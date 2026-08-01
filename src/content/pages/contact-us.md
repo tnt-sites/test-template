@@ -21,23 +21,7 @@ pageSections:
     imageSource: /src/assets/images/contacti-1.webp
     imageAlt: man smiling while looking at laptop
     imageAspectRatio: none
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
+    buttonSections: []
     reverse: false
     colorScheme: contrast
     backgroundColor: dark
