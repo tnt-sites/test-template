@@ -41,7 +41,9 @@ pageSections:
       - source: /images/assoc-6.png
         alt: American Dental Association
       - source: /images/assoc-7.png
-        alt: Better Business Bureau International Torch Awards for Ethics 2023 Winner
+        alt: >-
+          Better Business Bureau International Torch Awards for Ethics 2023
+          Winner
       - source: /images/assoc-8.png
         alt: Las Vegas Institute Global
     backgroundColor: base
@@ -53,12 +55,12 @@ pageSections:
       positionHorizontal: center
   - _component: page-sections/homepage-blocks/index-callouts
     id: ''
-    eyebrow: Sit Back, Relax &
-    heading: 'Let Us Take<br>Great Care of You'
+    eyebrow: Sit Back, Relax &amp;
+    heading: Let Us Take<br />Great Care of You
     intro: >-
       Our team is redefining what it means to visit the dentist in Hays. Our
-      personalized, compassionate & modern approach to care gives you the best
-      in quality and comprehensive convenience.
+      personalized, compassionate &amp; modern approach to care gives you the
+      best in quality and comprehensive convenience.
     callouts:
       - imageSource: /images/index-callout-1.png
         imageAlt: Dental team member talking to a patient in the treatment chair
@@ -92,18 +94,18 @@ pageSections:
   - _component: page-sections/homepage-blocks/index-split
     id: meet
     eyebrow: Meet Your Trusted Dentists in Hays
-    heading: 'Over 50 Years<br>of Combined<br>Experience'
+    heading: Over 50 Years<br />of Combined<br />Experience
     text: >-
       Our Lifetime Dental Care team includes Dr. Lowe, Dr. Grove, and Dr.
       Nelson, who are each committed to providing leading-edge dentistry to
-      their patients. They regularly take continuing education courses to
-      stay up-to-date with the latest advancements in their field, allowing
-      them to provide results that stand the test of time and look stunning!
+      their patients. They regularly take continuing education courses to stay
+      up-to-date with the latest advancements in their field, allowing them to
+      provide results that stand the test of time and look stunning!
     buttonText: Meet Our Dentists
     buttonHref: /meet-the-dentists/
     doctors:
       - name: Jeffrey Lowe
-        credentials: 'DDS, FAGD'
+        credentials: DDS, FAGD
         href: /dr-jeffery-h-lowe/
         imageSource: /images/index-meet-1.png
         imageAlt: Hays dentist Doctor Jeffrey Lowe
@@ -129,17 +131,17 @@ pageSections:
     cards:
       - heading: Health
         text: >-
-          First, our goal is to get your smile healthy by treating any
-          lingering dental concerns and clearing away plaque and tartar,
-          helping your smile feel refreshed.
+          First, our goal is to get your smile healthy by treating any lingering
+          dental concerns and clearing away plaque and tartar, helping your
+          smile feel refreshed.
         buttonText: Tell Me More
         href: /preventive-dentistry/
         backgroundSource: /images/index-bg-health.png
       - heading: Function
         text: >-
-          Next, our team will consider the function of your smile, making
-          sure that you can eat and speak with ease by restoring missing
-          teeth and addressing discomfort.
+          Next, our team will consider the function of your smile, making sure
+          that you can eat and speak with ease by restoring missing teeth and
+          addressing discomfort.
         buttonText: Tell Me More
         href: /restorative-dentistry/
         backgroundSource: /images/index-bg-function.png
@@ -163,23 +165,23 @@ pageSections:
     services:
       - iconSource: /images/index-services-1.png
         iconAlt: Tooth with a checkmark icon
-        title: 'Checkups<br>& Cleanings'
+        title: Checkups<br>& Cleanings
         href: /preventive-dentistry/
       - iconSource: /images/index-services-2.png
         iconAlt: Dental implant icon
-        title: 'Dental<br>Implants'
+        title: Dental<br>Implants
         href: /dental-implants/
       - iconSource: /images/index-services-3.png
         iconAlt: Crescent moon and stars icon
-        title: 'Sedation<br>Dentistry'
+        title: Sedation<br>Dentistry
         href: /sedation-dentistry/
       - iconSource: /images/index-services-4.png
         iconAlt: Smiling lips icon
-        title: 'Full Mouth<br>Restoration'
+        title: Full Mouth<br>Restoration
         href: /restorative-dentistry/
       - iconSource: /images/index-services-5.png
         iconAlt: Teeth under an aligner icon
-        title: 'Clear<br>Aligners'
+        title: Clear<br>Aligners
         href: /invisalign/
     buttonText: Explore All Our Services
     buttonHref: /our-services/
@@ -194,7 +196,6 @@ pageSections:
     id: ''
   - _component: page-sections/features/office-tour
     id: ''
-    class: peek
     heading: ''
     tourSlides:
       - _component: building-blocks/core-elements/image
@@ -214,7 +215,7 @@ pageSections:
         alt: Man in the dental chair smiling at his dentist
     slideNumbers: true
     floatingArrows: false
-    bottomEyebrow: A Relaxing & Modern Dental Office
+    bottomEyebrow: A Relaxing &amp; Modern Dental Office
     bottomHeading: Where Smiles Come to Life
     bottomText: >-
       Our newly renovated dental office is clean, modern, and features the
@@ -222,15 +223,37 @@ pageSections:
       streamlined, comfortable dentistry.
     bottomButtonSections:
       - _component: building-blocks/core-elements/button
+        id: ''
         text: Learn About Our Technology
+        hideText: false
         link: /advanced-dental-technology/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
         variant: primary
         size: md
+        width: xs
+        borderRadius: default
+        borderWidth: default
+        borderColor: default
+        textColor: default
+        uppercase: false
       - _component: building-blocks/core-elements/button
+        id: ''
         text: Tour Our Office
+        hideText: false
         link: /tour-our-office/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
         variant: primary
         size: md
+        width: xs
+        borderRadius: default
+        borderWidth: default
+        borderColor: default
+        textColor: default
+        uppercase: false
     backgroundColor: base
     backgroundGradient: ''
     backgroundImage:
@@ -238,6 +261,7 @@ pageSections:
       alt: ''
       positionVertical: top
       positionHorizontal: center
+    class: peek
   - _component: page-sections/homepage-blocks/index-reviews
     id: reviews
     eyebrow: Over 500 5-Star Reviews on Google
@@ -245,27 +269,31 @@ pageSections:
     heading: Delivering First-Class Service Since 2002
     reviews:
       - text: >-
-          Always a wonderful experience when visiting Lifetime Dental. The
-          clean environment paired with a happy and positive atmosphere
-          always makes each visit worth the drive.
+          Always a wonderful experience when visiting Lifetime Dental. The clean
+          environment paired with a happy and positive atmosphere always makes
+          each visit worth the drive.
         authorName: Tanner
+        socialIcon: ''
         reviewerImage: /images/index-rev-1.png
       - text: >-
           Dr. Jane Grove is AMAZING and every hygienist or assistant has been
           equally AMAZING! Also the front desk employees are so sweet and
           welcoming!
         authorName: Lacey
+        socialIcon: ''
         reviewerImage: /images/index-rev-2.png
       - text: >-
           Excellent dental care and Friendliest staff. They all go the extra
           mile to care for their patients.
         authorName: Sherelle
+        socialIcon: ''
         reviewerImage: /images/index-rev-3.png
       - text: >-
           10/10 recommend!!! Such a friendly environment and the staff are
           absolutely amazing!! They boosted my self-confidence and gave me my
           smile back!
         authorName: Harli
+        socialIcon: ''
         reviewerImage: /images/index-rev-4.png
     showQuoteIcon: true
     buttonText: Read More Reviews
@@ -296,10 +324,10 @@ pageSections:
     socialButtons:
       - iconSource: /images/index-insta-btn.png
         text: Follow Us on Instagram
-        href: 'https://www.instagram.com/lifetimedentalcare/'
+        href: https://www.instagram.com/lifetimedentalcare/
       - iconSource: /images/index-fb-btn.png
         text: Like us on Facebook
-        href: 'https://www.facebook.com/lifetimedentalcarebydrlowe'
+        href: https://www.facebook.com/lifetimedentalcarebydrlowe
     backgroundColor: base
     backgroundGradient: ''
     backgroundImage:
@@ -311,13 +339,12 @@ pageSections:
     id: ''
   - _component: page-sections/ctas/cta-center
     id: ''
-    eyebrow: Dental Insurance & Financing
+    eyebrow: Dental Insurance &amp; Financing
     heading: Quality Dentistry That Fits Every Budget
     anchorName: ''
     subtext: >-
-      Our team is happy to help you explore options for fitting the cost of
-      your care into your budget. Call our dental office for more
-      information!
+      Our team is happy to help you explore options for fitting the cost of your
+      care into your budget. Call our dental office for more information!
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ''
@@ -346,7 +373,7 @@ pageSections:
     rounded: false
   - _component: page-sections/homepage-blocks/index-find
     id: find
-    heading: 'Over 25 Years<br>on 27th Street'
+    heading: Over 25 Years<br />on 27th Street
     bullets:
       - text: Minutes from the Sternberg Museum of Natural History.
       - text: Nearby Hays Medical Center.
@@ -357,6 +384,6 @@ pageSections:
     mapEmbedUrl: >-
       https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11258.039381837942!2d-99.302791!3d38.885882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87a179154dcd7805%3A0xef0a776f4c5de755!2sLifetime%20Dental%20Care!5e1!3m2!1sen!2sus!4v1769796163046!5m2!1sen!2sus
 description: >-
-  Looking for a dentist in Hays? Call Lifetime Dental Care and learn how we
-  can provide comfortable care for the whole family.
+  Looking for a dentist in Hays? Call Lifetime Dental Care and learn how we can
+  provide comfortable care for the whole family.
 ---

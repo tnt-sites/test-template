@@ -39,13 +39,13 @@ reviews:
     structures: _structures.reviewItems
 showQuoteIcon:
   type: checkbox
-  comment: Show a large decorative opening quote mark on each review slide.
+  comment: Shows a quote mark on each review slide.
 buttonText:
   type: text
-  comment: Text for the call-to-action button below the carousel.
+  comment: Text for the call to action button below the carousel.
 buttonHref:
   type: text
-  comment: Link for the call-to-action button.
+  comment: Link for the call to action button.
 backgroundColor:
   type: select
   comment: Background color used behind the section.
