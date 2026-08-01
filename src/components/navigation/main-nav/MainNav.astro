@@ -66,11 +66,6 @@ const mobileNavData = [
     path: button.link || button.href || "#",
     children: [],
   })),
-  ...buttons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
 ];
 
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
@@ -336,10 +331,13 @@ const formatAddressLines = (address: any) => {
         }
 
         @container (max-width: 1350px) {
-          .bar .bar-list{align-items: start;}
           .hd-nav .desktop-button-group.button-group {
             display: none;
           }
+        }
+
+        @container (max-width: 1150px) {
+          .bar .bar-list{align-items: start;}
 
           .desktop-main-nav .bar-list > .nav-item.has-children {
             align-items: center;

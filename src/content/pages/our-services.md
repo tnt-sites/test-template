@@ -1,40 +1,39 @@
 ---
 _schema: default
-title: Our Services
+title: Our Dental Services Hays
 pageSections:
-  - _component: page-sections/heroes/hero-center
+  - _component: page-sections/heroes/hero-split
     id: ""
-    eyebrow: Services - City, ST
-    heading: Our Really Cool Dental Services
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ""
-        text: My Button
-        hideText: false
-        link: ""
-        modalTarget: ""
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
+    eyebrow: Our Dental Services Hays
+    heading: Keeping Your Smile Healthy, Functional & Beautiful
+    subtext: >-
+      Lifetime Dental Care provides complete health dentistry for patients
+      ages three and older. We are dedicated to helping you and your
+      family meet all your oral wellness needs and provide a full range
+      of dental services in Hays to help you maintain good oral health
+      and a beautiful smile.
+
+
+      Our practice features the latest technologies, including intraoral
+      cameras, CEREC same-day restorations, and 3D cone beam imaging, to
+      more effectively plan and provide your treatments. When you come to
+      our office for your treatment, our dentists and team keep their
+      focus on you, providing comfortable, personalized dental care in a
+      friendly, interactive environment.
+    imageSource: /src/assets/images/our-services-1.webp
+    imageAlt: Dental patient admiring his smile in a mirror
+    buttonSections: []
+    reverse: false
+    colorScheme: contrast
+    backgroundColor: dark
   - _component: page-sections/ctas/services-grid
     id: ""
-    heading: Our Services
+    heading: ""
     services:
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Preventive dentistry
-        title: I Need a Checkup or Cleaning
+        imageSource: /src/assets/images/our-services-2.webp
+        imageAlt: Blonde woman in the dental chair smiling over her shoulder
+        title: I Need a Checkup & Cleaning
         href: preventive-dentistry.html
         wide: false
         links:
@@ -42,111 +41,199 @@ pageSections:
             label: Dental Checkups & Cleanings
             href: preventive-dentistry.html#check
           - _component: page-sections/ctas/services-grid/service-link
+            label: Oral Cancer Screening
+            href: preventive-dentistry.html#screen
+          - _component: page-sections/ctas/services-grid/service-link
             label: Children's Dentistry
-            href: preventive-dentistry.html#child
-          - _component: page-sections/ctas/services-grid/service-link
-            label: Gum Disease Treatment
-            href: preventive-dentistry.html#gum
-          - _component: page-sections/ctas/services-grid/service-link
-            label: Fluoride Treatment
-            href: preventive-dentistry.html#flu
-          - _component: page-sections/ctas/services-grid/service-link
-            label: Dental Sealants
-            href: preventive-dentistry.html#seal
+            href: childrens-dentistry.html
           - _component: page-sections/ctas/services-grid/service-link
             label: Nightguards for Bruxism
             href: preventive-dentistry.html#night
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Restorative dentistry
+        imageSource: /src/assets/images/our-services-3.webp
+        imageAlt: Young man with curly brown hair smiling outdoors
+        title: I am Worried About Gum Disease
+        href: gum-disease-treatment.html
+        wide: false
+        links:
+          - _component: page-sections/ctas/services-grid/service-link
+            label: What is Gum Disease?
+            href: gum-disease-treatment.html#what
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Symptoms of Gum Disease
+            href: gum-disease-treatment.html#symp
+          - _component: page-sections/ctas/services-grid/service-link
+            label: How We Treat Gum Disease
+            href: gum-disease-treatment.html#how
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Scaling & Root Planing
+            href: gum-disease-treatment.html#scale
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Laser Periodontal Treatment
+            href: gum-disease-treatment.html#laser
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Chao Pinhole® Technique
+            href: gum-disease-treatment.html#pin
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Perio Protect®
+            href: gum-disease-treatment.html#perio
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Periodontal Maintenance
+            href: gum-disease-treatment.html#maint
+      - _component: page-sections/ctas/services-grid/services-grid-item
+        imageSource: /src/assets/images/our-services-4.webp
+        imageAlt: Smiling older man in the dental chair
         title: I Have a Cavity or Broken Tooth
         href: restorative-dentistry.html
         wide: false
         links:
           - _component: page-sections/ctas/services-grid/service-link
-            label: CEREC Same-Day Dental Crowns & Restorations
-            href: restorative-dentistry.html#cerec
-          - _component: page-sections/ctas/services-grid/service-link
             label: Tooth-Colored Fillings
-            href: restorative-dentistry.html#fill
+            href: tooth-colored-fillings.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Dental Crowns
+            href: dental-crowns.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: CEREC Same-Day Crowns
+            href: restorative-dentistry.html#same
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Missing teeth treatments
+        imageSource: /src/assets/images/our-services-5.webp
+        imageAlt: Smiling man in a white collared shirt
         title: I am Missing One or More Teeth
         href: missing-teeth.html
         wide: false
         links:
           - _component: page-sections/ctas/services-grid/service-link
             label: Dental Bridges
-            href: missing-teeth.html#bridge
-          - _component: page-sections/ctas/services-grid/service-link
-            label: Dentures
-            href: missing-teeth.html#denture
+            href: dental-bridges.html
           - _component: page-sections/ctas/services-grid/service-link
             label: Dental Implants
             href: dental-implants.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: All-on-X Dental Implants
+            href: all-on-x-dental-implants.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Mini Dental Implants
+            href: mini-dental-implants.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Roundhouse Dental Bridges
+            href: roundhouse-dental-bridges.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Dentures
+            href: dentures.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Full Mouth Reconstruction
+            href: full-mouth-reconstruction.html
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Cosmetic dentistry
+        imageSource: /src/assets/images/our-services-6.webp
+        imageAlt: Young woman taking a selfie
         title: I Want to Enhance My Smile
         href: cosmetic-dentistry.html
         wide: false
         links:
           - _component: page-sections/ctas/services-grid/service-link
             label: Veneers
-            href: cosmetic-dentistry.html#veneer
-          - _component: page-sections/ctas/services-grid/service-link
-            label: SureSmile Clear Aligners
-            href: cosmetic-dentistry.html#clear
+            href: veneers.html
           - _component: page-sections/ctas/services-grid/service-link
             label: Teeth Whitening
-            href: cosmetic-dentistry.html#white
+            href: teeth-whitening.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Dental Bonding
+            href: cosmetic-dentistry.html#bond
+          - _component: page-sections/ctas/services-grid/service-link
+            label: BOTOX® Injections
+            href: cosmetic-dentistry.html#botox
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Smile Makeovers
+            href: smile-makeovers.html
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Sleep apnea treatment
-        title: I Snore or Have Sleep Apnea
-        href: sleep-apnea-treatment.html
+        imageSource: /src/assets/images/our-services-7.webp
+        imageAlt: Smiling woman holding a clear aligner
+        title: I Want a Straighter Smile
+        href: orthodontics.html
         wide: false
         links:
           - _component: page-sections/ctas/services-grid/service-link
-            label: The Dangers of Sleep Apnea
-            href: sleep-apnea-treatment.html#danger
+            label: Invisalign®
+            href: invisalign.html
           - _component: page-sections/ctas/services-grid/service-link
-            label: At-Home Sleep Testing
-            href: sleep-apnea-treatment.html#home
+            label: SimplyClear®
+            href: orthodontics.html#simply
           - _component: page-sections/ctas/services-grid/service-link
-            label: Oral Appliance Treatment
-            href: sleep-apnea-treatment.html#oral
+            label: Fastbraces®
+            href: fastbraces.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Healthy Start
+            href: healthy-start.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Enjoy a Beautiful and Healthy Smile
+            href: orthodontics.html#enjoy
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: TMJ therapy
+        imageSource: /src/assets/images/our-services-8.webp
+        imageAlt: Dental patient covering her mouth in fear
+        title: I am Scared of the Dentist
+        href: sedation-dentistry.html
+        wide: false
+        links:
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Nitrous Oxide
+            href: sedation-dentistry.html#nitro
+          - _component: page-sections/ctas/services-grid/service-link
+            label: IV Dental Sedation
+            href: sedation-dentistry.html#iv
+          - _component: page-sections/ctas/services-grid/service-link
+            label: What is Dental Anxiety & How Can It Impact Your Health?
+            href: sedation-dentistry.html#what
+      - _component: page-sections/ctas/services-grid/services-grid-item
+        imageSource: /src/assets/images/our-services-9.webp
+        imageAlt: Young woman holding her cheek in pain
         title: I Have Jaw Pain
         href: tmj-therapy.html
         wide: false
         links:
           - _component: page-sections/ctas/services-grid/service-link
-            label: TMJ Diagnosis & Treatment
-            href: tmj-therapy.html#diagnose
+            label: What is TMJ Disorder?
+            href: tmj-therapy.html#what
           - _component: page-sections/ctas/services-grid/service-link
-            label: Equilibration/Occlusal Adjustments
-            href: tmj-therapy.html#equi
+            label: Signs & Symptoms of TMJ Disorder
+            href: tmj-therapy.html#symp
+          - _component: page-sections/ctas/services-grid/service-link
+            label: How We Treat TMJ Disorder
+            href: tmj-therapy.html#how
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Occlusal Adjustments/Equilibration
+            href: tmj-therapy.html#occl
           - _component: page-sections/ctas/services-grid/service-link
             label: Occlusal Splints
-            href: tmj-therapy.html#occl
+            href: tmj-therapy.html#splint
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Treatment with a TENS Machine
+            href: tmj-therapy.html#tens
+          - _component: page-sections/ctas/services-grid/service-link
+            label: BOTOX® Injections
+            href: tmj-therapy.html#botox
       - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Root canal therapy
-        title: I Need a Root Canal
-        href: root-canal-therapy.html
+        imageSource: /src/assets/images/our-services-10.webp
+        imageAlt: Man holding his cheek in pain
+        title: I Have a Dental Emergency
+        href: emergency-dentistry.html
         wide: false
-        links: []
-      - _component: page-sections/ctas/services-grid/services-grid-item
-        imageSource:
-        imageAlt: Tooth removal
-        title: I Need a Tooth Removed
-        href: tooth-removal.html
-        wide: false
-        links: []
+        links:
+          - _component: page-sections/ctas/services-grid/service-link
+            label: How We Treat Dental Emergencies
+            href: emergency-dentistry.html#how
+          - _component: page-sections/ctas/services-grid/service-link
+            label: The Most Common Dental Emergencies
+            href: emergency-dentistry.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Root Canal Treatment
+            href: root-canal-treatment.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Tooth Extractions
+            href: tooth-extractions.html
+          - _component: page-sections/ctas/services-grid/service-link
+            label: Wisdom Tooth Extractions
+            href: wisdom-tooth-extractions.html
     ctaCard:
       enabled: false
       id: all
@@ -167,20 +254,59 @@ pageSections:
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ""
-        text: My Button
+        text: Meet the Dentists
         hideText: false
-        link: ""
+        link: /meet-the-dentists/
         modalTarget: ""
         iconName: ""
         iconPosition: before
         variant: primary
         size: md
         width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
+      - _component: building-blocks/core-elements/button
+        id: ""
+        text: Tour Our Office
+        hideText: false
+        link: /tour-our-office/
+        modalTarget: ""
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ""
+        text: Smile Gallery
+        hideText: false
+        link: /smile-gallery/
+        modalTarget: ""
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ""
+        text: Advanced Dental Technology
+        hideText: false
+        link: /advanced-dental-technology/
+        modalTarget: ""
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ""
+        text: Request an Appointment
+        hideText: false
+        link: /request-an-appointment/
+        modalTarget: ""
+        iconName: ""
+        iconPosition: before
+        variant: alt
+        size: md
+        width: xs
     maxContentWidth:
     paddingHorizontal: sm
     paddingVertical: sm
@@ -192,5 +318,8 @@ pageSections:
       alt:
       positionVertical: top
       positionHorizontal: center
-description: ""
+description: >-
+  Wish everyone in your family could see the same dentist? Find out how
+  the team at Lifetime Dental Care can help everyone smile with our wide
+  range of dental services in Hays.
 ---

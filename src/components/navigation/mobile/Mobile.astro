@@ -104,16 +104,15 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       sharedSocials.length > 0 && (
         <div class="mobile-socials">
           {sharedSocials.map((social: any) => (
-            <Button
-              variant="ghost"
-              size="lg"
-              iconName={social.icon}
-              link={social.link}
-              hideText="true"
-              aria-label={`Visit our ${social.icon} page`}
+            <a
+              href={social.link}
+              data-icon={social.icon}
+              aria-label={social.label ? `Visit our ${social.label} page` : "Social link"}
               target="_blank"
               rel="noopener noreferrer"
-            />
+            >
+              <Icon name={social.icon} size="none" />
+            </a>
           ))}
         </div>
       )
@@ -483,9 +482,49 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           border-top: 1px solid var(--color-border-subtle);
           display: flex;
           flex-wrap: wrap;
-          gap: var(--spacing-sm);
           justify-content: center;
           padding: var(--spacing-lg) var(--spacing-md);
+
+          a {
+            --social-color: var(--color-text-muted);
+            align-items: center;
+            background-color: var(--social-color);
+            border-radius: 50%;
+            color: var(--color-text-inverse);
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            margin: 5px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            width: 40px;
+
+            &:hover,
+            &:focus-visible {
+              background-color: var(--color-bg);
+              color: var(--social-color);
+            }
+
+            &[data-icon="social/facebook"] {
+              --social-color: var(--color-social-facebook);
+            }
+
+            &[data-icon="social/google"] {
+              --social-color: var(--color-social-google);
+            }
+
+            &[data-icon="social/youtube"] {
+              --social-color: var(--color-social-youtube);
+            }
+
+            &[data-icon="social/instagram"] {
+              --social-color: var(--color-social-instagram);
+            }
+          }
+
+          :global(.icon svg) {
+            height: 18px;
+            width: 18px;
+          }
         }
       }
 

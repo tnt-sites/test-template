@@ -187,12 +187,13 @@ const htmlAttributes = Object.fromEntries(
 
       .services-grid-items > editable-array-item,
       .services-grid-items > .services-grid-item {
-        background-color: #fff;
-        box-shadow: 0 3px 6px rgb(0 0 0 / 60%);
+        
+        background-color: #000;
         display: flex;
         flex-direction: column;
-        flex: 0 1 360px;
-        overflow: hidden;
+        flex: 0 1 375px;
+        padding: 27px;
+        transition: 0.4s all;
       }
 
       .services-grid-items > editable-array-item.is-wide,
@@ -201,7 +202,7 @@ const htmlAttributes = Object.fromEntries(
       }
 
       .services-grid-figure {
-        margin: 0;
+        margin: 0 auto;
         transition: 0.4s all;
 
         img {
@@ -213,17 +214,19 @@ const htmlAttributes = Object.fromEntries(
       }
 
       .services-grid-content {
-        padding: 0 20px 20px;
+        padding: 0;
       }
 
       .services-grid-title {
         display: block;
-        font-family: var(--font-heading);
-        font-size: clamp(1.75rem, 2.8vw, 1.875rem);
-        line-height: 1.2;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 2.2px;
+        line-height: 1.1;
         margin: 20px 0 0;
         text-align: center;
-        text-transform: none;
+        text-transform: uppercase;
 
         span {
           display: block;
@@ -231,29 +234,41 @@ const htmlAttributes = Object.fromEntries(
         }
 
         a {
-          color: var(--color-text);
+          color: #fff;
           text-decoration: none;
         }
       }
 
       .services-grid-title:hover a,
       .services-grid-title:focus-within a {
-        color: var(--color-brand);
+        color: #00bbf2;
       }
 
       .services-grid-links {
         display: table;
         margin: 20px auto;
-       
 
         editable-array-item {
-          display: list-item;
+          display: block;
           line-height: 1.2;
-          margin: 10px auto;
+          margin: 0 0 10px;
+          overflow: hidden;
+          padding-left: 26px;
+          position: relative;
+
+          &::before {
+            background: url("/images/check-white.png") no-repeat center / contain;
+            content: "";
+            height: 0.9em;
+            left: 0;
+            position: absolute;
+            top: 0.25em;
+            width: 0.9em;
+          }
         }
 
         a {
-          color: var(--color-text);
+          color: #fff;
           text-decoration: none;
         }
       }
@@ -262,13 +277,13 @@ const htmlAttributes = Object.fromEntries(
       .services-grid-links editable-array-item:focus-within a,
       .services-grid-links li:hover a,
       .services-grid-links li:focus-within a {
-        color: var(--color-brand-muted);
+        color: #00bbf2;
       }
 
       .services-grid-cta,
       #all {
         align-items: center;
-        background-color: var(--color-brand);
+        background-color: #000;
         display: flex;
         flex: 0 1 400px;
         flex-direction: column;
@@ -307,9 +322,9 @@ const htmlAttributes = Object.fromEntries(
 
       .services-grid-cta-button,
       #all .btn {
-        background-color: #fff;
-        border: 0;
-        color: var(--color-brand);
+        background-color: transparent;
+        border: 1px solid #fff;
+        color: #fff;
         display: inline-block;
         font-size: var(--font-size-body-sm);
         font-weight: 600;
@@ -317,11 +332,18 @@ const htmlAttributes = Object.fromEntries(
         padding: 0.65rem 1.1rem;
       }
 
+      .services-grid-cta:hover,
+      .services-grid-cta:focus-within,
+      #all:hover,
+      #all:focus-within {
+        background-color: #00bbf2;
+      }
+
       .services-grid-cta:hover .services-grid-cta-button,
       .services-grid-cta:focus-within .services-grid-cta-button,
       #all:hover .btn,
       #all:focus-within .btn {
-        background-color: var(--color-brand-muted);
+        background-color: #00bbf2;
         color: #fff;
       }
 
