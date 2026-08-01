@@ -1,0 +1,23 @@
+label: Index Services
+icon: grid_view
+description: Row of icon + label service links with a call-to-action button.
+value:
+  _component: page-sections/homepage-blocks/index-services
+  id: ""
+  eyebrow: Eyebrow Text
+  services:
+    - iconSource: ""
+      iconAlt: ""
+      title: Service Name
+      href: /
+  buttonText: Explore All Our Services
+  buttonHref: /
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-services/index-services.cloudcannon.inputs.yml

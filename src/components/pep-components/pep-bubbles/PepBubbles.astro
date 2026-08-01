@@ -1,0 +1,113 @@
+---
+interface BubbleItem {
+  image?: { source?: string; alt?: string };
+  caption?: string;
+  disclaimer?: string;
+}
+
+const {
+  heading = "",
+  backgroundImage = { source: "", alt: "" },
+  items = [] as BubbleItem[],
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const normalizedItems = Array.isArray(items)
+  ? items.filter((item): item is BubbleItem => !!item && typeof item === "object")
+  : [];
+
+const bgStyle = backgroundImage?.source ? `background-image: url('${backgroundImage.source}')` : "";
+---
+
+<section class:list={["pep-bubbles", className]} style={bgStyle || undefined} {...htmlAttributes}>
+  {heading && <h2 data-editable="text" data-prop="heading" set:html={heading} />}
+  {
+    normalizedItems.length > 0 && (
+      <div class="pep-bubbles__grid">
+        {normalizedItems.map((item) => (
+          <article>
+            {item.image?.source && <img src={item.image.source} alt={item.image?.alt || ""} />}
+            {item.caption && (
+              <figcaption>
+                <span set:html={item.caption} />
+                {item.disclaimer && <small set:html={item.disclaimer} />}
+              </figcaption>
+            )}
+          </article>
+        ))}
+      </div>
+    )
+  }
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .pep-bubbles {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-top: 46px;
+      padding: 40px 20px;
+      text-align: center;
+
+      h2 {
+        color: #000;
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(1.5rem, 3.5vw, 35px);
+        font-weight: 700;
+        margin: 0 auto;
+        max-width: 900px;
+      }
+
+      &__grid {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 60px auto;
+        padding-bottom: 20px;
+
+        @media (min-width: 900px) {
+          flex-wrap: nowrap;
+        }
+      }
+
+      article {
+        flex: 0 1 320px;
+        margin: 20px;
+
+        img {
+          display: block;
+          height: auto;
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+
+      figcaption {
+        color: #000;
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(1.375rem, 3vw, 36px);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-top: 30px;
+
+        small {
+          color: #000;
+          display: block;
+          font-family: "Barlow", sans-serif;
+          font-size: 18px;
+          font-weight: 300;
+          letter-spacing: 3px;
+          margin-top: 10px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+</style>

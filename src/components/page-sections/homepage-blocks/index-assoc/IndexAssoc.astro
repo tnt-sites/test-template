@@ -1,0 +1,97 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+
+interface Logo {
+  source?: string;
+  alt?: string;
+}
+
+const {
+  logos = [] as Logo[],
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedLogos = Array.isArray(logos)
+  ? logos.filter((logo): logo is Logo => !!logo && typeof logo === "object")
+  : [];
+
+const logosArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "logos",
+    }
+  : {};
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-assoc", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="sm"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  {...htmlAttributes}
+>
+  {
+    normalizedLogos.length > 0 && (
+      <div class="assoc-row" {...logosArrayDataAttributes}>
+        {normalizedLogos.map((logo) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/index-assoc/assoc-logo">
+            <span>
+              <img
+                src={logo.source}
+                alt={logo.alt}
+                data-editable="image"
+                data-prop-src="source"
+                data-prop-alt="alt"
+              />
+            </span>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-assoc {
+      .assoc-row {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        max-width: 1400px;
+        opacity: 0.32;
+
+        editable-array-item,
+        span {
+          display: block;
+          padding: 8px;
+        }
+
+        img {
+          display: block;
+          height: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,18 @@
+label: Index Assoc
+icon: workspace_premium
+description: Row of muted association / affiliation logos.
+value:
+  _component: page-sections/homepage-blocks/index-assoc
+  id: ""
+  logos:
+    - source: ""
+      alt: ""
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-assoc/index-assoc.cloudcannon.inputs.yml

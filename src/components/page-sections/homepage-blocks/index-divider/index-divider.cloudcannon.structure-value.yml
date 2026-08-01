@@ -1,0 +1,8 @@
+label: Index Divider
+icon: horizontal_rule
+description: Decorative divider with two lines and a small vertical-lines graphic.
+value:
+  _component: page-sections/homepage-blocks/index-divider
+  id: ""
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-divider/index-divider.cloudcannon.inputs.yml

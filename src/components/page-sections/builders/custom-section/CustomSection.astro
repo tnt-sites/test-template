@@ -93,6 +93,51 @@ if (!htmlAttributes.id && label) {
         overflow: hidden;
       }
 
+      > .background {
+        inset: 0;
+        position: absolute;
+
+        &.bg-base {
+          background-color: var(--color-bg);
+        }
+
+        &.bg-surface {
+          background-color: var(--color-bg-surface);
+        }
+
+        &.bg-muted {
+          background-color: var(--color-bg-muted);
+        }
+
+        &.bg-brand {
+          background-color: var(--color-bg-brand);
+        }
+
+        &.bg-brand-secondary {
+          background-color: var(--color-bg-brand-secondary);
+        }
+
+        &.bg-brand-subtle {
+          background-color: var(--color-brand-subtle);
+        }
+
+        &.bg-brand-muted {
+          background-color: var(--color-brand-muted);
+        }
+
+        &.bg-inverse {
+          background-color: var(--color-bg-inverse);
+        }
+
+        &.bg-dark {
+          background-color: var(--color-bg-dark);
+        }
+
+        &.bg-black {
+          background-color: var(--color-bg-black);
+        }
+      }
+
       > .outer-content {
         height: 100%;
       }

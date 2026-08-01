@@ -1,0 +1,26 @@
+indexFlash:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Index Flash
+    icon: photo_library
+  definitions:
+    component_name: IndexFlash
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: cards
+        type: array
+        optional: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/index-flash/index-flash.cloudcannon.inputs.yml

@@ -1,6 +1,20 @@
 id:
   type: text
   comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the heading.
+colorScheme:
+  type: select
+  comment: Color scheme theme for the section.
+  options:
+    values:
+      - id: inherit
+        name: Inherit
+      - id: default
+        name: Default
+      - id: contrast
+        name: Contrast
 heading:
   type: markdown
   comment: Main heading text for the component. Supports inline span wrappers/classes for highlighted words.
@@ -26,6 +40,12 @@ reviews:
 showQuoteIcon:
   type: checkbox
   comment: Show a large decorative opening quote mark on each review slide.
+buttonText:
+  type: text
+  comment: Text for the call-to-action button below the carousel.
+buttonHref:
+  type: text
+  comment: Link for the call-to-action button.
 backgroundColor:
   type: select
   comment: Background color used behind the section.

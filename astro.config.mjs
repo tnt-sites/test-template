@@ -58,9 +58,18 @@ function makeBrandingPostcssPlugin() {
 }
 makeBrandingPostcssPlugin.postcss = true;
 
+// Redirects for posts migrated from WordPress (see scripts/migrate-wordpress-blog.mjs)
+let wpRedirects = {};
+try {
+  wpRedirects = JSON.parse(fs.readFileSync(path.resolve(__dirname, "scripts/wp-redirect-map.json"), "utf8"));
+} catch {
+  // no WordPress redirect map yet — nothing to redirect
+}
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://example.com",
+  redirects: wpRedirects,
   build: {
     inlineStylesheets: "always",
   },

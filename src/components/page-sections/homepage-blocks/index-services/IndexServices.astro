@@ -1,0 +1,162 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Button from "@core-elements/button/Button.astro";
+
+interface ServiceItem {
+  iconSource?: string;
+  iconAlt?: string;
+  title?: string;
+  href?: string;
+}
+
+const {
+  eyebrow = "",
+  services = [] as ServiceItem[],
+  buttonText = "",
+  buttonHref = "",
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedServices = Array.isArray(services)
+  ? services.filter((service): service is ServiceItem => !!service && typeof service === "object")
+  : [];
+
+const servicesArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "services",
+    }
+  : {};
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-services", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  {...htmlAttributes}
+>
+  {
+    eyebrow && (
+      <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+        {eyebrow}
+      </h2>
+    )
+  }
+
+  {
+    normalizedServices.length > 0 && (
+      <div class="services-links" {...servicesArrayDataAttributes}>
+        {normalizedServices.map((service) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/index-services/index-service-item">
+            <a href={service.href || "#"}>
+              {service.iconSource && (
+                <span class="icon">
+                  <img src={service.iconSource} alt={service.iconAlt} />
+                </span>
+              )}
+              <h3 set:html={service.title} />
+            </a>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    buttonText && (
+      <div class="services-cta">
+        <Button text={buttonText} link={buttonHref} variant="primary" data-prop="buttonText" />
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-services {
+      text-align: center;
+
+      .eyebrow-line {
+        color: var(--color-text);
+        display: block;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        line-height: 1.17;
+        margin: 10px auto;
+        text-transform: uppercase;
+      }
+
+      .services-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: 30px auto;
+        max-width: 1200px;
+
+        > editable-array-item {
+          flex: 0 1 180px;
+          margin: 10px auto;
+        }
+
+        a {
+          color: var(--color-text);
+          display: block;
+          text-decoration: none;
+        }
+
+        .icon {
+          align-items: center;
+          display: flex;
+          height: 50px;
+          justify-content: center;
+
+          img {
+            height: 100%;
+            width: auto;
+          }
+        }
+
+        h3 {
+          font-family: var(--font-body);
+          font-size: 17px;
+          font-weight: 500;
+          letter-spacing: 1.7px;
+          line-height: 1.12;
+          margin-top: var(--spacing-md);
+          text-transform: uppercase;
+        }
+
+        a:hover h3,
+        a:focus-visible h3 {
+          color: var(--color-brand);
+        }
+      }
+
+      .services-cta {
+        margin-top: var(--spacing-lg);
+      }
+    }
+  }
+</style>

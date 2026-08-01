@@ -57,6 +57,37 @@ if (!_component && !hasText && !hasSlotContent) return;
       &.align-end {
         text-align: end;
       }
+
+      ul {
+        list-style: none;
+        margin: 10px 0;
+        overflow: hidden;
+        padding: 0;
+        text-align: left;
+      }
+
+      ul li {
+        display: block;
+        line-height: 1.6;
+        margin: 0 0 10px 26px;
+        overflow: hidden;
+        padding-left: 40px;
+        position: relative;
+      }
+
+      ul li::before {
+        background: url("/images/check.png") no-repeat center / contain;
+        content: "";
+        height: 0.9em;
+        left: 0;
+        position: absolute;
+        top: 0.25em;
+        width: 0.9em;
+      }
     }
+  }
+
+  [data-theme="contrast"] .text ul li::before {
+    background-image: url("/images/check-white.png");
   }
 </style>

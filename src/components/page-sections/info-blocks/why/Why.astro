@@ -51,15 +51,57 @@ const htmlAttributes = Object.fromEntries(
 
   <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
 
-  <List items={items} direction="vertical" alignX="center" />
+  <List items={items} direction="horizontal" alignX="center" />
 </CustomSection>
 
-<style>
-  .why .heading-text {
-    text-transform: uppercase;
-  }
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .why {
+      padding-block: 30px;
+    }
 
-  .list {
-    margin-bottom: var(--spacing-lg);
+    .why .heading-text {
+      text-transform: uppercase;
+    }
+
+    .why .heading {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 3.2px;
+      line-height: 0.88;
+    }
+
+    .why .list {
+      align-items: flex-start;
+      justify-content: space-around;
+      margin-bottom: var(--spacing-lg);
+      text-align: center;
+    }
+
+    .why .list .item {
+      flex: 1 1 33%;
+      font-size: 21px;
+      margin: 10px;
+      max-width: 280px;
+      overflow: visible;
+      width: 100%;
+
+      &::before {
+        content: "";
+        background: url("/images/why.png") no-repeat center / contain;
+        display: block;
+        height: 40px;
+        margin: 0 auto 5px;
+        width: 40px;
+        position: static;
+        transform: none;
+      }
+
+      > p {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto;
+      }
+    }
   }
 </style>

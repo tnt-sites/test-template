@@ -22,6 +22,21 @@ officeTour:
       - editor_key: floatingArrows
         type: boolean
         optional: true
+      - editor_key: bottomEyebrow
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: bottomHeading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: bottomText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: bottomButtonSections
+        type: array
+        optional: true
       - editor_key: backgroundColor
         type: string
         optional: true

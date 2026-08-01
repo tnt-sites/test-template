@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/request-an-appointment/",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -11,15 +11,15 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+17856257969",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call ",
+      "textStrong": "Us"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/Lifetime+Dental+Care+-+Dr.+Jeffrey+H.+Lowe,+DDS/@38.885882,-99.302791,15z/data=!4m2!3m1!1s0x0:0x9f862895a0a04cbf",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -27,7 +27,7 @@
     },
     {
       "itemClass": "fr",
-      "enabled": true,
+      "enabled": false,
       "href": "for-patients.html#forms",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
@@ -36,7 +36,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/lifetimedentalcarebydrlowe",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +45,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/Lifetime+Dental+Care+-+Dr.+Jeffrey+H.+Lowe,+DDS/@38.885882,-99.302791,15z/data=!4m2!3m1!1s0x0:0x9f862895a0a04cbf",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",

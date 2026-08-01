@@ -1,6 +1,9 @@
 id:
   type: text
   comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the main heading.
 heading:
   type: markdown
   comment: Main heading text for the component. Supports inline span wrappers/classes for highlighted words.
@@ -17,28 +20,37 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
-backgroundColor:
-  type: select
-  comment: Background color used behind the section.
+quickLinks:
+  type: array
+  label: Quick Links
+  comment: Row of quick links shown below the heading.
   options:
-    values:
-      - id: none
-        name: None
-      - id: base
-        name: Base
-      - id: surface
-        name: Surface
-      - id: accent
-        name: Accent
-      - id: highlight
-        name: Highlight
-      - id: dark
-        name: Dark
-      - id: black
-        name: Black
-backgroundColorHex:
-  type: color
-  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+    structures:
+      values:
+        - label: Link
+          value:
+            text: Link Text
+            href: /
+badgeSource:
+  type: image
+  comment: Badge image overlapping the top-right of the hero photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+badgeAlt:
+  type: text
+  comment: Alt text for the badge image.
+thumbnailSource:
+  type: image
+  comment: Main hero photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+thumbnailAlt:
+  type: text
+  comment: Alt text for the main hero photo.
 backgroundGradient:
   type: textarea
   comment: Optional CSS gradient applied behind the section content.

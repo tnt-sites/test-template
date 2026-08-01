@@ -5,6 +5,8 @@ import MeetLandingPerson from "./MeetLandingPerson.astro";
 type MeetLandingPersonItem = {
   _component?: string;
   name?: string;
+  credentials?: string;
+  buttonText?: string;
   href?: string;
   imageSource?: string;
   imageAlt?: string;
@@ -42,6 +44,8 @@ const normalizedDoctors = Array.isArray(doctorItems)
       .filter((doctor): doctor is MeetLandingPersonItem => !!doctor && typeof doctor === "object")
       .map((doctor) => ({
         name: cleanText(doctor.name, "Provider Name"),
+        credentials: cleanText(doctor.credentials),
+        buttonText: cleanText(doctor.buttonText),
         href: cleanText(doctor.href, "#"),
         imageSource: cleanText(doctor.imageSource),
         imageAlt: cleanText(doctor.imageAlt),
@@ -112,7 +116,7 @@ const htmlAttributes = Object.fromEntries(
 
     .landing > editable-array-item,
     .landing > a {
-      flex: 0 1 auto;
+      flex: 0 1 330px;
       text-align: center;
     }
 
@@ -122,15 +126,29 @@ const htmlAttributes = Object.fromEntries(
       text-decoration: none;
     }
 
-    .landing .btn {
-      margin: 20px auto 0;
+    .landing a .name {
+      color: #000000;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      line-height: 0.93;
+      margin-top: 10px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.3s all;
     }
 
-    .landing .name {
-      color: #fff;
+    .landing a .name small {
       display: block;
-      font-size: 18px;
+      font-size: 12px;
+      letter-spacing: 1.2px;
+    }
+
+    .landing a .meet-landing-btn {
       margin: 10px auto 0;
+      min-width: 210px;
+      pointer-events: none;
     }
 
     .landing a:hover .name,

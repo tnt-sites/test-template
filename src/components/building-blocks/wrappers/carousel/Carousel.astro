@@ -14,6 +14,7 @@ const {
   arrowStyle = "default",
   "data-prop": customDataProp = "slides",
   editable = true,
+  class: className,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -68,7 +69,7 @@ if (autoScroll) {
   dataAttributes["data-show-arrows"] = "false";
 }
 
-const carouselClasses = "carousel";
+const carouselClasses = ["carousel", className];
 
 // Build the style attribute, merging custom styles with CSS variables
 const carouselStyles = `

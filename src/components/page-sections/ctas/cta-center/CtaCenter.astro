@@ -6,6 +6,7 @@ import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
   anchorName = "",
+  eyebrow = "",
   heading = "",
   subtext = "",
   buttonSections = [],
@@ -34,7 +35,31 @@ const {
   {...htmlAttributes}
 >
   {anchorName && <a name={anchorName} class="anchor-name-offset" aria-hidden="true" />}
-  <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />
+  {
+    eyebrow && (
+      <h2 class="cta-center-eyebrow" data-editable="text" data-prop="eyebrow">
+        {eyebrow}
+      </h2>
+    )
+  }
+  <Heading level="h3" size="xl" alignX="center" data-prop="heading" text={heading} />
   <Text alignX="center" data-prop="subtext" text={subtext} />
   <ButtonGroup class="buttons" buttonSections={buttonSections} alignX="center" />
 </CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .cta-center-eyebrow {
+      color: var(--color-text);
+      display: block;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2.4px;
+      line-height: 1.17;
+      margin: 10px auto;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+</style>

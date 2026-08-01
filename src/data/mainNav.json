@@ -1,47 +1,240 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/images/logo.png",
+  "logoAlt": "Lifetime Dental Care",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About",
+      "path": "/about-us/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "What Sets Us Apart",
+          "path": "/about-us/",
+          "children": []
+        },
+        {
+          "name": "Meet the Dentists",
+          "path": "/meet-the-dentists/",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dr. Jeffery H. Lowe",
+              "path": "/dr-jeffery-h-lowe/"
+            },
+            {
+              "name": "Dr. Jane M. Grove",
+              "path": "/dr-jane-m-grove/"
+            },
+            {
+              "name": "Dr. Brock Nelson",
+              "path": "/dr-brock-nelson/"
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Meet the Team",
+          "path": "/meet-the-team/",
+          "children": []
+        },
+        {
+          "name": "Tour Our Office",
+          "path": "/tour-our-office/",
+          "children": []
+        },
+        {
+          "name": "Smile Gallery",
+          "path": "/smile-gallery/",
+          "children": []
+        },
+        {
+          "name": "Advanced Dental Technology",
+          "path": "/advanced-dental-technology/",
+          "children": []
+        },
+        {
+          "name": "In the News",
+          "path": "/in-the-news/",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "/our-services/",
+      "children": [
+        {
+          "name": "I Need a Checkup & Cleaning",
+          "path": "/preventive-dentistry/",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Children's Dentistry",
+              "path": "/childrens-dentistry/"
+            }
+          ]
+        },
+        {
+          "name": "I am Worried About Gum Disease",
+          "path": "/gum-disease-treatment/",
+          "children": []
+        },
+        {
+          "name": "I Have a Cavity or Broken Tooth",
+          "path": "/restorative-dentistry/",
+          "children": [
+            {
+              "name": "Tooth-Colored Fillings",
+              "path": "/tooth-colored-fillings/"
+            },
+            {
+              "name": "Dental Crowns",
+              "path": "/dental-crowns/"
+            }
+          ]
+        },
+        {
+          "name": "I am Missing One or More Teeth",
+          "path": "/missing-teeth/",
+          "children": [
+            {
+              "name": "Dental Bridges",
+              "path": "/dental-bridges/"
+            },
+            {
+              "name": "Roundhouse Dental Bridges",
+              "path": "/roundhouse-dental-bridges/"
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/"
+            },
+            {
+              "name": "All-on-X Dental Implants",
+              "path": "/all-on-x-dental-implants/"
+            },
+            {
+              "name": "Mini Dental Implants",
+              "path": "/mini-dental-implants/"
+            },
+            {
+              "name": "Dentures",
+              "path": "/dentures/"
+            },
+            {
+              "name": "Full Mouth Reconstruction",
+              "path": "/full-mouth-reconstruction/"
+            }
+          ]
+        },
+        {
+          "name": "I Want to Enhance My Smile",
+          "path": "/cosmetic-dentistry/",
+          "children": [
+            {
+              "name": "Veneers",
+              "path": "/veneers/"
+            },
+            {
+              "name": "Teeth Whitening",
+              "path": "/teeth-whitening/"
+            },
+            {
+              "name": "Smile Makeovers",
+              "path": "/smile-makeovers/"
+            }
+          ]
+        },
+        {
+          "name": "I Want a Straighter Smile",
+          "path": "/orthodontics/",
+          "children": [
+            {
+              "name": "Invisalign",
+              "path": "/invisalign/"
+            },
+            {
+              "name": "Fastbraces",
+              "path": "/fastbraces/"
+            },
+            {
+              "name": "Healthy Start",
+              "path": "/healthy-start/"
+            }
+          ]
+        },
+        {
+          "name": "I am Scared of the Dentist",
+          "path": "/sedation-dentistry/",
+          "children": []
+        },
+        {
+          "name": "I Have Jaw Pain",
+          "path": "/tmj-therapy/",
+          "children": []
+        },
+        {
+          "name": "I Have a Dental Emergency",
+          "path": "/emergency-dentistry/",
+          "children": [
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-treatment/"
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/tooth-extractions/"
+            },
+            {
+              "name": "Wisdom Tooth Extractions",
+              "path": "/wisdom-tooth-extractions/"
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "For Patients",
+      "path": "/for-patients/",
+      "children": [
+        {
+          "name": "Your First Visit",
+          "path": "/for-patients/",
+          "children": []
+        },
+        {
+          "name": "Dental Insurance & Financing",
+          "path": "/for-patients/#insurance",
+          "children": []
+        },
+        {
+          "name": "Pay Online",
+          "path": "/for-patients/#pay",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "path": "/reviews/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
+      "name": "Contact",
+      "path": "/contact-us/",
+      "children": [
+        {
+          "name": "Office Info",
+          "path": "/contact-us/",
+          "children": []
+        },
+        {
+          "name": "Request an Appointment",
+          "path": "/request-an-appointment/",
+          "children": []
+        }
+      ]
     }
   ],
   "buttonSections": [
@@ -68,7 +261,7 @@
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "<span class=\"ra-main\">Request</span>An Appointment",
       "hideText": false,
       "link": "/request-an-appointment/",
       "modalTarget": "",
@@ -81,7 +274,8 @@
       "borderWidth": "default",
       "borderColor": "default",
       "textColor": "default",
-      "uppercase": false
+      "uppercase": false,
+      "class": "ra"
     }
   ]
 }

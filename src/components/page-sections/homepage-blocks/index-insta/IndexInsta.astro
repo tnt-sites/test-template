@@ -1,0 +1,215 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+
+interface FeedImage {
+  source?: string;
+  alt?: string;
+}
+
+interface SocialButton {
+  iconSource?: string;
+  text?: string;
+  href?: string;
+}
+
+const {
+  eyebrow = "",
+  heading = "",
+  images = [] as FeedImage[],
+  socialButtons = [] as SocialButton[],
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedImages = Array.isArray(images)
+  ? images.filter((image): image is FeedImage => !!image && typeof image === "object")
+  : [];
+
+const normalizedButtons = Array.isArray(socialButtons)
+  ? socialButtons.filter((button): button is SocialButton => !!button && typeof button === "object")
+  : [];
+
+const imagesArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "images",
+    }
+  : {};
+
+const buttonsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "socialButtons",
+    }
+  : {};
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-insta", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  {...htmlAttributes}
+>
+  {
+    eyebrow && (
+      <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+        {eyebrow}
+      </h2>
+    )
+  }
+  {
+    heading && (
+      <h3 class="insta-heading" data-editable="text" data-prop="heading" set:html={heading} />
+    )
+  }
+
+  {
+    normalizedImages.length > 0 && (
+      <div class="insta-grid" {...imagesArrayDataAttributes}>
+        {normalizedImages.map((image, index) => (
+          <editable-array-item
+            data-component="page-sections/homepage-blocks/index-insta/insta-image"
+            class:list={{ "hide-fifth": index === 4 }}
+          >
+            <img src={image.source} alt={image.alt} />
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    normalizedButtons.length > 0 && (
+      <div class="insta-buttons" {...buttonsArrayDataAttributes}>
+        {normalizedButtons.map((button) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/index-insta/insta-social-button">
+            <a href={button.href || "#"} target="_blank" rel="noopener noreferrer">
+              {button.iconSource && <img src={button.iconSource} alt="" />}
+              {button.text}
+            </a>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-insta {
+      text-align: center;
+
+      .eyebrow-line {
+        color: var(--color-text);
+        display: block;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        line-height: 1.17;
+        margin: 10px auto;
+        text-transform: uppercase;
+      }
+
+      .insta-heading {
+        color: var(--color-text-strong);
+        font-family: var(--font-headings);
+        font-size: clamp(2rem, 4vw, 54px);
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      .insta-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin: var(--spacing-xl) auto;
+
+        > editable-array-item {
+          display: block;
+          flex: 0 1 45%;
+
+          &.hide-fifth {
+            display: none;
+          }
+        }
+
+        img {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
+
+        @media (min-width: 1025px) {
+          flex-wrap: nowrap;
+
+          > editable-array-item {
+            flex: 1 1 0;
+
+            &.hide-fifth {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .insta-buttons {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        justify-content: center;
+
+        a {
+          align-items: center;
+          background-color: #000000;
+          color: #fff;
+          display: inline-flex;
+          font-size: var(--font-size-md);
+          font-weight: var(--font-weight-semibold);
+          gap: 12px;
+          justify-content: center;
+          padding: 0.85rem 1.5rem;
+          text-decoration: none;
+          transition: 0.3s all;
+          border-radius: 13px;
+
+          img {
+            flex-shrink: 0;
+            margin: 0;
+            width: 10px;
+          }
+
+          &:hover,
+          &:focus-visible {
+            background-color: transparent;
+            border-color: #000000;
+            box-shadow: inset 0 0 0 2px #000000;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+</style>

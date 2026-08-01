@@ -1,8 +1,11 @@
 ---
+import Button from "@core-elements/button/Button.astro";
 import Image from "@core-elements/image/Image.astro";
 
 const {
   name = "Provider Name",
+  credentials = "",
+  buttonText = "",
   href = "#",
   imageSource = "",
   imageAlt = "",
@@ -16,8 +19,9 @@ const cleanText = (value: unknown, fallback = "") =>
   typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
 
 const safeVariant = variant === "name" ? "name" : "button";
-const labelClass = safeVariant === "name" ? "name" : "btn";
 const providerName = cleanText(name, "Provider Name");
+const providerCredentials = cleanText(credentials);
+const providerButtonText = cleanText(buttonText, `Meet ${providerName}`);
 const providerHref = cleanText(href, "#");
 const providerImage = cleanText(imageSource);
 const providerImageAlt = cleanText(imageAlt, providerName);
@@ -27,7 +31,7 @@ if (!_component && providerName.length === 0 && providerImage.length === 0) {
 }
 ---
 
-<a href={providerHref} {...htmlAttributes}>
+<a href={providerHref} class:list={["meet-landing-person", `variant-${safeVariant}`]} {...htmlAttributes}>
   {
     providerImage && (
       <Image
@@ -40,11 +44,24 @@ if (!_component && providerName.length === 0 && providerImage.length === 0) {
       />
     )
   }
-  <span
-    class={labelClass}
-    data-editable={editable ? "text" : undefined}
-    data-prop={editable ? "name" : undefined}
-  >
+  <h3 class="name" data-editable={editable ? "text" : undefined} data-prop={editable ? "name" : undefined}>
     {providerName}
-  </span>
+    {providerCredentials && (
+      <small data-editable={editable ? "text" : undefined} data-prop={editable ? "credentials" : undefined}>
+        {providerCredentials}
+      </small>
+    )}
+  </h3>
+  {
+    safeVariant === "button" && (
+      <Button
+        element="span"
+        class="meet-landing-btn"
+        text={providerButtonText}
+        variant="primary"
+        editable={editable}
+        data-prop="buttonText"
+      />
+    )
+  }
 </a>

@@ -54,7 +54,7 @@ const htmlAttributes = Object.fromEntries(
   />
   <Heading
     class="more-to-explore__heading mt-12"
-    level="h6"
+    level="h2"
     size="xl"
     alignX="center"
     text={heading}
@@ -68,11 +68,38 @@ const htmlAttributes = Object.fromEntries(
     > .background-image {
       z-index: var(--layer-1);
     }
+
+    .more-to-explore__heading {
+      font-size: 70px;
+      line-height:;
+    }
   }
 
   @layer components {
     .more-to-explore__heading .heading-text .color {
       color: var(--color-brand);
+    }
+
+    .more-to-explore .buttons,
+    .more-to-explore .buttons > editable-array {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      justify-content: center;
+    }
+
+    .more-to-explore .buttons .button {
+      flex: 0 0 350px;
+      min-width: 350px;
+      width: 350px;
+    }
+
+    @media (max-width: 768px) {
+      .more-to-explore .buttons .button {
+        flex-basis: 100%;
+        min-width: auto;
+        width: 100%;
+      }
     }
   }
 </style>

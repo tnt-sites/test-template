@@ -1,0 +1,116 @@
+---
+const {
+  h1Text = "",
+  h2Text = "",
+  paragraphs = [] as string[],
+  image = { source: "", alt: "" },
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const normalizedParagraphs = Array.isArray(paragraphs)
+  ? paragraphs.filter((p) => typeof p === "string" && p.trim().length > 0)
+  : [];
+---
+
+<section class:list={["pep-banner-circus", className]} {...htmlAttributes}>
+  {
+    image?.source && (
+      <img class="pep-banner-circus__bg" src={image.source} alt={image.alt || ""} />
+    )
+  }
+  <div class="pep-banner-circus__top">
+    {h1Text && <h1 data-editable="text" data-prop="h1Text">{h1Text}</h1>}
+    {h2Text && <h2 data-editable="text" data-prop="h2Text">{h2Text}</h2>}
+    {
+      normalizedParagraphs.length > 0 && (
+        <div class="pep-banner-circus__paragraphs">
+          {normalizedParagraphs.map((p) => (
+            <p class="pep-banner-circus__p" set:html={p} />
+          ))}
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .pep-banner-circus {
+      overflow: hidden;
+      position: relative;
+
+      .pep-banner-circus__bg {
+        display: block;
+        height: 100vh;
+        max-height: 900px;
+        min-height: 500px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .pep-banner-circus__top {
+        left: 50%;
+        max-width: 800px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+      }
+
+      h1 {
+        color: #000;
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(2rem, 4vw, 50px);
+        font-weight: 700;
+        margin: 0;
+      }
+
+      h2 {
+        color: #000;
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(2.5rem, 7vw, 79px);
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      .pep-banner-circus__paragraphs {
+        margin-top: 30px;
+      }
+
+      .pep-banner-circus__p {
+        color: #000;
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(1rem, 2vw, 25px);
+        font-weight: 400;
+        line-height: 1.3;
+        margin: 0 0 20px;
+
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .pep-banner-circus__bg {
+          display: none;
+        }
+
+        .pep-banner-circus__top {
+          left: unset;
+          margin: 0 auto;
+          padding: 50px 20px 20px;
+          position: relative;
+          top: unset;
+          transform: unset;
+        }
+      }
+    }
+  }
+</style>

@@ -62,6 +62,10 @@ variant:
         name: Ghost
       - id: text
         name: Text
+      - id: alt
+        name: Alt
+      - id: reverse
+        name: Reverse (white, for dark sections)
 size:
   type: select
   comment: The font size of the button.

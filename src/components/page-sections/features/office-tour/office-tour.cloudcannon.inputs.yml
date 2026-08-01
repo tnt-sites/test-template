@@ -1,3 +1,34 @@
+heading:
+  type: text
+  comment: Optional heading shown above the carousel.
+bottomEyebrow:
+  type: text
+  comment: Small uppercase line shown above the bottom heading.
+bottomHeading:
+  type: markdown
+  comment: Heading text shown below the carousel.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+bottomText:
+  type: textarea
+  comment: Paragraph text shown below the bottom heading.
+bottomButtonSections:
+  type: array
+  label: Bottom Buttons
+  comment: Buttons shown below the bottom text.
+  options:
+    structures: _structures.buttonSections
 backgroundColor:
   type: select
   comment: Background color used behind the grid.

@@ -4,8 +4,15 @@ description: Description for Index Banner component.
 value:
   _component: page-sections/homepage-blocks/index-banner
   id: ""
+  eyebrow: Eyebrow Text
   heading: Index Banner <span class="heading-color">Heading</span>
-  backgroundColor: base
+  quickLinks:
+    - text: Link Text
+      href: /
+  badgeSource: ""
+  badgeAlt: ""
+  thumbnailSource: ""
+  thumbnailAlt: ""
   backgroundGradient: ""
   backgroundImage:
     source: null

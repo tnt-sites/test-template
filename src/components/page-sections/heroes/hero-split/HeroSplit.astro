@@ -2,10 +2,8 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Image from "@core-elements/image/Image.astro";
-import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Text from "@core-elements/text/Text.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
-import Split from "@wrappers/split/Split.astro";
 
 const {
   eyebrow = "",
@@ -13,14 +11,12 @@ const {
   subtext = "",
   imageSource = "",
   imageAlt = "",
-  imageAspectRatio = "none",
   buttonSections = [],
   reverse = false,
   colorScheme = "inherit",
   backgroundColor,
   backgroundGradient = "",
   backgroundImage,
-  paddingVertical = "4xl",
   class: className,
   _component,
   ...htmlAttributes
@@ -28,9 +24,8 @@ const {
 ---
 
 <CustomSection
-  maxContentWidth="xl"
-  paddingHorizontal="lg"
-  paddingVertical={paddingVertical}
+  paddingHorizontal="none"
+  paddingVertical="none"
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
   backgroundGradient={backgroundGradient}
@@ -38,35 +33,96 @@ const {
   class:list={["hero", className]}
   {...htmlAttributes}
 >
-  <Split
-    distributionMode="flexible-fixed"
-    fixedWidth="400"
-    verticalAlignment="center"
-    reverse={reverse}
-    minSplitWidth={710}
-    gap="2xl"
-    class="hero-split"
-  >
-    <Fragment slot="first">
-      <SimpleText class="eyebrow" data-prop="eyebrow">
-        {eyebrow}
-      </SimpleText>
-      <Heading level="h1" size="2xl" data-prop="heading" text={heading} />
+  <div class:list={["hero-split-grid", { reverse }]}>
+    <div class="hero-split-text">
+      <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
+      <Heading
+        level="h2"
+        size="2xl"
+        class="hero-split-heading"
+        data-prop="heading"
+        text={heading}
+      />
       <Text class="subtext" data-prop="subtext" text={subtext} />
       <ButtonGroup class="buttons-container" buttonSections={buttonSections} />
-    </Fragment>
-    <Fragment slot="second">
+    </div>
+    <div class="hero-split-image">
       <Image
         source={imageSource}
         alt={imageAlt}
-        rounded="true"
         editable={true}
-        aspectRatio={imageAspectRatio}
         data-prop-src="imageSource"
         data-prop-alt="imageAlt"
         data-editable="image"
         priority={true}
       />
-    </Fragment>
-  </Split>
+    </div>
+  </div>
 </CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 34rem;
+      padding: 5px 20px 60px;
+
+      &.reverse {
+        grid-template-columns: 1fr 1fr;
+
+        .hero-split-text {
+          order: 2;
+        }
+
+        .hero-split-image {
+          order: 1;
+        }
+      }
+    }
+
+    .hero-split-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;;
+      max-width: 510px;
+      margin: 0 auto;
+
+      .eyebrow {
+        color: var(--color-text-on-brand);
+      }
+
+      h2{font-size: 54px;}
+    }
+
+    .hero-split-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-2xl);
+    }
+
+    .hero-split-heading {
+      margin: 0;
+    }
+
+    @media (--to-md) {
+      .hero-split-grid,
+      .hero-split-grid.reverse {
+        grid-template-columns: 1fr;
+        min-height: 0;
+
+        .hero-split-text,
+        .hero-split-image {
+          order: initial;
+        }
+
+        .hero-split-image {
+          order: -1;
+        }
+      }
+    }
+  }
+</style>

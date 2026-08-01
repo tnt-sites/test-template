@@ -104,29 +104,27 @@ const htmlAttributes = Object.fromEntries(
   .pep-callout-shadows__heading {
     background-color: var(--csq-heading-bg);
     color: var(--csq-heading-text, var(--color-text-inverse, #fff));
+    font-family: var(--font-body);
     font-size: clamp(1.75rem, 4vw, 3rem);
-    font-weight: 400;
+    font-weight: 700;
     margin: 0;
     padding: 1.5rem 2.5rem;
     width: 100%;
   }
 
   .pep-callout-shadows__grid {
+    align-items: flex-start;
     display: flex;
     flex-flow: row;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem 1rem;
+    justify-content: center;
   }
 
   .pep-callout-shadows__item {
     background: inherit;
     border-radius: 16px;
-    /* Use PCSS color-mix for shadow with opacity */
-    box-shadow:
-      0 4px 16px color-mix(in srgb, var(--csq-shadow-color) 50%, transparent 50%),
-      0 1.5px 6px color-mix(in srgb, var(--csq-shadow-color) 30%, transparent 70%);
-    flex: 1 1 25%;
-    margin: 0 0.5rem;
+    flex: 0 1 200px;
     min-width: 0;
     padding: 1.5rem 0.5rem;
     text-align: center;
@@ -162,18 +160,13 @@ const htmlAttributes = Object.fromEntries(
   @media (max-width: 1024px) {
     .pep-callout-shadows__item {
       flex: 0 1 45%;
-      margin: 20px auto;
     }
-    
   }
 
   @media (max-width: 768px) {
     .pep-callout-shadows__item {
       background: inherit;
       border-radius: 16px;
-      box-shadow:
-        0 4px 16px color-mix(in srgb, var(--csq-shadow-color) 50%, transparent 50%),
-        0 1.5px 6px color-mix(in srgb, var(--csq-shadow-color) 30%, transparent 70%);
       flex: 1 1 25%;
       margin: 0 0.5rem;
       min-width: 0;

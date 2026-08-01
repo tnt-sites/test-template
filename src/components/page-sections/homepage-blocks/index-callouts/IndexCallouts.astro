@@ -1,17 +1,41 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
-import Heading from "@core-elements/heading/Heading.astro";
+
+interface CalloutItem {
+  imageSource?: string;
+  imageAlt?: string;
+  title?: string;
+  text?: string;
+  href?: string;
+}
 
 const {
+  eyebrow = "",
   heading = "",
+  intro = "",
+  callouts = [] as CalloutItem[],
   backgroundColor = "base",
   id = "",
   backgroundImage,
   backgroundGradient = "",
   class: className,
   editable = true,
+  _component,
   ...rest
 } = Astro.props;
+
+const normalizedCallouts = Array.isArray(callouts)
+  ? callouts.filter((callout): callout is CalloutItem => !!callout && typeof callout === "object")
+  : [];
+
+const calloutsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "callouts",
+    }
+  : {};
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
@@ -20,24 +44,212 @@ const htmlAttributes = Object.fromEntries(
 
 <CustomSection
   class:list={["index-callouts", className]}
+  id={id || undefined}
   maxContentWidth="2xl"
   paddingHorizontal="lg"
   paddingVertical="4xl"
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <div class="callouts-top">
+    <div class="title">
+      {
+        eyebrow && (
+          <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+            {eyebrow}
+          </h2>
+        )
+      }
+      {
+        heading && (
+          <h3 class="callouts-heading" data-editable="text" data-prop="heading" set:html={heading} />
+        )
+      }
+    </div>
+    {
+      intro && (
+        <div class="intro" data-editable="text" data-prop="intro">
+          {intro}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    normalizedCallouts.length > 0 && (
+      <div class="callouts-links" {...calloutsArrayDataAttributes}>
+        {normalizedCallouts.map((callout) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/index-callouts/callout-item">
+            <a href={callout.href || "#"}>
+              {callout.imageSource && <img src={callout.imageSource} alt={callout.imageAlt} />}
+              <div class="callout-body">
+                <h3 class="callout-title">
+                  <small set:html={callout.title} />
+                </h3>
+                <p>{callout.text}</p>
+                <span class="learn">
+                  Learn More
+                  <span class="arrow" aria-hidden="true">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="44.23"
+                      height="12.623"
+                      viewBox="0 0 44.23 12.623"
+                    >
+                      <g transform="translate(0.75 1.06)">
+                        <g transform="translate(37.074)">
+                          <path
+                            d="M1082.2,353.146l5.656,5.252-5.656,5.252"
+                            transform="translate(-1082.202 -353.146)"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="1.5"
+                          />
+                        </g>
+                        <line
+                          x1="42.73"
+                          transform="translate(0 5.252)"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.5"
+                        />
+                      </g>
+                    </svg>
+                  </span>
+                </span>
+              </div>
+            </a>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
 </CustomSection>
 
-<style>
-  .index-callouts {
-    background:
-      var(
-        --section-bg-gradient,
-        linear-gradient(transparent, transparent)
-      );
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-callouts {
+      .callouts-top {
+        align-items: flex-end;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+        justify-content: space-between;
+        margin-bottom: 50px;
+        text-align: center;
+
+        @media (min-width: 1025px) {
+          text-align: left;
+        }
+      }
+
+      .eyebrow-line {
+        color: var(--color-text);
+        display: block;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        line-height: 1.17;
+        margin: 10px auto;
+        text-transform: uppercase;
+      }
+
+      .callouts-heading {
+        color: var(--color-text-strong);
+        font-family: var(--font-headings);
+        font-size: clamp(2rem, 4vw, 54px);
+        line-height: 0.98;
+        font-weight: 400;
+        margin: 0;
+      }
+
+      .intro {
+        color: var(--color-text);
+        flex: 0 1 500px;
+
+        @media (min-width: 1025px) {
+          text-align: right;
+        }
+      }
+
+      .callouts-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+
+        > editable-array-item {
+          flex: 0 1 377px;
+        }
+
+        a {
+          color: var(--color-text);
+          display: block;
+          text-decoration: none;
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      .callout-body {
+        padding: 10px 0;
+      }
+
+      .callout-title {
+        margin-top: 10px;
+
+        small {
+          color: var(--color-text-strong);
+          display: block;
+          font-family: var(--font-body);
+          font-size: 15px;
+          font-weight: 500;
+          letter-spacing: 2.4px;
+          line-height: 1.17;
+          text-transform: uppercase;
+        }
+      }
+
+      .learn {
+        color: var(--color-text);
+        display: inline-block;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        margin-top: var(--spacing-sm);
+        text-transform: uppercase;
+
+        .arrow {
+          display: inline-block;
+          margin-left: 5px;
+          vertical-align: middle;
+
+          svg {
+            display: block;
+          }
+
+          path,
+          line {
+            transition: stroke 0.3s ease;
+          }
+        }
+      }
+
+      .callouts-links a:hover .learn,
+      .callouts-links a:focus-visible .learn {
+        color: var(--color-brand);
+      }
+    }
   }
 </style>

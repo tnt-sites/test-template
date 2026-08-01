@@ -36,6 +36,7 @@ const normalizedText = text
 
 const md = MarkdownIt({ html: true });
 let markdownText = normalizedText ? md.renderInline(normalizedText) : "";
+
 markdownText = markdownText.replace(/\n/g, "<br />");
 const textForAria = markdownText
   .replace(/<[^>]*>/g, " ")
@@ -46,6 +47,7 @@ const resolveSelectValue = (value: any): string | undefined => {
   if (typeof value === "string") return value.trim().toLowerCase();
   if (value && typeof value === "object") {
     const candidate = value.id ?? value.value ?? value.name;
+
     if (typeof candidate === "string") return candidate.trim().toLowerCase();
   }
   return undefined;
@@ -53,12 +55,13 @@ const resolveSelectValue = (value: any): string | undefined => {
 
 const normalizeChoice = (value: any, allowed: string[], fallback: string) => {
   const normalized = resolveSelectValue(value);
+
   return normalized && allowed.includes(normalized) ? normalized : fallback;
 };
 
 const normalizedVariant = normalizeChoice(
   variant,
-  ["primary", "secondary", "tertiary", "ghost", "text"],
+  ["primary", "secondary", "tertiary", "ghost", "text", "alt", "reverse"],
   "primary"
 );
 const normalizedSize = normalizeChoice(size, ["sm", "md", "lg"], "md");
@@ -158,32 +161,30 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
 <style lang="pcss" is:global>
   @layer components {
     .button {
-      align-items: center;
-      background-color: var(--color-bg-surface);
-      border: 1px solid var(--color-border);
-      border-radius: 30px;
-      color: var(--color-text-strong);
+      position: relative;
+      z-index: 1;
       display: inline-flex;
-      flex-shrink: 0;
-      font-weight: var(--font-weight-semibold);
-      gap: 0.15em;
+      align-items: center;
       justify-content: center;
-      min-height: 10px;
-      min-width: 0;
-      padding-block: var(--spacing-em-sm);
-      padding-inline: var(--spacing-em-sm);
-      text-align: center;
-      text-decoration: none;
-      transition-duration: var(--animation-normal);
-      transition-property: background-color, color, border-color;
-      transition-timing-function: ease-in-out;
+      gap: 0.15em;
+      flex-shrink: 0;
       vertical-align: middle;
-      line-height: 1.2;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.3s all;
+      font: 500 13px/1.2 "proxima-nova", sans-serif;
+      letter-spacing: 1.3px;
+      color: #000000;
+      text-transform: uppercase;
+      min-width: 285px;
+      margin: 5px;
+      padding: 14px 10px;
+      border-radius: 13px;
+      background-color: #00000;
+      border: 2px solid #000000;
+      text-decoration: none;
 
       &:hover {
-        background-color: var(--color-bg-muted);
-        border-color: var(--color-border-strong);
-        color: var(--color-text-strong);
         cursor: pointer;
       }
 
@@ -246,7 +247,7 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       }
 
       &.radius-default {
-        border-radius: 30px;
+        border-radius: 13px;
       }
 
       &.radius-none {
@@ -291,7 +292,6 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
 
       &.border-width-default,
       &.border-width-xs {
-        border-width: 1px;
       }
 
       &.border-width-none {
@@ -406,29 +406,28 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       }
 
       &.variant-primary {
-        background-color: var(--color-bg-brand);
-        border-color: transparent;
-        color: var(--color-text-on-brand);
+        background-color: #000000;
+        border-color: #000000;
+        color: #fff;
 
         &:hover,
         &:focus {
-          background-color: var(--color-bg-brand-muted);
-          border-color: transparent;
-          color: var(--color-text-on-brand);
+          background-color: transparent;
+          border-color: #000000;
+          color: #000000;
         }
       }
 
       &.variant-secondary {
         background-color: var(--color-bg-brand-secondary);
-        border-color: transparent;
-          color: var(--color-text-on-brand);
+        border-color: var(--color-brand-secondary);
+        color: var(--color-text-on-brand);
 
         &:hover,
         &:focus {
-
-          background-color: var(--color-bg-brand-muted);
-          border-color: transparent;
-          color: #fff;
+          background-color: transparent;
+          border-color: var(--color-brand-secondary);
+          color: var(--color-brand-secondary);
         }
       }
 
@@ -439,9 +438,35 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
 
         &:hover,
         &:focus {
-          background-color: var(--color-bg-surface);
-          border-color: var(--color-border-strong);
-          color: var(--color-text-strong);
+          background-color: var(--color-text-strong);
+          border-color: var(--color-text-strong);
+          color: var(--color-bg);
+        }
+      }
+
+      &.variant-alt {
+        background-color: transparent;
+        border-color: #000000;
+        color: #000000;
+
+        &:hover,
+        &:focus {
+          background-color: #000000;
+          border-color: #000000;
+          color: #fff;
+        }
+      }
+
+      &.variant-reverse {
+        background-color: #fff;
+        border-color: #fff;
+        color: #000000;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          border-color: #fff;
+          color: #fff;
         }
       }
 
@@ -490,6 +515,12 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
         min-width: auto;
         display: block;
       }
+    }
+
+    [data-theme="contrast"] .button {
+      background-color: #fff;
+      border-color: #fff;
+      color: #000000;
     }
   }
 </style>

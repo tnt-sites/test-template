@@ -1,0 +1,14 @@
+label: Pep Banner Circus
+icon: image
+description: Full-bleed background photo with a centered black heading and paragraphs.
+value:
+  _component: pep-components/pep-banner-circus
+  h1Text: Heading Line One
+  h2Text: Heading Line Two
+  image:
+    source: ""
+    alt: ""
+  paragraphs:
+    - Paragraph text.
+_inputs_from_glob:
+  - /src/components/pep-components/pep-banner-circus/pep-banner-circus.cloudcannon.inputs.yml

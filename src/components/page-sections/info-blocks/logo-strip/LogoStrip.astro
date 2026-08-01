@@ -1,0 +1,139 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  logos = [],
+  subtext = "",
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const hasLogos = Array.isArray(logos) && logos.length > 0;
+
+const arrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-prop": "logos",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+    }
+  : {};
+
+if (!_component && !hasLogos) {
+  return;
+}
+---
+
+<CustomSection
+  class:list={["logo-strip", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="lg"
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <div class="hr-deco">
+    <span></span>
+    <Image source="/src/assets/images/deco-white.png" alt="" editable={false} priority={false} />
+    <span></span>
+  </div>
+  {
+    hasLogos && (
+      <div class="logo-strip-row" {...arrayDataAttributes}>
+        {logos.map((logo: any) => (
+          <editable-array-item data-component="page-sections/info-blocks/logo-strip/logo-strip-item">
+            <span class="logo-strip-item">
+              <img src={logo.source} alt={logo.alt} />
+            </span>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+  <hr class="logo-strip-rule" />
+  {subtext && <Text class="logo-strip-subtext" data-prop="subtext" text={subtext} />}
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .logo-strip {
+      padding-bottom: 60px;
+      .hr-deco {
+        align-items: center;
+        display: flex;
+        gap: 12px;
+        margin: 20px auto;
+        max-width: 1200px;
+
+        span {
+          background: currentColor;
+          display: block;
+          flex: 1;
+          height: 1px;
+        }
+
+        .image {
+          flex-shrink: 0;
+          margin: 0;
+          width: 40px;
+        }
+      }
+
+      .logo-strip-row {
+        align-items: center;
+        display: flex;
+
+        flex-wrap: nowrap;
+        gap: 10px;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1200px;
+
+        > editable-array-item,
+        > .logo-strip-item {
+          flex: 0 1 auto;
+          min-width: 0;
+        }
+      }
+
+      .logo-strip-item {
+        display: block;
+        text-align: center;
+
+        .image {
+          margin: 0;
+        }
+
+        img {
+          margin-inline: auto;
+          max-width: 100%;
+          width: auto;
+        }
+      }
+
+      .logo-strip-rule {
+        background-color: currentColor;
+        border: none;
+        height: 2px;
+        margin: 20px auto 0;
+        max-width: 1200px;
+      }
+
+      .logo-strip-subtext {
+        margin: var(--spacing-lg) auto 0;
+        max-width: 1200px;
+      }
+    }
+  }
+</style>

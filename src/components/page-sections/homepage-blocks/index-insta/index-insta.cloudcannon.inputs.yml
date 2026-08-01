@@ -1,0 +1,103 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the heading (e.g. your handle).
+heading:
+  type: text
+  comment: Main heading text.
+images:
+  type: array
+  label: Feed Images
+  comment: Row of social feed photos. The 5th image is hidden below the desktop breakpoint.
+  options:
+    structures:
+      values:
+        - label: Image
+          value:
+            source: ""
+            alt: ""
+socialButtons:
+  type: array
+  label: Social Buttons
+  comment: Follow/like buttons shown below the image grid.
+  options:
+    structures:
+      values:
+        - label: Button
+          value:
+            iconSource: ""
+            text: Follow Us
+            href: /
+backgroundColor:
+  type: select
+  comment: Background color used behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+backgroundGradient:
+  type: textarea
+  comment: Optional CSS gradient applied behind the section content.
+backgroundImage:
+  type: object
+  comment: Background image configuration for the section.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  comment: URL or path to the background image.
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  comment: Alt text for the background image.
+  type: textarea
+backgroundImage.positionVertical:
+  comment: Vertical position of the background image.
+  type: select
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  comment: Horizontal position of the background image.
+  type: select
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Component from "@components/utils/renderBlock.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import Carousel from "@wrappers/carousel/Carousel.astro";
 import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
 
@@ -13,6 +14,10 @@ const {
   tourSlides = [],
   slideNumbers = true,
   floatingArrows = false,
+  bottomEyebrow = "",
+  bottomHeading = "",
+  bottomText = "",
+  bottomButtonSections = [],
   class: className,
   editable = true,
   ...rest
@@ -45,7 +50,7 @@ const isPeek = String(className ?? "")
 >
   {
     heading && (
-      <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+      <Heading level="h3" size="lg" alignX="center" data-prop="heading" text={heading} />
     )
   }
 
@@ -76,6 +81,34 @@ const isPeek = String(className ?? "")
     slideNumbers && normalizedTourSlides.length > 0 && (
       <div id="carouselSlideNumber" class="carousel-slide-number">
         1 / {normalizedTourSlides.length}
+      </div>
+    )
+  }
+
+  {
+    (bottomEyebrow || bottomHeading || bottomText || bottomButtonSections.length > 0) && (
+      <div class="office-tour-bottom">
+        {bottomEyebrow && (
+          <h2 class="eyebrow-line" data-editable="text" data-prop="bottomEyebrow">
+            {bottomEyebrow}
+          </h2>
+        )}
+        {bottomHeading && (
+          <h3
+            class="office-tour-bottom-heading"
+            data-editable="text"
+            data-prop="bottomHeading"
+            set:html={bottomHeading}
+          />
+        )}
+        {bottomText && (
+          <p data-editable="text" data-prop="bottomText">
+            {bottomText}
+          </p>
+        )}
+        {bottomButtonSections.length > 0 && (
+          <ButtonGroup buttonSections={bottomButtonSections} alignX="center" data-prop="bottomButtonSections" />
+        )}
       </div>
     )
   }
@@ -119,12 +152,24 @@ const isPeek = String(className ?? "")
 
   .office-tour.peek .slide {
     margin: 0 20px;
-    opacity: 0.5;
-    transition: opacity 0.3s ease;
+    opacity: 0.7;
+
+    transform-origin: top center;
+    transition:
+      transform 0.4s ease,
+      opacity 0.4s ease;
+
+      img{
+            transform: scale(0.7);
+      }
   }
 
   .office-tour.peek .slide.is-snapped {
     opacity: 1;
+    transform: scale(1);
+    z-index: 5;
+
+    img{transform: scale(1);}
   }
 
   .office-tour.floating-arrows .carousel > .controls-wrapper > .prev,
@@ -148,11 +193,95 @@ const isPeek = String(className ?? "")
     display: none;
   }
 
-  /* Slide number overlay */
+  /* Slick-style controls row (arrows + dots), matching legacy gallery/office-tour carousels */
+  .office-tour .carousel > .controls-wrapper {
+    gap: 0.5rem;
+    margin: 10px auto;
+    max-width: 1000px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev,
+  .office-tour .carousel > .controls-wrapper > .next {
+    color: #000;
+    min-width: auto;
+    opacity: 0.4;
+    transition: 0.3s all;
+    z-index: 5;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev:hover,
+  .office-tour .carousel > .controls-wrapper > .next:hover {
+    color: #000;
+    opacity: 1;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev svg,
+  .office-tour .carousel > .controls-wrapper > .next svg {
+    height: 22px;
+    width: 22px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev svg path,
+  .office-tour .carousel > .controls-wrapper > .next svg path {
+    fill: currentcolor;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator {
+    background-color: #00bbf2;
+    opacity: 0.18;
+    transition: opacity 0.3s ease;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator[data-selected="true"] {
+    opacity: 1;
+    transform: none;
+  }
+
+  .office-tour-bottom {
+    margin: 30px auto 0;
+    max-width: 1000px;
+    padding: 0 20px;
+    text-align: center;
+
+    .eyebrow-line {
+      color: var(--color-text);
+      display: block;
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2.4px;
+      line-height: 1.17;
+      margin: 10px auto;
+      text-transform: uppercase;
+    }
+  }
+
+  .office-tour-bottom-heading {
+    color: var(--color-text-strong);
+    font-family: var(--font-headings);
+    font-size: clamp(2rem, 4vw, 54px);
+    line-height: 0.98;
+    margin: 0;
+  }
+
+  .office-tour-bottom p {
+    color: var(--color-text);
+    margin-top: var(--spacing-md);
+  }
+
+  .office-tour-bottom .button-group {
+    justify-content: center;
+    margin-top: var(--spacing-md);
+  }
+
+  /* Slide number overlay, matching legacy .pagingInfo */
   .carousel-slide-number {
-      display: table;
-    font-size: 1.2rem;
-      margin: 0;
+    color: #000;
+    display: table;
+    font-family: reiher-headline, sans-serif;
+    font-size: 30px;
+    margin: 0;
+    opacity: 0.4;
     text-align: center;
   }
 </style>

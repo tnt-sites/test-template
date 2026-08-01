@@ -28,11 +28,34 @@ export interface Props {
 const props = Astro.props;
 const formattedTitle = seoData.titleFormat.replace("{title}", props.title);
 
+// --- Branding: named color/font fields mapped to their CSS custom properties ---
+const namedBrandingVars: [string, string | undefined][] = [
+  ["--color-brand", brandingData.colorBrand],
+  ["--color-brand-secondary", brandingData.colorBrandSecondary],
+  ["--color-brand-muted", brandingData.colorBrandTertiary],
+  ["--color-brand-subtle", brandingData.colorBrandSubtle],
+  ["--color-brand-on", brandingData.colorBrandOn],
+  ["--color-text-on-brand", brandingData.colorTextOnBrand],
+  ["--color-link", brandingData.colorLink],
+  ["--color-link-hover", brandingData.colorLinkHover],
+  ["--font-body", brandingData.bodyFont?.fontFamily],
+  ["--font-headings", brandingData.headingsFont?.fontFamily],
+];
+const namedBrandingCss = namedBrandingVars
+  .filter(([, value]) => typeof value === "string" && value.trim())
+  .map(([variable, value]) => `${variable}: ${value!.trim()};`)
+  .join(" ");
+
 // --- Branding: extraColors runtime overrides (arbitrary user-defined CSS vars) ---
 const brandingExtraColors = Array.isArray(brandingData.extraColors) ? brandingData.extraColors : [];
-const extraColorsCss = (brandingExtraColors as any[])
-  .filter((e: any) => e?.variable?.trim() && e?.value?.trim())
-  .map((e: any) => `${e.variable.trim()}: ${e.value.trim()};`)
+const extraColorsCss = [
+  namedBrandingCss,
+  (brandingExtraColors as any[])
+    .filter((e: any) => e?.variable?.trim() && e?.value?.trim())
+    .map((e: any) => `${e.variable.trim()}: ${e.value.trim()};`)
+    .join(" "),
+]
+  .filter(Boolean)
   .join(" ");
 
 // --- Branding: font link URLs ---
@@ -108,7 +131,7 @@ const globalModals = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <style is:inline>
       @layer reset, base, components, page-sections, utils, overrides;
@@ -147,6 +170,7 @@ const globalModals = [
 
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap-index.xml" />
     <link href="https://tntwebsites.com/tnticons/css/fontello.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.typekit.net/cfg5cpa.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -165,7 +189,7 @@ const globalModals = [
           id={modal.id.trim().replace(/^#/, "")}
           closeLabel={modal.closeLabel}
           showCloseButton={modal.showCloseButton}
-          class={modal.class}
+          class:list={modal.class}
           contentSections={modal.contentSections}
           propName={`siteInfo.modals.${index}.contentSections`}
         />

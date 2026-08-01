@@ -1,0 +1,14 @@
+label: Index Find
+icon: map
+description: Black split section with a bulleted list and an embedded map.
+value:
+  _component: page-sections/homepage-blocks/index-find
+  id: ""
+  heading: Heading Text
+  bullets:
+    - text: Bullet point text.
+  buttonText: Get Directions
+  buttonHref: /
+  mapEmbedUrl: ""
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-find/index-find.cloudcannon.inputs.yml

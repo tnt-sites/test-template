@@ -1,7 +1,6 @@
 ---
 import Button from "@core-elements/button/Button.astro";
 import Icon from "@core-elements/icon/Icon.astro";
-import Image from "@core-elements/image/Image.astro";
 
 const {
   logoSource,
@@ -80,14 +79,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
   <div class="mobile-header">
     <div class="mobile-logo">
       <slot name="logo">
-        <Image
-          source={logoSource}
-          alt={logoAlt || "Logo"}
-          width={120}
-          height={48}
-          class="mobile-logo-image"
-          editable={false}
-        />
+        <img src={logoSource} alt={logoAlt || "Logo"} class="mobile-logo-image" />
       </slot>
     </div>
     <label

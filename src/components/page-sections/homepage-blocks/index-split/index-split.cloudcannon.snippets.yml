@@ -12,10 +12,29 @@ indexSplit:
         type: string
         optional: true
         remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: heading
         type: string
         optional: true
         remove_empty: true
+      - editor_key: text
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonHref
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: doctors
+        type: array
+        optional: true
       - editor_key: backgroundColor
         type: string
         optional: true

@@ -1,0 +1,16 @@
+indexDivider:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Index Divider
+    icon: horizontal_rule
+  definitions:
+    component_name: IndexDivider
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/index-divider/index-divider.cloudcannon.inputs.yml

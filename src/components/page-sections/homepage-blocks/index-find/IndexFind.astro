@@ -1,0 +1,174 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Button from "@core-elements/button/Button.astro";
+
+interface Bullet {
+  text?: string;
+}
+
+const {
+  heading = "",
+  bullets = [] as Bullet[],
+  buttonText = "",
+  buttonHref = "",
+  mapEmbedUrl = "",
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedBullets = Array.isArray(bullets)
+  ? bullets.filter((bullet): bullet is Bullet => !!bullet && typeof bullet === "object")
+  : [];
+
+const bulletsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "bullets",
+    }
+  : {};
+
+const embedSrc = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-find", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="none"
+  paddingVertical="none"
+  colorScheme="contrast"
+  backgroundColor="black"
+  {...htmlAttributes}
+>
+  <div class="find-row">
+    <article class="order-last">
+      {
+        heading && (
+          <h3 class="find-heading" data-editable="text" data-prop="heading" set:html={heading} />
+        )
+      }
+      {
+        normalizedBullets.length > 0 && (
+          <ul {...bulletsArrayDataAttributes}>
+            {normalizedBullets.map((bullet) => (
+              <editable-array-item data-component="page-sections/homepage-blocks/index-find/find-bullet">
+                <li>{bullet.text}</li>
+              </editable-array-item>
+            ))}
+          </ul>
+        )
+      }
+      {
+        buttonText && (
+          <div class="find-cta">
+            <Button text={buttonText} link={buttonHref} variant="reverse" data-prop="buttonText" />
+          </div>
+        )
+      }
+    </article>
+    {
+      embedSrc && (
+        <div class="find-map">
+          <iframe
+            src={embedSrc}
+            title="Office location map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          />
+        </div>
+      )
+    }
+  </div>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-find {
+      .find-row {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media (min-width: 1025px) {
+          flex-direction: row;
+        }
+      }
+
+      .order-last {
+        @media (min-width: 1025px) {
+          order: 2;
+        }
+      }
+
+      article {
+        margin: 0 auto;
+        max-width: 1400px;
+        padding: var(--spacing-2xl) var(--spacing-lg);
+        text-align: center;
+      }
+
+      .find-heading {
+        color: #fff;
+        font-family: var(--font-headings);
+        font-size: clamp(2rem, 4vw, 54px);
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      ul {
+        display: table;
+        font-size: 16px;
+        margin: 50px auto 0;
+        max-width: 430px;
+        text-align: left;
+
+        li {
+          color: #fff;
+          margin-bottom: 0.5em;
+          padding-left: 1.4em;
+          position: relative;
+
+          &:before {
+            color: #fff;
+            content: "●";
+            font-size: 0.55em;
+            left: 0;
+            position: absolute;
+            top: 0.4em;
+          }
+        }
+      }
+
+      .find-cta {
+        margin-top: var(--spacing-lg);
+      }
+
+      .find-map {
+        flex: 0 1 700px;
+        width: 100%;
+
+        iframe {
+          border: 0;
+          display: block;
+          height: 450px;
+          width: 100%;
+
+          @media (min-width: 1025px) {
+            height: 700px;
+          }
+        }
+      }
+    }
+  }
+</style>

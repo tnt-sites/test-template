@@ -1,0 +1,3 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.

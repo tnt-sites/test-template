@@ -1,0 +1,188 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Button from "@core-elements/button/Button.astro";
+
+interface FlashCard {
+  heading?: string;
+  text?: string;
+  buttonText?: string;
+  href?: string;
+  backgroundSource?: string;
+}
+
+const {
+  cards = [] as FlashCard[],
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedCards = Array.isArray(cards)
+  ? cards.filter((card): card is FlashCard => !!card && typeof card === "object")
+  : [];
+
+const cardsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "cards",
+    }
+  : {};
+
+const bgVars = normalizedCards
+  .map((card, index) =>
+    card.backgroundSource ? `--flash-bg-${index + 1}: url('${card.backgroundSource}')` : ""
+  )
+  .filter(Boolean)
+  .join("; ");
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-flash", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  backgroundImage={backgroundImage}
+  style={[backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : "", bgVars]
+    .filter(Boolean)
+    .join("; ")}
+  {...htmlAttributes}
+>
+  {
+    normalizedCards.length > 0 && (
+      <div class="flash-links" {...cardsArrayDataAttributes}>
+        {normalizedCards.map((card) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/index-flash/flash-card">
+            <a href={card.href || "#"}>
+              <h3 set:html={card.heading} />
+              <p>{card.text}</p>
+              {card.buttonText && (
+                <Button element="span" text={card.buttonText} variant="primary" data-prop="buttonText" />
+              )}
+            </a>
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-flash {
+      background-color: var(--color-bg-black);
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+      padding-block: 100px;
+      position: relative;
+      transition: background-image 0.4s ease;
+
+      .flash-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1300px;
+
+        > editable-array-item {
+          display: block;
+        }
+
+        a {
+          align-items: center;
+          -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+          background-color: rgb(255 255 255 / 15%);
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          height: 260px;
+          justify-content: center;
+          margin: 0 auto;
+          max-width: 400px;
+          padding: 30px;
+          text-align: center;
+          text-decoration: none;
+          transition: background-color 0.3s ease;
+          width: 260px;
+
+          @media (min-width: 500px) {
+            height: 352px;
+            width: 352px;
+          }
+
+          &:hover,
+          &:focus-visible {
+            background-color: rgb(0 0 0 / 20%);
+          }
+        }
+
+        h3 {
+          color: #fff;
+          font-family: var(--font-body);
+          font-size: clamp(1.375rem, 3vw, 30px);
+          font-weight: 500;
+          letter-spacing: 3px;
+          margin: 0;
+          text-transform: uppercase;
+        }
+
+        p {
+          color: #fff;
+          display: block;
+          margin-top: var(--spacing-sm);
+
+          @media (min-width: 1025px) {
+            display: none;
+          }
+        }
+
+        a:hover p,
+        a:focus-visible p {
+          display: block;
+        }
+
+        .button {
+          display: inline-block;
+          margin-top: var(--spacing-md);
+
+          @media (min-width: 1025px) {
+            display: none;
+          }
+        }
+
+        a:hover .button,
+        a:focus-visible .button {
+          display: inline-block;
+        }
+      }
+
+      &:has(.flash-links > editable-array-item:nth-child(1) a:hover),
+      &:has(.flash-links > editable-array-item:nth-child(1) a:focus-visible) {
+        background-image: var(--flash-bg-1);
+      }
+
+      &:has(.flash-links > editable-array-item:nth-child(2) a:hover),
+      &:has(.flash-links > editable-array-item:nth-child(2) a:focus-visible) {
+        background-image: var(--flash-bg-2);
+      }
+
+      &:has(.flash-links > editable-array-item:nth-child(3) a:hover),
+      &:has(.flash-links > editable-array-item:nth-child(3) a:focus-visible) {
+        background-image: var(--flash-bg-3);
+      }
+    }
+  }
+</style>

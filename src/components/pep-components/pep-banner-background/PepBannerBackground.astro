@@ -11,6 +11,7 @@ const {
   backgroundColorHex = "",
   borderColor = "",
   headingColor = "",
+  headingFontFamily = "",
   dividerColor = "",
   textColor = "",
   HeadingSpanColor = "",
@@ -23,6 +24,7 @@ const inlineStyle = [
   backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
   borderColor ? `--pep-banner-border-color: ${borderColor}` : "",
   headingColor ? `--pep-banner-heading-color: ${headingColor}` : "",
+  headingFontFamily ? `--pep-banner-heading-font: ${headingFontFamily}` : "",
   textColor ? `--pep-banner-text-color: ${textColor}` : "",
   dividerColor ? `--pep-banner-divider-color: ${dividerColor}` : "",
   HeadingSpanColor ? `--pep-banner-span-color: ${HeadingSpanColor}` : "",
@@ -95,7 +97,7 @@ const htmlAttributes = Object.fromEntries(
 
   .pep-banner-background__heading {
     color: var(--pep-banner-heading-color, var(--color-text));
-    font-family: var(--pep-banner-heading-font, var(--font-headings));
+    font-family: var(--pep-banner-heading-font, var(--font-body));
     font-size: clamp(3rem, 5vw, 4.5rem);
     font-weight: 400;
     line-height: 1;

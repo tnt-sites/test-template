@@ -1,0 +1,21 @@
+h1Text:
+  type: text
+  comment: Small top line of the heading.
+h2Text:
+  type: text
+  comment: Large second line of the heading.
+image:
+  type: object
+  comment: Full-bleed background photo (hidden on mobile).
+image.source:
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+image.alt:
+  type: text
+paragraphs:
+  type: array
+  label: Paragraphs
+  comment: Body paragraphs shown below the heading. Supports basic HTML like <strong>.

@@ -1,0 +1,38 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+heading:
+  type: markdown
+  comment: Heading text (white, shown over the black background).
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+bullets:
+  type: array
+  label: Bullets
+  comment: List of nearby landmarks / selling points.
+  options:
+    structures:
+      values:
+        - label: Bullet
+          value:
+            text: Bullet point text.
+buttonText:
+  type: text
+  comment: Text for the call-to-action button.
+buttonHref:
+  type: text
+  comment: Link for the call-to-action button.
+mapEmbedUrl:
+  type: text
+  comment: Google Maps embed URL (src of the embed iframe).

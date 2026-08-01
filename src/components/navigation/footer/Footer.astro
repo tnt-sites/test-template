@@ -1,10 +1,7 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
-import Button from "@core-elements/button/Button.astro";
-import Divider from "@core-elements/divider/Divider.astro";
-import Image from "@core-elements/image/Image.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import siteInfoData from "@data/siteInfo.json";
-import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
   links = [],
@@ -130,188 +127,247 @@ const footerStyle = [
 ---
 
 <footer class="footer" style={footerStyle || undefined} {...htmlAttributes}>
-  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="2xl">
-    <div class="footer-content">
-      <div class="content-container">
-        <a href="/">
-          <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
-        </a>
-      </div>
-      <!-- <div class="content-container">
+  <div class="footer-deco-row">
+    <picture class="footer-deco-logo">
+      <source media="(min-width:1025px)" srcset="/images/logo-footer-icon.png" />
+      <img src="/images/logo-footer-icon-mob.png" alt="" />
+    </picture>
+    <div class="footer-deco-content">
+      <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="2xl">
+        <div class="fo-logo">
+          <div class="content-container">
+            <a href="/" class="logo">
+              <img src={logoSource} alt={logoAlt} />
+            </a>
+          </div>
+          <!-- <div class="content-container">
         <Bar navData={links} />
       </div> -->
-    </div>
+        </div>
 
-    <div id="fo-content" class="fo-content block lg:flex justify-around items-start text-center">
-      <div class="fo-info">
-        <span class="fo-title">{contactTitle}</span>
-        {
-          resolvedOffices.map((office: any) => (
-            <div class="office-block">
-              {office?.name && <span class="office-name">{office.name}</span>}
-              {Array.isArray(office?.phones) &&
-                office.phones.map((phone: any) =>
-                  phone?.display ? (
-                    <a href={phone?.href || "#"} class="pho">
-                      {phone?.label ? `${phone.label}: ` : ""}
-                      {phone.display}
-                    </a>
-                  ) : null
-                )}
-              {Array.isArray(office?.emails) &&
-                office.emails.map((email: any) =>
-                  email?.display ? (
-                    <a href={email?.href || "#"} class="pho">
-                      {email?.label ? `${email.label}: ` : ""}
-                      {email.display}
-                    </a>
-                  ) : null
-                )}
-              {Array.isArray(office?.addresses) &&
-                office.addresses.map((address: any) => {
-                  const formattedLines = formatAddressLines(address);
+        <div id="fo-content" class="fo-content block text-center">
+          <div class="fo-info">
+            <span class="fo-title">{contactTitle}</span>
+            {
+              resolvedOffices.map((office: any) => (
+                <div class="office-block">
+                  {office?.name && <span class="office-name">{office.name}</span>}
+                  {Array.isArray(office?.phones) &&
+                    office.phones.map((phone: any) =>
+                      phone?.display ? (
+                        <a href={phone?.href || "#"} class="pho">
+                          {phone?.label ? `${phone.label}: ` : ""}
+                          {phone.display}
+                        </a>
+                      ) : null
+                    )}
+                  {Array.isArray(office?.emails) &&
+                    office.emails.map((email: any) =>
+                      email?.display ? (
+                        <a href={email?.href || "#"} class="pho">
+                          {email?.label ? `${email.label}: ` : ""}
+                          {email.display}
+                        </a>
+                      ) : null
+                    )}
+                  {Array.isArray(office?.addresses) &&
+                    office.addresses.map((address: any) => {
+                      const formattedLines = formatAddressLines(address);
 
-                  return formattedLines.length > 0 ? (
-                    <a
-                      href={address?.mapUrl || "#"}
-                      class="phy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {formattedLines.map((line: string, index: number) => (
-                        <>
-                          {line}
-                          {index < formattedLines.length - 1 && <br />}
-                        </>
+                      return formattedLines.length > 0 ? (
+                        <a
+                          href={address?.mapUrl || "#"}
+                          class="phy"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {formattedLines.map((line: string, index: number) => (
+                            <>
+                              {line}
+                              {index < formattedLines.length - 1 && <br />}
+                            </>
+                          ))}
+                        </a>
+                      ) : null;
+                    })}
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="fo-hours">
+            <span class="fo-title">{officeHoursTitle}</span>
+            {
+              resolvedOffices.map((office: any) => (
+                <div class="office-hours">
+                  {/* {office?.name && <span class="office-name">{office.name}</span>} */}
+                  <div class="office-hours-list">
+                    {(office?.officeHours || []).map((item: any) => (
+                      <div class="office-hours-row">
+                        <div class="office-hours-line">
+                          <span class="office-hours-day">{item.day || ""}</span>
+                          <span class="office-hours-time">{item.hours || ""}</span>
+                        </div>
+                        {(item?.note || item?.hoursNote || item?.["hours-note"]) && (
+                          <small class="office-hours-note">
+                            {item?.note || item?.hoursNote || item?.["hours-note"]}
+                          </small>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                  {getOfficeHoursGeneralNotes(office).length > 0 && (
+                    <div class="office-hours-general-notes">
+                      {getOfficeHoursGeneralNotes(office).map((note: string) => (
+                        <small class="office-hours-general-note">{note}</small>
                       ))}
-                    </a>
-                  ) : null;
-                })}
-            </div>
-          ))
-        }
+                    </div>
+                  )}
+                </div>
+              ))
+            }
+          </div>
 
-        {
-          sharedSocials.length > 0 && (
-            <div class="social">
-              <ButtonGroup alignX="center">
+          {
+            sharedSocials.length > 0 && (
+              <div class="social">
                 {sharedSocials.map((social: any) => (
-                  <Button
-                    variant="ghost"
-                    size="lg"
-                    iconName={social.icon}
-                    link={social.link}
-                    hideText="true"
-                    aria-label={`Visit our ${social.icon} page`}
+                  <a
+                    href={social.link}
+                    data-icon={social.icon}
+                    aria-label={social.label ? `Visit our ${social.label} page` : "Social link"}
                     target="_blank"
                     rel="noopener noreferrer"
-                  />
+                  >
+                    <Icon name={social.icon} size="none" />
+                  </a>
                 ))}
-              </ButtonGroup>
+              </div>
+            )
+          }
+        </div>
+
+        {
+          embedSrc && (
+            <div class="footer-map-embed" aria-label="Map location">
+              <iframe
+                src={embedSrc}
+                title="Office location map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              />
             </div>
           )
         }
-      </div>
 
-      <div class="fo-hours">
-        <span class="fo-title">{officeHoursTitle}</span>
-        {
-          resolvedOffices.map((office: any) => (
-            <div class="office-hours">
-              {/* {office?.name && <span class="office-name">{office.name}</span>} */}
-              <div class="office-hours-list">
-                {(office?.officeHours || []).map((item: any) => (
-                  <div class="office-hours-row">
-                    <div class="office-hours-line">
-                      <span class="office-hours-day">{item.day || ""}</span>
-                      <span class="office-hours-time">{item.hours || ""}</span>
-                    </div>
-                    {(item?.note || item?.hoursNote || item?.["hours-note"]) && (
-                      <small class="office-hours-note">
-                        {item?.note || item?.hoursNote || item?.["hours-note"]}
-                      </small>
-                    )}
-                  </div>
-                ))}
-              </div>
-              {getOfficeHoursGeneralNotes(office).length > 0 && (
-                <div class="office-hours-general-notes">
-                  {getOfficeHoursGeneralNotes(office).map((note: string) => (
-                    <small class="office-hours-general-note">{note}</small>
-                  ))}
-                </div>
-              )}
+        <div class="hr-deco">
+          <span></span>
+          <img src="/images/deco.png" alt="Decorative vertical lines" />
+          <span></span>
+        </div>
+
+        <div class="footer-content">
+          <div class="content-container">
+            <div class="footer-legal-text" id="copy">
+              <span class="footer-legal-line footer-legal-line--primary">
+                &copy;<span class="inline" id="copyDate">{copyYear}</span>
+                {displaySiteName}
+              </span>
+              {
+                legalLinks.length > 0 && (
+                  <span class="footer-legal-separator" aria-hidden="true">
+                    |
+                  </span>
+                )
+              }
+              {
+                legalLinks.length > 0 && (
+                  <span class="footer-legal-line footer-legal-line--links">
+                    {legalLinks.map((item: any, index: number) => (
+                      <>
+                        <a href={item.path || "#"}>{item.name || "Link"}</a>
+                        {index < legalLinks.length - 1 && <span class="mx-2">|</span>}
+                      </>
+                    ))}
+                  </span>
+                )
+              }
+              <span class="footer-legal-separator" aria-hidden="true">|</span>
+              <span class="footer-legal-line footer-legal-line--credit">
+                Site designed and maintained by{" "}
+                <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
+                  <img src="/images/tnt.png" alt="TNT Dental" class="footer-tnt-logo" />
+                </a>
+              </span>
             </div>
-          ))
-        }
-      </div>
-    </div>
-
-    {
-      embedSrc && (
-        <div class="footer-map-embed" aria-label="Map location">
-          <iframe
-            src={embedSrc}
-            title="Office location map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen
-          />
+            {blurb && <p class="footer-legal-blurb">{blurb}</p>}
+          </div>
         </div>
-      )
-    }
-
-    <Divider />
-
-    <div class="footer-content">
-      <div class="content-container">
-        <div class="footer-legal-text" id="copy">
-          <span class="footer-legal-line footer-legal-line--primary">
-            &copy;<span class="inline" id="copyDate">{copyYear}</span>
-            {displaySiteName}
-          </span>
-          {
-            legalLinks.length > 0 && (
-              <span class="footer-legal-separator" aria-hidden="true">
-                |
-              </span>
-            )
-          }
-          {
-            legalLinks.length > 0 && (
-              <span class="footer-legal-line footer-legal-line--links">
-                {legalLinks.map((item: any, index: number) => (
-                  <>
-                    <a href={item.path || "#"}>{item.name || "Link"}</a>
-                    {index < legalLinks.length - 1 && <span class="mx-2">|</span>}
-                  </>
-                ))}
-              </span>
-            )
-          }
-          <span class="footer-legal-separator" aria-hidden="true">|</span>
-          <span class="footer-legal-line footer-legal-line--credit">
-            Site designed and maintained by{" "}
-            <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
-              TNT Dental
-            </a>
-          </span>
-        </div>
-        {blurb && <p class="footer-legal-blurb">{blurb}</p>}
-      </div>
+      </CustomSection>
     </div>
-  </CustomSection>
+  </div>
 </footer>
 
 <style lang="pcss" is:global>
   @layer page-sections {
     .footer {
+      background-color: var(--color-bg);
+      border-top: 4px solid var(--color-bg-black);
+      color: var(--color-text);
       container-type: inline-size;
+      overflow: hidden;
+
+      .content{padding: 0;}
+
+      a {
+        color: var(--color-text);
+
+        &:hover,
+        &:focus-visible {
+          color: var(--color-brand);
+        }
+      }
 
       &[data-fixed-tabs-active="true"] {
         @media (max-width: 1024px) {
           padding-bottom: calc(72px + env(safe-area-inset-bottom));
         }
+      }
+
+      .footer-deco-row {
+        align-items: center;
+        display: flex;
+
+        @media (max-width: 1024px) {
+          display: block;
+        }
+      }
+
+      .footer-deco-logo {
+        display: block;
+        flex: 0 0 auto;
+        line-height: 0;
+
+        img {
+          height: auto;
+          max-width: 600px;
+          margin: 0 auto 20px;;
+        }
+
+        @media (min-width: 1025px) {
+          margin-top: 0;
+
+          img {
+            height: auto;
+            width: auto;
+          }
+        }
+      }
+
+      .footer-deco-content {
+        flex: 1;
+        min-width: 0;
       }
 
       .button-group {
@@ -374,15 +430,7 @@ const footerStyle = [
         }
       }
 
-      .footer-logo {
-        flex-shrink: 0;
-        margin-top: 0 !important;
-
-        img {
-          margin: 0 auto 30px;
-          width: auto;
-        }
-      }
+      .logo{margin: 0 auto 30px; display: block; img{margin: 0 auto;}}
 
       .bar .bar-list {
         flex-flow: column wrap;
@@ -402,9 +450,12 @@ const footerStyle = [
         .fo-title {
           color: var(--color-text-strong);
           display: block;
+          font-size: 16px;
           font-weight: var(--font-weight-semibold);
+          letter-spacing: 3.2px;
           margin-bottom: var(--spacing-sm);
           text-align: center;
+          text-transform: uppercase;
         }
 
         .office-block,
@@ -434,6 +485,10 @@ const footerStyle = [
 
         .pho {
           color: var(--footer-phone-link-color, var(--color-text));
+          font-size: 32px;
+          font-weight: 500;
+          letter-spacing: 3.2px;
+          line-height: 1.2;
 
           &:hover,
           &:focus-visible {
@@ -443,6 +498,8 @@ const footerStyle = [
 
         .phy {
           color: var(--footer-address-link-color, var(--color-text));
+          font-size: 18px;
+          line-height: 1.2;
 
           &:hover,
           &:focus-visible {
@@ -459,11 +516,76 @@ const footerStyle = [
         }
 
         .social {
-          margin-top: var(--spacing-sm); 
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin-top: var(--spacing-sm);
 
-          .button{min-width: auto;}
+          a {
+            --social-color: var(--color-text-muted);
+            align-items: center;
+            background-color: var(--social-color);
+            border-radius: 50%;
+            color: var(--color-text-inverse);
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            margin: 5px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            width: 40px;
+
+            &:hover,
+            &:focus-visible {
+              background-color: var(--color-bg);
+              color: var(--social-color);
+            }
+
+            &[data-icon="social/facebook"] {
+              --social-color: var(--color-social-facebook);
+            }
+
+            &[data-icon="social/google"] {
+              --social-color: var(--color-social-google);
+            }
+
+            &[data-icon="social/youtube"] {
+              --social-color: var(--color-social-youtube);
+            }
+
+            &[data-icon="social/instagram"] {
+              --social-color: var(--color-social-instagram);
+            }
+          }
+
+          :global(.icon svg) {
+            height: 18px;
+            width: 18px;
+          }
         }
       }
+    }
+
+    .hr-deco {
+      align-items: center;
+      display: flex;
+      gap: 12px;
+      margin: 20px auto;
+      max-width: 1150px;
+
+      span {
+        background-color: var(--color-border);
+        display: block;
+        flex: 1;
+        height: 1px;
+        padding: 0;
+      }
+    }
+
+    .footer-tnt-logo {
+      display: inline-block;
+      height: auto;
+      vertical-align: middle;
+      width: 90px;
     }
 
     #copy {

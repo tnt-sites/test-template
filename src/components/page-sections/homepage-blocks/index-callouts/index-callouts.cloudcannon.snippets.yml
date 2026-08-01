@@ -12,10 +12,21 @@ indexCallouts:
         type: string
         optional: true
         remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: heading
         type: string
         optional: true
         remove_empty: true
+      - editor_key: intro
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: callouts
+        type: array
+        optional: true
       - editor_key: backgroundColor
         type: string
         optional: true

@@ -4,6 +4,8 @@ description: A carousel of written patient reviews with star ratings.
 value:
   _component: page-sections/homepage-blocks/index-reviews
   id: ""
+  eyebrow: ""
+  colorScheme: default
   heading: What Our Patients <span class="heading-color">Say</span>
   reviews:
     - text: "The entire staff is incredibly kind and professional. I actually look forward to my appointments!"
@@ -13,6 +15,8 @@ value:
     - text: "Exceptional care from start to finish. Highly recommend to anyone searching for a great dental office."
       authorName: Susan F.
   showQuoteIcon: false
+  buttonText: ""
+  buttonHref: ""
   backgroundColor: base
   backgroundGradient: ""
   backgroundImage:

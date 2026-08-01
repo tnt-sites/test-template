@@ -1,0 +1,17 @@
+label: Pep Bubbles
+icon: grid_view
+description: Row of plain images with bold captions below (no card/shadow treatment).
+value:
+  _component: pep-components/pep-bubbles
+  heading: Heading text
+  backgroundImage:
+    source: ""
+    alt: ""
+  items:
+    - image:
+        source: ""
+        alt: ""
+      caption: Caption text
+      disclaimer: ""
+_inputs_from_glob:
+  - /src/components/pep-components/pep-bubbles/pep-bubbles.cloudcannon.inputs.yml

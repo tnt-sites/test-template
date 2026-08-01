@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "Lifetime Dental Care",
   "url": "https://example.com",
-  "description": "",
+  "description": "Lifetime Dental Care is a family dental practice in Hays, Kansas, serving Northwest Kansas since 2002.",
   "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
-  "twitterHandle": "@yourusername"
+  "titleFormat": "{title} | Lifetime Dental Care",
+  "twitterHandle": ""
 }

@@ -1,0 +1,40 @@
+heading:
+  type: markdown
+  comment: Heading shown above the bubble images.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: false
+    strike: false
+    subscript: false
+    superscript: false
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+backgroundImage:
+  type: object
+  comment: Optional decorative background image behind the section (hidden on mobile).
+backgroundImage.source:
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  type: text
+items:
+  type: array
+  label: Bubbles
+  comment: Image + caption items.
+  options:
+    structures:
+      values:
+        - label: Bubble
+          value:
+            image:
+              source: ""
+              alt: ""
+            caption: Caption text
+            disclaimer: ""

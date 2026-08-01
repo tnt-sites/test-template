@@ -12,11 +12,30 @@ indexBanner:
         type: string
         optional: true
         remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: heading
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundColor
+      - editor_key: quickLinks
+        type: array
+        optional: true
+      - editor_key: badgeSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: badgeAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: thumbnailSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: thumbnailAlt
         type: string
         optional: true
         remove_empty: true

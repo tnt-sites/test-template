@@ -38,6 +38,8 @@ _structures:
         value:
           _component: page-sections/people/meet-landing/meet-landing-person
           name: Doctor Name
+          credentials: DDS
+          buttonText: Meet Dr. Name
           href: provider-page.html
           imageSource: /src/assets/images/component-library/profile.jpg
           imageAlt: Doctor Name
@@ -54,6 +56,14 @@ _structures:
           name:
             type: text
             comment: Doctor display name.
+          credentials:
+            type: text
+            comment: Credentials shown below the name (e.g. "DDS, FAGD").
+          buttonText:
+            type: text
+            comment: >-
+              Button label. Defaults to "Meet {name}" when left blank. Only
+              shown when the section's variant is set to Button.
           href:
             type: text
             comment: Link URL for the provider profile page.

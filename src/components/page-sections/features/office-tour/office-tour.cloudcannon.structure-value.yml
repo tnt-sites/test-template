@@ -8,6 +8,10 @@ value:
   tourSlides: []
   slideNumbers: false
   floatingArrows: false
+  bottomEyebrow: ""
+  bottomHeading: ""
+  bottomText: ""
+  bottomButtonSections: []
   backgroundColor: base
   backgroundGradient: ""
   backgroundImage:

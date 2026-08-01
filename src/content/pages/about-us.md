@@ -4,52 +4,43 @@ title: About Us
 pageSections:
   - _component: page-sections/heroes/hero-split
     id: ''
-    eyebrow: Service - City, ST
-    heading: Creative <span class="heading-color">Title</span>
-    subtext: Subtitle placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Hero image
-    imageAspectRatio: none
+    eyebrow: About Our Dental Office in Hays
+    heading: The World-Class Care You Deserve
+    subtext: >-
+      At Lifetime Dental Care, no matter what dental health concerns
+      you're dealing with, whether it's tooth loss or you just want a
+      reliable general dentist for your checkups and cleanings every six
+      months, we can help. Our three highly experienced and compassionate
+      dentists, Dr. Lowe, Dr. Grove, and Dr. Nelson are committed to
+      keeping your smile healthy and functional for your lifetime.
+    imageSource: /src/assets/images/about-us-1.webp
+    imageAlt: Dental patient grinning at her dentist in Hays
     buttonSections: []
     reverse: false
-    colorScheme: inherit
-    backgroundColor: none
+    colorScheme: contrast
+    backgroundColor: dark
   - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading <span class="heading-font">text</span>
+    id: implant
+    heading: We Offer the Gold Standard of Dental Implant Care
     anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
+    subtext: >-
+      If you're struggling with tooth loss, there's no tooth replacement
+      option that compares to dental implants. As the only treatment
+      that's able to restore both the visible crown as well as the roots
+      of your teeth, dental implants offer unmatched stability and
+      strength. Plus, because they're anchored within your mouth, you
+      won't ever have to worry about dealing with a slipping or shifting
+      prosthetic. Restore your smile and get the results that will help
+      your confidence soar with natural-looking and -feeling dental
+      implants in Hays.
+    imageSource: /src/assets/images/about-us-2.webp
+    imageAlt: Man undergoing a dental cleaning
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ''
-        text: My Button
+        text: Learn About Dental Implants
         hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: text
-        size: md
-        width: xs
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
+        link: /dental-implants/
         modalTarget: ''
         iconName: ''
         iconPosition: before
@@ -59,146 +50,129 @@ pageSections:
     reverse: true
     colorScheme: default
     backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Heading text
+  - _component: page-sections/ctas/cta-split
+    id: tech
+    heading: Advanced Technology & Sedation Techniques for Optimal Comfort
     anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
+    subtext: >-
+      Our team is committed to staying up-to-date with the latest
+      technology and techniques in the dental field. In fact, we're one
+      of the most advanced dental offices in the area! By employing
+      state-of-the-art diagnostic imaging technology as well as providing
+      several sedation dentistry options, we're able to make sure your
+      visit is as comfortable and streamlined as possible. We can even
+      design, craft, and mill your dental crown in a single visit!
+    imageSource: /src/assets/images/about-us-3.webp
+    imageAlt: Dentist preparing a dental instrument for a procedure
+    buttonSections: []
+    reverse: false
+    colorScheme: contrast
+    backgroundColor: black
+  - _component: page-sections/ctas/cta-split
+    id: roof
+    heading: Every Service You Need Is Under One Roof
+    anchorName: ''
+    subtext: >-
+      Our team of dentists brings over 50 years of cumulative experience
+      right to you. With hundreds of hours of advanced training in a
+      variety of services, including Invisalign, full mouth
+      reconstruction, IV sedation, dental implants, and more, we can care
+      for virtually all of your needs right here. That way, you won't
+      have to worry about traveling an hour or more to go to a different
+      office! We truly simplify your care while continuing to provide you
+      with top-quality service and results.
+    imageSource: /src/assets/images/about-us-4.webp
+    imageAlt: Young woman getting a dental exam
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ''
-        text: My Button
+        text: View Our Services
         hideText: false
-        link: ''
+        link: /our-services/
         modalTarget: ''
         iconName: ''
         iconPosition: before
         variant: primary
         size: md
         width: xs
-    colorScheme: inherit
+    reverse: true
+    colorScheme: default
     backgroundColor: base
-    rounded: false
-  - _component: page-sections/builders/custom-section
-    id: ''
-    label: tour
-    contentSections:
-      - _component: building-blocks/wrappers/carousel
-        id: ''
-        label: Carousel Test
-        slides:
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile3.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile5.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-        autoPlay: false
-        autoScroll: false
-        slideWidthPercent: 60
-        minSlideWidth: 0
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/features/office-tour
-    id: ''
-    heading: office-tour Heading
-    tourSlides:
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/castle.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/dunedin-cliff.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/profile5.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-    backgroundColor: base
-    slideNumbers: true
-    floatingArrows: true
   - _component: page-sections/ctas/more-to-explore
     id: ''
-    heading: More to <span class="color">Explore</span>
+    heading: More to Explore
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ''
-        text: My Button
+        text: Meet the Dentists
         hideText: false
-        link: ''
+        link: /meet-the-dentists/
         modalTarget: ''
         iconName: ''
         iconPosition: before
         variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ''
+        text: Meet the Team
+        hideText: false
+        link: /meet-the-team/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ''
+        text: Tour Our Office
+        hideText: false
+        link: /tour-our-office/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ''
+        text: Smile Gallery
+        hideText: false
+        link: /smile-gallery/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ''
+        text: Advanced Dental Technology
+        hideText: false
+        link: /advanced-dental-technology/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
+        variant: primary
+        size: md
+        width: xs
+      - _component: building-blocks/core-elements/button
+        id: ''
+        text: View Our Services
+        hideText: false
+        link: /our-services/
+        modalTarget: ''
+        iconName: ''
+        iconPosition: before
+        variant: alt
         size: md
         width: xs
     maxContentWidth:
     paddingHorizontal: sm
     paddingVertical: sm
     colorScheme: default
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/services-grid
-    id: ''
-    heading: Services Grid Heading
-    backgroundColor: base
+    backgroundColor: brand-subtle
     backgroundImage:
       source:
       alt:

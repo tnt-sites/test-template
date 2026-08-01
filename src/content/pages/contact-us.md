@@ -13,6 +13,6 @@ pageSections:
       positionHorizontal: center
     officeHoursTitle: Office Hours
     mapEmbedUrl: >-
-      https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.989778614257!2d-96.7204146227281!3d32.977671473580436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c23374904d86b%3A0x1d6d5ef027560e48!2sTNT%20Dental!5e0!3m2!1sen!2sus!4v1773839398787!5m2!1sen!2sus
+      https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11258.039381837942!2d-99.302791!3d38.885882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87a179154dcd7805%3A0xef0a776f4c5de755!2sLifetime%20Dental%20Care!5e1!3m2!1sen!2sus!4v1769796163046!5m2!1sen!2sus
 description: ""
 ---

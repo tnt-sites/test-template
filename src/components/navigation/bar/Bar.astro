@@ -362,8 +362,8 @@ function createNavItemData(item, level, parentGroupId) {
         flex-shrink: 0;
         gap: var(--spacing-xs);
         justify-content: center;
-        min-height: 1.75rem;
-        min-width: 1.75rem;
+        min-height: .5rem;
+        min-width: 1.5rem;
         transition:
           background-color var(--animation-normal) ease-in-out,
           border-color var(--animation-normal) ease-in-out,
@@ -420,7 +420,7 @@ function createNavItemData(item, level, parentGroupId) {
       }
 
       .nav-item-toggle:checked ~ .nav-item-content {
-        animation: grow-out-centered var(--animation-normal) ease-out forwards;
+        animation: grow-out var(--animation-normal) ease-out forwards;
         display: block;
       }
 
@@ -433,12 +433,11 @@ function createNavItemData(item, level, parentGroupId) {
         background: var(--color-bg);
         border: 1px solid var(--color-border-subtle);
         border-radius: var(--radius-xs);
-        left: 50%;
+        left: 0;
         margin-top: var(--spacing-xs);
         min-width: 200px;
         position: absolute;
         top: 100%;
-        transform: translateX(-50%);
         width: max-content;
         z-index: var(--layer-3);
       }
@@ -469,6 +468,10 @@ function createNavItemData(item, level, parentGroupId) {
       .nav-item-nested .nav-item > a {
         border-radius: 0;
         padding-left: var(--spacing-xl);
+      }
+
+      .nav-item-nested {
+        background: var(--color-bg-surface);
       }
     }
   }

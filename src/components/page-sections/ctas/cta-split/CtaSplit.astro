@@ -4,7 +4,6 @@ import Heading from "@core-elements/heading/Heading.astro";
 import Image from "@core-elements/image/Image.astro";
 import Text from "@core-elements/text/Text.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
-import Split from "@wrappers/split/Split.astro";
 
 const {
   anchorName = "",
@@ -14,12 +13,11 @@ const {
   imageSource = "",
   imageAlt = "",
   reverse = false,
+  compact = false,
   colorScheme = "inherit",
   backgroundColor,
   backgroundGradient = "",
   backgroundImage,
-  paddingVertical = "4xl",
-  rounded = false,
   class: className,
   _component,
   ...htmlAttributes
@@ -28,41 +26,130 @@ const {
 
 <CustomSection
   class:list={["cta-split", className]}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical={paddingVertical}
+  paddingHorizontal="none"
+  paddingVertical="none"
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
   backgroundGradient={backgroundGradient}
   backgroundImage={backgroundImage}
-  rounded={rounded}
   {...htmlAttributes}
 >
-  {anchorName && <a name={anchorName} class="anchor-name-offset" aria-hidden="true"></a>}
-  <Split
-    class="split"
-    distributionMode="fixed-flexible"
-    fixedWidth="400"
-    verticalAlignment="center"
-    reverse={reverse}
-    minSplitWidth={640}
-  >
-    <Fragment slot="first">
-      <Heading level="h2" size="xl" data-prop="heading" text={heading} />
+  {anchorName && <a name={anchorName} class="anchor-name-offset" aria-hidden="true" />}
+  <div class:list={["cta-split-grid", { reverse, compact }]}>
+    <div class="cta-split-text">
+      <Heading
+        level={compact ? "h3" : "h2"}
+        class="cta-split-heading"
+        data-prop="heading"
+        text={heading}
+      />
       <Text data-prop="subtext" text={subtext} />
       <ButtonGroup class="buttons" buttonSections={buttonSections} direction="row" alignX="start" />
-    </Fragment>
-    <Fragment slot="second">
+    </div>
+    <div class="cta-split-image">
       <Image
         source={imageSource}
-        rounded={true}
         alt={imageAlt}
-        aspectRatio="landscape"
         editable={true}
         data-prop-src="imageSource"
         data-prop-alt="imageAlt"
         data-editable="image"
       />
-    </Fragment>
-  </Split>
+    </div>
+  </div>
 </CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .cta-split-grid {
+      display: flex; align-items: center; justify-content: space-around;
+      min-height: 34rem;
+      padding-block: 80px;
+
+      &.reverse {
+        .cta-split-text {
+          order: 2;
+        }
+
+        .cta-split-image {
+          order: 1;
+        }
+      }
+    }
+
+    .cta-split-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      max-width: 510px;
+      margin: 0 auto;
+
+    }
+
+    .cta-split-heading {
+      margin: 0 0 var(--spacing-md);
+      font-size: 54px;
+      line-height: 1;
+    }
+
+    .cta-split-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-inline: var(--spacing-2xl);
+    }
+
+    @media (--to-md) {
+      .cta-split-grid,
+      .cta-split-grid.reverse {
+        display: block;
+        min-height: 0;
+
+        .cta-split-text,
+        .cta-split-image {
+          order: initial;
+        }
+
+        .cta-split-text {
+          align-items: center;
+          margin-inline: auto;
+          text-align: center;
+
+          .buttons {
+            justify-content: center;
+          }
+        }
+
+        .cta-split-image {
+          order: -1;
+        }
+      }
+    }
+
+    .cta-split-grid.compact {
+      min-height: 0;
+      padding-block: 20px;
+      max-width: 1140px; margin: 0 auto;
+
+      .cta-split-text {
+        max-width: 900px;
+        padding-block: var(--spacing-md);
+      }
+
+      .cta-split-heading {
+        font-size: var(--font-size-heading-lg);
+        margin: 0;
+      }
+
+      .cta-split-image {
+        padding: 0;
+        flex: 0 1 270px;
+
+        .image {
+          max-width: 270px;
+        }
+      }
+    }
+  }
+</style>

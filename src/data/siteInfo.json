@@ -1,20 +1,25 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Lifetime Dental Care",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/lifetimedentalcarebydrlowe"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/lifetimedentalcare/"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "YouTube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UC8MZzlCdGIXHkSVvAyJu-Ag/feed"
+    },
+    {
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://www.google.com/maps/place/Lifetime+Dental+Care+-+Dr.+Jeffrey+H.+Lowe,+DDS/@38.885882,-99.302791,15z/data=!4m2!3m1!1s0x0:0x9f862895a0a04cbf"
     }
   ],
   "offices": [
@@ -22,27 +27,22 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": ["2701 Sternberg Dr"],
+          "city": "Hays",
+          "state": "KS",
+          "postalCode": "67601",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://www.google.com/maps/place/Lifetime+Dental+Care+-+Dr.+Jeffrey+H.+Lowe,+DDS/@38.885882,-99.302791,15z/data=!4m2!3m1!1s0x0:0x9f862895a0a04cbf"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(785) 625-7969",
+          "href": "tel:+17856257969"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
@@ -63,18 +63,13 @@
           "day": "Thursday",
           "hours": "8:00 am - 5:00 pm",
           "note": ""
-        },
-        {
-          "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
-          "note": ""
         }
       ],
-      "officeHoursNote": ""
+      "officeHoursNote": "Our office is closed for lunch on Monday-Thursday from 1:00 pm-2:00 pm."
     }
   ],
   "modals": [],
   "head_scripts": ["/* test header script */"],
   "footer_scripts": ["/* Test Footer Script */"],
-  "mapEmbedUrl": ""
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11258.039381837942!2d-99.302791!3d38.885882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87a179154dcd7805%3A0xef0a776f4c5de755!2sLifetime%20Dental%20Care!5e1!3m2!1sen!2sus!4v1769796163046!5m2!1sen!2sus"
 }

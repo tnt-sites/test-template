@@ -1,0 +1,41 @@
+logoSource:
+  type: image
+  comment: Footer logo image.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+logoAlt:
+  type: text
+  comment: Alt text for the footer logo.
+siteName:
+  type: text
+  comment: Site name shown in the copyright line. Falls back to siteInfo.json.
+mapEmbedUrl:
+  type: text
+  comment: Google Maps embed URL for the "Find Us" column. Falls back to the office/site map embed.
+officeHours:
+  type: array
+  label: Office Hours
+  comment: Rows shown in the Office Hours column.
+  options:
+    structures:
+      values:
+        - label: Day
+          value:
+            day: Monday
+            hours: 8:00AM - 5:00PM
+questionsText:
+  type: markdown
+  comment: Short line shown below the office hours (supports a line break).
+legalLinks:
+  type: array
+  label: Legal Links
+  comment: Links shown in the copyright bar.
+  options:
+    structures:
+      values:
+        - label: Link
+          value:
+            name: Link Name
+            path: /

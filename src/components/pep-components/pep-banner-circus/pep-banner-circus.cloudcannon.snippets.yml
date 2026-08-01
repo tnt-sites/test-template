@@ -1,0 +1,26 @@
+pepBannerCircus:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Pep Banner Circus
+    icon: image
+  definitions:
+    component_name: PepBannerCircus
+    named_args:
+      - editor_key: h1Text
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: h2Text
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: image
+        type: object
+        optional: true
+      - editor_key: paragraphs
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/pep-components/pep-banner-circus/pep-banner-circus.cloudcannon.inputs.yml

@@ -1,0 +1,20 @@
+label: Index Flash
+icon: photo_library
+description: Frosted-glass cards over a full-bleed photo that swaps per hovered card.
+value:
+  _component: page-sections/homepage-blocks/index-flash
+  id: ""
+  cards:
+    - heading: Card Heading
+      text: Card description text.
+      buttonText: Tell Me More
+      href: /
+      backgroundSource: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-flash/index-flash.cloudcannon.inputs.yml

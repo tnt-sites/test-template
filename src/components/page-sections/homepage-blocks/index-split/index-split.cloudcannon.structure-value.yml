@@ -4,7 +4,17 @@ description: Description for Index Split component.
 value:
   _component: page-sections/homepage-blocks/index-split
   id: ""
+  eyebrow: Eyebrow Text
   heading: Index Split <span class="heading-color">Heading</span>
+  text: Body paragraph text.
+  buttonText: Learn More
+  buttonHref: /
+  doctors:
+    - name: Provider Name
+      credentials: ""
+      href: /
+      imageSource: ""
+      imageAlt: ""
   backgroundColor: base
   backgroundGradient: ""
   backgroundImage:

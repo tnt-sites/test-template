@@ -1,0 +1,24 @@
+label: Index Insta
+icon: photo_camera
+description: Social feed image grid with follow/like buttons.
+value:
+  _component: page-sections/homepage-blocks/index-insta
+  id: ""
+  eyebrow: "@yourhandle"
+  heading: See What We've Been Up To!
+  images:
+    - source: ""
+      alt: ""
+  socialButtons:
+    - iconSource: ""
+      text: Follow Us on Instagram
+      href: /
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-insta/index-insta.cloudcannon.inputs.yml

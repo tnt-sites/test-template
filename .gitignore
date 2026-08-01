@@ -31,3 +31,6 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# raw WordPress export dumps (contain internal contact emails; not for git history)
+*.WordPress.*.xml

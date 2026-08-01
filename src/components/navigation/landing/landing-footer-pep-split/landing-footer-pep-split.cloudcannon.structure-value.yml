@@ -1,0 +1,20 @@
+label: Landing Footer PEP Split
+icon: call_split
+description: Three-column PEP landing page footer (Contact Us / Find Us / Office Hours).
+value:
+  _component: navigation/landing/landing-footer-pep-split
+  logoSource: ""
+  logoAlt: Logo
+  siteName: ""
+  mapEmbedUrl: ""
+  officeHours:
+    - day: Monday
+      hours: 8:00AM - 5:00PM
+  questionsText: "Have Questions?<br>Give Us a Call!"
+  legalLinks:
+    - name: Sitemap
+      path: /sitemap/
+    - name: Privacy Policy
+      path: /privacy-policy/
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-pep-split/landing-footer-pep-split.cloudcannon.inputs.yml

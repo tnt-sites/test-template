@@ -1,17 +1,40 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
-import Heading from "@core-elements/heading/Heading.astro";
+
+interface QuickLink {
+  text?: string;
+  href?: string;
+}
 
 const {
+  eyebrow = "",
   heading = "",
-  backgroundColor = "base",
+  quickLinks = [] as QuickLink[],
+  badgeSource = "",
+  badgeAlt = "",
+  thumbnailSource = "",
+  thumbnailAlt = "",
   id = "",
   backgroundImage,
   backgroundGradient = "",
   class: className,
   editable = true,
+  _component,
   ...rest
 } = Astro.props;
+
+const normalizedLinks = Array.isArray(quickLinks)
+  ? quickLinks.filter((link): link is QuickLink => !!link && typeof link === "object")
+  : [];
+
+const linksArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "quickLinks",
+    }
+  : {};
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
@@ -20,24 +43,179 @@ const htmlAttributes = Object.fromEntries(
 
 <CustomSection
   class:list={["index-banner", className]}
+  id={id || undefined}
   maxContentWidth="2xl"
   paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
+  paddingVertical="none"
   backgroundImage={backgroundImage}
   style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <article>
+    {
+      eyebrow && (
+        <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+          {eyebrow}
+        </h2>
+      )
+    }
+    {
+      heading && (
+        <h3 class="banner-heading" data-editable="text" data-prop="heading" set:html={heading} />
+      )
+    }
+    {
+      normalizedLinks.length > 0 && (
+        <div class="links" {...linksArrayDataAttributes}>
+          {normalizedLinks.map((link, index) => (
+            <editable-array-item data-component="page-sections/homepage-blocks/index-banner/quick-link">
+              {index > 0 && (
+                <span aria-hidden="true" class="sep">
+                  &bull;
+                </span>
+              )}
+              <a href={link.href || "#"}>{link.text}</a>
+            </editable-array-item>
+          ))}
+        </div>
+      )
+    }
+    <img class="banner-deco" src="/images/index-banner-deco.png" alt="" />
+  </article>
+  <figure>
+    {
+      badgeSource && (
+        <span class="badge">
+          <img src={badgeSource} alt={badgeAlt} data-editable="image" data-prop-src="badgeSource" data-prop-alt="badgeAlt" />
+        </span>
+      )
+    }
+    {
+      thumbnailSource && (
+        <img
+          class="thumbnail"
+          src={thumbnailSource}
+          alt={thumbnailAlt}
+          data-editable="image"
+          data-prop-src="thumbnailSource"
+          data-prop-alt="thumbnailAlt"
+        />
+      )
+    }
+  </figure>
 </CustomSection>
 
-<style>
-  .index-banner {
-    background:
-      var(
-        --section-bg-gradient,
-        linear-gradient(transparent, transparent)
-      );
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-banner {
+      background-color: var(--color-bg-dark, #434243);
+      overflow: hidden;
+      position: relative;
+
+      &:after {
+        background-color: var(--color-bg);
+        bottom: 0;
+        content: "";
+        height: 140px;
+        left: 0;
+        position: absolute;
+        right: 0;
+      }
+
+      > .outer-content > .content {
+        max-width: none;
+      }
+
+      article {
+        padding: 70px 20px 40px;
+        position: relative;
+        text-align: center;
+        z-index: 2;
+      }
+
+      .eyebrow-line {
+        color: #fff;
+        display: block;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        line-height: 1.17;
+        margin: 10px auto;
+        text-transform: uppercase;
+      }
+
+      .banner-heading {
+        color: #fff;
+        font-family: var(--font-headings);
+        font-size: clamp(2.25rem, 5vw, 58px);
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      .links {
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 20px auto;
+        text-transform: uppercase;
+
+        editable-array-item {
+          display: inline;
+        }
+
+        .sep {
+          margin: 0 5px;
+        }
+
+        a {
+          color: #fff;
+          letter-spacing: 0.65px;
+          margin: 0 5px;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--color-brand);
+          }
+        }
+      }
+
+      .banner-deco {
+        display: block;
+        margin: 20px auto 0;
+      }
+
+      figure {
+        margin: 0 auto;
+        max-width: 870px;
+        position: relative;
+        z-index: 2;
+
+        .badge {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: -80px;
+
+          img {
+            width: 80%;
+          }
+        }
+
+        .thumbnail {
+          display: block;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 700px) {
+        figure .badge {
+          right: -60px;
+        }
+      }
+    }
   }
 </style>

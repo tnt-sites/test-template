@@ -1,6 +1,9 @@
 id:
   type: text
   comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the main heading.
 heading:
   type: markdown
   comment: Main heading text for the component. Supports inline span wrappers/classes for highlighted words.
@@ -17,6 +20,23 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
+intro:
+  type: textarea
+  comment: Intro paragraph shown to the right of the heading.
+callouts:
+  type: array
+  label: Callouts
+  comment: Row of image + text callout cards.
+  options:
+    structures:
+      values:
+        - label: Callout
+          value:
+            imageSource: ""
+            imageAlt: ""
+            title: Callout Title
+            text: Callout description text.
+            href: /
 backgroundColor:
   type: select
   comment: Background color used behind the section.

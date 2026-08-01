@@ -1,17 +1,45 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
-import Heading from "@core-elements/heading/Heading.astro";
+import Button from "@core-elements/button/Button.astro";
+import MeetLandingPerson from "@page-sections/people/meet-landing/MeetLandingPerson.astro";
+
+interface Doctor {
+  name?: string;
+  credentials?: string;
+  href?: string;
+  imageSource?: string;
+  imageAlt?: string;
+}
 
 const {
+  eyebrow = "",
   heading = "",
+  text = "",
+  buttonText = "",
+  buttonHref = "",
+  doctors = [] as Doctor[],
   backgroundColor = "base",
   id = "",
   backgroundImage,
   backgroundGradient = "",
   class: className,
   editable = true,
+  _component,
   ...rest
 } = Astro.props;
+
+const normalizedDoctors = Array.isArray(doctors)
+  ? doctors.filter((doctor): doctor is Doctor => !!doctor && typeof doctor === "object")
+  : [];
+
+const doctorsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "doctors",
+    }
+  : {};
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
@@ -20,6 +48,7 @@ const htmlAttributes = Object.fromEntries(
 
 <CustomSection
   class:list={["index-split", className]}
+  id={id || undefined}
   maxContentWidth="2xl"
   paddingHorizontal="lg"
   paddingVertical="4xl"
@@ -29,15 +58,142 @@ const htmlAttributes = Object.fromEntries(
   style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <div class="split-row">
+    {
+      normalizedDoctors.length > 0 && (
+        <figure class="doctors-figure" {...doctorsArrayDataAttributes}>
+          <div class="landing">
+            {normalizedDoctors.map((doctor) => (
+              <editable-array-item data-component="page-sections/people/meet-landing/meet-landing-person">
+                <MeetLandingPerson {...doctor} variant="name" editable={editable} />
+              </editable-array-item>
+            ))}
+          </div>
+        </figure>
+      )
+    }
+    <article>
+      {
+        eyebrow && (
+          <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+            {eyebrow}
+          </h2>
+        )
+      }
+      {
+        heading && (
+          <h3 class="split-heading" data-editable="text" data-prop="heading" set:html={heading} />
+        )
+      }
+      {text && <p data-editable="text" data-prop="text">{text}</p>}
+      {
+        buttonText && (
+          <Button text={buttonText} link={buttonHref} variant="primary" data-prop="buttonText" />
+        )
+      }
+    </article>
+  </div>
 </CustomSection>
 
-<style>
-  .index-split {
-    background:
-      var(
-        --section-bg-gradient,
-        linear-gradient(transparent, transparent)
-      );
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-split {
+      .split-row {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-xl);
+        justify-content: space-around;
+        text-align: center;
+
+        @media (min-width: 1025px) {
+          flex-direction: row-reverse;
+          text-align: left;
+        }
+      }
+
+      article {
+        flex: 0 1 400px;
+      }
+
+      .doctors-figure {
+        flex: 0 1 700px;
+        margin: 0;
+        width: 100%;
+
+        .landing {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          justify-content: center;
+
+          @media (min-width: 700px) {
+            flex-wrap: nowrap;
+          }
+
+          > editable-array-item {
+            flex: 0 1 224px;
+          }
+
+          a .name {
+            color: var(--color-text-strong);
+            display: block;
+            font-family: var(--font-body);
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 1.5px;
+            line-height: 0.93;
+            margin-top: 10px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+
+            small {
+              display: block;
+              font-size: 12px;
+              letter-spacing: 1.2px;
+            }
+          }
+
+          a:hover .name,
+          a:focus-visible .name {
+            color: var(--color-brand);
+          }
+        }
+      }
+
+      .eyebrow-line {
+        color: var(--color-text);
+        display: block;
+        font-family: var(--font-body);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2.4px;
+        line-height: 1.17;
+        margin: 10px auto;
+        text-transform: uppercase;
+
+        @media (min-width: 1025px) {
+          margin-left: 0;
+        }
+      }
+
+      .split-heading {
+        color: var(--color-text-strong);
+        font-family: var(--font-headings);
+        font-size: clamp(2rem, 4vw, 54px);
+        line-height: 0.98;
+        margin: 0;
+      }
+
+      article p {
+        color: var(--color-text);
+        margin-top: var(--spacing-md);
+      }
+
+      article .button {
+        margin-top: var(--spacing-md);
+      }
+    }
   }
 </style>

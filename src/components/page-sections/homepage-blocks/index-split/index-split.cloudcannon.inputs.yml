@@ -1,6 +1,9 @@
 id:
   type: text
   comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the main heading.
 heading:
   type: markdown
   comment: Main heading text for the component. Supports inline span wrappers/classes for highlighted words.
@@ -17,6 +20,29 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
+text:
+  type: textarea
+  comment: Body paragraph shown below the heading.
+buttonText:
+  type: text
+  comment: Text for the call-to-action button.
+buttonHref:
+  type: text
+  comment: Link for the call-to-action button.
+doctors:
+  type: array
+  label: Doctors
+  comment: Doctor photo lineup shown alongside the text.
+  options:
+    structures:
+      values:
+        - label: Doctor
+          value:
+            name: Provider Name
+            credentials: ""
+            href: /
+            imageSource: ""
+            imageAlt: ""
 backgroundColor:
   type: select
   comment: Background color used behind the section.
@@ -32,6 +58,8 @@ backgroundColor:
         name: Accent
       - id: highlight
         name: Highlight
+      - id: brand-subtle
+        name: Brand Subtle
       - id: dark
         name: Dark
       - id: black

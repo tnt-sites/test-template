@@ -4,7 +4,15 @@ description: Description for Index Callouts component.
 value:
   _component: page-sections/homepage-blocks/index-callouts
   id: ""
+  eyebrow: Eyebrow Text
   heading: Index Callouts <span class="heading-color">Heading</span>
+  intro: Intro paragraph text.
+  callouts:
+    - imageSource: ""
+      imageAlt: ""
+      title: Callout Title
+      text: Callout description text.
+      href: /
   backgroundColor: base
   backgroundGradient: ""
   backgroundImage:

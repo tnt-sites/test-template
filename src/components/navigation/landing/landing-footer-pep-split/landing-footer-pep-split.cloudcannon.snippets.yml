@@ -1,0 +1,38 @@
+landingFooterPepSplit:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Landing Footer PEP Split
+    icon: call_split
+  definitions:
+    component_name: LandingFooterPepSplit
+    named_args:
+      - editor_key: logoSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: logoAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: siteName
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: mapEmbedUrl
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: officeHours
+        type: array
+        optional: true
+      - editor_key: questionsText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: legalLinks
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/navigation/landing/landing-footer-pep-split/landing-footer-pep-split.cloudcannon.inputs.yml

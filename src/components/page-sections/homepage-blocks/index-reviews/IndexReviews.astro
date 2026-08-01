@@ -1,5 +1,6 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Button from "@core-elements/button/Button.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Carousel from "@wrappers/carousel/Carousel.astro";
 import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
@@ -13,9 +14,13 @@ interface ReviewItem {
 }
 
 const {
+  eyebrow = "",
   heading = "",
   reviews = [] as ReviewItem[],
   showQuoteIcon = false,
+  buttonText = "",
+  buttonHref = "",
+  colorScheme = "default",
   backgroundColor = "base",
   id = "",
   backgroundImage,
@@ -31,9 +36,13 @@ const htmlAttributes = Object.fromEntries(
 
 // In peek mode the carousel is edge-to-edge with slides capped at 600px.
 // Embla measures offsetWidth at init so max-width must be in CSS before init.
-const isPeek = String(className ?? "")
-  .split(" ")
-  .includes("peek");
+const classList = String(className ?? "").split(" ");
+const isPeek = classList.includes("peek");
+
+// In grid mode the carousel only applies below the desktop breakpoint; at
+// desktop width all reviews unwrap into a static wrapped row of bordered
+// boxes (see the media query in the style block below).
+const isGrid = classList.includes("grid");
 ---
 
 <CustomSection
@@ -41,28 +50,40 @@ const isPeek = String(className ?? "")
   maxContentWidth={isPeek ? undefined : "2xl"}
   paddingHorizontal="lg"
   paddingVertical="4xl"
-  colorScheme="default"
+  colorScheme={colorScheme}
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
   backgroundGradient={backgroundGradient}
   {...htmlAttributes}
 >
-  {heading && <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />}
+  {
+    eyebrow && (
+      <h2 class="eyebrow-line" data-editable="text" data-prop="eyebrow">
+        {eyebrow}
+      </h2>
+    )
+  }
+  {heading && <Heading level="h3" size="lg" alignX="center" text={heading} data-prop="heading" />}
 
   {
     reviews.length > 0 ? (
       <Carousel
         editable={false}
         class="index-reviews-carousel"
-        maxSlideWidth={isPeek ? 600 : 0}
+        maxSlideWidth={isGrid ? 320 : isPeek ? 600 : 0}
         {...(isPeek ? { "data-no-contain-scroll": true, "data-slides-to-scroll": "1" } : {})}
       >
         {reviews.map((review: ReviewItem) => {
           const hasMeta = !!(review.reviewerImage || review.socialIcon);
+
           return (
             <CarouselSlide>
               <div class="review-slide">
-                {showQuoteIcon && <i class="icon-quote quote-icon" aria-hidden="true" />}
+                {showQuoteIcon && (
+                  <span class="quote-badge">
+                    <img src="/images/index-quote.png" alt="" />
+                  </span>
+                )}
                 <p class="review-text">{review.text}</p>
                 <div class:list={["review-author", { "has-meta": hasMeta }]}>
                   {review.reviewerImage && (
@@ -87,22 +108,53 @@ const isPeek = String(className ?? "")
       <p class="empty-state">No reviews added yet.</p>
     )
   }
+
+  {
+    buttonText && (
+      <div class="reviews-cta">
+        <Button text={buttonText} link={buttonHref} variant="reverse" data-prop="buttonText" />
+      </div>
+    )
+  }
 </CustomSection>
 
 <style>
+  .eyebrow-line {
+    color: var(--color-text);
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2.4px;
+    line-height: 1.17;
+    margin: 10px auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  :global(.index-reviews .heading) {
+    font-size: clamp(2rem, 4vw, 54px);
+    line-height: 0.98;
+  }
+
   .review-slide {
-    padding: 0 var(--spacing-md);
+    padding: var(--spacing-md);
     position: relative;
     text-align: center;
   }
 
-  .quote-icon {
-    color: currentcolor;
+  .quote-badge {
+    background-color: var(--color-bg-black, #000);
+    display: table;
+    margin-top: -60px;
+    padding: 4px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-badge img {
     display: block;
-    font-size: 6rem;
-    line-height: 0.8;
-    opacity: 0.15;
-    transform: rotate(180deg);
+    margin: 0;
   }
 
   .review-text {
@@ -134,11 +186,7 @@ const isPeek = String(className ?? "")
   }
 
   .reviewer-img {
-    border-radius: var(--radius-full, 50%);
     flex-shrink: 0;
-    height: 3.5rem;
-    object-fit: cover;
-    width: 3.5rem;
   }
 
   .social-icon {
@@ -179,15 +227,21 @@ const isPeek = String(className ?? "")
   }
 
   .author-name {
-    font-size: 1.375rem;
-    font-weight: normal;
-    letter-spacing: 0.2em;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+    line-height: 1.27;
     text-transform: uppercase;
   }
 
   .empty-state {
     opacity: 0.6;
     padding: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .reviews-cta {
+    margin-top: var(--spacing-lg);
     text-align: center;
   }
 
@@ -224,5 +278,58 @@ const isPeek = String(className ?? "")
 
   :global(.index-reviews.peek .slide.is-snapped) {
     opacity: 1;
+  }
+
+  /*
+    GRID LAYOUT
+    Toggle by adding class "grid" to IndexReviews in index.md:
+      class: grid
+
+    The bordered-box look applies at every breakpoint (matching the
+    reference). Below 1025px the boxes sit inside a normal swipeable
+    carousel; at 1025px and up, all reviews unwrap into a static wrapped
+    row instead and the arrows/dots are hidden.
+   */
+  :global(.index-reviews.grid .review-slide) {
+    border: 1px solid var(--color-border-strong, #707070);
+    min-height: 287.5px;
+    padding: 27px;
+    text-align: left;
+  }
+
+  :global(.index-reviews.grid .review-text) {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-inline: 0;
+    min-height: 140px;
+  }
+
+  :global(.index-reviews.grid .review-author) {
+    justify-content: flex-start;
+  }
+
+  /* The quote badge overlaps the top border via a negative margin, so the
+     viewport can only clip horizontally (for the carousel's scroll) —
+     clipping vertically too would cut the badge off. */
+  :global(.index-reviews.grid .index-reviews-carousel > .viewport) {
+    overflow: hidden visible;
+  }
+
+  @media (min-width: 1025px) {
+    :global(.index-reviews.grid .index-reviews-carousel > .viewport > .track) {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-top: 60px;
+      transform: none !important;
+    }
+
+    :global(.index-reviews.grid .index-reviews-carousel .slide) {
+      flex: 0 1 287.5px;
+      max-width: none;
+    }
+
+    :global(.index-reviews.grid .index-reviews-carousel > .controls-wrapper) {
+      display: none;
+    }
   }
 </style>

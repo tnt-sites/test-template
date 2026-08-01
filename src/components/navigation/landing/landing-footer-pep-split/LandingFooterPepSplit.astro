@@ -1,0 +1,295 @@
+---
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource = "",
+  logoAlt = "Logo",
+  siteName = "",
+  offices = [],
+  officeHours = [],
+  questionsText = "Have Questions?<br>Give Us a Call!",
+  legalLinks = [],
+  mapEmbedUrl = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => !["_component", "editable", "socials"].includes(key))
+);
+
+const resolvedSiteName = siteName || (siteInfoData as any).siteName || "";
+const resolvedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+const office = resolvedOffices[0] || {};
+const phone = office?.phones?.[0] || null;
+const address = office?.addresses?.[0] || null;
+const resolvedEmbedUrl =
+  mapEmbedUrl || office?.mapEmbedUrl || (siteInfoData as any).mapEmbedUrl || "";
+
+const formatAddressLines = (addressObject: any) => {
+  const lineItems = Array.isArray(addressObject?.lines) ? addressObject.lines : [];
+  const stateAndPostal = [addressObject?.state, addressObject?.postalCode]
+    .filter(Boolean)
+    .join(" ");
+  const cityStatePostal = [addressObject?.city, stateAndPostal].filter(Boolean).join(", ");
+
+  return [...lineItems, cityStatePostal].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const addressLines = formatAddressLines(address);
+const copyYear = new Date().getFullYear();
+---
+
+<footer class:list={["landing-footer-pep-split", className]} {...htmlAttributes}>
+  <div class="lfps-split">
+    <article class="lfps-contact">
+      <h2>Contact Us</h2>
+      {logoSource && <img class="lfps-logo" src={logoSource} alt={logoAlt} />}
+      {
+        addressLines.length > 0 && (
+          <a
+            href={address?.mapUrl || "#"}
+            class="lfps-address"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {addressLines.map((line: string, index: number) => (
+              <>
+                {line}
+                {index < addressLines.length - 1 && <br />}
+              </>
+            ))}
+          </a>
+        )
+      }
+      {
+        phone?.display && (
+          <a href={phone?.href || "#"} class="lfps-phone">
+            {phone.display}
+          </a>
+        )
+      }
+    </article>
+
+    <figure class="lfps-map-figure">
+      <h2>Find Us</h2>
+      {
+        resolvedEmbedUrl && (
+          <div class="lfps-frame">
+            <iframe
+              src={resolvedEmbedUrl}
+              title="Office location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            />
+          </div>
+        )
+      }
+    </figure>
+
+    <article class="lfps-hours">
+      <h2>Office Hours</h2>
+      {
+        officeHours.length > 0 && (
+          <div class="lfps-hours-list">
+            {officeHours.map((item: any) => (
+              <span>
+                <label>{item.day}</label> {item.hours}
+              </span>
+            ))}
+          </div>
+        )
+      }
+      {questionsText && <span class="lfps-qa" set:html={questionsText} />}
+    </article>
+  </div>
+
+  <div class="lfps-copy">
+    &copy; {copyYear}
+    {resolvedSiteName}
+    {
+      legalLinks.length > 0 && (
+        <>
+          <span class="lfps-sep"> | </span>
+          {legalLinks.map((item: any, index: number) => (
+            <>
+              <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+              {index < legalLinks.length - 1 && <span class="lfps-sep"> | </span>}
+            </>
+          ))}
+        </>
+      )
+    }
+    <span class="lfps-sep"> | </span>
+    Site designed and maintained by{" "}
+    <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">TNT Dental</a>
+  </div>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-footer-pep-split {
+      background: var(--color-bg);
+      overflow: hidden;
+      padding: 40px 0 0;
+
+      &[data-fixed-tabs-active="true"] {
+        @media (max-width: 1024px) {
+          padding-bottom: calc(72px + env(safe-area-inset-bottom));
+        }
+      }
+
+      h2 {
+        color: var(--color-text-strong);
+        font-family: "Barlow", sans-serif;
+        font-size: clamp(1.75rem, 3.5vw, 2.8125rem);
+        font-weight: 600;
+        margin: 0 auto 50px;
+        position: relative;
+        text-align: center;
+
+        &:after {
+          background-color: var(--color-text-strong);
+          bottom: -20px;
+          content: "";
+          height: 4px;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          width: 85px;
+        }
+      }
+
+      .lfps-split {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem 1.5rem;
+        justify-content: center;
+        margin: 0 auto 30px;
+        max-width: 1300px;
+        padding: 0 1.25rem;
+      }
+
+      .lfps-contact,
+      .lfps-hours {
+        flex: 0 1 320px;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .lfps-map-figure {
+        flex: 0 1 400px;
+        margin: 0;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+      .lfps-logo {
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 220px;
+      }
+
+      .lfps-address,
+      .lfps-phone {
+        color: var(--color-text);
+        display: block;
+        font-family: "Barlow", sans-serif;
+        text-decoration: none;
+      }
+
+      .lfps-address {
+        font-size: 20px;
+        font-weight: 400;
+        margin: 10px auto;
+      }
+
+      .lfps-phone {
+        font-size: 41px;
+        font-weight: 700;
+      }
+
+      .lfps-address:hover,
+      .lfps-phone:hover {
+        color: var(--color-brand);
+      }
+
+      .lfps-frame {
+        margin: 0 auto;
+        max-width: 400px;
+        overflow: hidden;
+
+        iframe {
+          border: 0;
+          display: block;
+          height: 300px;
+          width: 100%;
+        }
+      }
+
+      .lfps-hours-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 auto;
+        max-width: 300px;
+
+        span {
+          color: var(--color-text);
+          display: flex;
+          font-family: "Barlow", sans-serif;
+          font-size: 20px;
+          justify-content: space-between;
+        }
+
+        label {
+          font-weight: 600;
+        }
+      }
+
+      .lfps-qa {
+        color: var(--color-text);
+        display: block;
+        font-family: "Barlow", sans-serif;
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .lfps-copy {
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        font-family: "Barlow", sans-serif;
+        font-size: 18px;
+        padding: 20px 10px 30px;
+        text-align: center;
+
+        a {
+          color: var(--color-text);
+
+          &:hover {
+            color: var(--color-brand);
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .lfps-split {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .lfps-contact,
+        .lfps-hours,
+        .lfps-map-figure {
+          flex-basis: auto;
+          width: 100%;
+        }
+      }
+    }
+  }
+</style>

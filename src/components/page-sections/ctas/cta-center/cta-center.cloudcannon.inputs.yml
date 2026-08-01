@@ -1,3 +1,6 @@
+eyebrow:
+  type: text
+  comment: Small uppercase line shown above the headline.
 heading:
   type: markdown
   comment: Headline for the CTA.
