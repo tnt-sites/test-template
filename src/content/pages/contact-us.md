@@ -39,7 +39,7 @@ pageSections:
         textColor: default
         uppercase: false
     reverse: false
-    colorScheme: inherit
+    colorScheme: contrast
     backgroundColor: dark
     backgroundGradient: ''
     backgroundImage:
