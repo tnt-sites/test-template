@@ -54,7 +54,14 @@ if (!_component && !hasLogos) {
         {logos.map((logo: any) => (
           <editable-array-item data-component="page-sections/info-blocks/logo-strip/logo-strip-item">
             <span class="logo-strip-item">
-              <img src={logo.source} alt={logo.alt} />
+              <Image
+                source={logo.source}
+                alt={logo.alt}
+                editable={false}
+                priority={false}
+                sizes="150px"
+                widths={[150, 300]}
+              />
             </span>
           </editable-array-item>
         ))}
@@ -112,12 +119,20 @@ if (!_component && !hasLogos) {
         text-align: center;
 
         .image {
+          height: 44px;
           margin: 0;
+          width: auto;
+
+          picture {
+            height: 100%;
+          }
         }
 
         img {
+          height: 100%;
           margin-inline: auto;
           max-width: 100%;
+          object-fit: contain;
           width: auto;
         }
       }
