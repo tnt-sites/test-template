@@ -26,156 +26,42 @@ pageSections:
       alt: ''
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/forms/appointment-form
+  - _component: page-sections/builders/custom-section
     id: ''
-    heading: Request an Appointment
-    subtext: ''
-    formAction: assets/php/validator.php
-    formBlocks:
-      - _component: building-blocks/forms/input
+    label: ''
+    contentSections:
+      - _component: building-blocks/core-elements/embed
         id: ''
-        label: Name
-        name: name
-        type: text
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: Are You a...
-        name: patient
-        required: true
-        options:
-          - value: new-patient
-            label: New Patient
-          - value: existing-patient
-            label: Existing Patient
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Phone
-        name: phone
-        type: tel
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: Preferred Method of Communication
-        name: communication
-        required: false
-        options:
-          - value: phone
-            label: Phone
-          - value: text
-            label: Text
-          - value: email
-            label: Email
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Email
-        name: email
-        type: email
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: How'd You Hear About Us?
-        name: hear
-        required: true
-        options:
-          - value: search-engine
-            label: Search Engine
-          - value: family-friend
-            label: Family/Friend
-          - value: promotion
-            label: Promotion
-          - value: social-media
-            label: Social Media
-          - value: other
-            label: Other
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Your Dental Insurance
-        name: insurance
-        type: text
-        required: false
-      - _component: building-blocks/forms/select
-        id: ''
-        label: I Am Interested In...
-        name: interested
-        required: false
-        options:
-          - value: dental-checkup-cleaning
-            label: Dental Checkup & Cleaning
-          - value: dental-implants
-            label: Dental Implants
-          - value: invisalign
-            label: Invisalign Clear Aligners
-          - value: veneers
-            label: Veneers
-          - value: teeth-whitening
-            label: Teeth Whitening
-          - value: dentures
-            label: Dentures
-          - value: crowns
-            label: Crowns
-          - value: bridges
-            label: Bridges
-          - value: fillings
-            label: Fillings
-          - value: extractions
-            label: Extractions
-          - value: emergency-dental-care
-            label: Emergency Dental Care
-          - value: other
-            label: Other
-        placeholder: Select one
-      - _component: building-blocks/forms/choice-group
-        id: ''
-        title: Preferred Day(s) of the Week
-        name: day
-        required: false
-        options:
-          - value: monday
-            label: Monday
-            checked: false
-          - value: tuesday
-            label: Tuesday
-            checked: false
-          - value: wednesday
-            label: Wednesday
-            checked: false
-          - value: thursday
-            label: Thursday
-            checked: false
-        orientation: horizontal
-        multiple: true
-      - _component: building-blocks/forms/textarea
-        id: ''
-        label: Questions or Comments
-        name: comment
-        required: false
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _subject
-        value: Request Appointment
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _redirect
-        value: /thanks
-      - _component: building-blocks/forms/submit
-        id: ''
-        text: Submit
-        variant: primary
-        size: md
-        iconPosition: before
-        hideText: false
-        disabled: false
+        html: |-
+          <div style="max-width: 1000px; margin: 50px auto; padding: 0 20px;">
+          <iframe
+                id="JotFormIFrame-260775496177977"
+                title="Lifetime Dental Care - Request Appt Form"
+                onload="window.parent.scrollTo(0,0)"
+                allowtransparency="true"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                src="https://forms.liine.com/260775496177977"
+                frameborder="0"
+                style="min-width:100%;max-width:100%;height:539px;border:none;"
+                scrolling="no"
+              >
+              </iframe>
+              <script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+              <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-260775496177977']", "https://forms.liine.com/")</script>
+          </div>
+        aspectRatio: widescreen
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: inherit
     backgroundColor: base
     backgroundGradient: ''
     backgroundImage:
-      source:
-      alt:
+      source: ''
+      alt: ''
       positionVertical: top
       positionHorizontal: center
+    rounded: false
 description: >-
   Request a dental appointment at Lifetime Dental Care in Hays, KS. Fill out the
   form and we'll reach out to schedule your visit.
