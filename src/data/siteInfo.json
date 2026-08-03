@@ -42,7 +42,9 @@
           "href": "tel:+17856257969"
         }
       ],
-      "emails": [],
+      "emails": [
+        {}
+      ],
       "officeHours": [
         {
           "day": "Monday",
