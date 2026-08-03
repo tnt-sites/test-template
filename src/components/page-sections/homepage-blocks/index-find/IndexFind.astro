@@ -96,17 +96,17 @@ const htmlAttributes = Object.fromEntries(
     .index-find {
       .find-row {
         align-items: center;
-        display: flex;
-        flex-direction: column;
+        display: block;
         justify-content: space-between;
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
           flex-direction: row;
+                  display: flex;
         }
       }
 
       .order-last {
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
           order: 2;
         }
       }
@@ -164,7 +164,7 @@ const htmlAttributes = Object.fromEntries(
           height: 450px;
           width: 100%;
 
-          @media (min-width: 1025px) {
+          @media (min-width: 1024px) {
             height: 700px;
           }
         }

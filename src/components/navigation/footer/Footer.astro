@@ -363,6 +363,17 @@ const footerStyle = [
             width: auto;
           }
         }
+
+        @media (max-width: 1024px) {
+          box-sizing: border-box;
+          padding: 20px;
+          width: 100%;
+
+          img {
+            max-width: 260px;
+            width: 100%;
+          }
+        }
       }
 
       .footer-deco-content {
@@ -431,6 +442,12 @@ const footerStyle = [
       }
 
       .logo{margin: 0 auto 30px; display: block; img{margin: 0 auto;}}
+
+      @media (max-width: 1024px) {
+        .logo {
+          padding: 20px;
+        }
+      }
 
       .bar .bar-list {
         flex-flow: column wrap;

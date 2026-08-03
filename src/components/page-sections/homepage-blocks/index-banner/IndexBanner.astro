@@ -48,7 +48,7 @@ const htmlAttributes = Object.fromEntries(
   paddingHorizontal="lg"
   paddingVertical="none"
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
   <article>
@@ -86,7 +86,13 @@ const htmlAttributes = Object.fromEntries(
     {
       badgeSource && (
         <span class="badge">
-          <img src={badgeSource} alt={badgeAlt} data-editable="image" data-prop-src="badgeSource" data-prop-alt="badgeAlt" />
+          <img
+            src={badgeSource}
+            alt={badgeAlt}
+            data-editable="image"
+            data-prop-src="badgeSource"
+            data-prop-alt="badgeAlt"
+          />
         </span>
       )
     }
@@ -197,7 +203,7 @@ const htmlAttributes = Object.fromEntries(
         .badge {
           display: block;
           position: absolute;
-          right: 20px;
+          right: -30px;
           top: -80px;
 
           img {
@@ -211,7 +217,7 @@ const htmlAttributes = Object.fromEntries(
         }
       }
 
-      @media (min-width: 700px) {
+      @media (min-width: 768px) {
         figure .badge {
           right: -60px;
         }

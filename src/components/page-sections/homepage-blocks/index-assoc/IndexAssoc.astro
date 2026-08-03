@@ -45,7 +45,7 @@ const htmlAttributes = Object.fromEntries(
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
   {
@@ -92,6 +92,10 @@ const htmlAttributes = Object.fromEntries(
           max-width: 100%;
         }
       }
+    }
+
+    @media (max-width: 1024px){
+      .index-assoc .assoc-row{flex-wrap: wrap; editable-array-item, span{flex: 0 1 45%;}}
     }
   }
 </style>

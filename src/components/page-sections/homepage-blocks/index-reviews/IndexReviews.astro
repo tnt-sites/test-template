@@ -48,7 +48,7 @@ const isGrid = classList.includes("grid");
 <CustomSection
   class:list={["index-reviews", className]}
   maxContentWidth={isPeek ? undefined : "2xl"}
-  paddingHorizontal="lg"
+  paddingHorizontal=""
   paddingVertical="4xl"
   colorScheme={colorScheme}
   backgroundColor={backgroundColor}
@@ -111,7 +111,7 @@ const isGrid = classList.includes("grid");
 
   {
     buttonText && (
-      <div class="reviews-cta">
+      <div class="reviews-cta px-8">
         <Button text={buttonText} link={buttonHref} variant="reverse" data-prop="buttonText" />
       </div>
     )
@@ -245,19 +245,6 @@ const isGrid = classList.includes("grid");
     text-align: center;
   }
 
-  /*
-    PEEK LAYOUT 
-    Toggle by adding class "peek" to IndexReviews in index.md:
-      class: peek
-   
-    Shows adjacent slides peeking in from the sides at half opacity.
-    Slide width is set at render time via slideWidthPercent (see isPeek above).
-    The ClassNames plugin (embla-carousel-class-names) adds "is-snapped" to
-    the selected slide, which drives the opacity.
-   */
-
-  /* Break carousel out of the padded content wrapper so it's truly full-width.
-     The heading retains its padding via the parent. */
   :global(.index-reviews.peek .index-reviews-carousel) {
     margin-inline: calc(-1 * var(--spacing-lg));
     width: calc(100% + 2 * var(--spacing-lg));
@@ -280,16 +267,6 @@ const isGrid = classList.includes("grid");
     opacity: 1;
   }
 
-  /*
-    GRID LAYOUT
-    Toggle by adding class "grid" to IndexReviews in index.md:
-      class: grid
-
-    The bordered-box look applies at every breakpoint (matching the
-    reference). Below 1025px the boxes sit inside a normal swipeable
-    carousel; at 1025px and up, all reviews unwrap into a static wrapped
-    row instead and the arrows/dots are hidden.
-   */
   :global(.index-reviews.grid .review-slide) {
     border: 1px solid var(--color-border-strong, #707070);
     min-height: 287.5px;
@@ -308,18 +285,19 @@ const isGrid = classList.includes("grid");
     justify-content: flex-start;
   }
 
-  /* The quote badge overlaps the top border via a negative margin, so the
-     viewport can only clip horizontally (for the carousel's scroll) —
-     clipping vertically too would cut the badge off. */
   :global(.index-reviews.grid .index-reviews-carousel > .viewport) {
     overflow: hidden visible;
   }
 
-  @media (min-width: 1025px) {
+  :global(.index-reviews.grid .index-reviews-carousel > .viewport > .track) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: 1024px) {
     :global(.index-reviews.grid .index-reviews-carousel > .viewport > .track) {
       flex-wrap: wrap;
       justify-content: center;
-      padding-top: 60px;
+
       transform: none !important;
     }
 

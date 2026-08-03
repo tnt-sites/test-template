@@ -55,7 +55,7 @@ const htmlAttributes = Object.fromEntries(
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
   <div class="split-row">
@@ -85,7 +85,13 @@ const htmlAttributes = Object.fromEntries(
           <h3 class="split-heading" data-editable="text" data-prop="heading" set:html={heading} />
         )
       }
-      {text && <p data-editable="text" data-prop="text">{text}</p>}
+      {
+        text && (
+          <p data-editable="text" data-prop="text">
+            {text}
+          </p>
+        )
+      }
       {
         buttonText && (
           <Button text={buttonText} link={buttonHref} variant="primary" data-prop="buttonText" />
@@ -100,13 +106,13 @@ const htmlAttributes = Object.fromEntries(
     .index-split {
       .split-row {
         align-items: center;
-        display: flex;
-        flex-direction: column;
+        display: block;
         gap: var(--spacing-xl);
         justify-content: space-around;
         text-align: center;
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
+                  display: flex;
           flex-direction: row-reverse;
           text-align: left;
         }
@@ -123,11 +129,10 @@ const htmlAttributes = Object.fromEntries(
 
         .landing {
           display: flex;
-          flex-wrap: wrap;
           gap: 5px;
           justify-content: center;
 
-          @media (min-width: 700px) {
+          @media (min-width: 768px) {
             flex-wrap: nowrap;
           }
 
@@ -153,6 +158,10 @@ const htmlAttributes = Object.fromEntries(
               font-size: 12px;
               letter-spacing: 1.2px;
             }
+
+            @media (max-width: 768px){
+              font-size: 12px;
+            }
           }
 
           a:hover .name,
@@ -173,7 +182,7 @@ const htmlAttributes = Object.fromEntries(
         margin: 10px auto;
         text-transform: uppercase;
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
           margin-left: 0;
         }
       }

@@ -95,6 +95,16 @@ const htmlAttributes = Object.fromEntries(
     }
 
     @media (max-width: 768px) {
+      .more-to-explore .buttons,
+      .more-to-explore .buttons > editable-array {
+        flex-direction: column;
+      }
+
+      .more-to-explore .buttons > editable-array-item,
+      .more-to-explore .buttons > editable-array > editable-array-item {
+        width: 100%;
+      }
+
       .more-to-explore .buttons .button {
         flex-basis: 100%;
         min-width: auto;

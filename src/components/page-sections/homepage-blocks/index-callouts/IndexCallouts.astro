@@ -65,7 +65,12 @@ const htmlAttributes = Object.fromEntries(
       }
       {
         heading && (
-          <h3 class="callouts-heading" data-editable="text" data-prop="heading" set:html={heading} />
+          <h3
+            class="callouts-heading"
+            data-editable="text"
+            data-prop="heading"
+            set:html={heading}
+          />
         )
       }
     </div>
@@ -145,8 +150,12 @@ const htmlAttributes = Object.fromEntries(
         margin-bottom: 50px;
         text-align: center;
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
           text-align: left;
+        }
+
+                @media (max-width: 1024px){
+            display: block;
         }
       }
 
@@ -175,7 +184,7 @@ const htmlAttributes = Object.fromEntries(
         color: var(--color-text);
         flex: 0 1 500px;
 
-        @media (min-width: 1025px) {
+        @media (min-width: 1024px) {
           text-align: right;
         }
       }
@@ -207,6 +216,7 @@ const htmlAttributes = Object.fromEntries(
       }
 
       .callout-title {
+        
         margin-top: 10px;
 
         small {
@@ -219,6 +229,8 @@ const htmlAttributes = Object.fromEntries(
           line-height: 1.17;
           text-transform: uppercase;
         }
+
+
       }
 
       .learn {

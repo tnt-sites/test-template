@@ -51,7 +51,7 @@ const htmlAttributes = Object.fromEntries(
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
   {
@@ -133,7 +133,6 @@ const htmlAttributes = Object.fromEntries(
           justify-content: center;
 
           img {
-            height: 100%;
             width: auto;
           }
         }
@@ -151,6 +150,11 @@ const htmlAttributes = Object.fromEntries(
         a:hover h3,
         a:focus-visible h3 {
           color: var(--color-brand);
+        }
+
+
+        @media (max-width: 768px){
+          > editable-array-item {flex: 0 1 45%;}
         }
       }
 

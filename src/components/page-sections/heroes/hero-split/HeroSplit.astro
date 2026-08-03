@@ -108,7 +108,7 @@ const {
       margin: 0;
     }
 
-    @media (--to-md) {
+    @media (max-width: 1024px) {
       .hero-split-grid,
       .hero-split-grid.reverse {
         grid-template-columns: 1fr;
@@ -117,6 +117,26 @@ const {
         .hero-split-text,
         .hero-split-image {
           order: initial;
+        }
+
+        .hero-split-image{padding: 0;}
+
+        .hero-split-text {
+          align-items: center;
+          margin-inline: auto;
+          text-align: center;
+
+          .eyebrow,
+          .heading,
+          .hero-split-heading,
+          .subtext,
+          .text {
+            text-align: center;
+          }
+
+          .buttons-container {
+            justify-content: center;
+          }
         }
 
         .hero-split-image {

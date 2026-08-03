@@ -100,11 +100,12 @@ const {
       padding-inline: var(--spacing-2xl);
     }
 
-    @media (--to-md) {
+    @media (max-width: 1024px) {
       .cta-split-grid,
       .cta-split-grid.reverse {
         display: block;
-        min-height: 0;
+        min-height: 0; 
+        text-align: center;
 
         .cta-split-text,
         .cta-split-image {
@@ -115,6 +116,11 @@ const {
           align-items: center;
           margin-inline: auto;
           text-align: center;
+
+          .heading,
+          .text {
+            text-align: center;
+          }
 
           .buttons {
             justify-content: center;
