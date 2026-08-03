@@ -7,24 +7,30 @@ pageSections:
     eyebrow: Request a Dental Appointment in Hays
     heading: Plan Your Next Visit with Us
     subtext: >-
-      Interested in scheduling a dental appointment in Hays? Simply fill
-      out the requested information on the form below and press submit.
-      Once our team receives your information, we'll reach out to you to
-      find the best time and date to plan your upcoming visit to
-      Lifetime Dental Care. We're also happy to answer any questions you
-      may have on the phone, so don't hesitate to call us during
-      business hours.
+      Interested in scheduling a dental appointment in Hays? Simply fill out the
+      requested information on the form below and press submit. Once our team
+      receives your information, we'll reach out to you to find the best time
+      and date to plan your upcoming visit to Lifetime Dental Care. We're also
+      happy to answer any questions you may have on the phone, so don't hesitate
+      to call us during business hours.
     imageSource: /src/assets/images/request-appointment-1.webp
     imageAlt: Woman talking on the phone with a dental office in Hays
+    imageAspectRatio: none
     buttonSections: []
     reverse: false
     colorScheme: contrast
     backgroundColor: dark
+    backgroundGradient: ''
+    backgroundImage:
+      source: ''
+      alt: ''
+      positionVertical: top
+      positionHorizontal: center
   - _component: page-sections/forms/appointment-form
     id: ''
     heading: Request an Appointment
     subtext: ''
-    formAction: ./
+    formAction: assets/php/validator.php
     formBlocks:
       - _component: building-blocks/forms/input
         id: ''
@@ -171,6 +177,6 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
 description: >-
-  Request a dental appointment at Lifetime Dental Care in Hays, KS. Fill
-  out the form and we'll reach out to schedule your visit.
+  Request a dental appointment at Lifetime Dental Care in Hays, KS. Fill out the
+  form and we'll reach out to schedule your visit.
 ---
