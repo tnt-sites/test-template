@@ -118,6 +118,10 @@ const date = post.data.date.toLocaleDateString("en-US", {
 </Page>
 
 <style>
+  :global(.post-container.custom-section) {
+    margin-bottom: var(--spacing-3xl);
+  }
+
   :global(.post-container.custom-section) > :global(.outer-content) > :global(.content) {
     padding-bottom: 0 !important;
   }

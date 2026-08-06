@@ -1,0 +1,41 @@
+label: Hero Profile
+icon: hero
+description: Title bar with the heading flexed beside an intro paragraph, plus a second paragraph and image below that overlaps the title bar.
+value:
+  _component: page-sections/heroes/hero-profile
+  id: ""
+  eyebrow: Eyebrow text
+  heading: Heading text
+  introText: Intro paragraph placeholder text that will be replaced with actual content.
+  subtext: Subtitle placeholder text that will be replaced with actual content.
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt: Hero image
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  colorScheme: inherit
+  backgroundColor: brand
+  backgroundColorHex: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: left
+preview:
+  text:
+    - Hero Profile
+  subtext:
+    - key: heading
+  icon: hero
+picker_preview:
+  text: Hero Profile
+  subtext: Title bar with heading + intro paragraph flexed, plus an overlapping image + paragraph row below.
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/hero-profile/hero-profile.cloudcannon.inputs.yml

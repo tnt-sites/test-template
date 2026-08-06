@@ -1,0 +1,61 @@
+label: Location FAQs
+icon: quiz
+description: Dark section with a single-open accordion of frequently asked questions.
+value:
+  _component: page-sections/location/location-faqs
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Frequently Asked Questions
+  intro: ''
+  faqs:
+    - _component: page-sections/location/location-faqs/location-faq-item
+      question: A frequently asked question?
+      answer: The answer to that question.
+preview:
+  text:
+    - key: heading
+    - Location FAQs
+  icon: quiz
+picker_preview:
+  text: Location FAQs
+  subtext: Single-open accordion of questions and answers.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-faqs/location-faqs.cloudcannon.inputs.yml
+_structures:
+  locationFaqs:
+    values:
+      - label: Question
+        icon: help
+        value:
+          _component: page-sections/location/location-faqs/location-faq-item
+          question: A frequently asked question?
+          answer: The answer to that question.
+        preview:
+          text:
+            - key: question
+            - Question
+          subtext:
+            - key: answer
+          icon: help
+        _inputs:
+          question:
+            type: text
+            comment: The question, shown on the clickable row.
+          answer:
+            type: markdown
+            comment: The answer, revealed when the row is opened.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css

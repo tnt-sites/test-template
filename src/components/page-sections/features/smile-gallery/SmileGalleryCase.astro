@@ -1,0 +1,44 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "",
+  text = "",
+  imageSource = "",
+  imageAlt = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<div
+  class:list={[
+    "block",
+    "text-center",
+    "lg:text-left",
+    "lg:flex",
+    "container",
+    "align-center",
+    "justify-between",
+    "gap-40",
+    className,
+  ]}
+  {...htmlAttributes}
+>
+  <figure>
+    <Image
+      source={imageSource}
+      alt={imageAlt}
+      data-prop-src="imageSource"
+      data-prop-alt="imageAlt"
+      data-editable="image"
+    />
+  </figure>
+  <article>
+    <Heading level="h3" data-prop="heading" text={heading} />
+    <Text data-prop="text" text={text} />
+  </article>
+</div>

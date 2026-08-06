@@ -1,0 +1,101 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+heading:
+  type: markdown
+  comment: Optional heading shown above the gallery. Leave blank to hide.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+cases:
+  type: array
+  label: Case Studies
+  comment: Large before/after rows pairing a photo with a story, each with its own heading and description.
+  options:
+    structures: _structures.smileGalleryCases
+smiles:
+  type: array
+  label: Photo-Only Cases with 4 images
+  comment: Smaller captioned before/after photos shown in a two-column grid beneath the case studies.
+  options:
+    structures: _structures.smileGallerySmiles
+smilesSmall:
+  type: array
+  label: Photo-Only Cases with 2 images
+  comment: Smaller captioned before/after photos shown in a two-column grid beneath the case studies.
+  options:
+    structures: _structures.smileGallerySmiles
+backgroundColor:
+  type: select
+  comment: Background color used behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+backgroundGradient:
+  type: textarea
+  comment: Optional CSS gradient applied behind the section content.
+backgroundImage:
+  type: object
+  comment: Background image configuration for the section.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  comment: URL or path to the background image.
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  comment: Alt text for the background image.
+  type: textarea
+backgroundImage.positionVertical:
+  comment: Vertical position of the background image.
+  type: select
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  comment: Horizontal position of the background image.
+  type: select
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

@@ -26,4 +26,13 @@ alignX:
         name: Center
       - id: end
         name: End
+width:
+  comment: Whether the group stretches to fill its container, or shrinks to fit its buttons.
+  type: select
+  options:
+    values:
+      - id: full
+        name: Full width
+      - id: content
+        name: Fit content
 

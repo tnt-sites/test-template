@@ -26,6 +26,11 @@ reviews:
 showQuoteIcon:
   type: checkbox
   comment: Show a large decorative opening quote mark on each review slide.
+buttonSections:
+  type: array
+  comment: Call-to-action buttons shown in the carousel controls row (e.g. "Read More Reviews", "Write a Review"), in place of the prev/next arrows.
+  options:
+    structures: _structures.buttonSections
 backgroundColor:
   type: select
   comment: Background color used behind the section.

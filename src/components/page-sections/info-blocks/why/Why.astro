@@ -51,15 +51,41 @@ const htmlAttributes = Object.fromEntries(
 
   <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
 
-  <List items={items} direction="vertical" alignX="center" />
+  <List items={items} direction="horizontal" alignX="center" />
 </CustomSection>
 
-<style>
-  .why .heading-text {
-    text-transform: uppercase;
+<style is:global>
+  .why {
+    margin: 0 auto 30px;
+    max-width: 1200px;
+  }
+  .why h2 {
+    font-weight: 300;
   }
 
-  .list {
+  .why .list {
+    font-weight: 700;
     margin-bottom: var(--spacing-lg);
+    margin-top: 20px;
+  }
+
+  .why .list .item, .why .list editable-array-item {
+    align-items: center;
+    display: flex;
+  flex: 1 1 33%;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .why .list .item > .list-icon {
+    color: var(--color-brand);
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .why .list .item > p {
+    display: block;
   }
 </style>

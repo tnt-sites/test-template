@@ -30,6 +30,10 @@ ctaSplit:
         type: string
         optional: true
         remove_empty: true
+      - editor_key: embedUrl
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: buttonSections
         type: array
         optional: true
@@ -45,6 +49,9 @@ ctaSplit:
         optional: true
         remove_empty: true
       - editor_key: rounded
+        type: boolean
+        optional: true
+      - editor_key: brickBackground
         type: boolean
         optional: true
   _inputs_from_glob:

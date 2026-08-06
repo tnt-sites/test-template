@@ -1,0 +1,61 @@
+label: Video Card Row
+icon: smart_display
+description: Intro copy beside a row of patient testimonial video cards, with a CTA button.
+value:
+  _component: page-sections/homepage-blocks/video-card-row
+  id: ""
+  heading: Your Home for Life-Changing Dentistry
+  subtext: |-
+    We have boundless passion for what we do and are always looking to provide our patients with transformative care. Hear some of our patients' inspiring stories about visiting Taylor Street Dental below.
+  videos:
+    - youtubeId: zKdDaaitCx0
+      caption: Lisa
+    - youtubeId: 4lOESX9HUXE
+      caption: Charlie
+    - youtubeId: 59l7jh6lju8
+      caption: Foxes
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: Watch More Patient Testimonials
+      hideText: false
+      link: video-testimonials.html
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  backgroundColor: surface
+  backgroundColorHex: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+  brickBackground: false
+preview:
+  text:
+    - Video Card Row
+  subtext:
+    - key: heading
+  icon: smart_display
+picker_preview:
+  text: Video Card Row
+  subtext: Intro text with a row of patient testimonial video cards.
+  icon: smart_display
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/video-card-row/video-card-row.cloudcannon.inputs.yml
+_structures:
+  videoItems:
+    values:
+      - label: Video
+        icon: smart_display
+        value:
+          youtubeId: ""
+          caption: ""
+        _inputs:
+          youtubeId:
+            type: text
+            comment: The YouTube video ID (the part of the URL after "v=").
+          caption:
+            type: text
+            comment: Short caption shown below the video, e.g. the patient's name.

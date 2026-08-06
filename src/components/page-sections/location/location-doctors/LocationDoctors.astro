@@ -1,0 +1,257 @@
+---
+/**
+ * "Meet your dentists near ___" — headshot cards, a row of credential icons,
+ * and a row of buttons, all opening the same set of bio modals.
+ *
+ * Each doctor's `bioLinkText` drives its button; leave it blank to omit one.
+ * Reusing the doctors array for the buttons keeps a card and its button
+ * pointed at the same modal.
+ */
+import Button from "@core-elements/button/Button.astro";
+import LocationIcon from "../location-icon/LocationIcon.astro";
+import LocationModal from "../LocationModal.astro";
+import LocationSection from "../LocationSection.astro";
+import { hasText, modalIdFor } from "../utils";
+import LocationDoctor from "./LocationDoctor.astro";
+
+const {
+  id = "",
+  heading = "",
+  doctors = [],
+  icons = [],
+  backgroundColor = "",
+  headingColor = "",
+  textColor = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const doctorItems = Array.isArray(doctors) ? doctors : [];
+const iconItems = Array.isArray(icons) ? icons : [];
+
+if (!_component && !hasText(heading) && doctorItems.length === 0) return;
+
+const doctorModalIds = doctorItems.map((item, index) => modalIdFor(item, index, id || "doctors"));
+const iconModalIds = iconItems.map((item, index) =>
+  modalIdFor(item, index, `${id || "doctors"}-icon`)
+);
+const bioLinks = doctorItems
+  .map((item: any, index: number) => ({ item, modalId: doctorModalIds[index] }))
+  .filter(({ item, modalId }) => modalId && hasText(item.bioLinkText));
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<LocationSection
+  id={id}
+  backgroundColor={backgroundColor}
+  headingColor={headingColor}
+  textColor={textColor}
+  class:list={["location-doctors", className]}
+  {...htmlAttributes}
+>
+  {/* Reversed by CSS so the headshots sit above the heading, as on the legacy page. */}
+  <div class="heading-and-doctors">
+    {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+    {
+      doctorItems.length > 0 && (
+        <div
+          class="doctor-images-container"
+          data-editable={editable ? "array" : undefined}
+          data-prop={editable ? "doctors" : undefined}
+          data-component-key="_component"
+          data-id-key="_component"
+        >
+          {doctorItems.map((item: any, index: number) => (
+            <editable-array-item data-component="page-sections/location/location-doctors/location-doctor">
+              <LocationDoctor {...item} modalId={doctorModalIds[index]} editable={editable} />
+            </editable-array-item>
+          ))}
+        </div>
+      )
+    }
+  </div>
+
+  {
+    iconItems.length > 0 && (
+      <div
+        class="doctor-icons-container"
+        data-editable={editable ? "array" : undefined}
+        data-prop={editable ? "icons" : undefined}
+        data-component-key="_component"
+        data-id-key="_component"
+      >
+        {iconItems.map((item: any, index: number) => (
+          <editable-array-item data-component="page-sections/location/location-icon">
+            <LocationIcon {...item} modalId={iconModalIds[index]} editable={editable} />
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    bioLinks.length > 0 && (
+      <div class="doctor-bio-links">
+        {bioLinks.map(({ item, modalId }) => (
+          <Button
+            class="btn"
+            text={item.bioLinkText}
+            modalTarget={modalId}
+            variant="primary"
+            size="md"
+            editable={false}
+          />
+        ))}
+      </div>
+    )
+  }
+</LocationSection>
+
+{
+  [
+    ...doctorItems.map((item: any, index: number) => ({ item, modalId: doctorModalIds[index] })),
+    ...iconItems.map((item: any, index: number) => ({ item, modalId: iconModalIds[index] })),
+  ].map(({ item, modalId }) =>
+    modalId ? (
+      <LocationModal
+        id={modalId}
+        heading={item.modalHeading || item.name || item.heading}
+        content={item.modalContent}
+      />
+    ) : null
+  )
+}
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .location-page-section.location-doctors:not(.alt-background) {
+      .heading-and-doctors {
+        display: flex;
+        flex-direction: column-reverse;
+
+        h2 {
+          padding: 0 10px 45px;
+        }
+
+        .doctor-images-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 50px 20px;
+          justify-content: center;
+          margin: 75px auto 50px;
+          max-width: var(--doctor-images-container-width);
+          padding: 0 20px;
+
+          /* renderBlock wraps each item in <editable-array-item>, so the flex
+             sizing has to sit on the wrapper as well as the bare element. */
+          > editable-array-item,
+          > .doctor {
+            align-self: start;
+            display: flex;
+            flex: 1 1 var(--doctor-image-width);
+            max-width: 100%;
+          }
+
+          .doctor {
+            display: grid;
+            gap: 10px 0;
+            margin: 0 auto;
+            max-width: 100%;
+            width: 100%;
+
+            figure {
+              margin: 0;
+              padding: 0;
+
+              img {
+                margin: 0 auto;
+                max-width: 100%;
+                padding: 0;
+                width: 100%;
+              }
+            }
+
+            h3 {
+              color: var(--image-modal-h3-color);
+              font-size: var(--doctor-h3-image-font);
+              padding: 5px 0;
+
+              small {
+                color: var(--image-modal-h3-color);
+                display: block;
+                margin: 10px auto 0;
+              }
+            }
+
+            &:hover h3,
+            &:hover h3 small {
+              color: var(--image-modal-h3-color-hover);
+            }
+          }
+        }
+      }
+
+      .doctor-icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 0;
+        margin: 0 auto;
+        max-width: 1200px;
+        padding: 20px 0 75px;
+
+        > editable-array-item,
+        > .location-icon {
+
+          flex: 0 1 33.33%;
+        }
+
+        .location-icon {
+          gap: 5px 0;
+          width: 100%;
+
+          h3 {
+            font-size: var(--doctor-h3-icon-font);
+          }
+        }
+      }
+
+      .doctor-bio-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 0 0 75px;
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .location-page-section.location-doctors:not(.alt-background) {
+        .doctor-images-container .doctor h3 {
+          font-size: var(--doctor-h3-image-font-tablet);
+        }
+
+        .doctor-icons-container .location-icon h3 {
+          font-size: var(--doctor-h3-icon-font-tablet);
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .location-page-section.location-doctors:not(.alt-background) {
+        .doctor-images-container .doctor h3 {
+          font-size: var(--doctor-h3-image-font-mobile);
+        }
+
+        .doctor-icons-container .location-icon h3 {
+          font-size: var(--doctor-h3-icon-font-mobile);
+        }
+      }
+    }
+  }
+</style>

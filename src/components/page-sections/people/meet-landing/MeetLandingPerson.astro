@@ -1,8 +1,10 @@
 ---
+import Button from "@core-elements/button/Button.astro";
 import Image from "@core-elements/image/Image.astro";
 
 const {
   name = "Provider Name",
+  role = "",
   href = "#",
   imageSource = "",
   imageAlt = "",
@@ -15,9 +17,9 @@ const {
 const cleanText = (value: unknown, fallback = "") =>
   typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
 
-const safeVariant = variant === "name" ? "name" : "button";
-const labelClass = safeVariant === "name" ? "name" : "btn";
+const safeVariant = ["name", "overlay"].includes(variant) ? variant : "button";
 const providerName = cleanText(name, "Provider Name");
+const providerRole = cleanText(role);
 const providerHref = cleanText(href, "#");
 const providerImage = cleanText(imageSource);
 const providerImageAlt = cleanText(imageAlt, providerName);
@@ -27,24 +29,77 @@ if (!_component && providerName.length === 0 && providerImage.length === 0) {
 }
 ---
 
-<a href={providerHref} {...htmlAttributes}>
-  {
-    providerImage && (
-      <Image
-        source={providerImage}
-        alt={providerImageAlt}
-        editable={editable}
-        data-editable={editable ? "image" : undefined}
-        data-prop-src={editable ? "imageSource" : undefined}
-        data-prop-alt={editable ? "imageAlt" : undefined}
-      />
-    )
-  }
-  <span
-    class={labelClass}
-    data-editable={editable ? "text" : undefined}
-    data-prop={editable ? "name" : undefined}
-  >
-    {providerName}
-  </span>
-</a>
+{
+  safeVariant === "overlay" ? (
+    <a href={providerHref} class="meet-landing-person meet-landing-person-overlay" {...htmlAttributes}>
+      {providerImage && (
+        <Image
+          class="meet-landing-overlay-photo"
+          source={providerImage}
+          alt={providerImageAlt}
+          aspectRatio="none"
+          rounded={false}
+          editable={editable}
+          data-editable={editable ? "image" : undefined}
+          data-prop-src={editable ? "imageSource" : undefined}
+          data-prop-alt={editable ? "imageAlt" : undefined}
+        />
+      )}
+      <h3 class="meet-landing-overlay-caption">
+        <span
+          class="meet-landing-overlay-name"
+          data-editable={editable ? "text" : undefined}
+          data-prop={editable ? "name" : undefined}
+        >
+          {providerName}
+        </span>
+        {providerRole && (
+          <span
+            class="meet-landing-overlay-role"
+            data-editable={editable ? "text" : undefined}
+            data-prop={editable ? "role" : undefined}
+          >
+            {providerRole}
+          </span>
+        )}
+      </h3>
+    </a>
+  ) : (
+    <div class="meet-landing-person" {...htmlAttributes}>
+      {providerImage && (
+        <a href={providerHref} class="meet-landing-photo" aria-hidden="true" tabindex="-1">
+          <Image
+            source={providerImage}
+            alt={providerImageAlt}
+            aspectRatio="portrait"
+            rounded
+            editable={editable}
+            data-editable={editable ? "image" : undefined}
+            data-prop-src={editable ? "imageSource" : undefined}
+            data-prop-alt={editable ? "imageAlt" : undefined}
+          />
+        </a>
+      )}
+      {safeVariant === "button" ? (
+        <Button
+          element="a"
+          link={providerHref}
+          text={providerName}
+          variant="primary"
+          size="md"
+          editable={editable}
+          data-prop={editable ? "name" : undefined}
+        />
+      ) : (
+        <a
+          href={providerHref}
+          class="name"
+          data-editable={editable ? "text" : undefined}
+          data-prop={editable ? "name" : undefined}
+        >
+          {providerName}
+        </a>
+      )}
+    </div>
+  )
+}

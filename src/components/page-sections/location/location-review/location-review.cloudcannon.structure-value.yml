@@ -1,0 +1,27 @@
+label: Location Review
+icon: format_quote
+description: Dark section featuring one patient review, with a platform logo above it and a five-star row below.
+value:
+  _component: page-sections/location/location-review
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: See What Other Patients Say About Our Team
+  logoSource: ''
+  logoAlt: Google
+  quote: A short, glowing review from a happy patient.
+  authorName: Patient Name
+  reviewStarColor: ''
+preview:
+  text:
+    - key: heading
+    - Location Review
+  subtext:
+    - key: authorName
+  icon: format_quote
+picker_preview:
+  text: Location Review
+  subtext: A single featured patient review with stars.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-review/location-review.cloudcannon.inputs.yml

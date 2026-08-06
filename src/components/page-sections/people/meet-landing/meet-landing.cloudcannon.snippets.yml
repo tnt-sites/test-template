@@ -12,6 +12,14 @@ meetLanding:
         type: string
         optional: true
         remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: subtext
+        type: string
+        optional: true
+        remove_empty: true
       - editor_key: variant
         type: string
         optional: true

@@ -181,18 +181,20 @@ const htmlAttributes = Object.fromEntries(
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 5px;
         margin: 40px auto 0;
       }
 
       .services-grid-items > editable-array-item,
       .services-grid-items > .services-grid-item {
-        background-color: #fff;
-        box-shadow: 0 3px 6px rgb(0 0 0 / 60%);
+        background-color: #205D5D;
+        padding: 10px;
         display: flex;
         flex-direction: column;
-        flex: 0 1 360px;
+        flex: 0 1 280px;
         overflow: hidden;
+        border-radius: 5px;
+
       }
 
       .services-grid-items > editable-array-item.is-wide,
@@ -200,26 +202,41 @@ const htmlAttributes = Object.fromEntries(
         flex: 1 1 min(100%, 820px);
       }
 
+      .services-grid-items > editable-array-item > .services-grid-item {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+      }
+
       .services-grid-figure {
         margin: 0;
         transition: 0.4s all;
+        max-width: 80px; margin: 20px auto auto;
 
-        img {
-          display: block;
+        height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+
+        .image {
+          height: 100%;
+          margin-top: 0;
           width: 100%;
         }
-
-        .image{margin-top: 0;}
       }
 
       .services-grid-content {
-        padding: 0 20px 20px;
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
       }
 
       .services-grid-title {
         display: block;
-        font-family: var(--font-heading);
-        font-size: clamp(1.75rem, 2.8vw, 1.875rem);
+        font-family: var(--font-headings);
+        font-weight: 300;
+        font-size: 22px;
         line-height: 1.2;
         margin: 20px 0 0;
         text-align: center;
@@ -231,29 +248,37 @@ const htmlAttributes = Object.fromEntries(
         }
 
         a {
-          color: var(--color-text);
+          color: #fff;
           text-decoration: none;
         }
       }
 
       .services-grid-title:hover a,
       .services-grid-title:focus-within a {
-        color: var(--color-brand);
+                color: var(--color-brand-muted);
+
       }
 
       .services-grid-links {
         display: table;
-        margin: 20px auto;
-       
+        padding: 20px 10px;
+        margin: 20px 0 0px;
+        background-color: #134545;
+        width: 100%;
+        min-height: 280px;
+        flex: 1 1 auto;
+        
 
         editable-array-item {
           display: list-item;
           line-height: 1.2;
-          margin: 10px auto;
+          font-size: 16px;
+          margin: 20px auto;
+          text-align: center;
         }
 
         a {
-          color: var(--color-text);
+          color: #fff;
           text-decoration: none;
         }
       }
@@ -268,12 +293,10 @@ const htmlAttributes = Object.fromEntries(
       .services-grid-cta,
       #all {
         align-items: center;
-        background-color: var(--color-brand);
+                background-color: #205D5D;
         display: flex;
-        flex: 0 1 400px;
         flex-direction: column;
         justify-content: center;
-        max-width: 100%;
         min-height: 250px;
         text-align: center;
         transition: 0.4s all;
@@ -283,6 +306,9 @@ const htmlAttributes = Object.fromEntries(
         }
 
         a {
+
+        background-color: var(--color-brand);
+
           color: #fff;
           display: flex;
           flex-direction: column;
@@ -300,7 +326,7 @@ const htmlAttributes = Object.fromEntries(
         color: #fff;
         font-family: var(--font-heading);
         font-size: clamp(2rem, 4.6vw, 3.3125rem);
-        font-weight: 700;
+        font-weight: 300;
         line-height: 1.05;
         padding: 10px;
       }
@@ -351,6 +377,23 @@ const htmlAttributes = Object.fromEntries(
           flex-basis: 100%;
         }
       }
+    }
+  }
+</style>
+
+<style lang="pcss" is:global>
+  /* Unlayered on purpose: needs to beat the "components" layer's
+     `.image img { width: 100%; height: auto }` rule so icons of
+     differing native aspect ratios are contained, not stretched. */
+  .services-grid-figure {
+    picture,
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    img {
+      object-fit: contain;
     }
   }
 </style>

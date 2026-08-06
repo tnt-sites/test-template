@@ -1,0 +1,157 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  imageSource1 = "",
+  imageAlt1 = "",
+  imageSource2 = "",
+  imageAlt2 = "",
+  backgroundColor = "brand",
+  backgroundColorHex = "",
+  backgroundGradient = "",
+  backgroundImage,
+  colorScheme = "inherit",
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBackgroundColor = backgroundColorHex ? undefined : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["index-tour", className]}
+  id={id || undefined}
+  maxContentWidth="3xl"
+  paddingHorizontal="none"
+  paddingVertical="none"
+  colorScheme={colorScheme}
+  backgroundColor={resolvedBackgroundColor}
+  backgroundImage={backgroundImage}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="index-tour-grid">
+    <figure class="index-tour-figure">
+      <Image
+        source={imageSource1}
+        alt={imageAlt1}
+        editable={editable}
+        rounded={false}
+        aspectRatio="none"
+        data-prop-src="imageSource1"
+        data-prop-alt="imageAlt1"
+        data-editable="image"
+      />
+    </figure>
+
+    <article class="index-tour-article">
+      <div class="index-tour-content">
+        <Heading level="h2" size="lg" class="index-tour-heading" data-prop="heading" text={heading} />
+        <Text data-prop="subtext" text={subtext} />
+        <ButtonGroup class="index-tour-buttons" buttonSections={buttonSections} alignX="center" />
+      </div>
+    </article>
+
+    <figure class="index-tour-figure index-tour-figure-2">
+      <Image
+        source={imageSource2}
+        alt={imageAlt2}
+        editable={editable}
+        rounded={false}
+        aspectRatio="none"
+        data-prop-src="imageSource2"
+        data-prop-alt="imageAlt2"
+        data-editable="image"
+      />
+    </figure>
+  </div>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .index-tour {
+      margin-block: var(--spacing-4xl);
+    }
+
+    .index-tour-grid {
+      align-items: stretch;
+      display: flex;
+    }
+
+    .index-tour-figure {
+      margin: 0;
+      max-width: 30%;
+    }
+
+    .index-tour-figure img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .index-tour-article {
+      align-items: center;
+      display: flex;
+      flex: 0 1 40%;
+      padding: var(--spacing-2xl) var(--spacing-xl);
+    }
+
+    .index-tour-content {
+      margin: 0 auto;
+      max-width: 340px;
+      text-align: center;
+    }
+
+    .index-tour-heading,
+    .index-tour-content .text,
+    .index-tour-content .text p {
+      color: var(--color-text-on-brand);
+    }
+
+    .index-tour-content .text a {
+      color: var(--color-text-on-brand);
+      text-decoration: underline;
+    }
+
+    .index-tour-buttons {
+      justify-content: center;
+      margin-top: var(--spacing-lg);
+    }
+
+    @media (max-width: 1000px) {
+      .index-tour-grid {
+        flex-direction: column;
+        margin-top: var(--spacing-xl);
+      }
+
+      .index-tour-figure {
+        max-width: 100%;
+      }
+
+      .index-tour-figure-2 {
+        display: none;
+      }
+    }
+  }
+</style>

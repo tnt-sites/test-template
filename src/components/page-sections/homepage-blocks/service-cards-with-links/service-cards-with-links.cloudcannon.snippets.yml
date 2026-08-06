@@ -1,0 +1,61 @@
+serviceCardsWithLinks:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Service Cards With Links
+    icon: view_module
+  definitions:
+    component_name: ServiceCardsWithLinks
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: subtext
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: services
+        type: array
+        optional: true
+      - editor_key: emergencyImageSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: emergencyImageAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: emergencyHeading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: emergencySubtext
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: emergencyButtonSections
+        type: array
+        optional: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColorHex
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/service-cards-with-links/service-cards-with-links.cloudcannon.inputs.yml

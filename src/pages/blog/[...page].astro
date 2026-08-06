@@ -50,6 +50,7 @@ const pageDescription =
     paddingVertical="none"
     colorScheme="default"
     backgroundColor="base"
+    class="blog-list-container"
   >
     {
       page.data.length > 0 ? (
@@ -128,3 +129,9 @@ const pageDescription =
     }
   </CustomSection>
 </Page>
+
+<style>
+  :global(.blog-list-container.custom-section) {
+    margin-bottom: var(--spacing-3xl);
+  }
+</style>

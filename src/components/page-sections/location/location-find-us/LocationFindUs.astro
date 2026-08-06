@@ -1,0 +1,52 @@
+---
+/** Closing "how to get here" block — a heading and a paragraph of directions. */
+import LocationSection from "../LocationSection.astro";
+import { hasText, renderMarkdown } from "../utils";
+
+const {
+  id = "",
+  heading = "",
+  text = "",
+  backgroundColor = "",
+  headingColor = "",
+  textColor = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+if (!_component && !hasText(heading) && !hasText(text)) return;
+
+const body = renderMarkdown(text);
+const editableAttributes = (prop: string, type = "text") =>
+  editable ? { "data-editable": type, "data-prop": prop } : {};
+---
+
+<LocationSection
+  id={id}
+  backgroundColor={backgroundColor}
+  headingColor={headingColor}
+  textColor={textColor}
+  class:list={["location-find-us", className]}
+  {...htmlAttributes}
+>
+  {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+  {
+    body && (
+      <div class="wrap" {...editableAttributes("text", "markdown")}>
+        <Fragment set:html={body} />
+      </div>
+    )
+  }
+</LocationSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .location-page-section.location-find-us:not(.alt-background) {
+      padding: 60px 10px 30px;
+
+            h2{ color: var(--location-services-h2-color);}
+    }
+  }
+</style>

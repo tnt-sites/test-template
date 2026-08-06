@@ -1,0 +1,33 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, for anchor links.
+backgroundColor:
+  type: select
+  comment: Override this section's background color. Leave blank to use the default.
+  options:
+    values: _select_data.locationBackgroundColors
+headingColor:
+  type: select
+  comment: Override this section's heading color (and the caption under an icon). Leave blank to use the default.
+  options:
+    values: _select_data.locationTextColors
+textColor:
+  type: select
+  comment: Override this section's paragraph and link color. Leave blank to use the default.
+  options:
+    values: _select_data.locationTextColors
+heading:
+  type: text
+  comment: Section heading. Shown below the headshots.
+doctors:
+  type: array
+  label: Doctors
+  comment: Headshot cards. Each one can open a bio pop-up and add a button to the row below.
+  options:
+    structures: _structures.locationDoctors
+icons:
+  type: array
+  label: Credential Icons
+  comment: Icon callouts shown under the headshots.
+  options:
+    structures: _structures.locationIcons

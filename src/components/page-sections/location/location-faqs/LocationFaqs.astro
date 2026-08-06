@@ -1,0 +1,256 @@
+---
+/** Single-open FAQ accordion. */
+import LocationSection from "../LocationSection.astro";
+import { hasText, renderMarkdown } from "../utils";
+import LocationFaqItem from "./LocationFaqItem.astro";
+
+const {
+  id = "",
+  heading = "",
+  intro = "",
+  faqs = [],
+  backgroundColor = "",
+  headingColor = "",
+  textColor = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const items = Array.isArray(faqs) ? faqs : [];
+
+if (!_component && !hasText(heading) && items.length === 0) return;
+
+const introHtml = renderMarkdown(intro);
+const editableAttributes = (prop: string, type = "text") =>
+  editable ? { "data-editable": type, "data-prop": prop } : {};
+---
+
+<LocationSection
+  id={id}
+  altBackground
+  backgroundColor={backgroundColor}
+  headingColor={headingColor}
+  textColor={textColor}
+  class:list={["location-faqs", className]}
+  {...htmlAttributes}
+>
+  {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+  {
+    introHtml && (
+      <div class="wrap" {...editableAttributes("intro", "markdown")}>
+        <Fragment set:html={introHtml} />
+      </div>
+    )
+  }
+  {
+    items.length > 0 && (
+      <div
+        class="location-accordion"
+        data-editable={editable ? "array" : undefined}
+        data-prop={editable ? "faqs" : undefined}
+        data-component-key="_component"
+        data-id-key="_component"
+      >
+        {items.map((item: any) => (
+          <editable-array-item data-component="page-sections/location/location-faqs/location-faq-item">
+            <LocationFaqItem {...item} editable={editable} />
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+</LocationSection>
+
+<script>
+  (() => {
+    const scopedWindow = window as Window & { __locationFaqsInitialized?: boolean };
+    if (scopedWindow.__locationFaqsInitialized) return;
+    scopedWindow.__locationFaqsInitialized = true;
+
+    const contentFor = (toggle: Element) =>
+      toggle.parentElement?.querySelector<HTMLElement>(".faq-content") ?? null;
+
+    const close = (toggle: Element) => {
+      toggle.classList.remove("active");
+      toggle.setAttribute("aria-expanded", "false");
+      const content = contentFor(toggle);
+      if (content) content.style.display = "";
+    };
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const toggle = target.closest(".location-accordion .faq-toggle");
+      if (!toggle) return;
+
+      const accordion = toggle.closest(".location-accordion");
+      const wasOpen = toggle.classList.contains("active");
+
+      // Single-open: collapse everything in this accordion first.
+      accordion?.querySelectorAll(".faq-toggle").forEach(close);
+
+      if (wasOpen) return;
+
+      toggle.classList.add("active");
+      toggle.setAttribute("aria-expanded", "true");
+      const content = contentFor(toggle);
+      if (content) content.style.display = "block";
+    });
+  })();
+</script>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .location-page-section.location-faqs.alt-background {
+      --faq-max-width: 900px;
+      --faq-h3-background: transparent;
+      --faq-h3-color: var(--alt-a-color);
+      --faq-h3-color-hover: var(--alt-a-color-hover);
+      --faq-h3-color-active: var(--alt-a-color-hover);
+      --faq-icon-color: var(--alt-a-color);
+      --faq-icon-color-hover: var(--alt-a-color-hover);
+      --faq-icon-color-active: var(--alt-a-color-hover);
+      --faq-a-color: var(--alt-a-color);
+      --faq-a-color-hover: var(--alt-a-color-hover);
+      --faq-border-type: solid;
+      --faq-border-color: #fff;
+      --side-border-color: transparent;
+      --faq-border-width: 2px;
+      --faq-border-radius: 0; /* keep at 0 while --side-border-color is transparent */
+      --faq-content-background: transparent;
+      --faq-content-color: var(--alt-content-color);
+      --faq-content-padding: 10px 20px 0;
+
+      padding: 60px 10px 45px;
+
+      .location-accordion {
+        border-bottom: none;
+        border-color: var(--faq-border-color);
+        border-left: var(--faq-border-type);
+        border-left-color: var(--side-border-color);
+        border-radius: var(--faq-border-radius);
+        border-right: var(--faq-border-type);
+        border-right-color: var(--side-border-color);
+        border-top: var(--faq-border-type);
+        border-width: var(--faq-border-width);
+        margin: 20px auto;
+        max-width: var(--faq-max-width);
+        overflow: hidden;
+        text-align: left;
+
+        /* renderBlock wraps each item in <editable-array-item>, which is an
+           unknown element and so inline by default. */
+        > editable-array-item {
+          display: block;
+        }
+
+        .faq-toggle {
+          background: var(--faq-h3-background);
+          border-bottom: var(--faq-border-type);
+          border-color: var(--faq-border-color);
+          border-width: var(--faq-border-width);
+          clear: both;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto;
+          padding: 10px 20px 10px 60px;
+          position: relative;
+          width: 100%;
+
+          &::before {
+            color: var(--faq-icon-color);
+            content: "\e840";
+            font-family: fontello;
+            font-size: var(--faq-icon-size);
+            left: 20px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+
+          &:hover {
+            &::before {
+              color: var(--faq-icon-color-hover);
+            }
+
+            h3 {
+              color: var(--faq-h3-color-hover);
+            }
+          }
+
+          &.active {
+            border: none;
+
+            &::before {
+              color: var(--faq-icon-color-active);
+              content: "\e841";
+            }
+
+            h3 {
+              color: var(--faq-h3-color-active);
+            }
+          }
+
+          h3 {
+            color: var(--faq-h3-color);
+            font-size: var(--faq-h3-font);
+            text-align: left;
+          }
+        }
+
+        .faq-content {
+          background: var(--faq-content-background);
+          border-bottom: var(--faq-border-type);
+          border-color: var(--faq-border-color);
+          border-width: var(--faq-border-width);
+          display: none;
+          padding: var(--faq-content-padding);
+
+          *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(a):not(button):not(input):not(select):not(textarea) {
+            color: var(--faq-content-color);
+          }
+
+          a:not(.btn):not(.btn-alt) {
+            color: var(--faq-a-color);
+
+            &:hover {
+              color: var(--faq-a-color-hover);
+            }
+          }
+
+          p {
+            margin: 0 0 20px;
+            padding: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .location-page-section.location-faqs.alt-background .faq-toggle {
+        &::before {
+          font-size: var(--faq-icon-size-tablet);
+        }
+
+        h3 {
+          font-size: var(--faq-h3-font-tablet);
+        }
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .location-page-section.location-faqs.alt-background .faq-toggle {
+        &::before {
+          font-size: var(--faq-icon-size-mobile);
+        }
+
+        h3 {
+          font-size: var(--faq-h3-font-mobile);
+        }
+      }
+    }
+  }
+</style>

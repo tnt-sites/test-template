@@ -70,6 +70,17 @@ const isPeek = String(className ?? "")
         </CarouselSlide>
       ))
     }
+
+    <Fragment slot="prev-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="60" viewBox="0 0 19 60">
+        <path d="M2,3 L17,30 L2,57 Z" />
+      </svg>
+    </Fragment>
+    <Fragment slot="next-arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="60" viewBox="0 0 19 60">
+        <path d="M2,3 L17,30 L2,57 Z" />
+      </svg>
+    </Fragment>
   </Carousel>
 
   {
@@ -127,25 +138,84 @@ const isPeek = String(className ?? "")
     opacity: 1;
   }
 
-  .office-tour.floating-arrows .carousel > .controls-wrapper > .prev,
+  /* Floating-arrows layout: dots above the image, arrows beside the image.
+     The controls-wrapper is collapsed with display:contents so its children
+     (prev / indicators / next) become direct grid items of .carousel. */
+  .office-tour.floating-arrows:not(.peek) .carousel {
+    align-items: center;
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-areas:
+      "dots dots dots"
+      "prev viewport next";
+    grid-template-columns: auto 1fr auto;
+    margin-inline: auto;
+    max-width: 1080px;
+  }
+
+  .office-tour.floating-arrows:not(.peek) .carousel > .viewport {
+    grid-area: viewport;
+    max-width: none;
+  }
+
+  .office-tour.floating-arrows .carousel > .controls-wrapper {
+    display: contents;
+  }
+
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .prev {
+    grid-area: prev;
+  }
+
   .office-tour.floating-arrows .carousel > .controls-wrapper > .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    grid-area: next;
   }
 
-  .office-tour .carousel > .controls-wrapper > .prev {
-    left: 0.5rem;
-  }
-
-  .office-tour .carousel > .controls-wrapper > .next {
-    right: 0.5rem;
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .indicators {
+    grid-area: dots;
+    justify-self: center;
   }
 
   /* Only hide the pager indicators if slideNumbers is true */
   .office-tour.slide-numbers .carousel > .controls-wrapper > .indicators {
     display: none;
+  }
+
+  /* Custom triangle arrows, matching the original site's arrow shape */
+  .office-tour .carousel > .controls-wrapper > .prev svg,
+  .office-tour .carousel > .controls-wrapper > .next svg {
+    height: auto;
+    width: 12px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev svg path,
+  .office-tour .carousel > .controls-wrapper > .next svg path {
+    fill: none;
+    stroke: #707070;
+    stroke-linejoin: round;
+    stroke-width: 2;
+    transition:
+      fill 0.3s ease,
+      stroke 0.3s ease;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev:hover svg path,
+  .office-tour .carousel > .controls-wrapper > .next:hover svg path {
+    fill: var(--color-brand);
+    stroke: var(--color-brand);
+  }
+
+  /* Pill-shaped indicators, matching the original site's dots */
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator {
+    background-color: var(--color-brand);
+    border-radius: 10px;
+    height: 2px;
+    opacity: 0.18;
+    width: 30px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator[data-selected="true"] {
+    opacity: 1;
+    transform: none;
   }
 
   /* Slide number overlay */

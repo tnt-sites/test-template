@@ -28,6 +28,7 @@ value:
     positionVertical: top
     positionHorizontal: center
   rounded: false
+  brickBackground: false
 preview:
   text:
     - CTA Split

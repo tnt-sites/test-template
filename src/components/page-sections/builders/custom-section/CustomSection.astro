@@ -10,9 +10,11 @@ const {
   paddingVertical = "4xl",
   colorScheme = "inherit",
   backgroundColor,
+  backgroundColorHex = "",
   backgroundGradient = "",
   backgroundImage,
   rounded = false,
+  brickBackground = false,
   class: className,
   _component,
   ...htmlAttributes
@@ -39,7 +41,7 @@ if (!htmlAttributes.id && label) {
 ---
 
 <section
-  class:list={["custom-section", rounded && "rounded", className]}
+  class:list={["custom-section", rounded && "rounded", brickBackground && "brick-bg", className]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
   style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
   {...htmlAttributes}
@@ -58,8 +60,11 @@ if (!htmlAttributes.id && label) {
     background={true}
   />
   {
-    backgroundColor && (
-      <div class:list={["background", backgroundColor && `bg-${backgroundColor}`]} />
+    (backgroundColor || backgroundColorHex) && (
+      <div
+        class:list={["background", backgroundColor && `bg-${backgroundColor}`]}
+        style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
+      />
     )
   }
 
@@ -91,6 +96,56 @@ if (!htmlAttributes.id && label) {
       &.rounded {
         border-radius: var(--radius-xl);
         overflow: hidden;
+      }
+
+      &.brick-bg {
+        &::before,
+        &::after {
+          position: absolute;
+          z-index: var(--layer-2);
+        }
+
+        @media (min-width: 2001px) {
+          &::before {
+            content: url("/images/brick-bg-top-large.png");
+            top: 0;
+            right: 0;
+          }
+
+          &::after {
+            content: url("/images/brick-bg-bottom-large.png");
+            bottom: -5px;
+            left: 0;
+          }
+        }
+
+        @media (min-width: 1001px) and (max-width: 2000px) {
+          &::before {
+            content: url("/images/brick-bg-top.png");
+            top: 0;
+            right: 0;
+          }
+
+          &::after {
+            content: url("/images/brick-bg-bottom.png");
+            bottom: -5px;
+            left: 0;
+          }
+        }
+
+        @media (max-width: 1000px) {
+          overflow: hidden;
+
+          &::before {
+            content: url("/images/brick-bg-top.png");
+            top: -100px;
+            right: -100px;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
       }
 
       > .outer-content {

@@ -1,0 +1,21 @@
+label: Location Find Us
+icon: directions
+description: Closing block with a heading and a paragraph of driving directions to the practice.
+value:
+  _component: page-sections/location/location-find-us
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Getting to Our Dental Office
+  text: Directions from the surrounding area go here.
+preview:
+  text:
+    - key: heading
+    - Location Find Us
+  icon: directions
+picker_preview:
+  text: Location Find Us
+  subtext: Driving directions to the practice.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-find-us/location-find-us.cloudcannon.inputs.yml

@@ -1,0 +1,131 @@
+label: Service Cards With Links
+icon: view_module
+description: A row of service cards (icon, title, link list) plus a callout box for a featured service.
+value:
+  _component: page-sections/homepage-blocks/service-cards-with-links
+  id: ""
+  heading: Comprehensive Dental Care
+  subtext: |-
+    Whether you come to us with a healthy smile in need of minimal intervention or one requiring same-day emergency dentistry, dental implants, periodontal treatment, or any of the services below, our team of expert dentists can help.
+  services:
+    - imageSource: /src/assets/images/pages/index/index-services-1.svg
+      imageAlt: Tooth icon
+      title: Preventive Dentistry
+      href: preventive-dentistry.html
+      links:
+        - label: Checkups & Cleanings
+          href: preventive-dentistry.html#check
+        - label: Fluoride Treatment
+          href: preventive-dentistry.html#flu
+        - label: Oral Cancer Screenings
+          href: preventive-dentistry.html#screen
+        - label: Laser Gum Therapy
+          href: gum-disease-treatment.html#laser
+    - imageSource: /src/assets/images/pages/index/index-services-2.svg
+      imageAlt: Icon of a patient in the dental chair
+      title: Restorative Dentistry
+      href: restorative-dentistry.html
+      links:
+        - label: Dental Implants
+          href: dental-implants.html
+        - label: Same-Day Dental Crowns
+          href: restorative-dentistry.html#same
+        - label: Root Canal Treatment
+          href: root-canal-treatment.html
+        - label: Full Mouth Reconstruction
+          href: missing-teeth.html#full
+    - imageSource: /src/assets/images/pages/index/index-services-3.svg
+      imageAlt: Icon of a toothbrush and a tube of toothpaste making an X
+      title: Cosmetic Dentistry
+      href: cosmetic-dentistry.html
+      links:
+        - label: Veneers
+          href: cosmetic-dentistry.html#veneer
+        - label: Teeth Whitening
+          href: cosmetic-dentistry.html#white
+        - label: Smile Makeovers
+          href: cosmetic-dentistry.html#make
+        - label: Metal-Free Restorations
+          href: cosmetic-dentistry.html#metal
+  emergencyImageSource: /src/assets/images/pages/index/index-emergency.svg
+  emergencyImageAlt: Icon of a tooth on a shield
+  emergencyHeading: Same-Day Emergency Dentistry
+  emergencySubtext: |-
+    If you have a toothache that's keeping you up at night or chipped or damaged a tooth, our team provides same-day emergency dental care for when you need it the most.
+  emergencyButtonSections:
+    - _component: building-blocks/core-elements/button
+      text: Get Help Now!
+      hideText: false
+      link: emergency-dentistry.html
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  backgroundColor: base
+  backgroundColorHex: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Service Cards With Links
+  subtext:
+    - key: heading
+  icon: view_module
+picker_preview:
+  text: Service Cards With Links
+  subtext: Service cards with link lists plus a featured callout.
+  icon: view_module
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/service-cards-with-links/service-cards-with-links.cloudcannon.inputs.yml
+_structures:
+  serviceCardItems:
+    values:
+      - label: Service Card
+        icon: view_module
+        value:
+          imageSource: ""
+          imageAlt: ""
+          title: ""
+          href: "#"
+          links: []
+        _inputs:
+          imageSource:
+            comment: Icon shown at the top of the card.
+            type: image
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            comment: Alt text for the icon.
+            type: textarea
+          title:
+            type: text
+            comment: The card's title, linking to the full service page.
+          href:
+            type: text
+            comment: URL the title links to.
+          links:
+            type: array
+            label: Links
+            comment: Related service links shown in the card.
+            options:
+              structures: _structures.serviceCardLinks
+  serviceCardLinks:
+    values:
+      - label: Link
+        icon: link
+        value:
+          label: ""
+          href: "#"
+        _inputs:
+          label:
+            type: text
+            comment: The link's visible text.
+          href:
+            type: text
+            comment: URL the link points to.

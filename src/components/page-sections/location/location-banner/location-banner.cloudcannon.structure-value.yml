@@ -1,0 +1,22 @@
+label: Location Banner
+icon: panorama
+description: Full-width banner image at the top of a location page, with an optional separate mobile crop.
+value:
+  _component: page-sections/location/location-banner
+  id: ''
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageSourceMobile: ''
+  imageAlt: Banner image
+preview:
+  text:
+    - Location Banner
+  subtext:
+    - key: imageAlt
+  image:
+    - key: imageSource
+  icon: panorama
+picker_preview:
+  text: Location Banner
+  subtext: Full-width banner image with an optional mobile crop.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-banner/location-banner.cloudcannon.inputs.yml

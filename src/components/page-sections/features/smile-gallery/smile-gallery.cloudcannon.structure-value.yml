@@ -1,0 +1,96 @@
+label: Smile Gallery
+icon: photo_library
+description: Before-and-after patient case gallery — large photo/story rows plus a grid of smaller captioned photos.
+value:
+  _component: page-sections/features/smile-gallery
+  id: ""
+  heading: ""
+  cases: []
+  smiles: []
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Smile Gallery
+  subtext:
+    - key: heading
+  icon: photo_library
+picker_preview:
+  text: Smile Gallery
+  subtext: Before-and-after patient case gallery with photos and stories.
+_inputs_from_glob:
+  - /src/components/page-sections/features/smile-gallery/smile-gallery.cloudcannon.inputs.yml
+# IMPORTANT: If you add a _structures block, keep it AFTER _inputs_from_glob.
+# CloudCannon applies _inputs_from_glob in document order — if _structures
+# appears first, _inputs_from_glob is ignored and inputs fall back to
+# auto-detected types (e.g. color picker instead of dropdown).
+_structures:
+  smileGalleryCases:
+    values:
+      - label: Case Study
+        icon: view_week
+        value:
+          _component: page-sections/features/smile-gallery/smile-gallery-case
+          heading: A Smile Our Team Won't Forget!
+          text: Description of the patient's treatment and results.
+          imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+          imageAlt: Patient's smile before and after treatment
+        preview:
+          text:
+            - key: heading
+            - Case Study
+          subtext:
+            - key: text
+          image:
+            - key: imageSource
+        _inputs:
+          heading:
+            type: text
+            comment: Short headline for this patient's story.
+          text:
+            type: textarea
+            comment: Description of the patient's treatment and results. Separate lines with a blank line for multiple paragraphs.
+          imageSource:
+            type: image
+            comment: Before/after composite photo for this case.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text describing the photo.
+  smileGallerySmiles:
+    values:
+      - label: Photo
+        icon: photo_camera
+        value:
+          _component: page-sections/features/smile-gallery/smile-gallery-smile
+          name: Name
+          imageSource: /src/assets/images/component-library/profile.jpg
+          imageAlt: Patient's smile before and after treatment
+        preview:
+          text:
+            - key: name
+            - Photo
+          image:
+            - key: imageSource
+        _inputs:
+          name:
+            type: text
+            comment: Patient's name shown above the photo.
+          imageSource:
+            type: image
+            comment: Before/after composite photo for this case.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text describing the photo.

@@ -12,6 +12,7 @@ const {
   buttonSections = [],
   imageSource = "",
   imageAlt = "",
+  embedUrl = "",
   reverse = false,
   compact = false,
   colorScheme = "inherit",
@@ -47,14 +48,26 @@ const {
       <ButtonGroup class="buttons" buttonSections={buttonSections} direction="row" alignX="start" />
     </div>
     <div class="cta-split-image">
-      <Image
-        source={imageSource}
-        alt={imageAlt}
-        editable={true}
-        data-prop-src="imageSource"
-        data-prop-alt="imageAlt"
-        data-editable="image"
-      />
+      {
+        embedUrl ? (
+          <iframe
+            class="cta-split-embed"
+            src={embedUrl}
+            data-prop="embedUrl"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        ) : (
+          <Image
+            source={imageSource}
+            alt={imageAlt}
+            editable={true}
+            data-prop-src="imageSource"
+            data-prop-alt="imageAlt"
+            data-editable="image"
+          />
+        )
+      }
     </div>
   </div>
 </CustomSection>
@@ -89,7 +102,9 @@ const {
 
     .cta-split-heading {
       margin: 0 0 var(--spacing-md);
-      font-size: 54px;
+      font-size: 46px;
+      font-weight: 300;
+   
       line-height: 1;
     }
 
@@ -98,6 +113,23 @@ const {
       align-items: center;
       justify-content: center;
       padding-inline: var(--spacing-2xl);
+      max-width: 600px;
+    }
+
+    .cta-split-embed {
+      aspect-ratio: 1 / 1;
+      border: 0;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    #location .cta-split-image {
+      max-width: 558px;
+    }
+
+    #location .cta-split-embed {
+      height: 525px;
     }
 
     @media (max-width: 1024px) {

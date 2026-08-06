@@ -1,0 +1,20 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, for anchor links.
+imageSource:
+  type: image
+  comment: Full-width banner image shown above 790px.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ''
+imageSourceMobile:
+  type: image
+  comment: Optional narrower crop used below 790px. Leave blank to use the main image everywhere.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ''
+imageAlt:
+  type: text
+  comment: Alt text describing the banner image.

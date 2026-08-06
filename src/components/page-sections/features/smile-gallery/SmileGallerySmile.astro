@@ -1,0 +1,24 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  name = "",
+  imageSource = "",
+  imageAlt = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<figure class:list={[className]} {...htmlAttributes}>
+  <Heading class="center" level="h3" data-prop="name" text={name} />
+  <Image
+    source={imageSource}
+    alt={imageAlt || name}
+    data-prop-src="imageSource"
+    data-prop-alt="imageAlt"
+    data-editable="image"
+  />
+</figure>

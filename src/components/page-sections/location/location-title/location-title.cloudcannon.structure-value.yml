@@ -1,0 +1,23 @@
+label: Location Title
+icon: title
+description: Page H1 plus a larger supporting headline, sitting directly under the banner.
+value:
+  _component: page-sections/location/location-title
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Dentist Near Anytown, ST
+  subheading: Providing Quality, Comprehensive Dental Care
+preview:
+  text:
+    - key: heading
+    - Location Title
+  subtext:
+    - key: subheading
+  icon: title
+picker_preview:
+  text: Location Title
+  subtext: Page heading and supporting headline for a location page.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-title/location-title.cloudcannon.inputs.yml

@@ -10,7 +10,7 @@ const {
   logoSource,
   logoAlt = "logo",
   navData = [],
-  buttonSections = [],
+  buttonSections,
   pageButtons = [],
   socials = [],
   class: className,
@@ -44,10 +44,11 @@ const defaultSearchButtonSections = [
   },
 ];
 
-const resolvedSearchButtonSections =
-  Array.isArray(buttonSections) && buttonSections.length > 0
-    ? buttonSections
-    : defaultSearchButtonSections;
+// An explicitly empty list means "no search button" (the original header has none),
+// while an absent list falls back to the template default.
+const resolvedSearchButtonSections = Array.isArray(buttonSections)
+  ? buttonSections
+  : defaultSearchButtonSections;
 
 const sanitizeButtonSection = (button: any) => ({
   ...button,
@@ -127,57 +128,88 @@ const formatAddressLines = (address: any) => {
 };
 ---
 
-<CustomSection
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="none"
-  class:list={["main-nav", className]}
-  {...htmlAttributes}
->
-  <div class="hd-content">
-    <a class="logo-link" href="/">
-      <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
-    </a>
-    <!-- Desktop Nav -->
-    <div class="hd-right">
-      <!-- Phone and Address -->
+<header class="site-header">
+  <CustomSection
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="none"
+    class:list={["main-nav", className]}
+    {...htmlAttributes}
+  >
+    <!-- Logo + Desktop Nav (original #hd-contents / .place-nav) -->
+    <div class="hd-content place-nav">
+      <a class="logo-link logo" href="/">
+        <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
+      </a>
+      <!-- Desktop Nav -->
+      <div class="hd-nav">
+        <div class="nav-end">
+          <Bar navData={navData} class="desktop-main-nav" />
+
+          {
+            searchButtons.length > 0 && (
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="desktop-button-group"
+                buttonSections={searchButtons}
+                editable={false}
+              />
+            )
+          }
+        </div>
+      </div>
+      <!-- End Desktop Nav -->
+    </div>
+    <!-- Mobile Nav -->
+    <Mobile
+      logoSource={logoSource}
+      logoAlt={logoAlt}
+      navData={mobileNavData}
+      class="mobile-main-nav"
+      offices={resolvedOffices}
+      sharedSocials={sharedSocials}
+    />
+    <!-- End Mobile Nav -->
+  </CustomSection>
+
+  <!-- Contact bar + appointment button (original #hd-bottom) -->
+  <div class="hd-bottom">
+    <div class="hd-bottom-inner">
+      <!-- Phone, text and address -->
       <div class="hd-info">
         {
           resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
+            <div class="hd-office">
+              {Array.isArray(office?.phones) &&
+                office.phones.map((phone: any) =>
+                  phone?.display ? (
+                    <a
+                      href={phone?.href || "#"}
+                      class:list={["pho", phone?.type === "sms" && "ctm-no-swap"]}
+                    >
+                      {phone?.label ? `${phone.label}: ` : ""}
+                      {phone.display}
+                    </a>
+                  ) : null
+                )}
 
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
+              {Array.isArray(office?.addresses) &&
+                office.addresses.map((address: any) => {
+                  const formattedLines = formatAddressLines(address);
 
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
-              </div>
-            </>
+                  return formattedLines.length > 0 ? (
+                    <a
+                      href={address?.mapUrl || "#"}
+                      class="phy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {formattedLines.join(" ")}
+                    </a>
+                  ) : null;
+                })}
+            </div>
           ))
         }
       </div>
@@ -194,38 +226,14 @@ const formatAddressLines = (address: any) => {
           </div>
         )
       }
-      <div class="hd-nav">
-        <div class="nav-end">
-          <Bar navData={navData} class="desktop-main-nav" />
-
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
-        </div>
-      </div>
-      <!-- End Desktop Nav -->
     </div>
   </div>
-  <!-- Mobile Nav -->
-  <Mobile
-    logoSource={logoSource}
-    logoAlt={logoAlt}
-    navData={mobileNavData}
-    class="mobile-main-nav"
-    offices={resolvedOffices}
-    sharedSocials={sharedSocials}
-  />
-  <!-- End Mobile Nav -->
-</CustomSection>
+</header>
 
 <!-- Adds --site-header-height CSS variable based on header height. Works with multiple screen sizes. -->
 <script>
   const initMainNavHeaderHeight = () => {
-    document.querySelectorAll(".main-nav").forEach((mainNav) => {
+    document.querySelectorAll(".site-header").forEach((mainNav) => {
       if (mainNav.getAttribute("data-header-height-initialized") === "true") return;
 
       const syncHeaderHeight = () => {
@@ -255,12 +263,30 @@ const formatAddressLines = (address: any) => {
 
 <style lang="pcss" is:global>
   @layer page-sections {
-    .main-nav {
-      z-index: var(--layer-2);
-      background-color: var(--color-bg); 
-      padding-block: var(--spacing-md);
-      position: sticky; 
+    /* Header styles ported from the original site (static/styles.css: header,
+       #hd-contents/.place-nav, #hd-bottom and the nav ul dropdowns). Original
+       hex values are mapped onto theme tokens where they match branding.json. */
+    .site-header {
+      /* Original colors with no branding token equivalent. */
+      --header-bar-bg: #d0c8b7; /* #hd-bottom */
+      --header-submenu-hover-bg: #081d1d; /* nav ul ul li:hover > a */
+
+      background-color: var(--color-bg);
+      left: 0;
+      position: sticky;
       top: 0;
+      transition: 0.3s all;
+      width: 100%;
+      z-index: var(--layer-4);
+
+      &:focus-within {
+        z-index: var(--layer-5);
+      }
+    }
+
+    .main-nav {
+      background-color: var(--color-bg);
+      padding-block: 0;
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
@@ -279,51 +305,52 @@ const formatAddressLines = (address: any) => {
         }
       }
 
+      /* .place-nav */
+      > .outer-content > .content {
+        max-width: 1350px;
+        padding-block: 10px;
+        padding-inline: 20px;
+      }
+
       > .outer-content .hd-content {
         align-items: center;
-        container-type: inline-size;
         display: flex;
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
-
-        > a > .image img {
-          height: 1.8em;
-          max-width: min(20em, 100%);
-          width: auto;
-        }
+        gap: 40px;
+        justify-content: space-between;
 
         .button-group {
           margin-top: 0;
         }
       }
 
-      > .outer-content .hd-content .hd-right {
-        display: flex;
-        flex: 0 1 700px;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-left: auto;
-        align-items: end;
-        margin-right: 20px;
+      > .outer-content .hd-content .logo-link {
+        flex: 0 0 auto;
+        position: relative;
+        z-index: 1;
       }
 
-      > .outer-content .hd-content .hd-actions {
-        align-items: center;
-        display: flex;
-        gap: var(--spacing-sm);
-        justify-content: flex-end;
+      > .outer-content .hd-content .logo-link .main-nav-logo img {
+        height: auto;
+        max-width: 100%;
+        width: 229px;
+      }
+
+      /* nav { flex: 0 1 1050px; max-width: 70%; } */
+      > .outer-content .hd-content .hd-nav {
+        flex: 0 1 1050px;
+        max-width: 70%;
       }
 
       > .outer-content .hd-content .nav-end {
         align-items: center;
-        display: inline-flex;
-        flex: 0 0 auto;
+        display: flex;
         gap: var(--spacing-xs);
         justify-content: flex-end;
       }
 
       > .outer-content .hd-content .nav-end > .desktop-main-nav.bar {
-        flex: 0 1 auto;
+        flex: 1 1 auto;
+        max-width: 900px;
       }
 
       > .outer-content .hd-content .nav-end > .desktop-button-group.button-group {
@@ -331,51 +358,381 @@ const formatAddressLines = (address: any) => {
         margin-top: 0;
         width: auto;
       }
+    }
 
-      > .outer-content .hd-content .page-buttons {
-        flex: 0 0 auto;
+    /* Top level: nav > ul > li > a */
+    .main-nav .desktop-main-nav.bar {
+      .bar-list {
+        gap: 0;
+        justify-content: space-between;
+        margin: auto 0 auto auto;
+        width: 100%;
+      }
 
-        > .button-group {
-          container-type: normal;
-          margin-left: 0;
+      > .bar-list > .nav-item {
+        text-align: center;
+      }
+
+      > .bar-list > .nav-item > a {
+        border-radius: 0;
+        color: var(--color-text-strong);
+        font-size: var(--font-size-md);
+        font-weight: var(--font-weight-medium);
+        padding: 6px;
+      }
+
+      > .bar-list > .nav-item:hover > a,
+      > .bar-list > .nav-item:focus-within > a {
+        color: var(--color-brand);
+      }
+
+      /* The original marks nothing as "current" — use the hover color rather
+         than the template's dotted underline. */
+      > .bar-list > .nav-item > a[aria-current="page"] {
+        color: var(--color-brand);
+        text-decoration: none;
+      }
+
+      /* Separate arrow: the label stays a link, the chevron opens the submenu. */
+      .nav-item.has-children > a {
+        padding-right: 2px;
+      }
+
+      > .bar-list > .nav-item > .nav-item-trigger {
+        align-self: center;
+        background: transparent;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-xs);
+        color: var(--color-text-strong);
+        height: 1.5rem;
+        margin-left: 4px;
+        min-height: 1.5rem;
+        min-width: 1.5rem;
+        padding: 0;
+        width: 1.5rem;
+
+        &:hover,
+        &:focus-visible {
+          background: transparent;
+          border-color: var(--color-brand);
+          color: var(--color-brand);
+        }
+      }
+
+      > .bar-list > .nav-item:hover > .nav-item-trigger,
+      > .bar-list > .nav-item:focus-within > .nav-item-trigger {
+        color: var(--color-brand);
+      }
+
+      .nav-item-toggle:checked ~ .nav-item-content,
+      .nav-item-toggle:checked ~ .nav-item-nested {
+        animation: fade-in 0.25s ease-out both;
+      }
+
+      /* nav ul ul */
+      .nav-item > .nav-item-content {
+        background-color: var(--color-brand-secondary);
+        border: none;
+        border-radius: 0;
+        box-shadow: 10px 17.3px 25px rgb(0 0 0 / 20%);
+        left: 0;
+        margin-top: 0;
+        min-width: 320px;
+        text-align: left;
+        transform: none;
+        z-index: var(--layer-3);
+      }
+
+      /* nav > ul > li:last-child ul */
+      > .bar-list > .nav-item:last-child > .nav-item-content {
+        left: auto;
+        right: 0;
+      }
+
+      > .bar-list > .nav-item:last-child .nav-item-nested {
+        left: auto;
+        right: 100%;
+      }
+
+      /* nav ul ul li > a */
+      .nav-item-content .nav-item {
+        display: block;
+      }
+
+      /* Label, then the chevron directly after it; the trailing column keeps the
+         row (and the third-level flyout anchored to it) full width. */
+      .nav-item-content .nav-item.has-children {
+        align-items: center;
+        column-gap: 0;
+        display: grid;
+        grid-template-columns: max-content max-content 1fr;
+      }
+
+      .nav-item-content .nav-item > a {
+        border-radius: 0;
+        color: var(--color-text-inverse);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-normal);
+        line-height: 1.3;
+        padding: 10px 12px;
+        text-transform: none;
+
+        &[aria-current="page"] {
+          text-decoration: none;
+        }
+      }
+
+      /* nav ul ul li:hover > a — the whole row highlights, chevron included */
+      .nav-item-content .nav-item:hover,
+      .nav-item-content .nav-item:focus-within {
+        background-color: var(--header-submenu-hover-bg);
+      }
+
+      .nav-item-content .nav-item:hover > a,
+      .nav-item-content .nav-item:focus-within > a {
+        color: var(--color-text-inverse);
+      }
+
+      /* The submenu chevron sits inline after the label, outlined so it reads as
+         a separate control from the link. */
+      .nav-item-content .nav-item > .nav-item-trigger {
+        background: transparent;
+        border: 1px solid rgb(255 255 255 / 40%);
+        border-radius: var(--radius-xs);
+        color: var(--color-text-inverse);
+        margin-inline: 0 12px;
+        min-height: 1.5rem;
+        min-width: 1.5rem;
+        padding: 0;
+
+        &:hover,
+        &:focus-visible {
+          background: rgb(255 255 255 / 10%);
+          border-color: var(--color-text-inverse);
+          color: var(--color-text-inverse);
+        }
+      }
+
+      /* Bar rotates the chevron about 50% 60%, which throws it off centre in the
+         outlined box when open. */
+      .nav-item-icon {
+        color: currentcolor;
+        display: flex;
+        transform-origin: center;
+      }
+
+      /* nav ul ul ul */
+      .nav-item-content .nav-item > .nav-item-nested {
+        background-color: var(--color-brand);
+        border-radius: 0;
+        box-shadow: 10px 17.3px 25px rgb(0 0 0 / 20%);
+        left: 100%;
+        min-width: 320px;
+        position: absolute;
+        top: 0;
+        z-index: var(--layer-3);
+      }
+
+      .nav-item-nested .nav-item > a {
+        padding-left: 12px;
+      }
+    }
+
+    /* #hd-bottom */
+    .hd-bottom {
+      background-color: var(--header-bar-bg);
+      padding: 10px 0;
+    }
+
+    .hd-bottom-inner {
+      align-items: center;
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1350px;
+      padding: 0 20px;
+    }
+
+    .hd-info {
+      align-items: center;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+      padding-top: 3px;
+    }
+
+    .hd-office {
+      align-items: center;
+      display: flex;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .site-header .pho,
+    .site-header .phy {
+      color: var(--color-text-strong);
+      display: table;
+      position: relative;
+      transition: 0.3s all;
+    }
+
+    .site-header .pho {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .site-header .phy {
+      font-size: 16px;
+      line-height: 1;
+    }
+
+    .site-header .pho:hover,
+    .site-header .phy:hover {
+      color: var(--color-link);
+    }
+
+    .hd-bottom .page-buttons {
+      flex: 0 0 auto;
+
+      > .button-group {
+        container-type: normal;
+        margin-left: 0;
+        margin-top: 0;
+      }
+
+      /* Original [class^="btn"] in the header bar */
+      .button {
+        border-radius: 50px;
+        font-size: var(--font-size-md);
+        font-weight: var(--font-weight-normal);
+        padding: 8px 25px 6px;
+
+        &:hover,
+        &:focus {
+          background-color: var(--color-bg-brand-secondary);
         }
       }
     }
 
-    .hd-info{display: flex; justify-content: space-between; align-items: center;}
-    .main-nav .phy{display: block; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text); line-height: 1; transition: .3s;}
-      .main-nav .pho{font-weight: var(--font-weight-bold); color: var(--color-brand); font-size: var(--font-size-2xl); line-height: 1; transition: .3s; display: block; margin: 0 auto 5px;}
-
-    .main-nav .pho:hover, .main-nav .phy:hover{color: var(--color-brand-secondary)}
-
-    .mobile-nav-button{min-width: 10px;border-radius: 0; border: none; height: 70px; width: 70px; background-color: var(--color-brand); color: #fff; display: flex; align-items: center; justify-content: center;}
-    .nav-hamburger .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
+    .mobile-nav-button {
+      align-items: center;
+      background-color: var(--color-brand);
+      border: none;
+      border-radius: 50%;
+      color: var(--color-text-inverse);
+      display: flex;
+      flex-direction: column;
+      height: 60px;
+      justify-content: center;
+      min-width: 10px;
+      width: 60px;
     }
 
-    .nav-hamburger .mobile-nav-button .icon svg path {
-      stroke-width: 2.25;
+    /* Mobile drawer — original .mean-container .mean-nav */
+    .mobile.mobile-main-nav {
+      .mobile-content {
+        background-color: var(--color-brand-secondary);
+      }
+
+      .nav-item {
+        border-bottom: none;
+        border-top: 1px solid rgb(255 255 255 / 50%);
+      }
+
+      .nav-item > a,
+      .nav-item > .nav-item-trigger {
+        border-radius: 0;
+        color: var(--color-text-inverse);
+        font-weight: var(--font-weight-normal);
+        padding: 1em 5%;
+        text-transform: uppercase;
+
+        &[aria-current="page"] {
+          text-decoration: none;
+        }
+
+        &:hover,
+        &:focus-visible {
+          background: rgb(255 255 255 / 10%);
+          color: var(--color-text-inverse);
+        }
+      }
+
+      .nav-item > .nav-item-content .nav-item {
+        border-top: 1px solid rgb(255 255 255 / 25%);
+
+        > a,
+        > .nav-item-trigger {
+          opacity: 0.75;
+          padding: 1em 10%;
+        }
+
+        > .nav-item-content .nav-item > a,
+        > .nav-item-content .nav-item > .nav-item-trigger {
+          padding: 1em 15%;
+        }
+      }
+
+      .nav-item-icon {
+        color: var(--color-text-inverse);
+      }
+
+      .mobile-socials {
+        border-top: none;
+
+        .button {
+          color: var(--color-text-inverse);
+        }
+      }
+
+      .hd-hours,
+      .hd-title,
+      .hours-day,
+      .hours-list,
+      .hours-note {
+        color: var(--color-text-inverse);
+      }
     }
 
+    /* .mean-container .mean-bar .icon-menu:after { content: "MENU" } */
+    .nav-hamburger .mobile-nav-button::after {
+      content: "MENU";
+      font-size: 0.55em;
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 1px;
+      line-height: 1;
+      margin-top: 2px;
+    }
+
+    .nav-hamburger .mobile-nav-button .icon,
     .mobile-close .mobile-nav-button .icon {
       font-size: var(--font-size-4xl);
     }
 
+    .nav-hamburger .mobile-nav-button .icon svg path,
     .mobile-close .mobile-nav-button .icon svg path {
       stroke-width: 2.25;
     }
 
-    .mobile-nav-close {}
-
-
     @media (max-width: 1024px) {
-      .main-nav{padding: 0;}
+      /* #hd-bottom { display: none; } — the fixed tabs carry the CTAs on mobile */
+      .hd-bottom {
+        display: none;
+      }
+
+      /* header { padding-left: 65px } — reserves the menu button's width so the
+         logo sits centered, with the button on the right. */
       .main-nav > .outer-content > .content {
         align-items: center;
         display: flex;
         gap: var(--spacing-sm);
         justify-content: space-between;
-        padding-right: 0;
+        padding: 7px 10px 7px 65px;
+      }
+
+      .main-nav > .outer-content > .content > .nav-hamburger {
+        flex: 0 0 auto;
       }
 
       .main-nav > .outer-content .hd-content {
@@ -388,15 +745,20 @@ const formatAddressLines = (address: any) => {
       .main-nav > .outer-content .hd-content .logo-link {
         display: block;
         flex: 0 0 auto;
+        margin: 0 auto;
+        padding: 8px;
       }
 
-      .main-nav > .outer-content .hd-content .logo-link .image img {
+      .main-nav > .outer-content .hd-content .logo-link .main-nav-logo img {
         display: block;
+        height: 90px;
+        width: auto;
       }
 
-      .hd-info, .top-bar{display: none;}
-      .main-nav > .outer-content .hd-content .hd-right {display: none;}
+      .hd-info,
+      .top-bar {
+        display: none;
+      }
     }
   }
-
 </style>

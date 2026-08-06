@@ -36,6 +36,7 @@ const normalizedText = text
 
 const md = MarkdownIt({ html: true });
 let markdownText = normalizedText ? md.renderInline(normalizedText) : "";
+
 markdownText = markdownText.replace(/\n/g, "<br />");
 const textForAria = markdownText
   .replace(/<[^>]*>/g, " ")
@@ -46,6 +47,7 @@ const resolveSelectValue = (value: any): string | undefined => {
   if (typeof value === "string") return value.trim().toLowerCase();
   if (value && typeof value === "object") {
     const candidate = value.id ?? value.value ?? value.name;
+
     if (typeof candidate === "string") return candidate.trim().toLowerCase();
   }
   return undefined;
@@ -53,12 +55,13 @@ const resolveSelectValue = (value: any): string | undefined => {
 
 const normalizeChoice = (value: any, allowed: string[], fallback: string) => {
   const normalized = resolveSelectValue(value);
+
   return normalized && allowed.includes(normalized) ? normalized : fallback;
 };
 
 const normalizedVariant = normalizeChoice(
   variant,
-  ["primary", "secondary", "tertiary", "ghost", "text"],
+  ["primary", "secondary", "tertiary", "ghost", "text", "white"],
   "primary"
 );
 const normalizedSize = normalizeChoice(size, ["sm", "md", "lg"], "md");
@@ -179,6 +182,7 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       transition-timing-function: ease-in-out;
       vertical-align: middle;
       line-height: 1.2;
+      font-weight: 400;
 
       &:hover {
         background-color: var(--color-bg-muted);
@@ -469,6 +473,19 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
         &:hover,
         &:focus {
           color: var(--color-brand-muted);
+        }
+      }
+
+      &.variant-white {
+        background-color: #fff;
+        border-color: transparent;
+        color: var(--color-brand);
+
+        &:hover,
+        &:focus {
+          background-color: #c6b696;
+          border-color: transparent;
+          color: #fff;
         }
       }
 

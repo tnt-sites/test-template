@@ -1,0 +1,287 @@
+---
+/**
+ * Shared shell for every location page-section.
+ *
+ * Owns the palette and the base typography that all nine sections inherit, so
+ * each section component only carries its own rules. Not a CloudCannon
+ * component — it has no structure-value.yml and is never picked directly.
+ *
+ * Sections alternate: `altBackground` gives the dark, light-on-dark treatment
+ * (Why, Review, Financing, FAQs); the default is the light one.
+ *
+ * All spacing comes from the ported CSS, so CustomSection's own padding and
+ * max-width are switched off, and `backgroundColor` is left unset so it doesn't
+ * emit an empty overlay div — the section paints its own background.
+ *
+ * Colors that ARE the site's brand identity (the teal, and white-on-teal text)
+ * default to the same --color-brand / --color-text-on-brand tokens the rest
+ * of the site uses, so editing branding.json in CloudCannon updates these
+ * sections too. On top of that, three selects let an editor override a
+ * specific section:
+ *   - `backgroundColor` — the section's background
+ *   - `headingColor`    — h2/h1 headings, and the caption under an icon
+ *   - `textColor`       — paragraph text and links
+ * each via an inline style that wins over the <style> block's defaults, so
+ * leaving them unset keeps a section's current look exactly as-is. SVG icon
+ * fill/stroke and the review star color are deliberately NOT covered here —
+ * see LocationIcon.astro and LocationReview.astro, which expose those as
+ * their own free-color inputs instead of theme-token selects, since neither
+ * is a "brand identity" color.
+ */
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import { resolveBackgroundColor, resolveTextColor } from "./colorTokens";
+import { cssVars } from "./utils";
+
+const {
+  id = "",
+  altBackground = false,
+  backgroundImage,
+  backgroundColor = "",
+  headingColor = "",
+  textColor = "",
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedBackground = resolveBackgroundColor(backgroundColor);
+const resolvedHeading = resolveTextColor(headingColor);
+const resolvedText = resolveTextColor(textColor);
+
+// Both the light- and dark-section variable names are set together: only one
+// set is ever consumed, based on which structural class (.alt-background or
+// not) is actually present, so setting the other's vars here is harmless.
+// Every derived var elsewhere (image-modal-h3-color, the FAQ colors, ...)
+// already resolves through these via var(), so one override here reaches all
+// of them with no extra wiring per component.
+const overrideStyle = cssVars({
+  "--background": resolvedBackground,
+  "--alt-background": resolvedBackground,
+  "--h2-color": resolvedHeading,
+  "--alt-h2-color": resolvedHeading,
+  "--intro-h2-color": resolvedHeading,
+  "--svg-h3-color": resolvedHeading,
+  "--alt-svg-h3-color": resolvedHeading,
+  "--location-services-h2-color": resolvedHeading,
+  "--site-a-color": resolvedText,
+  "--alt-a-color": resolvedText,
+  "--alt-content-color": resolvedText,
+  "--review-content-color": resolvedText,
+  "--quotation-color": resolvedText,
+});
+---
+
+<CustomSection
+  class:list={["location-page-section", altBackground && "alt-background", className]}
+  id={id || undefined}
+  paddingHorizontal="none"
+  paddingVertical="none"
+  colorScheme="inherit"
+  backgroundImage={backgroundImage}
+  style={overrideStyle}
+  {...htmlAttributes}
+>
+  <slot />
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    /* Palette and type scale, ported from the legacy location-page.css :root
+       blocks. Scoped to the section so it can't leak into the rest of the site;
+       custom properties inherit, so child components resolve them too.
+       These are the knobs to turn when re-theming for another site. */
+    .location-page-section {
+      --site-a-color: #000;
+      --site-a-color-hover: #000;
+
+      /* Light sections (Title, Doctors, Services, Find Us) */
+      --background: #F4F1EC;
+      --intro-h1-color: #000;
+      --intro-h2-color: var(--color-brand, #134545);
+      --h2-color: var(--color-brand, #134545);
+      --image-h3-color: #555;
+      --svg-color: var(--color-brand, #134545);
+      --svg-h3-color: var(--color-brand, #134545);
+      --focus-color: #222;
+      --location-services-h2-color: #d0c8b7;
+
+      /* Dark sections (Why, Review, Financing, FAQs) */
+      --alt-background: var(--color-bg-brand, #134545);
+      --alt-h2-color: var(--color-text-on-brand, #fff);
+      --alt-content-color: var(--color-text-on-brand, #fff);
+      --alt-a-color: var(--color-text-on-brand, #fff);
+      --alt-a-color-hover: #eab400;
+      --quotation-color: var(--color-text-on-brand, #fff);
+      --review-star-color: #f4bd17;
+      --review-content-color: var(--color-text-on-brand, #fff);
+      --alt-svg-color: var(--color-text-on-brand, #fff);
+      --alt-svg-h3-color: var(--color-text-on-brand, #fff);
+      --alt-focus-color: var(--color-text-on-brand, #fff);
+
+      /* Doctor & service card sizing */
+      --doctor-images-container-width: 1400px;
+      --doctor-image-width: 250px;
+      --service-images-container-width: 1200px;
+      --service-image-width: 325px;
+
+      /* Cards that open a modal */
+      --image-modal-h3-color: var(--site-a-color);
+      --image-modal-h3-color-hover: var(--site-a-color-hover);
+      --image-modal-h3-btn-color-hover: #fff;
+      --svg-modal-h3-color: var(--alt-a-color);
+      --svg-modal-h3-color-hover: var(--alt-a-color-hover);
+
+      /* Font sizes — desktop */
+      --intro-h1-font: 24px;
+      --intro-h2-font: 54px;
+      --h2-font: 54px;
+      --why-h3-icon-font: 24px;
+      --doctor-h3-image-font: 24px;
+      --doctor-h3-icon-font: 22px;
+      --quotation-font: 35px;
+      --review-content-font: 20px;
+      --service-h3-image-font: 22px;
+      --financing-h3-icon-font: 22px;
+      --faq-h3-font: 24px;
+      --faq-icon-size: 24px;
+
+      /* Font sizes — tablet, below 1025px */
+      --intro-h1-font-tablet: 23px;
+      --intro-h2-font-tablet: 48px;
+      --h2-font-tablet: 48px;
+      --why-h3-icon-font-tablet: 24px;
+      --doctor-h3-image-font-tablet: 23px;
+      --doctor-h3-icon-font-tablet: 22px;
+      --review-content-font-tablet: 20px;
+      --service-h3-image-font-tablet: 22px;
+      --financing-h3-icon-font-tablet: 20px;
+      --faq-h3-font-tablet: 22px;
+      --faq-icon-size-tablet: 22px;
+
+      /* Font sizes — mobile, below 768px */
+      --intro-h1-font-mobile: 22px;
+      --intro-h2-font-mobile: 42px;
+      --h2-font-mobile: 42px;
+      --why-h3-icon-font-mobile: 22px;
+      --doctor-h3-image-font-mobile: 22px;
+      --doctor-h3-icon-font-mobile: 20px;
+      --review-content-font-mobile: 20px;
+      --service-h3-image-font-mobile: 20px;
+      --financing-h3-icon-font-mobile: 20px;
+      --faq-h3-font-mobile: 21px;
+      --faq-icon-size-mobile: 21px;
+
+      margin: 0 auto;
+      padding: 0;
+
+      .container {
+        display: block;
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      .wrap {
+        display: block;
+        margin: 0 auto;
+        max-width: 1050px;
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      h2 {
+        font-size: var(--h2-font);
+        line-height: 1.15;
+        margin: 0 auto !important; /* over-rides the site's h2 spacing */
+        max-width: 1380px;
+        padding: 0 0 20px;
+        text-align: center;
+      }
+
+      h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      p {
+        margin: 0;
+        padding: 10px 0;
+      }
+
+      &:not(.alt-background) {
+        background: var(--background);
+        background-size: cover;
+
+        h2 {
+          color: var(--h2-color);
+        }
+
+        a:not(.btn):not(.btn-alt) {
+          color: var(--site-a-color);
+
+          &:hover {
+            color: var(--site-a-color-hover);
+          }
+        }
+
+        & :focus-visible {
+          outline: 2px solid var(--focus-color) !important;
+          outline-offset: 2px;
+          transition: none;
+        }
+
+        & :focus:not(:focus-visible) {
+          outline: none !important;
+          transition: none;
+        }
+      }
+
+      &.alt-background {
+        background: var(--alt-background);
+        background-size: cover;
+
+        h2 {
+          color: var(--alt-h2-color);
+        }
+
+        *:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6):not(a):not(button):not(input):not(select):not(textarea) {
+          color: var(--alt-content-color);
+        }
+
+        a:not(.btn):not(.btn-alt) {
+          color: var(--alt-a-color);
+
+          &:hover {
+            color: var(--alt-a-color-hover);
+          }
+        }
+
+        & :focus-visible {
+          outline: 2px solid var(--alt-focus-color) !important;
+          outline-offset: 2px;
+          transition: none;
+        }
+
+        & :focus:not(:focus-visible) {
+          outline: none !important;
+          transition: none;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .location-page-section h2 {
+        font-size: var(--h2-font-tablet);
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .location-page-section h2 {
+        font-size: var(--h2-font-mobile);
+      }
+    }
+  }
+</style>

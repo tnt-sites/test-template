@@ -1,0 +1,49 @@
+---
+/** One doctor card — headshot above a name, opening that doctor's bio modal. */
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  name = "",
+  credential = "",
+  imageSource = "",
+  imageAlt = "",
+  modalId = null,
+  editable = true,
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+if (!_component && !name && !imageSource) return;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component" && key !== "bioLinkText")
+);
+
+const Tag = modalId ? "a" : "div";
+const triggerAttributes = modalId ? { href: `#${modalId}`, role: "button" } : {};
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<Tag class:list={["doctor", className]} {...triggerAttributes} {...htmlAttributes}>
+  {
+    imageSource && (
+      <figure>
+        <Image
+          source={imageSource}
+          alt={imageAlt || name}
+          editable={editable}
+          data-prop-src="imageSource"
+          data-prop-alt="imageAlt"
+          data-editable="image"
+        />
+      </figure>
+    )
+  }
+  <h3>
+    <span {...editableAttributes("name")}>{name}</span>
+    {credential && <small {...editableAttributes("credential")}>{credential}</small>}
+  </h3>
+</Tag>

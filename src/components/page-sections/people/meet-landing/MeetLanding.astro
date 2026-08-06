@@ -1,16 +1,21 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
 import MeetLandingPerson from "./MeetLandingPerson.astro";
 
 type MeetLandingPersonItem = {
   _component?: string;
   name?: string;
+  role?: string;
   href?: string;
   imageSource?: string;
   imageAlt?: string;
 };
 
 const {
+  heading = "",
+  subtext = "",
   variant = "button",
   doctors = [],
   providers = [],
@@ -27,8 +32,13 @@ const {
 const cleanText = (value: unknown, fallback = "") =>
   typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
 
-const normalizedVariant = variant === "name" ? "name" : "button";
-const variantClass = normalizedVariant === "name" ? "landing--names" : "landing--buttons";
+const normalizedVariant = ["name", "overlay"].includes(variant) ? variant : "button";
+const variantClass =
+  normalizedVariant === "name"
+    ? "landing--names"
+    : normalizedVariant === "overlay"
+      ? "landing--overlay"
+      : "landing--buttons";
 
 const doctorItems =
   Array.isArray(doctors) && doctors.length > 0
@@ -42,6 +52,7 @@ const normalizedDoctors = Array.isArray(doctorItems)
       .filter((doctor): doctor is MeetLandingPersonItem => !!doctor && typeof doctor === "object")
       .map((doctor) => ({
         name: cleanText(doctor.name, "Provider Name"),
+        role: cleanText(doctor.role),
         href: cleanText(doctor.href, "#"),
         imageSource: cleanText(doctor.imageSource),
         imageAlt: cleanText(doctor.imageAlt),
@@ -59,7 +70,7 @@ const doctorsArrayDataAttributes = editable
     }
   : {};
 
-if (!_component && !hasDoctors) {
+if (!_component && !hasDoctors && !heading && !subtext) {
   return;
 }
 
@@ -77,9 +88,16 @@ const htmlAttributes = Object.fromEntries(
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
+  {heading && <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />}
+  {
+    subtext && (
+      <Text class="meet-landing-subtext" alignX="center" text={subtext} data-prop="subtext" />
+    )
+  }
+
   {
     hasDoctors && (
       <div class:list={["landing", variantClass]} {...doctorsArrayDataAttributes}>
@@ -101,6 +119,12 @@ const htmlAttributes = Object.fromEntries(
         linear-gradient(transparent, transparent)
       );
 
+    .meet-landing-subtext {
+      margin: var(--spacing-sm) auto var(--spacing-lg);
+      max-width: 850px;
+      text-align: center;
+    }
+
     .landing {
       align-items: flex-start;
       display: flex;
@@ -112,18 +136,31 @@ const htmlAttributes = Object.fromEntries(
 
     .landing > editable-array-item,
     .landing > a {
-      flex: 0 1 auto;
+      flex: 0 1 220px;
+      max-width: 220px;
       text-align: center;
     }
 
-    .landing a {
+    .meet-landing-person {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .landing a:not(.button) {
       display: block;
       text-align: center;
       text-decoration: none;
     }
 
-    .landing .btn {
-      margin: 20px auto 0;
+    .meet-landing-photo {
+      display: block;
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .landing .button {
+      margin: 0 auto;
     }
 
     .landing .name {
@@ -133,8 +170,8 @@ const htmlAttributes = Object.fromEntries(
       margin: 10px auto 0;
     }
 
-    .landing a:hover .name,
-    .landing a:focus-visible .name {
+    .landing a.name:hover,
+    .landing a.name:focus-visible {
       color: var(--color-brand);
     }
 
@@ -152,6 +189,79 @@ const htmlAttributes = Object.fromEntries(
     @media (max-width: 520px) {
       .landing > editable-array-item,
       .landing > a {
+        flex-basis: 100%;
+      }
+    }
+
+    /* Overlay variant: grayscale photo cards with a gradient name/role caption,
+       matching the original homepage "Meet" section. */
+    .landing--overlay > editable-array-item,
+    .landing--overlay > a {
+      flex: 0 1 20%;
+      max-width: none;
+    }
+
+    .meet-landing-person-overlay {
+      align-items: unset;
+      display: block;
+      flex-direction: unset;
+      position: relative;
+    }
+
+    .meet-landing-overlay-photo {
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+
+    .meet-landing-overlay-photo img {
+      filter: grayscale(1);
+      transition: filter 0.3s ease-in-out;
+    }
+
+    .meet-landing-person-overlay:hover .meet-landing-overlay-photo img,
+    .meet-landing-person-overlay:focus-visible .meet-landing-overlay-photo img {
+      filter: grayscale(0);
+    }
+
+    .meet-landing-overlay-caption {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      bottom: 0;
+      color: #fff;
+      font-family: var(--font-body);
+      font-size: .95rem;
+      font-weight: 400;
+      inset-inline: 0;
+      margin: 0;
+      padding: 120px 30px 20px;
+      position: absolute;
+      text-transform: none;
+      text-align: left;
+    }
+
+    .meet-landing-overlay-name {
+      display: block;
+    }
+
+    .meet-landing-overlay-role {
+      display: block;
+      font-size: .95rem;
+    }
+
+    @media (max-width: 1000px) {
+      .landing--overlay {
+        justify-content: center;
+      }
+
+      .landing--overlay > editable-array-item,
+      .landing--overlay > a {
+        flex-basis: 50%;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .landing--overlay > editable-array-item,
+      .landing--overlay > a {
         flex-basis: 100%;
       }
     }

@@ -1,6 +1,6 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/images/logo-header.svg",
+  "logoAlt": "Taylor Street Dental logo",
   "navData": [
     {
       "name": "Home",
@@ -8,62 +8,273 @@
       "children": []
     },
     {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About",
+      "path": "/about-us/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "What Sets Us Apart",
+          "path": "/about-us/",
+          "children": []
+        },
+        {
+          "name": "Meet Our Dentists",
+          "path": "/meet-our-dentists/",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Meet Dr. Peck",
+              "path": "/meet-dr-peck/"
+            },
+            {
+              "name": "Meet Dr. Tyra",
+              "path": "/meet-dr-tyra/"
+            },
+            {
+              "name": "Meet Dr. Greenberg",
+              "path": "/meet-dr-greenberg/"
+            },
+            {
+              "name": "Meet Dr. Truong",
+              "path": "/meet-dr-truong/"
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Tour Our Office",
+          "path": "/tour-our-office/",
+          "children": []
+        },
+        {
+          "name": "Advanced Dental Technology & Services",
+          "path": "/dental-technology/",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "/our-services/",
+      "children": [
+        {
+          "name": "I Need a Checkup & Cleaning",
+          "path": "/preventive-dentistry/",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Checkups & Cleanings",
+              "path": "/preventive-dentistry/#check"
+            },
+            {
+              "name": "Oral Cancer Screening",
+              "path": "/preventive-dentistry/#screen"
+            },
+            {
+              "name": "Fluoride Treatment",
+              "path": "/preventive-dentistry/#flu"
+            },
+            {
+              "name": "Bruxism & TMJ Treatment",
+              "path": "/preventive-dentistry/#tmj"
+            }
+          ]
+        },
+        {
+          "name": "I am Worried About Gum Disease",
+          "path": "/gum-disease-treatment/",
+          "children": [
+            {
+              "name": "Scaling & Root Planing",
+              "path": "/gum-disease-treatment/#scale"
+            },
+            {
+              "name": "Laser Periodontal Treatment",
+              "path": "/gum-disease-treatment/#laser"
+            },
+            {
+              "name": "PerioProtect",
+              "path": "/gum-disease-treatment/#perio"
+            }
+          ]
+        },
+        {
+          "name": "I Have a Cavity or Broken Tooth",
+          "path": "/restorative-dentistry/",
+          "children": [
+            {
+              "name": "Dental Crowns",
+              "path": "/restorative-dentistry/#crown"
+            },
+            {
+              "name": "CEREC Same-Day Dental Crowns",
+              "path": "/restorative-dentistry/#same"
+            },
+            {
+              "name": "Tooth-Colored Fillings",
+              "path": "/restorative-dentistry/#fill"
+            }
+          ]
+        },
+        {
+          "name": "I am Missing One or More Teeth",
+          "path": "/missing-teeth/",
+          "children": [
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/"
+            },
+            {
+              "name": "Dental Bridges",
+              "path": "/missing-teeth/#bridge"
+            },
+            {
+              "name": "Dentures",
+              "path": "/missing-teeth/#denture"
+            },
+            {
+              "name": "Full Mouth Reconstruction",
+              "path": "/missing-teeth/#full"
+            }
+          ]
+        },
+        {
+          "name": "I Want to Enhance My Smile",
+          "path": "/cosmetic-dentistry/",
+          "children": [
+            {
+              "name": "Veneers",
+              "path": "/veneers/"
+            },
+            {
+              "name": "Metal-Free Restorations",
+              "path": "/cosmetic-dentistry/#metal"
+            },
+            {
+              "name": "Teeth Whitening",
+              "path": "/teeth-whitening/"
+            },
+            {
+              "name": "Laser Gum Recontouring",
+              "path": "/cosmetic-dentistry/#recon"
+            },
+            {
+              "name": "Smile Makeovers",
+              "path": "/smile-makeovers/"
+            }
+          ]
+        },
+        {
+          "name": "I Want a Straighter Smile",
+          "path": "/orthodontics/",
+          "children": [
+            {
+              "name": "SureSmile Clear Aligners",
+              "path": "/orthodontics/#sure"
+            }
+          ]
+        },
+        {
+          "name": "I Have a Dental Emergency",
+          "path": "/emergency-dentistry/",
+          "children": [
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-treatment/"
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/tooth-extractions/"
+            },
+            {
+              "name": "Wisdom Tooth Extractions",
+              "path": "/wisdom-tooth-extractions/"
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "Patients",
+      "path": "/for-patients/",
+      "children": [
+        {
+          "name": "Your First Visit",
+          "path": "/for-patients/",
+          "children": []
+        },
+        {
+          "name": "Patient Forms",
+          "path": "/for-patients/#forms",
+          "children": []
+        },
+        {
+          "name": "Insurance",
+          "path": "/for-patients/#insurance",
+          "children": []
+        },
+        {
+          "name": "Cherry Financing",
+          "path": "/for-patients/#financing",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
-    }
-  ],
-  "buttonSections": [
+      "name": "Reviews",
+      "path": "/reviews/",
+      "children": [
+        {
+          "name": "Written Reviews",
+          "path": "/reviews/",
+          "children": []
+        },
+        {
+          "name": "Video Testimonials",
+          "path": "/video-testimonials/",
+          "children": []
+        }
+      ]
+    },
     {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
+      "name": "Contact",
+      "path": "/contact/",
+      "children": [
+        {
+          "name": "Office Info",
+          "path": "/contact/",
+          "children": []
+        },
+        {
+          "name": "Request an Appointment",
+          "path": "/request-an-appointment/",
+          "children": []
+        },
+        {
+          "name": "Dentist Near Holyoke",
+          "path": "/dentist-near-holyoke/",
+          "children": []
+        },
+        {
+          "name": "Dentist Near Chicopee",
+          "path": "/dentist-near-chicopee/",
+          "children": []
+        },
+        {
+          "name": "Refer a Friend",
+          "path": "/refer-a-friend/",
+          "children": []
+        }
+      ]
     }
   ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
@@ -76,7 +287,7 @@
       "iconPosition": "before",
       "variant": "primary",
       "size": "md",
-      "width": "md",
+      "width": "none",
       "borderRadius": "default",
       "borderWidth": "default",
       "borderColor": "default",

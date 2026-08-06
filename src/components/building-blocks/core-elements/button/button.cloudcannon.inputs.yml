@@ -62,6 +62,8 @@ variant:
         name: Ghost
       - id: text
         name: Text
+      - id: white
+        name: White
 size:
   type: select
   comment: The font size of the button.

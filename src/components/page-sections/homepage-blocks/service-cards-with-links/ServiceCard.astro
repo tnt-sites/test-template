@@ -1,0 +1,157 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+interface ServiceLink {
+  label?: string;
+  href?: string;
+}
+
+const {
+  title = "Service",
+  href = "#",
+  imageSource = "",
+  imageAlt = "",
+  links = [],
+  editable = true,
+  _component,
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const normalizedLinks = Array.isArray(links)
+  ? links.filter((link): link is ServiceLink => !!link && typeof link === "object")
+  : [];
+
+const linksArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "label",
+      "data-id-key": "label",
+      "data-prop": "links",
+    }
+  : {};
+---
+
+<div class:list={["service-card", className]} {...htmlAttributes}>
+  {
+    imageSource && (
+      <figure class="service-card-figure">
+        <Image
+          source={imageSource}
+          alt={imageAlt}
+          editable={editable}
+          rounded={false}
+          aspectRatio="none"
+          sizes="51px"
+          data-editable={editable ? "image" : undefined}
+          data-prop-src={editable ? "imageSource" : undefined}
+          data-prop-alt={editable ? "imageAlt" : undefined}
+        />
+      </figure>
+    )
+  }
+
+  <h3 class="service-card-title">
+    <a
+      href={href}
+      data-editable={editable ? "text" : undefined}
+      data-prop={editable ? "title" : undefined}
+    >
+      {title}
+    </a>
+  </h3>
+
+  {
+    normalizedLinks.length > 0 && (
+      <ul class="service-card-links" {...linksArrayDataAttributes}>
+        {normalizedLinks.map((link) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/service-cards-with-links/service-card-link">
+            <a href={link.href || "#"}>
+              <h4
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? "label" : undefined}
+              >
+                {link.label}
+              </h4>
+            </a>
+          </editable-array-item>
+        ))}
+      </ul>
+    )
+  }
+</div>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .service-card {
+      background-color: var(--color-bg-surface);
+      display: flex;
+      flex: 1 1 360px;
+      flex-direction: column;
+      max-width: 375px;
+      padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-lg);
+      text-align: center;
+    }
+
+    .service-card-figure {
+      align-items: center;
+      display: flex;
+      height: 51px;
+      justify-content: center;
+      margin: 0 0 var(--spacing-xl);
+    }
+
+    .service-card-figure img {
+      height: 51px;
+      object-fit: contain;
+      width: 51px;
+    }
+
+    .service-card-title {
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .service-card-title a {
+      color: var(--color-brand);
+    }
+
+    .service-card-title a:hover {
+      color: var(--color-link);
+    }
+
+    .service-card-links {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+      gap: 2px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .service-card-links > editable-array-item {
+      display: block;
+    }
+
+    .service-card-links a {
+      background-color: #d0c8b7;
+      display: block;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-decoration: none;
+      color: var(--color-brand);
+    }
+
+    .service-card-links a:hover {
+      background-color: #c6b696;
+    }
+
+    .service-card-links h4 {
+      color: var(--color-brand);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin: 0;
+      text-align: center;
+      text-transform: none;
+    }
+  }
+</style>

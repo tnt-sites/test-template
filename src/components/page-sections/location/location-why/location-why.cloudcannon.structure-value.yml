@@ -1,0 +1,90 @@
+label: Location Why
+icon: verified
+description: Dark section with a heading over a grid of icon callouts, for the reasons patients choose this practice.
+value:
+  _component: page-sections/location/location-why
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Why Patients Near Anytown Choose Us
+  icons:
+      - _component: page-sections/location/location-icon
+        icon: office-v1
+        heading: All Your Smile Needs Under One Roof
+        modalHeading: ''
+        modalContent: ''
+      - _component: page-sections/location/location-icon
+        icon: tooth-v4
+        heading: Focused on Proactive Treatment
+        modalHeading: ''
+        modalContent: ''
+      - _component: page-sections/location/location-icon
+        icon: care-v2
+        heading: Warm and Inviting Dental Office
+        modalHeading: ''
+        modalContent: ''
+preview:
+  text:
+    - key: heading
+    - Location Why
+  icon: verified
+picker_preview:
+  text: Location Why
+  subtext: Icon callouts explaining why patients choose this practice.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-why/location-why.cloudcannon.inputs.yml
+_structures:
+  locationIcons:
+    values:
+      - label: Icon
+        icon: interests
+        value:
+          _component: page-sections/location/location-icon
+          icon: office-v1
+          iconFillColor: ''
+          iconStrokeColor: ''
+          heading: Icon heading
+          modalHeading: ''
+          modalContent: ''
+        preview:
+          text:
+            - key: heading
+            - Icon
+          subtext:
+            - key: icon
+          icon: interests
+        _inputs:
+          icon:
+            type: select
+            comment: Which icon to show above the heading.
+            options:
+              values: _select_data.locationIcons
+          iconFillColor:
+            type: color
+            comment: Fill color for solid icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          iconStrokeColor:
+            type: color
+            comment: Stroke color for outlined icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          heading:
+            type: text
+            comment: Short label shown under the icon.
+          modalHeading:
+            type: text
+            comment: Title of the pop-up. Falls back to the heading above.
+          modalContent:
+            type: markdown
+            comment: Leave blank for a plain icon. Add content to make the icon open a pop-up.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css

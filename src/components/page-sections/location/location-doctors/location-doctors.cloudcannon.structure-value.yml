@@ -1,0 +1,159 @@
+label: Location Doctors
+icon: groups
+description: Doctor headshots, a row of credential icons, and bio buttons — all opening the same set of pop-ups.
+value:
+  _component: page-sections/location/location-doctors
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Introducing Your Experienced Dentists
+  doctors:
+    - _component: page-sections/location/location-doctors/location-doctor
+      name: Dr. Doctor Name
+      credential: ''
+      imageSource: /src/assets/images/component-library/profile.jpg
+      imageAlt: Headshot of Dr. Doctor Name
+      bioLinkText: Meet Dr. Doctor Name
+      modalHeading: ''
+      modalContent: Biography goes here.
+  icons:
+      - _component: page-sections/location/location-icon
+        icon: tooth-implant-v1
+        heading: Skilled in Complex Treatments
+        modalHeading: ''
+        modalContent: ''
+      - _component: page-sections/location/location-icon
+        icon: experience-v4
+        heading: Members of Prestigious Dental Organizations
+        modalHeading: ''
+        modalContent: ''
+      - _component: page-sections/location/location-icon
+        icon: family-v1
+        heading: Actively Give Back to the Community
+        modalHeading: ''
+        modalContent: ''
+preview:
+  text:
+    - key: heading
+    - Location Doctors
+  icon: groups
+picker_preview:
+  text: Location Doctors
+  subtext: Doctor headshots with bio pop-ups and credential icons.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-doctors/location-doctors.cloudcannon.inputs.yml
+_structures:
+  locationDoctors:
+    values:
+      - label: Doctor
+        icon: person
+        value:
+          _component: page-sections/location/location-doctors/location-doctor
+          name: Dr. Doctor Name
+          credential: ''
+          imageSource: /src/assets/images/component-library/profile.jpg
+          imageAlt: Headshot of Dr. Doctor Name
+          bioLinkText: Meet Dr. Doctor Name
+          modalHeading: ''
+          modalContent: Biography goes here.
+        preview:
+          text:
+            - key: name
+            - Doctor
+          subtext:
+            - key: credential
+          image:
+            - key: imageSource
+        _inputs:
+          name:
+            type: text
+            comment: Doctor's display name.
+          credential:
+            type: text
+            comment: Optional smaller line under the name, e.g. a qualification.
+          imageSource:
+            type: image
+            comment: Headshot.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ''
+          imageAlt:
+            type: text
+            comment: Alt text for the headshot.
+          bioLinkText:
+            type: text
+            comment: Label for this doctor's button in the row below the icons. Leave blank to omit the button.
+          modalHeading:
+            type: text
+            comment: Title of the bio pop-up. Falls back to the doctor's name.
+          modalContent:
+            type: markdown
+            comment: Biography shown in the pop-up. Leave blank and the card won't be clickable.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css
+  locationIcons:
+    values:
+      - label: Icon
+        icon: interests
+        value:
+          _component: page-sections/location/location-icon
+          icon: office-v1
+          iconFillColor: ''
+          iconStrokeColor: ''
+          heading: Icon heading
+          modalHeading: ''
+          modalContent: ''
+        preview:
+          text:
+            - key: heading
+            - Icon
+          subtext:
+            - key: icon
+          icon: interests
+        _inputs:
+          icon:
+            type: select
+            comment: Which icon to show above the heading.
+            options:
+              values: _select_data.locationIcons
+          iconFillColor:
+            type: color
+            comment: Fill color for solid icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          iconStrokeColor:
+            type: color
+            comment: Stroke color for outlined icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          heading:
+            type: text
+            comment: Short label shown under the icon.
+          modalHeading:
+            type: text
+            comment: Title of the pop-up. Falls back to the heading above.
+          modalContent:
+            type: markdown
+            comment: Leave blank for a plain icon. Add content to make the icon open a pop-up.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css

@@ -1,0 +1,161 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import Video from "@core-elements/video/Video.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+interface VideoCardItem {
+  _component?: string;
+  youtubeId?: string;
+  caption?: string;
+}
+
+const {
+  heading = "",
+  subtext = "",
+  videos = [] as VideoCardItem[],
+  buttonSections = [],
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  backgroundGradient = "",
+  backgroundImage,
+  brickBackground = false,
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedVideos = Array.isArray(videos)
+  ? videos.filter((video): video is VideoCardItem => !!video && typeof video === "object")
+  : [];
+
+const hasVideos = normalizedVideos.length > 0;
+
+const videosArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "videos",
+    }
+  : {};
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBackgroundColor = backgroundColorHex ? undefined : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["video-card-row", className]}
+  id={id || undefined}
+  maxContentWidth="xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={resolvedBackgroundColor}
+  backgroundImage={backgroundImage}
+  brickBackground={brickBackground}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <Text class="video-card-row-subtext" alignX="center" text={subtext} data-prop="subtext" />
+
+  {
+    hasVideos && (
+      <div class="video-card-row-items" {...videosArrayDataAttributes}>
+        {normalizedVideos.map((video) => (
+          <editable-array-item
+            data-component="page-sections/homepage-blocks/video-card-row/video-card-row-item"
+            class="video-card"
+          >
+            <Video
+              type="youtube"
+              id={video.youtubeId || ""}
+              title={video.caption || "Patient testimonial"}
+              class="video-card-embed"
+            />
+            {video.caption && (
+              <p
+                class="video-card-caption"
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? "caption" : undefined}
+              >
+                {video.caption}
+              </p>
+            )}
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+
+  <ButtonGroup class="video-card-row-buttons" buttonSections={buttonSections} alignX="center" />
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .video-card-row {
+      text-align: center;
+    }
+
+    .content{max-width: 100%;}
+
+    .video-card-row-subtext {
+      margin: var(--spacing-sm) auto var(--spacing-lg);
+      max-width: 850px;
+      text-align: center;
+    }
+
+    .video-card-row-items {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      justify-content: center;
+      margin-top: var(--spacing-lg);
+    }
+
+    .video-card {
+      display: block;
+      flex: 1 1 340px;
+      max-width: 367px;
+    }
+
+    .video-card-embed {
+      aspect-ratio: 16 / 9;
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+
+    .video-card-embed lite-youtube {
+      background-color: var(--color-bg-dark, #134545);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .video-card-caption {
+      font-weight: 600;
+      margin: var(--spacing-xs) auto 0;
+      text-align: center;
+    }
+
+    .video-card-row-buttons {
+      justify-content: center;
+      margin-top: var(--spacing-xl);
+    }
+  }
+</style>

@@ -1,0 +1,86 @@
+label: Location Services
+icon: grid_view
+description: Intro copy over a grid of service photo cards, each opening a pop-up with more detail.
+value:
+  _component: page-sections/location/location-services
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: Why Are You Looking for Dental Care?
+  intro: A short introduction to the range of treatments on offer.
+  services:
+    - _component: page-sections/location/location-services/location-service
+      eyebrow: I Need A
+      heading: Checkup & Cleaning
+      imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+      imageAlt: Dentist polishing a patient's teeth
+      modalHeading: ''
+      modalContent: Description of this service.
+preview:
+  text:
+    - key: heading
+    - Location Services
+  icon: grid_view
+picker_preview:
+  text: Location Services
+  subtext: Service photo cards with pop-up detail.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-services/location-services.cloudcannon.inputs.yml
+_structures:
+  locationServices:
+    values:
+      - label: Service
+        icon: photo_camera
+        value:
+          _component: page-sections/location/location-services/location-service
+          eyebrow: I Need A
+          heading: Checkup & Cleaning
+          imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+          imageAlt: Dentist polishing a patient's teeth
+          modalHeading: ''
+          modalContent: Description of this service.
+        preview:
+          text:
+            - key: heading
+            - Service
+          subtext:
+            - key: eyebrow
+          image:
+            - key: imageSource
+        _inputs:
+          eyebrow:
+            type: text
+            comment: Smaller line above the heading, e.g. "I Need A".
+          heading:
+            type: text
+            comment: Service name.
+          imageSource:
+            type: image
+            comment: Photo for this card.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ''
+          imageAlt:
+            type: text
+            comment: Alt text describing the photo.
+          modalHeading:
+            type: text
+            comment: Title of the pop-up. Falls back to the heading above.
+          modalContent:
+            type: markdown
+            comment: Detail shown in the pop-up. Leave blank and the card won't be clickable.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css

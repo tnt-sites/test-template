@@ -1,0 +1,196 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import ServiceCard from "./ServiceCard.astro";
+
+interface ServiceLink {
+  _component?: string;
+  label?: string;
+  href?: string;
+}
+
+interface ServiceCardItem {
+  _component?: string;
+  imageSource?: string;
+  imageAlt?: string;
+  title?: string;
+  href?: string;
+  links?: ServiceLink[];
+}
+
+const {
+  heading = "",
+  subtext = "",
+  services = [] as ServiceCardItem[],
+  emergencyImageSource = "",
+  emergencyImageAlt = "",
+  emergencyHeading = "",
+  emergencySubtext = "",
+  emergencyButtonSections = [],
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  backgroundGradient = "",
+  backgroundImage,
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const normalizedServices = Array.isArray(services)
+  ? services.filter(
+      (service): service is ServiceCardItem => !!service && typeof service === "object"
+    )
+  : [];
+
+const hasServices = normalizedServices.length > 0;
+const hasEmergency = !!(emergencyHeading || emergencyImageSource);
+
+const servicesArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "services",
+    }
+  : {};
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBackgroundColor = backgroundColorHex ? undefined : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["service-cards-with-links", className]}
+  id={id || undefined}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={resolvedBackgroundColor}
+  backgroundImage={backgroundImage}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <Text class="service-cards-subtext" alignX="center" text={subtext} data-prop="subtext" />
+
+  {
+    hasServices && (
+      <div class="service-cards-items" {...servicesArrayDataAttributes}>
+        {normalizedServices.map((service) => (
+          <editable-array-item data-component="page-sections/homepage-blocks/service-cards-with-links/service-card">
+            <ServiceCard {...service} editable={editable} />
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
+
+  {
+    hasEmergency && (
+      <div class="service-cards-emergency">
+        {emergencyImageSource && (
+          <figure class="service-cards-emergency-figure">
+            <Image
+              source={emergencyImageSource}
+              alt={emergencyImageAlt}
+              editable={editable}
+              rounded={false}
+              aspectRatio="none"
+              width={80}
+              data-prop-src="emergencyImageSource"
+              data-prop-alt="emergencyImageAlt"
+              data-editable="image"
+            />
+          </figure>
+        )}
+        <article class="service-cards-emergency-article">
+          <Heading level="h3" size="md" data-prop="emergencyHeading" text={emergencyHeading} />
+          <Text data-prop="emergencySubtext" text={emergencySubtext} />
+          <ButtonGroup
+            class="service-cards-emergency-buttons"
+            buttonSections={emergencyButtonSections}
+            data-prop="emergencyButtonSections"
+            alignX="start"
+          />
+        </article>
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+
+    .service-cards-subtext {
+      margin: var(--spacing-sm) auto var(--spacing-lg);
+      max-width: 850px;
+      text-align: center;
+
+    }
+
+    .service-cards-items {
+      align-items: stretch;
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xs);
+      justify-content: center;
+      margin-top: var(--spacing-lg);
+    }
+
+    .service-cards-emergency {
+      align-items: center;
+      display: flex;
+      gap: var(--spacing-2xl);
+      justify-content: center;
+      padding: var(--spacing-3xl) var(--spacing-md);
+    }
+
+    .service-cards-emergency-figure {
+      flex: 0 0 auto;
+      margin: 0;
+      max-width: 135px;
+    }
+
+    .service-cards-emergency-article {
+      max-width: 700px;
+      text-align: left;
+    }
+
+    @media (max-width: 1000px) {
+      .service-cards-items {
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .service-cards-emergency {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        padding: var(--spacing-xl) var(--spacing-md);
+        text-align: center;
+      }
+
+      .service-cards-emergency-article {
+        text-align: center;
+      }
+
+      .service-cards-emergency-buttons {
+        justify-content: center;
+      }
+    }
+  }
+</style>

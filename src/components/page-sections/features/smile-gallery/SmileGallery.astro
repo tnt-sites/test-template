@@ -1,0 +1,166 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import SmileGalleryCase from "@page-sections/features/smile-gallery/SmileGalleryCase.astro";
+import SmileGallerySmile from "@page-sections/features/smile-gallery/SmileGallerySmile.astro";
+
+const {
+  heading = "",
+  cases = [],
+  smiles = [],
+  smilesSmall = [],
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["smile-gallery", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
+  id={id || undefined}
+  {...htmlAttributes}
+>
+  {heading && <Heading level="h2" size="lg" data-prop="heading" text={heading} />}
+  <div id="smiles" class="gallery">
+    <div
+      class="cases"
+      data-editable="array"
+      data-prop="cases"
+      data-component-key="_component"
+      data-id-key="_component"
+    >
+      {
+        cases.map((item: any, index: number) => (
+          <editable-array-item data-component="page-sections/features/smile-gallery/smile-gallery-case">
+            <SmileGalleryCase {...item} data-index={index} />
+          </editable-array-item>
+        ))
+      }
+    </div>
+
+    <div
+      class="smiles-2 block lg:flex container align-center justify-between gap-20 text-center lg:text-left"
+      data-editable="array"
+      data-prop="smiles"
+      data-component-key="_component"
+      data-id-key="_component"
+    >
+      {
+        smiles.map((item: any, index: number) => (
+          <editable-array-item data-component="page-sections/features/smile-gallery/smile-gallery-smile">
+            <SmileGallerySmile {...item} data-index={index} />
+          </editable-array-item>
+        ))
+      }
+    </div>
+
+    <div
+      class="smiles-2 block lg:flex container align-center justify-between gap-20"
+      data-editable="array"
+      data-prop="smilesSmall"
+      data-component-key="_component"
+      data-id-key="_component"
+    >
+      {
+        smilesSmall.map((item: any, index: number) => (
+          <editable-array-item data-component="page-sections/features/smile-gallery/smile-gallery-smile">
+            <SmileGallerySmile {...item} data-index={index} />
+          </editable-array-item>
+        ))
+      }
+    </div>
+  </div>
+</CustomSection>
+
+<style is:global>
+  #smiles.gallery {
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+  }
+  #smiles.gallery .container {
+    padding: 30px 0;
+  }
+  #smiles.gallery figure {
+    max-width: 550px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  #smiles.gallery figure:after,
+  #smiles.gallery figure:before {
+    bottom: 0;
+    color: #626262;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 50%;
+  }
+  #smiles.gallery figure:before {
+    content: "Before";
+    left: 0;
+  }
+  #smiles.gallery figure:after {
+    content: "After";
+    right: 0;
+  }
+  #smiles.gallery article {
+    max-width: 455px;
+    text-align: left;
+  }
+  #smiles.gallery h3 {
+    color: #626262;
+    font-family: montserrat, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  #smiles.gallery figure div p {
+    display: block;
+  }
+  #smiles.gallery figcaption {
+    margin: 5px auto;
+  }
+  #smiles {
+    max-width: 1200px;
+    padding: 0;
+    width: calc(100% - 40px);
+  }
+  #smiles .smiles-2 {
+    border-top: 1px solid #7a7a7a;
+    gap: 50px 20px;
+    padding: 80px 0;
+  }
+  #smiles .smiles-2 h3 {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+  #smiles .smiles-2 figure {
+    flex: 0 1 48%;
+  }
+  @media (max-width: 1024px) {
+    #smiles.gallery {
+      padding: 0 70px;
+    }
+  }
+  @media (max-width: 700px) {
+    #smiles.gallery {
+      padding: 0;
+    }
+  }
+</style>

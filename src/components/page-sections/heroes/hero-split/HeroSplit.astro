@@ -21,6 +21,10 @@ const {
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const onDarkBackground = ["brand", "brand-secondary", "dark", "black"].includes(
+  String(backgroundColor)
+);
 ---
 
 <CustomSection
@@ -33,7 +37,7 @@ const {
   class:list={["hero", className]}
   {...htmlAttributes}
 >
-  <div class:list={["hero-split-grid", { reverse }]}>
+  <div class:list={["hero-split-grid", { reverse, "on-dark": onDarkBackground }]}>
     <div class="hero-split-text">
       <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
       <Heading
@@ -93,7 +97,19 @@ const {
       .eyebrow {
         color: var(--color-text-on-brand);
       }
+    }
 
+    .hero-split-grid.on-dark .hero-split-text {
+      .hero-split-heading,
+      .subtext,
+      .subtext p {
+        color: var(--color-text-on-brand);
+      }
+
+      .subtext a {
+        color: var(--color-text-on-brand);
+        text-decoration: underline;
+      }
     }
 
     .hero-split-image {

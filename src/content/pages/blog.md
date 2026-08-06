@@ -4,11 +4,9 @@ title: Blog
 pageSections:
   - _component: page-sections/heroes/hero-center
     eyebrow: ""
-    heading: All posts
+    heading: Taylor Street Dental Blog
     subtext: >-
-      This paginated blog index displays a grid of article cards, each waiting
-      to be populated with genuine posts once your content strategy moves beyond
-      placeholder text.
+
     buttonSections: []
     colorScheme: default
     backgroundColor: "var(--color-bg)"

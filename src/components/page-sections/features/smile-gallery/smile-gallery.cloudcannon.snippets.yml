@@ -1,0 +1,40 @@
+smileGallery:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Smile Gallery
+    icon: photo_library
+  definitions:
+    component_name: SmileGallery
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+      - editor_key: cases
+        type: array
+        optional: true
+      - editor_key: smiles
+        type: array
+        optional: true
+      - editor_key: smilesSmall
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/features/smile-gallery/smile-gallery.cloudcannon.inputs.yml

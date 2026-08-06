@@ -29,7 +29,7 @@ const htmlAttributes = Object.fromEntries(
   }
   <div class="modal-body">
     {
-      contentSections && contentSections.length > 0 && (
+      contentSections && contentSections.length > 0 ? (
         <CustomSection
           maxContentWidth="2xl"
           paddingHorizontal="none"
@@ -39,6 +39,8 @@ const htmlAttributes = Object.fromEntries(
         >
           <Component contentSections={contentSections} propName={propName} />
         </CustomSection>
+      ) : (
+        <slot />
       )
     }
   </div>

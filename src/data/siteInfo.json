@@ -1,20 +1,25 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Taylor Street Dental",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/TaylorStreetDentalAssociates/"
+    },
+    {
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://maps.app.goo.gl/ppqTauQ9ppDsQqB3A"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/explore/locations/34085001/taylor-street-dental/"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "YouTube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/@SpringfieldDentistry/videos"
     }
   ],
   "offices": [
@@ -22,51 +27,46 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": ["41 Taylor Street, 4th Floor"],
+          "city": "Springfield",
+          "state": "MA",
+          "postalCode": "01103",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://maps.app.goo.gl/ppqTauQ9ppDsQqB3A"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
-        }
-      ],
-      "emails": [
+          "display": "Call (413) 781-7646",
+          "href": "tel:+14137817646"
+        },
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "type": "sms",
+          "display": "Text (413) 781-7645",
+          "href": "sms:+14137817645"
         }
       ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:30 am - 2:30 pm",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 am - 8:00 pm",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 am - 6:00 pm",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
-          "note": ""
-        },
-        {
-          "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "hours": "12:00 pm - 8:00 pm",
           "note": ""
         }
       ],
@@ -74,8 +74,13 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "(function(){var s=document.createElement('script');s.type='application/ld+json';s.text=JSON.stringify({\"@context\":\"https://schema.org\",\"@type\":\"Dentist\",\"name\":\"Taylor Street Dental\",\"url\":window.location.origin,\"logo\":window.location.origin+\"/images/logo.svg\",\"image\":window.location.origin+\"/images/logo.svg\",\"telephone\":\"+14137817646\",\"priceRange\":\"$$$\",\"description\":\"Dentist in Springfield, MA\",\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"41 Taylor Street, 4th Floor\",\"addressLocality\":\"Springfield\",\"addressRegion\":\"MA\",\"postalCode\":\"01103\",\"addressCountry\":\"US\"},\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"42.104739\",\"longitude\":\"-72.592351\"},\"openingHoursSpecification\":[{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":\"Monday\",\"opens\":\"07:30\",\"closes\":\"14:30\"},{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":\"Tuesday\",\"opens\":\"09:00\",\"closes\":\"20:00\"},{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":\"Wednesday\",\"opens\":\"09:00\",\"closes\":\"18:00\"},{\"@type\":\"OpeningHoursSpecification\",\"dayOfWeek\":\"Thursday\",\"opens\":\"12:00\",\"closes\":\"20:00\"}],\"sameAs\":[\"https://www.facebook.com/TaylorStreetDentalAssociates/\"],\"founder\":[\"David I. Peck, DMD\"]});document.head.appendChild(s);})();",
+    "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RMGVDMGXC0');(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-RMGVDMGXC0';document.head.appendChild(s);})();"
+  ],
+  "footer_scripts": [
+    "(function(){var s=document.createElement('script');s.type='application/ld+json';s.text=JSON.stringify({\"@context\":\"https://schema.org\",\"@type\":\"Dentist\",\"url\":\"https://www.mygreatsmile.com/\",\"logo\":\"https://www.mygreatsmile.com/assets/images/logo-header.svg\",\"priceRange\":\"$$$\",\"hasMap\":\"https://maps.app.goo.gl/4kfBS5w3HFvaZu2x9\",\"address\":{\"@type\":\"PostalAddress\",\"addressLocality\":\"Springfield\",\"addressRegion\":\"MA\",\"postalCode\":\"01103\",\"streetAddress\":\"41 Taylor St. 4th Fl\",\"addressCountry\":\"US\"},\"description\":\"Dentist in Springfield, MA\",\"name\":\"Taylor Street Dental\",\"telephone\":\"413-781-7645\",\"openingHours\":[\"Mo 07:30-14:30\",\"Tu 09:00-20:00\",\"We 09:00-18:00\",\"Th 12:00-20:00\"],\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":\"42.104739\",\"longitude\":\"-72.592351\"},\"sameAs\":\"https://www.facebook.com/TaylorStreetDentalAssociates/#\",\"founder\":[\"David I. Peck, DMD\"]});document.head.appendChild(s);})();"
+  ],
   "mapEmbedUrl": "",
-  "recaptchaSiteKey": ""
+  "recaptchaSiteKey": "6LfEw3gtAAAAAAW1EL1b1ebV-X38N201p8lilMRS"
 }

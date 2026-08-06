@@ -1,0 +1,42 @@
+label: Index Tour
+icon: view_column
+description: Image, centered copy, image — a three-column showcase for an office or facility.
+value:
+  _component: page-sections/homepage-blocks/index-tour
+  id: ""
+  heading: View Our Modern, State-of-the-Art Office
+  subtext: |-
+    In addition to having stunning, exposed brick and large windows that flood the space with natural light, our beautiful office also features the latest dental technology. Our CEREC in-house milling machine, dental lasers, and 3D printer allows us to make your experience streamlined and your treatment precise.
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: Tour the Office
+      hideText: false
+      link: tour-our-office.html
+      iconName: ""
+      iconPosition: before
+      variant: white
+      size: md
+  imageSource1: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt1: Showcase image
+  imageSource2: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt2: Showcase image
+  backgroundColor: brand
+  backgroundColorHex: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Index Tour
+  subtext:
+    - key: heading
+  icon: view_column
+picker_preview:
+  text: Index Tour
+  subtext: Image, centered copy, image three-column showcase.
+  icon: view_column
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-tour/index-tour.cloudcannon.inputs.yml

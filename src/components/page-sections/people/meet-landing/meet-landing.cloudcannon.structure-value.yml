@@ -4,22 +4,24 @@ description: Description for Meet Landing component.
 value:
   _component: page-sections/people/meet-landing
   id: ""
+  heading: ""
+  subtext: ""
   variant: button
   doctors:
     - _component: page-sections/people/meet-landing/meet-landing-person
       name: Dr. David Schram
       href: dr-david-schram.html
-      imageSource: /src/assets/images/meet-our-dentists-schram.webp
+      imageSource: /src/assets/images/component-library/profile.jpg
       imageAlt: Dr. David Schram
     - _component: page-sections/people/meet-landing/meet-landing-person
       name: Dr. Blake Smith
       href: dr-blake-smith.html
-      imageSource: /src/assets/images/meet-our-dentists-smith.webp
+      imageSource: /src/assets/images/component-library/profile.jpg
       imageAlt: Dr. Blake Smith
     - _component: page-sections/people/meet-landing/meet-landing-person
       name: Dr. Andrew Weaver
       href: dr-andrew-weaver.html
-      imageSource: /src/assets/images/meet-our-dentists-weaver.webp
+      imageSource: /src/assets/images/component-library/profile.jpg
       imageAlt: Dr. Andrew Weaver
   backgroundColor: base
   backgroundGradient: ""
@@ -38,6 +40,7 @@ _structures:
         value:
           _component: page-sections/people/meet-landing/meet-landing-person
           name: Doctor Name
+          role: ""
           href: provider-page.html
           imageSource: /src/assets/images/component-library/profile.jpg
           imageAlt: Doctor Name
@@ -54,6 +57,9 @@ _structures:
           name:
             type: text
             comment: Doctor display name.
+          role:
+            type: text
+            comment: Optional role/credential shown below the name (Photo Overlay variant only), e.g. "D.M.D".
           href:
             type: text
             comment: Link URL for the provider profile page.

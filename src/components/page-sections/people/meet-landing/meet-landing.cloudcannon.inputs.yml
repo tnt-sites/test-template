@@ -1,6 +1,38 @@
 id:
   type: text
   comment: Optional HTML id attribute for this component.
+heading:
+  type: markdown
+  comment: Optional heading shown above the doctor row.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Optional body text shown below the heading.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
 variant:
   type: select
   comment: Choose how each provider label is rendered.
@@ -10,6 +42,8 @@ variant:
         name: Button Labels
       - id: name
         name: Name Labels
+      - id: overlay
+        name: Photo Overlay (grayscale photo with name/role caption)
 doctors:
   type: array
   label: Doctors

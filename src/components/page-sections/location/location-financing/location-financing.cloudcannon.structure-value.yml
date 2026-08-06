@@ -1,0 +1,86 @@
+label: Location Financing
+icon: payments
+description: Dark section with intro copy over icon callouts, each opening a pop-up about a payment option.
+value:
+  _component: page-sections/location/location-financing
+  id: ''
+  backgroundColor: ''
+  headingColor: ''
+  textColor: ''
+  heading: How We Make Dentistry Affordable
+  intro: A short introduction to the payment options available.
+  icons:
+    - _component: page-sections/location/location-icon
+      icon: financial-insurance-v2
+      heading: We Welcome Dental Insurance
+      modalHeading: ''
+      modalContent: Detail about insurance goes here.
+    - _component: page-sections/location/location-icon
+      icon: financial-insurance-v1
+      heading: We Happily Accept Flexible Financing
+      modalHeading: ''
+      modalContent: Detail about financing goes here.
+preview:
+  text:
+    - key: heading
+    - Location Financing
+  icon: payments
+picker_preview:
+  text: Location Financing
+  subtext: Payment-option icons with pop-up detail.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-financing/location-financing.cloudcannon.inputs.yml
+_structures:
+  locationIcons:
+    values:
+      - label: Icon
+        icon: interests
+        value:
+          _component: page-sections/location/location-icon
+          icon: office-v1
+          iconFillColor: ''
+          iconStrokeColor: ''
+          heading: Icon heading
+          modalHeading: ''
+          modalContent: ''
+        preview:
+          text:
+            - key: heading
+            - Icon
+          subtext:
+            - key: icon
+          icon: interests
+        _inputs:
+          icon:
+            type: select
+            comment: Which icon to show above the heading.
+            options:
+              values: _select_data.locationIcons
+          iconFillColor:
+            type: color
+            comment: Fill color for solid icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          iconStrokeColor:
+            type: color
+            comment: Stroke color for outlined icons. Only one of fill/stroke actually renders, depending on the icon — leave both blank to use the section's default icon color.
+          heading:
+            type: text
+            comment: Short label shown under the icon.
+          modalHeading:
+            type: text
+            comment: Title of the pop-up. Falls back to the heading above.
+          modalContent:
+            type: markdown
+            comment: Leave blank for a plain icon. Add content to make the icon open a pop-up.
+            options:
+              blockquote: false
+              bold: true
+              format: p
+              italic: true
+              link: true
+              strike: false
+              subscript: false
+              superscript: false
+              underline: false
+              bulletedlist: true
+              numberedlist: true
+              styles: /.cloudcannon/styles/editor.css

@@ -4,6 +4,7 @@ import Component from "@components/utils/renderBlock.astro";
 const {
   direction = "row",
   alignX = "start",
+  width = "full",
   buttonSections,
   editable = true,
   class: className,
@@ -39,7 +40,13 @@ if (!_component && !hasButtonSections && !hasSlotContent) return;
 ---
 
 <div
-  class:list={["button-group", direction === "column" ? "column" : "row", alignClass, className]}
+  class:list={[
+    "button-group",
+    direction === "column" ? "column" : "row",
+    alignClass,
+    width === "content" && "fit-content",
+    className,
+  ]}
   {...htmlAttributes}
 >
   <slot>
@@ -58,6 +65,14 @@ if (!_component && !hasButtonSections && !hasSlotContent) return;
       margin-top: var(--spacing-lg);
       container-type: inline-size;
       width: 100%;
+
+      /* Inline-size containment forces content-based widths (auto, fit-content,
+         max-content) to resolve to 0, so a shrink-to-content group must also
+         drop containment or its buttons render outside a collapsed box. */
+      &.fit-content {
+        container-type: normal;
+        width: fit-content;
+      }
 
       &, > editable-array {
         align-items: center;

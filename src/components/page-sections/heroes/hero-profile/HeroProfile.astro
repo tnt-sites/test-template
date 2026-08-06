@@ -1,0 +1,261 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  introText = "",
+  subtext = "",
+  imageSource = "",
+  imageAlt = "",
+  buttonSections = [],
+  colorScheme = "inherit",
+  backgroundColor = "brand",
+  backgroundColorHex = "",
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const {
+  source: titleImageSource = "",
+  alt: titleImageAlt = "",
+  positionVertical = "top",
+  positionHorizontal = "left",
+} = backgroundImage || {};
+
+const titleStyle = [
+  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+---
+
+<CustomSection
+  paddingHorizontal="none"
+  paddingVertical="none"
+  colorScheme={colorScheme}
+  class:list={["hero-profile", className]}
+  {...htmlAttributes}
+>
+  <div
+    class:list={["hero-profile-title", backgroundColor && `bg-${backgroundColor}`]}
+    style={titleStyle || undefined}
+  >
+    <Image
+      class="hero-profile-title-bg"
+      source={titleImageSource}
+      alt={titleImageAlt}
+      editable={false}
+      data-prop-src="backgroundImage.source"
+      data-prop-alt="backgroundImage.alt"
+      data-editable="image"
+      positionVertical={positionVertical}
+      positionHorizontal={positionHorizontal}
+      background={true}
+    />
+    <div class="hero-profile-title-inner">
+      <div class="hero-profile-heading">
+        <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
+        <Heading
+          level="h2"
+          size="2xl"
+          class="hero-profile-heading-text"
+          data-prop="heading"
+          text={heading}
+        />
+      </div>
+      <Text class="hero-profile-intro" data-prop="introText" text={introText} />
+    </div>
+  </div>
+
+  <div class="hero-profile-content">
+    <div class="hero-profile-image">
+      <Image
+        source={imageSource}
+        alt={imageAlt}
+        editable={true}
+        data-prop-src="imageSource"
+        data-prop-alt="imageAlt"
+        data-editable="image"
+        priority={true}
+      />
+    </div>
+    <div class="hero-profile-text">
+      <Text class="subtext" data-prop="subtext" text={subtext} />
+      <ButtonGroup class="buttons-container" buttonSections={buttonSections} />
+    </div>
+  </div>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .hero-profile-title {
+      background-image: var(--section-bg-gradient, url("/images/banner-bg.svg"));
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      position: relative;
+
+      &.bg-base {
+        background-color: var(--color-bg);
+      }
+
+      &.bg-surface {
+        background-color: var(--color-bg-surface);
+      }
+
+      &.bg-brand {
+        background-color: var(--color-bg-brand);
+      }
+
+      &.bg-brand-secondary {
+        background-color: var(--color-bg-brand-secondary);
+      }
+
+      &.bg-accent {
+        background-color: var(--color-bg-accent);
+      }
+
+      &.bg-highlight {
+        background-color: var(--color-bg-highlight);
+      }
+
+      &.bg-dark {
+        background-color: var(--color-bg-dark);
+      }
+
+      &.bg-black {
+        background-color: var(--color-bg-black);
+      }
+
+      .hero-profile-title-bg {
+        z-index: var(--layer-1);
+      }
+    }
+
+    .hero-profile-title-inner {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--spacing-2xl);
+      margin-inline: auto;
+      max-width: var(--content-width-2xl);
+      padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-4xl);
+      position: relative;
+      z-index: var(--layer-2);
+    }
+
+    .hero-profile-heading {
+      flex: 1 1 380px;
+
+      .eyebrow,
+      .hero-profile-heading-text {
+        color: var(--color-text-on-brand);
+        text-align: start;
+      }
+
+      .eyebrow {
+        font-weight: 300;
+        margin-top: 0;
+      }
+
+      .hero-profile-heading-text {
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+
+    .hero-profile-intro {
+      color: var(--color-text-on-brand);
+      flex: 1 1 420px;
+      margin-top: 0;
+      max-width: 540px;
+
+      :where(p, ul, ol, li, strong, em) {
+        color: inherit;
+      }
+    }
+
+    .hero-profile-content {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--spacing-2xl);
+      margin-inline: auto;
+      max-width: var(--content-width-2xl);
+      padding: 0 var(--spacing-lg) var(--spacing-3xl);
+      position: relative;
+      z-index: var(--layer-1);
+    }
+
+    .hero-profile-image {
+      flex: 1 1 380px;
+      margin-top: -80px;
+      position: relative;
+      z-index: var(--layer-2);
+    }
+
+    .hero-profile-text {
+      flex: 1 1 420px;
+      max-width: 540px;
+      padding-top: var(--spacing-xl);
+    }
+
+    @media (max-width: 1024px) {
+      .hero-profile-title-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-profile-heading,
+      .hero-profile-intro {
+        flex: none;
+        margin-inline: auto;
+        max-width: var(--content-width-md);
+        text-align: center;
+
+        .eyebrow,
+        .hero-profile-heading-text {
+          text-align: center;
+        }
+      }
+
+      .hero-profile-content {
+        align-items: center;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        padding-bottom: var(--spacing-2xl);
+        text-align: center;
+      }
+
+      .hero-profile-image {
+        flex: none;
+        margin-inline: auto;
+        width: 100%;
+      }
+
+      .hero-profile-text {
+        flex: none;
+        max-width: var(--content-width-md);
+        padding-top: 0;
+        text-align: center;
+
+        .buttons-container {
+          justify-content: center;
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      .hero-profile-title {
+        background-position: -150% 0;
+      }
+    }
+  }
+</style>

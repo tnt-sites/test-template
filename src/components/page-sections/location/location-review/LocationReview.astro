@@ -1,0 +1,194 @@
+---
+/**
+ * A single pulled-out patient review, with the Google mark above it.
+ *
+ * The quotation marks and the five stars are fontello glyphs applied by CSS
+ * (`\e838` and `\e80f`); the base layout already loads that icon font.
+ */
+import Image from "@core-elements/image/Image.astro";
+import LocationSection from "../LocationSection.astro";
+import { cssVars, hasText, renderMarkdown } from "../utils";
+
+const {
+  id = "",
+  heading = "",
+  logoSource = "",
+  logoAlt = "Google",
+  quote = "",
+  authorName = "",
+  reviewStarColor = "",
+  backgroundColor = "",
+  headingColor = "",
+  textColor = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+if (!_component && !hasText(heading) && !hasText(quote)) return;
+
+const quoteHtml = renderMarkdown(quote);
+// Free color picker, not a theme-token select — gold stars aren't a brand
+// color — so this is set locally rather than through LocationSection.
+const starStyle = cssVars({ "--review-star-color": reviewStarColor });
+
+const editableAttributes = (prop: string, type = "text") =>
+  editable ? { "data-editable": type, "data-prop": prop } : {};
+---
+
+<LocationSection
+  id={id}
+  altBackground
+  backgroundColor={backgroundColor}
+  headingColor={headingColor}
+  textColor={textColor}
+  class:list={["location-review", className]}
+  {...htmlAttributes}
+>
+  {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+  {
+    logoSource && (
+      <figure class="google-icon">
+        <Image
+          source={logoSource}
+          alt={logoAlt}
+          editable={editable}
+          data-prop-src="logoSource"
+          data-prop-alt="logoAlt"
+          data-editable="image"
+        />
+      </figure>
+    )
+  }
+  <div class="container" style={starStyle}>
+    {
+      quoteHtml && (
+        <blockquote class="review-text" {...editableAttributes("quote", "markdown")}>
+          <Fragment set:html={quoteHtml} />
+        </blockquote>
+      )
+    }
+    {
+      authorName && (
+        <author>
+          <star />
+          <strong {...editableAttributes("authorName")}>{authorName}</strong>
+        </author>
+      )
+    }
+  </div>
+</LocationSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .location-page-section.location-review.alt-background {
+      padding: 60px 10px;
+      position: relative;
+
+      .google-icon {
+        margin: 0;
+        padding: 0;
+
+        /* The shared Image component stretches images to 100%; this one is a
+           small mark that should stay at its natural size. */
+        .image {
+          margin: 0 auto;
+          max-width: 60px;
+        }
+
+        img {
+          display: block;
+          height: auto;
+          margin: 0 auto;
+          padding: 0;
+          width: auto;
+        }
+      }
+
+      .container {
+        padding: 5px 0 0;
+
+        .review-text {
+          /* The site's base stylesheet gives blockquote a left rule and inset;
+             this section's quote is centered, so clear both. */
+          border: none;
+          margin: 0 auto;
+          max-width: 800px;
+          padding: 0;
+
+          p {
+            color: var(--review-content-color);
+            font-size: var(--review-content-font);
+            font-weight: 400;
+            margin: 0 auto;
+            max-width: max-content;
+            position: relative;
+          }
+
+          p:first-child::before {
+            color: var(--quotation-color);
+            content: "\e838";
+            display: inline-block;
+            font-family: fontello;
+            font-size: var(--quotation-font);
+            line-height: 1;
+            margin: 0 8px 0 0;
+            transform: rotate(180deg);
+          }
+
+          p:last-child::after {
+            color: var(--quotation-color);
+            content: "\e838";
+            display: inline-block;
+            font-family: fontello;
+            font-size: var(--quotation-font);
+            line-height: 0;
+            margin: 0 0 0 8px;
+            padding: 0 8px 0 0;
+            vertical-align: middle;
+          }
+        }
+
+        author {
+          align-items: center;
+          display: flex;
+          font-size: 20px;
+          gap: 0 10px;
+          justify-content: center;
+          line-height: 35px;
+          margin: 0 auto;
+
+          star::before {
+            color: var(--review-star-color);
+            content: "\e80f \e80f \e80f \e80f \e80f";
+            font-family: fontello;
+            font-size: 35px;
+          }
+
+          strong {
+            color: var(--review-content-color);
+            font-weight: 700;
+
+            &::before {
+              content: "\2014";
+              padding: 0 5px 0 0;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1024px) {
+      .location-page-section.location-review.alt-background .container p {
+        font-size: var(--review-content-font-tablet);
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .location-page-section.location-review.alt-background .container p {
+        font-size: var(--review-content-font-mobile);
+      }
+    }
+  }
+</style>
