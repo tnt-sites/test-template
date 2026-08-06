@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/request-an-appointment/",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -28,7 +28,7 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/for-patients/#forms",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "

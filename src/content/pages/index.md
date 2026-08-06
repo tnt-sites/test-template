@@ -35,7 +35,7 @@ pageSections:
       - _component: building-blocks/core-elements/button
         text: Watch More Patient Testimonials
         hideText: false
-        link: video-testimonials.html
+        link: /video-testimonials/
         iconName: ""
         iconPosition: before
         variant: primary
@@ -62,7 +62,7 @@ pageSections:
       - _component: building-blocks/core-elements/button
         text: Request an Appointment
         hideText: false
-        link: request-an-appointment.html
+        link: /request-an-appointment/
         iconName: ""
         iconPosition: before
         variant: primary
@@ -86,25 +86,25 @@ pageSections:
       - _component: page-sections/people/meet-landing/meet-landing-person
         name: David I. Peck
         role: D.M.D
-        href: meet-dr-peck.html
+        href: /meet-dr-peck/
         imageSource: /src/assets/images/pages/index/index-meet-david.jpg
         imageAlt: Springfield dentist Doctor David I Peck
       - _component: page-sections/people/meet-landing/meet-landing-person
         name: Elwira Tyra
         role: D.M.D
-        href: meet-dr-tyra.html
+        href: /meet-dr-tyra/
         imageSource: /src/assets/images/pages/index/index-meet-elwira.jpg
         imageAlt: Springfield dentist Doctor Elwira Tyra
       - _component: page-sections/people/meet-landing/meet-landing-person
         name: Stephen J. Greenberg
         role: D.M.D
-        href: meet-dr-greenberg.html
+        href: /meet-dr-greenberg/
         imageSource: /src/assets/images/pages/index/index-meet-stephen.jpg
         imageAlt: Springfield dentist Doctor Stephen J Greenberg
       - _component: page-sections/people/meet-landing/meet-landing-person
         name: Hien Truong
         role: D.M.D
-        href: meet-dr-truong.html
+        href: /meet-dr-truong/
         imageSource: /src/assets/images/pages/index/index-meet-hien.jpg
         imageAlt: Springfield dentist Doctor Hien Truong
     backgroundColor: surface
@@ -118,12 +118,12 @@ pageSections:
     id: ""
     heading: View Our Modern, State-of-the-Art Office
     subtext: |-
-      In addition to having stunning, exposed brick and large windows that flood the space with natural light, our beautiful [office near Holyoke](dentist-near-holyoke.html) also features the latest dental technology. Our CEREC in-house milling machine, dental lasers, and 3D printer allows us to make your experience streamlined and your treatment precise.
+      In addition to having stunning, exposed brick and large windows that flood the space with natural light, our beautiful [office near Holyoke](/dentist-near-holyoke/) also features the latest dental technology. Our CEREC in-house milling machine, dental lasers, and 3D printer allows us to make your experience streamlined and your treatment precise.
     buttonSections:
       - _component: building-blocks/core-elements/button
         text: Tour the Office
         hideText: false
-        link: tour-our-office.html
+        link: /tour-our-office/
         iconName: ""
         iconPosition: before
         variant: white
@@ -155,7 +155,7 @@ pageSections:
       - _component: building-blocks/core-elements/button
         text: Read More Reviews
         hideText: false
-        link: reviews.html
+        link: /reviews/
         iconName: ""
         iconPosition: before
         variant: primary
@@ -184,42 +184,42 @@ pageSections:
       - imageSource: /src/assets/images/pages/index/index-services-1.svg
         imageAlt: Tooth icon
         title: Preventive Dentistry
-        href: preventive-dentistry.html
+        href: /preventive-dentistry/
         links:
           - label: Checkups & Cleanings
-            href: preventive-dentistry.html#check
+            href: /preventive-dentistry/#check
           - label: Fluoride Treatment
-            href: preventive-dentistry.html#flu
+            href: /preventive-dentistry/#flu
           - label: Oral Cancer Screenings
-            href: preventive-dentistry.html#screen
+            href: /preventive-dentistry/#screen
           - label: Laser Gum Therapy
-            href: gum-disease-treatment.html#laser
+            href: /gum-disease-treatment/#laser
       - imageSource: /src/assets/images/pages/index/index-services-2.svg
         imageAlt: Icon of a patient in the dental chair
         title: Restorative Dentistry
-        href: restorative-dentistry.html
+        href: /restorative-dentistry/
         links:
           - label: Dental Implants
-            href: dental-implants.html
+            href: /dental-implants/
           - label: Same-Day Dental Crowns
-            href: restorative-dentistry.html#same
+            href: /restorative-dentistry/#same
           - label: Root Canal Treatment
-            href: root-canal-treatment.html
+            href: /root-canal-treatment/
           - label: Full Mouth Reconstruction
-            href: missing-teeth.html#full
+            href: /missing-teeth/#full
       - imageSource: /src/assets/images/pages/index/index-services-3.svg
         imageAlt: Icon of a toothbrush and a tube of toothpaste making an X
         title: Cosmetic Dentistry
-        href: cosmetic-dentistry.html
+        href: /cosmetic-dentistry/
         links:
           - label: Veneers
-            href: cosmetic-dentistry.html#veneer
+            href: /cosmetic-dentistry/#veneer
           - label: Teeth Whitening
-            href: cosmetic-dentistry.html#white
+            href: /cosmetic-dentistry/#white
           - label: Smile Makeovers
-            href: cosmetic-dentistry.html#make
+            href: /cosmetic-dentistry/#make
           - label: Metal-Free Restorations
-            href: cosmetic-dentistry.html#metal
+            href: /cosmetic-dentistry/#metal
     emergencyImageSource: /src/assets/images/pages/index/index-emergency.svg
     emergencyImageAlt: Icon of a tooth on a shield
     emergencyHeading: Same-Day Emergency Dentistry
@@ -229,7 +229,7 @@ pageSections:
       - _component: building-blocks/core-elements/button
         text: Get Help Now!
         hideText: false
-        link: emergency-dentistry.html
+        link: /emergency-dentistry/
         iconName: ""
         iconPosition: before
         variant: primary
@@ -255,7 +255,7 @@ pageSections:
       - _component: building-blocks/core-elements/button
         text: Learn More
         hideText: false
-        link: for-patients.html#insurance
+        link: /for-patients/#insurance
         iconName: ""
         iconPosition: before
         variant: primary
