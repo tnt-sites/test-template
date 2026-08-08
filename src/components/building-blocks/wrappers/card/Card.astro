@@ -1,6 +1,6 @@
 ---
 import Component from "@components/utils/renderBlock.astro";
-import Image from "@core-elements/image/Image.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 
 const {
   label,
@@ -18,17 +18,16 @@ const {
   rounded = false,
   border = false,
   class: className,
+  style: styleProp,
+  // Unused since the background image moved to CSS, but kept destructured so it is
+  // swallowed here rather than falling into htmlAttributes and rendering as a
+  // stray `editable` DOM attribute.
   editable = true,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const {
-  source = "",
-  alt = "",
-  positionVertical = "top",
-  positionHorizontal = "center",
-} = backgroundImage || {};
+const bgImage = await backgroundImageCss(backgroundImage);
 
 const slugifyLabel = (label: string) => {
   return label
@@ -41,11 +40,16 @@ if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
 
-// Accessibility: the background colour lives on the card element itself, never on an
-// absolutely-positioned child. Contrast checkers (WAVE, axe) resolve a text node's
+// Accessibility: the background colour and image live on the card element itself, never
+// on an absolutely-positioned child. Contrast checkers (WAVE, axe) resolve a text node's
 // background by walking UP the ancestor chain, so a sibling overlay div is invisible to
 // them — they fall through to the white <body> and report a false "light text on light
-// background" error. Do not move this back onto a child element.
+// background" error. Do not move these back onto a child element.
+//
+// `styleProp` is merged rather than spread over, so a caller-supplied `style` cannot
+// silently replace the background-image custom properties this component sets.
+const cardStyle = [bgImage.style, styleProp].filter(Boolean).join("; ") || undefined;
+
 const Tag = link ? "a" : "div";
 ---
 
@@ -54,24 +58,15 @@ const Tag = link ? "a" : "div";
   {...link && { href: link }}
   class:list={[
     "card",
+    "bg-layers",
     rounded && "rounded",
     border && "border",
-    backgroundColor && `bg-${backgroundColor}`,
+    backgroundColor && backgroundColor !== "none" && `bg-${backgroundColor}`,
     className,
   ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  style={cardStyle}
 >
-  <Image
-    class:list={["background-image"]}
-    source={source}
-    alt={alt}
-    editable={editable}
-    data-prop-src="backgroundImage.source"
-    data-prop-alt="backgroundImage.alt"
-    positionVertical={positionVertical}
-    positionHorizontal={positionHorizontal}
-    background={true}
-  />
 
   {
     ((beforeContentSections && showBeforeAfter) || Astro.slots.has("before")) && (
@@ -285,10 +280,6 @@ const Tag = link ? "a" : "div";
       > .card-outer-content {
         position: relative;
         z-index: var(--layer-2);
-      }
-
-      > .background-image {
-        z-index: var(--layer-1);
       }
 
       /*

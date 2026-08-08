@@ -112,13 +112,8 @@ const htmlAttributes = Object.fromEntries(
 </CustomSection>
 
 <style lang="pcss" is:global>
+  /* backgroundGradient is rendered by CustomSection from --section-bg-gradient. */
   .meet-landing {
-    background:
-      var(
-        --section-bg-gradient,
-        linear-gradient(transparent, transparent)
-      );
-
     .meet-landing-subtext {
       margin: var(--spacing-sm) auto var(--spacing-lg);
       max-width: 850px;

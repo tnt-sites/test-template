@@ -1,0 +1,62 @@
+/* Shared background layer stack for sections, cards and footers.
+ *
+ * Backgrounds are painted on the element that CONTAINS the text, never on an
+ * absolutely-positioned child. Accessibility checkers (WAVE, axe) resolve a
+ * text node's background by walking UP the ancestor chain, so a background
+ * sibling reads as transparent and they fall through to the white <body> —
+ * producing false "white text on white" contrast errors. Anything that used to
+ * be a `<div class="background">` or an `<Image background={true}>` overlay
+ * belongs here instead.
+ *
+ * Apply `.bg-layers` to the container and set the custom properties from
+ * @core-elements/image/backgroundImageCss.ts on its `style` attribute. The
+ * width tiers below are paired with the custom media in
+ * src/styles/variables/_media.pcss — move both together.
+ *
+ * Components that also have a gradient re-point `--bg-gradient` at their own
+ * variable in their own rule, e.g. `--bg-gradient: var(--section-bg-gradient, none);`
+ * That is the only line they need; the composition is handled here.
+ */
+@layer base {
+  .bg-layers {
+    /* Custom properties inherit, and `.bg-layers` elements nest — a Card sits
+       inside a CustomSection. Without this reset a card with no background image
+       of its own would inherit the section's tiers and repaint the section's
+       image. Resetting them to the guaranteed-invalid value makes each element
+       fall back to `none` unless it sets its own; the inline style written by
+       backgroundImageCss.ts is on the element itself, so it still wins here. */
+    --bg-image-sm: initial;
+    --bg-image-lg: initial;
+    --bg-image-2xl: initial;
+    --bg-image-fallback: initial;
+    --bg-image-position: initial;
+
+    /* Each tier falls through to the next-smallest, then to the untransformed
+       fallback — sources that can't be optimised (arbitrary remote URLs) emit
+       no tiers at all, and must still render. */
+    --bg-image: var(--bg-image-sm, var(--bg-image-fallback, none));
+    --bg-gradient: none;
+
+    background-image: var(--bg-gradient), var(--bg-image-fallback, none);
+    background-position: var(--bg-image-position, center center);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (--from-lg) {
+      --bg-image: var(--bg-image-lg, var(--bg-image-sm, var(--bg-image-fallback, none)));
+    }
+
+    @media (--from-2xl) {
+      --bg-image: var(
+        --bg-image-2xl,
+        var(--bg-image-lg, var(--bg-image-sm, var(--bg-image-fallback, none)))
+      );
+    }
+
+    /* Preferred path: image-set() picks avif and the right DPR. Browsers
+       without it keep the plain --bg-image-fallback URL declared above. */
+    @supports (background-image: image-set(url("i.avif") type("image/avif") 1x)) {
+      background-image: var(--bg-gradient), var(--bg-image);
+    }
+  }
+}

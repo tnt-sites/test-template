@@ -1,6 +1,6 @@
 ---
 import Component from "@components/utils/renderBlock.astro";
-import Image from "@core-elements/image/Image.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 
 const {
   label,
@@ -16,17 +16,12 @@ const {
   rounded = false,
   brickBackground = false,
   class: className,
+  style: styleProp,
   _component,
   ...htmlAttributes
 } = Astro.props;
 
-const {
-  source = "",
-  alt = "",
-  positionVertical = "top",
-  positionHorizontal = "center",
-  priority = false,
-} = backgroundImage || {};
+const bgImage = await backgroundImageCss(backgroundImage);
 
 const slugifyLabel = (label: string) => {
   return label
@@ -39,44 +34,50 @@ if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
 
-// Accessibility: the background colour, gradient and hex all live on the <section>
-// itself, never on an absolutely-positioned child. Contrast checkers (WAVE, axe) resolve
-// a text node's background by walking UP the ancestor chain, so a sibling overlay div is
-// invisible to them — they fall through to the white <body> and report a false
-// "light text on light background" error. Do not move these back onto a child element.
-const sectionStyle = [
-  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
-  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
-]
-  .filter(Boolean)
-  .join("; ");
+// Accessibility: the background colour, gradient, hex and image all live on the
+// <section> itself, never on an absolutely-positioned child. Contrast checkers (WAVE,
+// axe) resolve a text node's background by walking UP the ancestor chain, so a sibling
+// overlay div is invisible to them — they fall through to the white <body> and report a
+// false "light text on light background" error. Do not move these back onto a child.
+//
+// `styleProp` is merged rather than spread over: callers pass their own custom
+// properties via `style`, and because `style` would otherwise arrive inside
+// `htmlAttributes` — spread after this attribute — it would silently replace the
+// gradient/image/hex custom properties this component sets.
+const sectionStyle =
+  [
+    backgroundGradient && `--section-bg-gradient: ${backgroundGradient}`,
+    backgroundColorHex && `background-color: ${backgroundColorHex}`,
+    bgImage.style,
+    styleProp,
+  ]
+    .filter(Boolean)
+    .join("; ") || undefined;
 ---
 
+{
+  bgImage.preload && (
+    <link
+      rel="preload"
+      as="image"
+      href={bgImage.preload.href}
+      imagesrcset={bgImage.preload.imagesrcset}
+    />
+  )
+}
 <section
   class:list={[
     "custom-section",
+    "bg-layers",
     rounded && "rounded",
     brickBackground && "brick-bg",
-    backgroundColor && `bg-${backgroundColor}`,
+    backgroundColor && backgroundColor !== "none" && `bg-${backgroundColor}`,
     className,
   ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
-  style={sectionStyle || undefined}
+  style={sectionStyle}
   {...htmlAttributes}
 >
-  <Image
-    class:list={["background-image"]}
-    source={source}
-    alt={alt}
-    priority={priority}
-    editable={false}
-    data-prop-src="backgroundImage.source"
-    data-prop-alt="backgroundImage.alt"
-    data-editable="image"
-    positionVertical={positionVertical}
-    positionHorizontal={positionHorizontal}
-    background={true}
-  />
 
   <div class="outer-content">
     <div
@@ -109,10 +110,15 @@ const sectionStyle = [
         re-declare this in a wrapper's own <style>. Wrapper styles are unlayered or in
         @layer page-sections, both of which beat @layer components, so a duplicate would
         win and its `linear-gradient(transparent, transparent)` fallback would blank out
-        the gradient. Note this is `background-image`, not the `background` shorthand:
-        the shorthand also resets background-color and would wipe the bg-* colour below.
+        the gradient.
+
+        Hand the gradient to the shared `.bg-layers` rule
+        (src/styles/base/_background-image.pcss) rather than declaring
+        `background-image` here: .bg-layers composes the gradient over the background
+        image, and a `background-image` on this element would beat it (@layer components
+        wins over @layer base) and drop the image entirely.
       */
-      background-image: var(--section-bg-gradient, none);
+      --bg-gradient: var(--section-bg-gradient, none);
 
       &.rounded {
         border-radius: var(--radius-xl);
@@ -339,10 +345,6 @@ const sectionStyle = [
         &.max-width-3xl {
           max-width: var(--content-width-3xl);
         }
-      }
-
-      > .background-image {
-        z-index: var(--layer-1);
       }
 
       /* Background colours sit on the section itself — see the comment on the markup. */

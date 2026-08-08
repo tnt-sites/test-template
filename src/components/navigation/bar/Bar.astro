@@ -69,6 +69,7 @@ function createNavItemData(item, level, parentGroupId) {
               aria-controls={itemData.contentId}
               tabindex="0"
               aria-current={itemData.isCurrent ? "page" : undefined}
+              aria-label={`Toggle ${itemData.name} submenu`}
             >
               <span class="nav-item-icon">
                 <Icon name="chevron-right" size="none" aria-hidden="true" />
