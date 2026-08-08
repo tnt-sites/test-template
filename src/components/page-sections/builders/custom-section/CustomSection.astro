@@ -39,7 +39,12 @@ if (!htmlAttributes.id && label) {
 ---
 
 <section
-  class:list={["custom-section", rounded && "rounded", className]}
+  class:list={[
+    "custom-section",
+    rounded && "rounded",
+    backgroundColor && `bg-${backgroundColor}`,
+    className,
+  ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
   style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
   {...htmlAttributes}
@@ -57,11 +62,6 @@ if (!htmlAttributes.id && label) {
     positionHorizontal={positionHorizontal}
     background={true}
   />
-  {
-    backgroundColor && (
-      <div class:list={["background", backgroundColor && `bg-${backgroundColor}`]} />
-    )
-  }
 
   <div class="outer-content">
     <div
@@ -93,49 +93,52 @@ if (!htmlAttributes.id && label) {
         overflow: hidden;
       }
 
-      > .background {
-        inset: 0;
-        position: absolute;
+      &.bg-base {
+        background-color: var(--color-bg);
+      }
 
-        &.bg-base {
-          background-color: var(--color-bg);
-        }
+      &.bg-surface {
+        background-color: var(--color-bg-surface);
+      }
 
-        &.bg-surface {
-          background-color: var(--color-bg-surface);
-        }
+      &.bg-muted {
+        background-color: var(--color-bg-muted);
+      }
 
-        &.bg-muted {
-          background-color: var(--color-bg-muted);
-        }
+      &.bg-brand {
+        background-color: var(--color-bg-brand);
+      }
 
-        &.bg-brand {
-          background-color: var(--color-bg-brand);
-        }
+      &.bg-brand-secondary {
+        background-color: var(--color-bg-brand-secondary);
+      }
 
-        &.bg-brand-secondary {
-          background-color: var(--color-bg-brand-secondary);
-        }
+      &.bg-brand-subtle {
+        background-color: var(--color-brand-subtle);
+      }
 
-        &.bg-brand-subtle {
-          background-color: var(--color-brand-subtle);
-        }
+      &.bg-brand-muted {
+        background-color: var(--color-brand-muted);
+      }
 
-        &.bg-brand-muted {
-          background-color: var(--color-brand-muted);
-        }
+      &.bg-inverse {
+        background-color: var(--color-bg-inverse);
+      }
 
-        &.bg-inverse {
-          background-color: var(--color-bg-inverse);
-        }
+      &.bg-accent {
+        background-color: var(--color-bg-accent);
+      }
 
-        &.bg-dark {
-          background-color: var(--color-bg-dark);
-        }
+      &.bg-highlight {
+        background-color: var(--color-bg-highlight);
+      }
 
-        &.bg-black {
-          background-color: var(--color-bg-black);
-        }
+      &.bg-dark {
+        background-color: var(--color-bg-dark);
+      }
+
+      &.bg-black {
+        background-color: var(--color-bg-black);
       }
 
       > .outer-content {
@@ -310,45 +313,8 @@ if (!htmlAttributes.id && label) {
         }
       }
 
-      > .background {
-        inset: 0;
-        position: absolute;
-      }
-
       > .background-image {
         z-index: var(--layer-1);
-      }
-
-      > .bg-base {
-        background-color: var(--color-bg);
-      }
-
-      > .bg-surface {
-        background-color: var(--color-bg-surface);
-      }
-
-      > .bg-brand {
-        background-color: var(--color-bg-brand);
-      }
-
-      > .bg-brand-secondary {
-        background-color: var(--color-bg-brand-secondary);
-      }
-
-      > .bg-accent {
-        background-color: var(--color-bg-accent);
-      }
-
-      > .bg-highlight {
-        background-color: var(--color-bg-highlight);
-      }
-
-      > .bg-dark {
-        background-color: var(--color-bg-dark);
-      }
-
-      > .bg-black {
-        background-color: var(--color-bg-black);
       }
     }
   }

@@ -47,7 +47,13 @@ const Tag = link ? "a" : "div";
 <Tag
   {...htmlAttributes}
   {...link && { href: link }}
-  class:list={["card", rounded && "rounded", border && "border", className]}
+  class:list={[
+    "card",
+    rounded && "rounded",
+    border && "border",
+    backgroundColor && `bg-${backgroundColor}`,
+    className,
+  ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
 >
   <Image
@@ -61,14 +67,6 @@ const Tag = link ? "a" : "div";
     positionHorizontal={positionHorizontal}
     background={true}
   />
-  {
-    backgroundColor && (
-      <div
-        aria-hidden="true"
-        class:list={["background", backgroundColor && `bg-${backgroundColor}`]}
-      />
-    )
-  }
 
   {
     ((beforeContentSections && showBeforeAfter) || Astro.slots.has("before")) && (
@@ -284,29 +282,32 @@ const Tag = link ? "a" : "div";
         z-index: var(--layer-2);
       }
 
-      > .background {
-        inset: 0;
-        position: absolute;
-      }
-
       > .background-image {
         z-index: var(--layer-1);
       }
-      
-      > .bg-base {
+
+      &.bg-base {
         background-color: var(--color-bg);
       }
 
-      > .bg-surface {
+      &.bg-surface {
         background-color: var(--color-bg-surface);
       }
 
-      > .bg-accent {
+      &.bg-accent {
         background-color: var(--color-bg-accent);
       }
 
-      > .bg-highlight {
+      &.bg-highlight {
         background-color: var(--color-bg-highlight);
+      }
+
+      &.bg-dark {
+        background-color: var(--color-bg-dark);
+      }
+
+      &.bg-black {
+        background-color: var(--color-bg-black);
       }
     }
   }
