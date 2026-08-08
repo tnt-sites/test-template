@@ -6,7 +6,7 @@ value:
   id: ""
   heading: "list-section Heading"
   backgroundColor: base
-  backgroundColorHex: ""
+  backgroundColorHex: "#54667a"
   headingColor: "#ffffff"
   listTextColor: "#ffffff"
   checkmarkColor: "#DDCA52"

@@ -126,8 +126,11 @@ const htmlAttributes = Object.fromEntries(
 </CustomSection>
 
 <style>
+  /* The background colour lives on `backgroundColorHex` in the structure
+     value, not here. This stylesheet is unlayered, so a rule here beats the
+     `bg-*` classes CustomSection puts in `@layer components` — an editor
+     choosing a background colour would have no effect. */
   .list-section {
-    background-color: #54667a;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.56);
     padding: 200px 10px 80px;
   }

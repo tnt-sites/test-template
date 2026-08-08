@@ -168,8 +168,8 @@ pageSections:
         iconPosition: before
         variant: primary
         size: md
-    backgroundColor: base
-    backgroundGradient: ""
+    backgroundColor: dark
+    backgroundGradient: "linear-gradient(90deg, rgba(28, 34, 38, 0.85) 0%, rgba(28, 34, 38, 0.72) 55%, rgba(28, 34, 38, 0.62) 100%)"
     backgroundImage:
       source: /src/assets/images/pages/index/index-reviews-bg.jpg
       alt: ""
