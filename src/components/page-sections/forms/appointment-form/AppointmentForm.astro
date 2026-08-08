@@ -49,9 +49,8 @@ const htmlAttributes = Object.fromEntries(
 
 <style lang="pcss" is:global>
   @layer page-sections {
+    /* backgroundGradient is rendered by CustomSection from --section-bg-gradient. */
     .appointment-form {
-      background: var(--section-bg-gradient, linear-gradient(transparent, transparent));
-
       .appt-form.form {
         display: grid;
         grid-template-columns: 1fr 1fr;

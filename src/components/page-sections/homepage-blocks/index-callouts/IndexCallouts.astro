@@ -8,6 +8,8 @@ const {
   id = "",
   backgroundImage,
   backgroundGradient = "",
+  // Rendered by CustomSection, which consumes --section-bg-gradient. Do not re-declare
+  // a `background` shorthand here -- it would beat @layer components and blank the bg-* colour.
   class: className,
   editable = true,
   ...rest
@@ -32,12 +34,3 @@ const htmlAttributes = Object.fromEntries(
   <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
 </CustomSection>
 
-<style>
-  .index-callouts {
-    background:
-      var(
-        --section-bg-gradient,
-        linear-gradient(transparent, transparent)
-      );
-  }
-</style>

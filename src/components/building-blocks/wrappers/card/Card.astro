@@ -41,13 +41,24 @@ if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
 
+// Accessibility: the background colour lives on the card element itself, never on an
+// absolutely-positioned child. Contrast checkers (WAVE, axe) resolve a text node's
+// background by walking UP the ancestor chain, so a sibling overlay div is invisible to
+// them — they fall through to the white <body> and report a false "light text on light
+// background" error. Do not move this back onto a child element.
 const Tag = link ? "a" : "div";
 ---
 
 <Tag
   {...htmlAttributes}
   {...link && { href: link }}
-  class:list={["card", rounded && "rounded", border && "border", className]}
+  class:list={[
+    "card",
+    rounded && "rounded",
+    border && "border",
+    backgroundColor && `bg-${backgroundColor}`,
+    className,
+  ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
 >
   <Image
@@ -61,14 +72,6 @@ const Tag = link ? "a" : "div";
     positionHorizontal={positionHorizontal}
     background={true}
   />
-  {
-    backgroundColor && (
-      <div
-        aria-hidden="true"
-        class:list={["background", backgroundColor && `bg-${backgroundColor}`]}
-      />
-    )
-  }
 
   {
     ((beforeContentSections && showBeforeAfter) || Astro.slots.has("before")) && (
@@ -284,29 +287,37 @@ const Tag = link ? "a" : "div";
         z-index: var(--layer-2);
       }
 
-      > .background {
-        inset: 0;
-        position: absolute;
-      }
-
       > .background-image {
         z-index: var(--layer-1);
       }
-      
-      > .bg-base {
+
+      /*
+        Background colours sit on the card itself — see the comment on the markup.
+        Keep this list in sync with the `backgroundColor` options in
+        card.cloudcannon.inputs.yml; an option with no rule here silently renders nothing.
+      */
+      &.bg-base {
         background-color: var(--color-bg);
       }
 
-      > .bg-surface {
+      &.bg-surface {
         background-color: var(--color-bg-surface);
       }
 
-      > .bg-accent {
+      &.bg-accent {
         background-color: var(--color-bg-accent);
       }
 
-      > .bg-highlight {
+      &.bg-highlight {
         background-color: var(--color-bg-highlight);
+      }
+
+      &.bg-dark {
+        background-color: var(--color-bg-dark);
+      }
+
+      &.bg-black {
+        background-color: var(--color-bg-black);
       }
     }
   }

@@ -54,9 +54,8 @@ const htmlAttributes = Object.fromEntries(
 
 <style lang="pcss" is:global>
   @layer page-sections {
+    /* backgroundGradient is rendered by CustomSection from --section-bg-gradient. */
     .landing-page-form {
-      background: var(--section-bg-gradient, linear-gradient(transparent, transparent));
-
       .lp-intro {
         margin: var(--spacing-lg) auto 0;
         max-width: 700px;

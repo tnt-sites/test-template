@@ -38,12 +38,30 @@ const slugifyLabel = (label: string) => {
 if (!htmlAttributes.id && label) {
   htmlAttributes.id = slugifyLabel(label);
 }
+
+// Accessibility: the background colour, gradient and hex all live on the <section>
+// itself, never on an absolutely-positioned child. Contrast checkers (WAVE, axe) resolve
+// a text node's background by walking UP the ancestor chain, so a sibling overlay div is
+// invisible to them — they fall through to the white <body> and report a false
+// "light text on light background" error. Do not move these back onto a child element.
+const sectionStyle = [
+  backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : "",
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
 ---
 
 <section
-  class:list={["custom-section", rounded && "rounded", brickBackground && "brick-bg", className]}
+  class:list={[
+    "custom-section",
+    rounded && "rounded",
+    brickBackground && "brick-bg",
+    backgroundColor && `bg-${backgroundColor}`,
+    className,
+  ]}
   data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={sectionStyle || undefined}
   {...htmlAttributes}
 >
   <Image
@@ -59,14 +77,6 @@ if (!htmlAttributes.id && label) {
     positionHorizontal={positionHorizontal}
     background={true}
   />
-  {
-    (backgroundColor || backgroundColorHex) && (
-      <div
-        class:list={["background", backgroundColor && `bg-${backgroundColor}`]}
-        style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
-      />
-    )
-  }
 
   <div class="outer-content">
     <div
@@ -92,6 +102,17 @@ if (!htmlAttributes.id && label) {
   @layer components {
     .custom-section {
       position: relative;
+
+      /*
+        Single source of truth for `backgroundGradient`. Any component that sets
+        --section-bg-gradient on its CustomSection root is rendered here — do not
+        re-declare this in a wrapper's own <style>. Wrapper styles are unlayered or in
+        @layer page-sections, both of which beat @layer components, so a duplicate would
+        win and its `linear-gradient(transparent, transparent)` fallback would blank out
+        the gradient. Note this is `background-image`, not the `background` shorthand:
+        the shorthand also resets background-color and would wipe the bg-* colour below.
+      */
+      background-image: var(--section-bg-gradient, none);
 
       &.rounded {
         border-radius: var(--radius-xl);
@@ -320,44 +341,40 @@ if (!htmlAttributes.id && label) {
         }
       }
 
-      > .background {
-        inset: 0;
-        position: absolute;
-      }
-
       > .background-image {
         z-index: var(--layer-1);
       }
 
-      > .bg-base {
+      /* Background colours sit on the section itself — see the comment on the markup. */
+      &.bg-base {
         background-color: var(--color-bg);
       }
 
-      > .bg-surface {
+      &.bg-surface {
         background-color: var(--color-bg-surface);
       }
 
-      > .bg-brand {
+      &.bg-brand {
         background-color: var(--color-bg-brand);
       }
 
-      > .bg-brand-secondary {
+      &.bg-brand-secondary {
         background-color: var(--color-bg-brand-secondary);
       }
 
-      > .bg-accent {
+      &.bg-accent {
         background-color: var(--color-bg-accent);
       }
 
-      > .bg-highlight {
+      &.bg-highlight {
         background-color: var(--color-bg-highlight);
       }
 
-      > .bg-dark {
+      &.bg-dark {
         background-color: var(--color-bg-dark);
       }
 
-      > .bg-black {
+      &.bg-black {
         background-color: var(--color-bg-black);
       }
     }

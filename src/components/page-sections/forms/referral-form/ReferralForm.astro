@@ -43,9 +43,8 @@ const htmlAttributes = Object.fromEntries(
 
 <style lang="pcss" is:global>
   @layer page-sections {
+    /* backgroundGradient is rendered by CustomSection from --section-bg-gradient. */
     .referral-form {
-      background: var(--section-bg-gradient, linear-gradient(transparent, transparent));
-
       .submit { display: block; margin-inline: auto; }
 
       editable-array-item:has(.submit) {
