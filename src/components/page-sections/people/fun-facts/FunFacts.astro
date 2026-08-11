@@ -1,0 +1,162 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+type Fact = {
+  imageSource?: string;
+  imageAlt?: string;
+  question?: string;
+  answer?: string;
+};
+
+const {
+  title = "",
+  items = [],
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+
+const withLineBreaks = (value: string) =>
+  escapeHtml(value.trim()).replace(/&lt;br\s*\/?&gt;/gi, "<br>");
+
+const resolvedItems = (Array.isArray(items) ? items : [])
+  .filter((item: Fact) => !!item && typeof item === "object")
+  .map((item: Fact) => ({
+    imageSource: hasText(item.imageSource) ? item.imageSource.trim() : "",
+    imageAlt: hasText(item.imageAlt) ? item.imageAlt.trim() : "",
+    questionHtml: hasText(item.question) ? withLineBreaks(item.question) : "",
+    answerHtml: hasText(item.answer) ? withLineBreaks(item.answer) : "",
+  }))
+  .filter((item) => item.questionHtml.length > 0 || item.answerHtml.length > 0);
+---
+
+{
+  resolvedItems.length > 0 && (
+    <div class:list={["fun-facts", className]} {...htmlAttributes}>
+      {hasText(title) && (
+        <span
+          class="title h1-small"
+          data-editable={editable ? "text" : undefined}
+          data-prop={editable ? "title" : undefined}
+        >
+          {title}
+        </span>
+      )}
+
+      <div class="flex container justify-between gap-20">
+        {resolvedItems.map((item, index: number) => (
+          <div class="item">
+            {item.imageSource && (
+              <img
+                src={item.imageSource}
+                alt={item.imageAlt}
+                data-editable={editable ? "image" : undefined}
+                data-prop-src={editable ? `items.${index}.imageSource` : undefined}
+                data-prop-alt={editable ? `items.${index}.imageAlt` : undefined}
+              />
+            )}
+            {/* No `data-editable` on either: both render `<br>` from their
+                field, and inline text editing would write the collapsed text
+                back and lose the breaks. Edit them in the sidebar. */}
+            {item.questionHtml && <h3 set:html={item.questionHtml} />}
+            {item.answerHtml && <p set:html={item.answerHtml} />}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<style lang="pcss" is:global>
+  .fun-facts {
+    background-color: #e9e7e1;
+    margin-bottom: 80px;
+    padding: 80px 20px;
+    position: relative;
+  }
+
+  /* The hairline the title sits in the middle of. It runs the full width at
+     the title's own height; the title covers the span behind itself by
+     painting the band's background colour over it. */
+  .fun-facts::before {
+    background-color: #a4a4a4;
+    content: "";
+    height: 1px;
+    inset: 87px 0 auto;
+    margin: 0 auto;
+    max-width: 1150px;
+    position: absolute;
+    width: calc(100% - 40px);
+  }
+
+  .fun-facts .title {
+    background-color: #e9e7e1;
+    display: table;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+  }
+
+  .fun-facts .flex {
+    display: flex;
+  }
+
+  .fun-facts .justify-between {
+    justify-content: space-between;
+  }
+
+  .fun-facts .flex.container {
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1150px;
+    width: 100%;
+  }
+
+  .fun-facts .item {
+    margin: 0 auto;
+    max-width: 300px;
+    padding-bottom: 15px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* The short rule that closes each card. */
+  .fun-facts .item::before {
+    background-color: #32302f;
+    content: "";
+    height: 1px;
+    inset: auto 0 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 100px;
+  }
+
+  .fun-facts img {
+    display: block;
+    margin: 0 auto 10px;
+  }
+
+  .fun-facts h3 {
+    color: #32302f;
+    font: 500 34px/1.1 "canada-type-gibson", sans-serif;
+  }
+
+  .fun-facts p {
+    font-family: "canada-type-gibson", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    line-height: 1.3;
+  }
+</style>

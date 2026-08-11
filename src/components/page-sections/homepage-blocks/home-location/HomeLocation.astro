@@ -1,0 +1,118 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+const {
+  heading = "",
+  items = [],
+  mapEmbedUrl = "",
+  mapTitle = "Office location map",
+  buttonText = "",
+  buttonLink = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedItems = (Array.isArray(items) ? items : [])
+  .map((item: any) => (typeof item === "string" ? item : item?.text))
+  .filter((text: any) => hasText(text));
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<section id="location" class:list={[className]} {...htmlAttributes}>
+  <div class="flex container align-center justify-between gap-30">
+    {
+      hasText(mapEmbedUrl) && (
+        <figure>
+          <iframe
+            src={mapEmbedUrl}
+            title={mapTitle}
+            width="525"
+            height="390"
+            style="border:0;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          />
+        </figure>
+      )
+    }
+
+    <article>
+      {hasText(heading) && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+
+      {
+        resolvedItems.length > 0 && (
+          <ul>
+            {resolvedItems.map((text: string) => (
+              <li>{text}</li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        hasText(buttonText) && (
+          <a href={buttonLink || "#"} class="btn">
+            {buttonText}
+          </a>
+        )
+      }
+    </article>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+
+    #location {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #location .flex.container { flex-direction: column; }
+    }
+
+    #location { background-color: #DDE4E9; padding: 100px 20px; }
+    #location article { max-width: 468px; }
+    #location article h2 { margin: 0; }
+    #location ul { margin-top: 20px; }
+    #location ul li { margin-left: 0; }
+    #location .btn { margin-top: 20px; }
+    #location figure { border-radius: 15px; padding: 20px; background-image: url(/assets/images/green-bg-wave.webp); background-size: cover; background-position: center; background-repeat: no-repeat; }
+    #location figure iframe { border-radius: 15px; }
+    @media (max-width: 1024px) {
+      #location article { text-align: center; }
+      #location figure { display: none; }
+      #location ul { margin-top: 30px; }
+      #location .btn { margin: 20px auto 0; }
+    }
+
+</style>

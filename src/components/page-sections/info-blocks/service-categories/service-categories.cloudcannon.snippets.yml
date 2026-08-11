@@ -1,0 +1,15 @@
+service_categories:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Service Categories
+    icon: grid_view
+  definitions:
+    component_name: ServiceCategories
+    named_args:
+      - editor_key: services
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/service-categories/service-categories.cloudcannon.inputs.yml

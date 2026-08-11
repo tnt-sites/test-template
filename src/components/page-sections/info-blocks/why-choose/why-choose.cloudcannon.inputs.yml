@@ -1,0 +1,8 @@
+heading:
+  type: text
+  comment: 'Heading, e.g. "Why Choose R2 Center for Dentistry for Preventive Dentistry?"'
+items:
+  type: array
+  comment: Short plain-text reasons, shown as pill cards in a row.
+  options:
+    structures: _structures.whyChooseItems

@@ -1,0 +1,165 @@
+label: Appointment Request Form
+icon: event_available
+description: The two-column appointment request form with floating labels and preferred-day checkboxes.
+value:
+  _component: page-sections/forms/appt-form
+  heading: Request an Appointment
+  formAction: ""
+  columnOne:
+    - type: text
+      name: Name
+      label: Name
+      required: true
+    - type: tel
+      name: Phone
+      label: Phone
+      required: true
+    - type: email
+      name: Email
+      label: Email
+      required: true
+    - type: select
+      name: Patient
+      label: Are you a...
+      required: true
+      options:
+        - New Patient
+        - Existing Patient
+  columnTwo:
+    - type: select
+      name: Communication
+      label: Preferred Method of Communication
+      options:
+        - Phone
+        - Text
+        - Email
+    - type: select
+      name: Hear
+      label: How'd you hear about us?
+      required: true
+      options:
+        - Search Engine
+        - Family/Friend
+        - Promotion
+        - Social Media
+        - Other
+    - type: textarea
+      name: Comment
+      label: Do you have any questions or comments?
+  checkboxGroup:
+    label: Preferred day(s) of the week
+    name: day
+    options:
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+  submitText: Send
+  subject: Request Appointment
+  redirect: ""
+preview:
+  text:
+    - key: heading
+    - Appointment Request Form
+  icon: event_available
+picker_preview:
+  text: Appointment Request Form
+  subtext: Two columns of floating-label fields, preferred-day checkboxes, and a submit pill.
+  icon: event_available
+_inputs_from_glob:
+  - /src/components/page-sections/forms/appt-form/appt-form.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  apptFormFields:
+    values:
+      - label: Text Field
+        icon: text_fields
+        value:
+          type: text
+          name: FieldName
+          label: Field label
+          required: false
+        preview:
+          text:
+            - key: label
+            - Text Field
+          subtext:
+            - key: name
+        _inputs: &apptFormFieldInputs
+          type:
+            type: select
+            comment: What kind of control this field renders.
+            options:
+              values:
+                - id: text
+                  name: Text
+                - id: tel
+                  name: Phone
+                - id: email
+                  name: Email
+                - id: select
+                  name: Dropdown
+                - id: textarea
+                  name: Long text
+          name:
+            type: text
+            comment: Field name the value submits under. Shows up in the emailed submission.
+          label:
+            type: text
+            comment: Label shown over the field, which lifts clear once the field is in use.
+          required:
+            type: switch
+            comment: Block submission until this field is filled in.
+          options:
+            type: array
+            comment: Choices, for a dropdown only.
+            options:
+              structures: _structures.apptFormOptions
+          otherInputName:
+            type: text
+            comment: Set on a dropdown that has an "Other" choice to reveal a free-text field when it is picked. This is the name that free-text field submits under.
+          otherInputPlaceholder:
+            type: text
+            comment: Placeholder for that free-text field.
+      - label: Dropdown
+        icon: arrow_drop_down_circle
+        value:
+          type: select
+          name: FieldName
+          label: Field label
+          required: false
+          options:
+            - First choice
+            - Second choice
+        preview:
+          text:
+            - key: label
+            - Dropdown
+          subtext:
+            - key: name
+        _inputs: *apptFormFieldInputs
+      - label: Long Text
+        icon: notes
+        value:
+          type: textarea
+          name: Comment
+          label: Do you have any questions or comments?
+          required: false
+        preview:
+          text:
+            - key: label
+            - Long Text
+          subtext:
+            - key: name
+        _inputs: *apptFormFieldInputs
+  apptFormOptions:
+    values:
+      - label: Choice
+        icon: list
+        value: Choice
+        preview:
+          text:
+            - Choice

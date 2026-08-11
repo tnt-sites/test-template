@@ -43,7 +43,6 @@ const editableAttributes = (prop: string) =>
 ---
 
 <LocationSection id={id} class:list={["location-doctors", className]} {...htmlAttributes}>
-  {/* Reversed by CSS so the headshots sit above the heading, as on the legacy page. */}
   <div class="heading-and-doctors">
     {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
     {

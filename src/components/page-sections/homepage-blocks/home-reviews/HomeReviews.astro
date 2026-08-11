@@ -1,0 +1,230 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+const {
+  reviews = [],
+  sealSource = "",
+  quoteIconSource = "",
+  reviewIconSource = "",
+  buttonText = "",
+  buttonLink = "",
+  autoplayDelay = 10000,
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedReviews = (Array.isArray(reviews) ? reviews : []).filter((review: any) =>
+  hasText(review?.text)
+);
+---
+
+<section id="reviews" class:list={[className]} {...htmlAttributes}>
+  <div class="container">
+    {hasText(sealSource) && <img class="google-seal" src={sealSource} alt="" />}
+    {hasText(quoteIconSource) && <img class="quote-icon" src={quoteIconSource} alt="" />}
+
+    <div class="slick-reviews" data-autoplay-delay={autoplayDelay}>
+      {
+        resolvedReviews.map((review: any, index: number) => (
+          <div class={index === 0 ? "is-active" : undefined}>
+            <p
+              data-editable={editable ? "text" : undefined}
+              data-prop={editable ? `reviews.${index}.text` : undefined}
+            >
+              {review.text}
+            </p>
+            <div class="author">
+              {hasText(review.iconSource || reviewIconSource) && (
+                <img src={review.iconSource || reviewIconSource} alt="" />
+              )}
+              <div>
+                <span class="star" role="img" aria-label="5 stars" />
+                {hasText(review.authorName) && (
+                  <span
+                    class="h1-small"
+                    data-editable={editable ? "text" : undefined}
+                    data-prop={editable ? `reviews.${index}.authorName` : undefined}
+                  >
+                    {review.authorName}
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="slick-controls">
+      <button class="slick-arrow" id="prev" type="button" aria-label="Previous Slide">
+        <i class="icon-angle-left"></i>
+      </button>
+      <ul class="slick-dots">
+        {
+          resolvedReviews.map((_review: any, index: number) => (
+            <li class={index === 0 ? "slick-active" : undefined}>
+              <button type="button" aria-label={`${index + 1} of ${resolvedReviews.length}`}>
+                <span />
+              </button>
+            </li>
+          ))
+        }
+      </ul>
+      <button class="slick-arrow" id="next" type="button" aria-label="Next Slide">
+        <i class="icon-angle-right"></i>
+      </button>
+    </div>
+
+    {
+      hasText(buttonText) && (
+        <a href={buttonLink || "#"} class="btn">
+          {buttonText}
+        </a>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer source-bridge {
+    #reviews .slick-reviews {
+      display: grid;
+      position: relative;
+    }
+
+    #reviews .slick-reviews > div {
+      grid-area: 1 / 1;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 300ms linear;
+    }
+
+    #reviews .slick-reviews > div.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+    #reviews {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #reviews .flex.container { flex-direction: column; }
+    }
+
+    #reviews .quote-icon { display: block; margin: 0 auto; }
+
+    #reviews .slick-controls { display: flex; align-items: center; justify-content: space-around; max-width: 1000px; margin: 10px auto; }
+    #reviews .slick-arrow { padding: 0; color: #fff; font-family: fontello; font-size: 25px; width: 54px; height: 54px; flex: 0 0 54px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-radius: 50%; z-index: 5; transition: 0.3s all; background-color: #32302F; padding-bottom: 2px; }
+    #reviews .slick-arrow i { margin-left: -4px; }
+    #reviews .slick-arrow:hover { background-color: #A3C90D; }
+    #reviews .slick-dots { margin: 0; padding: 0; list-style: none; text-align: center; line-height: 1; }
+    #reviews .slick-dots li { padding: 0 !important; display: inline-block; margin: 0 5px; line-height: 1; }
+    #reviews .slick-dots li:before { display: none; }
+    #reviews .slick-dots li button { padding: 0; background: none; border: 0; }
+    #reviews .slick-dots span { cursor: pointer; background-color: transparent; height: 12px; width: 12px; border-radius: 50%; display: inline-block; margin: 0 5px; border: 1px solid #fff; }
+    #reviews .slick-dots .slick-active span { background-color: #fff; }
+
+    #reviews { background-color: #118534; background-image: url(/assets/images/green-bg.webp); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 0 20px; }
+    #reviews .container { padding: 70px 0 0; position: relative; }
+    #reviews .container .google-seal { position: absolute; top: -89px; right: 0; }
+    #reviews .quote-icon { margin-bottom: 15px; }
+    #reviews .slick-arrow { position: relative; transform: none; inset: unset; }
+    #reviews .slick-reviews .slick-track { display: flex !important; align-items: center; }
+    #reviews .slick-reviews p { max-width: 980px; text-align: center; margin: 0 auto; font-family: "canada-type-gibson", sans-serif; font-weight: 500; font-size: 27px; color: #fff; }
+    #reviews .slick-reviews .author { display: flex; justify-content: center; align-items: center; gap: 15px; margin-top: 20px; }
+    #reviews .slick-reviews .author img { margin: 0; }
+    #reviews .slick-reviews .author star, #reviews .slick-reviews .author span { display: block; }
+    #reviews .slick-reviews .author star:before { letter-spacing: 8px; }
+    #reviews .slick-reviews .author span { display: table; margin: 5px 0 0; color: #fff; }
+    #reviews .btn { margin: 0 auto -31px; }
+    #reviews .slick-controls { justify-content: center; gap: 20px; margin: 25px auto 40px; }
+    @media (max-width: 1024px) {
+      #reviews { padding: 0 20px; }
+      #reviews .container { padding-top: 120px; }
+      #reviews .container .google-seal { position: absolute; inset: -89px 0 auto; }
+    }
+
+</style>
+
+<script>
+  class ReviewsCarousel {
+    constructor(root) {
+      this.slides = [...root.querySelectorAll(":scope > div")];
+      if (this.slides.length < 2) return;
+
+      const container = root.closest(".container");
+      this.dots = [...(container?.querySelectorAll(".slick-dots li") ?? [])];
+      this.index = 0;
+      this.delay = Number(root.dataset.autoplayDelay) || 10000;
+
+      container?.querySelector("#prev")?.addEventListener("click", () => this.step(-1));
+      container?.querySelector("#next")?.addEventListener("click", () => this.step(1));
+      this.dots.forEach((dot, index) =>
+        dot.querySelector("button")?.addEventListener("click", () => this.go(index))
+      );
+
+      // Pause while the pointer is over the section, so a reader is not
+      // interrupted mid-review.
+      root.addEventListener("pointerenter", () => this.stop());
+      root.addEventListener("pointerleave", () => this.start());
+
+      this.start();
+    }
+
+    go(index) {
+      const count = this.slides.length;
+      this.index = ((index % count) + count) % count;
+      this.slides.forEach((slide, i) => slide.classList.toggle("is-active", i === this.index));
+      this.dots.forEach((dot, i) => dot.classList.toggle("slick-active", i === this.index));
+    }
+
+    step(delta) {
+      this.go(this.index + delta);
+      this.start();
+    }
+
+    start() {
+      this.stop();
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        this.timer = window.setInterval(() => this.go(this.index + 1), this.delay);
+      }
+    }
+
+    stop() {
+      window.clearInterval(this.timer);
+    }
+  }
+
+  document
+    .querySelectorAll("#reviews .slick-reviews")
+    .forEach((root) => new ReviewsCarousel(root));
+</script>

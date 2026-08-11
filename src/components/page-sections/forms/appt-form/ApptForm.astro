@@ -1,0 +1,533 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+type Field = {
+  type?: string;
+  name?: string;
+  label?: string;
+  required?: boolean | string;
+  options?: Array<string | { value?: string; label?: string }>;
+  otherInputName?: string;
+  otherInputPlaceholder?: string;
+};
+
+const {
+  heading = "Request an Appointment",
+  formAction = "",
+  columnOne = [],
+  columnTwo = [],
+  checkboxGroup,
+  submitText = "Send",
+  subject = "",
+  redirect = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const isTrue = (value: unknown) =>
+  typeof value === "string" ? value.trim().toLowerCase() === "true" : !!value;
+
+const SELECT_TYPES = new Set(["select"]);
+const TEXTAREA_TYPES = new Set(["textarea"]);
+
+const normalizeOptions = (options: Field["options"]) =>
+  (Array.isArray(options) ? options : [])
+    .map((option) =>
+      typeof option === "string"
+        ? { value: option.trim(), label: option.trim() }
+        : {
+            value: hasText(option?.value) ? option.value.trim() : "",
+            label: hasText(option?.label)
+              ? option.label.trim()
+              : hasText(option?.value)
+                ? option.value.trim()
+                : "",
+          }
+    )
+    .filter((option) => option.label.length > 0)
+    .map((option) => ({ value: option.value || option.label, label: option.label }));
+
+const normalizeFields = (fields: unknown) =>
+  (Array.isArray(fields) ? fields : [])
+    .filter((field): field is Field => !!field && typeof field === "object")
+    .map((field) => {
+      const type = hasText(field.type) ? field.type.trim().toLowerCase() : "text";
+
+      return {
+        type,
+        isSelect: SELECT_TYPES.has(type),
+        isTextarea: TEXTAREA_TYPES.has(type),
+        name: hasText(field.name) ? field.name.trim() : "",
+        label: hasText(field.label) ? field.label.trim() : "",
+        required: isTrue(field.required),
+        options: normalizeOptions(field.options),
+        otherInputName: hasText(field.otherInputName) ? field.otherInputName.trim() : "",
+        otherInputPlaceholder: hasText(field.otherInputPlaceholder)
+          ? field.otherInputPlaceholder.trim()
+          : "",
+      };
+    })
+    .filter((field) => field.name.length > 0);
+
+const columns = [normalizeFields(columnOne), normalizeFields(columnTwo)].filter(
+  (column) => column.length > 0
+);
+
+const checkboxes = {
+  label: hasText(checkboxGroup?.label) ? checkboxGroup.label.trim() : "",
+  name: hasText(checkboxGroup?.name) ? checkboxGroup.name.trim() : "",
+  options: normalizeOptions(checkboxGroup?.options),
+};
+const hasCheckboxes = checkboxes.name.length > 0 && checkboxes.options.length > 0;
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+{
+  columns.length > 0 && (
+    <form
+      id="appt-form"
+      class:list={[className]}
+      method="post"
+      action={formAction || undefined}
+      {...htmlAttributes}
+    >
+      {hasText(heading) && <h2 {...editableAttributes("heading")}>{heading}</h2>}
+
+      <div class="flex-row-input">
+        {columns.map((column, columnIndex: number) => (
+          <article>
+            {column.map((field) => (
+              <div class="group" id={field.otherInputName ? "int-list" : undefined}>
+                <span
+                  class:list={[
+                    "input-content",
+                    field.isSelect && "dwn",
+                    field.isTextarea && "txt",
+                  ]}
+                >
+                  {field.isSelect ? (
+                    <select name={field.name} required={field.required} class="input__field">
+                      <option value="" hidden />
+                      {field.options.map((option) => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  ) : field.isTextarea ? (
+                    <textarea name={field.name} required={field.required} class="input__field" />
+                  ) : (
+                    <input
+                      type={field.type}
+                      name={field.name}
+                      required={field.required}
+                      class="input__field"
+                    />
+                  )}
+                  <span class="highlight" />
+                  <span class="bar" />
+                  <label class="input__label">
+                    <span class="input__label-content">{field.label}</span>
+                  </label>
+                </span>
+
+                {field.otherInputName && (
+                  <input
+                    class="other-interest"
+                    type="text"
+                    name={field.otherInputName}
+                    placeholder={field.otherInputPlaceholder}
+                  />
+                )}
+              </div>
+            ))}
+          </article>
+        ))}
+      </div>
+
+      {hasCheckboxes && (
+        <div class="options day">
+          {checkboxes.label && (
+            <label {...editableAttributes("checkboxGroup.label")}>{checkboxes.label}</label>
+          )}
+          <div class="flex-checks">
+            {checkboxes.options.map((option) => (
+              <span>
+                <input name={`${checkboxes.name}[]`} type="checkbox" value={option.value} />
+                {option.label}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <input type="submit" name="submit" value={submitText} class="btn" />
+      {hasText(subject) && <input type="hidden" name="_subject" value={subject} />}
+      {hasText(redirect) && <input type="hidden" name="_redirect" value={redirect} />}
+    </form>
+  )
+}
+
+<script>
+  (() => {
+    const form = document.getElementById("appt-form");
+    if (!form) return;
+
+    const setFilled = (field: Element, filled: boolean) => {
+      field.parentElement?.classList.toggle("input--filled", filled);
+    };
+
+    const hasValue = (field: Element) =>
+      field instanceof HTMLInputElement ||
+      field instanceof HTMLSelectElement ||
+      field instanceof HTMLTextAreaElement
+        ? field.value.trim() !== ""
+        : false;
+
+    const fields = form.querySelectorAll(".input__field");
+    fields.forEach((field) => {
+      setFilled(field, hasValue(field));
+
+      field.addEventListener("focus", () => setFilled(field, true));
+      field.addEventListener("blur", () => setFilled(field, hasValue(field)));
+      field.addEventListener("change", () => setFilled(field, hasValue(field)));
+    });
+
+    /* Reveals the free-text input beside a select whose value is "Other". */
+    const otherLists = form.querySelectorAll(".group:has(.other-interest)");
+    otherLists.forEach((group) => {
+      const select = group.querySelector("select");
+      if (!(select instanceof HTMLSelectElement)) return;
+
+      const sync = () => group.classList.toggle("oth", select.value === "Other");
+
+      sync();
+      select.addEventListener("change", sync);
+    });
+  })();
+</script>
+
+<style lang="pcss" is:global>
+  #appt-form {
+    margin: 10px auto;
+    max-width: 800px;
+    padding: 140px 10px 60px;
+    text-align: left;
+  }
+
+  #appt-form h2 {
+    font-size: 45px;
+    letter-spacing: 0.05em;
+    margin: 20px auto 50px;
+    text-align: center;
+  }
+
+  #appt-form .flex-row-input {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #appt-form .flex-row-input article {
+    flex: 1;
+    margin: 10px;
+  }
+
+  #appt-form .group {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  /* The field is absolutely positioned over its label, so the wrapper is what
+     reserves the row's height. */
+  #appt-form .input-content {
+    background: none;
+    border-bottom: 1px solid #118534;
+    color: #32302f;
+    display: block;
+    min-height: 65px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  #appt-form .input-content.txt {
+    height: 150px;
+  }
+
+  #appt-form .input__field {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #32302f;
+    display: block;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0 10px;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+  }
+
+  #appt-form .input-content textarea.input__field {
+    display: block;
+    font-family: "jost", sans-serif;
+    height: 130px;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #appt-form .group input,
+  #appt-form .group select,
+  #appt-form .group textarea {
+    -webkit-appearance: none;
+    font-size: 18px;
+  }
+
+  #appt-form .group input:focus,
+  #appt-form .group select:focus,
+  #appt-form .group textarea:focus {
+    background-color: rgb(0 0 0 / 3%);
+    outline: none;
+  }
+
+  #appt-form .input__label {
+    background: transparent;
+    display: inline-block;
+    height: 100%;
+    padding: 0;
+    position: absolute;
+    text-align: left;
+    user-select: none;
+    width: 100%;
+  }
+
+  #appt-form .input__label-content {
+    color: #32302f;
+    display: block;
+    padding: 40px 10px 10px;
+    position: relative;
+    transform-origin: 0% 50%;
+    transition: transform 0.3s, color 0.3s;
+    width: 100%;
+  }
+
+  /* The lift: label shrinks and rises out of the field's way. */
+  #appt-form .input__field:focus + .input__label .input__label-content,
+  #appt-form .input--filled .input__label .input__label-content {
+    color: #32302f;
+    font-size: 0.75em;
+    padding: 15px 5px 5px;
+    transform: translate3d(0, -0.8em, 0);
+  }
+
+  /* The underline that draws in from the centre on focus. */
+  #appt-form .bar {
+    bottom: -1px;
+    display: block;
+    left: 0;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+  }
+
+  #appt-form .bar::before,
+  #appt-form .bar::after {
+    background: #118534;
+    bottom: 1px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transition: 0.2s ease all;
+    width: 0;
+  }
+
+  #appt-form .bar::before {
+    left: 50%;
+  }
+
+  #appt-form .bar::after {
+    right: 50%;
+  }
+
+  #appt-form input:focus ~ .bar::before,
+  #appt-form input:focus ~ .bar::after,
+  #appt-form textarea:focus ~ .bar::before,
+  #appt-form textarea:focus ~ .bar::after,
+  #appt-form select:focus ~ .bar::before,
+  #appt-form select:focus ~ .bar::after {
+    width: 50%;
+  }
+
+  #appt-form .highlight {
+    height: 60%;
+    left: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    position: absolute;
+    top: 25%;
+    width: 100px;
+  }
+
+  #appt-form input:focus ~ .highlight,
+  #appt-form textarea:focus ~ .highlight,
+  #appt-form select:focus ~ .highlight {
+    animation: appt-form-highlight 0.3s ease;
+  }
+
+  @keyframes appt-form-highlight {
+    from {
+      background: #118534;
+    }
+
+    to {
+      background: transparent;
+      width: 0;
+    }
+  }
+
+  /* Select chevron — the native arrow is suppressed by `-webkit-appearance`. */
+  #appt-form .dwn {
+    position: relative;
+  }
+
+  #appt-form .dwn::after {
+    bottom: 5px;
+    color: #118534;
+    content: "\e935";
+    font-family: "fontello";
+    font-size: 1.2em;
+    line-height: 1.5;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    z-index: 8;
+  }
+
+  #appt-form .other-interest {
+    display: none;
+    margin: 10px auto;
+  }
+
+  #appt-form .group.oth .other-interest {
+    display: block;
+  }
+
+  #appt-form .options {
+    color: #32302f;
+    margin: 0 10px;
+  }
+
+  #appt-form .options label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    text-align: left;
+  }
+
+  #appt-form .flex-checks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #appt-form .flex-checks span {
+    align-items: center;
+    display: flex;
+    flex: 0 1 30%;
+    font-size: 16px;
+    margin: 10px 5px 10px 0;
+  }
+
+  #appt-form .flex-checks span [type="checkbox"] {
+    margin-right: 8px;
+  }
+
+  /* Hand-drawn checkbox: a square that fills with the fontello check. */
+  #appt-form .options [type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #32302f;
+    border-radius: 3px;
+    height: 25px;
+    position: relative;
+    vertical-align: middle;
+    width: 25px;
+  }
+
+  #appt-form .options [type="checkbox"]:checked {
+    background-color: #fff;
+    border: 1px solid #118534;
+  }
+
+  #appt-form .options [type="checkbox"]:checked::after {
+    color: #118534;
+    content: "\e832";
+    font-family: "fontello";
+    font-size: 13px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+  }
+
+  #appt-form .btn {
+    background-color: #32302f;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: table;
+    font: 500 18px/1 "jost", sans-serif;
+    margin: 20px auto;
+    min-width: 280px;
+    padding: 22px 30px;
+    text-align: center;
+    transition: 0.3s all;
+  }
+
+  #appt-form .btn:hover {
+    background-color: #a3c90d;
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    #appt-form {
+      padding: 60px 10px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    #appt-form .flex-row-input {
+      display: block;
+    }
+
+    #appt-form .options {
+      margin: 10px auto 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #appt-form {
+      padding: 40px 20px;
+    }
+
+    #appt-form .flex-row-input article {
+      margin: 10px auto;
+    }
+
+    #appt-form .flex-checks span {
+      flex: 0 1 48%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    #appt-form .input-content,
+    #appt-form .group input,
+    #appt-form .group select,
+    #appt-form .group textarea {
+      font-size: 16px;
+    }
+  }
+</style>

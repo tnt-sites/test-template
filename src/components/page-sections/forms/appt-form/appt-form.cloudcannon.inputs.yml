@@ -1,0 +1,49 @@
+heading:
+  type: text
+  comment: Heading above the form, e.g. "Request an Appointment".
+formAction:
+  type: text
+  comment: URL the form posts to. Leave blank until the form handler's endpoint is known.
+columnOne:
+  type: array
+  label: Left Column
+  comment: Fields in the left column.
+  options:
+    structures: _structures.apptFormFields
+columnTwo:
+  type: array
+  label: Right Column
+  comment: Fields in the right column. On narrow screens both columns stack into one.
+  options:
+    structures: _structures.apptFormFields
+checkboxGroup:
+  type: object
+  comment: Optional row of checkboxes under the two columns, e.g. preferred days.
+  options:
+    preview:
+      icon: check_box
+      text:
+        - key: label
+        - Checkbox group
+      subtext:
+        - key: name
+checkboxGroup.label:
+  type: text
+  comment: Label above the checkboxes.
+checkboxGroup.name:
+  type: text
+  comment: Field name the checkboxes submit under. Sent as an array, e.g. "day" posts "day[]".
+checkboxGroup.options:
+  type: array
+  comment: One checkbox per entry.
+  options:
+    structures: _structures.apptFormOptions
+submitText:
+  type: text
+  comment: Label on the submit button.
+subject:
+  type: text
+  comment: Subject line the handler sends the submission under, e.g. "Request Appointment".
+redirect:
+  type: text
+  comment: Page to send visitors to after submitting. Leave blank for no redirect.

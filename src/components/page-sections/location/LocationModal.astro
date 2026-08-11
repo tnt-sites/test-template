@@ -1,17 +1,4 @@
 ---
-/**
- * A location-page modal: the site's native <dialog> component wearing the
- * legacy location-page skin.
- *
- * Opening, closing, Escape, backdrop clicks and focus handling all come from
- * the shared Modal component's controller — this only supplies the heading,
- * the markdown body, and the styling.
- *
- * Modals don't have their own pageSection slot (they're rendered from array
- * items inside Doctors/Services/Why/Financing), so they're deliberately not
- * tied to whichever backgroundColor/textColor the parent section picked —
- * always a fixed, neutral white-background/black-text style.
- */
 import Modal from "@page-sections/info-blocks/modal/Modal.astro";
 import { renderMarkdown } from "./utils";
 

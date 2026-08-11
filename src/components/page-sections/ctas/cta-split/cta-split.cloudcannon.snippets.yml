@@ -36,6 +36,9 @@ ctaSplit:
       - editor_key: reverse
         type: boolean
         optional: true
+      - editor_key: noWhy
+        type: boolean
+        optional: true
       - editor_key: colorScheme
         type: string
         optional: true

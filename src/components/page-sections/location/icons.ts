@@ -7,7 +7,6 @@ const raw = import.meta.glob("./icons/*.svg", {
   eager: true,
 }) as Record<string, string>;
 
-/** Every available icon, in the order the legacy svgIcons map declared them. */
 export const LOCATION_ICON_KEYS = [
   "amenities-v1",
   "calendar-v1",

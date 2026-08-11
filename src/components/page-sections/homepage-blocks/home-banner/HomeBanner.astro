@@ -1,0 +1,117 @@
+---
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  eyebrow = "",
+  heading = "",
+  headingHighlight = "",
+  text = "",
+  imageSource = "",
+  imageSourceWide = "",
+  imageSourceMobile = "",
+  imageAlt = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+
+const wide = imageSourceWide || imageSource;
+const mobile = imageSourceMobile || imageSource;
+---
+
+<section id="banner" class:list={[className]} {...htmlAttributes}>
+  <figure>
+    <picture>
+      {wide && <source srcset={wide} media="(min-width: 1501px)" />}
+      {imageSource && (
+        <source srcset={imageSource} media="(min-width: 701px) and (max-width: 1500px)" />
+      )}
+      {mobile && <source srcset={mobile} media="(max-width: 700px)" />}
+      <img src={imageSource} alt={imageAlt} />
+    </picture>
+  </figure>
+
+  <div class="container">
+    <article>
+      {hasText(eyebrow) && <h1 class="h1-small" {...editableAttributes("eyebrow")}>{eyebrow}</h1>}
+
+      {
+        hasText(heading) && (
+          <h2 class="h1" {...editableAttributes("heading")}>
+            {heading}
+            {hasText(headingHighlight) && <span>{headingHighlight}</span>}
+          </h2>
+        )
+      }
+
+      {
+        hasText(text) && (
+          <div {...editableAttributes("text")} set:html={renderMarkdown(text)} />
+        )
+      }
+    </article>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+
+    #banner {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #banner .flex.container { flex-direction: column; }
+    }
+
+    #banner { position: relative; padding: 0; overflow: hidden; background-color: #E9E7E1; }
+    #banner figure img { max-height: 80vh; min-height: 600px; width: 100%; -o-object-fit: cover; object-fit: cover; -o-object-position: 0% 50%; object-position: 0% 50%; }
+    #banner .container { z-index: 50; text-align: left; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1350px; padding: 10px 30px; }
+    #banner .container article p { max-width: 470px; margin: 20px auto 0 0; }
+
+    @media (max-width: 1250px) {
+      #banner figure img { margin-right: -10%; }
+    }
+
+    @media (max-width: 1000px) {
+      #banner { padding-bottom: 10px; }
+      #banner .container { position: relative; transform: none; inset: unset; padding: 0 20px; }
+      #banner .container article { text-align: center; transform: translateY(-40px); }
+      #banner .container article p { margin: 20px auto 0; }
+      #banner .container:before { content: ""; position: absolute; inset: -140px 0 -10px; height: 145px; background-image: linear-gradient(to top, #E9E7E1, rgba(233, 231, 225, 0)); }
+      #banner figure img { margin-right: 0; min-height: unset; }
+    }
+
+    @media (max-width: 600px) {
+      #banner figure img { min-height: 370px; -o-object-position: 60% 50%; object-position: 60% 50%; }
+    }
+
+</style>

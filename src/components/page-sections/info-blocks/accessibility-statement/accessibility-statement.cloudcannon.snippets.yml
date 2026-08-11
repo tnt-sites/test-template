@@ -1,0 +1,47 @@
+accessibility_statement:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Accessibility Statement
+    icon: accessibility
+  definitions:
+    component_name: AccessibilityStatement
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: intro
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: conformanceTitle
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: conformanceBody
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sections
+        type: array
+        optional: true
+      - editor_key: feedbackTitle
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: feedbackBody
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: lastUpdated
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/accessibility-statement/accessibility-statement.cloudcannon.inputs.yml

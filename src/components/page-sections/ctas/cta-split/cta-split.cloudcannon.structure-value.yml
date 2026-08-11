@@ -19,6 +19,7 @@ value:
       variant: primary
       size: md
   reverse: false
+  noWhy: false
   colorScheme: default
   backgroundColor: base
   backgroundGradient: ""

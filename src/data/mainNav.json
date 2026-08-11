@@ -1,47 +1,143 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/assets/images/logo-header.svg",
+  "logoAlt": "logo",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "/about-us/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "What Sets Us Apart",
+          "path": "/about-us/",
+          "children": []
+        },
+        {
+          "name": "Meet the Dentists",
+          "path": "/meet-the-dentists/",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dr. Ty Reusser",
+              "path": "/dr-ty-reusser/",
+              "children": []
+            },
+            {
+              "name": "Dr. Brooke Coltrane",
+              "path": "/dr-brooke-coltrane/",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Tour Our Office",
+          "path": "/tour-our-office/",
+          "children": []
+        },
+        {
+          "name": "Advanced Dental Technology",
+          "path": "/advanced-dental-technology/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "path": "/our-services/",
+      "children": [
+        {
+          "name": "Preventive Dentistry",
+          "path": "/preventive-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Restorative Dentistry",
+          "path": "/restorative-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Missing Tooth Replacement",
+          "path": "/missing-tooth-replacement/",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "/cosmetic-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Sedation Dentistry",
+          "path": "/sedation-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Emergency Dentistry",
+          "path": "/emergency-dentistry/",
+          "children": [
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-treatment/",
+              "children": []
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/tooth-extractions/",
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "For Patients",
+      "path": "/for-patients/",
+      "children": [
+        {
+          "name": "Your First Visit",
+          "path": "/for-patients/",
+          "children": []
+        },
+        {
+          "name": "Patient Forms",
+          "path": "/for-patients/#forms",
+          "children": []
+        },
+        {
+          "name": "Insurance & Financing",
+          "path": "/for-patients/#insurance",
+          "children": []
+        },
+        {
+          "name": "Membership Plan",
+          "path": "/membership-plan/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "path": "/reviews/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
+      "name": "Contact",
+      "path": "/contact/",
+      "children": [
+        {
+          "name": "Office Info",
+          "path": "/contact/",
+          "children": []
+        },
+        {
+          "name": "Request an Appointment",
+          "path": "/request-an-appointment/",
+          "children": []
+        }
+      ]
     }
   ],
   "buttonSections": [

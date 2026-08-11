@@ -1,0 +1,229 @@
+label: Membership Plans
+icon: card_membership
+description: In-house membership pricing — plan cards with a price medallion and savings line, over a guidelines note.
+value:
+  _component: page-sections/info-blocks/membership-plans
+  heading: Our Yearly Plans
+  plans:
+    - name: Prophy Plan
+      includesLabel: INCLUDES
+      items:
+        - text: 2 Professional Cleanings
+        - text: All Dental Exams
+        - text: All Required X-Rays
+      priceCurrency: $
+      priceAmount: "324"
+      priceInterval: per year
+      savings: 'Total Annual<br> Savings: $200'
+      buttonText: Sign Up Today
+      buttonLink: /request-an-appointment/
+    - name: Perio Plan
+      includesLabel: INCLUDES
+      items:
+        - text: 4 Periodontal Maintenance Visits
+        - text: All Dental Exams
+        - text: All Required X-Rays
+      priceCurrency: $
+      priceAmount: "429"
+      priceInterval: per year
+      savings: 'Total Annual<br> Savings: $410'
+      buttonText: Sign Up Today
+      buttonLink: /request-an-appointment/
+  guidelinesHeading: Program Guidelines & Limitations
+  guidelines: |-
+    \*This program is a discount plan, not a dental insurance plan. There is *no* cancelation penalty. Patient's portion is due the day of service.
+
+    \*Plan cannot be used in conjunction with dental insurance or financing, such as CareCredit.
+  signUpModal:
+    enabled: true
+    id: offer-modal
+    formAction: ""
+    fields:
+      - type: text
+        name: Name
+        placeholder: Name
+        required: true
+      - type: tel
+        name: Phone
+        placeholder: Phone Number
+      - type: email
+        name: email
+        placeholder: Email Address
+        required: true
+      - type: select
+        name: patient
+        placeholder: Are you a...
+        options:
+          - New Patient
+          - Existing Patient
+      - type: textarea
+        name: question
+        placeholder: Questions/Comments
+    submitText: Send
+    subject: Special Offer
+    redirect: ""
+preview:
+  text:
+    - key: heading
+    - Membership Plans
+  icon: card_membership
+picker_preview:
+  text: Membership Plans
+  subtext: Plan cards with a price medallion and savings line, over a shared guidelines note.
+  icon: card_membership
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/membership-plans/membership-plans.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  membershipPlanItems:
+    values:
+      - label: Plan
+        icon: loyalty
+        value:
+          name: Plan Name
+          includesLabel: INCLUDES
+          items:
+            - text: What the plan covers
+          priceCurrency: $
+          priceAmount: "0"
+          priceInterval: per year
+          savings: 'Total Annual<br> Savings: $0'
+          buttonText: Sign Up Today
+          buttonLink: /request-an-appointment/
+        preview:
+          text:
+            - key: name
+            - Plan
+          subtext:
+            - key: priceAmount
+        _inputs:
+          name:
+            type: text
+            comment: Plan name, shown in the green band at the top of the card.
+          includesLabel:
+            type: text
+            comment: Small uppercase label above the list, e.g. "INCLUDES".
+          items:
+            type: array
+            comment: What the plan covers. Each line gets a green check.
+            options:
+              structures: _structures.membershipPlanIncludes
+          priceCurrency:
+            type: text
+            comment: Currency mark, set small and raised beside the figure.
+          priceAmount:
+            type: text
+            comment: The price figure alone, without the currency mark, e.g. "324".
+          priceInterval:
+            type: text
+            comment: Billing period under the price, e.g. "per year". Rendered uppercase.
+          savings:
+            type: text
+            comment: 'Savings line at the card''s lower right. Use <br> to break it, e.g. "Total Annual<br> Savings: $200" — the break is hidden on narrow screens.'
+          buttonText:
+            type: text
+            comment: Label for the pill button under the card. Leave blank to hide the button.
+          buttonLink:
+            type: url
+            comment: Where the button goes. A "#modal-id" value opens a modal on this page and passes it the plan name and price.
+  membershipPlanIncludes:
+    values:
+      - label: Inclusion
+        icon: check
+        value:
+          text: What the plan covers
+        preview:
+          icon: check
+          text:
+            - key: text
+            - Inclusion
+        _inputs:
+          text:
+            type: text
+            comment: One thing the plan covers. Keep it short.
+  membershipModalFields:
+    values:
+      - label: Text Field
+        icon: text_fields
+        value:
+          type: text
+          name: FieldName
+          placeholder: Field label
+          required: false
+        preview:
+          text:
+            - key: placeholder
+            - Text Field
+          subtext:
+            - key: name
+        _inputs: &membershipModalFieldInputs
+          type:
+            type: select
+            comment: What kind of control this field renders.
+            options:
+              values:
+                - id: text
+                  name: Text
+                - id: tel
+                  name: Phone
+                - id: email
+                  name: Email
+                - id: select
+                  name: Dropdown
+                - id: textarea
+                  name: Long text
+          name:
+            type: text
+            comment: Field name the value submits under. Shows up in the emailed submission.
+          placeholder:
+            type: text
+            comment: Placeholder text. On a dropdown this is the unselectable first choice.
+          required:
+            type: switch
+            comment: Block submission until this field is filled in.
+          options:
+            type: array
+            comment: Choices, for a dropdown only.
+            options:
+              structures: _structures.membershipModalOptions
+      - label: Dropdown
+        icon: arrow_drop_down_circle
+        value:
+          type: select
+          name: FieldName
+          placeholder: Choose one...
+          required: false
+          options:
+            - First choice
+            - Second choice
+        preview:
+          text:
+            - key: placeholder
+            - Dropdown
+          subtext:
+            - key: name
+        _inputs: *membershipModalFieldInputs
+      - label: Long Text
+        icon: notes
+        value:
+          type: textarea
+          name: question
+          placeholder: Questions/Comments
+          required: false
+        preview:
+          text:
+            - key: placeholder
+            - Long Text
+          subtext:
+            - key: name
+        _inputs: *membershipModalFieldInputs
+  membershipModalOptions:
+    values:
+      - label: Choice
+        icon: list
+        value: Choice
+        preview:
+          text:
+            - Choice

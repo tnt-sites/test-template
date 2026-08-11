@@ -1,0 +1,135 @@
+---
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  eyebrow = "",
+  heading = "",
+  items = [],
+  imageSource = "",
+  imageAlt = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedItems = (Array.isArray(items) ? items : []).filter(
+  (item: any) => hasText(item?.heading) || hasText(item?.text)
+);
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<section id="financial" class:list={[className]} {...htmlAttributes}>
+  {
+    (hasText(eyebrow) || hasText(heading)) && (
+      <div class="title">
+        {hasText(eyebrow) && (
+          <span class="h1-small" {...editableAttributes("eyebrow")}>
+            {eyebrow}
+          </span>
+        )}
+        {hasText(heading) && (
+          <span class="h2" {...editableAttributes("heading")}>
+            {heading}
+          </span>
+        )}
+      </div>
+    )
+  }
+
+  <div class="flex container align-start justify-between gap-30">
+    <article>
+      {
+        resolvedItems.map((item: any, index: number) => (
+          <div class="item">
+            {hasText(item.heading) && (
+              <h3
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? `items.${index}.heading` : undefined}
+              >
+                {item.heading}
+              </h3>
+            )}
+            {hasText(item.text) && (
+              <div
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? `items.${index}.text` : undefined}
+                set:html={renderMarkdown(item.text)}
+              />
+            )}
+            {hasText(item.linkText) && (
+              <a href={item.link || "#"} class="arrow-btn h1-small">
+                {item.linkText}
+              </a>
+            )}
+          </div>
+        ))
+      }
+    </article>
+
+    {
+      hasText(imageSource) && (
+        <figure>
+          <img src={imageSource} alt={imageAlt} />
+        </figure>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+
+    #financial {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #financial .flex.container { flex-direction: column; }
+    }
+
+    #financial { background-color: #F8FBFF; padding: 120px 20px 100px; }
+    #financial .title { text-align: center; margin-bottom: 40px; }
+    #financial article { max-width: 523px; }
+    #financial article .item { padding: 20px 10px 20px 0; border-bottom: 1px solid rgba(112, 112, 112, 0.2); }
+    #financial article .item:first-of-type { padding-top: 0; }
+    #financial article .item:last-of-type { padding-bottom: 0; border: none; }
+    #financial article p { margin-bottom: 0; }
+    #financial h3 { font-size: 24px; line-height: 1; margin: 0; }
+    #financial .arrow-btn { position: relative; display: flex; justify-content: flex-start; align-items: center; max-width: -moz-fit-content; max-width: fit-content; margin: 10px 0 0; }
+    #financial .arrow-btn:after { content: url(/assets/images/green-arrow-small.svg); position: relative; display: table; line-height: 0; margin-left: 10px; transition: transform 0.3s; }
+
+    #financial .arrow-btn:hover { color: #118534; }
+    #financial .arrow-btn:hover:after { transform: translateX(5px); }
+    #financial figure img { border-radius: 15px; }
+    @media (max-width: 1024px) {
+      #financial .flex.container { align-items: center; }
+    }
+
+</style>

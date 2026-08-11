@@ -1,0 +1,22 @@
+tour_gallery:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Tour Gallery
+    icon: photo_library
+  definitions:
+    component_name: TourGallery
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: images
+        type: array
+        optional: true
+      - editor_key: autoplaySeconds
+        type: number
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/features/tour-gallery/tour-gallery.cloudcannon.inputs.yml

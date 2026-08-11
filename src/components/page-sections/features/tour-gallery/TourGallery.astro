@@ -1,0 +1,266 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+type GalleryImage = {
+  source?: string;
+  alt?: string;
+};
+
+const {
+  id = "tour",
+  images = [],
+  autoplaySeconds = 3,
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedImages = (Array.isArray(images) ? images : [])
+  .filter((image: GalleryImage) => !!image && typeof image === "object")
+  .map((image: GalleryImage) => ({
+    source: hasText(image.source) ? image.source.trim() : "",
+    alt: hasText(image.alt) ? image.alt.trim() : "",
+  }))
+  .filter((image) => image.source.length > 0);
+
+const delay = Math.max(1, Number(autoplaySeconds) || 3) * 1000;
+const hasControls = resolvedImages.length > 1;
+---
+
+{
+  resolvedImages.length > 0 && (
+    <div id={id || undefined} class:list={["tour-gallery", className]} {...htmlAttributes}>
+      <div class="tour-gallery-slides" data-autoplay-delay={delay}>
+        {resolvedImages.map((image, index: number) => (
+          <div class:list={["tour-gallery-slide", index === 0 && "is-active"]}>
+            <img
+              src={image.source}
+              alt={image.alt}
+              loading={index === 0 ? "eager" : "lazy"}
+              data-editable={editable ? "image" : undefined}
+              data-prop-src={editable ? `images.${index}.source` : undefined}
+              data-prop-alt={editable ? `images.${index}.alt` : undefined}
+            />
+          </div>
+        ))}
+      </div>
+
+      {hasControls && (
+        <>
+          <button
+            class="tour-gallery-arrow tour-gallery-prev"
+            type="button"
+            aria-label="Previous slide"
+          >
+            <i class="icon-angle-left" aria-hidden="true" />
+          </button>
+          <button class="tour-gallery-arrow tour-gallery-next" type="button" aria-label="Next slide">
+            <i class="icon-angle-right" aria-hidden="true" />
+          </button>
+
+          <div class="tour-gallery-controls">
+            <div class="tour-gallery-dots">
+              {resolvedImages.map((_image, index: number) => (
+                <button
+                  class:list={["tour-gallery-dot", index === 0 && "is-active"]}
+                  type="button"
+                  aria-label={`Show photo ${index + 1} of ${resolvedImages.length}`}
+                >
+                  <span />
+                </button>
+              ))}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
+<script>
+  /**
+   * Cross-fade rotation for the office tour gallery — the same shape as
+   * `HomeReviews`, against this section's own class names.
+   */
+  class TourGallery {
+    slides: HTMLElement[];
+    dots: HTMLElement[];
+    index = 0;
+    delay: number;
+    timer = 0;
+
+    constructor(root: HTMLElement) {
+      const track = root.querySelector<HTMLElement>(".tour-gallery-slides");
+      this.slides = [...root.querySelectorAll<HTMLElement>(".tour-gallery-slide")];
+      this.dots = [...root.querySelectorAll<HTMLElement>(".tour-gallery-dot")];
+      this.delay = Number(track?.dataset.autoplayDelay) || 3000;
+
+      if (this.slides.length < 2) return;
+
+      root
+        .querySelector(".tour-gallery-prev")
+        ?.addEventListener("click", () => this.step(-1));
+      root.querySelector(".tour-gallery-next")?.addEventListener("click", () => this.step(1));
+      this.dots.forEach((dot, index) =>
+        dot.addEventListener("click", () => this.step(index - this.index))
+      );
+
+      // Pause while the pointer is over the gallery, so it does not slide out
+      // from under someone looking at a photo.
+      root.addEventListener("pointerenter", () => this.stop());
+      root.addEventListener("pointerleave", () => this.start());
+
+      this.start();
+    }
+
+    go(index: number) {
+      const count = this.slides.length;
+      this.index = ((index % count) + count) % count;
+      this.slides.forEach((slide, i) => slide.classList.toggle("is-active", i === this.index));
+      this.dots.forEach((dot, i) => dot.classList.toggle("is-active", i === this.index));
+    }
+
+    step(delta: number) {
+      this.go(this.index + delta);
+      this.start();
+    }
+
+    start() {
+      this.stop();
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        this.timer = window.setInterval(() => this.go(this.index + 1), this.delay);
+      }
+    }
+
+    stop() {
+      window.clearInterval(this.timer);
+    }
+  }
+
+  document
+    .querySelectorAll<HTMLElement>(".tour-gallery")
+    .forEach((root) => new TourGallery(root));
+</script>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .tour-gallery {
+      margin: 40px auto;
+      max-width: 800px;
+      padding: 0 10px;
+      position: relative;
+    }
+
+    .tour-gallery-slides {
+      display: grid;
+      margin: 20px auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .tour-gallery-slide {
+      grid-area: 1 / 1;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .tour-gallery-slide.is-active {
+      opacity: 1;
+    }
+
+    .tour-gallery-slide img {
+      border-radius: 15px;
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Over the photo, centred on its left and right edges. */
+    .tour-gallery-arrow {
+      align-items: center;
+      background-color: #32302f;
+      border: 0;
+      border-radius: 50%;
+      color: #fff;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      font-family: "fontello";
+      font-size: 25px;
+      height: 54px;
+      justify-content: center;
+      padding: 0 0 2px;
+      position: absolute;
+      top: 52%;
+      transform: translateY(-50%);
+      transition: 0.3s all;
+      width: 54px;
+      z-index: 5;
+    }
+
+    .tour-gallery-arrow:hover {
+      background-color: #a3c90d;
+    }
+
+    .tour-gallery-prev {
+      left: 0;
+    }
+
+    .tour-gallery-prev i {
+      margin-left: -4px;
+    }
+
+    .tour-gallery-next {
+      right: 0;
+    }
+
+    .tour-gallery-next i {
+      margin-left: 4px;
+    }
+
+    .tour-gallery-controls {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin: 10px auto;
+      max-width: 1000px;
+    }
+
+    .tour-gallery-dots {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .tour-gallery-dot {
+      background: none;
+      border: 0;
+      cursor: pointer;
+      line-height: 0;
+      padding: 0;
+    }
+
+    .tour-gallery-dot span {
+      background-color: transparent;
+      border: 1px solid #118534;
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      margin: 0 5px;
+      width: 12px;
+    }
+
+    .tour-gallery-dot.is-active span {
+      background-color: #118534;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .tour-gallery-slide {
+        transition: none;
+      }
+    }
+  }
+</style>

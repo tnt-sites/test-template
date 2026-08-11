@@ -1,0 +1,104 @@
+---
+
+import { hasText } from "@page-sections/location/utils";
+
+const {
+  heading = "",
+  items = [],
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedItems = (Array.isArray(items) ? items : [])
+  .map((item: any) => (typeof item === "string" ? item : item?.text))
+  .filter((text: any) => hasText(text));
+---
+
+<div class:list={["why-choose", className]} {...htmlAttributes}>
+
+  <div class="container">
+    {hasText(heading) && <h2 data-editable={editable ? "text" : undefined} data-prop={editable ? "heading" : undefined}>{heading}</h2>}
+    {
+      resolvedItems.length > 0 && (
+        <ul>
+          {resolvedItems.map((text: string, index: number) => (
+            <li data-editable={editable ? "text" : undefined} data-prop={editable ? `items.${index}.text` : undefined}>
+              {text}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</div>
+
+<style lang="pcss" is:global>
+
+
+.why-choose {
+  background-color: #118534;
+  background-image: url(/assets/images/green-bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 20px 30px;
+  position: relative;
+}
+
+.why-choose .container {
+  margin: 0 auto;
+  max-width: 1150px;
+  width: 100%;
+}
+
+.why-choose h2 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.why-choose ul {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.why-choose ul li {
+  background-color: #fff;
+  border-radius: 15px;
+  color: #32302f;
+  margin: 10px 0;
+  max-width: 350px;
+  overflow: visible;
+  padding: 15px 30px;
+  width: 100%;
+  font-size: 19px;
+}
+
+.why-choose ul li::before {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .why-choose {
+    padding: 30px 20px;
+  }
+
+  .why-choose h2 {
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .why-choose ul {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+</style>

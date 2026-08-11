@@ -20,6 +20,7 @@ const {
   emailHref = "",
   emailText = [],
   officeHoursTitle = "Office Hours",
+  followTitle = "Follow Us",
   officeHours = [],
   officeHoursNote = "",
   officeHoursNotes = [],
@@ -31,9 +32,14 @@ const {
   phoneLinkHoverColor = "",
   logoSource,
   logoAlt,
+  followImages = [],
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const resolvedFollowImages = (Array.isArray(followImages) ? followImages : []).filter(
+  (image: any) => image && typeof image.source === "string" && image.source.trim().length > 0
+);
 
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
 
@@ -191,26 +197,6 @@ const footerStyle = [
           ))
         }
 
-        {
-          sharedSocials.length > 0 && (
-            <div class="social">
-              <ButtonGroup alignX="center">
-                {sharedSocials.map((social: any) => (
-                  <Button
-                    variant="ghost"
-                    size="lg"
-                    iconName={social.icon}
-                    link={social.link}
-                    hideText="true"
-                    aria-label={`Visit our ${social.icon} page`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ))}
-              </ButtonGroup>
-            </div>
-          )
-        }
       </div>
 
       <div class="fo-hours">
@@ -245,6 +231,59 @@ const footerStyle = [
           ))
         }
       </div>
+
+      {
+        (sharedSocials.length > 0 || resolvedFollowImages.length > 0) && (
+          <div class="fo-follow">
+            <hr class="fo-follow-divider" />
+
+            {sharedSocials.length > 0 && (
+              <div class="fo-follow-socials">
+                {followTitle && <span class="fo-title">{followTitle}</span>}
+                <div class="social">
+                  <ButtonGroup alignX="center">
+                    {sharedSocials.map((social: any) => (
+                      <Button
+                        variant="ghost"
+                        size="lg"
+                        iconName={social.icon}
+                        link={social.link}
+                        hideText="true"
+                        aria-label={`Visit our ${social.icon} page`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      />
+                    ))}
+                  </ButtonGroup>
+                </div>
+              </div>
+            )}
+
+            {resolvedFollowImages.length > 0 && (
+            <div class="flex-imgs">
+              {resolvedFollowImages.map((image: any) => {
+                const figure = (
+                  <Image
+                    source={image.source}
+                    alt={image.alt || ""}
+                    class="fo-follow-image"
+                    editable={false}
+                  />
+                );
+
+                return image.link ? (
+                  <a href={image.link} target="_blank" rel="noopener noreferrer">
+                    {figure}
+                  </a>
+                ) : (
+                  figure
+                );
+              })}
+            </div>
+            )}
+          </div>
+        )
+      }
     </div>
 
     {
@@ -458,8 +497,10 @@ const footerStyle = [
           .fo-title { text-align: center; }
         }
 
+        .fo-follow-socials{display: flex; align-items: center; justify-content: center; .fo-title{margin: 0;}}
+
         .social {
-          margin-top: var(--spacing-sm); 
+          margin-left: 10px;
 
           .button{min-width: auto;}
         }
@@ -483,6 +524,8 @@ const footerStyle = [
 
       a {
         color: var(--color-link);
+              font-size: var(--font-size-sm);
+
 
         &:hover,
         &:focus-visible {
@@ -505,4 +548,214 @@ const footerStyle = [
       }
     }
   }
+
+@layer source-bridge {
+  footer {
+    background-color: var(--color-bg, #ffffff);
+    color: var(--src-color2, #000000);
+    position: relative;
+  }
+
+  footer a {
+    color: var(--color-text, #32302f);
+    font-family: jost, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+  }
+
+  footer a:hover {
+    color: #a3c90d;
+  }
+
+  footer p {
+    color: var(--color-text, #32302f);
+    font-family: jost, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.2px;
+  }
+
+  footer .fo-title {
+    color: #32302f;
+    display: block;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  footer .content {
+    max-width: 1150px;
+  }
+
+  footer .fo-follow-divider {
+    background-color: #e0dedb;
+    border: 0;
+    height: 1px;
+    margin: 0 0 24px;
+    width: 100%;
+  }
+
+  footer .fo-follow-socials {
+    text-align: center;
+  }
+
+  footer .fo-follow-socials .fo-title {
+    text-align: center;
+  }
+
+  footer .social {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  footer .social .button-group {
+    display: contents;
+  }
+
+  footer .social a {
+    align-items: center;
+    background-color: #118534;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+  }
+
+  footer .social a:hover {
+    background-color: #a3c90d;
+    color: #fff;
+  }
+
+  footer .social a svg {
+    height: 16px;
+    width: 16px;
+  }
+
+  footer hr.rule {
+    display: none;
+  }
+
+  footer #fo-content {
+    flex-wrap: wrap;
+  }
+
+  footer .fo-follow {
+    flex: 0 0 100%;
+    margin-top: 32px;
+  }
+
+  footer .fo-follow .flex-imgs {
+    margin-top: 24px;
+  }
+
+  footer .flex-imgs {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer .flex-imgs img {
+    aspect-ratio: 1;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  footer .footer-content:has(#copy) .content-container,
+  footer #copy {
+    margin-inline: auto;
+    max-width: 1000px;
+    text-align: center;
+  }
+
+  footer #copy a {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+
+  footer::after {
+    background: linear-gradient(270deg, #5ec4c8 0%, #a3c90d 50%, #118534 100%);
+    content: "";
+    height: 14px;
+    inset: auto 0 0;
+    position: absolute;
+  }
+
+  @media (min-width: 1025px) {
+    footer .content {
+      padding-inline: 0;
+    }
+
+    footer .outer-content > .content {
+      align-items: start;
+      column-gap: 168px;
+      display: grid;
+      grid-template-columns: 406px 576px;
+      justify-content: center;
+    }
+
+    footer .footer-content:not(:has(#copy)) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    footer #fo-content {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    footer .footer-content:has(#copy) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    footer .footer-content:not(:has(#copy)) .footer-logo img {
+      height: auto;
+      margin: 0;
+      max-width: 100%;
+      width: 406px;
+    }
+
+    footer #fo-content {
+      display: flex;
+      gap: 40px;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    footer #fo-content .fo-info {
+      flex: 0 0 191px;
+    }
+
+    footer #fo-content .fo-hours {
+      flex: 0 0 271px;
+    }
+
+    footer #fo-content :is(.fo-info, .fo-hours),
+    footer #fo-content :is(.fo-info, .fo-hours) :is(.fo-title, .pho, .phy, .office-block) {
+      text-align: left;
+    }
+
+    footer #fo-content .pho,
+    footer #fo-content .phy {
+      display: block;
+      margin-inline: 0;
+    }
+
+    footer .flex-imgs {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
 </style>

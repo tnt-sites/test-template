@@ -1,0 +1,39 @@
+label: Why Choose
+icon: check_circle
+description: 'A "Why Choose [Practice] for [Service]?" banner — heading over a row of short reason cards.'
+value:
+  _component: page-sections/info-blocks/why-choose
+  heading: "Why Choose R2 Center for Dentistry?"
+  items:
+    - text: Reason one
+    - text: Reason two
+    - text: Reason three
+preview:
+  text:
+    - key: heading
+    - Why Choose
+  icon: check_circle
+picker_preview:
+  text: Why Choose
+  subtext: Heading over a row of short reason cards, for the green band under an interior banner.
+  icon: check_circle
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/why-choose/why-choose.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  whyChooseItems:
+    values:
+      - label: Reason
+        value:
+          text: Reason
+        preview:
+          icon: text_fields
+          text:
+            - key: text
+            - Reason
+        _inputs:
+          text:
+            type: text
+            comment: Short reason, shown as a single pill card. Keep it to one line.

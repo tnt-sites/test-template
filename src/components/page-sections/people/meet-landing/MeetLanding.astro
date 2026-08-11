@@ -99,14 +99,16 @@ const htmlAttributes = Object.fromEntries(
       align-items: flex-start;
       display: flex;
       flex-wrap: wrap;
-      gap: 5px;
+      gap: 30px;
       justify-content: center;
-      margin-top: 1.5rem;
+      margin: 0 auto;
     }
 
     .landing > editable-array-item,
     .landing > a {
       flex: 0 1 auto;
+      margin: 10px 0 20px;
+      max-width: 350px;
       text-align: center;
     }
 
@@ -116,8 +118,28 @@ const htmlAttributes = Object.fromEntries(
       text-decoration: none;
     }
 
+    .landing img {
+      border-radius: 15px;
+    }
+
     .landing .btn {
-      margin: 20px auto 0;
+      background-color: #32302f;
+      border-radius: 50px;
+      color: #fff;
+      cursor: pointer;
+      display: table;
+      font: 500 18px/1 "jost", sans-serif;
+      margin: 15px auto 0;
+      min-width: 280px;
+      padding: 22px 30px;
+      text-align: center;
+      transition: 0.3s all;
+    }
+
+    .landing a:hover .btn,
+    .landing a:focus-visible .btn {
+      background-color: #a3c90d;
+      color: #fff;
     }
 
     .landing .name {

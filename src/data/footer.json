@@ -1,30 +1,61 @@
 {
-  "logoSource": "/images/logo.svg",
+  "logoSource": "/assets/images/logo-footer.svg",
   "logoAlt": "Logo",
   "links": [
     {
-      "name": "Home",
-      "path": "/"
-    },
-    {
-      "name": "Why",
-      "path": "/why/"
-    },
-    {
-      "name": "Blog",
-      "path": "/blog/"
+      "name": "Site designed and maintained by",
+      "path": "https://www.tntdental.com"
     }
   ],
   "contactTitle": "Contact Us",
   "officeHoursTitle": "Office Hours",
+  "followTitle": "Follow Us",
   "legalLinks": [
     {
       "name": "Sitemap",
-      "path": "/sitemap"
+      "path": "/sitemap/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/assets/docs/P104- R2 (Reusser) Privacy Policy.pdf"
     },
     {
       "name": "Privacy Policy",
-      "path": "/privacy-policy"
+      "path": "/privacy-policy/"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
+    },
+    {
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
+    },
+    {
+      "name": "Cookie preferences",
+      "path": "#"
+    }
+  ],
+  "followImages": [
+    {
+      "source": "/assets/images/footer-follow-1.webp",
+      "alt": "",
+      "link": "https://www.instagram.com/r2dentistry/"
+    },
+    {
+      "source": "/assets/images/footer-follow-2.webp",
+      "alt": "",
+      "link": "https://www.instagram.com/r2dentistry/"
+    },
+    {
+      "source": "/assets/images/footer-follow-3.webp",
+      "alt": "",
+      "link": "https://www.instagram.com/r2dentistry/"
+    },
+    {
+      "source": "/assets/images/footer-follow-4.webp",
+      "alt": "",
+      "link": "https://www.instagram.com/r2dentistry/"
     }
   ]
 }

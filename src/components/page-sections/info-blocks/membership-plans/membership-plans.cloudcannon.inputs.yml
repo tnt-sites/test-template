@@ -1,0 +1,57 @@
+heading:
+  type: text
+  comment: Heading above the plan cards, e.g. "Our Yearly Plans".
+plans:
+  type: array
+  label: Plans
+  comment: One card per membership plan. Two fit side by side; more wrap onto the next row.
+  options:
+    structures: _structures.membershipPlanItems
+guidelinesHeading:
+  type: text
+  comment: Heading for the note under the cards, e.g. "Program Guidelines & Limitations".
+guidelines:
+  type: markdown
+  comment: The program's guidelines and limitations, shown centred under both cards.
+  options:
+    blockquote: false
+    bold: true
+    italic: true
+    strike: false
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+signUpModal:
+  type: object
+  comment: The sign-up popup. Point a plan's button at "#" plus this popup's ID to open it; the popup takes its heading and price from whichever plan was clicked.
+  options:
+    preview:
+      icon: web_asset
+      text:
+        - Sign-up popup
+      subtext:
+        - key: id
+signUpModal.enabled:
+  type: switch
+  comment: Render the popup on this page.
+signUpModal.id:
+  type: text
+  comment: HTML id for the popup. A plan button linking to "#" plus this value opens it.
+signUpModal.formAction:
+  type: text
+  comment: URL the form posts to. Leave blank until the form handler's endpoint is known.
+signUpModal.fields:
+  type: array
+  comment: Fields in the popup's form, in order.
+  options:
+    structures: _structures.membershipModalFields
+signUpModal.submitText:
+  type: text
+  comment: Label on the submit button.
+signUpModal.subject:
+  type: text
+  comment: Fallback subject for the submission. Overwritten with the plan's name when a plan button opens the popup.
+signUpModal.redirect:
+  type: text
+  comment: Page to send visitors to after submitting. Leave blank for no redirect.

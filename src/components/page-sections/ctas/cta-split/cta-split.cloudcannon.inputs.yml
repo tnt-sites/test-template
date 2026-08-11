@@ -50,6 +50,9 @@ buttonSections:
 reverse:
   type: switch
   comment: Reverse the order so buttons appear before the copy.
+noWhy:
+  type: switch
+  comment: Turn on for the first section of a page that has no Why Choose band under its banner. The banner's photo hangs 115px below its own section, and this adds the matching space so the heading clears it.
 colorScheme:
   type: select
   comment: Color scheme theme for the CTA.

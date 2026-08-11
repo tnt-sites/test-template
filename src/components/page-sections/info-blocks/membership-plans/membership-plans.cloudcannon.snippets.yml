@@ -1,0 +1,27 @@
+membership_plans:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Membership Plans
+    icon: card_membership
+  definitions:
+    component_name: MembershipPlans
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: plans
+        type: array
+        optional: true
+      - editor_key: guidelinesHeading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: guidelines
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/membership-plans/membership-plans.cloudcannon.inputs.yml

@@ -1,14 +1,4 @@
 ---
-/**
- * One icon-plus-heading cell, used by the Why, Doctors and Financing sections.
- *
- * Reproduces at build time what the legacy location-page.js did on DOMContentLoaded:
- * look the icon key up in the SVG map and prepend a `.svg-container`, tagged
- * `no-fill` for the stroke-drawn icons.
- *
- * When `modalId` is set the cell becomes an anchor that opens that dialog; the
- * parent section is responsible for rendering the matching <Modal>.
- */
 import { LOCATION_ICON_NO_FILL, getLocationIcon } from "../icons";
 
 const {
@@ -30,8 +20,6 @@ const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
 );
 
-// The icon key stays on the element as a class. It carries no styling now, but
-// makes diffing a rendered page against the legacy markup straightforward.
 const Tag = modalId ? "a" : "div";
 const triggerAttributes = modalId ? { href: `#${modalId}`, role: "button" } : {};
 

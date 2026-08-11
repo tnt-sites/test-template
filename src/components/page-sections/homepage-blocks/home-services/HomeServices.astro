@@ -1,0 +1,191 @@
+---
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  blockOne = {},
+  blockTwo = {},
+  servicesTitle = "",
+  services = [],
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedServices = (Array.isArray(services) ? services : []).filter(
+  (service: any) => hasText(service?.name)
+);
+
+const hasBlock = (block: any) =>
+  block && (hasText(block.heading) || hasText(block.text) || hasText(block.imageSource));
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<section id="services" class:list={[className]} {...htmlAttributes}>
+  {
+    hasBlock(blockOne) && (
+      <div class="block-1 flex container align-center justify-between gap-30">
+        <article>
+          {hasText(blockOne.eyebrow) && (
+            <h2 class="h1-small" {...editableAttributes("blockOne.eyebrow")}>
+              {blockOne.eyebrow}
+            </h2>
+          )}
+          {hasText(blockOne.heading) && (
+            <span class="h2" {...editableAttributes("blockOne.heading")}>
+              {blockOne.heading}
+            </span>
+          )}
+          {hasText(blockOne.text) && (
+            <div
+              {...editableAttributes("blockOne.text")}
+              set:html={renderMarkdown(blockOne.text)}
+            />
+          )}
+          {hasText(blockOne.buttonText) && (
+            <a href={blockOne.buttonLink || "#"} class="btn">
+              {blockOne.buttonText}
+            </a>
+          )}
+        </article>
+        {hasText(blockOne.imageSource) && (
+          <figure>
+            <img src={blockOne.imageSource} alt={blockOne.imageAlt || ""} />
+          </figure>
+        )}
+      </div>
+    )
+  }
+
+  {
+    hasBlock(blockTwo) && (
+      <div class="block-2 flex container align-center justify-between gap-30">
+        {hasText(blockTwo.imageSource) && (
+          <figure>
+            <img src={blockTwo.imageSource} alt={blockTwo.imageAlt || ""} />
+          </figure>
+        )}
+        <article>
+          {hasText(blockTwo.eyebrow) && (
+            <h2 class="h1-small" {...editableAttributes("blockTwo.eyebrow")}>
+              {blockTwo.eyebrow}
+            </h2>
+          )}
+          {hasText(blockTwo.heading) && (
+            <span class="h2" {...editableAttributes("blockTwo.heading")}>
+              {blockTwo.heading}
+            </span>
+          )}
+          {hasText(blockTwo.text) && (
+            <div
+              {...editableAttributes("blockTwo.text")}
+              set:html={renderMarkdown(blockTwo.text)}
+            />
+          )}
+          {hasText(blockTwo.buttonText) && (
+            <a href={blockTwo.buttonLink || "#"} class="btn">
+              {blockTwo.buttonText}
+            </a>
+          )}
+        </article>
+      </div>
+    )
+  }
+
+  {
+    resolvedServices.length > 0 && (
+      <div class="services-list">
+        {hasText(servicesTitle) && (
+          <span class="h1-small" {...editableAttributes("servicesTitle")}>
+            {servicesTitle}
+          </span>
+        )}
+        <div class="flex container align-start justify-around gap-30">
+          {resolvedServices.map((service: any, index: number) => (
+            <a href={service.link || "#"}>
+              {hasText(service.iconSource) && (
+                <figure>
+                  <img src={service.iconSource} alt={service.iconAlt || ""} />
+                </figure>
+              )}
+              <h3
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? `services.${index}.name` : undefined}
+              >
+                {service.name}
+              </h3>
+            </a>
+          ))}
+        </div>
+      </div>
+    )
+  }
+</section>
+
+<style lang="pcss" is:global>
+
+    #services {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    #services .block-1,
+    #services .block-2 { block-size: auto; }
+
+    @media (max-width: 1024px) {
+      #services .flex.container { flex-direction: column; }
+    }
+
+    #services { padding: 100px 20px 120px; }
+    #services article { max-width: 428px; }
+    #services article p { max-width: 405px; margin: 10px 0 20px; }
+    #services figure img { margin: 0; border-radius: 15px; }
+    #services .block-1 { margin-bottom: 80px; }
+    #services .services-list { max-width: 1150px; margin: 80px auto 0; position: relative; }
+    #services .services-list .h1-small { display: table; padding: 0 30px; background-color: #fff; }
+    #services .services-list .h1-small:before { content: ""; position: absolute; inset: 7px 0 auto; width: 100%; height: 1px; background-color: #707070; z-index: -1; }
+    #services .services-list .flex.container { margin-top: 50px; flex-direction: row; }
+    #services .services-list a { position: relative; }
+    #services .services-list a:after { content: url(/assets/images/green-arrow.svg); position: relative; margin: 15px auto 0; display: table; }
+    #services .services-list a figure { height: 61px; display: flex; align-items: center; margin-bottom: 10px; }
+    #services .services-list a img { margin: 0 auto; border-radius: 0; }
+    #services .services-list a h3 { font-size: 22px; transition: 0.3s all; }
+    #services .services-list a:hover h3 { color: #A3C90D; }
+    @media (max-width: 1024px) {
+      #services { padding: 60px 20px 100px; }
+      #services article { text-align: center; }
+      #services .block-1 { flex-direction: column-reverse; }
+      #services .btn { margin: 20px auto 0; }
+      #services .services-list .flex.container { flex-wrap: wrap; max-width: 460px; gap: 20px; }
+    }
+    @media (max-width: 450px) {
+      #services .services-list a h3 { font-size: 20px; }
+    }
+
+</style>

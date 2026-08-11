@@ -1,0 +1,89 @@
+---
+import { hasText } from "@page-sections/location/utils";
+
+const {
+  cards = [],
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedCards = (Array.isArray(cards) ? cards : []).filter(
+  (card: any) => hasText(card?.heading) || hasText(card?.text)
+);
+---
+
+<section id="about" class:list={[className]} {...htmlAttributes}>
+  <div class="flex container align-start justify-around gap-30">
+    {
+      resolvedCards.map((card: any, index: number) => (
+        <a href={card.link || "#"} class="card">
+          {hasText(card.iconSource) && (
+            <figure>
+              <img src={card.iconSource} alt={card.iconAlt || ""} />
+            </figure>
+          )}
+          {hasText(card.heading) && (
+            <span
+              class="h4"
+              data-editable={editable ? "text" : undefined}
+              data-prop={editable ? `cards.${index}.heading` : undefined}
+            >
+              {card.heading}
+            </span>
+          )}
+          {hasText(card.text) && (
+            <p
+              data-editable={editable ? "text" : undefined}
+              data-prop={editable ? `cards.${index}.text` : undefined}
+            >
+              {card.text}
+            </p>
+          )}
+        </a>
+      ))
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+
+    #about {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #about .flex.container { flex-direction: column; }
+    }
+
+    #about { background-color: #F8FBFF; padding: 60px 20px; }
+    #about .card { width: 100%; max-width: 321px; text-align: center; margin: 0; }
+    #about .card img { display: block; margin: 0 auto; }
+
+</style>

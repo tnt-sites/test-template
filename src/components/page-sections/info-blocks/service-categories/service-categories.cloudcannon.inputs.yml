@@ -1,0 +1,6 @@
+services:
+  type: array
+  label: Service Categories
+  comment: One card per service category — icon, linked title, and the sub-services listed beneath it.
+  options:
+    structures: _structures.serviceCategoryItems

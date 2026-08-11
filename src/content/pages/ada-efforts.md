@@ -1,0 +1,69 @@
+---
+title: ADA Efforts | R2 Center for Dentistry
+description: The ongoing steps R2 Center for Dentistry takes to meet ADA and WCAG accessibility expectations, online and in our Wichita office.
+pageSections:
+  - _component: page-sections/ctas/more-to-explore
+    id: interior-banner
+    heading: ADA Efforts
+    buttonSections: []
+    maxContentWidth: null
+    paddingHorizontal: sm
+    paddingVertical: sm
+    colorScheme: default
+    backgroundColor: surface
+    backgroundGradient: ""
+    backgroundImage:
+      source: null
+      alt: null
+      positionVertical: top
+      positionHorizontal: center
+  - _component: page-sections/info-blocks/ada-efforts
+    heading: How We Work on Accessibility
+    intro: >-
+      R2 Center for Dentistry wants every patient to be able to use our website
+      and visit our practice comfortably. Accessibility is not a one-off project
+      for us — it is reviewed as the site changes and as we learn what our
+      patients need.
+    measuresTitle: Ongoing Measures
+    measures:
+      - title: Accessibility is part of our review process
+        description: >-
+          New pages and features are checked for keyboard access, colour
+          contrast, and screen reader labelling before they go live.
+      - title: We test with assistive technology
+        description: >-
+          Key journeys — finding our hours, requesting an appointment, and
+          contacting the office — are exercised with a screen reader and with
+          keyboard-only navigation.
+      - title: We keep alternatives available
+        description: >-
+          Anything you cannot complete on the website, our team will complete
+          with you by phone or in the office.
+      - title: We act on what we hear
+        description: >-
+          Reports from patients are triaged and fixed, and we use them to decide
+          what to improve next.
+    measureIcon: icon-ok-1
+    standardsTitle: Standards We Work To
+    standardsBody: >-
+      We use the [Web Content Accessibility Guidelines (WCAG)
+      2.1](https://www.w3.org/WAI/standards-guidelines/wcag/) at Level AA as our
+      benchmark, and we design our office visits around the requirements of the
+      Americans with Disabilities Act (ADA).
+
+
+      If you need an accommodation for your appointment, tell us when you book
+      and we will arrange it.
+    contactTitle: Questions or Concerns
+    contactBody: >-
+      If something on this site is difficult to use, or you need an
+      accommodation at our office, please contact us. We will respond as quickly
+      as we can.
+    backgroundColor: none
+    backgroundGradient: ""
+    backgroundImage:
+      source: ""
+      alt: ""
+      positionVertical: top
+      positionHorizontal: center
+---

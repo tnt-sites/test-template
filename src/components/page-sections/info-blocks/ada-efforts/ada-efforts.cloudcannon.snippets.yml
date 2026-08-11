@@ -1,0 +1,51 @@
+ada_efforts:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - ADA Efforts
+    icon: verified
+  definitions:
+    component_name: AdaEfforts
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: intro
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: measuresTitle
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: measures
+        type: array
+        optional: true
+      - editor_key: measureIcon
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: standardsTitle
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: standardsBody
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: contactTitle
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: contactBody
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/ada-efforts/ada-efforts.cloudcannon.inputs.yml

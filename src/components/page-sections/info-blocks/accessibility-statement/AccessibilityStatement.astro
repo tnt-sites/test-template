@@ -1,0 +1,143 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import siteInfoData from "@data/siteInfo.json";
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  heading = "Accessibility Statement",
+  intro = "",
+  conformanceTitle = "Conformance Status",
+  conformanceBody = "",
+  sections = [],
+  feedbackTitle = "Feedback",
+  feedbackBody = "",
+  lastUpdated = "",
+  siteInfo,
+  colorScheme = "inherit",
+  backgroundColor = "none",
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedSiteInfo = siteInfo && typeof siteInfo === "object" ? siteInfo : siteInfoData;
+const office = resolvedSiteInfo?.offices?.[0] ?? {};
+const phone = office?.phones?.[0];
+const email = office?.emails?.[0];
+const address = office?.addresses?.[0];
+
+const addressLine = address
+  ? [...(address.lines ?? []), [address.city, address.state].filter(Boolean).join(", "), address.postalCode]
+      .filter(Boolean)
+      .join(" ")
+  : "";
+
+const bodySections = (Array.isArray(sections) ? sections : []).filter(
+  (section: any) => hasText(section?.title) || hasText(section?.body)
+);
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<CustomSection
+  class:list={["accessibility-statement", className]}
+  maxContentWidth="lg"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="2xl" alignX="start" text={heading} data-prop="heading" />
+
+  {hasText(intro) && <Text text={intro} alignX="start" data-prop="intro" />}
+
+  {
+    (hasText(conformanceTitle) || hasText(conformanceBody)) && (
+      <div class="accessibility-statement__conformance">
+        {hasText(conformanceTitle) && (
+          <h3 {...editableAttributes("conformanceTitle")}>{conformanceTitle}</h3>
+        )}
+        {hasText(conformanceBody) && (
+          <div {...editableAttributes("conformanceBody")} set:html={renderMarkdown(conformanceBody)} />
+        )}
+      </div>
+    )
+  }
+
+  {
+    bodySections.map((section: any, index: number) => (
+      <div class="accessibility-statement__section">
+        {hasText(section.title) && (
+          <h3 data-prop={editable ? `sections.${index}.title` : undefined}>{section.title}</h3>
+        )}
+        {hasText(section.body) && <div set:html={renderMarkdown(section.body)} />}
+      </div>
+    ))
+  }
+
+  {
+    (hasText(feedbackTitle) || hasText(feedbackBody) || phone) && (
+      <div class="accessibility-statement__feedback">
+        {hasText(feedbackTitle) && (
+          <h3 {...editableAttributes("feedbackTitle")}>{feedbackTitle}</h3>
+        )}
+        {hasText(feedbackBody) && (
+          <div {...editableAttributes("feedbackBody")} set:html={renderMarkdown(feedbackBody)} />
+        )}
+        <ul class="accessibility-statement__contact">
+          {phone?.display && (
+            <li>
+              Phone: <a href={phone.href || `tel:${phone.display}`}>{phone.display}</a>
+            </li>
+          )}
+          {email?.display && (
+            <li>
+              Email: <a href={email.href || `mailto:${email.display}`}>{email.display}</a>
+            </li>
+          )}
+          {addressLine && <li>Address: {addressLine}</li>}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    hasText(lastUpdated) && (
+      <p class="accessibility-statement__updated" {...editableAttributes("lastUpdated")}>
+        This statement was last reviewed on {lastUpdated}.
+      </p>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .accessibility-statement {
+      :is(.accessibility-statement__conformance, .accessibility-statement__section, .accessibility-statement__feedback) {
+        margin-top: var(--spacing-2xl);
+      }
+
+      h3 {
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .accessibility-statement__contact {
+        margin-top: var(--spacing-md);
+      }
+
+      .accessibility-statement__updated {
+        font-style: italic;
+        margin-top: var(--spacing-2xl);
+      }
+    }
+  }
+</style>

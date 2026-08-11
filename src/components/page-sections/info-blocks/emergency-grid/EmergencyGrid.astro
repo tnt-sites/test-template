@@ -56,8 +56,18 @@ const normalizeKey = (value: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+
+const titleHtmlFor = (value: string) =>
+  escapeHtml(value.trim()).replace(/&lt;br\s*\/?&gt;/gi, "<br>");
+
 const items = emergencyItems.map((item: any, index: number) => {
-  const title = typeof item?.title === "string" ? item.title.trim() : "";
+  const title = typeof item?.title === "string" ? titleHtmlFor(item.title) : "";
   const iconPresetRaw = typeof item?.iconPreset === "string" ? item.iconPreset.trim() : "";
   const contentSections = Array.isArray(item?.contentSections) ? item.contentSections : [];
   const normalizedIconPreset = normalizeKey(iconPresetRaw);
@@ -117,7 +127,7 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
                 <div class="emergency-grid-item-icon" aria-hidden="true">
                   <Icon name={iconName} size="none" />
                 </div>
-                <h3 class="emergency-grid-item-title">{title}</h3>
+                <h3 class="emergency-grid-item-title" set:html={title} />
               </button>
             ) : (
               // If the item does not have a modal, render a div
@@ -125,7 +135,7 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
                 <div class="emergency-grid-item-icon" aria-hidden="true">
                   <Icon name={iconName} size="none" />
                 </div>
-                <h3 class="emergency-grid-item-title">{title}</h3>
+                <h3 class="emergency-grid-item-title" set:html={title} />
               </div>
             )}
           </editable-array-item>
@@ -164,16 +174,29 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
       .emergency-grid-icons {
         display: flex;
         flex-wrap: wrap;
+        gap: 50px;
         justify-content: center;
-        margin: 20px auto;
-        max-width: 1400px;
+        margin: 40px auto 0;
+        max-width: 900px;
         text-align: center;
 
         > * {
           display: block;
-          flex: 0 1 180px;
+          flex: 0 1 auto;
           margin: 10px auto;
+          max-width: 160px;
           padding: 5px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .emergency-grid-icons {
+          gap: 40px 20px;
+        }
+
+        .emergency-grid-icons > * {
+          max-width: none;
+          width: 45%;
         }
       }
 
@@ -207,27 +230,30 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
             width: 100%;
           }
 
-
           .ic-color {
             color: var(--color-brand);
             fill: var(--color-brand);
             stroke: var(--color-brand);
           }
 
-          path:not(.ic-color),
-          circle:not(.ic-color),
-          ellipse:not(.ic-color),
-          polygon:not(.ic-color),
-          rect:not(.ic-color) {
+          .ic-color-2 {
+            color: var(--color-brand-muted);
+            fill: var(--color-brand-muted);
+            stroke: var(--color-brand-muted);
+          }
+
+          path:not(.ic-color, .ic-color-2),
+          circle:not(.ic-color, .ic-color-2),
+          ellipse:not(.ic-color, .ic-color-2),
+          polygon:not(.ic-color, .ic-color-2),
+          rect:not(.ic-color, .ic-color-2) {
             fill: currentColor;
           }
         }
       }
 
       .emergency-grid-item-title {
-        font-size: 22px;
         line-height: 1.1;
-        margin: 5px auto;
       }
 
       .emergency-grid-item:hover,
@@ -247,5 +273,12 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
         margin-top: 0;
       }
     }
+  }
+
+  .emergency-grid .emergency-grid-item-title {
+    color: #616f74;
+    font: 400 18px/1.1 "jost", sans-serif;
+    margin: 10px auto 0;
+    text-transform: none;
   }
 </style>

@@ -1,0 +1,169 @@
+---
+/**
+ * ADA Efforts.
+ *
+ * Companion to the accessibility statement: where that page records the
+ * current conformance status, this one records the ongoing work — the measures
+ * the practice takes and the standards it holds itself to.
+ *
+ * `measures` is a repeatable list rather than prose because it is the part
+ * that gets added to over time, and each entry reads as a discrete commitment.
+ */
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import Text from "@core-elements/text/Text.astro";
+import siteInfoData from "@data/siteInfo.json";
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  heading = "ADA Efforts",
+  intro = "",
+  measuresTitle = "Ongoing Measures",
+  measures = [],
+  measureIcon = "icon-ok-1",
+  standardsTitle = "",
+  standardsBody = "",
+  contactTitle = "Questions or Concerns",
+  contactBody = "",
+  siteInfo,
+  colorScheme = "inherit",
+  backgroundColor = "none",
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedSiteInfo = siteInfo && typeof siteInfo === "object" ? siteInfo : siteInfoData;
+const office = resolvedSiteInfo?.offices?.[0] ?? {};
+const phone = office?.phones?.[0];
+const email = office?.emails?.[0];
+
+const resolvedMeasures = (Array.isArray(measures) ? measures : []).filter(
+  (measure: any) => hasText(measure?.title) || hasText(measure?.description)
+);
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<CustomSection
+  class:list={["ada-efforts", className]}
+  maxContentWidth="lg"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="2xl" alignX="start" text={heading} data-prop="heading" />
+
+  {hasText(intro) && <Text text={intro} alignX="start" data-prop="intro" />}
+
+  {
+    resolvedMeasures.length > 0 && (
+      <div class="ada-efforts__measures">
+        {hasText(measuresTitle) && (
+          <h3 {...editableAttributes("measuresTitle")}>{measuresTitle}</h3>
+        )}
+        <ul class="ada-efforts__list">
+          {resolvedMeasures.map((measure: any) => (
+            <li class="ada-efforts__item">
+              {hasText(measureIcon) && (
+                <Icon name={measureIcon} size="none" class="ada-efforts__icon" aria-hidden="true" />
+              )}
+              <div>
+                {hasText(measure.title) && (
+                  <strong class="ada-efforts__item-title">{measure.title}</strong>
+                )}
+                {hasText(measure.description) && <span>{measure.description}</span>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    )
+  }
+
+  {
+    (hasText(standardsTitle) || hasText(standardsBody)) && (
+      <div class="ada-efforts__standards">
+        {hasText(standardsTitle) && (
+          <h3 {...editableAttributes("standardsTitle")}>{standardsTitle}</h3>
+        )}
+        {hasText(standardsBody) && (
+          <div {...editableAttributes("standardsBody")} set:html={renderMarkdown(standardsBody)} />
+        )}
+      </div>
+    )
+  }
+
+  {
+    (hasText(contactTitle) || hasText(contactBody) || phone) && (
+      <div class="ada-efforts__contact">
+        {hasText(contactTitle) && <h3 {...editableAttributes("contactTitle")}>{contactTitle}</h3>}
+        {hasText(contactBody) && (
+          <div {...editableAttributes("contactBody")} set:html={renderMarkdown(contactBody)} />
+        )}
+        <ul>
+          {phone?.display && (
+            <li>
+              Phone: <a href={phone.href || `tel:${phone.display}`}>{phone.display}</a>
+            </li>
+          )}
+          {email?.display && (
+            <li>
+              Email: <a href={email.href || `mailto:${email.display}`}>{email.display}</a>
+            </li>
+          )}
+        </ul>
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .ada-efforts {
+      :is(.ada-efforts__measures, .ada-efforts__standards, .ada-efforts__contact) {
+        margin-top: var(--spacing-2xl);
+      }
+
+      h3 {
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .ada-efforts__list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ada-efforts__item {
+        display: flex;
+        gap: var(--spacing-sm);
+        margin-bottom: var(--spacing-md);
+        padding-left: 0;
+
+        &::before {
+          content: none;
+        }
+      }
+
+      .ada-efforts__icon {
+        color: var(--color-brand);
+        flex-shrink: 0;
+        margin-top: 0.25em;
+      }
+
+      .ada-efforts__item-title {
+        display: block;
+      }
+    }
+  }
+</style>

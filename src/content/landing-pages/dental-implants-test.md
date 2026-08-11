@@ -28,7 +28,7 @@ landingFooter:
       - name: Sitemap
         path: sitemap.html
       - name: Privacy Policy
-        path: privacy-policy.html
+        path: /privacy-policy/
     socials:
       - label: Facebook
         icon: social/facebook

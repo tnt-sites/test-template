@@ -1,0 +1,88 @@
+heading:
+  type: text
+  comment: Page heading, e.g. "Accessibility Statement".
+intro:
+  type: markdown
+  comment: Opening paragraph describing the practice's commitment to accessibility.
+conformanceTitle:
+  type: text
+  comment: Heading for the conformance status block.
+conformanceBody:
+  type: markdown
+  comment: >-
+    Which standard the site aims to meet and how fully. Keep this accurate — it
+    is the part of an accessibility statement people rely on.
+sections:
+  type: array
+  comment: Additional titled sections, e.g. measures taken, known limitations.
+  options:
+    structures: _structures.accessibilityStatementSections
+feedbackTitle:
+  type: text
+  comment: Heading for the feedback block.
+feedbackBody:
+  type: markdown
+  comment: How to report an accessibility problem and what response to expect.
+lastUpdated:
+  type: text
+  comment: Date this statement was last reviewed, e.g. "10 August 2026".
+siteInfo:
+  hidden: true
+  comment: Falls back to src/data/siteInfo.json so contact details match the footer.
+backgroundColor:
+  type: select
+  comment: Background color used behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundGradient:
+  type: textarea
+  comment: Optional CSS gradient applied behind the section content.
+backgroundImage:
+  type: object
+  comment: Background image configuration for the section.
+backgroundImage.source:
+  type: image
+  comment: URL or path to the background image.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  type: textarea
+  comment: Alt text for the background image.
+backgroundImage.positionVertical:
+  type: select
+  comment: Vertical position of the background image.
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  type: select
+  comment: Horizontal position of the background image.
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

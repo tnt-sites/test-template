@@ -66,7 +66,10 @@ addressLines:
   comment: "Address lines shown as stacked text."
 officeHoursTitle:
   type: text
-  comment: "Heading for office hours column."
+  comment: "Heading for the office hours column (e.g. Office Hours)."
+followTitle:
+  type: text
+  comment: "Heading above the social icons (e.g. Follow Us). Leave blank to hide it."
 officeHours:
   type: array
   comment: "Office hours entries with day, hours, and optional note shown beneath each row."
@@ -161,3 +164,8 @@ phoneLinkHoverColor:
         name: Text (Strong)
       - id: "var(--color-text-inverse)"
         name: Text (Inverse)
+followImages:
+  type: array
+  comment: "Photo strip shown under the socials, mirroring the source site's Follow Us row."
+  options:
+    structures: _structures.footerFollowImages

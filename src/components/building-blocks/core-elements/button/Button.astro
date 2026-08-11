@@ -36,6 +36,7 @@ const normalizedText = text
 
 const md = MarkdownIt({ html: true });
 let markdownText = normalizedText ? md.renderInline(normalizedText) : "";
+
 markdownText = markdownText.replace(/\n/g, "<br />");
 const textForAria = markdownText
   .replace(/<[^>]*>/g, " ")
@@ -46,6 +47,7 @@ const resolveSelectValue = (value: any): string | undefined => {
   if (typeof value === "string") return value.trim().toLowerCase();
   if (value && typeof value === "object") {
     const candidate = value.id ?? value.value ?? value.name;
+
     if (typeof candidate === "string") return candidate.trim().toLowerCase();
   }
   return undefined;
@@ -53,6 +55,7 @@ const resolveSelectValue = (value: any): string | undefined => {
 
 const normalizeChoice = (value: any, allowed: string[], fallback: string) => {
   const normalized = resolveSelectValue(value);
+
   return normalized && allowed.includes(normalized) ? normalized : fallback;
 };
 
@@ -170,7 +173,7 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       justify-content: center;
       min-height: 10px;
       min-width: 0;
-      padding-block: var(--spacing-em-sm);
+      padding-block: var(--spacing-em-md);
       padding-inline: var(--spacing-em-sm);
       text-align: center;
       text-decoration: none;
@@ -406,9 +409,9 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       }
 
       &.variant-primary {
-        background-color: var(--color-bg-brand);
+        background-color: #32302F;
         border-color: transparent;
-        color: var(--color-text-on-brand);
+        color: #fff;
 
         &:hover,
         &:focus {

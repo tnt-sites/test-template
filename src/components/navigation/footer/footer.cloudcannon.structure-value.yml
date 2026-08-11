@@ -17,6 +17,7 @@ value:
     - 1801 Colorado Ave. Suite 280
     - Turlock, CA 95382
   officeHoursTitle: Office Hours
+  followTitle: Follow Us
   officeHours:
     - day: Monday
       hours: 8:00 am - 5:00 pm
@@ -42,6 +43,7 @@ value:
   phoneLinkColor: ""
   phoneLinkHoverColor: ""
   offices: []
+  followImages: []
 preview:
   text:
     - Footer
@@ -52,3 +54,38 @@ picker_preview:
   icon: page_footer
 _inputs_from_glob:
   - /src/components/navigation/footer/footer.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  footerFollowImages:
+    values:
+      - label: Follow Image
+        value:
+          source: ""
+          alt: ""
+          link: ""
+        preview:
+          icon: image
+          text:
+            - key: alt
+            - Follow Image
+          subtext:
+            - key: source
+            - Add an image source
+          image:
+            - key: source
+        _inputs:
+          source:
+            type: image
+            comment: Square photo shown in the footer Follow Us strip.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          alt:
+            type: textarea
+            comment: Alt text. Leave blank if the photo is decorative.
+          link:
+            type: url
+            comment: Optional link, e.g. the practice's Instagram profile.

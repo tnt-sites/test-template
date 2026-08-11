@@ -1,20 +1,20 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "R2 Center for Dentistry",
   "socials": [
+    {
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://www.google.com/maps/place/R2+Center+for+Dentistry/@37.722363,-97.1860326,892m/data=!3m1!1e3!4m8!3m7!1s0x87bafdd17aa84b3f:0x169cf9c59f0cec4c!8m2!3d37.722363!4d-97.1860326!9m1!1b1!16s%2Fg%2F1tmqm941!5m1!1e1?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D"
+    },
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/r2centerfordentistry"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
-    },
-    {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "link": "https://www.instagram.com/r2dentistry/"
     }
   ],
   "offices": [
@@ -22,10 +22,12 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "13121 E 21st St N #107"
+          ],
+          "city": "Wichita",
+          "state": "KS",
+          "postalCode": "67230",
           "country": null,
           "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
         }
@@ -33,16 +35,11 @@
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(316) 630-9500",
+          "href": "tel:+13166309500"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
@@ -74,8 +71,8 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [],
+  "footer_scripts": [],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

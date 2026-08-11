@@ -1,0 +1,3 @@
+User-agent: *
+Sitemap: https://www.r2dentistry.com/sitemap.xml
+Sitemap: https://www.r2dentistry.com/blog/post-sitemap.xml

@@ -106,4 +106,15 @@ const featureSplitId = `feature-split-${crypto.randomUUID()}`;
       container-type: inline-size;
     }
   }
+
+/* Source design, ported — content photos carry a 15px radius. */
+@layer source-bridge {
+  main .feature-split-image img {
+    border-radius: 15px;
+  }
+
+  main .feature-split-image img[src$=".svg"] {
+    border-radius: 0;
+  }
+}
 </style>

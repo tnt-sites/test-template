@@ -1,0 +1,12 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, so it can be linked to. Defaults to "tour".
+images:
+  type: array
+  label: Photos
+  comment: Photos in the gallery, in order. Two or more turn on the arrows and dots.
+  options:
+    structures: _structures.tourGalleryImages
+autoplaySeconds:
+  type: number
+  comment: Seconds each photo is shown before the gallery advances. Rotation pauses while the pointer is over it, and is off entirely for visitors who ask for reduced motion.

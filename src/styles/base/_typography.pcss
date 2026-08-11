@@ -122,3 +122,137 @@
     color: var(--color-text-muted);
   }
 }
+
+@layer base {
+  body {
+    color: #32302f;
+    font: 500 18px/1.2 "jost", sans-serif;
+  }
+
+  p {
+    color: #32302f;
+    font: 500 18px/1.6 "jost", sans-serif;
+    margin: 10px auto;
+  }
+
+  a {
+    color: #0f6b29;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #17b4c6;
+  }
+
+  h2 {
+    color: #32302f;
+    font: 500 47px/1 "canada-type-gibson", sans-serif;
+  }
+
+  h3 {
+    color: #32302f;
+    font: 500 34px/1.1 "canada-type-gibson", sans-serif;
+  }
+
+  h4 {
+    color: #32302f;
+    font: 500 22px/1.1 "canada-type-gibson", sans-serif;
+  }
+}
+
+@layer source-bridge {
+  main :is(h2, .h2) {
+    color: #32302f;
+    font: 500 47px/1 "canada-type-gibson", sans-serif;
+  }
+
+  main :is(h3, .h3) {
+    color: #32302f;
+    font: 500 34px/1.1 "canada-type-gibson", sans-serif;
+  }
+
+  main h4 {
+    color: #32302f;
+    font: 500 22px/1.1 "canada-type-gibson", sans-serif;
+  }
+
+  main .h1-small {
+    color: #32302f;
+    display: block;
+    font: 500 15px/1 "jost", sans-serif;
+    letter-spacing: 2px;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+  }
+
+  main .h1 {
+    color: #32302f;
+    font: 500 68px/1 "canada-type-gibson", sans-serif;
+  }
+
+  main .h1 span {
+    display: block;
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  @media (max-width: 600px) {
+    main .h1 {
+      font-size: 44px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    main .h1 {
+      font-size: 40px;
+    }
+  }
+
+  main .h4 {
+    color: #32302f;
+    display: block;
+    font: 500 22px/1.1 "canada-type-gibson", sans-serif;
+    position: relative;
+  }
+
+  main :is(p, li) {
+    color: #32302f;
+    font-family: "jost", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  main a:not(.button, .btn, .arrow-btn) {
+    color: #0f6b29;
+    text-decoration: none;
+  }
+
+  main a:not(.button, .btn, .arrow-btn):hover {
+    color: #17b4c6;
+  }
+
+  main ul li:not([class]) {
+    display: block;
+    margin: 0 0 10px 26px;
+    overflow: visible;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  main ul li:not([class])::before {
+    color: #118534;
+    content: "\e832";
+    font-family: "fontello";
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: 400;
+    left: 0;
+    position: absolute;
+    top: 3px;
+  }
+
+  main ul li:is(.item, .list-item-has-icon)::before {
+    content: none;
+  }
+}

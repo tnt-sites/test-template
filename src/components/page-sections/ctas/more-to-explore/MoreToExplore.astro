@@ -29,7 +29,7 @@ const htmlAttributes = Object.fromEntries(
   paddingHorizontal="lg"
   paddingVertical="4xl"
   colorScheme="default"
-  backgroundColor={backgroundColor}
+  backgroundColor="none"
   backgroundGradient={backgroundGradient}
   backgroundImage={backgroundImage}
   {...htmlAttributes}
@@ -47,16 +47,31 @@ const htmlAttributes = Object.fromEntries(
 
 <style is:global>
   .more-to-explore {
+    background-color: #118534;
+    background-image: url("/assets/images/green-bg-wave.webp");
+    background-size: cover;
+    border-radius: 15px;
+    margin: 80px auto;
+    max-width: 1150px;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    width: calc(100% - 20px);
+
     .more-to-explore__heading {
       font-size: 70px;
-      line-height:;
+      line-height: 1.1;
+
+      .color{color: inherit;}
+    }
+
+    .outer-content{
+      background-color: #fff; border-radius: 10px;
     }
   }
 
   @layer components {
-    .more-to-explore__heading .heading-text .color {
-      color: var(--color-brand);
-    }
+
 
     .more-to-explore .buttons,
     .more-to-explore .buttons > editable-array {
@@ -90,4 +105,10 @@ const htmlAttributes = Object.fromEntries(
       }
     }
   }
+
+@layer source-bridge {
+  main .more-to-explore__heading {
+    font-size: 47px;
+  }
+}
 </style>

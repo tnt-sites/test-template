@@ -77,6 +77,7 @@ const heroStyle =
       align-items: stretch;
       min-height: 34rem;
       padding: 5px 20px 60px;
+      max-width: 1400px; margin: 0 auto;
 
       &.reverse {
         grid-template-columns: 1fr 1fr;
@@ -96,13 +97,9 @@ const heroStyle =
       flex-direction: column;
       justify-content: center;
       padding: 20px;;
-      max-width: 510px;
+      max-width: 550px;
       margin: 0 auto;
 
-      /* Falls back to `inherit` so the eyebrow follows the section's
-         `colorScheme` when the editor hasn't picked an explicit color. This
-         used to be hardcoded to `--color-text-on-brand`, which rendered
-         near-white regardless of scheme and was invisible on light sections. */
       .eyebrow {
         color: var(--hero-split-eyebrow-color, inherit);
       }
@@ -157,4 +154,59 @@ const heroStyle =
       }
     }
   }
+
+@layer source-bridge {
+  main :is(.hero-split-heading, .hero-center-heading, .heading.size-2xl) {
+    color: #32302f;
+    font: 500 58px/1 "canada-type-gibson", sans-serif;
+  }
+
+  @media (max-width: 600px) {
+    main :is(.hero-split-heading, .hero-center-heading, .heading.size-2xl) {
+      font-size: 44px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    main :is(.hero-split-heading, .hero-center-heading, .heading.size-2xl) {
+      font-size: 40px;
+    }
+  }
+
+  main .hero-split-text {
+    max-width: 640px;
+  }
+
+  main .hero-split-image img {
+    border-radius: 15px;
+  }
+
+  main .hero-split-image img[src$=".svg"] {
+    border-radius: 0;
+  }
+
+  #interior-banner .hero-split-grid {
+    align-items: start;
+  }
+
+  #interior-banner .hero-split-image {
+    align-items: start;
+    margin-bottom: -115px;
+    padding: 0;
+    position: relative;
+    z-index: 5;
+  }
+
+  #interior-banner .hero-split-grid {
+    padding-bottom: 0;
+  }
+
+  main:has(#interior-banner) {
+    background-color: #f8fbff;
+  }
+
+  main #interior-banner :is(p, li) {
+    color: #000;
+  }
+}
 </style>

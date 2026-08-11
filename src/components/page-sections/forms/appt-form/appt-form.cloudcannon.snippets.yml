@@ -1,0 +1,41 @@
+appt_form:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Appointment Request Form
+    icon: event_available
+  definitions:
+    component_name: ApptForm
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: formAction
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: columnOne
+        type: array
+        optional: true
+      - editor_key: columnTwo
+        type: array
+        optional: true
+      - editor_key: checkboxGroup
+        type: object
+        optional: true
+      - editor_key: submitText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: subject
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: redirect
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/forms/appt-form/appt-form.cloudcannon.inputs.yml

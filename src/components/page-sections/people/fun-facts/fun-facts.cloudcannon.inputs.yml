@@ -1,0 +1,9 @@
+title:
+  type: text
+  comment: 'Label centred in the hairline above the cards, e.g. "Fun Facts About Dr. Ty". Rendered in small caps.'
+items:
+  type: array
+  label: Facts
+  comment: One card per fact. Three fit per row.
+  options:
+    structures: _structures.funFactsItems

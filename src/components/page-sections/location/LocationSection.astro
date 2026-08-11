@@ -1,27 +1,4 @@
 ---
-/**
- * Shared shell for every location page-section.
- *
- * Owns the palette and the base typography that all nine sections inherit, so
- * each section component only carries its own rules. Not a CloudCannon
- * component — it has no structure-value.yml and is never picked directly.
- *
- * Each section picks its own `backgroundColor`, `textColor`, `accentColor`
- * (link-hover, review stars, the "Find Us" watermark heading) and `iconColor`
- * (SVG fill/stroke) — CloudCannon selects backed by the same brand/black/white
- * option list (cloudcannon.config.yml's `_select_data.brandColors`) on each
- * section's own inputs.yml. There's no shared light/dark toggle any more:
- * every section can be any combination, so descendants apply `textColor` to
- * every element unconditionally rather than assuming a fixed pairing.
- *
- * All spacing comes from the ported CSS, so CustomSection's own padding and
- * max-width are switched off, and `backgroundColor` is left unset on
- * CustomSection itself so it doesn't emit an empty overlay div — the section
- * paints its own background via these custom properties instead.
- *
- * The hex literals in the <style> block below are fallback defaults for
- * whichever of the four color props a section instance leaves blank.
- */
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import { cssVars } from "./utils";
 
@@ -73,10 +50,6 @@ const paletteStyle = cssVars({
 
 <style lang="pcss" is:global>
   @layer page-sections {
-    /* Palette and type scale, ported from the legacy location-page.css :root
-       blocks. Scoped to the section so it can't leak into the rest of the site;
-       custom properties inherit, so child components resolve them too.
-       These are the knobs to turn when re-theming for another site. */
     .location-page-section {
       --background: #ffffff;
       --h2-color: #000000;

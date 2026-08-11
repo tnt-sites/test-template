@@ -1,0 +1,52 @@
+label: Tour Gallery
+icon: photo_library
+description: A cross-fading photo gallery with arrows over the image and a dot row beneath.
+value:
+  _component: page-sections/features/tour-gallery
+  id: tour
+  images:
+    - source: /assets/images/office-tour-1.webp
+      alt: The outside of our Wichita dental office
+    - source: /assets/images/office-tour-2.webp
+      alt: Our reception area
+    - source: /assets/images/office-tour-3.webp
+      alt: A treatment room
+  autoplaySeconds: 3
+preview:
+  text:
+    - Tour Gallery
+  icon: photo_library
+picker_preview:
+  text: Tour Gallery
+  subtext: Cross-fading photo gallery with arrows and dots.
+  icon: photo_library
+_inputs_from_glob:
+  - /src/components/page-sections/features/tour-gallery/tour-gallery.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  tourGalleryImages:
+    values:
+      - label: Photo
+        icon: image
+        value:
+          source: ""
+          alt: ""
+        preview:
+          text:
+            - key: alt
+            - Photo
+          image:
+            - key: source
+        _inputs:
+          source:
+            type: image
+            comment: The photo. All the photos should share an aspect ratio, or the gallery will jump as it advances.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          alt:
+            type: text
+            comment: Describe what the photo shows, for screen readers and search engines.

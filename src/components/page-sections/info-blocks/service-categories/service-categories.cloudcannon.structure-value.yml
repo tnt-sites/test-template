@@ -1,0 +1,126 @@
+label: Service Categories
+icon: grid_view
+description: The Our Services grid — icon-topped cards, each linking to a service page and listing its sub-services.
+value:
+  _component: page-sections/info-blocks/service-categories
+  services:
+    - imageSource: /assets/images/our-services-icon-1.svg
+      imageAlt: ""
+      title: Preventive<br> Dentistry
+      href: /preventive-dentistry/
+      cardColor: blue
+      links:
+        - label: Dental Checkups & Cleanings
+          href: /preventive-dentistry/#check
+        - label: Gum Disease Treatment
+          href: /preventive-dentistry/#gum
+    - imageSource: /assets/images/our-services-icon-2.svg
+      imageAlt: ""
+      title: Restorative<br> Dentistry
+      href: /restorative-dentistry/
+      cardColor: green
+      links:
+        - label: Dental Crowns
+          href: /restorative-dentistry/#crown
+        - label: Tooth-Colored Fillings
+          href: /restorative-dentistry/#fill
+    - imageSource: /assets/images/our-services-icon-3.svg
+      imageAlt: ""
+      title: Cosmetic<br> Dentistry
+      href: /cosmetic-dentistry/
+      cardColor: beige
+      links:
+        - label: Veneers
+          href: /cosmetic-dentistry/#veneer
+        - label: Teeth Whitening
+          href: /cosmetic-dentistry/#white
+preview:
+  text:
+    - Service Categories
+  icon: grid_view
+picker_preview:
+  text: Service Categories
+  subtext: Icon-topped cards in a grid, each linking to a service page and listing its sub-services.
+  icon: grid_view
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/service-categories/service-categories.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  serviceCategoryItems:
+    values:
+      - label: Service Category
+        icon: category
+        value:
+          imageSource: ""
+          imageAlt: ""
+          title: Service<br> Category
+          href: /our-services/
+          cardColor: ""
+          links:
+            - label: Sub-service
+              href: /our-services/#anchor
+        preview:
+          text:
+            - key: title
+            - Service Category
+          subtext:
+            - key: href
+          image:
+            - key: imageSource
+        _inputs:
+          imageSource:
+            type: image
+            comment: Icon shown in the circle above the card. The source uses a small SVG line icon.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the icon. Leave blank — the icon is decorative and the title says the same thing.
+          title:
+            type: text
+            comment: 'Card title. Use <br> to break it across two lines, e.g. "Preventive<br> Dentistry".'
+          href:
+            type: url
+            comment: Page the card title links to.
+          cardColor:
+            type: select
+            comment: Card background. Leave blank to follow the source's blue/green/beige diagonal pattern.
+            options:
+              values:
+                - id: ""
+                  name: Automatic
+                - id: blue
+                  name: Pale Blue
+                - id: green
+                  name: Pale Green
+                - id: beige
+                  name: Warm Grey
+          links:
+            type: array
+            comment: Sub-services listed under the title, each with a green check.
+            options:
+              structures: _structures.serviceCategoryLinks
+  serviceCategoryLinks:
+    values:
+      - label: Sub-service Link
+        icon: link
+        value:
+          label: Sub-service
+          href: /our-services/#anchor
+        preview:
+          text:
+            - key: label
+            - Sub-service Link
+          subtext:
+            - key: href
+        _inputs:
+          label:
+            type: text
+            comment: Link text for this sub-service.
+          href:
+            type: url
+            comment: URL for this sub-service.

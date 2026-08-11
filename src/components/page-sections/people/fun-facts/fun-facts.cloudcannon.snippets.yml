@@ -1,0 +1,19 @@
+fun_facts:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Fun Facts
+    icon: emoji_objects
+  definitions:
+    component_name: FunFacts
+    named_args:
+      - editor_key: title
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: items
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/people/fun-facts/fun-facts.cloudcannon.inputs.yml

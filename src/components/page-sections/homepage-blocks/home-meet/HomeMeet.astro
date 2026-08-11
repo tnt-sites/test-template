@@ -1,0 +1,135 @@
+---
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  doctors = [],
+  eyebrow = "",
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedDoctors = (Array.isArray(doctors) ? doctors : []).filter(
+  (doctor: any) => hasText(doctor?.name) || hasText(doctor?.imageSource)
+);
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<section id="meet" class:list={[className]} {...htmlAttributes}>
+  <div class="flex container justify-between gap-20">
+    {
+      resolvedDoctors.length > 0 && (
+        <figure>
+          {resolvedDoctors.map((doctor: any, index: number) => (
+            <a href={doctor.link || "#"} class="dr">
+              {hasText(doctor.imageSource) && (
+                <picture>
+                  <img src={doctor.imageSource} alt={doctor.imageAlt || ""} />
+                </picture>
+              )}
+              {hasText(doctor.name) && (
+                <span
+                  class="h1-small"
+                  data-editable={editable ? "text" : undefined}
+                  data-prop={editable ? `doctors.${index}.name` : undefined}
+                >
+                  {doctor.name}
+                </span>
+              )}
+            </a>
+          ))}
+        </figure>
+      )
+    }
+
+    <article>
+      <div class="content">
+        <div>
+          {hasText(eyebrow) && (
+            <h2 class="h1-small" {...editableAttributes("eyebrow")} set:html={eyebrow} />
+          )}
+          {hasText(heading) && (
+            <span class="h2" {...editableAttributes("heading")}>
+              {heading}
+            </span>
+          )}
+          {hasText(text) && (
+            <div {...editableAttributes("text")} set:html={renderMarkdown(text)} />
+          )}
+          {hasText(buttonText) && (
+            <a href={buttonLink || "#"} class="btn">
+              {buttonText}
+            </a>
+          )}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+
+    #meet {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #meet .flex.container { flex-direction: column; }
+    }
+
+    #meet { background-color: #F8FBFF; padding: 0 20px 80px; }
+    #meet .flex.container { align-items: stretch; max-width: 1120px; }
+    #meet figure { display: flex; gap: 20px; }
+    #meet .dr { display: block; text-align: center; }
+    #meet .dr img { border-radius: 15px; transition: 0.3s all; }
+    #meet .dr span { display: block; text-align: center; margin: 10px auto 0; transition: 0.3s all; }
+    #meet .dr:hover img { transform: scale(0.95); }
+    #meet .dr:hover span { color: #118534; }
+    #meet article { max-width: 543px; width: 100%; background-color: #118534; border-radius: 15px; padding: 10px; margin-bottom: 25px; position: relative; isolation: isolate; }
+    #meet article:before { content: ""; position: absolute; inset: 0; background-image: url(/assets/images/green-bg.webp); background-size: cover; background-position: center; background-repeat: no-repeat; border-radius: 15px; z-index: -1; transform: rotate(180deg); }
+    #meet article .content { text-align: center; width: 100%; background-color: #fff; border-radius: 10px; height: 100%; padding: 20px 10px; display: flex; align-items: center; }
+    #meet article .content p { line-height: 1.4; }
+    #meet article .content > div { max-width: 423px; margin: 0 auto; }
+    #meet article .btn { width: 320px; margin: 20px auto 0; }
+    @media (max-width: 1100px) {
+      #meet { padding: 0 10px 40px; }
+      #meet .flex.container { align-items: center; flex-direction: column; gap: 40px; flex-wrap: wrap; }
+    }
+    @media (max-width: 600px) {
+      #meet figure { flex-direction: column; }
+      #meet article .content { padding: 30px 15px; }
+    }
+
+</style>

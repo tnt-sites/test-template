@@ -1,0 +1,65 @@
+---
+import { hasText, renderMarkdown } from "@page-sections/location/utils";
+
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<section id="welcome" class:list={[className]} {...htmlAttributes}>
+  <article>
+    {hasText(eyebrow) && <h2 class="h1-small" {...editableAttributes("eyebrow")}>{eyebrow}</h2>}
+    {hasText(heading) && <span class="h2" {...editableAttributes("heading")}>{heading}</span>}
+    {hasText(text) && <div {...editableAttributes("text")} set:html={renderMarkdown(text)} />}
+  </article>
+</section>
+
+<style lang="pcss" is:global>
+
+    #welcome {
+      .flex { display: flex; }
+      .container { margin: 0 auto; max-width: 1150px; width: 100%; }
+      .align-center { align-items: center; }
+      .align-start { align-items: flex-start; }
+      .justify-around { justify-content: space-around; }
+      .justify-between { justify-content: space-between; }
+      .gap-20 { gap: 20px; }
+      .gap-30 { gap: 30px; }
+
+      .btn {
+        background-color: #32302f;
+        border-radius: 50px;
+        color: #fff;
+        cursor: pointer;
+        display: table;
+        font: 500 18px/1 "jost", sans-serif;
+        min-width: 280px;
+        padding: 22px 30px;
+        position: relative;
+        text-align: center;
+        transition: 0.3s all;
+        vertical-align: middle;
+        z-index: 1;
+      }
+
+      .btn:hover { background-color: #118534; color: #fff; }
+    }
+
+    @media (max-width: 1024px) {
+      #welcome .flex.container { flex-direction: column; }
+    }
+
+    #welcome { background-color: #F8FBFF; }
+    #welcome article { background-color: #fff; padding: 30px; position: relative; z-index: 5; margin: -95px auto 0; width: calc(100% - 40px); max-width: 1100px; text-align: center; border-radius: 15px; box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15); }
+    #welcome article p { max-width: 1000px; margin: 15px auto 0; }
+
+</style>

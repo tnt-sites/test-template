@@ -1,0 +1,68 @@
+label: Fun Facts
+icon: emoji_objects
+description: The doctor-bio band — a titled hairline over a three-up grid of icon, question and italic answer.
+value:
+  _component: page-sections/people/fun-facts
+  title: Fun Facts About the Doctor
+  items:
+    - imageSource: /assets/images/meet-dr-ty-icon-1.svg
+      imageAlt: ""
+      question: What Is Your Favorite Dental Procedure?
+      answer: Their answer.
+    - imageSource: /assets/images/meet-dr-ty-icon-2.svg
+      imageAlt: ""
+      question: Who is Your Favorite Sports Team?
+      answer: Their answer.
+    - imageSource: /assets/images/meet-dr-ty-icon-3.svg
+      imageAlt: ""
+      question: Where Is Your Favorite Place to Take a Vacation?
+      answer: Their answer.
+preview:
+  text:
+    - key: title
+    - Fun Facts
+  icon: emoji_objects
+picker_preview:
+  text: Fun Facts
+  subtext: Titled hairline over a three-up grid of icon, question and italic answer.
+  icon: emoji_objects
+_inputs_from_glob:
+  - /src/components/page-sections/people/fun-facts/fun-facts.cloudcannon.inputs.yml
+
+# Must stay after `_inputs_from_glob:` — a structure-value that declares
+# `_structures:` before it has its inputs file silently ignored.
+_structures:
+  funFactsItems:
+    values:
+      - label: Fact
+        icon: help
+        value:
+          imageSource: ""
+          imageAlt: ""
+          question: The question?
+          answer: The answer.
+        preview:
+          text:
+            - key: question
+            - Fact
+          subtext:
+            - key: answer
+          image:
+            - key: imageSource
+        _inputs:
+          imageSource:
+            type: image
+            comment: Icon above the question. The source uses a coloured circle SVG.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the icon. Leave blank — the icon is decorative and the question says the same thing.
+          question:
+            type: text
+            comment: 'The question. Use <br> to control where it breaks, e.g. "What Is<br> Your Favorite<br> Movie?".'
+          answer:
+            type: text
+            comment: The answer, set in italics. Use <br> to control where it breaks.
