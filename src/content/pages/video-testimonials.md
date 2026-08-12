@@ -45,14 +45,6 @@ pageSections:
                 title: Lisa
                 source: ''
                 thumbnail: ''
-          - _component: building-blocks/wrappers/grid/grid-item
-            contentSections:
-              - _component: building-blocks/core-elements/video
-                type: youtube
-                id: zMnkNyRYkew
-                title: Lisa
-                source: ''
-                thumbnail: ''
         gap: md
     maxContentWidth: 2xl
     paddingHorizontal: md
