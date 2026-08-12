@@ -30,18 +30,30 @@ pageSections:
     id: ''
     label: ''
     contentSections:
-      - _component: building-blocks/core-elements/video
-        type: youtube
-        id: zMnkNyRYkew
-        title: Lisa
-        source: ''
-        thumbnail: ''
-      - _component: building-blocks/core-elements/video
-        type: youtube
+      - _component: building-blocks/wrappers/grid
         id: ''
-        title: zMnkNyRYkew
-        source: ''
-        thumbnail: ''
+        label: ''
+        layout: center
+        minItemWidth: 280
+        maxItemWidth: 400
+        items:
+          - _component: building-blocks/wrappers/grid/grid-item
+            contentSections:
+              - _component: building-blocks/core-elements/video
+                type: youtube
+                id: zMnkNyRYkew
+                title: Lisa
+                source: ''
+                thumbnail: ''
+          - _component: building-blocks/wrappers/grid/grid-item
+            contentSections:
+              - _component: building-blocks/core-elements/video
+                type: youtube
+                id: zMnkNyRYkew
+                title: Lisa
+                source: ''
+                thumbnail: ''
+        gap: md
     maxContentWidth: md
     paddingHorizontal: md
     paddingVertical: md
