@@ -54,7 +54,7 @@ pageSections:
                 source: ''
                 thumbnail: ''
         gap: md
-    maxContentWidth: md
+    maxContentWidth: 2xl
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: inherit
