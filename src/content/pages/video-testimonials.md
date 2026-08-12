@@ -45,6 +45,34 @@ pageSections:
                 title: Lisa
                 source: ''
                 thumbnail: ''
+          - _component: building-blocks/wrappers/grid/grid-item
+            contentSections:
+              - _component: building-blocks/wrappers/card
+                id: ''
+                label:
+                contentSections:
+                  - _component: building-blocks/core-elements/video
+                    type: youtube
+                    id: zMnkNyRYkew
+                    title: Lisa
+                    source: ''
+                    thumbnail: ''
+                maxContentWidth:
+                paddingHorizontal: sm
+                paddingVertical: sm
+                colorScheme: inherit
+                backgroundColor: base
+                backgroundImage:
+                  source:
+                  alt:
+                  positionVertical: top
+                  positionHorizontal: center
+                link:
+                rounded: false
+                border: false
+                showBeforeAfter: false
+                beforeContentSections: []
+                afterContentSections: []
         gap: md
     maxContentWidth: 2xl
     paddingHorizontal: md
@@ -58,5 +86,28 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
     rounded: false
+  - _component: page-sections/homepage-blocks/video-card-row
+    id: ''
+    heading:
+    subtext:
+    videos:
+      - youtubeId: zKdDaaitCx0
+        caption: Lisa
+      - youtubeId: 4lOESX9HUXE
+        caption: Charlie
+      - youtubeId: 59l7jh6lju8
+        caption: Foxes
+      - youtubeId: ''
+        caption: ''
+    buttonSections: []
+    backgroundColor: none
+    backgroundColorHex: ''
+    backgroundGradient: ''
+    backgroundImage:
+      source:
+      alt:
+      positionVertical: top
+      positionHorizontal: center
+    brickBackground: false
 description: ''
 ---
