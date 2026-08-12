@@ -26,79 +26,45 @@ pageSections:
       alt: ''
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/builders/custom-section
-    id: ''
-    label: ''
-    contentSections:
-      - _component: building-blocks/wrappers/grid
-        id: ''
-        label: ''
-        layout: center
-        minItemWidth: 280
-        maxItemWidth: 400
-        items:
-          - _component: building-blocks/wrappers/grid/grid-item
-            contentSections:
-              - _component: building-blocks/core-elements/video
-                type: youtube
-                id: zMnkNyRYkew
-                title: Lisa
-                source: ''
-                thumbnail: ''
-          - _component: building-blocks/wrappers/grid/grid-item
-            contentSections:
-              - _component: building-blocks/wrappers/card
-                id: ''
-                label:
-                contentSections:
-                  - _component: building-blocks/core-elements/video
-                    type: youtube
-                    id: zMnkNyRYkew
-                    title: Lisa
-                    source: ''
-                    thumbnail: ''
-                maxContentWidth:
-                paddingHorizontal: sm
-                paddingVertical: sm
-                colorScheme: inherit
-                backgroundColor: base
-                backgroundImage:
-                  source:
-                  alt:
-                  positionVertical: top
-                  positionHorizontal: center
-                link:
-                rounded: false
-                border: false
-                showBeforeAfter: false
-                beforeContentSections: []
-                afterContentSections: []
-        gap: md
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
   - _component: page-sections/homepage-blocks/video-card-row
     id: ''
     heading:
     subtext:
     videos:
+      - youtubeId: zMnkNyRYkew
+        caption: Testimonial - Lisa
       - youtubeId: zKdDaaitCx0
-        caption: Lisa
-      - youtubeId: 4lOESX9HUXE
-        caption: Charlie
+        caption: Lisa - Killer Chompers
+      - youtubeId: BERd6BcOM3s
+        caption: Testimonial - Peg
+      - youtubeId: 3dMcadLp_Mo
+        caption: Peg - Boyfriend's Mother
+      - youtubeId: v3GdW0tACEY
+        caption: Testimonial - Foxes
       - youtubeId: 59l7jh6lju8
-        caption: Foxes
-      - youtubeId: ''
-        caption: ''
+        caption: Huge Confidence Booster - Foxes
+      - youtubeId: qw8IhjEAbo8
+        caption: Testimonial - Charlie
+      - youtubeId: 4lOESX9HUXE
+        caption: Peace of Mind - Charlie
+      - youtubeId: 3AY0eRqkQXQ
+        caption: Testimonial - Andrea
+      - youtubeId: 4FhCbvZ21fI
+        caption: Testimonial - Raquel
+      - youtubeId: YsKsMKbILWw
+        caption: Testimonial - Louella
+      - youtubeId: yox2p-hev8E
+        caption: Testimonial - Wendy
+      - youtubeId: 8qHZCUeGSaY
+        caption: Testimonial - Marcia
+      - youtubeId: s3pQ-Dp1QRA
+        caption: Testimonial - Dawn
+      - youtubeId: 5PqeU8gVXbQ
+        caption: Testimonial - Elizabeth
+      - youtubeId: F64-0KHw790
+        caption: Testimonial - Judy
+      - youtubeId: MdiLI1fwEcc
+        caption: American Smile
     buttonSections: []
     backgroundColor: none
     backgroundColorHex: ''
