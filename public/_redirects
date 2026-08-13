@@ -1,0 +1,42 @@
+# mig:generated v=0.1.0 gen=redirects hash=a5e6aa1b4af58efa
+/childrens-dentistry.html /childrens-dentistry/ 301
+/contact.html /contact/ 301
+/cosmetic-dentistry.html /cosmetic-dentistry/ 301
+/dental-exam-special.html /dental-exam-special/ 301
+/dental-implants.html /dental-implants/ 301
+/emergency-dentistry.html /emergency-dentistry/ 301
+/for-patients.html /for-patients/ 301
+/free-invisalign-consultation.html /free-invisalign-consultation/ 301
+/hipaa.html /hipaa/ 301
+/index.html / 301
+/invisalign.html /invisalign/ 301
+/meet-dr-jetton.html /meet-dr-jetton/ 301
+/meet-the-team.html /meet-the-team/ 301
+/missing-teeth.html /missing-teeth/ 301
+/our-services.html /our-services/ 301
+/preventive-dentistry.html /preventive-dentistry/ 301
+/privacy-policy.html /privacy-policy/ 301
+/request-an-appointment.html /request-an-appointment/ 301
+/restorative-dentistry.html /restorative-dentistry/ 301
+/reviews.html /reviews/ 301
+/root-canal-treatment.html /root-canal-treatment/ 301
+/sedation-dentistry.html /sedation-dentistry/ 301
+/smile-gallery.html /smile-gallery/ 301
+/special-offers.html /special-offers/ 301
+/tooth-extractions.html /tooth-extractions/ 301
+/tour-our-office.html /tour-our-office/ 301
+/wisdom-tooth-extractions.html /wisdom-tooth-extractions/ 301
+
+# Excluded from the crawl (no migrated page of their own), but both are live
+# URLs on the old site that must not 404.
+#   sitemap.html -> the template's own /sitemap/ page
+#   thanks.html  -> form thank-you page; sent to the appointment page, which is
+#                   what the form now returns to
+/sitemap.html /sitemap/ 301
+/thanks.html /request-an-appointment/ 301
+
+# The WordPress blog lived at /blog/ on the same domain and its post URLs are
+# preserved verbatim by the import (/blog/<wp-slug>/), so only the WP-internal
+# feed and admin paths need handling.
+/blog/feed/ /blog/ 301
+/blog/wp-content/* /blog/ 301

@@ -1,0 +1,189 @@
+---
+// Ported from the source homepage's `<section id="welcome" class="horizontal-accordion">`.
+//
+// The accordion is the source's own: four items sitting absolutely at the
+// bottom of the photo, one open at a time. scripts.js drives it with
+// `$(this).toggleClass('active').siblings().removeClass('active')` — replicated
+// below in vanilla JS rather than pulling in jQuery.
+type Item = { heading?: string; text?: string };
+
+const {
+  id = "welcome",
+  eyebrow = "",
+  image = "",
+  imageAlt = "",
+  items = [] as Item[],
+} = Astro.props;
+---
+
+<section id={id} class="horizontal-accordion">
+  <figure>
+    {eyebrow && <span class="h1-small">{eyebrow}</span>}
+    {image && <img src={image} alt={imageAlt} />}
+  </figure>
+  <div class="flex">
+    {
+      items.map((item: Item) => (
+        <div class="item">
+          <h4>{item.heading}</h4>
+          <div class="expand">
+            <p>{item.text}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<script>
+  // One open at a time, matching scripts.js:416.
+  document.querySelectorAll("#welcome .item, #financial .item").forEach((item) => {
+    item.addEventListener("click", () => {
+      const wasActive = item.classList.contains("active");
+      item.parentElement?.querySelectorAll(".item").forEach((s) => s.classList.remove("active"));
+      if (!wasActive) item.classList.add("active");
+    });
+  });
+</script>
+
+<style is:global>
+  /* Ported by selector from the source, rem converted at 10px root, media
+     queries kept in place. Unlayered and id-scoped: `.flex` and `.item` are
+     names Tailwind also generates utilities for, and generated utilities are
+     unlayered, so only specificity outranks them. */
+  #welcome {
+    margin: 0 auto 100px;
+    max-width: 1150px;
+    width: calc(100% - 20px);
+  }
+
+  #welcome figure {
+    background-color: #292929;
+    margin: 0;
+    position: relative;
+  }
+
+  #welcome figure .h1-small {
+    background-color: #292929;
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    inset: 40px 0 auto;
+    position: absolute;
+    text-align: center;
+  }
+
+  #welcome figure img {
+    border-radius: 21px 21px 0 0;
+    display: block;
+    width: 100%;
+  }
+
+  /* Source-wide `[class*=flex] { display: flex }` — a global rule every ported
+     section depends on but which is invisible in any one section's CSS.
+     Restated scoped rather than site-wide, where it would turn unrelated
+     template classes containing "flex" into flex containers. */
+  #welcome.horizontal-accordion {
+    overflow: hidden;
+    position: relative;
+  }
+
+  #welcome.horizontal-accordion .flex {
+    align-items: flex-end;
+    display: flex;
+    inset: auto 0 0;
+    position: absolute;
+  }
+
+  #welcome.horizontal-accordion .item {
+    background-color: #fff;
+    border-bottom: 2px solid #707070;
+    border-left: 1px solid #707070;
+    border-right: 1px solid #707070;
+    border-top: 2px solid #707070;
+    cursor: pointer;
+    padding: 0 20px;
+  }
+
+  #welcome .item {
+    width: 25%;
+  }
+
+  #welcome.horizontal-accordion .item:first-of-type {
+    border-left: 2px solid #707070;
+  }
+
+  #welcome.horizontal-accordion .item:last-of-type {
+    border-right: 2px solid #707070;
+  }
+
+  #welcome.horizontal-accordion .item h4 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px 0;
+    position: relative;
+  }
+
+  #welcome.horizontal-accordion .item h4::after {
+    content: url("/assets/images/plus-icon.svg");
+    line-height: 0;
+    transition: 0.6s all;
+  }
+
+  #welcome.horizontal-accordion .item .expand {
+    height: 0;
+    opacity: 0;
+    transition: 0.3s all;
+  }
+
+  #welcome.horizontal-accordion .item .expand p {
+    font-size: 15px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  #welcome.horizontal-accordion .item.active h4::after {
+    content: url("/assets/images/less-icon.svg");
+    transform: rotate(180deg);
+  }
+
+  #welcome.horizontal-accordion .item.active .expand {
+    height: 120px;
+    opacity: 1;
+  }
+
+  @media (max-width: 1150px) {
+    #welcome.horizontal-accordion .item {
+      padding: 0 15px;
+    }
+
+    #welcome.horizontal-accordion .item h4 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #welcome figure .h1-small {
+      color: #000;
+      font-size: 20px;
+      inset: unset;
+      max-width: 400px;
+      position: relative;
+    }
+
+    #welcome.horizontal-accordion .item {
+      border: 1px solid #000 !important;
+      margin: 0 auto;
+      max-width: 400px;
+      width: 90% !important;
+    }
+
+    #welcome.horizontal-accordion .flex {
+      flex-direction: column;
+      margin: -40px auto 0;
+      position: relative;
+    }
+  }
+</style>

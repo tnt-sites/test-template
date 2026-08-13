@@ -122,3 +122,136 @@
     color: var(--color-text-muted);
   }
 }
+
+/* ------------------------------------------------------------------------
+   Source display classes (newteethhouston.com)
+
+   The source declares `.h1`, `.h1-small`, `.h2`, `.h3`, `.h4` once, globally,
+   and every section references them. Ported section-by-section they end up
+   used by every component and defined nowhere, so each silently falls back to
+   its tag's size — an eyebrow renders as a second headline. These are the
+   documented exception to keeping ported CSS in its own component: they have
+   no single owner, so they live here.
+
+   `source-bridge` outranks `components` and `page-sections`, which is what
+   lets these beat the template's own heading styles. rem values are already
+   converted at the source's `html { font-size: 10px }`.
+   ------------------------------------------------------------------------ */
+@layer source-bridge {
+  /* The template's own `:where(:root) h1..h6 { margin: 0.8em 0 0.5em }` applies
+     to ported markup that merely shares those tags — measured against the
+     source, a `<h2 class="h1">` gained 36.8px top and 23px bottom margin it
+     never had. The source gives these classes no margin of their own, so state
+     that explicitly; sections that do want one (e.g. `#meet .h2`) set it in
+     their own component. */
+  main :is(.h1, .h2, .h3, .h4) {
+    margin: 0;
+  }
+
+  main :is(.h1, .h2, .h3, .h4, .h1-small) {
+    text-transform: uppercase;
+  }
+
+  main .h1-small {
+    color: #292929;
+    display: block;
+    font: 500 15px/1 aktiv-grotesk-extended, sans-serif;
+    letter-spacing: 1.5px;
+    margin: 0 0 10px;
+  }
+
+  main .h1 {
+    color: #292929;
+    font: 400 46px/1.1 spirits-soft, serif;
+  }
+
+  main .h2 {
+    color: #292929;
+    font: 400 46px/1.2 spirits-soft, serif;
+    position: relative;
+  }
+
+  main .h3 {
+    color: #292929;
+    display: block;
+    font: 400 35px/1.1 spirits-soft, serif;
+    position: relative;
+  }
+
+  main .h4 {
+    color: #292929;
+    display: block;
+    font: 400 22px/1 spirits-soft, serif;
+    position: relative;
+  }
+}
+
+/* ------------------------------------------------------------------------
+   Source list markers
+
+   `mig tokens` ports typography, not decoration: it brought `main ul li:before`
+   across with its font-family, colour, size and line-height but dropped the
+   `content` and the absolute positioning, so every list marker silently
+   rendered as a plain bullet instead of the source's fontello glyph. It also
+   emitted them into `@layer source-base`, which ranks BELOW `components` and
+   `page-sections`, so the template's own list styling won regardless.
+
+   Restated here in `source-bridge`, which outranks both.
+   ------------------------------------------------------------------------ */
+@layer source-bridge {
+  main ul {
+    list-style: none;
+    margin: 10px 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+  }
+
+  main ul li {
+    display: block;
+    line-height: 1.6;
+    margin: 0 0 10px 26px;
+    overflow: hidden;
+    padding-left: 24px;
+    position: relative;
+  }
+
+  main ul li::before {
+    color: #2b8435;
+    content: "\e81a";
+    font-family: "fontello";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    left: 0;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    top: 2px;
+  }
+
+  /* The `.why` section's own icon-above-text marker used to be patched in here.
+     It now lives with the rest of the ported `.why` CSS in Why.astro — see the
+     comment there for why it has to be unlayered to beat this rule. */
+}
+
+/* ------------------------------------------------------------------------
+   The source sets `body { overflow-x: hidden }` in _above-the-fold.css, and
+   its homepage depends on it: the reviews carousel deliberately renders
+   `.slick-list { overflow: visible }` above 1000px so the next card peeks past
+   the 1200px container, and the body clip is what stops that becoming a
+   page-wide horizontal scrollbar.
+
+   `mig tokens` ports typography, not decoration, so this declaration was
+   dropped along with the rest of the body rule's non-type properties — the
+   symptom was a 1307px document at a 1280px viewport.
+
+   Clipping the carousel's own section instead is not an option: `#reviews`
+   holds the Google seal at `top: -206px`, which overflows upward on purpose
+   and would be cut off.
+   ------------------------------------------------------------------------ */
+@layer source-bridge {
+  body {
+    overflow-x: hidden;
+  }
+}

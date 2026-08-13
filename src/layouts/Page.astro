@@ -2,6 +2,7 @@
 import FixedTabs from "@components/navigation/fixed-tabs/FixedTabs.astro";
 import Footer from "@components/navigation/footer/Footer.astro";
 import MainNavigation from "@components/navigation/main-nav/MainNav.astro";
+import ReadyBar from "@components/navigation/ready-bar/ReadyBar.astro";
 import Components from "@components/utils/renderBlock.astro";
 import fixedTabsData from "@data/fixedTabs.json";
 import footerData from "@data/footer.json";
@@ -82,6 +83,7 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
       ) : null
     }
   </main>
+  <ReadyBar {...((siteInfo as any)?.readyBar ?? {})} />
   <Footer
     {...footer}
     siteName={footerSiteName}
@@ -91,3 +93,48 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
   />
   <FixedTabs {...fixedTabs} />
 </Layout>
+
+<style lang="pcss" is:global>
+  /* ----------------------------------------------------------------------
+     Header clearance for first sections that have no hero behind them.
+
+     `.main-nav` is `position: fixed` and overlays the page, matching the
+     source. The sections written to sit under it carry their own clearance
+     already — `#banner` (homepage) and `#interior-banner` start their content
+     220px+ down — but a plain first section starts at y=0 and its heading
+     landed behind the nav pill.
+
+     This is the source's own answer to the same case:
+     `.banner-no-img #interior-banner { padding: 200px 20px 60px }`, dropping
+     to 120px at its 1024px breakpoint. Listed by component class rather than
+     applied to every first section so the image heroes keep their own
+     spacing; the second selector covers a render without the CloudCannon
+     editing wrappers.
+
+     The trailing `:is(#interior-banner, .custom-section)` is a specificity
+     bump, not a filter. Two of these pages carry `id="interior-banner"` from
+     the source, which pulls in `InteriorBanner`'s id-scoped `padding: 0`, and
+     (1,0,0) beats any number of classes. An id inside the `:is()` lifts this
+     rule to (1,x,x) so it wins; the `.custom-section` branch keeps it matching
+     the sections that do not carry that id.
+     ---------------------------------------------------------------------- */
+  main
+    > editable-array
+    > editable-array-item:first-child
+    > .custom-section:is(.hero-center, .sitemap):is(#interior-banner, .custom-section),
+  main
+    > .custom-section:is(.hero-center, .sitemap):is(#interior-banner, .custom-section):first-child {
+    padding-top: 200px;
+  }
+
+  @media (max-width: 1024px) {
+    main
+      > editable-array
+      > editable-array-item:first-child
+      > .custom-section:is(.hero-center, .sitemap):is(#interior-banner, .custom-section),
+    main
+      > .custom-section:is(.hero-center, .sitemap):is(#interior-banner, .custom-section):first-child {
+      padding-top: 120px;
+    }
+  }
+</style>

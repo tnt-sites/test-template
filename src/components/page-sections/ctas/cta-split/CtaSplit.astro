@@ -61,6 +61,17 @@ const {
 
 <style lang="pcss" is:global>
   @layer page-sections {
+    /* The source alternates its `.page-divider > .block` sections and outlines
+       the tinted ones: `.block:nth-of-type(even) { background-color: #f2f2f2;
+       border: 1px solid #000 }`. `mig content` carried the fill across as
+       `backgroundColor: surface` but dropped the border, because it ports
+       backgrounds as a prop and everything else on the rule is lost. Keying the
+       border off `.bg-surface` reproduces the pairing: on this site a tinted
+       split IS an even block. */
+    .cta-split.bg-surface {
+      border: 1px solid #000;
+    }
+
     .cta-split-grid {
       display: flex; align-items: center; justify-content: space-around;
       min-height: 34rem;
@@ -91,6 +102,14 @@ const {
       margin: 0 0 var(--spacing-md);
       font-size: 54px;
       line-height: 1;
+
+      .cta-split-heading-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
     }
 
     .cta-split-image {
@@ -98,6 +117,10 @@ const {
       align-items: center;
       justify-content: center;
       padding-inline: var(--spacing-2xl);
+
+      .image {
+        max-width: 400px;
+      }
     }
 
     @media (max-width: 1024px) {

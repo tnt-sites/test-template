@@ -1,0 +1,386 @@
+---
+// Ported from the source homepage's `<section id="reviews">` — the Google
+// review carousel with the seal overlapping the section above it.
+//
+// The source drives this with slick (jQuery). `mig behaviors` recovered the
+// settings and they are reimplemented in vanilla JS below rather than pulling
+// jQuery + slick into the build:
+//
+//   dots: false        arrows: true          draggable: false
+//   infinite: false    autoplay: true        autoplaySpeed: 10000
+//   speed: 300         slidesToScroll: 1     slidesToShow: 3
+//   responsive: <=1200 -> 2 slides, <=1000 -> 1 slide
+//
+// slick's own theme CSS is not ported by the toolkit, so the track/list/slide
+// rules the layout depends on are restated below — without them the arrows are
+// bare glyphs and the slides stack.
+// Bare `<i>` fontello glyphs, matching the source — the template's <Icon>
+// component wraps them in a block div with its own sizing.
+
+type Review = { text?: string; author?: string };
+
+const {
+  id = "reviews",
+  eyebrow = "",
+  heading = "",
+  sealImage = "",
+  sealAlt = "",
+  reviews = [] as Review[],
+  buttonText = "",
+  buttonHref = "",
+  arrowImage = "/assets/images/arrow-left.svg",
+} = Astro.props;
+---
+
+<section id={id}>
+  <div class="flex container justify-between align-end">
+    {sealImage && <img class="seal" src={sealImage} alt={sealAlt} />}
+    <article>
+      {eyebrow && <span class="h1-small">{eyebrow}</span>}
+      {heading && <span class="h2">{heading}</span>}
+    </article>
+    <div class="slick-controls">
+      <button class="arrow slick-arrow" id="prev" aria-label="Previous Slide">
+        <img src={arrowImage} alt="" />
+      </button>
+      <button class="arrow slick-arrow" id="next" aria-label="Next Slide">
+        <img src={arrowImage} alt="" />
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="slick-reviews slick-initialized slick-slider">
+      <div class="slick-list">
+        <div class="slick-track">
+          {
+            reviews.map((review: Review) => (
+              <div class="slick-slide">
+                <div class="review">
+                  <i class="icon-google" aria-hidden="true" />
+                  <i class="icon-quote" aria-hidden="true" />
+                  <p>{review.text}</p>
+                  <div class="author">
+                    <span class="star" />
+                    <span>{review.author}</span>
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    {
+      buttonText && (
+        <a href={buttonHref} class="btn">
+          {buttonText}
+        </a>
+      )
+    }
+  </div>
+</section>
+
+<script>
+  // Vanilla reimplementation of the source's slick config.
+  const section = document.getElementById("reviews");
+  const track = section?.querySelector<HTMLElement>(".slick-track");
+  const slides = [...(section?.querySelectorAll<HTMLElement>(".slick-slide") ?? [])];
+  const prev = section?.querySelector<HTMLButtonElement>("#prev");
+  const next = section?.querySelector<HTMLButtonElement>("#next");
+
+  if (track && slides.length) {
+    const perView = () => (window.innerWidth <= 1000 ? 1 : window.innerWidth <= 1200 ? 2 : 3);
+    let index = 0;
+
+    const maxIndex = () => Math.max(0, slides.length - perView());
+
+    const render = () => {
+      const n = perView();
+      index = Math.min(index, maxIndex());
+      for (const slide of slides) slide.style.flex = `0 0 ${100 / n}%`;
+      track.style.transform = `translateX(-${index * (100 / n)}%)`;
+      // infinite: false — slick disables the arrow at each end.
+      prev?.classList.toggle("slick-disabled", index === 0);
+      next?.classList.toggle("slick-disabled", index >= maxIndex());
+      prev && (prev.disabled = index === 0);
+      next && (next.disabled = index >= maxIndex());
+    };
+
+    const go = (delta: number) => {
+      index = Math.max(0, Math.min(index + delta, maxIndex()));
+      render();
+    };
+
+    prev?.addEventListener("click", () => go(-1));
+    next?.addEventListener("click", () => go(1));
+    window.addEventListener("resize", render);
+
+    // autoplay: true, autoplaySpeed: 10000 — stops at the end, since
+    // infinite is false.
+    let timer = window.setInterval(() => {
+      if (index >= maxIndex()) window.clearInterval(timer);
+      else go(1);
+    }, 10000);
+    section?.addEventListener("mouseenter", () => window.clearInterval(timer));
+
+    render();
+  }
+</script>
+
+<style is:global>
+  #reviews {
+    padding: 120px 20px;
+    position: relative;
+    z-index: 5;
+  }
+
+  #reviews .flex.container {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 60px;
+    max-width: 1200px;
+    position: relative;
+    width: 100%;
+  }
+
+  #reviews .container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  #reviews .flex.container .seal {
+    left: 0;
+    position: absolute;
+    top: -206px;
+  }
+
+  /* slick's own stylesheet is not ported by `mig behaviors`; these are the
+     structural rules the layout depends on. */
+  #reviews .slick-list {
+    display: block;
+    margin: 0;
+    outline: none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+  }
+
+  #reviews .slick-track {
+    display: flex;
+    position: relative;
+    transition: transform 0.3s linear; /* slick speed: 300, cssEase: linear */
+  }
+
+  #reviews .slick-slide {
+    flex: 0 0 33.3333%;
+    height: auto;
+    min-height: 1px;
+    padding-right: 20px;
+  }
+
+  #reviews .review {
+    background-color: #9ecae1;
+    border-radius: 21px;
+    height: 320px;
+    max-width: 400px;
+    padding: 25px 20px 40px 25px;
+  }
+
+  #reviews .review i {
+    display: block;
+  }
+
+  #reviews .review .icon-google {
+    color: rgb(0 0 0 / 25%);
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
+
+  #reviews .review .icon-google::before {
+    margin-left: 0;
+  }
+
+  #reviews .review .icon-quote {
+    color: #2b8435;
+    display: table;
+    font-size: 31px;
+    line-height: 1;
+    transform: rotate(180deg);
+  }
+
+  #reviews .review p {
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.4;
+  }
+
+  #reviews .review .author {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  #reviews .review .author .star {
+    line-height: 1;
+  }
+
+  /* The source renders the rating as a fontello glyph run on `.star:before`;
+     ported without the `content` it would render nothing at all. */
+  #reviews .review .author .star::before {
+    color: #9a7200;
+    content: "\e80f\e80f\e80f\e80f\e80f";
+    font-family: "fontello";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 6px;
+  }
+
+  #reviews .review .author span:not(.star) {
+    color: #292929;
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  #reviews .btn {
+    border: 2px solid #9ecae1;
+    border-radius: 50px;
+    color: #292929;
+    cursor: pointer;
+    display: table;
+    font: 500 14px/1.2 aktiv-grotesk-extended, sans-serif;
+    margin-top: 30px;
+    min-width: 320px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    z-index: 1;
+  }
+
+  #reviews .btn:hover {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    color: #fff;
+  }
+
+  #reviews .slick-controls {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    margin: 0;
+  }
+
+  #reviews .slick-arrow {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #292929;
+    border-color: rgb(0 0 0 / 25%);
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 96px;
+    flex-direction: column;
+    height: 56px;
+    inset: unset;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    transform: none;
+    transition: 0.3s all;
+    width: 96px;
+    z-index: 5;
+  }
+
+  #reviews .slick-arrow:hover {
+    background-color: rgb(0 0 0 / 25%);
+  }
+
+  #reviews .slick-arrow.slick-disabled {
+    opacity: 0.35;
+    pointer-events: none;
+  }
+
+  #reviews #prev img {
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  #reviews #prev {
+    order: 2;
+  }
+
+  #reviews #next {
+    order: 3;
+  }
+
+  @media (min-width: 1001px) {
+    /* The source lets the track bleed past the container on desktop so the
+       next card peeks in. */
+    #reviews .slick-list {
+      overflow: visible;
+    }
+
+    #reviews .slick-reviews {
+      max-width: 100vw;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    #reviews .slick-slide {
+      flex: 0 0 50%;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    #reviews {
+      padding-bottom: 60px;
+      padding-top: 0;
+    }
+
+    #reviews .flex.container {
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #reviews .flex.container .seal {
+      inset: unset;
+      margin: -30px auto 20px;
+      position: relative;
+    }
+
+    #reviews .slick-slide {
+      flex: 0 0 100%;
+      padding: 0 5px;
+    }
+
+    #reviews .review {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+
+    #reviews article {
+      text-align: center;
+    }
+
+    #reviews .slick-controls {
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    #reviews .btn {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+    }
+  }
+</style>

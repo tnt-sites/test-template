@@ -32,7 +32,7 @@ landingFooter:
       - name: Sitemap
         path: sitemap.html
       - name: Privacy Policy
-        path: privacy-policy.html
+        path: /privacy-policy/
     legalBlurb: ""
     backgroundColor: ""
     linkColor: ""

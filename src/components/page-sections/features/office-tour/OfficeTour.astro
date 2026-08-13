@@ -59,6 +59,10 @@ const isPeek = String(className ?? "")
     editable={editable}
     {...(isPeek ? { "data-no-contain-scroll": true, "data-slides-to-scroll": "1" } : {})}
   >
+    {/* The source's own arrow glyph. arrow-left.svg actually points right — the
+      source flips it for `#prev` rather than shipping two files. */}
+    <img slot="prev-arrow" src="/assets/images/arrow-left.svg" alt="" width="38" height="17" />
+    <img slot="next-arrow" src="/assets/images/arrow-left.svg" alt="" width="38" height="17" />
     {
       normalizedTourSlides.map((slide, index) => (
         <CarouselSlide aria-label={`Slide ${index + 1} of ${normalizedTourSlides.length}`}>
@@ -94,8 +98,12 @@ const isPeek = String(className ?? "")
     position: relative;
   }
 
-  .office-tour:not(.peek) .carousel .viewport {
-    margin: 0 auto;
+  /* The source's `.gallery` is a single 1000px relative box holding the images,
+     the dots and the absolutely-positioned arrows, so all three share an edge.
+     Capping the viewport alone left the arrows anchored to the section's wider
+     content column. */
+  .office-tour:not(.peek) .carousel {
+    margin-inline: auto;
     max-width: 1000px;
   }
 
@@ -117,6 +125,22 @@ const isPeek = String(className ?? "")
     align-items: center;
   }
 
+  /* The source's `.slick-gallery` is `text-align: center` and puts no width on
+     its images, so each photo sits at its intrinsic size (675x450) inside the
+     1000px gallery. The Image component's `width: 100%` upscales them to the
+     full viewport instead, cropping differently at every breakpoint. */
+  .office-tour .carousel .slide .image {
+    text-align: center;
+  }
+
+  .office-tour .carousel .slide .image picture,
+  .office-tour .carousel .slide .image img {
+    display: inline-block;
+    margin-inline: auto;
+    max-width: 100%;
+    width: auto;
+  }
+
   .office-tour.peek .slide {
     margin: 0 20px;
     opacity: 0.5;
@@ -127,20 +151,124 @@ const isPeek = String(className ?? "")
     opacity: 1;
   }
 
+  /* CONTROLS — ported from the source's `.slick-controls` / `.slick-arrow` /
+     `.slick-dots` rules in styles.css. Unlayered on purpose: the base carousel
+     styles live in `@layer components`, so an unlayered rule outranks them
+     without needing extra specificity games.
+
+     The source's dot spacing comes from two stacked margins — slick's own
+     `.slick-dots li { margin: 0 5px }` plus the site's `span { margin: 0 5px }`
+     — for 20px between dots, halved to 10px under 1024px. Restated as a `gap`
+     since embla renders each dot as a single button. */
+  .office-tour .carousel > .controls-wrapper {
+    gap: 0;
+    margin: 20px auto 0;
+    max-width: 1000px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators {
+    gap: 20px;
+    line-height: 1;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator {
+    background-color: transparent;
+    border: 2px solid #000;
+    height: 12px;
+    transform: none;
+    transition: 0.3s all;
+    width: 12px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .indicators > .indicator[data-selected="true"] {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    transform: none;
+  }
+
+  /* The source centres its arrows on the image with `top: 57%` — a hand-tuned
+     value that compensates for the dots row sitting inside the same relative
+     box. Anchoring the button between `top: 0` and the top of the controls row
+     instead centres it on the viewport exactly, whatever the image height.
+     32px = the 20px controls margin plus the 12px dot. */
   .office-tour.floating-arrows .carousel > .controls-wrapper > .prev,
   .office-tour.floating-arrows .carousel > .controls-wrapper > .next {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #292929;
+    border-radius: 30px;
+    bottom: 32px;
+    display: flex;
+    flex: 0 0 96px;
+    height: 56px;
+    justify-content: center;
+    margin-block: auto;
+    padding: 0;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
+    top: 0;
+    transition: 0.3s all;
+    width: 96px;
+    z-index: 5;
+  }
+
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .prev:hover,
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .next:hover {
+    background-color: #9ecae1;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev img,
+  .office-tour .carousel > .controls-wrapper > .next img {
+    display: block;
+    width: 38px;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev img {
+    transform: rotate(180deg);
   }
 
   .office-tour .carousel > .controls-wrapper > .prev {
-    left: 0.5rem;
+    left: 0;
   }
 
   .office-tour .carousel > .controls-wrapper > .next {
-    right: 0.5rem;
+    right: 0;
+  }
+
+  /* Under 1024px the source drops the arrows back into flow below the image,
+     with the dots on their own row above them. */
+  @media (max-width: 1024px) {
+    .office-tour .carousel > .controls-wrapper {
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    .office-tour.floating-arrows .carousel > .controls-wrapper > .prev,
+    .office-tour.floating-arrows .carousel > .controls-wrapper > .next {
+      inset: unset;
+      margin-block: 0;
+      position: relative;
+    }
+
+    .office-tour .carousel > .controls-wrapper > .indicators {
+      flex: 0 1 100%;
+      gap: 10px;
+      order: 1;
+    }
+
+    .office-tour .carousel > .controls-wrapper > .indicators > .indicator {
+      border-width: 1px;
+      height: 10px;
+      width: 10px;
+    }
+
+    .office-tour .carousel > .controls-wrapper > .prev {
+      order: 2;
+    }
+
+    .office-tour .carousel > .controls-wrapper > .next {
+      order: 3;
+    }
   }
 
   /* Only hide the pager indicators if slideNumbers is true */

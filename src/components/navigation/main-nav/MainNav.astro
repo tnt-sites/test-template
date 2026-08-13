@@ -60,18 +60,26 @@ const searchButtons = resolvedSearchButtonSections.map((button: any) =>
 
 const buttons = pageButtons.map((button: any) => sanitizeButtonSection(button));
 
+// A page button flattened into the mobile menu becomes a plain nav link, so
+// its `newTab` toggle has to be restated as `target`/`rel` here — the mobile
+// nav items have no `newTab` field of their own.
+const toMobileNavItem = (button: any) => {
+  const newTab = typeof button?.newTab === "string"
+    ? button.newTab.trim().toLowerCase() === "true"
+    : !!button?.newTab;
+
+  return {
+    name: button.text || "Button",
+    path: button.link || button.href || "#",
+    children: [],
+    ...(newTab ? { target: "_blank", rel: "noopener noreferrer" } : {}),
+  };
+};
+
 const mobileNavData = [
   ...navData,
-  ...searchButtons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
-  ...buttons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
+  ...searchButtons.map(toMobileNavItem),
+  ...buttons.map(toMobileNavItem),
 ];
 
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
@@ -167,12 +175,13 @@ const formatAddressLines = (address: any) => {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
+                        {/* The source header prints the address on one line
+                            ("4005 Broadway St, Houston, TX 77087"); only the
+                            footer breaks it across two. Joining here rather
+                            than hiding a <br> in CSS, because `display: none`
+                            on the <br> merges the two text runs into a single
+                            anonymous flex item and no gap can separate them. */}
+                        {formattedLines.join(", ")}
                       </a>
                     ) : null;
                   })}
@@ -250,6 +259,30 @@ const formatAddressLines = (address: any) => {
     document.addEventListener("DOMContentLoaded", initMainNavHeaderHeight);
   } else {
     initMainNavHeaderHeight();
+  }
+</script>
+
+<!-- Mirrors the source's `body.fix-nav` state: once the page scrolls past the
+     header's own height the transparent scrim is swapped for the solid band. -->
+<script>
+  const initMainNavScrolled = () => {
+    const mainNav = document.querySelector(".main-nav");
+    if (!mainNav || mainNav.getAttribute("data-scrolled-initialized") === "true") return;
+    mainNav.setAttribute("data-scrolled-initialized", "true");
+
+    const sync = () => {
+      mainNav.classList.toggle("is-scrolled", window.scrollY >= mainNav.offsetHeight);
+    };
+
+    sync();
+    window.addEventListener("scroll", sync, { passive: true });
+    window.addEventListener("resize", sync);
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMainNavScrolled);
+  } else {
+    initMainNavScrolled();
   }
 </script>
 
@@ -399,4 +432,436 @@ const formatAddressLines = (address: any) => {
     }
   }
 
+  /* ----------------------------------------------------------------------
+     Source header architecture (newteethhouston.com)
+
+     `mig chrome` migrates the header as data plus colour and type, never its
+     architecture. Matching heights was not enough here: the source's header is
+     two stacked pills, and the template renders three loose stacked rows.
+
+     Source:
+       .place-nav (row, max 1350, pad 15, align flex-start)
+         a.logo                       position:absolute — hangs below the band
+         .hd-container (margin-left auto)
+           #hd-top > .hd-info         DARK pill  #292929, radius 50, pad 8/20
+                                      address · CALL TODAY (713) 497-1814
+           nav#main-nav               GREY pill  #E2E2E2, radius 50, pad-left 50
+                                      the menu AND the blue Book Online button
+
+     Template: .hd-content > a.logo-link + .hd-right > (.hd-info, .hd-btns,
+     .hd-nav) — no pills, phone above address, CTA floating outside the nav.
+
+     Rebuilt below with grid areas so the CTA joins the nav row and the two
+     share one continuous grey pill (left half on .hd-nav, right half on
+     .hd-btns). `source-bridge` outranks `components`/`page-sections`, so this
+     wins without forking the component, and everything is gated at the
+     source's own 1025px breakpoint — below it the template's responsive
+     chrome already works and ungated fixed columns overflow a phone.
+     ---------------------------------------------------------------------- */
+  @layer source-bridge {
+    @media (min-width: 1025px) {
+      /* The source's logo is `position: absolute; top: 15px; left: 15px`, so
+         its 186px height never sizes the header — it deliberately hangs below
+         the 160px band. Left in flow it was the tallest flex item and set the
+         header height on its own. */
+      .main-nav > .outer-content .hd-content {
+        align-items: flex-start;
+        position: relative;
+      }
+
+      .main-nav > .outer-content .hd-content .logo-link {
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+      }
+
+      /* `minmax(0, 1fr)` on the nav column and `min-width: 0` on .hd-right are
+         what let the nav band shrink below its content width. Without them the
+         grid held its min-content size and the Book Online button pushed the
+         document 27px past a 1280 viewport — a desktop horizontal scrollbar,
+         which `mig qa` fails on. The source shrinks the same band with
+         `nav { flex: 0 1 1050px }`. */
+      /* `flex: 0 1 auto` + `margin-left: auto` sizes the block to its content
+         and pushes it right, mirroring the source's `.hd-container
+         { margin-left: auto }`. `1 1 auto` made it grow instead, sliding the
+         nav pill left underneath the logo.
+
+         `minmax(0, 1fr)` on the nav column and `min-width: 0` here are what
+         let the band shrink below its content width; without them the grid
+         held its min-content size and the Book Online button pushed the
+         document 27px past a 1280 viewport. The source shrinks the same band
+         with `nav { flex: 0 1 1050px }`. */
+      .main-nav > .outer-content .hd-content .hd-right {
+        align-items: stretch;
+        display: grid;
+        flex: 0 1 auto;
+        gap: 15px 0;
+        grid-template-areas:
+          "info info"
+          "nav  btns";
+        grid-template-columns: minmax(0, 1fr) auto;
+        justify-content: end;
+        margin-left: auto;
+        margin-right: 0;
+        min-width: 0;
+      }
+
+      /* Reserves the logo's column. The logo is absolutely positioned, and an
+         abspos element resolves `left: 0` against the padding box, so this
+         holds the flex content clear of it without moving the logo itself. */
+      .main-nav > .outer-content .hd-content {
+        padding-left: 210px;
+      }
+
+      /* The source's header box is `.place-nav { max-width: 1350px; padding:
+         15px }`, i.e. content from 60px to 1380px at a 1440 viewport. The
+         template's CustomSection was giving 104px–1336px, so both pills sat
+         44px short of the source's right edge. */
+      .main-nav > .outer-content > .content {
+        margin: 0 auto;
+        max-width: 1350px;
+        padding: 15px;
+      }
+
+      /* CustomSection still applies 16px block padding of its own despite
+         `paddingVertical="none"`, which put the header 32px over the source's
+         160px. The source's only vertical padding is the 15px above. */
+      .main-nav.custom-section {
+        padding-block: 0;
+      }
+
+      /* Source: `nav { flex: 0 1 1050px }` — a declared basis the band shrinks
+         from. Its measured width at 1440 is 928px (a 608px menu region plus
+         the 320px button), which is what this basis reproduces; the nav column
+         is free to shrink below it at narrower viewports. */
+      .main-nav > .outer-content .hd-content .hd-right {
+        flex-basis: 928px;
+      }
+
+      /* ---- dark pill: address · CALL TODAY phone ---- */
+      .main-nav > .outer-content .hd-content .hd-info {
+        align-items: center;
+        background-color: #292929;
+        border-radius: 50px;
+        display: flex;
+        gap: 20px;
+        grid-area: info;
+        justify-content: center;
+        /* The source's dark pill spans the same 928px as the nav band below
+           it; content-sizing it left the two edges misaligned. */
+        justify-self: stretch;
+        margin: 0;
+        padding: 8px 20px;
+      }
+
+      .main-nav > .outer-content .hd-content .hd-info > div {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+      }
+
+      /* The template emits the phone before the address; the source shows the
+         address first, separated by a fontello dot. */
+      .main-nav .hd-info .phy {
+        color: #fff;
+        font: 500 17px/1 aktiv-grotesk-extended, sans-serif;
+        order: 1;
+        position: relative;
+      }
+
+      .main-nav .hd-info .pho {
+        align-items: center;
+        color: #fff;
+        display: flex;
+        font: 500 26px/1 aktiv-grotesk-extended, sans-serif;
+        gap: 10px;
+        order: 2;
+        position: relative;
+      }
+
+      /* The source's separator dot between address and phone, and its small
+         blue "CALL TODAY" kicker. Both are presentational in the source
+         (`<i class="icon-circle">` and a `<span>`); the template's data model
+         has no field for either, so they are restated in CSS rather than
+         faked into the phone's label — a label would render as plain
+         "CALL TODAY: (713)…" in the same size and colour as the number. */
+      .main-nav .hd-info .pho::before {
+        color: #9ecae1;
+        content: "\e933  CALL TODAY";
+        font-family: "fontello", aktiv-grotesk-extended, sans-serif;
+        font-size: 12px;
+        letter-spacing: 1px;
+        white-space: pre;
+      }
+
+      .main-nav .hd-info .pho:hover,
+      .main-nav .hd-info .phy:hover {
+        color: #9ecae1;
+      }
+
+      /* The source prints the header address in mixed case; the template's own
+         `.main-nav .phy` uppercases it. (The one-line join happens in the
+         markup above, not here.) */
+      .main-nav .hd-info .phy {
+        text-transform: none;
+      }
+
+      /* ---- grey pill: nav on the left, Book Online button on the right ---- */
+      .main-nav > .outer-content .hd-content .hd-nav {
+        backdrop-filter: blur(10px);
+        background-color: #e2e2e2;
+        border-radius: 50px 0 0 50px;
+        display: flex;
+        grid-area: nav;
+        min-width: 0;
+        padding-left: 50px;
+        padding-right: 12px;
+      }
+
+
+      .main-nav > .outer-content .hd-content .hd-nav .nav-end {
+        flex: 1 1 auto;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .main-nav > .outer-content .hd-content .hd-nav .desktop-main-nav {
+        flex: 1 1 auto;
+      }
+
+      /* Source: `nav > ul > li > a { padding: 6px 8px; font-size: 16px }`. The
+         template's own item padding made the band 94px wider than the
+         source's 928px. */
+      .main-nav > .outer-content .hd-content .hd-nav :is(a, button) {
+        font-size: 16px;
+      }
+
+      /* The source nests each submenu caret INSIDE its link
+         (`$('nav > ul > .has-submenu > a').append('<button>…')`), so the whole
+         menu fits its 608px region. The template renders the caret as a
+         separate trigger NEXT TO the link — 17px of trigger plus a 4px column
+         gap on each of the four dropdowns, 84px the 608px pill does not have,
+         which pushed "Contact" underneath the Book Online button.
+         Tightened padding alone did not buy that back; the caret is taken out
+         of flow instead and laid over the link's own right padding, so a
+         dropdown item measures exactly as wide as a plain one plus the caret's
+         inset — the same footprint the source's nested caret has. */
+      .main-nav .hd-nav .bar-list > .nav-item > a {
+        padding: 6px 4px;
+      }
+
+      .main-nav .hd-nav .bar-list > .nav-item.has-children {
+        column-gap: 0;
+      }
+
+      .main-nav .hd-nav .bar-list > .nav-item.has-children > a {
+        padding-right: 14px;
+      }
+
+      .main-nav .hd-nav .bar-list > .nav-item.has-children > .nav-item-trigger {
+        align-items: center;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      /* The source's own gap between items is zero — `nav ul` spaces them with
+         `justify-content: space-around` alone. The template's 8px flex gap put
+         another 32px on a band that had none to give. */
+      .main-nav .hd-nav .bar-list {
+        column-gap: 0;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      /* The source header has no search affordance. Setting `buttonSections`
+         to [] in mainNav.json is not enough — MainNav falls back to a built-in
+         `defaultSearchButtonSections` whenever that array is empty, so the
+         magnifying glass comes back. Hidden here instead; the /search/ page
+         itself still exists and works. */
+      .main-nav > .outer-content .hd-content .hd-nav .nav-end > .desktop-button-group {
+        display: none;
+      }
+
+      /* Submenu carets. The template renders a bordered <label> around a
+         `chevron-right` SVG, which read as an empty box next to each item. The
+         source appends `<button><i class="icon-angle-down"></i></button>` — a
+         small green chevron pointing DOWN, with no box of its own. */
+      .main-nav .hd-nav .nav-item-trigger {
+        background: none;
+        border: none;
+        box-shadow: none;
+        height: auto;
+        min-height: 0;
+        min-width: 0;
+        padding: 0 0 0 4px;
+        width: auto;
+      }
+
+      .main-nav .hd-nav .nav-item-trigger .icon {
+        color: #2b8435;
+        font-size: 10px;
+      }
+
+      .main-nav .hd-nav .nav-item-trigger svg {
+        rotate: 90deg;
+      }
+
+      /* The CTA is a separate grid cell but paints the right end of the same
+         pill, so the two read as one continuous shape. */
+      .main-nav > .outer-content .hd-content .hd-btns {
+        align-items: center;
+        background-color: #e2e2e2;
+        border-radius: 0 50px 50px 0;
+        display: flex;
+        grid-area: btns;
+      }
+
+      /* The source's buttons are styled with the attribute selector
+         `[class^=btn]`, which carries the 320px min-width; ported as `.btn`
+         alone the pill shrink-wraps its label — 211px against the source's
+         320px. */
+      .main-nav > .outer-content .hd-content .hd-btns .button {
+        background-color: #9ecae1;
+        border: none;
+        border-radius: 50px;
+        color: #292929;
+        font: 500 16px/1 aktiv-grotesk-extended, sans-serif;
+        justify-content: center;
+        letter-spacing: 1px;
+        min-width: 320px;
+        padding: 25px 35px;
+        text-transform: uppercase;
+      }
+
+      .main-nav > .outer-content .hd-content .hd-btns .button:hover {
+        background-color: #2b8435;
+        color: #fff;
+      }
+
+      /* ---- the source's own desktop step-downs ----
+         `_above-the-fold.css:140–142`. Between 1025 and 1350 the source stops
+         treating the CTA as a fixed 320px slab and shrinks it, the nav's 50px
+         inset, and the menu type, in three steps. Only the 1025px breakpoint
+         itself was ported, so every width below 1350 kept the widest possible
+         menu AND the widest possible button inside a band that shrinks with
+         `minmax(0, 1fr)` — the menu simply ran out under the button. Ported
+         verbatim, keyed to the same three widths. */
+      @media (max-width: 1350px) {
+        .main-nav > .outer-content .hd-content .hd-nav {
+          padding-left: 30px;
+        }
+
+        .main-nav .hd-nav .bar-list > .nav-item > a {
+          padding: 6px;
+        }
+
+        .main-nav > .outer-content .hd-content .hd-btns .button {
+          font-size: 14px;
+          min-width: 0;
+          padding: 25px 20px;
+        }
+      }
+
+      @media (max-width: 1220px) {
+        .main-nav > .outer-content .hd-content .hd-nav {
+          padding-left: 15px;
+        }
+
+        .main-nav .hd-nav .bar-list > .nav-item > a,
+        .main-nav > .outer-content .hd-content .hd-nav :is(a, button) {
+          font-size: 14px;
+        }
+
+        .main-nav .hd-nav .bar-list > .nav-item > a {
+          padding: 6px 5px;
+        }
+
+        .main-nav > .outer-content .hd-content .hd-btns .button {
+          font-size: 13px;
+          padding: 20px;
+        }
+
+        .main-nav > .outer-content .hd-content .logo-link .image img {
+          max-width: 120px;
+        }
+      }
+
+      @media (max-width: 1060px) {
+        .main-nav .hd-nav .bar-list > .nav-item > a,
+        .main-nav > .outer-content .hd-content .hd-nav :is(a, button) {
+          font-size: 13px;
+        }
+
+        .main-nav > .outer-content .hd-content .hd-btns .button {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  /* ----------------------------------------------------------------------
+     Source header behaviour (newteethhouston.com)
+
+     The source header is `position: fixed` over a transparent scrim, so the
+     hero runs full-bleed underneath it — `header { position: fixed; top: 0;
+     background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,0)) }`. The
+     template's is `position: sticky` in normal flow, which reserved a band at
+     the top of every page and rendered that scrim as an opaque grey slab.
+
+     Fixed also takes the header out of flow, which is what lets the hero start
+     at y=0. `--site-header-height` is still measured from the element, so
+     `.anchor-name-offset` keeps working.
+
+     Scrolled past its own height, the source swaps the scrim for a solid band
+     (`body.fix-nav`); `is-scrolled` is set by the script above.
+
+     DELIBERATELY UNLAYERED. The resting background is an `@layer source-bridge`
+     rule (`_chrome.pcss` headerBackground) and the template's `position` an
+     `@layer page-sections` one, both of equal specificity — an unlayered
+     declaration beats every layered one regardless of source order.
+     ---------------------------------------------------------------------- */
+  .main-nav {
+    background-color: transparent;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .main-nav.is-scrolled {
+    background-color: #7fa8be;
+    background-image: none;
+    box-shadow: 0 3px 7px rgb(24 23 24 / 35%);
+  }
+
+  /* Mobile: the source's logo is `position: absolute; top: 15px; left: 15px`
+     and taller than the band, so it deliberately overhangs the bottom edge
+     rather than sizing the header. Out of flow, the 70px hamburger is left to
+     set the band height, and the row aligns to the top. */
+  @media (max-width: 1024px) {
+    .main-nav > .outer-content > .content {
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .main-nav > .outer-content .hd-content {
+      align-items: flex-start;
+    }
+
+    .main-nav > .outer-content .hd-content .logo-link {
+      left: 15px;
+      position: absolute;
+      top: 15px;
+      z-index: 2;
+    }
+
+    .main-nav > .outer-content .hd-content .logo-link .image img {
+      max-width: 105px;
+    }
+  }
 </style>

@@ -4,7 +4,7 @@ description: CTA section with background image support and centered button group
 value:
   _component: page-sections/ctas/more-to-explore
   id: ""
-  heading: More to <span class="color">Explore</span>
+  heading: More to Explore
   buttonSections:
     - _component: building-blocks/core-elements/button
       text: My Button
@@ -33,6 +33,6 @@ preview:
   icon: add
 picker_preview:
   text: More to Explore
-  subtext: Centered CTA with a highlighted heading and button group.
+  subtext: Centered CTA with a heading and button group.
 _inputs_from_glob:
   - /src/components/page-sections/ctas/more-to-explore/more-to-explore.cloudcannon.inputs.yml

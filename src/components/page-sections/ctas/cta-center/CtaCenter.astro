@@ -3,12 +3,14 @@ import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Text from "@core-elements/text/Text.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Image from "@core-elements/image/Image.astro";
 
 const {
   anchorName = "",
   heading = "",
   subtext = "",
   buttonSections = [],
+  logos = [],
   colorScheme = "inherit",
   backgroundColor,
   backgroundGradient = "",
@@ -19,6 +21,13 @@ const {
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+const normalizedLogos = Array.isArray(logos)
+  ? logos.filter(
+      (logo): logo is { source?: string; alt?: string } =>
+        !!logo && typeof logo === "object" && typeof logo.source === "string" && logo.source.trim() !== ""
+    )
+  : [];
 ---
 
 <CustomSection
@@ -36,5 +45,60 @@ const {
   {anchorName && <a name={anchorName} class="anchor-name-offset" aria-hidden="true" />}
   <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />
   <Text alignX="center" data-prop="subtext" text={subtext} />
+  {
+    normalizedLogos.length > 0 && (
+      <div
+        class="cta-center-logos"
+        data-editable="array"
+        data-component-key="_component"
+        data-id-key="_component"
+        data-prop="logos"
+      >
+        {normalizedLogos.map((logo) => (
+          <editable-array-item data-component="page-sections/ctas/cta-center/logo">
+            <Image
+              source={logo.source}
+              alt={logo.alt || ""}
+              class="cta-center-logo"
+              rounded={false}
+              aspectRatio="none"
+              sizes="auto"
+              widths={[]}
+              data-prop-src="source"
+              data-prop-alt="alt"
+            />
+          </editable-array-item>
+        ))}
+      </div>
+    )
+  }
   <ButtonGroup class="buttons" buttonSections={buttonSections} alignX="center" />
 </CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .cta-center-logos {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin: 20px auto 0;
+
+      .image {
+        margin: 0;
+      }
+
+      img {
+        display: block;
+        height: auto;
+        /* The source shows these full-size in a much wider column; this
+           section's text column is narrower, so cap the height rather than
+           the source's unscaled width to keep a same-row pair from wrapping. */
+        max-height: 90px;
+        max-width: 100%;
+        width: auto;
+      }
+    }
+  }
+</style>

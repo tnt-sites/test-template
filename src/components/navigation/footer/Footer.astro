@@ -13,6 +13,9 @@ const {
   offices = [],
   legalLinks = [],
   contactTitle = "Contact Us",
+  // The source labels its social column "Connect with us"; the template had no
+  // field for it, so the heading was simply absent.
+  socialsTitle = "",
   phoneText = "",
   phoneHref = "",
   addressHref = "",
@@ -194,6 +197,7 @@ const footerStyle = [
         {
           sharedSocials.length > 0 && (
             <div class="social">
+              {socialsTitle && <span class="fo-title">{socialsTitle}</span>}
               <ButtonGroup alignX="center">
                 {sharedSocials.map((social: any) => (
                   <Button
@@ -504,5 +508,276 @@ const footerStyle = [
         }
       }
     }
+  }
+</style>
+
+<style lang="pcss" is:global>
+  /* ----------------------------------------------------------------------
+     Source footer architecture (newteethhouston.com)
+
+     `mig chrome` fills the footer's data and colour but not its arrangement.
+     The source is a single three-column row inside a 1200px container, with a
+     separate full-bleed dark bar beneath it:
+
+       #fo-contents (row, align center, max 1200, pad 60/20)
+         .fo-info    Contact / phone / address / Office Hours table
+         a.logo      the big apple logo, centred
+         .fo-social  "Connect with us" + three 70px colour circles
+       #copy         full-bleed #292929 bar: copyright, legal links, TNT credit
+
+     The template stacks instead: a full-width logo block on top, then contact
+     and hours side by side with the socials nested inside the contact column,
+     and the legal row on the page background. 864px against the source's 605px,
+     but the shape was the real mismatch.
+
+     `.fo-content` and `.fo-info` are flattened with `display: contents` so
+     their children become items of one grid on the footer's content box —
+     that is what lets the socials sit in their own column while staying
+     nested in the markup.
+
+     DELIBERATELY UNLAYERED. `.fo-content` carries Tailwind's `lg:flex`, and
+     Tailwind's generated utilities are unlayered, so an `@layer source-bridge`
+     rule loses to them however specific it is — an unlayered declaration beats
+     every layered one. Written in the cascade's unlayered origin instead, where
+     specificity decides; every selector is scoped under `.footer`.
+
+     Gated at the source's own 1025px breakpoint — below it the template's
+     stacked footer is already the right answer.
+     ---------------------------------------------------------------------- */
+  @media (min-width: 1025px) {
+    .footer > .custom-section > .outer-content > .content {
+      align-items: center;
+      column-gap: 40px;
+      display: grid;
+      grid-template-areas:
+        "contact logo social"
+        "office  logo social"
+        "hours   logo social"
+        "legal   legal legal";
+      grid-template-columns: 1fr 330px 1fr;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding: 60px 20px 0;
+    }
+
+    /* Flatten the two wrappers so their children land on the grid above. */
+    .footer .fo-content,
+    .footer .fo-content .fo-info {
+      display: contents;
+    }
+
+    .footer .fo-info > .fo-title {
+      grid-area: contact;
+    }
+
+    .footer .fo-info > .office-block {
+      grid-area: office;
+    }
+
+    .footer .fo-hours {
+      grid-area: hours;
+    }
+
+    .footer .fo-info > .social {
+      grid-area: social;
+    }
+
+    .footer .footer-content:has(.footer-logo) {
+      grid-area: logo;
+    }
+
+    .footer .footer-content:has(.footer-legal-text) {
+      grid-area: legal;
+    }
+
+    /* The source separates the bands with the dark bar, not a rule. */
+    .footer .divider {
+      display: none;
+    }
+
+    /* ---- left column: contact + hours, stacked and centred ---- */
+    .footer .fo-info > .fo-title,
+    .footer .fo-hours > .fo-title,
+    .footer .social > .fo-title {
+      color: #292929;
+      display: block;
+      font: 500 14px/1 aktiv-grotesk-extended, sans-serif;
+      letter-spacing: 1px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .footer .social > .fo-title {
+      margin-bottom: 20px;
+    }
+
+    /* The source footer's contact column is title / phone / address — it does
+       not repeat the practice name, which the template prints from
+       `office.name`. */
+    .footer .fo-info .office-block .office-name {
+      display: none;
+    }
+
+    .footer .fo-info > .office-block {
+      text-align: center;
+    }
+
+    .footer .fo-info .pho {
+      display: block;
+      font: 500 26px/1.2 aktiv-grotesk-extended, sans-serif;
+      margin: 10px auto;
+      text-align: center;
+    }
+
+    /* The source footer lists phone and address only — no email. */
+    .footer .fo-info .office-block a[href^="mailto:"] {
+      display: none;
+    }
+
+    /* ---- centre column: the logo ---- */
+    .footer .footer-content:has(.footer-logo) {
+      display: block;
+    }
+
+    .footer .footer-content:has(.footer-logo) .content-container,
+    .footer .footer-content:has(.footer-logo) a {
+      display: block;
+      width: 100%;
+    }
+
+    .footer .footer-content:has(.footer-logo) :is(img, .image) {
+      height: auto;
+      margin: 0 auto;
+      max-width: 330px;
+      width: 100%;
+    }
+
+    /* ---- the full-bleed dark legal bar ---- */
+    /* The source's #copy is a sibling of the 1200px container and spans the
+       whole viewport, so it is pulled back out to full width here. */
+    /* Full-bleed WITHOUT `width: 100vw` + a negative margin: `100vw` counts the
+       scrollbar, so that version pushed the document to 1307px at a 1280
+       viewport — a horizontal scrollbar on desktop, which `mig qa` fails on.
+       Painting the band with a large box-shadow instead keeps the element at
+       its normal width (shadows never add to scrollable overflow), and the
+       clip-path stops the shadow bleeding vertically into the row above. */
+    .footer .footer-content:has(.footer-legal-text) {
+      background-color: #292929;
+      box-shadow: 0 0 0 100vmax #292929;
+      clip-path: inset(0 -100vmax);
+      color: #fff;
+      font: 400 15px/1.5 figtree, sans-serif;
+      margin-top: 60px;
+      padding: 12px 10px;
+    }
+
+    .footer .footer-content:has(.footer-legal-text) .content-container {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 1280px;
+    }
+
+    /* "Site designed and maintained by TNT Dental" is one phrase in the source
+       and was breaking across two lines here. */
+    .footer .footer-legal-line--credit {
+      white-space: nowrap;
+    }
+
+    .footer .footer-content:has(.footer-legal-text) :is(span, p) {
+      color: #fff;
+    }
+
+    .footer .footer-content:has(.footer-legal-text) a {
+      color: #9ecae1;
+      text-decoration: underline;
+    }
+
+    .footer .footer-content:has(.footer-legal-text) a:hover {
+      color: #fff;
+    }
+
+    /* The TNT credit is not one of the legal links and stays white. */
+    .footer .footer-legal-line--credit a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer .footer-legal-line--credit a:hover {
+      color: #9ecae1;
+    }
+  }
+
+  /* ---- colour social circles, at every width ----
+     Also unlayered, and deliberately outside the 1025px gate: the circles are
+     the design at every width, not a desktop enhancement. Below it the
+     template falls back to ghost icon buttons, and `Button`'s
+     `@media (max-width: 768px) { .button { display: block } }` additionally
+     breaks the flex centring the icon relies on. Matched on href because the
+     data model carries no per-network class. */
+  .footer .fo-info > .social {
+    margin: 0 auto;
+    max-width: 220px;
+    width: 100%;
+  }
+
+  .footer .social .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer .social .button-group .button {
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    flex: 0 0 70px;
+    height: 70px;
+    justify-content: center;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+    transition: 0.3s all;
+    width: 70px;
+  }
+
+  .footer .social .button-group .button .icon {
+    color: #fff;
+    font-size: 33px;
+  }
+
+  .footer .social .button-group .button[href*="facebook"] {
+    background-color: #4d70a8;
+  }
+
+  .footer .social .button-group .button[href*="goo.gl"],
+  .footer .social .button-group .button[href*="google"] {
+    background-color: #dc4e41;
+  }
+
+  .footer .social .button-group .button[href*="instagram"] {
+    background-color: transparent;
+    background-image: url("/assets/images/instagram-bg.svg");
+    background-size: cover;
+  }
+
+  .footer .social .button-group .button:hover {
+    background-color: #2b8435;
+    background-image: none;
+  }
+
+  /* `_chrome.pcss`'s ported `footer a` pins every footer link to 17px, which in
+     the legal bar leaves the links a size larger than the text they sit in.
+     Unlayered so it beats that `source-bridge` rule. */
+  .footer #copy a {
+    font-size: inherit;
+    line-height: inherit;
   }
 </style>

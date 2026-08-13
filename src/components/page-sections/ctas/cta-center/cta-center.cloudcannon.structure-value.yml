@@ -16,6 +16,7 @@ value:
       iconPosition: before
       variant: primary
       size: md
+  logos: []
   colorScheme: inherit
   backgroundColor: base
   backgroundGradient: ""

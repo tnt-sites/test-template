@@ -25,6 +25,9 @@ ctaCenter:
       - editor_key: buttonSections
         type: array
         optional: true
+      - editor_key: logos
+        type: array
+        optional: true
       - editor_key: colorScheme
         type: string
         optional: true

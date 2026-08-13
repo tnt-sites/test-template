@@ -19,6 +19,10 @@ link:
   type: url
   comment: The URL to which the button should link.
   hidden: modalTarget
+newTab:
+  type: switch
+  comment: Open the link in a new browser tab.
+  hidden: modalTarget
 modalTarget:
   type: text
   comment: The ID of a modal element to open when the button is clicked.

@@ -18,6 +18,7 @@ const {
   uppercase = false,
   link,
   modalTarget,
+  newTab = false,
   element = "a",
   class: className,
   editable = true,
@@ -92,6 +93,8 @@ const normalizedHideText =
 const normalizedModalTarget =
   typeof modalTarget === "string" ? modalTarget.trim().replace(/^#/, "") : "";
 
+const normalizedNewTab = typeof newTab === "string" ? newTab.trim().toLowerCase() === "true" : !!newTab;
+
 const textDataAttributes =
   editable && customDataProp
     ? {
@@ -114,7 +117,10 @@ const tagProps = normalizedModalTarget
       "aria-controls": normalizedModalTarget,
     }
   : Tag === "a" && link
-    ? { href: link }
+    ? {
+        href: link,
+        ...(normalizedNewTab ? { target: "_blank", rel: "noopener noreferrer" } : {}),
+      }
     : Tag === "button"
       ? { type: "button" }
       : {};
@@ -405,30 +411,74 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
         }
       }
 
+      /* Ported from the source's `[class^=btn]` rule: an unfilled pill with a
+         2px brand rule and a dark uppercase label. `rem` values are converted
+         at the source's `html { font-size: 10px }` (1.4rem -> 14px), matching
+         how the rest of the ported chrome is written.
+
+         The `.radius-default` / `.border-width-default` / `.size-md` pairings
+         below carry an extra class so they outrank those control rules at
+         their default setting, while an editor's explicit radius, border
+         width, or size choice still wins. */
       &.variant-primary {
-        background-color: var(--color-bg-brand);
-        border-color: transparent;
-        color: var(--color-text-on-brand);
+        background-color: transparent;
+        border-color: var(--color-brand);
+        color: var(--color-text-strong);
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 500;
+        padding-block: 20px;
+        padding-inline: 30px;
+        text-transform: uppercase;
+
+        &.radius-default {
+          border-radius: 50px;
+        }
+
+        &.border-width-default {
+          border-width: 2px;
+        }
+
+        &.size-md {
+          font-size: 14px;
+        }
 
         &:hover,
         &:focus {
-          background-color: var(--color-bg-brand-muted);
-          border-color: transparent;
-          color: var(--color-text-on-brand);
+          background-color: var(--color-bg-brand-secondary);
+          border-color: var(--color-bg-brand-secondary);
+          color: var(--color-text-inverse);
         }
       }
 
+      /* The source's `.btn-secondary`: the same pill, filled with the brand
+         blue it outlines. */
       &.variant-secondary {
-        background-color: var(--color-bg-brand-secondary);
-        border-color: transparent;
-          color: var(--color-text-on-brand);
+        background-color: var(--color-bg-brand);
+        border-color: var(--color-brand);
+        color: var(--color-text-strong);
+        font-family: aktiv-grotesk-extended, sans-serif;
+        font-weight: 500;
+        padding-block: 20px;
+        padding-inline: 30px;
+        text-transform: uppercase;
+
+        &.radius-default {
+          border-radius: 50px;
+        }
+
+        &.border-width-default {
+          border-width: 2px;
+        }
+
+        &.size-md {
+          font-size: 14px;
+        }
 
         &:hover,
         &:focus {
-
-          background-color: var(--color-bg-brand-muted);
-          border-color: transparent;
-          color: var(--color-text-on-brand);
+          background-color: var(--color-bg-brand-secondary);
+          border-color: var(--color-bg-brand-secondary);
+          color: var(--color-text-inverse);
         }
       }
 

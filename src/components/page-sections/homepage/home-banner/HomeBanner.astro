@@ -1,0 +1,382 @@
+---
+// Ported from the source homepage's `<section id="banner">`.
+//
+// The markup keeps the source's own id and class names verbatim — #banner,
+// .content, .links, .inner-wrapper, .offer, .spanish-seal — so the CSS ported
+// below applies unchanged instead of needing translation. Props carry the
+// content; the structure is fixed to match the source.
+// Icons are the source's bare `<i class="icon-…">` fontello glyphs, not the
+// template's <Icon> component: <Icon> renders a block
+// `<div class="icon size-lg">` wrapper, which made this row 62px instead of
+// the source's 44px. BaseLayout already loads the same fontello stylesheet the
+// source uses, so the class names carry across verbatim.
+
+type Link = { label?: string; href?: string; separatorBefore?: boolean };
+
+const {
+  id = "banner",
+  eyebrow = "",
+  heading = "",
+  links = [] as Link[],
+  imageLarge = "",
+  imageDesktop = "",
+  imageMobile = "",
+  imageAlt = "",
+  sealImage = "",
+  sealAlt = "",
+  offerPrice = "",
+  offerLabel = "",
+  offerButtonText = "",
+  offerButtonHref = "",
+  providerImage = "",
+  providerAlt = "",
+} = Astro.props;
+---
+
+<section id={id}>
+  <figure>
+    <picture>
+      {imageLarge && <source srcset={imageLarge} media="(min-width: 1501px)" />}
+      {imageDesktop && (
+        <source srcset={imageDesktop} media="(min-width: 1001px) and (max-width: 1500px)" />
+      )}
+      {imageMobile && <source srcset={imageMobile} media="(max-width: 1000px)" />}
+      <img class="thumbnail" src={imageDesktop || imageLarge} alt={imageAlt} />
+    </picture>
+    {sealImage && <img class="spanish-seal" src={sealImage} alt={sealAlt} />}
+  </figure>
+
+  <article>
+    <div class="content">
+      {/* Tags match the source exactly: it puts the small kicker in the `<h1>`
+          and the display line in an `<h2 class="h1">`. */}
+      {eyebrow && <h1 class="h1-small">{eyebrow}</h1>}
+      {heading && <h2 class="h1" set:html={heading} />}
+      {
+        links.length > 0 && (
+          <div class="links">
+            {links.map((link: Link) => (
+              <>
+                {link.separatorBefore && <i class="icon-circle" aria-hidden="true" />}
+                <a href={link.href}>{link.label}</a>
+              </>
+            ))}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="inner-wrapper">
+      {
+        (offerPrice || offerLabel) && (
+          <div class="offer">
+            <div>
+              {offerPrice && (
+                <div class="price">
+                  <sup>$</sup>
+                  {offerPrice}
+                </div>
+              )}
+              {offerLabel && <span>{offerLabel}</span>}
+            </div>
+            {offerButtonText && (
+              <a href={offerButtonHref} class="btn">
+                {offerButtonText}
+              </a>
+            )}
+          </div>
+        )
+      }
+      {providerImage && <img class="invisalign-provider" src={providerImage} alt={providerAlt} />}
+    </div>
+  </article>
+</section>
+
+<style is:global>
+  /* Ported by selector out of the source's _above-the-fold.css / styles.css.
+     rem values converted at the source's `html { font-size: 10px }`, and every
+     media query kept inside the wrapper it came from — flattening those makes
+     the mobile layout apply at all widths.
+
+     Unlayered on purpose: the source's own utility-shaped class names collide
+     with Tailwind's generated utilities, which are themselves unlayered, so no
+     @layer can outrank them. Every selector is scoped under #banner, which
+     wins on specificity instead. */
+  #banner {
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+  }
+
+  #banner video,
+  #banner .thumbnail {
+    max-height: 90vh;
+    min-height: 650px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  #banner figure {
+    line-height: 0;
+    margin: 0;
+    position: relative;
+  }
+
+  #banner article {
+    align-items: flex-end;
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+    padding-bottom: 90px;
+    padding-right: 30px;
+  }
+
+  #banner article .content {
+    background-color: #fff;
+    border-radius: 0 42px 0 0;
+    flex: 1 0 570px;
+    margin-top: -140px;
+    max-width: 570px;
+    padding: 25px 40px 0;
+    position: relative;
+    width: 100%;
+  }
+
+  #banner article .content::before {
+    content: url("/assets/images/curve.svg");
+    line-height: 0;
+    position: absolute;
+    right: -77px;
+    top: 63px;
+    z-index: 1;
+  }
+
+  #banner .links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  #banner .links a {
+    color: #292929;
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  #banner .links a:hover {
+    color: #930e19;
+  }
+
+  #banner .links i {
+    color: #2b8435;
+    font-size: 8px;
+  }
+
+  #banner .inner-wrapper {
+    align-items: center;
+    display: flex;
+    flex: 0 1 100%;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  #banner .invisalign-provider {
+    margin: 0 0 20px 30px;
+  }
+
+  #banner .spanish-seal {
+    border-radius: 50%;
+    bottom: 30px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 16%);
+    position: absolute;
+    right: 5%;
+    z-index: 5;
+  }
+
+  /* `.offer` is a shared source class, but #banner is its only user on this
+     page; scoped here rather than made global. */
+  #banner .offer {
+    align-items: center;
+    border: 1px solid #000;
+    border-radius: 50px;
+    display: flex;
+    gap: 15px;
+    margin: auto auto 20px;
+    padding: 10px 0 10px 20px;
+  }
+
+  #banner .offer > div {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  #banner .offer .price {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 49px;
+    font-weight: 500;
+  }
+
+  #banner .offer span {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  /* The source styles buttons with `[class^=btn]`; ported as `.btn` alone the
+     pill loses its metrics, so the base rule is restated before the override. */
+  #banner .btn {
+    border: 2px solid #9ecae1;
+    border-radius: 50px;
+    color: #292929;
+    cursor: pointer;
+    display: table;
+    font: 500 14px/1.2 aktiv-grotesk-extended, sans-serif;
+    min-width: 320px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    z-index: 1;
+  }
+
+  #banner .offer .btn {
+    background-color: #9ecae1;
+    border: none;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-right: -15px;
+    min-width: unset;
+    padding: 10px 30px;
+  }
+
+  #banner .offer .btn:hover {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    color: #fff;
+  }
+
+  /* These `.offer` overrides live on the bare class in the source, not under
+     `#banner`, so extracting rules by section id alone missed them — at 1280px
+     the price rendered 49px instead of the source's 40px and the pill wrapped
+     to two lines. */
+  @media (max-width: 1370px) {
+    #banner article .content {
+      flex: 1 0 500px;
+      max-width: 500px;
+      padding: 25px 15px 0;
+    }
+
+    #banner .offer .price {
+      font-size: 40px;
+    }
+
+    #banner .offer span {
+      font-size: 18px;
+    }
+
+    #banner .offer .btn {
+      padding: 10px 15px;
+    }
+  }
+
+  @media (max-width: 1220px) {
+    #banner .offer {
+      max-width: 350px;
+      padding-left: 30px;
+    }
+
+    #banner .offer > div {
+      align-items: center;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    #banner .offer span {
+      font-size: 15px;
+    }
+
+    #banner .invisalign-provider {
+      max-width: 180px;
+    }
+  }
+
+  @media (max-width: 1090px) {
+    #banner .offer {
+      margin: auto 0 20px;
+    }
+
+    #banner article {
+      flex-wrap: wrap;
+      padding-right: 0;
+    }
+
+    #banner article .content {
+      flex: 1 0 550px;
+      max-width: 550px;
+      padding: 25px 40px 0;
+    }
+
+    #banner .inner-wrapper {
+      flex: 0 1 100%;
+      justify-content: space-around;
+      margin: 50px auto 0;
+      max-width: 800px;
+    }
+
+    #banner .invisalign-provider {
+      margin-left: 0;
+    }
+
+    #banner .links {
+      max-width: 520px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    #banner article .content {
+      flex: unset;
+      max-width: 380px;
+      padding: 50px 20px 0;
+    }
+
+    #banner article .content::before {
+      right: -76px;
+      top: 64px;
+    }
+
+    #banner .inner-wrapper {
+      flex-direction: column;
+    }
+
+    #banner .spanish-seal {
+      inset: auto auto 110px 20px;
+    }
+
+    #banner .links {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    #banner .links a {
+      font-size: 13px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    #banner .links a {
+      font-size: 11px;
+    }
+  }
+</style>

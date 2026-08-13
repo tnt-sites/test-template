@@ -1,0 +1,96 @@
+---
+// The source's pre-footer CTA band.
+//
+// On newteethhouston.com this `<section id="ready">` sits *outside* `<main>`,
+// between `</main>` and `<footer>`, and is byte-identical on all 30 pages. The
+// migrator segments within `roots: [main]`, so it never saw this band at all —
+// it is migrated as chrome rather than as a page section, which is also the
+// right CMS shape: one editable copy in siteInfo.json instead of the same CTA
+// repeated in 30 pages' content.
+//
+// Markup keeps the source's own id and class names (`#ready`, `.h2`, `.btn`)
+// verbatim so the ported CSS below applies unchanged.
+
+type Props = {
+  heading?: string;
+  buttonText?: string;
+  href?: string;
+  newTab?: boolean;
+  enabled?: boolean;
+};
+
+const {
+  heading = "Ready to Get Started?",
+  buttonText = "Book Online",
+  href = "",
+  newTab = true,
+  enabled = true,
+} = Astro.props as Props;
+---
+
+{
+  enabled && href && (
+    <section id="ready">
+      <span class="h2">{heading}</span>
+      <a href={href} class="btn" {...(newTab ? { target: "_blank", rel: "noopener" } : {})}>
+        {buttonText}
+      </a>
+    </section>
+  )
+}
+
+<style is:global>
+  /* Ported from the source's styles.css / _above-the-fold.css.
+     `rem` values are converted at the source's `html { font-size: 10px }`
+     (1.4rem -> 14px), and every selector is scoped under `#ready` so it beats
+     Tailwind's own unlayered `.h2`/`.btn`-shaped utilities on specificity —
+     no @layer can outrank an unlayered generated utility. */
+  @layer source-bridge {
+    #ready {
+      background-color: #9ecae1;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    /* Source: `h2, .h2, .dividerLead, .more-to-explore span`. Restated here
+       rather than inherited: the template styles `.h2` differently, and this
+       is one of the shared display classes a section-by-section port routinely
+       references but never defines. */
+    #ready .h2 {
+      color: #292929;
+      display: block;
+      font: 400 46px/1.2 spirits-soft, serif;
+      margin: 0 auto;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    /* Source uses the attribute selector `[class^=btn]`, which carries the
+       min-width and the 1.4rem/1.2 metrics. Ported as `.btn` alone the pill
+       shrink-wraps its label, so the full rule is restated. */
+    #ready .btn {
+      border: 2px solid #000;
+      border-radius: 50px;
+      color: #292929;
+      cursor: pointer;
+      display: table;
+      font: 500 14px/1.2 aktiv-grotesk-extended, sans-serif;
+      margin: 30px auto 0;
+      min-width: 320px;
+      padding: 20px 30px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.3s all;
+      vertical-align: middle;
+      z-index: 1;
+    }
+
+    #ready .btn:hover {
+      background-color: #2b8435;
+      border-color: #2b8435;
+      color: #fff;
+    }
+  }
+</style>

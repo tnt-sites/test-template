@@ -1,0 +1,346 @@
+---
+// Ported from the source's interior `<div id="interior-banner">`.
+//
+// The source builds this banner in JavaScript, not markup: scripts.js moves
+// `#page h1, h2#append` into `#page-title`, wraps the leading prose into
+// `<article id="intro">`, lifts `#main-img` out of that prose, then wraps
+// `.contain` + `#main-img` in a `.flex-title` div. The raw HTML is therefore
+// nothing like what ships — the post-JS shape is:
+//
+//   #interior-banner > .flex-title > .contain > div > #page-title + #intro
+//                                  > #main-img
+//
+// That shape is reproduced statically here, keeping the source's own ids and
+// class names so the CSS ported below applies unchanged. The layout it
+// produces — a full-bleed 720px image with a white card notched into the
+// bottom-left corner — is not a two-column split, which is why the migration's
+// `hero-split` mapping was wrong for these pages.
+//
+// The eyebrow is the source's `<h1>` and the display line its `<h2 id="append">`;
+// that ordering is deliberate in the source and kept for SEO parity. Both reuse
+// the global `.h1-small` / `.h1` display classes already ported into
+// `styles/base/_typography.pcss`.
+
+// @ts-ignore
+import markdownit from "markdown-it";
+
+const md = markdownit({ html: true });
+
+type Button = { text?: string; link?: string };
+
+const {
+  // The ported CSS below is scoped by `#interior-banner`; changing this id
+  // detaches the styles, so it is not exposed as an editable input.
+  id = "interior-banner",
+  eyebrow = "",
+  heading = "",
+  subtext = "",
+  imageSource = "",
+  imageAlt = "",
+  buttons = [] as Button[],
+  // Four source pages widen the card and its content in a per-page `<style>`
+  // block that outranks the base rule at every breakpoint. Carried as props
+  // rather than page CSS so an editor can see and change them.
+  cardMaxWidth = "",
+  contentMaxWidth = "",
+  // `.meet .flex-title .contain { padding-bottom: 0 }` — a body-class rule the
+  // source applies to Dr. Jetton's page alone.
+  cardPaddingBottom = "",
+  // meet-the-team's per-page block flips the mobile stack so the card leads and
+  // the photo follows.
+  mobileImageBelow = false,
+  imagePositionMobile = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const headingHtml = heading ? md.renderInline(heading) : "";
+const subtextHtml = subtext ? md.render(subtext) : "";
+const hasImage = typeof imageSource === "string" && imageSource.trim() !== "";
+const hasIntro = Boolean(subtextHtml) || buttons.length > 0;
+
+const toLength = (value: unknown) =>
+  typeof value === "number"
+    ? `${value}px`
+    : typeof value === "string" && value.trim()
+      ? value.trim()
+      : "";
+
+// Set as custom properties so the widths win inside the responsive rules too,
+// which is how the source's page-level overrides behave.
+const bannerStyle =
+  [
+    toLength(cardMaxWidth) && `--interior-banner-card-max: ${toLength(cardMaxWidth)}`,
+    toLength(contentMaxWidth) && `--interior-banner-content-max: ${toLength(contentMaxWidth)}`,
+    toLength(cardPaddingBottom) &&
+      `--interior-banner-card-pad-bottom: ${toLength(cardPaddingBottom)}`,
+    typeof imagePositionMobile === "string" &&
+      imagePositionMobile.trim() &&
+      `--interior-banner-image-position-mobile: ${imagePositionMobile.trim()}`,
+  ]
+    .filter(Boolean)
+    .join("; ") || undefined;
+---
+
+<section
+  id={id}
+  class:list={[
+    { "banner-no-img": !hasImage, "mobile-image-below": Boolean(mobileImageBelow) },
+    className,
+  ]}
+  style={bannerStyle}
+  {...htmlAttributes}
+>
+  {
+    /* `.flex-title` is the wrapper scripts.js adds only when the page has a
+      banner image — without one the source leaves `.contain` on its own inside
+      a solid-colour band. */
+  }
+  <div class:list={[{ "flex-title": hasImage }]}>
+    <div class="contain">
+      <div>
+        <div id="page-title">
+          {
+            eyebrow && (
+              <h1 class="h1-small" data-editable="text" data-prop="eyebrow">
+                {eyebrow}
+              </h1>
+            )
+          }
+          {
+            heading && (
+              <h2
+                id="append"
+                class="h1"
+                data-editable="text"
+                data-prop="heading"
+                set:html={headingHtml}
+              />
+            )
+          }
+        </div>
+        {
+          hasIntro && (
+            <article id="intro">
+              {subtextHtml && <Fragment set:html={subtextHtml} />}
+              {/* The source puts each button in its own `<p>`, which is what
+                stacks them; a flex button group renders them in a row and
+                loses 91px of card height. */}
+              {buttons.map((button: Button) => (
+                <p>
+                  <a class="btn" href={button.link}>
+                    {button.text}
+                  </a>
+                </p>
+              ))}
+            </article>
+          )
+        }
+      </div>
+    </div>
+    {
+      hasImage && (
+        <img
+          id="main-img"
+          src={imageSource}
+          alt={imageAlt}
+          data-editable="image"
+          data-prop-src="imageSource"
+          data-prop-alt="imageAlt"
+        />
+      )
+    }
+  </div>
+</section>
+
+<style is:global>
+  /* Ported by selector out of the source's _above-the-fold.css. rem values
+     converted at the source's `html { font-size: 10px }`, and every media
+     query kept inside the wrapper it came from.
+
+     Unlayered on purpose, like the other ported sections: the source's own
+     utility-shaped class names (`.contain`, `.flex-title`) collide with
+     Tailwind's generated utilities, which are themselves unlayered, so no
+     @layer can outrank them. Every selector is scoped under #interior-banner,
+     which wins on specificity instead. */
+  #interior-banner {
+    padding: 0;
+    position: relative;
+    text-align: center;
+  }
+
+  /* The source's `[class*=flex] { display: flex }` catch-all is what makes
+     `.flex-title` a flex container — it never declares `display` itself.
+     Restated here rather than porting the attribute selector globally. */
+  #interior-banner .flex-title {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100%;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  #interior-banner .flex-title .contain {
+    background-color: #fff;
+    border-radius: 0 42px 0 0;
+    bottom: 0;
+    left: 0;
+    max-width: var(--interior-banner-card-max, 600px);
+    padding: 60px 20px var(--interior-banner-card-pad-bottom, 40px);
+    position: absolute;
+    text-align: left;
+    width: 100%;
+  }
+
+  /* The notch that curves the card's top-right corner back into the image. */
+  #interior-banner .flex-title .contain::before {
+    bottom: -1px;
+    content: url("/assets/images/curve.svg");
+    line-height: 0;
+    position: absolute;
+    right: -77px;
+    z-index: 1;
+  }
+
+  #interior-banner .flex-title .contain > div {
+    margin: auto;
+    max-width: var(--interior-banner-content-max, 450px);
+  }
+
+  #interior-banner .flex-title #page-title {
+    margin: auto;
+  }
+
+  #interior-banner #intro {
+    margin: 0 auto;
+  }
+
+  /* The source's global `p` rule, restated: the template's own layered prose
+     styles outrank `@layer source-base`, where `mig tokens` put it. */
+  #interior-banner #intro p,
+  #interior-banner #intro li {
+    color: #000;
+    font:
+      400 17px/1.666 figtree,
+      sans-serif;
+    margin: 10px auto;
+  }
+
+  #interior-banner #main-img {
+    flex: 0 1 auto;
+    min-height: 720px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* The source styles buttons with `[class^=btn]`; ported as `.btn` alone the
+     pill loses its metrics, so the base rule is restated here. */
+  #interior-banner #intro .btn {
+    border: 2px solid #9ecae1;
+    border-radius: 50px;
+    color: #292929;
+    cursor: pointer;
+    display: table;
+    font:
+      500 14px/1.2 aktiv-grotesk-extended,
+      sans-serif;
+    min-width: 320px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    vertical-align: middle;
+    z-index: 1;
+  }
+
+  #interior-banner #intro .btn:hover {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    color: #fff;
+  }
+
+  /* Pages whose source banner has no image (`body.banner-no-img`) drop the
+     photo for a solid band with the card centred in it. */
+  #interior-banner.banner-no-img {
+    background-color: #9ecae1;
+    padding: 200px 20px 60px;
+  }
+
+  #interior-banner.banner-no-img .contain {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  @media (max-width: 1100px) {
+    #interior-banner .flex-title .contain {
+      max-width: var(--interior-banner-card-max, 540px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #interior-banner {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    #interior-banner .flex-title {
+      gap: 0;
+    }
+
+    /* Out of the corner and back into flow: `column-reverse` puts the image
+       above the card, which then overlaps it by 2vh. */
+    #interior-banner .flex-title .contain {
+      border-radius: 30px;
+      margin: -2vh auto 0;
+      max-width: var(--interior-banner-card-max, 650px);
+      padding: 40px 20px var(--interior-banner-card-pad-bottom, 40px);
+      position: relative;
+    }
+
+    /* meet-the-team leads with the card on small screens and drops the photo
+       below it. The source pairs this with 170px of top padding to clear its
+       fixed, transparent mobile header; the template's header is opaque and in
+       flow, so that clearance would render as dead white space and is omitted. */
+    #interior-banner.mobile-image-below .flex-title {
+      flex-direction: column;
+    }
+
+    #interior-banner.mobile-image-below .flex-title .contain {
+      margin-top: 0;
+    }
+
+    #interior-banner .flex-title .contain > div {
+      max-width: var(--interior-banner-content-max, 550px);
+      text-align: center;
+    }
+
+    #interior-banner #main-img {
+      min-height: 300px;
+      object-position: var(--interior-banner-image-position-mobile, 80% 0%);
+    }
+
+    #interior-banner #intro .btn {
+      margin: 10px auto 0;
+    }
+
+    #interior-banner.banner-no-img {
+      padding: 120px 20px 60px;
+    }
+  }
+
+  /* The source drops every display heading to 36px here. The rule is global in
+     the source but was not ported with the `.h1` class into
+     `styles/base/_typography.pcss`, so it is restated for this section. */
+  @media (max-width: 650px) {
+    #interior-banner #page-title .h1 {
+      font-size: 36px;
+    }
+  }
+</style>

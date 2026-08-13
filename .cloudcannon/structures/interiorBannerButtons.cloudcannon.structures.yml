@@ -1,0 +1,27 @@
+interiorBannerButtons:
+  style: modal
+  values:
+    - label: Banner Button
+      icon: link
+      description: A pill button stacked at the end of the banner's intro copy.
+      value:
+        text: ""
+        link: ""
+      preview:
+        text:
+          - key: text
+          - Banner Button
+        subtext:
+          - key: link
+          - Add a link
+      picker_preview:
+        text: Banner Button
+        subtext: A pill button stacked at the end of the banner's intro copy.
+        icon: link
+      _inputs:
+        text:
+          type: text
+          comment: Button label.
+        link:
+          type: text
+          comment: Where the button goes. Use an anchor like #offer-modal to open a modal.

@@ -181,17 +181,24 @@ const htmlAttributes = Object.fromEntries(
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 0;
         margin: 40px auto 0;
       }
 
+      /* Source renders these as a hairline table: every cell shares its
+         left/bottom border with its neighbours, and only the outer edge of
+         the grid (top row, right column) adds the matching extra side. The
+         column count changes per breakpoint below, so which cell counts as
+         "top row" / "right column" changes with it. */
       .services-grid-items > editable-array-item,
-      .services-grid-items > .services-grid-item {
-        background-color: #fff;
-        box-shadow: 0 3px 6px rgb(0 0 0 / 60%);
+      .services-grid-items > .services-grid-item:not(.services-grid-cta) {
+        background-color: transparent;
+        border-bottom: 1px solid #000;
+        border-left: 1px solid #000;
+        box-shadow: none;
         display: flex;
+        flex: 0 1 380px;
         flex-direction: column;
-        flex: 0 1 360px;
         overflow: hidden;
       }
 
@@ -200,30 +207,86 @@ const htmlAttributes = Object.fromEntries(
         flex: 1 1 min(100%, 820px);
       }
 
-      .services-grid-figure {
-        margin: 0;
-        transition: 0.4s all;
+      @media (min-width: 1081px) {
+        .services-grid-items > editable-array-item:nth-of-type(-n + 3) {
+          border-top: 1px solid #000;
+        }
 
-        img {
-          display: block;
+        .services-grid-items > editable-array-item:nth-of-type(3n) {
+          border-right: 1px solid #000;
+        }
+      }
+
+      /* Just above the tablet breakpoint, three 380px cells plus their
+         borders no longer fit the narrower container — the source shrinks
+         each cell to 340px here so the 3-column layout still holds. */
+      @media (min-width: 1081px) and (max-width: 1200px) {
+        .services-grid-items > editable-array-item {
+          flex-basis: 340px;
+        }
+      }
+
+      @media (min-width: 831px) and (max-width: 1080px) {
+        .services-grid-items > editable-array-item:nth-of-type(-n + 2) {
+          border-top: 1px solid #000;
+        }
+
+        .services-grid-items > editable-array-item:nth-of-type(2n) {
+          border-right: 1px solid #000;
+        }
+      }
+
+      @media (max-width: 830px) {
+        .services-grid-items {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .services-grid-items > editable-array-item,
+        .services-grid-items > .services-grid-item:not(.services-grid-cta) {
+          border: 1px solid #000;
+          border-bottom: none;
+          max-width: 420px;
           width: 100%;
         }
 
-        .image{margin-top: 0;}
+        .services-grid-items > editable-array-item:last-of-type {
+          border-bottom: 1px solid #000;
+        }
+      }
+
+      .services-grid-figure {
+        margin: 0;
+        padding-top: 30px;
+        text-align: center;
+        transition: 0.4s all;
+
+        /* The source never scales these — each SVG carries its own small
+           intrinsic width/height (~40-80px) and renders at that size. A
+           `width: 100%` here stretches an icon to the full card width. */
+        img {
+          display: inline-block;
+          height: auto;
+          max-width: 100%;
+          width: auto;
+        }
+
+        .image {
+          margin-top: 0;
+        }
       }
 
       .services-grid-content {
-        padding: 0 20px 20px;
+        padding: 15px 30px 20px;
       }
 
       .services-grid-title {
+        color: #292929;
         display: block;
-        font-family: var(--font-heading);
-        font-size: clamp(1.75rem, 2.8vw, 1.875rem);
-        line-height: 1.2;
+        font: 400 35px/1.1 spirits-soft, serif;
         margin: 20px 0 0;
         text-align: center;
-        text-transform: none;
+        text-transform: uppercase;
 
         span {
           display: block;
@@ -231,38 +294,55 @@ const htmlAttributes = Object.fromEntries(
         }
 
         a {
-          color: var(--color-text);
+          color: #000;
           text-decoration: none;
         }
       }
 
       .services-grid-title:hover a,
       .services-grid-title:focus-within a {
-        color: var(--color-brand);
+        color: #2b8435;
       }
 
       .services-grid-links {
         display: table;
         margin: 20px auto;
-       
 
         editable-array-item {
           display: list-item;
-          line-height: 1.2;
-          margin: 10px auto;
+          line-height: 1.6;
+          margin: 0 0 10px 26px;
+          overflow: hidden;
+          padding-left: 24px;
+          position: relative;
+        }
+
+        /* Ported from the source's `main ul li:before` marker — restated here
+           because these array items are `<editable-array-item>`, not `<li>`,
+           so they never matched that selector. */
+        editable-array-item::before {
+          color: #2b8435;
+          content: "\e81a";
+          font-family: "fontello";
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          left: 0;
+          line-height: 1;
+          margin: 0;
+          position: absolute;
+          top: 2px;
         }
 
         a {
-          color: var(--color-text);
+          color: #000;
           text-decoration: none;
         }
       }
 
       .services-grid-links editable-array-item:hover a,
-      .services-grid-links editable-array-item:focus-within a,
-      .services-grid-links li:hover a,
-      .services-grid-links li:focus-within a {
-        color: var(--color-brand-muted);
+      .services-grid-links editable-array-item:focus-within a {
+        color: #2b8435;
       }
 
       .services-grid-cta,
@@ -325,29 +405,13 @@ const htmlAttributes = Object.fromEntries(
         color: #fff;
       }
 
-      @media (max-width: 1200px) {
-        .services-grid-items > editable-array-item,
-        .services-grid-items > .services-grid-item {
-          flex-basis: calc(50% - 10px);
-        }
-
-        .services-grid-items > editable-array-item.is-wide,
-        .services-grid-items > .services-grid-item.is-wide,
-        .services-grid-cta.is-wide,
-        #all.is-wide {
-          flex-basis: 100%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .services-grid-items > editable-array-item,
-        .services-grid-items > .services-grid-item,
-        .services-grid-items > editable-array-item.is-wide,
-        .services-grid-items > .services-grid-item.is-wide,
+      /* The CTA tile (`#all` / `.services-grid-cta`) is unrelated to the
+         bordered item grid above — it's an optional, source-less extra some
+         template instances of this component may enable — but it should
+         still stack full-width once the grid itself has gone single-column. */
+      @media (max-width: 830px) {
         .services-grid-cta,
-        #all,
-        .services-grid-cta.is-wide,
-        #all.is-wide {
+        #all {
           flex-basis: 100%;
         }
       }

@@ -1,0 +1,7 @@
+---
+const { source = "", alt = "", _component, ...htmlAttributes } = Astro.props;
+
+if (!_component && !source) return;
+---
+
+<img src={source} alt={alt} data-editable="image" data-prop-src="source" data-prop-alt="alt" {...htmlAttributes} />

@@ -1,768 +1,206 @@
 ---
-_schema: default
-title: Preventive Dentistry
+_mig:
+  v: "0.1.0"
+  gen: "content"
+  hash: "291da19fa0db6b3e"
+title: Preventive Dentistry Houston, TX | New Teeth Dental Solutions
+description: Keep your smile safe from tooth decay and gum disease with preventive dentistry in Houston at New Teeth Dental Solutions - Houston.
+canonical: /preventive-dentistry/
 pageSections:
-  - _component: page-sections/heroes/hero-split
-    id: ''
-    eyebrow: Service - City, ST
-    heading: Preventive Dentistry
-    subtext: Subtitle placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Hero image
-    imageAspectRatio: none
-    buttonSections: []
-    reverse: false
-    colorScheme: contrast
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source: /src/assets/images/component-library/castle.jpg
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: text
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    reverse: false
-    colorScheme: default
+  - _component: page-sections/heroes/interior-banner
+    eyebrow: Preventive Dentistry Houston
+    heading: The Best of the Basics
+    subtext: "While [Dr. Jetton](/meet-dr-jetton/) can provide all types of dental services, some of the most effective are the ones you’re likely familiar with: checkups and cleanings. These and other preventive dentistry treatments in Houston help patients avoid the most common dental issues and catch them early if they pop up. They offer peace of mind while protecting your health, so reach out today to schedule your next appointment."
+    imageSource: /assets/images/preventive-dentistry-1.webp
+    imageAlt: Man in white shirt smiling
+    buttons: []
+  - _component: page-sections/info-blocks/why
+    id: ""
+    heading: Why Choose New Teeth Dental Solutions - Houston for Preventive Dentistry?
     backgroundColor: base
-    backgroundGradient: ''
+    backgroundGradient: ""
     backgroundImage:
-      source:
-      alt:
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
-    rounded: false
+    items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trusted by Houston for Over 45 Years
+        iconName: check
+        iconColor: default
+      - _component: building-blocks/core-elements/list/list-item
+        text: Able to See the Entire Family
+        iconName: check
+        iconColor: default
+      - _component: building-blocks/core-elements/list/list-item
+        text: High-Quality & Budget-Friendly
+        iconName: check
+        iconColor: default
   - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
+    id: ""
+    heading: What to Expect at Your Dental Appointment
+    anchorName: ""
     subtext: |-
-      Subtext placeholder text that will be replaced with actual content.
+      Here is what we will do when you come in to make your experience as pleasant as possible:
 
-      &nbsp;
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
+      We know that receiving quality service is a huge consideration when choosing which dentist to visit. We are here to help transform your smile because we want to make sure that you are getting the most out of your teeth every day.
+
+      - **We will partner with you to provide you with an oral health experience.** Our approach to dentistry is centered around the philosophy that every mouth is unique and deserves special attention. Because of this, Dr. Jetton will collaborate with you so that you can make the best decision for your oral health together.
+      - **Education is an important part of every visit.** We don’t just care for your teeth and send you on your way. We will also teach you how to care for your teeth and maintain a vibrant smile during all of your daily activities. Good oral hygiene habits are essential for maintaining a healthy smile.
+      - **We provide a comfortable and relaxing environment.** Dentists make some people nervous. We understand that and take special care to make our office as comfortable as possible. Our patients are heard and treated with compassion. You are a member of our family, and we want you to feel at home with us.
+    imageSource: /assets/images/preventive-dentistry-2.webp
+    imageAlt: Female patient having teeth cleaned during preventive dentistry appointment in Houston
+    buttonSections: []
     reverse: true
     colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
+    backgroundColor: none
+    backgroundGradient: ""
     backgroundImage:
-      source:
-      alt:
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
-  - _component: page-sections/ctas/cta-split-learn-more
-    id: ''
-    heading: Keep Your Smile Healthy <span class="heading-font">Year-Round</span>
-    anchorName: ''
-    subtext: >-
-      Our preventive dentistry appointments focus on early detection,
-      professional cleaning, and practical home-care guidance.
-
-
-      &nbsp;
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Preventive dentistry consultation
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Book Preventive Visit
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    learnMoreButtonText: Learn More About Preventive Dentistry
-    learnMoreSections:
-      - _component: building-blocks/core-elements/heading
-        id: ''
-        text: What’s Included in Preventive Care
-        level: h3
-        size: lg
-        alignX: start
-        iconPosition: before
-      - _component: building-blocks/core-elements/text
-        id: ''
-        text: >-
-          Preventive care includes routine exams, digital x-rays when needed,
-          personalized hygiene recommendations, and early treatment planning to
-          help avoid more complex procedures.
-        alignX: start
-      - _component: building-blocks/wrappers/split
-        id: ''
-        label: Learn Something
-        firstColumnContentSections:
-          - _component: building-blocks/core-elements/image
-            id: ''
-            source: /src/assets/images/component-library/profile.jpg
-            alt: Sad man
-            rounded: false
-            aspectRatio: none
-            positionVertical: center
-            positionHorizontal: center
-            priority: false
-        secondColumnContentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Look at the Sad Man
-            level: h2
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/simple-text
-            id: ''
-            text: He is so sad.
-            alignX: start
-            size: md
-        distributionMode: quarter-three-quarters
-        fixedWidth:
-        minSplitWidth: 768
-        verticalAlignment: center
-        reverse: false
-        reverseOrderOnMobile: false
-        gap: lg
+  - _component: page-sections/ctas/cta-split
+    id: ""
+    heading: Dental Checkups & Cleanings
+    anchorName: ""
+    subtext: While we’ll definitely keep an eye out for cavities during your checkup, we’ll also look for things like the early signs of oral cancer. That way, patients can get treatment quickly. With a professional cleaning, plaque and bacteria buildup from the hard-to-reach areas of your mouth is completely eliminated. As a bonus, this also takes care of minor surface stains to help your smile stay white!
+    imageSource: /assets/images/preventive-dentistry-3.webp
+    imageAlt: Bearded male patient receiving dental checkup and cleaning
+    buttonSections: []
     reverse: false
     colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
+    backgroundColor: surface
+    backgroundGradient: ""
     backgroundImage:
-      source:
-      alt:
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Checkups
-    anchorName: checkups
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Modal Button
-        hideText: false
-        link: ''
-        modalTarget: sample-modal
-        iconName:
-        iconPosition: before
-        variant: primary
-        size: md
-        width: lg
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/info-blocks/emergency-grid
-    id: ''
-    heading: Most Common Dental Emergencies
-    subtext: >-
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    emergencyItems:
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Toothache
-        iconPreset: toothache
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Toothaches
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Chipped Tooth
-        iconPreset: chipped-tooth
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Chipped Tooth
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Cracked Tooth
-        iconPreset: cracked-tooth
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Cracked Tooth
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Sensitivity to Hot and Cold
-        iconPreset: sensitivity-hot-cold
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Sensitivity to Hot and Cold
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Loose Tooth
-        iconPreset: loose-tooth
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Loose Tooth
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Jaw Pain or Clenching
-        iconPreset: jaw-pain-clenching
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Jaw Pain or Clenching
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Knocked-Out Tooth
-        iconPreset: knocked-out-tooth
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Knocked-Out Tooth
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Lost Filling or Crown
-        iconPreset: lost-filling-crown
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Lost Filling or Crown
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Broken Denture
-        iconPreset: broken-denture
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Broken Denture
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Gum, Lip or Tongue Injury
-        iconPreset: gum-lip-tongue-injury
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Gum, Lip or Tongue Injury
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-      - _component: page-sections/info-blocks/emergency-grid/emergency-item
-        title: Something Stuck Between Teeth
-        iconPreset: stuck-between-teeth
-        contentSections:
-          - _component: building-blocks/core-elements/heading
-            id: ''
-            text: Something Stuck Between Teeth
-            level: h3
-            size: default
-            alignX: start
-            iconName:
-            iconPosition: before
-          - _component: building-blocks/core-elements/text
-            id: ''
-            text: >-
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            alignX: start
-    enableModals: true
-    backgroundColor: base
-    backgroundGradient: ''
-  - _component: page-sections/features/office-tour
-    id: ''
-    heading: Office Tour Heading
-    tourSlides:
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/castle.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/dunedin-cliff.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/profile5.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-    slideNumbers: false
-    floatingArrows: false
+  - _component: page-sections/ctas/cta-split
+    id: ""
+    heading: Gum Disease Treatment
+    anchorName: ""
+    subtext: Are your gums easily irritated or swollen? Do they bleed when you brush and floss them? If your gums have been red or sensitive for a while, there is a good chance that you could be dealing with the early stages of gum disease, otherwise known as gingivitis. We can help you regain a happy and healthy smile with treatments like scaling and root planing and laser gum treatment.
+    imageSource: /assets/images/preventive-dentistry-4.webp
+    imageAlt: Female patient opening mouth for gum disease treatment
+    buttonSections: []
+    reverse: true
+    colorScheme: default
     backgroundColor: none
-    backgroundGradient: ''
+    backgroundGradient: ""
     backgroundImage:
-      source:
-      alt:
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
-    class: peek
+    rounded: false
+  - _component: page-sections/ctas/cta-split
+    id: ""
+    heading: Nightguards for Teeth Grinding (Bruxism)
+    anchorName: ""
+    subtext: Millions of people unconsciously grind their teeth while they sleep—are you one of them? Do you wake up with headaches, a sore jaw, or have teeth that look worn down? If so, we can provide you with a custom-made nightguard. This comfortable mouthpiece is only worn to bed and will protect your teeth, dental work, and jaw muscles while you rest.
+    imageSource: /assets/images/preventive-dentistry-5.webp
+    imageAlt: Nightguard in light blue container
+    buttonSections: []
+    reverse: false
+    colorScheme: default
+    backgroundColor: surface
+    backgroundGradient: ""
+    backgroundImage:
+      source: ""
+      alt: ""
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/ctas/cta-split
+    id: ""
+    heading: TMJ Treatment
+    anchorName: ""
+    subtext: We can help patients dealing with issues that not only affect their teeth, but their jaw joint as well (known as the temporomandibular joint, or TMJ). Things like teeth grinding or an uneven bite can cause stiffness, pain, and headaches like migraines. Our team can identify the root cause of the discomfort, correct any imbalances, and create custom mouthguards that take the stress off of overworked and strained facial muscles.
+    imageSource: /assets/images/preventive-dentistry-6.webp
+    imageAlt: Woman sitting on couch with jaw pain
+    buttonSections: []
+    reverse: true
+    colorScheme: default
+    backgroundColor: none
+    backgroundGradient: ""
+    backgroundImage:
+      source: ""
+      alt: ""
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
   - _component: page-sections/ctas/more-to-explore
-    id: ''
-    heading: More to <span class="color">Explore</span>
+    id: ""
+    heading: More to Explore
     buttonSections:
       - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
+        text: I Have a Cavity or Broken Tooth
         hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
+        link: /restorative-dentistry/
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    maxContentWidth:
+      - _component: building-blocks/core-elements/button
+        text: I am Missing One or More Teeth
+        hideText: false
+        link: /missing-teeth/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: I Want to Enhance My Smile
+        hideText: false
+        link: /cosmetic-dentistry/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: I am Scared of the Dentist
+        hideText: false
+        link: /sedation-dentistry/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: I Have a Dental Emergency
+        hideText: false
+        link: /emergency-dentistry/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: View Our Services
+        hideText: false
+        link: /our-services/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+    maxContentWidth: null
     paddingHorizontal: sm
     paddingVertical: sm
     colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
+    backgroundColor: surface
+    backgroundGradient: ""
     backgroundImage:
-      source:
-      alt:
+      source: null
+      alt: null
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/forms/appointment-form
-    id: ''
-    heading: Request an Appointment
-    subtext: ''
-    formAction: ./
-    formBlocks:
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Name
-        name: name
-        type: text
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: Are You a...
-        name: patient
-        required: true
-        options:
-          - value: new-patient
-            label: New Patient
-          - value: existing-patient
-            label: Existing Patient
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Phone
-        name: phone
-        type: tel
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: Preferred Method of Communication
-        name: communication
-        required: false
-        options:
-          - value: phone
-            label: Phone
-          - value: text
-            label: Text
-          - value: email
-            label: Email
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Email
-        name: email
-        type: email
-        required: true
-      - _component: building-blocks/forms/select
-        id: ''
-        label: How'd You Hear About Us?
-        name: hear
-        required: true
-        options:
-          - value: search-engine
-            label: Search Engine
-          - value: family-friend
-            label: Family/Friend
-          - value: promotion
-            label: Promotion
-          - value: social-media
-            label: Social Media
-          - value: other
-            label: Other
-        placeholder: Select one
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Your Dental Insurance
-        name: insurance
-        type: text
-        required: false
-      - _component: building-blocks/forms/select
-        id: ''
-        label: I Am Interested In...
-        name: interested
-        required: false
-        options:
-          - value: dental-checkup-cleaning
-            label: Dental Checkup & Cleaning
-          - value: traditional-braces
-            label: Traditional Braces
-          - value: invisalign
-            label: Invisalign Clear Aligners
-          - value: veneers
-            label: Veneers
-          - value: teeth-whitening
-            label: Teeth Whitening
-          - value: gummy-smile
-            label: Gummy Smile
-          - value: dental-implants
-            label: Dental Implants
-          - value: dentures
-            label: Dentures
-          - value: crowns
-            label: Crowns
-          - value: bridges
-            label: Bridges
-          - value: fillings
-            label: Fillings
-          - value: extractions
-            label: Extractions
-          - value: emergency-dental-care
-            label: Emergency Dental Care
-          - value: other
-            label: Other
-        placeholder: Select one
-      - _component: building-blocks/forms/choice-group
-        id: ''
-        title: Preferred Day(s) of the Week
-        name: day
-        required: false
-        options:
-          - value: monday
-            label: Monday
-            checked: false
-          - value: tuesday
-            label: Tuesday
-            checked: false
-          - value: wednesday
-            label: Wednesday
-            checked: false
-          - value: thursday
-            label: Thursday
-            checked: false
-          - value: friday
-            label: Friday
-            checked: false
-        orientation: horizontal
-        multiple: true
-      - _component: building-blocks/forms/textarea
-        id: ''
-        label: Questions or Comments
-        name: comment
-        required: false
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _subject
-        value: Request Appointment
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _redirect
-        value: /thanks
-      - _component: building-blocks/forms/submit
-        id: ''
-        text: Submit
-        variant: primary
-        size: md
-        iconPosition: before
-        hideText: false
-        disabled: false
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/forms/referral-form
-    id: ''
-    heading: Refer a Patient
-    subtext: ''
-    formAction: ./
-    formBlocks:
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Your Name
-        name: name
-        type: text
-        placeholder:
-        required: true
-        value:
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Your Email
-        name: email
-        type: email
-        required: true
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Your Phone
-        name: phone
-        type: tel
-        required: false
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Patient's Name
-        name: patient-name
-        type: text
-        required: true
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Patient's Email
-        name: patient-email
-        type: email
-        required: true
-      - _component: building-blocks/forms/input
-        id: ''
-        label: Patient's Phone
-        name: patient-phone
-        type: tel
-        required: true
-      - _component: building-blocks/forms/textarea
-        id: ''
-        label: Reason for Referral
-        name: reason
-        required: true
-      - _component: building-blocks/forms/textarea
-        id: ''
-        label: Description of Previous Treatments
-        name: treatments
-        required: true
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _subject
-        value: Refer a Patient
-      - _component: building-blocks/forms/hidden
-        id: ''
-        name: _redirect
-        value: /thanks
-      - _component: building-blocks/forms/submit
-        id: ''
-        text: Submit
-        variant: primary
-        size: md
-        iconPosition: before
-        hideText: false
-        disabled: false
-    backgroundColor: none
-    backgroundGradient: linear-gradient(0deg,rgba(11, 79, 86, 1) 0%, rgba(55, 167, 81, 1) 100%)
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/info-blocks/modal
-    id: sample-modal
-    closeLabel: Close modal
-    showCloseButton: true
-    class: ''
-    contentSections:
-      - _component: building-blocks/core-elements/heading
-        id: ''
-        text: Modal Heading
-        level: h3
-        size: default
-        alignX: start
-        iconName:
-        iconPosition: before
-      - _component: building-blocks/core-elements/text
-        id: ''
-        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        alignX: start
-      - _component: building-blocks/core-elements/video
-        type: youtube
-        id: 0NyaGRNH2zE
-        title: Some video
-        source: ''
-        thumbnail: ''
-  - _component: page-sections/info-blocks/icon-grid-sheet
-    id: ''
-    heading: Icon Grid Sheet Heading
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-description: ''
+_migUnmapped:
+  sections:
+    - component: page-sections/ctas/more-to-explore
+      fields:
+        - field: subtext
+          content: More to Explore
 ---

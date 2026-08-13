@@ -1,0 +1,64 @@
+eyebrow:
+  type: text
+  comment: Small uppercase line above the headline. This is the page's <h1>.
+heading:
+  type: markdown
+  comment: Display headline shown under the eyebrow.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Intro copy shown inside the white card.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: true
+    numberedlist: false
+imageSource:
+  type: image
+  comment: Full-width banner photo. Leave blank to fall back to a solid colour band.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the banner photo.
+buttons:
+  type: array
+  comment: Optional call-to-action buttons, stacked at the end of the intro copy.
+  options:
+    structures: _structures.interiorBannerButtons
+cardMaxWidth:
+  type: number
+  comment: Width of the white card, in pixels. Leave blank for the default (600 desktop, 540 below 1100px, 650 below 1024px).
+contentMaxWidth:
+  type: number
+  comment: Width of the text inside the card, in pixels. Leave blank for the default (450 desktop, 550 below 1024px).
+cardPaddingBottom:
+  type: number
+  comment: Space below the card's content, in pixels. Leave blank for the default (40).
+mobileImageBelow:
+  type: switch
+  comment: On screens under 1024px, show the card first and the photo below it instead of the other way around.
+imagePositionMobile:
+  type: text
+  comment: How the photo is framed under 1024px, as a CSS object-position. Leave blank for the default (80% 0%).

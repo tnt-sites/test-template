@@ -1,0 +1,24 @@
+label: Interior Banner
+icon: hero
+description: Full-width banner photo with the page title and intro in a card notched into the bottom-left corner.
+value:
+  _component: page-sections/heroes/interior-banner
+  eyebrow: Eyebrow text
+  heading: Heading text
+  subtext: Intro copy that will be replaced with actual content.
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt: Banner image
+  buttons: []
+preview:
+  text:
+    - Interior Banner
+  subtext:
+    - key: heading
+  icon: hero
+  image:
+    - key: imageSource
+picker_preview:
+  text: Interior Banner
+  subtext: Full-width banner photo with the page title and intro card.
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/interior-banner/interior-banner.cloudcannon.inputs.yml

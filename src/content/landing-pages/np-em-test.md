@@ -71,7 +71,7 @@ landingFooter:
       - name: Sitemap
         path: sitemap.html
       - name: Privacy Policy
-        path: privacy-policy.html
+        path: /privacy-policy/
     mapEmbedUrl: >-
       https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.989778614253!2d-96.7204146237577!3d32.977671473580536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c23374904d86b%3A0x1d6d5ef027560e48!2sTNT%20Dental!5e0!3m2!1sen!2sus!4v1780452835122!5m2!1sen!2sus
     backgroundImage:

@@ -30,6 +30,14 @@ function hasCurrentChild(item) {
   return Boolean(item.children?.some((child) => hasCurrentChild(child)));
 }
 
+// A nav item that opts into `target: "_blank"` (an external booking link, e.g.)
+// gets `rel="noopener noreferrer"` unless it names its own `rel`.
+function linkTargetAttrs(item) {
+  const target = item.target?.trim() || undefined;
+  const rel = item.rel?.trim() || (target === "_blank" ? "noopener noreferrer" : undefined);
+  return { target, rel };
+}
+
 // Create navigation item data
 function createNavItemData(item, level, parentGroupId) {
   const hasChildren = Boolean(item.children?.length);
@@ -135,7 +143,11 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           if (!itemData.hasChildren) {
             return (
               <li class="nav-item">
-                <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+                <a
+                  href={itemData.path}
+                  aria-current={itemData.isCurrent ? "page" : undefined}
+                  {...linkTargetAttrs(itemData)}
+                >
                   {itemData.name}
                 </a>
               </li>
@@ -154,7 +166,11 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 autocomplete="off"
                 checked={itemData.hasCurrent}
               />
-              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+              <a
+                href={itemData.path}
+                aria-current={itemData.isCurrent ? "page" : undefined}
+                {...linkTargetAttrs(itemData)}
+              >
                 {itemData.name}
               </a>
               <label
@@ -186,6 +202,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           <a
                             href={childData.path}
                             aria-current={childData.isCurrent ? "page" : undefined}
+                            {...linkTargetAttrs(childData)}
                           >
                             {childData.name}
                           </a>
@@ -208,6 +225,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                         <a
                           href={childData.path}
                           aria-current={childData.isCurrent ? "page" : undefined}
+                          {...linkTargetAttrs(childData)}
                         >
                           {childData.name}
                         </a>
@@ -243,6 +261,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                                   <a
                                     href={grandChildData.path}
                                     aria-current={grandChildData.isCurrent ? "page" : undefined}
+                                    {...linkTargetAttrs(grandChildData)}
                                   >
                                     {grandChildData.name}
                                   </a>
@@ -708,5 +727,46 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         transform: translateX(0);
       }
     }
+  }
+
+  /* The source's drawer socials are one row of 50px white circles on a grey
+     strip. `Button`'s 160px `min-width` — and its `display: block` under 768px
+     — made each a full-width block, so three of them wrapped onto two rows.
+     DELIBERATELY UNLAYERED so it beats those `@layer components` rules. */
+  .mobile-socials {
+    background-color: rgb(102 102 102 / 10%);
+    flex-wrap: nowrap;
+    gap: 10px;
+    min-height: 64px;
+    padding: 5px;
+  }
+
+  .mobile-socials .button {
+    align-items: center;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 50px;
+    height: 50px;
+    justify-content: center;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+    transition: 0.3s all;
+    width: 50px;
+  }
+
+  .mobile-socials .button .icon {
+    color: #292929;
+    font-size: 20px;
+  }
+
+  .mobile-socials .button:hover {
+    background-color: #2b8435;
+  }
+
+  .mobile-socials .button:hover .icon {
+    color: #fff;
   }
 </style>

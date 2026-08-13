@@ -37,6 +37,29 @@ buttonSections:
   comment: Buttons for calls-to-action.
   options:
     structures: _structures.buttonSections
+logos:
+  type: array
+  comment: Optional row of logos displayed under the text.
+  options:
+    structures:
+      values:
+        - label: Logo
+          icon: workspace_premium
+          value:
+            _component: page-sections/ctas/cta-center/logo
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the logo image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
 colorScheme:
   type: select
   comment: Color scheme theme for the CTA.

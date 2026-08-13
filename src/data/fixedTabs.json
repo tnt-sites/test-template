@@ -3,40 +3,33 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "https://book.modento.io/newteethimplantanddenturesolutionshouston/patient-details?liine_session_id=ad43c904-ef7e-4ced-9766-f28ecb9cfb49",
+      "target": "_blank",
       "icon": "calendar-days",
-      "textMobile": "Request",
-      "textStrong": " an Appointment"
+      "textMobile": "Book",
+      "textStrong": " Online"
     },
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+17134971814",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call ",
+      "textStrong": "Us"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/yKiUd1qd98aRDyfV9",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
       "textAfter": "Map"
     },
     {
-      "itemClass": "fr",
-      "enabled": true,
-      "href": "for-patients.html#forms",
-      "icon": "document-arrow-down",
-      "textMobile": "Download ",
-      "textStrong": "Forms "
-    },
-    {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/newteethtexas/",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,65 +38,11 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/New+Teeth+Dental+Solutions+-+Houston/@29.683385,-95.2769297,982m/data=!3m1!1e3!4m8!3m7!1s0x864096283aa6f507:0xbb283c9619d36aa7!8m2!3d29.683385!4d-95.2769297!9m1!1b1!16s%2Fg%2F1263_4dby!5m1!1e1?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",
       "textStrong": " Reviews "
-    },
-    {
-      "itemClass": "ig",
-      "enabled": false,
-      "href": "https://www.instagram.com/",
-      "target": "_blank",
-      "icon": "social/instagram",
-      "textMobile": "Follow ",
-      "textStrong": "Instagram"
-    },
-    {
-      "itemClass": "tw",
-      "enabled": false,
-      "href": "https://x.com/",
-      "target": "_blank",
-      "icon": "social/x",
-      "textMobile": "Follow ",
-      "textStrong": "Twitter"
-    },
-    {
-      "itemClass": "tt",
-      "enabled": false,
-      "href": "https://www.tiktok.com/",
-      "target": "_blank",
-      "icon": "social/tiktok",
-      "textMobile": "Follow ",
-      "textStrong": "TikTok"
-    },
-    {
-      "itemClass": "yp",
-      "enabled": false,
-      "href": "https://www.yelp.com/",
-      "target": "_blank",
-      "icon": "social/yelp",
-      "textMobile": "Read ",
-      "textStrong": "Yelp Reviews"
-    },
-    {
-      "itemClass": "bs",
-      "enabled": false,
-      "href": "https://bsky.app/",
-      "target": "_blank",
-      "icon": "social/bluesky",
-      "textMobile": "Follow ",
-      "textStrong": "Bluesky"
-    },
-    {
-      "itemClass": "yt",
-      "enabled": false,
-      "href": "https://www.youtube.com/",
-      "target": "_blank",
-      "icon": "social/youtube",
-      "textMobile": "Watch ",
-      "textStrong": "YouTube"
     }
   ]
 }

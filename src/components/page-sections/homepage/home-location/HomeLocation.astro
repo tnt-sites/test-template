@@ -1,0 +1,137 @@
+---
+// Ported from the source homepage's `<section id="location">` — directions
+// bullets beside an embedded Google map.
+const {
+  id = "location",
+  heading = "",
+  items = [] as string[],
+  buttonText = "",
+  buttonHref = "",
+  mapEmbedUrl = "",
+} = Astro.props;
+---
+
+<section id={id}>
+  <div class="flex container align-center justify-between gap-50">
+    <article>
+      {heading && <span class="h2">{heading}</span>}
+      {
+        items.length > 0 && (
+          <ul>
+            {items.map((item: string) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        )
+      }
+      {
+        buttonText && (
+          <a href={buttonHref} class="btn">
+            {buttonText}
+          </a>
+        )
+      }
+    </article>
+    {
+      mapEmbedUrl && (
+        <figure>
+          <iframe
+            src={mapEmbedUrl}
+            width="480"
+            height="480"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Map to New Teeth Dental Solutions - Houston"
+          />
+        </figure>
+      )
+    }
+  </div>
+</section>
+
+<style is:global>
+  #location {
+    padding: 100px 20px;
+  }
+
+  /* `.gap-50` is exactly the shape Tailwind v4 claims as a dynamic utility
+     (`gap: calc(var(--spacing) * 50)` = 200px). Its generated rule is
+     unlayered, so no @layer outranks it — restating the source's real 50px at
+     id specificity is what wins. Same reasoning for .container/.flex. */
+  #location .flex.container {
+    align-items: center;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  #location ul {
+    margin: 20px 0 15px;
+  }
+
+  #location ul li {
+    margin-left: 0;
+  }
+
+  #location figure {
+    line-height: 0;
+    margin: 0;
+  }
+
+  #location iframe {
+    border: none;
+    border-radius: 21px;
+  }
+
+  #location .btn {
+    border: 2px solid #9ecae1;
+    border-radius: 50px;
+    color: #292929;
+    cursor: pointer;
+    display: table;
+    font: 500 14px/1.2 aktiv-grotesk-extended, sans-serif;
+    min-width: 320px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    z-index: 1;
+  }
+
+  #location .btn:hover {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    #location {
+      padding: 60px 20px;
+    }
+
+    #location .h2 {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 250px;
+    }
+
+    #location figure {
+      display: none;
+    }
+
+    #location article {
+      text-align: center;
+    }
+
+    #location .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

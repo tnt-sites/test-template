@@ -1,0 +1,150 @@
+---
+// Ported from the source homepage's `<section id="meet">` — the doctor split:
+// photo on one half, bordered copy panel on the other.
+const {
+  id = "meet",
+  eyebrow = "",
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonHref = "",
+  image = "",
+  imageAlt = "",
+} = Astro.props;
+---
+
+<section id={id}>
+  <div class="flex container">
+    <figure>
+      {image && <img src={image} alt={imageAlt} />}
+    </figure>
+    <article>
+      <div class="content">
+        {eyebrow && <span class="h1-small" set:html={eyebrow} />}
+        {/* The source uses `<h3 class="h2">` here, not `<h2>`. Keeping the tag
+            matters: `#meet article h2 { margin-bottom: 20px }` is written
+            against the tag, so an `<h2>` picks up 20px the source never has. */}
+        {heading && <h3 class="h2">{heading}</h3>}
+        {text && <p>{text}</p>}
+        {
+          buttonText && (
+            <a href={buttonHref} class="btn">
+              {buttonText}
+            </a>
+          )
+        }
+      </div>
+    </article>
+  </div>
+</section>
+
+<style is:global>
+  /* Unlayered + id-scoped: `.container` and `.flex` collide with Tailwind's own
+     utilities, which are unlayered, so specificity is what decides. */
+  #meet .flex.container {
+    align-items: stretch;
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  #meet article,
+  #meet figure {
+    width: 50%;
+  }
+
+  #meet figure {
+    line-height: 0;
+    margin: 0;
+  }
+
+  /* The source's site-wide `img { max-width: 100%; display: block; margin: 0
+     auto }` — a global reset that is invisible in this section's own rules but
+     which it depends on. Restated scoped rather than site-wide, where it would
+     re-centre every image in the template. Note it does NOT stretch the image:
+     the photo renders at its natural 700px inside a 720px column, and forcing
+     width/height:100% here made the section 20px too tall. */
+  #meet figure img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  #meet article {
+    align-items: center;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+  }
+
+  #meet article .content {
+    margin: auto;
+    max-width: 440px;
+  }
+
+  /* Source selector is `#meet article h2` — tag only. Broadening it to `.h2`
+     makes it hit this section's `<h3 class="h2">`, which the source never
+     does, and adds 20px the original has not got. */
+  #meet article h2 {
+    margin-bottom: 20px;
+  }
+
+  #meet article p {
+    margin-left: 0;
+    max-width: 420px;
+  }
+
+  /* The source's `[class^=btn]` base rule, restated — ported as `.btn` alone it
+     loses min-width and its 1.4rem/1.2 metrics and shrink-wraps the label. */
+  #meet .btn {
+    border: 2px solid #9ecae1;
+    border-radius: 50px;
+    color: #292929;
+    cursor: pointer;
+    display: table;
+    font: 500 14px/1.2 aktiv-grotesk-extended, sans-serif;
+    margin-top: 30px;
+    min-width: 320px;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.3s all;
+    z-index: 1;
+  }
+
+  #meet .btn:hover {
+    background-color: #2b8435;
+    border-color: #2b8435;
+    color: #fff;
+  }
+
+  @media (max-width: 1024px) {
+    #meet {
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    #meet .flex.container {
+      flex-wrap: wrap;
+    }
+
+    #meet article,
+    #meet figure {
+      width: 100%;
+    }
+
+    #meet article {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    #meet .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

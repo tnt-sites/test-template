@@ -35,9 +35,8 @@ const htmlAttributes = Object.fromEntries(
   {...htmlAttributes}
 >
   <Heading
-    class="more-to-explore__heading mt-12"
+    class="more-to-explore__heading"
     level="h6"
-    size="xl"
     alignX="center"
     text={heading}
     data-prop="heading"
@@ -46,18 +45,45 @@ const htmlAttributes = Object.fromEntries(
 </CustomSection>
 
 <style is:global>
-  .more-to-explore {
-    .more-to-explore__heading {
-      font-size: 70px;
-      line-height:;
+  /* Ported from the source's `_above-the-fold.css` / `styles.css`.
+     Selectors are scoped under `.more-to-explore` so they clear the template's
+     own `.heading` rules in `@layer components`, which `source-bridge`
+     outranks, and any unlayered Tailwind utility of the same shape, which no
+     layer can outrank — only specificity. */
+  @layer source-bridge {
+    /* Source: `.more-to-explore { padding: 40px 10px 40px }`. `CustomSection`
+       puts its padding on the inner `.content` wrapper via a `pad-y-*` token,
+       and the nearest token is roughly double the source's 40px — the section
+       measured 86px taller than the source with the content itself matching to
+       the pixel. Pinned to the source's own value instead. */
+    .more-to-explore .content {
+      padding: 40px 10px;
     }
+
+    /* Source: `h2, .h2, .dividerLead, .more-to-explore span`. The heading here
+       is one member of that shared display group, so it carries the group's
+       full rule — 46px spirits-soft, uppercase — not the template's heading
+       ramp. It is deliberately NOT highlighted: the source paints the whole
+       phrase #292929, with no accent on any word, so the heading takes no
+       `.color`/`.heading-color` span. Re-adding one is the recurring mistake. */
+    .more-to-explore .more-to-explore__heading {
+      color: #292929;
+      font: 400 46px/1.2 spirits-soft, serif;
+
+      /* The source's heading is an inline `<span>` whose only vertical space
+         is the section's own `padding: 40px 10px`. The template gives every
+         `.heading` a `margin-top: var(--spacing-lg)` the source has no
+         equivalent for. */
+      margin: 0;
+      position: relative;
+      text-transform: uppercase;
+    }
+
+    /* Source never shrinks this heading: the 650px rule that drops `h2, .h2`
+       to 36px lists neither `.more-to-explore span` nor `.dividerLead`. */
   }
 
   @layer components {
-    .more-to-explore__heading .heading-text .color {
-      color: var(--color-brand);
-    }
-
     .more-to-explore .buttons,
     .more-to-explore .buttons > editable-array {
       display: flex;

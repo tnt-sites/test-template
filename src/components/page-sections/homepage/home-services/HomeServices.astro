@@ -1,0 +1,193 @@
+---
+// Ported from the source homepage's `<section id="services">` — the featured
+// services list (icon + label pills) beside a photo with an overlapping seal.
+type Link = { label?: string; href?: string; icon?: string; iconAlt?: string };
+
+const {
+  id = "services",
+  eyebrow = "",
+  heading = "",
+  text = "",
+  links = [] as Link[],
+  image = "",
+  imageAlt = "",
+  sealImage = "",
+  sealAlt = "",
+  sealHref = "",
+} = Astro.props;
+---
+
+<section id={id}>
+  <div class="flex container justify-between align-center">
+    <article>
+      {eyebrow && <h2 class="h1-small">{eyebrow}</h2>}
+      {heading && <span class="h2" set:html={heading} />}
+      {text && <p>{text}</p>}
+      {
+        links.length > 0 && (
+          <div class="links">
+            {links.map((link: Link) => (
+              <a href={link.href}>
+                <span>{link.icon && <img src={link.icon} alt={link.iconAlt} />}</span>
+                <h3>{link.label}</h3>
+              </a>
+            ))}
+          </div>
+        )
+      }
+    </article>
+    <figure>
+      {image && <img class="img" src={image} alt={imageAlt} />}
+      {
+        sealImage && (
+          <a href={sealHref} class="seal">
+            <img src={sealImage} alt={sealAlt} />
+          </a>
+        )
+      }
+    </figure>
+  </div>
+</section>
+
+<style is:global>
+  #services {
+    background-color: #ececec;
+    padding: 100px 20px;
+  }
+
+  /* Source-wide `[class*=flex] { display: flex }` plus `.container`,
+     `.justify-between` and `.align-center`, restated at id specificity so
+     Tailwind's same-named unlayered utilities cannot win. */
+  #services .flex.container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  #services figure {
+    margin: 0;
+    position: relative;
+  }
+
+  #services figure img {
+    border-radius: 21px;
+  }
+
+  #services figure .seal {
+    bottom: 30px;
+    left: -100px;
+    position: absolute;
+    transition: all 0.3s ease;
+  }
+
+  #services figure .seal:hover {
+    transform: scale(1.05);
+  }
+
+  #services article {
+    max-width: 480px;
+  }
+
+  #services article p {
+    margin: 20px 0;
+  }
+
+  #services .links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #services .links a {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #292929;
+    border-radius: 30px;
+    display: flex;
+    gap: 20px;
+    height: 56px;
+    justify-content: flex-start;
+    padding: 0 5px 0 15px;
+    text-decoration: none;
+  }
+
+  #services .links a::after {
+    align-items: center;
+    background-color: #2b8435;
+    border-radius: 50%;
+    content: url("/assets/images/btn-arrow.svg");
+    display: flex;
+    flex: 0 1 44px;
+    height: 44px;
+    justify-content: center;
+    line-height: 0;
+    margin-left: auto;
+    width: 44px;
+  }
+
+  #services .links a span {
+    flex: 0 1 45px;
+  }
+
+  #services .links a h3 {
+    color: #292929;
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  #services .links a:hover {
+    background-color: #9ecae1;
+  }
+
+  @media (max-width: 1150px) {
+    #services figure .seal {
+      left: -20px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #services {
+      margin-top: 80px;
+      padding-top: 0;
+    }
+
+    #services .flex.container {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
+
+    #services article {
+      text-align: center;
+    }
+
+    #services figure {
+      margin-top: -80px;
+    }
+
+    #services figure .seal {
+      inset: unset;
+      margin: -95px auto 0;
+      position: relative;
+    }
+  }
+
+  @media (max-width: 550px) {
+    #services .links a {
+      padding-left: 20px;
+    }
+
+    #services .links a h3 {
+      font-size: 14px;
+    }
+
+    #services .links a span {
+      display: none;
+    }
+  }
+</style>

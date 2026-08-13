@@ -1,76 +1,176 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/assets/images/logo-header.svg",
+  "logoAlt": "New Teeth Dental Solutions Houston logo",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
+      "name": "About Us",
+      "path": "/meet-dr-jetton/",
+      "children": [
+        {
+          "name": "Meet Dr. Jetton",
+          "path": "/meet-dr-jetton/",
+          "children": []
+        },
+        {
+          "name": "Meet the Team",
+          "path": "/meet-the-team/",
+          "children": []
+        },
+        {
+          "name": "Tour Our Office",
+          "path": "/tour-our-office/",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "children": []
+        }
+      ]
     },
     {
       "name": "Our Services",
-      "path": "/our-services",
+      "path": "/our-services/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "I Need a Checkup & Cleaning",
+          "path": "/preventive-dentistry/",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Children's Dentistry",
+              "path": "/childrens-dentistry/",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "I Have a Cavity or Broken Tooth",
+          "path": "/restorative-dentistry/",
+          "children": []
+        },
+        {
+          "name": "I am Missing One or More Teeth",
+          "path": "/missing-teeth/",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "I Want to Enhance My Smile",
+          "path": "/cosmetic-dentistry/",
+          "children": [
+            {
+              "name": "Invisalign",
+              "path": "/invisalign/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "I am Scared of the Dentist",
+          "path": "/sedation-dentistry/",
+          "children": []
+        },
+        {
+          "name": "I Have a Dental Emergency",
+          "path": "/emergency-dentistry/",
+          "children": [
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-treatment/",
+              "children": []
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/tooth-extractions/",
+              "children": []
+            },
+            {
+              "name": "Wisdom Tooth Extractions",
+              "path": "/wisdom-tooth-extractions/",
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "For Patients",
+      "path": "/for-patients/",
+      "children": [
+        {
+          "name": "Your First Visit",
+          "path": "/for-patients/",
+          "children": []
+        },
+        {
+          "name": "Dental Insurance & Financing",
+          "path": "/for-patients/#insurance",
+          "children": []
+        },
+        {
+          "name": "Pay Online",
+          "path": "/for-patients/#payonline",
+          "children": []
+        },
+        {
+          "name": "In-House Savings Plan",
+          "path": "/for-patients/#membership",
+          "children": []
+        },
+        {
+          "name": "Special Offers",
+          "path": "/special-offers/",
+          "children": [
+            {
+              "name": "FREE Invisalign Consultation",
+              "path": "/free-invisalign-consultation/",
+              "children": []
+            },
+            {
+              "name": "Dental Exam Special",
+              "path": "/dental-exam-special/",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reviews",
+      "path": "/reviews/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
+      "name": "Contact",
+      "path": "/contact/",
+      "children": [
+        {
+          "name": "Office Info",
+          "path": "/contact/",
+          "children": []
+        },
+        {
+          "name": "Book Online",
+          "path": "https://book.modento.io/newteethimplantanddenturesolutionshouston/patient-details?liine_session_id=ad43c904-ef7e-4ced-9766-f28ecb9cfb49",
+          "target": "_blank",
+          "children": []
+        }
+      ]
     }
   ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "Book Online",
       "hideText": false,
-      "link": "/request-an-appointment/",
+      "link": "https://book.modento.io/newteethimplantanddenturesolutionshouston/patient-details?liine_session_id=ad43c904-ef7e-4ced-9766-f28ecb9cfb49",
       "modalTarget": "",
       "iconName": "",
       "iconPosition": "before",
@@ -81,7 +181,8 @@
       "borderWidth": "default",
       "borderColor": "default",
       "textColor": "default",
-      "uppercase": false
+      "uppercase": true,
+      "newTab": true
     }
   ]
 }

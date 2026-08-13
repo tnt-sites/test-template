@@ -1,20 +1,20 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
+  "colorBrand": "#9ecae1",
+  "colorBrandSecondary": "#2b8435",
+  "colorBrandTertiary": "#349f40",
+  "colorBrandSubtle": "#000000",
   "colorBrandOn": "",
-  "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
+  "colorTextOnBrand": "#000000",
+  "colorLink": "#2b8435",
+  "colorLinkHover": "#930e19",
   "extraColors": [],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "figtree, sans-serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "spirits-soft, serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "https://use.typekit.net/qzh1ryp.css"
   ]
 }

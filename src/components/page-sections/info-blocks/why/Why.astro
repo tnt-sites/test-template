@@ -1,7 +1,22 @@
 ---
+// Ported from the source's `div.why` — the three-across "Why Choose ..." strip
+// that sits under the interior banner intro on every service page.
+//
+// The template's generic Heading + List rendering was visually nothing like the
+// source: a 46px serif h2 instead of a 15px uppercase extended-grotesk kicker,
+// and a vertical list with an inline check glyph instead of three centred
+// columns, each with the two-tone why-icon.svg set *above* its text.
+//
+// The CSS below is the source's own `.why` block, restated verbatim. It is
+// deliberately UNLAYERED: the layer order declared in BaseLayout.astro puts
+// `source-bridge` after `page-sections`, and `source-bridge` carries the global
+// `main ul li { margin: 0 0 10px 26px; padding-left: 24px }` list rule plus its
+// fontello `::before` check marker. A layered rule here — at any specificity —
+// would lose to it. Unlayered CSS outranks every layer, which is what the
+// ported homepage sections do too.
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
-import List from "@core-elements/list/List.astro";
+import ListItem from "@core-elements/list/ListItem.astro";
 
 const {
   heading = "",
@@ -11,33 +26,135 @@ const {
   items = [],
   class: className,
   editable = true,
+  _component,
   ...rest
 } = Astro.props;
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
 );
+
+const hasItems = Array.isArray(items) && items.length > 0;
+const hasHeading = typeof heading === "string" && heading.trim().length > 0;
+
+if (!_component && !hasHeading && !hasItems) return;
+
+// Mirrors the attributes List.astro emits, so the array stays editable in
+// CloudCannon now that this component renders its own `<ul>` instead.
+const arrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-prop": "items",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+    }
+  : {};
 ---
 
 <CustomSection
   class:list={["why", className]}
+  paddingHorizontal="none"
+  paddingVertical="none"
   colorScheme="default"
   backgroundColor={backgroundColor}
   backgroundGradient={backgroundGradient}
   backgroundImage={backgroundImage}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+  <Heading level="h2" class="why-heading" data-prop="heading" text={heading} />
 
-  <List items={items} direction="vertical" alignX="center" />
+  {
+    hasItems && (
+      <ul class="why-list" role="list" {...arrayDataAttributes}>
+        {items.map((item: any) => (
+          <editable-array-item data-component="building-blocks/core-elements/list/list-item">
+            <ListItem text={item.text} editable={editable} showIcon={false} />
+          </editable-array-item>
+        ))}
+      </ul>
+    )
+  }
 </CustomSection>
 
-<style>
-  .why .heading-text {
+<style is:global>
+  /* Source: `.why { padding: 40px 20px 0; position: relative; }` — the
+     background stays on the `backgroundColor` prop so the section can be
+     recoloured from the CMS. */
+  .why {
+    padding: 40px 20px 0;
+    position: relative;
+  }
+
+  /* Source: `.why h2`. Overrides the site-wide 46px spirits-soft h2. */
+  .why .why-heading {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin: 0 0 20px;
+    text-align: center;
     text-transform: uppercase;
   }
 
-  .list {
-    margin-bottom: var(--spacing-lg);
+  /* Source: `.why ul`. */
+  .why .why-list {
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: visible;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* The `editable-array-item` wrapper CloudCannon needs sits between the `<ul>`
+     and each `<li>`, so it — not the `<li>` — is the flex item. The source's
+     box metrics therefore go on the wrapper and the type on the `<li>`. */
+  .why .why-list > editable-array-item {
+    display: block;
+    margin: 10px;
+    max-width: 280px;
+    width: 100%;
+  }
+
+  /* Source: `.why ul li`. */
+  .why .why-list li {
+    color: #000;
+    display: block;
+    font-family: figtree, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .why .why-list li > p {
+    color: inherit;
+    display: inline;
+    font: inherit;
+    margin: 0;
+  }
+
+  /* Source: `.why ul li:before` — replaces the global fontello check marker
+     with the two-tone SVG, set above the text rather than beside it. */
+  .why .why-list li::before {
+    content: url("/assets/images/why-icon.svg");
+    display: block;
+    font-size: inherit;
+    inset: unset;
+    margin: 0 0 10px;
+    padding-left: 0;
+    position: relative;
+  }
+
+  @media (max-width: 1024px) {
+    .why .why-list {
+      align-items: center;
+      flex-direction: column;
+    }
   }
 </style>

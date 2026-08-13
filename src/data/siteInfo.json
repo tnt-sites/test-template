@@ -1,81 +1,94 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "New Teeth Dental Solutions - Houston",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/newteethtexas/"
+    },
+    {
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://maps.app.goo.gl/yKiUd1qd98aRDyfV9"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
-    },
-    {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "link": "https://www.instagram.com/newteethdentaltx/"
     }
   ],
   "offices": [
     {
-      "name": null,
+      "name": "New Teeth Dental Solutions - Houston",
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "4005 Broadway St"
+          ],
+          "city": "Houston",
+          "state": "TX",
+          "postalCode": "77087",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://maps.app.goo.gl/yKiUd1qd98aRDyfV9"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(713) 497-1814",
+          "href": "tel:+17134971814"
         }
       ],
       "emails": [
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "display": "front@newteethtexas.com",
+          "href": "mailto:front@newteethtexas.com"
         }
       ],
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 4:00 pm",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 4:00 pm",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 4:00 pm",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 4:00 pm",
           "note": ""
         },
         {
           "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
-          "note": ""
+          "hours": "8:00 am - 3:00 pm",
+          "note": "Every other Friday"
         }
       ],
       "officeHoursNote": ""
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
-  "recaptchaSiteKey": ""
+  "recaptchaSiteKey": "",
+  "readyBar": {
+    "enabled": true,
+    "heading": "Ready to Get Started?",
+    "buttonText": "Book Online",
+    "href": "https://book.modento.io/newteethimplantanddenturesolutionshouston/patient-details?liine_session_id=ad43c904-ef7e-4ced-9766-f28ecb9cfb49",
+    "newTab": true
+  }
 }

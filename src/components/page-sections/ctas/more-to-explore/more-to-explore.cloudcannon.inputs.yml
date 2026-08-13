@@ -1,6 +1,6 @@
 heading:
   type: markdown
-  comment: Headline for the CTA. Supports inline span wrappers/classes for highlighted words.
+  comment: Headline for the CTA. Rendered as one solid colour — the source design has no highlighted word here, so do not add a `.color` span.
   options:
     blockquote: false
     bold: true

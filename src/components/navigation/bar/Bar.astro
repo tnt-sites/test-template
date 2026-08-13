@@ -14,6 +14,14 @@ function hasCurrentChild(item) {
   return Boolean(item.children?.some((child) => hasCurrentChild(child)));
 }
 
+// A nav item that opts into `target: "_blank"` (an external booking link, e.g.)
+// gets `rel="noopener noreferrer"` unless it names its own `rel`.
+function linkTargetAttrs(item) {
+  const target = item.target?.trim() || undefined;
+  const rel = item.rel?.trim() || (target === "_blank" ? "noopener noreferrer" : undefined);
+  return { target, rel };
+}
+
 // Helper function to create navigation item data
 function createNavItemData(item, level, parentGroupId) {
   const hasChildren = Boolean(item.children?.length);
@@ -41,7 +49,11 @@ function createNavItemData(item, level, parentGroupId) {
         if (!itemData.hasChildren) {
           return (
             <li class="nav-item">
-              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+              <a
+                href={itemData.path}
+                aria-current={itemData.isCurrent ? "page" : undefined}
+                {...linkTargetAttrs(itemData)}
+              >
                 {itemData.name}
               </a>
             </li>
@@ -59,7 +71,11 @@ function createNavItemData(item, level, parentGroupId) {
               aria-controls={itemData.contentId}
               autocomplete="off"
             />
-            <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+            <a
+              href={itemData.path}
+              aria-current={itemData.isCurrent ? "page" : undefined}
+              {...linkTargetAttrs(itemData)}
+            >
               {itemData.name}
             </a>
             <label
@@ -91,6 +107,7 @@ function createNavItemData(item, level, parentGroupId) {
                         <a
                           href={childData.path}
                           aria-current={childData.isCurrent ? "page" : undefined}
+                          {...linkTargetAttrs(childData)}
                         >
                           {childData.name}
                         </a>
@@ -112,6 +129,7 @@ function createNavItemData(item, level, parentGroupId) {
                       <a
                         href={childData.path}
                         aria-current={childData.isCurrent ? "page" : undefined}
+                        {...linkTargetAttrs(childData)}
                       >
                         {childData.name}
                       </a>
@@ -147,6 +165,7 @@ function createNavItemData(item, level, parentGroupId) {
                                 <a
                                   href={grandChildData.path}
                                   aria-current={grandChildData.isCurrent ? "page" : undefined}
+                                  {...linkTargetAttrs(grandChildData)}
                                 >
                                   {grandChildData.name}
                                 </a>

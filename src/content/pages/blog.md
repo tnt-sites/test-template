@@ -3,16 +3,15 @@ _schema: default
 title: Blog
 pageSections:
   - _component: page-sections/heroes/hero-center
-    eyebrow: ""
-    heading: All posts
+    eyebrow: New Teeth Dental Solutions - Houston
+    heading: Our Dental Blog
     subtext: >-
-      This paginated blog index displays a grid of article cards, each waiting
-      to be populated with genuine posts once your content strategy moves beyond
-      placeholder text.
+      News, oral health tips and treatment guides from Dr. Brad Jetton and the
+      team at New Teeth Dental Solutions in Houston.
     buttonSections: []
     colorScheme: default
-    backgroundColor: "var(--color-bg)"
+    backgroundColor: surface
 description: >-
-  Read our latest articles and insights on web development, design, and
-  technology.
+  Oral health tips, treatment guides and practice news from Dr. Brad Jetton and
+  the team at New Teeth Dental Solutions in Houston, TX.
 ---
