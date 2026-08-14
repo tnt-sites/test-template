@@ -2,7 +2,7 @@
   "name": "Astro Component Starter",
   "url": "https://www.newteethhouston.com",
   "description": "",
-  "logoSource": "/images/logo.svg",
+  "logoSource": "/public/assets/images/logo-header.svg",
   "titleFormat": "{title} | Astro Component Starter",
   "twitterHandle": "@yourusername"
 }
