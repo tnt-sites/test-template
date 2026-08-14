@@ -1,0 +1,44 @@
+homeMeet:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Home Meet
+    icon: add
+  definitions:
+    component_name: HomeMeet
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: text
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonHref
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: image
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imageAlt
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/home-meet/home-meet.cloudcannon.inputs.yml

@@ -1,0 +1,53 @@
+label: Home Banner
+icon: add
+description: Full-bleed homepage banner with quick links, an offer pill and a provider badge.
+value:
+  _component: page-sections/homepage-blocks/home-banner
+  id: banner
+  eyebrow: ""
+  heading: ""
+  links: []
+  imageLarge: null
+  imageDesktop: null
+  imageMobile: null
+  imageAlt: ""
+  sealImage: null
+  sealAlt: ""
+  offerPrice: ""
+  offerLabel: ""
+  offerButtonText: ""
+  offerButtonHref: ""
+  providerImage: null
+  providerAlt: ""
+preview:
+  text:
+    - key: heading
+    - Home Banner
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-banner/home-banner.cloudcannon.inputs.yml
+_structures:
+  homeBannerLinks:
+    values:
+      - label: Link
+        icon: link
+        value:
+          label: Link label
+          href: "#"
+          separatorBefore: false
+        preview:
+          text:
+            - key: label
+            - Link
+          subtext:
+            - key: href
+        _inputs:
+          label:
+            type: text
+            comment: Link text.
+          href:
+            type: text
+            comment: Link URL.
+          separatorBefore:
+            type: switch
+            comment: Show a small dot separator before this link.

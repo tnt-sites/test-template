@@ -1,0 +1,18 @@
+label: Home Location
+icon: add
+description: Directions bullet list beside an embedded Google map.
+value:
+  _component: page-sections/homepage-blocks/home-location
+  id: location
+  heading: ""
+  items: []
+  buttonText: ""
+  buttonHref: ""
+  mapEmbedUrl: ""
+preview:
+  text:
+    - key: heading
+    - Home Location
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-location/home-location.cloudcannon.inputs.yml

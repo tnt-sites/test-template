@@ -1,0 +1,42 @@
+label: Home Reviews
+icon: add
+description: Google review carousel with a seal overlapping the section above it.
+value:
+  _component: page-sections/homepage-blocks/home-reviews
+  id: reviews
+  eyebrow: ""
+  heading: ""
+  sealImage: null
+  sealAlt: ""
+  reviews: []
+  buttonText: ""
+  buttonHref: ""
+  arrowImage: /assets/images/arrow-left.svg
+preview:
+  text:
+    - key: heading
+    - Home Reviews
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-reviews/home-reviews.cloudcannon.inputs.yml
+_structures:
+  homeReviewsItems:
+    values:
+      - label: Review
+        icon: format_quote
+        value:
+          text: ""
+          author: ""
+        preview:
+          text:
+            - key: author
+            - Review
+          subtext:
+            - key: text
+        _inputs:
+          text:
+            type: textarea
+            comment: The review text.
+          author:
+            type: text
+            comment: The reviewer's name.

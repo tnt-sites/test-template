@@ -1,0 +1,28 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+heading:
+  type: text
+  comment: Main heading text.
+items:
+  type: array
+  label: Directions
+  comment: Directions/landmark bullet points listed beside the map.
+  options:
+    structures:
+      values:
+        - label: Direction
+          icon: location_on
+          value: ""
+items[*]:
+  type: text
+  comment: Single direction/landmark line.
+buttonText:
+  type: text
+  comment: Button label.
+buttonHref:
+  type: text
+  comment: Button link URL.
+mapEmbedUrl:
+  type: text
+  comment: Google Maps embed URL (the iframe "src" attribute).

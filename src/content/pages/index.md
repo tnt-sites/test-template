@@ -7,7 +7,7 @@ title: Dentist Houston, TX | Dentist Near Me | New Teeth Dental Solutions
 description: Need a new dentist in Houston? Give New Teeth Dental Solutions - Houston a call today.
 canonical: /
 pageSections:
-  - _component: page-sections/homepage/home-banner
+  - _component: page-sections/homepage-blocks/home-banner
     id: banner
     eyebrow: Dentist in Houston
     heading: Making Healthy Smiles Possible with Convenience & Ease
@@ -36,7 +36,7 @@ pageSections:
     offerButtonHref: "#offer-modal"
     providerImage: /assets/images/invisalign-provider.svg
     providerAlt: Diamond+ Invisalign Provider
-  - _component: page-sections/homepage/home-welcome
+  - _component: page-sections/homepage-blocks/home-welcome
     id: welcome
     eyebrow: What Makes Our Care Stand Out?
     image: /assets/images/index-welcome.webp
@@ -50,7 +50,7 @@ pageSections:
         text: Our dental office has been serving the community for 45 years and is known for delivering first-class dentistry to patients of all ages.
       - heading: serving all ages
         text: No matter what your dental concerns are, our team can help meet them in the convenience of one dental office.
-  - _component: page-sections/homepage/home-meet
+  - _component: page-sections/homepage-blocks/home-meet
     id: meet
     eyebrow: Say <strong>“Hello”</strong> to Your Dentist!
     heading: Meet Dr. Brad Jetton
@@ -59,7 +59,7 @@ pageSections:
     buttonHref: /meet-dr-jetton/
     image: /assets/images/index-meet.webp
     imageAlt: Houston dentist Dr Brad Jetton
-  - _component: page-sections/homepage/home-reviews
+  - _component: page-sections/homepage-blocks/home-reviews
     id: reviews
     eyebrow: Several Generations Served Here
     heading: We Treat Our Patients Like Family
@@ -80,7 +80,7 @@ pageSections:
         author: Eledid
     buttonText: Read More Reviews
     buttonHref: /reviews/
-  - _component: page-sections/homepage/home-services
+  - _component: page-sections/homepage-blocks/home-services
     id: services
     eyebrow: Featured Dental Services
     heading: Dentistry for Everyone You Love
@@ -111,7 +111,7 @@ pageSections:
     sealImage: /assets/images/invisalign-seal.svg
     sealAlt: Free 15 minute Invisalign consultation
     sealHref: /free-invisalign-consultation/
-  - _component: page-sections/homepage/home-financial
+  - _component: page-sections/homepage-blocks/home-financial
     id: financial
     eyebrow: Dentistry for Every Budget
     heading: 3 Stress-Free Payment Options
@@ -131,7 +131,7 @@ pageSections:
         text: If you would like to split the cost of your treatment up into smaller payments, ask our team how to apply for third-party financing.
         linkText: Financing Options
         linkHref: /for-patients/#financing
-  - _component: page-sections/homepage/home-location
+  - _component: page-sections/homepage-blocks/home-location
     id: location
     heading: A Dental Home Near You
     items:

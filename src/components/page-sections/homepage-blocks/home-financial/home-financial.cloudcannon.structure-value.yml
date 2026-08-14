@@ -1,0 +1,46 @@
+label: Home Financial
+icon: add
+description: Full-bleed photo with a blue heading panel overlapping its lower edge, holding an accordion of payment options.
+value:
+  _component: page-sections/homepage-blocks/home-financial
+  id: financial
+  eyebrow: ""
+  heading: ""
+  imageDesktop: null
+  imageMobile: null
+  imageAlt: ""
+  items: []
+preview:
+  text:
+    - key: heading
+    - Home Financial
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-financial/home-financial.cloudcannon.inputs.yml
+_structures:
+  homeFinancialItems:
+    values:
+      - label: Accordion Item
+        icon: list
+        value:
+          heading: Item heading
+          text: ""
+          linkText: ""
+          linkHref: ""
+        preview:
+          text:
+            - key: heading
+            - Accordion Item
+        _inputs:
+          heading:
+            type: text
+            comment: Item heading, always visible.
+          text:
+            type: textarea
+            comment: Body text revealed when this item is open.
+          linkText:
+            type: text
+            comment: Optional link label shown under the body text.
+          linkHref:
+            type: text
+            comment: Link URL for linkText.

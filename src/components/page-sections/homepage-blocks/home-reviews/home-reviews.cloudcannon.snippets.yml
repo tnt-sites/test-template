@@ -1,0 +1,47 @@
+homeReviews:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Home Reviews
+    icon: add
+  definitions:
+    component_name: HomeReviews
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sealImage
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sealAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: reviews
+        type: array
+        optional: true
+      - editor_key: buttonText
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonHref
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: arrowImage
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/home-reviews/home-reviews.cloudcannon.inputs.yml

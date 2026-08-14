@@ -1,0 +1,31 @@
+homeWelcome:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Home Welcome
+    icon: add
+  definitions:
+    component_name: HomeWelcome
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: image
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imageAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: items
+        type: array
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/home-welcome/home-welcome.cloudcannon.inputs.yml

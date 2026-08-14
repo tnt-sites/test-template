@@ -1,0 +1,54 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Kicker line above the heading.
+heading:
+  type: markdown
+  comment: Main heading text. Supports inline span wrappers/classes for highlighted words.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+text:
+  type: textarea
+  comment: Body copy under the heading.
+links:
+  type: array
+  label: Service Links
+  comment: Icon + label pills linking to featured services.
+  options:
+    structures: _structures.homeServicesLinks
+image:
+  type: image
+  comment: Photo displayed beside the service links.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the photo.
+sealImage:
+  type: image
+  comment: Optional seal image overlapping the photo (e.g. a free consultation offer).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+sealAlt:
+  type: text
+  comment: Alt text for the seal image.
+sealHref:
+  type: text
+  comment: Link URL for the seal image.

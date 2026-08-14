@@ -1,0 +1,36 @@
+label: Home Welcome
+icon: add
+description: Photo with a horizontal accordion of "what makes our care stand out" items overlapping its bottom edge.
+value:
+  _component: page-sections/homepage-blocks/home-welcome
+  id: welcome
+  eyebrow: ""
+  image: null
+  imageAlt: ""
+  items: []
+preview:
+  text:
+    - key: eyebrow
+    - Home Welcome
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-welcome/home-welcome.cloudcannon.inputs.yml
+_structures:
+  homeWelcomeItems:
+    values:
+      - label: Accordion Item
+        icon: list
+        value:
+          heading: Item heading
+          text: ""
+        preview:
+          text:
+            - key: heading
+            - Accordion Item
+        _inputs:
+          heading:
+            type: text
+            comment: Item heading, always visible.
+          text:
+            type: textarea
+            comment: Body text revealed when this item is open.

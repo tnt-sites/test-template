@@ -1,0 +1,38 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Kicker line above the heading.
+heading:
+  type: text
+  comment: Main heading text.
+sealImage:
+  type: image
+  comment: Circular seal image overlapping the section above (e.g. "Top Rated on Google").
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+sealAlt:
+  type: text
+  comment: Alt text for the seal image.
+reviews:
+  type: array
+  label: Reviews
+  comment: Reviews shown in the carousel.
+  options:
+    structures: _structures.homeReviewsItems
+buttonText:
+  type: text
+  comment: Button label below the carousel.
+buttonHref:
+  type: text
+  comment: Button link URL.
+arrowImage:
+  type: image
+  comment: Arrow glyph used for the previous/next carousel controls.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""

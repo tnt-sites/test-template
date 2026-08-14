@@ -1,0 +1,28 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Kicker line above the heading. Supports inline HTML (e.g. <strong>).
+heading:
+  type: text
+  comment: Main heading text.
+text:
+  type: textarea
+  comment: Body copy beside the photo.
+buttonText:
+  type: text
+  comment: Button label.
+buttonHref:
+  type: text
+  comment: Button link URL.
+image:
+  type: image
+  comment: Photo displayed beside the copy.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the photo.

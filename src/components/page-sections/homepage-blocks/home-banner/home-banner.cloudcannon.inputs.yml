@@ -1,0 +1,84 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Small kicker line displayed above the heading.
+heading:
+  type: markdown
+  comment: Main banner heading. Supports inline span wrappers/classes for highlighted words.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+links:
+  type: array
+  label: Links
+  comment: Quick links displayed under the heading.
+  options:
+    structures: _structures.homeBannerLinks
+imageLarge:
+  type: image
+  comment: Banner photo shown at wide desktop widths (min-width 1501px).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageDesktop:
+  type: image
+  comment: Banner photo shown at desktop widths (1001–1500px). Also the fallback <img> source below that range.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageMobile:
+  type: image
+  comment: Banner photo shown at mobile widths (max-width 1000px).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the banner photo.
+sealImage:
+  type: image
+  comment: Optional circular seal image (e.g. "Se Habla Español") overlaid on the banner photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+sealAlt:
+  type: text
+  comment: Alt text for the seal image.
+offerPrice:
+  type: text
+  comment: Price shown in the offer pill (digits only — a "$" is added automatically).
+offerLabel:
+  type: text
+  comment: Label shown next to the offer price.
+offerButtonText:
+  type: text
+  comment: Button text for the offer pill.
+offerButtonHref:
+  type: text
+  comment: Link (or "#modal-id") for the offer button.
+providerImage:
+  type: image
+  comment: Optional provider badge image (e.g. Invisalign Diamond+ Provider).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+providerAlt:
+  type: text
+  comment: Alt text for the provider badge image.

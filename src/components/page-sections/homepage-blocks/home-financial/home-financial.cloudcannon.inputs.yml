@@ -1,0 +1,32 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+eyebrow:
+  type: text
+  comment: Kicker line in the blue heading panel.
+heading:
+  type: text
+  comment: Main heading text in the blue heading panel.
+imageDesktop:
+  type: image
+  comment: Full-bleed background photo shown at desktop widths (min-width 701px). Also the fallback <img> source.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageMobile:
+  type: image
+  comment: Full-bleed background photo shown at mobile widths (max-width 700px).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the background photo.
+items:
+  type: array
+  label: Accordion Items
+  comment: One-at-a-time accordion of payment options.
+  options:
+    structures: _structures.homeFinancialItems

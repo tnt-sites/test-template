@@ -1,0 +1,57 @@
+label: Home Services
+icon: add
+description: Featured services list (icon + label pills) beside a photo with an overlapping seal.
+value:
+  _component: page-sections/homepage-blocks/home-services
+  id: services
+  eyebrow: ""
+  heading: ""
+  text: ""
+  links: []
+  image: null
+  imageAlt: ""
+  sealImage: null
+  sealAlt: ""
+  sealHref: ""
+preview:
+  text:
+    - key: heading
+    - Home Services
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-services/home-services.cloudcannon.inputs.yml
+_structures:
+  homeServicesLinks:
+    values:
+      - label: Service Link
+        icon: link
+        value:
+          label: Service label
+          href: "#"
+          icon: null
+          iconAlt: ""
+        preview:
+          text:
+            - key: label
+            - Service Link
+          subtext:
+            - key: href
+          image:
+            - key: icon
+        _inputs:
+          label:
+            type: text
+            comment: Link label.
+          href:
+            type: text
+            comment: Link URL.
+          icon:
+            type: image
+            comment: Small icon shown beside the label.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          iconAlt:
+            type: text
+            comment: Alt text for the icon.

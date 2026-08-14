@@ -1,0 +1,20 @@
+label: Home Meet
+icon: add
+description: Doctor split — a photo beside a bordered copy panel introducing the dentist.
+value:
+  _component: page-sections/homepage-blocks/home-meet
+  id: meet
+  eyebrow: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonHref: ""
+  image: null
+  imageAlt: ""
+preview:
+  text:
+    - key: heading
+    - Home Meet
+  icon: add
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/home-meet/home-meet.cloudcannon.inputs.yml

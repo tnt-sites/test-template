@@ -1,0 +1,51 @@
+homeServices:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Home Services
+    icon: add
+  definitions:
+    component_name: HomeServices
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: eyebrow
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: text
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: links
+        type: array
+        optional: true
+      - editor_key: image
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imageAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sealImage
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sealAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: sealHref
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/home-services/home-services.cloudcannon.inputs.yml
