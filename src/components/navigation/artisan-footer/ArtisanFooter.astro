@@ -198,7 +198,7 @@ const year = new Date().getFullYear();
   .af-affiliations .af-inner {
     display: grid;
     gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
   }
 
   .af-affiliations h3 {
@@ -209,19 +209,31 @@ const year = new Date().getFullYear();
     margin: 0 0 1.25rem;
   }
 
+  /* One white panel per group, logos on a 3-up grid with generous padding
+     and a soft drop shadow. */
   .af-logos {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem 2rem;
+    background: #fff;
+    box-shadow: 6px 6px 0 rgb(0 0 0 / 18%);
+    display: grid;
+    gap: 2.5rem 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 2.5rem 2rem;
+  }
+
+  .af-logos li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .af-logos :global(img) {
     height: auto;
-    max-height: 64px;
+    max-height: 110px;
+    max-width: 100%;
     object-fit: contain;
     width: auto;
   }
@@ -408,6 +420,14 @@ const year = new Date().getFullYear();
     min-width: 0;
     padding: 0;
     width: 1.75rem;
+  }
+
+  @media (max-width: 620px) {
+    .af-logos {
+      gap: 1.5rem 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1.5rem 1rem;
+    }
   }
 
   @media (max-width: 900px) {
