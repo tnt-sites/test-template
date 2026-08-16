@@ -32,7 +32,7 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
   </div>
 </section>
 <style>
-  .a-logostrip { background-color: var(--bg); padding-block: 3rem; position: relative; }
+  .a-logostrip { background-color: var(--bg); padding-block: 46px; position: relative; }
 
   /* Measured: the source lays #321c0e over the wood texture. */
 
@@ -52,7 +52,15 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
     position: absolute;
   }
   .ls-inner {  margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
-  .ls-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 400; margin: 0; }
+  .ls-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
   .ls-logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.75rem 3rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
   .ls-logos img { height: auto; max-height: 120px; object-fit: contain; width: auto; }

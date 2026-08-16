@@ -1500,7 +1500,7 @@ const doctor = defineCommand({
   args: sharedArgs,
   async run({ args }) {
     const ctx = await ctxFor(args);
-    const { runDoctor } = await import("../src/config/doctor.mjs");
+    const { runDoctor, templateHazards } = await import("../src/config/doctor.mjs");
 
     const results = await runDoctor(ctx);
     let failed = 0;
@@ -1516,6 +1516,10 @@ const doctor = defineCommand({
       console.error(`${failed} check(s) need attention before the pipeline will work.`);
       process.exitCode = 1;
     } else {
+      for (const h of templateHazards(ctx.paths.targetRoot)) {
+        console.log(`  ${h.level === "warn" ? "!" : "-"}  ${h.label.padEnd(20)} ${h.detail}`);
+      }
+
       console.log("Ready. Next: mig mirror -> detect -> tokens -> scan -> chrome -> content");
     }
   },

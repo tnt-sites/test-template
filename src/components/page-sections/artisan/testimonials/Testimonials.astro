@@ -35,7 +35,7 @@ const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
   </div>
 </section>
 <style>
-  .a-testi { background-color: var(--bg); padding-block: 4.5rem; position: relative; }
+  .a-testi { background-color: var(--bg); padding-block: 100px; position: relative; }
 
   /* Source structure: the section is solid brand-brown, and the wood texture
      rides on the OVERLAY together with the same brown at opacity .15 and
@@ -53,7 +53,15 @@ const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
     position: absolute;
   }
   .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
-  .ts-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  .ts-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2.5rem; }
 
   /* Multi-column, not grid: cards flow top-to-bottom so each column holds

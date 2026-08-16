@@ -42,9 +42,17 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
   </div>
 </section>
 <style>
-  .a-services { background: var(--bg); padding-block: 4.5rem; }
+  .a-services { background: var(--bg); padding-block: 150px; }
   .sg-inner { align-items: center; display: grid; gap: 3rem; grid-template-columns: minmax(280px, 1fr) 1.4fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
-  .sg-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  .sg-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
   .sg-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 1.75rem; }
   .sg-cards { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); list-style: none; margin: 0; padding: 0; }

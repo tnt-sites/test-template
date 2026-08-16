@@ -123,3 +123,67 @@ export async function runDoctor(ctx) {
   }
   return results;
 }
+
+/**
+ * Template-side traps that silently break a hand-built component.
+ *
+ * Each of these cost a round of "it doesn't look like the original" before
+ * being found, so they are reported up front rather than discovered later.
+ * See README, "Visual fidelity: what actually goes wrong".
+ */
+export function templateHazards(targetRoot) {
+  const out = [];
+  const stylesDir = path.join(targetRoot, "src/styles");
+
+  const walk = (dir) => {
+    let acc = "";
+    if (!fs.existsSync(dir)) return acc;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) acc += walk(full);
+      else if (/\.p?css$/.test(entry.name)) acc += fs.readFileSync(full, "utf8");
+    }
+    return acc;
+  };
+  const css = walk(stylesDir);
+  if (!css) return out;
+
+  // 1. Generic class names the template already claims. Astro scopes a
+  //    component's styles, but global CSS still matches its elements.
+  const generic =
+    /^(panel|card|media|inner|copy|row|label|value|body|items|cards|logos|frame|play|name|more|details|intro|lead)$/;
+  const claimed = [
+    ...new Set(
+      [...css.matchAll(/(?:^|[\s,}])\.([a-z][a-z0-9-]{2,})\s*(?:,|\{)/gm)]
+        .map((m) => m[1])
+        .filter((c) => generic.test(c))
+    ),
+  ];
+  if (claimed.length) {
+    out.push({
+      level: "warn",
+      label: "Class collisions",
+      detail: `template styles .${claimed.slice(0, 6).join(", .")} — prefix your component classes`,
+    });
+  }
+
+  // 2. A global list marker that needs an escape hatch.
+  if (/\bli:{1,2}before\b/.test(css)) {
+    out.push({
+      level: "warn",
+      label: "Global list marker",
+      detail: `li:before injects a marker${/\.no-check\b/.test(css) ? " — use ul.no-check" : ""}`,
+    });
+  }
+
+  // 3. Layer order: a bridge layer loses to unlayered component styles.
+  if (/@layer[^;{]*source-bridge/.test(css)) {
+    out.push({
+      level: "info",
+      label: "Layer order",
+      detail: "source-bridge loses to component <style> blocks (unlayered) — style internals in the component",
+    });
+  }
+
+  return out;
+}

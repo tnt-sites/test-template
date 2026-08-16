@@ -419,3 +419,82 @@ is visible in the CSS you ported.
 ## Requirements
 
 Node ≥ 22. `npm install` fetches a Chromium build for the measurement passes.
+
+## Visual fidelity: what actually goes wrong
+
+The pipeline reliably gets *content* onto the page. Getting it to **look like the
+source** is where the time goes, and every failure so far has come from one of a
+short list of causes. Check these before hand-tuning anything, and run
+`tools/compare.mjs` rather than judging by eye — every item below was originally
+missed by eyeballing screenshots and only found once the two renders were put
+side by side with their computed styles printed underneath.
+
+```bash
+node tools/compare.mjs                  # homepage, every section
+node tools/compare.mjs our-office       # one page
+node tools/compare.mjs index --section 3
+node tools/compare.mjs index --styles-only
+```
+
+It pairs source and built sections by index and reports height/image-count
+mismatches plus a computed-style diff over the properties that have actually
+gone wrong. Side-by-side PNGs land in `.migration/compare/`.
+
+### The toolkit re-skins; it does not port a design
+
+`mig chrome` migrates the header and footer as **data** into the template's own
+components, and `mig content` maps sections onto components that have their own
+designs. Neither reproduces the source's layout, and the generated
+`_chrome.pcss` says as much in its header. The `synthesize` config that would
+have generated components from source markup **is declared in the schema and
+never read by any code** — like `noise.ids` and `noise.attributes`, it is dead.
+
+So if the brief is "make it look like the original", budget for building
+components by hand. Everything below is about making those components correct
+the first time.
+
+### Failure modes, in the order they bit
+
+1. **A global rule matches your component's class.** Astro scopes a component's
+   own styles, but the template's global CSS still matches its elements. A
+   `.panel` wrapper rendered with `display: none` because the starter defines
+   `.panel { display: none }`. **Prefix every class** (`fb-panel`, `cg-media`).
+2. **Layered CSS loses to unlayered CSS.** Rules in `@layer source-bridge` are
+   beaten by any component `<style>` block, which is unlayered. Affiliation
+   sizing silently did nothing for two rounds. **Anything targeting a
+   component's internals belongs in that component**, not the bridge.
+3. **Local overrides fight the shared rule.** Three components carried their own
+   button colour and radius, so a site-wide button change skipped them. Keep
+   colour and shape in one place; let components set typography only.
+4. **Overlays are layered the other way round.** The source puts its wood
+   texture *on the overlay* (`background-image` + colour + `opacity: .15` +
+   `mix-blend-mode: lighten`) above a solid section. Reading `background-image`
+   off the section returns `none` and invites you to put the texture underneath,
+   which renders far too light. **Walk descendants for backgrounds**, not just
+   the section.
+5. **Sampling one element and generalising.** Header buttons are 50px pills;
+   every body and footer button is square. Measuring one and applying it
+   everywhere inverted the whole site's buttons. **Sample per context.**
+6. **Eyebrows are heading widgets.** The source builds kickers out of heading
+   widgets, so "the first heading" is often the kicker (Open Sans 18px italic,
+   0.5px tracking) and the real title is the second. Naive pairing reports a
+   permanent italic/tracking mismatch that is not real.
+7. **Carousels report every slide.** An image carousel clones slides; the DOM
+   holds 17 where the design shows 5. Read `slides_to_show` from
+   `data-settings`, not the slide count.
+8. **Global list markers.** `main ul li:before` injects a Fontello glyph whose
+   font is never loaded, so every ported list renders a tofu box with a 50px
+   indent. The starter ships `ul.no-check` as the escape hatch.
+9. **Section padding is much larger than it looks.** The source runs 100–150px
+   of vertical padding; defaulting to a comfortable `4.5rem` made every built
+   section shorter than its counterpart. Compare heights, not just styles.
+10. **Fonts declared but never served.** `mig tokens` records `font-service`
+    stylesheets in `branding.json`, but nothing copies the files. A self-hosted
+    source ships four brand faces that all 404 — see `tools/port-fonts.mjs`.
+
+### A working order for a new component
+
+1. `tools/compare.mjs <page> --section N` — read the source's real numbers.
+2. Build it with prefixed classes, and props for text, images, links and colours.
+3. Rebuild, re-run the same command, and drive the diff to empty.
+4. Only then move on. A section left "close enough" is a fix request later.

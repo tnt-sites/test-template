@@ -113,15 +113,41 @@ const PROBE = ([isSource, props]) => {
     for (const p of props) o[p] = c[p];
     return o;
   };
+  // An eyebrow is a <p> too, so the naive "first p" pairs the source's body
+  // copy against the build's kicker and reports a font mismatch that is not
+  // real. Both sides therefore skip eyebrow-ish nodes when sampling body copy.
+  const isEyebrow = (el) =>
+    /eyebrow|kicker|slide-heading/i.test(el.className || "") ||
+    Number.parseFloat(getComputedStyle(el).fontSize) < 15;
+  const bodyOf = (s) =>
+    [...s.querySelectorAll("p,.elementor-slide-description,.elementor-text-editor p")].find(
+      (el) => !isEyebrow(el) && (el.innerText || "").trim().length > 40
+    ) ?? null;
+  const eyebrowOf = (s) =>
+    s.querySelector(".hero-eyebrow,[class*=eyebrow],[class*=kicker]") ?? null;
+
   return list.map((s, i) => {
     const r = s.getBoundingClientRect();
+    const vis = getComputedStyle(s);
     return {
       i,
       height: Math.round(r.height),
+      empty: (s.innerText || "").trim().length === 0 && s.querySelectorAll("img,iframe,svg").length === 0,
+      hidden: vis.display === "none" || vis.visibility === "hidden" || r.height === 0,
       text: (s.innerText || "").replace(/\s+/g, " ").trim().slice(0, 70),
       section: read(s),
-      heading: read(s.querySelector("h1,h2,h3,.elementor-heading-title,.elementor-slide-heading")),
-      body: read(s.querySelector("p,.elementor-slide-description,.elementor-text-editor")),
+      ...(() => {
+        // The source builds eyebrows out of heading widgets, so the first
+        // heading is often the kicker and the second is the real title.
+        // Pairing naively reports a permanent italic/tracking "mismatch".
+        const hs = [...s.querySelectorAll("h1,h2,h3,.elementor-heading-title,.elementor-slide-heading")];
+        const small = (el) => el && Number.parseFloat(getComputedStyle(el).fontSize) < 24;
+        const explicit = eyebrowOf(s);
+        const eyebrow = explicit ?? (hs.length > 1 && small(hs[0]) ? hs[0] : null);
+        const heading = hs.find((h) => h !== eyebrow) ?? null;
+        return { heading: read(heading), eyebrow: read(eyebrow) };
+      })(),
+      body: read(bodyOf(s)),
       button: read(s.querySelector(".button, .elementor-button, a[class*=button]")),
       images: s.querySelectorAll("img").length,
     };
@@ -173,16 +199,25 @@ async function main() {
     if (only !== null && i !== only) continue;
     const s = a[i];
     const t = b[i];
-    const tag = !s ? "EXTRA IN BUILD" : !t ? "MISSING IN BUILD" : "";
+    const skip = s && (s.empty || s.hidden);
+    const tag = skip
+      ? `SOURCE SECTION IS ${s.hidden ? "HIDDEN" : "EMPTY"} — nothing to migrate`
+      : !s
+        ? "EXTRA IN BUILD"
+        : !t
+          ? "MISSING IN BUILD"
+          : "";
     console.log(
       `[${i}] ${tag}  h: ${s?.height ?? "—"} vs ${t?.height ?? "—"}   imgs: ${s?.images ?? "—"} vs ${t?.images ?? "—"}`
     );
     if (s) console.log(`    src   "${s.text}"`);
     if (t) console.log(`    built "${t.text}"`);
+    if (skip) { console.log(''); continue; }
     if (s && t) {
       const rows = [
         ...diffRow("section", s.section, t.section),
         ...diffRow("heading", s.heading, t.heading),
+        ...diffRow("eyebrow", s.eyebrow, t.eyebrow),
         ...diffRow("body", s.body, t.body),
         ...diffRow("button", s.button, t.button),
       ];

@@ -121,7 +121,7 @@ pageSections:
     headingColor: "#ffffff"
     textColor: "#ffffff"
     markerColor: "#d2b22e"
-    minHeight: 520px
+    minHeight: 900px
   - _component: page-sections/artisan/card-grid
     id: ""
     cards:
