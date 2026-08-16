@@ -357,13 +357,32 @@ async function main() {
 
     const { markdown, firstImage } = convert(val(p["content:encoded"]));
 
+    // Excerpts are not always plain prose: some carry markdown image syntax,
+    // which would put an <img> path into the meta description (and leave a
+    // reference to a file that was never downloaded).
     let description = decodeEntities(val(p["excerpt:encoded"]))
       .replace(/<[^>]+>/g, "")
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+      .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
       .replace(/\s+/g, " ")
       .trim();
     if (!description) {
-      const firstPara = markdown.split("\n\n").find((b) => !/^[#\-!>|]/.test(b)) ?? "";
-      const plain = firstPara.replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[*\\]/g, "");
+      // Strip markdown constructs BEFORE picking a block. A body that opens
+      // with a link-wrapped image starts with "[", which the leading-character
+      // filter does not exclude, and the raw image syntax then became the meta
+      // description (carrying an <img> path that was never downloaded).
+      const plainBlocks = markdown
+        .split("\n\n")
+        .map((b) =>
+          b
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+            .replace(/\[([^\]]*)\]\([^)]*\)/g, "$1")
+            .replace(/[*_`\\]/g, "")
+            .replace(/\s+/g, " ")
+            .trim()
+        )
+        .filter((b) => b && !/^[#\->|]/.test(b) && b.length > 20);
+      const plain = plainBlocks[0] ?? "";
       description =
         plain.length > 180 ? `${plain.slice(0, 177).replace(/\s+\S*$/, "")}…` : plain;
     }
@@ -524,6 +543,14 @@ async function main() {
       r.image = null;
       droppedFeatured++;
     }
+    // WordPress commonly wraps a post image in a link to the full-size file.
+    // Dropping the image leaves an empty `[](…)` pointing at the same dead
+    // asset, which still renders as a broken link in the build.
+    // Also covers links to WordPress attachment pages (/slug/image-name/,
+    // /?attachment_id=N), which lose their content the same way.
+    r.markdown = r.markdown
+      .replace(/\[\s*\]\([^)\s]*\)/g, "")
+      .replace(/^[ \t]*\|[ \t]*$/gm, "");
     r.markdown = tidyMarkdown(r.markdown);
   }
   if (droppedImgs || droppedFeatured) {
