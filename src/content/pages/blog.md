@@ -1,22 +1,22 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "78d7ebcf23bfd6eb"
+  v: 0.1.0
+  gen: content
+  hash: 78d7ebcf23bfd6eb
 title: Blog
 description: ""
 canonical: /blog/
 pageSections:
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Artisan Dental Blog​
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/builders/custom-section
     id: ""
     label: ""

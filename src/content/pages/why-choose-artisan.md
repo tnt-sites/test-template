@@ -1,8 +1,8 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "66b78722655a00b9"
+  v: 0.1.0
+  gen: content
+  hash: 66b78722655a00b9
 title: Why Choose Artisan
 description: ""
 canonical: /why-choose-artisan/
@@ -215,16 +215,16 @@ pageSections:
       alt: ""
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Dental Health Plan
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/builders/custom-section
     id: ""
     label: ""

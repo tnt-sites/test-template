@@ -1,22 +1,22 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "c14b0c34d3bf3d9d"
+  v: 0.1.0
+  gen: content
+  hash: c14b0c34d3bf3d9d
 title: Teeth Whitening Options
 description: ""
 canonical: /teeth-whitening-options/
 pageSections:
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Teeth Whitening Options
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/ctas/cta-split-learn-more
     id: ""
     heading: What You Should Know About Teeth Whitening

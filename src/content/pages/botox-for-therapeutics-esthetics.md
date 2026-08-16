@@ -1,8 +1,8 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "3703f99b7cb6a515"
+  v: 0.1.0
+  gen: content
+  hash: 3703f99b7cb6a515
 title: Botox for Therapeutics & Esthetics
 description: ""
 canonical: /botox-for-therapeutics-esthetics/
@@ -103,16 +103,16 @@ pageSections:
       alt: Moderate to severe frown lines
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: "Reasons patients may consider Botulinum toxin or Botox® therapy for dental conditions and esthetic goals include:"
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/location/location-find-us
     id: ""
     heading: Gummy Smile

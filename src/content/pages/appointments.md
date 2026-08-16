@@ -7,16 +7,16 @@ title: Appointments
 description: ""
 canonical: /appointments/
 pageSections:
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Appointments
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/ctas/cta-form
     id: ""
     heading: "[Printable Contact Information](/wp-content/uploads/2020/08/Artisan-Dental-Contact-Information-1-1.pdf)"

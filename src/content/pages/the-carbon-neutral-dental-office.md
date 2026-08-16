@@ -1,22 +1,22 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "6d9469f23c9db7fd"
+  v: 0.1.0
+  gen: content
+  hash: 6d9469f23c9db7fd
 title: The Carbon Neutral Dental Office
 description: ""
 canonical: /the-carbon-neutral-dental-office/
 pageSections:
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: The Carbon Neutral Dental Office
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/info-blocks/contact
     id: ""
     backgroundColor: base

@@ -1,8 +1,8 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "f3714f938497ae06"
+  v: 0.1.0
+  gen: content
+  hash: f3714f938497ae06
 title: About Us
 description: ""
 canonical: /about-us/
@@ -185,16 +185,16 @@ pageSections:
       alt: Certified B Corporation
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Dental Health Plan
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/builders/custom-section
     id: ""
     label: ""

@@ -1,0 +1,25 @@
+label: Page Banner
+icon: title
+description: Interior page title band.
+value:
+  _component: page-sections/artisan/page-banner
+  id: ""
+  eyebrow: ""
+  heading: Page title
+  backgroundColor: "#321c0e"
+  headingColor: "#ffffff"
+  eyebrowColor: "#d2b22e"
+  backgroundImage: ""
+  overlayColor: "rgba(50, 28, 14, 0.55)"
+  align: center
+preview:
+  text:
+    - Page Banner
+  subtext:
+    - key: heading
+  icon: title
+picker_preview:
+  text: Page Banner
+  subtext: Interior page title band.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/page-banner/page-banner.cloudcannon.inputs.yml

@@ -1,22 +1,22 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "7d53af56d25f6364"
+  v: 0.1.0
+  gen: content
+  hash: 7d53af56d25f6364
 title: Ceramic or Porcelain Veneers
 description: ""
 canonical: /ceramic-veneers/
 pageSections:
-  - _component: page-sections/homepage-blocks/index-banner
+  - _component: page-sections/artisan/page-banner
     id: ""
+    eyebrow: ""
     heading: Ceramic or Porcelain Veneers
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
   - _component: page-sections/ctas/cta-split-learn-more
     id: ""
     heading: What Can Be Accomplished With Porcelain Veneers?
