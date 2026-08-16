@@ -524,3 +524,28 @@ clusters:
   #   structure: LINK
   #   no component in the library covers this; it may need building
   # link: { component: ??? }
+
+  # ---------------------------------------------------------------------
+  # Hand-added after reviewing `mig content --dry-run`. The scan's proposer
+  # found no library component for these four.
+  # ---------------------------------------------------------------------
+
+  # section — 5 section(s) on 4 page(s). textLength 0, no images: empty
+  # decorative bands (spacers/dividers) that carry background and padding but
+  # no content. custom-section keeps the styling without inventing content.
+  section:
+    component: page-sections/builders/custom-section
+
+  # imgx-4-x-3 — the /patient-reviews/ review wall (7490 chars of quotes).
+  imgx-4-x-3:
+    component: page-sections/people/testimonial-section
+
+  # link — a single linked badge on /why-choose-artisan/, no text.
+  link:
+    component: page-sections/builders/custom-section
+
+  # linkx-2-x-4-linkx-4 is DELIBERATELY NOT MAPPED. It is Elementor's archive
+  # post-listing widget on /blog/, and the starter renders that listing itself
+  # from the blog collection (src/pages/blog/[...page].astro). Mapping it would
+  # bake a frozen snapshot of August 2026's posts into the page. Its content is
+  # recorded under _migUnmapped, which is the correct outcome.

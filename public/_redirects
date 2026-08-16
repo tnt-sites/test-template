@@ -1,0 +1,127 @@
+# mig:generated v=0.1.0 gen=redirects hash=a429ec67bb823779 frozen=true
+/about-us.html /about-us/ 301
+/adria.html /adria/ 301
+/alli.html /alli/ 301
+/appointments.html /appointments/ 301
+/artificial-intelligence-in-dentistry.html /artificial-intelligence-in-dentistry/ 301
+/artisan-dental-botox-plan.html /artisan-dental-botox-plan/ 301
+/artisan-dental-cancellation-policy.html /artisan-dental-cancellation-policy/ 301
+/awards-recognitions.html /awards-recognitions/ 301
+/bite-guard.html /bite-guard/ 301
+/blog.html /blog/ 301
+/botox-at-artisan-dental.html /botox-at-artisan-dental/ 301
+/botox-for-bruxism-clenching-and-grinding-teeth-in-madison-wisconsin.html /botox-for-bruxism-clenching-and-grinding-teeth-in-madison-wisconsin/ 301
+/botox-for-therapeutics-esthetics.html /botox-for-therapeutics-esthetics/ 301
+/bridges.html /bridges/ 301
+/business-non-profit-plans.html /business-non-profit-plans/ 301
+/cancellation-policy.html /cancellation-policy/ 301
+/carbon-neutral.html /carbon-neutral/ 301
+/careers.html /careers/ 301
+/cassandra.html /cassandra/ 301
+/ceramic-veneers.html /ceramic-veneers/ 301
+/cerec.html /cerec/ 301
+/certified-b-corporation.html /certified-b-corporation/ 301
+/claire.html /claire/ 301
+/code-of-conduct.html /code-of-conduct/ 301
+/community-giving.html /community-giving/ 301
+/composite-tooth-colored-fillings.html /composite-tooth-colored-fillings/ 301
+/contact-us.html /contact-us/ 301
+/cosmetic.html /cosmetic/ 301
+/covid-19-updates.html /covid-19-updates/ 301
+/crowns.html /crowns/ 301
+/dental-implants.html /dental-implants/ 301
+/dental-sealants.html /dental-sealants/ 301
+/dermal-filler.html /dermal-filler/ 301
+/dr-mark-rehermann.html /dr-mark-rehermann/ 301
+/dr-nicole-andersen.html /dr-nicole-andersen/ 301
+/dr-rehermann.html /dr-rehermann/ 301
+/dr-shruthi-dayal.html /dr-shruthi-dayal/ 301
+/emily-2.html /emily-2/ 301
+/endodontics-2.html /endodontics-2/ 301
+/endodontics.html /endodontics/ 301
+/extractions.html /extractions/ 301
+/faqs.html /faqs/ 301
+/fillings.html /fillings/ 301
+/financial.html /financial/ 301
+/full-partial-mouth-rehabilitation.html /full-partial-mouth-rehabilitation/ 301
+/health-plans.html /health-plans/ 301
+/impact-report.html /impact-report/ 301
+/index.html / 301
+/insurance-assistance.html /insurance-assistance/ 301
+/invisalign-suresmile-clear-aligners.html /invisalign-suresmile-clear-aligners/ 301
+/jen.html /jen/ 301
+/jill.html /jill/ 301
+/jonlyn.html /jonlyn/ 301
+/juliana.html /juliana/ 301
+/kaitlin.html /kaitlin/ 301
+/kat.html /kat/ 301
+/katie.html /katie/ 301
+/kelli.html /kelli/ 301
+/laser-gum-sculpting.html /laser-gum-sculpting/ 301
+/legal.html /legal/ 301
+/lindsay.html /lindsay/ 301
+/madelyn.html /madelyn/ 301
+/meet-the-team.html /meet-the-team/ 301
+/mission-vision-values.html /mission-vision-values/ 301
+/new-smile-design.html /new-smile-design/ 301
+/office-tour.html /office-tour/ 301
+/online-forms.html /online-forms/ 301
+/online-payments-2.html /online-payments-2/ 301
+/our-office.html /our-office/ 301
+/pamee.html /pamee/ 301
+/patient-reviews.html /patient-reviews/ 301
+/periodontal-therapy.html /periodontal-therapy/ 301
+/post-op-instructions.html /post-op-instructions/ 301
+/program-details.html /program-details/ 301
+/recognitions-and-awards.html /recognitions-and-awards/ 301
+/request-appointment.html /request-appointment/ 301
+/same-day-crowns-cerec.html /same-day-crowns-cerec/ 301
+/scott-andersen.html /scott-andersen/ 301
+/services.html /services/ 301
+/sleep-apnea.html /sleep-apnea/ 301
+/smile-gallery.html /smile-gallery/ 301
+/specific-product-info.html /specific-product-info/ 301
+/sustainability.html /sustainability/ 301
+/teeth-cleaning.html /teeth-cleaning/ 301
+/teeth-whitening-options.html /teeth-whitening-options/ 301
+/thank-you.html /thank-you/ 301
+/the-carbon-neutral-dental-office.html /the-carbon-neutral-dental-office/ 301
+/videos.html /videos/ 301
+/wellness-series.html /wellness-series/ 301
+/why-choose-artisan.html /why-choose-artisan/ 301
+
+# ---------------------------------------------------------------------------
+# Hand-added. `mig redirects` only emits page.path -> page.route pairs, so it
+# cannot know about WordPress's own URL surface or the legacy .html links that
+# still appear inside migrated page content.
+# ---------------------------------------------------------------------------
+
+# Legacy .html URLs from the pre-WordPress site, still linked from page copy.
+# Reported by `mig links` as unmapped.
+/thanks.html                  /thank-you/           301
+/request-an-appointment.html  /request-appointment/ 301
+/privacy-policy.html          /legal/               301
+/sitemap.html                 /sitemap/             301
+
+# The starter's own privacy page was removed; Artisan's equivalent is /legal/.
+/privacy-policy/              /legal/               301
+
+# WordPress taxonomy archives. Indexed via category-sitemap.xml and
+# post_tag-sitemap.xml, but the starter has no tag-archive route.
+/category/*                   /blog/                301
+/tag/*                        /blog/                301
+/author/*                     /blog/                301
+
+# Feeds
+/feed/*                       /blog/                301
+/blog/feed/*                  /blog/                301
+/comments/feed/*              /blog/                301
+
+# WordPress admin surface
+/wp-admin/*                   /                     301
+/wp-login.php                 /                     301
+/xmlrpc.php                   /                     301
+
+# WordPress renders an attachment page per media item; the file itself still
+# resolves under /wp-content/uploads/.
+/blog/*/attachment/*          /blog/:splat/         301

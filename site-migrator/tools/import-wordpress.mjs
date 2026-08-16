@@ -278,7 +278,11 @@ async function main() {
 
   /** Resolve any image reference to the canonical original attachment URL. */
   const originalFor = (src) => {
-    const abs = src.replace(hostRe, `https://${args.host}`);
+    // convert() strips the host before this runs, so most refs arrive
+    // root-relative. Re-absolutise, or the download step later gets a path
+    // fetch() cannot parse.
+    let abs = src.replace(hostRe, `https://${args.host}`);
+    if (abs.startsWith("/")) abs = `https://${args.host}${abs}`;
     if (byUrl.has(abs)) return abs;
     let base;
     try {
@@ -453,14 +457,30 @@ async function main() {
         return;
       }
 
-      try {
-        const res = await fetch(url, { headers: { "User-Agent": UA } });
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
-        downloaded++;
-      } catch (err) {
-        imageFailures.push({ url, reason: err.message });
+      // Old posts reference a /uploads/sites/<n>/ multisite prefix that no
+      // longer resolves; the file usually exists one level up.
+      const candidates = [url];
+      if (/\/uploads\/sites\/\d+\//.test(url)) {
+        candidates.push(url.replace(/\/uploads\/sites\/\d+\//, "/uploads/"));
       }
+
+      let lastErr = "no candidate";
+      for (const candidate of candidates) {
+        try {
+          const res = await fetch(candidate, { headers: { "User-Agent": UA } });
+          if (!res.ok) {
+            lastErr = `HTTP ${res.status}`;
+            continue;
+          }
+          fs.writeFileSync(dest, Buffer.from(await res.arrayBuffer()));
+          downloaded++;
+          lastErr = null;
+          break;
+        } catch (err) {
+          lastErr = err.message;
+        }
+      }
+      if (lastErr) imageFailures.push({ url, reason: lastErr });
     });
   }
   console.log(`  ${copied} reused from snapshot, ${downloaded} downloaded, ${imageFailures.length} failed`);
@@ -468,20 +488,48 @@ async function main() {
   /* ---- write ----------------------------------------------------------- */
   const yamlStr = (s) => `"${String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
 
+  // Remove anything in the collection that this export does not account for.
+  // Matching on a byline was too narrow — the starter's 11 demo posts are
+  // bylined by several fake authors, not just "Alex Smith", so only one was
+  // ever caught. The imported slug set is the authoritative list.
   if (args.purgeDemo && !args.dryRun && fs.existsSync(args.out)) {
+    const keep = new Set(records.map((r) => `${r.slug}.mdx`));
     let removed = 0;
     for (const f of fs.readdirSync(args.out)) {
-      if (!f.endsWith(".mdx")) continue;
-      const full = path.join(args.out, f);
-      if (/^author:\s*["']?Alex Smith/m.test(fs.readFileSync(full, "utf8"))) {
-        fs.unlinkSync(full);
-        removed++;
-      }
+      if (!f.endsWith(".mdx") || keep.has(f)) continue;
+      fs.unlinkSync(path.join(args.out, f));
+      removed++;
     }
-    console.log(`Removed ${removed} starter demo post(s)`);
+    console.log(`Removed ${removed} post(s) not present in the export`);
   }
 
   if (!args.dryRun) fs.mkdirSync(args.out, { recursive: true });
+
+  // Some 2014-era posts reference images from an old /uploads/sites/7/
+  // multisite that 404 at every path on the live server — they are already
+  // broken on the source site, so there is nothing to migrate. Drop the
+  // references rather than shipping <img> tags that cannot resolve.
+  const haveImage = (local) =>
+    args.dryRun || fs.existsSync(path.join(args.images, path.basename(local)));
+  let droppedImgs = 0;
+  let droppedFeatured = 0;
+
+  for (const r of records) {
+    r.markdown = r.markdown.replace(/!\[([^\]]*)\]\((\/assets\/images\/blog\/[^)\s]+)\)/g, (whole, alt, src) => {
+      if (haveImage(src)) return whole;
+      droppedImgs++;
+      return "";
+    });
+    if (r.image && !haveImage(r.image)) {
+      r.image = null;
+      droppedFeatured++;
+    }
+    r.markdown = tidyMarkdown(r.markdown);
+  }
+  if (droppedImgs || droppedFeatured) {
+    console.log(`Dropped ${droppedImgs} unresolvable inline image(s) and ${droppedFeatured} featured image(s)`);
+  }
+
   let written = 0;
   for (const r of records) {
     const fm = [

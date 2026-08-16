@@ -1,238 +1,545 @@
 ---
-_schema: default
-title: Astro Component Starter
+_mig:
+  v: "0.1.0"
+  gen: "content"
+  hash: "0e5aa2a63b626a04"
+title: Home
+description: ""
+canonical: /
 pageSections:
-  - _component: page-sections/heroes/hero-center
-    id: ''
-    eyebrow:
-    heading: The Astro Component Starter for building any site
-    subtext: >-
-      Built on web fundamentals. Easy to customize, fast to use, and simple to
-      maintain.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: secondary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: default
+  - _component: page-sections/builders/custom-section
+    id: ""
+    label: ""
+    contentSections: []
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: inherit
     backgroundColor: base
-    backgroundGradient: ''
+    backgroundGradient: ""
     backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Built for Astro
-    heading: Fast, modern, and easy to work with
-    subtext: >-
-      The Component Starter takes full advantage of Astro's zero-JS-by-default
-      approach. You get fast pages, simple routing, and a component system that
-      stays easy to use as your site grows.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-feature.svg
-    imageAlt: Website Feature
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: CloudCannon Ready
-    heading: Easy visual editing
-    subtext: >-
-      Every component is built to work seamlessly in CloudCannon's Visual
-      Editor. Developers can create and style custom Page Sections with Astro.
-      Editors can click, change, and rearrange content right on the page without
-      touching the code or guessing where anything lives.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-split.svg
-    imageAlt: Website Split
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme:
-    backgroundColor:
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-    paddingVertical: lg
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Performance
-    heading: Fast by architecture, not by accident
-    subtext: >-
-      Your components render to static HTML, keeping bundles lean and pages
-      instant. Your users get instant page loads. You get a modern developer
-      experience.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-hero.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Documentation
-    heading: Every component, clearly documented
-    subtext: >-
-      Each component comes with straightforward docs, real examples, full
-      descriptions of every property, and clear guidance without having to dig
-      through source files.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-documented.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-reviews
-    id: reviews
-    heading: What Our Patients Say
-    reviews:
-      - text: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          vehicula felis nec urna tincidunt, vitae fermentum nulla condimentum.
-        authorName: First L.
-        socialIcon:
-        reviewerImage: /src/assets/images/component-library/profile1.jpg
-      - text: >-
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Proin euismod erat vel ligula facilisis.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-      - text: >-
-          Sed posuere consectetur est at lobortis. Donec sed odio dui. Cras
-          mattis consectetur purus sit amet fermentum.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-    showQuoteIcon: true
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    class: peek
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Ready to start building?
-    anchorName: ''
-    subtext: >-
-      Browse the complete Astro Component Starter and see live examples of every
-      component in action. All components are ready to use in CloudCannon and
-      are fully customizable.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: tertiary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: contrast
-    backgroundColor: surface
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
+      source: ""
+      alt: ""
       positionVertical: top
       positionHorizontal: center
     rounded: false
-  - _component: page-sections/ctas/request-bar
-    id: ''
-    heading: Ready to Get Started?
-    buttonText: Request an Appointment
-    buttonLink: /request-an-appointment
-    buttonVariant: primary
-    backgroundColor: none
-    backgroundGradient: ''
+  - _component: page-sections/builders/custom-section
+    id: ""
+    label: ""
+    contentSections: []
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: inherit
+    backgroundColor: base
+    backgroundGradient: ""
     backgroundImage:
-      source: ''
-      alt: ''
+      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+      alt: FFPC winner logo
       positionVertical: top
       positionHorizontal: center
-description: ''
+    rounded: false
+  - _component: page-sections/ctas/cta-center
+    id: ""
+    heading: Comfortable & Compassionate
+    anchorName: ""
+    subtext: |-
+      ###### Our Services
+
+      [Our team](/meet-the-team/) is here for you every step of the way.  With years of experience and training, we are fully prepared to provide exceptional quality care.
+
+      [![Cosmetic dental icon](/wp-content/uploads/2021/05/Cosmetic-icon.png)](/category/services/cosmetic/)
+
+      ### [Cosmetic](/category/services/cosmetic/)
+
+      Looking to brighten up your smile? Have an imperfection you want fixed? We can make it happen!
+
+      [![Restorative dental icon](/wp-content/uploads/2021/05/Restorative-icon.png)](/category/services/restorative/)
+
+      ### [Restorative](/category/services/restorative/)
+
+      Turn that frown upside down. With our advanced techniques we can restore your beautiful smile!
+
+      [](/category/services/preventive/)
+
+      ### [Preventive](/category/services/preventive/)
+
+      The most important part of maintaining a happy healthy smile is to keep up with routine visits.
+
+      [![Dental insurance icon](/wp-content/uploads/2021/05/Insurance-icon.png)](/health-plans/)
+
+      ### [Artisan Dental Health Plan](/health-plans/)
+
+      Affordable oral health care for individuals and families without dental insurance.
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: View All Services
+        hideText: false
+        link: /services/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+    colorScheme: inherit
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: /wp-content/uploads/2021/05/Resorative-icon.png
+      alt: Restorative dental icon
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/location/location-find-us
+    id: ""
+    heading: Why Choose Us
+    text: |-
+      ###### About Us
+
+      - Exceptional Quality
+      - Comfortable + Compassionate Care
+      - Award Winning
+      - Outstanding Patient Reviews
+      - Warm + Calming Atmosphere
+      - State of the Art Technology
+      - Insurance Compatibility
+      - Affordability
+      - Business for Good
+      - Certified B Corporation
+    backgroundColor: "#ffffff"
+    textColor: "#000000"
+    accentColor: var(--color-brand-subtle)
+    iconColor: var(--color-brand)
+  - _component: page-sections/location/location-find-us
+    id: ""
+    heading: "[Why Choose Us](/why-choose-artisan/)"
+    text: |-
+      [](/why-choose-artisan/)
+
+      We want you to have the very best dental experience. It is important you feel safe and comfortable with your dentist!
+
+      [![](/wp-content/uploads/2020/08/102261448_1964298147033994_78904-1-1-1.jpg)](/meet-the-team/)
+
+      ## [Meet Our Team](/meet-the-team/)
+
+      We are more than just a traditional dentist office, our dental team is a family of local highly trained professionals!
+
+      [![Artisan Dental office lobby](/wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology-235-rev.jpg)](/contact-us/)
+
+      ## [Tour Our Office](/contact-us/)
+
+      Come stop by our office anytime to take a free tour. We also have a wonderful online image gallery to check out!
+    backgroundColor: "#ffffff"
+    textColor: "#000000"
+    accentColor: var(--color-brand-subtle)
+    iconColor: var(--color-brand)
+  - _component: page-sections/builders/custom-section
+    id: ""
+    label: ""
+    contentSections: []
+    maxContentWidth: 2xl
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: inherit
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: /wp-content/uploads/2021/05/ESN2-rev.png
+      alt: ESN logo white
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/ctas/cta-center
+    id: ""
+    heading: Warm & Calming Atmosphere
+    anchorName: ""
+    subtext: |-
+      ###### Our Office
+
+      We designed [our facility](/office-tour/) in downtown Madison, Wisconsin to be warm, calming and supportive of your health and healing. From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation Films”, our intention is that your dental care experience is comfortable and enjoyable.
+
+      Health and happiness are our utmost priority whether it’s our patients, team members, or community. Creating equal opportunities is our belief for growth and development for our company. Love, Service, Ethical Integrity, Wisdom, and hard work are some of our major core values.
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: Our Mission, Vision & Values
+        hideText: false
+        link: /mission-vision-values/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+    colorScheme: inherit
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: ""
+      alt: ""
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/ctas/cta-center
+    id: ""
+    heading: State of the Art Technology
+    anchorName: ""
+    subtext: |-
+      ###### Proudly Use
+
+      Integral to the goal of providing the highest quality [dental care](/services/) available, is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and a more effective long lasting treatment.
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: Watch a Quick Video
+        hideText: false
+        link: /videos/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+    colorScheme: inherit
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: ""
+      alt: ""
+      positionVertical: top
+      positionHorizontal: center
+    rounded: false
+  - _component: page-sections/info-blocks/contact
+    id: ""
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: null
+      alt: null
+      positionVertical: top
+      positionHorizontal: center
+    officeHoursTitle: Office Hours
+    doctorNames: []
+    mapEmbedUrl: ""
+  - _component: page-sections/ctas/more-to-explore
+    id: ""
+    heading: Our Testimonials
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: View More Testimonials
+        hideText: false
+        link: /patient-reviews/
+        iconName: ""
+        iconPosition: before
+        variant: primary
+        size: md
+    maxContentWidth: null
+    paddingHorizontal: sm
+    paddingVertical: sm
+    colorScheme: default
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: /wp-content/uploads/2021/05/google-icon4-rev.png
+      alt: Google icon
+      positionVertical: top
+      positionHorizontal: center
+  - _component: page-sections/info-blocks/contact
+    id: ""
+    backgroundColor: base
+    backgroundGradient: ""
+    backgroundImage:
+      source: null
+      alt: null
+      positionVertical: top
+      positionHorizontal: center
+    officeHoursTitle: Office Hours
+    doctorNames: []
+    mapEmbedUrl: https://maps.google.com/maps?q=Artisan%20Dental%2010%20North%20Livingston%20Street%2C%20Suite%20301%2C%20Madison%2C%20WI%2053703&t=m&z=13&output=embed&iwloc=near
+  - _component: page-sections/location/location-find-us
+    id: ""
+    heading: Send us a message
+    text: |-
+      [](https://g.page/artisandds?share)
+
+      10 North Livingston Street, Suite 301, Madison, WI 53703
+
+      [![Mail Icon](/wp-content/uploads/2021/05/Mail-Icon.png)](mailto:info@artisandentalmadison.com)
+
+      ### [Email](mailto:info@artisandentalmadison.com)
+
+      info@artisandentalmadison.com
+
+      [![Phone Icon](/wp-content/uploads/2021/05/Phone-icon.png)](tel:608-467-8022)
+
+      ### [Phone](tel:608-467-8022)
+
+      [(608) 467-8022](tel:608-467-8022)
+
+       
+
+      Submit
+    backgroundColor: "#ffffff"
+    textColor: "#000000"
+    accentColor: var(--color-brand-subtle)
+    iconColor: var(--color-brand)
+_migUnmapped:
+  sections:
+    - component: page-sections/builders/custom-section
+      fields:
+        - field: subtext
+          content: |-
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            The Artisan  
+            Dental Experience
+
+            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
+
+            More About Us
+
+            ](/about-us/)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            Clear Aligner Therapy  
+            For a Perfect Smile
+
+            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
+
+            Clear Aligners
+
+            ](/services/invisalign-suresmile-clear-aligners)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            More Than  
+            Just Teeth
+
+            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
+
+            Botox & Fillers
+
+            ](/services/botox-for-therapeutics-esthetics/)
+
+            Let’s make a difference together!
+
+            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
+              
+            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
+              
+            Check out our [Impact Report.](/impact-report/)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            The Artisan  
+            Dental Experience
+
+            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
+
+            More About Us
+
+            ](/about-us/)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            Clear Aligner Therapy  
+            For a Perfect Smile
+
+            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
+
+            Clear Aligners
+
+            ](/services/invisalign-suresmile-clear-aligners)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            More Than  
+            Just Teeth
+
+            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
+
+            Botox & Fillers
+
+            ](/services/botox-for-therapeutics-esthetics/)
+
+            Let’s make a difference together!
+
+            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
+              
+            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
+              
+            Check out our [Impact Report.](/impact-report/)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            The Artisan  
+            Dental Experience
+
+            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
+
+            More About Us
+
+            ](/about-us/)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            Clear Aligner Therapy  
+            For a Perfect Smile
+
+            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
+
+            Clear Aligners
+
+            ](/services/invisalign-suresmile-clear-aligners)
+
+            [
+
+            Creating Healthy, Beautiful Smiles.  
+            More Than  
+            Just Teeth
+
+            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
+
+            Botox & Fillers
+
+            ](/services/botox-for-therapeutics-esthetics/)
+
+            Let’s make a difference together!
+
+            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
+              
+            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
+              
+            Check out our [Impact Report.](/impact-report/)
+    - component: page-sections/builders/custom-section
+      fields:
+        - field: subtext
+          content: |-
+            ![geat](/wp-content/uploads/2025/11/geat.png)
+
+            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+
+            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+
+            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+
+            ![top](/wp-content/uploads/2025/11/top.png)
+
+            ![b-logo3](/wp-content/uploads/2022/01/b-logo3.png)
+
+            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+
+            ![geat](/wp-content/uploads/2025/11/geat.png)
+
+            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+
+            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+
+            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+
+            ![top](/wp-content/uploads/2025/11/top.png)
+
+            ![b-logo3](/wp-content/uploads/2022/01/b-logo3.png)
+
+            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+
+            ![geat](/wp-content/uploads/2025/11/geat.png)
+
+            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+    - component: page-sections/location/location-find-us
+      fields:
+        - field: imageSource
+          content: /wp-content/uploads/2021/05/Why-choose-Us.jpg
+        - field: imageAlt
+          content: Dental chair - Artisan Dental office
+    - component: page-sections/builders/custom-section
+      fields:
+        - field: heading
+          content: Proudly Featured In
+        - field: subtext
+          content: |-
+            ###### Top Rated & Award Winning
+
+            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
+
+            ![sitelogo\_main2](/wp-content/uploads/2020/08/sitelogo_main2.png)
+
+            ![In Business logo white](/wp-content/uploads/2021/05/IBmasthead-horizontal2-rev.png)
+
+            ![acd-logo2](/wp-content/uploads/2020/08/acd-logo2.png)
+
+            ![Incisal edge logo](/wp-content/uploads/2021/05/edge2-rev.png)
+
+            ![wisconsin state journal logo](/wp-content/uploads/2021/05/23s-rev.png)
+
+            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
+
+            ![sitelogo\_main2](/wp-content/uploads/2020/08/sitelogo_main2.png)
+
+            ![In Business logo white](/wp-content/uploads/2021/05/IBmasthead-horizontal2-rev.png)
+
+            ![ESN logo white](/wp-content/uploads/2021/05/ESN2-rev.png)
+
+            ![acd-logo2](/wp-content/uploads/2020/08/acd-logo2.png)
+
+            ![Incisal edge logo](/wp-content/uploads/2021/05/edge2-rev.png)
+
+            ![wisconsin state journal logo](/wp-content/uploads/2021/05/23s-rev.png)
+
+            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
+    - component: page-sections/info-blocks/contact
+      fields:
+        - field: youtubeId
+          content: https://www.youtube.com/embed/iT5KMZZTY44?controls=1&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A59392&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A59392%2Findex.html&aoriginsup=1&vf=1
+        - field: embedUrl
+          content: https://www.youtube.com/embed/fh6IQb8i6Sc?controls=1&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A59392&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A59392%2Findex.html&aoriginsup=1&vf=1
+    - component: page-sections/ctas/more-to-explore
+      fields:
+        - field: eyebrow
+          content: What People Are Saying
+        - field: subtext
+          content: |-
+            I was so nervous to see a new dentist after not going for soooo long. The staff were so courteous and explained all of my health records and options. They did a great job catering to my nerves and making me feel comfortable. I left feeling very hopeful, healthy, and without any unanswered questions. They did a great job with COVID precautions and the environment is spotless!
+
+            Kate S.
+
+            Everyone is so kind, patient, mindful, and personable. Professionalism is 110%. The office is clean & beautiful. I never feel like they're trying to push unnecessary and expensive dental work to make money off me. Plus, they recycle old dental products for clients! I hate going to the dentist, but this place has changed my mind. Thank you!
+
+            ![Google icon](/wp-content/uploads/2021/05/google-icon4-rev.png)
+
+            Marie S.
+
+            I love Artisan Dental and have been going there for four years now. The folks in reception always make me feel welcomed, the hygienists are skilled and personable, and I trust and appreciate the professionalism and skills of the dentists. I'm particularly fond of the TVs they have that display beautiful nature scenes (rather than assaulting the senses as some businesses seem to think is desirable).
+
+            ![Yelp icon](/wp-content/uploads/2021/05/Yelp.png)
+
+            Liz Z.
+
+            I was in town visiting Epic and had an unexpected dental emergency. This was quite distressing since I was so far from my normal dentist in Cincinnati. Thank goodness I found Artisan Dental! They got me in quickly and did a great job. Everyone from the office staff to the hygienist to the dentist was very calming and helpful!
+
+            ![Yelp icon](/wp-content/uploads/2021/05/Yelp.png)
+
+            Christy B.
+
+            The staff's kindness, service, and professionalism make me glad that I chose to go here for my dental services. I had a LOT of work to get done this year as I hadn't been to the dentist in awhile. They took it in stride and never made me feel guilty, but rather inspired me to take better care of my teeth! I was in awe when I first started going as someone else said, it almost feels like a relaxing spa retreat...
+
+            ![FB circle logo](/wp-content/uploads/2021/05/fb-logo4-rev.png)
+
+            Erin G.
+
+            Fantastic service from entry to exit. Not only is the clinic beautiful and welcoming with small details, the staff is extremely friendly and seems very genuine. I had fillings done, and actually enjoyed the process. I highly recommended this office (coming from a former Dental clinic receptionist in another city).
+
+            ![FB circle logo](/wp-content/uploads/2021/05/fb-logo4-rev.png)
+
+            Esperanza S.
+    - component: page-sections/location/location-find-us
+      fields:
+        - field: eyebrow
+          content: Address
+        - field: imageSource
+          content: /wp-content/uploads/2021/05/Location-icon.png
+        - field: imageAlt
+          content: Location icon
 ---
