@@ -7,27 +7,6 @@ title: Services
 description: ""
 canonical: /services/
 pageSections:
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: Take a look at all of our
-    heading: Services Artisan Dental Provides
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>“there is no better feeling than changing someone’s life by making them comfortable and confident with one of their most important assets…a beautiful smile.” You have choices that can help you smile with ease. Even the smallest change in your smile can make a dramatic difference in the way you look and feel about yourself.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: Schedule Your Consultation
-    buttonLink: /contact-us/
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: ""

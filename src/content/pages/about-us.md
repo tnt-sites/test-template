@@ -9,35 +9,15 @@ canonical: /about-us/
 pageSections:
   - _component: page-sections/artisan/page-banner
     id: ""
-    eyebrow: ""
+    eyebrow: We Invite You To
     heading: Dental Health Plan
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    backgroundImage: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-239.jpeg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: We Invite You To
-    heading: Learn More About Us
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is an award-winning, mission, vision and values oriented general dentistry practice in downtown Madison, Wisconsin. As a member of the broader, Business For Good movement and Certified B Corporation, our mission is to optimize the health and happiness of our patients, team members, suppliers, community, and the environment through exceptional quality care and sustainable business practices.</p><p>We designed our facility in downtown Madison, Wisconsin to be warm, calming, and supportive of your health and healing.&nbsp; From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation”, our intention is that your dental care experience is comfortable and enjoyable.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: Schedule Your Consultation
-    buttonLink: /contact-us/
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
+    minHeight: 420px
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: ""

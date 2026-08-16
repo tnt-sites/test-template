@@ -14,30 +14,10 @@ pageSections:
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Botox for Therapeutics & Esthetics
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>At Artisan Dental, we appreciate the opportunity to fulfill our mission of providing exceptional quality care that is empathetic and compassionate. Building on Dr. Andersen’s extensive experience in cosmetic dentistry, Dr. Rehermann has received specialized training regarding the administration of Botulinum Toxin – Botox® for dental therapeutic and esthetic purposes from the American Academy of Facial Esthetics.</p><p>We understand that looking and feeling your best can contribute to your overall sense of happiness and well being and look forward to partnering with you to create individualized treatment plans for all of your oral health, cosmetic dental and facial esthetic needs and wishes.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: rgb(50, 28, 14)
-    eyebrowColor: "#d2b22e"
-    headingColor: "#ffffff"
-    textColor: "#ffffff"
+    minHeight: 420px
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""

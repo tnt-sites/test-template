@@ -9,35 +9,15 @@ canonical: /why-choose-artisan/
 pageSections:
   - _component: page-sections/artisan/page-banner
     id: ""
-    eyebrow: ""
+    eyebrow: We Know You Have Options
     heading: Dental Health Plan
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    backgroundImage: /wp-content/uploads/2020/09/shutterstock_720054574-2.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: We Know You Have Options
-    heading: Why Choose Artisan?
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>We designed&nbsp;our facility in downtown Madison, Wisconsin to be warm, calming, and supportive of your health and healing.&nbsp; From our floor to ceiling windows, to the incorporation of the visual technology “Window Channel Network”, our intention is that your dental care experience is comfortable and enjoyable.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: Schedule Your Consultation
-    buttonLink: /contact-us/
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
+    minHeight: 420px
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""

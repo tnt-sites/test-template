@@ -14,24 +14,10 @@ pageSections:
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Full & Partial Mouth Rehabilitation
-    text: <p></p>
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: rgb(50, 28, 14)
-    eyebrowColor: "#d2b22e"
-    headingColor: "#ffffff"
-    textColor: "#ffffff"
+    minHeight: 420px
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: Look your very best!

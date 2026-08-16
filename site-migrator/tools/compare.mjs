@@ -192,27 +192,27 @@ async function main() {
   const a = await src.page.evaluate(PROBE, [true, PROPS]);
   const b = await blt.page.evaluate(PROBE, [false, PROPS]);
 
-  console.log(`\n${pageId}: ${a.length} source section(s) vs ${b.length} built\n`);
+  const dropped = a.filter((s) => s.empty || s.hidden);
+  const aa = a.filter((s) => !s.empty && !s.hidden);
+  const bb = b.filter((s) => !s.empty && !s.hidden);
 
-  const n = Math.max(a.length, b.length);
+  console.log(
+    `\n${pageId}: ${aa.length} source content section(s) vs ${bb.length} built` +
+      (dropped.length ? `  (${dropped.length} empty/hidden source section(s) ignored)` : "") +
+      "\n"
+  );
+
+  const n = Math.max(aa.length, bb.length);
   for (let i = 0; i < n; i++) {
     if (only !== null && i !== only) continue;
-    const s = a[i];
-    const t = b[i];
-    const skip = s && (s.empty || s.hidden);
-    const tag = skip
-      ? `SOURCE SECTION IS ${s.hidden ? "HIDDEN" : "EMPTY"} — nothing to migrate`
-      : !s
-        ? "EXTRA IN BUILD"
-        : !t
-          ? "MISSING IN BUILD"
-          : "";
+    const s = aa[i];
+    const t = bb[i];
+    const tag = !s ? "EXTRA IN BUILD" : !t ? "MISSING IN BUILD" : "";
     console.log(
       `[${i}] ${tag}  h: ${s?.height ?? "—"} vs ${t?.height ?? "—"}   imgs: ${s?.images ?? "—"} vs ${t?.images ?? "—"}`
     );
     if (s) console.log(`    src   "${s.text}"`);
     if (t) console.log(`    built "${t.text}"`);
-    if (skip) { console.log(''); continue; }
     if (s && t) {
       const rows = [
         ...diffRow("section", s.section, t.section),

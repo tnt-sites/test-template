@@ -19,6 +19,7 @@ const {
   backgroundImage = "",
   overlayColor = "rgba(50, 28, 14, 0.55)",
   align = "center",
+  minHeight = "",
   id,
   _component,
   ...rest
@@ -30,7 +31,7 @@ const image = typeof backgroundImage === "string" ? backgroundImage : (backgroun
 <section
   class:list={["a-pagebanner", { center: align === "center" }]}
   id={id || undefined}
-  style={`--bg:${backgroundColor};--hd:${headingColor};--eb:${eyebrowColor};--ov:${overlayColor}${image ? `;--img:url('${image}')` : ""}`}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--eb:${eyebrowColor};--ov:${overlayColor};--minh:${minHeight || (image ? "420px" : "auto")}${image ? `;--img:url('${image}')` : ""}`}
   {...rest}
 >
   {image && <div class="pb-scrim" />}
@@ -41,11 +42,16 @@ const image = typeof backgroundImage === "string" ? backgroundImage : (backgroun
 </section>
 
 <style>
+  /* A plain title band is just padding; a photo banner is much taller on the
+     source (810px vs 200px), so it gets a min-height instead. */
   .a-pagebanner {
+    align-items: center;
     background-color: var(--bg);
     background-image: var(--img, none);
     background-position: center;
     background-size: cover;
+    display: flex;
+    min-height: var(--minh, auto);
     padding-block: 75px;
     position: relative;
   }

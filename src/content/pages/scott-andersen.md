@@ -14,9 +14,10 @@ pageSections:
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
+    minHeight: 420px
   - _component: page-sections/artisan/page-body
     id: ""
     sidebarHeading: Our Team

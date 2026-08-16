@@ -7,27 +7,6 @@ title: New Smile Design
 description: ""
 canonical: /new-smile-design/
 pageSections:
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: Look your very best!
-    heading: Have You Considered A New Smile Design?
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>People choose new smile design&nbsp;services to assist with a variety of challenges including those outlined below.&nbsp; If you have any of these common issues and would like to explore enhancing your smile, it would be Dr. Andersen’s pleasure to help you!</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: Schedule Your Consultation
-    buttonLink: /contact-us/
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: We Can Fix These

@@ -12,6 +12,7 @@ value:
   backgroundImage: ""
   overlayColor: "rgba(50, 28, 14, 0.55)"
   align: center
+  minHeight: ""
 preview:
   text:
     - Page Banner

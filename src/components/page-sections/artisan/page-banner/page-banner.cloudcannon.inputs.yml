@@ -14,6 +14,9 @@ _inputs:
     type: color
   overlayColor:
     type: color
+  minHeight:
+    type: text
+    comment: CSS length. Blank uses 420px when there is a photo.
   align:
     type: select
     options:

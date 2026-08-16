@@ -184,13 +184,25 @@ for (const id of ids) {
   await page.evaluate(() => new Promise((r) => { let y = 0; const t = setInterval(() => { window.scrollTo(0, y += 700); if (y > 12000) { clearInterval(t); r(); } }, 15); }));
   const secs = await page.evaluate(READ);
 
-  const built = secs.map(classify).filter(Boolean);
+  const content = secs.filter((x) => !x.hidden && (x.text || x.images.length || x.iframes.length));
+  const bannerSrc = content[0];
+  const built = content.slice(1).map(classify).filter(Boolean);
   const md = path.join(PAGES, `${id}.md`);
   if (!fs.existsSync(md)) { console.log(`  ! no page file for ${id}`); continue; }
   const raw = fs.readFileSync(md, "utf8");
   const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   const fm = YAML.parse(m[1]);
   const banner = (fm.pageSections ?? []).find((s) => s._component?.endsWith("artisan/page-banner"));
+  if (banner && bannerSrc) {
+    // Interior banners often sit on a photo. The old index-banner carried a
+    // null backgroundImage, so the swap had nothing to copy and every banner
+    // came out as the plain brown band.
+    if (bannerSrc.bgImage) {
+      banner.backgroundImage = bannerSrc.bgImage;
+      wanted.add(bannerSrc.bgImage);
+    }
+    if (!banner.eyebrow && bannerSrc.eyebrow) banner.eyebrow = bannerSrc.eyebrow;
+  }
   fm.pageSections = [...(banner ? [banner] : []), ...built];
   delete fm._migUnmapped;
 
