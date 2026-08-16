@@ -163,65 +163,775 @@ pageSections:
       alt: Google icon
       positionVertical: top
       positionHorizontal: center
-  - _component: page-sections/builders/custom-section
+  - _component: page-sections/artisan/page-body
     id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-_migUnmapped:
-  sections:
-    - component: page-sections/location/location-find-us
-      fields:
-        - field: imageSource
-          content: /wp-content/uploads/2020/08/google-icon4.png
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: subtext
-          content: |-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2021/05/google-icon4-rev.png
+    imageAlt: Google icon
+    body: "
 
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-inner-section elementor-element elementor-element-4964019 elementor-section-full_width elementor-section-height-default elementor-section-height-default\" data-id=\"4964019\" data-element_type=\"section\" data-e-type=\"section\">
 
-            ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2a32e6a\" data-id=\"2a32e6a\" data-element_type=\"column\" data-e-type=\"column\">
 
-            ![top-dentist-2024](/wp-content/uploads/2024/07/top-dentist-2024.png)
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-c952b7f elementor-widget elementor-widget-testimonial\" data-id=\"c952b7f\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
 
-            ![great](/wp-content/uploads/2023/09/great-4.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
 
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Best dental office in Madison hands down! Caring staff, highly skilled dentists, hygienists, and assistants. Amazing technology and beautiful office. Would not trust anyone else with my family’s care. Thank you for being amazing!</div>
 
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t
 
-            ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
 
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
 
-            ![top-dentist-2024](/wp-content/uploads/2024/07/top-dentist-2024.png)
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
 
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
 
-            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      \t\t\t\t\t
 
-            ![great](/wp-content/uploads/2023/09/great-4.png)
+      \t\t\t\t\t\t\t\t\t</div>
 
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-c3eb163 elementor-widget elementor-widget-testimonial\" data-id=\"c3eb163\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Awesome people and great at talking over that they are doing. I HATE the dentist, but I like it here. </div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-9e71031 elementor-widget elementor-widget-testimonial\" data-id=\"9e71031\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">My first experience at Artisan Dental was fantastic! They treated me with an amazing amount of care, consideration and precision. The office and staff make the entire experience feel like a spa. I will certainly be recommending Artisan Dental to anyone looking for a dental office in Madison.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-8acd1df elementor-widget elementor-widget-testimonial\" data-id=\"8acd1df\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Very friendly, thorough cleaning, clean and modern office. Highly recommend.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-d13bcb6 elementor-widget elementor-widget-testimonial\" data-id=\"d13bcb6\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">My visit to Artisan Dental today has been the most amazing dental visit I have ever had! Dr. Mark Rehermann was so skilled I can honestly say it was absolutely painless. Highly recommend!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-c5f0763 elementor-widget elementor-widget-testimonial\" data-id=\"c5f0763\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Best dentist office! They’re always clean, punctual, friendly, and professional. Also love that they’re a B Corp company. Major kudos!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-7247915 elementor-widget elementor-widget-testimonial\" data-id=\"7247915\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">They are taking appropriate COVID precautions. They screen all patients with a comprehensive questionnaire, they have barriers between patients and reception, their staff wear the appropriate masks, they use aerosol reduction techniques for cleanings, and they're giving out hand sanitizer. Overall, felt safe and low-risk. Always appreciate the friendliness of the staff, as well!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-5fd0643 elementor-widget elementor-widget-testimonial\" data-id=\"5fd0643\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">I was very happy with my visit today. I had Destinee at my hygienist and she was so nice and explained everything she was doing before she did it. They had good safety precautions in place and I felt very comfortable.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"290\" height=\"290\" src=\"/wp-content/uploads/2021/05/google-icon4-rev.png\" class=\"attachment-full size-full wp-image-7013\" alt=\"Google icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t<div class=\"elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-23eb5a5\" data-id=\"23eb5a5\" data-element_type=\"column\" data-e-type=\"column\">
+
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
+
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-ceb0e1c elementor-widget elementor-widget-testimonial\" data-id=\"ceb0e1c\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">It’s located in my neighborhood, so for me this place is very convenient. There’s street parking and also free 2-hour parking in the garage.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-59e0033 elementor-widget elementor-widget-testimonial\" data-id=\"59e0033\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">I had a dental emergency today and Artisan Dental saw me through it. Great people and great service!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-09746f3 elementor-widget elementor-widget-testimonial\" data-id=\"09746f3\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">I was in town visiting Epic and had an unexpected dental emergency. This was quite distressing since I was so far from my normal dentist in Cincinnati. Thank goodness I found Artisan Dental! They got me in quickly and did a great job. Everyone from the office staff to the hygienist to the dentist was very calming and helpful!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-0a00744 elementor-widget elementor-widget-testimonial\" data-id=\"0a00744\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Above and beyond. I couldn’t be happier with my experience. Everyone was kind and courteous. There wasn’t a long waiting period for anything. Lindsay (dental hygienist) was very patient and took great care of me with my cleaning and X-rays. Thank you!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-098df01 elementor-widget elementor-widget-testimonial\" data-id=\"098df01\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">The staff is nice and always checking on your comfort level. Despite being in the chair for over half an hour it doesn’t really feel too long. They are more than happy to discuss your insurance plan to ensure that you’re getting the most out of your dental plan and benefits.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-98dea13 elementor-widget elementor-widget-testimonial\" data-id=\"98dea13\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Fantastic group of people who have done great work and helped alleviate my extreme anxiety about dental work.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-f005e8c elementor-widget elementor-widget-testimonial\" data-id=\"f005e8c\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">This place is first class all around. Lindsay was an amazing dental hygienist. Courteous, knowledgeable. Dr Mierick was great too. Receptionist as well. Great hospitality, latest technology. I made a great choice!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-64ef3c1 elementor-widget elementor-widget-testimonial\" data-id=\"64ef3c1\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">I’ve not been to a spa but this place reminds me of one with its fruit water, comforting color scheme throughout the waiting area, and tv screens that display tropical settings. I guess it helps to reduce your anxiety if your anxious about going to the dentist.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"375\" height=\"375\" src=\"/wp-content/uploads/2021/05/Yelp.png\" class=\"attachment-full size-full wp-image-7014\" alt=\"Yelp icon\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t<div class=\"elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-8c59740\" data-id=\"8c59740\" data-element_type=\"column\" data-e-type=\"column\">
+
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
+
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-0ba3a08 elementor-widget elementor-widget-testimonial\" data-id=\"0ba3a08\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Always enjoy my time with Artisan Dental as everyone is super friendly &amp; helpful! Very clean/sanitary office spaces so I also felt safe coming in during the COVID crisis.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-2c20f5d elementor-widget elementor-widget-testimonial\" data-id=\"2c20f5d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Was very anxious about having plaque removed after not having a cleaning for over two years. Kind, compassionate and have great results. A plan was put into place to get my teeth and gums back to 100%.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-3c311fa elementor-widget elementor-widget-testimonial\" data-id=\"3c311fa\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">The team is very professional and even though I had procrastinated on work to be done, the team performed the work professionally and without judgement. Really a positive place to be.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-77baf4c elementor-widget elementor-widget-testimonial\" data-id=\"77baf4c\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">The Artisan Dental staff are so kind and friendly, it’s always a treat to go in and get my teeth cleaned. I love that they do the toothpaste tube and toothbrush recycling as well. As always, Artisan Dental is an excellent experience..</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-e4ffc55 elementor-widget elementor-widget-testimonial\" data-id=\"e4ffc55\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Excellent experience from start to finish. All staff very friendly and explained what was going to happen before proceeding. Every staff member went to extremes to protect against covid. Very impressed.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-2ae5df7 elementor-widget elementor-widget-testimonial\" data-id=\"2ae5df7\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Last night, I called them and left a message about my broken molar. They texted right away this morning and I went in today with a fractured molar and they fit me in unexpectedly and were friendly, reassuring, and fast! I walked out with a filling and a smile!</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-52c22cf elementor-widget elementor-widget-testimonial\" data-id=\"52c22cf\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">Had a cavity filled and honestly wouldn't complain if I had to get another one filled with them ;) Hands down the best dentist experience I have ever had. Staff is excellent from the reception desk to the hygienists to the dentists.</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-1d996f6 elementor-widget elementor-widget-testimonial\" data-id=\"1d996f6\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"testimonial.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-wrapper\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-testimonial-content\">The hygienist and dentist really listened and explained next steps well. Was presented with options to make the best decision for my needs. It felt more like a partnership rather than a feeling of helplessness sitting in a dentist chair</div>
+
+      \t\t\t
+
+      \t\t\t\t\t\t<div class=\"elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-aside\">
+
+      \t\t\t\t<div class=\"elementor-testimonial-meta-inner\">
+
+      \t\t\t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial-image\">
+
+      \t\t\t\t\t\t\t<img loading=\"lazy\" decoding=\"async\" width=\"335\" height=\"335\" src=\"/wp-content/uploads/2020/09/webmd-circle-logo.png\" class=\"attachment-full size-full wp-image-6795\" alt=\"webmd logo\">\t\t\t\t\t\t</div>
+
+      \t\t\t\t\t
+
+      \t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t\t</div>
+
+      \t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---

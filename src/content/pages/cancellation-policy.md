@@ -17,64 +17,77 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/features/feature-grid
+  - _component: page-sections/artisan/page-body
     id: ""
-    eyebrow: ""
-    heading: ""
-    subtext: |-
-      #### Artisan Dental Cancellation Policy
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2021/04/IB_award.png
+    imageAlt: IB small Business award
+    body: "
 
-      To ensure we can serve all of our stakeholders in the best way possible, we have a 24 hour cancellation policy in place. If you need to reschedule or cancel any of your appointments, we ask that you contact Artisan Dental a minimum of 24 hours prior to your appointment to avoid being charged a cancellation fee.
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      If calling less than 24 hours prior to your appointment or not coming to a scheduled appointment, our cancellation fee will be collected over the phone or billed to your account.
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"7893\" class=\"elementor elementor-7893\" data-elementor-post-type=\"page\">
 
-      You can contact our office at 608.467.8022 or email us at [info@artisandentalmadison.com](mailto:info@artisandentalmadison.com) to reschedule your appointment.
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-baa2f1a elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"baa2f1a\" data-element_type=\"section\" data-e-type=\"section\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fb46761\" data-id=\"fb46761\" data-element_type=\"column\" data-e-type=\"column\">
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-b521658 elementor-widget elementor-widget-heading\" data-id=\"b521658\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t\t<h4 class=\"elementor-heading-title elementor-size-default\">Artisan Dental Cancellation Policy
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      </h4>\t\t\t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-046a5c2 elementor-widget elementor-widget-text-editor\" data-id=\"046a5c2\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t\t\t\t\t\t<p dir=\"ltr\">To ensure we can serve all of our stakeholders in the best way possible, we have a 24 hour cancellation policy in place. If you need to reschedule or cancel any of your appointments, we ask that you contact Artisan Dental a minimum of 24 hours prior to your appointment to avoid being charged a cancellation fee.</p>\t\t\t\t\t\t\t\t</div>
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t</div>
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-03fa78d elementor-widget elementor-widget-text-editor\" data-id=\"03fa78d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t\t\t\t\t\t<p dir=\"ltr\">If calling less than 24 hours prior to your appointment or not coming to a scheduled appointment, our cancellation fee will be collected over the phone or billed to your account.</p>\t\t\t\t\t\t\t\t</div>
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      \t\t\t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-4e89bd3 elementor-widget elementor-widget-text-editor\" data-id=\"4e89bd3\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features: []
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>You can contact our office at 608.467.8022 or email us at&nbsp;<a href=\"mailto:info@artisandentalmadison.com\" target=\"_blank\" rel=\"noopener\">info@artisandentalmadison.com</a>&nbsp;<span class=\"gmail_default\">to reschedule your appointment.</span></p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---

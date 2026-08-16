@@ -17,64 +17,65 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/features/feature-grid
+  - _component: page-sections/artisan/page-body
     id: ""
-    eyebrow: ""
-    heading: ""
-    subtext: |-
-      #### We accept most dental insurance programs.
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2021/04/IB_award.png
+    imageAlt: IB small Business award
+    body: "
 
-      Our staff will take the lead in gathering information on your coverage prior to your appointment. We will help you understand what type of coverage you have without you having to decipher the complexities of the insurance business and its language.
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      It is important for you to understand that your dental insurance is a contract between you and the insurance company, which is often set up by your employer. If you have concerns regarding the type of coverage it is best to talk with your employer or the insurance company directly.
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"543\" class=\"elementor elementor-543\" data-elementor-post-type=\"page\">
 
-      All estimated co-pays and deductibles are due at the time of service.
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-7ee58c7 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"7ee58c7\" data-element_type=\"section\" data-e-type=\"section\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1d0f615\" data-id=\"1d0f615\" data-element_type=\"column\" data-e-type=\"column\">
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-75ad77d elementor-widget elementor-widget-spacer\" data-id=\"75ad77d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"spacer.default\">
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t\t\t\t<div class=\"elementor-spacer\">
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t<div class=\"elementor-spacer-inner\"></div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t</div>
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t</div>
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-f72fd4f elementor-widget elementor-widget-text-editor\" data-id=\"f72fd4f\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t\t\t\t\t\t<h4>We accept most dental insurance programs.</h4><p>Our staff will take the lead in gathering information on your coverage prior to your appointment. We will help you understand what type of coverage you have without you having to decipher the complexities of the insurance business and its language.</p><p>It is important for you to understand that your dental insurance is a contract between you and the insurance company, which is often set up by your employer. If you have concerns regarding the type of coverage it is best to talk with your employer or the insurance company directly.</p><p>All estimated co-pays and deductibles are due at the time of service.</p>\t\t\t\t\t\t\t\t</div>
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t</div>
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t\t</div>
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      \t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features: []
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
+      \t\t</section>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---

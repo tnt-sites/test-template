@@ -17,58 +17,97 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/ctas/cta-split-learn-more
+  - _component: page-sections/artisan/page-body
     id: ""
-    heading: ""
-    anchorName: ""
-    subtext: |-
-      Our Team
-
-      -   [Dr. Nicole Andersen](/dr-nicole-andersen/)
-      -   [Dr. Shruthi Dayal](/dr-shruthi-dayal/)
-      -   [Dr. Mark Rehermann](/dr-mark-rehermann/)
-      -   [Jill](/jill/)
-      -   [Scott Andersen](/scott-andersen/)
-      -   [Lindsay](/lindsay/)
-      -   [Madelyn](/madelyn/)
-      -   [Jen](/jen/)
-      -   [Claire](/claire/)
-      -   [Alli](/alli/)
-      -   [Jonlyn](/jonlyn/)
-      -   [Cassandra](/cassandra/)
-      -   [Emily](/emily-2/)
-      -   [Adria](/adria/)
-      -   [Kat](/kat/)
-      -   [Katie](/katie/)
-      -   [Pamee](/pamee/)
-      -   [Juliana](/juliana/)
-      -   [Kaitlin](/kaitlin/)
-      -   [Kelli](/kelli/)
-
-      Share Page
-
-      #### Director of Stakeholder Stewardship
-
-      I work collaboratively with Dr. Andersen and the entire Artisan team to ensure we are providing you with compassionate care that is of the highest quality. My responsibilities range from cultivating relationships with our various community and industry partners to research and development of new services we can offer at Artisan Dental. My previous professional experiences include founding and directing several businesses and roles with two global healthcare organizations.  I graduated with honors from Mount Mercy University in 1995 with an Interdisciplinary B.A. in the Social Sciences and a Business Administration minor. As always, we welcome your feedback around ways that we can enhance the quality of your care and experience at Artisan Dental.
-
-      In my free time, I enjoy spending time with my wife and two children, reading, traveling and volunteering in our community as a coach, teacher and active member of various non-profit and civic boards.
-
-      [PrevPreviousJill](/jill/)
-
-      [NextJonlynNext](/jonlyn/)
-    imageSource: /wp-content/uploads/2020/08/Scott-Andersen.jpg
+    sidebarHeading: Our Team
+    links:
+      - name: Dr. Nicole Andersen
+        path: /dr-nicole-andersen/
+        current: false
+      - name: Dr. Shruthi Dayal
+        path: /dr-shruthi-dayal/
+        current: false
+      - name: Dr. Mark Rehermann
+        path: /dr-mark-rehermann/
+        current: false
+      - name: Jill
+        path: /jill/
+        current: false
+      - name: Scott Andersen
+        path: /scott-andersen/
+        current: true
+      - name: Lindsay
+        path: /lindsay/
+        current: false
+      - name: Madelyn
+        path: /madelyn/
+        current: false
+      - name: Jen
+        path: /jen/
+        current: false
+      - name: Claire
+        path: /claire/
+        current: false
+      - name: Alli
+        path: /alli/
+        current: false
+      - name: Jonlyn
+        path: /jonlyn/
+        current: false
+      - name: Cassandra
+        path: /cassandra/
+        current: false
+      - name: Emily
+        path: /emily-2/
+        current: false
+      - name: Adria
+        path: /adria/
+        current: false
+      - name: Kat
+        path: /kat/
+        current: false
+      - name: Katie
+        path: /katie/
+        current: false
+      - name: Pamee
+        path: /pamee/
+        current: false
+      - name: Juliana
+        path: /juliana/
+        current: false
+      - name: Kaitlin
+        path: /kaitlin/
+        current: false
+      - name: Kelli
+        path: /kelli/
+        current: false
+    image: /wp-content/uploads/2020/08/Scott-Andersen.jpg
     imageAlt: Scott Andersen - Artisan Dental Staff
-    buttonSections: []
-    learnMoreButtonText: Learn More About Heading text
-    learnMoreSections: []
+    body: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t
+
+      <h4 class=\"wp-block-heading\">Director of Stakeholder Stewardship</h4>
+
+
+
+
+      <p class=\"wp-block-paragraph\">I work collaboratively with Dr. Andersen and the entire Artisan team to ensure we are providing you with compassionate care that is of the highest quality. My responsibilities range from cultivating relationships with our various community and industry partners to research and development of new services we can offer at Artisan Dental. My previous professional experiences include founding and directing several businesses and roles with two global healthcare organizations.&nbsp;&nbsp;I graduated with honors from Mount Mercy University in 1995 with an Interdisciplinary B.A. in the Social Sciences and a Business Administration minor. As always, we welcome your feedback around ways that we can enhance the quality of your care and experience at Artisan Dental.</p>
+
+
+
+
+      <p class=\"wp-block-paragraph\">In my free time, I enjoy spending time with my wife and two children, reading, traveling and volunteering in our community as a coach, teacher and active member of various non-profit and civic boards.</p>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
 ---

@@ -1,0 +1,34 @@
+_inputs:
+  links:
+    type: array
+    comment: The section navigation shown in the sidebar.
+    options:
+      structures: _structures.page_body_link
+  body:
+    type: html
+  image:
+    type: image
+  backgroundColor:
+    type: color
+  headingBackground:
+    type: color
+  headingColor:
+    type: color
+  linkColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  page_body_link:
+    values:
+      - value:
+          name: ""
+          path: ""
+          current: false
+        _inputs:
+          name:
+            type: text
+          path:
+            type: url
+          current:
+            type: switch

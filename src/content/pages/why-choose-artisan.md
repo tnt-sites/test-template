@@ -41,136 +41,25 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
     rounded: false
-  - _component: page-sections/builders/custom-section
+  - _component: page-sections/artisan/page-body
     id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/features/feature-grid
-    id: ""
-    eyebrow: ""
-    heading: ★★★★★
-    subtext: |-
-      ### Recognitions and Awards
+    sidebarHeading: ""
+    links: []
+    image: ""
+    imageAlt: ""
+    body: "
 
-      Our team consists of highly qualified dentists, dental assistants, dental hygienists and patient care coordinators able to provide you with top rated dental care. Among our team, Dr. Andersen has been named one of Madison’s Top Dentists since 2011. 
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      Our recognitions and awards as a practice include:
+      \t\t\t\t\t\t\t\t\t<h3><span style=\"color: #d2b22e\">★★★★★</span></h3><h3>Recognitions and Awards</h3><p><span style=\"font-weight: 400\">Our team consists of highly qualified dentists, dental assistants, dental hygienists and patient care coordinators able to provide you with top rated dental care. Among our team, Dr. Andersen has been named one of Madison’s Top Dentists since 2011.&nbsp;</span></p><p><span style=\"font-weight: 400\">Our recognitions and awards as a practice include:</span></p><ul><li><span style=\"font-weight: 400\"><strong>2025: </strong>Dr. Nicole Andersen named topDentist by her colleagues since 2011.</span></li></ul><ul><li><strong>2023</strong>: Artisan Dental’s Impact Report won the American Graphic Design Health and Wellness Award</li><li><strong>2023:</strong>&nbsp;Artisan Dental’s Impact Report won the American Graphic Design Award in the new category of “Designing for Good.”</li><li><strong>2023</strong>: Scott Andersen was awarded the Wisconsin Sustainable Business Council’s, Sustainable Leadership – Executive Award.</li><li><b>2023:</b><span style=\"font-weight: 400\"> Artisan Dental received the Great Place to Work Certification.</span></li><li><b>2022:</b><span style=\"font-weight: 400\"> Scott Andersen was named a finalist for the Wisconsin Sustainable Business Council’s, Sustainable Leadership – Executive Award.</span></li><li style=\"font-weight: 400\"><span style=\"font-weight: 400\"><strong>2022:</strong> Artisan Dental received the Communitas Excellence Award.</span></li><li><strong>2021:</strong> Artisan Dental featured as a case study in the book, “The Sustainable Dentist, The New Normal”, by Beverly Oviedo-Allison and Marylou Shockey, PhD.</li><li><strong>2021:</strong> Rochelle Guastella earned the American Association of Office Managers, Green Leader award.</li><li><strong>2021:</strong> Artisan Dental was featured in the September/October issue of the Wisconsin Dental Association’s Journal cover story on Green Dentistry</li><li style=\"font-weight: 400\"><span style=\"font-weight: 400\"><strong>2021:</strong> Artisan Dental received the Communitas Excellence Award.</span></li><li style=\"font-weight: 400\"><span style=\"font-weight: 400\"><strong>2020:</strong> Artisan Dental named a Climate Champion by Dane County Office of Energy and Climate Change</span></li><li><strong>2019:</strong> Artisan Dental was recognized as a Best for the World – Worker category honoree by B Lab the non-profit that Certifies B Corporations.</li><li><strong>2019:</strong> Artisan Dental was recognized by Madison Magazine as the Best Place to Work in the small company category.</li><li><strong>2019:</strong> Artisan Dental was selected as a winner in the Wisconsin-based Force for Positive Change Award.</li><li><strong>2018:</strong> Artisan Dental was featured in a case study on Going Green, in the fall issue of the Journal of the American College of Dentists.</li><li><strong>2018:</strong> Artisan Dentalwas featured in “Stage 5, Purpose and Values” company in the 2018 summer,&nbsp;&nbsp;“Sustainability” issue of the Journal of the American College of Dentists.</li><li><strong>2018:</strong> Artisan Dental was recognized as a Best for the World – Worker category honoree by B Lab the non-profit that Certifies B Corporations.</li><li><strong>2018:</strong> Artisan Dental was recognized by Madison Magazine as the Best Place to Work in the Small Company category.</li><li style=\"font-weight: 400\"><strong>2018:</strong> Artisan Dental was the winner of the In Business Magazine, Dane County Small Business Award.</li><li style=\"font-weight: 400\"><span style=\"font-weight: 400\"><strong>2017:</strong> Artisan Dental is Wisconsin’s first general dentistry practice to become a Certified B Corporation and the second practice in the United States to become certified as a B Corporation.</span></li></ul>\t\t\t\t\t\t\t\t</div>
 
-      -   **2025:** Dr. Nicole Andersen named topDentist by her colleagues since 2011.
-
-      -   **2023**: Artisan Dental’s Impact Report won the American Graphic Design Health and Wellness Award
-      -   **2023:** Artisan Dental’s Impact Report won the American Graphic Design Award in the new category of “Designing for Good.”
-      -   **2023**: Scott Andersen was awarded the Wisconsin Sustainable Business Council’s, Sustainable Leadership – Executive Award.
-      -   **2023:** Artisan Dental received the Great Place to Work Certification.
-      -   **2022:** Scott Andersen was named a finalist for the Wisconsin Sustainable Business Council’s, Sustainable Leadership – Executive Award.
-      -   **2022:** Artisan Dental received the Communitas Excellence Award.
-      -   **2021:** Artisan Dental featured as a case study in the book, “The Sustainable Dentist, The New Normal”, by Beverly Oviedo-Allison and Marylou Shockey, PhD.
-      -   **2021:** Rochelle Guastella earned the American Association of Office Managers, Green Leader award.
-      -   **2021:** Artisan Dental was featured in the September/October issue of the Wisconsin Dental Association’s Journal cover story on Green Dentistry
-      -   **2021:** Artisan Dental received the Communitas Excellence Award.
-      -   **2020:** Artisan Dental named a Climate Champion by Dane County Office of Energy and Climate Change
-      -   **2019:** Artisan Dental was recognized as a Best for the World – Worker category honoree by B Lab the non-profit that Certifies B Corporations.
-      -   **2019:** Artisan Dental was recognized by Madison Magazine as the Best Place to Work in the small company category.
-      -   **2019:** Artisan Dental was selected as a winner in the Wisconsin-based Force for Positive Change Award.
-      -   **2018:** Artisan Dental was featured in a case study on Going Green, in the fall issue of the Journal of the American College of Dentists.
-      -   **2018:** Artisan Dentalwas featured in “Stage 5, Purpose and Values” company in the 2018 summer,  “Sustainability” issue of the Journal of the American College of Dentists.
-      -   **2018:** Artisan Dental was recognized as a Best for the World – Worker category honoree by B Lab the non-profit that Certifies B Corporations.
-      -   **2018:** Artisan Dental was recognized by Madison Magazine as the Best Place to Work in the Small Company category.
-      -   **2018:** Artisan Dental was the winner of the In Business Magazine, Dane County Small Business Award.
-      -   **2017:** Artisan Dental is Wisconsin’s first general dentistry practice to become a Certified B Corporation and the second practice in the United States to become certified as a B Corporation.
-
-      ### ★★★★★
-
-      ### Recognitions and Awards
-
-      Our team consists of highly qualified dentists, dental assistants, dental hygienists and patient care coordinators able to provide you with top rated dental care. Among our team, Dr. Andersen has been named one of Madison’s Top Dentists since 2011. 
-
-      Our recognitions and awards as a practice include:
-
-      -   **2023:** Dr. Nicole Andersen name topDentist by her colleagues since 2011.
-      -   **2023:** Artisan Dental received the Great Place to Work Certification.
-      -   **2022:** Artisan Dental received the Communitas Excellence Award.
-      -   **2021:** Artisan Dental received the Communitas Excellence Award.
-      -   **2020:** Artisan Dental named a Climate Champion by Dane County Office of Energy and Climate Change.
-      -   **2019:** Artisan Dental was selected as a winner in the Wisconsin-based Force for Positive Change Award. We were also recognized by Madison Magazine as the Best Place to Work in the small company category and recognized as a Best For The World – Worker category honoree by B Lab.
-      -   **2018:** Artisan Dental was one of the winners of the In Business Magazine, Dane County Small Business Award. We were also recognized by Madison Magazine as the Best Place to Work in the small company category and recognized as a Best For The World – Worker category honoree by B Lab.
-      -   **2017:** Artisan Dental was recognized by Madison Magazine as the Best Place to Work in the small company category.
-      -   **2017:** Artisan Dental is Wisconsin’s first general dentistry practice to become a Certified B Corporation and the second practice in the United States to become certified as a B Corporation.
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features: []
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/builders/custom-section
-    id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2020/08/FFPC-winner-logo2-1.png
-      alt: FFPC-winner-logo2 (1)
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/ctas/cta-split
-    id: ""
-    heading: Exceptional Quality
-    anchorName: ""
-    subtext: |-
-      ###### Our Team Provides
-
-      At Artisan Dental our commitment to providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts.  Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
-
-      ###### Top Rated
-
-      ## Patient Reviews
-
-      We feel fortunate to have received very appreciative patient feedback from our existing patients regarding their experience being cared for at Artisan Dental.  We invite you to review their comments available on the [Google](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=artisandental%20madison%2C%20wi.&lrd=0x880653684d22bba9:0x675904eddaf49867,1), [Yelp,](https://www.yelp.com/biz/artisan-dental-madison) [Facebook,](https://www.facebook.com/Artisan-Dental-Madison-417141075083050/?ref=bookmarks) and [Rate A Dentist](http://rateadentist.com/reviews/Wisconsin/Madison/ArtisanDentalLLCMadison) review sites.
-    imageSource: /wp-content/uploads/2022/02/artisan-doc.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: View All Reviews
-        hideText: false
-        link: /patient-reviews/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
   - _component: page-sections/ctas/cta-center
     id: ""
     heading: Certified B Corporation
@@ -225,22 +114,6 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/builders/custom-section
-    id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2022/12/Graphic-without-prices.jpg
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
   - _component: page-sections/location/location-find-us
     id: ""
     heading: Insurance Compatibility
@@ -479,57 +352,4 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
     rounded: false
-_migUnmapped:
-  sections:
-    - component: page-sections/ctas/cta-center
-      fields:
-        - field: eyebrow
-          content: We Know You Have Options
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: subtext
-          content: |-
-            ![Artisan\_Dental,\_LLC\_US\_English\_2024\_Certification\_Badge 1 (2)](/wp-content/uploads/2024/08/Artisan_Dental_LLC_US_English_2024_Certification_Badge-1-2-1.png)
-
-            ![BFTW-2018-19](/wp-content/uploads/2020/08/BFTW-2018-19.png)
-
-            ![top-dentist-2024](/wp-content/uploads/2024/07/top-dentist-2024.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![2021-communitas-awards](/wp-content/uploads/2021/04/2021-communitas-awards.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-            ![Artisan\_Dental,\_LLC\_US\_English\_2024\_Certification\_Badge 1 (2)](/wp-content/uploads/2024/08/Artisan_Dental_LLC_US_English_2024_Certification_Badge-1-2-1.png)
-
-            ![BFTW-2018-19](/wp-content/uploads/2020/08/BFTW-2018-19.png)
-
-            ![top-dentist-2024](/wp-content/uploads/2024/07/top-dentist-2024.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![2021-communitas-awards](/wp-content/uploads/2021/04/2021-communitas-awards.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-            ![FFPC-winner-logo2 (1)](/wp-content/uploads/2020/08/FFPC-winner-logo2-1.png)
-
-            ![Artisan\_Dental,\_LLC\_US\_English\_2024\_Certification\_Badge 1 (2)](/wp-content/uploads/2024/08/Artisan_Dental_LLC_US_English_2024_Certification_Badge-1-2-1.png)
-    - component: page-sections/homepage-blocks/index-banner
-      fields:
-        - field: subtext
-          content: "###### The Artisan"
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: subtext
-          content: "[](/health-plans/)"
 ---

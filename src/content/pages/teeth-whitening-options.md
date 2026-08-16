@@ -17,89 +17,89 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/ctas/cta-split-learn-more
+  - _component: page-sections/artisan/page-body
     id: ""
-    heading: What You Should Know About Teeth Whitening
-    anchorName: ""
-    subtext: |-
-      #### Teeth Whitening Options:
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2020/09/shutterstock_171267962.jpg
+    imageAlt: ""
+    body: "
 
-      We understand that even with over-the-counter options, certain shades and discolorations of teeth can be just too stubborn to lighten. That’s why we offer teeth whitening for our patients! Our teeth whitening services will help remove stains, discoloration, and signs of yellowing teeth and provide you with the confidence boost you need for a healthy smile. Under the care of our team at Artisan Dental, we can provide affordable treatment options to remove stains and help you have a beautiful white smile.
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      Discoloration can be an unappealing part of your smile, but know that we’re here to help. Professional teeth whitening works to lighten this discoloration through the use of hydrogen peroxide. While many over-the-counter options have this mixture in their products, [professional whitening services offer a higher percentage of hydrogen peroxide](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4058574/) than over the counter whiteners. When used with custom trays, the whitening gel applies evenly precisely to your specific smile.
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-post\" data-elementor-id=\"744\" class=\"elementor elementor-744\" data-elementor-post-type=\"page\">
 
-      During your dental exam with us, we work with you to understand the source of your discoloration. Tooth discoloration can often happen for a number of reasons, but we classify discoloration into different types depending on the source of the stain, the deepness of the stain, and other factors related to your oral health.
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-5d28feea elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"5d28feea\" data-element_type=\"section\" data-e-type=\"section\">
 
-      **These classifications include:** 
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-      [Teeth whitening is considered safe](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4058574/) and can be a great cosmetic option for you to help you achieve a better-looking smile. 
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3f3129b9\" data-id=\"3f3129b9\" data-element_type=\"column\" data-e-type=\"column\">
 
-      ### How Artisan Dental Can Help With Teeth Whitening
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      Our professional teeth whitening services can help keep your smile gleaming and bright. During your exam, we will work with you to provide treatment plans, schedule appointments, discuss financing options and other preventative measures to keep your teeth clean and healthy. For more information about your discoloration and our treatments, schedule a dental visit at our practice in Madison, Wisconsin, to learn more about what we do at Artisan Dental. 
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-89321ff elementor-widget elementor-widget-text-editor\" data-id=\"89321ff\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      #### Share this page with your friends!
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      Facebook
+      \t\t\t\t\t\t\t\t\t<h4>Teeth Whitening Options:</h4><p>We understand that even with over-the-counter options, certain shades and discolorations of teeth can be just too stubborn to lighten. That’s why we offer teeth whitening for our patients! Our teeth whitening services will help remove stains, discoloration, and signs of yellowing teeth and provide you with the confidence boost you need for a healthy smile. Under the care of our team at Artisan Dental, we can provide affordable treatment options to remove stains and help you have a beautiful white smile.</p>\t\t\t\t\t\t\t\t</div>
 
-      Twitter
+      \t\t\t\t</div>
 
-      Email
+      \t\t\t\t<div class=\"elementor-element elementor-element-464f651 elementor-widget elementor-widget-text-editor\" data-id=\"464f651\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t\t\t\t\t<h3>What You Should Know About Teeth Whitening</h3>
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      <p>Discoloration can be an unappealing part of your smile, but know that we’re here to help. Professional teeth whitening works to lighten this discoloration through the use of hydrogen peroxide. While many over-the-counter options have this mixture in their products,&nbsp;<a class=\"rank-math-link\" href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4058574/\" target=\"_blank\" rel=\"noreferrer noopener\" aria-label=\" (opens in a new tab)\">professional whitening services offer a higher percentage of hydrogen peroxide</a>&nbsp;than over the counter whiteners. When used with custom trays, the whitening gel applies evenly precisely to your specific smile.</p>
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      <p>During your dental exam with us, we work with you to understand the source of your discoloration. Tooth discoloration can often happen for a number of reasons, but we classify discoloration into different types depending on the source of the stain, the deepness of the stain, and other factors related to your oral health.</p>
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      <p><strong>These classifications include:&nbsp;</strong></p>
 
-      ![top](/wp-content/uploads/2025/11/top-1.png)
+      <ul>
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      <li>Extrinsic: These types of stains often come from culprits such as tea, coffee, wine, and poor dental hygiene. Extrinsic stains only affect the enamel surface and are usually removable through both at-home treatments and professional cleanings.&nbsp;</li>
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      <li>Intrinsic: Over time, however, extrinsic stains can become intrinsic. Intrinsic stains are&nbsp; embedded into the enamel and are best treated by a professional whitening system.&nbsp;</li>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      <li>Age-Related Stains: Other stains can be caused by other factors not controlled by your oral habits. Aging is often one of the biggest proponents of yellowing stains.&nbsp;</li>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      </ul>
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      <p>&nbsp;</p>
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      <p><a class=\"rank-math-link\" href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4058574/\" target=\"_blank\" rel=\"noreferrer noopener\" aria-label=\" (opens in a new tab)\">Teeth whitening is considered safe</a>&nbsp;and can be a great cosmetic option for you to help you achieve a better-looking smile.&nbsp;</p>\t\t\t\t\t\t\t\t</div>
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t</div>
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-bde0f30 elementor-widget elementor-widget-text-editor\" data-id=\"bde0f30\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![top](/wp-content/uploads/2025/11/top-1.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t\t\t\t\t\t<h3>How Artisan Dental Can Help With Teeth Whitening</h3>
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      <p>Our professional teeth whitening services can help keep your smile gleaming and bright. During your exam, we will work with you to provide treatment plans, schedule appointments, discuss financing options and other preventative measures to keep your teeth clean and healthy. For more information about your discoloration and our treatments, schedule a dental visit at our practice in Madison, Wisconsin, to learn more about what we do at Artisan Dental.&nbsp;</p>\t\t\t\t\t\t\t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t</div>
 
-      - Extrinsic: These types of stains often come from culprits such as tea, coffee, wine, and poor dental hygiene. Extrinsic stains only affect the enamel surface and are usually removable through both at-home treatments and professional cleanings.
-      - Intrinsic: Over time, however, extrinsic stains can become intrinsic. Intrinsic stains are  embedded into the enamel and are best treated by a professional whitening system.
-      - Age-Related Stains: Other stains can be caused by other factors not controlled by your oral habits. Aging is often one of the biggest proponents of yellowing stains.
-    imageSource: /wp-content/uploads/2020/09/shutterstock_171267962.jpg
-    imageAlt: CTA image
-    buttonSections: []
-    learnMoreButtonText: Learn More About Heading text
-    learnMoreSections: []
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
 ---

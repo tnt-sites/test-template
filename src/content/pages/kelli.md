@@ -17,55 +17,92 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/ctas/cta-split-learn-more
+  - _component: page-sections/artisan/page-body
     id: ""
-    heading: ""
-    anchorName: ""
-    subtext: |-
-      Our Team
+    sidebarHeading: Our Team
+    links:
+      - name: Dr. Nicole Andersen
+        path: /dr-nicole-andersen/
+        current: false
+      - name: Dr. Shruthi Dayal
+        path: /dr-shruthi-dayal/
+        current: false
+      - name: Dr. Mark Rehermann
+        path: /dr-mark-rehermann/
+        current: false
+      - name: Jill
+        path: /jill/
+        current: false
+      - name: Scott Andersen
+        path: /scott-andersen/
+        current: false
+      - name: Lindsay
+        path: /lindsay/
+        current: false
+      - name: Madelyn
+        path: /madelyn/
+        current: false
+      - name: Jen
+        path: /jen/
+        current: false
+      - name: Claire
+        path: /claire/
+        current: false
+      - name: Alli
+        path: /alli/
+        current: false
+      - name: Jonlyn
+        path: /jonlyn/
+        current: false
+      - name: Cassandra
+        path: /cassandra/
+        current: false
+      - name: Emily
+        path: /emily-2/
+        current: false
+      - name: Adria
+        path: /adria/
+        current: false
+      - name: Kat
+        path: /kat/
+        current: false
+      - name: Katie
+        path: /katie/
+        current: false
+      - name: Pamee
+        path: /pamee/
+        current: false
+      - name: Juliana
+        path: /juliana/
+        current: false
+      - name: Kaitlin
+        path: /kaitlin/
+        current: false
+      - name: Kelli
+        path: /kelli/
+        current: true
+    image: /wp-content/uploads/2024/11/Screenshot-2024-12-11-072323-1.png
+    imageAlt: ""
+    body: "
 
-      -   [Dr. Nicole Andersen](/dr-nicole-andersen/)
-      -   [Dr. Shruthi Dayal](/dr-shruthi-dayal/)
-      -   [Dr. Mark Rehermann](/dr-mark-rehermann/)
-      -   [Jill](/jill/)
-      -   [Scott Andersen](/scott-andersen/)
-      -   [Lindsay](/lindsay/)
-      -   [Madelyn](/madelyn/)
-      -   [Jen](/jen/)
-      -   [Claire](/claire/)
-      -   [Alli](/alli/)
-      -   [Jonlyn](/jonlyn/)
-      -   [Cassandra](/cassandra/)
-      -   [Emily](/emily-2/)
-      -   [Adria](/adria/)
-      -   [Kat](/kat/)
-      -   [Katie](/katie/)
-      -   [Pamee](/pamee/)
-      -   [Juliana](/juliana/)
-      -   [Kaitlin](/kaitlin/)
-      -   [Kelli](/kelli/)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      Share Page
+      \t\t\t\t\t
 
-      [PrevPreviousSleep Apnea](/sleep-apnea/)
+      <p class=\"wp-block-paragraph\">In spring of 2024 I completed the Dental Assisting program at Western Technical College in La Crosse. After moving back to the Madison area where I grew up, I was fortunate enough to begin my assisting career at Artisan Dental. Since I’ve started working here I have already learned so much, and continue to grow personally and professionally each day. I truly couldn’t imagine a better place to begin my dental career.&nbsp;</p>
 
-      [NextKaitlinNext](/kaitlin/)
 
-      - In spring of 2024 I completed the Dental Assisting program at Western Technical College in La Crosse. After moving back to the Madison area where I grew up, I was fortunate enough to begin my assisting career at Artisan Dental. Since I’ve started working here I have already learned so much, and continue to grow personally and professionally each day. I truly couldn’t imagine a better place to begin my dental career.
-      - When I’m not in the office you can find me exploring new restaurants in Madison, cheering for the Packers and Badgers with my friends and family, and staying in to watch movies on the weekends. I’ve loved getting to know Madison again and all it has to offer. I look forward to meeting you all!
-    imageSource: /wp-content/uploads/2024/11/Screenshot-2024-12-11-072323-1.png
-    imageAlt: CTA image
-    buttonSections: []
-    learnMoreButtonText: Learn More About Heading text
-    learnMoreSections: []
+
+
+      <p class=\"wp-block-paragraph\">When I’m not in the office you can find me exploring new restaurants in Madison, cheering for the Packers and Badgers with my friends and family, and staying in to watch movies on the weekends. I’ve loved getting to know Madison again and all it has to offer. I look forward to meeting you all!</p>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
 ---

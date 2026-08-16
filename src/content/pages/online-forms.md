@@ -17,72 +17,51 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/features/feature-grid
+  - _component: page-sections/artisan/page-body
     id: ""
-    eyebrow: ""
-    heading: PATIENT FORMS
-    subtext: |-
-      New and existing patients can securely fill out forms and schedule or view future appointments. We are always happy to talk to you in person if you’d prefer to give us a call at [608.467.8022](/patient-forms/contact). All your information is always handled in strictest confidence in accordance with the HIPAA Act of 1996.
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2021/04/IB_award.png
+    imageAlt: IB small Business award
+    body: "
 
-      ### New and Current Patients
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      [Request Appointment](/patient-forms/appointment)
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"551\" class=\"elementor elementor-551\" data-elementor-post-type=\"page\">
 
-      [Online Forms](https://www.ident.ws/template_include/new_patient_sign_in.do?site=12747&practiceId=42629)
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-765bcaa elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"765bcaa\" data-element_type=\"section\" data-e-type=\"section\">
 
-      10 North Livingston Street, Suite 301, Madison, Wisconsin 53703 | Office: 608.467.8022
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-       Hours of Operation: Monday – Friday 7:00am – 5:00pm
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7279c0b\" data-id=\"7279c0b\" data-element_type=\"column\" data-e-type=\"column\">
 
-      Free Parking in the [Constellation Building](/ "Constellation")
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      **Cancellation & Rescheduling Policy:**  Please contact us at least 48 hours prior to your scheduled visit to enable other patients to be cared for during your appointment time. If appropriate notice is not given, the patient may be charged a scheduling fee to reschedule this appointment.  The fee would be forfeited if that appointment is not kept.
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-8433470 elementor-widget elementor-widget-text-editor\" data-id=\"8433470\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t\t\t\t\t<h3>PATIENT FORMS</h3><p>New and existing patients can securely fill out forms and schedule or view future appointments. We are always happy to talk to you in person if you’d prefer to give us a call at&nbsp;<a href=\"/patient-forms/contact\">608.467.8022</a>. All your information is always handled in strictest confidence in accordance with the HIPAA Act of 1996.</p><h3>New and Current Patients</h3><p><a href=\"/patient-forms/appointment\">Request Appointment</a></p><p><a href=\"https://www.ident.ws/template_include/new_patient_sign_in.do?site=12747&amp;practiceId=42629\" target=\"_blank\" rel=\"noopener noreferrer\">Online Forms</a></p><p>10 North Livingston Street, Suite 301, Madison, Wisconsin 53703 | Office: 608.467.8022</p><p>&nbsp;Hours of Operation: Monday – Friday 7:00am – 5:00pm</p><p>Free Parking in the&nbsp;<a title=\"Constellation\" href=\"http://www.constellation-madison.com/index.html\">Constellation Building</a></p><p><strong>Cancellation &amp; Rescheduling Policy:</strong><b>&nbsp;&nbsp;</b>Please contact us at least 48 hours prior to your scheduled visit to enable other patients to be cared for during your appointment time. If appropriate notice is not given, the patient may be charged a scheduling fee to reschedule this appointment.&nbsp; The fee would be forfeited if that appointment is not kept.</p>\t\t\t\t\t\t\t\t</div>
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t</div>
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t</div>
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t</div>
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t\t</div>
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t</section>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t</div>
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features: []
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---

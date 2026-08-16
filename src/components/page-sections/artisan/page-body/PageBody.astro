@@ -1,0 +1,172 @@
+---
+/**
+ * Interior page body: a section-nav sidebar beside the main content.
+ *
+ * This is the single most common interior layout on the source — 53 of 90
+ * pages use it. `mig content` mapped it to the starter's cta-split-learn-more,
+ * which is a marketing split, not a sidebar layout, so the section nav was lost
+ * entirely and the copy reflowed full width.
+ *
+ * Measured: 300px sidebar / 900px main, sidebar heading Open Sans 20px 700 on a
+ * brand bar, nav links Open Sans 16px #222.
+ *
+ * Baked in: layout and typography. Props: text, image, colours.
+ * Arrays: `links`, so the section nav is editable.
+ */
+const {
+  sidebarHeading = "",
+  links = [],
+  image = "",
+  imageAlt = "",
+  body = "",
+  backgroundColor = "transparent",
+  headingBackground = "#321c0e",
+  headingColor = "#ffffff",
+  linkColor = "#222222",
+  textColor = "#686868",
+  reverse = false,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
+---
+
+<section
+  class:list={["a-pagebody", { reverse }]}
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hbg:${headingBackground};--hc:${headingColor};--lc:${linkColor};--tx:${textColor}`}
+  {...rest}
+>
+  <div class="pb2-inner">
+    {
+      (sidebarHeading || list.length > 0) && (
+        <aside class="pb2-side">
+          {sidebarHeading && <h2>{sidebarHeading}</h2>}
+          {list.length > 0 && (
+            <ul class="no-check">
+              {list.map((l: any) => (
+                <li>
+                  <a href={l.path || "#"} class:list={{ current: l.current }}>
+                    {l.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </aside>
+      )
+    }
+    <div class="pb2-main">
+      {image && <img class="pb2-image" src={image} alt={imageAlt} loading="lazy" />}
+      {body && <div class="pb2-prose" set:html={body} />}
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-pagebody {
+    background: var(--bg);
+    padding-block: 60px;
+  }
+
+  .pb2-inner {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 300px minmax(0, 1fr);
+    margin-inline: auto;
+    max-width: 1240px;
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  .a-pagebody.reverse .pb2-side {
+    order: 2;
+  }
+
+  .pb2-side h2 {
+    background: var(--hbg);
+    color: var(--hc);
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .pb2-side ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pb2-side li {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+  }
+
+  .pb2-side a {
+    color: var(--lc);
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0.7rem 1.25rem;
+    text-decoration: none;
+  }
+
+  .pb2-side a:hover,
+  .pb2-side a.current {
+    background: rgb(0 0 0 / 4%);
+    color: var(--hbg);
+    font-weight: 600;
+  }
+
+  .pb2-image {
+    display: block;
+    height: auto;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+  }
+
+  .pb2-prose {
+    color: var(--tx);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .pb2-prose :global(h2),
+  .pb2-prose :global(h3) {
+    color: var(--hbg);
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin: 1.75rem 0 0.75rem;
+  }
+
+  .pb2-prose :global(h2) {
+    font-size: 30px;
+  }
+
+  .pb2-prose :global(h3) {
+    font-size: 22px;
+  }
+
+  .pb2-prose :global(p) {
+    margin: 0 0 1.25rem;
+  }
+
+  .pb2-prose :global(a) {
+    color: var(--hbg);
+  }
+
+  @media (max-width: 900px) {
+    .pb2-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .a-pagebody.reverse .pb2-side {
+      order: 0;
+    }
+  }
+</style>

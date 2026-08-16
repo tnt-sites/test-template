@@ -17,62 +17,65 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/features/feature-grid
+  - _component: page-sections/artisan/page-body
     id: ""
-    eyebrow: ""
-    heading: ""
-    subtext: |-
-      #### We have received your information
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1600x1066.jpg
+    imageAlt: Young smiling white female business owner, portrait
+    body: "
 
-      We will contact you as soon as possible.
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"34\" class=\"elementor elementor-34\" data-elementor-post-type=\"page\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-1972564e elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"1972564e\" data-element_type=\"section\" data-e-type=\"section\">
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ab06d84\" data-id=\"3ab06d84\" data-element_type=\"column\" data-e-type=\"column\">
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-ea43036 elementor-widget elementor-widget-image\" data-id=\"ea43036\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"image.default\">
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"800\" height=\"533\" src=\"/wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1600x1066.jpg\" class=\"attachment-large size-large wp-image-620\" alt=\"Young smiling white female business owner, portrait\" srcset=\"/wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1600x1066.jpg 1600w, /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1200x800.jpg 1200w, /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-800x533.jpg 800w, /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1536x1024.jpg 1536w, /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-600x400.jpg 600w, /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait.jpg 2000w\" sizes=\"(max-width: 800px) 100vw, 800px\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t\t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+      \t\t\t\t<div class=\"elementor-element elementor-element-6639bdd6 elementor-widget elementor-widget-text-editor\" data-id=\"6639bdd6\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
 
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
+      \t\t\t\t<div class=\"elementor-widget-container\">
 
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
+      \t\t\t\t\t\t\t\t\t
 
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
+      <h4>We have received your information</h4>
 
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
+      <p class=\"wp-block-paragraph\">We will contact you as soon as possible.</p>
 
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
+      \t\t\t\t\t\t\t\t</div>
 
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
+      \t\t\t\t</div>
 
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
+      \t\t\t\t\t</div>
 
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
+      \t\t</div>
 
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    gap: xl
-    minItemWidth: 280
-    maxItemWidth: 360
-    features: []
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1600x1066.jpg
-      alt: Young smiling white female business owner, portrait
-      positionVertical: top
-      positionHorizontal: center
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---

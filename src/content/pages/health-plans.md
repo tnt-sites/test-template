@@ -17,73 +17,123 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/ctas/cta-split-learn-more
+  - _component: page-sections/artisan/page-body
     id: ""
-    heading: ""
-    anchorName: ""
-    subtext: |-
-      [](/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg)
-
-      #### Get Started Today! Call 608-467-8022
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    imageSource: /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg
     imageAlt: "Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods."
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Call Now
-        hideText: false
-        link: tel:+16084678022
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    learnMoreButtonText: Learn More About Heading text
-    learnMoreSections: []
+    body: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"536\" class=\"elementor elementor-536\" data-elementor-post-type=\"page\">
+
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-41650c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"41650c3\" data-element_type=\"section\" data-e-type=\"section\">
+
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
+
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ad95f60\" data-id=\"ad95f60\" data-element_type=\"column\" data-e-type=\"column\">
+
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
+
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-05b419d elementor-widget elementor-widget-image\" data-id=\"05b419d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"image.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" data-elementor-open-lightbox=\"yes\" data-e-action-hash=\"#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Nzk1NSwidXJsIjoiaHR0cHM6XC9cL2FydGlzYW5kZW50YWxtYWRpc29uLmNvbVwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNlwvMDJcL2FydGlzYW4tZGVudGFsLWhlYWx0aC1wbGFuLWZseWVyLXYxLmpwZyJ9\">
+
+      \t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"1999\" height=\"1485\" src=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" class=\"attachment-full size-full wp-image-7955\" alt=\"Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods.\" srcset=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg 1999w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1200x891.jpg 1200w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1600x1189.jpg 1600w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-800x594.jpg 800w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1536x1141.jpg 1536w\" sizes=\"(max-width: 1999px) 100vw, 1999px\">\t\t\t\t\t\t\t\t</a>
+
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-6952877 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"6952877\" data-element_type=\"section\" data-e-type=\"section\">
+
+      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
+
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7a9e69e\" data-id=\"7a9e69e\" data-element_type=\"column\" data-e-type=\"column\">
+
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
+
+      \t\t\t\t\t\t<section class=\"elementor-section elementor-inner-section elementor-element elementor-element-29e1044 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"29e1044\" data-element_type=\"section\" data-e-type=\"section\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">
+
+      \t\t\t\t\t\t\t<div class=\"elementor-background-overlay\"></div>
+
+      \t\t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-no\">
+
+      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fa2dae4\" data-id=\"fa2dae4\" data-element_type=\"column\" data-e-type=\"column\">
+
+      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
+
+      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-47af693 elementor-widget elementor-widget-heading\" data-id=\"47af693\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t<h4 class=\"elementor-heading-title elementor-size-default\">Get Started Today! Call 608-467-8022</h4>\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t<div class=\"elementor-element elementor-element-40d6147 elementor-align-center elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button\" data-id=\"40d6147\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"button.default\">
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">
+
+      \t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-md\" href=\"tel:+16084678022\">
+
+      \t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">
+
+      \t\t\t\t\t\t<span class=\"elementor-button-icon\">
+
+      \t\t\t\t<i aria-hidden=\"true\" class=\"fas fa-phone\"></i>\t\t\t</span>
+
+      \t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Call Now</span>
+
+      \t\t\t\t\t</span>
+
+      \t\t\t\t\t</a>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t\t</div>
+
+      \t\t</div>
+
+      \t\t\t\t\t</div>
+
+      \t\t</section>
+
+      \t\t\t\t</div>
+
+      \t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
 ---

@@ -40,22 +40,25 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
     rounded: false
-  - _component: page-sections/builders/custom-section
+  - _component: page-sections/artisan/page-body
     id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
+    sidebarHeading: ""
+    links: []
+    image: ""
+    imageAlt: ""
+    body: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<h3><span style=\"color: #d2b22e;\">★★★★★</span></h3><h3><span style=\"color: #321c0e;\">Award-Winning</span></h3><p>In 2026 Dr. Nicole Andersen was again named Top Dentist by her colleagues since 2011. In 2025 Artisan received the Great Places to Work certification and our B Corporation Recertification for the third time!</p><p>In 2023 Scott Andersen was awarded the Wisconsin Sustainable Business Council’s, Sustainable Leadership Executive Award. This same year Artisan’s Impact Report won two American Graphic award in the Designing for Good and Wellness categories. In 2022, Artisan Dental received the Community’s Excellence Award.</p><p>In 2020 and 2021 Artisan Dental was named Climate Champion by Dane County Office of Energy &amp; Climate Change. In 2021 Artisan Dental received the Communitas Award, a MarCom Award and our Director of Business Development was honored with the AADOM Green Leader Award.</p><p>In 2017, 2018 &amp; 2019 Artisan Dental was recognized by Madison Magazine as a Best Place to Work in the small company category. In 2018, Artisan Dental, was one of the winners of the In Business Magazine, Dane County Small Business award. Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019. The Best For The World designation is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment. In 2019, Artisan Dental was selected as a winner in the Wisconsin based, Force for Positive Change award.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
   - _component: page-sections/location/location-find-us
     id: ""
     heading: Love
@@ -106,41 +109,6 @@ pageSections:
     textColor: "#000000"
     accentColor: var(--color-brand-subtle)
     iconColor: var(--color-brand)
-  - _component: page-sections/ctas/cta-split
-    id: ""
-    heading: Exceptional Quality
-    anchorName: ""
-    subtext: |-
-      ###### Our Team Provides
-
-      At Artisan Dental our commitment to providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts.  Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
-
-      ###### Top Rated
-
-      ## Patient Reviews
-
-      We feel fortunate to have received very appreciative patient feedback from our existing patients regarding their experience being cared for at Artisan Dental.  We invite you to review their comments available on the [Google](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=artisandental%20madison%2C%20wi.&lrd=0x880653684d22bba9:0x675904eddaf49867,1), [Yelp,](https://www.yelp.com/biz/artisan-dental-madison) [Facebook,](https://www.facebook.com/Artisan-Dental-Madison-417141075083050/?ref=bookmarks) and [Rate A Dentist](http://rateadentist.com/reviews/Wisconsin/Madison/ArtisanDentalLLCMadison) review sites.
-    imageSource: /wp-content/uploads/2020/09/Team-Lake-ShoreHomePage.jpg
-    imageAlt: Team Lake Shore - Artisan Dental
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: View All Reviews
-        hideText: false
-        link: /patient-reviews/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
   - _component: page-sections/ctas/cta-center
     id: ""
     heading: Certified B Corporation
@@ -195,22 +163,6 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/builders/custom-section
-    id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
   - _component: page-sections/location/location-find-us
     id: ""
     heading: Insurance Compatibility
@@ -478,18 +430,4 @@ pageSections:
       positionVertical: top
       positionHorizontal: center
     rounded: false
-_migUnmapped:
-  sections:
-    - component: page-sections/ctas/cta-center
-      fields:
-        - field: eyebrow
-          content: We Invite You To
-    - component: page-sections/homepage-blocks/index-banner
-      fields:
-        - field: subtext
-          content: "###### The Artisan"
-    - component: page-sections/location/location-find-us
-      fields:
-        - field: imageSource
-          content: /wp-content/uploads/2022/01/ADHP_Web16noPrices.jpg
 ---
