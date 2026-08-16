@@ -1,0 +1,10 @@
+_snippets:
+  testimonials:
+    template: astro_component
+    inline: false
+    preview:
+      text: Testimonials
+    definitions:
+      component_name: page-sections/artisan/testimonials
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/testimonials/testimonials.cloudcannon.inputs.yml

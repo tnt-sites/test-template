@@ -14,20 +14,21 @@ const {
   eyebrowColor = "#d2b22e",
   headingColor = "#321c0e",
   textColor = "#333333",
+  cardBackgroundColor = "#fbfaf7",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 ---
 <section class="a-services" id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
-  <div class="inner">
-    <div class="intro">
-      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--card:${cardBackgroundColor}`} {...rest}>
+  <div class="sg-inner">
+    <div class="sg-intro">
+      {eyebrow && <p class="sg-eyebrow">{eyebrow}</p>}
       {heading && <h2>{heading}</h2>}
-      {text && <p class="lead">{text}</p>}
+      {text && <p class="sg-lead">{text}</p>}
       {buttonText && <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />}
     </div>
-    <ul class="cards no-check">
+    <ul class="sg-cards no-check">
       {list.map((c: any) => (
         <li>
           <a href={c.link || "#"}>
@@ -42,15 +43,16 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 </section>
 <style>
   .a-services { background: var(--bg); padding-block: 4.5rem; }
-  .inner { display: grid; gap: 3rem; grid-template-columns: minmax(280px, 1fr) 1.4fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
-  .eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  .sg-inner { display: grid; gap: 3rem; grid-template-columns: minmax(280px, 1fr) 1.4fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .sg-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
-  .lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 1.75rem; }
-  .cards { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); list-style: none; margin: 0; padding: 0; }
-  .cards a { color: inherit; display: block; text-align: center; text-decoration: none; }
-  .cards img { height: 90px; object-fit: contain; width: auto; }
-  .cards h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 600; margin: 1rem 0 0.5rem; }
-  .cards p { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 23px; margin: 0; }
-  .cards a:hover h3 { color: var(--eb); }
-  @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } }
+  .sg-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 1.75rem; }
+  .sg-cards { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); list-style: none; margin: 0; padding: 0; }
+  .sg-cards a { background: var(--card, #fbfaf7); border: 1px solid rgb(50 28 14 / 10%); border-radius: 6px; color: inherit; display: block; height: 100%; padding: 1.75rem 1.25rem; text-align: center; text-decoration: none; transition: box-shadow .15s ease; }
+  .sg-cards a:hover { box-shadow: 0 6px 20px rgb(50 28 14 / 12%); }
+  .sg-cards img { height: 90px; object-fit: contain; width: auto; }
+  .sg-cards h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 600; margin: 1rem 0 0.5rem; }
+  .sg-cards p { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 23px; margin: 0; }
+  .sg-cards a:hover h3 { color: var(--eb); }
+  @media (max-width: 860px) { .sg-inner { grid-template-columns: 1fr; } }
 </style>

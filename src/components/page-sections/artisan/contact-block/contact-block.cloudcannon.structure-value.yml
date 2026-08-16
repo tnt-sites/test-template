@@ -1,0 +1,26 @@
+label: Contact Block
+icon: mail
+description: Contact details beside a message form.
+value:
+  _component: page-sections/artisan/contact-block
+  id: ""
+  heading: ""
+  details:
+    - label: ""
+      value: ""
+      link: ""
+  formBlocks: []
+  formAction: "/thank-you/"
+  backgroundColor: "#ffffff"
+  headingColor: "#321c0e"
+  labelColor: "#321c0e"
+  textColor: "#333333"
+preview:
+  text:
+    - Contact Block
+  icon: mail
+picker_preview:
+  text: Contact Block
+  subtext: Contact details beside a message form.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/contact-block/contact-block.cloudcannon.inputs.yml

@@ -1,0 +1,48 @@
+---
+/**
+ * Grid of patient testimonials on a solid band — the source's
+ * "What People Are Saying / Our Testimonials".
+ *
+ * Baked in: layout, card shape, type scale. Props: text, colours.
+ * Array: `testimonials`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "", heading = "", testimonials = [],
+  buttonText = "", buttonLink = "",
+  backgroundColor = "#321c0e", eyebrowColor = "#ffffff", headingColor = "#ffffff",
+  cardBackgroundColor = "#ffffff", cardTextColor = "#333333", nameColor = "#321c0e",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
+---
+<section class="a-testi" id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--card:${cardBackgroundColor};--tx:${cardTextColor};--nm:${nameColor}`} {...rest}>
+  <div class="ts-inner">
+    {eyebrow && <p class="ts-eyebrow">{eyebrow}</p>}
+    {heading && <h2>{heading}</h2>}
+    <ul class="ts-cards no-check">
+      {list.map((t: any) => (
+        <li>
+          <blockquote>{t.text}</blockquote>
+          <p class="ts-name">{t.image && <img src={t.image} alt="" loading="lazy" />}{t.name}</p>
+        </li>
+      ))}
+    </ul>
+    {buttonText && <div class="ts-more"><Button variant="primary" size="lg" link={buttonLink} text={buttonText} /></div>}
+  </div>
+</section>
+<style>
+  .a-testi { background: var(--bg); padding-block: 4.5rem; }
+  .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); text-align: center; }
+  .ts-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2.5rem; }
+  .ts-cards { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); list-style: none; margin: 0; padding: 0; text-align: left; }
+  .ts-cards li { background: var(--card); border-radius: 6px; display: flex; flex-direction: column; padding: 1.75rem; }
+  blockquote { color: var(--tx); flex: 1; font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 25px; margin: 0; }
+  .ts-name { align-items: center; color: var(--nm); display: flex; font-family: Poppins, sans-serif; font-size: 16px; font-weight: 700; gap: 0.6rem; margin: 1.25rem 0 0; }
+  .ts-name img { border-radius: 50%; height: 34px; object-fit: cover; width: 34px; }
+  .ts-more { margin-top: 2.5rem; }
+  .ts-more :global(.button) { background: transparent; border: 2px solid var(--eb); border-radius: 50px; color: var(--eb); font-family: Poppins, sans-serif; padding: 12px 28px; }
+  .ts-more :global(.button:hover) { background: var(--eb); color: var(--bg); }
+</style>

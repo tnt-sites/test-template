@@ -1,0 +1,10 @@
+_snippets:
+  split_feature:
+    template: astro_component
+    inline: false
+    preview:
+      text: Split Feature
+    definitions:
+      component_name: page-sections/artisan/split-feature
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/split-feature/split-feature.cloudcannon.inputs.yml

@@ -1,0 +1,53 @@
+---
+/**
+ * Row of embedded videos. Reproduces the source's pair of YouTube blocks.
+ * Uses a click-to-load facade so the page does not ship YouTube on first paint.
+ *
+ * Baked in: layout, aspect ratio, play button. Array: `videos`.
+ */
+const {
+  videos = [], backgroundColor = "#ffffff",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(videos) ? videos.filter((v: any) => v?.youtubeId) : [];
+---
+<section class="a-videos" id={id || undefined} style={`--bg:${backgroundColor}`} {...rest}>
+  <ul class="vr-inner no-check">
+    {list.map((v: any) => (
+      <li>
+        <button class="vr-frame" type="button" data-id={v.youtubeId} aria-label={`Play ${v.title || "video"}`}>
+          <img src={`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`} alt={v.title || ""} loading="lazy" />
+          <span class="vr-play" aria-hidden="true">▶</span>
+        </button>
+        {v.title && <p>{v.title}</p>}
+      </li>
+    ))}
+  </ul>
+</section>
+<style>
+  .a-videos { background: var(--bg); padding-block: 3rem; }
+  .vr-inner { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); list-style: none; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .vr-frame { aspect-ratio: 16 / 9; background: #000; border: none; cursor: pointer; display: block; overflow: hidden; padding: 0; position: relative; width: 100%; }
+  .vr-frame img { height: 100%; object-fit: cover; opacity: 0.85; width: 100%; }
+  .vr-play { color: #fff; font-size: 3rem; height: fit-content; inset: 0; line-height: 1; margin: auto; position: absolute; text-shadow: 0 2px 12px rgb(0 0 0 / 60%); width: fit-content; }
+  .vr-frame:hover img { opacity: 1; }
+  p { color: var(--color-text, #333); font-family: "Open Sans", sans-serif; font-size: 16px; margin: 0.75rem 0 0; }
+</style>
+<script>
+  const init = () => document.querySelectorAll(".a-videos .vr-frame").forEach((f) => {
+    if ((f as HTMLElement).dataset.ready) return;
+    (f as HTMLElement).dataset.ready = "1";
+    f.addEventListener("click", () => {
+      const id = (f as HTMLElement).dataset.id;
+      const i = document.createElement("iframe");
+      i.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      i.title = "YouTube video";
+      i.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; picture-in-picture";
+      i.allowFullscreen = true;
+      i.style.cssText = "position:absolute;inset:0;width:100%;height:100%;border:0";
+      f.replaceChildren(i);
+    });
+  });
+  init();
+  document.addEventListener("astro:page-load", init);
+</script>

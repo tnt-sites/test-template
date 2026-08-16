@@ -173,148 +173,130 @@ pageSections:
     backgroundColor: "#321c0e"
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
-  - _component: page-sections/builders/custom-section
+  - _component: page-sections/artisan/split-feature
     id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/ESN2-rev.png
-      alt: ESN logo white
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: ""
+    eyebrow: Our Office
     heading: Warm & Calming Atmosphere
-    anchorName: ""
-    subtext: |-
-      ###### Our Office
-
-      We designed [our facility](/office-tour/) in downtown Madison, Wisconsin to be warm, calming and supportive of your health and healing. From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation Films”, our intention is that your dental care experience is comfortable and enjoyable.
-
-      Health and happiness are our utmost priority whether it’s our patients, team members, or community. Creating equal opportunities is our belief for growth and development for our company. Love, Service, Ethical Integrity, Wisdom, and hard work are some of our major core values.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Our Mission, Vision & Values
-        hideText: false
-        link: /mission-vision-values/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/ctas/cta-center
+    text: We designed our facility in downtown Madison, Wisconsin to be warm, calming and supportive of your health and healing. From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation Films”, our intention is that your dental care experience is comfortable and enjoyable.
+    image: /wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology-239-rev.jpeg
+    buttonText: Our Mission, Vision & Values
+    buttonLink: /mission-vision-values/
+    reverse: false
+    align: left
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
     id: ""
+    eyebrow: Proudly Use
     heading: State of the Art Technology
-    anchorName: ""
-    subtext: |-
-      ###### Proudly Use
-
-      Integral to the goal of providing the highest quality [dental care](/services/) available, is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and a more effective long lasting treatment.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Watch a Quick Video
-        hideText: false
-        link: /videos/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/info-blocks/contact
+    text: Integral to the goal of providing the highest quality dental care available, is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and a more effective long lasting treatment.
+    image: ""
+    buttonText: Watch a Quick Video
+    buttonLink: /office-tour/
+    reverse: false
+    align: center
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/video-row
     id: ""
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
-    officeHoursTitle: Office Hours
-    doctorNames: []
-    mapEmbedUrl: ""
-  - _component: page-sections/ctas/more-to-explore
+    videos:
+      - youtubeId: iT5KMZZTY44
+        title: ""
+      - youtubeId: fh6IQb8i6Sc
+        title: ""
+    backgroundColor: "#ffffff"
+  - _component: page-sections/artisan/testimonials
     id: ""
+    eyebrow: What People Are Saying
     heading: Our Testimonials
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: View More Testimonials
-        hideText: false
-        link: /patient-reviews/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    maxContentWidth: null
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/google-icon4-rev.png
-      alt: Google icon
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/info-blocks/contact
-    id: ""
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
-    officeHoursTitle: Office Hours
-    doctorNames: []
-    mapEmbedUrl: https://maps.google.com/maps?q=Artisan%20Dental%2010%20North%20Livingston%20Street%2C%20Suite%20301%2C%20Madison%2C%20WI%2053703&t=m&z=13&output=embed&iwloc=near
-  - _component: page-sections/location/location-find-us
+    testimonials:
+      - text: I was so nervous to see a new dentist after not going for soooo long. The staff were so courteous and explained all of my health records and options. They did a great job catering to my nerves and making me feel comfortable. I left feeling very hopeful, healthy, and without any unanswered questions. They did a great job with COVID precautions and the environment is spotless!
+        name: Kate S.
+        image: /wp-content/uploads/2021/05/google-icon4-rev.png
+      - text: Everyone is so kind, patient, mindful, and personable. Professionalism is 110%. The office is clean & beautiful. I never feel like they're trying to push unnecessary and expensive dental work to make money off me. Plus, they recycle old dental products for clients! I hate going to the dentist, but this place has changed my mind. Thank you!
+        name: Marie S.
+        image: /wp-content/uploads/2021/05/google-icon4-rev.png
+      - text: I love Artisan Dental and have been going there for four years now. The folks in reception always make me feel welcomed, the hygienists are skilled and personable, and I trust and appreciate the professionalism and skills of the dentists. I'm particularly fond of the TVs they have that display beautiful nature scenes (rather than assaulting the senses as some businesses seem to think is desirable).
+        name: Liz Z.
+        image: /wp-content/uploads/2021/05/Yelp.png
+      - text: I was in town visiting Epic and had an unexpected dental emergency. This was quite distressing since I was so far from my normal dentist in Cincinnati. Thank goodness I found Artisan Dental! They got me in quickly and did a great job. Everyone from the office staff to the hygienist to the dentist was very calming and helpful!
+        name: Christy B.
+        image: /wp-content/uploads/2021/05/Yelp.png
+      - text: The staff's kindness, service, and professionalism make me glad that I chose to go here for my dental services. I had a LOT of work to get done this year as I hadn't been to the dentist in awhile. They took it in stride and never made me feel guilty, but rather inspired me to take better care of my teeth! I was in awe when I first started going as someone else said, it almost feels like a relaxing spa retreat...
+        name: Erin G.
+        image: /wp-content/uploads/2021/05/fb-logo4-rev.png
+      - text: Fantastic service from entry to exit. Not only is the clinic beautiful and welcoming with small details, the staff is extremely friendly and seems very genuine. I had fillings done, and actually enjoyed the process. I highly recommended this office (coming from a former Dental clinic receptionist in another city).
+        name: Esperanza S.
+        image: /wp-content/uploads/2021/05/fb-logo4-rev.png
+    buttonText: View More Testimonials
+    buttonLink: /patient-reviews/
+    backgroundColor: "#321c0e"
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+    cardBackgroundColor: "#ffffff"
+    cardTextColor: "#333333"
+    nameColor: "#321c0e"
+  - _component: page-sections/artisan/contact-block
     id: ""
     heading: Send us a message
-    text: |-
-      [](https://g.page/artisandds?share)
-
-      10 North Livingston Street, Suite 301, Madison, WI 53703
-
-      [![Mail Icon](/wp-content/uploads/2021/05/Mail-Icon.png)](mailto:info@artisandentalmadison.com)
-
-      ### [Email](mailto:info@artisandentalmadison.com)
-
-      info@artisandentalmadison.com
-
-      [![Phone Icon](/wp-content/uploads/2021/05/Phone-icon.png)](tel:608-467-8022)
-
-      ### [Phone](tel:608-467-8022)
-
-      [(608) 467-8022](tel:608-467-8022)
-
-       
-
-      Submit
+    details:
+      - label: Address
+        value: 10 North Livingston Street, Suite 301, Madison, WI 53703
+        link: https://g.page/artisandds?share
+      - label: Email
+        value: info@artisandentalmadison.com
+        link: mailto:info@artisandentalmadison.com
+      - label: Phone
+        value: (608) 467-8022
+        link: tel:6084678022
+    formBlocks:
+      - _component: building-blocks/forms/input
+        id: ""
+        label: First Name
+        name: first_name
+        type: text
+        placeholder: null
+        required: true
+        value: null
+      - _component: building-blocks/forms/input
+        id: ""
+        label: Email
+        name: email
+        type: email
+        placeholder: null
+        required: true
+        value: null
+      - _component: building-blocks/forms/input
+        id: ""
+        label: Phone
+        name: phone
+        type: tel
+        placeholder: null
+        required: true
+        value: null
+      - _component: building-blocks/forms/textarea
+        id: ""
+        label: Notes / Comments
+        name: message
+        required: true
+        placeholder: Notes / Comments
+        value: null
+      - _component: building-blocks/forms/submit
+        id: ""
+        text: Request Appointment
+        variant: primary
+        size: md
+        iconName: null
+        iconPosition: before
+        hideText: false
+        disabled: false
+    formAction: /thank-you/
     backgroundColor: "#ffffff"
-    textColor: "#000000"
-    accentColor: var(--color-brand-subtle)
-    iconColor: var(--color-brand)
+    headingColor: "#321c0e"
+    labelColor: "#321c0e"
+    textColor: "#333333"
 ---

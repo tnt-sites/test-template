@@ -1,0 +1,40 @@
+---
+/**
+ * Image beside a copy block — the source's "Warm & Calming Atmosphere" and,
+ * with no image, "State of the Art Technology".
+ *
+ * Baked in: layout, type scale. Props: text, image, colours, side.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "", heading = "", text = "", image = "",
+  buttonText = "", buttonLink = "", reverse = false, align = "left",
+  backgroundColor = "transparent", eyebrowColor = "#d2b22e",
+  headingColor = "#321c0e", textColor = "#333333",
+  id, _component, ...rest
+} = Astro.props;
+---
+<section class:list={["a-split", { reverse, center: !image && align === "center" }]} id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="sf-inner">
+    {image && <div class="sf-media"><img src={image} alt={heading || ""} loading="lazy" /></div>}
+    <div class="sf-copy">
+      {eyebrow && <p class="sf-eyebrow">{eyebrow}</p>}
+      {heading && <h2>{heading}</h2>}
+      {text && <div class="sf-body" set:html={text} />}
+      {buttonText && <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />}
+    </div>
+  </div>
+</section>
+<style>
+  .a-split { background: var(--bg); padding-block: 4.5rem; }
+  .sf-inner { align-items: center; display: grid; gap: 3.5rem; grid-template-columns: 1fr 1fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .a-split.reverse .sf-media { order: 2; }
+  .a-split.center .sf-inner { grid-template-columns: 1fr; max-width: 860px; text-align: center; }
+  .sf-media img { border-radius: 4px; display: block; height: auto; width: 100%; }
+  .sf-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
+  .sf-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 28px; margin-bottom: 1.75rem; }
+  .sf-body :global(p) { margin: 0 0 1rem; }
+  @media (max-width: 860px) { .sf-inner { grid-template-columns: 1fr; } .a-split.reverse .sf-media { order: 0; } }
+</style>

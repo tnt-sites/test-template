@@ -1,0 +1,10 @@
+_snippets:
+  video_row:
+    template: astro_component
+    inline: false
+    preview:
+      text: Video Row
+    definitions:
+      component_name: page-sections/artisan/video-row
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/video-row/video-row.cloudcannon.inputs.yml

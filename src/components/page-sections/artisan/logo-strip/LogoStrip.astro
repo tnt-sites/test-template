@@ -17,10 +17,10 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
 ---
 <section class="a-logostrip" id={id || undefined}
   style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor}`} {...rest}>
-  <div class="inner">
-    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+  <div class="ls-inner">
+    {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
-    <ul class="logos no-check">
+    <ul class="ls-logos no-check">
       {list.map((l: any) => (
         <li>{l.link
           ? <a href={l.link}><img src={l.image} alt={l.alt || ""} loading="lazy" /></a>
@@ -31,9 +31,9 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
 </section>
 <style>
   .a-logostrip { background: var(--bg); padding-block: 3rem; }
-  .inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); text-align: center; }
-  .eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 400; margin: 0; }
+  .ls-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); text-align: center; }
+  .ls-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 400; margin: 0; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
-  .logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
-  .logos img { height: auto; max-height: 70px; object-fit: contain; width: auto; }
+  .ls-logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
+  .ls-logos img { height: auto; max-height: 70px; object-fit: contain; width: auto; }
 </style>
