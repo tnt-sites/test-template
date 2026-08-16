@@ -124,6 +124,9 @@ pageSections:
     eyebrowColor: "#d2b22e"
     headingColor: "#ffffff"
     textColor: "#ffffff"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    marginBottom: 60px
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: ""

@@ -119,8 +119,9 @@ const ctaBar = (s) =>
     eyebrow: "", heading: s.heading, text: "", image: "",
     buttonText: s.button?.text ?? "", buttonLink: fixHref(s.button?.link),
     reverse: false, align: "center", mediaMinHeight: "0px",
-    backgroundColor: "#321c0e", eyebrowColor: "#d2b22e",
-    headingColor: "#ffffff", textColor: "#ffffff",
+    backgroundColor: "#321c0e", backgroundImage: WOOD, overlayOpacity: 0.15,
+    marginBottom: "60px",
+    eyebrowColor: "#d2b22e", headingColor: "#ffffff", textColor: "#ffffff",
   });
 
 const isDark = (c) => /rgb\(\s*(\d+)/.test(c) && Number(c.match(/rgb\(\s*(\d+)/)[1]) < 90 && !/, 0\)$/.test(c);

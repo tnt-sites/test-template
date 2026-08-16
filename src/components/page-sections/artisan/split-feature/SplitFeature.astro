@@ -9,13 +9,15 @@ import Button from "@core-elements/button/Button.astro";
 const {
   eyebrow = "", heading = "", text = "", image = "",
   buttonText = "", buttonLink = "", reverse = false, align = "left", mediaMinHeight = "0px",
-  backgroundColor = "transparent", eyebrowColor = "#d2b22e",
+  backgroundColor = "transparent", backgroundImage = "", overlayOpacity = 0.15,
+  marginBottom = "0px",
+  eyebrowColor = "#d2b22e",
   headingColor = "#321c0e", textColor = "#333333",
   id, _component, ...rest
 } = Astro.props;
 ---
 <section class:list={["a-split", { reverse, center: !image && align === "center", wide: !image && align === "left" }]} id={id || undefined}
-  style={`--mediah:${mediaMinHeight};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  style={`--mediah:${mediaMinHeight};--mb:${marginBottom};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
   <div class="sf-inner">
     {image && <div class="sf-media"><img src={image} alt={heading || ""} loading="lazy" /></div>}
     <div class="sf-copy">
@@ -27,8 +29,22 @@ const {
   </div>
 </section>
 <style>
-  .a-split { background: var(--bg); padding-block: 100px; }
-  .sf-inner { align-items: center; display: grid; gap: 3.5rem; grid-template-columns: 1fr 1fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .a-split { background-color: var(--bg); margin-bottom: var(--mb, 0); padding-block: 100px; position: relative; }
+
+  /* Same recipe as the full-width bands: solid brand-brown with the wood
+     texture on an overlay above it, lightened at 15%. */
+  .a-split::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+  .sf-inner { align-items: center; display: grid; gap: 3.5rem; grid-template-columns: 1fr 1fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; }
   .a-split.reverse .sf-media { order: 2; }
   .a-split.center .sf-inner { grid-template-columns: 1fr; max-width: 1100px; text-align: center; }
   .a-split.wide .sf-inner { grid-template-columns: 1fr; max-width: 1100px; text-align: left; }
