@@ -369,7 +369,7 @@
       "id": "",
       "text": "Request an Appointment",
       "hideText": false,
-      "link": "/request-an-appointment/",
+      "link": "/request-appointment/",
       "modalTarget": "",
       "iconName": "",
       "iconPosition": "before",
@@ -382,5 +382,16 @@
       "textColor": "default",
       "uppercase": false
     }
-  ]
+  ],
+  "topBar": {
+    "followLabel": "Follow Us!",
+    "phoneLabel": "or Call",
+    "backgroundColor": "#321c0e",
+    "textColor": "#ffffff",
+    "socialColor": "#bf9800",
+    "mainBackgroundColor": "rgba(255, 255, 255, 0.9)",
+    "navColor": "#321c0e",
+    "buttonBackgroundColor": "#ffffff",
+    "buttonTextColor": "#d2b22e"
+  }
 }

@@ -1,0 +1,370 @@
+---
+/**
+ * Artisan Dental site header, reproducing the source site's design.
+ *
+ * The starter's MainNav renders a different layout (logo, floating address,
+ * button, then nav on its own row) and `mig chrome` only ports colours and
+ * type onto it — so a data-only migration could never look like the original,
+ * which is a dark top bar (socials + phone + CTA) above a white logo/nav bar.
+ *
+ * Split of concerns, per the migration brief:
+ *   - Layout, typography, spacing and the pill button shape are BAKED IN below,
+ *     measured from the source at 1280px.
+ *   - Text, images, links, colours and background colours are PROPS, editable
+ *     in CloudCannon via src/data/mainNav.json and siteInfo.json.
+ *   - Socials and nav items are arrays, so more can be added.
+ */
+import Bar from "@components/navigation/bar/Bar.astro";
+import Mobile from "@components/navigation/mobile/Mobile.astro";
+import Button from "@core-elements/button/Button.astro";
+import Image from "@core-elements/image/Image.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource,
+  logoAlt = "Artisan Dental",
+  navData = [],
+  pageButtons = [],
+  socials = [],
+  offices = [],
+  topBar = {},
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedOffices = offices.length ? offices : ((siteInfoData as any).offices ?? []);
+const resolvedSocials = socials.length ? socials : ((siteInfoData as any).socials ?? []);
+const phone = resolvedOffices[0]?.phones?.[0] ?? null;
+
+// Editable text + colour, with the source's own values as defaults.
+const {
+  followLabel = "Follow Us!",
+  phoneLabel = "or Call",
+  backgroundColor = "#321c0e",
+  textColor = "#ffffff",
+  socialColor = "#bf9800",
+  mainBackgroundColor = "rgba(255, 255, 255, 0.9)",
+  navColor = "#321c0e",
+  buttonBackgroundColor = "#ffffff",
+  buttonTextColor = "#d2b22e",
+} = topBar as Record<string, string>;
+
+const cta = pageButtons?.[0] ?? null;
+
+const styleVars = [
+  `--ah-bar-bg:${backgroundColor}`,
+  `--ah-bar-fg:${textColor}`,
+  `--ah-social:${socialColor}`,
+  `--ah-main-bg:${mainBackgroundColor}`,
+  `--ah-nav:${navColor}`,
+  `--ah-btn-bg:${buttonBackgroundColor}`,
+  `--ah-btn-fg:${buttonTextColor}`,
+].join(";");
+
+const mobileNavData = navData;
+---
+
+<header class:list={["artisan-header", className]} style={styleVars} {...htmlAttributes}>
+  <div class="ah-topbar">
+    <div class="ah-inner">
+      {followLabel && <span class="ah-follow">{followLabel}</span>}
+
+      {
+        resolvedSocials.length > 0 && (
+          <ul class="ah-socials">
+            {resolvedSocials.map((social: any) => (
+              <li>
+                <a
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label || social.icon}
+                >
+                  <Button
+                    variant="ghost"
+                    size="md"
+                    iconName={social.icon}
+                    hideText="true"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        phone?.display && (
+          <span class="ah-phone">
+            {phoneLabel} <a href={phone.href || "#"}>{phone.display}</a>
+          </span>
+        )
+      }
+
+      {
+        cta && (
+          <div class="ah-cta">
+            <a href={cta.link || "#"}>{cta.text}</a>
+          </div>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="ah-mainbar">
+    <div class="ah-inner">
+      <a class="ah-logo" href="/">
+        <Image source={logoSource} alt={logoAlt} editable={false} />
+      </a>
+      <Bar navData={navData} class="ah-nav desktop-main-nav" />
+    </div>
+  </div>
+
+  <Mobile
+    logoSource={logoSource}
+    logoAlt={logoAlt}
+    navData={mobileNavData}
+    class="mobile-main-nav"
+    offices={resolvedOffices}
+    sharedSocials={resolvedSocials}
+  />
+</header>
+
+<style>
+  /* Measured from the source at 1280px: top bar 56px on #321c0e, main bar
+     131px on white/90%, logo 215px wide, nav links Poppins 400 18px with
+     0.5px tracking, uppercase. */
+  .artisan-header {
+    position: relative;
+    z-index: 20;
+  }
+
+  .ah-inner {
+    align-items: center;
+    display: flex;
+    margin-inline: auto;
+    max-width: 1600px;
+    padding-inline: clamp(1rem, 2vw, 2rem);
+  }
+
+  /* ---------------------------------------------------------------- top bar */
+  .ah-topbar {
+    background: var(--ah-bar-bg);
+    color: var(--ah-bar-fg);
+  }
+
+  .ah-topbar .ah-inner {
+    gap: 0.75rem;
+    min-height: 56px;
+  }
+
+  .ah-follow,
+  .ah-phone {
+    color: var(--ah-bar-fg);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+
+  .ah-phone {
+    margin-inline-start: 0.25rem;
+  }
+
+  .ah-phone a {
+    color: var(--ah-bar-fg);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .ah-phone a:hover {
+    text-decoration: underline;
+  }
+
+  .ah-socials {
+    align-items: center;
+    display: flex;
+    gap: 0.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ah-socials a {
+    color: var(--ah-social);
+    display: inline-flex;
+    --color-text: var(--ah-social);
+  }
+
+  /* The shared Button reserves a full control's worth of width, which spread
+     the icons far apart; the source sits them almost shoulder to shoulder. */
+  .ah-socials :global(.button) {
+    color: var(--ah-social);
+    height: 1.75rem;
+    justify-content: center;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    width: 1.75rem;
+  }
+
+  .ah-socials :global(.icon svg) {
+    height: 18px;
+    width: 18px;
+  }
+
+  /* Pill CTA: white fill, gold label, fully rounded — matches the source. */
+  .ah-cta {
+    margin-inline-start: auto;
+  }
+
+  .ah-cta a {
+    background: var(--ah-btn-bg);
+    border-radius: 50px;
+    color: var(--ah-btn-fg);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: filter 0.15s ease;
+    white-space: nowrap;
+  }
+
+  .ah-cta a:hover {
+    filter: brightness(0.94);
+  }
+
+  /* --------------------------------------------------------------- main bar */
+  .ah-mainbar {
+    background: var(--ah-main-bg);
+  }
+
+  .ah-mainbar .ah-inner {
+    gap: 1.5rem;
+    justify-content: space-between;
+    min-height: 131px;
+    padding-block: 5px;
+  }
+
+  .ah-logo {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .ah-logo :global(img) {
+    height: auto;
+    max-width: 100%;
+    width: 215px;
+  }
+
+  /* Nav sits right and is allowed to wrap, exactly as the source does. */
+  .ah-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .ah-nav :global(ul) {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: flex-end;
+  }
+
+  .ah-nav :global(a) {
+    color: var(--ah-nav);
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    padding: 15px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  .ah-nav :global(a:hover) {
+    color: var(--ah-btn-fg);
+  }
+
+  /* The starter draws each dropdown parent's trigger as a bordered square.
+     The source has no such control, so strip the box and let the chevron sit
+     inline as a quiet affordance — the trigger stays keyboard-operable. */
+  .ah-nav :global(.nav-item-trigger) {
+    background: none;
+    border: none;
+    color: inherit;
+    margin-inline-start: -6px;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .ah-nav :global(.nav-item-icon svg) {
+    height: 12px;
+    opacity: 0.55;
+    width: 12px;
+  }
+
+  /* The source's nav is desktop-only; below that the starter's off-canvas
+     mobile nav takes over. Both the hamburger and the panel live outside
+     .ah-nav, so they need hiding explicitly. */
+  .artisan-header :global(.nav-hamburger),
+  .artisan-header :global(nav.mobile) {
+    display: none;
+  }
+
+  @media (max-width: 1100px) {
+    .ah-nav {
+      display: none;
+    }
+
+    .artisan-header :global(.nav-hamburger) {
+      display: inline-flex;
+    }
+
+    .artisan-header :global(nav.mobile) {
+      display: block;
+    }
+
+    .ah-mainbar .ah-inner {
+      min-height: 90px;
+    }
+
+    .ah-logo :global(img) {
+      width: 170px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .ah-follow,
+    .ah-phone {
+      display: none;
+    }
+
+    .ah-topbar .ah-inner {
+      justify-content: space-between;
+    }
+  }
+</style>
+
+<script>
+  // The starter exposes --site-header-height for sticky offsets; keep it fed.
+  const sync = () => {
+    const el = document.querySelector(".artisan-header");
+    if (!el) return;
+    document.documentElement.style.setProperty(
+      "--site-header-height",
+      `${Math.round(el.getBoundingClientRect().height)}px`
+    );
+  };
+  sync();
+  window.addEventListener("resize", sync);
+  document.addEventListener("astro:page-load", sync);
+</script>
