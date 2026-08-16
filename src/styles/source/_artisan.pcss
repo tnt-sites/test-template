@@ -46,16 +46,18 @@
     color: #fff;
   }
 
-  /* Footer affiliation logos sit in white cards on the gold band. */
-  .af-logos li {
-    align-items: center;
+  /* One white panel behind each affiliation GROUP, not one per logo. */
+  .af-logos {
     background: #fff;
     border-radius: 4px;
-    display: flex;
+    gap: 1.25rem 2rem;
     justify-content: center;
-    min-height: 92px;
-    padding: 0.75rem 1rem;
-    width: 150px;
+    padding: 1.5rem 1.75rem;
+  }
+
+  .af-logos li {
+    background: none;
+    padding: 0;
   }
 
   .af-logos img {
