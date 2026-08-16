@@ -1,0 +1,40 @@
+---
+/**
+ * Full-bleed photo banner with an eyebrow, headline and a checklist —
+ * the source's "About Us / Why Choose Us" band.
+ *
+ * Baked in: layout, scrim, type scale, tick marker. Props: text, image,
+ * colours. Array: `items`.
+ */
+const {
+  eyebrow = "", heading = "", items = [],
+  image = "", overlayColor = "rgba(50, 28, 14, 0.72)",
+  eyebrowColor = "#ffffff", headingColor = "#ffffff",
+  textColor = "#ffffff", markerColor = "#d2b22e",
+  minHeight = "520px",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="a-banner" id={id || undefined}
+  style={`--ov:${overlayColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--mk:${markerColor};--minh:${minHeight}${image ? `;background-image:url('${image}')` : ""}`} {...rest}>
+  <div class="scrim"></div>
+  <div class="inner">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    {heading && <h2>{heading}</h2>}
+    {list.length > 0 && (
+      <ul class="items no-check">{list.map((i: any) => <li>{typeof i === "string" ? i : i.text}</li>)}</ul>
+    )}
+  </div>
+</section>
+<style>
+  .a-banner { background-position: center; background-size: cover; min-height: var(--minh); position: relative; }
+  .scrim { background: var(--ov); inset: 0; position: absolute; }
+  .inner { margin-inline: auto; max-width: 1200px; padding: 5rem clamp(1rem,3vw,2.5rem); position: relative; }
+  .eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
+  .items { color: var(--tx); columns: 2; display: block; font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 34px; list-style: none; margin: 0; padding: 0; }
+  .items li { break-inside: avoid; padding-left: 1.75rem; position: relative; }
+  .items li::before { color: var(--mk); content: "\2713"; font-weight: 700; left: 0; position: absolute; }
+  @media (max-width: 700px) { .items { columns: 1; } }
+</style>

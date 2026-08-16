@@ -1,0 +1,13 @@
+_inputs:
+  items:
+    type: array
+  overlayColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  markerColor:
+    type: color

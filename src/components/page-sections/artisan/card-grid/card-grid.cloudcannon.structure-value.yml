@@ -1,0 +1,24 @@
+label: Card Grid
+icon: grid_view
+description: Row of linked image cards.
+value:
+  _component: page-sections/artisan/card-grid
+  id: ""
+  cards:
+    - image: ""
+            title: ""
+            text: ""
+            link: ""
+  backgroundColor: "transparent"
+  titleColor: "#ffffff"
+  textColor: "#333333"
+  overlayColor: "rgba(50, 28, 14, 0.55)"
+preview:
+  text:
+    - Card Grid
+  icon: grid_view
+picker_preview:
+  text: Card Grid
+  subtext: Row of linked image cards.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/card-grid/card-grid.cloudcannon.inputs.yml

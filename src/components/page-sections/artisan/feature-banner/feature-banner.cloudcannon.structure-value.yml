@@ -1,0 +1,25 @@
+label: Feature Banner
+icon: hero
+description: Full-bleed photo banner with a checklist.
+value:
+  _component: page-sections/artisan/feature-banner
+  id: ""
+  eyebrow: ""
+  heading: ""
+  items: []
+  image: ""
+  overlayColor: "rgba(50, 28, 14, 0.72)"
+  eyebrowColor: "#ffffff"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+  markerColor: "#d2b22e"
+  minHeight: "520px"
+preview:
+  text:
+    - Feature Banner
+  icon: hero
+picker_preview:
+  text: Feature Banner
+  subtext: Full-bleed photo banner with a checklist.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/feature-banner/feature-banner.cloudcannon.inputs.yml

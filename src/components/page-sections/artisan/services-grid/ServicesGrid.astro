@@ -1,0 +1,56 @@
+---
+/**
+ * Intro column beside a grid of icon cards — the source's "Our Services".
+ *
+ * Baked in: layout, type scale, card shape. Props: text, colours, button.
+ * Array: `cards`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "", heading = "", text = "",
+  buttonText = "", buttonLink = "",
+  cards = [],
+  backgroundColor = "#ffffff",
+  eyebrowColor = "#d2b22e",
+  headingColor = "#321c0e",
+  textColor = "#333333",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<section class="a-services" id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="inner">
+    <div class="intro">
+      {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+      {heading && <h2>{heading}</h2>}
+      {text && <p class="lead">{text}</p>}
+      {buttonText && <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />}
+    </div>
+    <ul class="cards no-check">
+      {list.map((c: any) => (
+        <li>
+          <a href={c.link || "#"}>
+            {c.icon && <img src={c.icon} alt="" loading="lazy" />}
+            <h3>{c.title}</h3>
+            {c.text && <p>{c.text}</p>}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<style>
+  .a-services { background: var(--bg); padding-block: 4.5rem; }
+  .inner { display: grid; gap: 3rem; grid-template-columns: minmax(280px, 1fr) 1.4fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
+  .lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 1.75rem; }
+  .cards { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); list-style: none; margin: 0; padding: 0; }
+  .cards a { color: inherit; display: block; text-align: center; text-decoration: none; }
+  .cards img { height: 90px; object-fit: contain; width: auto; }
+  .cards h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 600; margin: 1rem 0 0.5rem; }
+  .cards p { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 23px; margin: 0; }
+  .cards a:hover h3 { color: var(--eb); }
+  @media (max-width: 860px) { .inner { grid-template-columns: 1fr; } }
+</style>

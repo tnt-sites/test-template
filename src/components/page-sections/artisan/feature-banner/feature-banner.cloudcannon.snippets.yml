@@ -1,0 +1,10 @@
+_snippets:
+  feature_banner:
+    template: astro_component
+    inline: false
+    preview:
+      text: Feature Banner
+    definitions:
+      component_name: page-sections/artisan/feature-banner
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/feature-banner/feature-banner.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  services_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Services Grid
+    definitions:
+      component_name: page-sections/artisan/services-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/services-grid/services-grid.cloudcannon.inputs.yml

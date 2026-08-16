@@ -46,62 +46,68 @@ pageSections:
     overlayColor: rgba(0, 0, 0, 0.45)
     minHeight: 620px
     autoplaySeconds: 6
-  - _component: page-sections/ctas/cta-center
+  - _component: page-sections/artisan/logo-strip
     id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+        link: ""
+      - image: /wp-content/uploads/2025/11/geat.png
+        alt: geat
+        link: ""
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+        link: ""
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+        link: ""
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+        link: ""
+      - image: /wp-content/uploads/2025/11/top.png
+        alt: top
+        link: ""
+      - image: /wp-content/uploads/2022/01/b-logo3.png
+        alt: b-logo3
+        link: ""
+    backgroundColor: "#321c0e"
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/services-grid
+    id: ""
+    eyebrow: Our Services
     heading: Comfortable & Compassionate
-    anchorName: ""
-    subtext: |-
-      ###### Our Services
-
-      [Our team](/meet-the-team/) is here for you every step of the way.  With years of experience and training, we are fully prepared to provide exceptional quality care.
-
-      [![Cosmetic dental icon](/wp-content/uploads/2021/05/Cosmetic-icon.png)](/category/services/cosmetic/)
-
-      ### [Cosmetic](/category/services/cosmetic/)
-
-      Looking to brighten up your smile? Have an imperfection you want fixed? We can make it happen!
-
-      [![Restorative dental icon](/wp-content/uploads/2021/05/Restorative-icon.png)](/category/services/restorative/)
-
-      ### [Restorative](/category/services/restorative/)
-
-      Turn that frown upside down. With our advanced techniques we can restore your beautiful smile!
-
-      [](/category/services/preventive/)
-
-      ### [Preventive](/category/services/preventive/)
-
-      The most important part of maintaining a happy healthy smile is to keep up with routine visits.
-
-      [![Dental insurance icon](/wp-content/uploads/2021/05/Insurance-icon.png)](/health-plans/)
-
-      ### [Artisan Dental Health Plan](/health-plans/)
-
-      Affordable oral health care for individuals and families without dental insurance.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: View All Services
-        hideText: false
-        link: /services/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/Resorative-icon.png
-      alt: Restorative dental icon
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/location/location-find-us
+    text: Our team is here for you every step of the way. With years of experience and training, we are fully prepared to provide exceptional quality care.
+    buttonText: View All Services
+    buttonLink: /services/
+    cards:
+      - icon: /wp-content/uploads/2021/05/Cosmetic-icon.png
+        title: Cosmetic
+        text: Looking to brighten up your smile? Have an imperfection you want fixed? We can make it happen!
+        link: /services/cosmetic/
+      - icon: /wp-content/uploads/2021/05/Restorative-icon.png
+        title: Restorative
+        text: Turn that frown upside down. With our advanced techniques we can restore your beautiful smile!
+        link: /services/restorative/
+      - icon: /wp-content/uploads/2021/05/Resorative-icon.png
+        title: Preventive
+        text: The most important part of maintaining a happy healthy smile is to keep up with routine visits.
+        link: /services/preventive/
+      - icon: /wp-content/uploads/2021/05/Insurance-icon.png
+        title: Artisan Dental Health Plan
+        text: Affordable oral health care for individuals and families without dental insurance.
+        link: /health-plans/
+    backgroundColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/feature-banner
     id: ""
+    eyebrow: About Us
     heading: Why Choose Us
-    text: |-
-      ###### About Us
-
+    items:
       - Exceptional Quality
       - Comfortable + Compassionate Care
       - Award Winning
@@ -112,33 +118,61 @@ pageSections:
       - Affordability
       - Business for Good
       - Certified B Corporation
-    backgroundColor: "#ffffff"
-    textColor: "#000000"
-    accentColor: var(--color-brand-subtle)
-    iconColor: var(--color-brand)
-  - _component: page-sections/location/location-find-us
+    image: /wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology.jpeg
+    overlayColor: rgba(50, 28, 14, 0.72)
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
+    markerColor: "#d2b22e"
+    minHeight: 520px
+  - _component: page-sections/artisan/card-grid
     id: ""
-    heading: "[Why Choose Us](/why-choose-artisan/)"
-    text: |-
-      [](/why-choose-artisan/)
-
-      We want you to have the very best dental experience. It is important you feel safe and comfortable with your dentist!
-
-      [![](/wp-content/uploads/2020/08/102261448_1964298147033994_78904-1-1-1.jpg)](/meet-the-team/)
-
-      ## [Meet Our Team](/meet-the-team/)
-
-      We are more than just a traditional dentist office, our dental team is a family of local highly trained professionals!
-
-      [![Artisan Dental office lobby](/wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology-235-rev.jpg)](/contact-us/)
-
-      ## [Tour Our Office](/contact-us/)
-
-      Come stop by our office anytime to take a free tour. We also have a wonderful online image gallery to check out!
-    backgroundColor: "#ffffff"
-    textColor: "#000000"
-    accentColor: var(--color-brand-subtle)
-    iconColor: var(--color-brand)
+    cards:
+      - image: /wp-content/uploads/2021/05/Why-choose-Us.jpg
+        title: Why Choose Us
+        text: We want you to have the very best dental experience. It is important you feel safe and comfortable with your dentist!
+        link: /why-choose-artisan/
+      - image: /wp-content/uploads/2020/08/102261448_1964298147033994_78904-1-1-1.jpg
+        title: Meet Our Team
+        text: We are more than just a traditional dentist office, our dental team is a family of local highly trained professionals!
+        link: /meet-the-team/
+      - image: /wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology-235-rev.jpg
+        title: Tour Our Office
+        text: Come stop by our office anytime to take a free tour. We also have a wonderful online image gallery to check out!
+        link: /contact-us/
+    backgroundColor: transparent
+    titleColor: "#ffffff"
+    textColor: "#333333"
+    overlayColor: rgba(50, 28, 14, 0.55)
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: Top Rated & Award Winning
+    heading: Proudly Featured In
+    logos:
+      - image: /wp-content/uploads/2020/08/Brava_2.png
+        alt: Brava_2
+        link: ""
+      - image: /wp-content/uploads/2020/08/sitelogo_main2.png
+        alt: sitelogo_main2
+        link: ""
+      - image: /wp-content/uploads/2021/05/IBmasthead-horizontal2-rev.png
+        alt: In Business logo white
+        link: ""
+      - image: /wp-content/uploads/2021/05/ESN2-rev.png
+        alt: ESN logo white
+        link: ""
+      - image: /wp-content/uploads/2020/08/acd-logo2.png
+        alt: acd-logo2
+        link: ""
+      - image: /wp-content/uploads/2021/05/edge2-rev.png
+        alt: Incisal edge logo
+        link: ""
+      - image: /wp-content/uploads/2021/05/23s-rev.png
+        alt: wisconsin state journal logo
+        link: ""
+    backgroundColor: "#321c0e"
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
   - _component: page-sections/builders/custom-section
     id: ""
     label: ""
@@ -283,100 +317,4 @@ pageSections:
     textColor: "#000000"
     accentColor: var(--color-brand-subtle)
     iconColor: var(--color-brand)
-_migUnmapped:
-  sections:
-    - component: page-sections/location/location-find-us
-      fields:
-        - field: imageSource
-          content: /wp-content/uploads/2021/05/Why-choose-Us.jpg
-        - field: imageAlt
-          content: Dental chair - Artisan Dental office
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: heading
-          content: Proudly Featured In
-        - field: subtext
-          content: |-
-            ###### Top Rated & Award Winning
-
-            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
-
-            ![sitelogo\_main2](/wp-content/uploads/2020/08/sitelogo_main2.png)
-
-            ![In Business logo white](/wp-content/uploads/2021/05/IBmasthead-horizontal2-rev.png)
-
-            ![acd-logo2](/wp-content/uploads/2020/08/acd-logo2.png)
-
-            ![Incisal edge logo](/wp-content/uploads/2021/05/edge2-rev.png)
-
-            ![wisconsin state journal logo](/wp-content/uploads/2021/05/23s-rev.png)
-
-            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
-
-            ![sitelogo\_main2](/wp-content/uploads/2020/08/sitelogo_main2.png)
-
-            ![In Business logo white](/wp-content/uploads/2021/05/IBmasthead-horizontal2-rev.png)
-
-            ![ESN logo white](/wp-content/uploads/2021/05/ESN2-rev.png)
-
-            ![acd-logo2](/wp-content/uploads/2020/08/acd-logo2.png)
-
-            ![Incisal edge logo](/wp-content/uploads/2021/05/edge2-rev.png)
-
-            ![wisconsin state journal logo](/wp-content/uploads/2021/05/23s-rev.png)
-
-            ![Brava\_2](/wp-content/uploads/2020/08/Brava_2.png)
-    - component: page-sections/info-blocks/contact
-      fields:
-        - field: youtubeId
-          content: https://www.youtube.com/embed/iT5KMZZTY44?controls=1&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A59392&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A59392%2Findex.html&aoriginsup=1&vf=1
-        - field: embedUrl
-          content: https://www.youtube.com/embed/fh6IQb8i6Sc?controls=1&rel=0&playsinline=0&cc_load_policy=0&autoplay=0&enablejsapi=1&origin=http%3A%2F%2F127.0.0.1%3A59392&widgetid=3&forigin=http%3A%2F%2F127.0.0.1%3A59392%2Findex.html&aoriginsup=1&vf=1
-    - component: page-sections/ctas/more-to-explore
-      fields:
-        - field: eyebrow
-          content: What People Are Saying
-        - field: subtext
-          content: |-
-            I was so nervous to see a new dentist after not going for soooo long. The staff were so courteous and explained all of my health records and options. They did a great job catering to my nerves and making me feel comfortable. I left feeling very hopeful, healthy, and without any unanswered questions. They did a great job with COVID precautions and the environment is spotless!
-
-            Kate S.
-
-            Everyone is so kind, patient, mindful, and personable. Professionalism is 110%. The office is clean & beautiful. I never feel like they're trying to push unnecessary and expensive dental work to make money off me. Plus, they recycle old dental products for clients! I hate going to the dentist, but this place has changed my mind. Thank you!
-
-            ![Google icon](/wp-content/uploads/2021/05/google-icon4-rev.png)
-
-            Marie S.
-
-            I love Artisan Dental and have been going there for four years now. The folks in reception always make me feel welcomed, the hygienists are skilled and personable, and I trust and appreciate the professionalism and skills of the dentists. I'm particularly fond of the TVs they have that display beautiful nature scenes (rather than assaulting the senses as some businesses seem to think is desirable).
-
-            ![Yelp icon](/wp-content/uploads/2021/05/Yelp.png)
-
-            Liz Z.
-
-            I was in town visiting Epic and had an unexpected dental emergency. This was quite distressing since I was so far from my normal dentist in Cincinnati. Thank goodness I found Artisan Dental! They got me in quickly and did a great job. Everyone from the office staff to the hygienist to the dentist was very calming and helpful!
-
-            ![Yelp icon](/wp-content/uploads/2021/05/Yelp.png)
-
-            Christy B.
-
-            The staff's kindness, service, and professionalism make me glad that I chose to go here for my dental services. I had a LOT of work to get done this year as I hadn't been to the dentist in awhile. They took it in stride and never made me feel guilty, but rather inspired me to take better care of my teeth! I was in awe when I first started going as someone else said, it almost feels like a relaxing spa retreat...
-
-            ![FB circle logo](/wp-content/uploads/2021/05/fb-logo4-rev.png)
-
-            Erin G.
-
-            Fantastic service from entry to exit. Not only is the clinic beautiful and welcoming with small details, the staff is extremely friendly and seems very genuine. I had fillings done, and actually enjoyed the process. I highly recommended this office (coming from a former Dental clinic receptionist in another city).
-
-            ![FB circle logo](/wp-content/uploads/2021/05/fb-logo4-rev.png)
-
-            Esperanza S.
-    - component: page-sections/location/location-find-us
-      fields:
-        - field: eyebrow
-          content: Address
-        - field: imageSource
-          content: /wp-content/uploads/2021/05/Location-icon.png
-        - field: imageAlt
-          content: Location icon
 ---

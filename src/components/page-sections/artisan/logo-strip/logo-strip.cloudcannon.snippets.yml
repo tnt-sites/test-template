@@ -1,0 +1,10 @@
+_snippets:
+  logo_strip:
+    template: astro_component
+    inline: false
+    preview:
+      text: Logo Strip
+    definitions:
+      component_name: page-sections/artisan/logo-strip
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/logo-strip/logo-strip.cloudcannon.inputs.yml

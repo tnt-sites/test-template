@@ -1,0 +1,30 @@
+_inputs:
+  cards:
+    type: array
+    options:
+      structures: _structures.card_grid_item
+  backgroundColor:
+    type: color
+  titleColor:
+    type: color
+  textColor:
+    type: color
+  overlayColor:
+    type: color
+_structures:
+  card_grid_item:
+    values:
+      - value:
+          image: ""
+          title: ""
+          text: ""
+          link: ""
+        _inputs:
+          image:
+            type: image
+          title:
+            type: text
+          text:
+            type: markdown
+          link:
+            type: url
