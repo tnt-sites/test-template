@@ -9,7 +9,7 @@ const {
   cards = [],
   backgroundColor = "#321c0e",
   backgroundImage = "",
-  overlayColor = "rgba(50, 28, 14, 0.15)",
+  overlayOpacity = 0.15,
   titleColor = "#ffffff",
   textColor = "#ffffff",
   captionColor = "#d2b22e",
@@ -18,7 +18,7 @@ const {
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 ---
 <section class="a-cardgrid" id={id || undefined}
-  style={`--bg:${backgroundColor};--tc:${titleColor};--tx:${textColor};--cap:${captionColor};--ov:${overlayColor}${backgroundImage ? `;background-image:url('${backgroundImage}')` : ""}`} {...rest}>
+  style={`--bg:${backgroundColor};--tc:${titleColor};--tx:${textColor};--cap:${captionColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
   <ul class="cg-inner no-check">
     {list.map((c: any) => (
       <li>
@@ -34,10 +34,25 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
   </ul>
 </section>
 <style>
-  .a-cardgrid { background-color: var(--bg); background-position: center; background-size: cover; padding-block: 4rem; position: relative; }
+  .a-cardgrid { background-color: var(--bg); padding-block: 4rem; position: relative; }
 
   /* Measured: the source lays #321c0e over the wood texture. */
-  .a-cardgrid::before { background: var(--ov); content: ""; inset: 0; position: absolute; }
+
+  /* Source structure: the section is solid brand-brown, and the wood texture
+     rides on the OVERLAY together with the same brown at opacity .15 and
+     mix-blend-mode: lighten. Putting the texture on the section instead (which
+     is what this did first) renders it far too light. */
+  .a-cardgrid::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
   .cg-inner {  display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); list-style: none; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; }
   a { color: inherit; text-decoration: none; }
   .cg-media { border-radius: 4px; overflow: hidden; position: relative; }

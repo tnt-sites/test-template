@@ -71,7 +71,7 @@ pageSections:
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
-    overlayColor: rgba(50, 28, 14, 0.15)
+    overlayOpacity: 0.15
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: Our Services
@@ -140,8 +140,8 @@ pageSections:
     backgroundColor: "#321c0e"
     titleColor: "#ffffff"
     textColor: "#ffffff"
-    overlayColor: rgba(50, 28, 14, 0.15)
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: Top Rated & Award Winning
@@ -163,7 +163,7 @@ pageSections:
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
-    overlayColor: rgba(50, 28, 14, 0.15)
+    overlayOpacity: 0.15
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: Our Office
@@ -232,6 +232,8 @@ pageSections:
     cardBackgroundColor: "#ffffff"
     cardTextColor: "#333333"
     nameColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
   - _component: page-sections/artisan/contact-block
     id: ""
     heading: Send us a message

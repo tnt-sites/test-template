@@ -10,14 +10,16 @@ import Button from "@core-elements/button/Button.astro";
 const {
   eyebrow = "", heading = "", testimonials = [],
   buttonText = "", buttonLink = "",
-  backgroundColor = "#321c0e", eyebrowColor = "#ffffff", headingColor = "#ffffff",
+  backgroundColor = "#321c0e",
+  backgroundImage = "",
+  overlayOpacity = 0.15, eyebrowColor = "#ffffff", headingColor = "#ffffff",
   cardBackgroundColor = "#ffffff", cardTextColor = "#333333", nameColor = "#321c0e",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
 ---
 <section class="a-testi" id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--card:${cardBackgroundColor};--tx:${cardTextColor};--nm:${nameColor}`} {...rest}>
+  style={`--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--card:${cardBackgroundColor};--tx:${cardTextColor};--nm:${nameColor}`} {...rest}>
   <div class="ts-inner">
     {eyebrow && <p class="ts-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
@@ -33,8 +35,24 @@ const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
   </div>
 </section>
 <style>
-  .a-testi { background: var(--bg); padding-block: 4.5rem; }
-  .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); text-align: center; }
+  .a-testi { background-color: var(--bg); padding-block: 4.5rem; position: relative; }
+
+  /* Source structure: the section is solid brand-brown, and the wood texture
+     rides on the OVERLAY together with the same brown at opacity .15 and
+     mix-blend-mode: lighten. Putting the texture on the section instead (which
+     is what this did first) renders it far too light. */
+  .a-testi::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+  .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
   .ts-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2.5rem; }
 

@@ -10,7 +10,7 @@ const {
   logos = [],
   backgroundColor = "#321c0e",
   backgroundImage = "",
-  overlayColor = "rgba(50, 28, 14, 0.15)",
+  overlayOpacity = 0.15,
   eyebrowColor = "#ffffff",
   headingColor = "#ffffff",
   id, _component, ...rest
@@ -18,7 +18,7 @@ const {
 const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
 ---
 <section class="a-logostrip" id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--ov:${overlayColor}${backgroundImage ? `;background-image:url('${backgroundImage}')` : ""}`} {...rest}>
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="ls-inner">
     {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
@@ -32,13 +32,28 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
   </div>
 </section>
 <style>
-  .a-logostrip { background-color: var(--bg); background-position: center; background-size: cover; padding-block: 3rem; position: relative; }
+  .a-logostrip { background-color: var(--bg); padding-block: 3rem; position: relative; }
 
   /* Measured: the source lays #321c0e over the wood texture. */
-  .a-logostrip::before { background: var(--ov); content: ""; inset: 0; position: absolute; }
+
+  /* Source structure: the section is solid brand-brown, and the wood texture
+     rides on the OVERLAY together with the same brown at opacity .15 and
+     mix-blend-mode: lighten. Putting the texture on the section instead (which
+     is what this did first) renders it far too light. */
+  .a-logostrip::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
   .ls-inner {  margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
   .ls-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 400; margin: 0; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
-  .ls-logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.5rem 2.5rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
-  .ls-logos img { height: auto; max-height: 70px; object-fit: contain; width: auto; }
+  .ls-logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.75rem 3rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
+  .ls-logos img { height: auto; max-height: 120px; object-fit: contain; width: auto; }
 </style>
