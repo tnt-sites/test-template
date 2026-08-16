@@ -17,7 +17,7 @@ pageSections:
     backgroundImage: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-239.jpeg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-    minHeight: 420px
+    minHeight: 810px
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: ""

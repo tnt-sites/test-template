@@ -59,9 +59,18 @@ function createNavItemData(item, level, parentGroupId) {
               aria-controls={itemData.contentId}
               autocomplete="off"
             />
-            <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
-              {itemData.name}
-            </a>
+            {itemData.path ? (
+              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+                {itemData.name}
+              </a>
+            ) : (
+              // A parent with no destination is a group label, not a link. Rendering it
+              // as <a href=""> made it navigate to the current page; the label opens the
+              // submenu instead, which is what the text is for.
+              <label for={itemData.dropdownId} class="nav-item-label">
+                {itemData.name}
+              </label>
+            )}
             <label
               for={itemData.dropdownId}
               class="nav-item-trigger"
@@ -109,12 +118,18 @@ function createNavItemData(item, level, parentGroupId) {
                         aria-controls={childData.contentId}
                         autocomplete="off"
                       />
-                      <a
-                        href={childData.path}
-                        aria-current={childData.isCurrent ? "page" : undefined}
-                      >
-                        {childData.name}
-                      </a>
+                      {childData.path ? (
+                        <a
+                          href={childData.path}
+                          aria-current={childData.isCurrent ? "page" : undefined}
+                        >
+                          {childData.name}
+                        </a>
+                      ) : (
+                        <label for={childData.dropdownId} class="nav-item-label">
+                          {childData.name}
+                        </label>
+                      )}
                       <label
                         for={childData.dropdownId}
                         class="nav-item-trigger"
@@ -281,7 +296,7 @@ function createNavItemData(item, level, parentGroupId) {
         toggle.addEventListener("change", handleToggleChange);
       });
 
-      barNav.querySelectorAll(".nav-item-trigger").forEach((trigger) => {
+      barNav.querySelectorAll(".nav-item-trigger, .nav-item-label").forEach((trigger) => {
         trigger.addEventListener("click", handleTriggerClick);
         trigger.addEventListener("keydown", handleKeydown);
       });
@@ -327,12 +342,14 @@ function createNavItemData(item, level, parentGroupId) {
         display: flex;;
       }
 
-      .nav-item > a{
+      .nav-item > a,
+      .nav-item > .nav-item-label {
         border-radius: var(--radius-xs);
         color: var(--color-text-strong);
         cursor: pointer;
         display: block;
         font-weight: var(--font-weight-medium);
+        user-select: none;
         padding: var(--spacing-sm) var(--spacing-md);
         text-decoration: none;
         transition: background var(--animation-normal) ease-in-out;
@@ -386,7 +403,8 @@ function createNavItemData(item, level, parentGroupId) {
       .nav-item.has-children {
         column-gap: var(--spacing-xs);
 
-        > a {
+        > a,
+        > .nav-item-label {
           padding-right: 2px;
         }
       }
@@ -458,7 +476,8 @@ function createNavItemData(item, level, parentGroupId) {
         grid-column: 1 / -1;
       }
 
-      .nav-item-content .nav-item > a {
+      .nav-item-content .nav-item > a,
+      .nav-item-content .nav-item > .nav-item-label {
         border-radius: 0;
       }
 
@@ -466,7 +485,8 @@ function createNavItemData(item, level, parentGroupId) {
         margin-inline-start: var(--spacing-xs);
       }
 
-      .nav-item-nested .nav-item > a {
+      .nav-item-nested .nav-item > a,
+      .nav-item-nested .nav-item > .nav-item-label {
         border-radius: 0;
         padding-left: var(--spacing-xl);
       }

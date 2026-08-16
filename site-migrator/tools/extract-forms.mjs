@@ -36,7 +36,7 @@ const MIRROR = path.join(ROOT, ".migration/instrumented");
 const PAGES = path.resolve(ROOT, "../src/content/pages");
 
 const FORM_ACTION = "/thank-you/";
-const FORM_COMPONENTS = /^page-sections\/(ctas\/cta-form|forms\/)/;
+const FORM_COMPONENTS = /^page-sections\/(ctas\/cta-form|forms\/|artisan\/contact-block)/;
 
 // WordPress plugin plumbing — routing and CSRF fields with no meaning in a
 // static build. `_subject` is kept: it names the form for whatever backend

@@ -17,7 +17,7 @@ pageSections:
     backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-    minHeight: 420px
+    minHeight: 200px
   - _component: page-sections/forms/appointment-form
     id: ""
     heading: "Positions:"

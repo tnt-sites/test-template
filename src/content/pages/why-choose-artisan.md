@@ -17,7 +17,7 @@ pageSections:
     backgroundImage: /wp-content/uploads/2020/09/shutterstock_720054574-2.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-    minHeight: 420px
+    minHeight: 810px
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""

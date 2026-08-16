@@ -269,10 +269,10 @@ pageSections:
     formBlocks:
       - _component: building-blocks/forms/input
         id: ""
-        label: First Name
-        name: first_name
+        label: Name
+        name: name
         type: text
-        placeholder: null
+        placeholder: Name
         required: true
         value: null
       - _component: building-blocks/forms/input
@@ -280,7 +280,7 @@ pageSections:
         label: Email
         name: email
         type: email
-        placeholder: null
+        placeholder: Email
         required: true
         value: null
       - _component: building-blocks/forms/input
@@ -288,25 +288,32 @@ pageSections:
         label: Phone
         name: phone
         type: tel
-        placeholder: null
+        placeholder: Phone
         required: true
         value: null
       - _component: building-blocks/forms/textarea
         id: ""
-        label: Notes / Comments
+        label: Message
         name: message
         required: true
-        placeholder: Notes / Comments
+        placeholder: Message
         value: null
+      - _component: building-blocks/forms/recaptcha
+        id: ""
+        siteKey: null
       - _component: building-blocks/forms/submit
         id: ""
-        text: Request Appointment
+        text: Submit
         variant: primary
         size: md
         iconName: null
         iconPosition: before
         hideText: false
         disabled: false
+      - _component: building-blocks/forms/hidden
+        id: ""
+        name: _subject
+        value: Send Us A Message - Home Page
     formAction: /thank-you/
     backgroundColor: "#ffffff"
     headingColor: "#321c0e"

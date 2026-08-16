@@ -17,14 +17,12 @@ pageSections:
     backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-    minHeight: 420px
-  - _component: page-sections/artisan/page-body
+    minHeight: 200px
+  - _component: page-sections/artisan/split-feature
     id: ""
-    sidebarHeading: ""
-    links: []
-    image: /wp-content/uploads/2024/04/14214592_Yunker_Raymond_Anterior.jpeg
-    imageAlt: ""
-    body: "
+    eyebrow: ""
+    heading: Full mouth rehabilitation due to severe wear.
+    text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
@@ -513,10 +511,116 @@ pageSections:
       \t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    backgroundColor: transparent
-    headingBackground: "#321c0e"
-    headingColor: "#ffffff"
-    linkColor: "#222222"
-    textColor: "#686868"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
     reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: Full mouth rehabilitation due to severe wear.
+    logos:
+      - image: /wp-content/uploads/2024/04/14214592_Yunker_Raymond_Anterior.jpeg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/14214592_Raymond_Yunker_8_Anterior.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/14214592_Yunker_Raymond_Anterior-Open-Bite.jpeg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/14214592_Raymond_Yunker_11_Anterior_Open_Bite.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/14214592_Yunker_Raymond_Smile.jpeg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/14214592_Raymond_Yunker_3_Smile.jpeg
+        alt: ""
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: '"Upper and lower veneers to correct intrinsic discoloration and enhance shape.'
+    logos:
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_8_Anterior-2.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_8_Anterior.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_11_Anterior_Open_Bite-2.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_11_Anterior_Open_Bite.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_3_Smile-2.jpeg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/04/21921617_Lauren_Armstrong_3_Smile.jpeg
+        alt: ""
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2020/09/Amanda-Yocum.006.jpg
+        alt: Full mouth Restoration
+        link: ""
+      - image: /wp-content/uploads/2020/09/Tammy-Wedige.jpg
+        alt: Full mouth rehabiliation
+        link: ""
+      - image: /wp-content/uploads/2020/09/Ray-Andretti.jpg
+        alt: Crown and veneers patient
+        link: ""
+      - image: /wp-content/uploads/2020/09/Tina-MandavilleVeneers.jpg
+        alt: veneers patient
+        link: ""
+      - image: /wp-content/uploads/2020/09/ARTISAN-DENTAL-Smile-Gallery.012.jpg
+        alt: veneers patient
+        link: ""
+      - image: /wp-content/uploads/2020/09/Barb-Buse.jpg
+        alt: veneers patient
+        link: ""
+      - image: /wp-content/uploads/2020/09/Lee-Marks.jpg
+        alt: Full mouth rehabiliation
+        link: ""
+      - image: /wp-content/uploads/2020/09/Jim-Henkel.jpg
+        alt: Full mouth rehabilitation
+        link: ""
+      - image: /wp-content/uploads/2020/09/Artisan-Pat.-Veneers.jpg
+        alt: Ceramic Veneers
+        link: ""
+      - image: /wp-content/uploads/2020/09/Gabreilles.jpg
+        alt: Whitening and Veneers
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
 ---

@@ -17,14 +17,12 @@ pageSections:
     backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-    minHeight: 420px
-  - _component: page-sections/artisan/page-body
+    minHeight: 200px
+  - _component: page-sections/artisan/split-feature
     id: ""
-    sidebarHeading: ""
-    links: []
-    image: /wp-content/uploads/2026/04/artisan-dental-impact-report-2025.jpg
-    imageAlt: Artisan Dental 2025 Impact Report.
-    body: "
+    eyebrow: ""
+    heading: ""
+    text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
@@ -247,10 +245,68 @@ pageSections:
       \t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    backgroundColor: transparent
-    headingBackground: "#321c0e"
-    headingColor: "#ffffff"
-    linkColor: "#222222"
-    textColor: "#686868"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
     reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2026/04/artisan-dental-impact-report-2025.jpg
+        alt: Artisan Dental 2025 Impact Report.
+        link: ""
+      - image: /wp-content/uploads/2025/07/AD_2024_Impact_final_page-0001.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2024/03/AD_2023_final.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2023/06/impact-2023.jpg
+        alt: ""
+        link: ""
+      - image: /wp-content/uploads/2022/09/impact-2022.jpg
+        alt: impact-2021
+        link: ""
+      - image: /wp-content/uploads/2021/03/Artisan_Dental_Impact_Report_2020-1.jpg
+        alt: Artisan Dental Impact Report 2020
+        link: ""
+      - image: /wp-content/uploads/2020/08/Artisan_Dental_Impact_Report_final-1-01-1600x2071.jpg
+        alt: Artisan Dental Impact Report Final
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: ""
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>The Artisan Dental Impact reports below provide additional information on how Artisan Dental is bringing it mission, vision and values to life, by creating beneficial impact for all of its stakeholders. The impact report pages contain summaries of new and existing programs we have implemented, scores Artisan Dental earned within the various sub-domains of the Certified B Corporation, B Impact Assessment, as well as depiction of how our programs relate the United Nations, Sustainable Development Goals.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
 ---

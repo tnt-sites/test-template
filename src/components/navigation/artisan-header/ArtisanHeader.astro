@@ -279,7 +279,10 @@ const mobileNavData = navData;
     justify-content: flex-end;
   }
 
-  .ah-nav :global(a) {
+  /* Dropdown parents with no destination render as .nav-item-label rather than
+     an anchor, so they need the same type treatment as the real links. */
+  .ah-nav :global(a),
+  .ah-nav :global(.nav-item-label) {
     color: var(--ah-nav);
     font-family: Poppins, sans-serif;
     font-size: 18px;
@@ -290,7 +293,8 @@ const mobileNavData = navData;
     text-transform: uppercase;
   }
 
-  .ah-nav :global(a:hover) {
+  .ah-nav :global(a:hover),
+  .ah-nav :global(.nav-item-label:hover) {
     color: var(--ah-btn-fg);
   }
 

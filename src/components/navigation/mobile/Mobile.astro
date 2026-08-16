@@ -154,9 +154,18 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 autocomplete="off"
                 checked={itemData.hasCurrent}
               />
-              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
-                {itemData.name}
-              </a>
+              {itemData.path ? (
+                <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+                  {itemData.name}
+                </a>
+              ) : (
+                // A parent with no destination is a group label, not a link. Rendering it
+                // as <a href=""> made it navigate to the current page; the label opens the
+                // submenu instead, which is what the text is for.
+                <label for={itemData.dropdownId} class="nav-item-label">
+                  {itemData.name}
+                </label>
+              )}
               <label
                 for={itemData.dropdownId}
                 class="nav-item-trigger"
@@ -205,12 +214,18 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           autocomplete="off"
                           checked={childData.hasCurrent}
                         />
-                        <a
-                          href={childData.path}
-                          aria-current={childData.isCurrent ? "page" : undefined}
-                        >
-                          {childData.name}
-                        </a>
+                        {childData.path ? (
+                          <a
+                            href={childData.path}
+                            aria-current={childData.isCurrent ? "page" : undefined}
+                          >
+                            {childData.name}
+                          </a>
+                        ) : (
+                          <label for={childData.dropdownId} class="nav-item-label">
+                            {childData.name}
+                          </label>
+                        )}
                         <label
                           for={childData.dropdownId}
                           class="nav-item-trigger"
@@ -384,7 +399,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 
     // Handle dropdown interactions using event delegation
     const handleDropdownToggle = (e) => {
-      const trigger = e.target?.closest(".nav-item-trigger");
+      const trigger = e.target?.closest(".nav-item-trigger, .nav-item-label");
       if (!trigger) return;
 
       const radioName = trigger.getAttribute("for");
@@ -508,7 +523,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         border-bottom: 1px solid var(--color-border-subtle);
         position: relative;
 
-        > a {
+        > a,
+        > .nav-item-label {
           border-radius: var(--radius-xs);
           color: var(--color-text-strong);
           cursor: pointer;
@@ -539,7 +555,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           display: flex;
           flex-wrap: wrap;
 
-          > a {
+          > a,
+          > .nav-item-label {
             flex: 1 1 auto;
             min-width: 0;
             width: auto;
@@ -599,12 +616,14 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       }
 
       .nav-item > .nav-item-content .nav-item {
-        > a {
+        > a,
+        > .nav-item-label {
           padding: var(--spacing-md) var(--spacing-xl);
           width: 100%;
         }
 
-        &.has-children > a {
+        &.has-children > a,
+        &.has-children > .nav-item-label {
           width: auto;
         }
 
@@ -613,12 +632,14 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         }
 
         > .nav-item-content .nav-item {
-          > a {
+          > a,
+          > .nav-item-label {
             padding: var(--spacing-md) var(--spacing-2xl);
             width: 100%;
           }
 
-          &.has-children > a {
+          &.has-children > a,
+          &.has-children > .nav-item-label {
             width: auto;
           }
         }

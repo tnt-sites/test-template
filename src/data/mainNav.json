@@ -126,7 +126,7 @@
       "children": [
         {
           "name": "Restorative",
-          "path": "/blog/category/services/restorative/",
+          "path": "",
           "children": [
             {
               "name": "Full & Partial Mouth Rehabilitation",
@@ -172,7 +172,7 @@
         },
         {
           "name": "Cosmetic",
-          "path": "/blog/category/services/cosmetic/",
+          "path": "/cosmetic/",
           "children": [
             {
               "name": "New Smile Design",
@@ -218,7 +218,7 @@
         },
         {
           "name": "Preventive",
-          "path": "/blog/category/services/preventive/",
+          "path": "",
           "children": [
             {
               "name": "Botox For Bruxism (Clenching and Grinding Teeth)",
@@ -271,7 +271,7 @@
     },
     {
       "name": "Health Plans",
-      "path": "#",
+      "path": "",
       "children": [
         {
           "name": "Artisan Dental Health Plans",
@@ -312,16 +312,11 @@
       "children": [
         {
           "name": "Request Appointment",
-          "path": "/contact-us/",
+          "path": "/request-appointment/",
           "children": []
         },
         {
-          "name": "Existing link – Patient Forms",
-          "path": "https://forms.mydentistlink.com/b189b388-42c3-424d-a52c-5f92231226af",
-          "children": []
-        },
-        {
-          "name": "New link – New Patient Journey",
+          "name": "Patient Forms",
           "path": "https://forms.mydentistlink.com/b189b388-42c3-424d-a52c-5f92231226af",
           "children": []
         },
