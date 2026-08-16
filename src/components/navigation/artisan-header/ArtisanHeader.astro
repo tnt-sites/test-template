@@ -247,7 +247,7 @@ const mobileNavData = navData;
   }
 
   .ah-mainbar .ah-inner {
-    gap: 1.5rem;
+    gap: clamp(0.75rem, 1.5vw, 1.5rem);
     justify-content: space-between;
     min-height: 131px;
     padding-block: 5px;
@@ -259,22 +259,26 @@ const mobileNavData = navData;
     flex: 0 0 auto;
   }
 
+  /* The nav is held to a single row, so the logo is what gives ground as the
+     window narrows — pinned at 215px it pushed Contact Us onto a second line. */
   .ah-logo :global(img) {
     height: auto;
     max-width: 100%;
-    width: 215px;
+    width: clamp(160px, 13vw, 215px);
   }
 
-  /* Nav sits right and is allowed to wrap, exactly as the source does. */
   .ah-nav {
     flex: 1 1 auto;
     min-width: 0;
   }
 
-  .ah-nav :global(ul) {
+  /* Top-level items stay on one line. Only .bar-list is targeted — the
+     dropdown panels' own <ul>s must stay block-level, or they lay their items
+     out in a row. */
+  .ah-nav :global(.bar-list) {
     align-items: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0;
     justify-content: flex-end;
   }
@@ -285,7 +289,7 @@ const mobileNavData = navData;
   .ah-nav :global(.nav-item-label) {
     color: var(--ah-nav);
     font-family: Poppins, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.5px;
     padding: 15px 10px;
@@ -293,27 +297,55 @@ const mobileNavData = navData;
     text-transform: uppercase;
   }
 
+  /* Nine top-level items don't fit at a fixed 18px, so the row's type and
+     padding scale with the viewport. Both are fluid, so the row's total width
+     stays a roughly constant share of the window and never wraps between the
+     1200px breakpoint below and the 1600px max-width. */
+  .ah-nav :global(.bar-list > .nav-item > a),
+  .ah-nav :global(.bar-list > .nav-item > .nav-item-label) {
+    font-size: clamp(13px, 1.05vw, 17px);
+    padding: 15px clamp(3px, 0.45vw, 8px);
+    white-space: nowrap;
+  }
+
   .ah-nav :global(a:hover),
   .ah-nav :global(.nav-item-label:hover) {
     color: var(--ah-btn-fg);
   }
 
-  /* The starter draws each dropdown parent's trigger as a bordered square.
-     The source has no such control, so strip the box and let the chevron sit
-     inline as a quiet affordance — the trigger stays keyboard-operable. */
+  /* Each dropdown parent's chevron sits in a bordered box so the affordance is
+     visible without opening the menu. The box is sized fluidly for the same
+     reason the labels are — it has to earn its width out of the single row. */
   .ah-nav :global(.nav-item-trigger) {
     background: none;
-    border: none;
-    color: inherit;
-    margin-inline-start: -6px;
+    border: 1px solid color-mix(in srgb, var(--ah-nav) 40%, transparent);
+    border-radius: 4px;
+    color: var(--ah-nav);
+    height: clamp(15px, 1.25vw, 20px);
+    margin-inline-start: -2px;
     min-height: 0;
     min-width: 0;
+    width: clamp(15px, 1.25vw, 20px);
+  }
+
+  /* Filled while hovered, focused, or open — so the box doubles as the
+     open-state indicator alongside the chevron's existing rotation. */
+  .ah-nav :global(.nav-item-trigger:hover),
+  .ah-nav :global(.nav-item-trigger:focus-visible),
+  .ah-nav :global(.nav-item-toggle:checked ~ .nav-item-trigger) {
+    background: var(--ah-btn-fg);
+    border-color: var(--ah-btn-fg);
+    color: var(--ah-btn-bg);
+  }
+
+  .ah-nav :global(.nav-item-icon) {
+    color: inherit;
   }
 
   .ah-nav :global(.nav-item-icon svg) {
-    height: 12px;
-    opacity: 0.55;
-    width: 12px;
+    height: 11px;
+    opacity: 1;
+    width: 11px;
   }
 
   /* The source's nav is desktop-only; below that the starter's off-canvas
@@ -324,7 +356,10 @@ const mobileNavData = navData;
     display: none;
   }
 
-  @media (max-width: 1100px) {
+  /* Raised from 1100px: below ~1200px the nine top-level items can only fit on
+     one line at a type size too small to read, so the off-canvas nav takes
+     over a little earlier instead. */
+  @media (max-width: 1200px) {
     .ah-nav {
       display: none;
     }
