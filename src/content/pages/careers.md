@@ -1,8 +1,8 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "f88ab6663ba497fc"
+  v: 0.1.0
+  gen: content
+  hash: f88ab6663ba497fc
 title: Careers
 description: ""
 canonical: /careers/
@@ -20,72 +20,80 @@ pageSections:
   - _component: page-sections/forms/appointment-form
     id: ""
     heading: "Positions:"
-    subtext: |-
-      ##### Learn More About Our Positions!
-
-         
-
-      Name 
-
-      Email 
-
-      phone 
-
-      Please upload the resume
-
-      Please Upload the Resume 
-
-      Message
-
-      <iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-e7in66ueelof" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="/recaptcha/api2/anchor"></iframe>
-
-      Submit Your Resume
-
-       
-
-      Please Upload Resume (Accepted Files: .pdf | .doc | .docx) 2MB Max Size 
-
-      Submit Your Resume 
-
-        
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-      ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-      ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-      ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-      ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-      ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-      ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-      ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-      ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-      ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-    formAction: ./
-    formBlocks: []
+    subtext: ""
+    formAction: /thank-you/
+    formBlocks:
+      - _component: building-blocks/forms/hidden
+        id: ""
+        name: post_id
+        value: "7575"
+      - _component: building-blocks/forms/hidden
+        id: ""
+        name: form_id
+        value: f0e0217
+      - _component: building-blocks/forms/hidden
+        id: ""
+        name: referer_title
+        value: Careers - Artisan Dental in Madison, WI
+      - _component: building-blocks/forms/hidden
+        id: ""
+        name: queried_id
+        value: "7575"
+      - _component: building-blocks/forms/input
+        id: ""
+        label: Name
+        name: form_fields[name]
+        type: text
+        placeholder: Name
+        required: false
+        value: null
+      - _component: building-blocks/forms/input
+        id: ""
+        label: Email
+        name: form_fields[email]
+        type: email
+        placeholder: Email
+        required: true
+        value: null
+      - _component: building-blocks/forms/input
+        id: ""
+        label: phone
+        name: form_fields[field_b584d3b]
+        type: tel
+        placeholder: phone
+        required: false
+        value: null
+      - _component: building-blocks/forms/file-upload
+        id: ""
+        label: Please Upload the Resume
+        name: form_fields[field_68101c7]
+        required: false
+      - _component: building-blocks/forms/textarea
+        id: ""
+        label: Message
+        name: form_fields[message]
+        required: false
+        placeholder: Message
+        value: null
+      - _component: building-blocks/forms/textarea
+        id: ""
+        label: G Recaptcha Response
+        name: g-recaptcha-response
+        required: false
+        placeholder: null
+        value: null
+      - _component: building-blocks/forms/recaptcha
+        id: ""
+        siteKey: null
+      - _component: building-blocks/forms/submit
+        id: ""
+        text: Submit Your Resume
+        variant: primary
+        size: md
+        iconName: null
+        iconPosition: before
+        hideText: false
+        disabled: false
     backgroundColor: base
     backgroundGradient: ""
     backgroundImage:
