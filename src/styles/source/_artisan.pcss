@@ -14,35 +14,34 @@
     padding: 15px 30px;
   }
 
-  /* Solid brand-brown with white text — "View All Services",
-     "Watch a Quick Video", the footer "Contact Us". */
+  /* Primary: gold fill, white label, square. */
   main .button.variant-primary,
-  footer .button.variant-secondary {
-    background-color: var(--color-brand);
-    border-color: var(--color-brand);
+  footer .button.variant-primary {
+    background-color: var(--color-brand-secondary);
+    border: none;
+    border-radius: 0;
     color: #fff;
   }
 
   main .button.variant-primary:hover,
-  footer .button.variant-secondary:hover {
-    background-color: var(--color-brand-secondary);
-    border-color: var(--color-brand-secondary);
+  footer .button.variant-primary:hover {
+    background-color: var(--color-brand);
     color: #fff;
   }
 
-  /* Solid gold with a gold border — "View More Testimonials",
-     "Get in touch with us". */
+  /* Secondary: brand-brown fill, white label, square — keeps the two
+     variants distinguishable where the source uses both. */
   main .button.variant-secondary,
-  footer .button.variant-primary {
-    background-color: var(--color-brand-secondary);
-    border: 2px solid var(--color-brand-secondary);
+  footer .button.variant-secondary {
+    background-color: var(--color-brand);
+    border: none;
+    border-radius: 0;
     color: #fff;
   }
 
   main .button.variant-secondary:hover,
-  footer .button.variant-primary:hover {
-    background-color: var(--color-brand);
-    border-color: var(--color-brand);
+  footer .button.variant-secondary:hover {
+    background-color: var(--color-brand-secondary);
     color: #fff;
   }
 
