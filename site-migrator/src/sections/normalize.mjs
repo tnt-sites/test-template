@@ -98,7 +98,21 @@ function makeNormalizer(config) {
 
     let node = el;
     let guard = 0;
-    while (isTransparentWrapper(node) && guard++ < 10) node = node.children[0];
+    // Never collapse *past* an element that carries a role. isTransparentWrapper
+    // is a purely geometric test — one child, no padding, no background — and a
+    // heading satisfies it whenever its text is wrapped in a span, which is
+    // exactly what Elementor emits:
+    //   <h3 class="elementor-icon-box-title"><span>Title</span></h3>
+    // Roles are only ever read off \`node.children\`, so descending into the
+    // heading discarded it. On an Elementor source that silently emptied the
+    // role sequence of every section whose content sits in inner sections.
+    while (
+      isTransparentWrapper(node) &&
+      roleOf(node.children[0]) === null &&
+      guard++ < 10
+    ) {
+      node = node.children[0];
+    }
 
     const out = [];
     for (const child of node.children) {

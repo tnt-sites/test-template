@@ -247,7 +247,14 @@ noise:
     # back to the role sequence (cluster.mjs:210), giving readable cluster names
     # like `h2-p-img` instead of a hash.
     - elementor-(top-|inner-)?section
-    - elementor-section-(boxed|full_width|stretched|height-\w+|content-\w+|items-\w+)
+    # Broad on purpose: every elementor-section-* is a layout modifier
+    # (boxed / full_width / stretched / height-min-height / content-middle /
+    # items-stretch). The narrower `height-\w+` form missed
+    # `height-min-height` because \w does not match a hyphen, and those names
+    # then became cluster ids.
+    - elementor-section-[\w-]+
+    # Responsive column-order modifiers: elementor-reverse-tablet/-mobile.
+    - elementor-reverse-[\w-]+
     - elementor-(top-|inner-)?column
     - elementor-col-\d+
     - elementor-container
@@ -282,11 +289,17 @@ fingerprint:
   # flag, because it only warns about too MANY clusters and singletons.
   #
   # Verify after every scan:  grep -c '"\.\.\."' .migration/scan/clusters.json
-  maxDepth: 8
+  #
+  # MEASURED, not guessed. Walking from each top section down to its first
+  # H1-6/P/IMG/UL/A gives depths of 6 (a bare section), 9-12 (content inside an
+  # inner section), and up to 20 on /faqs/. A first pass at 8 still produced
+  # 103 truncated sequences and a 135-member cluster whose roleSequence was
+  # literally [] — every section on 87 pages collapsing into one bucket.
+  maxDepth: 16
 
   clusterThreshold: 0.22
   # ~700 top-level sections across 90 pages. The default of 25 is far too tight.
-  maxClusters: 45
+  maxClusters: 80
 
   identityWeights:
     roleSequence: 0.75

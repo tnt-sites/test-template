@@ -1,0 +1,526 @@
+# Cluster -> library component, proposed by `mig scan`.
+#
+# Each entry is the component whose props best fit what the cluster
+# actually contains. Review before running `mig content`: alternatives
+# and anything a component cannot hold are noted inline.
+
+clusters:
+  # h2 — 81 section(s) on 81 page(s)
+  #   structure: H2
+  #   alternative: page-sections/heroes/hero-center
+  #   alternative: page-sections/heroes/hero-split
+  h2:
+    component: page-sections/homepage-blocks/index-banner
+
+  # h2-p-btn — 31 section(s) on 5 page(s)
+  #   structure: H2 P BTN
+  #   alternative: page-sections/ctas/cta-split
+  #   alternative: page-sections/features/feature-split
+  h2-p-btn:
+    component: page-sections/ctas/cta-center
+
+  # h2-p — 18 section(s) on 9 page(s)
+  #   structure: H2 P
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/heroes/hero-center
+  h2-p:
+    component: page-sections/location/location-find-us
+
+  # list-4-img-h4 — 17 section(s) on 17 page(s)
+  #   structure: LIST(4+) IMG H4 Px{2} LINKx{2}
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  list-4-img-h4:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # carousel — 14 section(s) on 11 page(s)
+  #   structure: CAROUSEL
+  #   alternative: page-sections/features/feature-slider
+  #   alternative: page-sections/info-blocks/modal
+  carousel:
+    component: page-sections/builders/custom-section
+
+  # img-h4-p — 10 section(s) on 10 page(s)
+  #   structure: IMG H4 P H3 Px{2} LIST(4+) P H3 P H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  img-h4-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # section — 5 section(s) on 4 page(s)
+  #   structure: (empty)
+  #   no component in the library covers this; it may need building
+  # section: { component: ??? }
+
+  # img-p-h4 — 5 section(s) on 5 page(s)
+  #   structure: IMG P H4 Px{3} LIST(3) H4 P H4 P LIST(4+) P H4 P H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  img-p-h4:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h4-linkx-2-link — 4 section(s) on 1 page(s)
+  #   structure: H4 LINKx{2} LINK
+  #   alternative: page-sections/homepage-blocks/index-callouts
+  #   alternative: page-sections/homepage-blocks/index-split
+  h4-linkx-2-link:
+    component: page-sections/ctas/request-bar
+
+  # h4-px-3-carousel — 3 section(s) on 3 page(s)
+  #   structure: H4 Px{3} CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h4-px-3-carousel:
+    component: page-sections/features/feature-grid
+
+  # list-4-img-h4-2 — 3 section(s) on 3 page(s)
+  #   structure: LIST(4+) IMG H4 Px{4+} H4 LIST(3) H4 LIST(4+) H4 LIST(4+) LINKx{2}
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  list-4-img-h4-2:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # embedx-4-carousel — 3 section(s) on 3 page(s)
+  #   structure: EMBEDx{4+} CAROUSEL
+  #   alternative: page-sections/builders/custom-section (cannot hold: embed)
+  #   alternative: page-sections/ctas/services-grid (cannot hold: embed)
+  embedx-4-carousel:
+    component: page-sections/info-blocks/contact
+
+  # embedx-2 — 3 section(s) on 2 page(s)
+  #   structure: EMBEDx{2}
+  embedx-2:
+    component: page-sections/info-blocks/contact
+
+  # h2-link-h3 — 3 section(s) on 1 page(s)
+  #   structure: H2 LINK H3 LINK H3 LINK H3 LINK H3 LINK H3 LINK H3 EMBED
+  #   alternative: page-sections/ctas/request-bar (cannot hold: embed)
+  #   alternative: page-sections/homepage-blocks/index-callouts (cannot hold: embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h2-link-h3:
+    component: page-sections/ctas/more-to-explore
+
+  # img-h2-p — 2 section(s) on 2 page(s)
+  #   structure: IMG H2 P H2 P BTN
+  #   alternative: page-sections/features/feature-split
+  #   alternative: page-sections/heroes/hero-split
+  img-h2-p:
+    component: page-sections/ctas/cta-split
+
+  # p — 2 section(s) on 2 page(s)
+  #   structure: P
+  #   alternative: page-sections/location/location-find-us
+  #   alternative: page-sections/ctas/cta-center
+  p:
+    component: page-sections/people/testimonial-section
+
+  # img — 2 section(s) on 2 page(s)
+  #   structure: IMG
+  #   alternative: page-sections/features/feature-split
+  #   alternative: page-sections/location/location-banner
+  img:
+    component: page-sections/ctas/cta-split
+
+  # h2-h3-px-2 — 2 section(s) on 2 page(s)
+  #   structure: H2 H3 Px{2}
+  #   alternative: page-sections/heroes/hero-split
+  #   alternative: page-sections/location/location-find-us
+  h2-h3-px-2:
+    component: page-sections/heroes/hero-center
+
+  # h4-linkx-2 — 2 section(s) on 1 page(s)
+  #   structure: H4 LINKx{2}
+  #   alternative: page-sections/homepage-blocks/index-callouts
+  #   alternative: page-sections/homepage-blocks/index-split
+  h4-linkx-2:
+    component: page-sections/ctas/request-bar
+
+  # img-h4-px-3 — 2 section(s) on 2 page(s)
+  #   structure: IMG H4 Px{3} H4 P H4 EMBED H4 EMBED H4 Px{3} H4 P CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: embed, items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  img-h4-px-3:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-carousel-btn — 2 section(s) on 2 page(s)
+  #   structure: H2 CAROUSEL BTN
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/more-to-explore (cannot hold: items)
+  h2-carousel-btn:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h4-p-h4 — 1 section(s) on 1 page(s)
+  #   structure: H4 P H4 P H4 H3x{3}x{3}
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  h4-p-h4:
+    component: page-sections/location/location-find-us
+
+  # link-h3-p — 1 section(s) on 1 page(s)
+  #   structure: LINK H3 P
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  link-h3-p:
+    component: page-sections/location/location-find-us
+
+  # h4-form-h4 — 1 section(s) on 1 page(s)
+  #   structure: H4 FORM H4 TABLE H4 EMBED Px{4+} LINK H3 P CAROUSEL
+  #   alternative: page-sections/forms/appointment-form (cannot hold: embed)
+  #   alternative: page-sections/forms/referral-form (cannot hold: embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h4-form-h4:
+    component: page-sections/ctas/cta-form
+
+  # img-h3-p — 1 section(s) on 1 page(s)
+  #   structure: IMG H3 P H3 Px{3} H3 P LIST(4+) CAROUSEL EMBED BTN H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items, embed)
+  #   alternative: page-sections/features/feature-split (cannot hold: items, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  img-h3-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # img-p-h3 — 1 section(s) on 1 page(s)
+  #   structure: IMG P H3 Px{2} LIST(1) P LIST(1) P LIST(1) P LIST(1) Px{2} BTN CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-split (cannot hold: items)
+  img-p-h3:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # px-4-h4-carousel — 1 section(s) on 1 page(s)
+  #   structure: Px{4+} H4 CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  px-4-h4-carousel:
+    component: page-sections/features/feature-grid
+
+  # linkx-2-x-4-linkx-4 — 1 section(s) on 1 page(s)
+  #   structure: LINKx{2}x{4+} LINKx{4+}
+  #   no component in the library covers this; it may need building
+  # linkx-2-x-4-linkx-4: { component: ??? }
+
+  # img-table-p — 1 section(s) on 1 page(s)
+  #   structure: IMG TABLE P H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  img-table-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-h4-p — 1 section(s) on 1 page(s)
+  #   structure: H2 H4 P H4 P H4 Px{2} H4 P H4 P H4 P ACCORDION BTN
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  h2-h4-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-p-list-4 — 1 section(s) on 1 page(s)
+  #   structure: H2 P LIST(4+)
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h2-p-list-4:
+    component: page-sections/features/feature-grid
+
+  # h2-p-img — 1 section(s) on 1 page(s)
+  #   structure: H2 P IMG
+  #   alternative: page-sections/features/feature-split
+  #   alternative: page-sections/heroes/hero-split
+  h2-p-img:
+    component: page-sections/ctas/cta-split
+
+  # carousel-h2-list-4 — 1 section(s) on 1 page(s)
+  #   structure: CAROUSEL H2 LIST(4+)
+  #   alternative: page-sections/features/office-tour
+  #   alternative: page-sections/homepage-blocks/index-reviews
+  carousel-h2-list-4:
+    component: page-sections/ctas/services-grid
+
+  # h2-btn-link — 1 section(s) on 1 page(s)
+  #   structure: H2 BTN LINK
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  h2-btn-link:
+    component: page-sections/ctas/more-to-explore
+
+  # h2-accordion-btn — 1 section(s) on 1 page(s)
+  #   structure: H2 ACCORDION BTN
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/more-to-explore (cannot hold: items)
+  h2-accordion-btn:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-form-carousel — 1 section(s) on 1 page(s)
+  #   structure: H2 FORM CAROUSEL
+  #   alternative: page-sections/forms/referral-form (cannot hold: embed)
+  #   alternative: page-sections/ctas/cta-form (cannot hold: embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h2-form-carousel:
+    component: page-sections/forms/appointment-form
+
+  # img-h4-p-2 — 1 section(s) on 1 page(s)
+  #   structure: IMG H4 P IMGx{3} Px{2} H4 P H2 P H3 P H2 P H2 P H2 P H2 P CAROUSEL H2 Px{3} BTN H2 Px{2} H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-split (cannot hold: items)
+  img-h4-p-2:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h4-px-3-img — 1 section(s) on 1 page(s)
+  #   structure: H4 Px{3} IMG H4 Px{4+} H4 P CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  h4-px-3-img:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # img-p-link — 1 section(s) on 1 page(s)
+  #   structure: IMG P LINK CAROUSEL
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  #   alternative: page-sections/info-blocks/emergency-grid (cannot hold: image)
+  img-p-link:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # embed-h4-form — 1 section(s) on 1 page(s)
+  #   structure: EMBED H4 FORM H4 LINK H3 P LINK H3 P LINK H3 P H4 FORM H4 TABLE H4 Px{3} LIST(3) Px{4+} H3 P CAROUSEL
+  #   alternative: page-sections/forms/appointment-form (cannot hold: embed)
+  #   alternative: page-sections/forms/referral-form (cannot hold: embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  embed-h4-form:
+    component: page-sections/ctas/cta-form
+
+  # px-2-list-3-p — 1 section(s) on 1 page(s)
+  #   structure: Px{2} LIST(3) P LIST(2) P LIST(1) P LIST(4+) P CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  px-2-list-3-p:
+    component: page-sections/features/feature-grid
+
+  # h4-px-3-h4 — 1 section(s) on 1 page(s)
+  #   structure: H4 Px{3} H4 Px{4+} H4 Px{4+} H4 Px{4+}
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  h4-px-3-h4:
+    component: page-sections/location/location-find-us
+
+  # img-h4-px-4 — 1 section(s) on 1 page(s)
+  #   structure: IMG H4 Px{4+} EMBED H4 Px{4+} H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: embed, items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  img-h4-px-4:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # accordion-carousel — 1 section(s) on 1 page(s)
+  #   structure: ACCORDION CAROUSEL
+  #   alternative: page-sections/features/feature-slider
+  #   alternative: page-sections/info-blocks/modal
+  accordion-carousel:
+    component: page-sections/builders/custom-section
+
+  # h4-btn-h4 — 1 section(s) on 1 page(s)
+  #   structure: H4 BTN H4 BTN H4 LIST(1) P H4 LIST(1) P H4 LIST(1) Px{2} CAROUSEL
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  h4-btn-h4:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2x-2-p-btnx-2 — 1 section(s) on 1 page(s)
+  #   structure: H2x{2} P BTNx{2} H2 H3x{4+}x{3} H2 P ...x{2} CAROUSEL H2 H4 IMG H3 Px{4+} BTN IMG H2 P H3 P H2 P H2 P H2 P H2 Px{2} LINK P LINK P LINK EMBEDx{2} H2 CAROUSEL BTN H2 P BTNx{2} H2 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P CAROUSELx{2}
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items, embed)
+  #   alternative: page-sections/features/feature-split (cannot hold: items, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h2x-2-p-btnx-2:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # link-h4-btn — 1 section(s) on 1 page(s)
+  #   structure: LINK H4 BTN CAROUSEL
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/more-to-explore (cannot hold: items)
+  link-h4-btn:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # linkx-2-x-3-link-p — 1 section(s) on 1 page(s)
+  #   structure: LINKx{2}x{3} LINK P CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  linkx-2-x-3-link-p:
+    component: page-sections/features/feature-grid
+
+  # h2-p-btn-2 — 1 section(s) on 1 page(s)
+  #   structure: H2 P BTN LINK H3 P LINK H3 P LINK H3 P LINK H3 P
+  #   alternative: page-sections/ctas/cta-split
+  #   alternative: page-sections/features/feature-split
+  h2-p-btn-2:
+    component: page-sections/ctas/cta-center
+
+  # link-h2-p — 1 section(s) on 1 page(s)
+  #   structure: LINK H2 P LINK H2 P LINK H2 P
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  link-h2-p:
+    component: page-sections/location/location-find-us
+
+  # h2x-2-imgx-2-x-3-btn — 1 section(s) on 1 page(s)
+  #   structure: H2x{2} IMGx{2}x{3} BTN
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  h2x-2-imgx-2-x-3-btn:
+    component: page-sections/ctas/more-to-explore
+
+  # link-h3-p-2 — 1 section(s) on 1 page(s)
+  #   structure: LINK H3 P LINK H3 P LINK H3 P H2 FORM
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  link-h3-p-2:
+    component: page-sections/location/location-find-us
+
+  # img-h1-px-2 — 1 section(s) on 1 page(s)
+  #   structure: IMG H1 Px{2} H2 Px{3} IMGx{2} H2 P H4 P LIST(4+) P H2 IMG P LIST(4+) EMBED H2 Px{2} H2 Px{2} IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P Px{3} H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items, embed)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  img-h1-px-2:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-list-1-h4 — 1 section(s) on 1 page(s)
+  #   structure: H2 LIST(1) H4 LIST(4+) H2 Px{2} H2 P H3 P H3 Px{2} H3 P H2 Px{4+} H3 P H3 Px{2} H3 P H3 P H3 P H3 P H2 P H4 Px{4+}
+  #   alternative: page-sections/heroes/hero-split (cannot hold: items)
+  #   alternative: page-sections/homepage-blocks/index-banner (cannot hold: items, text)
+  #   note: cannot hold items — that content is preserved on the page
+  h2-list-1-h4:
+    component: page-sections/heroes/hero-center
+
+  # h4x-4-carousel — 1 section(s) on 1 page(s)
+  #   structure: H4x{4+} CAROUSEL
+  #   alternative: page-sections/features/office-tour
+  #   alternative: page-sections/homepage-blocks/index-reviews
+  h4x-4-carousel:
+    component: page-sections/ctas/services-grid
+
+  # p-h4-p — 1 section(s) on 1 page(s)
+  #   structure: P H4 P H4 P H4 H3x{3}x{3} IMG CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  p-h4-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-h3x-4-x-3 — 1 section(s) on 1 page(s)
+  #   structure: H2 H3x{4+}x{3}
+  #   alternative: page-sections/homepage-blocks/index-callouts
+  #   alternative: page-sections/homepage-blocks/index-split
+  h2-h3x-4-x-3:
+    component: page-sections/ctas/request-bar
+
+  # carousel-h2-h4 — 1 section(s) on 1 page(s)
+  #   structure: CAROUSEL H2 H4 IMG H2 Px{3} BTN IMG
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-split (cannot hold: items)
+  carousel-h2-h4:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # p-link-p — 1 section(s) on 1 page(s)
+  #   structure: P LINK P LINK P LINK
+  #   alternative: page-sections/location/location-find-us
+  #   alternative: page-sections/ctas/cta-center
+  p-link-p:
+    component: page-sections/people/testimonial-section
+
+  # h2-p-img-2 — 1 section(s) on 1 page(s)
+  #   structure: H2 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P IMG H4 P
+  #   alternative: page-sections/features/feature-split
+  #   alternative: page-sections/heroes/hero-split
+  h2-p-img-2:
+    component: page-sections/ctas/cta-split
+
+  # h3-p-h3 — 1 section(s) on 1 page(s)
+  #   structure: H3 P H3 Px{4+} CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h3-p-h3:
+    component: page-sections/features/feature-grid
+
+  # h2-px-2-list-1 — 1 section(s) on 1 page(s)
+  #   structure: H2 Px{2} LIST(1) H2 Px{2} LIST(1) H2 Px{2} LIST(1) H2 P LIST(1) H2 Px{2} LIST(4+)
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h2-px-2-list-1:
+    component: page-sections/features/feature-grid
+
+  # h4-p-linkx-2-x-3-x-2 — 1 section(s) on 1 page(s)
+  #   structure: H4 P LINKx{2}x{3}x{2}
+  #   alternative: page-sections/ctas/cta-center
+  #   alternative: page-sections/ctas/cta-split
+  h4-p-linkx-2-x-3-x-2:
+    component: page-sections/location/location-find-us
+
+  # imgx-4-x-3 — 1 section(s) on 1 page(s)
+  #   structure: IMGx{4+}x{3}
+  #   no component in the library covers this; it may need building
+  # imgx-4-x-3: { component: ??? }
+
+  # h3-px-2-list-4 — 1 section(s) on 1 page(s)
+  #   structure: H3 Px{2} LIST(4+) CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h3-px-2-list-4:
+    component: page-sections/features/feature-grid
+
+  # carousel-h2-p — 1 section(s) on 1 page(s)
+  #   structure: CAROUSEL H2 P BTN
+  #   alternative: page-sections/ctas/cta-center (cannot hold: items)
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  carousel-h2-p:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h2-h4-img — 1 section(s) on 1 page(s)
+  #   structure: H2 H4 IMG P H4 P H4 P H4 P H2 P H4x{2} Px{4+} H4 Px{4+} H4 Px{4+} H2 EMBED Px{3} H4 Px{2} H4 Px{4+} H4 Px{3} IMG H2 Px{3} LIST(1) LIST(4+) Px{3} H2 Px{4+} LIST(1) LIST(4+) Px{3} H2 P H4 Px{2} LIST(4+) Px{3} LIST(4+) H4 Px{3} LIST(4+) Px{4+} H2 Px{3} H4 Px{3} H4 Px{4+} H4 CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: embed, items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image, embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h2-h4-img:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h4-p-img — 1 section(s) on 1 page(s)
+  #   structure: H4 P IMG P IMG P IMG P IMG P IMG P IMG H4 P IMG P IMG P IMG P IMG P IMG P IMG LINKx{4+} CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  h4-p-img:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # img-h4-p-3 — 1 section(s) on 1 page(s)
+  #   structure: IMG H4 P IMG Px{4+} IMG P CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  img-h4-p-3:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # img-h4-px-4-2 — 1 section(s) on 1 page(s)
+  #   structure: IMG H4 Px{4+} H4 LIST(4+)x{2} CAROUSEL
+  #   alternative: page-sections/ctas/cta-split (cannot hold: items)
+  #   alternative: page-sections/features/feature-grid (cannot hold: image)
+  img-h4-px-4-2:
+    component: page-sections/ctas/cta-split-learn-more
+
+  # h4-embed-h4 — 1 section(s) on 1 page(s)
+  #   structure: H4 EMBED H4 EMBED H4 EMBED H4 EMBED H4 EMBED CAROUSEL
+  #   alternative: page-sections/features/feature-grid (cannot hold: embed)
+  #   alternative: page-sections/features/office-tour (cannot hold: embed)
+  #   note: cannot hold embed — that content is preserved on the page
+  h4-embed-h4:
+    component: page-sections/ctas/services-grid
+
+  # p-h3-h4 — 1 section(s) on 1 page(s)
+  #   structure: P H3 H4 Px{4+} H3 Px{4+} CAROUSEL
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  p-h3-h4:
+    component: page-sections/features/feature-grid
+
+  # h3x-2-px-2-list-1 — 1 section(s) on 1 page(s)
+  #   structure: H3x{2} Px{2} LIST(1) LIST(4+)
+  #   alternative: page-sections/info-blocks/emergency-grid
+  #   alternative: page-sections/people/team-grid
+  h3x-2-px-2-list-1:
+    component: page-sections/features/feature-grid
+
+  # link — 1 section(s) on 1 page(s)
+  #   structure: LINK
+  #   no component in the library covers this; it may need building
+  # link: { component: ??? }
