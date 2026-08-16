@@ -9,6 +9,7 @@
 import Components from "@components/utils/renderBlock.astro";
 const {
   heading = "", details = [], formBlocks = [], formAction = "/thank-you/",
+  mapEmbedUrl = "", mapHeight = "360px",
   backgroundColor = "#ffffff", headingColor = "#321c0e",
   labelColor = "#321c0e", textColor = "#333333",
   id, _component, ...rest
@@ -17,6 +18,11 @@ const list = Array.isArray(details) ? details.filter(Boolean) : [];
 ---
 <section class="a-contact" id={id || undefined}
   style={`--bg:${backgroundColor};--hd:${headingColor};--lb:${labelColor};--tx:${textColor}`} {...rest}>
+  {mapEmbedUrl && (
+    <div class="cb-map" style={`--maph:${mapHeight}`}>
+      <iframe src={mapEmbedUrl} title="Map to Artisan Dental" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
+    </div>
+  )}
   <div class="cb-inner">
     <div class="cb-details">
       {list.map((d: any) => (
@@ -36,6 +42,8 @@ const list = Array.isArray(details) ? details.filter(Boolean) : [];
 </section>
 <style>
   .a-contact { background: var(--bg); padding-block: 4.5rem; }
+  .cb-map { line-height: 0; }
+  .cb-map iframe { border: 0; display: block; height: var(--maph); width: 100%; }
   .cb-inner { display: grid; gap: 3.5rem; grid-template-columns: minmax(240px,1fr) 1.6fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0 0 1.5rem; }
   .cb-row + .cb-row { margin-top: 1.5rem; }

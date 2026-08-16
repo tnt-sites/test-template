@@ -1,0 +1,55 @@
+/* Artisan-specific bridges over the starter's components.
+   Lives in @layer source-bridge, which the layer order places after
+   `components`, so these win without !important. */
+@layer source-bridge {
+  /* The source uses fully rounded pills everywhere. The starter's .button is
+     30px, and several variants reset it to --radius-none, which reads as
+     square next to the migrated chrome. */
+  .button,
+  .button.radius-default,
+  .button.radius-none,
+  .button.radius-xs {
+    border-radius: 50px;
+  }
+
+  /* Source body buttons are a solid brand-brown pill with white text. */
+  main .button.variant-primary {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: #fff;
+  }
+
+  main .button.variant-primary:hover {
+    background-color: var(--color-brand-secondary);
+    border-color: var(--color-brand-secondary);
+    color: var(--color-brand);
+  }
+
+  main .button.variant-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-brand-secondary);
+    color: var(--color-brand);
+  }
+
+  main .button.variant-secondary:hover {
+    background-color: var(--color-brand-secondary);
+    color: #fff;
+  }
+
+  /* Footer affiliation logos sit in white cards on the gold band. */
+  .af-logos li {
+    align-items: center;
+    background: #fff;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    min-height: 92px;
+    padding: 0.75rem 1rem;
+    width: 150px;
+  }
+
+  .af-logos img {
+    max-height: 68px;
+    max-width: 100%;
+  }
+}

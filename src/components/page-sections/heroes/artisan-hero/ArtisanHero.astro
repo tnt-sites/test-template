@@ -17,11 +17,12 @@ import Button from "@core-elements/button/Button.astro";
 
 const {
   slides = [],
-  eyebrowColor = "#d2b22e",
+  eyebrowColor = "#ffffff",
+  buttonColor = "#ffffff",
   headingColor = "#ffffff",
   textColor = "#ffffff",
   overlayColor = "rgba(0, 0, 0, 0.45)",
-  minHeight = "620px",
+  minHeight = "820px",
   autoplaySeconds = 6,
   id,
   _component,
@@ -35,7 +36,7 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
   class="artisan-hero"
   id={id || undefined}
   data-autoplay={autoplaySeconds}
-  style={`--ah-eyebrow:${eyebrowColor};--ah-heading:${headingColor};--ah-text:${textColor};--ah-overlay:${overlayColor};--ah-minh:${minHeight}`}
+  style={`--ah-eyebrow:${eyebrowColor};--ah-button:${buttonColor};--ah-heading:${headingColor};--ah-text:${textColor};--ah-overlay:${overlayColor};--ah-minh:${minHeight}`}
   {...htmlAttributes}
 >
   <div class="hero-track">
@@ -121,13 +122,15 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
     width: 100%;
   }
 
+  /* Measured on the source: the eyebrow is an 18px italic span inside the
+     slide heading, in white — not a large gold kicker. */
   .hero-eyebrow {
     color: var(--ah-eyebrow);
     font-family: Poppins, sans-serif;
-    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-size: 18px;
     font-style: italic;
     font-weight: 400;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.25rem;
   }
 
   .hero-heading {
@@ -135,7 +138,7 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
     font-family: Poppins, sans-serif;
     font-size: clamp(2.25rem, 4.2vw, 54px);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
     margin: 0 0 1.25rem;
     max-width: 18ch;
   }
@@ -143,17 +146,17 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
   .hero-text {
     color: var(--ah-text);
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
-    line-height: 26px;
+    font-size: 17px;
+    line-height: 23.8px;
     margin: 0 0 1.75rem;
     max-width: 52ch;
   }
 
   .hero-inner :global(.button) {
     background: transparent;
-    border: 2px solid var(--ah-eyebrow);
+    border: 2px solid var(--ah-button, #fff);
     border-radius: 50px;
-    color: var(--ah-eyebrow);
+    color: var(--ah-button, #fff);
     font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -161,8 +164,8 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
   }
 
   .hero-inner :global(.button:hover) {
-    background: var(--ah-eyebrow);
-    color: #fff;
+    background: var(--ah-button, #fff);
+    color: #321c0e;
   }
 
   .hero-arrow {
