@@ -1,6 +1,8 @@
 ---
 import FixedTabs from "@components/navigation/fixed-tabs/FixedTabs.astro";
-import Footer from "@components/navigation/footer/Footer.astro";
+// Artisan's own footer reproduces the source's four bands; the starter's
+// Footer renders a centred contact block and an office-hours table instead.
+import ArtisanFooter from "@components/navigation/artisan-footer/ArtisanFooter.astro";
 // Artisan's own header reproduces the source site's two-bar design; the
 // starter's MainNav renders a different layout that `mig chrome` can only
 // recolour, never restructure.
@@ -85,10 +87,7 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
       ) : null
     }
   </main>
-  <Footer
-    {...footer}
-    siteName={footerSiteName}
-    offices={footerOffices}
+  <ArtisanFooter
     socials={footerSocials}
     data-fixed-tabs-active={hasActiveFixedTabs ? "true" : undefined}
   />

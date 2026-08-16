@@ -1,0 +1,446 @@
+---
+/**
+ * Artisan Dental site footer, reproducing the source site's design.
+ *
+ * The starter's Footer renders a centred contact block plus an office-hours
+ * table; the source is four stacked bands — affiliation logos on gold, a brown
+ * "Have a question?" CTA, a white block with the practice details beside four
+ * link columns, and a credit/social bar. `mig chrome` migrates footer links as
+ * one flat list, so the column structure has to be modelled explicitly.
+ *
+ * Editability split per the migration brief:
+ *   - baked in: layout, font family/size/weight, band padding
+ *   - props: every string, image, link and colour, from src/data/footer.json
+ *   - arrays: affiliation groups, their logos, and the link columns
+ */
+import Button from "@core-elements/button/Button.astro";
+import Image from "@core-elements/image/Image.astro";
+import footerData from "@data/footer.json";
+import siteInfoData from "@data/siteInfo.json";
+
+const { socials = [], class: className, _component, ...htmlAttributes } = Astro.props;
+
+const data = footerData as any;
+const affiliations = data.affiliations ?? {};
+const cta = data.cta ?? {};
+const main = data.main ?? {};
+const bottom = data.bottom ?? {};
+const resolvedSocials = socials.length ? socials : ((siteInfoData as any).socials ?? []);
+const siteName = (siteInfoData as any).siteName ?? "Artisan Dental";
+const year = new Date().getFullYear();
+---
+
+<footer class:list={["artisan-footer", className]} {...htmlAttributes}>
+  {
+    (affiliations.groups ?? []).length > 0 && (
+      <section
+        class="af-affiliations"
+        style={`--af-aff-bg:${affiliations.backgroundColor};--af-aff-fg:${affiliations.headingColor}`}
+      >
+        <div class="af-inner">
+          {(affiliations.groups ?? []).map((group: any) => (
+            <div class="af-aff-group">
+              {group.heading && <h3>{group.heading}</h3>}
+              <ul class="af-logos">
+                {(group.logos ?? []).map((logo: any) => (
+                  <li>
+                    <Image source={logo.source} alt={logo.alt} editable={false} />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section
+    class="af-cta"
+    style={`--af-cta-bg:${cta.backgroundColor};--af-cta-fg:${cta.textColor}`}
+  >
+    <div class="af-inner af-cta-inner">
+      <div class="af-cta-copy">
+        {cta.heading && <h2>{cta.heading}</h2>}
+        {cta.body && <p>{cta.body}</p>}
+      </div>
+      <div class="af-cta-action">
+        {
+          cta.phoneHeading && (
+            <a class="af-cta-phone" href={cta.phoneHref || "#"}>
+              {cta.phoneHeading}
+            </a>
+          )
+        }
+        {
+          cta.button?.text && (
+            <Button variant="primary" size="lg" link={cta.button.link} text={cta.button.text} />
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="af-main"
+    style={`--af-main-bg:${main.backgroundColor};--af-head:${main.headingColor};--af-link:${main.linkColor}`}
+  >
+    <div class="af-inner af-main-inner">
+      <div class="af-practice">
+        {
+          main.logoSource && (
+            <a href="/" class="af-logo">
+              <Image source={main.logoSource} alt={main.logoAlt} editable={false} />
+            </a>
+          )
+        }
+        {
+          main.phone && (
+            <p class="af-phone">
+              {main.phoneLabel} <a href={main.phoneHref || "#"}>{main.phone}</a>
+            </p>
+          )
+        }
+        {
+          (main.addressLines ?? []).length > 0 && (
+            <a class="af-address" href={main.addressHref || "#"} target="_blank" rel="noopener noreferrer">
+              {(main.addressLines ?? []).map((line: string) => (
+                <span>{line}</span>
+              ))}
+            </a>
+          )
+        }
+        {
+          main.button?.text && (
+            <Button variant="secondary" size="md" link={main.button.link} text={main.button.text} />
+          )
+        }
+      </div>
+
+      <div class="af-columns">
+        {
+          (main.columns ?? []).map((col: any) => (
+            <div class="af-column">
+              <h3>{col.heading}</h3>
+              <ul>
+                {(col.links ?? []).map((link: any) => (
+                  <li>
+                    <a href={link.path}>{link.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="af-inner af-bottom">
+      <p class="af-credit">
+        ©{year} {siteName}
+        {
+          bottom.creditName && (
+            <>
+              {" · "}
+              {bottom.creditPrefix}{" "}
+              <a href={bottom.creditLink || "#"} target="_blank" rel="noopener noreferrer">
+                {bottom.creditName}
+              </a>
+            </>
+          )
+        }
+      </p>
+      {
+        resolvedSocials.length > 0 && (
+          <ul class="af-socials">
+            {resolvedSocials.map((social: any) => (
+              <li>
+                <a
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label || social.icon}
+                >
+                  <Button
+                    variant="ghost"
+                    size="md"
+                    iconName={social.icon}
+                    hideText="true"
+                    aria-hidden="true"
+                    tabindex="-1"
+                  />
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </section>
+</footer>
+
+<style>
+  /* Measured from the source at 1280px: gold affiliations band (50px pad),
+     brown CTA band (100px pad), white main band (65px pad). Headings are
+     Poppins 700, body and links Open Sans 18px/26px. */
+  .af-inner {
+    margin-inline: auto;
+    max-width: 1200px;
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  /* ----------------------------------------------------- affiliations band */
+  .af-affiliations {
+    background: var(--af-aff-bg);
+    padding-block: 50px;
+  }
+
+  .af-affiliations .af-inner {
+    display: grid;
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .af-affiliations h3 {
+    color: var(--af-aff-fg);
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+  }
+
+  .af-logos {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .af-logos :global(img) {
+    height: auto;
+    max-height: 64px;
+    object-fit: contain;
+    width: auto;
+  }
+
+  /* -------------------------------------------------------------- CTA band */
+  .af-cta {
+    background: var(--af-cta-bg);
+    color: var(--af-cta-fg);
+    padding-block: 100px;
+  }
+
+  .af-cta-inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  .af-cta h2 {
+    color: var(--af-cta-fg);
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.75rem;
+  }
+
+  .af-cta p {
+    color: var(--af-cta-fg);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  .af-cta-action {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .af-cta-phone {
+    color: var(--af-cta-fg);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .af-cta-phone:hover {
+    text-decoration: underline;
+  }
+
+  /* The shared Button renders as a plain text link against these bands, so the
+     two footer CTAs are given the source's own shapes explicitly. */
+  .af-cta-action :global(.button) {
+    background: transparent;
+    border: 2px solid var(--af-cta-fg);
+    border-radius: 50px;
+    color: var(--af-cta-fg);
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 28px;
+  }
+
+  .af-cta-action :global(.button:hover) {
+    background: var(--af-cta-fg);
+    color: var(--af-cta-bg);
+  }
+
+  .af-practice :global(.button) {
+    background: var(--af-head);
+    border-radius: 50px;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 1.25rem;
+    padding: 12px 28px;
+  }
+
+  .af-practice :global(.button:hover) {
+    filter: brightness(1.15);
+  }
+
+  /* ------------------------------------------------------------- main band */
+  .af-main {
+    background: var(--af-main-bg);
+    padding-block: 65px 1.5rem;
+  }
+
+  .af-main-inner {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: minmax(240px, 1fr) 2.4fr;
+  }
+
+  .af-logo :global(img) {
+    height: auto;
+    max-width: 100%;
+    width: 200px;
+  }
+
+  .af-phone,
+  .af-address {
+    color: var(--af-link);
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 1rem 0 0;
+    text-decoration: none;
+  }
+
+  .af-phone a {
+    color: var(--af-head);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .af-address span {
+    display: block;
+  }
+
+  .af-practice :global(.button) {
+    margin-top: 1.25rem;
+  }
+
+  .af-columns {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .af-column h3 {
+    color: var(--af-head);
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 1rem;
+  }
+
+  .af-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .af-column li + li {
+    margin-top: 0.5rem;
+  }
+
+  .af-column a {
+    color: var(--af-link);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    text-decoration: none;
+  }
+
+  .af-column a:hover {
+    text-decoration: underline;
+  }
+
+  /* ------------------------------------------------------------ bottom bar */
+  .af-bottom {
+    align-items: center;
+    border-top: 1px solid rgb(0 0 0 / 12%);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+  }
+
+  .af-credit {
+    color: var(--af-link);
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .af-credit a {
+    color: var(--af-head);
+    font-weight: 700;
+  }
+
+  .af-socials {
+    display: flex;
+    gap: 0.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .af-socials :global(.button) {
+    color: var(--af-head);
+    height: 1.75rem;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    width: 1.75rem;
+  }
+
+  @media (max-width: 900px) {
+    .af-main-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .af-cta {
+      padding-block: 60px;
+    }
+
+    .af-cta h2 {
+      font-size: 32px;
+    }
+  }
+</style>
