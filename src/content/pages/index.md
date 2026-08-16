@@ -46,7 +46,7 @@ pageSections:
     overlayColor: rgba(0, 0, 0, 0.45)
     minHeight: 820px
     autoplaySeconds: 6
-    buttonColor: "#ffffff"
+    buttonColor: "#d2b22e"
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: ""
@@ -71,6 +71,7 @@ pageSections:
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayColor: rgba(50, 28, 14, 0.15)
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: Our Services
@@ -139,7 +140,7 @@ pageSections:
     backgroundColor: "#321c0e"
     titleColor: "#ffffff"
     textColor: "#ffffff"
-    overlayColor: rgba(50, 28, 14, 0.55)
+    overlayColor: rgba(50, 28, 14, 0.15)
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
   - _component: page-sections/artisan/logo-strip
     id: ""
@@ -162,6 +163,7 @@ pageSections:
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayColor: rgba(50, 28, 14, 0.15)
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: Our Office
@@ -207,27 +209,21 @@ pageSections:
       - text: I was so nervous to see a new dentist after not going for soooo long. The staff were so courteous and explained all of my health records and options. They did a great job catering to my nerves and making me feel comfortable. I left feeling very hopeful, healthy, and without any unanswered questions. They did a great job with COVID precautions and the environment is spotless!
         name: Kate S.
         image: /wp-content/uploads/2021/05/google-icon4-rev.png
-        iconColor: "#4285f4"
       - text: Everyone is so kind, patient, mindful, and personable. Professionalism is 110%. The office is clean & beautiful. I never feel like they're trying to push unnecessary and expensive dental work to make money off me. Plus, they recycle old dental products for clients! I hate going to the dentist, but this place has changed my mind. Thank you!
         name: Marie S.
         image: /wp-content/uploads/2021/05/google-icon4-rev.png
-        iconColor: "#4285f4"
       - text: I love Artisan Dental and have been going there for four years now. The folks in reception always make me feel welcomed, the hygienists are skilled and personable, and I trust and appreciate the professionalism and skills of the dentists. I'm particularly fond of the TVs they have that display beautiful nature scenes (rather than assaulting the senses as some businesses seem to think is desirable).
         name: Liz Z.
         image: /wp-content/uploads/2021/05/Yelp.png
-        iconColor: "#d32323"
       - text: I was in town visiting Epic and had an unexpected dental emergency. This was quite distressing since I was so far from my normal dentist in Cincinnati. Thank goodness I found Artisan Dental! They got me in quickly and did a great job. Everyone from the office staff to the hygienist to the dentist was very calming and helpful!
         name: Christy B.
         image: /wp-content/uploads/2021/05/Yelp.png
-        iconColor: "#d32323"
       - text: The staff's kindness, service, and professionalism make me glad that I chose to go here for my dental services. I had a LOT of work to get done this year as I hadn't been to the dentist in awhile. They took it in stride and never made me feel guilty, but rather inspired me to take better care of my teeth! I was in awe when I first started going as someone else said, it almost feels like a relaxing spa retreat...
         name: Erin G.
         image: /wp-content/uploads/2021/05/fb-logo4-rev.png
-        iconColor: "#1877f2"
       - text: Fantastic service from entry to exit. Not only is the clinic beautiful and welcoming with small details, the staff is extremely friendly and seems very genuine. I had fillings done, and actually enjoyed the process. I highly recommended this office (coming from a former Dental clinic receptionist in another city).
         name: Esperanza S.
         image: /wp-content/uploads/2021/05/fb-logo4-rev.png
-        iconColor: "#1877f2"
     buttonText: View More Testimonials
     buttonLink: /patient-reviews/
     backgroundColor: "#321c0e"

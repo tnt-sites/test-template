@@ -2,37 +2,47 @@
    Lives in @layer source-bridge, which the layer order places after
    `components`, so these win without !important. */
 @layer source-bridge {
-  /* The source uses fully rounded pills everywhere. The starter's .button is
-     30px, and several variants reset it to --radius-none, which reads as
-     square next to the migrated chrome. */
-  .button,
-  .button.radius-default,
-  .button.radius-none,
-  .button.radius-xs {
-    border-radius: 50px;
+  /* MEASURED on the source: every body and footer button is square
+     (border-radius 0) with 15px 30px padding. Only the header's
+     "Make An Appointment" is a 50px pill, and that lives in ArtisanHeader. */
+  main .button,
+  main .button.radius-default,
+  main .button.radius-none,
+  main .button.radius-xs,
+  footer .button {
+    border-radius: 0;
+    padding: 15px 30px;
   }
 
-  /* Source body buttons are a solid brand-brown pill with white text. */
-  main .button.variant-primary {
+  /* Solid brand-brown with white text — "View All Services",
+     "Watch a Quick Video", the footer "Contact Us". */
+  main .button.variant-primary,
+  footer .button.variant-secondary {
     background-color: var(--color-brand);
     border-color: var(--color-brand);
     color: #fff;
   }
 
-  main .button.variant-primary:hover {
+  main .button.variant-primary:hover,
+  footer .button.variant-secondary:hover {
     background-color: var(--color-brand-secondary);
     border-color: var(--color-brand-secondary);
-    color: var(--color-brand);
+    color: #fff;
   }
 
-  main .button.variant-secondary {
-    background-color: transparent;
-    border: 2px solid var(--color-brand-secondary);
-    color: var(--color-brand);
-  }
-
-  main .button.variant-secondary:hover {
+  /* Solid gold with a gold border — "View More Testimonials",
+     "Get in touch with us". */
+  main .button.variant-secondary,
+  footer .button.variant-primary {
     background-color: var(--color-brand-secondary);
+    border: 2px solid var(--color-brand-secondary);
+    color: #fff;
+  }
+
+  main .button.variant-secondary:hover,
+  footer .button.variant-primary:hover {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
     color: #fff;
   }
 

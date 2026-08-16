@@ -25,7 +25,7 @@ const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
       {list.map((t: any) => (
         <li>
           <blockquote>{t.text}</blockquote>
-          <p class="ts-name">{t.image && <span class="ts-avatar" style={t.iconColor ? `background:${t.iconColor}` : undefined}><img src={t.image} alt="" loading="lazy" /></span>}{t.name}</p>
+          <p class="ts-name">{t.image && <img class="ts-avatar" src={t.image} alt="" loading="lazy" />}{t.name}</p>
         </li>
       ))}
     </ul>
@@ -37,13 +37,22 @@ const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
   .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); text-align: center; }
   .ts-eyebrow { color: var(--eb); font-family: Poppins, sans-serif; font-size: 18px; margin: 0; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2.5rem; }
-  .ts-cards { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); list-style: none; margin: 0; padding: 0; text-align: left; }
-  .ts-cards li { background: var(--card); border-radius: 6px; display: flex; flex-direction: column; padding: 1.75rem; }
+
+  /* Multi-column, not grid: cards flow top-to-bottom so each column holds
+     one review source (Google, then Yelp, then Facebook). */
+  .ts-cards { column-gap: 1.75rem; columns: 3; list-style: none; margin: 0; padding: 0; text-align: left; }
+  .ts-cards li { background: var(--card); border-radius: 6px; break-inside: avoid; display: flex; flex-direction: column; margin-bottom: 1.75rem; padding: 1.75rem; }
   blockquote { border: 0; color: var(--tx); flex: 1; font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 25px; margin: 0; }
   .ts-name { align-items: center; color: var(--nm); display: flex; font-family: Poppins, sans-serif; font-size: 16px; font-weight: 700; gap: 0.6rem; margin: 1.25rem 0 0; }
-  .ts-avatar { align-items: center; background: var(--nm); border-radius: 50%; display: inline-flex; flex: 0 0 auto; height: 46px; justify-content: center; width: 46px; }
-  .ts-avatar img { filter: brightness(0) invert(1); height: 26px; object-fit: contain; width: 26px; }
-  .ts-more { margin-top: 2.5rem; }
+
+  /* Original brand artwork, just larger — the source's own icons are
+     already coloured, so no knockout or circle behind them. */
+  .ts-avatar { flex: 0 0 auto; height: 46px; object-fit: contain; width: 46px; }
+  .ts-more { margin-top: 0.75rem; }
+
+  @media (max-width: 1000px) { .ts-cards { columns: 2; } }
+
+  @media (max-width: 660px) { .ts-cards { columns: 1; } }
   .ts-more :global(.button) { background: transparent; border: 2px solid var(--eb); border-radius: 50px; color: var(--eb); font-family: Poppins, sans-serif; padding: 12px 28px; }
   .ts-more :global(.button:hover) { background: var(--eb); color: var(--bg); }
 </style>
