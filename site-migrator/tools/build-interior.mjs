@@ -79,6 +79,15 @@ const READ = () => {
       bodyText: t(content),
       button: btn ? { text: t(btn), link: btn.getAttribute("href") ?? "" } : null,
       iframes: [...s.querySelectorAll("iframe")].map((f) => f.getAttribute("src") ?? ""),
+      // A single Elementor section often holds several distinct blocks — page
+      // content, a CTA and a logo carousel all at once. Record them separately
+      // so one carousel cannot swallow the rest of the section.
+      carouselImages: [...s.querySelectorAll(".swiper, .elementor-image-carousel")]
+        .flatMap((c) => [...c.querySelectorAll("img")])
+        .map((i) => ({ src: strip(i.getAttribute("src")), alt: i.getAttribute("alt") || "" })),
+      contentImages: [...s.querySelectorAll(".elementor-widget-image img, .elementor-widget-theme-post-content img")]
+        .map((i) => ({ src: strip(i.getAttribute("src")), alt: i.getAttribute("alt") || "" })),
+      hasPostContent: !!s.querySelector(".elementor-widget-theme-post-content"),
     };
   });
 };
@@ -87,11 +96,54 @@ const fixHref = (h) =>
   !h ? "" : h.replace(/^https?:\/\/[^/]+/, "").replace(/^\/?([a-z0-9-]+)\.html$/i, "/$1/").replace(/^\/category\/services\//, "/services/");
 
 const C = (name, o) => ({ _component: `page-sections/artisan/${name}`, id: "", ...o });
+const ctaBar = (s) =>
+  C("split-feature", {
+    eyebrow: "", heading: s.heading, text: "", image: "",
+    buttonText: s.button?.text ?? "", buttonLink: fixHref(s.button?.link),
+    reverse: false, align: "center", mediaMinHeight: "0px",
+    backgroundColor: "#321c0e", eyebrowColor: "#d2b22e",
+    headingColor: "#ffffff", textColor: "#ffffff",
+  });
+
 const isDark = (c) => /rgb\(\s*(\d+)/.test(c) && Number(c.match(/rgb\(\s*(\d+)/)[1]) < 90 && !/, 0\)$/.test(c);
 
 /** Measured shape -> the component already built for it. */
 function classify(s) {
   if (s.hidden || (!s.text && !s.images.length && !s.iframes.length)) return null;
+
+  // Compound section: split it rather than letting the carousel win.
+  const uniqCarousel = [...new Map(s.carouselImages.map((i) => [i.src, i])).values()];
+  const hasCopy = s.hasPostContent || s.contentImages.length > 0 || s.bodyText.length > 120;
+  if (uniqCarousel.length >= 3 && hasCopy) {
+    const out = [];
+    const bodyHtml =
+      (s.contentImages.length
+        ? s.contentImages.map((i) => `<p><img src="${i.src}" alt="${i.alt}"></p>`).join("")
+        : "") + (s.body || "");
+    if (bodyHtml.trim()) {
+      out.push(C("split-feature", {
+        eyebrow: "", heading: "", text: bodyHtml, image: "",
+        buttonText: "", buttonLink: "", reverse: false, align: "left", mediaMinHeight: "0px",
+        backgroundColor: "transparent", eyebrowColor: "#d2b22e",
+        headingColor: "#321c0e", textColor: "#333333",
+      }));
+    }
+    if (s.heading && s.button) out.push(ctaBar(s));
+    out.push(C("logo-strip", {
+      eyebrow: "", heading: "",
+      logos: uniqCarousel.map((i) => ({ image: i.src, alt: i.alt, link: "" })),
+      perView: s.perView || Math.min(5, uniqCarousel.length), autoplaySeconds: 5,
+      backgroundColor: "#321c0e", backgroundImage: WOOD, overlayOpacity: 0.15,
+      eyebrowColor: "#ffffff", headingColor: "#ffffff",
+    }));
+    return out;
+  }
+
+  // A short band that is just a headline and a button is a CTA bar, not a
+  // content split — health-plans has one at 162px.
+  if (s.heading && s.button && !s.images.length && !s.imageBoxes.length && s.bodyText.length < 160) {
+    return ctaBar(s);
+  }
 
   // A carousel or a run of logos with no prose is a logo strip.
   if ((s.carousel || s.images.length >= 4) && s.bodyText.length < 120 && !s.imageBoxes.length) {
@@ -186,7 +238,7 @@ for (const id of ids) {
 
   const content = secs.filter((x) => !x.hidden && (x.text || x.images.length || x.iframes.length));
   const bannerSrc = content[0];
-  const built = content.slice(1).map(classify).filter(Boolean);
+  const built = content.slice(1).flatMap((x) => classify(x) ?? []).filter(Boolean);
   const md = path.join(PAGES, `${id}.md`);
   if (!fs.existsSync(md)) { console.log(`  ! no page file for ${id}`); continue; }
   const raw = fs.readFileSync(md, "utf8");
