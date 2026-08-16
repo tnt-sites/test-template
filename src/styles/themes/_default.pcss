@@ -59,3 +59,28 @@
   --color-focus-ring: rgba(0, 87, 255, 0.4);
   --color-error: #f00;
 }
+
+/* mig:begin source-theme */
+:root,
+[data-theme="default"] {
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  /* Corrected by hand from the #ffffff `mig tokens` measured.
+     assignRoles takes the heading colour from the first h2/h1 it samples, and
+     on this source that is a hero banner over a dark background image — so
+     white wins on rendered area (1.29M px² vs 469K) while being wrong as the
+     global default. The dominant heading colour outside heroes is the brand
+     brown; white headings are a per-section concern the component's
+     colorScheme prop already handles. 30 files read this token, including form
+     labels, so #ffffff would render them invisible on the white page. */
+  --color-text-strong: #321c0e;
+  --color-link: #cc3366;
+  --color-link-hover: #333366;
+  --color-brand: #321c0e;
+  --color-brand-secondary: #d2b22e;
+  --color-brand-muted: #cc3366;
+  --color-brand-subtle: #bf9800;
+  --color-bg-accent: #bf9800;
+  --color-bg-highlight: #cc3366;
+}
+/* mig:end source-theme */

@@ -1,20 +1,26 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
+  "colorBrand": "#321c0e",
+  "colorBrandSecondary": "#d2b22e",
+  "colorBrandTertiary": "#cc3366",
+  "colorBrandSubtle": "#bf9800",
   "colorBrandOn": "",
-  "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
+  "colorTextOnBrand": "#efefef",
+  "colorLink": "#cc3366",
+  "colorLinkHover": "#333366",
   "extraColors": [],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "\"Open Sans\", sans-serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "Poppins, sans-serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "/wp-content/uploads/elementor/google-fonts/css/roboto.css",
+    "/wp-content/uploads/elementor/google-fonts/css/robotoslab.css",
+    "/wp-content/uploads/elementor/google-fonts/css/opensans.css",
+    "/wp-content/uploads/elementor/google-fonts/css/poppins.css",
+    "/wp-content/uploads/elementor/google-fonts/css/notoserif.css",
+    "/wp-content/uploads/elementor/google-fonts/css/montserrat.css",
+    "/wp-content/uploads/elementor/google-fonts/css/varela.css"
   ]
 }
