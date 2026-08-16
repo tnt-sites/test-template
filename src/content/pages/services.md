@@ -7,245 +7,340 @@ title: Services
 description: ""
 canonical: /services/
 pageSections:
-  - _component: page-sections/ctas/cta-center
+  - _component: page-sections/artisan/split-feature
     id: ""
+    eyebrow: Take a look at all of our
     heading: Services Artisan Dental Provides
-    anchorName: ""
-    subtext: “there is no better feeling than changing someone’s life by making them comfortable and confident with one of their most important assets…a beautiful smile.” You have choices that can help you smile with ease. Even the smallest change in your smile can make a dramatic difference in the way you look and feel about yourself.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Schedule Your Consultation
-        hideText: false
-        link: /contact-us/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: View Services
-        hideText: false
-        link: "#down"
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/artisan/page-body
-    id: ""
-    sidebarHeading: ""
-    links: []
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>“there is no better feeling than changing someone’s life by making them comfortable and confident with one of their most important assets…a beautiful smile.” You have choices that can help you smile with ease. Even the smallest change in your smile can make a dramatic difference in the way you look and feel about yourself.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
     image: ""
-    imageAlt: ""
-    body: "
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-inner-section elementor-element elementor-element-d6d0594 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"d6d0594\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-no\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-e7bc9e1\" data-id=\"e7bc9e1\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-7fd4ec9 elementor-widget elementor-widget-heading\" data-id=\"7fd4ec9\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t<h6 class=\"elementor-heading-title elementor-size-default\">We have flexible payment options.</h6>\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-f1b500d elementor-widget elementor-widget-heading\" data-id=\"f1b500d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t<h2 class=\"elementor-heading-title elementor-size-default\">Concerned about the Cost?</h2>\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-f20c56f elementor-testimonial--layout-image_above elementor-testimonial--skin-default elementor-testimonial--align-center elementor-arrows-yes elementor-widget elementor-widget-testimonial-carousel\" data-id=\"f20c56f\" data-element_type=\"widget\" data-e-type=\"widget\" data-settings=\"{&quot;slides_per_view&quot;:&quot;2&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;20&quot;,&quot;sizes&quot;:[]},&quot;show_arrows&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}\" data-widget_type=\"testimonial-carousel.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<div class=\"elementor-swiper\">
-
-      \t\t\t\t\t<div class=\"elementor-main-swiper swiper\" role=\"region\" aria-roledescription=\"carousel\" aria-label=\"Slides\">
-
-      \t\t\t\t<div class=\"swiper-wrapper\">
-
-      \t\t\t\t\t\t\t\t\t\t\t<div class=\"swiper-slide\" role=\"group\" aria-roledescription=\"slide\">
-
-      \t\t\t\t\t\t\t\t\t<div class=\"elementor-testimonial\">
-
-      \t\t\t\t\t\t\t<div class=\"elementor-testimonial__content\">
-
-      \t\t\t\t\t<div class=\"elementor-testimonial__text\">
-
-      \t\t\t\t\t\tWe provide complimentary consultations, where you have the opportunity to meet Dr. Andersen.  During the complimentary consultation, she will recommend cosmetic dental approaches designed to help you achieve your goals and visions.  Dr. Andersen will then provide an outline of the next steps in the process.\ 
-
-      <br><br>
-
-      Once your treatment plan in completed, our patient care coordinators will work with you to identify any dental insurance coverage you may have for the procedures.  We will also review discounts available through the Artisan Dental Health Plan or payment the day of services. Lastly, we work closely with affiliated third-party financial partner, CareCredit to create affordable payment options.
-
-      <br><br>\t\t\t\t\t</div>
-
-      \t\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t\t\t<div class=\"elementor-testimonial__footer\">
-
-      \t\t\t\t\t\t\t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-039aac0 elementor-align-center elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button\" data-id=\"039aac0\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"button.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">
-
-      \t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-md\" href=\"financial.html\">
-
-      \t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">
-
-      \t\t\t\t\t\t<span class=\"elementor-button-icon\">
-
-      \t\t\t\t<i aria-hidden=\"true\" class=\"fas fa-arrow-right\"></i>\t\t\t</span>
-
-      \t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">View Payment Options</span>
-
-      \t\t\t\t\t</span>
-
-      \t\t\t\t\t</a>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t\t</div>
-
-      \t\t"
-    backgroundColor: transparent
-    headingBackground: "#321c0e"
-    headingColor: "#ffffff"
-    linkColor: "#222222"
-    textColor: "#686868"
+    buttonText: Schedule Your Consultation
+    buttonLink: /contact-us/
     reverse: false
-  - _component: page-sections/location/location-find-us
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
     id: ""
-    heading: First Step, Understanding You & Your Goals
-    text: |-
-      ###### Personalized Just For You
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2023/09/great-4.png
+        alt: great
+        link: ""
+      - image: /wp-content/uploads/2020/08/BFTW-2018-19.png
+        alt: BFTW-2018-19
+        link: ""
+      - image: /wp-content/uploads/2024/07/top-dentist-2024.png
+        alt: top-dentist-2024
+        link: ""
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+        link: ""
+      - image: /wp-content/uploads/2021/04/2021-communitas-awards.png
+        alt: 2021-communitas-awards
+        link: ""
+      - image: /wp-content/uploads/2020/08/IB_DCSBA3-1.png
+        alt: IB_DCSBA3 (1)
+        link: ""
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+        link: ""
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+        link: ""
+      - image: /wp-content/uploads/2020/08/FFPC-winner-logo2-1.png
+        alt: FFPC-winner-logo2 (1)
+        link: ""
+      - image: /wp-content/uploads/2023/09/great-4.png
+        alt: great
+        link: ""
+      - image: /wp-content/uploads/2020/08/BFTW-2018-19.png
+        alt: BFTW-2018-19
+        link: ""
+      - image: /wp-content/uploads/2024/07/top-dentist-2024.png
+        alt: top-dentist-2024
+        link: ""
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+        link: ""
+      - image: /wp-content/uploads/2021/04/2021-communitas-awards.png
+        alt: 2021-communitas-awards
+        link: ""
+      - image: /wp-content/uploads/2020/08/IB_DCSBA3-1.png
+        alt: IB_DCSBA3 (1)
+        link: ""
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+        link: ""
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+        link: ""
+      - image: /wp-content/uploads/2020/08/FFPC-winner-logo2-1.png
+        alt: FFPC-winner-logo2 (1)
+        link: ""
+      - image: /wp-content/uploads/2023/09/great-4.png
+        alt: great
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: Personalized Just For You
+    text: "
 
-      Whether it is a simple, minimally invasive treatment such as veneers or whitening, or a complex procedure like a full-mouth reconstruction, our dentists will work with you to select and assess the treatments or procedures that are best for you.
-    backgroundColor: "#ffffff"
-    textColor: "#000000"
-    accentColor: var(--color-brand-subtle)
-    iconColor: var(--color-brand)
-  - _component: page-sections/ctas/more-to-explore
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Whether it is a simple, minimally invasive treatment such as veneers or whitening, or a complex procedure like a full-mouth reconstruction, our dentists will work with you to select and assess the treatments or procedures that are best for you.&nbsp;</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/services-grid
     id: ""
+    eyebrow: ""
     heading: Restorative
-    buttonSections: []
-    maxContentWidth: null
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/more-to-explore
+    text: ""
+    buttonText: ""
+    buttonLink: ""
+    cards:
+      - icon: ""
+        title: Full & Partial Rehabilitation
+        text: ""
+        link: /services/restorative/full-partial-rehabilitation/
+      - icon: ""
+        title: Dental Implants
+        text: ""
+        link: /services/restorative/dental-implants/
+      - icon: ""
+        title: Fillings, Crowns, Bridges
+        text: ""
+        link: /services/restorative/fillings-crowns-bridges/
+      - icon: ""
+        title: Same-Day Crowns (CEREC)
+        text: ""
+        link: /services/restorative/same-day-crowns-cerec/
+      - icon: ""
+        title: Extractions
+        text: ""
+        link: /services/restorative/extractions/
+      - icon: ""
+        title: Endodontics
+        text: ""
+        link: /services/restorative/endodontics/
+      - icon: ""
+        title: Orthodontics
+        text: ""
+        link: /services/restorative/orthodontics/
+    backgroundColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+    cardBackgroundColor: "#fbfaf7"
+  - _component: page-sections/artisan/services-grid
     id: ""
+    eyebrow: ""
     heading: Cosmetic
-    buttonSections: []
-    maxContentWidth: null
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/more-to-explore
+    text: ""
+    buttonText: ""
+    buttonLink: ""
+    cards:
+      - icon: ""
+        title: Invisalign
+        text: ""
+        link: /services/cosmetic/invisalign/
+      - icon: ""
+        title: Smile Make Over
+        text: ""
+        link: /services/cosmetic/smile-make-over/
+      - icon: ""
+        title: Ceramic Veneers
+        text: ""
+        link: /services/cosmetic/ceramic-veneers/
+      - icon: ""
+        title: Laser Gum Sculpting
+        text: ""
+        link: /services/cosmetic/laser-gum-sculpting/
+      - icon: ""
+        title: Whitening Options
+        text: ""
+        link: /services/cosmetic/whitening-options/
+      - icon: ""
+        title: White Fillings
+        text: ""
+        link: /services/cosmetic/white-fillings/
+    backgroundColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+    cardBackgroundColor: "#fbfaf7"
+  - _component: page-sections/artisan/services-grid
     id: ""
+    eyebrow: ""
     heading: Preventive
-    buttonSections: []
-    maxContentWidth: null
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: null
-      alt: null
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/cta-center
+    text: ""
+    buttonText: ""
+    buttonLink: ""
+    cards:
+      - icon: ""
+        title: Teeth Cleaning
+        text: ""
+        link: /services/preventive/teeth-cleaning/
+      - icon: ""
+        title: Periodontal Therapy
+        text: ""
+        link: /services/preventive/periodontal-therapy/
+      - icon: ""
+        title: Dental Sealants
+        text: ""
+        link: /services/preventive/dental-sealants/
+      - icon: ""
+        title: Mouth Guards
+        text: ""
+        link: /services/preventive/mouth-guards/
+      - icon: ""
+        title: Dental Videos
+        text: ""
+        link: /services/preventive/dental-videos/
+    backgroundColor: "#ffffff"
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+    cardBackgroundColor: "#fbfaf7"
+  - _component: page-sections/artisan/split-feature
     id: ""
+    eyebrow: ""
+    heading: Meet Dr. Andersen
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Dr. Andersen has received hundreds of hours of specialized, hands on training in cosmetic dental care with some of the world’s most qualified professors and instructors. You can learn more about Dr. Andersen’s training as an expert cosmetic dentist by visiting her biography.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: /wp-content/uploads/2020/09/Andersen_New3-3-1-1000x1000.jpg
+    buttonText: Meet Dr. Andersen
+    buttonLink: /doctors-team/dr-nicole-andersen/
+    reverse: false
+    align: left
+    mediaMinHeight: 420px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: We have flexible payment options.
+    heading: Concerned about the Cost?
+    logos: []
+    perView: 0
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
     heading: We welcome the opportunity to partner with you in realizing your smile design dreams.
-    anchorName: ""
-    subtext: Call or email to schedule your appointment with Dr. Andersen to review your vision.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        text: Schedule Your Consultation
-        hideText: false
-        link: /contact-us/
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-      - _component: building-blocks/core-elements/button
-        text: Call 608-467-8022
-        hideText: false
-        link: tel:+16084678022
-        iconName: ""
-        iconPosition: before
-        variant: primary
-        size: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400\">Call or email to schedule your appointment with Dr. Andersen to review your vision.</span></p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: Schedule Your Consultation
+    buttonLink: /contact-us/
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2020/09/shutterstock_1663189090-1-1000x1000.jpg
+        alt: Happy Woman Pointing Fingers At Perfect Smile
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_511540777-1-1000x1000.jpg
+        alt: Smiling Woman Making Frame Gesture
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_114795058-1-1000x1000.jpg
+        alt: Panoramic dental X-Ray with hands point
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_183860366-1-1000x1000.jpg
+        alt: Closeup of a woman patient at the dentist
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_410381239-1-1000x1000.jpg
+        alt: Young woman is touching her face and smiling while looking at the mirror
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_444243769-2-1-1000x1000.jpg
+        alt: happy patient in dental chair
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_1663189090-1-1000x1000.jpg
+        alt: Happy Woman Pointing Fingers At Perfect Smile
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_511540777-1-1000x1000.jpg
+        alt: Smiling Woman Making Frame Gesture
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_114795058-1-1000x1000.jpg
+        alt: Panoramic dental X-Ray with hands point
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_183860366-1-1000x1000.jpg
+        alt: Closeup of a woman patient at the dentist
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_410381239-1-1000x1000.jpg
+        alt: Young woman is touching her face and smiling while looking at the mirror
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_444243769-2-1-1000x1000.jpg
+        alt: happy patient in dental chair
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_1663189090-1-1000x1000.jpg
+        alt: Happy Woman Pointing Fingers At Perfect Smile
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_511540777-1-1000x1000.jpg
+        alt: Smiling Woman Making Frame Gesture
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_114795058-1-1000x1000.jpg
+        alt: Panoramic dental X-Ray with hands point
+        link: ""
+      - image: /wp-content/uploads/2020/09/shutterstock_183860366-1-1000x1000.jpg
+        alt: Closeup of a woman patient at the dentist
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
 ---

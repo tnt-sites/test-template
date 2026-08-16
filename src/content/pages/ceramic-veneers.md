@@ -17,13 +17,26 @@ pageSections:
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
-  - _component: page-sections/artisan/page-body
+  - _component: page-sections/artisan/split-feature
     id: ""
-    sidebarHeading: ""
-    links: []
-    image: /wp-content/uploads/2020/09/featured.jpg
-    imageAlt: ""
-    body: "
+    eyebrow: ""
+    heading: Ceramic or Porcelain Veneers
+    text: <p></p>
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: rgb(50, 28, 14)
+    eyebrowColor: "#d2b22e"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: A Beautiful New Smile With Natural-Looking Veneers
+    text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
@@ -842,10 +855,182 @@ pageSections:
       \t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    backgroundColor: transparent
-    headingBackground: "#321c0e"
-    headingColor: "#ffffff"
-    linkColor: "#222222"
-    textColor: "#686868"
+    image: ""
+    buttonText: View Doctor Bio
+    buttonLink: /doctors-team/dr-nicole-andersen/
     reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: A Beautiful New Smile With Natural-Looking Veneers
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>A veneer is a thin ceramic or porcelain facing that covers the front of your tooth, changing its size, shape or color. Veneers can solve cosmetic concerns, such as cracked or chipped teeth, small gaps between your teeth, slightly crooked or misaligned teeth, small or poorly shaped teeth or teeth that are resistant to whitening agents. If you have been unhappy with the appearance of your smile, veneers could be the answer you’ve been looking for.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: Ceramic Veneers
+    heading: "In Just 4 Simple Steps:"
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Your smile is unique, which means we will create a customized treatment plan designed around your goals and visions for your new smile. The process entails four easy steps.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: rgb(50, 28, 14)
+    eyebrowColor: "#d2b22e"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: "Step #1"
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Time is created for Dr. Andersen to perform a comprehensive exam of your overall oral health.&nbsp; Dr. Andersen will review your historical treatment records and X-rays.&nbsp; She will also take photographs that will assist in the creation of dental models of your teeth.&nbsp; Dr. Andersen will then listen to your needs, wishes and goals regarding what you hope to see and experience when your smile is complete.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: "Step #2"
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Dr. Andersen will combine your overall oral health and aesthetic preferences to formulate an individualized treatment plan.&nbsp; The plan brings together suggestions to foster your overall oral health and aesthetic preferences, leading to increased levels of confidence in your new smile.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: "Step #3"
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>After you approve the final design for your smile,&nbsp; Dr. Andersen will complete the tooth preparation work.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: "Step #4"
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Your final visits will include Dr. Andersen fitting and bonding your veneers or crowns to your teeth, along with any final gum sculpting.&nbsp; Steps 3 and 4 are comfortable with a range of spa-like amenities for your enjoyment and ease. The final outcome is a beautiful, healthy smile for years to come.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: Skilled Cosmetic Dentist
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>Dr. Nicole Andersen’s passion for changing someone’s life by making them comfortable and confident with one of their most important assets—a beautiful smile—shows in the extensive cosmetic dentistry she has performed over the last 15 years. Patients have come from all over the area to take advantage of Dr. Anderson’s skill and expertise in cosmetic dentistry.</p><p>Dr. Andersen is committed to exceptional, quality care and aesthetically-beautiful outcomes which results from her hundreds of hours of specialized, hands-on training in cosmetic dental care with some of the worlds most qualified professors and instructors.&nbsp;You can learn more about Dr. Andersen’s training as an expert cosmetic dentist by <a href=\"/doctors-team/dr-nicole-andersen/\">visiting her biography</a>.</p><p>Dr. Andersen understands that aesthetics are an important part of dental work and she loves helping patients look their best. She will take great care to ensure that&nbsp;you have a beautiful smile that is&nbsp;natural-looking and long-lasting.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: /wp-content/uploads/2020/10/artisan2020071x2.jpg
+    buttonText: View Doctor Bio
+    buttonLink: /doctors-team/dr-nicole-andersen/
+    reverse: false
+    align: left
+    mediaMinHeight: 420px
+    backgroundColor: transparent
+    eyebrowColor: "#d2b22e"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: A New Smile Design
+    heading: Complimentary Cosmetic Consultation
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>We provide complimentary consultations, where you have the opportunity to meet Dr. Andersen. During the complimentary consultation, she will recommend cosmetic dental approaches designed to help you achieve your smile goals. Dr. Andersen will then provide an outline of the next steps in the process.</p><p>Once your treatment plan is complete, our patient care coordinators will work with you to identify any dental insurance coverage you may have for the procedures. We will also review discounts available through the Artisan Dental Health Plan or payment the day of services. Lastly, we work closely with affiliated third-party financial partner, CareCredit to create affordable payment options.</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: ""
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: rgb(50, 28, 14)
+    eyebrowColor: "#d2b22e"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
 ---
