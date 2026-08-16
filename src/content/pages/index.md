@@ -1,44 +1,51 @@
 ---
 _mig:
-  v: "0.1.0"
-  gen: "content"
-  hash: "0e5aa2a63b626a04"
+  v: 0.1.0
+  gen: content
+  hash: 0e5aa2a63b626a04
 title: Home
 description: ""
 canonical: /
 pageSections:
-  - _component: page-sections/builders/custom-section
+  - _component: page-sections/heroes/artisan-hero
     id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: ""
-      alt: ""
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/builders/custom-section
-    id: ""
-    label: ""
-    contentSections: []
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
+    slides:
+      - image: /wp-content/uploads/2023/04/Slider_002.jpg
+        eyebrow: Creating Healthy, Beautiful Smiles.
+        heading: |-
+          The Artisan
+          Dental Experience
+        text: Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
+        buttonText: More About Us
+        buttonLink: /about-us/
+      - image: /wp-content/uploads/2023/04/Slider_003.jpg
+        eyebrow: Creating Healthy, Beautiful Smiles.
+        heading: |-
+          Clear Aligner Therapy
+          For a Perfect Smile
+        text: Clear aligners such as SureSmile and Invisalign are a virtually invisible way to a healthy beautiful smile. They are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation.
+        buttonText: Clear Aligners
+        buttonLink: /invisalign-suresmile-clear-aligners/
+      - image: /wp-content/uploads/2023/04/Slider_004.jpg
+        eyebrow: Creating Healthy, Beautiful Smiles.
+        heading: |-
+          More Than
+          Just Teeth
+        text: Get a new look to compliment your smile with Botox and Dermal Fillers — whether you want relief from clenching and grinding, or to reduce fine lines and wrinkles. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics.
+        buttonText: Botox & Fillers
+        buttonLink: /botox-for-therapeutics-esthetics/
+      - image: /wp-content/uploads/2023/04/Slider_005.jpg
+        eyebrow: ""
+        heading: Let’s make a difference together!
+        text: We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, you are part of that difference.
+        buttonText: Impact Report
+        buttonLink: /impact-report/
+    eyebrowColor: "#d2b22e"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
+    overlayColor: rgba(0, 0, 0, 0.45)
+    minHeight: 620px
+    autoplaySeconds: 6
   - _component: page-sections/ctas/cta-center
     id: ""
     heading: Comfortable & Compassionate
@@ -278,176 +285,6 @@ pageSections:
     iconColor: var(--color-brand)
 _migUnmapped:
   sections:
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: subtext
-          content: |-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            The Artisan  
-            Dental Experience
-
-            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
-
-            More About Us
-
-            ](/about-us/)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            Clear Aligner Therapy  
-            For a Perfect Smile
-
-            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
-
-            Clear Aligners
-
-            ](/services/invisalign-suresmile-clear-aligners)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            More Than  
-            Just Teeth
-
-            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
-
-            Botox & Fillers
-
-            ](/services/botox-for-therapeutics-esthetics/)
-
-            Let’s make a difference together!
-
-            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
-              
-            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
-              
-            Check out our [Impact Report.](/impact-report/)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            The Artisan  
-            Dental Experience
-
-            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
-
-            More About Us
-
-            ](/about-us/)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            Clear Aligner Therapy  
-            For a Perfect Smile
-
-            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
-
-            Clear Aligners
-
-            ](/services/invisalign-suresmile-clear-aligners)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            More Than  
-            Just Teeth
-
-            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
-
-            Botox & Fillers
-
-            ](/services/botox-for-therapeutics-esthetics/)
-
-            Let’s make a difference together!
-
-            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
-              
-            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
-              
-            Check out our [Impact Report.](/impact-report/)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            The Artisan  
-            Dental Experience
-
-            Providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts. Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.
-
-            More About Us
-
-            ](/about-us/)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            Clear Aligner Therapy  
-            For a Perfect Smile
-
-            Clear aligners such as SureSmile and Invisalign, are a virtually invisible way to a healthy beautiful smile. With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Clear aligners are removable, so you can eat anything you want, as well as brush and floss easily. Call our office for a free consultation to see if clear aligners are right for you.
-
-            Clear Aligners
-
-            ](/services/invisalign-suresmile-clear-aligners)
-
-            [
-
-            Creating Healthy, Beautiful Smiles.  
-            More Than  
-            Just Teeth
-
-            Get a new look to compliment your smile with Botox and Dermal Fillers. Whether you are looking for relief from clenching and grinding, are interested in reducing fine lines and wrinkles on your face, or want to enhance some of your facial features, Botox and/or dermal fillers may be right for you. Dr. Mark Rehermann has been specially trained by the Academy of Facial Esthetics and he would love to help you look and feel your best.
-
-            Botox & Fillers
-
-            ](/services/botox-for-therapeutics-esthetics/)
-
-            Let’s make a difference together!
-
-            We all want to make the world a better place, but at times wonder how our small contributions can make a difference. By having your dentistry done at Artisan Dental, not only are you receiving exceptional quality oral health care, you are making the world a better place. By doing business with Artisan Dental you can feel proud to be our partner in supporting organizations such as Women for Women International, an organization that provides practical and moral support to female survivors of war, and Second Harvest Food Bank, working hard to meet the nutritional needs of our neighbors facing hunger, just to name a couple.  
-              
-            You are also our partner in sustainability, confident in the knowledge that we take our responsibility to the planet seriously. Artisan Dental is the first general dentistry practice to become carbon negative, offsetting more GHG emissions than we create. We also started the first oral care products recycling program in the Dane County area, partnering with Terracycle to keep toothbrushes, toothpaste tubes, floss containers, deodorant containers, soap wrappers and mouthwash containers out of the landfills.  
-              
-            Check out our [Impact Report.](/impact-report/)
-    - component: page-sections/builders/custom-section
-      fields:
-        - field: subtext
-          content: |-
-            ![geat](/wp-content/uploads/2025/11/geat.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![top](/wp-content/uploads/2025/11/top.png)
-
-            ![b-logo3](/wp-content/uploads/2022/01/b-logo3.png)
-
-            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-            ![geat](/wp-content/uploads/2025/11/geat.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![top](/wp-content/uploads/2025/11/top.png)
-
-            ![b-logo3](/wp-content/uploads/2022/01/b-logo3.png)
-
-            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-            ![geat](/wp-content/uploads/2025/11/geat.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
     - component: page-sections/location/location-find-us
       fields:
         - field: imageSource

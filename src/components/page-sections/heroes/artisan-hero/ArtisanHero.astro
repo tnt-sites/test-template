@@ -1,0 +1,232 @@
+---
+/**
+ * Artisan Dental homepage hero — a full-bleed image slider.
+ *
+ * The source's first section is an Elementor slides widget: a full-viewport
+ * photo with a dark scrim, a gold italic eyebrow, a large white headline, body
+ * copy and a pill CTA. `mig content` had no component that could hold it and
+ * mapped it to a generic custom-section, pushing all the copy into
+ * `_migUnmapped`.
+ *
+ * Editability split per the migration brief:
+ *   - baked in: layout, font family/size/weight, scrim, control shapes
+ *   - props: every string, image, link and colour
+ *   - arrays: `slides`, so more can be added
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const {
+  slides = [],
+  eyebrowColor = "#d2b22e",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  overlayColor = "rgba(0, 0, 0, 0.45)",
+  minHeight = "620px",
+  autoplaySeconds = 6,
+  id,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
+---
+
+<section
+  class="artisan-hero"
+  id={id || undefined}
+  data-autoplay={autoplaySeconds}
+  style={`--ah-eyebrow:${eyebrowColor};--ah-heading:${headingColor};--ah-text:${textColor};--ah-overlay:${overlayColor};--ah-minh:${minHeight}`}
+  {...htmlAttributes}
+>
+  <div class="hero-track">
+    {
+      list.map((slide: any, i: number) => (
+        <article
+          class:list={["hero-slide", { "is-active": i === 0 }]}
+          data-index={i}
+          style={slide.image ? `background-image:url('${slide.image}')` : undefined}
+        >
+          <div class="hero-scrim" />
+          <div class="hero-inner">
+            {slide.eyebrow && <p class="hero-eyebrow">{slide.eyebrow}</p>}
+            {slide.heading && <h1 class="hero-heading" set:html={slide.heading.replace(/\n/g, "<br />")} />}
+            {slide.text && <p class="hero-text">{slide.text}</p>}
+            {slide.buttonText && (
+              <Button variant="primary" size="lg" link={slide.buttonLink} text={slide.buttonText} />
+            )}
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  {
+    list.length > 1 && (
+      <>
+        <button class="hero-arrow prev" type="button" aria-label="Previous slide">
+          <span aria-hidden="true">‹</span>
+        </button>
+        <button class="hero-arrow next" type="button" aria-label="Next slide">
+          <span aria-hidden="true">›</span>
+        </button>
+      </>
+    )
+  }
+</section>
+
+<style>
+  /* Measured from the source: headline Poppins 700 54px white over a full-bleed
+     photo with a dark scrim; eyebrow italic gold above it. */
+  .artisan-hero {
+    isolation: isolate;
+    min-height: var(--ah-minh);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-track {
+    display: grid;
+    min-height: var(--ah-minh);
+  }
+
+  .hero-slide {
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    grid-area: 1 / 1;
+    min-height: var(--ah-minh);
+    opacity: 0;
+    position: relative;
+    transition: opacity 0.6s ease;
+    visibility: hidden;
+  }
+
+  .hero-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hero-scrim {
+    background: var(--ah-overlay);
+    inset: 0;
+    position: absolute;
+  }
+
+  .hero-inner {
+    margin-inline: auto;
+    max-width: 1200px;
+    padding: 4rem clamp(1rem, 4vw, 3rem);
+    position: relative;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    color: var(--ah-eyebrow);
+    font-family: Poppins, sans-serif;
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    font-style: italic;
+    font-weight: 400;
+    margin: 0 0 0.5rem;
+  }
+
+  .hero-heading {
+    color: var(--ah-heading);
+    font-family: Poppins, sans-serif;
+    font-size: clamp(2.25rem, 4.2vw, 54px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0 0 1.25rem;
+    max-width: 18ch;
+  }
+
+  .hero-text {
+    color: var(--ah-text);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 1.75rem;
+    max-width: 52ch;
+  }
+
+  .hero-inner :global(.button) {
+    background: transparent;
+    border: 2px solid var(--ah-eyebrow);
+    border-radius: 50px;
+    color: var(--ah-eyebrow);
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 30px;
+  }
+
+  .hero-inner :global(.button:hover) {
+    background: var(--ah-eyebrow);
+    color: #fff;
+  }
+
+  .hero-arrow {
+    background: none;
+    border: none;
+    color: var(--ah-eyebrow);
+    cursor: pointer;
+    font-size: 3rem;
+    line-height: 1;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+
+  .hero-arrow.prev {
+    left: 0.25rem;
+  }
+
+  .hero-arrow.next {
+    right: 0.25rem;
+  }
+
+  @media (max-width: 720px) {
+    .hero-arrow {
+      display: none;
+    }
+
+    .hero-heading {
+      max-width: none;
+    }
+  }
+</style>
+
+<script>
+  const initHeroes = () => {
+    document.querySelectorAll(".artisan-hero").forEach((hero) => {
+      if ((hero as HTMLElement).dataset.heroReady === "true") return;
+      (hero as HTMLElement).dataset.heroReady = "true";
+
+      const slides = [...hero.querySelectorAll(".hero-slide")];
+      if (slides.length < 2) return;
+
+      let index = 0;
+      const show = (next: number) => {
+        index = (next + slides.length) % slides.length;
+        slides.forEach((s, i) => s.classList.toggle("is-active", i === index));
+      };
+
+      hero.querySelector(".prev")?.addEventListener("click", () => show(index - 1));
+      hero.querySelector(".next")?.addEventListener("click", () => show(index + 1));
+
+      const seconds = Number((hero as HTMLElement).dataset.autoplay || 0);
+      if (seconds > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        let timer = window.setInterval(() => show(index + 1), seconds * 1000);
+        hero.addEventListener("mouseenter", () => window.clearInterval(timer));
+        hero.addEventListener("mouseleave", () => {
+          timer = window.setInterval(() => show(index + 1), seconds * 1000);
+        });
+      }
+    });
+  };
+
+  initHeroes();
+  document.addEventListener("astro:page-load", initHeroes);
+</script>
