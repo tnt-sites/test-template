@@ -8,6 +8,8 @@
 const {
   eyebrow = "", heading = "",
   logos = [],
+  perView = 5,
+  autoplaySeconds = 5,
   backgroundColor = "#321c0e",
   backgroundImage = "",
   overlayOpacity = 0.15,
@@ -17,18 +19,20 @@ const {
 } = Astro.props;
 const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
 ---
-<section class="a-logostrip" id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+<section class="a-logostrip" data-autoplay={autoplaySeconds} id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--per:${perView};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="ls-inner">
     {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
-    <ul class="ls-logos no-check">
-      {list.map((l: any) => (
-        <li>{l.link
-          ? <a href={l.link}><img src={l.image} alt={l.alt || ""} loading="lazy" /></a>
-          : <img src={l.image} alt={l.alt || ""} loading="lazy" />}</li>
-      ))}
-    </ul>
+    <div class="ls-viewport">
+      <ul class="ls-logos no-check">
+        {list.map((l: any) => (
+          <li>{l.link
+            ? <a href={l.link}><img src={l.image} alt={l.alt || ""} loading="lazy" /></a>
+            : <img src={l.image} alt={l.alt || ""} loading="lazy" />}</li>
+        ))}
+      </ul>
+    </div>
   </div>
 </section>
 <style>
@@ -62,6 +66,63 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
     margin: 0;
   }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
-  .ls-logos { align-items: center; display: flex; flex-wrap: wrap; gap: 1.75rem 3rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
+
+  /* The source is an autoplaying carousel showing `perView` of the set, not a
+     static row — trimming the data to what is visible loses the rest. */
+  .ls-viewport {
+    overflow: hidden;
+  }
+
+  .ls-logos {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.6s ease;
+  }
+
+  .ls-logos li {
+    align-items: center;
+    display: flex;
+    flex: 0 0 calc(100% / var(--per, 5));
+    justify-content: center;
+    padding-inline: 1.5rem;
+  }
   .ls-logos img { height: auto; max-height: 120px; object-fit: contain; width: auto; }
 </style>
+
+<script>
+  const initLogoStrips = () => {
+    document.querySelectorAll(".a-logostrip").forEach((strip) => {
+      const el = strip as HTMLElement;
+      if (el.dataset.stripReady) return;
+      el.dataset.stripReady = "1";
+
+      const track = strip.querySelector(".ls-logos") as HTMLElement | null;
+      if (!track) return;
+      const items = track.children.length;
+      const per = Number(getComputedStyle(strip).getPropertyValue("--per")) || 5;
+      if (items <= per) return;
+
+      let first = 0;
+      const step = () => {
+        first = (first + 1) % items;
+        // Wrap by moving the leading item to the end, so the loop is seamless
+        // rather than snapping back at the end of the set.
+        track.appendChild(track.children[0]);
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        void track.offsetWidth;
+        track.style.transition = "";
+      };
+
+      const seconds = Number(el.dataset.autoplay || 0);
+      if (seconds > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setInterval(step, seconds * 1000);
+      }
+    });
+  };
+
+  initLogoStrips();
+  document.addEventListener("astro:page-load", initLogoStrips);
+</script>

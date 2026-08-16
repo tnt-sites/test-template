@@ -52,6 +52,12 @@ pageSections:
     eyebrow: ""
     heading: ""
     logos:
+      - image: /wp-content/uploads/2025/11/top.png
+        alt: top
+        link: ""
+      - image: /wp-content/uploads/2022/01/b-logo3.png
+        alt: b-logo3
+        link: ""
       - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
         alt: FFPC winner logo
         link: ""
@@ -72,6 +78,8 @@ pageSections:
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
     overlayOpacity: 0.15
+    perView: 5
+    autoplaySeconds: 5
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: Our Services
@@ -147,6 +155,15 @@ pageSections:
     eyebrow: Top Rated & Award Winning
     heading: Proudly Featured In
     logos:
+      - image: /wp-content/uploads/2020/08/acd-logo2.png
+        alt: acd-logo2
+        link: ""
+      - image: /wp-content/uploads/2021/05/edge2-rev.png
+        alt: Incisal edge logo
+        link: ""
+      - image: /wp-content/uploads/2021/05/23s-rev.png
+        alt: wisconsin state journal logo
+        link: ""
       - image: /wp-content/uploads/2020/08/Brava_2.png
         alt: Brava_2
         link: ""
@@ -164,6 +181,8 @@ pageSections:
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
     overlayOpacity: 0.15
+    perView: 4
+    autoplaySeconds: 4
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: Our Office

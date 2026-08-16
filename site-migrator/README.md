@@ -479,9 +479,11 @@ the first time.
    widgets, so "the first heading" is often the kicker (Open Sans 18px italic,
    0.5px tracking) and the real title is the second. Naive pairing reports a
    permanent italic/tracking mismatch that is not real.
-7. **Carousels report every slide.** An image carousel clones slides; the DOM
-   holds 17 where the design shows 5. Read `slides_to_show` from
-   `data-settings`, not the slide count.
+7. **Carousels report every slide, and they rotate.** An image carousel clones
+   slides, so the DOM holds 17 where the design shows 5. Read `slides_to_show`
+   and `autoplay_speed` from `data-settings` — and note that the extra logos
+   are not decoration to be trimmed away, they rotate through. Building a
+   static row of the visible count silently drops the rest of the set.
 8. **Global list markers.** `main ul li:before` injects a Fontello glyph whose
    font is never loaded, so every ported list renders a tofu box with a 50px
    indent. The starter ships `ul.no-check` as the escape hatch.
