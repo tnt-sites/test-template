@@ -1,18 +1,98 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2020/08/american_dental_association-rev.png",
+  "logoAlt": "american dental association",
   "links": [
     {
-      "name": "Home",
-      "path": "/"
+      "name": "Get in touch with us",
+      "path": "/contact-us/"
     },
     {
-      "name": "Why",
-      "path": "/why/"
+      "name": "Contact Us",
+      "path": "/contact-us/"
     },
     {
-      "name": "Blog",
-      "path": "/blog/"
+      "name": "Our Office",
+      "path": "/office-tour/"
+    },
+    {
+      "name": "Why Choose Artisan",
+      "path": "/why-choose-artisan/"
+    },
+    {
+      "name": "Mission, Vision, Values",
+      "path": "/mission-vision-values/"
+    },
+    {
+      "name": "Certified B Corp",
+      "path": "/certified-b-corporation/"
+    },
+    {
+      "name": "Patient Reviews",
+      "path": "/patient-reviews/"
+    },
+    {
+      "name": "Dr. Andersen",
+      "path": "/doctors-team/dr-nicole-andersen/"
+    },
+    {
+      "name": "Dr. Rehermann",
+      "path": "/doctors-team/dr-mark-rehermann/"
+    },
+    {
+      "name": "Dr. Dayal",
+      "path": "/doctors-team/dr-shruthi-dayal/"
+    },
+    {
+      "name": "Meet the Team",
+      "path": "/meet-the-team/"
+    },
+    {
+      "name": "Careers",
+      "path": "/careers/"
+    },
+    {
+      "name": "Take a Tour",
+      "path": "/office-tour/"
+    },
+    {
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/"
+    },
+    {
+      "name": "Health Plans",
+      "path": "/health-plans/"
+    },
+    {
+      "name": "Payments + Financing",
+      "path": "/financial/"
+    },
+    {
+      "name": "Online Payment",
+      "path": "https://pay.balancecollect.com/m/artisandentalllc"
+    },
+    {
+      "name": "HIPAA Policy",
+      "path": "/wp-content/uploads/2026/02/artisan-dental-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+    },
+    {
+      "name": "Send a Message",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "Request Appointment",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "Send Email",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "View Contact Info",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "O360®",
+      "path": "https://o360.com/"
     }
   ],
   "contactTitle": "Contact Us",

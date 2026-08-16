@@ -1,0 +1,73 @@
+/* mig:generated v=0.1.0 gen=chrome hash=95b6df121ac7e052 */
+/* Header and footer styling ported from the source site.
+   Colours, type and band backgrounds only — the template keeps its own
+   layout and dropdown behaviour. */
+@layer source-bridge {
+  /* headerLayout */
+  .main-nav .hd-content {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: normal;
+    max-width: 1600px;
+  }
+
+  /* navLink */
+  .main-nav nav > ul > li > a {
+    color: var(--color-brand, #321c0e);
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* logo */
+  .main-nav picture img, .main-nav img {
+    width: 215px;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* headerPhone */
+  .main-nav a[href^='tel:'] {
+    color: var(--color-bg, #ffffff);
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+  }
+
+  /* footerBackground */
+  footer {
+    color: var(--src-color4, #686868);
+  }
+
+  /* footerHeading */
+  footer h2, footer h3 {
+    color: var(--color-bg, #ffffff);
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  /* footerLink */
+  footer a {
+    color: var(--color-brand-subtle, #bf9800);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+
+  /* footerText */
+  footer p {
+    color: var(--src-color4, #686868);
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+}

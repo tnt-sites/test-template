@@ -1,46 +1,49 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Artisan Dental in Madison, WI",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/Artisan-Dental-Madison-417141075083050/"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/artisandds/"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "Twitter",
+      "icon": "social/twitter",
+      "link": "https://twitter.com/ArtisanDDS"
     }
   ],
   "offices": [
     {
-      "name": null,
+      "name": "Artisan Dental",
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
-          "country": null,
+          "lines": [
+            "10 North Livingston Street",
+            "Suite 301"
+          ],
+          "city": "Madison",
+          "state": "WI",
+          "postalCode": "53703",
+          "country": "US",
           "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(608) 467-8022",
+          "href": "tel:6084678022"
         }
       ],
       "emails": [
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "display": "info@artisandentalmadison.com",
+          "href": "mailto:info@artisandentalmadison.com"
         }
       ],
       "officeHours": [
@@ -74,8 +77,8 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [],
+  "footer_scripts": [],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }
