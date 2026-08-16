@@ -75,7 +75,25 @@ const READ = () => {
       })).filter((b) => b.title || b.text),
       eyebrow: t(eyebrow),
       heading: t(heading),
-      body: content ? content.innerHTML : "",
+      body: (() => {
+        if (!content) return "";
+        // Clean the lifted markup in the DOM, where it can be walked properly:
+        //  - drop heading/button widgets, which we re-emit as a real CTA
+        //    component; left in they render as unstyled Elementor markup
+        //  - drop srcset/sizes, which point at WordPress size variants that
+        //    were never ported, so the browser picks a 404 and shows alt text
+        const clone = content.cloneNode(true);
+        clone.querySelectorAll(".elementor-widget-heading, .elementor-widget-button, .elementor-button-wrapper")
+          .forEach((n) => n.remove());
+        clone.querySelectorAll("img").forEach((img) => {
+          img.removeAttribute("srcset");
+          img.removeAttribute("sizes");
+          img.removeAttribute("data-srcset");
+          img.removeAttribute("width");
+          img.removeAttribute("height");
+        });
+        return clone.innerHTML;
+      })(),
       bodyText: t(content),
       button: btn ? { text: t(btn), link: btn.getAttribute("href") ?? "" } : null,
       iframes: [...s.querySelectorAll("iframe")].map((f) => f.getAttribute("src") ?? ""),
@@ -116,8 +134,12 @@ function classify(s) {
   const hasCopy = s.hasPostContent || s.contentImages.length > 0 || s.bodyText.length > 120;
   if (uniqCarousel.length >= 3 && hasCopy) {
     const out = [];
+    // Only synthesise an <img> when the post content does not already carry
+    // one, or the flyer renders twice — once real, once as a broken duplicate
+    // showing its alt text.
+    const bodyHasImg = /<img\b/i.test(s.body || "");
     const bodyHtml =
-      (s.contentImages.length
+      (!bodyHasImg && s.contentImages.length
         ? s.contentImages.map((i) => `<p><img src="${i.src}" alt="${i.alt}"></p>`).join("")
         : "") + (s.body || "");
     if (bodyHtml.trim()) {
@@ -238,7 +260,18 @@ for (const id of ids) {
 
   const content = secs.filter((x) => !x.hidden && (x.text || x.images.length || x.iframes.length));
   const bannerSrc = content[0];
-  const built = content.slice(1).flatMap((x) => classify(x) ?? []).filter(Boolean);
+  const raw2 = content.slice(1).flatMap((x) => classify(x) ?? []).filter(Boolean);
+  // The same CTA often appears both inside a compound section and again as its
+  // own band; keep the first.
+  const seenCta = new Set();
+  const built = raw2.filter((sec) => {
+    const isCta = sec._component.endsWith("split-feature") && sec.heading && sec.buttonText && !sec.text;
+    if (!isCta) return true;
+    const key = `${sec.heading}|${sec.buttonText}`;
+    if (seenCta.has(key)) return false;
+    seenCta.add(key);
+    return true;
+  });
   const md = path.join(PAGES, `${id}.md`);
   if (!fs.existsSync(md)) { console.log(`  ! no page file for ${id}`); continue; }
   const raw = fs.readFileSync(md, "utf8");

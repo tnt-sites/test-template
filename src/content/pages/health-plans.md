@@ -22,7 +22,7 @@ pageSections:
     id: ""
     eyebrow: ""
     heading: ""
-    text: "<p><img src=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" alt=\"Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods.\"></p>
+    text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
@@ -42,7 +42,7 @@ pageSections:
 
       \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" data-elementor-open-lightbox=\"yes\" data-e-action-hash=\"#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Nzk1NSwidXJsIjoiaHR0cHM6XC9cL2FydGlzYW5kZW50YWxtYWRpc29uLmNvbVwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNlwvMDJcL2FydGlzYW4tZGVudGFsLWhlYWx0aC1wbGFuLWZseWVyLXYxLmpwZyJ9\">
 
-      \t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"1999\" height=\"1485\" src=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" class=\"attachment-full size-full wp-image-7955\" alt=\"Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods.\" srcset=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg 1999w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1200x891.jpg 1200w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1600x1189.jpg 1600w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-800x594.jpg 800w, /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1-1536x1141.jpg 1536w\" sizes=\"(max-width: 1999px) 100vw, 1999px\">\t\t\t\t\t\t\t\t</a>
+      \t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" src=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" class=\"attachment-full size-full wp-image-7955\" alt=\"Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods.\">\t\t\t\t\t\t\t\t</a>
 
       \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 
@@ -74,39 +74,9 @@ pageSections:
 
       \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
 
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-47af693 elementor-widget elementor-widget-heading\" data-id=\"47af693\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
+      \t\t\t\t\t\t
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t<h4 class=\"elementor-heading-title elementor-size-default\">Get Started Today! Call 608-467-8022</h4>\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-40d6147 elementor-align-center elementor-mobile-align-center elementor-tablet-align-center elementor-widget elementor-widget-button\" data-id=\"40d6147\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"button.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\">
-
-      \t\t\t\t\t<a class=\"elementor-button elementor-button-link elementor-size-md\" href=\"tel:+16084678022\">
-
-      \t\t\t\t\t\t<span class=\"elementor-button-content-wrapper\">
-
-      \t\t\t\t\t\t<span class=\"elementor-button-icon\">
-
-      \t\t\t\t<i aria-hidden=\"true\" class=\"fas fa-phone\"></i>\t\t\t</span>
-
-      \t\t\t\t\t\t\t\t\t<span class=\"elementor-button-text\">Call Now</span>
-
-      \t\t\t\t\t</span>
-
-      \t\t\t\t\t</a>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
+      \t\t\t\t
 
       \t\t\t\t\t</div>
 
@@ -193,19 +163,4 @@ pageSections:
     overlayOpacity: 0.15
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Get Started Today! Call 608-467-8022
-    text: ""
-    image: ""
-    buttonText: Call Now
-    buttonLink: tel:+16084678022
-    reverse: false
-    align: center
-    mediaMinHeight: 0px
-    backgroundColor: "#321c0e"
-    eyebrowColor: "#d2b22e"
-    headingColor: "#ffffff"
-    textColor: "#ffffff"
 ---
