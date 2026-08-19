@@ -157,7 +157,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p><img decoding=\"async\" class=\"alignleft\" src=\"/wp-content/uploads/2020/09/logo-black-certified-b-corpora-.png\" alt=\"Certified B Corporation\">B corporation certification is one of the most respected and credible certifications for conscious and sustainable businesses globally with more than 6737 companies, 161 industries and 90 countries as of 5/8/2023.&nbsp;&nbsp;Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019.&nbsp;<a href=\"https://bthechange.com/2018-best-for-the-world-workers-honorees-e285649d2514\">The Best For The World designation</a>&nbsp;is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment.&nbsp; You can learn more at our&nbsp;Certified B Corporations page.</p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<div style=\"background:#e0e0e0;border:1px solid #696969;border-radius:6px;padding:1.5rem 1.75rem;overflow:hidden;\"><p><img decoding=\"async\" class=\"alignleft\" src=\"/wp-content/uploads/2020/09/logo-black-certified-b-corpora-.png\" alt=\"Certified B Corporation\" width=\"100\" height=\"163\">B corporation certification is one of the most respected and credible certifications for conscious and sustainable businesses globally with more than 6737 companies, 161 industries and 90 countries as of 5/8/2023.&nbsp;&nbsp;Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019.&nbsp;<a href=\"https://bthechange.com/2018-best-for-the-world-workers-honorees-e285649d2514\">The Best For The World designation</a>&nbsp;is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment.&nbsp; You can learn more at our&nbsp;Certified B Corporations page.</p></div>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: ""
@@ -191,6 +191,26 @@ pageSections:
     textColor: "#333333"
     buttonBackgroundColor: ""
     buttonTextColor: ""
+    paddingBlock: 60px 0px
+  - _component: page-sections/artisan/split-feature
+    id: ""
+    eyebrow: ""
+    heading: ""
+    text: <p></p>
+    image: /wp-content/uploads/2022/12/Graphic-without-prices.jpg
+    buttonText: ""
+    buttonLink: ""
+    reverse: false
+    align: left
+    mediaMinHeight: 0px
+    backgroundColor: transparent
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
+    textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
+    paddingBlock: 0px 60px
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""

@@ -15,6 +15,8 @@ import mdx from "@astrojs/mdx";
 
 import tailwindcss from "@tailwindcss/vite";
 
+import remarkYoutubeEmbed from "./src/lib/remark-youtube-embed.mjs";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
@@ -47,7 +49,9 @@ export default defineConfig({
         return !page.includes("/component-library");
       },
     }),
-    mdx(),
+    mdx({
+      remarkPlugins: [remarkYoutubeEmbed],
+    }),
   ],
   vite: {
     css: {
