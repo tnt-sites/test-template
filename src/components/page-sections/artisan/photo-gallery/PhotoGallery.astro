@@ -1,0 +1,98 @@
+---
+/**
+ * A heading over one or more patient photos that open full-size in a
+ * lightbox on click — the source's "[Patient]'s Photos Courtesy of
+ * Allergan" rows. Each photo is a single flat before/after comparison
+ * graphic (labels baked into the image itself), shown at its natural
+ * aspect ratio rather than cropped into a card.
+ *
+ * Baked in: layout, lightbox behaviour. Props: heading, images, colours.
+ */
+const {
+  heading = "",
+  images = [],
+  headingColor = "#321c0e",
+  backgroundColor = "#ffffff",
+  id, _component, ...rest
+} = Astro.props;
+const items = Array.isArray(images) ? images.filter((p: any) => p?.image) : [];
+---
+{items.length > 0 && (
+  <section class="a-photogallery" id={id || undefined}
+    style={`--bg:${backgroundColor};--hd:${headingColor}`} {...rest}>
+    <div class="pg-inner">
+      {heading && <h3>{heading}</h3>}
+      <div class="pg-grid">
+        {items.map((p: any, i: number) => (
+          <button class="pg-thumb" type="button" data-lightbox-index={i}>
+            <img src={p.image} alt={p.alt || ""} loading="lazy" />
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="pg-overlay" hidden>
+      <button class="pg-close" type="button" aria-label="Close">✕</button>
+      <button class="pg-prev" type="button" aria-label="Previous photo">‹</button>
+      <img class="pg-full" src="" alt="" />
+      <button class="pg-next" type="button" aria-label="Next photo">›</button>
+    </div>
+  </section>
+)}
+<style>
+  .a-photogallery { background-color: var(--bg); padding-block: 2.5rem; }
+  .pg-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.375rem,2.75vw,28px); font-weight: 700; margin: 0 0 1.75rem; text-align: center; }
+  .pg-grid { align-items: flex-start; display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; }
+  .pg-thumb { background: none; border: 0; cursor: pointer; flex: 0 1 500px; max-width: 100%; padding: 0; }
+  .pg-thumb img { border-radius: 4px; display: block; height: auto; transition: opacity 0.2s ease; width: 100%; }
+  .pg-thumb:hover img { opacity: 0.85; }
+  .pg-overlay {
+    align-items: center; background: rgba(20, 12, 6, 0.92); display: flex; inset: 0;
+    justify-content: center; position: fixed; z-index: 999;
+  }
+  .pg-overlay[hidden] { display: none; }
+  .pg-full { max-height: 88vh; max-width: 82vw; object-fit: contain; }
+  .pg-close, .pg-prev, .pg-next {
+    background: rgba(255, 255, 255, 0.12); border: 0; border-radius: 50%; color: #fff;
+    cursor: pointer; font-size: 1.5rem; height: 44px; line-height: 1; position: absolute; width: 44px;
+  }
+  .pg-close { right: 1.5rem; top: 1.5rem; }
+  .pg-prev { left: 1.5rem; }
+  .pg-next { right: 1.5rem; }
+  .pg-close:hover, .pg-prev:hover, .pg-next:hover { background: rgba(255, 255, 255, 0.24); }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>(".a-photogallery").forEach((section) => {
+    if (section.dataset.pgReady) return;
+    section.dataset.pgReady = "1";
+
+    const thumbs = [...section.querySelectorAll<HTMLButtonElement>(".pg-thumb")];
+    const overlay = section.querySelector<HTMLElement>(".pg-overlay");
+    const fullImg = section.querySelector<HTMLImageElement>(".pg-full");
+    if (!overlay || !fullImg || thumbs.length === 0) return;
+
+    let current = 0;
+    const show = (i: number) => {
+      current = (i + thumbs.length) % thumbs.length;
+      const img = thumbs[current].querySelector("img");
+      if (img) {
+        fullImg.src = img.src;
+        fullImg.alt = img.alt;
+      }
+      overlay.hidden = false;
+    };
+    const close = () => { overlay.hidden = true; };
+
+    thumbs.forEach((t, i) => t.addEventListener("click", () => show(i)));
+    section.querySelector(".pg-close")?.addEventListener("click", close);
+    section.querySelector(".pg-prev")?.addEventListener("click", () => show(current - 1));
+    section.querySelector(".pg-next")?.addEventListener("click", () => show(current + 1));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", (e) => {
+      if (overlay.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+  });
+</script>

@@ -13,60 +13,11 @@ pageSections:
     heading: Mission, Vision, Values
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
     minHeight: ""
-  - _component: page-sections/artisan/services-grid
-    id: ""
-    eyebrow: ""
-    heading: "MISSION:"
-    text: "Artisan Dental is an award-winning, mission, vision and values oriented general dentistry practice in downtown Madison, Wisconsin. We a heartened to be part of the larger Business For Good Movement and a Certified B Corporation. MISSION: Our mission is to optimize the health and happiness of our patients, team members, suppliers, community, and the environment through exceptional quality care and "
-    buttonText: ""
-    buttonLink: ""
-    cards:
-      - icon: ""
-        title: Love
-        text: ""
-        link: ""
-      - icon: ""
-        title: Wisdom
-        text: ""
-        link: ""
-      - icon: ""
-        title: Compassion
-        text: ""
-        link: ""
-      - icon: ""
-        title: Service
-        text: ""
-        link: ""
-      - icon: ""
-        title: Collaboration
-        text: ""
-        link: ""
-      - icon: ""
-        title: Creativity
-        text: ""
-        link: ""
-      - icon: ""
-        title: Ethical Integrity
-        text: ""
-        link: ""
-      - icon: ""
-        title: Empathy
-        text: ""
-        link: ""
-      - icon: ""
-        title: Fun
-        text: ""
-        link: ""
-    backgroundColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    cardBackgroundColor: "#fbfaf7"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -85,9 +36,12 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -106,71 +60,107 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
-  - _component: page-sections/artisan/services-grid
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
+  - _component: page-sections/artisan/icon-grid
     id: ""
     eyebrow: ""
     heading: "CORE VALUES:"
     text: ""
-    buttonText: ""
-    buttonLink: ""
     cards:
-      - icon: ""
+      - icon: check-circle-duo
         title: Love
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Wisdom
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Compassion
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Service
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Collaboration
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Creativity
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Ethical Integrity
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Empathy
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Fun
         text: ""
-        link: ""
+    columns: "3"
     backgroundColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
-    cardBackgroundColor: "#fbfaf7"
+    iconColor: "var(--color-brand-secondary)"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
     heading: ""
     text: <p></p>
-    image: ""
+    image: /wp-content/uploads/2020/08/Artisan-Team-Sidewalk_Retouch2-12.jpg
     buttonText: ""
     buttonLink: ""
     reverse: false
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+        link: ""
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+        link: ""
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+        link: ""
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+        link: ""
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+        link: ""
+      - image: /wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png
+        alt: Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.
+        link: ""
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+        link: ""
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+        link: ""
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
 ---

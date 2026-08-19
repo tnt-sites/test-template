@@ -1,0 +1,475 @@
+---
+/**
+ * Restore Your Smile And — migrated from full-partial-mouth-rehabilitation [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  image2 = "",
+  image2Alt = "",
+  heading2 = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  image3 = "",
+  image3Alt = "",
+  backgroundColor = "#f2f2f2",
+  headingColor = "var(--color-brand-secondary)",
+  textColor = "#686868",
+  buttonBackgroundColor = "#321c0e",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#686868",
+  hoverColor = "#666666",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="restore-your-smile-and" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonTextHoverColor};--c7:${hoverColor}`} {...rest}>
+  <div class="rysa-box">
+    <div class="rysa-box2">
+      <figure class="rysa-box3">
+        {image && <img class="rysa-media" src={image} alt={imageAlt || ""} loading="lazy" />}
+      </figure>
+    </div>
+    <div class="rysa-box4">
+      <div class="rysa-box5">
+        <div class="rysa-box6">
+          <div class="rysa-box7">
+            <div class="rysa-box8">
+              <h2 class="rysa-heading">{heading}</h2>
+            </div>
+            <div class="rysa-box9">
+              {subheading && <h4 class="rysa-heading2">{subheading}</h4>}
+            </div>
+          </div>
+          <div class="rysa-box10">
+            <div class="rysa-box11">
+              {image2 && <img class="rysa-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="395" height="205" />}
+            </div>
+          </div>
+        </div>
+        <div class="rysa-box12">
+          {heading2 && <h3 class="rysa-heading3">{heading2}</h3>}
+        </div>
+        <div class="rysa-box13">
+          <div class="rysa-box14">
+            {text && <div class="rysa-body" set:html={text} />}
+          </div>
+        </div>
+        <div class="rysa-box15">
+          <div class="rysa-box16">
+            <div class="rysa-box17">
+              <div class="rysa-box18">
+                {buttonText && <Button variant="primary" size="sm" width="none" borderRadius="none" borderWidth="none" class="rysa-btn" text={buttonText} link={buttonLink || "#"} />}
+              </div>
+            </div>
+          </div>
+          <div class="rysa-box19">
+            <div class="rysa-box20">
+              {image3 && <img class="rysa-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="395" height="205" />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .restore-your-smile-and {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding: 50px 10px;
+    position: relative;
+  }
+
+  .rysa-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .rysa-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rysa-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin: 0px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rysa-media {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+
+  .rysa-box4 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .rysa-box5 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rysa-box6 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rysa-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rysa-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rysa-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-size: 31px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rysa-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rysa-heading2 {
+    box-sizing: border-box;
+    color: var(--color-brand-secondary);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rysa-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rysa-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rysa-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .rysa-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .rysa-heading3 {
+    box-sizing: border-box;
+    color: #321c0e;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rysa-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rysa-box14 {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+  }
+
+  .rysa-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .rysa-box15 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rysa-box16 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rysa-box17 {
+    background-color: #321c0e;
+    box-sizing: border-box;
+    flex: 0 0 80%;
+    margin-bottom: 30px;
+    max-width: 80%;
+    text-align: left;
+  }
+
+  .rysa-box18 {
+    box-sizing: border-box;
+  }
+
+  :global(.rysa-btn) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rysa-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .rysa-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rysa-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rysa-media3 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  :global(.rysa-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #686868;
+    color: var(--c6);
+  }
+
+  :global(.rysa-btn):hover .rysa-box19 {
+    border-top-color: #666666;
+    color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .restore-your-smile-and {
+      max-width: 675px;
+    }
+
+    .rysa-box17 {
+      flex: 0 0 30.57%;
+      max-width: 30.57%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .restore-your-smile-and {
+      max-width: 1108px;
+      padding: 100px 0px;
+    }
+
+    .rysa-box {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .rysa-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .rysa-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .rysa-box5 {
+      flex: 0 0 90.97%;
+      justify-content: normal;
+      margin-left: 50px;
+      max-width: 90.97%;
+    }
+
+    .rysa-box6 {
+      flex-wrap: nowrap;
+    }
+
+    .rysa-box7 {
+      flex: 0 0 69.01%;
+      max-width: 69.01%;
+    }
+
+    .rysa-box8 {
+      text-align: start;
+    }
+
+    .rysa-box9 {
+      text-align: start;
+    }
+
+    .rysa-box10 {
+      flex: 0 0 30.37%;
+      max-width: 30.37%;
+    }
+
+    .rysa-box11 {
+      text-align: start;
+    }
+
+    .rysa-media2 {
+      width: 100%;
+    }
+
+    .rysa-box12 {
+      margin-bottom: 15px;
+      text-align: start;
+    }
+
+    .rysa-heading3 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .rysa-box15 {
+      flex-wrap: nowrap;
+    }
+
+    .rysa-box16 {
+      flex: 0 0 69.01%;
+      max-width: 69.01%;
+    }
+
+    .rysa-box17 {
+      flex: 0 0 60%;
+      margin-bottom: 0px;
+      max-width: 60%;
+      text-align: start;
+    }
+
+    .rysa-box19 {
+      flex: 0 0 30.79%;
+      max-width: 30.79%;
+    }
+
+    .rysa-media3 {
+      width: 100%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .rysa-heading {
+    font-weight: 400;
+  }
+  .rysa-heading2 {
+    font-weight: 400;
+  }
+  .rysa-heading3 {
+    font-weight: 700;
+  }
+  :global(.rysa-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+/* wpmig:corrections:end */
+</style>

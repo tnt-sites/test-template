@@ -1,0 +1,25 @@
+label: Photo Lightbox
+icon: photo
+description: Grid of photos that open full-size in a lightbox on click.
+value:
+  _component: page-sections/artisan/photo-lightbox
+  id: ""
+  eyebrow: ""
+  heading: ""
+  photos:
+    - image: ""
+      alt: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+preview:
+  text:
+    - Photo Lightbox
+  subtext:
+    - key: heading
+  icon: photo
+picker_preview:
+  text: Photo Lightbox
+  subtext: Grid of photos that open full-size in a lightbox.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/photo-lightbox/photo-lightbox.cloudcannon.inputs.yml

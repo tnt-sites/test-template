@@ -13,7 +13,7 @@ pageSections:
     heading: Dr. Nicole Andersen
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -85,8 +85,6 @@ pageSections:
     image: /wp-content/uploads/2020/10/artisan2020071x2.jpg
     imageAlt: Demo image
     body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t
 
@@ -269,8 +267,6 @@ pageSections:
 
       </ul>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -278,4 +274,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Specific Product Info
+    prevLink: /specific-product-info/
+    nextName: Dr. Shruthi Dayal
+    nextLink: /dr-shruthi-dayal/
+    textColor: "#321c0e"
 ---

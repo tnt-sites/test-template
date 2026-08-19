@@ -10,17 +10,33 @@ const {
   logos = [],
   perView = 5,
   autoplaySeconds = 5,
-  backgroundColor = "#321c0e",
+  backgroundColor = "var(--color-brand)",
   backgroundImage = "",
   overlayOpacity = 0.15,
   eyebrowColor = "#ffffff",
   headingColor = "#ffffff",
+  // Presentation, measured from the source rather than assumed. An award band
+  // and an edge-to-edge photo gallery are the same *behaviour* (a rotating
+  // strip) with different presentation, so these vary while the rotation is
+  // shared. Defaults reproduce the award band exactly, so existing usage is
+  // unaffected.
+  gap = "1.5rem",
+  maxWidth = "1200px",
+  paddingBlock = "46px",
+  itemFit = "contain",
+  itemHeight = "120px",
+  // Opt-in static layout: a fixed-column grid instead of the autoplaying
+  // strip, for sets meant to be browsed rather than glanced at (e.g. a list
+  // of downloadable reports).
+  layout = "carousel",
+  columns = 2,
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
+const isGrid = layout === "grid";
 ---
-<section class="a-logostrip" data-autoplay={autoplaySeconds} id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--per:${perView};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+<section class:list={["a-logostrip", maxWidth === "none" && "is-bleed", isGrid && "is-grid"]} data-autoplay={isGrid ? 0 : autoplaySeconds} id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--per:${perView};--cols:${columns};--gap:${gap};--maxw:${maxWidth};--padblock:${paddingBlock};--fit:${itemFit};--ih:${itemHeight};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="ls-inner">
     {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
@@ -36,7 +52,7 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
   </div>
 </section>
 <style>
-  .a-logostrip { background-color: var(--bg); padding-block: 46px; position: relative; }
+  .a-logostrip { background-color: var(--bg); padding-block: var(--padblock, 46px); position: relative; }
 
   /* Measured: the source lays #321c0e over the wood texture. */
 
@@ -55,7 +71,8 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
     opacity: var(--woodopacity, 0.15);
     position: absolute;
   }
-  .ls-inner {  margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
+  .ls-inner {  margin-inline: auto; max-width: var(--maxw, 1200px); padding-inline: var(--maxw-pad, clamp(1rem,3vw,2.5rem)); position: relative; text-align: center; }
+  .a-logostrip.is-bleed .ls-inner { --maxw-pad: 0px; }
   .ls-eyebrow {
     color: var(--eb);
     font-family: "Open Sans", sans-serif;
@@ -86,16 +103,32 @@ const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
     display: flex;
     flex: 0 0 calc(100% / var(--per, 5));
     justify-content: center;
-    padding-inline: 1.5rem;
+    padding-inline: var(--gap, 1.5rem);
   }
-  .ls-logos img { height: auto; max-height: 120px; object-fit: contain; width: auto; }
+  .ls-logos img { height: auto; max-height: var(--ih, 120px); object-fit: var(--fit, contain); width: auto; }
+  .a-logostrip.is-bleed .ls-logos img { height: var(--ih, auto); max-height: none; width: 100%; }
+
+  /* Grid layout: a static, fully-visible set rather than a rotating strip.
+     Flex-wrap rather than CSS grid so a leftover item on the final row
+     centers with the row instead of sticking to the first column. */
+  .a-logostrip.is-grid .ls-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1.5rem);
+    justify-content: center;
+  }
+  .a-logostrip.is-grid .ls-logos li {
+    flex: 0 1 calc((100% - (var(--cols, 2) - 1) * var(--gap, 1.5rem)) / var(--cols, 2));
+    padding-inline: 0;
+  }
+  .a-logostrip.is-grid .ls-logos img { max-height: none; width: 100%; }
 </style>
 
 <script>
   const initLogoStrips = () => {
     document.querySelectorAll(".a-logostrip").forEach((strip) => {
       const el = strip as HTMLElement;
-      if (el.dataset.stripReady) return;
+      if (el.dataset.stripReady || el.classList.contains("is-grid")) return;
       el.dataset.stripReady = "1";
 
       const track = strip.querySelector(".ls-logos") as HTMLElement | null;

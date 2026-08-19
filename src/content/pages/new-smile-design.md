@@ -7,67 +7,85 @@ title: New Smile Design
 description: ""
 canonical: /new-smile-design/
 pageSections:
-  - _component: page-sections/artisan/services-grid
+  - _component: page-sections/artisan/page-banner
+    id: ""
+    eyebrow: ""
+    heading: New Smile Design
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "var(--color-brand-secondary)"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
+    minHeight: ""
+  - _component: page-sections/artisan/photo-intro-hero
+    id: ""
+    eyebrow: Look your very best!
+    heading: Have You Considered A New Smile Design?
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t\t\t\t\t<p>People choose new smile design&nbsp;services to assist with a variety of challenges including those outlined below.&nbsp; If you have any of these common issues and would like to explore enhancing your smile, it would be Dr. Andersen’s pleasure to help you!</p>\t\t\t\t\t\t\t\t</div>
+
+      \t\t\t\t"
+    image: /wp-content/uploads/2020/09/shutterstock_410381239-1.jpg
+    buttonText: Schedule Your Consultation
+    buttonLink: /contact-us/
+    secondaryButtonText: Learn More
+    secondaryButtonLink: "#down"
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
+  - _component: page-sections/artisan/icon-grid
     id: ""
     eyebrow: We Can Fix These
     heading: Common Issues
     text: ""
-    buttonText: ""
-    buttonLink: ""
     cards:
-      - icon: ""
+      - icon: check-circle-duo
         title: Tooth Discoloration
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Crooked Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Gaps in Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Crowded Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Missing Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Misshapen Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Length/Proportions
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Chipped Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Cracked Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Worn Teeth
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Gummy Smile
         text: ""
-        link: ""
-      - icon: ""
+      - icon: check-circle-duo
         title: Stained Teeth
         text: ""
-        link: ""
+    columns: "3"
     backgroundColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
-    cardBackgroundColor: "#fbfaf7"
+    iconColor: "var(--color-brand-secondary)"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -86,9 +104,12 @@ pageSections:
     align: left
     mediaMinHeight: 420px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: rgb(50, 28, 14)
+    buttonTextColor: rgb(255, 255, 255)
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: A New Smile Design
@@ -107,13 +128,16 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: rgb(50, 28, 14)
-    eyebrowColor: "#d2b22e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#ffffff"
     textColor: "#ffffff"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
-    eyebrow: ""
-    heading: "Step #1"
+    eyebrow: "Step #1"
+    heading: Understanding You and Your Goals
     text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
@@ -121,20 +145,23 @@ pageSections:
       \t\t\t\t\t\t\t\t\t<p>Time is created for Dr. Andersen to perform a comprehensive exam of your overall oral health.&nbsp; Dr. Andersen will review your historical treatment records and X-rays.&nbsp; She will also take photographs that will assist in the creation of dental models of your teeth.&nbsp; Dr. Andersen will then listen to your needs, wishes and goals regarding what you hope to see and experience when your smile is complete.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    image: ""
+    image: /wp-content/uploads/2020/09/shutterstock_511540777-1.jpg
     buttonText: ""
     buttonLink: ""
     reverse: false
     align: left
-    mediaMinHeight: 0px
+    mediaMinHeight: 420px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
-    eyebrow: ""
-    heading: "Step #2"
+    eyebrow: "Step #2"
+    heading: Review Your Individualized Treatment Plan
     text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
@@ -142,20 +169,23 @@ pageSections:
       \t\t\t\t\t\t\t\t\t<p>Dr. Andersen will combine your overall oral health and aesthetic preferences to formulate an individualized treatment plan.&nbsp; The plan brings together suggestions to foster your overall oral health and aesthetic preferences, leading to increased levels of confidence in your new smile.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    image: ""
+    image: /wp-content/uploads/2020/09/shutterstock_114795058-1.jpg
     buttonText: ""
     buttonLink: ""
-    reverse: false
+    reverse: true
     align: left
-    mediaMinHeight: 0px
+    mediaMinHeight: 420px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
-    eyebrow: ""
-    heading: "Step #3"
+    eyebrow: "Step #3"
+    heading: Smile Design Preparation
     text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
@@ -163,20 +193,23 @@ pageSections:
       \t\t\t\t\t\t\t\t\t<p>After you approve the final design for your smile,&nbsp; Dr. Andersen will complete the tooth preparation work.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    image: ""
+    image: /wp-content/uploads/2020/09/shutterstock_183860366-1.jpg
     buttonText: ""
     buttonLink: ""
     reverse: false
     align: left
-    mediaMinHeight: 0px
+    mediaMinHeight: 420px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
-    eyebrow: ""
-    heading: "Step #4"
+    eyebrow: "Step #4"
+    heading: Smile Design Completion
     text: "
 
       \t\t\t\t<div class=\"elementor-widget-container\">
@@ -184,16 +217,19 @@ pageSections:
       \t\t\t\t\t\t\t\t\t<p>Your final visits will include Dr. Andersen fitting and bonding your veneers or crowns to your teeth, along with any final gum sculpting.&nbsp; Steps 3 and 4 are comfortable with a range of spa-like amenities for your enjoyment and ease. The final outcome is a beautiful, healthy smile for years to come.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
-    image: ""
+    image: /wp-content/uploads/2020/09/shutterstock_444243769-2-1.jpg
     buttonText: ""
     buttonLink: ""
-    reverse: false
+    reverse: true
     align: left
-    mediaMinHeight: 0px
+    mediaMinHeight: 420px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/video-row
     id: ""
     videos:
@@ -205,51 +241,39 @@ pageSections:
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
-    heading: ""
-    text: <p></p>
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-  - _component: page-sections/artisan/logo-strip
-    id: ""
-    eyebrow: We have felixble payment options.
     heading: COMPLIMENTARY COSMETIC CONSULTATION
-    logos: []
-    perView: 0
-    autoplaySeconds: 5
+    text: ""
+    image: ""
+    buttonText: View Payment Options
+    buttonLink: /payment-financing-options/
+    reverse: false
+    align: center
+    mediaMinHeight: 0px
     backgroundColor: "#321c0e"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
     overlayOpacity: 0.15
-    eyebrowColor: "#ffffff"
+    marginBottom: 60px
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#ffffff"
+    textColor: "#ffffff"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
     heading: We welcome the opportunity to partner with you in realizing your smile restoration goals.
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400\">Call or email to schedule your appointment with Dr. Andersen and discuss your smile design goals.</span></p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
+    text: ""
     image: ""
     buttonText: Schedule Your Consultation
     buttonLink: /contact-us/
     reverse: false
-    align: left
+    align: center
     mediaMinHeight: 0px
-    backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
-    textColor: "#333333"
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    marginBottom: 60px
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
   - _component: page-sections/artisan/services-grid
     id: ""
     eyebrow: ""
@@ -295,7 +319,7 @@ pageSections:
         text: A full-mouth restoration can handle decayed, cracked or damaged teeth to full health and function and allow you to smile again with confidence. Dr. Andersen provides comprehensive dental services and has the skills necessary to make your full-mouth restoration successful. She is experienced in handling extensive cases, and is partner to one of the country’s best aesthetic dental labs to make sure the work you have done is not only strong and durable, but also looks aesthetic and natural.
         link: ""
     backgroundColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
     cardBackgroundColor: "#fbfaf7"
@@ -321,36 +345,6 @@ pageSections:
         link: ""
       - image: /wp-content/uploads/2020/09/shutterstock_444243769-2-1-1000x1000.jpg
         alt: happy patient in dental chair
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_1663189090-1-1000x1000.jpg
-        alt: Happy Woman Pointing Fingers At Perfect Smile
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_511540777-1-1000x1000.jpg
-        alt: Smiling Woman Making Frame Gesture
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_114795058-1-1000x1000.jpg
-        alt: Panoramic dental X-Ray with hands point
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_183860366-1-1000x1000.jpg
-        alt: Closeup of a woman patient at the dentist
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_410381239-1-1000x1000.jpg
-        alt: Young woman is touching her face and smiling while looking at the mirror
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_444243769-2-1-1000x1000.jpg
-        alt: happy patient in dental chair
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_1663189090-1-1000x1000.jpg
-        alt: Happy Woman Pointing Fingers At Perfect Smile
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_511540777-1-1000x1000.jpg
-        alt: Smiling Woman Making Frame Gesture
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_114795058-1-1000x1000.jpg
-        alt: Panoramic dental X-Ray with hands point
-        link: ""
-      - image: /wp-content/uploads/2020/09/shutterstock_183860366-1-1000x1000.jpg
-        alt: Closeup of a woman patient at the dentist
         link: ""
     perView: 5
     autoplaySeconds: 5

@@ -1,0 +1,273 @@
+---
+/**
+ * Step C — migrated from full-partial-mouth-rehabilitation [8] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="step-c" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="sc-box">
+    <div class="sc-box2">
+      <div class="sc-box3">
+        <div class="sc-box4">
+          <div class="sc-spacer" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+    <div class="sc-box5">
+      <div class="sc-box6">
+        <div class="sc-box7">
+          {eyebrow && <h6 class="sc-heading">{eyebrow}</h6>}
+        </div>
+        <div class="sc-box8">
+          <div class="sc-box9">
+            <h2 class="sc-heading2">{heading}</h2>
+          </div>
+        </div>
+        <div class="sc-box10">
+          <div class="sc-box11">
+            {text && <p class="sc-text">{text}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .step-c {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 298px;
+    padding: 50px 10px;
+    position: relative;
+  }
+
+  .sc-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sc-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sc-box3 {
+    background-image: url("/wp-content/uploads/2020/09/shutterstock_738949717-1.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sc-box4 {
+    box-sizing: border-box;
+  }
+
+  .sc-spacer {
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+  .sc-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sc-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sc-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sc-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sc-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sc-box9 {
+    box-sizing: border-box;
+  }
+
+  .sc-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sc-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sc-box11 {
+    box-sizing: border-box;
+    margin-bottom: -15px;
+  }
+
+  .sc-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .step-c {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .step-c {
+      max-width: 1108px;
+      padding: 0px;
+    }
+
+    .sc-box {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .sc-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sc-spacer {
+      height: 500px;
+    }
+
+    .sc-box5 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sc-box6 {
+      flex: 0 0 90.97%;
+      justify-content: normal;
+      margin-left: 50px;
+      max-width: 90.97%;
+    }
+
+    .sc-box7 {
+      text-align: start;
+    }
+
+    .sc-box8 {
+      text-align: start;
+    }
+
+    .sc-box9 {
+      margin-bottom: 15px;
+    }
+
+    .sc-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .sc-box10 {
+      text-align: start;
+    }
+
+    .sc-box11 {
+      margin-bottom: 30px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sc-heading {
+    font-weight: 400;
+  }
+  .sc-heading2 {
+    font-weight: 700;
+  }
+  .sc-box2 {
+    align-items: normal;
+    text-align: center;
+  }
+  .sc-text {
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .sc-box3 {
+    text-align: start;
+  }
+  .sc-box4 {
+    text-align: start;
+  }
+  .sc-spacer {
+    text-align: start;
+  }
+/* wpmig:corrections:end */
+</style>

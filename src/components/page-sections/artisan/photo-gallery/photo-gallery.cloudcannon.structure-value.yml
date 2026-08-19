@@ -1,0 +1,23 @@
+label: Photo Gallery
+icon: photo
+description: A heading over one or more patient photos that open full-size in a lightbox on click.
+value:
+  _component: page-sections/artisan/photo-gallery
+  id: ""
+  heading: ""
+  images:
+    - image: ""
+      alt: ""
+  headingColor: "#321c0e"
+  backgroundColor: "#ffffff"
+preview:
+  text:
+    - Photo Gallery
+  subtext:
+    - key: heading
+  icon: photo
+picker_preview:
+  text: Photo Gallery
+  subtext: Heading with patient photos that open in a lightbox.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/photo-gallery/photo-gallery.cloudcannon.inputs.yml

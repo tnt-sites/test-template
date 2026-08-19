@@ -1,0 +1,260 @@
+---
+/**
+ * Step — migrated from full-partial-mouth-rehabilitation [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="step" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="st-box">
+    <div class="st-box2">
+      <div class="st-box3">
+        <div class="st-box4">
+          <div class="st-spacer" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+    <div class="st-box5">
+      <div class="st-box6">
+        <div class="st-box7">
+          {eyebrow && <h6 class="st-heading">{eyebrow}</h6>}
+        </div>
+        <div class="st-box8">
+          <div class="st-box9">
+            <h2 class="st-heading2">{heading}</h2>
+          </div>
+        </div>
+        <div class="st-box10">
+          <div class="st-box11">
+            {text && <p class="st-text">{text}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .step {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    max-width: 298px;
+    padding: 50px 10px;
+    position: relative;
+  }
+
+  .st-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .st-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .st-box3 {
+    background-image: url("/wp-content/uploads/2020/09/shutterstock_511540777-1.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .st-box4 {
+    box-sizing: border-box;
+  }
+
+  .st-spacer {
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+  .st-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .st-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .st-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .st-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .st-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .st-box9 {
+    box-sizing: border-box;
+  }
+
+  .st-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .st-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .st-box11 {
+    box-sizing: border-box;
+    margin-bottom: -15px;
+  }
+
+  .st-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .step {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .step {
+      max-width: 1108px;
+      padding: 0px;
+    }
+
+    .st-box {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .st-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .st-spacer {
+      height: 500px;
+    }
+
+    .st-box5 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .st-box6 {
+      flex: 0 0 90.97%;
+      justify-content: normal;
+      margin-left: 50px;
+      max-width: 90.97%;
+    }
+
+    .st-box7 {
+      text-align: start;
+    }
+
+    .st-box8 {
+      text-align: start;
+    }
+
+    .st-box9 {
+      margin-bottom: 15px;
+    }
+
+    .st-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .st-box10 {
+      text-align: start;
+    }
+
+    .st-box11 {
+      margin-bottom: 30px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .st-heading {
+    font-weight: 400;
+  }
+  .st-heading2 {
+    font-weight: 700;
+  }
+  .st-text {
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

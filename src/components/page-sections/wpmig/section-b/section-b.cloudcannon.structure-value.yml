@@ -1,0 +1,18 @@
+label: Section B
+icon: grid_view
+description: Section B section with editable images. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/section-b
+  id: ""
+  images:
+    - image: ""
+      imageAlt: ""
+preview:
+  text:
+    - Section B
+  icon: grid_view
+picker_preview:
+  text: Section B
+  subtext: Section B section with editable images. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/section-b/section-b.cloudcannon.inputs.yml

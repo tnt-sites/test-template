@@ -3,6 +3,14 @@ _inputs:
     type: array
     options:
       structures: _structures.logo_strip_item
+  layout:
+    type: select
+    options:
+      values:
+        - carousel
+        - grid
+  columns:
+    type: number
   backgroundColor:
     type: color
   eyebrowColor:

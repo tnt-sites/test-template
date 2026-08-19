@@ -13,7 +13,7 @@ pageSections:
     heading: Dr. Shruthi Dayal
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -85,8 +85,6 @@ pageSections:
     image: /wp-content/uploads/2020/08/21.jpg
     imageAlt: Dr. Shruthi Dayal - Artisan Dental Staff
     body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t
 
@@ -204,8 +202,6 @@ pageSections:
 
       </ul>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -213,4 +209,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Dr. Nicole Andersen
+    prevLink: /dr-nicole-andersen/
+    nextName: Dr. Mark Rehermann
+    nextLink: /dr-mark-rehermann/
+    textColor: "#321c0e"
 ---

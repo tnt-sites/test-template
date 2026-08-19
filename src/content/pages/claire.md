@@ -13,7 +13,7 @@ pageSections:
     heading: Claire
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,13 +86,9 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t<p>As a dental hygienist, I’m so excited to be a part of the Artisan Dental family! My favorite thing about being a hygienist is being able to help educate my patients. I want my patients to leave the dental office feeling confident and informed about their treatment.<br>
 
       When I’m not at the office, you can find me snuggled up with my Bernese Mountain Dog, CocoBean, or binge-watching tv shows. Can’t wait to meet you all!</p>
-
-      \t\t\t\t</div>
 
       \t\t\t\t"
     backgroundColor: transparent
@@ -101,4 +97,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Recognitions and Awards
+    prevLink: /recognitions-and-awards/
+    nextName: Dermal Filler
+    nextLink: /dermal-filler/
+    textColor: "#321c0e"
 ---

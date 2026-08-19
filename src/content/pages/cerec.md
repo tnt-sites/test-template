@@ -13,7 +13,7 @@ pageSections:
     heading: CEREC
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -25,8 +25,6 @@ pageSections:
     image: /wp-content/uploads/2021/08/shutterstock_611274782-1.jpg
     imageAlt: ""
     body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t
 
@@ -67,8 +65,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">Are you ready to see what our team of <a href=\"https://pubmed.ncbi.nlm.nih.gov/15206254/\" target=\"_blank\" aria-label=\" (opens in a new tab)\" rel=\"noreferrer noopener\" class=\"rank-math-link\">CEREC restorations</a> experts can do for you? Contact us and arrange a consultation and exam today! After your visit, you’ll have a better understanding of your oral health and how CEREC can produce the best possible restoration for you. We look forward to seeing you in our office!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -76,4 +72,38 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2025/11/top-1.png
+        alt: top
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
+  - _component: page-sections/artisan/share-bar
+    id: ""
+    label: Share this page with your friends!
+    headingColor: "#321c0e"
 ---

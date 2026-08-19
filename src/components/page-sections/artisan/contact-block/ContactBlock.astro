@@ -1,55 +1,101 @@
 ---
 /**
  * Contact details beside a message form — the source's "Send us a message".
- * The form is rebuilt with the starter's form builder; the backend is
- * deliberately unwired (see tools/extract-forms.mjs).
+ *
+ * Two ways in for the form, because the source has two kinds: `formBlocks`
+ * rebuilds it with the starter's form builder (the home page), and `formHtml`
+ * renders the source's own hand-written `.tnt-form` markup lifted verbatim
+ * (contact-us, where the same page also carries a 20-field appointment form
+ * that only exists as lifted markup — one style of form per page beats two).
+ * Either way the backend is unwired (see tools/extract-forms.mjs).
+ *
+ * The map is optional and, when it's the only thing set, renders on its own —
+ * the source gives it a full-bleed section of its own above the details.
  *
  * Baked in: layout, type scale. Props: text, colours. Array: `details`.
  */
 import Components from "@components/utils/renderBlock.astro";
 const {
-  heading = "", details = [], formBlocks = [], formAction = "/thank-you/",
+  detailsHeading = "", heading = "", details = [], formBlocks = [], formHtml = "",
+  formAction = "/thank-you/",
   mapEmbedUrl = "", mapHeight = "360px",
-  backgroundColor = "#ffffff", headingColor = "#321c0e",
-  labelColor = "#321c0e", textColor = "#333333",
+  backgroundColor = "#ffffff", headingColor = "var(--color-brand)",
+  labelColor = "var(--color-brand)", textColor = "#333333",
+  headingSize = "", paddingBlock = "",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(details) ? details.filter(Boolean) : [];
+const blocks = Array.isArray(formBlocks) ? formBlocks : [];
+const hasForm = blocks.length > 0 || Boolean(formHtml);
+const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detailsHeading);
 ---
-<section class="a-contact" id={id || undefined}
-  style={`--bg:${backgroundColor};--hd:${headingColor};--lb:${labelColor};--tx:${textColor}`} {...rest}>
+<section class:list={["a-contact", { "map-only": !hasInner }]} id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--lb:${labelColor};--tx:${textColor}${headingSize ? `;--hdsize:${headingSize}` : ""}${paddingBlock ? `;--pad:${paddingBlock}` : ""}`} {...rest}>
   {mapEmbedUrl && (
     <div class="cb-map" style={`--maph:${mapHeight}`}>
       <iframe src={mapEmbedUrl} title="Map to Artisan Dental" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
     </div>
   )}
-  <div class="cb-inner">
-    <div class="cb-details">
-      {list.map((d: any) => (
-        <div class="cb-row">
-          <p class="cb-label">{d.label}</p>
-          {d.link ? <a href={d.link}>{d.value}</a> : <p class="cb-value">{d.value}</p>}
+  {hasInner && (
+    <div class="cb-inner">
+      <div class="cb-details">
+        {detailsHeading && <h2>{detailsHeading}</h2>}
+        {list.map((d: any) => (
+          <div class="cb-row">
+            {d.icon && <img class="cb-icon" src={d.icon} alt="" loading="lazy" />}
+            <div class="cb-copy">
+              <p class="cb-label">{d.link ? <a href={d.link}>{d.label}</a> : d.label}</p>
+              {d.link
+                ? <a class:list={["cb-value", { linked: d.valueIsLink }]} href={d.link}>{d.value}</a>
+                : <p class="cb-value">{d.value}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+      {(heading || hasForm) && (
+        <div class="cb-formwrap">
+          {heading && <h2>{heading}</h2>}
+          {formHtml
+            ? <div class="cb-formhtml" set:html={formHtml} />
+            : (
+              <form action={formAction} method="get" class="a-form">
+                {blocks.length > 0 && <Components contentSections={blocks} propName="formBlocks" editable={false} />}
+              </form>
+            )}
         </div>
-      ))}
+      )}
     </div>
-    <div class="cb-formwrap">
-      {heading && <h2>{heading}</h2>}
-      <form action={formAction} method="get" class="a-form">
-        {formBlocks.length > 0 && <Components contentSections={formBlocks} propName="formBlocks" editable={false} />}
-      </form>
-    </div>
-  </div>
+  )}
 </section>
 <style>
-  .a-contact { background: var(--bg); padding-block: 0 4.5rem; }
+  .a-contact { background: var(--bg); padding-block: var(--pad, 0 4.5rem); }
+
+  /* Nothing but the map: the source runs it edge to edge with no padding of
+     its own, and an empty details/form grid below it just adds dead space. */
+  .a-contact.map-only { padding-block: 0; }
+  .a-contact.map-only .cb-map { margin-bottom: 0; }
+
   .cb-map { line-height: 0; margin-bottom: 3.5rem; }
   .cb-map iframe { border: 0; display: block; height: var(--maph); width: 100%; }
-  .cb-inner { display: grid; gap: 3.5rem; grid-template-columns: minmax(240px,1fr) 1.6fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
-  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0 0 1.5rem; }
-  .cb-row + .cb-row { margin-top: 1.5rem; }
-  .cb-label { color: var(--lb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 0.25rem; }
-  .cb-value, .cb-details a { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 17px; line-height: 26px; margin: 0; text-decoration: none; }
+  /* MEASURED: 50/50 columns inside a 1200px container, on both the home page's
+     band and contact-us'. */
+  .cb-inner { display: grid; gap: 3.5rem; grid-template-columns: 1fr 1fr; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: var(--hdsize, clamp(1.75rem,3vw,40px)); font-weight: 700; line-height: 1.3; margin: 0 0 1.5rem; }
+
+  /* An icon beside each row, and a hairline between them — the source builds
+     these out of image-box widgets separated by divider widgets. */
+  .cb-row { display: flex; gap: 20px; }
+  .cb-row + .cb-row { border-top: 1px solid rgb(0 0 0 / 10%); margin-top: 15px; padding-top: 15px; }
+  .cb-icon { flex: 0 0 auto; height: auto; width: 73px; }
+  .cb-label { color: var(--lb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; line-height: 28px; margin: 8px 0 5px; }
+  .cb-label a { color: inherit; text-decoration: none; }
+  .cb-value, .cb-details a.cb-value { color: var(--tx); display: block; font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0; text-decoration: none; }
   .cb-details a:hover { text-decoration: underline; }
+
+  /* The source links every row's label but only the phone number's value, and
+     the theme paints that one link gold — which is why the phone reads
+     differently from the address and email sitting above it. */
+  .cb-value.linked, .cb-details a.cb-value.linked { color: var(--color-brand-subtle, #bf9800); }
   .a-form { display: grid; gap: 1rem; }
   @media (max-width: 860px) { .cb-inner { grid-template-columns: 1fr; } }
 </style>

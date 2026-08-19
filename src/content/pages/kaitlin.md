@@ -13,7 +13,7 @@ pageSections:
     heading: Kaitlin
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <p class=\"wp-block-paragraph\">I’m thrilled to return to Artisan as a dental hygienist, having previously worked as an assistant here while attending school. As a recent graduate of Madison College, I’m eager to apply my skills and knowledge to provide exceptional care for my patients. One of the most rewarding aspects of dental hygiene for me is connecting with patients and educating them about the importance of oral health.</p>
@@ -97,8 +95,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">Inspired by my sister and aunt, both dental hygienists, I decided to pursue this fulfilling career path. Outside of work, I enjoy staying active with workouts and spending quality time with my nephew, Silas, and niece, Sidney. I also have a golden retriever, Max, who loves long walks when he’s not at doggy daycare.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -106,4 +102,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Kelli
+    prevLink: /kelli/
+    nextName: Juliana
+    nextLink: /juliana/
+    textColor: "#321c0e"
 ---

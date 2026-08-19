@@ -13,7 +13,7 @@ pageSections:
     heading: Katie
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Katie - Artisan Dental
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\"><strong>Patient Care Coordinator</strong></h4>
@@ -97,8 +95,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">I was born and raised in Madison, WI. I started my dental career in a west side dental office in 2000 as an accounts/office manager. I feel very privileged to have been hired by Artisan Dental, and feel I have become part of a great team.&nbsp; I have been married to my husband for over 20 yrs, and have two grown sons and 3 beautiful grandchildren. In my free time I love spending time with family and friends. In the summer I love to play golf and take long rides in our convertible.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -106,4 +102,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Emily
+    prevLink: /emily-2/
+    nextName: Cosmetic
+    nextLink: /cosmetic/
+    textColor: "#321c0e"
 ---

@@ -1,0 +1,58 @@
+---
+/**
+ * "Share this page with your friends!" — the source's share-buttons widget,
+ * present on most interior pages. The source generates its Facebook/X/Email
+ * links from Elementor's own JS at render time; this does the same on the
+ * client, since the share target has to be the visitor's actual URL, not
+ * whatever this page happens to build under.
+ *
+ * Baked in: layout, share targets. Props: label, colours.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  label = "Share this page with your friends!",
+  headingColor = "#321c0e",
+  id, _component, ...rest
+} = Astro.props;
+---
+<div class="a-sharebar" id={id || undefined}
+  style={`--hd:${headingColor}`} {...rest}>
+  {label && <p class="sb-label">{label}</p>}
+  <div class="sb-buttons">
+    <a class="sb-btn sb-fb" data-share="facebook" href="#" aria-label="Share on Facebook">
+      <Icon name="social/facebook" size="sm" />Facebook
+    </a>
+    <a class="sb-btn sb-x" data-share="x" href="#" aria-label="Share on X">
+      <Icon name="social/x" size="sm" />X
+    </a>
+    <a class="sb-btn sb-em" data-share="email" href="#" aria-label="Share by email">
+      <Icon name="envelope" size="sm" />Email
+    </a>
+  </div>
+</div>
+<script>
+  document.querySelectorAll<HTMLAnchorElement>(".a-sharebar [data-share]").forEach((a) => {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent(document.title);
+    const kind = a.dataset.share;
+    if (kind === "facebook") a.href = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+    if (kind === "x") a.href = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+    if (kind === "email") a.href = `mailto:?subject=${title}&body=${url}`;
+    if (kind !== "email") {
+      a.target = "_blank";
+      a.rel = "noopener noreferrer";
+    }
+  });
+</script>
+<style>
+  .a-sharebar { margin-block: 2rem; }
+  .sb-label { color: var(--hd); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 1rem; }
+  .sb-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .sb-btn {
+    align-items: center; background: #f5f4f1; border-radius: 4px; color: #321c0e;
+    display: inline-flex; font-family: "Open Sans", sans-serif; font-size: 14px; font-weight: 600;
+    gap: 0.5rem; padding: 0.6rem 1rem; text-decoration: none; transition: background-color 0.2s ease;
+  }
+  .sb-btn:hover { background: #e9e7e1; }
+  .sb-btn :global(.icon) { color: inherit; }
+</style>

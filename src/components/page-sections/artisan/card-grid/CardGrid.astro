@@ -7,13 +7,13 @@
  */
 const {
   cards = [],
-  backgroundColor = "#321c0e",
+  backgroundColor = "var(--color-brand)",
   sectionBackgroundColor = "transparent",
   backgroundImage = "",
   overlayOpacity = 0.15,
   titleColor = "#ffffff",
   textColor = "#ffffff",
-  captionColor = "#d2b22e",
+  captionColor = "var(--color-brand-secondary)",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];

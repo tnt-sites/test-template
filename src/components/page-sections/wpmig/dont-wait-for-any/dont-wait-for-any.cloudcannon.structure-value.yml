@@ -1,0 +1,26 @@
+label: Dont Wait For Any
+icon: grid_view
+description: Dont Wait For Any section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dont-wait-for-any
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  items:
+    - title: ""
+      text: ""
+  backgroundImage: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-5.jpeg
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+  titleColor: "#ffffff"
+preview:
+  text:
+    - Dont Wait For Any
+  icon: grid_view
+picker_preview:
+  text: Dont Wait For Any
+  subtext: Dont Wait For Any section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dont-wait-for-any/dont-wait-for-any.cloudcannon.inputs.yml

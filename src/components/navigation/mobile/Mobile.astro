@@ -91,8 +91,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       </slot>
     </div>
     <label
-      for={toggleId}
       class="mobile-close mobile-button"
+      role="button"
       aria-label="Close navigation menu"
       tabindex="0"
     >
@@ -167,7 +167,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 </label>
               )}
               <label
-                for={itemData.dropdownId}
+                for={itemData.path ? itemData.dropdownId : undefined}
                 class="nav-item-trigger"
                 role="button"
                 aria-controls={itemData.contentId}
@@ -227,7 +227,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           </label>
                         )}
                         <label
-                          for={childData.dropdownId}
+                          for={childData.path ? childData.dropdownId : undefined}
                           class="nav-item-trigger"
                           role="button"
                           aria-controls={childData.contentId}

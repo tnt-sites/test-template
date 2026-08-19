@@ -11,7 +11,7 @@ value:
       text: ""
       buttonText: ""
       buttonLink: ""
-  eyebrowColor: "#d2b22e"
+  eyebrowColor: "var(--color-brand-secondary)"
   headingColor: "#ffffff"
   textColor: "#ffffff"
   overlayColor: "rgba(0, 0, 0, 0.45)"

@@ -1,0 +1,64 @@
+---
+/**
+ * Single-open FAQ accordion — the source's elementor-tab-title/
+ * elementor-tab-content pairs, which have no toggle JS ported anywhere in
+ * this project and so render as flat, always-expanded text today.
+ *
+ * Baked in: layout, toggle behaviour. Props: heading, items, colours.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  heading = "", items = [],
+  headingColor = "#321c0e", questionColor = "#321c0e", textColor = "#333333",
+  id, _component, ...rest
+} = Astro.props;
+const faqs = Array.isArray(items) ? items : [];
+---
+{faqs.length > 0 && (
+  <section class="a-faq" id={id || undefined}
+    style={`--hd:${headingColor};--q:${questionColor};--tx:${textColor}`} {...rest}>
+    <div class="faq-inner">
+      {heading && <h2>{heading}</h2>}
+      <div class="faq-list">
+        {faqs.map((item: any) => (
+          <div class="faq-item">
+            <button class="faq-toggle" type="button" aria-expanded="false">
+              <span class="faq-q">{item?.question}</span>
+              <Icon name="chevron-down" size="sm" class="faq-icon" />
+            </button>
+            <div class="faq-answer" set:html={item?.answer} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+<style>
+  .a-faq { padding-block: 3rem; }
+  .faq-inner { margin-inline: auto; max-width: 900px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.5rem,3vw,32px); font-weight: 700; margin: 0 0 1.5rem; }
+  .faq-item { border-bottom: 1px solid #e5e2db; }
+  .faq-toggle {
+    align-items: center; background: none; border: 0; cursor: pointer; display: flex;
+    gap: 1rem; justify-content: space-between; padding: 1.1rem 0; text-align: left; width: 100%;
+  }
+  .faq-q { color: var(--q); font-family: Poppins, sans-serif; font-size: 17px; font-weight: 700; }
+  .faq-icon { color: var(--q); flex-shrink: 0; transition: transform 0.2s ease; }
+  .faq-toggle[aria-expanded="true"] .faq-icon { transform: rotate(180deg); }
+  .faq-answer { color: var(--tx); display: none; font-family: "Open Sans", sans-serif; font-size: 16px; line-height: 26px; padding-bottom: 1.25rem; }
+  .faq-answer :global(p) { margin: 0 0 1rem; }
+  .faq-toggle[aria-expanded="true"] + .faq-answer { display: block; }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>(".a-faq").forEach((faq) => {
+    if (faq.dataset.faqReady) return;
+    faq.dataset.faqReady = "1";
+    faq.addEventListener("click", (e) => {
+      const toggle = (e.target as HTMLElement)?.closest<HTMLButtonElement>(".faq-toggle");
+      if (!toggle || !faq.contains(toggle)) return;
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      faq.querySelectorAll(".faq-toggle").forEach((t) => t.setAttribute("aria-expanded", "false"));
+      toggle.setAttribute("aria-expanded", open ? "false" : "true");
+    });
+  });
+</script>

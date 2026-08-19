@@ -13,7 +13,7 @@ pageSections:
     heading: Alli
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\"><strong>Dental Hygienist Team Leader</strong></h4>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">When I’m not working I enjoy staying active, running, snowboarding, reading, playing piano, exploring new places in Madison with my husband and traveling.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Dermal Filler
+    prevLink: /dermal-filler/
+    nextName: Careers
+    nextLink: /careers/
+    textColor: "#321c0e"
 ---

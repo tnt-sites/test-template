@@ -1,0 +1,29 @@
+label: Look Your Very Best
+icon: vertical_split
+description: Look Your Very Best section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/look-your-very-best
+  id: ""
+  heading: ""
+  subheading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  backgroundImage: /wp-content/uploads/2020/09/shutterstock_279778787x2.jpg
+  headingColor: rgba(255, 255, 255, 0.98)
+  textColor: "#ffffff"
+  buttonBackgroundColor: "var(--color-brand-secondary)"
+  buttonTextColor: "#ffffff"
+  buttonBackgroundHoverColor: "#c3a527"
+  buttonBackgroundHoverColor2: "#c5a628"
+preview:
+  text:
+    - Look Your Very Best
+  icon: vertical_split
+picker_preview:
+  text: Look Your Very Best
+  subtext: Look Your Very Best section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/look-your-very-best/look-your-very-best.cloudcannon.inputs.yml

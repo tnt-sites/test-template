@@ -1,0 +1,10 @@
+_snippets:
+  icon_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Icon Grid
+    definitions:
+      component_name: page-sections/artisan/icon-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/icon-grid/icon-grid.cloudcannon.inputs.yml

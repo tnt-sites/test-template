@@ -10,10 +10,10 @@ import Button from "@core-elements/button/Button.astro";
 const {
   eyebrow = "", heading = "", testimonials = [],
   buttonText = "", buttonLink = "",
-  backgroundColor = "#321c0e",
+  backgroundColor = "var(--color-brand)",
   backgroundImage = "",
   overlayOpacity = 0.15, eyebrowColor = "#ffffff", headingColor = "#ffffff",
-  cardBackgroundColor = "#ffffff", cardTextColor = "#333333", nameColor = "#321c0e",
+  cardBackgroundColor = "#ffffff", cardTextColor = "#333333", nameColor = "var(--color-brand)",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];

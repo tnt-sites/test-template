@@ -13,7 +13,7 @@ pageSections:
     heading: Adria
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Adria - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\"><strong>Patient Care Coordinator</strong> <strong>Team Lead</strong></h4>
@@ -107,8 +105,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">I am looking forward to helping make your experience at Artisan Dental the best one yet!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -116,4 +112,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Cassandra
+    prevLink: /cassandra/
+    nextName: Kat
+    nextLink: /kat/
+    textColor: "#321c0e"
 ---

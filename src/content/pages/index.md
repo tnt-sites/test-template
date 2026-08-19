@@ -46,7 +46,7 @@ pageSections:
     overlayColor: rgba(0, 0, 0, 0.45)
     minHeight: 820px
     autoplaySeconds: 6
-    buttonColor: "#d2b22e"
+    buttonColor: var(--color-brand-secondary)
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: ""
@@ -73,7 +73,7 @@ pageSections:
       - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
         alt: Climate Champion logo
         link: ""
-    backgroundColor: "#321c0e"
+    backgroundColor: var(--color-brand)
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
@@ -105,8 +105,8 @@ pageSections:
         text: Affordable oral health care for individuals and families without dental insurance.
         link: /health-plans/
     backgroundColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
+    eyebrowColor: var(--color-brand-secondary)
+    headingColor: var(--color-brand)
     textColor: "#333333"
   - _component: page-sections/artisan/feature-banner
     id: ""
@@ -128,7 +128,7 @@ pageSections:
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     textColor: "#ffffff"
-    markerColor: "#d2b22e"
+    markerColor: var(--color-brand-secondary)
     minHeight: 900px
   - _component: page-sections/artisan/card-grid
     id: ""
@@ -145,7 +145,7 @@ pageSections:
         title: Tour Our Office
         text: Come stop by our office anytime to take a free tour. We also have a wonderful online image gallery to check out!
         link: /contact-us/
-    backgroundColor: "#321c0e"
+    backgroundColor: var(--color-brand)
     titleColor: "#ffffff"
     textColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
@@ -176,7 +176,7 @@ pageSections:
       - image: /wp-content/uploads/2021/05/ESN2-rev.png
         alt: ESN logo white
         link: ""
-    backgroundColor: "#321c0e"
+    backgroundColor: var(--color-brand)
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
@@ -194,8 +194,8 @@ pageSections:
     reverse: false
     align: left
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
+    eyebrowColor: var(--color-brand-secondary)
+    headingColor: var(--color-brand)
     textColor: "#333333"
     mediaMinHeight: 520px
   - _component: page-sections/artisan/split-feature
@@ -209,8 +209,8 @@ pageSections:
     reverse: false
     align: left
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
-    headingColor: "#321c0e"
+    eyebrowColor: var(--color-brand-secondary)
+    headingColor: var(--color-brand)
     textColor: "#333333"
   - _component: page-sections/artisan/video-row
     id: ""
@@ -245,12 +245,12 @@ pageSections:
         image: /wp-content/uploads/2021/05/fb-logo4-rev.png
     buttonText: View More Testimonials
     buttonLink: /patient-reviews/
-    backgroundColor: "#321c0e"
+    backgroundColor: var(--color-brand)
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
     cardBackgroundColor: "#ffffff"
     cardTextColor: "#333333"
-    nameColor: "#321c0e"
+    nameColor: var(--color-brand)
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
     overlayOpacity: 0.15
   - _component: page-sections/artisan/contact-block
@@ -316,8 +316,8 @@ pageSections:
         value: Send Us A Message - Home Page
     formAction: /thank-you/
     backgroundColor: "#ffffff"
-    headingColor: "#321c0e"
-    labelColor: "#321c0e"
+    headingColor: var(--color-brand)
+    labelColor: var(--color-brand)
     textColor: "#333333"
     mapEmbedUrl: https://maps.google.com/maps?q=Artisan%20Dental%2010%20North%20Livingston%20Street%2C%20Suite%20301%2C%20Madison%2C%20WI%2053703&t=m&z=13&output=embed&iwloc=near
     mapHeight: 380px

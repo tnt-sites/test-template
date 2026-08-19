@@ -15,11 +15,11 @@ const list = Array.isArray(videos) ? videos.filter((v: any) => v?.youtubeId) : [
   <ul class="vr-inner no-check">
     {list.map((v: any) => (
       <li>
+        {v.title && <p>{v.title}</p>}
         <button class="vr-frame" type="button" data-id={v.youtubeId} aria-label={`Play ${v.title || "video"}`}>
           <img src={`https://i.ytimg.com/vi/${v.youtubeId}/hqdefault.jpg`} alt={v.title || ""} loading="lazy" />
           <span class="vr-play" aria-hidden="true">▶</span>
         </button>
-        {v.title && <p>{v.title}</p>}
       </li>
     ))}
   </ul>
@@ -31,7 +31,7 @@ const list = Array.isArray(videos) ? videos.filter((v: any) => v?.youtubeId) : [
   .vr-frame img { height: 100%; object-fit: cover; opacity: 0.85; width: 100%; }
   .vr-play { color: #fff; font-size: 3rem; height: fit-content; inset: 0; line-height: 1; margin: auto; position: absolute; text-shadow: 0 2px 12px rgb(0 0 0 / 60%); width: fit-content; }
   .vr-frame:hover img { opacity: 1; }
-  p { color: var(--color-text, #333); font-family: "Open Sans", sans-serif; font-size: 16px; margin: 0.75rem 0 0; }
+  p { color: var(--color-text, #333); font-family: Poppins, sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 0.75rem; }
 </style>
 <script>
   const init = () => document.querySelectorAll(".a-videos .vr-frame").forEach((f) => {

@@ -1,0 +1,10 @@
+_snippets:
+  look_your_very_best:
+    template: astro_component
+    inline: false
+    preview:
+      text: Look Your Very Best
+    definitions:
+      component_name: page-sections/wpmig/look-your-very-best
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/look-your-very-best/look-your-very-best.cloudcannon.inputs.yml

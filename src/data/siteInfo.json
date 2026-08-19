@@ -15,6 +15,11 @@
       "label": "X",
       "icon": "social/x",
       "link": "https://twitter.com/ArtisanDDS"
+    },
+    {
+      "label": "Email",
+      "icon": "envelope",
+      "link": "mailto:info@artisandentalmadison.com"
     }
   ],
   "offices": [

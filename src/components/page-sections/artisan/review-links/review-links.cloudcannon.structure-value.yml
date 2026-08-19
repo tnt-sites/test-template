@@ -1,0 +1,28 @@
+label: Review Links
+icon: rate_review
+description: Intro line above a grid of review-platform logos, each linking out to that platform's profile.
+value:
+  _component: page-sections/artisan/review-links
+  id: ""
+  heading: ""
+  body: ""
+  links:
+    - image: ""
+      alt: ""
+      text: ""
+      link: ""
+  backgroundColor: "#ffffff"
+  headingColor: "#321c0e"
+  textColor: "#686868"
+  linkColor: "#321c0e"
+  captionColor: "#333333"
+  hoverColor: "var(--color-brand-secondary)"
+preview:
+  text:
+    - Review Links
+  icon: rate_review
+picker_preview:
+  text: Review Links
+  subtext: Grid of review-platform logos that link out to each profile.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/review-links/review-links.cloudcannon.inputs.yml

@@ -1,0 +1,29 @@
+_inputs:
+  heading:
+    type: text
+  text:
+    type: textarea
+  images:
+    type: array
+    options:
+      structures: _structures.full_mouth_rehabilitation_procedures_item
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  full_mouth_rehabilitation_procedures_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+          text: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text
+          text:
+            type: html

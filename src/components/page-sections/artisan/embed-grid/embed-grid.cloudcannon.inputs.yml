@@ -1,0 +1,24 @@
+_inputs:
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  labelColor:
+    type: color
+  embeds:
+    type: array
+    options:
+      structures: _structures.embed_grid_item
+_structures:
+  embed_grid_item:
+    values:
+      - value:
+          embedUrl: ""
+          label: ""
+        _inputs:
+          embedUrl:
+            type: url
+          label:
+            type: text

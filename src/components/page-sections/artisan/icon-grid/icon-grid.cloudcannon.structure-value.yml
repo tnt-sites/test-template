@@ -1,0 +1,33 @@
+label: Icon Grid
+icon: list-bullet
+description: Full-width heading above a plain grid of icon + title (+ text) items.
+value:
+  _component: page-sections/artisan/icon-grid
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  cards:
+    - icon: check-circle-duo
+      title: ""
+      text: ""
+  columns: "3"
+  youtubeId: ""
+  videoTitle: ""
+  backgroundColor: "#ffffff"
+  backgroundImage: ""
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  textColor: "#333333"
+  iconColor: "var(--color-brand-secondary)"
+preview:
+  text:
+    - Icon Grid
+  subtext:
+    - key: heading
+  icon: list-bullet
+picker_preview:
+  text: Icon Grid
+  subtext: Plain grid of icon + title (+ text) items.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/icon-grid/icon-grid.cloudcannon.inputs.yml

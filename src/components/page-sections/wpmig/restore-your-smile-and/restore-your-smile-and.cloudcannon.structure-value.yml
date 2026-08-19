@@ -1,0 +1,34 @@
+label: Restore Your Smile And
+icon: vertical_split
+description: Restore Your Smile And section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/restore-your-smile-and
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  image2: ""
+  image2Alt: ""
+  heading2: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  image3: ""
+  image3Alt: ""
+  backgroundColor: "#f2f2f2"
+  headingColor: "var(--color-brand-secondary)"
+  textColor: "#686868"
+  buttonBackgroundColor: "#321c0e"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#686868"
+  hoverColor: "#666666"
+preview:
+  text:
+    - Restore Your Smile And
+  icon: vertical_split
+picker_preview:
+  text: Restore Your Smile And
+  subtext: Restore Your Smile And section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/restore-your-smile-and/restore-your-smile-and.cloudcannon.inputs.yml

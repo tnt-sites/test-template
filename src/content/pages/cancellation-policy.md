@@ -13,7 +13,7 @@ pageSections:
     heading: Cancellation Policy
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -22,73 +22,52 @@ pageSections:
     id: ""
     sidebarHeading: ""
     links: []
-    image: /wp-content/uploads/2021/04/IB_award.png
-    imageAlt: IB small Business award
-    body: "
+    image: ""
+    imageAlt: ""
+    body: |-
+      
+      					<h4 class="elementor-heading-title elementor-size-default">Artisan Dental Cancellation Policy
+      </h4>				
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
+      									<p dir="ltr">To ensure we can serve all of our stakeholders in the best way possible, we have a 24 hour cancellation policy in place. If you need to reschedule or cancel any of your appointments, we ask that you contact Artisan Dental a minimum of 24 hours prior to your appointment to avoid being charged a cancellation fee.</p>								
 
-      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"7893\" class=\"elementor elementor-7893\" data-elementor-post-type=\"page\">
+      									<p dir="ltr">If calling less than 24 hours prior to your appointment or not coming to a scheduled appointment, our cancellation fee will be collected over the phone or billed to your account.</p>								
 
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-baa2f1a elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"baa2f1a\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fb46761\" data-id=\"fb46761\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-b521658 elementor-widget elementor-widget-heading\" data-id=\"b521658\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"heading.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t<h4 class=\"elementor-heading-title elementor-size-default\">Artisan Dental Cancellation Policy
-
-      </h4>\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-046a5c2 elementor-widget elementor-widget-text-editor\" data-id=\"046a5c2\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p dir=\"ltr\">To ensure we can serve all of our stakeholders in the best way possible, we have a 24 hour cancellation policy in place. If you need to reschedule or cancel any of your appointments, we ask that you contact Artisan Dental a minimum of 24 hours prior to your appointment to avoid being charged a cancellation fee.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-03fa78d elementor-widget elementor-widget-text-editor\" data-id=\"03fa78d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p dir=\"ltr\">If calling less than 24 hours prior to your appointment or not coming to a scheduled appointment, our cancellation fee will be collected over the phone or billed to your account.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-4e89bd3 elementor-widget elementor-widget-text-editor\" data-id=\"4e89bd3\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>You can contact our office at 608.467.8022 or email us at&nbsp;<a href=\"mailto:info@artisandentalmadison.com\" target=\"_blank\" rel=\"noopener\">info@artisandentalmadison.com</a>&nbsp;<span class=\"gmail_default\">to reschedule your appointment.</span></p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t"
+      									<p>You can contact our office at 608.467.8022 or email us at&nbsp;<a href="mailto:info@artisandentalmadison.com" target="_blank" rel="noopener">info@artisandentalmadison.com</a>&nbsp;<span class="gmail_default">to reschedule your appointment.</span></p>								
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png
+        alt: Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
 ---

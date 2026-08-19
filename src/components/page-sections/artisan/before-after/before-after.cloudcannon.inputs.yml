@@ -1,0 +1,26 @@
+_inputs:
+  headingColor:
+    type: color
+  labelColor:
+    type: color
+  pairs:
+    type: array
+    options:
+      structures: _structures.before_after_pair
+_structures:
+  before_after_pair:
+    values:
+      - value:
+          beforeLabel: Before
+          beforeImage: ""
+          afterLabel: After
+          afterImage: ""
+        _inputs:
+          beforeLabel:
+            type: text
+          beforeImage:
+            type: image
+          afterLabel:
+            type: text
+          afterImage:
+            type: image

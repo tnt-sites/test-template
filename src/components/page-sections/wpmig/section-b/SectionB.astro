@@ -1,0 +1,125 @@
+---
+/**
+ * Section B — migrated from full-partial-mouth-rehabilitation [15] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+const {
+  images = [],
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<section class="section-b" id={id || undefined} {...rest}>
+  <div class="sb-box" role="region" aria-roledescription="carousel" aria-label="Image Carousel">
+    <div class="sb-grid">
+      {list.map((it) => (
+        <figure class="sb-box2">
+          {it.image && <img class="sb-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" />}
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .section-b {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    position: relative;
+  }
+
+  .sb-box {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .sb-grid {
+    display: flex;
+    position: relative;
+    transform: matrix(1, 0, 0, 1, -298, 0);
+    z-index: 1;
+  }
+
+  .sb-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 89.93%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0px;
+    max-width: 89.93%;
+    position: relative;
+  }
+
+  .sb-media {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 100%;
+    max-width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+    position: relative;
+    text-align: center;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .section-b {
+      max-width: 675px;
+    }
+
+    .sb-grid {
+      transform: matrix(1, 0, 0, 1, -675, 0);
+    }
+
+    .sb-box2 {
+      flex: 0 0 95.56%;
+      max-width: 95.56%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section-b {
+      max-width: 1108px;
+    }
+
+    .sb-grid {
+      transform: matrix(1, 0, 0, 1, -1108, 0);
+    }
+
+    .sb-box2 {
+      align-content: normal;
+      display: block;
+      flex: 0 0 20%;
+      flex-wrap: nowrap;
+      justify-content: normal;
+      max-width: 20%;
+      position: static;
+      text-align: center;
+    }
+
+    .sb-media {
+      flex: 0 1 auto;
+      overflow-x: clip;
+      overflow-y: clip;
+      position: static;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sb-box2 {
+    align-items: normal;
+    text-align: center;
+  }
+/* wpmig:corrections:end */
+</style>

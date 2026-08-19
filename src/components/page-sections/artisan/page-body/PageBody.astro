@@ -31,6 +31,7 @@ const {
 } = Astro.props;
 
 const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
+const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
 ---
 
 <section
@@ -39,7 +40,7 @@ const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
   style={`--bg:${backgroundColor};--hbg:${headingBackground};--hc:${headingColor};--lc:${linkColor};--tx:${textColor}`}
   {...rest}
 >
-  <div class="pb2-inner">
+  <div class:list={["pb2-inner", { "no-sidebar": !hasSidebar }]}>
     {
       (sidebarHeading || list.length > 0) && (
         <aside class="pb2-side">
@@ -79,6 +80,10 @@ const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
     margin-inline: auto;
     max-width: 1240px;
     padding-inline: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  .pb2-inner.no-sidebar {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .a-pagebody.reverse .pb2-side {
@@ -153,11 +158,70 @@ const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
   }
 
   .pb2-prose :global(p) {
+    color: inherit;
     margin: 0 0 1.25rem;
   }
 
   .pb2-prose :global(a) {
     color: var(--hbg);
+  }
+
+  .pb2-prose :global(.media-columns) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pb2-prose :global(.media-columns h4) {
+    margin-top: 0;
+  }
+
+  /* A dark wood-textured band for grouping a few call-to-action buttons,
+     e.g. "Pay Now Directly" / "Care Credit" on the financial page. Same
+     recipe as the logo-strip bands: solid brand-brown under the texture,
+     blended at low opacity, rather than the raw photo at full brightness. */
+  .pb2-prose :global(.wood-band) {
+    background-color: #321c0e;
+    border-radius: 4px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 2rem 0;
+    overflow: hidden;
+    padding: 2.5rem 2rem;
+    position: relative;
+    text-align: center;
+  }
+
+  .pb2-prose :global(.wood-band::before) {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg");
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+  }
+
+  .pb2-prose :global(.wood-band > *) {
+    position: relative;
+  }
+
+  .pb2-prose :global(.wood-band h4) {
+    color: #fff;
+    margin: 0 0 1.25rem;
+  }
+
+  .pb2-prose :global(.wood-band .button) {
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .pb2-prose :global(.media-columns) {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: 900px) {

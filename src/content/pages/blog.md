@@ -13,7 +13,7 @@ pageSections:
     heading: Artisan Dental Blog​
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -26,19 +26,13 @@ pageSections:
     imageAlt: Top Dentists logo.
     body: "
 
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-43d51ab1 elementor-posts--align-center elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-posts--thumbnail-top elementor-card-shadow-yes elementor-posts__hover-gradient elementor-widget elementor-widget-posts animated fadeIn\" data-id=\"43d51ab1\" data-element_type=\"widget\" data-e-type=\"widget\" data-settings=\"{&quot;pagination_type&quot;:&quot;numbers_and_prev_next&quot;,&quot;_animation&quot;:&quot;fadeIn&quot;,&quot;cards_masonry&quot;:&quot;yes&quot;,&quot;cards_columns&quot;:&quot;3&quot;,&quot;cards_columns_tablet&quot;:&quot;2&quot;,&quot;cards_columns_mobile&quot;:&quot;1&quot;,&quot;cards_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]},&quot;cards_row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;cards_row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}\" data-widget_type=\"posts.cards\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t\t\t<div class=\"elementor-posts-container elementor-posts elementor-posts--skin-cards elementor-grid elementor-posts-masonry\" role=\"list\">
 
       \t\t\t\t<article class=\"elementor-post elementor-grid-item post-9133 post type-post status-publish format-standard has-post-thumbnail hentry category-blogs\" role=\"listitem\">
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/top-dentist-2026/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"375\" height=\"240\" src=\"/wp-content/uploads/2026/08/top-dentists-logo-v1.jpg\" class=\"attachment-medium_large size-medium_large wp-image-9131\" alt=\"Top Dentists logo.\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/top-dentist-2026/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2026/08/top-dentists-logo-v1.jpg\" class=\"attachment-medium_large size-medium_large wp-image-9131\" alt=\"Top Dentists logo.\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -68,7 +62,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/great-place-to-work-certification-2025-2026/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"450\" height=\"636\" src=\"/wp-content/uploads/2026/08/great-place-to-work-certified-usa-august-2026-through-august-2027-badge.png\" class=\"attachment-medium_large size-medium_large wp-image-9117\" alt=\"Great Place To Work Certified USA August 2026 through August 2027 - Badge.\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/great-place-to-work-certification-2025-2026/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2026/08/great-place-to-work-certified-usa-august-2026-through-august-2027-badge.png\" class=\"attachment-medium_large size-medium_large wp-image-9117\" alt=\"Great Place To Work Certified USA August 2026 through August 2027 - Badge.\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -98,7 +92,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/artisan-dental-has-been-great-place-to-work-certified/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"800\" height=\"1132\" src=\"/wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-800x1132.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7936\" alt=\"\" decoding=\"async\" srcset=\"/wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-800x1132.jpg 800w, /wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-1200x1697.jpg 1200w, /wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-1600x2263.jpg 1600w, /wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-1086x1536.jpg 1086w, /wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-1448x2048.jpg 1448w, /wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-scaled.jpg 1810w\" sizes=\"(max-width: 800px) 100vw, 800px\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/artisan-dental-has-been-great-place-to-work-certified/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2025/11/Artisan_Dental_LLC_US_English_2025_Certification_Badge-800x1132.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7936\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -128,7 +122,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/empowering-connections-harnessing-relationships-to-inspire-your-dreams/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"640\" height=\"426\" src=\"/wp-content/uploads/2025/07/240430-Audrey-0227-1.jpeg\" class=\"attachment-medium_large size-medium_large wp-image-7919\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/empowering-connections-harnessing-relationships-to-inspire-your-dreams/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2025/07/240430-Audrey-0227-1.jpeg\" class=\"attachment-medium_large size-medium_large wp-image-7919\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -158,7 +152,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/ask-the-dentist-why-is-retention-crucial-after-orthodontics/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"800\" height=\"495\" src=\"/wp-content/uploads/2025/07/suresmile-800x495.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7915\" alt=\"\" decoding=\"async\" srcset=\"/wp-content/uploads/2025/07/suresmile-800x495.jpg 800w, /wp-content/uploads/2025/07/suresmile.jpg 804w\" sizes=\"(max-width: 800px) 100vw, 800px\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/ask-the-dentist-why-is-retention-crucial-after-orthodontics/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2025/07/suresmile-800x495.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7915\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -188,7 +182,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/more-smiles-wi/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"780\" height=\"586\" src=\"/wp-content/uploads/2025/07/IMG_7698.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7911\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/more-smiles-wi/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2025/07/IMG_7698.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7911\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -218,7 +212,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-nicole-andersen-named-topdentist-in-2025/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"395\" height=\"205\" src=\"/wp-content/uploads/2025/07/Andersen_2011-25-small.png\" class=\"attachment-medium_large size-medium_large wp-image-7902\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-nicole-andersen-named-topdentist-in-2025/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2025/07/Andersen_2011-25-small.png\" class=\"attachment-medium_large size-medium_large wp-image-7902\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -248,7 +242,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/simple-energy-management-skills-for-reducing-stress/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"768\" height=\"589\" src=\"/wp-content/uploads/2024/07/unnamed-1-768x589-1.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7811\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/simple-energy-management-skills-for-reducing-stress/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2024/07/unnamed-1-768x589-1.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7811\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -278,7 +272,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-andersen-named-topdentist-2024/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"395\" height=\"205\" src=\"/wp-content/uploads/2024/07/top-dentist-2024.png\" class=\"attachment-medium_large size-medium_large wp-image-7809\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-andersen-named-topdentist-2024/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2024/07/top-dentist-2024.png\" class=\"attachment-medium_large size-medium_large wp-image-7809\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -308,7 +302,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/artisan-dental-certified-great-place-to-work-in-2023-2024/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"452\" height=\"640\" src=\"/wp-content/uploads/2024/08/Artisan_Dental_LLC_US_English_2024_Certification_Badge.png\" class=\"attachment-medium_large size-medium_large wp-image-7820\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/artisan-dental-certified-great-place-to-work-in-2023-2024/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2024/08/Artisan_Dental_LLC_US_English_2024_Certification_Badge.png\" class=\"attachment-medium_large size-medium_large wp-image-7820\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -338,7 +332,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/ask-the-dentist-what-are-the-types-of-dental-radiographs-commonly-evaluated-at-your-dental-appointment/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"630\" height=\"303\" src=\"/wp-content/uploads/2023/10/unnamed-3.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7718\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/ask-the-dentist-what-are-the-types-of-dental-radiographs-commonly-evaluated-at-your-dental-appointment/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2023/10/unnamed-3.jpg\" class=\"attachment-medium_large size-medium_large wp-image-7718\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -368,7 +362,7 @@ pageSections:
 
       \t\t\t<div class=\"elementor-post__card\">
 
-      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-andersen-named-topdentist-2023/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img width=\"500\" height=\"300\" src=\"/wp-content/uploads/2023/11/top.png\" class=\"attachment-medium_large size-medium_large wp-image-7726\" alt=\"\" decoding=\"async\"></div></a>
+      \t\t\t\t<a class=\"elementor-post__thumbnail__link\" href=\"/blog/dr-andersen-named-topdentist-2023/\" tabindex=\"-1\"><div class=\"elementor-post__thumbnail\"><img src=\"/wp-content/uploads/2023/11/top.png\" class=\"attachment-medium_large size-medium_large wp-image-7726\" alt=\"\" decoding=\"async\"></div></a>
 
       \t\t\t\t<div class=\"elementor-post__text\">
 
@@ -416,13 +410,7 @@ pageSections:
 
       <a class=\"page-numbers next\" href=\"/blog/page/2/\">Next »</a>\t\t</nav>
 
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t"
+      \t\t\t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"

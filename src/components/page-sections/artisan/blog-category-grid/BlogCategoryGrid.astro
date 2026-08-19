@@ -1,0 +1,104 @@
+---
+/**
+ * Grid of blog posts filtered by tag — the source's WordPress blog category
+ * archive (e.g. /blog/category/services/restorative/). Posts come from the
+ * blog collection, matched against `tag` case-insensitively; nothing is
+ * editable per-card since the list is derived, not authored.
+ */
+import { getCollection } from "astro:content";
+
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  tag = "",
+  emptyText = "No posts yet. Check back soon!",
+  backgroundColor = "#ffffff",
+  captionBackgroundColor = "var(--color-brand-secondary)",
+  captionTextColor = "#ffffff",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  textColor = "#333333",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const allPosts = await getCollection("blog");
+const needle = tag.trim().toLowerCase();
+const posts = needle
+  ? allPosts
+      .filter((post: any) =>
+        (post.data.tags || []).some((t: string) => t.toLowerCase() === needle)
+      )
+      .sort((a: any, b: any) => b.data.date.getTime() - a.data.date.getTime())
+  : [];
+---
+
+<section
+  class="a-blogcatgrid"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--capbg:${captionBackgroundColor};--captx:${captionTextColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
+  <div class="bcg-inner">
+    {
+      (eyebrow || heading || text) && (
+        <div class="bcg-intro">
+          {eyebrow && <p class="bcg-eyebrow">{eyebrow}</p>}
+          {heading && <h2>{heading}</h2>}
+          {text && <p class="bcg-lead">{text}</p>}
+        </div>
+      )
+    }
+    {
+      posts.length > 0 ? (
+        <ul class="bcg-cards no-check">
+          {posts.map((post: any) => {
+            const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+            return (
+              <li>
+                <a href={`/blog/${slug}`}>
+                  {post.data.image && <img src={post.data.image} alt={post.data.title} loading="lazy" />}
+                  <span class="bcg-cap">{post.data.title}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      ) : (
+        <p class="bcg-empty">{emptyText}</p>
+      )
+    }
+  </div>
+</section>
+<style>
+  .a-blogcatgrid { background: var(--bg); padding-block: 80px; }
+  .bcg-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem, 3vw, 2.5rem); }
+  .bcg-intro { margin-bottom: 2.5rem; max-width: 900px; }
+  .bcg-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  .bcg-intro h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem, 3vw, 40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
+  .bcg-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0; }
+  .bcg-cards { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); list-style: none; margin: 0; padding: 0; }
+  .bcg-cards a { color: inherit; display: block; text-decoration: none; }
+  .bcg-cards img { aspect-ratio: 4 / 3; display: block; height: auto; object-fit: cover; width: 100%; }
+  .bcg-cap {
+    background: var(--capbg);
+    color: var(--captx);
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 1rem 1.25rem;
+    text-align: center;
+  }
+  .bcg-empty { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 16px; }
+</style>

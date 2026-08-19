@@ -13,7 +13,7 @@ pageSections:
     heading: Jen
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\">Dental Hygienist</h4>
@@ -107,8 +105,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">There is a saying, that “nothing is consistent but change.” I believe to grow and develop you need change. I am honored to be part of such a great team atmosphere and mission that we stand behind here at Artisan Dental!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -116,4 +112,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: The Carbon Neutral Dental Office
+    prevLink: /the-carbon-neutral-dental-office/
+    nextName: Recognitions and Awards
+    nextLink: /recognitions-and-awards/
+    textColor: "#321c0e"
 ---

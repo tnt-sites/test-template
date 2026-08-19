@@ -13,7 +13,7 @@ pageSections:
     heading: Artificial Intelligence in Dentistry
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -42,7 +42,7 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
   - _component: page-sections/artisan/split-feature
@@ -63,7 +63,7 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
   - _component: page-sections/artisan/split-feature
@@ -84,7 +84,7 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
   - _component: page-sections/artisan/logo-strip
@@ -144,7 +144,7 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
 ---

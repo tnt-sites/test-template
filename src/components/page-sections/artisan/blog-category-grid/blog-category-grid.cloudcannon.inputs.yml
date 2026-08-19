@@ -1,0 +1,24 @@
+_inputs:
+  tag:
+    type: text
+    comment: Matches this exact blog post tag (case-insensitive), e.g. "Restorative".
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  text:
+    type: markdown
+  emptyText:
+    type: text
+  backgroundColor:
+    type: color
+  captionBackgroundColor:
+    type: color
+  captionTextColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color

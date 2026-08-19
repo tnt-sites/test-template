@@ -1,0 +1,10 @@
+_snippets:
+  a_subscription_is_required:
+    template: astro_component
+    inline: false
+    preview:
+      text: A Subscription Is Required
+    definitions:
+      component_name: page-sections/wpmig/a-subscription-is-required
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/a-subscription-is-required/a-subscription-is-required.cloudcannon.inputs.yml

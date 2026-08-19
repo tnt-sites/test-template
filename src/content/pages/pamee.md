@@ -13,7 +13,7 @@ pageSections:
     heading: Pamee
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\">Patient Care Coordinator</h4>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">Again, I am so excited to be a part of Artisan Dental, a place where employees are valued and mean more than just a number. The morale here is unreal, I love that they put so much effort into building a great place to work. I can see that Artisan Dental cares deeply about their employees and community and I love being a part of that.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Online Payments
+    prevLink: /online-payments-2/
+    nextName: Artificial Intelligence in Dentistry
+    nextLink: /artificial-intelligence-in-dentistry/
+    textColor: "#321c0e"
 ---

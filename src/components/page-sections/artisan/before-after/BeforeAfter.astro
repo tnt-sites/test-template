@@ -1,0 +1,47 @@
+---
+/**
+ * A case study: a heading and one or more labelled before/after photo
+ * pairs — the source's "Before Closed Bite" / "After Closed Bite" rows.
+ * Generic split-feature holds one image; this shape is two, paired and
+ * labelled, repeated per angle.
+ *
+ * Baked in: layout. Props: heading, pairs (each a before/after image+label),
+ * colours.
+ */
+const {
+  heading = "",
+  pairs = [],
+  headingColor = "#321c0e", labelColor = "#686868",
+  id, _component, ...rest
+} = Astro.props;
+const items = Array.isArray(pairs) ? pairs.filter((p: any) => p?.beforeImage || p?.afterImage) : [];
+---
+{items.length > 0 && (
+  <section class="a-beforeafter" id={id || undefined}
+    style={`--hd:${headingColor};--lb:${labelColor}`} {...rest}>
+    <div class="ba-inner">
+      {heading && <h3>{heading}</h3>}
+      {items.map((p: any) => (
+        <div class="ba-pair">
+          <div class="ba-photo">
+            {p.beforeLabel && <p class="ba-label">{p.beforeLabel}</p>}
+            {p.beforeImage && <img src={p.beforeImage} alt={p.beforeLabel || ""} loading="lazy" />}
+          </div>
+          <div class="ba-photo">
+            {p.afterLabel && <p class="ba-label">{p.afterLabel}</p>}
+            {p.afterImage && <img src={p.afterImage} alt={p.afterLabel || ""} loading="lazy" />}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+<style>
+  .a-beforeafter { padding-block: 2.5rem; }
+  .ba-inner { margin-inline: auto; max-width: 1000px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.25rem,2.5vw,26px); font-weight: 700; margin: 0 0 1.5rem; }
+  .ba-pair { display: grid; gap: 1.5rem; grid-template-columns: 1fr 1fr; margin-bottom: 1.5rem; }
+  .ba-label { color: var(--lb); font-family: "Open Sans", sans-serif; font-size: 14px; font-weight: 600; margin: 0 0 0.5rem; text-transform: uppercase; }
+  .ba-photo img { border-radius: 4px; display: block; height: auto; width: 100%; }
+  @media (max-width: 640px) { .ba-pair { grid-template-columns: 1fr; } }
+</style>

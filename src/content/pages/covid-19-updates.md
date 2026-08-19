@@ -13,7 +13,7 @@ pageSections:
     heading: Covid-19 Updates
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -22,11 +22,9 @@ pageSections:
     id: ""
     sidebarHeading: ""
     links: []
-    image: /wp-content/uploads/2021/04/IB_award.png
-    imageAlt: IB small Business award
+    image: ""
+    imageAlt: ""
     body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t
 
@@ -143,8 +141,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">We will continue to closely monitor updates from the&nbsp;<a href=\"http://email.yodle.com/ls/click?upn=gnl6vTBopJwjuvZm8tUWbU75IANciI1qxZiPtjRqV5o5XTaNOb0zpz507MzMje-2BvxI4aSqlfTmTudfwZ7YOGLPVzSXHDDtsqzxP0bgakvg93Lj1GUgCHYMlg6s7pogYuAJWncOH2E0dhK526zBn-2F6QJCKIu2sUNiKVSnvUDTEjwVsMNn62480Zf-2BNlMJh1KUhcKY4dJXGBpqDRCdbC4nuX6rMBH3-2F0IN7piKqrHZejINGqL88lgPhLIAULHPbeDMt37NoqQ-2FMA0eP5Oc1e9qJ7FEcfkROl1IoYyhkQWLe24zIn5vSTlmeuI7GQA6PoWGrJsUlfn4GPvfxmiKQjzUl1gqYQh0Jg4bDPHU2waeVME0axa4s-2FCtB9N82Cj-2F0ZLxC5q3wDFIZyrNANt3l4B6uh1Mjem281OXUwifWW6Yj3h4Uwk49dQlgwi6gD34Aq3VAqkhRS7VFUwsX4IQ7vxz52avzL65RO7gX38qn53s3-2BqquKMLel7yYLjsJeY83uD8cpuT08x-2BeSP9R-2F29cPZp5-2FRS7yTE-2FZNLApS8AS3PwRDqn-2FCBCHhSiRnMPkEfggnymnxbtvioEA10BEI0aV6A91QjNkDkjUItne2iwlmm98gEbsVcY93thf97lsiDrzQBL7meqc-2FHSueggi4h2PZhIfvc4rpPFWZYv1W0zXPreUTix08yd2ZS3-2BkKUw6m0ch3a0I-2BehZYACV4q7AVzqdMYf3foOi7yggTuSQL7So3-2FdB2b6Sge2eK-2BECzrBtHxE-2Fta4psoS4j7VuGsff0aZaLGQ-3D-3D6URe_eH3My2zy8TrcfmLXeISJA618OGfjy-2BJp6WcSw8OWGEau1yWDuajMT2V-2FST7nIJC3ZVT5N1pdznUTunZbkPNNBk9flMHqak-2F9xkxXD-2B4MR8oTCDXYiB-2FDOdnui3WiJ49mNmAZ3a78-2FRPNcTtPX5ZEL8ApVmGARIJdu9OXEEGnTGJiu9u3G9VP5DJBUsnaWdhKUVSdK2s9Hi5tR-2BW6-2FmTivRClkOviJb6AYHCuTZn9whTWFvL84c7Ez48fkAV-2B6VFG9HR0khOAi2DMS7H0RnnbKfV5FLfSzikd82BJYVwfm-2BdrlwCmUKp9ydCZbBtPAtYXRAJQFp7e23bbUGr9KtU4gw-3D-3D\" target=\"_blank\" rel=\"noreferrer noopener\">American Dental Association</a>,&nbsp;<a href=\"http://email.yodle.com/ls/click?upn=gnl6vTBopJwjuvZm8tUWbU75IANciI1qxZiPtjRqV5o5XTaNOb0zpz507MzMje-2BvxI4aSqlfTmTudfwZ7YOGLPVzSXHDDtsqzxP0bgakvg93Lj1GUgCHYMlg6s7pogYuAJWncOH2E0dhK526zBn-2F6QJCKIu2sUNiKVSnvUDTEjwVsMNn62480Zf-2BNlMJh1KUlQelUKlx25v96oC9NFbdT-2FIAUunGoJX5nC9iq7bA6HQu8kxWXUkJNW-2B9SMA-2FM-2B8G7ShsuJhdQuu4iaPWNU-2BDpzE-2Fz1lOX10ZGC5EgXpn9eL3vAz9I6c8oLmVXdp1qiC-2FlBWM5EV0joPLTuAwbCIyiMBK-2F4gn4mRm-2BcbfAh-2FxVxExP0x8po5HTbB0H7nhzRRbUfeK7ifuvognFj7R9lTIYt-2FbiIEmLcn13mBeqmSp6UUXHn-2BFfPLRhV3FdGp4-2BnFaYZyiG-2BDmMSFPEiSwwdAe9wS7GNg2jj194-2BDTPWf1gWBtLuR1ubwF9f-2BKeAkIICviB5RIwu6nNgpZn-2FrMukLY6luWqB6BZVsMazIJoQn5FeUu5pMV4tpYTCmJReKQETqbUOj-2BLxBbFCPEOsqlElLwJK8OTzSE1yxcJnNRsSK9vc2HG-2Bt5PQpvwH-2BwAIhusBkV7uI-2FrZ3xhz-2BT8i2Zi9dR7MVzg11PpnCSAb3rxWfPo-2BMCq00xWiBfrsj-2FjHNKBlzXiOJ4sLh6xTkkGrzfQUFGJzlgM3GRlwWa1pgx-2BHUxUyrMsKEGy-2FWn1xTJTt8a8k0TKchvHFFmD-2Fu34D03oFBA6A-3D-3DCLGb_eH3My2zy8TrcfmLXeISJA618OGfjy-2BJp6WcSw8OWGEau1yWDuajMT2V-2FST7nIJC3ZVT5N1pdznUTunZbkPNNBk9flMHqak-2F9xkxXD-2B4MR8oTCDXYiB-2FDOdnui3WiJ49msl3ZWWFXxzIWjpPtxg3p13rMIEXIo8gZbj0hJWV3UFA-2BD9lcXmNPucOv9LsDnCNFLDS1coKKZXeuKewgjDvgK35BKcFb-2B-2BjrAA4x7DRM7JeGTT63ac6-2BNC3CZmqEW-2Fkl1HeRy8ug0nXv5ja4CJGxAfLY66xmbVDJMwfwJJRrQzvX2KTBh0d910Lka8B8jzBQOyuLL8-2Fcdnjg2yfooPFgSg-3D-3D\" target=\"_blank\" rel=\"noreferrer noopener\">Centers for Disease Control</a>,&nbsp;<a href=\"http://email.yodle.com/ls/click?upn=CFNw5l3kDXijp6mt6R1IPVp-2B9Rv98MxJXHABthgygsg-3D5F8w_eH3My2zy8TrcfmLXeISJA618OGfjy-2BJp6WcSw8OWGEau1yWDuajMT2V-2FST7nIJC3ZVT5N1pdznUTunZbkPNNBk9flMHqak-2F9xkxXD-2B4MR8oTCDXYiB-2FDOdnui3WiJ49mKqL54IvHOmaYTrFDOKvsdG04yRRGINBfnoq37bsF6krb4-2FdR652lX-2FWqJolOJRd4Yq74eQgInfdlHV9ln-2FHJjPlWWasSU6hYQbcscOwwXi3afHypmZpLzCoAFj-2BQ3LNIOWJeTp9NIxzjP-2B4EevUB6Q1DJ801HKXhqRID2Pq-2BO1me0rzN6PpGW-2FPItfDtnydQ32pQId91KFoVxYvTpmZ4Lg-3D-3D\" target=\"_blank\" rel=\"noreferrer noopener\">Occupational Safety and Health Administration(OSHA)</a>&nbsp;and will continue to seek guidance from these agencies and public health officials.&nbsp; We will keep you informed of any changes. We look forward to seeing you again and are happy to answer any questions you may have about the steps we are taking to keep you, and every patient, safe in our practice. To make an appointment, please call our office at 608.467.8022 or visit our website at&nbsp;<a>www.artisandentalmadison.com</a>. Thank you for being our patient. We value your trust and loyalty and look forward to welcoming back our patients, neighbors and friends. Sincerely, Dr. Nicole Andersen and Team</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -152,4 +148,34 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png
+        alt: Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
 ---

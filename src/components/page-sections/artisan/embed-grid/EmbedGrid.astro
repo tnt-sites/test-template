@@ -1,0 +1,48 @@
+---
+/**
+ * A grid of map/embed iframes — the source's 7-room virtual office tour,
+ * each room a bare Google Maps Street View embed back to back with no
+ * heading of its own. Generic split-feature has no field for an iframe at
+ * all, so every room silently rendered as an empty band.
+ *
+ * Baked in: layout. Props: heading, embeds (each an embed URL + optional
+ * label), colours.
+ */
+const {
+  eyebrow = "", heading = "",
+  embeds = [],
+  backgroundColor = "#ffffff", eyebrowColor = "var(--color-brand-secondary)", headingColor = "#321c0e", labelColor = "#321c0e",
+  id, _component, ...rest
+} = Astro.props;
+const items = Array.isArray(embeds) ? embeds.filter((e: any) => e?.embedUrl) : [];
+---
+{items.length > 0 && (
+  <section class="a-embedgrid" id={id || undefined}
+    style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--lb:${labelColor}`} {...rest}>
+    <div class="eg-inner">
+      {eyebrow && <p class="eg-eyebrow">{eyebrow}</p>}
+      {heading && <h2>{heading}</h2>}
+      <div class="eg-grid">
+        {items.map((e: any) => (
+          <div class="eg-item">
+            {e.label && <p class="eg-label">{e.label}</p>}
+            <div class="eg-frame">
+              <iframe src={e.embedUrl} title={e.label || "Embedded map"} loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+<style>
+  .a-embedgrid { background-color: var(--bg); padding-block: 4rem; }
+  .eg-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .eg-eyebrow { color: var(--eb); font-family: "Open Sans", sans-serif; font-size: 18px; font-style: italic; font-weight: 400; letter-spacing: 0.5px; margin: 0; text-align: center; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; text-align: center; }
+  .eg-grid { display: grid; gap: 1.75rem; grid-template-columns: repeat(2, 1fr); }
+  .eg-label { color: var(--lb); font-family: Poppins, sans-serif; font-size: 16px; font-weight: 700; margin: 0 0 0.5rem; }
+  .eg-frame { aspect-ratio: 4 / 3; border-radius: 4px; overflow: hidden; }
+  .eg-frame iframe { border: 0; display: block; height: 100%; width: 100%; }
+  @media (max-width: 720px) { .eg-grid { grid-template-columns: 1fr; } }
+</style>

@@ -126,7 +126,7 @@
       "children": [
         {
           "name": "Restorative",
-          "path": "",
+          "path": "/restorative/",
           "children": [
             {
               "name": "Full & Partial Mouth Rehabilitation",
@@ -218,7 +218,7 @@
         },
         {
           "name": "Preventive",
-          "path": "",
+          "path": "/preventive/",
           "children": [
             {
               "name": "Botox For Bruxism (Clenching and Grinding Teeth)",
@@ -312,7 +312,7 @@
       "children": [
         {
           "name": "Request Appointment",
-          "path": "/request-appointment/",
+          "path": "/contact-us/",
           "children": []
         },
         {
@@ -364,7 +364,7 @@
       "id": "",
       "text": "Request an Appointment",
       "hideText": false,
-      "link": "/request-appointment/",
+      "link": "/contact-us/",
       "modalTarget": "",
       "iconName": "",
       "iconPosition": "before",
@@ -381,12 +381,12 @@
   "topBar": {
     "followLabel": "Follow Us!",
     "phoneLabel": "or Call",
-    "backgroundColor": "#321c0e",
+    "backgroundColor": "var(--color-brand)",
     "textColor": "#ffffff",
-    "socialColor": "#bf9800",
+    "socialColor": "var(--color-brand-subtle)",
     "mainBackgroundColor": "rgba(255, 255, 255, 0.9)",
-    "navColor": "#321c0e",
+    "navColor": "var(--color-brand)",
     "buttonBackgroundColor": "#ffffff",
-    "buttonTextColor": "#d2b22e"
+    "buttonTextColor": "var(--color-brand-secondary)"
   }
 }

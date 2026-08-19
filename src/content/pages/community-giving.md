@@ -13,7 +13,7 @@ pageSections:
     heading: Community Giving
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -22,67 +22,55 @@ pageSections:
     id: ""
     sidebarHeading: ""
     links: []
-    image: /wp-content/uploads/2020/08/3ds.jpg
-    imageAlt: Busy city road
+    image: ""
+    imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" src=\"/wp-content/uploads/2020/08/3ds.jpg\" class=\"attachment-large size-large wp-image-601\" alt=\"Busy city road\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 
-      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"509\" class=\"elementor elementor-509\" data-elementor-post-type=\"page\">
 
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-6e9892a elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"6e9892a\" data-element_type=\"section\" data-e-type=\"section\">
+      \t\t\t\t\t\t\t\t\t<p><strong>We appreciate that we are an interwoven part of a larger local and global community.</strong> We are heartened by the opportunity to support these organizations with owner and staff volunteer hours, free dental services, and/or ongoing financial contributions.&nbsp;</p>\t\t\t\t\t\t\t\t
 
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1aaf3c4\" data-id=\"1aaf3c4\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-76a4fc5 elementor-widget elementor-widget-image\" data-id=\"76a4fc5\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"image.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" width=\"800\" height=\"530\" src=\"/wp-content/uploads/2020/08/3ds.jpg\" class=\"attachment-large size-large wp-image-601\" alt=\"Busy city road\" srcset=\"/wp-content/uploads/2020/08/3ds.jpg 1024w, /wp-content/uploads/2020/08/3ds-800x530.jpg 800w, /wp-content/uploads/2020/08/3ds-600x397.jpg 600w\" sizes=\"(max-width: 800px) 100vw, 800px\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-db760e9 elementor-widget elementor-widget-text-editor\" data-id=\"db760e9\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p><strong>We appreciate that we are an interwoven part of a larger local and global community.</strong> We are heartened by the opportunity to support these organizations with owner and staff volunteer hours, free dental services, and/or ongoing financial contributions.&nbsp;</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t<div class=\"elementor-element elementor-element-45c8d95 elementor-widget elementor-widget-image\" data-id=\"45c8d95\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"image.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/wp-content/uploads/2026/05/artisan-dental-impact-donations-report-2025.pdf\" target=\"_blank\">
 
-      \t\t\t\t\t\t\t<img decoding=\"async\" width=\"800\" height=\"1035\" src=\"/wp-content/uploads/2026/05/artisan-dental-impact-donations-report-2025.pdf.jpg\" class=\"attachment-large size-large wp-image-8368\" alt=\"2025 Artisan Dental Impact Donations Report\">\t\t\t\t\t\t\t\t</a>
+      \t\t\t\t\t\t\t<img decoding=\"async\" src=\"/wp-content/uploads/2026/05/artisan-dental-impact-donations-report-2025.pdf.jpg\" class=\"attachment-large size-large wp-image-8368\" alt=\"2025 Artisan Dental Impact Donations Report\">\t\t\t\t\t\t\t\t</a>
 
-      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t"
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png
+        alt: Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
 ---

@@ -13,7 +13,7 @@ pageSections:
     heading: Scott Andersen
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Scott Andersen - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\">Director of Stakeholder Stewardship</h4>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">In my free time, I enjoy spending time with my wife and two children, reading, traveling and volunteering in our community as a coach, teacher and active member of various non-profit and civic boards.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Jill
+    prevLink: /jill/
+    nextName: Jonlyn
+    nextLink: /jonlyn/
+    textColor: "#321c0e"
 ---

@@ -1,0 +1,10 @@
+_snippets:
+  we_welcome_the_opportunity:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Welcome The Opportunity
+    definitions:
+      component_name: page-sections/wpmig/we-welcome-the-opportunity
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/we-welcome-the-opportunity/we-welcome-the-opportunity.cloudcannon.inputs.yml

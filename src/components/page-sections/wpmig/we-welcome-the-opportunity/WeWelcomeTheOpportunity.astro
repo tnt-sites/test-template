@@ -1,0 +1,248 @@
+---
+/**
+ * We Welcome The Opportunity — migrated from full-partial-mouth-rehabilitation [13] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  buttonBackgroundColor = "var(--color-brand-secondary)",
+  buttonTextColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-welcome-the-opportunity" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+  <div class="wwto-box">
+    <div class="wwto-box2">
+      <div class="wwto-box3">
+        <h2 class="wwto-heading">{heading}</h2>
+      </div>
+    </div>
+    <div class="wwto-box4">
+      <div class="wwto-box5">
+        {text && <p class="wwto-text" set:html={text} />}
+      </div>
+    </div>
+    <div class="wwto-box6">
+      {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="wwto-btn" text={buttonText} link={buttonLink || "#"} />}
+    </div>
+    <div class="wwto-box7">
+      <div class="wwto-box8">
+        {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="wwto-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .we-welcome-the-opportunity {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding: 40px;
+    position: relative;
+  }
+
+  .wwto-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+  }
+
+  .wwto-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wwto-box3 {
+    box-sizing: border-box;
+  }
+
+  .wwto-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wwto-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wwto-box5 {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+  }
+
+  .wwto-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .wwto-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :global(.wwto-btn) {
+    background-color: var(--btnbg);
+    border: 2px solid var(--color-brand-secondary);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+  }
+
+  .wwto-box7 {
+    box-sizing: border-box;
+    flex: 0 0 95.41%;
+    margin-left: 10px;
+    max-width: 95.41%;
+    text-align: center;
+  }
+
+  .wwto-box8 {
+    box-sizing: border-box;
+  }
+
+  :global(.wwto-btn2) {
+    background-color: var(--btnbg);
+    border: 2px solid var(--color-brand-secondary);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+  }
+
+  :global(.wwto-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #ffffff;
+    letter-spacing: -2px;
+  }
+
+  :global(.wwto-btn2):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .we-welcome-the-opportunity {
+      max-width: 675px;
+    }
+
+    .wwto-box6 {
+      flex: 0 0 52.94%;
+      max-width: 52.94%;
+    }
+
+    :global(.wwto-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.wwto-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .wwto-box7 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    :global(.wwto-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.wwto-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .we-welcome-the-opportunity {
+      max-width: 1108px;
+      padding: 100px 0px;
+    }
+
+    .wwto-box3 {
+      margin-bottom: 15px;
+    }
+
+    .wwto-heading {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .wwto-box6 {
+      flex: 0 0 28.43%;
+      max-width: 28.43%;
+    }
+
+    .wwto-box7 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wwto-heading {
+    font-weight: 700;
+  }
+  .wwto-text {
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    line-height: 26px;
+  }
+  :global(.wwto-btn) {
+    align-items: normal;
+    font-size: 18px;
+    justify-content: normal;
+  }
+  :global(.wwto-btn2) {
+    align-items: normal;
+    font-size: 18px;
+    justify-content: normal;
+  }
+/* wpmig:corrections:end */
+</style>

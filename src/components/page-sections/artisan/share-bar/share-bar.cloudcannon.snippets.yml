@@ -1,0 +1,10 @@
+_snippets:
+  share_bar:
+    template: astro_component
+    inline: false
+    preview:
+      text: Share Bar
+    definitions:
+      component_name: page-sections/artisan/share-bar
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/share-bar/share-bar.cloudcannon.inputs.yml

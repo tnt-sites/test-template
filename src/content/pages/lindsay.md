@@ -13,7 +13,7 @@ pageSections:
     heading: Lindsay
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Lindsey - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\">Director of Human Resources and Compliance</h4>
@@ -112,8 +110,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">I am originally from Northern Illinois and moved to Madison following graduation. My family and I reside in Sun Prairie, where we love enjoying everything the growing city has to offer while still being very close to downtown! We love staying active through the gym, hiking, and going on walks with our dogs. We LOVE traveling and are always interested in any location recommendations! When we are home, you can catch us grilling, creating something yummy in the kitchen, spending time with friends and family, and watching any Wisconsin sport! I look forward to meeting all of you!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -121,4 +117,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Jonlyn
+    prevLink: /jonlyn/
+    nextName: Cassandra
+    nextLink: /cassandra/
+    textColor: "#321c0e"
 ---

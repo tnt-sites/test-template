@@ -1,0 +1,25 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  items:
+    type: array
+    options:
+      structures: _structures.we_can_fix_these_item
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  titleColor:
+    type: color
+_structures:
+  we_can_fix_these_item:
+    values:
+      - value:
+          title: ""
+        _inputs:
+          title:
+            type: text

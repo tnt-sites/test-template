@@ -1,0 +1,268 @@
+/* Styles for markup lifted verbatim out of the source pages — forms and the
+   office-hours table — whose stylesheets lived inline in the WordPress <head>
+   and so never came across with the markup.
+
+   The source's own hand-written forms — `.tnt-form` markup inside Elementor
+   html widgets, posting to admin-post.php — are lifted into page bodies
+   verbatim (contact-us' appointment request, appointments, careers). Their
+   stylesheet was inline in the WordPress <head>, so it never came across:
+   every one of them landed as bare browser-default controls, labels and
+   inputs running inline, nothing full width, no submit button.
+
+   This is that stylesheet, ported. Only the shared `.tnt-form` block is here —
+   the source's per-page blocks (`.form-request-appointment-home-page` and
+   friends) are all empty. Lives in @layer source-bridge so it beats the
+   starter's zero-specificity `@layer base` control styles.
+
+   MEASURED against the source: rows 8px 0, half-rows two columns with 15px/10px
+   gaps, labels Open Sans 18px #686868, controls 100% wide with a 1px #ccc
+   border and 2px radius, submit full width brown #321c0e. */
+@layer source-bridge {
+  .tnt-form form {
+    font-family: "Open Sans", sans-serif;
+    max-width: 100%;
+
+    /* Clear floats */
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+
+    .form-row {
+      box-sizing: border-box;
+      padding: 8px 0;
+
+      &.full {
+        clear: both;
+        width: 100%;
+      }
+
+      &.half {
+        display: flex;
+        gap: 15px 10px;
+
+        .column {
+          float: left;
+          width: 50%;
+        }
+      }
+
+      &.checkboxes {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin: 0 0 10px;
+        width: 100%;
+
+        label {
+          font-family: "Open Sans", sans-serif;
+          font-size: 18px;
+          margin: 0;
+        }
+
+        input {
+          height: 15px;
+          margin: 0;
+          width: 15px;
+        }
+      }
+
+      label,
+      input,
+      textarea {
+        &::placeholder {
+          color: #686868;
+          font-family: "Open Sans", sans-serif;
+          font-size: 15px;
+          font-weight: 400;
+        }
+      }
+
+      label {
+        color: #686868;
+        display: block;
+        font-family: "Open Sans", sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 4px;
+      }
+
+      input {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #1f2124;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px;
+        width: 100%;
+
+        /* The date field carries its own `mm/dd/yyyy` placeholder, drawn over
+           a blanked-out native edit until the field is focused or filled. */
+        &[type="date"] {
+          background-color: #fff;
+          color: #686868;
+          max-height: 45px;
+          padding: 10px;
+          position: relative;
+
+          &.date-empty:not(:focus) {
+            &::before {
+              color: #686868;
+              content: attr(data-placeholder);
+              font-family: "Open Sans", sans-serif;
+              font-size: 15px;
+              font-weight: 400;
+              pointer-events: none;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            &::-webkit-datetime-edit-text,
+            &::-webkit-datetime-edit-month-field,
+            &::-webkit-datetime-edit-day-field,
+            &::-webkit-datetime-edit-year-field {
+              color: transparent;
+            }
+          }
+
+          &:focus,
+          &:not(.date-empty) {
+            color: #686868;
+
+            &::before {
+              content: "";
+            }
+
+            &::-webkit-datetime-edit-text,
+            &::-webkit-datetime-edit-month-field,
+            &::-webkit-datetime-edit-day-field,
+            &::-webkit-datetime-edit-year-field {
+              color: #686868;
+            }
+          }
+
+          &::-webkit-calendar-picker-indicator {
+            cursor: pointer;
+          }
+        }
+
+        &[type="radio"],
+        &[type="checkbox"] {
+          width: auto;
+        }
+      }
+
+      select {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #1f2124;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        padding: 10px;
+        width: 100%;
+
+        &.time-input {
+          background-color: #fff;
+          color: #686868;
+          min-height: 45px;
+        }
+      }
+
+      textarea {
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+        color: #1f2124;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        min-height: 100px;
+        padding: 10px;
+        resize: vertical;
+        width: 100%;
+      }
+
+      /* Submit */
+      button {
+        background: #321c0e;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        line-height: 16px;
+        margin: 0 auto;
+        padding: 14px;
+        width: 100%;
+
+        &:hover {
+          background: #472c1c;
+        }
+      }
+    }
+
+    .form-section-title {
+      clear: both;
+      color: #555;
+      font-family: "Open Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 0 0 5px;
+    }
+  }
+
+  /* Hidden plumbing inputs would otherwise take a row's worth of space. */
+  .tnt-form input[type="hidden"] {
+    display: none;
+  }
+
+  /* The office-hours table is lifted markup too (`<table class="hours">`), and
+     the starter's table styling is a different animal — rounded, muted head
+     row, 0.5rem cells, no zebra. MEASURED on the source: full width, collapsed
+     1px rgb(128 128 128 / 50%) borders, 15px cells, odd rows tinted 7%, day
+     column bold and centred. */
+  table.hours {
+    border-collapse: collapse;
+    margin: 0 0 15px;
+    width: 100%;
+
+    th,
+    td {
+      border: 1px solid rgb(128 128 128 / 50%);
+      border-radius: 0;
+      color: #686868;
+      font-size: 16.2px;
+      line-height: 24.3px;
+      padding: 15px;
+      vertical-align: middle;
+    }
+
+    th {
+      background: none;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    tr.odd th,
+    tr.odd td {
+      background-color: rgb(128 128 128 / 7%);
+    }
+  }
+
+  @media (max-width: 799px) {
+    .tnt-form form .form-row.half {
+      display: grid;
+
+      .column {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+}

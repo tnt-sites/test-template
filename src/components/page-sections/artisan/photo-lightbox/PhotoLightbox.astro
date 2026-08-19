@@ -1,0 +1,101 @@
+---
+/**
+ * A grid of photos that open full-size in a lightbox on click — the
+ * source's native WordPress [gallery], which used Elementor's own lightbox
+ * JS (not ported). Rendering the photos as a plain autoplay logo-strip
+ * carousel, as the generic classifier did, drops the click-to-enlarge
+ * behaviour and the captions entirely.
+ *
+ * Baked in: layout, lightbox behaviour. Props: heading, photos, colours.
+ */
+const {
+  eyebrow = "", heading = "",
+  photos = [],
+  backgroundColor = "#ffffff", eyebrowColor = "var(--color-brand-secondary)", headingColor = "#321c0e",
+  id, _component, ...rest
+} = Astro.props;
+const items = Array.isArray(photos) ? photos.filter((p: any) => p?.image) : [];
+---
+{items.length > 0 && (
+  <section class="a-lightbox" id={id || undefined}
+    style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor}`} {...rest}>
+    <div class="lb-inner">
+      {eyebrow && <p class="lb-eyebrow">{eyebrow}</p>}
+      {heading && <h2>{heading}</h2>}
+      <div class="lb-grid">
+        {items.map((p: any, i: number) => (
+          <button class="lb-thumb" type="button" data-lightbox-index={i}>
+            <img src={p.image} alt={p.alt || ""} loading="lazy" />
+          </button>
+        ))}
+      </div>
+    </div>
+    <div class="lb-overlay" hidden>
+      <button class="lb-close" type="button" aria-label="Close">✕</button>
+      <button class="lb-prev" type="button" aria-label="Previous photo">‹</button>
+      <img class="lb-full" src="" alt="" />
+      <button class="lb-next" type="button" aria-label="Next photo">›</button>
+    </div>
+  </section>
+)}
+<style>
+  .a-lightbox { background-color: var(--bg); padding-block: 4rem; }
+  .lb-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  .lb-eyebrow { color: var(--eb); font-family: "Open Sans", sans-serif; font-size: 18px; font-style: italic; font-weight: 400; letter-spacing: 0.5px; margin: 0; text-align: center; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; text-align: center; }
+  .lb-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, 1fr); }
+  .lb-thumb { background: none; border: 0; border-radius: 4px; cursor: pointer; overflow: hidden; padding: 0; }
+  .lb-thumb img { aspect-ratio: 16/9; display: block; height: 100%; object-fit: cover; transition: transform 0.2s ease; width: 100%; }
+  .lb-thumb:hover img { transform: scale(1.04); }
+  .lb-overlay {
+    align-items: center; background: rgba(20, 12, 6, 0.92); display: flex; inset: 0;
+    justify-content: center; position: fixed; z-index: 999;
+  }
+  .lb-overlay[hidden] { display: none; }
+  .lb-full { max-height: 88vh; max-width: 82vw; object-fit: contain; }
+  .lb-close, .lb-prev, .lb-next {
+    background: rgba(255, 255, 255, 0.12); border: 0; border-radius: 50%; color: #fff;
+    cursor: pointer; font-size: 1.5rem; height: 44px; line-height: 1; position: absolute; width: 44px;
+  }
+  .lb-close { right: 1.5rem; top: 1.5rem; }
+  .lb-prev { left: 1.5rem; }
+  .lb-next { right: 1.5rem; }
+  .lb-close:hover, .lb-prev:hover, .lb-next:hover { background: rgba(255, 255, 255, 0.24); }
+  @media (max-width: 860px) { .lb-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .lb-grid { grid-template-columns: 1fr; } }
+</style>
+<script>
+  document.querySelectorAll<HTMLElement>(".a-lightbox").forEach((section) => {
+    if (section.dataset.lbReady) return;
+    section.dataset.lbReady = "1";
+
+    const thumbs = [...section.querySelectorAll<HTMLButtonElement>(".lb-thumb")];
+    const overlay = section.querySelector<HTMLElement>(".lb-overlay");
+    const fullImg = section.querySelector<HTMLImageElement>(".lb-full");
+    if (!overlay || !fullImg || thumbs.length === 0) return;
+
+    let current = 0;
+    const show = (i: number) => {
+      current = (i + thumbs.length) % thumbs.length;
+      const img = thumbs[current].querySelector("img");
+      if (img) {
+        fullImg.src = img.src;
+        fullImg.alt = img.alt;
+      }
+      overlay.hidden = false;
+    };
+    const close = () => { overlay.hidden = true; };
+
+    thumbs.forEach((t, i) => t.addEventListener("click", () => show(i)));
+    section.querySelector(".lb-close")?.addEventListener("click", close);
+    section.querySelector(".lb-prev")?.addEventListener("click", () => show(current - 1));
+    section.querySelector(".lb-next")?.addEventListener("click", () => show(current + 1));
+    overlay.addEventListener("click", (e) => { if (e.target === overlay) close(); });
+    document.addEventListener("keydown", (e) => {
+      if (overlay.hidden) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
+    });
+  });
+</script>

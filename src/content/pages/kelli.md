@@ -13,7 +13,7 @@ pageSections:
     heading: Kelli
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <p class=\"wp-block-paragraph\">In spring of 2024 I completed the Dental Assisting program at Western Technical College in La Crosse. After moving back to the Madison area where I grew up, I was fortunate enough to begin my assisting career at Artisan Dental. Since I’ve started working here I have already learned so much, and continue to grow personally and professionally each day. I truly couldn’t imagine a better place to begin my dental career.&nbsp;</p>
@@ -97,8 +95,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">When I’m not in the office you can find me exploring new restaurants in Madison, cheering for the Packers and Badgers with my friends and family, and staying in to watch movies on the weekends. I’ve loved getting to know Madison again and all it has to offer. I look forward to meeting you all!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -106,4 +102,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Sleep Apnea
+    prevLink: /sleep-apnea/
+    nextName: Kaitlin
+    nextLink: /kaitlin/
+    textColor: "#321c0e"
 ---

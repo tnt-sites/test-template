@@ -1,0 +1,27 @@
+label: We Have Felixble Payment
+icon: interests
+description: We Have Felixble Payment section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-have-felixble-payment
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#321c0e"
+  eyebrowColor: "#ffffff"
+  headingColor: "#ffffff"
+  textColor: "#000000"
+  buttonBackgroundColor: "var(--color-brand-secondary)"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#686868"
+preview:
+  text:
+    - We Have Felixble Payment
+  icon: interests
+picker_preview:
+  text: We Have Felixble Payment
+  subtext: We Have Felixble Payment section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-have-felixble-payment/we-have-felixble-payment.cloudcannon.inputs.yml

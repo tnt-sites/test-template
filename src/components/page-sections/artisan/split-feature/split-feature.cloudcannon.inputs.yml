@@ -1,9 +1,31 @@
 _inputs:
+  imageAlt:
+    type: text
+    comment: Describes the image for screen readers. Falls back to the heading.
   backgroundColor:
     type: color
+  backgroundImage:
+    type: image
+    comment: Optional decorative texture, blended at overlayOpacity.
   eyebrowColor:
     type: color
   headingColor:
     type: color
   textColor:
     type: color
+  buttonBackgroundColor:
+    type: color
+    comment: Leave blank for the default brand button colour.
+  buttonTextColor:
+    type: color
+  buttonAlign:
+    type: select
+    comment: Leave blank to follow the copy alignment.
+    options:
+      values: [left, center, right]
+  headingSize:
+    type: text
+    comment: Optional heading size override, e.g. 30px. Blank uses the default scale.
+  paddingBlock:
+    type: text
+    comment: Optional vertical padding override, e.g. "25px" or "0 25px".

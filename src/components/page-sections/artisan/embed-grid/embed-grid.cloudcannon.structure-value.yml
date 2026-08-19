@@ -1,0 +1,26 @@
+label: Embed Grid
+icon: map
+description: Grid of map/embed iframes — the office tour's room-by-room Street View panes.
+value:
+  _component: page-sections/artisan/embed-grid
+  id: ""
+  eyebrow: ""
+  heading: ""
+  embeds:
+    - embedUrl: ""
+      label: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  labelColor: "#321c0e"
+preview:
+  text:
+    - Embed Grid
+  subtext:
+    - key: heading
+  icon: map
+picker_preview:
+  text: Embed Grid
+  subtext: Grid of map/embed iframes.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/embed-grid/embed-grid.cloudcannon.inputs.yml

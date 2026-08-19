@@ -1,6 +1,0 @@
-node_modules/
-.migration/
-static/
-.astro/
-*.log
-.DS_Store

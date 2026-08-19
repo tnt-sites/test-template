@@ -1,0 +1,10 @@
+_snippets:
+  step_d:
+    template: astro_component
+    inline: false
+    preview:
+      text: Step D
+    definitions:
+      component_name: page-sections/wpmig/step-d
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/step-d/step-d.cloudcannon.inputs.yml

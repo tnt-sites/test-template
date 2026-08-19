@@ -12,7 +12,7 @@ value:
   eyebrowColor: "#ffffff"
   headingColor: "#ffffff"
   textColor: "#ffffff"
-  markerColor: "#d2b22e"
+  markerColor: "var(--color-brand-secondary)"
   minHeight: "520px"
 preview:
   text:

@@ -13,7 +13,7 @@ pageSections:
     heading: Careers
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -58,17 +58,12 @@ pageSections:
         value: null
       - _component: building-blocks/forms/input
         id: ""
-        label: phone
+        label: Phone
         name: form_fields[field_b584d3b]
         type: tel
         placeholder: phone
         required: false
         value: null
-      - _component: building-blocks/forms/file-upload
-        id: ""
-        label: Please Upload the Resume
-        name: form_fields[field_68101c7]
-        required: false
       - _component: building-blocks/forms/textarea
         id: ""
         label: Message
@@ -76,16 +71,6 @@ pageSections:
         required: false
         placeholder: Message
         value: null
-      - _component: building-blocks/forms/textarea
-        id: ""
-        label: G Recaptcha Response
-        name: g-recaptcha-response
-        required: false
-        placeholder: null
-        value: null
-      - _component: building-blocks/forms/recaptcha
-        id: ""
-        siteKey: null
       - _component: building-blocks/forms/submit
         id: ""
         text: Submit Your Resume
@@ -98,14 +83,8 @@ pageSections:
     backgroundColor: base
     backgroundGradient: ""
     backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
+      source: null
+      alt: null
       positionVertical: top
       positionHorizontal: center
-_migUnmapped:
-  sections:
-    - component: page-sections/forms/appointment-form
-      fields:
-        - field: embedUrl
-          content: https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfoL68sAAAAADU_X8GYY79mTdfu3nmlWPHY2IkY&co=aHR0cDovLzEyNy4wLjAuMTo1OTM5Mg..&hl=en&type=v3&v=XOqlk8PL_yVx6IdpLbpXdiLy&size=invisible&badge=bottomright&sa=Form&anchor-ms=20000&execute-ms=30000&cb=3joi3p3m4d5y
 ---

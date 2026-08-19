@@ -13,8 +13,8 @@ pageSections:
     heading: Artisan Dental Health Plans
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
     minHeight: ""
@@ -22,93 +22,25 @@ pageSections:
     id: ""
     eyebrow: ""
     heading: ""
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-page\" data-elementor-id=\"536\" class=\"elementor elementor-536\" data-elementor-post-type=\"page\">
-
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-41650c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"41650c3\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ad95f60\" data-id=\"ad95f60\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-05b419d elementor-widget elementor-widget-image\" data-id=\"05b419d\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"image.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" data-elementor-open-lightbox=\"yes\" data-e-action-hash=\"#elementor-action%3Aaction%3Dlightbox%26settings%3DeyJpZCI6Nzk1NSwidXJsIjoiaHR0cHM6XC9cL2FydGlzYW5kZW50YWxtYWRpc29uLmNvbVwvd3AtY29udGVudFwvdXBsb2Fkc1wvMjAyNlwvMDJcL2FydGlzYW4tZGVudGFsLWhlYWx0aC1wbGFuLWZseWVyLXYxLmpwZyJ9\">
-
-      \t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" src=\"/wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg\" class=\"attachment-full size-full wp-image-7955\" alt=\"Artisan Dental Health Plan flyer showing three plans: Child at $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes dental cleanings, exams, x-rays, and fluoride treatments with 15% off additional services. Financing via CareCredit. No deductibles, pre-authorizations, yearly maximums, or waiting periods.\">\t\t\t\t\t\t\t\t</a>
-
-      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-6952877 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"6952877\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7a9e69e\" data-id=\"7a9e69e\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-inner-section elementor-element elementor-element-29e1044 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"29e1044\" data-element_type=\"section\" data-e-type=\"section\" data-settings=\"{&quot;background_background&quot;:&quot;classic&quot;}\">
-
-      \t\t\t\t\t\t\t<div class=\"elementor-background-overlay\"></div>
-
-      \t\t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-no\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fa2dae4\" data-id=\"fa2dae4\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t
-
-      \t\t\t\t
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
+    text: <p></p>
+    image: /wp-content/uploads/2026/02/artisan-dental-health-plan-flyer-v1.jpg
+    imageAlt: "Artisan Dental Health Plan flyer showing three plans: Child at
+      $390/year, Adult at $450/year, and Perio at $800/year. Each plan includes
+      dental cleanings, exams, x-rays, and fluoride treatments with 15% off
+      additional services. Financing via CareCredit. No deductibles,
+      pre-authorizations, yearly maximums, or waiting periods."
     buttonText: ""
     buttonLink: ""
     reverse: false
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -121,12 +53,12 @@ pageSections:
     align: center
     mediaMinHeight: 0px
     backgroundColor: "#321c0e"
-    eyebrowColor: "#d2b22e"
-    headingColor: "#ffffff"
-    textColor: "#ffffff"
     backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
     overlayOpacity: 0.15
     marginBottom: 60px
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#ffffff"
+    textColor: "#ffffff"
   - _component: page-sections/artisan/logo-strip
     id: ""
     eyebrow: ""

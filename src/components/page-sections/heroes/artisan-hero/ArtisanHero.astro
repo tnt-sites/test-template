@@ -18,7 +18,7 @@ import Button from "@core-elements/button/Button.astro";
 const {
   slides = [],
   eyebrowColor = "#ffffff",
-  buttonColor = "#d2b22e",
+  buttonColor = "var(--color-brand-secondary)",
   headingColor = "#ffffff",
   textColor = "#ffffff",
   overlayColor = "rgba(0, 0, 0, 0.45)",
@@ -47,14 +47,15 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
           data-index={i}
           style={slide.image ? `background-image:url('${slide.image}')` : undefined}
         >
-          <div class="hero-scrim" />
-          <div class="hero-inner">
-            {slide.eyebrow && <p class="hero-eyebrow">{slide.eyebrow}</p>}
-            {slide.heading && <h1 class="hero-heading" set:html={slide.heading.replace(/\n/g, "<br />")} />}
-            {slide.text && <p class="hero-text">{slide.text}</p>}
-            {slide.buttonText && (
-              <Button variant="primary" size="lg" link={slide.buttonLink} text={slide.buttonText} />
-            )}
+          <div class="hero-scrim">
+            <div class="hero-inner">
+              {slide.eyebrow && <p class="hero-eyebrow">{slide.eyebrow}</p>}
+              {slide.heading && <h1 class="hero-heading" set:html={slide.heading.replace(/\n/g, "<br />")} />}
+              {slide.text && <p class="hero-text">{slide.text}</p>}
+              {slide.buttonText && (
+                <Button variant="primary" size="lg" link={slide.buttonLink} text={slide.buttonText} />
+              )}
+            </div>
           </div>
         </article>
       ))
@@ -108,8 +109,14 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
     visibility: visible;
   }
 
+  /* An ancestor of .hero-inner (not a sibling), so the scrim's own background
+     is part of the text's real background chain — contrast checkers (and
+     genuinely, contrast against a bright patch of an uploaded photo) can't
+     see a sibling's paint, only what's actually behind the element. */
   .hero-scrim {
+    align-items: center;
     background: var(--ah-overlay);
+    display: flex;
     inset: 0;
     position: absolute;
   }
@@ -155,7 +162,7 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
   /* Primary: gold fill, white label, square — matching every other primary
      button on the site. */
   .hero-inner :global(.button) {
-    background: var(--ah-button, #d2b22e);
+    background: var(--ah-button, var(--color-brand-secondary));
     border: none;
     border-radius: 0;
     color: #fff;
@@ -166,21 +173,30 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
   }
 
   .hero-inner :global(.button:hover) {
-    background: #321c0e;
+    background: var(--color-brand);
     color: #fff;
   }
 
+  /* A real solid-ish backdrop, not just white glyphs floating on the photo —
+     without it, contrast depends on whatever the image happens to show at
+     that spot, which isn't guaranteed to hold up against a bright patch. */
   .hero-arrow {
-    background: none;
+    align-items: center;
+    background: rgb(0 0 0 / 65%);
     border: none;
+    border-radius: 50%;
     color: var(--ah-eyebrow);
     cursor: pointer;
-    font-size: 3rem;
+    display: flex;
+    font-size: 2rem;
+    height: 3rem;
+    justify-content: center;
     line-height: 1;
-    padding: 0.5rem 1rem;
+    padding: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    width: 3rem;
     z-index: 2;
   }
 

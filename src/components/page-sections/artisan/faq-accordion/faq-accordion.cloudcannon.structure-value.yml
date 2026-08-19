@@ -1,0 +1,24 @@
+label: FAQ Accordion
+icon: help
+description: Single-open question/answer accordion.
+value:
+  _component: page-sections/artisan/faq-accordion
+  id: ""
+  heading: ""
+  items:
+    - question: Question
+      answer: Answer
+  headingColor: "#321c0e"
+  questionColor: "#321c0e"
+  textColor: "#333333"
+preview:
+  text:
+    - FAQ Accordion
+  subtext:
+    - key: heading
+  icon: help
+picker_preview:
+  text: FAQ Accordion
+  subtext: Single-open question/answer accordion.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/faq-accordion/faq-accordion.cloudcannon.inputs.yml

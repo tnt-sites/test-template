@@ -1,0 +1,10 @@
+_snippets:
+  photo_lightbox:
+    template: astro_component
+    inline: false
+    preview:
+      text: Photo Lightbox
+    definitions:
+      component_name: page-sections/artisan/photo-lightbox
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/photo-lightbox/photo-lightbox.cloudcannon.inputs.yml

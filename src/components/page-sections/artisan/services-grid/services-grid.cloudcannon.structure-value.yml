@@ -15,7 +15,7 @@ value:
             text: ""
             link: ""
   backgroundColor: "#ffffff"
-  eyebrowColor: "#d2b22e"
+  eyebrowColor: "var(--color-brand-secondary)"
   headingColor: "#321c0e"
   textColor: "#333333"
 preview:

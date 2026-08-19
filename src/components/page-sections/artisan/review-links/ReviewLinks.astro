@@ -1,0 +1,76 @@
+---
+/**
+ * Intro line beside an outbound link to leave a review, above a plain grid of
+ * review-platform marks (Google, Yelp, Facebook, ...) each linking out to that
+ * platform's profile — the source's "See what people are saying about us!"
+ * block on the reviews page.
+ *
+ * Unlike card-grid (photo cards on a brand-brown band), the source here is
+ * unstyled: white section, uncropped logo marks, a plain text caption below
+ * each. Baked in: layout, type scale. Props: text, colours. Array: `links`.
+ */
+const {
+  heading = "",
+  body = "",
+  links = [],
+  backgroundColor = "#ffffff",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  linkColor = "#321c0e",
+  captionColor = "#333333",
+  hoverColor = "var(--color-brand-secondary)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(links) ? links.filter((l: any) => l?.image) : [];
+---
+
+<section
+  class="a-reviewlinks"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--lc:${linkColor};--cap:${captionColor};--hov:${hoverColor}`}
+  {...rest}
+>
+  <div class="rl-inner">
+    {heading && <h4>{heading}</h4>}
+    {body && <div class="rl-body" set:html={body} />}
+    {
+      list.length > 0 && (
+        <ul class="rl-grid no-check">
+          {list.map((l: any) => (
+            <li>
+              <a href={l.link || "#"} target="_blank" rel="noopener">
+                <img src={l.image} alt={l.alt || ""} loading="lazy" />
+                <span>{l.text}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</section>
+<style>
+  .a-reviewlinks { background-color: var(--bg); padding-block: 70px; }
+  .rl-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); }
+  h4 { color: var(--hd); font-family: "Open Sans", sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 0.75rem; }
+  .rl-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 16px; line-height: 26px; margin-bottom: 2.5rem; max-width: 900px; }
+  .rl-body :global(p) { margin: 0; }
+  .rl-body :global(a) { color: var(--lc); }
+
+  .rl-grid { display: grid; gap: 3rem 2rem; grid-template-columns: repeat(3, 1fr); list-style: none; margin: 0; padding: 0; }
+  .rl-grid li { text-align: center; }
+  .rl-grid a { align-items: center; color: inherit; display: flex; flex-direction: column; gap: 1rem; text-decoration: none; }
+  .rl-grid img { display: block; height: 100px; object-fit: contain; transition: transform 0.2s ease; width: 100px; }
+  .rl-grid a:hover img { transform: scale(1.05); }
+  .rl-grid span { color: var(--cap); font-family: "Open Sans", sans-serif; font-size: 16px; }
+  .rl-grid a:hover span { color: var(--hov); }
+
+  @media (max-width: 700px) {
+    .rl-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 420px) {
+    .rl-grid { grid-template-columns: 1fr; }
+  }
+</style>

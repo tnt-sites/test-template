@@ -13,7 +13,7 @@ pageSections:
     heading: Jonlyn
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Jonlyn - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\">Clinical Assistant Team Lead</h4>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">I am a flea market junkie! And love treasure hunting with my college daughters. I have been married for over 25 years and have lived in Cottage Grove for most of my life! We have 4 crazy German Shorthaired Pointers that I cannot live without! I love to run and be outside as much as possible, though I’m still not sold on the winter thing around here! &nbsp;</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Scott Andersen
+    prevLink: /scott-andersen/
+    nextName: Lindsay
+    nextLink: /lindsay/
+    textColor: "#321c0e"
 ---

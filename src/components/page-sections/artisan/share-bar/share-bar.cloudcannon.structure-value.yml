@@ -1,0 +1,17 @@
+label: Share Bar
+icon: share
+description: "\"Share this page\" row — Facebook, X and Email, linking to the visitor's current page."
+value:
+  _component: page-sections/artisan/share-bar
+  id: ""
+  label: Share this page with your friends!
+  headingColor: "#321c0e"
+preview:
+  text:
+    - Share Bar
+  icon: share
+picker_preview:
+  text: Share Bar
+  subtext: "\"Share this page with your friends!\" row."
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/share-bar/share-bar.cloudcannon.inputs.yml

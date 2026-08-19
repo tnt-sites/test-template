@@ -1,0 +1,238 @@
+---
+/**
+ * Step B — migrated from full-partial-mouth-rehabilitation [7] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="step-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="sb-box">
+    <div class="sb-box2">
+      <div class="sb-box3">
+        {eyebrow && <h6 class="sb-heading">{eyebrow}</h6>}
+      </div>
+      <div class="sb-box4">
+        <div class="sb-box5">
+          <h2 class="sb-heading2">{heading}</h2>
+        </div>
+      </div>
+      <div class="sb-box6">
+        <div class="sb-box7">
+          {text && <p class="sb-text">{text}</p>}
+        </div>
+      </div>
+    </div>
+    <div class="sb-box8">
+      <div class="sb-box9">
+        <div class="sb-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .step-b {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 298px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .sb-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sb-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sb-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sb-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sb-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sb-box5 {
+    box-sizing: border-box;
+  }
+
+  .sb-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    letter-spacing: -1.5px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sb-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sb-box7 {
+    box-sizing: border-box;
+    margin-bottom: -15px;
+  }
+
+  .sb-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .sb-box8 {
+    background-image: url("/wp-content/uploads/2020/09/shutterstock_114795058-1.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sb-box9 {
+    box-sizing: border-box;
+  }
+
+  .sb-spacer {
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+  @media (min-width: 768px) {
+    .step-b {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .step-b {
+      max-width: 1108px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .sb-box {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .sb-box2 {
+      flex: 0 0 47.74%;
+      justify-content: normal;
+      margin-right: 25px;
+      max-width: 47.74%;
+    }
+
+    .sb-box3 {
+      text-align: start;
+    }
+
+    .sb-box4 {
+      text-align: start;
+    }
+
+    .sb-box5 {
+      margin-bottom: 15px;
+    }
+
+    .sb-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .sb-box6 {
+      text-align: start;
+    }
+
+    .sb-box7 {
+      margin-bottom: 30px;
+    }
+
+    .sb-box8 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sb-spacer {
+      height: 500px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sb-heading {
+    font-weight: 400;
+  }
+  .sb-heading2 {
+    font-weight: 700;
+  }
+  .sb-box2 {
+    align-items: normal;
+    text-align: center;
+  }
+  .sb-text {
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -13,7 +13,7 @@ pageSections:
     heading: Fillings
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -25,22 +25,6 @@ pageSections:
     image: /wp-content/uploads/2021/08/shutterstock_611274782-2.jpg
     imageAlt: ""
     body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-post\" data-elementor-id=\"7169\" class=\"elementor elementor-7169\" data-elementor-post-type=\"page\">
-
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-55c38f0a elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"55c38f0a\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2a6628ec\" data-id=\"2a6628ec\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-7607ca9b elementor-widget elementor-widget-text-editor\" data-id=\"7607ca9b\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
 
       \t\t\t\t\t\t\t\t\t
 
@@ -110,27 +94,45 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">Above we’ve introduced the basics of dental fillings and when they’re necessary. There are numerous types and techniques of filling that can be applied. Reach out to our office to get more details by <a class=\"rank-math-link\" href=\"contact-us.html\">scheduling a consultation</a>. We look forward to seeing you at our office in Madison, WI.</p>
 
-      \t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t"
+      \t\t\t\t\t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2025/11/top-1.png
+        alt: top
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
+  - _component: page-sections/artisan/share-bar
+    id: ""
+    label: Share this page with your friends!
+    headingColor: "#321c0e"
 ---

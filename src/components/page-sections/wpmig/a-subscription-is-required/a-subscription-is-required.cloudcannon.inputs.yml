@@ -1,0 +1,29 @@
+_inputs:
+  items:
+    type: array
+    options:
+      structures: _structures.a_subscription_is_required_item
+  textColor:
+    type: color
+  textHoverColor:
+    type: color
+  hoverColor:
+    type: color
+  hoverColor2:
+    type: color
+  hoverColor3:
+    type: color
+_structures:
+  a_subscription_is_required_item:
+    values:
+      - value:
+          text: ""
+          buttonText: ""
+          buttonLink: ""
+        _inputs:
+          text:
+            type: textarea
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

@@ -13,7 +13,7 @@ pageSections:
     heading: Kat
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Kat - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\"><strong>Patient Care Coordinator</strong></h4>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">When I’m not at work I enjoy trying new restaurants, especially Wisconsin supper clubs. All my teeth are sweet teeth so I try to make my desserts low carb friendly. I enjoy reading, but these days it’s mainly children’s books. I take pride in my bargain shopping abilities. I love going up north to Boulder Junction and spending quality time with my family, friends, and all the dogs.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Adria
+    prevLink: /adria/
+    nextName: Emily
+    nextLink: /emily-2/
+    textColor: "#321c0e"
 ---

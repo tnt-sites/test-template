@@ -7,29 +7,59 @@
  */
 import Button from "@core-elements/button/Button.astro";
 const {
-  eyebrow = "", heading = "", text = "", image = "",
+  eyebrow = "", heading = "", text = "", image = "", imageAlt = "",
   buttonText = "", buttonLink = "", reverse = false, align = "left", mediaMinHeight = "0px",
   backgroundColor = "transparent", backgroundImage = "", overlayOpacity = 0.15,
   marginBottom = "0px",
-  eyebrowColor = "#d2b22e",
-  headingColor = "#321c0e", textColor = "#333333",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "var(--color-brand)", textColor = "#333333",
+  buttonBackgroundColor = "", buttonTextColor = "", buttonAlign = "",
+  headingSize = "", paddingBlock = "",
   id, _component, ...rest
 } = Astro.props;
+
+// Lifted bodies often carry an empty `<p></p>` rather than "", so measure the
+// copy by its text, not its markup. An image with no copy beside it was a
+// 100%-wide column in the source (the plan/price flyers) — give it the whole
+// row at its natural aspect ratio instead of half a row, cropped.
+const hasText = Boolean(text && text.replace(/<[^>]*>/g, "").trim());
+const hasCopy = Boolean(eyebrow || heading || buttonText || hasText);
+const solo = Boolean(image) && !hasCopy;
+
+// The source aligns the button per widget (`elementor-align-center`), which is
+// independent of how its copy is aligned — botox-plan's "Contact Us" is centred
+// under left-aligned prose. Empty means "follow the copy".
+const btnAlign = ["left", "center", "right"].includes(buttonAlign) ? buttonAlign : "";
+const btnStyle = [
+  buttonBackgroundColor && `--color-bg-brand:${buttonBackgroundColor};--color-bg-brand-muted:${buttonBackgroundColor};--color-brand-secondary:${buttonBackgroundColor};--color-text-on-brand:${buttonTextColor || "#ffffff"}`,
+  btnAlign && `text-align:${btnAlign}`,
+].filter(Boolean).join(";") || undefined;
 ---
-<section class:list={["a-split", { reverse, center: !image && align === "center", wide: !image && align === "left" }]} id={id || undefined}
-  style={`--mediah:${mediaMinHeight};--mb:${marginBottom};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+<section class:list={["a-split", { reverse, solo, center: !image && align === "center", wide: !image && align === "left" }]} id={id || undefined}
+  style={`--mediah:${mediaMinHeight};--mb:${marginBottom};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}${headingSize ? `;--hdsize:${headingSize}` : ""}${paddingBlock ? `;--pad:${paddingBlock}` : ""}`} {...rest}>
   <div class="sf-inner">
-    {image && <div class="sf-media"><img src={image} alt={heading || ""} loading="lazy" /></div>}
-    <div class="sf-copy">
+    {image && <div class="sf-media"><img src={image} alt={imageAlt || heading || ""} loading="lazy" /></div>}
+    {hasCopy && <div class="sf-copy">
       {eyebrow && <p class="sf-eyebrow">{eyebrow}</p>}
       {heading && <h2>{heading}</h2>}
-      {text && <div class="sf-body" set:html={text} />}
-      {buttonText && <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />}
-    </div>
+      {hasText && <div class="sf-body" set:html={text} />}
+      {buttonText && (
+        // A sitewide rule (`main .button.variant-primary`) repaints every
+        // primary button with --color-brand-secondary, beating a plain
+        // --color-bg-brand override by specificity — both need overriding
+        // together or this one silently does nothing.
+        <div class="sf-btn" style={btnStyle}>
+          <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />
+        </div>
+      )}
+    </div>}
   </div>
 </section>
 <style>
-  .a-split { background-color: var(--bg); margin-bottom: var(--mb, 0); padding-block: 100px; position: relative; }
+  /* 100px is the marketing-band rhythm. The interior pages' own body sections
+     are tighter than that on the source (contact-us runs 0–25px), so
+     `paddingBlock` can dial it back per section. */
+  .a-split { background-color: var(--bg); margin-bottom: var(--mb, 0); padding-block: var(--pad, 100px); position: relative; }
 
   /* Same recipe as the full-width bands: solid brand-brown with the wood
      texture on an overlay above it, lightened at 15%. */
@@ -49,6 +79,10 @@ const {
   .a-split.center .sf-inner { grid-template-columns: 1fr; max-width: 1100px; text-align: center; }
   .a-split.wide .sf-inner { grid-template-columns: 1fr; max-width: 1100px; text-align: left; }
   .sf-media img { border-radius: 4px; display: block; height: 100%; min-height: var(--mediah, 0); object-fit: cover; width: 100%; }
+
+  /* Lone flyer/chart images: whole row, uncropped, no forced media height. */
+  .a-split.solo .sf-inner { grid-template-columns: 1fr; }
+  .a-split.solo .sf-media img { height: auto; min-height: 0; object-fit: contain; }
   .sf-eyebrow {
     color: var(--eb);
     font-family: "Open Sans", sans-serif;
@@ -58,8 +92,78 @@ const {
     letter-spacing: 0.5px;
     margin: 0;
   }
-  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: var(--hdsize, clamp(1.75rem,3vw,40px)); font-weight: 700; line-height: 1.3; margin: 0.25rem 0 1rem; }
   .sf-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 28px; margin-bottom: 1.75rem; }
-  .sf-body :global(p) { margin: 0 0 1rem; }
+  .sf-body :global(p) { color: inherit; margin: 0 0 1rem; }
+
+  /* MEASURED: #bf9800, no underline until hover. `--color-link` carries that
+     now, but name the subtle-brand token so the prose keeps the source's link
+     gold even if the link token is retuned. */
+  .sf-body :global(a) { color: var(--color-brand-subtle, #bf9800); text-decoration: none; }
+  .sf-body :global(a:hover) { text-decoration: underline; }
+
+  .sf-body :global(img.alignleft) { float: left; margin: 0 2em 1em 0; }
+  .sf-body :global(img.alignright) { float: right; margin: 0 0 1em 2em; }
+  .sf-body :global(img.aligncenter) { display: block; margin: 0 auto 1em; }
+
+  /* Lifted bodies mark sub-headings up as `<ul><li><h4>Gummy Smile</h4></li></ul>`.
+     The sitewide bullet (`main ul li:before`) is pinned 3px below the li's top,
+     which rides high beside a heading, so move the marker onto the heading —
+     there `top: 50%` centres it on the heading's own line box, and the heading
+     keeps its margins. `left` backs out of the li's 24px text indent. */
+  .sf-body :global(li:has(> h4))::before { content: none; }
+  .sf-body :global(li > h4) { position: relative; }
+  .sf-body :global(li > h4)::before {
+    color: var(--color-brand-secondary);
+    content: "\e933";
+    /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword -- icon font, as in _base.pcss */
+    font-family: Fontello;
+    font-size: 11px;
+    font-weight: 400;
+    left: -24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
   @media (max-width: 860px) { .sf-inner { grid-template-columns: 1fr; } .a-split.reverse .sf-media { order: 0; } }
+
+  /* A small "download the printable version" callout, e.g. contact-us'
+     "Printable Contact Information". Not part of the source's own
+     stylesheet (an icon-box widget styled inline in the WP head), so this
+     is a from-scratch match to the measured card: pale grey row, a cream
+     icon tile, bold heading, gold "Click Here". */
+  .sf-body :global(.printable-contact) {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    margin: 1.75rem auto 0;
+    text-align: left;
+    width: fit-content;
+  }
+
+  .sf-body :global(.printable-contact-icon) {
+    align-items: center;
+    background-color: #e4d9b8;
+    border-radius: 4px;
+    color: var(--color-brand-subtle, #bf9800);
+    display: flex;
+    flex: 0 0 auto;
+    height: 48px;
+    justify-content: center;
+    width: 48px;
+  }
+
+  .sf-body :global(.printable-contact-icon svg) { height: 24px; width: 24px; }
+
+  .sf-body :global(.printable-contact h3) {
+    color: #222;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 0.2rem;
+  }
+
+  .sf-body :global(.printable-contact p) { margin: 0; }
+
+  .sf-body :global(.printable-contact a) { color: var(--color-brand-subtle, #bf9800); font-weight: 700; }
 </style>

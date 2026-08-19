@@ -1,0 +1,10 @@
+_snippets:
+  photo_gallery:
+    template: astro_component
+    inline: false
+    preview:
+      text: Photo Gallery
+    definitions:
+      component_name: page-sections/artisan/photo-gallery
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/photo-gallery/photo-gallery.cloudcannon.inputs.yml

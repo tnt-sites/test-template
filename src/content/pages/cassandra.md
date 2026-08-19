@@ -13,7 +13,7 @@ pageSections:
     heading: Cassandra
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Cassie - Artisan Dental Staff
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <h4 class=\"wp-block-heading\"><strong>Equipment and&nbsp;Maintenance Team Leader</strong></h4>
@@ -107,8 +105,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">We love traveling to different locations and would love recommendations! I couldn’t be happier to be working at Artisan Dental. I can’t wait to meet you!&nbsp;</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -116,4 +112,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Lindsay
+    prevLink: /lindsay/
+    nextName: Adria
+    nextLink: /adria/
+    textColor: "#321c0e"
 ---

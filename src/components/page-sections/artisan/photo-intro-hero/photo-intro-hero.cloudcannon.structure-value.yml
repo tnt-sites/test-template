@@ -1,0 +1,28 @@
+label: Photo Intro Hero
+icon: hero
+description: Full-bleed photo hero opening a page's content, right after its title banner.
+value:
+  _component: page-sections/artisan/photo-intro-hero
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  image: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+preview:
+  text:
+    - Photo Intro Hero
+  subtext:
+    - key: heading
+  icon: hero
+picker_preview:
+  text: Photo Intro Hero
+  subtext: Full-bleed photo hero opening a page's content.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/photo-intro-hero/photo-intro-hero.cloudcannon.inputs.yml

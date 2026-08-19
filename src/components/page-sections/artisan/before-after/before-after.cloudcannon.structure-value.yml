@@ -1,0 +1,25 @@
+label: Before / After
+icon: photo
+description: A case study with one or more labelled before/after photo pairs.
+value:
+  _component: page-sections/artisan/before-after
+  id: ""
+  heading: ""
+  pairs:
+    - beforeLabel: Before
+      beforeImage: ""
+      afterLabel: After
+      afterImage: ""
+  headingColor: "#321c0e"
+  labelColor: "#686868"
+preview:
+  text:
+    - Before / After
+  subtext:
+    - key: heading
+  icon: photo
+picker_preview:
+  text: Before / After
+  subtext: Labelled before/after photo pairs.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/before-after/before-after.cloudcannon.inputs.yml

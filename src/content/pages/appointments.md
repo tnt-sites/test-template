@@ -13,140 +13,177 @@ pageSections:
     heading: Appointments
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
-    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
+    backgroundImage: /wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1-1.jpg
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
     minHeight: ""
-  - _component: page-sections/artisan/contact-block
-    id: ""
-    heading: Appointment Request Form
-    details: []
-    formBlocks:
-      - _component: building-blocks/forms/choice-group
-        id: ""
-        title: Patient Type
-        name: patient_type
-        required: true
-        options:
-          - value: New Patient
-            label: New Patient
-            checked: false
-          - value: Existing Patient
-            label: Existing Patient
-            checked: false
-        orientation: horizontal
-        multiple: false
-      - _component: building-blocks/forms/input
-        id: ""
-        label: First Name
-        name: first_name
-        type: text
-        placeholder: First Name
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Last Name
-        name: last_name
-        type: text
-        placeholder: Last Name
-        required: true
-        value: null
-      - _component: building-blocks/forms/hidden
-        id: ""
-        name: name
-        value: ""
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Email Address
-        name: email
-        type: email
-        placeholder: Email Address
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Phone
-        name: phone
-        type: tel
-        placeholder: Phone
-        required: true
-        value: null
-      - _component: building-blocks/forms/date
-        id: ""
-        label: Date Of Birth
-        name: date_of_birth
-        required: true
-        value: null
-        min: null
-        max: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Insurance Provider
-        name: insurance_provider
-        type: text
-        placeholder: Insurance Provider
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: How did you hear about us?
-        name: how_you_heard_about_us
-        type: text
-        placeholder: How did you hear about us?
-        required: true
-        value: null
-      - _component: building-blocks/forms/date
-        id: ""
-        label: Appointment Date
-        name: appointment_date
-        required: true
-        value: null
-        min: null
-        max: null
-      - _component: building-blocks/forms/select
-        id: ""
-        label: Requested Time
-        name: requested_time
-        required: true
-        options: []
-        placeholder: Requested Time (Choose "Appointment Date" first)
-      - _component: building-blocks/forms/textarea
-        id: ""
-        label: Notes / Comments
-        name: message
-        required: true
-        placeholder: Notes / Comments
-        value: null
-      - _component: building-blocks/forms/recaptcha
-        id: ""
-        siteKey: null
-      - _component: building-blocks/forms/submit
-        id: ""
-        text: Submit
-        variant: primary
-        size: md
-        iconName: null
-        iconPosition: before
-        hideText: false
-        disabled: false
-      - _component: building-blocks/forms/hidden
-        id: ""
-        name: _subject
-        value: Appointment Request Form - Appointments Page
-    formAction: /thank-you/
-    mapEmbedUrl: https://maps.google.com/maps?q=10%20North%20Livingston%20Street%2C%20Suite%20301%2C%20Madison%2C%20WI%2053703&t=m&z=13&output=embed&iwloc=near
-    mapHeight: 380px
-    backgroundColor: "#ffffff"
-    headingColor: "#321c0e"
-    labelColor: "#321c0e"
-    textColor: "#333333"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
     heading: Appointment Request Form
-    text: <p></p>
+    text: "
+
+      \t\t\t\t<div class=\"elementor-widget-container\">
+
+      \t\t\t\t\t
+
+      \    <div class=\"tnt-form form-request-appointment-appointments-page\">
+
+
+      \        <form action=\"/wp-admin/admin-post.php\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
+
+
+      \            <!-- Form Validator -->
+
+      \            <input type=\"hidden\" name=\"action\" value=\"artisan_dental_form_validator\">
+
+
+      \            <!-- Patient Type -->
+
+      \            <div class=\"form-row checkboxes\">
+
+      \                <label class=\"radio-inline\">
+
+      \                    <input type=\"radio\" name=\"patient_type\" value=\"New Patient\" required=\"\"> New Patient
+
+      \                </label>
+
+      \                <label class=\"radio-inline\">
+
+      \                    <input type=\"radio\" name=\"patient_type\" value=\"Existing Patient\" required=\"\"> Existing Patient
+
+      \                </label>
+
+      \            </div>
+
+
+      \            <!-- Name -->
+
+      \            <div class=\"form-row half\">
+
+      \                <div class=\"column\">
+
+      \                    <input type=\"text\" class=\"first_name\" name=\"first_name\" placeholder=\"First Name\" required=\"\">
+
+      \                </div>
+
+      \                <div class=\"column\">
+
+      \                    <input type=\"text\" class=\"last_name\" name=\"last_name\" placeholder=\"Last Name\" required=\"\">
+
+      \                </div>
+
+      \                <!-- Full Name: Combines first_name & last_name -->
+
+      \                <input type=\"hidden\" name=\"name\">
+
+      \            </div>
+
+
+      \            <!-- Email -->
+
+      \            <div class=\"form-row full\">
+
+      \                <input type=\"email\" name=\"email\" placeholder=\"Email Address\" required=\"\">
+
+      \            </div>
+
+
+      \            <!-- Phone / DOB -->
+
+      \            <div class=\"form-row half\">
+
+      \                <div class=\"column\">
+
+      \                    <input type=\"tel\" name=\"phone\" placeholder=\"Phone\" required=\"\">
+
+      \                </div>
+
+      \                <div class=\"column\">
+
+      \                    <input type=\"date\" name=\"date_of_birth\" class=\"date-input all-dates date-empty\" autocomplete=\"bday\" data-placeholder=\"DOB: mm/dd/yyyy\" required=\"\">
+
+      \                </div>
+
+      \            </div>
+
+
+      \            <!-- Insurance -->
+
+      \            <div class=\"form-row full\">
+
+      \                <input type=\"text\" name=\"insurance_provider\" placeholder=\"Insurance Provider\" required=\"\">
+
+      \            </div>
+
+
+      \            <!-- How did you hear about us? -->
+
+      \            <div class=\"form-row full\">
+
+      \                <input type=\"text\" name=\"how_you_heard_about_us\" placeholder=\"How did you hear about us?\" required=\"\">
+
+      \            </div>
+
+
+      \            <!-- Requested Date & Time -->
+
+      \            <div class=\"form-row half\">
+
+      \                <div class=\"column\">
+
+      \                    <input type=\"date\" name=\"appointment_date\" class=\"date-input restricted-date date-empty\" autocomplete=\"off\" data-placeholder=\"Appointment Date: mm/dd/yyyy\" required=\"\" min=\"2026-08-16\">
+
+      \                </div>
+
+      \                <div class=\"column\">
+
+      \                    <select name=\"requested_time\" class=\"time-input\" required=\"\"><option value=\"\">Requested Time (Choose \"Appointment Date\" first)</option></select>
+
+      \                </div>
+
+      \            </div>
+
+
+      \            <!-- Message -->
+
+      \            <div class=\"form-row full\">
+
+      \                <textarea name=\"message\" placeholder=\"Notes / Comments\" required=\"\"></textarea>
+
+      \            </div>
+
+
+      \            <!-- Submit -->
+
+      \            <div class=\"form-row full\">
+
+      \                <button type=\"submit\" class=\"btn\">Submit</button>
+
+      \                <input type=\"hidden\" name=\"token_generate\" id=\"token_generate\">
+
+      \            </div>
+
+
+      \            <input name=\"_subject\" type=\"hidden\" value=\"Appointment Request Form - Appointments Page\">
+
+
+      \            <input type=\"hidden\" name=\"page_url\" value=\"/appointments/\">
+
+
+      \            <input name=\"_redirect\" type=\"hidden\" value=\"/thank-you\">
+
+
+      \        </form>
+
+
+      \    </div>
+
+
+      \    \t\t\t\t</div>
+
+      \t\t\t\t"
     image: ""
     buttonText: ""
     buttonLink: ""
@@ -154,9 +191,12 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -175,126 +215,17 @@ pageSections:
     align: left
     mediaMinHeight: 0px
     backgroundColor: transparent
-    eyebrowColor: "#d2b22e"
+    backgroundImage: ""
+    eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
+    buttonBackgroundColor: ""
+    buttonTextColor: ""
   - _component: page-sections/artisan/contact-block
     id: ""
     heading: Additional Information
     details: []
-    formBlocks:
-      - _component: building-blocks/forms/choice-group
-        id: ""
-        title: Patient Type
-        name: patient_type
-        required: true
-        options:
-          - value: New Patient
-            label: New Patient
-            checked: false
-          - value: Existing Patient
-            label: Existing Patient
-            checked: false
-        orientation: horizontal
-        multiple: false
-      - _component: building-blocks/forms/input
-        id: ""
-        label: First Name
-        name: first_name
-        type: text
-        placeholder: First Name
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Last Name
-        name: last_name
-        type: text
-        placeholder: Last Name
-        required: true
-        value: null
-      - _component: building-blocks/forms/hidden
-        id: ""
-        name: name
-        value: ""
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Email Address
-        name: email
-        type: email
-        placeholder: Email Address
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Phone
-        name: phone
-        type: tel
-        placeholder: Phone
-        required: true
-        value: null
-      - _component: building-blocks/forms/date
-        id: ""
-        label: Date Of Birth
-        name: date_of_birth
-        required: true
-        value: null
-        min: null
-        max: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: Insurance Provider
-        name: insurance_provider
-        type: text
-        placeholder: Insurance Provider
-        required: true
-        value: null
-      - _component: building-blocks/forms/input
-        id: ""
-        label: How did you hear about us?
-        name: how_you_heard_about_us
-        type: text
-        placeholder: How did you hear about us?
-        required: true
-        value: null
-      - _component: building-blocks/forms/date
-        id: ""
-        label: Appointment Date
-        name: appointment_date
-        required: true
-        value: null
-        min: null
-        max: null
-      - _component: building-blocks/forms/select
-        id: ""
-        label: Requested Time
-        name: requested_time
-        required: true
-        options: []
-        placeholder: Requested Time (Choose "Appointment Date" first)
-      - _component: building-blocks/forms/textarea
-        id: ""
-        label: Notes / Comments
-        name: message
-        required: true
-        placeholder: Notes / Comments
-        value: null
-      - _component: building-blocks/forms/recaptcha
-        id: ""
-        siteKey: null
-      - _component: building-blocks/forms/submit
-        id: ""
-        text: Submit
-        variant: primary
-        size: md
-        iconName: null
-        iconPosition: before
-        hideText: false
-        disabled: false
-      - _component: building-blocks/forms/hidden
-        id: ""
-        name: _subject
-        value: Appointment Request Form - Appointments Page
+    formBlocks: []
     formAction: /thank-you/
     mapEmbedUrl: https://maps.google.com/maps?q=10%20North%20Livingston%20Street%2C%20Suite%20301%2C%20Madison%2C%20WI%2053703&t=m&z=13&output=embed&iwloc=near
     mapHeight: 380px
@@ -302,4 +233,43 @@ pageSections:
     headingColor: "#321c0e"
     labelColor: "#321c0e"
     textColor: "#333333"
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+        link: ""
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+        link: ""
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+        link: ""
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+        link: ""
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+        link: ""
+      - image: /wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png
+        alt: Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.
+        link: ""
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+        link: ""
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+        link: ""
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+        link: ""
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "#ffffff"
+    headingColor: "#ffffff"
 ---

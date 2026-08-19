@@ -13,7 +13,7 @@ pageSections:
     heading: Juliana
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: ""
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <p class=\"wp-block-paragraph\">I started my career out as a CNA, I soon became worn out and knew I needed a change so I decided to go back to school for something. In 2019 I became a Dental Assistant. This was the best career choice I could have ever made! I had no idea how much passion I would have as a Dental Assistant – one of my favorite things about being a dental assistant is being the one to help calm a patient down when they have dental anxiety and seeing a smile on our patients face after treatment.</p>
@@ -97,8 +95,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">When I’m not at work, I enjoy spending time with my family. We love hunting, fishing, hiking, camping, ice fishing, softball so basically anything that we can do that gets us outside all year around. When my family and I are not doing any of these things we are usually watching movies together or just relaxing at home.</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -106,4 +102,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Kaitlin
+    prevLink: /kaitlin/
+    nextName: Cancellation Policy
+    nextLink: /cancellation-policy/
+    textColor: "#321c0e"
 ---

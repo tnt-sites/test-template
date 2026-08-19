@@ -13,7 +13,7 @@ pageSections:
     heading: Madelyn
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -86,8 +86,6 @@ pageSections:
     imageAlt: Madeyln - Artisan Dental
     body: "
 
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
       \t\t\t\t\t
 
       <p class=\"wp-block-paragraph\">I graduated from Milwaukee Area Technical College in 2016 and have spent most of my dental hygiene career in Madison where I take pride in providing quality care and information to patients while building a trusting relationship.</p>
@@ -102,8 +100,6 @@ pageSections:
 
       <p class=\"wp-block-paragraph\">I look forward to working with the community and continuing my career with Artisan Dental!</p>
 
-      \t\t\t\t</div>
-
       \t\t\t\t"
     backgroundColor: transparent
     headingBackground: "#321c0e"
@@ -111,4 +107,11 @@ pageSections:
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Covid-19 Updates
+    prevLink: /covid-19-updates/
+    nextName: FAQ’s
+    nextLink: /faqs/
+    textColor: "#321c0e"
 ---

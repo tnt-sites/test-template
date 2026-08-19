@@ -1,0 +1,26 @@
+label: Blog Category Grid
+icon: collections_bookmark
+description: Grid of blog posts filtered by tag — mirrors a WordPress blog category archive.
+value:
+  _component: page-sections/artisan/blog-category-grid
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  tag: ""
+  emptyText: No posts yet. Check back soon!
+  backgroundColor: "#ffffff"
+  captionBackgroundColor: "var(--color-brand-secondary)"
+  captionTextColor: "#ffffff"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  textColor: "#333333"
+preview:
+  text:
+    - Blog Category Grid
+  icon: collections_bookmark
+picker_preview:
+  text: Blog Category Grid
+  subtext: Grid of blog posts filtered by tag.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/blog-category-grid/blog-category-grid.cloudcannon.inputs.yml

@@ -1,6 +1,6 @@
 {
   "affiliations": {
-    "backgroundColor": "#d2b22e",
+    "backgroundColor": "var(--color-brand-secondary)",
     "headingColor": "#ffffff",
     "groups": [
       {
@@ -60,7 +60,7 @@
     ]
   },
   "cta": {
-    "backgroundColor": "#321c0e",
+    "backgroundColor": "var(--color-brand)",
     "textColor": "#ffffff",
     "heading": "Have a question?",
     "body": "We want you to feel supported, which is why our team is always happy to help with all of your questions. Just give us a call!",
@@ -73,7 +73,7 @@
   },
   "main": {
     "backgroundColor": "#ffffff",
-    "headingColor": "#321c0e",
+    "headingColor": "var(--color-brand)",
     "linkColor": "#000000",
     "logoSource": "/wp-content/uploads/2020/08/ARTD_horizontal-eps.png",
     "logoAlt": "Artisan Dental",
@@ -178,7 +178,7 @@
           },
           {
             "name": "Request Appointment",
-            "path": "/request-appointment/"
+            "path": "/contact-us/"
           },
           {
             "name": "Call Us",

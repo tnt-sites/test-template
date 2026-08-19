@@ -1,0 +1,10 @@
+_snippets:
+  restore_your_smile_and:
+    template: astro_component
+    inline: false
+    preview:
+      text: Restore Your Smile And
+    definitions:
+      component_name: page-sections/wpmig/restore-your-smile-and
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/restore-your-smile-and/restore-your-smile-and.cloudcannon.inputs.yml

@@ -1,0 +1,7 @@
+_inputs:
+  heading:
+    type: html
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color

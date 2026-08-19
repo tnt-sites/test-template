@@ -1,0 +1,24 @@
+label: A Subscription Is Required
+icon: grid_view
+description: A Subscription Is Required section with editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/a-subscription-is-required
+  id: ""
+  items:
+    - text: ""
+      buttonText: ""
+      buttonLink: ""
+  textColor: "#ffffff"
+  textHoverColor: "#686868"
+  hoverColor: "#686868"
+  hoverColor2: "#e4bb0f"
+  hoverColor3: "#666666"
+preview:
+  text:
+    - A Subscription Is Required
+  icon: grid_view
+picker_preview:
+  text: A Subscription Is Required
+  subtext: A Subscription Is Required section with editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/a-subscription-is-required/a-subscription-is-required.cloudcannon.inputs.yml

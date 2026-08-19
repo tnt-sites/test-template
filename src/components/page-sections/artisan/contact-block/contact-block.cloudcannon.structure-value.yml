@@ -4,13 +4,19 @@ description: Contact details beside a message form.
 value:
   _component: page-sections/artisan/contact-block
   id: ""
+  detailsHeading: ""
   heading: ""
   details:
-    - label: ""
+    - icon: ""
+      label: ""
       value: ""
       link: ""
+      valueIsLink: false
   formBlocks: []
+  formHtml: ""
   formAction: "/thank-you/"
+  headingSize: ""
+  paddingBlock: ""
   backgroundColor: "#ffffff"
   headingColor: "#321c0e"
   labelColor: "#321c0e"

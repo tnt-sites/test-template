@@ -75,10 +75,16 @@
      colorScheme prop already handles. 30 files read this token, including form
      labels, so #ffffff would render them invisible on the white page. */
   --color-text-strong: #321c0e;
-  --color-link: #c36;
-  --color-link-hover: #336;
+
+  /* Also corrected by hand: `mig tokens` never measured a link colour and left
+     the starter's placeholder pink (#c36 — it shows up as three tokens here,
+     which is the giveaway). MEASURED on the source: body links are #bf9800 and
+     do not change on hover. Lifted prose links read this token, so the
+     placeholder was rendering pink links on pages like contact-us. */
+  --color-link: #bf9800;
+  --color-link-hover: #bf9800;
   --color-brand: #321c0e;
-  --color-brand-secondary: #d2b22e;
+  --color-brand-secondary: #7e6a1c;
   --color-brand-muted: #c36;
   --color-brand-subtle: #bf9800;
   --color-bg-accent: #bf9800;

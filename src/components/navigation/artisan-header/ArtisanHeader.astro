@@ -41,13 +41,13 @@ const phone = resolvedOffices[0]?.phones?.[0] ?? null;
 const {
   followLabel = "Follow Us!",
   phoneLabel = "or Call",
-  backgroundColor = "#321c0e",
+  backgroundColor = "var(--color-brand)",
   textColor = "#ffffff",
-  socialColor = "#bf9800",
+  socialColor = "var(--color-brand-subtle)",
   mainBackgroundColor = "rgba(255, 255, 255, 0.9)",
-  navColor = "#321c0e",
+  navColor = "var(--color-brand)",
   buttonBackgroundColor = "#ffffff",
-  buttonTextColor = "#d2b22e",
+  buttonTextColor = "var(--color-brand-secondary)",
 } = topBar as Record<string, string>;
 
 const cta = pageButtons?.[0] ?? null;
@@ -75,21 +75,16 @@ const mobileNavData = navData;
           <ul class="ah-socials">
             {resolvedSocials.map((social: any) => (
               <li>
-                <a
-                  href={social.link}
+                <Button
+                  variant="ghost"
+                  size="md"
+                  iconName={social.icon}
+                  link={social.link}
+                  hideText="true"
+                  aria-label={social.label || social.icon}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={social.label || social.icon}
-                >
-                  <Button
-                    variant="ghost"
-                    size="md"
-                    iconName={social.icon}
-                    hideText="true"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  />
-                </a>
+                />
               </li>
             ))}
           </ul>

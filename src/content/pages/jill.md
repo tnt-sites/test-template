@@ -13,7 +13,7 @@ pageSections:
     heading: Jill
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
-    eyebrowColor: "#d2b22e"
+    eyebrowColor: "var(--color-brand-secondary)"
     backgroundImage: ""
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
@@ -84,61 +84,28 @@ pageSections:
         current: false
     image: /wp-content/uploads/2020/08/Jill.jpg
     imageAlt: Jill - Artisan Dental Staff
-    body: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t<div data-elementor-type=\"wp-post\" data-elementor-id=\"656\" class=\"elementor elementor-656\" data-elementor-post-type=\"page\">
-
-      \t\t\t\t\t\t<section class=\"elementor-section elementor-top-section elementor-element elementor-element-7853a043 elementor-section-boxed elementor-section-height-default elementor-section-height-default\" data-id=\"7853a043\" data-element_type=\"section\" data-e-type=\"section\">
-
-      \t\t\t\t\t\t<div class=\"elementor-container elementor-column-gap-default\">
-
-      \t\t\t\t\t<div class=\"elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5f3151fd\" data-id=\"5f3151fd\" data-element_type=\"column\" data-e-type=\"column\">
-
-      \t\t\t<div class=\"elementor-widget-wrap elementor-element-populated\">
-
-      \t\t\t\t\t\t<div class=\"elementor-element elementor-element-3300888f elementor-widget elementor-widget-text-editor\" data-id=\"3300888f\" data-element_type=\"widget\" data-e-type=\"widget\" data-widget_type=\"text-editor.default\">
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p></p>
-
-      <h4 class=\"wp-block-heading\">Registered Dental Hygienist &amp; Director of Operations and Finance</h4>
-
+    body: |-
+      
+      									<p></p>
+      <h4 class="wp-block-heading">Registered Dental Hygienist &amp; Director of Operations and Finance</h4>
       <p></p>
-
-      <p class=\"wp-block-paragraph\">I am thrilled to have worked with Dr. Andersen since 1999 and to have been part of the original startup of Artisan Dental. I graduated from&nbsp;<a href=\"http://madisoncollege.edu/program-info/dental-hygienist\">Madison College’s Dental Hygiene School</a>&nbsp;in 1995. I feel fortunate to be able to work both as a Dental Hygienist and be the Director of Finance and Operations at Artisan Dental. Customer service and quality care are our top priorities for our patients.&nbsp;</p>
-
+      <p class="wp-block-paragraph">I am thrilled to have worked with Dr. Andersen since 1999 and to have been part of the original startup of Artisan Dental. I graduated from&nbsp;<a href="http://madisoncollege.edu/program-info/dental-hygienist">Madison College’s Dental Hygiene School</a>&nbsp;in 1995. I feel fortunate to be able to work both as a Dental Hygienist and be the Director of Finance and Operations at Artisan Dental. Customer service and quality care are our top priorities for our patients.&nbsp;</p>
       <p></p>
-
-      <p class=\"wp-block-paragraph\">A few things about me. I was born and raised in Monona and now live in Cottage Grove with my husband and two teddy bear dogs! We are newly empty nesters, having two adult daughters that have not settled down in one spot yet, so we enjoy traveling to see them wherever they might be.&nbsp; We also enjoy traveling to northern Wisconsin when possible during the summer and visiting family in Arizona during the winter months. We enjoy golfing, fishing, UTV riding and going to dinner with friends! We are always up for new adventures.</p>
-
+      <p class="wp-block-paragraph">A few things about me. I was born and raised in Monona and now live in Cottage Grove with my husband and two teddy bear dogs! We are newly empty nesters, having two adult daughters that have not settled down in one spot yet, so we enjoy traveling to see them wherever they might be.&nbsp; We also enjoy traveling to northern Wisconsin when possible during the summer and visiting family in Arizona during the winter months. We enjoy golfing, fishing, UTV riding and going to dinner with friends! We are always up for new adventures.</p>
       <p></p>
-
-      <p class=\"wp-block-paragraph\">I look forward to working with you to make your Artisan Dental experience the best dental experience you have ever had!</p>
-
-      <p></p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</div>
-
-      \t\t\t\t\t</div>
-
-      \t\t</section>
-
-      \t\t\t\t</div>
-
-      \t\t\t\t\t\t</div>
-
-      \t\t\t\t"
+      <p class="wp-block-paragraph">I look forward to working with you to make your Artisan Dental experience the best dental experience you have ever had!</p>
+      <p></p>								
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"
     linkColor: "#222222"
     textColor: "#686868"
     reverse: false
+  - _component: page-sections/artisan/person-pager
+    id: ""
+    prevName: Dr. Mark Rehermann
+    prevLink: /dr-mark-rehermann/
+    nextName: Scott Andersen
+    nextLink: /scott-andersen/
+    textColor: "#321c0e"
 ---
