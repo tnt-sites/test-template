@@ -1,0 +1,20 @@
+label: Person Pager
+icon: navigation
+description: Prev/next navigation between team member bios.
+value:
+  _component: page-sections/artisan/person-pager
+  id: ""
+  prevName: ""
+  prevLink: ""
+  nextName: ""
+  nextLink: ""
+  textColor: "#321c0e"
+preview:
+  text:
+    - Person Pager
+  icon: navigation
+picker_preview:
+  text: Person Pager
+  subtext: Prev/next navigation between team member bios.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/person-pager/person-pager.cloudcannon.inputs.yml

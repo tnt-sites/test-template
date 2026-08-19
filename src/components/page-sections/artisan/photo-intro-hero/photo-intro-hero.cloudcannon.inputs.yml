@@ -1,0 +1,9 @@
+_inputs:
+  image:
+    type: image
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color

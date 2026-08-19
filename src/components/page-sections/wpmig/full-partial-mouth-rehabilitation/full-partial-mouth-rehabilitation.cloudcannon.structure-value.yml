@@ -1,0 +1,18 @@
+label: Full Partial Mouth Rehabilitation
+icon: interests
+description: Full Partial Mouth Rehabilitation section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/full-partial-mouth-rehabilitation
+  id: ""
+  heading: ""
+  backgroundColor: "#321c0e"
+  headingColor: "#ffffff"
+preview:
+  text:
+    - Full Partial Mouth Rehabilitation
+  icon: interests
+picker_preview:
+  text: Full Partial Mouth Rehabilitation
+  subtext: Full Partial Mouth Rehabilitation section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/full-partial-mouth-rehabilitation/full-partial-mouth-rehabilitation.cloudcannon.inputs.yml

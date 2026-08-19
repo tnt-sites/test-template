@@ -1,0 +1,433 @@
+---
+/**
+ * Look Your Very Best — migrated from full-partial-mouth-rehabilitation [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  subheading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  backgroundImage = "/wp-content/uploads/2020/09/shutterstock_279778787x2.jpg",
+  headingColor = "rgba(255, 255, 255, 0.98)",
+  textColor = "#ffffff",
+  buttonBackgroundColor = "var(--color-brand-secondary)",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundHoverColor = "#c3a527",
+  buttonBackgroundHoverColor2 = "#c5a628",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="look-your-very-best" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundHoverColor};--c6:${buttonBackgroundHoverColor2}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="lyvb-decor" aria-hidden="true"></div>
+  <div class="lyvb-box">
+    <div class="lyvb-box2">
+      <div class="lyvb-box3">
+        <div class="lyvb-box4">
+          <h2 class="lyvb-heading">{heading}</h2>
+        </div>
+        <div class="lyvb-box5">
+          <div class="lyvb-box6">
+            {subheading && <h2 class="lyvb-heading2">{subheading}</h2>}
+          </div>
+        </div>
+        <div class="lyvb-box7">
+          <div class="lyvb-box8">
+            {text && <p class="lyvb-text">{text}</p>}
+          </div>
+        </div>
+        <div class="lyvb-box9">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lyvb-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+        <div class="lyvb-box10">
+          <div class="lyvb-box11">
+            {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lyvb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          </div>
+        </div>
+      </div>
+      <div class="lyvb-box12">
+        <div class="lyvb-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .look-your-very-best {
+    background-image: var(--bgimg, none);
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    position: relative;
+  }
+
+  .look-your-very-best :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-decor {
+    background-image: linear-gradient(270deg, rgba(41, 41, 41, 0) 0%, rgba(41, 41, 41, 0.48) 100%);
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .lyvb-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 846px;
+    position: relative;
+  }
+
+  .lyvb-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 80%;
+    flex-wrap: wrap;
+    max-width: 80%;
+    position: relative;
+  }
+
+  .lyvb-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .lyvb-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .lyvb-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-style: italic;
+    letter-spacing: 0.3px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lyvb-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .lyvb-box6 {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+  }
+
+  .lyvb-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Poppins, sans-serif;
+    font-size: 40px;
+    letter-spacing: -2px;
+    line-height: 50px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lyvb-box7 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    line-height: 28px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .lyvb-box8 {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  .lyvb-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .lyvb-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :global(.lyvb-btn) {
+    background-color: var(--btnbg);
+    border: 2px solid var(--color-brand-secondary);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+  }
+
+  .lyvb-box10 {
+    box-sizing: border-box;
+    flex: 0 0 84.03%;
+    margin-left: 10px;
+    max-width: 84.03%;
+    text-align: center;
+  }
+
+  .lyvb-box10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-box11 {
+    box-sizing: border-box;
+  }
+
+  .lyvb-box11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  :global(.lyvb-btn2) {
+    background-color: var(--btnbg);
+    border: 2px solid var(--color-brand-secondary);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.lyvb-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.lyvb-btn2) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .lyvb-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .lyvb-spacer {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  :global(.lyvb-btn):hover {
+    background-color: var(--c5);
+    border-top-color: #c3a527;
+  }
+
+  :global(.lyvb-btn2):hover {
+    background-color: var(--c6);
+    border-top-color: #c5a628;
+  }
+
+  @media (min-width: 768px) {
+    .look-your-very-best {
+      max-width: 675px;
+    }
+
+    .lyvb-box2 {
+      flex: 0 0 91.11%;
+      max-width: 91.11%;
+    }
+
+    .lyvb-box9 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    :global(.lyvb-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.lyvb-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .lyvb-box10 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .look-your-very-best {
+      max-width: 1108px;
+    }
+
+    .lyvb-box {
+      flex-wrap: nowrap;
+    }
+
+    .lyvb-box2 {
+      flex: 0 0 100%;
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+
+    .lyvb-box3 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .lyvb-box4 {
+      text-align: start;
+    }
+
+    .lyvb-box5 {
+      text-align: start;
+    }
+
+    .lyvb-heading2 {
+      font-size: 65px;
+      line-height: 70px;
+    }
+
+    .lyvb-box7 {
+      line-height: 26px;
+      text-align: start;
+    }
+
+    .lyvb-box8 {
+      margin-bottom: 50px;
+    }
+
+    .lyvb-box9 {
+      flex: 0 0 46.6%;
+      max-width: 46.6%;
+    }
+
+    .lyvb-box10 {
+      flex: 0 0 29.59%;
+      max-width: 29.59%;
+      text-align: left;
+    }
+
+    :global(.lyvb-btn2) {
+      text-align: center;
+    }
+
+    .lyvb-box12 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .lyvb-spacer {
+      height: 539px;
+      justify-content: normal;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .lyvb-heading {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .lyvb-heading2 {
+    font-weight: 700;
+  }
+  .lyvb-text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 26px;
+  }
+  :global(.lyvb-btn) {
+    align-items: normal;
+    font-size: 18px;
+    justify-content: normal;
+  }
+  :global(.lyvb-btn2) {
+    align-items: normal;
+    font-size: 18px;
+    justify-content: normal;
+  }
+/* wpmig:corrections:end */
+</style>

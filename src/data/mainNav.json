@@ -1,46 +1,340 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2020/08/ARTD_horizontal-eps-rev.png",
+  "logoAlt": "Artisan Dental logo",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About",
+      "path": "",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "About Us",
+          "path": "/about-us/",
+          "children": []
+        },
+        {
+          "name": "Mission, Vision, Values",
+          "path": "/mission-vision-values/",
+          "children": []
+        },
+        {
+          "name": "Meet the Team",
+          "path": "/meet-the-team/",
+          "children": []
+        },
+        {
+          "name": "Office Tour",
+          "path": "/office-tour/",
+          "children": []
+        },
+        {
+          "name": "Recognitions and Awards",
+          "path": "/recognitions-and-awards/",
+          "children": []
+        },
+        {
+          "name": "Certified B Corporation",
+          "path": "/certified-b-corporation/",
+          "children": []
+        },
+        {
+          "name": "Videos",
+          "path": "/videos/",
+          "children": []
+        },
+        {
+          "name": "Community Giving",
+          "path": "/community-giving/",
+          "children": []
+        },
+        {
+          "name": "Sustainability",
+          "path": "/sustainability/",
+          "children": []
+        },
+        {
+          "name": "Carbon Negative",
+          "path": "/carbon-neutral/",
+          "children": []
+        },
+        {
+          "name": "The Carbon Neutral Dental Office",
+          "path": "/the-carbon-neutral-dental-office/",
+          "children": []
+        },
+        {
+          "name": "Wellness Series",
+          "path": "/wellness-series/",
+          "children": []
+        },
+        {
+          "name": "Recycling Program",
+          "path": "",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Program Details",
+              "path": "/program-details/",
+              "children": []
+            },
+            {
+              "name": "Specific Product Info",
+              "path": "/specific-product-info/",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
-          "children": [
-            {
-              "name": "More Implants",
-              "path": "/dental-implants"
-            }
-          ]
+          "name": "Code of Conduct",
+          "path": "/code-of-conduct/",
+          "children": []
+        },
+        {
+          "name": "Covid-19 Updates",
+          "path": "/covid-19-updates/",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "children": []
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "Why Artisan",
+      "path": "",
+      "children": [
+        {
+          "name": "Why Choose Artisan",
+          "path": "/why-choose-artisan/",
+          "children": []
+        },
+        {
+          "name": "Patient Reviews",
+          "path": "/patient-reviews/",
+          "children": []
+        },
+        {
+          "name": "Impact Report",
+          "path": "/impact-report/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "/services/",
+      "children": [
+        {
+          "name": "Restorative",
+          "path": "/restorative/",
+          "children": [
+            {
+              "name": "Full & Partial Mouth Rehabilitation",
+              "path": "/full-partial-mouth-rehabilitation/",
+              "children": []
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "children": []
+            },
+            {
+              "name": "Same-Day Crowns (CEREC)",
+              "path": "/same-day-crowns-cerec/",
+              "children": []
+            },
+            {
+              "name": "Fillings",
+              "path": "/fillings/",
+              "children": []
+            },
+            {
+              "name": "Crowns",
+              "path": "/crowns/",
+              "children": []
+            },
+            {
+              "name": "Bridges",
+              "path": "/bridges/",
+              "children": []
+            },
+            {
+              "name": "Extractions",
+              "path": "/extractions/",
+              "children": []
+            },
+            {
+              "name": "Endodontic (Root Canal)",
+              "path": "/endodontics/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cosmetic",
+          "path": "/cosmetic/",
+          "children": [
+            {
+              "name": "New Smile Design",
+              "path": "/new-smile-design/",
+              "children": []
+            },
+            {
+              "name": "Full & Partial Mouth Rehabilitation",
+              "path": "/full-partial-mouth-rehabilitation/",
+              "children": []
+            },
+            {
+              "name": "Composite Tooth-Colored Fillings",
+              "path": "/composite-tooth-colored-fillings/",
+              "children": []
+            },
+            {
+              "name": "Teeth Whitening Options",
+              "path": "/teeth-whitening-options/",
+              "children": []
+            },
+            {
+              "name": "Laser Gum Sculpting",
+              "path": "/laser-gum-sculpting/",
+              "children": []
+            },
+            {
+              "name": "Ceramic or Porcelain Veneers",
+              "path": "/ceramic-veneers/",
+              "children": []
+            },
+            {
+              "name": "Invisalign® & SureSmile® Clear Teeth Straightening in Madison",
+              "path": "/invisalign-suresmile-clear-aligners/",
+              "children": []
+            },
+            {
+              "name": "Botox for Therapeutics & Esthetics",
+              "path": "/botox-for-therapeutics-esthetics/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Preventive",
+          "path": "/preventive/",
+          "children": [
+            {
+              "name": "Botox For Bruxism (Clenching and Grinding Teeth)",
+              "path": "/botox-for-bruxism-clenching-and-grinding-teeth-in-madison-wisconsin/",
+              "children": []
+            },
+            {
+              "name": "Teeth Cleaning",
+              "path": "/teeth-cleaning/",
+              "children": []
+            },
+            {
+              "name": "Periodontal Therapy",
+              "path": "/periodontal-therapy/",
+              "children": []
+            },
+            {
+              "name": "Dental Sealants",
+              "path": "/dental-sealants/",
+              "children": []
+            },
+            {
+              "name": "Bite Guard",
+              "path": "/bite-guard/",
+              "children": []
+            },
+            {
+              "name": "Botox®",
+              "path": "/botox-at-artisan-dental/",
+              "children": []
+            },
+            {
+              "name": "Artificial Intelligence in Dentistry",
+              "path": "/artificial-intelligence-in-dentistry/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Sleep Apnea",
+          "path": "/sleep-apnea/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
+      "name": "Health Plans",
+      "path": "",
+      "children": [
+        {
+          "name": "Artisan Dental Health Plans",
+          "path": "/health-plans/",
+          "children": []
+        },
+        {
+          "name": "Artisan Dental Botox Plan",
+          "path": "/artisan-dental-botox-plan/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Financial",
+      "path": "",
+      "children": [
+        {
+          "name": "Online Payments",
+          "path": "https://pay.balancecollect.com/m/artisandentalllc",
+          "children": []
+        },
+        {
+          "name": "Insurance Assistance",
+          "path": "/insurance-assistance/",
+          "children": []
+        },
+        {
+          "name": "Payment + Financing Options",
+          "path": "/financial/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Patient Info",
+      "path": "",
+      "children": [
+        {
+          "name": "Request Appointment",
+          "path": "/contact-us/",
+          "children": []
+        },
+        {
+          "name": "Patient Forms",
+          "path": "https://forms.mydentistlink.com/b189b388-42c3-424d-a52c-5f92231226af",
+          "children": []
+        },
+        {
+          "name": "Cancellation Policy",
+          "path": "/cancellation-policy/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Careers",
+      "path": "/careers/",
+      "children": []
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us/",
       "children": []
     }
   ],
@@ -70,7 +364,7 @@
       "id": "",
       "text": "Request an Appointment",
       "hideText": false,
-      "link": "/request-an-appointment/",
+      "link": "/contact-us/",
       "modalTarget": "",
       "iconName": "",
       "iconPosition": "before",
@@ -83,5 +377,16 @@
       "textColor": "default",
       "uppercase": false
     }
-  ]
+  ],
+  "topBar": {
+    "followLabel": "Follow Us!",
+    "phoneLabel": "or Call",
+    "backgroundColor": "var(--color-brand)",
+    "textColor": "#ffffff",
+    "socialColor": "var(--color-brand-subtle)",
+    "mainBackgroundColor": "rgba(255, 255, 255, 0.9)",
+    "navColor": "var(--color-brand)",
+    "buttonBackgroundColor": "#ffffff",
+    "buttonTextColor": "var(--color-brand-secondary)"
+  }
 }

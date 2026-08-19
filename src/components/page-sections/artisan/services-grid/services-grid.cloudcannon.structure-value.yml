@@ -1,0 +1,29 @@
+label: Services Grid
+icon: grid_view
+description: Intro column beside a grid of icon cards.
+value:
+  _component: page-sections/artisan/services-grid
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  cards:
+    - icon: ""
+            title: ""
+            text: ""
+            link: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  textColor: "#333333"
+preview:
+  text:
+    - Services Grid
+  icon: grid_view
+picker_preview:
+  text: Services Grid
+  subtext: Intro column beside a grid of icon cards.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/services-grid/services-grid.cloudcannon.inputs.yml

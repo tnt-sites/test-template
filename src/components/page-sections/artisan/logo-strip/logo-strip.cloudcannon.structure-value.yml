@@ -1,0 +1,24 @@
+label: Logo Strip
+icon: view_carousel
+description: Band of partner or award logos.
+value:
+  _component: page-sections/artisan/logo-strip
+  id: ""
+  eyebrow: ""
+  heading: ""
+  logos:
+    - image: ""
+            alt: ""
+            link: ""
+  backgroundColor: "#321c0e"
+  eyebrowColor: "#ffffff"
+  headingColor: "#ffffff"
+preview:
+  text:
+    - Logo Strip
+  icon: view_carousel
+picker_preview:
+  text: Logo Strip
+  subtext: Band of partner or award logos.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/logo-strip/logo-strip.cloudcannon.inputs.yml

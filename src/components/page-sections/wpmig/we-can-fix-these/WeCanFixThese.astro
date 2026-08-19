@@ -1,0 +1,292 @@
+---
+/**
+ * We Can Fix These — migrated from full-partial-mouth-rehabilitation [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  items = [],
+  backgroundColor = "#fbfbfb",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  titleColor = "#666666",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="we-can-fix-these" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tt:${titleColor}`} {...rest}>
+  <div class="wcft-box">
+    <div class="wcft-box2">
+      <div class="wcft-box3">
+        {eyebrow && <h6 class="wcft-heading">{eyebrow}</h6>}
+      </div>
+    </div>
+    <div class="wcft-box4">
+      <div class="wcft-box5">
+        <h2 class="wcft-heading2">{heading}</h2>
+      </div>
+    </div>
+    <div class="wcft-box6">
+      <div class="wcft-grid">
+        {list.map((it) => (
+          <div class="wcft-box7">
+            <span class="wcft-box8">
+              <span class="wcft-decor" aria-hidden="true"><Icon name="check-circle-duo" /></span>
+            </span>
+            <div class="wcft-box9">
+              <h3 class="wcft-heading3">{it.title}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .we-can-fix-these {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding: 75px 10px;
+    position: relative;
+  }
+
+  .we-can-fix-these :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .wcft-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wcft-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .wcft-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcft-box3 {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .wcft-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcft-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcft-box5 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .wcft-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcft-box6 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wcft-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .wcft-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+  }
+
+  .wcft-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .wcft-box7 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 33.33%;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 33.33%;
+    text-align: center;
+  }
+
+  .wcft-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .wcft-box8 {
+    box-sizing: border-box;
+    color: var(--color-brand-secondary);
+    display: inline-block;
+    font-size: 35px;
+    line-height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35px;
+  }
+
+  .wcft-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 35px;
+    width: 35px;
+  }
+
+  .wcft-decor {
+    box-sizing: border-box;
+    display: block;
+    font-family: "Font Awesome 5 Duotone";
+    font-weight: 900;
+    position: relative;
+  }
+
+  .wcft-decor :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 35px;
+    width: 35px;
+  }
+
+  .wcft-box9 {
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+
+  .wcft-heading3 {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-family: Poppins, sans-serif;
+    line-height: 12.6px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+  }
+
+  @media (min-width: 768px) {
+    .we-can-fix-these {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .we-can-fix-these {
+      max-width: 1108px;
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+
+    .wcft-box2 {
+      text-align: start;
+    }
+
+    .wcft-box4 {
+      text-align: start;
+    }
+
+    .wcft-box5 {
+      margin-bottom: 15px;
+    }
+
+    .wcft-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .wcft-box6 {
+      flex-wrap: nowrap;
+    }
+
+    .wcft-box7 {
+      align-items: start;
+      flex-direction: row;
+      text-align: start;
+    }
+
+    .wcft-box8 {
+      flex: 0 0 12.03%;
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: 12.03%;
+      text-align: center;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wcft-heading {
+    font-weight: 400;
+  }
+  .wcft-heading2 {
+    font-weight: 700;
+  }
+  .wcft-heading3 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

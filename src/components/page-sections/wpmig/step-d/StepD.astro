@@ -1,0 +1,251 @@
+---
+/**
+ * Step D — migrated from full-partial-mouth-rehabilitation [9] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#321c0e",
+  textColor = "#686868",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="step-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="sd-box">
+    <div class="sd-box2">
+      <div class="sd-box3">
+        <div class="sd-box4">
+          {eyebrow && <h6 class="sd-heading">{eyebrow}</h6>}
+        </div>
+        <div class="sd-box5">
+          <div class="sd-box6">
+            <h2 class="sd-heading2">{heading}</h2>
+          </div>
+        </div>
+        <div class="sd-box7">
+          <div class="sd-box8">
+            {text && <p class="sd-text">{text}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sd-box9">
+      <div class="sd-box10">
+        <div class="sd-spacer" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .step-d {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    max-width: 298px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .sd-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sd-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    order: 10;
+    position: relative;
+  }
+
+  .sd-box3 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sd-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sd-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-size: 24px;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sd-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sd-box6 {
+    box-sizing: border-box;
+  }
+
+  .sd-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sd-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sd-box8 {
+    box-sizing: border-box;
+    margin-bottom: -15px;
+  }
+
+  .sd-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .sd-box9 {
+    background-image: url("/wp-content/uploads/2020/09/shutterstock_631495055-1.jpg");
+    background-position: 0% 50%;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sd-box10 {
+    box-sizing: border-box;
+  }
+
+  .sd-spacer {
+    box-sizing: border-box;
+    height: 250px;
+  }
+
+  @media (min-width: 768px) {
+    .step-d {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .step-d {
+      max-width: 1108px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .sd-box {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .sd-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      order: 0;
+    }
+
+    .sd-box3 {
+      flex: 0 0 90.97%;
+      justify-content: normal;
+      margin-right: 50px;
+      max-width: 90.97%;
+    }
+
+    .sd-box4 {
+      text-align: start;
+    }
+
+    .sd-box5 {
+      text-align: start;
+    }
+
+    .sd-box6 {
+      margin-bottom: 15px;
+    }
+
+    .sd-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .sd-box7 {
+      text-align: start;
+    }
+
+    .sd-box8 {
+      margin-bottom: 30px;
+    }
+
+    .sd-box9 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sd-spacer {
+      height: 500px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sd-heading {
+    font-weight: 400;
+  }
+  .sd-heading2 {
+    font-weight: 700;
+  }
+  .sd-text {
+    color: rgb(104, 104, 104);
+    font-size: 18px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

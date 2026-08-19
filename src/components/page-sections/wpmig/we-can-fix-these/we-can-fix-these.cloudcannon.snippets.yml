@@ -1,0 +1,10 @@
+_snippets:
+  we_can_fix_these:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Can Fix These
+    definitions:
+      component_name: page-sections/wpmig/we-can-fix-these
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/we-can-fix-these/we-can-fix-these.cloudcannon.inputs.yml

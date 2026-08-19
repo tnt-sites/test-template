@@ -1,0 +1,19 @@
+label: Video Row
+icon: play_circle
+description: Row of embedded videos.
+value:
+  _component: page-sections/artisan/video-row
+  id: ""
+  videos:
+    - youtubeId: ""
+      title: ""
+  backgroundColor: "#ffffff"
+preview:
+  text:
+    - Video Row
+  icon: play_circle
+picker_preview:
+  text: Video Row
+  subtext: Row of embedded videos.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/video-row/video-row.cloudcannon.inputs.yml

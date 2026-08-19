@@ -1,0 +1,213 @@
+---
+/**
+ * A Subscription Is Required — migrated from full-partial-mouth-rehabilitation [10] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  items = [],
+  textColor = "#ffffff",
+  textHoverColor = "#686868",
+  hoverColor = "#686868",
+  hoverColor2 = "#e4bb0f",
+  hoverColor3 = "#666666",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="a-subscription-is-required" id={id || undefined} style={`--tx:${textColor};--c2:${textHoverColor};--c3:${hoverColor};--c4:${hoverColor2};--c5:${hoverColor3}`} {...rest}>
+  <div class="asir-grid">
+    {list.map((it) => (
+      <div class="asir-box">
+        <div class="asir-box2">
+          <div class="asir-box3">
+            <div class="asir-spacer" aria-hidden="true"></div>
+            <div class="asir-box4">
+              <p class="asir-text">{it.text}</p>
+              {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="asir-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+            </div>
+            <div class="asir-spacer2" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="asir-box5">
+          <div class="asir-box6">
+            <div class="asir-spacer3" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+<style>
+  .a-subscription-is-required {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 100px auto 150px auto;
+    max-width: 298px;
+    position: relative;
+  }
+
+  .asir-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .asir-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .asir-box2 {
+    background-color: #000000;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 156.4px;
+    position: relative;
+  }
+
+  .asir-box3 {
+    background-image: url("https://www.optiopublishing.com/embed/templates/images/disabled-video.jpg");
+    background-size: 100% 100%;
+    bottom: 0px;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 300;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    top: 0px;
+  }
+
+  .asir-box4 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .asir-text {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  :global(.asir-btn) {
+    background-color: #4ba4c9;
+    border-radius: 4px;
+    display: inline-block;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 0px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  :global(.asir-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .asir-box5 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: -15px;
+    max-width: 100%;
+  }
+
+  .asir-box6 {
+    box-sizing: border-box;
+  }
+
+  .asir-spacer3 {
+    box-sizing: border-box;
+    height: 25px;
+  }
+
+  :global(.asir-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #686868;
+    color: var(--c2);
+  }
+
+  :global(.asir-btn):hover .asir-spacer2 {
+    letter-spacing: -2px;
+  }
+
+  @media (min-width: 768px) {
+    .a-subscription-is-required {
+      max-width: 675px;
+    }
+
+    .asir-box2 {
+      padding-bottom: 368.4px;
+    }
+
+    .asir-box4 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 590px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .a-subscription-is-required {
+      max-width: 1108px;
+    }
+
+    .asir-grid {
+      flex-wrap: nowrap;
+      max-width: 1200px;
+    }
+
+    .asir-box {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    .asir-box2 {
+      padding-bottom: 196.5px;
+    }
+
+    .asir-box4 {
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  :global(.asir-btn) {
+    align-items: normal;
+    font-weight: 300;
+    justify-content: normal;
+    line-height: 26px;
+  }
+  .asir-text {
+    color: rgb(255, 255, 255);
+  }
+  .asir-box3 {
+    font-size: 16px;
+  }
+  .asir-box4 {
+    font-size: 16px;
+  }
+/* wpmig:corrections:end */
+</style>

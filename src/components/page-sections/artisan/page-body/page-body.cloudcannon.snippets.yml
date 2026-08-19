@@ -1,0 +1,10 @@
+_snippets:
+  page_body:
+    template: astro_component
+    inline: false
+    preview:
+      text: Page Body
+    definitions:
+      component_name: page-sections/artisan/page-body
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/page-body/page-body.cloudcannon.inputs.yml

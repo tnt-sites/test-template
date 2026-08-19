@@ -1,0 +1,10 @@
+_snippets:
+  blog_category_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Blog Category Grid
+    definitions:
+      component_name: page-sections/artisan/blog-category-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/blog-category-grid/blog-category-grid.cloudcannon.inputs.yml

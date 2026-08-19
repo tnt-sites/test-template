@@ -1,30 +1,208 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
-  "links": [
-    {
-      "name": "Home",
-      "path": "/"
-    },
-    {
-      "name": "Why",
-      "path": "/why/"
-    },
-    {
-      "name": "Blog",
-      "path": "/blog/"
+  "affiliations": {
+    "backgroundColor": "var(--color-brand-secondary)",
+    "headingColor": "#ffffff",
+    "groups": [
+      {
+        "heading": "Professional Affiliations:",
+        "logos": [
+          {
+            "source": "/wp-content/uploads/2020/08/american_dental_association-rev.png",
+            "alt": "American Dental Association"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/lh4-rev.png",
+            "alt": "Wisconsin Dental Association"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/AACD-rev.png",
+            "alt": "American Academy of Cosmetic Dentistry"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/accredations-mobile-rev.png",
+            "alt": "Academy of General Dentistry"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/Caduceus_Dane-County-Dental-Social-rev.png",
+            "alt": "Dane County Dental Society"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/headerlogo-rev.png",
+            "alt": "International Dental Implant Association"
+          }
+        ]
+      },
+      {
+        "heading": "Sustainability Affiliations:",
+        "logos": [
+          {
+            "source": "/wp-content/uploads/2020/08/b-logo3-black.png",
+            "alt": "Certified B Corporation"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/unnamed-1.png",
+            "alt": "Carbon Neutral Company"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/member.png",
+            "alt": "Wisconsin Sustainable Business Council"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/SD-Logo-for-Badger-Bioneers-RGB-1.png",
+            "alt": "Badger Bioneers"
+          },
+          {
+            "source": "/wp-content/uploads/2020/08/gpt-logo-rev.png",
+            "alt": "Green Power Tomorrow"
+          }
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "backgroundColor": "var(--color-brand)",
+    "textColor": "#ffffff",
+    "heading": "Have a question?",
+    "body": "We want you to feel supported, which is why our team is always happy to help with all of your questions. Just give us a call!",
+    "phoneHeading": "Call Today! (608) 467-8022",
+    "phoneHref": "tel:6084678022",
+    "button": {
+      "text": "Get in touch with us",
+      "link": "/contact-us/"
     }
-  ],
-  "contactTitle": "Contact Us",
-  "officeHoursTitle": "Office Hours",
-  "legalLinks": [
-    {
-      "name": "Sitemap",
-      "path": "/sitemap"
+  },
+  "main": {
+    "backgroundColor": "#ffffff",
+    "headingColor": "var(--color-brand)",
+    "linkColor": "#000000",
+    "logoSource": "/wp-content/uploads/2020/08/ARTD_horizontal-eps.png",
+    "logoAlt": "Artisan Dental",
+    "phoneLabel": "Call Us Today –",
+    "phone": "(608) 467-8022",
+    "phoneHref": "tel:6084678022",
+    "addressLines": [
+      "10 North Livingston Street, Suite 301",
+      "Madison, Wisconsin 53703"
+    ],
+    "addressHref": "https://g.page/artisandds?share",
+    "button": {
+      "text": "Contact Us",
+      "link": "/contact-us/"
     },
-    {
-      "name": "Privacy Policy",
-      "path": "/privacy-policy"
-    }
-  ]
+    "columns": [
+      {
+        "heading": "About Us",
+        "links": [
+          {
+            "name": "Our Office",
+            "path": "/our-office/"
+          },
+          {
+            "name": "Why Choose Artisan",
+            "path": "/why-choose-artisan/"
+          },
+          {
+            "name": "Mission, Vision, Values",
+            "path": "/mission-vision-values/"
+          },
+          {
+            "name": "Certified B Corp",
+            "path": "/certified-b-corporation/"
+          },
+          {
+            "name": "Patient Reviews",
+            "path": "/patient-reviews/"
+          }
+        ]
+      },
+      {
+        "heading": "The Team",
+        "links": [
+          {
+            "name": "Dr. Andersen",
+            "path": "/dr-nicole-andersen/"
+          },
+          {
+            "name": "Dr. Rehermann",
+            "path": "/dr-mark-rehermann/"
+          },
+          {
+            "name": "Dr. Dayal",
+            "path": "/dr-shruthi-dayal/"
+          },
+          {
+            "name": "Meet the Team",
+            "path": "/meet-the-team/"
+          },
+          {
+            "name": "Careers",
+            "path": "/careers/"
+          }
+        ]
+      },
+      {
+        "heading": "Quick Links",
+        "links": [
+          {
+            "name": "Take a Tour",
+            "path": "/office-tour/"
+          },
+          {
+            "name": "Smile Gallery",
+            "path": "/smile-gallery/"
+          },
+          {
+            "name": "Health Plans",
+            "path": "/health-plans/"
+          },
+          {
+            "name": "Payments + Financing",
+            "path": "/financial/"
+          },
+          {
+            "name": "Online Payment",
+            "path": "/online-payments-2/"
+          },
+          {
+            "name": "HIPAA Policy",
+            "path": "/legal/"
+          }
+        ]
+      },
+      {
+        "heading": "Contact us",
+        "links": [
+          {
+            "name": "Send a Message",
+            "path": "/contact-us/"
+          },
+          {
+            "name": "Request Appointment",
+            "path": "/contact-us/"
+          },
+          {
+            "name": "Call Us",
+            "path": "tel:6084678022"
+          },
+          {
+            "name": "Send Email",
+            "path": "mailto:info@artisandentalmadison.com"
+          },
+          {
+            "name": "View Contact Info",
+            "path": "/contact-us/"
+          },
+          {
+            "name": "Careers",
+            "path": "/careers/"
+          }
+        ]
+      }
+    ]
+  },
+  "bottom": {
+    "creditPrefix": "Designed by",
+    "creditName": "O360®",
+    "creditLink": "https://www.officite.com/"
+  }
 }

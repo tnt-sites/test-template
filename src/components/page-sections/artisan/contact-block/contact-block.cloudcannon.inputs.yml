@@ -1,0 +1,46 @@
+_inputs:
+  detailsHeading:
+    type: text
+    comment: Heading above the contact details column.
+  formHtml:
+    type: html
+    comment: Only for forms lifted from the source as-is; otherwise use formBlocks.
+  details:
+    type: array
+    options:
+      structures: _structures.contact_block_item
+  headingSize:
+    type: text
+    comment: Optional heading size override, e.g. 30px. Blank uses the default scale.
+  paddingBlock:
+    type: text
+    comment: Optional vertical padding override, e.g. "25px" or "0 25px".
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  labelColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  contact_block_item:
+    values:
+      - value:
+          icon: ""
+          label: ""
+          value: ""
+          link: ""
+          valueIsLink: false
+        _inputs:
+          icon:
+            type: image
+          label:
+            type: text
+          value:
+            type: text
+          link:
+            type: url
+          valueIsLink:
+            type: switch
+            comment: Paint the value in link gold, not just the label.

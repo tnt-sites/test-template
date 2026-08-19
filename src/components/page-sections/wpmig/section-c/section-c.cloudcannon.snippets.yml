@@ -1,0 +1,10 @@
+_snippets:
+  section_c:
+    template: astro_component
+    inline: false
+    preview:
+      text: Section C
+    definitions:
+      component_name: page-sections/wpmig/section-c
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/section-c/section-c.cloudcannon.inputs.yml

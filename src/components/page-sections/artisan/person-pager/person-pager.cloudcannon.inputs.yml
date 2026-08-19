@@ -1,0 +1,7 @@
+_inputs:
+  prevLink:
+    type: url
+  nextLink:
+    type: url
+  textColor:
+    type: color

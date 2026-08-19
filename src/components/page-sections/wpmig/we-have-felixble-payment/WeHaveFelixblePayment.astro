@@ -1,0 +1,348 @@
+---
+/**
+ * We Have Felixble Payment — migrated from full-partial-mouth-rehabilitation [12] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#321c0e",
+  eyebrowColor = "#ffffff",
+  headingColor = "#ffffff",
+  textColor = "#000000",
+  buttonBackgroundColor = "var(--color-brand-secondary)",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#686868",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-have-felixble-payment" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c7:${buttonTextHoverColor}`} {...rest}>
+  <div class="whfp-decor" aria-hidden="true"></div>
+  <section class="whfp-box">
+    <div class="whfp-box2">
+      <div class="whfp-box3">
+        <div class="whfp-box4">
+          <div class="whfp-box5">
+            {eyebrow && <h6 class="whfp-heading">{eyebrow}</h6>}
+          </div>
+        </div>
+        <div class="whfp-box6">
+          <div class="whfp-box7">
+            <h2 class="whfp-heading2">{heading}</h2>
+          </div>
+        </div>
+        <div class="whfp-box8">
+          <div class="whfp-box9" role="group" aria-roledescription="slide">
+            <div class="whfp-box10">
+              <div class="whfp-box11">
+                {text && <div class="whfp-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whfp-box12">
+          <div class="whfp-box13">
+            <div class="whfp-box14">
+              {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="whfp-btn" text={buttonText} link={buttonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<style>
+  .we-have-felixble-payment {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .we-have-felixble-payment :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-decor {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .whfp-box {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .whfp-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    position: relative;
+  }
+
+  .whfp-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .whfp-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .whfp-box5 {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .whfp-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .whfp-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .whfp-box7 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .whfp-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .whfp-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .whfp-box9 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 25px;
+    position: relative;
+  }
+
+  .whfp-box10 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .whfp-box11 {
+    box-sizing: border-box;
+  }
+
+  .whfp-text {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .whfp-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .whfp-box12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-box13 {
+    box-sizing: border-box;
+    margin-top: 50px;
+  }
+
+  .whfp-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .whfp-box14 {
+    box-sizing: border-box;
+  }
+
+  .whfp-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  :global(.whfp-btn) {
+    background-color: var(--btnbg);
+    border: 2px solid var(--color-brand-secondary);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 0px;
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+  }
+
+  :global(.whfp-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  :global(.whfp-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #686868;
+    color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .we-have-felixble-payment {
+      max-width: 675px;
+    }
+
+    :global(.whfp-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.whfp-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .we-have-felixble-payment {
+      max-width: 1108px;
+      padding: 115px 0px 100px 0px;
+    }
+
+    .whfp-box2 {
+      flex-wrap: nowrap;
+      margin-left: 54px;
+      margin-right: 54px;
+    }
+
+    .whfp-box7 {
+      margin-bottom: 15px;
+    }
+
+    .whfp-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .whfp-text {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .whfp-heading {
+    font-weight: 400;
+  }
+  .whfp-heading2 {
+    font-weight: 700;
+  }
+  .whfp-text {
+    color: rgb(0, 0, 0);
+  }
+  :global(.whfp-btn) {
+    align-items: normal;
+    font-size: 18px;
+    justify-content: normal;
+  }
+/* wpmig:corrections:end */
+</style>

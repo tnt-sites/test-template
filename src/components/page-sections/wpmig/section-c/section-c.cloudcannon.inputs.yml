@@ -1,0 +1,18 @@
+_inputs:
+  images:
+    type: array
+    options:
+      structures: _structures.section_c_item
+  backgroundColor:
+    type: color
+_structures:
+  section_c_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text

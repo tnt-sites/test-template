@@ -1,0 +1,10 @@
+_snippets:
+  review_links:
+    template: astro_component
+    inline: false
+    preview:
+      text: Review Links
+    definitions:
+      component_name: page-sections/artisan/review-links
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/review-links/review-links.cloudcannon.inputs.yml

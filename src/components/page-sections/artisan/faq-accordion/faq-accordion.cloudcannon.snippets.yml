@@ -1,0 +1,10 @@
+_snippets:
+  faq_accordion:
+    template: astro_component
+    inline: false
+    preview:
+      text: FAQ Accordion
+    definitions:
+      component_name: page-sections/artisan/faq-accordion
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/faq-accordion/faq-accordion.cloudcannon.inputs.yml

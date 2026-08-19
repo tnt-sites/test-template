@@ -1,0 +1,94 @@
+---
+/**
+ * Interior page title band — the brown strip every non-homepage page opens
+ * with. Measured on the source: #321c0e, 75px vertical padding, title in
+ * Poppins 700 40px/50px white.
+ *
+ * `mig content` mapped this to the starter's homepage index-banner, which
+ * renders transparent with dark 36px type, so all ~88 interior pages opened
+ * wrong in the same way.
+ *
+ * Baked in: layout and typography. Props: text, colours, optional photo.
+ */
+const {
+  heading = "",
+  eyebrow = "",
+  backgroundColor = "#321c0e",
+  headingColor = "#ffffff",
+  eyebrowColor = "var(--color-brand-secondary)",
+  backgroundImage = "",
+  overlayColor = "rgba(50, 28, 14, 0.55)",
+  align = "center",
+  minHeight = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const image = typeof backgroundImage === "string" ? backgroundImage : (backgroundImage?.source ?? "");
+---
+
+<section
+  class:list={["a-pagebanner", { center: align === "center" }]}
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--eb:${eyebrowColor};--ov:${overlayColor};--minh:${minHeight || (image ? "420px" : "auto")}${image ? `;--img:url('${image}')` : ""}`}
+  {...rest}
+>
+  {image && <div class="pb-scrim" />}
+  <div class="pb-inner">
+    {eyebrow && <p class="pb-eyebrow">{eyebrow}</p>}
+    {heading && <h1>{heading}</h1>}
+  </div>
+</section>
+
+<style>
+  /* A plain title band is just padding; a photo banner is much taller on the
+     source (810px vs 200px), so it gets a min-height instead. */
+  .a-pagebanner {
+    align-items: center;
+    background-color: var(--bg);
+    background-image: var(--img, none);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    min-height: var(--minh, auto);
+    padding-block: 75px;
+    position: relative;
+  }
+
+  .pb-scrim {
+    background: var(--ov);
+    inset: 0;
+    position: absolute;
+  }
+
+  .pb-inner {
+    margin-inline: auto;
+    max-width: 1200px;
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+    position: relative;
+  }
+
+  .a-pagebanner.center .pb-inner {
+    text-align: center;
+  }
+
+  .pb-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0 0 0.25rem;
+  }
+
+  h1 {
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: clamp(1.85rem, 3vw, 40px);
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+  }
+</style>

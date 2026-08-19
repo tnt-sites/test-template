@@ -1,0 +1,275 @@
+---
+/**
+ * Partial And Full Mouth — migrated from full-partial-mouth-rehabilitation [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  backgroundColor = "#321c0e",
+  eyebrowColor = "#ffffff",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="partial-and-full-mouth" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="pafm-decor" aria-hidden="true"></div>
+  <div class="pafm-box">
+    <section class="pafm-box2">
+      <div class="pafm-box3">
+        <div class="pafm-box4">
+          <div class="pafm-box5">
+            {eyebrow && <h6 class="pafm-heading">{eyebrow}</h6>}
+          </div>
+        </div>
+        <div class="pafm-box6">
+          <div class="pafm-box7">
+            <h2 class="pafm-heading2">{heading}</h2>
+          </div>
+        </div>
+        <div class="pafm-box8">
+          <div class="pafm-box9">
+            {text && <p class="pafm-text">{text}</p>}
+          </div>
+        </div>
+        <div class="pafm-box10">
+          <div class="pafm-box11">
+            {subheading && <h3 class="pafm-heading3">{subheading}</h3>}
+          </div>
+        </div>
+        <div class="pafm-box12">
+          <div class="pafm-box13">
+            {text2 && <p class="pafm-text2" set:html={text2} />}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+<style>
+  .partial-and-full-mouth {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .pafm-decor {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .pafm-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .pafm-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 40px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pafm-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .pafm-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pafm-box5 {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .pafm-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pafm-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pafm-box7 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .pafm-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pafm-box8 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pafm-box9 {
+    box-sizing: border-box;
+  }
+
+  .pafm-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .pafm-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pafm-box11 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .pafm-heading3 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pafm-box12 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pafm-box13 {
+    box-sizing: border-box;
+  }
+
+  .pafm-text2 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .partial-and-full-mouth {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .partial-and-full-mouth {
+      max-width: 1108px;
+      padding: 115px 0px 75px 0px;
+    }
+
+    .pafm-box3 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 800px;
+    }
+
+    .pafm-box7 {
+      margin-bottom: 15px;
+    }
+
+    .pafm-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .pafm-box11 {
+      margin-bottom: 15px;
+    }
+
+    .pafm-heading3 {
+      font-size: 28px;
+      line-height: 50px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .pafm-heading {
+    font-weight: 400;
+  }
+  .pafm-heading2 {
+    font-weight: 700;
+  }
+  .pafm-text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .pafm-text2 {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

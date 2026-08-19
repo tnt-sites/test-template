@@ -1,0 +1,74 @@
+---
+/**
+ * Section — migrated from full-partial-mouth-rehabilitation [11] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section" id={id || undefined} {...rest}>
+  <div class="se-box">
+    <iframe class="se-embed" src="https://www.youtube.com/embed/UfEpLime4yw" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    <iframe class="se-embed2" src="https://www.youtube.com/embed/fh6IQb8i6Sc" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+</section>
+<style>
+  .section {
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 75px auto;
+    max-width: 298px;
+    position: relative;
+  }
+
+  .se-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .se-embed {
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    height: auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .se-embed2 {
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      max-width: 675px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section {
+      margin-bottom: 150px;
+      margin-top: 150px;
+      max-width: 1108px;
+    }
+  }
+</style>

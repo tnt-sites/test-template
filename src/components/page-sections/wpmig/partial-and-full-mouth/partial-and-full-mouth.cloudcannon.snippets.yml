@@ -1,0 +1,10 @@
+_snippets:
+  partial_and_full_mouth:
+    template: astro_component
+    inline: false
+    preview:
+      text: Partial And Full Mouth
+    definitions:
+      component_name: page-sections/wpmig/partial-and-full-mouth
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/partial-and-full-mouth/partial-and-full-mouth.cloudcannon.inputs.yml

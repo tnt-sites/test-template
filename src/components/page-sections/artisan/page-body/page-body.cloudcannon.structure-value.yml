@@ -1,0 +1,28 @@
+label: Page Body
+icon: view_sidebar
+description: Section-nav sidebar beside the main content.
+value:
+  _component: page-sections/artisan/page-body
+  id: ""
+  sidebarHeading: ""
+  links: []
+  image: ""
+  imageAlt: ""
+  body: ""
+  backgroundColor: transparent
+  headingBackground: "#321c0e"
+  headingColor: "#ffffff"
+  linkColor: "#222222"
+  textColor: "#686868"
+  reverse: false
+preview:
+  text:
+    - Page Body
+  subtext:
+    - key: sidebarHeading
+  icon: view_sidebar
+picker_preview:
+  text: Page Body
+  subtext: Sidebar nav beside main content.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/page-body/page-body.cloudcannon.inputs.yml

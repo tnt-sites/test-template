@@ -1,0 +1,49 @@
+_inputs:
+  slides:
+    type: array
+    comment: Each slide is a full-bleed image with its own copy and call to action.
+    options:
+      structures: _structures.artisan_hero_slide
+  eyebrowColor:
+    type: color
+    comment: Also used for the CTA border and the slider arrows.
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  overlayColor:
+    type: color
+    comment: Dark scrim over the photo so the text stays readable.
+  minHeight:
+    type: text
+    comment: CSS length, e.g. 620px.
+  autoplaySeconds:
+    type: number
+    comment: Seconds between slides. Set to 0 to disable auto-rotation.
+_structures:
+  artisan_hero_slide:
+    values:
+      - value:
+          image: ""
+          eyebrow: ""
+          heading: ""
+          text: ""
+          buttonText: ""
+          buttonLink: ""
+        preview:
+          text:
+            - key: heading
+        _inputs:
+          image:
+            type: image
+          eyebrow:
+            type: text
+          heading:
+            type: textarea
+            comment: Line breaks are preserved.
+          text:
+            type: markdown
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

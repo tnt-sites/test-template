@@ -1,0 +1,30 @@
+_inputs:
+  cards:
+    type: array
+    options:
+      structures: _structures.services_grid_item
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  services_grid_item:
+    values:
+      - value:
+          icon: ""
+          title: ""
+          text: ""
+          link: ""
+        _inputs:
+          icon:
+            type: image
+          title:
+            type: text
+          text:
+            type: markdown
+          link:
+            type: url

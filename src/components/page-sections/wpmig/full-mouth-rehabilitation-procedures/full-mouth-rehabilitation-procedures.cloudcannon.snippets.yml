@@ -1,0 +1,10 @@
+_snippets:
+  full_mouth_rehabilitation_procedures:
+    template: astro_component
+    inline: false
+    preview:
+      text: Full Mouth Rehabilitation Procedures
+    definitions:
+      component_name: page-sections/wpmig/full-mouth-rehabilitation-procedures
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/full-mouth-rehabilitation-procedures/full-mouth-rehabilitation-procedures.cloudcannon.inputs.yml

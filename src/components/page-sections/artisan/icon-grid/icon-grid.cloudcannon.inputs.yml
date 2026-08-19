@@ -1,0 +1,44 @@
+_inputs:
+  backgroundColor:
+    type: color
+  backgroundImage:
+    type: image
+    comment: Optional decorative texture, blended at overlayOpacity.
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  iconColor:
+    type: color
+  columns:
+    type: select
+    options:
+      values: ["2", "3"]
+    comment: Ignored when a video is set — the list is single-column beside a video.
+  youtubeId:
+    type: text
+    comment: Optional YouTube video ID shown beside the list (e.g. UfEpLime4yw). Leave empty for the full-width grid.
+  videoTitle:
+    type: text
+    comment: Accessible title for the video. Falls back to the heading.
+  cards:
+    type: array
+    options:
+      structures: _structures.icon_grid_item
+_structures:
+  icon_grid_item:
+    values:
+      - value:
+          icon: check-circle-duo
+          title: ""
+          text: ""
+        _inputs:
+          icon:
+            type: text
+            comment: Icon name from this project's icon set (e.g. check-circle-duo, arrow-right-circle-duo).
+          title:
+            type: text
+          text:
+            type: markdown

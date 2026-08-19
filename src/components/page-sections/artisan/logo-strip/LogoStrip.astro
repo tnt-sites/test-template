@@ -1,0 +1,161 @@
+---
+/**
+ * Band of partner / award logos, optionally introduced by an eyebrow and
+ * heading. Reproduces the source's two brown logo bands.
+ *
+ * Baked in: layout, type scale. Props: text, colours. Array: `logos`.
+ */
+const {
+  eyebrow = "", heading = "",
+  logos = [],
+  perView = 5,
+  autoplaySeconds = 5,
+  backgroundColor = "var(--color-brand)",
+  backgroundImage = "",
+  overlayOpacity = 0.15,
+  eyebrowColor = "#ffffff",
+  headingColor = "#ffffff",
+  // Presentation, measured from the source rather than assumed. An award band
+  // and an edge-to-edge photo gallery are the same *behaviour* (a rotating
+  // strip) with different presentation, so these vary while the rotation is
+  // shared. Defaults reproduce the award band exactly, so existing usage is
+  // unaffected.
+  gap = "1.5rem",
+  maxWidth = "1200px",
+  paddingBlock = "46px",
+  itemFit = "contain",
+  itemHeight = "120px",
+  // Opt-in static layout: a fixed-column grid instead of the autoplaying
+  // strip, for sets meant to be browsed rather than glanced at (e.g. a list
+  // of downloadable reports).
+  layout = "carousel",
+  columns = 2,
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(logos) ? logos.filter((l: any) => l?.image) : [];
+const isGrid = layout === "grid";
+---
+<section class:list={["a-logostrip", maxWidth === "none" && "is-bleed", isGrid && "is-grid"]} data-autoplay={isGrid ? 0 : autoplaySeconds} id={id || undefined}
+  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--per:${perView};--cols:${columns};--gap:${gap};--maxw:${maxWidth};--padblock:${paddingBlock};--fit:${itemFit};--ih:${itemHeight};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="ls-inner">
+    {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
+    {heading && <h2>{heading}</h2>}
+    <div class="ls-viewport">
+      <ul class="ls-logos no-check">
+        {list.map((l: any) => (
+          <li>{l.link
+            ? <a href={l.link}><img src={l.image} alt={l.alt || ""} loading="lazy" /></a>
+            : <img src={l.image} alt={l.alt || ""} loading="lazy" />}</li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
+<style>
+  .a-logostrip { background-color: var(--bg); padding-block: var(--padblock, 46px); position: relative; }
+
+  /* Measured: the source lays #321c0e over the wood texture. */
+
+  /* Source structure: the section is solid brand-brown, and the wood texture
+     rides on the OVERLAY together with the same brown at opacity .15 and
+     mix-blend-mode: lighten. Putting the texture on the section instead (which
+     is what this did first) renders it far too light. */
+  .a-logostrip::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+  .ls-inner {  margin-inline: auto; max-width: var(--maxw, 1200px); padding-inline: var(--maxw-pad, clamp(1rem,3vw,2.5rem)); position: relative; text-align: center; }
+  .a-logostrip.is-bleed .ls-inner { --maxw-pad: 0px; }
+  .ls-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
+
+  /* The source is an autoplaying carousel showing `perView` of the set, not a
+     static row — trimming the data to what is visible loses the rest. */
+  .ls-viewport {
+    overflow: hidden;
+  }
+
+  .ls-logos {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: transform 0.6s ease;
+  }
+
+  .ls-logos li {
+    align-items: center;
+    display: flex;
+    flex: 0 0 calc(100% / var(--per, 5));
+    justify-content: center;
+    padding-inline: var(--gap, 1.5rem);
+  }
+  .ls-logos img { height: auto; max-height: var(--ih, 120px); object-fit: var(--fit, contain); width: auto; }
+  .a-logostrip.is-bleed .ls-logos img { height: var(--ih, auto); max-height: none; width: 100%; }
+
+  /* Grid layout: a static, fully-visible set rather than a rotating strip.
+     Flex-wrap rather than CSS grid so a leftover item on the final row
+     centers with the row instead of sticking to the first column. */
+  .a-logostrip.is-grid .ls-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap, 1.5rem);
+    justify-content: center;
+  }
+  .a-logostrip.is-grid .ls-logos li {
+    flex: 0 1 calc((100% - (var(--cols, 2) - 1) * var(--gap, 1.5rem)) / var(--cols, 2));
+    padding-inline: 0;
+  }
+  .a-logostrip.is-grid .ls-logos img { max-height: none; width: 100%; }
+</style>
+
+<script>
+  const initLogoStrips = () => {
+    document.querySelectorAll(".a-logostrip").forEach((strip) => {
+      const el = strip as HTMLElement;
+      if (el.dataset.stripReady || el.classList.contains("is-grid")) return;
+      el.dataset.stripReady = "1";
+
+      const track = strip.querySelector(".ls-logos") as HTMLElement | null;
+      if (!track) return;
+      const items = track.children.length;
+      const per = Number(getComputedStyle(strip).getPropertyValue("--per")) || 5;
+      if (items <= per) return;
+
+      let first = 0;
+      const step = () => {
+        first = (first + 1) % items;
+        // Wrap by moving the leading item to the end, so the loop is seamless
+        // rather than snapping back at the end of the set.
+        track.appendChild(track.children[0]);
+        track.style.transition = "none";
+        track.style.transform = "translateX(0)";
+        void track.offsetWidth;
+        track.style.transition = "";
+      };
+
+      const seconds = Number(el.dataset.autoplay || 0);
+      if (seconds > 0 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        setInterval(step, seconds * 1000);
+      }
+    });
+  };
+
+  initLogoStrips();
+  document.addEventListener("astro:page-load", initLogoStrips);
+</script>

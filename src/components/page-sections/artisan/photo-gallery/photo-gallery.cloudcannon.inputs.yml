@@ -1,0 +1,22 @@
+_inputs:
+  heading:
+    type: text
+  headingColor:
+    type: color
+  backgroundColor:
+    type: color
+  images:
+    type: array
+    options:
+      structures: _structures.photo_gallery_item
+_structures:
+  photo_gallery_item:
+    values:
+      - value:
+          image: ""
+          alt: ""
+        _inputs:
+          image:
+            type: image
+          alt:
+            type: text

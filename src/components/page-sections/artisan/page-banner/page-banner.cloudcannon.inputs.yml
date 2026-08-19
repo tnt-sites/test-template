@@ -1,0 +1,23 @@
+_inputs:
+  heading:
+    type: text
+  eyebrow:
+    type: text
+  backgroundImage:
+    type: image
+    comment: Optional photo behind the band.
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  eyebrowColor:
+    type: color
+  overlayColor:
+    type: color
+  minHeight:
+    type: text
+    comment: CSS length. Blank uses 420px when there is a photo.
+  align:
+    type: select
+    options:
+      values: [left, center]

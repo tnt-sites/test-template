@@ -59,3 +59,36 @@
   --color-focus-ring: rgba(0, 87, 255, 0.4);
   --color-error: #f00;
 }
+
+/* mig:begin source-theme */
+:root,
+[data-theme="default"] {
+  --color-bg: #fff;
+  --color-text: #333;
+
+  /* Corrected by hand from the #ffffff `mig tokens` measured.
+     assignRoles takes the heading colour from the first h2/h1 it samples, and
+     on this source that is a hero banner over a dark background image — so
+     white wins on rendered area (1.29M px² vs 469K) while being wrong as the
+     global default. The dominant heading colour outside heroes is the brand
+     brown; white headings are a per-section concern the component's
+     colorScheme prop already handles. 30 files read this token, including form
+     labels, so #ffffff would render them invisible on the white page. */
+  --color-text-strong: #321c0e;
+
+  /* Also corrected by hand: `mig tokens` never measured a link colour and left
+     the starter's placeholder pink (#c36 — it shows up as three tokens here,
+     which is the giveaway). MEASURED on the source: body links are #bf9800 and
+     do not change on hover. Lifted prose links read this token, so the
+     placeholder was rendering pink links on pages like contact-us. */
+  --color-link: #bf9800;
+  --color-link-hover: #bf9800;
+  --color-brand: #321c0e;
+  --color-brand-secondary: #7e6a1c;
+  --color-brand-muted: #c36;
+  --color-brand-subtle: #bf9800;
+  --color-bg-accent: #bf9800;
+  --color-bg-highlight: #c36;
+}
+
+/* mig:end source-theme */

@@ -1,0 +1,10 @@
+_snippets:
+  full_partial_mouth_rehabilitation:
+    template: astro_component
+    inline: false
+    preview:
+      text: Full Partial Mouth Rehabilitation
+    definitions:
+      component_name: page-sections/wpmig/full-partial-mouth-rehabilitation
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/full-partial-mouth-rehabilitation/full-partial-mouth-rehabilitation.cloudcannon.inputs.yml

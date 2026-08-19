@@ -1,0 +1,139 @@
+---
+/**
+ * Section C — migrated from full-partial-mouth-rehabilitation [16] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+const {
+  images = [],
+  backgroundColor = "#321c0e",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<section class="section-c" id={id || undefined} style={`--bg:${backgroundColor}`} {...rest}>
+  <div class="sc-decor" aria-hidden="true"></div>
+  <div class="sc-box" role="region" aria-roledescription="carousel" aria-label="Image Carousel">
+    <div class="sc-grid">
+      {list.map((it) => (
+        <figure class="sc-box2">
+          {it.image && <img class="sc-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" />}
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .section-c {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 370px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .sc-decor {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .sc-box {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .sc-grid {
+    align-items: center;
+    display: flex;
+    position: relative;
+    transform: matrix(1, 0, 0, 1, -350, 0);
+    z-index: 1;
+  }
+
+  .sc-box2 {
+    box-sizing: border-box;
+    flex: 0 0 75%;
+    margin: 0px;
+    max-width: 75%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sc-media {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    overflow-x: visible;
+    overflow-y: visible;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .section-c {
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+    }
+
+    .sc-grid {
+      transform: matrix(1, 0, 0, 1, -727, 0);
+    }
+
+    .sc-box2 {
+      flex: 0 0 88.72%;
+      max-width: 88.72%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section-c {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1180px;
+    }
+
+    .sc-grid {
+      transform: matrix(1, 0, 0, 1, -1160, 0);
+    }
+
+    .sc-box2 {
+      flex: 0 0 20%;
+      max-width: 20%;
+      position: static;
+    }
+
+    .sc-media {
+      border: 30px solid rgba(0, 0, 0, 0);
+      margin-bottom: 0px;
+      overflow-x: clip;
+      overflow-y: clip;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sc-box2 {
+    align-items: normal;
+    text-align: center;
+  }
+/* wpmig:corrections:end */
+</style>

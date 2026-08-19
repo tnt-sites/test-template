@@ -1,0 +1,365 @@
+---
+/**
+ * Dont Wait For Any — migrated from full-partial-mouth-rehabilitation [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  items = [],
+  backgroundImage = "/wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-5.jpeg",
+  eyebrowColor = "var(--color-brand-secondary)",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  titleColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="dont-wait-for-any" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--tt:${titleColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="dwfa-box">
+    <div class="dwfa-decor" aria-hidden="true"></div>
+    <div class="dwfa-box2">
+      <div class="dwfa-box3">
+        {eyebrow && <h6 class="dwfa-heading">{eyebrow}</h6>}
+      </div>
+    </div>
+    <div class="dwfa-box4">
+      <div class="dwfa-box5">
+        <h2 class="dwfa-heading2">{heading}</h2>
+      </div>
+    </div>
+    <div class="dwfa-box6">
+      <div class="dwfa-box7">
+        {text && <p class="dwfa-text">{text}</p>}
+      </div>
+    </div>
+    <div class="dwfa-box8">
+      <div class="dwfa-grid">
+        {list.map((it) => (
+          <div class="dwfa-box9">
+            <span class="dwfa-box10">
+              <span class="dwfa-decor2" aria-hidden="true"><Icon name="arrow-right-circle-duo" /></span>
+            </span>
+            <div class="dwfa-box11">
+              <h3 class="dwfa-heading3">{it.title}</h3>
+              <p class="dwfa-text2">{it.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .dont-wait-for-any {
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding: 30px;
+    position: relative;
+  }
+
+  .dont-wait-for-any :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .dwfa-box {
+    align-content: center;
+    align-items: center;
+    background-color: #321c0e;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 25px;
+    position: relative;
+  }
+
+  .dwfa-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .dwfa-decor {
+    background-image: url("/wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg");
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    flex: 0 0 126.6%;
+    left: 0px;
+    max-width: 126.6%;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .dwfa-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .dwfa-box3 {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .dwfa-heading {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-style: italic;
+    letter-spacing: 0.5px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .dwfa-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .dwfa-box5 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .dwfa-heading2 {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .dwfa-box6 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    font-size: 22px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .dwfa-box7 {
+    box-sizing: border-box;
+  }
+
+  .dwfa-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .dwfa-box8 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .dwfa-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .dwfa-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+  }
+
+  .dwfa-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .dwfa-box9 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 50%;
+    text-align: center;
+  }
+
+  .dwfa-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 18px;
+    width: 18px;
+  }
+
+  .dwfa-box10 {
+    box-sizing: border-box;
+    color: var(--color-brand-secondary);
+    display: inline-block;
+    font-size: 35px;
+    line-height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 35px;
+  }
+
+  .dwfa-box10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 35px;
+    width: 35px;
+  }
+
+  .dwfa-decor2 {
+    box-sizing: border-box;
+    display: block;
+    font-family: "Font Awesome 5 Duotone";
+    font-weight: 900;
+    position: relative;
+  }
+
+  .dwfa-decor2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 35px;
+    width: 35px;
+  }
+
+  .dwfa-box11 {
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+
+  .dwfa-heading3 {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+    line-height: 15.4px;
+    margin-bottom: 15px;
+    margin-top: 8px;
+  }
+
+  .dwfa-text2 {
+    box-sizing: border-box;
+    color: var(--tx);
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .dont-wait-for-any {
+      max-width: 675px;
+    }
+
+    .dwfa-decor {
+      flex: 0 0 108.85%;
+      max-width: 108.85%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dont-wait-for-any {
+      max-width: 1108px;
+      padding: 100px 0px;
+    }
+
+    .dwfa-box {
+      padding: 70px;
+    }
+
+    .dwfa-decor {
+      flex: 0 0 114.46%;
+      max-width: 114.46%;
+    }
+
+    .dwfa-box2 {
+      text-align: start;
+    }
+
+    .dwfa-box4 {
+      text-align: start;
+    }
+
+    .dwfa-box5 {
+      margin-bottom: 15px;
+    }
+
+    .dwfa-heading2 {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .dwfa-box8 {
+      flex-wrap: nowrap;
+    }
+
+    .dwfa-box9 {
+      align-items: start;
+      flex-direction: row;
+      text-align: start;
+    }
+
+    .dwfa-box10 {
+      flex: 0 0 7.63%;
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: 7.63%;
+      text-align: center;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .dwfa-heading {
+    font-weight: 400;
+  }
+  .dwfa-heading2 {
+    font-weight: 700;
+  }
+  .dwfa-heading3 {
+    font-weight: 700;
+  }
+  .dwfa-text {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

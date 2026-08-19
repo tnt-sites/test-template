@@ -1,0 +1,31 @@
+_inputs:
+  testimonials:
+    type: array
+    options:
+      structures: _structures.testimonials_item
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  cardBackgroundColor:
+    type: color
+  cardTextColor:
+    type: color
+  nameColor:
+    type: color
+_structures:
+  testimonials_item:
+    values:
+      - value:
+          text: ""
+          name: ""
+          image: ""
+        _inputs:
+          text:
+            type: markdown
+          name:
+            type: text
+          image:
+            type: image

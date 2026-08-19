@@ -1,0 +1,255 @@
+---
+/**
+ * Full Mouth Rehabilitation Procedures — migrated from full-partial-mouth-rehabilitation [14] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+const {
+  heading = "",
+  text = "",
+  images = [],
+  backgroundColor = "#321c0e",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<section class="full-mouth-rehabilitation-procedures" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="fmrp-decor" aria-hidden="true"></div>
+  <div class="fmrp-box">
+    <div class="fmrp-box2">
+      <div class="fmrp-box3">
+        <div class="fmrp-box4">
+          <h2 class="fmrp-heading">{heading}</h2>
+        </div>
+      </div>
+      <div class="fmrp-box5">
+        <div class="fmrp-box6">
+          {text && <p class="fmrp-text">{text}</p>}
+        </div>
+      </div>
+    </div>
+    <div class="fmrp-grid">
+      {list.map((it) => (
+        <div class="fmrp-box7">
+          <div class="fmrp-box8">
+            <figure class="fmrp-box9">
+              {it.image && <img class="fmrp-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="267" height="200" />}
+            </figure>
+            <div class="fmrp-box10">
+              {it.text && <div class="fmrp-body" set:html={it.text} />}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .full-mouth-rehabilitation-procedures {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #686868;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 298px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px;
+    position: relative;
+  }
+
+  .fmrp-decor {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2020/08/brown-wood-texture-and-backgroun-1.jpg");
+    background-position: 50% 0%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .fmrp-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .fmrp-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fmrp-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .fmrp-box4 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .fmrp-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .fmrp-box5 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .fmrp-box6 {
+    box-sizing: border-box;
+  }
+
+  .fmrp-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .fmrp-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+  }
+
+  .fmrp-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 33.33%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 33.33%;
+    position: relative;
+  }
+
+  .fmrp-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .fmrp-box9 {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .fmrp-media {
+    box-sizing: border-box;
+    display: block;
+    line-height: 0px;
+    width: 100%;
+  }
+
+  .fmrp-box10 {
+    box-sizing: border-box;
+  }
+
+  .fmrp-body :global(h4) {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    margin-top: 8px;
+  }
+
+  .fmrp-body :global(p) {
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .full-mouth-rehabilitation-procedures {
+      max-width: 675px;
+    }
+
+    .fmrp-box9 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 267px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .full-mouth-rehabilitation-procedures {
+      max-width: 1108px;
+      padding: 115px 0px 100px 0px;
+    }
+
+    .fmrp-box4 {
+      margin-bottom: 15px;
+    }
+
+    .fmrp-heading {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    .fmrp-box7 {
+      padding: 10px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .fmrp-heading {
+    font-weight: 700;
+  }
+  .fmrp-body {
+    color: rgb(255, 255, 255);
+    font-family: Poppins, sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+  }
+  .fmrp-text {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    line-height: 26px;
+  }
+/* wpmig:corrections:end */
+</style>

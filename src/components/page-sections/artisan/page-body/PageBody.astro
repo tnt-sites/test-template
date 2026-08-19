@@ -1,0 +1,236 @@
+---
+/**
+ * Interior page body: a section-nav sidebar beside the main content.
+ *
+ * This is the single most common interior layout on the source — 53 of 90
+ * pages use it. `mig content` mapped it to the starter's cta-split-learn-more,
+ * which is a marketing split, not a sidebar layout, so the section nav was lost
+ * entirely and the copy reflowed full width.
+ *
+ * Measured: 300px sidebar / 900px main, sidebar heading Open Sans 20px 700 on a
+ * brand bar, nav links Open Sans 16px #222.
+ *
+ * Baked in: layout and typography. Props: text, image, colours.
+ * Arrays: `links`, so the section nav is editable.
+ */
+const {
+  sidebarHeading = "",
+  links = [],
+  image = "",
+  imageAlt = "",
+  body = "",
+  backgroundColor = "transparent",
+  headingBackground = "#321c0e",
+  headingColor = "#ffffff",
+  linkColor = "#222222",
+  textColor = "#686868",
+  reverse = false,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const list = Array.isArray(links) ? links.filter((l: any) => l?.name) : [];
+const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
+---
+
+<section
+  class:list={["a-pagebody", { reverse }]}
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hbg:${headingBackground};--hc:${headingColor};--lc:${linkColor};--tx:${textColor}`}
+  {...rest}
+>
+  <div class:list={["pb2-inner", { "no-sidebar": !hasSidebar }]}>
+    {
+      (sidebarHeading || list.length > 0) && (
+        <aside class="pb2-side">
+          {sidebarHeading && <h2>{sidebarHeading}</h2>}
+          {list.length > 0 && (
+            <ul class="no-check">
+              {list.map((l: any) => (
+                <li>
+                  <a href={l.path || "#"} class:list={{ current: l.current }}>
+                    {l.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </aside>
+      )
+    }
+    <div class="pb2-main">
+      {image && <img class="pb2-image" src={image} alt={imageAlt} loading="lazy" />}
+      {body && <div class="pb2-prose" set:html={body} />}
+      <slot />
+    </div>
+  </div>
+</section>
+
+<style>
+  .a-pagebody {
+    background: var(--bg);
+    padding-block: 60px;
+  }
+
+  .pb2-inner {
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 300px minmax(0, 1fr);
+    margin-inline: auto;
+    max-width: 1240px;
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+  }
+
+  .pb2-inner.no-sidebar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .a-pagebody.reverse .pb2-side {
+    order: 2;
+  }
+
+  .pb2-side h2 {
+    background: var(--hbg);
+    color: var(--hc);
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.85rem 1.25rem;
+  }
+
+  .pb2-side ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pb2-side li {
+    border-bottom: 1px solid rgb(0 0 0 / 10%);
+  }
+
+  .pb2-side a {
+    color: var(--lc);
+    display: block;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0.7rem 1.25rem;
+    text-decoration: none;
+  }
+
+  .pb2-side a:hover,
+  .pb2-side a.current {
+    background: rgb(0 0 0 / 4%);
+    color: var(--hbg);
+    font-weight: 600;
+  }
+
+  .pb2-image {
+    display: block;
+    height: auto;
+    margin-bottom: 1.75rem;
+    max-width: 100%;
+  }
+
+  .pb2-prose {
+    color: var(--tx);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .pb2-prose :global(h2),
+  .pb2-prose :global(h3) {
+    color: var(--hbg);
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin: 1.75rem 0 0.75rem;
+  }
+
+  .pb2-prose :global(h2) {
+    font-size: 30px;
+  }
+
+  .pb2-prose :global(h3) {
+    font-size: 22px;
+  }
+
+  .pb2-prose :global(p) {
+    color: inherit;
+    margin: 0 0 1.25rem;
+  }
+
+  .pb2-prose :global(a) {
+    color: var(--hbg);
+  }
+
+  .pb2-prose :global(.media-columns) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pb2-prose :global(.media-columns h4) {
+    margin-top: 0;
+  }
+
+  /* A dark wood-textured band for grouping a few call-to-action buttons,
+     e.g. "Pay Now Directly" / "Care Credit" on the financial page. Same
+     recipe as the logo-strip bands: solid brand-brown under the texture,
+     blended at low opacity, rather than the raw photo at full brightness. */
+  .pb2-prose :global(.wood-band) {
+    background-color: #321c0e;
+    border-radius: 4px;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin: 2rem 0;
+    overflow: hidden;
+    padding: 2.5rem 2rem;
+    position: relative;
+    text-align: center;
+  }
+
+  .pb2-prose :global(.wood-band::before) {
+    background-color: #321c0e;
+    background-image: url("/wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg");
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: 0.15;
+    position: absolute;
+  }
+
+  .pb2-prose :global(.wood-band > *) {
+    position: relative;
+  }
+
+  .pb2-prose :global(.wood-band h4) {
+    color: #fff;
+    margin: 0 0 1.25rem;
+  }
+
+  .pb2-prose :global(.wood-band .button) {
+    margin: 0;
+  }
+
+  @media (max-width: 700px) {
+    .pb2-prose :global(.media-columns) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .pb2-inner {
+      grid-template-columns: 1fr;
+    }
+
+    .a-pagebody.reverse .pb2-side {
+      order: 0;
+    }
+  }
+</style>

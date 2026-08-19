@@ -1,0 +1,125 @@
+---
+/**
+ * Full-width heading above a plain grid of icon + title (+ optional text)
+ * items — the source's "Common Issues" checklist and "Feel Your Very Best"
+ * benefit list, both built from Elementor icon-box widgets with a
+ * Font-Awesome glyph (never an image). services-grid is the wrong shape for
+ * this: it's a sidebar-intro-beside-bordered-cards layout, for the pages
+ * that really do have a photo/icon per card. This is a plain full-width
+ * list — no card background, no border — using this project's own SVG
+ * icons in place of the Font Awesome glyphs (not loaded anywhere here).
+ *
+ * Baked in: layout, card shape. Props: text, columns, colours, icon per
+ * item (an icon name from this project's icon set). Array: `cards`.
+ *
+ * `youtubeId` switches to the source's `services` shape: the checklist in one
+ * narrow column with an explainer video beside it, instead of the full-width
+ * grid. `columns` is ignored there — the list is always single-column.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+import Video from "@core-elements/video/Video.astro";
+const {
+  eyebrow = "", heading = "", text = "",
+  cards = [],
+  columns = 3,
+  youtubeId = "", videoTitle = "",
+  backgroundColor = "#ffffff", backgroundImage = "", overlayOpacity = 0.15,
+  eyebrowColor = "var(--color-brand-secondary)", headingColor = "#321c0e", textColor = "#333333", iconColor = "var(--color-brand-secondary)",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter((c: any) => c?.title) : [];
+const cols = Number(columns) === 2 ? 2 : 3;
+const hasVideo = Boolean(youtubeId);
+
+// MEASURED: the source aligns the icon to the top of its box, but a 35px glyph
+// beside a single 18px line lands visually centred anyway (icon and title
+// centres come out 3px apart). Centring is the honest way to say that, and it
+// holds when a title wraps — but a card with a description below it is a tall
+// block, where a centred icon would float to the middle of the paragraph.
+const plain = !list.some((c: any) => c.text);
+---
+{list.length > 0 && (
+  <section class:list={["a-icongrid", hasVideo ? "with-video" : `cols-${cols}`]} id={id || undefined}
+    style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--ic:${iconColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+    <div class="ig-inner">
+      <div class="ig-copy-col">
+        {eyebrow && <p class="ig-eyebrow">{eyebrow}</p>}
+        {heading && <h2>{heading}</h2>}
+        {text && <p class="ig-lead">{text}</p>}
+        <ul class:list={["ig-cards", "no-check", { plain }]}>
+          {list.map((c: any) => (
+            <li>
+              <span class="ig-icon"><Icon name={c.icon || "check-circle-duo"} size="none" /></span>
+              <div class="ig-copy">
+                <h3>{c.title}</h3>
+                {c.text && <p>{c.text}</p>}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      {hasVideo && (
+        <div class="ig-media">
+          <Video type="youtube" id={youtubeId} title={videoTitle || heading} />
+        </div>
+      )}
+    </div>
+  </section>
+)}
+<style>
+  .a-icongrid { background-color: var(--bg); padding-block: 100px; position: relative; }
+  .a-icongrid::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+  .ig-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; }
+
+  /* MEASURED: the source's checklist-beside-video row is 480/720 inside a
+     1200px container — not the 50/50 its `elementor-col-50` classes imply. */
+  .with-video .ig-inner { align-items: center; display: grid; gap: 2.5rem; grid-template-columns: 2fr 3fr; }
+  .ig-media :global(lite-youtube) { aspect-ratio: 16 / 9; display: block; margin-top: 0; max-width: 100%; width: 100%; }
+  .ig-eyebrow { color: var(--eb); font-family: "Open Sans", sans-serif; font-size: 18px; font-style: italic; font-weight: 400; letter-spacing: 0.5px; margin: 0; }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 1rem; }
+  .ig-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 2rem; max-width: 640px; }
+  .ig-cards { display: grid; gap: 1.75rem 2.5rem; grid-template-columns: repeat(var(--cols, 3), 1fr); list-style: none; margin: 2rem 0 0; padding: 0; }
+
+  /* Beside a video the list is always one column — `columns` doesn't apply. */
+  .with-video .ig-cards { grid-template-columns: 1fr; }
+
+  /* A sitewide `main ul li` rule injects a Fontello bullet glyph and indents
+     every item by 50px (26px margin + 24px padding); this grid draws its own
+     icon, flush with the heading as on the source. `no-check` on the <ul> is
+     this project's own opt-out for all three, and drops the 10px bottom
+     margin that would otherwise fight the row gap below. */
+  .cols-2 .ig-cards { --cols: 2; }
+  .cols-3 .ig-cards { --cols: 3; }
+
+  /* MEASURED against the source's icon-box: 35px gold glyph, 25px from an
+     18px title. The glyph is Font Awesome duotone there and one of this
+     project's own SVGs here, so the size is set on the wrapper and the SVG
+     (1em wide) follows it. */
+  .ig-cards li { align-items: flex-start; display: flex; gap: 25px; }
+
+  /* MEASURED: a title-only row is 36px tall on a 46px pitch, so the airier
+     row gap above (right for rows carrying a paragraph) is 10px here. */
+  .ig-cards.plain { row-gap: 10px; }
+  .ig-cards.plain li { align-items: center; }
+
+  /* `display: flex` so the span wraps the glyph tightly: as an inline box its
+     line-height would make a 35px icon claim 56px of row height. */
+  .ig-icon { color: var(--ic); display: flex; flex-shrink: 0; font-size: 35px; width: 35px; }
+  .ig-copy h3 { color: var(--hd); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; margin: 0; }
+  .ig-copy h3:not(:only-child) { margin-bottom: 0.35rem; }
+  .ig-copy p { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 23px; margin: 0; }
+  @media (max-width: 860px) {
+    .ig-cards { grid-template-columns: 1fr; }
+    .with-video .ig-inner { grid-template-columns: 1fr; }
+  }
+</style>

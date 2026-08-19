@@ -1,0 +1,39 @@
+_inputs:
+  heading:
+    type: text
+  image:
+    type: image
+  imageAlt:
+    type: text
+  subheading:
+    type: text
+  image2:
+    type: image
+  image2Alt:
+    type: text
+  heading2:
+    type: textarea
+  text:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  image3:
+    type: image
+  image3Alt:
+    type: text
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color
+  buttonTextHoverColor:
+    type: color
+  hoverColor:
+    type: color

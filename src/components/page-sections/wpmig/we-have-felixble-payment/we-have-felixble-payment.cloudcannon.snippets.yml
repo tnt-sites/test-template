@@ -1,0 +1,10 @@
+_snippets:
+  we_have_felixble_payment:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Have Felixble Payment
+    definitions:
+      component_name: page-sections/wpmig/we-have-felixble-payment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/we-have-felixble-payment/we-have-felixble-payment.cloudcannon.inputs.yml

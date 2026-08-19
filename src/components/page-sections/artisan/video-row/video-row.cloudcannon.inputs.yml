@@ -1,0 +1,18 @@
+_inputs:
+  videos:
+    type: array
+    options:
+      structures: _structures.video_row_item
+  backgroundColor:
+    type: color
+_structures:
+  video_row_item:
+    values:
+      - value:
+          youtubeId: ""
+          title: ""
+        _inputs:
+          youtubeId:
+            type: text
+          title:
+            type: text

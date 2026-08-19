@@ -1,0 +1,24 @@
+label: Partial And Full Mouth
+icon: interests
+description: Partial And Full Mouth section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/partial-and-full-mouth
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  backgroundColor: "#321c0e"
+  eyebrowColor: "#ffffff"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+preview:
+  text:
+    - Partial And Full Mouth
+  icon: interests
+picker_preview:
+  text: Partial And Full Mouth
+  subtext: Partial And Full Mouth section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/partial-and-full-mouth/partial-and-full-mouth.cloudcannon.inputs.yml

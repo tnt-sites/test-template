@@ -1,0 +1,22 @@
+_inputs:
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  photos:
+    type: array
+    options:
+      structures: _structures.photo_lightbox_item
+_structures:
+  photo_lightbox_item:
+    values:
+      - value:
+          image: ""
+          alt: ""
+        _inputs:
+          image:
+            type: image
+          alt:
+            type: text

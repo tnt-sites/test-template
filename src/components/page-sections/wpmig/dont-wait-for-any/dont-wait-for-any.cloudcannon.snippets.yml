@@ -1,0 +1,10 @@
+_snippets:
+  dont_wait_for_any:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dont Wait For Any
+    definitions:
+      component_name: page-sections/wpmig/dont-wait-for-any
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dont-wait-for-any/dont-wait-for-any.cloudcannon.inputs.yml

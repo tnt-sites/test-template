@@ -1,0 +1,31 @@
+label: Split Feature
+icon: hero
+description: Image beside a copy block.
+value:
+  _component: page-sections/artisan/split-feature
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  image: ""
+  imageAlt: ""
+  buttonText: ""
+  buttonLink: ""
+  buttonAlign: ""
+  reverse: false
+  align: "left"
+  headingSize: ""
+  paddingBlock: ""
+  backgroundColor: "transparent"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  textColor: "#333333"
+preview:
+  text:
+    - Split Feature
+  icon: hero
+picker_preview:
+  text: Split Feature
+  subtext: Image beside a copy block.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/split-feature/split-feature.cloudcannon.inputs.yml

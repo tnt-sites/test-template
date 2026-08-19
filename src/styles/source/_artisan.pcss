@@ -1,0 +1,48 @@
+/* Artisan-specific bridges over the starter's components.
+   Lives in @layer source-bridge, which the layer order places after
+   `components`, so these win without !important. */
+@layer source-bridge {
+  /* MEASURED on the source: every body and footer button is square
+     (border-radius 0) with 15px 30px padding. Only the header's
+     "Make An Appointment" is a 50px pill, and that lives in ArtisanHeader. */
+  main .button,
+  main .button.radius-default,
+  main .button.radius-none,
+  main .button.radius-xs,
+  footer .button {
+    border-radius: 0;
+    padding: 15px 30px;
+  }
+
+  /* Primary: gold fill, white label, square. */
+  main .button.variant-primary,
+  footer .button.variant-primary {
+    background-color: var(--color-brand-secondary);
+    border: none;
+    border-radius: 0;
+    color: #fff;
+  }
+
+  main .button.variant-primary:hover,
+  footer .button.variant-primary:hover {
+    background-color: var(--color-brand);
+    color: #fff;
+  }
+
+  /* Secondary: brand-brown fill, white label, square — keeps the two
+     variants distinguishable where the source uses both. */
+  main .button.variant-secondary,
+  footer .button.variant-secondary {
+    background-color: var(--color-brand);
+    border: none;
+    border-radius: 0;
+    color: #fff;
+  }
+
+  main .button.variant-secondary:hover,
+  footer .button.variant-secondary:hover {
+    background-color: var(--color-brand-secondary);
+    color: #fff;
+  }
+
+}

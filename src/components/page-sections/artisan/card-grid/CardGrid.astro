@@ -1,0 +1,69 @@
+---
+/**
+ * Row of image cards, each linking somewhere — the source's
+ * "Why Choose Us / Meet Our Team / Tour Our Office" row.
+ *
+ * Baked in: layout, type scale, image ratio. Props: colours. Array: `cards`.
+ */
+const {
+  cards = [],
+  backgroundColor = "var(--color-brand)",
+  sectionBackgroundColor = "transparent",
+  backgroundImage = "",
+  overlayOpacity = 0.15,
+  titleColor = "#ffffff",
+  textColor = "#ffffff",
+  captionColor = "var(--color-brand-secondary)",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<section class="a-cardgrid" id={id || undefined}
+  style={`--sectionbg:${sectionBackgroundColor};--bg:${backgroundColor};--tc:${titleColor};--tx:${textColor};--cap:${captionColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+  <ul class="cg-inner no-check">
+    {list.map((c: any) => (
+      <li>
+        <a href={c.link || "#"}>
+          <div class="cg-media">
+            {c.image && <img src={c.image} alt={c.title || ""} loading="lazy" />}
+          </div>
+          <span class="cg-cap">{c.title}</span>
+          {c.text && <p>{c.text}</p>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>
+<style>
+  .a-cardgrid { background-color: var(--sectionbg, transparent); padding-block: 80px; }
+
+  /* Measured: the source lays #321c0e over the wood texture. */
+  .cg-inner {  display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); list-style: none; margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; }
+
+  /* The band is per-CARD here, not on the section: solid brand-brown with the
+     wood texture on an overlay above it, lightened at 15% — same recipe as the
+     full-width bands. */
+  .cg-inner li {
+    background-color: var(--bg);
+    position: relative;
+  }
+
+  .cg-inner li::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+
+  a { color: inherit; position: relative; text-decoration: none; }
+  .cg-media { line-height: 0; overflow: hidden; }
+  .cg-media img { aspect-ratio: 4 / 3; display: block; height: auto; object-fit: cover; width: 100%; }
+  .cg-cap { color: var(--tc); display: block; font-family: Poppins, sans-serif; font-size: 22px; font-weight: 700; padding: 1rem 1.25rem 0; text-align: center; }
+  p { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 16px; line-height: 26px; margin: 1rem 0 0; padding: 0 1.25rem 1.5rem; text-align: center; }
+  a:hover .cg-cap { color: var(--cap); }
+</style>

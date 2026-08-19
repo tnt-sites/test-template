@@ -1,0 +1,33 @@
+_inputs:
+  logos:
+    type: array
+    options:
+      structures: _structures.logo_strip_item
+  layout:
+    type: select
+    options:
+      values:
+        - carousel
+        - grid
+  columns:
+    type: number
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+_structures:
+  logo_strip_item:
+    values:
+      - value:
+          image: ""
+          alt: ""
+          link: ""
+        _inputs:
+          image:
+            type: image
+          alt:
+            type: text
+          link:
+            type: url

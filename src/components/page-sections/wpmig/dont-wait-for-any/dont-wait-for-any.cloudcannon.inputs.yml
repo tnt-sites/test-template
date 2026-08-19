@@ -1,0 +1,32 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  text:
+    type: textarea
+  items:
+    type: array
+    options:
+      structures: _structures.dont_wait_for_any_item
+  backgroundImage:
+    type: image
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  titleColor:
+    type: color
+_structures:
+  dont_wait_for_any_item:
+    values:
+      - value:
+          title: ""
+          text: ""
+        _inputs:
+          title:
+            type: text
+          text:
+            type: textarea

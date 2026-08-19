@@ -1,0 +1,23 @@
+label: We Can Fix These
+icon: grid_view
+description: We Can Fix These section with heading, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-can-fix-these
+  id: ""
+  eyebrow: ""
+  heading: ""
+  items:
+    - title: ""
+  backgroundColor: "#fbfbfb"
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  titleColor: "#666666"
+preview:
+  text:
+    - We Can Fix These
+  icon: grid_view
+picker_preview:
+  text: We Can Fix These
+  subtext: We Can Fix These section with heading, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-can-fix-these/we-can-fix-these.cloudcannon.inputs.yml

@@ -1,0 +1,38 @@
+_inputs:
+  heading:
+    type: text
+  body:
+    type: html
+  links:
+    type: array
+    options:
+      structures: _structures.review_links_item
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  linkColor:
+    type: color
+  captionColor:
+    type: color
+  hoverColor:
+    type: color
+_structures:
+  review_links_item:
+    values:
+      - value:
+          image: ""
+          alt: ""
+          text: ""
+          link: ""
+        _inputs:
+          image:
+            type: image
+          alt:
+            type: text
+          text:
+            type: text
+          link:
+            type: url

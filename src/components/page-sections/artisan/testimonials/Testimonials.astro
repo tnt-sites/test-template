@@ -1,0 +1,83 @@
+---
+/**
+ * Grid of patient testimonials on a solid band — the source's
+ * "What People Are Saying / Our Testimonials".
+ *
+ * Baked in: layout, card shape, type scale. Props: text, colours.
+ * Array: `testimonials`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "", heading = "", testimonials = [],
+  buttonText = "", buttonLink = "",
+  backgroundColor = "var(--color-brand)",
+  backgroundImage = "",
+  overlayOpacity = 0.15, eyebrowColor = "#ffffff", headingColor = "#ffffff",
+  cardBackgroundColor = "#ffffff", cardTextColor = "#333333", nameColor = "var(--color-brand)",
+  id, _component, ...rest
+} = Astro.props;
+const list = Array.isArray(testimonials) ? testimonials.filter(Boolean) : [];
+---
+<section class="a-testi" id={id || undefined}
+  style={`--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--card:${cardBackgroundColor};--tx:${cardTextColor};--nm:${nameColor}`} {...rest}>
+  <div class="ts-inner">
+    {eyebrow && <p class="ts-eyebrow">{eyebrow}</p>}
+    {heading && <h2>{heading}</h2>}
+    <ul class="ts-cards no-check">
+      {list.map((t: any) => (
+        <li>
+          <blockquote>{t.text}</blockquote>
+          <p class="ts-name">{t.image && <img class="ts-avatar" src={t.image} alt="" loading="lazy" />}{t.name}</p>
+        </li>
+      ))}
+    </ul>
+    {buttonText && <div class="ts-more"><Button variant="primary" size="lg" link={buttonLink} text={buttonText} /></div>}
+  </div>
+</section>
+<style>
+  .a-testi { background-color: var(--bg); padding-block: 100px; position: relative; }
+
+  /* Source structure: the section is solid brand-brown, and the wood texture
+     rides on the OVERLAY together with the same brown at opacity .15 and
+     mix-blend-mode: lighten. Putting the texture on the section instead (which
+     is what this did first) renders it far too light. */
+  .a-testi::before {
+    background-color: var(--bg);
+    background-image: var(--wood, none);
+    background-position: top center;
+    background-size: cover;
+    content: "";
+    inset: 0;
+    mix-blend-mode: lighten;
+    opacity: var(--woodopacity, 0.15);
+    position: absolute;
+  }
+  .ts-inner { margin-inline: auto; max-width: 1200px; padding-inline: clamp(1rem,3vw,2.5rem); position: relative; text-align: center; }
+  .ts-eyebrow {
+    color: var(--eb);
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    margin: 0;
+  }
+  h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2.5rem; }
+
+  /* Multi-column, not grid: cards flow top-to-bottom so each column holds
+     one review source (Google, then Yelp, then Facebook). */
+  .ts-cards { column-gap: 1.75rem; columns: 3; list-style: none; margin: 0; padding: 0; text-align: left; }
+  .ts-cards li { background: var(--card); border-radius: 6px; break-inside: avoid; display: flex; flex-direction: column; margin-bottom: 1.75rem; padding: 1.75rem; }
+  blockquote { border: 0; color: var(--tx); flex: 1; font-family: "Open Sans", sans-serif; font-size: 15px; line-height: 25px; margin: 0; }
+  .ts-name { align-items: center; color: var(--nm); display: flex; font-family: Poppins, sans-serif; font-size: 16px; font-weight: 700; gap: 0.6rem; margin: 1.25rem 0 0; }
+
+  /* Original brand artwork, just larger — the source's own icons are
+     already coloured, so no knockout or circle behind them. */
+  .ts-avatar { flex: 0 0 auto; height: 46px; object-fit: contain; width: 46px; }
+  .ts-more { margin-top: 0.75rem; }
+
+  @media (max-width: 1000px) { .ts-cards { columns: 2; } }
+
+  @media (max-width: 660px) { .ts-cards { columns: 1; } }
+  .ts-more :global(.button) { font-family: Poppins, sans-serif; }
+</style>

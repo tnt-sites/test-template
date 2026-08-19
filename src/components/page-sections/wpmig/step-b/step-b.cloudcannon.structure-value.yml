@@ -1,0 +1,21 @@
+label: Step B
+icon: interests
+description: Step B section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/step-b
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#321c0e"
+  textColor: "#686868"
+preview:
+  text:
+    - Step B
+  icon: interests
+picker_preview:
+  text: Step B
+  subtext: Step B section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/step-b/step-b.cloudcannon.inputs.yml

@@ -1,0 +1,24 @@
+label: Full Mouth Rehabilitation Procedures
+icon: grid_view
+description: Full Mouth Rehabilitation Procedures section with heading, copy, editable images. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/full-mouth-rehabilitation-procedures
+  id: ""
+  heading: ""
+  text: ""
+  images:
+    - image: ""
+      imageAlt: ""
+      text: ""
+  backgroundColor: "#321c0e"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+preview:
+  text:
+    - Full Mouth Rehabilitation Procedures
+  icon: grid_view
+picker_preview:
+  text: Full Mouth Rehabilitation Procedures
+  subtext: Full Mouth Rehabilitation Procedures section with heading, copy, editable images. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/full-mouth-rehabilitation-procedures/full-mouth-rehabilitation-procedures.cloudcannon.inputs.yml

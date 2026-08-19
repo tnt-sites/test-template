@@ -1,0 +1,30 @@
+label: Artisan Hero
+icon: view_carousel
+description: Full-bleed image slider with eyebrow, headline, copy and a CTA.
+value:
+  _component: page-sections/heroes/artisan-hero
+  id: ""
+  slides:
+    - image: ""
+      eyebrow: ""
+      heading: New slide
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+  eyebrowColor: "var(--color-brand-secondary)"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+  overlayColor: "rgba(0, 0, 0, 0.45)"
+  minHeight: 620px
+  autoplaySeconds: 6
+preview:
+  text:
+    - Artisan Hero
+  subtext:
+    - key: slides[0].heading
+  icon: view_carousel
+picker_preview:
+  text: Artisan Hero
+  subtext: Full-bleed image slider.
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/artisan-hero/artisan-hero.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  embed_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Embed Grid
+    definitions:
+      component_name: page-sections/artisan/embed-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/embed-grid/embed-grid.cloudcannon.inputs.yml

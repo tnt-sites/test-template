@@ -1,0 +1,29 @@
+label: Testimonials
+icon: format_quote
+description: Grid of patient testimonials on a band.
+value:
+  _component: page-sections/artisan/testimonials
+  id: ""
+  eyebrow: ""
+  heading: ""
+  testimonials:
+    - text: ""
+      name: ""
+      image: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#321c0e"
+  eyebrowColor: "#ffffff"
+  headingColor: "#ffffff"
+  cardBackgroundColor: "#ffffff"
+  cardTextColor: "#333333"
+  nameColor: "#321c0e"
+preview:
+  text:
+    - Testimonials
+  icon: format_quote
+picker_preview:
+  text: Testimonials
+  subtext: Grid of patient testimonials on a band.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/testimonials/testimonials.cloudcannon.inputs.yml

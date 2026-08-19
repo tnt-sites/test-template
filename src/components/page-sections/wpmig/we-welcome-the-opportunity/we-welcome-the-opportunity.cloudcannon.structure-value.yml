@@ -1,0 +1,25 @@
+label: We Welcome The Opportunity
+icon: interests
+description: We Welcome The Opportunity section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-welcome-the-opportunity
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  headingColor: "#321c0e"
+  textColor: "#686868"
+  buttonBackgroundColor: "var(--color-brand-secondary)"
+  buttonTextColor: "#ffffff"
+preview:
+  text:
+    - We Welcome The Opportunity
+  icon: interests
+picker_preview:
+  text: We Welcome The Opportunity
+  subtext: We Welcome The Opportunity section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-welcome-the-opportunity/we-welcome-the-opportunity.cloudcannon.inputs.yml

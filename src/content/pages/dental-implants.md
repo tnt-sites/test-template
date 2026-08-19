@@ -1,246 +1,102 @@
 ---
-_schema: default
+_mig:
+  v: 0.1.0
+  gen: content
+  hash: 066f16b67726b64e
 title: Dental Implants
+description: ""
+canonical: /dental-implants/
 pageSections:
-  - _component: page-sections/heroes/hero-split
-    id: ''
-    eyebrow: Service - City, ST
+  - _component: page-sections/artisan/page-banner
+    id: ""
+    eyebrow: ""
     heading: Dental Implants
-    subtext: Subtitle placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Hero image
-    imageAspectRatio: none
-    buttonSections: []
+    backgroundColor: "#321c0e"
+    headingColor: "#ffffff"
+    eyebrowColor: "var(--color-brand-secondary)"
+    backgroundImage: ""
+    overlayColor: rgba(50, 28, 14, 0.55)
+    align: center
+    minHeight: ""
+  - _component: page-sections/artisan/page-body
+    id: ""
+    sidebarHeading: ""
+    links: []
+    image: /wp-content/uploads/2020/09/shutterstock_767861803-1.jpg
+    imageAlt: Tooth dental implant in human dentura
+    body: |-
+      
+      									<h4>Information:</h4>
+      <p><!-- /wp:post-content --><!-- wp:paragraph --></p>
+      <p>Modern medical science has created a whole new paradigm for life expectancy. What was once thought to be middle-aged now represents the prime of our life. As a result, we’re using our teeth longer, and dental health is more important than ever. A routine of flossing, brushing, and using mouthwash is enough to keep our teeth healthy most of the time. However, whether through accidents, medical conditions, or poor oral hygiene, we can still lose our teeth. Finding new restoration treatments that help us keep a beautiful, functional smile for a lifetime is more important than ever. Dental implants are the rising star of dental restorations and are the go-to option for many dentists and patients.</p>								
+
+      					<div style="position:relative;height:530px;overflow:hidden;margin-bottom:1.677em;"><iframe referrerpolicy="no-referrer-when-downgrade" src="//patient-api.speareducation.com/dr/63778/video/875/key/4de12b2831337fe88130e65a4056898471427141839d259778fff9919b7266b5?autoplay=0" allowfullscreen="" mozallowfullscreen="" webkitallowfullscreen="" oallowfullscreen="" msallowfullscreen="" scrolling="no" frameborder="no" width="100%" height="100%"></iframe></div>				
+
+      					<h3 class="elementor-heading-title elementor-size-default">Understanding Implants And Why They Do Wonders For Lasting Oral Function</h3>				
+
+      									<!-- /wp:paragraph --><!-- wp:paragraph -->
+      <p>Dental implants are a popular form of dental restoration that provides superior appearance and function over previous options. Using a titanium mounting screw set into the jawbone, and a&nbsp; dental prosthetic known as a crown, your smile can be restored. Titanium does more than provide a stable mounting surface. This metal is known for its ability to stimulate bone growth. Through a process known as osseointegration, this metal combines with the implant and integrates the implant to the bone, much like your previous tooth. This integration is just one of the advantages implants have over dentures.</p>
+      <!-- /wp:paragraph --><!-- wp:paragraph -->
+      <p>This list isn’t where the benefits end, however. Dental implants are also more stable and long-lasting than dentures. They can last for decades without losing functionality or appearance. Convenience is another significant edge they have over dentures. Traditional dentures are taken out every night to be cleaned and sanitized. Dental implants remain in place and are cared for much like your natural teeth.</p>
+      <!-- /wp:paragraph --><!-- wp:paragraph -->
+      <p><strong>Those most likely to benefit from dental implants include patients who:</strong></p>
+      <!-- /wp:paragraph --><!-- wp:list -->
+      <ul>
+      <li>Have good oral health and hygiene practices</li>
+      <li>Don’t use tobacco products or vape</li>
+      <li>Those who have dense, healthy jawbones</li>
+      <li>Don’t have gingivitis or periodontitis</li>
+      </ul>
+      <!-- /wp:list --><!-- wp:paragraph -->
+      <p>&nbsp;</p>
+      <!-- /wp:paragraph --><!-- wp:paragraph -->
+      <p><a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/books/NBK470448/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Implants</a> are a very versatile solution to tooth replacement. Your dentist can use them to replace a single tooth or multiple teeth. They can also use them to replace an entire arch of teeth using only a few mounting points in the jaw. Expandability is another option; your dentist can use previously placed mounts to facilitate multiple tooth solutions.</p>
+      <!-- /wp:paragraph --><!-- wp:paragraph -->
+      <p>Caring for your implants is simple and already part of your standard hygiene practices. You need to continue brushing, flossing, and using a water pik. These standard hygiene practices, combined with a bi-annual visit to your dentist for a checkup, are all that’s required.</p>
+      <!-- /wp:paragraph --><!-- wp:heading {"level":3} /-->								
+
+      					<h3 class="elementor-heading-title elementor-size-default">Learn More By Calling Artisan Dental In Madison, WI Today</h3>				
+
+      									<p><!-- /wp:heading --><!-- wp:paragraph --></p>
+      <p>Our team in Madison, WI, is ready to receive new and existing patients seeking <a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5773996/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">dental implants</a>. By scheduling a consultation visit, you’ll set yourself on the road to a beautiful and functioning smile. During your visit, you’ll undergo a thorough dental exam, discuss your medical history, and explore options for dental restorations with our team. Don’t let a missing tooth or teeth spell the end to a confident smile. Call us today!</p>								
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
     reverse: false
-    colorScheme: inherit
-    backgroundColor: none
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: text
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: "var(--color-bg)"
-    rounded: false
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    reverse: true
-    colorScheme: default
-    backgroundColor: "var(--color-bg)"
-    rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: inherit
-    backgroundColor: "var(--color-bg)"
-    rounded: false
-  - _component: page-sections/builders/custom-section
-    id: ''
-    label: tour
-    contentSections:
-      - _component: building-blocks/wrappers/carousel
-        id: ''
-        label: Carousel Test
-        slides:
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile3.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile5.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-        autoPlay: false
-        autoScroll: false
-        slideWidthPercent: 60
-        minSlideWidth: 0
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: "var(--color-bg)"
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/features/office-tour
-    id: ''
-    heading: office-tour Heading
-    tourSlides:
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/castle.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/dunedin-cliff.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/profile5.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-    backgroundColor: "var(--color-bg)"
-    slideNumbers: true
-    floatingArrows: true
-  - _component: page-sections/ctas/more-to-explore
-    id: ''
-    heading: More to <span class="color">Explore</span>
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    maxContentWidth:
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: "var(--color-bg)"
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/info-blocks/review-video-switcher
-    id: ''
-    heading: Review Video Switcher Heading
-    subtext: Add short supporting text for the review video section.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Watch Review
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    backgroundColor: "var(--color-bg)"
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-description: ''
+  - _component: page-sections/artisan/logo-strip
+    id: ""
+    eyebrow: ""
+    heading: ""
+    logos:
+      - image: /wp-content/uploads/2021/04/IB_award.png
+        alt: IB small Business award
+      - image: /wp-content/uploads/2021/05/2021-communitas-award-nw.png
+        alt: 2021 communitas award
+      - image: /wp-content/uploads/2020/08/bptw2.png
+        alt: bptw2
+      - image: /wp-content/uploads/2021/05/BFTW-2018-19-rev.png
+        alt: Best for The World 2018-2019
+      - image: /wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png
+        alt: Climate Champion logo
+      - image: /wp-content/uploads/2025/11/top-1.png
+        alt: top
+      - image: /wp-content/uploads/2020/08/cb1-123.png
+        alt: cb1 (1)23
+      - image: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
+        alt: FFPC winner logo
+      - image: /wp-content/uploads/2025/11/geat-1.png
+        alt: geat
+    perView: 5
+    autoplaySeconds: 5
+    backgroundColor: "#321c0e"
+    backgroundImage: /wp-content/uploads/2021/05/brown-wood-texture-and-backgroun-nw.jpg
+    overlayOpacity: 0.15
+    eyebrowColor: "var(--color-brand-secondary)"
+    headingColor: "#321c0e"
+  - _component: page-sections/artisan/share-bar
+    id: ""
+    label: Share this page with your friends!
+    headingColor: "#321c0e"
 ---

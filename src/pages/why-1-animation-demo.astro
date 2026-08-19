@@ -63,29 +63,29 @@
   }
 
   .dot {
-    transform-box: fill-box;
-    transform-origin: center;
     animation: dot-travel 2.4s linear infinite;
     animation-delay: calc(var(--i) * -0.6s);
+    transform-box: fill-box;
+    transform-origin: center;
   }
 
   @keyframes dot-travel {
     0% {
-      transform: translateX(0);
       opacity: 1;
+      transform: translateX(0);
     }
     25% {
-      transform: translateX(-15.15px);
       opacity: 1;
+      transform: translateX(-15.15px);
     }
     50% {
-      transform: translateX(-30.45px);
       opacity: 0.5;
+      transform: translateX(-30.45px);
     }
     75%,
     100% {
-      transform: translateX(-45.45px);
       opacity: 0;
+      transform: translateX(-45.45px);
     }
   }
 </style>

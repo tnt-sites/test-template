@@ -1,0 +1,41 @@
+---
+/**
+ * Prev/next staff-bio navigation — the source's post-navigation widget at
+ * the foot of every team member's page, cycling through the team roster.
+ *
+ * Baked in: layout. Props: names, links, colours.
+ */
+const {
+  prevName = "", prevLink = "",
+  nextName = "", nextLink = "",
+  textColor = "#321c0e",
+  id, _component, ...rest
+} = Astro.props;
+---
+{(prevName || nextName) && (
+  <nav class="a-personpager" aria-label="Team member navigation" id={id || undefined}
+    style={`--tx:${textColor}`} {...rest}>
+    {prevName ? (
+      <a class="pp-link pp-prev" href={prevLink}>
+        <span class="pp-arrow" aria-hidden="true">&larr;</span>
+        <span class="pp-text"><span class="pp-label">Previous</span><span class="pp-name">{prevName}</span></span>
+      </a>
+    ) : <span />}
+    {nextName && (
+      <a class="pp-link pp-next" href={nextLink}>
+        <span class="pp-text"><span class="pp-label">Next</span><span class="pp-name">{nextName}</span></span>
+        <span class="pp-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    )}
+  </nav>
+)}
+<style>
+  .a-personpager { border-top: 1px solid #e5e2db; display: flex; justify-content: space-between; margin-block: 2rem; padding-top: 1.5rem; }
+  .pp-link { align-items: center; color: var(--tx); display: inline-flex; gap: 0.75rem; text-decoration: none; }
+  .pp-link:hover .pp-name { text-decoration: underline; }
+  .pp-next { margin-left: auto; text-align: right; }
+  .pp-arrow { font-size: 1.25rem; }
+  .pp-text { display: flex; flex-direction: column; }
+  .pp-label { color: #686868; font-family: "Open Sans", sans-serif; font-size: 13px; }
+  .pp-name { font-family: Poppins, sans-serif; font-size: 16px; font-weight: 700; }
+</style>

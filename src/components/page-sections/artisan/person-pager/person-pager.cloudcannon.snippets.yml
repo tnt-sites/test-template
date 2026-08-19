@@ -1,0 +1,10 @@
+_snippets:
+  person_pager:
+    template: astro_component
+    inline: false
+    preview:
+      text: Person Pager
+    definitions:
+      component_name: page-sections/artisan/person-pager
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/person-pager/person-pager.cloudcannon.inputs.yml

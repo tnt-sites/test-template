@@ -1,0 +1,22 @@
+_inputs:
+  headingColor:
+    type: color
+  questionColor:
+    type: color
+  textColor:
+    type: color
+  items:
+    type: array
+    options:
+      structures: _structures.faq_accordion_item
+_structures:
+  faq_accordion_item:
+    values:
+      - value:
+          question: ""
+          answer: ""
+        _inputs:
+          question:
+            type: text
+          answer:
+            type: markdown

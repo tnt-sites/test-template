@@ -1,0 +1,10 @@
+_snippets:
+  card_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Card Grid
+    definitions:
+      component_name: page-sections/artisan/card-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/artisan/card-grid/card-grid.cloudcannon.inputs.yml
