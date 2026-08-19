@@ -12,6 +12,8 @@
  *   - baked in: layout, font family/size/weight, band padding
  *   - props: every string, image, link and colour, from src/data/footer.json
  *   - arrays: affiliation groups, their logos, and the link columns
+ *   - phone and address are read from src/data/siteInfo.json (the same
+ *     source the header uses), so both stay in sync from one place
  */
 import Button from "@core-elements/button/Button.astro";
 import Image from "@core-elements/image/Image.astro";
@@ -28,6 +30,24 @@ const bottom = data.bottom ?? {};
 const resolvedSocials = socials.length ? socials : ((siteInfoData as any).socials ?? []);
 const siteName = (siteInfoData as any).siteName ?? "Artisan Dental";
 const year = new Date().getFullYear();
+
+// Phone and address live in siteInfo.json, the single source of truth shared
+// with the header — footer.json only supplies the surrounding copy and links.
+const office = ((siteInfoData as any).offices ?? [])[0] ?? {};
+const officePhone = office.phones?.[0] ?? null;
+const officeAddress = office.addresses?.[0] ?? null;
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+
+  return [...lineItems, cityStatePostal].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const mainAddressLines = formatAddressLines(officeAddress);
 ---
 
 <footer class:list={["artisan-footer", className]} {...htmlAttributes}>
@@ -66,9 +86,10 @@ const year = new Date().getFullYear();
       </div>
       <div class="af-cta-action">
         {
-          cta.phoneHeading && (
-            <a class="af-cta-phone" href={cta.phoneHref || "#"}>
-              {cta.phoneHeading}
+          officePhone?.display && (
+            <a class="af-cta-phone" href={officePhone.href || "#"}>
+              {cta.phoneLabel ? `${cta.phoneLabel} ` : ""}
+              {officePhone.display}
             </a>
           )
         }
@@ -95,16 +116,21 @@ const year = new Date().getFullYear();
           )
         }
         {
-          main.phone && (
+          officePhone?.display && (
             <p class="af-phone">
-              {main.phoneLabel} <a href={main.phoneHref || "#"}>{main.phone}</a>
+              {main.phoneLabel} <a href={officePhone.href || "#"}>{officePhone.display}</a>
             </p>
           )
         }
         {
-          (main.addressLines ?? []).length > 0 && (
-            <a class="af-address" href={main.addressHref || "#"} target="_blank" rel="noopener noreferrer">
-              {(main.addressLines ?? []).map((line: string) => (
+          mainAddressLines.length > 0 && (
+            <a
+              class="af-address"
+              href={officeAddress?.mapUrl || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {mainAddressLines.map((line: string) => (
                 <span>{line}</span>
               ))}
             </a>

@@ -64,8 +64,7 @@
     "textColor": "#ffffff",
     "heading": "Have a question?",
     "body": "We want you to feel supported, which is why our team is always happy to help with all of your questions. Just give us a call!",
-    "phoneHeading": "Call Today! (608) 467-8022",
-    "phoneHref": "tel:6084678022",
+    "phoneLabel": "Call Today!",
     "button": {
       "text": "Get in touch with us",
       "link": "/contact-us/"
@@ -78,13 +77,6 @@
     "logoSource": "/wp-content/uploads/2020/08/ARTD_horizontal-eps.png",
     "logoAlt": "Artisan Dental",
     "phoneLabel": "Call Us Today –",
-    "phone": "(608) 467-8022",
-    "phoneHref": "tel:6084678022",
-    "addressLines": [
-      "10 North Livingston Street, Suite 301",
-      "Madison, Wisconsin 53703"
-    ],
-    "addressHref": "https://g.page/artisandds?share",
     "button": {
       "text": "Contact Us",
       "link": "/contact-us/"
