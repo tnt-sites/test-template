@@ -75,10 +75,7 @@ const mainAddressLines = formatAddressLines(officeAddress);
     )
   }
 
-  <section
-    class="af-cta"
-    style={`--af-cta-bg:${cta.backgroundColor};--af-cta-fg:${cta.textColor}`}
-  >
+  <section class="af-cta" style={`--af-cta-bg:${cta.backgroundColor};--af-cta-fg:${cta.textColor}`}>
     <div class="af-inner af-cta-inner">
       <div class="af-cta-copy">
         {cta.heading && <h2>{cta.heading}</h2>}
@@ -163,7 +160,8 @@ const mainAddressLines = formatAddressLines(officeAddress);
 
     <div class="af-inner af-bottom">
       <p class="af-credit">
-        ©{year} {siteName}
+        ©{year}
+        {siteName}
         {
           bottom.creditName && (
             <>
@@ -398,7 +396,7 @@ const mainAddressLines = formatAddressLines(officeAddress);
   .af-column a {
     color: var(--af-link);
     font-family: "Open Sans", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 26px;
     text-decoration: none;
   }

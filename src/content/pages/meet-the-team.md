@@ -18,75 +18,79 @@ pageSections:
     overlayColor: rgba(50, 28, 14, 0.55)
     align: center
     minHeight: ""
-  - _component: page-sections/ctas/services-grid
+  - _component: page-sections/artisan/page-body
     id: ""
-    heading: Our Services
-    services: []
-    ctaCard:
-      enabled: true
-      id: all
-      href: request-an-appointment.html
-      heading: Get Started Now
-      buttonText: Request an Appointment
-      wide: true
-    backgroundColor: base
-    backgroundGradient: ""
-    backgroundImage:
-      source: /wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png
-      alt: FFPC winner logo
-      positionVertical: top
-      positionHorizontal: center
-_migUnmapped:
-  sections:
-    - component: page-sections/ctas/services-grid
-      fields:
-        - field: subtext
-          content: |-
-            ![](/wp-content/uploads/2022/02/artisan-doc.jpg)
-
-            #### Dentists
-
-            #### Leadership Team
-
-            #### Dental Hygienist
-
-            #### Dental Assistant
-
-            #### Patient Care Coordinator
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-            ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-            ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
-
-            ![2021 communitas award](/wp-content/uploads/2021/05/2021-communitas-award-nw.png)
-
-            ![bptw2](/wp-content/uploads/2020/08/bptw2.png)
-
-            ![Best for The World 2018-2019](/wp-content/uploads/2021/05/BFTW-2018-19-rev.png)
-
-            ![Climate Champion logo](/wp-content/uploads/2021/04/DCOECC_Climate-Champion_vert.png)
-
-            ![Doctor Nicole Anderson DDS selected Top Dentists from 2011 through 2026.](/wp-content/uploads/2026/06/doctor-nicole-anderson-dds-selected-top-dentists-2011-through-2026.png)
-
-            ![cb1 (1)23](/wp-content/uploads/2020/08/cb1-123.png)
-
-            ![FFPC winner logo](/wp-content/uploads/2021/05/FFPC-winner-logo2-1-rev.png)
-
-            ![geat](/wp-content/uploads/2025/11/geat-1.png)
-
-            ![IB small Business award](/wp-content/uploads/2021/04/IB_award.png)
+    sidebarHeading: Our Team
+    links:
+      - name: Dr. Nicole Andersen
+        path: /dr-nicole-andersen/
+        current: false
+      - name: Dr. Shruthi Dayal
+        path: /dr-shruthi-dayal/
+        current: false
+      - name: Dr. Mark Rehermann
+        path: /dr-mark-rehermann/
+        current: false
+      - name: Jill
+        path: /jill/
+        current: false
+      - name: Scott Andersen
+        path: /scott-andersen/
+        current: false
+      - name: Lindsay
+        path: /lindsay/
+        current: false
+      - name: Madelyn
+        path: /madelyn/
+        current: false
+      - name: Jen
+        path: /jen/
+        current: false
+      - name: Claire
+        path: /claire/
+        current: false
+      - name: Alli
+        path: /alli/
+        current: false
+      - name: Jonlyn
+        path: /jonlyn/
+        current: false
+      - name: Cassandra
+        path: /cassandra/
+        current: false
+      - name: Emily
+        path: /emily-2/
+        current: false
+      - name: Adria
+        path: /adria/
+        current: false
+      - name: Kat
+        path: /kat/
+        current: false
+      - name: Katie
+        path: /katie/
+        current: false
+      - name: Pamee
+        path: /pamee/
+        current: false
+      - name: Juliana
+        path: /juliana/
+        current: false
+      - name: Kaitlin
+        path: /kaitlin/
+        current: false
+      - name: Kelli
+        path: /kelli/
+        current: false
+    image: ""
+    imageAlt: ""
+    body: |-
+      <h4 class="wp-block-heading">Get to Know Our Team</h4>
+      <p class="wp-block-paragraph">Our doctors, hygienists, assistants, and patient care coordinators work together to make every visit to Artisan Dental comfortable, personal, and exceptional. Select a team member from the list to learn more about them.</p>
+    backgroundColor: transparent
+    headingBackground: "#321c0e"
+    headingColor: "#ffffff"
+    linkColor: "#222222"
+    textColor: "#686868"
+    reverse: false
 ---
