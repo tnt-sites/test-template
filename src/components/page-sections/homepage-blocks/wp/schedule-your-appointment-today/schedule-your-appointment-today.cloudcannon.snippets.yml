@@ -1,0 +1,10 @@
+_snippets:
+  schedule_your_appointment_today:
+    template: astro_component
+    inline: false
+    preview:
+      text: Schedule Your Appointment Today
+    definitions:
+      component_name: page-sections/homepage-blocks/wp/schedule-your-appointment-today
+    _inputs_from_glob:
+      - /src/components/page-sections/homepage-blocks/wp/schedule-your-appointment-today/schedule-your-appointment-today.cloudcannon.inputs.yml

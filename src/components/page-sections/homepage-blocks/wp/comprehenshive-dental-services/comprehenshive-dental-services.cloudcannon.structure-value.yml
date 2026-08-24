@@ -1,0 +1,32 @@
+label: Comprehenshive Dental Services
+icon: grid_view
+description: Comprehenshive Dental Services section with heading, copy, editable cards. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/comprehenshive-dental-services
+  id: ""
+  heading: ""
+  text: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+  backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+  headingColor: "#3b6278"
+  textColor: "#1b2e38"
+  titleColor: "#4e4e4e"
+  textColor2: "#ffffff"
+  textColor2HoverColor: "#1b2e38"
+  hoverColor: "#5bb781"
+  hoverColor2: "#1b2e38"
+preview:
+  text:
+    - Comprehenshive Dental Services
+  icon: grid_view
+picker_preview:
+  text: Comprehenshive Dental Services
+  subtext: Comprehenshive Dental Services section with heading, copy, editable cards. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/comprehenshive-dental-services/comprehenshive-dental-services.cloudcannon.inputs.yml

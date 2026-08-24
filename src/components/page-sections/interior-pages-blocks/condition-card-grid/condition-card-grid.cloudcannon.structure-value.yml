@@ -1,0 +1,30 @@
+label: Condition Card Grid
+icon: grid_view
+description: Two-up grid of dental-condition cards, each with a title, summary and link.
+value:
+  _component: page-sections/interior-pages-blocks/condition-card-grid
+  id: ""
+  items:
+    - title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+      text2: ""
+      text3: ""
+      buttonText2: ""
+      buttonLink2: ""
+  titleColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#ffffff"
+  hoverBackgroundColor: "#49ab71"
+  hoverBackgroundColor2: "#4bad73"
+  hoverBackgroundColor3: "#4eaf76"
+preview:
+  text:
+    - Condition Card Grid
+  icon: grid_view
+picker_preview:
+  text: Condition Card Grid
+  subtext: Two-up grid of dental-condition cards, each with a title, summary and link.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/condition-card-grid/condition-card-grid.cloudcannon.inputs.yml

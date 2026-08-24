@@ -1,20 +1,23 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
+  "colorBrand": "#3b6278",
+  "colorBrandSecondary": "#007bff",
+  "colorBrandTertiary": "#5bb781",
+  "colorBrandSubtle": "#40a569",
   "colorBrandOn": "",
-  "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
+  "colorTextOnBrand": "#e8e8e8",
+  "colorLink": "#007bff",
+  "colorLinkHover": "#0056b3",
   "extraColors": [],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "Roboto, sans-serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "Montserrat, sans-serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "/wp-content/uploads/elementor/google-fonts/css/montserrat.css",
+    "/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css",
+    "/wp-content/uploads/elementor/google-fonts/css/roboto.css",
+    "/wp-content/uploads/elementor/google-fonts/css/robotoslab.css"
   ]
 }

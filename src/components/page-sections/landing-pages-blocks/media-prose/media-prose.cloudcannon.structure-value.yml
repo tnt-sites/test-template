@@ -1,0 +1,28 @@
+label: Media Prose
+icon: vertical_split
+description: Good Vibes section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/media-prose
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  image: ""
+  imageAlt: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+  hoverColor: "#5bb781"
+  hoverBackgroundColor: "#ffffff"
+preview:
+  text:
+    - Media Prose
+  icon: vertical_split
+picker_preview:
+  text: Media Prose
+  subtext: Good Vibes section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/media-prose/media-prose.cloudcannon.inputs.yml

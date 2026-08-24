@@ -1,0 +1,26 @@
+label: Prose Sections
+icon: interests
+description: We Can Provide You section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/prose-sections
+  id: ""
+  heading: ""
+  text: ""
+  subheading: ""
+  heading2: ""
+  text2: ""
+  text3: ""
+  heading3: ""
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#ffffff"
+preview:
+  text:
+    - Prose Sections
+  icon: interests
+picker_preview:
+  text: Prose Sections
+  subtext: We Can Provide You section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/prose-sections/prose-sections.cloudcannon.inputs.yml

@@ -31,3 +31,7 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# wp-migrator working state (provenance baseline for re-runs)
+.migration/
+wp-migrator/.wpmig/

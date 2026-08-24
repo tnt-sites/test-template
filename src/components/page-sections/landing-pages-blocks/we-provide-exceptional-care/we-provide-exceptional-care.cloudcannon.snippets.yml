@@ -1,0 +1,10 @@
+_snippets:
+  we_provide_exceptional_care:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Provide Exceptional Care
+    definitions:
+      component_name: page-sections/landing-pages-blocks/we-provide-exceptional-care
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/we-provide-exceptional-care/we-provide-exceptional-care.cloudcannon.inputs.yml

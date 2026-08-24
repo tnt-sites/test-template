@@ -1,0 +1,22 @@
+label: We Provide Exceptional Care
+icon: vertical_split
+description: We Provide Exceptional Care section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/we-provide-exceptional-care
+  id: ""
+  heading: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - We Provide Exceptional Care
+  icon: vertical_split
+picker_preview:
+  text: We Provide Exceptional Care
+  subtext: We Provide Exceptional Care section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/we-provide-exceptional-care/we-provide-exceptional-care.cloudcannon.inputs.yml

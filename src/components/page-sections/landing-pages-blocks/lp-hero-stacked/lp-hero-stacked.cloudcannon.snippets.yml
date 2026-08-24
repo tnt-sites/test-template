@@ -1,0 +1,10 @@
+_snippets:
+  lp_hero_stacked:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lp Hero Stacked
+    definitions:
+      component_name: page-sections/landing-pages-blocks/lp-hero-stacked
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/lp-hero-stacked/lp-hero-stacked.cloudcannon.inputs.yml

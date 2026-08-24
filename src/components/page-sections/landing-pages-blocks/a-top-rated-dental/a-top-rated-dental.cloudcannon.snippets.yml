@@ -1,0 +1,10 @@
+_snippets:
+  a_top_rated_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: A Top Rated Dental
+    definitions:
+      component_name: page-sections/landing-pages-blocks/a-top-rated-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/a-top-rated-dental/a-top-rated-dental.cloudcannon.inputs.yml

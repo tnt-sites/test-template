@@ -1,0 +1,10 @@
+_snippets:
+  same_day_emergency_treatments:
+    template: astro_component
+    inline: false
+    preview:
+      text: Same Day Emergency Treatments
+    definitions:
+      component_name: page-sections/landing-pages-blocks/same-day-emergency-treatments
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/same-day-emergency-treatments/same-day-emergency-treatments.cloudcannon.inputs.yml

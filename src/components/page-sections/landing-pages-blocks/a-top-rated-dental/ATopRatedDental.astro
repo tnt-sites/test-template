@@ -1,0 +1,423 @@
+---
+/**
+ * A Top Rated Dental — migrated from lp/dental-emergency [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  headingColor = "#3b6278",
+  textColor = "#3b6278",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#1b2e38",
+  hoverColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="a-top-rated-dental" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor}`} {...rest}>
+  <section class="atrd-box">
+    <div class="atrd-box2">
+      <div class="atrd-box3">
+        <div class="atrd-box4">
+          <div class="atrd-box5">
+            {image && <img class="atrd-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="400" />}
+          </div>
+        </div>
+      </div>
+      <div class="atrd-box6">
+        <div class="atrd-box7">
+          <div class="atrd-box8">
+            <h2 class="atrd-heading" set:html={heading} />
+          </div>
+        </div>
+        <div class="atrd-box9">
+          <div class="atrd-box10">
+            {text && <p class="atrd-text">{text}</p>}
+          </div>
+        </div>
+        <div class="atrd-box11">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="atrd-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<style>
+  .a-top-rated-dental {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .atrd-box {
+    box-sizing: border-box;
+    padding: 20px;
+    position: relative;
+  }
+
+  .atrd-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .atrd-box3 {
+    align-content: center;
+    align-items: center;
+    background-image: url("/wp-content/uploads/2024/01/img-team.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .atrd-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .atrd-box5 {
+    box-sizing: border-box;
+  }
+
+  .atrd-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .atrd-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+  }
+
+  .atrd-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 103px;
+    position: relative;
+    text-align: center;
+  }
+
+  .atrd-box8 {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    margin-top: 15px;
+  }
+
+  .atrd-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .atrd-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .atrd-box10 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .atrd-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .atrd-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :global(.atrd-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.atrd-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.atrd-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #1b2e38;
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .a-top-rated-dental {
+      left: -39px;
+      padding-bottom: 83px;
+      right: 39px;
+    }
+
+    .atrd-box {
+      padding: 0px;
+    }
+
+    .atrd-box2 {
+      flex-direction: row;
+      max-width: 1024px;
+    }
+
+    .atrd-box3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    .atrd-box4 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .atrd-box5 {
+      display: none;
+    }
+
+    .atrd-media {
+      display: none;
+    }
+
+    .atrd-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 30px 20px 30px 30px;
+    }
+
+    .atrd-box7 {
+      min-height: auto;
+      text-align: start;
+    }
+
+    .atrd-box8 {
+      margin-top: 0px;
+    }
+
+    .atrd-heading {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .atrd-box9 {
+      text-align: start;
+    }
+
+    .atrd-text {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    .atrd-box11 {
+      text-align: left;
+    }
+
+    :global(.atrd-btn) {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .a-top-rated-dental {
+      left: -165px;
+      right: 165px;
+    }
+
+    .atrd-box2 {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .atrd-box6 {
+      padding: 80px 50px;
+    }
+
+    .atrd-box7 {
+      margin-bottom: 20px;
+    }
+
+    .atrd-heading {
+      font-size: 45px;
+      line-height: 60px;
+    }
+
+    .atrd-box9 {
+      margin-bottom: 20px;
+    }
+
+    .atrd-box10 {
+      margin-bottom: 12px;
+    }
+
+    .atrd-text {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .atrd-box10 {
+    color: rgb(59, 98, 120);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .atrd-box11 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  :global(.atrd-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: normal;
+    line-height: 24px;
+  }
+  .atrd-box8 {
+    color: rgb(59, 98, 120);
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .atrd-media {
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .atrd-box6 {
+    align-items: normal;
+    justify-content: normal;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .atrd-box8 {
+      color: rgb(59, 98, 120);
+      font-family: Montserrat, sans-serif;
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .atrd-box10 {
+      color: rgb(59, 98, 120);
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    .atrd-box11 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    :global(.atrd-btn) {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      justify-content: normal;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .atrd-box6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: start;
+    }
+
+    .atrd-box2 {
+      align-items: center;
+    }
+  }
+  @media (min-width: 1440px) {
+
+    :global(.atrd-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .atrd-text {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  .atrd-heading {
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,33 @@
+label: New Patient Specials
+icon: interests
+description: New Patient Specials section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/new-patient-specials
+  id: ""
+  heading: ""
+  subheading: ""
+  text: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  buttonText: ""
+  buttonLink: ""
+  cardLink: /new-patients/new-patient-specials/
+  backgroundColor: "#f4f7f8"
+  headingColor: "#1b2e38"
+  textColor: "#ffffff"
+  textColor2: "#1b2e38"
+  textColor3: "#868686"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  hoverColor: "#3b6278"
+  buttonTextHoverColor: "#46a96f"
+preview:
+  text:
+    - New Patient Specials
+  icon: interests
+picker_preview:
+  text: New Patient Specials
+  subtext: New Patient Specials section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/new-patient-specials/new-patient-specials.cloudcannon.inputs.yml

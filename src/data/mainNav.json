@@ -1,46 +1,350 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/themes/ColumbineCreek/img/logo.png",
+  "logoAlt": "Columbine Creek Dentistry",
   "navData": [
     {
       "name": "Home",
       "path": "/",
+      "icon": "",
       "children": []
     },
     {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "#",
+      "icon": "",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "About Columbine Creek",
+          "path": "/about-us/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Comfort & Amenities",
+          "path": "/about-us/comfort-amenities/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Office Tour",
+          "path": "/about-us/office-tour/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Meet the Team",
+          "path": "/about-us/meet-the-team/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Patient Reviews",
+          "path": "/about-us/patient-reviews/",
+          "icon": "chevron-right",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "/dental-services/",
+      "icon": "",
+      "children": [
+        {
+          "name": "General Dentistry",
+          "path": "/dental-services/general-dentistry/",
+          "icon": "",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Cleanings & Check Ups",
+              "path": "/dental-services/general-dentistry/cleanings-check-ups/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Cracked Tooth Repair",
+              "path": "/dental-services/general-dentistry/cracked-tooth-repair/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Dental Crowns",
+              "path": "/dental-services/general-dentistry/dental-crowns/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Gum Disease",
+              "path": "/dental-services/general-dentistry/gum-disease/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Halitosis Treatment",
+              "path": "/dental-services/general-dentistry/halitosis-treatment/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Periodontal Therapy",
+              "path": "/dental-services/general-dentistry/periodontal-therapy/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Root Canal Therapy",
+              "path": "/dental-services/general-dentistry/root-canal-therapy/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Same Day Dentistry",
+              "path": "/dental-services/general-dentistry/same-day-dentistry/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/dental-services/general-dentistry/tooth-extractions/",
+              "icon": "chevron-right",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Cosmetic Dentistry",
+          "path": "/dental-services/cosmetic-dentistry/",
+          "icon": "",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Invisalign",
+              "path": "/dental-services/cosmetic-dentistry/invisalign/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Teeth Whitening",
+              "path": "/dental-services/cosmetic-dentistry/teeth-whitening/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Porcelain Veneers",
+              "path": "/dental-services/cosmetic-dentistry/porcelain-veneers/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Dental Bridges",
+              "path": "/dental-services/cosmetic-dentistry/dental-bridges/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "White Fillings",
+              "path": "/dental-services/cosmetic-dentistry/white-fillings/",
+              "icon": "chevron-right",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Restorative Dentistry",
+          "path": "/dental-services/restorative-dentistry/",
+          "icon": "",
+          "children": [
+            {
+              "name": "Dentures",
+              "path": "/dental-services/restorative-dentistry/dentures/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Implant Supported Dentures",
+              "path": "/dental-services/restorative-dentistry/implant-supported-dentures/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-services/restorative-dentistry/dental-implants/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Implant Restorations",
+              "path": "/dental-services/restorative-dentistry/implant-restorations/",
+              "icon": "chevron-right",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Sedation Dentistry",
+          "path": "/dental-services/sedation-dentistry/",
+          "icon": "",
+          "children": [
+            {
+              "name": "Oral Conscious Sedation",
+              "path": "/dental-services/sedation-dentistry/oral-conscious-sedation/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Nitrous Oxide",
+              "path": "/dental-services/sedation-dentistry/nitrous-oxide/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "IV Sedation Dentistry",
+              "path": "/dental-services/sedation-dentistry/iv-sedation-dentistry/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Pediatric Dentistry",
+              "path": "/dental-services/pediatric-dentistry/",
+              "icon": "chevron-right",
+              "children": []
+            },
+            {
+              "name": "Emergency Dentistry",
+              "path": "/dental-services/emergency-dentistry/",
+              "icon": "chevron-right",
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
-      "children": []
+      "name": "Dental Conditions",
+      "path": "#",
+      "icon": "",
+      "children": [
+        {
+          "name": "Broken Fillings",
+          "path": "/broken-fillings/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Swollen / Bleeding Gums",
+          "path": "/swollen-or-bleeding-gums/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Facial Swelling",
+          "path": "/facial-swelling/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Cracked Tooth",
+          "path": "/cracked-tooth/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Shooting Pain",
+          "path": "/shooting-pain/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Tooth Pain",
+          "path": "/tooth-pain/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Abscess",
+          "path": "/abscess/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Missing Teeth",
+          "path": "/missing-teeth/",
+          "icon": "chevron-right",
+          "children": []
+        }
+      ]
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
+      "name": "Payment Options",
+      "path": "/payment-options/",
+      "icon": "",
+      "children": [
+        {
+          "name": "Dental Insurance",
+          "path": "/payment-options/dental-insurance/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Flexible Payment Options",
+          "path": "/payment-options/flexible-payment-options/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Dental Savers Plan",
+          "path": "/payment-options/dental-savers-plan/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Alphaeon Credit",
+          "path": "/payment-options/alphaeon-credit/",
+          "icon": "chevron-right",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "New Patients",
+      "path": "/new-patients/",
+      "icon": "",
+      "children": [
+        {
+          "name": "Your First Visit",
+          "path": "/new-patients/your-first-visit/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "New Patient Forms",
+          "path": "/new-patients/new-patient-forms/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "New Patient Specials",
+          "path": "/new-patients/new-patient-specials/",
+          "icon": "chevron-right",
+          "children": []
+        },
+        {
+          "name": "Frequently Asked Questions",
+          "path": "/frequently-asked-questions/",
+          "icon": "chevron-right",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us/",
+      "icon": "",
       "children": []
     }
   ],
@@ -68,9 +372,9 @@
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "24/7 Online Scheduling",
       "hideText": false,
-      "link": "/request-an-appointment/",
+      "link": "https://www.flexbook.me/schedulecc/1",
       "modalTarget": "",
       "iconName": "",
       "iconPosition": "before",
@@ -83,5 +387,13 @@
       "textColor": "default",
       "uppercase": false
     }
-  ]
+  ],
+  "topBar": {
+    "label": "Call us Today!",
+    "phone": {
+      "display": "(720) 222-2345",
+      "href": "tel:7202222345",
+      "icon": "phone"
+    }
+  }
 }

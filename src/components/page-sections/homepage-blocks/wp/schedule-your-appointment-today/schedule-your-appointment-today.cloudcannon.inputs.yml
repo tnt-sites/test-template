@@ -1,0 +1,23 @@
+_inputs:
+  heading:
+    type: text
+  image:
+    type: image
+  imageAlt:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color
+  buttonTextHoverColor:
+    type: color
+  buttonBackgroundHoverColor:
+    type: color

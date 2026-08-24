@@ -1,0 +1,10 @@
+_snippets:
+  lp_heading_pair:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lp Heading Pair
+    definitions:
+      component_name: page-sections/landing-pages-blocks/lp-heading-pair
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/lp-heading-pair/lp-heading-pair.cloudcannon.inputs.yml

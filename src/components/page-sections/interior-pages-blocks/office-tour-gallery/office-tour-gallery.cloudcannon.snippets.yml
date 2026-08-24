@@ -1,0 +1,10 @@
+_snippets:
+  office_tour_gallery:
+    template: astro_component
+    inline: false
+    preview:
+      text: Office Tour Gallery
+    definitions:
+      component_name: page-sections/interior-pages-blocks/office-tour-gallery
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/office-tour-gallery/office-tour-gallery.cloudcannon.inputs.yml

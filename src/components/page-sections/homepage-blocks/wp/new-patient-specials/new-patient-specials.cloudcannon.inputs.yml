@@ -1,0 +1,38 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: textarea
+  text:
+    type: text
+  text2:
+    type: html
+  text3:
+    type: text
+  text4:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  cardLink:
+    type: url
+    comment: Where the offer card links. Leave empty to make the card static.
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  textColor3:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color
+  hoverColor:
+    type: color
+  buttonTextHoverColor:
+    type: color

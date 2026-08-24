@@ -1,0 +1,10 @@
+_snippets:
+  call_us_now_to:
+    template: astro_component
+    inline: false
+    preview:
+      text: Call Us Now To
+    definitions:
+      component_name: page-sections/landing-pages-blocks/call-us-now-to
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/call-us-now-to/call-us-now-to.cloudcannon.inputs.yml

@@ -1,20 +1,30 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Columbine Creek Dentistry - Dentist Littleton",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/ColumbineCreekDentistry"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/columbine_creek_dentistry/"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "Twitter",
+      "icon": "social/x",
+      "link": "https://twitter.com/CCreekDentistry"
+    },
+    {
+      "label": "Yelp",
+      "icon": "social/yelp",
+      "link": "https://www.yelp.com/biz/columbine-creek-dentistry-littleton"
+    },
+    {
+      "label": "Youtube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UCclN0EuyOz9HR5ZpG7if_sg"
     }
   ],
   "offices": [
@@ -22,27 +32,24 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "4760 W. Mineral Ave. Suite 60"
+          ],
+          "city": "Littleton",
+          "state": "CO",
+          "postalCode": "80128",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://www.google.com/maps/dir//columbine+creek+dental/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62?sa=X&ved=2ahUKEwjR_r31jYvlAhVRvZ4KHefcBwAQ9RcwDXoECAgQEQ"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(720) 222-2345",
+          "href": "tel:7202222345"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
@@ -74,8 +81,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

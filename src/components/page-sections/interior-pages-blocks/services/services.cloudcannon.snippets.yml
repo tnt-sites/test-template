@@ -1,0 +1,10 @@
+_snippets:
+  services:
+    template: astro_component
+    inline: false
+    preview:
+      text: Services
+    definitions:
+      component_name: page-sections/interior-pages-blocks/services
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/services/services.cloudcannon.inputs.yml

@@ -1,0 +1,5 @@
+_inputs:
+  text:
+    type: html
+  textColor:
+    type: color

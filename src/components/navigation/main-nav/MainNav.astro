@@ -5,10 +5,12 @@ import Mobile from "@components/navigation/mobile/Mobile.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import siteInfoData from "@data/siteInfo.json";
+import { Icon as AstroIcon } from "astro-icon/components";
 
 const {
   logoSource,
   logoAlt = "logo",
+  topBar = null,
   navData = [],
   buttonSections = [],
   pageButtons = [],
@@ -74,6 +76,22 @@ const mobileNavData = [
   })),
 ];
 
+/*
+ * A header drawn as two tiers — a brand bar over a menu bar — which is how the
+ * source presents it and how most WordPress themes do.
+ *
+ * The starter's header is a single row: logo, contact details and menu all on
+ * one line. Folding a top bar into that row renders the practice's phone
+ * number at menu-link size next to the menu items, which is the difference
+ * most visible on every page of the migrated site. Rather than reshape the
+ * single-row header for every site, the second tier appears only when the
+ * source actually had one — `topBar` absent means the starter's own header,
+ * unchanged.
+ */
+const tierTopBar =
+  topBar && typeof topBar === "object" && topBar.phone?.display ? topBar : null;
+const hasTopBar = Boolean(tierTopBar);
+
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
 
 const resolvedOffices =
@@ -127,100 +145,172 @@ const formatAddressLines = (address: any) => {
 };
 ---
 
-<CustomSection
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="none"
-  class:list={["main-nav", className]}
-  {...htmlAttributes}
->
-  <div class="hd-content">
-    <a class="logo-link" href="/">
-      <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
-    </a>
-    <!-- Desktop Nav -->
-    <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
-        {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
+{
+  hasTopBar ? (
+    <CustomSection
+      paddingHorizontal="none"
+      paddingVertical="none"
+      class:list={["main-nav", "main-nav--tiered", className]}
+      {...htmlAttributes}
+    >
+      <div class="hd-topbar">
+        <div class="hd-bar-inner">
+          <a class="logo-link" href="/">
+            <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
+          </a>
 
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
-
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
-              </div>
-            </>
-          ))
-        }
-      </div>
-      {
-        buttons.length > 0 && (
-          <div class="hd-btns page-buttons">
-            <ButtonGroup
-              direction="row"
-              align="center"
-              class="desktop-button-group"
-              buttonSections={buttons}
-              editable={false}
-            />
+          <div class="hd-aside">
+            {tierTopBar.label && <span class="hd-aside-label">{tierTopBar.label}</span>}
+            <a class="hd-aside-phone" href={tierTopBar.phone.href || "#"}>
+              {tierTopBar.phone.icon && (
+                <AstroIcon name={tierTopBar.phone.icon} class="hd-aside-phone-icon" is:inline />
+              )}
+              {tierTopBar.phone.display}
+            </a>
           </div>
-        )
-      }
-      <div class="hd-nav">
-        <div class="nav-end">
-          <Bar navData={navData} class="desktop-main-nav" />
 
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
         </div>
       </div>
-      <!-- End Desktop Nav -->
-    </div>
-  </div>
-  <!-- Mobile Nav -->
-  <Mobile
-    logoSource={logoSource}
-    logoAlt={logoAlt}
-    navData={mobileNavData}
-    class="mobile-main-nav"
-    offices={resolvedOffices}
-    sharedSocials={sharedSocials}
-  />
-  <!-- End Mobile Nav -->
-</CustomSection>
+
+      <div class="hd-navbar">
+        <div class="hd-bar-inner">
+          <Bar navData={navData} class="desktop-main-nav" />
+
+          <div class="hd-navbar-end">
+            {buttons.length > 0 && (
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="hd-navbar-cta button-group-row fit-content"
+                buttonSections={buttons}
+                editable={false}
+              />
+            )}
+
+            {/*
+              The number appears twice by design, once per tier, because the
+              source drops the brand tier's contact block on a narrow screen
+              and re-states the number in the menu bar. Only one is ever
+              visible.
+            */}
+            <a class="hd-navbar-phone" href={tierTopBar.phone.href || "#"}>
+              {tierTopBar.phone.display}
+            </a>
+
+            {/*
+              The toggle sits in the menu tier, which is the tier that stays
+              on a narrow screen — the brand tier is the one the source
+              reduces to a logo.
+            */}
+            <Mobile
+              logoSource={logoSource}
+              logoAlt={logoAlt}
+              navData={mobileNavData}
+              class="mobile-main-nav"
+              offices={resolvedOffices}
+              sharedSocials={sharedSocials}
+            />
+          </div>
+        </div>
+      </div>
+    </CustomSection>
+  ) : (
+    <CustomSection
+      maxContentWidth="2xl"
+      paddingHorizontal="lg"
+      paddingVertical="none"
+      class:list={["main-nav", className]}
+      {...htmlAttributes}
+    >
+      <div class="hd-content">
+        <a class="logo-link" href="/">
+          <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
+        </a>
+        <!-- Desktop Nav -->
+        <div class="hd-right">
+          <!-- Phone and Address -->
+          <div class="hd-info">
+            {
+              resolvedOffices.map((office: any) => (
+                <>
+                  <div>
+                    {Array.isArray(office?.phones) &&
+                      office.phones.map((phone: any) =>
+                        phone?.display ? (
+                          <a href={phone?.href || "#"} class="pho">
+                            {phone?.label ? `${phone.label}: ` : ""}
+                            {phone.display}
+                          </a>
+                        ) : null
+                      )}
+
+                    {Array.isArray(office?.addresses) &&
+                      office.addresses.map((address: any) => {
+                        const formattedLines = formatAddressLines(address);
+
+                        return formattedLines.length > 0 ? (
+                          <a
+                            href={address?.mapUrl || "#"}
+                            class="phy"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {formattedLines.map((line: string, index: number) => (
+                              <>
+                                {line}
+                                {index < formattedLines.length - 1 && <br />}
+                              </>
+                            ))}
+                          </a>
+                        ) : null;
+                      })}
+                  </div>
+                </>
+              ))
+            }
+          </div>
+          {
+            buttons.length > 0 && (
+              <div class="hd-btns page-buttons">
+                <ButtonGroup
+                  direction="row"
+                  align="center"
+                  class="desktop-button-group"
+                  buttonSections={buttons}
+                  editable={false}
+                />
+              </div>
+            )
+          }
+          <div class="hd-nav">
+            <div class="nav-end">
+              <Bar navData={navData} class="desktop-main-nav" />
+
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="desktop-button-group"
+                buttonSections={searchButtons}
+                editable={false}
+              />
+            </div>
+          </div>
+          <!-- End Desktop Nav -->
+        </div>
+      </div>
+      <!-- Mobile Nav -->
+      <Mobile
+        logoSource={logoSource}
+        logoAlt={logoAlt}
+        navData={mobileNavData}
+        class="mobile-main-nav"
+        offices={resolvedOffices}
+        sharedSocials={sharedSocials}
+      />
+      <!-- End Mobile Nav -->
+    </CustomSection>
+  )
+}
 
 <!-- Adds --site-header-height CSS variable based on header height. Works with multiple screen sizes. -->
 <script>
@@ -255,6 +345,335 @@ const formatAddressLines = (address: any) => {
 
 <style lang="pcss" is:global>
   @layer page-sections {
+    /*
+     * Two-tier header.
+     *
+     * Every value reads a `--chrome-*` token measured from the source by
+     * `wpmig dev-chrome`, falling back to the starter's own. A site that was
+     * never measured therefore renders in the target's design rather than
+     * unstyled, and a measured one looks like itself.
+     */
+    .main-nav.main-nav--tiered {
+      /*
+       * The source scrolls its brand bar away and pins only the menu bar, so
+       * the sticky positioning the single-row header puts on the whole
+       * component moves down one level. Left on the root, the logo and phone
+       * number follow the page down and cover 116px of every scrolled screen.
+       */
+      background-color: var(--chrome-header-bg, var(--color-bg));
+      padding-block: 0;
+      position: static;
+
+      .hd-bar-inner {
+        align-items: center;
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: space-between;
+        margin-inline: auto;
+        max-width: var(--chrome-container-max, 1140px);
+        padding-inline: var(--chrome-container-pad, 15px);
+        width: 100%;
+      }
+
+      .hd-topbar {
+        padding-bottom: var(--chrome-header-pad-bottom, 0);
+        padding-top: var(--chrome-header-pad-top, 10px);
+      }
+
+      /*
+       * The band's padding sets the header off from the page; the row's insets
+       * what is in it. Both are needed, and the second is the one that keeps
+       * the rule beside the logo clear of the header's top edge and of the
+       * menu bar beneath it — without it the logo box is the full height of
+       * the row and the divider butts into both.
+       */
+      .hd-topbar .hd-bar-inner {
+        padding-bottom: var(--chrome-header-row-pad-bottom, 10px);
+        padding-top: var(--chrome-header-row-pad-top, 10px);
+      }
+
+      .logo-link {
+        display: block;
+        flex: none;
+        /* The source rules off the logo from what sits beside it. */
+        border-right: var(--chrome-header-logo-divider, none);
+        padding-right: var(--chrome-header-logo-pad-right, 13px);
+
+        .image img {
+          height: auto;
+          max-width: 100%;
+          width: var(--chrome-header-logo-width, 200px);
+        }
+      }
+
+      .hd-aside {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        min-width: 0;
+      }
+
+      .hd-aside-label {
+        color: var(--chrome-header-label-color, var(--color-text-muted));
+        font-family: var(--chrome-header-label-font, inherit);
+        font-size: var(--chrome-header-label-size, var(--font-size-md));
+        font-weight: var(--chrome-header-label-weight, 300);
+        margin-left: var(--chrome-header-label-indent, 0);
+      }
+
+      .hd-aside-phone {
+        align-items: center;
+        color: var(--chrome-header-phone-color, var(--color-text));
+        display: flex;
+        gap: 0.25em;
+        font-family: var(--chrome-header-phone-font, inherit);
+        font-size: var(--chrome-header-phone-size, var(--font-size-2xl));
+        font-weight: var(--chrome-header-phone-weight, 600);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      /*
+       * Sized in `em` so the glyph tracks the number it belongs to — the
+       * number is 28px on a wide screen and 18px on a narrow one, and a fixed
+       * icon size would leave it looking pinned on one of them.
+       */
+      .hd-aside-phone-icon {
+        flex: none;
+        height: 0.82em;
+        width: 0.82em;
+      }
+
+      .hd-navbar {
+        background-color: var(--chrome-nav-bg, var(--color-bg));
+        border-bottom: var(--chrome-nav-border-bottom, none);
+        border-top: var(--chrome-nav-border-top, none);
+        position: var(--chrome-nav-position, static);
+        top: 0;
+        z-index: var(--layer-2);
+      }
+
+      .hd-navbar .hd-bar-inner {
+        gap: var(--spacing-sm);
+        min-height: var(--chrome-nav-height, auto);
+      }
+
+      .hd-navbar-end {
+        align-items: center;
+        display: flex;
+        flex: none;
+        gap: var(--spacing-xs);
+      }
+
+      /*
+       * `.button-group` carries a page-section's top margin, which in a menu
+       * bar drops the call-to-action below the links it sits beside.
+       */
+      .hd-navbar-cta.button-group {
+        margin-top: 0;
+      }
+
+      /*
+       * The menu bar's own type, applied to the link rather than to the list:
+       * the starter's `Bar` sets its size on each anchor, so a rule on the
+       * list is overridden and the menu keeps the target's size.
+       */
+      .desktop-main-nav.bar a {
+        color: var(--chrome-nav-link-color, inherit);
+        font-family: var(--chrome-nav-link-font, inherit);
+        font-size: var(--chrome-nav-link-size, var(--font-size-md));
+        font-weight: var(--chrome-nav-link-weight, 400);
+        padding: var(--chrome-nav-link-pad-y, 8px) var(--chrome-nav-link-pad-x, 8px);
+        text-transform: var(--chrome-nav-link-transform, none);
+      }
+
+      /*
+       * The dropdown affordance, sized to the source's.
+       *
+       * The starter draws it as a bordered 28px button beside each parent
+       * item, which is the right call for a header with three menu entries.
+       * This menu has seven, five of them with children, and the extra ~200px
+       * of chrome pushes the call-to-action off the right edge of the bar —
+       * so at this width the affordance has to be the caret the source uses.
+       * Scoped to the tiered header so every other use of `Bar` keeps the
+       * starter's buttons.
+       */
+      .desktop-main-nav.bar .nav-item-trigger {
+        border: 0;
+        color: var(--chrome-nav-link-color, inherit);
+        /*
+         * The caret is the affordance, but a 13px-wide label is a hard target
+         * to hit. The padding widens the hit area either side of the glyph
+         * without moving the glyph or the bar: the negative margins pull the
+         * added padding back over the link's own trailing padding on one side
+         * and into the 8px gap before the next item on the other, so the caret
+         * still sits tight against its word and each item keeps its width.
+         * The bar is already 95px over its box between 992px and 1440px —
+         * widening the items for real is what pushes the call-to-action off
+         * the right edge, which is the trade the caret was chosen to avoid.
+         */
+        margin-left: -0.85em;
+        margin-right: -0.5em;
+        min-height: 0;
+        min-width: 0;
+        padding: 0 0.5em;
+      }
+
+      .desktop-main-nav.bar .nav-item-icon {
+        font-size: 0.7em;
+        /* chevron-right pointed down: the source's caret opens downward. */
+        transform: rotate(90deg);
+      }
+
+      .desktop-main-nav.bar .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+        transform: rotate(-90deg);
+      }
+
+      /*
+       * The menu is what gives way when the bar runs out of room, not the
+       * call-to-action — the button is the reason the bar exists.
+       */
+      .desktop-main-nav.bar {
+        min-width: 0;
+      }
+
+      /*
+       * The dropdown panel.
+       *
+       * Measured with the menu forced open — a panel at rest is
+       * `display: none`, and a hidden element reports no box and no resolved
+       * colours, so an at-rest read would have described every site's dropdown
+       * as a zero-sized transparent one.
+       */
+      .desktop-main-nav.bar .nav-item-content {
+        background: var(--chrome-dropdown-bg, var(--color-bg));
+        border: 0;
+        border-radius: var(--chrome-dropdown-radius, var(--radius-xs));
+        box-shadow: var(--chrome-dropdown-shadow, none);
+        margin-top: var(--chrome-dropdown-offset, 0);
+        min-width: var(--chrome-dropdown-min-width, 200px);
+        padding-block: var(--chrome-dropdown-pad-y, 0) 0;
+        /*
+         * The source hangs its panel from the left edge of the item it belongs
+         * to; the starter centres it. Centring reads as a drift of half a
+         * panel width against the original at every menu position.
+         */
+        left: 0;
+        transform: none;
+        width: var(--chrome-dropdown-width, max-content);
+      }
+
+      /*
+       * `transform: none` above is not enough on its own. The starter opens
+       * the panel with `grow-out-centered`, whose keyframes carry the
+       * `translateX(-50%)` that goes with the centred position, and it runs
+       * `forwards` — a running animation's declarations outrank any normal
+       * one, so the panel kept landing half its width (100px) left of the
+       * item it belongs to. `grow-out` is the same fade-and-drop without the
+       * horizontal half-step, which leaves `left: 0` to do the positioning.
+       */
+      .desktop-main-nav.bar .nav-item-toggle:checked ~ .nav-item-content {
+        animation-name: grow-out;
+      }
+
+      /*
+       * The leading glyph on a dropdown entry. Sized and coloured from the
+       * source's own, which is smaller and a different colour from the item's
+       * text — matching the text would make it a bullet rather than the accent
+       * the source uses.
+       */
+      .desktop-main-nav.bar .nav-item-lead {
+        color: var(--chrome-dropdown-icon-color, currentColor);
+        font-size: var(--chrome-dropdown-icon-size, 0.75em);
+        /*
+         * `max()` because plenty of themes space this glyph with an `&nbsp;`
+         * in the markup rather than with padding — the measured gap is then a
+         * truthful 0px, and using it directly glues the chevron to the word.
+         */
+        margin-right: max(var(--chrome-dropdown-icon-gap, 0px), 0.45em);
+      }
+
+      .desktop-main-nav.bar .nav-item-content .nav-item > a,
+      .desktop-main-nav.bar .nav-item-content .nav-item > .nav-item-trigger + a {
+        border-bottom: var(--chrome-dropdown-item-border, none);
+        color: var(--chrome-dropdown-item-color, inherit);
+        font-family: var(--chrome-dropdown-item-font, inherit);
+        font-size: var(--chrome-dropdown-item-size, var(--font-size-sm));
+        font-weight: var(--chrome-dropdown-item-weight, 400);
+        padding: var(--chrome-dropdown-item-pad-y, 10px) var(--chrome-dropdown-item-pad-x, 8px);
+      }
+
+      /* The call-to-action is a painted rectangle in the source, not a pill. */
+      .hd-navbar-cta .button {
+        background-color: var(--chrome-nav-cta-bg, var(--color-primary));
+        border-color: transparent;
+        border-radius: var(--chrome-nav-cta-radius, var(--radius-md));
+        color: var(--chrome-nav-cta-color, var(--color-on-primary));
+        font-family: var(--chrome-nav-cta-font, inherit);
+        font-size: var(--chrome-nav-cta-size, var(--font-size-md));
+        font-weight: var(--chrome-nav-cta-weight, 400);
+        padding: var(--chrome-nav-cta-pad-y, 8px) var(--chrome-nav-cta-pad-x, 25px);
+      }
+
+      .nav-hamburger.mobile-button {
+        flex: none;
+        @media (min-width: 1025px) {
+          display: none;
+        }
+      }
+
+      .hd-navbar-phone {
+        color: var(--chrome-nav-phone-color, var(--chrome-nav-link-color, inherit));
+        font-family: var(--chrome-nav-phone-font, inherit);
+        font-size: var(--chrome-nav-phone-size, var(--font-size-sm));
+        font-weight: var(--chrome-nav-phone-weight, 400);
+        text-decoration: none;
+        white-space: nowrap;
+
+        @media (min-width: 1025px) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        /*
+         * The starter turns the header's content box into a single flex row on
+         * a narrow screen, which lays the two tiers out side by side — the
+         * brand tier and the menu tier each taking half the width — rather
+         * than stacking them.
+         */
+        > .outer-content > .content {
+          display: block;
+          padding-inline: 0;
+        }
+
+        /*
+         * Both tiers stay on a narrow screen — the source keeps them — but
+         * they swap contents: the brand tier drops to the logo alone, and the
+         * menu tier becomes the call-to-action, the number and the toggle.
+         */
+        .hd-aside {
+          display: none;
+        }
+
+        .hd-navbar .hd-bar-inner {
+          justify-content: space-between;
+          padding-inline: 0;
+        }
+
+        .hd-navbar-end {
+          flex: 1;
+          gap: var(--spacing-sm);
+          justify-content: space-between;
+        }
+
+        .hd-navbar-cta.button-group .button {
+          /* Flush to the edge, as the source has it. */
+          border-radius: 0;
+        }
+      }
+    }
+
     .main-nav {
       z-index: var(--layer-2);
       background-color: var(--color-bg); 

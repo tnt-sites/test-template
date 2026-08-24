@@ -7,6 +7,7 @@ navData:
       value:
         name: ""
         path: ""
+        icon: ""
         children: []
       preview:
         text:
@@ -26,6 +27,11 @@ navData:
         path:
           type: text
           comment: URL path for the navigation item.
+        icon:
+          type: select
+          comment: Optional leading icon, drawn before the label.
+          options:
+            values: _select_data.icons
         children:
           type: array
           label: Child Navigation Items
@@ -37,6 +43,7 @@ navData:
                 value:
                   name: ""
                   path: ""
+                  icon: ""
                   children: []
                 preview:
                   text:
@@ -52,6 +59,11 @@ navData:
                   path:
                     type: text
                     comment: URL path for the child navigation item.
+                  icon:
+                    type: select
+                    comment: Optional leading icon, drawn before the label.
+                    options:
+                      values: _select_data.icons
                   children:
                     type: array
                     label: Grandchild Navigation Items
@@ -63,6 +75,7 @@ navData:
                           value:
                             name: ""
                             path: ""
+                            icon: ""
                           preview:
                             text:
                               - key: name
@@ -77,3 +90,8 @@ navData:
                             path:
                               type: text
                               comment: URL path for the grandchild navigation item.
+                            icon:
+                              type: select
+                              comment: Optional leading icon, drawn before the label.
+                              options:
+                                values: _select_data.icons

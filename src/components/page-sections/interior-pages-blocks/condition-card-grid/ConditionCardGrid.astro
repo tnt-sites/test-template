@@ -1,0 +1,503 @@
+---
+/**
+ * Grid of dental-condition cards — a title, a sentence, and a "Learn More"
+ * link per condition. Used by the dental-conditions index.
+ *
+ * Each `items` entry holds *two* cards, not one: the migrator captured the
+ * source's two-up rows verbatim, so `title`/`text`/`buttonText` is the left
+ * card and `text2`/`text3`/`buttonText2` the right one.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  items = [],
+  titleColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#ffffff",
+  hoverBackgroundColor = "#49ab71",
+  hoverBackgroundColor2 = "#4bad73",
+  hoverBackgroundColor3 = "#4eaf76",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="condition-card-grid" id={id || undefined} style={`--tt:${titleColor};--tx:${textColor};--c3:${textColor2};--c4:${hoverBackgroundColor};--c5:${hoverBackgroundColor2};--c6:${hoverBackgroundColor3}`} {...rest}>
+  <div class="bf-box">
+    <section class="bf-box2">
+      <div class="bf-grid">
+        {list.map((it) => (
+          <section class="bf-box3">
+            <div class="bf-box4">
+              <div class="bf-box5">
+                <div class="bf-box6">
+                  <h2 class="bf-heading">{it.title}</h2>
+                </div>
+                <div class="bf-box7">
+                  <div class="bf-decor" aria-hidden="true"></div>
+                </div>
+                <div class="bf-box8">
+                  <div class="bf-text">{it.text}</div>
+                </div>
+                <div class="bf-box9">
+                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+                </div>
+              </div>
+              <div class="bf-box10">
+                <div class="bf-box11">
+                  <h2 class="bf-heading2">{it.text2}</h2>
+                </div>
+                <div class="bf-box12">
+                  <div class="bf-decor2" aria-hidden="true"></div>
+                </div>
+                <div class="bf-box13">
+                  <div class="bf-text2">{it.text3}</div>
+                </div>
+                <div class="bf-box14">
+                  {it.buttonText2 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn2" text={it.buttonText2} link={it.buttonLink2 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </section>
+  </div>
+</div>
+<style>
+  .condition-card-grid {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    min-height: 2881px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .bf-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .bf-box2 {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .bf-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 2741px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bf-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .bf-box4 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    min-height: 652px;
+    position: relative;
+  }
+
+  .bf-box5 {
+    align-content: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 20px 20px 40px 20px;
+    max-width: 88.24%;
+    padding: 20px;
+    position: relative;
+  }
+
+  .bf-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: -10px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bf-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bf-box7 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+
+  .bf-decor {
+    border-top: 2px solid #40a569;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    margin-left: 65px;
+    margin-right: 65px;
+    max-width: 50%;
+    min-height: 2px;
+  }
+
+  .bf-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .bf-text {
+    box-sizing: border-box;
+  }
+
+  .bf-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :global(.bf-btn) {
+    background-color: #5bb781;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c3);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.bf-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .bf-box10 {
+    align-content: flex-start;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 20px 20px 40px 20px;
+    max-width: 88.24%;
+    padding: 20px;
+    position: relative;
+  }
+
+  .bf-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: -10px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bf-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bf-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+
+  .bf-decor2 {
+    border-top: 2px solid #40a569;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    margin-left: 65px;
+    margin-right: 65px;
+    max-width: 50%;
+    min-height: 2px;
+  }
+
+  .bf-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .bf-text2 {
+    box-sizing: border-box;
+  }
+
+  .bf-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  :global(.bf-btn2) {
+    background-color: #5bb781;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c3);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.bf-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.bf-btn):hover {
+    background-color: var(--c4);
+  }
+
+  :global(.bf-btn2):hover {
+    background-color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .condition-card-grid {
+      min-height: 1400px;
+    }
+
+    .bf-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .bf-grid {
+      min-height: 1260px;
+    }
+
+    .bf-box4 {
+      max-width: 1024px;
+      min-height: 0px;
+    }
+
+    .bf-box5 {
+      flex: 0 0 44.03%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      max-width: 44.03%;
+      min-height: 293px;
+    }
+
+    .bf-decor {
+      margin-left: 63.8px;
+      margin-right: 63.8px;
+    }
+
+    .bf-box10 {
+      flex: 0 0 44.03%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      max-width: 44.03%;
+    }
+
+    .bf-decor2 {
+      margin-left: 63.8px;
+      margin-right: 63.8px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .condition-card-grid {
+      min-height: 1225px;
+    }
+
+    .bf-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .bf-grid {
+      min-height: 1085px;
+    }
+
+    .bf-box4 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .bf-box5 {
+      flex: 0 0 46.33%;
+      max-width: 46.33%;
+      min-height: auto;
+    }
+
+    .bf-decor {
+      margin-left: 116.3px;
+      margin-right: 116.3px;
+    }
+
+    .bf-box10 {
+      flex: 0 0 46.33%;
+      max-width: 46.33%;
+    }
+
+    .bf-decor2 {
+      margin-left: 116.3px;
+      margin-right: 116.3px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .bf-box7 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .bf-decor2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .bf-box6 {
+    text-align: left;
+  }
+  .bf-box11 {
+    text-align: left;
+  }
+  :global(.bf-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+  }
+  :global(.bf-btn2) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+
+    .bf-box7 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 31.2px;
+    }
+
+    .bf-decor2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 31.2px;
+    }
+
+    .bf-box6 {
+      text-align: left;
+    }
+
+    .bf-box11 {
+      text-align: left;
+    }
+
+    :global(.bf-btn) {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      justify-content: normal;
+      line-height: 24px;
+    }
+
+    :global(.bf-btn2) {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      justify-content: normal;
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+
+    :global(.bf-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    :global(.bf-btn2) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .bf-box10 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .bf-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .bf-heading {
+    font-size: 24px;
+  }
+  .bf-heading2 {
+    font-size: 24px;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "https://www.flexbook.me/schedulecc/1",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -19,7 +19,7 @@
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/dir//columbine+creek+dental/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62?sa=X&ved=2ahUKEwjR_r31jYvlAhVRvZ4KHefcBwAQ9RcwDXoECAgQEQ",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -28,7 +28,7 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/new-patients/new-patient-forms/",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "
@@ -36,7 +36,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/ColumbineCreekDentistry",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +45,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/dir//columbine+creek+dental/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62?sa=X&ved=2ahUKEwjR_r31jYvlAhVRvZ4KHefcBwAQ9RcwDXoECAgQEQ",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",
@@ -54,7 +54,7 @@
     {
       "itemClass": "ig",
       "enabled": false,
-      "href": "https://www.instagram.com/",
+      "href": "https://www.instagram.com/columbine_creek_dentistry/",
       "target": "_blank",
       "icon": "social/instagram",
       "textMobile": "Follow ",
@@ -63,43 +63,25 @@
     {
       "itemClass": "tw",
       "enabled": false,
-      "href": "https://x.com/",
+      "href": "https://twitter.com/CCreekDentistry",
       "target": "_blank",
       "icon": "social/x",
       "textMobile": "Follow ",
       "textStrong": "Twitter"
     },
     {
-      "itemClass": "tt",
-      "enabled": false,
-      "href": "https://www.tiktok.com/",
-      "target": "_blank",
-      "icon": "social/tiktok",
-      "textMobile": "Follow ",
-      "textStrong": "TikTok"
-    },
-    {
       "itemClass": "yp",
       "enabled": false,
-      "href": "https://www.yelp.com/",
+      "href": "https://www.yelp.com/biz/columbine-creek-dentistry-littleton",
       "target": "_blank",
       "icon": "social/yelp",
       "textMobile": "Read ",
       "textStrong": "Yelp Reviews"
     },
     {
-      "itemClass": "bs",
-      "enabled": false,
-      "href": "https://bsky.app/",
-      "target": "_blank",
-      "icon": "social/bluesky",
-      "textMobile": "Follow ",
-      "textStrong": "Bluesky"
-    },
-    {
       "itemClass": "yt",
       "enabled": false,
-      "href": "https://www.youtube.com/",
+      "href": "https://www.youtube.com/channel/UCclN0EuyOz9HR5ZpG7if_sg",
       "target": "_blank",
       "icon": "social/youtube",
       "textMobile": "Watch ",

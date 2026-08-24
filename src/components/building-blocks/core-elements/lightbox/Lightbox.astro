@@ -1,0 +1,259 @@
+---
+/**
+ * Lightbox for image galleries.
+ *
+ * Attaches to any container marked `data-lightbox`, treating each descendant
+ * anchor that points at an image file as a slide. Rendering one of these
+ * anywhere on the page is enough — a single overlay serves every gallery on it.
+ *
+ * The gallery markup stays a plain list of links to full-size images, so with
+ * JavaScript unavailable a click still opens the photo. The lightbox only ever
+ * intercepts a click it can handle.
+ */
+const { id, _component, ...rest } = Astro.props;
+---
+
+<dialog class="lightbox" id={id || undefined} aria-label="Image viewer" {...rest}>
+  <div class="lightbox-dialog">
+    <figure class="lightbox-figure">
+      <img class="lightbox-image" src="" alt="" />
+      <figcaption class="lightbox-caption" data-lightbox-caption></figcaption>
+    </figure>
+
+    <button class="lightbox-button lightbox-close" type="button" data-lightbox-close aria-label="Close image viewer">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+        ><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg
+      >
+    </button>
+
+    <button class="lightbox-button lightbox-prev" type="button" data-lightbox-prev aria-label="Previous image">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+        ><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg
+      >
+    </button>
+
+    <button class="lightbox-button lightbox-next" type="button" data-lightbox-next aria-label="Next image">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"
+        ><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg
+      >
+    </button>
+  </div>
+</dialog>
+
+<style>
+  /*
+   * A native modal dialog rather than a positioned overlay: `showModal()` puts
+   * it in the browser's top layer, above every stacking context on the page.
+   * The site chrome sits at `z-index: 9999`, so an overlay competing on
+   * z-index would have had to outbid it — and outbid whatever gets added next.
+   * The top layer does not enter that contest at all.
+   */
+  .lightbox {
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    overflow: hidden;
+  }
+
+  .lightbox::backdrop {
+    background: rgb(0 0 0 / 88%);
+  }
+
+  .lightbox:not([open]) {
+    display: none;
+  }
+
+  .lightbox-dialog {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: min(92vw, 1200px);
+    height: min(88vh, 900px);
+    display: grid;
+    place-items: center;
+  }
+
+  .lightbox-figure {
+    margin: 0;
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .lightbox-image {
+    max-width: 92vw;
+    max-height: 76vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    background: rgb(255 255 255 / 6%);
+  }
+
+  .lightbox-caption {
+    color: rgb(255 255 255 / 82%);
+    font-size: 0.9rem;
+    text-align: center;
+    min-height: 1.2em;
+  }
+
+  .lightbox-button {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgb(255 255 255 / 12%);
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .lightbox-button:hover,
+  .lightbox-button:focus-visible {
+    background: rgb(255 255 255 / 26%);
+  }
+
+  .lightbox-button svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .lightbox-close {
+    top: -8px;
+    right: -8px;
+  }
+
+  .lightbox-prev {
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .lightbox-next {
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* One control per edge is all that fits beside the image on a phone. */
+  @media (max-width: 640px) {
+    .lightbox-prev {
+      left: 4px;
+    }
+
+    .lightbox-next {
+      right: 4px;
+    }
+
+    .lightbox-close {
+      top: 4px;
+      right: 4px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lightbox-button {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  const IMAGE_HREF = /\.(jpe?g|png|gif|webp|avif)(\?|#|$)/i;
+
+  function setupLightbox() {
+    const overlay = document.querySelector<HTMLDialogElement>("dialog.lightbox");
+    const galleries = document.querySelectorAll<HTMLElement>("[data-lightbox]");
+    if (!overlay || !galleries.length) return;
+
+    const image = overlay.querySelector<HTMLImageElement>(".lightbox-image");
+    const caption = overlay.querySelector<HTMLElement>("[data-lightbox-caption]");
+    const prevButton = overlay.querySelector<HTMLElement>("[data-lightbox-prev]");
+    const nextButton = overlay.querySelector<HTMLElement>("[data-lightbox-next]");
+    if (!image) return;
+
+    let slides: HTMLAnchorElement[] = [];
+    let index = 0;
+
+    const show = (next: number) => {
+      if (!slides.length) return;
+      index = (next + slides.length) % slides.length;
+      const slide = slides[index];
+      image.src = slide.href;
+      // The tile itself carries no alt text — it is a background image — so
+      // fall back to whatever the link says about itself.
+      const label = slide.getAttribute("data-caption") || slide.getAttribute("aria-label") || "";
+      image.alt = label;
+      if (caption) caption.textContent = label;
+      const many = slides.length > 1;
+      prevButton?.toggleAttribute("hidden", !many);
+      nextButton?.toggleAttribute("hidden", !many);
+    };
+
+    const close = () => {
+      if (overlay.open) overlay.close();
+    };
+
+    // Fires for the close button, for Escape, and for anything else that closes
+    // it — one place to undo what opening did. The dialog returns focus to the
+    // element that opened it on its own.
+    overlay.addEventListener("close", () => {
+      document.body.style.removeProperty("overflow");
+      image.src = "";
+    });
+
+    const open = (gallery: HTMLElement, link: HTMLAnchorElement) => {
+      slides = [...gallery.querySelectorAll<HTMLAnchorElement>("a[href]")].filter((a) =>
+        IMAGE_HREF.test(a.getAttribute("href") || "")
+      );
+      if (!slides.length) return;
+      show(slides.indexOf(link));
+      overlay.showModal();
+      // Stop the page behind the dialog from scrolling with it.
+      document.body.style.overflow = "hidden";
+    };
+
+    for (const gallery of galleries) {
+      if (gallery.hasAttribute("data-lightbox-ready")) continue;
+      gallery.setAttribute("data-lightbox-ready", "");
+      gallery.addEventListener("click", (event) => {
+        const link = (event.target as HTMLElement)?.closest?.("a[href]") as HTMLAnchorElement | null;
+        if (!link || !gallery.contains(link)) return;
+        if (!IMAGE_HREF.test(link.getAttribute("href") || "")) return;
+        // Leave modified clicks alone — opening in a new tab is a deliberate act.
+        if (event.metaKey || event.ctrlKey || event.shiftKey || (event as MouseEvent).button !== 0) return;
+        event.preventDefault();
+        open(gallery, link);
+      });
+    }
+
+    overlay.addEventListener("click", (event) => {
+      const target = event.target as HTMLElement;
+      if (target.closest("[data-lightbox-close]")) return close();
+      if (target.closest("[data-lightbox-prev]")) return show(index - 1);
+      if (target.closest("[data-lightbox-next]")) return show(index + 1);
+      // A click landing on the dialog itself is a click on the area around the
+      // image.
+      if (target === overlay) close();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (!overlay.open) return;
+      if (event.key === "ArrowLeft") show(index - 1);
+      else if (event.key === "ArrowRight") show(index + 1);
+    });
+  }
+
+  setupLightbox();
+  document.addEventListener("astro:page-load", setupLightbox);
+</script>

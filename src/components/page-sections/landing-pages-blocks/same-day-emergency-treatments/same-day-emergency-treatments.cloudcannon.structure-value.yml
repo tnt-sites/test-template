@@ -1,0 +1,35 @@
+label: Same Day Emergency Treatments
+icon: vertical_split
+description: Same Day Emergency Treatments section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/same-day-emergency-treatments
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  image: ""
+  imageAlt: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonBackgroundColor2: "#ffffff"
+  buttonTextColor2: "#5bb781"
+  buttonBackgroundHoverColor: "#4bad73"
+  buttonTextColor2HoverColor: "#ffffff"
+  buttonBackgroundColor2HoverColor: "#40a569"
+preview:
+  text:
+    - Same Day Emergency Treatments
+  icon: vertical_split
+picker_preview:
+  text: Same Day Emergency Treatments
+  subtext: Same Day Emergency Treatments section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/same-day-emergency-treatments/same-day-emergency-treatments.cloudcannon.inputs.yml

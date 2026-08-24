@@ -1,0 +1,13 @@
+label: Interior Content
+icon: article
+description: Side menu, heading, and a flexible list of prose, image, card, table, and CTA blocks.
+value:
+  _component: page-sections/shared-blocks/interior-content
+  id: ""
+  eyebrow: ""
+  menuLinks: []
+  heading: ""
+  headingLevel: h2
+  blocks: []
+  callUsBar: ""
+  accentColor: "#d44d5c"

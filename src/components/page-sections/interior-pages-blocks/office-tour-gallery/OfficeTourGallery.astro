@@ -1,0 +1,2162 @@
+---
+/**
+ * Office tour photo gallery — a grid of practice photos opening in a lightbox,
+ * beside the About Us side menu.
+ *
+ * The 21 image paths are hardcoded in the markup below; the migrator did not
+ * lift them into props, so the gallery cannot be edited in the CMS. The
+ * theme's own `page-sections/features/office-tour` carousel takes a
+ * `tourSlides` array and is the editable alternative if this page ever moves
+ * off the migrated layout.
+ */
+import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
+import Lightbox from "@core-elements/lightbox/Lightbox.astro";
+const {
+  subheading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  buttonTextColor = "#1b2e38",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverColor = "#0e4174",
+  hoverColor2 = "#0b457f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="office-tour-gallery" id={id || undefined} style={`--btntx:${buttonTextColor};--c2:${hoverBackgroundColor};--c3:${hoverBackgroundColor2};--c4:${hoverColor};--c5:${hoverColor2}`} {...rest}>
+  <div class="auf-box">
+    <div class="auf-box2">
+      <SideMenu heading={subheading} links={[{ text: buttonText, link: buttonLink }, { text: secondaryButtonText, link: secondaryButtonLink }, { text: secondaryButtonText2, link: secondaryButtonLink2 }, { text: secondaryButtonText3, link: secondaryButtonLink3 }, { text: secondaryButtonText4, link: secondaryButtonLink4 }, { text: secondaryButtonText5, link: secondaryButtonLink5 }]} />
+      <div class="auf-box5">
+        <div class="auf-box6">
+          <div class="auf-box7" data-lightbox>
+            <a class="auf-box8" href="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg" data-caption="Office tour photo 1 of 21">
+              <img src="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg" alt="Office tour photo 1 of 21" loading="eager" decoding="async" />
+            </a>
+            <a class="auf-box9" href="/wp-content/uploads/2024/01/img-Appointments.jpg" data-caption="Office tour photo 2 of 21">
+              <img src="/wp-content/uploads/2024/01/img-Appointments.jpg" alt="Office tour photo 2 of 21" loading="eager" decoding="async" />
+            </a>
+            <a class="auf-box10" href="/wp-content/uploads/2019/10/3d.jpg" data-caption="Office tour photo 3 of 21">
+              <img src="/wp-content/uploads/2019/10/3d.jpg" alt="Office tour photo 3 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box11" href="/wp-content/uploads/2019/10/4d.jpg" data-caption="Office tour photo 4 of 21">
+              <img src="/wp-content/uploads/2019/10/4d.jpg" alt="Office tour photo 4 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box12" href="/wp-content/uploads/2019/10/5d.jpg" data-caption="Office tour photo 5 of 21">
+              <img src="/wp-content/uploads/2019/10/5d.jpg" alt="Office tour photo 5 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box13" href="/wp-content/uploads/2019/10/6d.jpg" data-caption="Office tour photo 6 of 21">
+              <img src="/wp-content/uploads/2019/10/6d.jpg" alt="Office tour photo 6 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box14" href="/wp-content/uploads/2019/10/7d.jpg" data-caption="Office tour photo 7 of 21">
+              <img src="/wp-content/uploads/2019/10/7d.jpg" alt="Office tour photo 7 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box15" href="/wp-content/uploads/2019/10/8d.jpg" data-caption="Office tour photo 8 of 21">
+              <img src="/wp-content/uploads/2019/10/8d.jpg" alt="Office tour photo 8 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box16" href="/wp-content/uploads/2019/10/9d.jpg" data-caption="Office tour photo 9 of 21">
+              <img src="/wp-content/uploads/2019/10/9d.jpg" alt="Office tour photo 9 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box17" href="/wp-content/uploads/2019/10/10d.jpg" data-caption="Office tour photo 10 of 21">
+              <img src="/wp-content/uploads/2019/10/10d.jpg" alt="Office tour photo 10 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box18" href="/wp-content/uploads/2019/10/11d.jpg" data-caption="Office tour photo 11 of 21">
+              <img src="/wp-content/uploads/2019/10/11d.jpg" alt="Office tour photo 11 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box19" href="/wp-content/uploads/2019/10/13d.jpg" data-caption="Office tour photo 12 of 21">
+              <img src="/wp-content/uploads/2019/10/13d.jpg" alt="Office tour photo 12 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box20" href="/wp-content/uploads/2019/10/columbinecreek-office1.jpg" data-caption="Office tour photo 13 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office1.jpg" alt="Office tour photo 13 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box21" href="/wp-content/uploads/2019/10/columbinefrontoffice.jpg" data-caption="Office tour photo 14 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinefrontoffice.jpg" alt="Office tour photo 14 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box22" href="/wp-content/uploads/2019/10/columbinecreek-office8.jpg" data-caption="Office tour photo 15 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office8.jpg" alt="Office tour photo 15 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box23" href="/wp-content/uploads/2019/10/columbinecreek-office7.jpg" data-caption="Office tour photo 16 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office7.jpg" alt="Office tour photo 16 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box24" href="/wp-content/uploads/2019/10/columbinecreek-office6.jpg" data-caption="Office tour photo 17 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office6.jpg" alt="Office tour photo 17 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box25" href="/wp-content/uploads/2019/10/columbinecreek-office5.jpg" data-caption="Office tour photo 18 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office5.jpg" alt="Office tour photo 18 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box26" href="/wp-content/uploads/2019/10/Img-Edit.jpg" data-caption="Office tour photo 19 of 21">
+              <img src="/wp-content/uploads/2019/10/Img-Edit.jpg" alt="Office tour photo 19 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box27" href="/wp-content/uploads/2019/10/columbinecreek-office2.jpg" data-caption="Office tour photo 20 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office2.jpg" alt="Office tour photo 20 of 21" loading="lazy" decoding="async" />
+            </a>
+            <a class="auf-box28" href="/wp-content/uploads/2019/10/columbinecreek-office4.jpg" data-caption="Office tour photo 21 of 21">
+              <img src="/wp-content/uploads/2019/10/columbinecreek-office4.jpg" alt="Office tour photo 21 of 21" loading="lazy" decoding="async" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <Lightbox />
+</div>
+<style>
+  .office-tour-gallery {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .auf-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .auf-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .auf-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .auf-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auf-box7 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-height: 1px;
+    padding-bottom: 2510px;
+    position: relative;
+  }
+
+  .auf-box8 {
+    bottom: 2323.7px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 0px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor {
+    background-image: url("/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box9 {
+    bottom: 2245.2px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 78.5px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor2 {
+    background-image: url("/wp-content/uploads/2024/01/img-Appointments.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box10 {
+    bottom: 2087.5px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 236.2px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor3 {
+    background-image: url("/wp-content/uploads/2019/10/3d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box11 {
+    bottom: 2008.9px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 314.7px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor4 {
+    background-image: url("/wp-content/uploads/2019/10/4d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box12 {
+    bottom: 1851.2px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 472.5px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor5 {
+    background-image: url("/wp-content/uploads/2019/10/5d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box13 {
+    bottom: 1772.7px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 551px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor6 {
+    background-image: url("/wp-content/uploads/2019/10/6d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box14 {
+    bottom: 1615px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 708.7px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor7 {
+    background-image: url("/wp-content/uploads/2019/10/7d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box15 {
+    bottom: 1536.5px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 787.2px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor8 {
+    background-image: url("/wp-content/uploads/2019/10/8d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box16 {
+    bottom: 1378.8px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 944.9px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor9 {
+    background-image: url("/wp-content/uploads/2019/10/9d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box17 {
+    bottom: 1300.3px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 1023.4px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor10 {
+    background-image: url("/wp-content/uploads/2019/10/10d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box18 {
+    bottom: 1142.5px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 1181.1px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor11 {
+    background-image: url("/wp-content/uploads/2019/10/11d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box19 {
+    bottom: 1064px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 1259.7px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor12 {
+    background-image: url("/wp-content/uploads/2019/10/13d.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box20 {
+    bottom: 906.3px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 1417.4px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor13 {
+    background-image: url("/wp-content/uploads/2019/10/columbinecreek-office1.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box21 {
+    bottom: 827.8px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 1495.9px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-decor14 {
+    background-image: url("/wp-content/uploads/2019/10/columbinefrontoffice.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    min-height: 186px;
+    padding-bottom: 186.3px;
+    transition: all 0.8s ease;
+  }
+
+  .auf-box22 {
+    bottom: 670.1px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 1653.6px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box23 {
+    bottom: 591.6px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 1732.1px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer2 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box24 {
+    bottom: 433.8px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 1889.8px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer3 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box25 {
+    bottom: 355.3px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 1968.3px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer4 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box26 {
+    bottom: 197.6px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 2126.1px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer5 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box27 {
+    bottom: 119.1px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 60.5px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 2204.6px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer6 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box28 {
+    bottom: -38.6px;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 82.35%;
+    flex-shrink: 0;
+    left: 0px;
+    max-width: 82.35%;
+    min-height: 186px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 60.5px;
+    top: 2362.3px;
+    transition: all 0.35s ease;
+  }
+
+  .auf-spacer7 {
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    filter: opacity(0);
+    height: 93px;
+    min-height: 93px;
+    padding-bottom: 186.3px;
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transition: all 0.8s ease;
+  }
+
+  .auf-box8:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box8:hover .auf-decor {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box9:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box9:hover .auf-decor2 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box10:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box10:hover .auf-decor3 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box11:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box11:hover .auf-decor4 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box12:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box12:hover .auf-decor5 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box13:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box13:hover .auf-decor6 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box14:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box14:hover .auf-decor7 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box15:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box15:hover .auf-decor8 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box16:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box16:hover .auf-decor9 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box17:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box17:hover .auf-decor10 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box18:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box18:hover .auf-decor11 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box19:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box19:hover .auf-decor12 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box20:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box20:hover .auf-decor13 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box21:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box21:hover .auf-decor14 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box22:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box22:hover .auf-spacer {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box23:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box23:hover .auf-spacer2 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box24:hover {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box24:hover .auf-spacer3 {
+    border-top-color: #0e4174;
+    color: var(--c4);
+  }
+
+  .auf-box25:hover {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box25:hover .auf-spacer4 {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box26:hover {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box26:hover .auf-spacer5 {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box27:hover {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box27:hover .auf-spacer6 {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box28:hover {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  .auf-box28:hover .auf-spacer7 {
+    border-top-color: #0b457f;
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .auf-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    :global(.auf-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auf-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auf-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auf-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auf-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .auf-box7 {
+      padding-bottom: 1640px;
+    }
+
+    .auf-box8 {
+      bottom: 1500px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+    }
+
+    .auf-decor {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box9 {
+      bottom: 1500px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 0px;
+    }
+
+    .auf-decor2 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box10 {
+      bottom: 1350px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 150px;
+    }
+
+    .auf-decor3 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box11 {
+      bottom: 1350px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 150px;
+    }
+
+    .auf-decor4 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box12 {
+      bottom: 1200px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 300px;
+    }
+
+    .auf-decor5 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box13 {
+      bottom: 1200px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 300px;
+    }
+
+    .auf-decor6 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box14 {
+      bottom: 1050px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 450px;
+    }
+
+    .auf-decor7 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box15 {
+      bottom: 1050px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 450px;
+    }
+
+    .auf-decor8 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box16 {
+      bottom: 900px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 600px;
+    }
+
+    .auf-decor9 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box17 {
+      bottom: 900px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 600px;
+    }
+
+    .auf-decor10 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box18 {
+      bottom: 750px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 750px;
+    }
+
+    .auf-decor11 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box19 {
+      bottom: 750px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 750px;
+    }
+
+    .auf-decor12 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box20 {
+      bottom: 600px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      right: 220px;
+      top: 900px;
+    }
+
+    .auf-decor13 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box21 {
+      bottom: 600px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      top: 900px;
+    }
+
+    .auf-decor14 {
+      min-height: 140px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box22 {
+      bottom: 450px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 140px;
+      right: 220px;
+      top: 1050px;
+    }
+
+    .auf-spacer {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box23 {
+      bottom: 450px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      min-height: 140px;
+      top: 1050px;
+    }
+
+    .auf-spacer2 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box24 {
+      bottom: 300px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 140px;
+      right: 220px;
+      top: 1200px;
+    }
+
+    .auf-spacer3 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box25 {
+      bottom: 300px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      min-height: 140px;
+      top: 1200px;
+    }
+
+    .auf-spacer4 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box26 {
+      bottom: 150px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 140px;
+      right: 220px;
+      top: 1350px;
+    }
+
+    .auf-spacer5 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box27 {
+      bottom: 150px;
+      flex: 0 0 50%;
+      left: 220px;
+      max-width: 50%;
+      min-height: 140px;
+      top: 1350px;
+    }
+
+    .auf-spacer6 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+
+    .auf-box28 {
+      bottom: 0px;
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 140px;
+      right: 220px;
+      top: 1500px;
+    }
+
+    .auf-spacer7 {
+      height: 70px;
+      min-height: 70px;
+      padding-bottom: 140px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .auf-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    :global(.auf-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auf-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auf-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .auf-box7 {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      padding-bottom: 0px;
+    }
+
+    .auf-box8 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      width: 50%;
+    }
+
+    .auf-decor {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box9 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+    }
+
+    .auf-decor2 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box10 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor3 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box11 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor4 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box12 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor5 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box13 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor6 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box14 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor7 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box15 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor8 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box16 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor9 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box17 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor10 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box18 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor11 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box19 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor12 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box20 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-decor13 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box21 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-decor14 {
+      min-height: 265px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box22 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-spacer {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box23 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-spacer2 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box24 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-spacer3 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box25 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-spacer4 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box26 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-spacer5 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box27 {
+      bottom: 0px;
+      flex: 0 0 auto;
+      left: 0px;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      top: 0px;
+    }
+
+    .auf-spacer6 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+
+    .auf-box28 {
+      flex: 0 0 auto;
+      max-width: none;
+      min-height: 265px;
+      position: relative;
+      right: 0px;
+      top: 0px;
+      width: 50%;
+    }
+
+    .auf-spacer7 {
+      height: 132px;
+      min-height: 132px;
+      padding-bottom: 265px;
+    }
+  }
+
+  /*
+   * Gallery layout — a deliberate change from the source.
+   *
+   * The original positions every tile absolutely from JavaScript (a masonry
+   * script), so the captured CSS is a frozen set of offsets like
+   * `bottom: 2323.7px` that only hold for one viewport width — below 1440 the
+   * photos overlapped each other. These rules drop the offsets entirely and lay
+   * the tiles out as a grid of uniform horizontal rectangles, which is what was
+   * asked for and is also what survives a resize.
+   *
+   * Specificity beats the generated per-tile rules (`.auf-box7 > a` over
+   * `.auf-box8`), so the offsets are overridden without editing 21 rules.
+   */
+  .auf-box7 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-bottom: 0;
+    position: static;
+  }
+
+  .auf-box7 > a {
+    position: static;
+    inset: auto;
+    display: block;
+    width: 100%;
+    max-width: none;
+    flex: none;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 4px;
+    cursor: zoom-in;
+  }
+
+  /*
+   * The photos are real <img> elements rather than the captured background
+   * images. Seven of the twenty-one tiles were still lazy-loading when the page
+   * was captured, so they had no background to capture and came through as
+   * empty boxes — the URL was only ever on the anchor. Reading the image from
+   * the anchor's own href fixes those, and lets the browser lazy-load the
+   * gallery natively instead of fetching all twenty-one up front.
+   */
+  .auf-box7 > a > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    transition: transform 0.4s ease;
+  }
+
+  .auf-box7 > a:hover > img,
+  .auf-box7 > a:focus-visible > img {
+    transform: scale(1.04);
+  }
+
+  .auf-box7 > a:focus-visible {
+    outline: 3px solid var(--color-brand, #3b6278);
+    outline-offset: 2px;
+  }
+
+  @media (min-width: 640px) {
+    .auf-box7 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .auf-box7 {
+      gap: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .auf-box7 > a > img {
+      transition: none;
+    }
+
+    .auf-box7 > a:hover > img,
+    .auf-box7 > a:focus-visible > img {
+      transform: none;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .auf-box8 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box9 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor2 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box10 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor3 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box11 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor4 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box12 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor5 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box13 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor6 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box14 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor7 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box15 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor8 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box16 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor9 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box17 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor10 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box18 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor11 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box19 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor12 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box20 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor13 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box21 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-decor14 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box22 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box23 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer2 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box24 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer3 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box25 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer4 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box26 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer5 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box27 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer6 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-box28 {
+    color: rgb(27, 46, 56);
+  }
+  .auf-spacer7 {
+    color: rgb(27, 46, 56);
+  }
+  @media (min-width: 768px) {
+
+    .auf-box8 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box9 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box10 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box11 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box12 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box13 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box14 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor7 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box15 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor8 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box16 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor9 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box17 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor10 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box18 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor11 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box19 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor12 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box20 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor13 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box21 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor14 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box22 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box23 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box24 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box25 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box26 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box27 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box28 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer7 {
+      color: rgb(27, 46, 56);
+    }
+  }
+  @media (min-width: 1440px) {
+
+    .auf-box8 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box9 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box10 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box11 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box12 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box13 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box14 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor7 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box15 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor8 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box16 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor9 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box17 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor10 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box18 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor11 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box19 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor12 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box20 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor13 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box21 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-decor14 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box22 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box23 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box24 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box25 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box26 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box27 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-box28 {
+      color: rgb(27, 46, 56);
+    }
+
+    .auf-spacer7 {
+      color: rgb(27, 46, 56);
+    }
+  }
+/* wpmig:corrections:end */
+</style>

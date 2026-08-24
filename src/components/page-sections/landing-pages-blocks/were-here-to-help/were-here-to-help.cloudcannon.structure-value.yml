@@ -1,0 +1,23 @@
+label: Were Here To Help
+icon: interests
+description: Were Here To Help section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/were-here-to-help
+  id: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+preview:
+  text:
+    - Were Here To Help
+  icon: interests
+picker_preview:
+  text: Were Here To Help
+  subtext: Were Here To Help section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/were-here-to-help/were-here-to-help.cloudcannon.inputs.yml

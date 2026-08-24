@@ -1,0 +1,117 @@
+---
+/**
+ * Dental Savers Plan — migrated from  [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#e6eff4",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#3b6278",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="dental-savers-plan" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonTextHoverColor}`} {...rest}>
+  <div class="dsp-box">
+    <h2 class="dsp-heading">{heading}</h2>
+    {text && <div class="dsp-body" set:html={text} />}
+    {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" uppercase class="dsp-btn" text={buttonText} link={buttonLink || "#"} />}
+  </div>
+</div>
+<style>
+  .dental-savers-plan {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding: 40px 20px 45px 20px;
+    text-align: left;
+  }
+
+  .dsp-box {
+    box-sizing: border-box;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .dsp-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 6px;
+  }
+
+  .dsp-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  :global(.dsp-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 14.4px;
+    font-weight: 600;
+    line-height: 45px;
+    margin: 6px 0px 0px 0px;
+    padding: 0px 40px;
+    text-transform: uppercase;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+  }
+
+  :global(.dsp-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.dsp-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #3b6278;
+    color: var(--c6);
+  }
+
+  @media (min-width: 1440px) {
+    .dsp-box {
+      margin-left: 300px;
+      margin-right: 300px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  :global(.dsp-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    :global(.dsp-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.dsp-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,569 @@
+---
+/**
+ * We Offer Several Options — migrated from dental-services/cosmetic-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+import ServiceCardGrid from "@page-sections/shared-blocks/service-card-grid/ServiceCardGrid.astro";
+const {
+  text = "",
+  subheading = "",
+  image = "",
+  imageAlt = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  images = [],
+  textColor = "#1b2e38",
+  textColor2 = "#d44d5c",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<div class="we-offer-several-options" id={id || undefined} style={`--tx:${textColor};--c2:${textColor2}`} {...rest}>
+  <div class="woso-box">
+    <div class="woso-box2">
+      <div class="woso-box3">
+        <div class="woso-box4">
+          <div class="woso-box5">
+            {text && <div class="woso-body" set:html={text} />}
+          </div>
+        </div>
+        <div class="woso-box6">
+          {subheading && <h4 class="woso-heading">{subheading}</h4>}
+        </div>
+        <ServiceCardGrid items={list} accentColor={`var(--c2)`} />
+        <div class="woso-box27">
+          <div class="woso-box28">
+            <div class="woso-box29">
+              <div class="woso-box30">
+                {image && <img class="woso-media5" src={image} alt={imageAlt || ""} loading="lazy" width="150" height="150" />}
+              </div>
+              <div class="woso-box31">
+                {text2 && <div class="woso-text9" set:html={text2} />}
+              </div>
+              <div class="woso-box32">
+                {text3 && <p class="woso-text10">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="woso-box33">
+            <div class="woso-spacer" aria-hidden="true"></div>
+          </div>
+          <div class="woso-box34">
+            <div class="woso-spacer2" aria-hidden="true"></div>
+          </div>
+          <div class="woso-box35">
+            <div class="woso-spacer3" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+      <div class="woso-box36">
+        <div class="woso-box37">
+          <div class="woso-box38">
+            {text4 && <p class="woso-text11" set:html={text4} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .we-offer-several-options {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .woso-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .woso-box2 {
+    box-sizing: border-box;
+  }
+
+  .woso-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .woso-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .woso-box5 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .woso-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .woso-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .woso-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .woso-box27 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .woso-box28 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-box29 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .woso-box30 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .woso-media5 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .woso-box31 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .woso-text9 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .woso-box32 {
+    display: none;
+  }
+
+  .woso-text10 {
+    display: none;
+  }
+
+  .woso-box33 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-spacer {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-box34 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-spacer2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-box35 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-spacer3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .woso-box36 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .woso-box37 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .woso-box38 {
+    box-sizing: border-box;
+  }
+
+  .woso-text11 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .woso-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .woso-box5 {
+      min-height: 208px;
+    }
+
+    .woso-heading {
+      line-height: 24px;
+    }
+
+    .woso-box28 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .woso-box29 {
+      flex: 0 0 88.1%;
+      max-width: 88.1%;
+    }
+
+    .woso-box30 {
+      flex: 0 0 96.88%;
+      max-width: 96.88%;
+    }
+
+    .woso-box31 {
+      flex: 0 0 96.88%;
+      max-width: 96.88%;
+    }
+
+    .woso-box32 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 96.88%;
+      max-width: 96.88%;
+      text-align: center;
+    }
+
+    .woso-text10 {
+      box-sizing: border-box;
+      color: var(--c2);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .woso-box33 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .woso-spacer {
+      height: 225px;
+      min-height: 225px;
+    }
+
+    .woso-box34 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .woso-spacer2 {
+      height: 225px;
+      min-height: 225px;
+    }
+
+    .woso-box35 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .woso-spacer3 {
+      height: 225px;
+      min-height: 225px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .woso-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .woso-box5 {
+      min-height: 136px;
+    }
+
+    .woso-box27 {
+      flex-wrap: nowrap;
+    }
+
+    .woso-box29 {
+      flex: 0 0 92.67%;
+      max-width: 92.67%;
+    }
+
+    .woso-box30 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .woso-box31 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .woso-box32 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .woso-box30 {
+    text-align: left;
+  }
+  .woso-media5 {
+    text-align: left;
+  }
+  .woso-box31 {
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+  }
+  .woso-box33 {
+    text-align: center;
+  }
+  .woso-box6 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  .woso-text11 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .woso-text9 {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+
+    .woso-box32 {
+      color: rgb(212, 77, 92);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+    }
+
+    .woso-text10 {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .woso-box29 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+    }
+
+    .woso-box6 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .woso-box28 {
+      align-items: center;
+      background-color: rgb(245, 245, 245);
+    }
+
+    .woso-box30 {
+      text-align: center;
+    }
+
+    .woso-media5 {
+      text-align: center;
+    }
+
+    .woso-box31 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+    }
+
+    .woso-text9 {
+      text-align: center;
+    }
+
+    .woso-box33 {
+      text-align: left;
+    }
+
+    .woso-spacer {
+      text-align: left;
+    }
+  }
+  @media (min-width: 1440px) {
+    .woso-text11 {
+      line-height: 24px;
+    }
+
+    .woso-box32 {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .woso-text10 {
+      color: rgb(212, 77, 92);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    .woso-box29 {
+      align-items: center;
+      background-color: rgb(245, 245, 245);
+      text-align: left;
+    }
+
+    .woso-box30 {
+      text-align: center;
+    }
+
+    .woso-media5 {
+      text-align: center;
+    }
+
+    .woso-box31 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+    }
+
+    .woso-text9 {
+      text-align: center;
+    }
+
+    .woso-box33 {
+      text-align: left;
+    }
+
+    .woso-spacer {
+      text-align: left;
+    }
+
+    .woso-box6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .woso-heading {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+    }
+
+    .woso-box28 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+/* wpmig:corrections:end */
+</style>

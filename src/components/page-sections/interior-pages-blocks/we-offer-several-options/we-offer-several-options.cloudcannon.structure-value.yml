@@ -1,0 +1,30 @@
+label: We Offer Several Options
+icon: grid_view
+description: We Offer Several Options section with copy, editable images. Migrated by wp-migrator.
+value:
+  _component: page-sections/interior-pages-blocks/we-offer-several-options
+  id: ""
+  text: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  images:
+    - image: ""
+      imageAlt: ""
+      text: ""
+      text2: ""
+      link: ""
+  textColor: "#1b2e38"
+  textColor2: "#d44d5c"
+preview:
+  text:
+    - We Offer Several Options
+  icon: grid_view
+picker_preview:
+  text: We Offer Several Options
+  subtext: We Offer Several Options section with copy, editable images. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/we-offer-several-options/we-offer-several-options.cloudcannon.inputs.yml

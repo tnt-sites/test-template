@@ -1,0 +1,199 @@
+---
+/**
+ * We Are Here If — migrated from littleton-emergency-dentistry [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  image = "",
+  imageAlt = "",
+  backgroundImage = "/wp-content/uploads/2020/03/Hero-BG-Photo.jpg",
+  backgroundColor = "#eeeeee",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-are-here-if" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="wahi-box">
+    <div class="wahi-box2">
+      <div class="wahi-box3">
+        <h1 class="wahi-heading">{heading}</h1>
+      </div>
+      <div class="wahi-box4">
+        {subheading && <h2 class="wahi-heading2" set:html={subheading} />}
+      </div>
+    </div>
+    <div class="wahi-box5">
+      {image && <img class="wahi-media" src={image} alt={imageAlt || ""} loading="lazy" width="1017" height="600" />}
+    </div>
+  </div>
+</section>
+<style>
+  .we-are-here-if {
+    background-color: var(--bg);
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+  .wahi-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .wahi-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .wahi-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: 24px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wahi-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wahi-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wahi-heading2 {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .wahi-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: end;
+  }
+
+  .wahi-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .wahi-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 227px;
+    }
+
+    .wahi-box3 {
+      margin-left: 4px;
+      margin-top: 0px;
+      text-align: left;
+    }
+
+    .wahi-heading {
+      font-size: 14.4px;
+      line-height: 14.4px;
+    }
+
+    .wahi-box4 {
+      text-align: left;
+    }
+
+    .wahi-box5 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wahi-box {
+      flex-wrap: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1370px;
+    }
+
+    .wahi-box2 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      min-height: 485px;
+    }
+
+    .wahi-heading {
+      font-size: 25.6px;
+      line-height: 25.6px;
+    }
+
+    .wahi-heading2 {
+      font-size: 88px;
+      line-height: 79.2px;
+    }
+
+    .wahi-box5 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wahi-box4 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+  }
+  .wahi-box5 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+  }
+  .wahi-heading {
+    font-family: Open Sans Condensed, sans-serif;
+    font-size: 25.6px;
+    font-weight: 700;
+    line-height: 25.6px;
+  }
+  .wahi-heading2 {
+    font-family: Open Sans Condensed, sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 79.2px;
+  }
+/* wpmig:corrections:end */
+</style>

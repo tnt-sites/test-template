@@ -1,0 +1,10 @@
+_snippets:
+  media_block:
+    template: astro_component
+    inline: false
+    preview:
+      text: Media Block
+    definitions:
+      component_name: page-sections/interior-pages-blocks/media-block
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/media-block/media-block.cloudcannon.inputs.yml

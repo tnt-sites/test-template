@@ -1,0 +1,25 @@
+label: What Our Patients Say
+icon: grid_view
+description: What Our Patients Say section with heading, copy, editable images. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/what-our-patients-say
+  id: ""
+  heading: ""
+  subheading: ""
+  heading2: ""
+  images:
+    - link: ""
+      image: ""
+      imageAlt: ""
+  backgroundColor: "#e6eff4"
+  headingColor: "#3b6278"
+  hoverColor: "#5bb781"
+preview:
+  text:
+    - What Our Patients Say
+  icon: grid_view
+picker_preview:
+  text: What Our Patients Say
+  subtext: What Our Patients Say section with heading, copy, editable images. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/what-our-patients-say/what-our-patients-say.cloudcannon.inputs.yml

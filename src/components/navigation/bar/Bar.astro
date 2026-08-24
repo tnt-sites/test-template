@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { schedulingLinkAttrs } from "@component-utils/scheduling-links";
 
 const { navData = [], class: className, _component, ...htmlAttributes } = Astro.props;
 
@@ -21,6 +22,8 @@ function createNavItemData(item, level, parentGroupId) {
   return {
     ...item,
     hasChildren,
+    // Spread onto the item's anchor — empty for everything but booking links.
+    linkAttrs: schedulingLinkAttrs(item.path),
     level,
     dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
@@ -41,7 +44,14 @@ function createNavItemData(item, level, parentGroupId) {
         if (!itemData.hasChildren) {
           return (
             <li class="nav-item">
-              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+              <a
+                href={itemData.path}
+                {...itemData.linkAttrs}
+                aria-current={itemData.isCurrent ? "page" : undefined}
+              >
+                {itemData.icon && (
+                  <Icon name={itemData.icon} size="none" class="nav-item-lead" aria-hidden="true" />
+                )}
                 {itemData.name}
               </a>
             </li>
@@ -59,7 +69,11 @@ function createNavItemData(item, level, parentGroupId) {
               aria-controls={itemData.contentId}
               autocomplete="off"
             />
-            <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+            <a
+              href={itemData.path}
+              {...itemData.linkAttrs}
+              aria-current={itemData.isCurrent ? "page" : undefined}
+            >
               {itemData.name}
             </a>
             <label
@@ -90,8 +104,17 @@ function createNavItemData(item, level, parentGroupId) {
                       <li class="nav-item">
                         <a
                           href={childData.path}
+                          {...childData.linkAttrs}
                           aria-current={childData.isCurrent ? "page" : undefined}
                         >
+                          {childData.icon && (
+                            <Icon
+                              name={childData.icon}
+                              size="none"
+                              class="nav-item-lead"
+                              aria-hidden="true"
+                            />
+                          )}
                           {childData.name}
                         </a>
                       </li>
@@ -111,8 +134,17 @@ function createNavItemData(item, level, parentGroupId) {
                       />
                       <a
                         href={childData.path}
+                        {...childData.linkAttrs}
                         aria-current={childData.isCurrent ? "page" : undefined}
                       >
+                        {childData.icon && (
+                          <Icon
+                            name={childData.icon}
+                            size="none"
+                            class="nav-item-lead"
+                            aria-hidden="true"
+                          />
+                        )}
                         {childData.name}
                       </a>
                       <label
@@ -146,8 +178,17 @@ function createNavItemData(item, level, parentGroupId) {
                               <li class="nav-item">
                                 <a
                                   href={grandChildData.path}
+                                  {...grandChildData.linkAttrs}
                                   aria-current={grandChildData.isCurrent ? "page" : undefined}
                                 >
+                                  {grandChildData.icon && (
+                                    <Icon
+                                      name={grandChildData.icon}
+                                      size="none"
+                                      class="nav-item-lead"
+                                      aria-hidden="true"
+                                    />
+                                  )}
                                   {grandChildData.name}
                                 </a>
                               </li>

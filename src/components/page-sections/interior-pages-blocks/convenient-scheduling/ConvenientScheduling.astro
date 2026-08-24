@@ -1,0 +1,639 @@
+---
+/**
+ * Convenient Scheduling — migrated from schedule-appointment [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  embedUrl = "",
+  text2 = "",
+  image = "",
+  imageAlt = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  text3 = "",
+  subheading = "",
+  text4 = "",
+  heading2 = "",
+  text5 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  hoverColor = "#064d96",
+  hoverColor2 = "#09498c",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="convenient-scheduling" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`} {...rest}>
+  <div class="cs-box">
+    <div class="cs-box2">
+      <div class="cs-box3">
+        <div class="cs-box4">
+          <div class="cs-box5">
+            <h2 class="cs-heading">{heading}</h2>
+          </div>
+          <div class="cs-box6">
+            {text && <div class="cs-text" set:html={text} />}
+          </div>
+          <div class="cs-box7">
+            <div class="cs-box8">
+              <iframe class="cs-embed" src={embedUrl} title="Candidate for Implants - South Airdrie Smiles" allow="geolocation; microphone; camera; fullscreen" frameborder="0" loading="lazy"></iframe>
+            </div>
+            <div class="cs-box9">
+              {text2 && <div class="cs-text2" set:html={text2} />}
+            </div>
+          </div>
+        </div>
+        <div class="cs-box10">
+          <div class="cs-box11">
+            {image && <img class="cs-media" src={image} alt={imageAlt || ""} loading="lazy" width="900" height="577" />}
+          </div>
+          <ul class="cs-box12">
+            <li class="cs-box13">
+              {buttonText && <a class="cs-link" href={buttonLink || "#"}>{buttonText}</a>}
+            </li>
+            <li class="cs-box14">
+              {secondaryButtonText && <a class="cs-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+            </li>
+            {text3 && <div class="cs-body" set:html={text3} />}
+          </ul>
+        </div>
+      </div>
+      <div class="cs-box15">
+        <div class="cs-box16">
+          {subheading && <h3 class="cs-heading2">{subheading}</h3>}
+        </div>
+        <div class="cs-box17">
+          {text4 && <div class="cs-body2" set:html={text4} />}
+        </div>
+      </div>
+      <div class="cs-box18">
+        <div class="cs-box19">
+          {heading2 && <h3 class="cs-heading3" set:html={heading2} />}
+        </div>
+        <div class="cs-box20">
+          <div class="cs-box21">
+            {text5 && <div class="cs-body3" set:html={text5} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .convenient-scheduling {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .convenient-scheduling :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cs-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box2 {
+    box-sizing: border-box;
+  }
+
+  .cs-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .cs-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cs-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cs-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cs-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cs-text {
+    box-sizing: border-box;
+  }
+
+  .cs-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cs-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cs-embed {
+    aspect-ratio: 0.38 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cs-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cs-text2 {
+    box-sizing: border-box;
+    margin-top: -9px;
+  }
+
+  .cs-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cs-box10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cs-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cs-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    min-height: 285px;
+    padding-left: 0px;
+  }
+
+  .cs-box12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box13 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cs-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-link {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .cs-link :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-box14 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 7.5px;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cs-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-link2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .cs-link2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cs-body :global(li) {
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 7.5px;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cs-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cs-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cs-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cs-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 592px;
+  }
+
+  .cs-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cs-box18 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cs-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cs-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cs-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cs-box21 {
+    box-sizing: border-box;
+    min-height: 472px;
+  }
+
+  .cs-body3 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cs-link:hover {
+    border-top-color: #064d96;
+    color: var(--c3);
+  }
+
+  .cs-link2:hover {
+    border-top-color: #09498c;
+    color: var(--c4);
+  }
+
+  @media (min-width: 768px) {
+    .cs-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cs-box3 {
+      max-width: 1024px;
+    }
+
+    .cs-box4 {
+      flex: 0 0 70.58%;
+      max-width: 70.58%;
+    }
+
+    .cs-embed {
+      aspect-ratio: 0.53 / 1;
+    }
+
+    .cs-box10 {
+      flex: 0 0 29.42%;
+      max-width: 29.42%;
+      min-height: 1092px;
+    }
+
+    .cs-box12 {
+      min-height: 333px;
+    }
+
+    .cs-box17 {
+      min-height: 304px;
+    }
+
+    .cs-box21 {
+      min-height: 256px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cs-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cs-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .cs-box4 {
+      flex: 0 0 70.54%;
+      max-width: 70.54%;
+    }
+
+    .cs-embed {
+      aspect-ratio: 1 / 1;
+    }
+
+    .cs-box10 {
+      flex: 0 0 29.46%;
+      max-width: 29.46%;
+      min-height: 909px;
+    }
+
+    .cs-box12 {
+      min-height: 285px;
+    }
+
+    .cs-box17 {
+      min-height: 184px;
+    }
+
+    .cs-box21 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cs-box4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .cs-text2 {
+    text-align: center;
+  }
+  .cs-box10 {
+    text-align: center;
+  }
+  .cs-box11 {
+    text-align: left;
+  }
+  .cs-media {
+    align-items: center;
+    text-align: left;
+  }
+  .cs-box7 {
+    line-height: 16px;
+  }
+  .cs-embed {
+    line-height: 24px;
+  }
+  .cs-box12 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cs-link {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cs-link2 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cs-box13 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cs-box14 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cs-heading2 {
+      font-weight: 400;
+    }
+
+    .cs-heading3 {
+      font-weight: 400;
+    }
+
+    .cs-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cs-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cs-body {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .cs-box12 {
+      line-height: 24px;
+    }
+
+    .cs-box13 {
+      line-height: 24px;
+    }
+
+    .cs-box14 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cs-heading2 {
+      font-weight: 400;
+    }
+
+    .cs-heading3 {
+      font-weight: 400;
+    }
+
+    .cs-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cs-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cs-body {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .cs-box12 {
+      line-height: 24px;
+    }
+
+    .cs-box13 {
+      line-height: 24px;
+    }
+
+    .cs-box14 {
+      line-height: 24px;
+    }
+  }
+  .cs-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -2,17 +2,12 @@
 _schema: default
 title: Blog
 pageSections:
-  - _component: page-sections/heroes/hero-center
-    eyebrow: ""
-    heading: All posts
-    subtext: >-
-      This paginated blog index displays a grid of article cards, each waiting
-      to be populated with genuine posts once your content strategy moves beyond
-      placeholder text.
-    buttonSections: []
-    colorScheme: default
-    backgroundColor: "var(--color-bg)"
-description: >-
-  Read our latest articles and insights on web development, design, and
-  technology.
+  - _component: page-sections/interior-pages-blocks/page-banner-stacked
+    id: ""
+    heading: Blog
+    subheading: Dental Care Blog
+    backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+    headingColor: "#1b2e38"
+description: Dental health news, treatment guides and practice updates from
+  Columbine Creek Dentistry in Littleton, CO.
 ---

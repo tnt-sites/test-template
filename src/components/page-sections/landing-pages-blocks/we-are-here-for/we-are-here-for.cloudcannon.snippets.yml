@@ -1,0 +1,10 @@
+_snippets:
+  we_are_here_for:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Are Here For
+    definitions:
+      component_name: page-sections/landing-pages-blocks/we-are-here-for
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/we-are-here-for/we-are-here-for.cloudcannon.inputs.yml

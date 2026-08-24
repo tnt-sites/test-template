@@ -1,0 +1,46 @@
+_inputs:
+  cards:
+    type: array
+    options:
+      structures: _structures.online_scheduling_item
+  backgroundImage:
+    type: image
+  titleColor:
+    type: color
+  textColor:
+    type: color
+  hoverColor:
+    type: color
+  textHoverColor:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverColor2:
+    type: color
+  hoverColor3:
+    type: color
+  hoverColor4:
+    type: color
+_structures:
+  online_scheduling_item:
+    values:
+      - value:
+          link: ""
+          image: ""
+          imageAlt: ""
+          title: ""
+          buttonText: ""
+          buttonLink: ""
+        _inputs:
+          link:
+            type: url
+          image:
+            type: image
+          imageAlt:
+            type: text
+          title:
+            type: text
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

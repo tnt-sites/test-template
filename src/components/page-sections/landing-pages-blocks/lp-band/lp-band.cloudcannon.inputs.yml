@@ -1,0 +1,30 @@
+_inputs:
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  items:
+    type: array
+    options:
+      structures: _structures.lp_band_item
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color
+  titleColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundHoverColor:
+    type: color
+_structures:
+  lp_band_item:
+    values:
+      - value:
+          title: ""
+          text: ""
+        _inputs:
+          title:
+            type: text
+          text:
+            type: textarea

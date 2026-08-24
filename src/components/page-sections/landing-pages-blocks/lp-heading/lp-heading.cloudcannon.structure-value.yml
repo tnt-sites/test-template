@@ -1,0 +1,17 @@
+label: Lp Heading
+icon: interests
+description: If Youre Experiencing Dental section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-heading
+  id: ""
+  heading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - Lp Heading
+  icon: interests
+picker_preview:
+  text: Lp Heading
+  subtext: If Youre Experiencing Dental section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-heading/lp-heading.cloudcannon.inputs.yml

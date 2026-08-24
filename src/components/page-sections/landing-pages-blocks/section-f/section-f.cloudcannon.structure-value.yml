@@ -1,0 +1,16 @@
+label: Section F
+icon: panorama
+description: Section F section with imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/section-f
+  id: ""
+  backgroundImage: /wp-content/uploads/2020/03/swirl-bottom.png
+preview:
+  text:
+    - Section F
+  icon: panorama
+picker_preview:
+  text: Section F
+  subtext: Section F section with imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/section-f/section-f.cloudcannon.inputs.yml

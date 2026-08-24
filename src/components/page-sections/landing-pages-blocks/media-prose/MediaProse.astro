@@ -1,0 +1,461 @@
+---
+/**
+ * Good Vibes — migrated from lp/new-patient [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  image = "",
+  imageAlt = "",
+  headingColor = "#3b6278",
+  textColor = "#3b6278",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#1b2e38",
+  hoverColor = "#5bb781",
+  hoverBackgroundColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="good-vibes" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor};--c7:${hoverBackgroundColor}`} {...rest}>
+  <section class="gv-box">
+    <div class="gv-box2">
+      <div class="gv-box3">
+        <div class="gv-box4">
+          <div class="gv-box5">
+            <h2 class="gv-heading" set:html={heading} />
+          </div>
+        </div>
+        <div class="gv-box6">
+          <div class="gv-box7">
+            {text && <p class="gv-text">{text}</p>}
+          </div>
+        </div>
+        <div class="gv-box8">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gv-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+      <div class="gv-box9">
+        <div class="gv-box10">
+          <div class="gv-box11">
+            {image && <img class="gv-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<style>
+  .good-vibes {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .good-vibes :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gv-box {
+    box-sizing: border-box;
+    padding: 30px;
+    position: relative;
+  }
+
+  .gv-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gv-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .gv-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gv-box3 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gv-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gv-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 65px;
+    position: relative;
+    text-align: center;
+  }
+
+  .gv-box5 {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    margin-top: 15px;
+  }
+
+  .gv-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .gv-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .gv-box7 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .gv-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gv-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .gv-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.gv-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gv-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gv-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .gv-box9 {
+    align-content: center;
+    align-items: center;
+    background-image: url("/wp-content/uploads/2024/01/img-Good-Vibes-1.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .gv-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .gv-box11 {
+    box-sizing: border-box;
+  }
+
+  .gv-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  :global(.gv-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #1b2e38;
+    color: var(--c5);
+  }
+
+  :global(.gv-btn):hover .gv-box9 {
+    transform: none;
+  }
+
+  :global(.gv-btn):hover .gv-box10 {
+    background-color: var(--c7);
+    border-top-color: #ffffff;
+    color: var(--c6);
+  }
+
+  @media (min-width: 768px) {
+    .good-vibes {
+      left: -39px;
+      right: 39px;
+    }
+
+    .gv-box {
+      padding: 0px;
+    }
+
+    .gv-box2 {
+      max-width: 1024px;
+    }
+
+    .gv-box3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 340px;
+      padding: 30px;
+    }
+
+    .gv-box4 {
+      min-height: auto;
+      text-align: start;
+    }
+
+    .gv-box5 {
+      margin-top: 0px;
+    }
+
+    .gv-heading {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .gv-box6 {
+      text-align: start;
+    }
+
+    .gv-text {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    .gv-box8 {
+      text-align: left;
+    }
+
+    :global(.gv-btn) {
+      text-align: center;
+    }
+
+    .gv-box9 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .good-vibes {
+      left: -165px;
+      right: 165px;
+    }
+
+    .gv-box2 {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gv-box3 {
+      min-height: auto;
+      padding: 100px 50px;
+    }
+
+    .gv-box4 {
+      margin-bottom: 20px;
+    }
+
+    .gv-heading {
+      font-size: 45px;
+      line-height: 60px;
+    }
+
+    .gv-box6 {
+      margin-bottom: 20px;
+    }
+
+    .gv-box7 {
+      margin-bottom: 12px;
+    }
+
+    .gv-text {
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    .gv-box10 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gv-box11 {
+      display: none;
+    }
+
+    .gv-media {
+      display: none;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  :global(.gv-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .gv-box5 {
+      color: rgb(59, 98, 120);
+      font-family: Montserrat, sans-serif;
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .gv-box7 {
+      color: rgb(59, 98, 120);
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    .gv-box8 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    :global(.gv-btn) {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      justify-content: normal;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .gv-media {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    .gv-box3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: start;
+    }
+
+    .gv-box9 {
+      align-items: normal;
+      text-align: center;
+    }
+
+    .gv-box11 {
+      text-align: left;
+    }
+
+    .gv-box2 {
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+  @media (min-width: 1440px) {
+
+    :global(.gv-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .gv-text {
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 40px;
+  }
+  .gv-heading {
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

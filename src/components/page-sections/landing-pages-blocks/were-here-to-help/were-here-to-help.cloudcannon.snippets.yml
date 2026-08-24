@@ -1,0 +1,10 @@
+_snippets:
+  were_here_to_help:
+    template: astro_component
+    inline: false
+    preview:
+      text: Were Here To Help
+    definitions:
+      component_name: page-sections/landing-pages-blocks/were-here-to-help
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/were-here-to-help/were-here-to-help.cloudcannon.inputs.yml

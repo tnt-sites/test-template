@@ -1,0 +1,10 @@
+_snippets:
+  we_offer_several_options:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Offer Several Options
+    definitions:
+      component_name: page-sections/interior-pages-blocks/we-offer-several-options
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/we-offer-several-options/we-offer-several-options.cloudcannon.inputs.yml

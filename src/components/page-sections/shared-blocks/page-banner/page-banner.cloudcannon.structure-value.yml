@@ -1,0 +1,19 @@
+label: Page Banner
+icon: vertical_split
+description: Cosmetic Dentistry section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/shared-blocks/page-banner
+  id: ""
+  eyebrow: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Page Banner
+  icon: vertical_split
+picker_preview:
+  text: Page Banner
+  subtext: Cosmetic Dentistry section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/shared-blocks/page-banner/page-banner.cloudcannon.inputs.yml

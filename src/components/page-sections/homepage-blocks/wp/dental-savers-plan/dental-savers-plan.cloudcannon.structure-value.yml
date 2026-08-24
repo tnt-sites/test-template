@@ -1,0 +1,25 @@
+label: Dental Savers Plan
+icon: interests
+description: Dental Savers Plan section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/dental-savers-plan
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#e6eff4"
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#3b6278"
+preview:
+  text:
+    - Dental Savers Plan
+  icon: interests
+picker_preview:
+  text: Dental Savers Plan
+  subtext: Dental Savers Plan section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/dental-savers-plan/dental-savers-plan.cloudcannon.inputs.yml

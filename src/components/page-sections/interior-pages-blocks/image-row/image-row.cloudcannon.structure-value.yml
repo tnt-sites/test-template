@@ -1,0 +1,18 @@
+label: Image Row
+icon: grid_view
+description: A row of images, two across on wider screens.
+value:
+  _component: page-sections/interior-pages-blocks/image-row
+  id: ""
+  images:
+    - image: ""
+      imageAlt: ""
+preview:
+  text:
+    - Image Row
+  icon: grid_view
+picker_preview:
+  text: Image Row
+  subtext: A row of images, two across on wider screens.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/image-row/image-row.cloudcannon.inputs.yml

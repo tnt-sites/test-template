@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { schedulingLinkAttrs } from "@component-utils/scheduling-links";
 // @ts-ignore
 import MarkdownIt from "markdown-it";
 
@@ -114,7 +115,7 @@ const tagProps = normalizedModalTarget
       "aria-controls": normalizedModalTarget,
     }
   : Tag === "a" && link
-    ? { href: link }
+    ? { href: link, ...schedulingLinkAttrs(link) }
     : Tag === "button"
       ? { type: "button" }
       : {};

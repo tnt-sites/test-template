@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "Columbine Creek Dentistry - Dentist Littleton",
   "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "description": "We have expert dentist in Littleton, CO who offers the best dental treatments to patients. Contact Columbine Creek Dentistry today for safe dental environment.",
+  "logoSource": "/wp-content/themes/ColumbineCreek/img/logo.png",
+  "titleFormat": "{title} | Columbine Creek Dentistry",
   "twitterHandle": "@yourusername"
 }

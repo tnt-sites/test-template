@@ -1,0 +1,20 @@
+label: Columbine Creek Has A
+icon: vertical_split
+description: Columbine Creek Has A section with copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/columbine-creek-has-a
+  id: ""
+  text: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Columbine Creek Has A
+  icon: vertical_split
+picker_preview:
+  text: Columbine Creek Has A
+  subtext: Columbine Creek Has A section with copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/columbine-creek-has-a/columbine-creek-has-a.cloudcannon.inputs.yml

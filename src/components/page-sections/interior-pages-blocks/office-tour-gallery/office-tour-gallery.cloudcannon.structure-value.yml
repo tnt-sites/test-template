@@ -1,0 +1,33 @@
+label: Office Tour Gallery
+icon: interests
+description: Lightbox photo grid of the practice. Images are hardcoded, not editable.
+value:
+  _component: page-sections/interior-pages-blocks/office-tour-gallery
+  id: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  buttonTextColor: "#1b2e38"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverColor: "#0e4174"
+  hoverColor2: "#0b457f"
+preview:
+  text:
+    - Office Tour Gallery
+  icon: interests
+picker_preview:
+  text: Office Tour Gallery
+  subtext: Lightbox photo grid of the practice. Images are hardcoded, not editable.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/office-tour-gallery/office-tour-gallery.cloudcannon.inputs.yml

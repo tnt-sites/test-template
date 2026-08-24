@@ -1,0 +1,776 @@
+---
+/**
+ * We Can Provide You C — migrated from littleton-emergency-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  image2 = "",
+  image2Alt = "",
+  heading2 = "",
+  image3 = "",
+  image3Alt = "",
+  heading3 = "",
+  image4 = "",
+  image4Alt = "",
+  heading4 = "",
+  heading5 = "",
+  heading6 = "",
+  text = "",
+  embedUrl = "",
+  heading7 = "",
+  backgroundColor = "#eeeeee",
+  headingColor = "#1b2e38",
+  textColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-can-provide-you-c" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="wcpy-box">
+    <div class="wcpy-box2">
+      <div class="wcpy-box3">
+        <div class="wcpy-box4">
+          <h2 class="wcpy-heading">{heading}</h2>
+        </div>
+      </div>
+      <div class="wcpy-box5">
+        <div class="wcpy-box6">
+          <figure class="wcpy-box7">
+            {image && <img class="wcpy-media" src={image} alt={imageAlt || ""} loading="lazy" width="75" height="75" />}
+          </figure>
+          <div class="wcpy-box8">
+            {subheading && <h3 class="wcpy-heading2">{subheading}</h3>}
+          </div>
+        </div>
+      </div>
+      <div class="wcpy-box9">
+        <div class="wcpy-box10">
+          <figure class="wcpy-box11">
+            {image2 && <img class="wcpy-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="75" height="75" />}
+          </figure>
+          <div class="wcpy-box12">
+            {heading2 && <h3 class="wcpy-heading3">{heading2}</h3>}
+          </div>
+        </div>
+      </div>
+      <div class="wcpy-box13">
+        <div class="wcpy-box14">
+          <figure class="wcpy-box15">
+            {image3 && <img class="wcpy-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="75" height="75" />}
+          </figure>
+          <div class="wcpy-box16">
+            {heading3 && <h3 class="wcpy-heading4">{heading3}</h3>}
+          </div>
+        </div>
+      </div>
+      <div class="wcpy-box17">
+        <div class="wcpy-box18">
+          <figure class="wcpy-box19">
+            {image4 && <img class="wcpy-media4" src={image4} alt={image4Alt || ""} loading="lazy" width="75" height="75" />}
+          </figure>
+          <div class="wcpy-box20">
+            {heading4 && <h3 class="wcpy-heading5">{heading4}</h3>}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wcpy-box21">
+      <section class="wcpy-box22">
+        <div class="wcpy-box23">
+          <div class="wcpy-box24">
+            {heading5 && <h3 class="wcpy-heading6">{heading5}</h3>}
+          </div>
+          <div class="wcpy-box25">
+            {heading6 && <h4 class="wcpy-heading7">{heading6}</h4>}
+          </div>
+          <div class="wcpy-box26">
+            <div class="wcpy-decor" aria-hidden="true"></div>
+          </div>
+          <div class="wcpy-box27">
+            <div class="wcpy-box28">
+              {text && <p class="wcpy-text">{text}</p>}
+            </div>
+          </div>
+          <div class="wcpy-box29">
+            <iframe class="wcpy-embed" src={embedUrl} title="Candidate for Implants - South Airdrie Smiles" allow="geolocation; microphone; camera; fullscreen" frameborder="0" loading="lazy"></iframe>
+          </div>
+          <div class="wcpy-box30">
+            <div class="wcpy-decor2" aria-hidden="true"></div>
+          </div>
+          <div class="wcpy-box31">
+            {heading7 && <h3 class="wcpy-heading8">{heading7}</h3>}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<style>
+  .we-can-provide-you-c {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+  .wcpy-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1370px;
+    position: relative;
+  }
+
+  .wcpy-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wcpy-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcpy-box4 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  .wcpy-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .wcpy-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .wcpy-box6 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .wcpy-box7 {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px auto;
+    max-width: 59px;
+  }
+
+  .wcpy-media {
+    box-sizing: border-box;
+    display: block;
+    line-height: 0px;
+    width: 100%;
+  }
+
+  .wcpy-box8 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-heading2 {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .wcpy-box10 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .wcpy-box11 {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px auto;
+    max-width: 59px;
+  }
+
+  .wcpy-media2 {
+    box-sizing: border-box;
+    display: block;
+    line-height: 0px;
+    width: 100%;
+  }
+
+  .wcpy-box12 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-heading3 {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .wcpy-box14 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .wcpy-box15 {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px auto;
+    max-width: 59px;
+  }
+
+  .wcpy-media3 {
+    box-sizing: border-box;
+    display: block;
+    line-height: 0px;
+    width: 100%;
+  }
+
+  .wcpy-box16 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-heading4 {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .wcpy-box18 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .wcpy-box19 {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0px auto;
+    max-width: 59px;
+  }
+
+  .wcpy-media4 {
+    box-sizing: border-box;
+    display: block;
+    line-height: 0px;
+    width: 100%;
+  }
+
+  .wcpy-box20 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-heading5 {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box21 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wcpy-box22 {
+    background-image: linear-gradient(150deg, #3b6278 0%, #204960 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 16px;
+    position: relative;
+  }
+
+  .wcpy-box23 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wcpy-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading6 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Damion, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading7 {
+    box-sizing: border-box;
+    color: #cdcdcd;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 19.2px;
+    font-weight: 600;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box26 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .wcpy-decor {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 89.94%;
+    margin-left: 15.9px;
+    margin-right: 15.9px;
+    max-width: 89.94%;
+    min-height: 1px;
+  }
+
+  .wcpy-box27 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14.4px;
+    line-height: 21.6px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcpy-box28 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wcpy-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wcpy-embed {
+    aspect-ratio: 0.39 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .wcpy-box30 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .wcpy-decor2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 89.94%;
+    margin-left: 15.9px;
+    margin-right: 15.9px;
+    max-width: 89.94%;
+    min-height: 1px;
+  }
+
+  .wcpy-box31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading8 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: rgba(255, 255, 255, 0.35) 0px 0px 10px;
+  }
+
+  @media (min-width: 768px) {
+    .wcpy-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 1160px;
+      padding: 15px;
+    }
+
+    .wcpy-box3 {
+      min-height: 142px;
+      text-align: left;
+    }
+
+    .wcpy-box4 {
+      margin-top: 60px;
+    }
+
+    .wcpy-heading {
+      font-size: 27.2px;
+      line-height: 27.2px;
+    }
+
+    .wcpy-box6 {
+      align-items: center;
+      display: flex;
+      text-align: start;
+    }
+
+    .wcpy-box7 {
+      display: block;
+      flex: 0 0 12.43%;
+      margin-left: 0px;
+      margin-right: 16px;
+      max-width: 12.43%;
+    }
+
+    .wcpy-box8 {
+      flex: 0 0 83.05%;
+      max-width: 83.05%;
+    }
+
+    .wcpy-box10 {
+      align-items: center;
+      display: flex;
+      text-align: start;
+    }
+
+    .wcpy-box11 {
+      display: block;
+      flex: 0 0 12.43%;
+      margin-left: 0px;
+      margin-right: 16px;
+      max-width: 12.43%;
+    }
+
+    .wcpy-box12 {
+      flex: 0 0 83.05%;
+      max-width: 83.05%;
+    }
+
+    .wcpy-box14 {
+      align-items: center;
+      display: flex;
+      text-align: start;
+    }
+
+    .wcpy-box15 {
+      display: block;
+      flex: 0 0 12.43%;
+      margin-left: 0px;
+      margin-right: 16px;
+      max-width: 12.43%;
+    }
+
+    .wcpy-box16 {
+      flex: 0 0 83.05%;
+      max-width: 83.05%;
+    }
+
+    .wcpy-box18 {
+      align-items: center;
+      display: flex;
+      text-align: start;
+    }
+
+    .wcpy-box19 {
+      display: block;
+      flex: 0 0 12.43%;
+      margin-left: 0px;
+      margin-right: 16px;
+      max-width: 12.43%;
+    }
+
+    .wcpy-box20 {
+      flex: 0 0 83.05%;
+      max-width: 83.05%;
+    }
+
+    .wcpy-box21 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .wcpy-box22 {
+      margin-top: -100px;
+    }
+
+    .wcpy-heading6 {
+      font-size: 38.4px;
+      line-height: 38.4px;
+    }
+
+    .wcpy-heading7 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .wcpy-decor {
+      flex: 0 0 90.06%;
+      margin-left: 15.6px;
+      margin-right: 15.6px;
+      max-width: 90.06%;
+    }
+
+    .wcpy-box28 {
+      padding-left: 31.2px;
+      padding-right: 31.2px;
+    }
+
+    .wcpy-embed {
+      aspect-ratio: 0.38 / 1;
+    }
+
+    .wcpy-decor2 {
+      flex: 0 0 90.06%;
+      margin-left: 15.6px;
+      margin-right: 15.6px;
+      max-width: 90.06%;
+    }
+
+    .wcpy-heading8 {
+      font-size: 25.6px;
+      line-height: 25.6px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wcpy-box {
+      flex-wrap: nowrap;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    .wcpy-box2 {
+      min-height: 829px;
+      padding: 0px 50px 0px 0px;
+    }
+
+    .wcpy-box3 {
+      min-height: 114px;
+    }
+
+    .wcpy-box7 {
+      flex: 0 0 12.76%;
+      max-width: 12.76%;
+    }
+
+    .wcpy-box8 {
+      flex: 0 0 84.72%;
+      max-width: 84.72%;
+    }
+
+    .wcpy-heading2 {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    .wcpy-box11 {
+      flex: 0 0 12.76%;
+      max-width: 12.76%;
+    }
+
+    .wcpy-box12 {
+      flex: 0 0 84.72%;
+      max-width: 84.72%;
+    }
+
+    .wcpy-heading3 {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    .wcpy-box15 {
+      flex: 0 0 12.76%;
+      max-width: 12.76%;
+    }
+
+    .wcpy-box16 {
+      flex: 0 0 84.72%;
+      max-width: 84.72%;
+    }
+
+    .wcpy-heading4 {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    .wcpy-box19 {
+      flex: 0 0 12.76%;
+      max-width: 12.76%;
+    }
+
+    .wcpy-box20 {
+      flex: 0 0 84.72%;
+      max-width: 84.72%;
+    }
+
+    .wcpy-heading5 {
+      font-size: 28px;
+      line-height: 33.6px;
+    }
+
+    .wcpy-box22 {
+      padding: 24px;
+    }
+
+    .wcpy-heading6 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .wcpy-decor {
+      flex: 0 0 89.95%;
+      margin-left: 29.9px;
+      margin-right: 29.8px;
+      max-width: 89.95%;
+    }
+
+    .wcpy-box28 {
+      padding-left: 59.7px;
+      padding-right: 59.7px;
+    }
+
+    .wcpy-embed {
+      aspect-ratio: 1 / 1;
+    }
+
+    .wcpy-decor2 {
+      flex: 0 0 89.95%;
+      margin-left: 29.9px;
+      margin-right: 29.8px;
+      max-width: 89.95%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wcpy-heading {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .wcpy-heading8 {
+    font-size: 16px;
+  }
+  .wcpy-text {
+    color: rgb(255, 255, 255);
+  }
+  @media (min-width: 768px) {
+    .wcpy-text {
+      color: rgb(255, 255, 255);
+      font-size: 14.4px;
+      line-height: 21.6px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .wcpy-text {
+      color: rgb(255, 255, 255);
+      font-size: 14.4px;
+      line-height: 21.6px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

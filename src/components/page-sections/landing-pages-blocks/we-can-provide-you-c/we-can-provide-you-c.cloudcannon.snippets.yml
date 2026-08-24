@@ -1,0 +1,10 @@
+_snippets:
+  we_can_provide_you_c:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Can Provide You C
+    definitions:
+      component_name: page-sections/landing-pages-blocks/we-can-provide-you-c
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/we-can-provide-you-c/we-can-provide-you-c.cloudcannon.inputs.yml

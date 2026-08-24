@@ -1,0 +1,10 @@
+_snippets:
+  meet_our_provider:
+    template: astro_component
+    inline: false
+    preview:
+      text: Meet Our Provider
+    definitions:
+      component_name: page-sections/landing-pages-blocks/meet-our-provider
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/meet-our-provider/meet-our-provider.cloudcannon.inputs.yml

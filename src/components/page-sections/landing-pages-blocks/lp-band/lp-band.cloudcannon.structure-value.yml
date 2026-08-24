@@ -1,0 +1,25 @@
+label: Lp Band
+icon: grid_view
+description: No More Pain section with editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-band
+  id: ""
+  buttonText: ""
+  buttonLink: ""
+  items:
+    - title: ""
+      text: ""
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  titleColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundHoverColor: "#49ab71"
+preview:
+  text:
+    - Lp Band
+  icon: grid_view
+picker_preview:
+  text: Lp Band
+  subtext: No More Pain section with editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-band/lp-band.cloudcannon.inputs.yml

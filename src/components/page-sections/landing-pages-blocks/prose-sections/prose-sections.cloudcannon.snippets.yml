@@ -1,0 +1,10 @@
+_snippets:
+  prose_sections:
+    template: astro_component
+    inline: false
+    preview:
+      text: Prose Sections
+    definitions:
+      component_name: page-sections/landing-pages-blocks/prose-sections
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/prose-sections/prose-sections.cloudcannon.inputs.yml

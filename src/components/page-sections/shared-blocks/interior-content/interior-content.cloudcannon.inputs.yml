@@ -1,0 +1,284 @@
+_inputs:
+  eyebrow:
+    type: text
+    comment: Heading shown above the side menu.
+  menuLinks:
+    type: array
+    options:
+      structures: _structures.interior_content_link
+  heading:
+    type: text
+  headingLevel:
+    type: select
+    comment: Tag for the section heading. Use h1 only on pages without a banner.
+    options:
+      values: [h1, h2, h3, h4]
+  callUsBar:
+    type: html
+    comment: Optional "call us today" band closing the section. Leave empty to omit.
+  accentColor:
+    type: color
+  blocks:
+    type: array
+    options:
+      structures: _structures.interior_content_blocks
+_structures:
+  interior_content_link:
+    values:
+      - value:
+          text: ""
+          link: ""
+        _inputs:
+          text: { type: text }
+          link: { type: url }
+  interior_content_blocks:
+    style: modal
+    values:
+      - label: Prose
+        icon: notes
+        value:
+          _bt: prose
+          heading: ""
+          level: h3
+          text: ""
+        _inputs:
+          _bt: { type: hidden }
+          heading: { type: text }
+          level:
+            type: select
+            options:
+              values: [h2, h3, h4, h5]
+          text: { type: markdown }
+      - label: Call to action
+        icon: campaign
+        value:
+          _bt: cta
+          heading: ""
+          text: ""
+          buttons: []
+        _inputs:
+          _bt: { type: hidden }
+          heading: { type: text }
+          text: { type: markdown }
+          buttons:
+            type: array
+            options:
+              structures: _structures.interior_content_cta_button
+      - label: Columns
+        icon: view_column
+        value:
+          _bt: columns
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          items:
+            type: array
+            comment: One entry per column; they stack on narrow screens.
+            options:
+              structures: _structures.interior_content_column
+      - label: Text beside image
+        icon: view_sidebar
+        value:
+          _bt: split
+          media: right
+          textWidth: 50
+          src: ""
+          alt: ""
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          media:
+            type: select
+            comment: Which side the image sits on at desktop widths.
+            options:
+              values: [left, right]
+          textWidth:
+            type: number
+            comment: Percentage of the row given to the text column at desktop widths.
+          src: { type: image }
+          alt: { type: text }
+          items:
+            type: array
+            options:
+              structures: _structures.interior_content_blocks_prose
+      - label: File links
+        icon: attach_file
+        value:
+          _bt: files
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          items:
+            type: array
+            comment: Documents to view, download, or print. One row each.
+            options:
+              structures: _structures.interior_content_file
+      - label: Image
+        icon: image
+        value:
+          _bt: image
+          src: ""
+          alt: ""
+        _inputs:
+          _bt: { type: hidden }
+          src: { type: image }
+          alt: { type: text }
+      - label: Service cards
+        icon: grid_view
+        value:
+          _bt: cards
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          items:
+            type: array
+            options:
+              structures: _structures.interior_content_card
+      - label: Special offer cards
+        icon: local_offer
+        value:
+          _bt: specials
+          heading: ""
+          level: h3
+          cards: []
+        _inputs:
+          _bt: { type: hidden }
+          heading: { type: text }
+          level:
+            type: select
+            options:
+              values: [h2, h3, h4, h5]
+          cards:
+            type: array
+            comment: One entry per offer; they sit two-up at desktop widths.
+            options:
+              structures: _structures.interior_content_special
+      - label: Offer card
+        icon: local_activity
+        value:
+          _bt: offer
+          heading: ""
+          price: ""
+          text: ""
+          note: ""
+          buttonText: ""
+          buttonLink: ""
+          link: ""
+        _inputs:
+          _bt: { type: hidden }
+          heading:
+            type: text
+            comment: Name of the offer, shown in the blue band.
+          price: { type: html }
+          text:
+            type: text
+            comment: Line under the price.
+          note:
+            type: text
+            comment: Fine print under the divider.
+          buttonText: { type: text }
+          buttonLink: { type: url }
+          link:
+            type: url
+            comment: Where the card itself links. Leave empty to make it static.
+      - label: Table
+        icon: table_chart
+        value:
+          _bt: table
+          html: ""
+          variant: default
+        _inputs:
+          _bt: { type: hidden }
+          html: { type: html }
+          variant:
+            type: select
+            comment: Accent gives the table a blue head and banded rows.
+            options:
+              values: [default, accent]
+  interior_content_blocks_prose:
+    values:
+      - value:
+          heading: ""
+          level: h3
+          text: ""
+        _inputs:
+          heading: { type: text }
+          level:
+            type: select
+            options:
+              values: [h2, h3, h4, h5]
+          text: { type: markdown }
+  interior_content_column:
+    values:
+      - value:
+          text: ""
+        _inputs:
+          text: { type: markdown }
+  interior_content_file:
+    values:
+      - value:
+          text: ""
+          link: ""
+          variant: link
+        _inputs:
+          text: { type: text }
+          link: { type: url }
+          variant:
+            type: select
+            comment: Which icon leads the row.
+            options:
+              values: [link, pdf, word]
+  interior_content_card:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+          text: ""
+          text2: Read More
+          link: ""
+        _inputs:
+          image: { type: image }
+          imageAlt: { type: text }
+          text: { type: text }
+          text2: { type: text }
+          link: { type: url }
+  interior_content_special:
+    values:
+      - value:
+          heading: ""
+          note: ""
+          price: ""
+          items: []
+        _inputs:
+          heading:
+            type: html
+            comment: Name of the offer, shown in the blue band.
+          note:
+            type: text
+            comment: Optional small line under the offer name.
+          price:
+            type: html
+          items:
+            type: array
+            comment: What the offer includes.
+            options:
+              structures: _structures.interior_content_special_item
+  interior_content_special_item:
+    values:
+      - value:
+          text: ""
+        _inputs:
+          text: { type: text }
+  interior_content_cta_button:
+    values:
+      - value:
+          text: ""
+          link: ""
+          style: primary
+        _inputs:
+          text: { type: text }
+          link: { type: url }
+          style:
+            type: select
+            options:
+              values: [primary, secondary]

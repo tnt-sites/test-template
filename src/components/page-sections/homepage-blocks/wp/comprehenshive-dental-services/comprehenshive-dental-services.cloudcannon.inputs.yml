@@ -1,0 +1,51 @@
+_inputs:
+  heading:
+    type: text
+  text:
+    type: textarea
+  cards:
+    type: array
+    options:
+      structures: _structures.comprehenshive_dental_services_item
+  backgroundImage:
+    type: image
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  titleColor:
+    type: color
+  textColor2:
+    type: color
+  textColor2HoverColor:
+    type: color
+  hoverColor:
+    type: color
+  hoverColor2:
+    type: color
+_structures:
+  comprehenshive_dental_services_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+          backgroundImage: ""
+          title: ""
+          text: ""
+          buttonText: ""
+          buttonLink: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text
+          backgroundImage:
+            type: image
+          title:
+            type: text
+          text:
+            type: textarea
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

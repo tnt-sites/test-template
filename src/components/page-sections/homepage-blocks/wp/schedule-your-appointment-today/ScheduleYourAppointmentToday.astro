@@ -1,0 +1,216 @@
+---
+/**
+ * Schedule Your Appointment Today — migrated from  [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#3b6278",
+  headingColor = "#ffffff",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#223a47",
+  buttonBackgroundHoverColor = "rgba(255, 255, 255, 0.77)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="schedule-your-appointment-today" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="syat-box">
+    <div class="syat-box2">
+      <div class="syat-box3">
+        {image && <img class="syat-media" src={image} alt={imageAlt || ""} loading="lazy" title="Emergency Dental" />}
+        <h3 class="syat-heading">{heading}</h3>
+      </div>
+      <div class="syat-box4">
+        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="syat-btn" text={buttonText} link={buttonLink || "#"} />}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .schedule-your-appointment-today {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .syat-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .syat-box2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .syat-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 197px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  .syat-media {
+    box-sizing: border-box;
+    display: block;
+  }
+
+  .syat-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33.6px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+
+  .syat-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  :global(.syat-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 2px 2px 3px 0px;
+    box-sizing: border-box;
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+    padding: 10px 15px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.syat-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.syat-btn):hover {
+    background-color: var(--c6);
+    border-top-color: #3b6278;
+    box-shadow: none;
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .syat-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .syat-box3 {
+      flex-shrink: 0;
+      min-height: 164px;
+    }
+
+    .syat-box4 {
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .syat-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .syat-box3 {
+      align-items: center;
+      display: flex;
+      flex: 0 0 66.67%;
+      gap: 15px;
+      max-width: 66.67%;
+      min-height: auto;
+      text-align: left;
+    }
+
+    .syat-media {
+      flex-shrink: 0;
+    }
+
+    .syat-heading {
+      display: inline;
+      margin-bottom: 0px;
+    }
+
+    .syat-box4 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      text-align: right;
+    }
+
+    :global(.syat-btn) {
+      display: inline;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .syat-heading {
+    color: rgb(255, 255, 255);
+  }
+  :global(.syat-btn) {
+    align-items: normal;
+    color: rgb(255, 255, 255);
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .syat-heading {
+      color: rgb(255, 255, 255);
+    }
+
+    :global(.syat-btn) {
+      align-items: normal;
+      color: rgb(255, 255, 255);
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.syat-btn) {
+      align-items: normal;
+      color: rgb(255, 255, 255);
+      justify-content: normal;
+      text-align: right;
+    }
+
+    .syat-heading {
+      color: rgb(255, 255, 255);
+    }
+  }
+/* wpmig:corrections:end */
+</style>

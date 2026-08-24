@@ -1,0 +1,22 @@
+label: Meet Our Provider
+icon: vertical_split
+description: Meet Our Provider section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/meet-our-provider
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#585858"
+preview:
+  text:
+    - Meet Our Provider
+  icon: vertical_split
+picker_preview:
+  text: Meet Our Provider
+  subtext: Meet Our Provider section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/meet-our-provider/meet-our-provider.cloudcannon.inputs.yml

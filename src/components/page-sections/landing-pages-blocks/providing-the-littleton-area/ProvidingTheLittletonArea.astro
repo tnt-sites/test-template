@@ -1,0 +1,311 @@
+---
+/**
+ * Providing The Littleton Area — migrated from dental-implants-littleton-co [7] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  embedUrl = "",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="providing-the-littleton-area" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+  <div class="ptla-box">
+    <div class="ptla-box2">
+      <div class="ptla-box3">
+        <h2 class="ptla-heading">{heading}</h2>
+      </div>
+      <div class="ptla-box4">
+        <div class="ptla-decor" aria-hidden="true"></div>
+      </div>
+      <div class="ptla-box5">
+        <div class="ptla-box6">
+          {subheading && <h3 class="ptla-heading2" set:html={subheading} />}
+        </div>
+      </div>
+      <div class="ptla-box7">
+        <iframe class="ptla-embed" src={embedUrl} title="760 W Mineral Ave Suite 60, Littleton, CO" aria-label="760 W Mineral Ave Suite 60, Littleton, CO" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .providing-the-littleton-area {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+  .ptla-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .ptla-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ptla-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ptla-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ptla-box4 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+  }
+
+  .ptla-decor {
+    border-top: 1px solid #eeeeee;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .ptla-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .ptla-box6 {
+    box-sizing: border-box;
+  }
+
+  .ptla-heading2 {
+    box-sizing: border-box;
+    color: #3b6278;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ptla-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    line-height: 0px;
+    max-width: 100%;
+  }
+
+  .ptla-embed {
+    aspect-ratio: 1.06 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ptla-box {
+      max-width: 1024px;
+    }
+
+    .ptla-heading {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .ptla-embed {
+      aspect-ratio: 2.14 / 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ptla-box {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ptla-box3 {
+      padding-left: 168px;
+      padding-right: 168px;
+    }
+
+    .ptla-embed {
+      aspect-ratio: 3.2 / 1;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ptla-box3 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .ptla-box6 {
+    color: rgb(59, 98, 120);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+  .ptla-box7 {
+    line-height: 16px;
+    text-align: left;
+  }
+  .ptla-box2 {
+    text-align: center;
+  }
+  .ptla-decor {
+    text-align: center;
+  }
+  .ptla-embed {
+    line-height: 24px;
+    text-align: center;
+  }
+  .ptla-box4 {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .ptla-box3 {
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+    }
+
+    .ptla-heading {
+      text-align: left;
+    }
+
+    .ptla-box6 {
+      color: rgb(59, 98, 120);
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .ptla-heading2 {
+      color: rgb(27, 46, 56);
+      line-height: 0px;
+      text-align: left;
+    }
+
+    .ptla-box7 {
+      line-height: 16px;
+      text-align: left;
+    }
+
+    .ptla-box2 {
+      text-align: center;
+    }
+
+    .ptla-decor {
+      text-align: center;
+    }
+
+    .ptla-embed {
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .ptla-box4 {
+      text-align: left;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ptla-box3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .ptla-heading {
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .ptla-box6 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .ptla-heading2 {
+      color: rgb(59, 98, 120);
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+      text-align: center;
+    }
+
+    .ptla-box7 {
+      line-height: 0px;
+      text-align: left;
+    }
+
+    .ptla-box2 {
+      text-align: left;
+    }
+
+    .ptla-box4 {
+      text-align: left;
+    }
+
+    .ptla-decor {
+      text-align: left;
+    }
+
+    .ptla-embed {
+      line-height: 16px;
+      text-align: left;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

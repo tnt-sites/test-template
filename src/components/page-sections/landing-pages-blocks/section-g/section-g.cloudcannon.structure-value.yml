@@ -1,0 +1,21 @@
+label: Section G
+icon: vertical_split
+description: Section G section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/section-g
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  headingColor: "#040404"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Section G
+  icon: vertical_split
+picker_preview:
+  text: Section G
+  subtext: Section G section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/section-g/section-g.cloudcannon.inputs.yml

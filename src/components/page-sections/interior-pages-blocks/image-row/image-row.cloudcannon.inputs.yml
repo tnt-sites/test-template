@@ -1,0 +1,16 @@
+_inputs:
+  images:
+    type: array
+    options:
+      structures: _structures.image_row_item
+_structures:
+  image_row_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text

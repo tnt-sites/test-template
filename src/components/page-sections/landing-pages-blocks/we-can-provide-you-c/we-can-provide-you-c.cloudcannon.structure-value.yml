@@ -1,0 +1,36 @@
+label: We Can Provide You C
+icon: vertical_split
+description: We Can Provide You C section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/we-can-provide-you-c
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  image2: ""
+  image2Alt: ""
+  heading2: ""
+  image3: ""
+  image3Alt: ""
+  heading3: ""
+  image4: ""
+  image4Alt: ""
+  heading4: ""
+  heading5: ""
+  heading6: ""
+  text: ""
+  embedUrl: ""
+  heading7: ""
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+  textColor: "#ffffff"
+preview:
+  text:
+    - We Can Provide You C
+  icon: vertical_split
+picker_preview:
+  text: We Can Provide You C
+  subtext: We Can Provide You C section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/we-can-provide-you-c/we-can-provide-you-c.cloudcannon.inputs.yml

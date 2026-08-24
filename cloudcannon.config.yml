@@ -122,6 +122,56 @@ collections_config:
         options:
           structures: _structures.buttonSections
         cascade: true
+      linkColumns:
+        type: array
+        label: Footer Columns
+        comment: The footer's columns, in order. Each is a heading and its links.
+        options:
+          structures: _structures.linkColumns
+        cascade: true
+      socialImages:
+        type: array
+        label: Social Badges
+        comment: Social links drawn as uploaded artwork rather than as icons from the icon set.
+        cascade: true
+        options:
+          structures:
+            values:
+              - label: Social Badge
+                icon: image
+                value:
+                  link: ""
+                  image: ""
+                  alt: ""
+                preview:
+                  text:
+                    - key: alt
+                    - Social Badge
+                  subtext:
+                    - key: link
+                    - Add link
+                _inputs:
+                  link:
+                    type: text
+                    comment: The profile this badge opens.
+                  image:
+                    type: image
+                    options:
+                      paths:
+                        uploads: src/assets/images
+                  alt:
+                    type: text
+                    comment: Read aloud in place of the badge, e.g. "Facebook".
+      copyright:
+        type: object
+        label: Copyright Strip
+        comment: The bar beneath the footer — its wording and its links.
+        cascade: true
+      topBar:
+        type: object
+        label: Header Top Bar
+        comment: The brand tier above the menu. Remove it to render a single-tier header.
+        cascade: true
       pageButtons:
         type: array
         options:

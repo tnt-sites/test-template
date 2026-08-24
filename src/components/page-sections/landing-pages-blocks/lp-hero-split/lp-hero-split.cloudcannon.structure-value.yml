@@ -1,0 +1,35 @@
+label: Lp Hero Split
+icon: vertical_split
+description: Look Forward To The section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-hero-split
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  image: ""
+  imageAlt: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  textColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonBackgroundColor2: "#ffffff"
+  buttonTextColor2: "#5bb781"
+  buttonBackgroundHoverColor: "#49ab71"
+  buttonTextColor2HoverColor: "#ffffff"
+  buttonBackgroundColor2HoverColor: "#40a569"
+preview:
+  text:
+    - Lp Hero Split
+  icon: vertical_split
+picker_preview:
+  text: Lp Hero Split
+  subtext: Look Forward To The section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-hero-split/lp-hero-split.cloudcannon.inputs.yml

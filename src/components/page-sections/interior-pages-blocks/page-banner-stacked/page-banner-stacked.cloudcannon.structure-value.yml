@@ -1,0 +1,19 @@
+label: Page Banner Stacked
+icon: vertical_split
+description: Banner with a section name above the page title, over a background image.
+value:
+  _component: page-sections/interior-pages-blocks/page-banner-stacked
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Page Banner Stacked
+  icon: vertical_split
+picker_preview:
+  text: Page Banner Stacked
+  subtext: Banner with a section name above the page title, over a background image.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/page-banner-stacked/page-banner-stacked.cloudcannon.inputs.yml

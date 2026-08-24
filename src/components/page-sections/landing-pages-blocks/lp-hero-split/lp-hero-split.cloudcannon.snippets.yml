@@ -1,0 +1,10 @@
+_snippets:
+  lp_hero_split:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lp Hero Split
+    definitions:
+      component_name: page-sections/landing-pages-blocks/lp-hero-split
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/lp-hero-split/lp-hero-split.cloudcannon.inputs.yml

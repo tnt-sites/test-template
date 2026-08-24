@@ -1,0 +1,15 @@
+label: Video Embed
+icon: interests
+description: Full-width YouTube embed. The video URL is hardcoded, not editable.
+value:
+  _component: page-sections/interior-pages-blocks/video-embed
+  id: ""
+preview:
+  text:
+    - Video Embed
+  icon: interests
+picker_preview:
+  text: Video Embed
+  subtext: Full-width YouTube embed. The video URL is hardcoded, not editable.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/video-embed/video-embed.cloudcannon.inputs.yml

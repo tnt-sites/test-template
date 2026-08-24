@@ -1,0 +1,17 @@
+label: Breadcrumb
+icon: interests
+description: Home About Us section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/shared-blocks/breadcrumb
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Breadcrumb
+  icon: interests
+picker_preview:
+  text: Breadcrumb
+  subtext: Home About Us section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/shared-blocks/breadcrumb/breadcrumb.cloudcannon.inputs.yml

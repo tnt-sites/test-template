@@ -1,0 +1,526 @@
+---
+/**
+ * Generalized interior content column.
+ *
+ * The migrator emitted a separate component for every interior page — 35 of
+ * them across general-dentistry, cosmetic, restorative, sedation, new-patients,
+ * about-us and payment-options — each a whole page baked into one file, all
+ * the same shape wearing different words: a side menu, a main heading, a run of
+ * subheading/prose blocks, and a closing contact CTA. This is the one component
+ * they now share.
+ *
+ * Content is a typed `blocks` array so a page can carry any number of prose
+ * sections, images, a service-card grid, a pricing table, and a CTA, in any
+ * order — which is exactly the variation that made the migrator emit a new
+ * component per page.
+ */
+import Button from "@core-elements/button/Button.astro";
+import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
+import ServiceCardGrid from "@page-sections/shared-blocks/service-card-grid/ServiceCardGrid.astro";
+import CallUsBar from "@page-sections/shared-blocks/call-us-bar/CallUsBar.astro";
+import NewPatientSpecialCards from "@page-sections/shared-blocks/new-patient-special-cards/NewPatientSpecialCards.astro";
+import NewPatientSpecials from "@page-sections/homepage-blocks/wp/new-patient-specials/NewPatientSpecials.astro";
+import FileIcon from "./FileIcon.astro";
+
+type Block = {
+  _bt?: string;
+  heading?: string;
+  level?: string;
+  text?: string;
+  src?: string;
+  alt?: string;
+  html?: string;
+  variant?: string;
+  media?: string;
+  textWidth?: number | string;
+  items?: unknown[];
+  buttons?: { text?: string; link?: string; style?: string }[];
+  cards?: unknown[];
+  price?: string;
+  note?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  link?: string;
+};
+
+const {
+  eyebrow = "",
+  menuLinks = [],
+  heading = "",
+  headingLevel = "h2",
+  blocks = [],
+  callUsBar = "",
+  accentColor = "#d44d5c",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const clean = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+const links = Array.isArray(menuLinks) ? menuLinks : [];
+const list: Block[] = Array.isArray(blocks) ? blocks.filter((b): b is Block => !!b && typeof b === "object") : [];
+
+const HEADING_TAGS: Record<string, string> = { h2: "h2", h3: "h3", h4: "h4", h5: "h5" };
+const levelTag = (level: unknown) => HEADING_TAGS[clean(level).toLowerCase()] ?? "h3";
+
+// The page heading can be the document's h1 on pages that carry no banner.
+const TOP_TAGS: Record<string, string> = { h1: "h1", ...HEADING_TAGS };
+const HeadingTag = (TOP_TAGS[clean(headingLevel).toLowerCase()] ?? "h2") as any;
+
+// Mirrors SideMenu's own render condition: with no menu the column is the
+// whole container rather than two thirds of it with a gap where the nav was.
+const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof l === "object" && clean(l.text).length > 0);
+---
+
+<section class:list={["interior-content", hasMenu && "has-menu"]} id={id || undefined} style={`--accent:${accentColor}`} {...rest}>
+  <div class="ic-container">
+    <SideMenu heading={eyebrow} links={links} />
+    <div class="ic-column">
+      {heading && <HeadingTag class="ic-heading" set:html={heading} />}
+      {
+        list.map((block) => {
+          const bt = clean(block._bt) || "prose";
+
+          if (bt === "cards") {
+            return <ServiceCardGrid items={block.items ?? []} accentColor={accentColor} />;
+          }
+          if (bt === "specials") {
+            return <NewPatientSpecialCards heading={block.heading} headingLevel={block.level} cards={block.cards ?? []} />;
+          }
+          if (bt === "offer") {
+            // The homepage's offer card, in its inline mode so it sits in this
+            // column rather than spanning the viewport as its own section.
+            return (
+              <NewPatientSpecials
+                inline
+                heading=""
+                text={block.heading}
+                text2={block.price}
+                text3={block.text}
+                text4={block.note}
+                buttonText={block.buttonText}
+                buttonLink={block.buttonLink}
+                cardLink={block.link ?? ""}
+              />
+            );
+          }
+          if (bt === "files") {
+            // A list of documents to open or download — one hairline-separated
+            // row each, led by an icon naming the file's kind.
+            const files = (Array.isArray(block.items) ? block.items : []) as Block[];
+            return (
+              <ul class="ic-files no-check">
+                {files
+                  .filter((file) => clean(file.text))
+                  .map((file) => (
+                    <li class="ic-file">
+                      <a class="ic-file-link" href={file.link || "#"} target="_blank" rel="noopener">
+                        <FileIcon kind={clean(file.variant)} />
+                        <span>{clean(file.text)}</span>
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            );
+          }
+          if (bt === "image") {
+            return block.src ? (
+              <figure class="ic-figure">
+                <img src={block.src} alt={block.alt || ""} loading="lazy" />
+              </figure>
+            ) : null;
+          }
+          if (bt === "table") {
+            return block.html ? (
+              <div class:list={["ic-table", clean(block.variant) === "accent" && "ic-table-accent"]} set:html={block.html} />
+            ) : null;
+          }
+          if (bt === "cta") {
+            const buttons = Array.isArray(block.buttons) ? block.buttons : [];
+            return (
+              <div class="ic-cta">
+                {block.heading && <h2 class="ic-cta-heading" set:html={block.heading} />}
+                {block.text && <p class="ic-cta-text" set:html={block.text} />}
+                {buttons.length > 0 && (
+                  <div class="ic-cta-actions">
+                    {buttons.map((b) => (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class:list={["ic-btn", b.style === "secondary" && "ic-btn-secondary"]}
+                        text={b.text ?? ""}
+                        link={b.link || "#"}
+                        editable={false}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          }
+          if (bt === "columns") {
+            // A list split across equal columns at desktop width. The migrated
+            // pages shipped this twice — a one-piece list for mobile and a
+            // pre-split one for desktop, each hidden at the other breakpoint.
+            // One set of columns that stacks below 768px replaces both.
+            const cols = (Array.isArray(block.items) ? block.items : []) as Block[];
+            return (
+              <div class="ic-cols">
+                {cols.map((col) => (col.text ? <div class="ic-col ic-text" set:html={col.text} /> : null))}
+              </div>
+            );
+          }
+          if (bt === "split") {
+            // A prose column beside an image. The migrated pages used four
+            // different ratios for this, so the text share is a prop rather
+            // than four near-identical block types.
+            const parts = (Array.isArray(block.items) ? block.items : []) as Block[];
+            const width = Number(block.textWidth) || 50;
+            return (
+              <div
+                class:list={["ic-split", clean(block.media) === "left" && "ic-split-flip"]}
+                style={`--split:${width}%`}
+              >
+                <div class="ic-split-text">
+                  {parts.map((part) => {
+                    const PartTag = levelTag(part.level) as any;
+                    return (
+                      <div class="ic-prose">
+                        {part.heading && <PartTag class="ic-subheading" set:html={part.heading} />}
+                        {part.text && <div class="ic-text" set:html={part.text} />}
+                      </div>
+                    );
+                  })}
+                </div>
+                {block.src && (
+                  <div class="ic-split-media">
+                    <img src={block.src} alt={block.alt || ""} loading="lazy" />
+                  </div>
+                )}
+              </div>
+            );
+          }
+          // prose (default)
+          const Tag = levelTag(block.level) as any;
+          return (
+            <div class="ic-prose">
+              {block.heading && <Tag class="ic-subheading" set:html={block.heading} />}
+              {block.text && <div class="ic-text" set:html={block.text} />}
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+  <CallUsBar heading={callUsBar} />
+</section>
+
+<style>
+  .interior-content {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .ic-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ic-column {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .ic-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 16px;
+  }
+
+  h3.ic-heading {
+    font-size: 28px;
+  }
+
+  h4.ic-heading {
+    font-size: 24px;
+  }
+
+  .ic-prose {
+    margin-bottom: 16px;
+  }
+
+  .ic-subheading {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 8px;
+  }
+
+  h2.ic-subheading {
+    font-size: 32px;
+  }
+
+  h3.ic-subheading {
+    font-size: 28px;
+  }
+
+  h4.ic-subheading {
+    font-size: 24px;
+  }
+
+  h5.ic-subheading {
+    font-size: 20px;
+  }
+
+  .ic-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .ic-text :global(p) {
+    margin: 0 0 16px;
+  }
+
+  .ic-text :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .ic-text :global(a) {
+    color: var(--accent);
+  }
+
+  .ic-cols {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .ic-col {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ic-col {
+      flex: 1 1 0;
+      max-width: none;
+      padding-right: 20px;
+    }
+
+    .ic-col:last-child {
+      padding-right: 0;
+    }
+  }
+
+  .ic-split {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+
+  .ic-split-text,
+  .ic-split-media {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ic-split-media img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ic-split-text {
+      flex: 0 0 var(--split);
+      max-width: var(--split);
+      padding-right: 20px;
+    }
+
+    .ic-split-media {
+      align-self: center;
+      flex: 1 1 0;
+      max-width: calc(100% - var(--split));
+    }
+
+    .ic-split-flip .ic-split-media {
+      order: -1;
+      padding-right: 20px;
+    }
+
+    .ic-split-flip .ic-split-text {
+      padding-right: 0;
+    }
+  }
+
+  .ic-files {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+  }
+
+  .ic-file + .ic-file {
+    border-top: 1px solid #ddd;
+  }
+
+  .ic-file-link {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    font-size: 16px;
+    gap: 11px;
+    line-height: 16px;
+    padding: 18px 0;
+    text-decoration: none;
+  }
+
+  .ic-file-link:hover span,
+  .ic-file-link:focus-visible span {
+    text-decoration: underline;
+  }
+
+  :global(.ic-file-icon) {
+    color: #d44d5c;
+    flex: 0 0 auto;
+  }
+
+  .ic-figure {
+    margin: 0 0 16px;
+  }
+
+  .ic-figure img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  /* The tables arrive as raw HTML with no class hooks of their own, so their
+     internals need :global. Two looks: a plain price list, and the accent
+     comparison table with a blue head and banded rows. */
+  .ic-table {
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 16px;
+    overflow-x: auto;
+  }
+
+  .ic-table :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .ic-table :global(th),
+  .ic-table :global(td) {
+    border-bottom: 1px solid #dee2e6;
+    padding: 12px;
+    text-align: left;
+  }
+
+  .ic-table :global(th) {
+    font-weight: 700;
+  }
+
+  .ic-table :global(thead th) {
+    background-color: #f5f5f5;
+  }
+
+  .ic-table-accent :global(thead th) {
+    background-color: #3b6278;
+    color: #ffffff;
+  }
+
+  .ic-table-accent :global(tbody tr:nth-child(even)) {
+    background-color: #f5f5f5;
+  }
+
+  .ic-cta {
+    border-top: 1px solid #e8e8e8;
+    margin-top: 24px;
+    padding-top: 24px;
+  }
+
+  .ic-cta-heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+
+  .ic-cta-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 16px;
+  }
+
+  .ic-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  :global(.ic-btn) {
+    background-color: #5bb781;
+    border-radius: 3px;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+  }
+
+  :global(.ic-btn):hover {
+    background-color: #4eaf76;
+  }
+
+  :global(.ic-btn-secondary) {
+    background-color: #3b6278;
+  }
+
+  :global(.ic-btn-secondary):hover {
+    background-color: #54595f;
+  }
+
+  /* The "Call Us Now" tel: button was mobile-only in the source design. */
+  @media (min-width: 768px) {
+    :global(.ic-btn-secondary) {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .has-menu .ic-column {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .has-menu .ic-column {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+</style>

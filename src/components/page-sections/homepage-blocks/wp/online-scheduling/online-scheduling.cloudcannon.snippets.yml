@@ -1,0 +1,10 @@
+_snippets:
+  online_scheduling:
+    template: astro_component
+    inline: false
+    preview:
+      text: Online Scheduling
+    definitions:
+      component_name: page-sections/homepage-blocks/wp/online-scheduling
+    _inputs_from_glob:
+      - /src/components/page-sections/homepage-blocks/wp/online-scheduling/online-scheduling.cloudcannon.inputs.yml

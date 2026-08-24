@@ -1,0 +1,19 @@
+label: Media Block
+icon: vertical_split
+description: Section section with imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/interior-pages-blocks/media-block
+  id: ""
+  image: ""
+  imageAlt: ""
+  imageWidth: 900
+  imageHeight: 577
+preview:
+  text:
+    - Media Block
+  icon: vertical_split
+picker_preview:
+  text: Media Block
+  subtext: Section section with imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/media-block/media-block.cloudcannon.inputs.yml

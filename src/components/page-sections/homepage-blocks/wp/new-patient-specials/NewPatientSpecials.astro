@@ -1,0 +1,388 @@
+---
+/**
+ * New Patient Specials — migrated from  [8] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  subheading = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  buttonText = "",
+  buttonLink = "",
+  cardLink = "/new-patients/new-patient-specials/",
+  inline = false,
+  backgroundColor = "#f4f7f8",
+  headingColor = "#1b2e38",
+  textColor = "#ffffff",
+  textColor2 = "#1b2e38",
+  textColor3 = "#868686",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  hoverColor = "#3b6278",
+  buttonTextHoverColor = "#46a96f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+// The card was a hardcoded link to the specials page. That page now renders
+// this component too, where linking to itself is a dead end — so an empty
+// `cardLink` drops the anchor rather than pointing the card at its own URL.
+const cardHref = typeof cardLink === "string" && cardLink.trim() ? cardLink.trim() : undefined;
+const CardTag = (cardHref ? "a" : "div") as any;
+---
+<div class:list={["new-patient-specials", inline && "is-inline"]} id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2};--c5:${textColor3};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c8:${hoverColor};--c9:${buttonTextHoverColor}`} {...rest}>
+  <div class="nps-box">
+    {heading && <h2 class="nps-heading">{heading}</h2>}
+    {subheading && <h3 class="nps-heading2">{subheading}</h3>}
+    <div class="nps-box2">
+      <CardTag class="nps-box3" href={cardHref}>
+        <div class="nps-box4">
+          {text && <div class="nps-text">{text}</div>}
+          {text2 && <div class="nps-text2" set:html={text2} />}
+          <div class="nps-box5">
+            {text3 && <div class="nps-description">{text3}</div>}
+            <div class="nps-decor" aria-hidden="true"></div>
+            {text4 && <span class="nps-text3">{text4}</span>}
+          </div>
+        </div>
+      </CardTag>
+    </div>
+    {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="nps-btn" text={buttonText} link={buttonLink || "#"} />}
+  </div>
+</div>
+<style>
+  .new-patient-specials {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 60px;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .nps-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nps-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 37px;
+    font-weight: 300;
+    line-height: 44.4px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  .nps-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21.6px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+  }
+
+  .nps-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 60px;
+  }
+
+  .nps-box3 {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 100%;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+
+  .nps-box4 {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 5px 0px;
+    box-sizing: border-box;
+  }
+
+  .nps-text {
+    background-color: #006594;
+    box-sizing: border-box;
+    color: var(--tx);
+    font-family: Montserrat, sans-serif;
+    font-size: 21px;
+    line-height: 31.5px;
+    padding: 13px;
+  }
+
+  .nps-text2 {
+    background-color: #ebf2f6;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 117px;
+    padding: 6px;
+  }
+
+  .nps-box5 {
+    box-sizing: border-box;
+    min-height: 111px;
+    padding: 13px;
+  }
+
+  .nps-description {
+    box-sizing: border-box;
+    color: var(--c4);
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .nps-decor {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-top-style: solid;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    min-height: 1px;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .nps-text3 {
+    box-sizing: border-box;
+    color: var(--c5);
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+
+  :global(.nps-btn) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 30px 0px 20px 0px;
+    padding: 15px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.nps-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .nps-box3:hover {
+    border-top-color: #3b6278;
+    color: var(--c8);
+  }
+
+  :global(.nps-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #46a96f;
+    color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .nps-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .nps-box2 {
+      justify-content: center;
+    }
+
+    .nps-box3 {
+      flex: 0 0 50%;
+      flex-shrink: 0;
+      max-width: 50%;
+    }
+
+    .nps-box5 {
+      min-height: 135px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .nps-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .nps-box3 {
+      flex: 0 0 33.33%;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      max-width: 33.33%;
+    }
+
+    .nps-box4 {
+      min-height: 336px;
+    }
+
+    .nps-box5 {
+      min-height: 111px;
+    }
+
+    :global(.nps-btn) {
+      margin-left: 430px;
+      margin-right: 430px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .nps-box3 {
+    color: rgb(27, 46, 56);
+  }
+  .nps-box4 {
+    color: rgb(27, 46, 56);
+  }
+  .nps-text2 {
+    color: rgb(27, 46, 56);
+  }
+  .nps-box5 {
+    color: rgb(27, 46, 56);
+  }
+  .nps-decor {
+    color: rgb(128, 128, 128);
+  }
+  :global(.nps-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .nps-box3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-box4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-text2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-box5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    :global(.nps-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    .nps-box3 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-box4 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-text2 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-box5 {
+      color: rgb(27, 46, 56);
+    }
+
+    .nps-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    :global(.nps-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+/* wpmig:corrections:end */
+
+  /* Inline mode: the same card, rendered inside an `interior-content` column
+     instead of as its own full-width section. The section-level chrome is what
+     has to go — the tinted band, the 60px section padding, and the container
+     max-widths/margins that assume the full viewport. The button also stops
+     being a full-width block centred by a baked 430px side margin, which only
+     lands at one viewport and one container width. */
+  .is-inline {
+    background-color: transparent;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  .is-inline .nps-box {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .is-inline .nps-box2 {
+    margin-top: 0;
+  }
+
+  .is-inline :global(.nps-btn) {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    width: auto;
+  }
+
+  @media (min-width: 768px) {
+    .is-inline .nps-box {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .is-inline .nps-box {
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none;
+    }
+
+    .is-inline .nps-box3 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .is-inline :global(.nps-btn) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>

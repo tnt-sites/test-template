@@ -1,0 +1,469 @@
+---
+/**
+ * We Can Provide You — migrated from dental-implants-littleton-co [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  subheading = "",
+  heading2 = "",
+  text2 = "",
+  text3 = "",
+  heading3 = "",
+  backgroundColor = "#eeeeee",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-can-provide-you" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2}`} {...rest}>
+  <div class="wcpy-box">
+    <div class="wcpy-box2">
+      <div class="wcpy-box3">
+        <div class="wcpy-box4">
+          <h2 class="wcpy-heading" set:html={heading} />
+        </div>
+      </div>
+      <div class="wcpy-box5">
+        {text && <div class="wcpy-body" set:html={text} />}
+      </div>
+    </div>
+    <div class="wcpy-box6">
+      <section class="wcpy-box7">
+        <div class="wcpy-box8">
+          <div class="wcpy-box9">
+            {subheading && <h3 class="wcpy-heading2">{subheading}</h3>}
+          </div>
+          <div class="wcpy-box10">
+            {heading2 && <h4 class="wcpy-heading3">{heading2}</h4>}
+          </div>
+          <div class="wcpy-box11">
+            <div class="wcpy-decor" aria-hidden="true"></div>
+          </div>
+          <div class="wcpy-box12">
+            <div class="wcpy-box13">
+              {text2 && <p class="wcpy-text">{text2}</p>}
+            </div>
+          </div>
+          <div class="wcpy-box14">
+            {text3 && <div class="wcpy-text2">{text3}</div>}
+          </div>
+          <div class="wcpy-box15">
+            <div class="wcpy-decor2" aria-hidden="true"></div>
+          </div>
+          <div class="wcpy-box16">
+            {heading3 && <h3 class="wcpy-heading4">{heading3}</h3>}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<style>
+  .we-can-provide-you {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+  .we-can-provide-you :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .wcpy-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1370px;
+    position: relative;
+  }
+
+  .wcpy-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .wcpy-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wcpy-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .wcpy-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcpy-box4 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  .wcpy-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .wcpy-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wcpy-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .wcpy-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .wcpy-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wcpy-box7 {
+    background-image: linear-gradient(150deg, #3b6278 0%, #204960 100%);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 15px 0px;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 16px;
+    position: relative;
+  }
+
+  .wcpy-box8 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wcpy-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Damion, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading3 {
+    box-sizing: border-box;
+    color: #cdcdcd;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 19.2px;
+    font-weight: 600;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wcpy-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .wcpy-decor {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 89.94%;
+    margin-left: 15.9px;
+    margin-right: 15.9px;
+    max-width: 89.94%;
+    min-height: 1px;
+  }
+
+  .wcpy-box12 {
+    box-sizing: border-box;
+    color: #ffffff;
+    flex: 0 0 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14.4px;
+    line-height: 21.6px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wcpy-box13 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wcpy-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wcpy-text2 {
+    box-sizing: border-box;
+  }
+
+  .wcpy-box15 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .wcpy-decor2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 89.94%;
+    margin-left: 15.9px;
+    margin-right: 15.9px;
+    max-width: 89.94%;
+    min-height: 1px;
+  }
+
+  .wcpy-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wcpy-heading4 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: rgba(255, 255, 255, 0.35) 0px 0px 10px;
+  }
+
+  @media (min-width: 768px) {
+    .wcpy-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 15px;
+    }
+
+    .wcpy-box3 {
+      min-height: 130px;
+      text-align: left;
+    }
+
+    .wcpy-box4 {
+      margin-bottom: 16px;
+      margin-top: 60px;
+    }
+
+    .wcpy-heading {
+      font-size: 27.2px;
+      line-height: 27.2px;
+    }
+
+    .wcpy-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 684px;
+    }
+
+    .wcpy-box7 {
+      margin-top: -100px;
+    }
+
+    .wcpy-heading2 {
+      font-size: 38.4px;
+      line-height: 38.4px;
+    }
+
+    .wcpy-heading3 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .wcpy-decor {
+      flex: 0 0 90.06%;
+      margin-left: 15.6px;
+      margin-right: 15.6px;
+      max-width: 90.06%;
+    }
+
+    .wcpy-box13 {
+      padding-left: 31.2px;
+      padding-right: 31.2px;
+    }
+
+    .wcpy-decor2 {
+      flex: 0 0 90.06%;
+      margin-left: 15.6px;
+      margin-right: 15.6px;
+      max-width: 90.06%;
+    }
+
+    .wcpy-heading4 {
+      font-size: 25.6px;
+      line-height: 25.6px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wcpy-box {
+      flex-wrap: nowrap;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    .wcpy-box2 {
+      padding: 0px 50px 0px 0px;
+    }
+
+    .wcpy-box6 {
+      min-height: 414px;
+    }
+
+    .wcpy-box7 {
+      padding: 24px;
+    }
+
+    .wcpy-heading2 {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .wcpy-decor {
+      flex: 0 0 89.95%;
+      margin-left: 29.9px;
+      margin-right: 29.8px;
+      max-width: 89.95%;
+    }
+
+    .wcpy-box13 {
+      padding-left: 59.7px;
+      padding-right: 59.7px;
+    }
+
+    .wcpy-decor2 {
+      flex: 0 0 89.95%;
+      margin-left: 29.9px;
+      margin-right: 29.8px;
+      max-width: 89.95%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wcpy-heading4 {
+    font-size: 16px;
+  }
+  .wcpy-text {
+    color: rgb(255, 255, 255);
+  }
+  @media (min-width: 768px) {
+    .wcpy-text {
+      color: rgb(255, 255, 255);
+      font-size: 14.4px;
+      line-height: 21.6px;
+    }
+
+    .wcpy-heading4 {
+      font-size: 25.6px;
+    }
+
+  }
+  @media (min-width: 1440px) {
+    .wcpy-text {
+      color: rgb(255, 255, 255);
+      font-size: 14.4px;
+      line-height: 21.6px;
+    }
+
+    .wcpy-heading4 {
+      font-size: 25.6px;
+    }
+
+  }
+  .wcpy-heading {
+    font-size: 27.2px;
+    line-height: 27.2px;
+  }
+  @media (min-width: 768px) {
+    .wcpy-heading {
+      font-size: 27.2px;
+      line-height: 27.2px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

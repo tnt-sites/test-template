@@ -1,0 +1,26 @@
+label: Call Us Now To
+icon: vertical_split
+description: Call Us Now To section with copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/call-us-now-to
+  id: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  image: ""
+  imageAlt: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  backgroundColor: "#3b6278"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+preview:
+  text:
+    - Call Us Now To
+  icon: vertical_split
+picker_preview:
+  text: Call Us Now To
+  subtext: Call Us Now To section with copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/call-us-now-to/call-us-now-to.cloudcannon.inputs.yml

@@ -1,0 +1,194 @@
+---
+/**
+ * Online Scheduling — migrated from  [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+import { schedulingLinkAttrs } from "@component-utils/scheduling-links";
+
+const {
+  cards = [],
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg.jpg",
+  titleColor = "#1b2e38",
+  textColor = "#5bb781",
+  hoverColor = "#3b6278",
+  textHoverColor = "#223a47",
+  hoverBackgroundColor = "rgba(255, 255, 255, 0.77)",
+  hoverColor2 = "#46a96f",
+  hoverColor3 = "#49ab71",
+  hoverColor4 = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+
+<div
+  class="online-scheduling"
+  id={id || undefined}
+  style={`--tt:${titleColor};--tx:${textColor};--c3:${hoverColor};--c4:${textHoverColor};--c5:${hoverBackgroundColor};--c6:${hoverColor2};--c7:${hoverColor3};--c8:${hoverColor4}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
+  <div class="os-box">
+    <div class="os-grid">
+      {
+        list.map((c) => (
+          <div class="os-box2">
+            <a class="os-box3" href={c.link || "#"} target="_blank" rel="noopener noreferrer">
+              {c.image && (
+                <img
+                  class="os-media"
+                  src={c.image}
+                  alt={c.imageAlt || ""}
+                  loading="lazy"
+                  title="Make an Appointment"
+                />
+              )}
+            </a>
+            <h3 class="os-heading">{c.title}</h3>
+            {c.buttonText && (
+              <a class="os-link" href={c.buttonLink || "#"} {...schedulingLinkAttrs(c.buttonLink)}>
+                {c.buttonText}
+              </a>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<style>
+  .online-scheduling {
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: left;
+  }
+
+  .os-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .os-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .os-box2 {
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    margin-top: 15px;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  .os-box3 {
+    box-sizing: border-box;
+    color: #5bb781;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-top: 8px;
+    transition: all 0.25s ease;
+  }
+
+  .os-media {
+    box-sizing: border-box;
+    display: block;
+    margin-left: 32.5px;
+    margin-right: 32.5px;
+  }
+
+  .os-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20.4px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
+
+  .os-link {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .os-link::after {
+    content: "\00bb";
+    margin-left: 5px;
+  }
+
+  .os-box3:hover {
+    border-top-color: #3b6278;
+    color: var(--c3);
+  }
+
+  .os-link:hover {
+    background-color: var(--c5);
+    border-top-color: #3b6278;
+    color: var(--c4);
+  }
+
+  @media (min-width: 768px) {
+    .os-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .os-box2 {
+      flex: 0 0 25%;
+      flex-shrink: 0;
+      max-width: 25%;
+    }
+
+    .os-media {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+
+    .os-link {
+      box-sizing: border-box;
+      color: var(--tx);
+      display: inline;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 22.5px;
+      margin-top: 8px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .os-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .os-box2 {
+      margin-top: 0px;
+    }
+
+    .os-media {
+      margin-left: 77.5px;
+      margin-right: 77.5px;
+    }
+  }
+</style>

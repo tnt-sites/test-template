@@ -1,0 +1,531 @@
+---
+/**
+ * Contact Us Today — migrated from contact-us [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  embedUrl = "",
+  image = "",
+  imageAlt = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  text2 = "",
+  embedUrl2 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  hoverColor = "#064d96",
+  hoverColor2 = "#09498c",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="contact-us-today" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`} {...rest}>
+  <div class="cut-box">
+    <div class="cut-box2">
+      <div class="cut-box3">
+        <div class="cut-box4">
+          <div class="cut-box5">
+            <h2 class="cut-heading">{heading}</h2>
+          </div>
+          <div class="cut-box6">
+            <div class="cut-box7">
+              {text && <p class="cut-text" set:html={text} />}
+            </div>
+          </div>
+          <div class="cut-box8">
+            <div class="cut-box9">
+              <iframe class="cut-embed" src={embedUrl} title="Columbine Creek Dentistry  - Contact Form" allow="geolocation; microphone; camera; fullscreen; payment" frameborder="0" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="cut-box10">
+          <div class="cut-box11">
+            {image && <img class="cut-media" src={image} alt={imageAlt || ""} loading="lazy" width="900" height="577" />}
+          </div>
+          <ul class="cut-box12">
+            <li class="cut-box13">
+              {buttonText && <a class="cut-link" href={buttonLink || "#"}>{buttonText}</a>}
+            </li>
+            <li class="cut-box14">
+              {secondaryButtonText && <a class="cut-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+            </li>
+            {text2 && <div class="cut-body" set:html={text2} />}
+          </ul>
+        </div>
+      </div>
+      <div class="cut-box15">
+        <div class="cut-box16">
+          <iframe class="cut-embed2" src={embedUrl2} title="columbine creek dentistry" aria-label="columbine creek dentistry" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .contact-us-today {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .contact-us-today :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cut-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box2 {
+    box-sizing: border-box;
+  }
+
+  .cut-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .cut-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cut-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cut-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cut-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cut-box7 {
+    box-sizing: border-box;
+  }
+
+  .cut-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cut-box8 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cut-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cut-embed {
+    aspect-ratio: 0.32 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cut-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cut-box10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cut-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cut-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    min-height: 333px;
+    padding-left: 0px;
+  }
+
+  .cut-box12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box13 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cut-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-link {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .cut-link :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-box14 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 7.5px;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cut-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-link2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .cut-link2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cut-body :global(li) {
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 7.5px;
+    padding-bottom: 7.5px;
+    position: relative;
+  }
+
+  .cut-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cut-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    line-height: 0px;
+    max-width: 100%;
+  }
+
+  .cut-embed2 {
+    aspect-ratio: 1.13 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 16px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .cut-link:hover {
+    border-top-color: #064d96;
+    color: var(--c3);
+  }
+
+  .cut-link2:hover {
+    border-top-color: #09498c;
+    color: var(--c4);
+  }
+
+  @media (min-width: 768px) {
+    .cut-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cut-box3 {
+      max-width: 1024px;
+    }
+
+    .cut-box4 {
+      flex: 0 0 70.58%;
+      max-width: 70.58%;
+    }
+
+    .cut-heading {
+      line-height: 32px;
+    }
+
+    .cut-embed {
+      aspect-ratio: 0.45 / 1;
+    }
+
+    .cut-box10 {
+      flex: 0 0 29.42%;
+      max-width: 29.42%;
+      min-height: 1173px;
+    }
+
+    .cut-box12 {
+      min-height: 453px;
+    }
+
+    .cut-embed2 {
+      aspect-ratio: 2.23 / 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cut-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cut-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .cut-box4 {
+      flex: 0 0 70.54%;
+      max-width: 70.54%;
+    }
+
+    .cut-embed {
+      aspect-ratio: 0.96 / 1;
+    }
+
+    .cut-box10 {
+      flex: 0 0 29.46%;
+      max-width: 29.46%;
+      min-height: 921px;
+    }
+
+    .cut-box12 {
+      min-height: 333px;
+    }
+
+    .cut-embed2 {
+      aspect-ratio: 3.63 / 1;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cut-link {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-link2 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-body {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-box12 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-box13 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cut-box14 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cut-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cut-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cut-body {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .cut-text {
+      line-height: 24px;
+    }
+
+    .cut-box12 {
+      line-height: 24px;
+    }
+
+    .cut-box13 {
+      line-height: 24px;
+    }
+
+    .cut-box14 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cut-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cut-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .cut-body {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .cut-text {
+      line-height: 24px;
+    }
+
+    .cut-box12 {
+      line-height: 24px;
+    }
+
+    .cut-box13 {
+      line-height: 24px;
+    }
+
+    .cut-box14 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

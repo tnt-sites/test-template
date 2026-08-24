@@ -1,18 +1,74 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/themes/ColumbineCreek/img/logo.png",
+  "logoAlt": "Columbine Creek Dentistry - Dentist Littleton",
   "links": [
     {
-      "name": "Home",
+      "name": "4760 W. Mineral Ave. Suite 60, Littleton, CO 80128",
+      "path": "https://www.google.com/maps/dir//columbine+creek+dental/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62?sa=X&ved=2ahUKEwjR_r31jYvlAhVRvZ4KHefcBwAQ9RcwDXoECAgQEQ"
+    },
+    {
+      "name": "Map & Directions",
+      "path": "https://www.google.com/maps?ll=39.579658,-105.0517&z=16&t=m&hl=en-US&gl=US&mapclient=embed&saddr&daddr=Columbine+Creek+Dentistry,+4760+W+Mineral+Ave+Suite+60,+Littleton,+CO+80128&dirflg=d"
+    },
+    {
+      "name": "About Us",
+      "path": "/about-us/"
+    },
+    {
+      "name": "Dental Services",
+      "path": "/dental-services/"
+    },
+    {
+      "name": "Payment Options",
+      "path": "/payment-options/"
+    },
+    {
+      "name": "New Patients",
+      "path": "/new-patients/"
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "Schedule Appointment",
+      "path": "https://www.flexbook.me/schedulecc/1"
+    },
+    {
+      "name": "Frequently Asked Questions",
+      "path": "/frequently-asked-questions/"
+    },
+    {
+      "name": "General Dentistry",
+      "path": "/dental-services/general-dentistry/"
+    },
+    {
+      "name": "Cosmetic Dentistry",
+      "path": "/dental-services/cosmetic-dentistry/"
+    },
+    {
+      "name": "Restorative Dentistry",
+      "path": "/dental-services/restorative-dentistry/"
+    },
+    {
+      "name": "Sedation Dentistry",
+      "path": "/dental-services/sedation-dentistry/"
+    },
+    {
+      "name": "Emergency Dentistry",
+      "path": "/dental-services/emergency-dentistry/"
+    },
+    {
+      "name": "Pediatric Dentistry",
+      "path": "/dental-services/pediatric-dentistry/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf"
+    },
+    {
+      "name": "Columbine Creek Dentistry",
       "path": "/"
-    },
-    {
-      "name": "Why",
-      "path": "/why/"
-    },
-    {
-      "name": "Blog",
-      "path": "/blog/"
     }
   ],
   "contactTitle": "Contact Us",
@@ -26,5 +82,175 @@
       "name": "Privacy Policy",
       "path": "/privacy-policy"
     }
-  ]
+  ],
+  "linkColumns": [
+    {
+      "title": "",
+      "brand": true,
+      "logo": {
+        "source": "/wp-content/themes/ColumbineCreek/img/logo.png",
+        "alt": "Columbine Creek Dentistry - Dentist Littleton"
+      },
+      "links": []
+    },
+    {
+      "title": "Contact Us",
+      "links": [
+        {
+          "name": "(720) 222-2345",
+          "path": "tel:7202222345",
+          "icon": "phone"
+        },
+        {
+          "name": "4760 W. Mineral Ave. Suite 60, Littleton, CO 80128",
+          "path": "https://www.google.com/maps/dir//columbine+creek+dental/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62?sa=X&ved=2ahUKEwjR_r31jYvlAhVRvZ4KHefcBwAQ9RcwDXoECAgQEQ",
+          "icon": "map-pin"
+        },
+        {
+          "name": "Follow us on Facebook",
+          "path": "https://www.facebook.com/ColumbineCreekDentistry/",
+          "icon": "social/facebook",
+          "external": true
+        },
+        {
+          "name": "Follow us on Twitter",
+          "path": "https://twitter.com/CCreekDentistry",
+          "icon": "social/x",
+          "external": true
+        },
+        {
+          "name": "Check us out on Yelp!",
+          "path": "https://www.yelp.com/biz/columbine-creek-dentistry-littleton",
+          "icon": "social/yelp",
+          "external": true
+        },
+        {
+          "name": "Follow us on YouTube",
+          "path": "https://www.youtube.com/channel/UCclN0EuyOz9HR5ZpG7if_sg",
+          "icon": "social/youtube",
+          "external": true
+        },
+        {
+          "name": "Map & Directions",
+          "path": "https://www.google.com/maps?ll=39.579658,-105.0517&z=16&t=m&hl=en-US&gl=US&mapclient=embed&saddr&daddr=Columbine+Creek+Dentistry,+4760+W+Mineral+Ave+Suite+60,+Littleton,+CO+80128&dirflg=d",
+          "icon": "arrow-right",
+          "iconAfter": true,
+          "color": "rgb(91, 183, 129)",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "Helpful Links",
+      "links": [
+        {
+          "name": "About Us",
+          "path": "/about-us/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Dental Services",
+          "path": "/dental-services/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Payment Options",
+          "path": "/payment-options/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "New Patients",
+          "path": "/new-patients/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Contact Us",
+          "path": "/contact-us/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Schedule Appointment",
+          "path": "https://www.flexbook.me/schedulecc/1",
+          "icon": "chevron-right",
+          "external": true
+        },
+        {
+          "name": "Frequently Asked Questions",
+          "path": "/frequently-asked-questions/",
+          "icon": "chevron-right",
+          "external": true
+        }
+      ]
+    },
+    {
+      "title": "Our Services",
+      "links": [
+        {
+          "name": "General Dentistry",
+          "path": "/dental-services/general-dentistry/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "/dental-services/cosmetic-dentistry/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Restorative Dentistry",
+          "path": "/dental-services/restorative-dentistry/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Sedation Dentistry",
+          "path": "/dental-services/sedation-dentistry/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Emergency Dentistry",
+          "path": "/dental-services/emergency-dentistry/",
+          "icon": "chevron-right"
+        },
+        {
+          "name": "Pediatric Dentistry",
+          "path": "/dental-services/pediatric-dentistry/",
+          "icon": "chevron-right"
+        }
+      ]
+    }
+  ],
+  "socialImages": [
+    {
+      "link": "https://www.facebook.com/ColumbineCreekDentistry",
+      "image": "/wp-content/uploads/2024/10/Facebook-icon.png",
+      "alt": "",
+      "width": 50
+    },
+    {
+      "link": "https://www.instagram.com/columbine_creek_dentistry/",
+      "image": "/wp-content/uploads/2024/10/instagram-icon.png",
+      "alt": "",
+      "width": 50
+    },
+    {
+      "link": "https://www.google.com/search?hl=en-IN&gl=in&q=Columbine+Creek+Dentistry+-+Dentist+Littleton,+4760+W+Mineral+Ave+Ste+60,+Littleton,+CO+80128,+United+States&ludocid=1933119429758065250&lsig=AB86z5Xe9g4pTJoYJNi-YKCXhOnn",
+      "image": "/wp-content/uploads/2024/10/google-icon.png",
+      "alt": "",
+      "width": 50
+    }
+  ],
+  "copyright": {
+    "text": "All Content © 2026",
+    "links": [
+      {
+        "name": "HIPAA Notice",
+        "path": "/wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf",
+        "external": true
+      },
+      {
+        "name": "Columbine Creek Dentistry",
+        "path": "/",
+        "external": true
+      }
+    ]
+  }
 }

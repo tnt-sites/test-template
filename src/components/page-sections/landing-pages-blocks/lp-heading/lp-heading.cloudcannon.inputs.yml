@@ -1,0 +1,5 @@
+_inputs:
+  heading:
+    type: text
+  headingColor:
+    type: color

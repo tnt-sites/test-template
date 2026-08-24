@@ -1,0 +1,10 @@
+_snippets:
+  dentist_littleton_co:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dentist Littleton Co
+    definitions:
+      component_name: page-sections/homepage-blocks/wp/dentist-littleton-co
+    _inputs_from_glob:
+      - /src/components/page-sections/homepage-blocks/wp/dentist-littleton-co/dentist-littleton-co.cloudcannon.inputs.yml

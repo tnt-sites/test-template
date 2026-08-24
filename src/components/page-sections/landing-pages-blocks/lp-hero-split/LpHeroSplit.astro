@@ -1,0 +1,565 @@
+---
+/**
+ * Look Forward To The — migrated from lp/new-patient [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  image = "",
+  imageAlt = "",
+  backgroundColor = "#3b6278",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#ffffff",
+  buttonTextColor2 = "#5bb781",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonTextColor2HoverColor = "#ffffff",
+  buttonBackgroundColor2HoverColor = "#40a569",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="look-forward-to-the" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="lftt-box">
+    <div class="lftt-box2">
+      <div class="lftt-box3">
+        <h1 class="lftt-heading" set:html={heading} />
+      </div>
+      <div class="lftt-box4">
+        {text && <p class="lftt-text">{text}</p>}
+      </div>
+      <div class="lftt-box5">
+        <div class="lftt-box6">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lftt-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+      <div class="lftt-box7">
+        <div class="lftt-box8">
+          <div class="lftt-box9">
+            {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lftt-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          </div>
+        </div>
+      </div>
+      <div class="lftt-box10">
+        <div class="lftt-box11">
+          <p class="lftt-box12">
+            {secondaryButtonText2 && <a class="lftt-link" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="lftt-box13">
+      <div class="lftt-box14">
+        <div class="lftt-box15">
+          {image && <img class="lftt-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="787" />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .look-forward-to-the {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .look-forward-to-the :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .lftt-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+  }
+
+  .lftt-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .lftt-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .lftt-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .lftt-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lftt-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .lftt-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box6 {
+    box-sizing: border-box;
+  }
+
+  .lftt-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.lftt-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.lftt-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.lftt-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .lftt-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .lftt-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box8 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  .lftt-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .lftt-box9 {
+    box-sizing: border-box;
+  }
+
+  .lftt-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.lftt-btn2) {
+    background-color: var(--c6);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--c7);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.lftt-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.lftt-btn2) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .lftt-box10 {
+    display: none;
+  }
+
+  .lftt-box11 {
+    display: none;
+  }
+
+  .lftt-box12 {
+    display: none;
+  }
+
+  .lftt-link {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .lftt-box13 {
+    align-content: center;
+    align-items: center;
+    background-image: url("/wp-content/uploads/2024/05/img-new-patient-banner-columbia.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .lftt-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .lftt-box15 {
+    box-sizing: border-box;
+  }
+
+  .lftt-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  :global(.lftt-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.lftt-btn2):hover {
+    background-color: var(--c10);
+    color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .look-forward-to-the {
+      left: -39px;
+      right: 39px;
+    }
+
+    .lftt-box {
+      flex-direction: row;
+    }
+
+    .lftt-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .lftt-box3 {
+      text-align: left;
+    }
+
+    .lftt-heading {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    .lftt-box4 {
+      margin-bottom: 15px;
+      margin-top: 15px;
+      text-align: start;
+    }
+
+    .lftt-box5 {
+      text-align: left;
+    }
+
+    :global(.lftt-btn) {
+      text-align: center;
+    }
+
+    .lftt-box7 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+      text-align: left;
+    }
+
+    .lftt-box8 {
+      display: none;
+      margin-top: 0px;
+    }
+
+    .lftt-box9 {
+      display: none;
+    }
+
+    :global(.lftt-btn2) {
+      background-color: #ffffff;
+      color: #5bb781;
+      display: none;
+      white-space: normal;
+    }
+
+    .lftt-box10 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .lftt-box11 {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .lftt-box12 {
+      box-sizing: border-box;
+      color: #ffffff;
+      display: block;
+      font-family: Quicksand, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .lftt-link {
+      box-sizing: border-box;
+      display: inline;
+    }
+
+    .lftt-box13 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      transform: matrix(1, 0, 0, 1, 24.75, 0);
+    }
+
+    .lftt-box14 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .lftt-box15 {
+      display: none;
+    }
+
+    .lftt-media {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .look-forward-to-the {
+      left: -165px;
+      right: 165px;
+    }
+
+    .lftt-box {
+      flex-wrap: nowrap;
+    }
+
+    .lftt-box2 {
+      padding: 70px 50px;
+    }
+
+    .lftt-heading {
+      font-size: 55px;
+      line-height: 55px;
+    }
+
+    .lftt-box4 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .lftt-text {
+      font-size: 32px;
+    }
+
+    .lftt-box5 {
+      margin-bottom: 20px;
+    }
+
+    .lftt-box13 {
+      transform: matrix(1, 0, 0, 1, 18.76, 0);
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .lftt-box5 {
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    line-height: 36px;
+  }
+  :global(.lftt-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  :global(.lftt-btn2) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .lftt-box5 {
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      line-height: 36px;
+      text-align: start;
+    }
+
+    .lftt-box10 {
+      text-align: start;
+    }
+
+    .lftt-box11 {
+      text-align: start;
+    }
+
+    .lftt-box12 {
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .lftt-link {
+      color: rgb(255, 255, 255);
+      line-height: 24px;
+      text-align: start;
+    }
+
+    :global(.lftt-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    .lftt-box10 {
+      text-align: start;
+    }
+
+    .lftt-box11 {
+      text-align: start;
+    }
+
+    .lftt-box12 {
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .lftt-link {
+      color: rgb(255, 255, 255);
+      line-height: 24px;
+      text-align: start;
+    }
+
+    :global(.lftt-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .lftt-heading {
+    line-height: 55px;
+  }
+  .lftt-text {
+    font-size: 32px;
+    line-height: 36px;
+  }
+/* wpmig:corrections:end */
+</style>

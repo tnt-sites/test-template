@@ -1,0 +1,23 @@
+label: Appointments Now Available
+icon: interests
+description: Appointments Now Available section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/appointments-now-available
+  id: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#3b6278"
+preview:
+  text:
+    - Appointments Now Available
+  icon: interests
+picker_preview:
+  text: Appointments Now Available
+  subtext: Appointments Now Available section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/appointments-now-available/appointments-now-available.cloudcannon.inputs.yml

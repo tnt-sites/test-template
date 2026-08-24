@@ -1,0 +1,279 @@
+---
+/**
+ * Dont Wait Get Relief — migrated from littleton-emergency-dentistry [8] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#3b6278",
+  headingColor = "#ffffff",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="dont-wait-get-relief" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`} {...rest}>
+  <div class="dwgr-box">
+    <div class="dwgr-box2">
+      <div class="dwgr-box3">
+        <div class="dwgr-box4">
+          <div class="dwgr-box5">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="dwgr-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+        <div class="dwgr-box6">
+          <h3 class="dwgr-heading">{heading}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .dont-wait-get-relief {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    position: relative;
+    text-align: left;
+  }
+
+  .dont-wait-get-relief :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .dwgr-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1370px;
+    position: relative;
+  }
+
+  .dwgr-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .dwgr-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .dwgr-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .dwgr-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .dwgr-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .dwgr-box4 {
+    box-sizing: border-box;
+    flex: 0 0 97.84%;
+    margin-right: 8px;
+    max-width: 97.84%;
+    text-align: center;
+  }
+
+  .dwgr-box4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .dwgr-box5 {
+    box-sizing: border-box;
+  }
+
+  .dwgr-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.dwgr-btn) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    margin: 0px;
+    padding: 16px 24px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.dwgr-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.dwgr-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dwgr-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: 24px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .dwgr-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Damion, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  :global(.dwgr-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #1b2e38;
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .dwgr-box4 {
+      flex: 0 0 37.83%;
+      max-width: 37.83%;
+      text-align: left;
+    }
+
+    :global(.dwgr-btn) {
+      text-align: center;
+    }
+
+    .dwgr-box6 {
+      flex: 0 0 60%;
+      margin-top: 0px;
+      max-width: 60%;
+    }
+
+    .dwgr-heading {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dwgr-box {
+      flex-wrap: nowrap;
+      margin-left: 35px;
+      margin-right: 35px;
+    }
+
+    .dwgr-box3 {
+      flex-wrap: nowrap;
+    }
+
+    .dwgr-box4 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .dwgr-box6 {
+      text-align: end;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .dwgr-box5 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+  }
+  :global(.dwgr-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: normal;
+    line-height: 24px;
+  }
+  .dwgr-box {
+    align-items: center;
+  }
+  .dwgr-box2 {
+    align-items: normal;
+  }
+  @media (min-width: 768px) {
+    .dwgr-box {
+      align-items: center;
+    }
+
+    .dwgr-box2 {
+      align-items: normal;
+    }
+
+    :global(.dwgr-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.dwgr-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .dwgr-box3 {
+    text-align: left;
+  }
+/* wpmig:corrections:end */
+</style>

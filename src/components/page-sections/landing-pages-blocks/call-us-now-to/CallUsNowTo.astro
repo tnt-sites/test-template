@@ -1,0 +1,311 @@
+---
+/**
+ * Call Us Now To — migrated from dental-implants-littleton-co [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  image = "",
+  imageAlt = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  backgroundColor = "#3b6278",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="call-us-now-to" id={id || undefined} style={`--bg:${backgroundColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+  <div class="cunt-box">
+    <div class="cunt-box2">
+      <div class="cunt-box3">
+        {text && <div class="cunt-text" set:html={text} />}
+      </div>
+      <div class="cunt-box4">
+        <li class="cunt-box5">
+          {buttonText && <a class="cunt-link" href={buttonLink || "#"}>{buttonText}</a>}
+        </li>
+      </div>
+    </div>
+    <div class="cunt-box6">
+      {image && <img class="cunt-media" src={image} alt={imageAlt || ""} loading="lazy" width="163" height="74" />}
+    </div>
+    <div class="cunt-box7">
+      <div class="cunt-box8">
+        <div class="cunt-box9">
+          {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="cunt-btn" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .call-us-now-to :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-link :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 31px;
+    width: 31px;
+  }
+
+  .cunt-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cunt-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.cunt-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  @media (min-width: 1440px) {
+    .call-us-now-to {
+      background-color: var(--bg);
+      box-sizing: border-box;
+      color: #1b2e38;
+      font-family: Roboto, sans-serif;
+      line-height: 24px;
+      position: relative;
+      text-align: left;
+    }
+
+    .cunt-box {
+      box-sizing: border-box;
+      display: flex;
+      margin-left: 35px;
+      margin-right: 35px;
+      max-width: 1370px;
+      position: relative;
+    }
+
+    .cunt-box2 {
+      align-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 33.33%;
+      flex-wrap: wrap;
+      max-width: 33.33%;
+      min-height: 73px;
+      position: relative;
+    }
+
+    .cunt-box3 {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .cunt-text {
+      box-sizing: border-box;
+      margin-bottom: -4px;
+      margin-left: 8px;
+      margin-top: -8px;
+    }
+
+    .cunt-box4 {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+      margin-left: 8px;
+      max-width: 100%;
+    }
+
+    .cunt-box5 {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      position: relative;
+    }
+
+    .cunt-link {
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 31px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 31px;
+      max-width: 100%;
+    }
+
+    .cunt-box6 {
+      box-sizing: border-box;
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding-bottom: 8px;
+      padding-top: 8px;
+      text-align: center;
+    }
+
+    .cunt-media {
+      box-sizing: border-box;
+      display: inline-block;
+    }
+
+    .cunt-box7 {
+      align-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 33.33%;
+      flex-wrap: wrap;
+      max-width: 33.33%;
+      min-height: 73px;
+      position: relative;
+    }
+
+    .cunt-box8 {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+      margin-right: 8px;
+      max-width: 100%;
+      text-align: right;
+    }
+
+    .cunt-box9 {
+      box-sizing: border-box;
+    }
+
+    :global(.cunt-btn) {
+      background-color: var(--btnbg);
+      box-sizing: border-box;
+      color: var(--btntx);
+      display: inline-block;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 15px;
+      margin: 0px;
+      padding: 16px 24px;
+      text-align: center;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    :global(.cunt-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cunt-box5 {
+    align-items: center;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 31px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 31px;
+    text-align: center;
+  }
+  .cunt-box8 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: center;
+  }
+  .call-us-now-to {
+    background-color: rgb(59, 98, 120);
+    text-align: left;
+  }
+  .cunt-box {
+    text-align: left;
+  }
+  .cunt-box2 {
+    align-items: center;
+    text-align: left;
+  }
+  .cunt-box3 {
+    text-align: center;
+  }
+  .cunt-text {
+    text-align: center;
+  }
+  .cunt-box4 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .cunt-link {
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+  }
+  .cunt-box6 {
+    text-align: center;
+  }
+  .cunt-media {
+    text-align: center;
+  }
+  .cunt-box7 {
+    text-align: center;
+  }
+/* wpmig:corrections:end */
+</style>

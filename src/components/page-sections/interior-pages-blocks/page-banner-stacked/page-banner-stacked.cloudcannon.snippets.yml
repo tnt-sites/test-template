@@ -1,0 +1,10 @@
+_snippets:
+  page_banner_stacked:
+    template: astro_component
+    inline: false
+    preview:
+      text: Page Banner Stacked
+    definitions:
+      component_name: page-sections/interior-pages-blocks/page-banner-stacked
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/page-banner-stacked/page-banner-stacked.cloudcannon.inputs.yml

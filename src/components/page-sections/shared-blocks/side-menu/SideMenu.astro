@@ -1,0 +1,131 @@
+---
+/**
+ * Interior-page side menu — the white bordered nav column listing the sibling
+ * pages of the section you are in.
+ *
+ * A shared partial, not a CloudCannon-selectable section. 37 migrated
+ * components carried their own copy of this markup and CSS under their own
+ * class prefix; they now all render this.
+ *
+ * The migrator baked a measured `min-height` into every copy (670px on the
+ * sedation page, 3597px on about-us) to hold the column open to whatever the
+ * page happened to be that day. That is what left the tall empty gaps below
+ * short pages, and it is deliberately not reproduced here — the column is a
+ * list, and its height is its content's.
+ *
+ * `links`: [{ text, link }]. Falsy entries are dropped, so callers can pass a
+ * fixed-length array built from `buttonText`/`secondaryButtonText…` props.
+ */
+const { heading = "", links = [], class: className, ...rest } = Astro.props;
+
+const items = (Array.isArray(links) ? links : [])
+  .filter((l) => l && typeof l === "object" && typeof l.text === "string" && l.text.trim().length > 0)
+  .map((l) => ({ text: l.text.trim(), link: typeof l.link === "string" && l.link.trim() ? l.link.trim() : "#" }));
+
+const hasHeading = typeof heading === "string" && heading.trim().length > 0;
+---
+
+{
+  (hasHeading || items.length > 0) && (
+    <nav class:list={["side-menu", className]} aria-label={hasHeading ? heading : "Section navigation"} {...rest}>
+      <div class="side-menu-inner">
+        {hasHeading && <h4 class="side-menu-heading">{heading}</h4>}
+        {items.map((item) => (
+          <a class="side-menu-link" href={item.link}>
+            <svg class="side-menu-chevron" viewBox="0 0 6 10" width="6" height="10" aria-hidden="true" focusable="false">
+              <path d="M1 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            {item.text}
+          </a>
+        ))}
+      </div>
+    </nav>
+  )
+}
+
+<style>
+  /* The column is a wide-viewport affordance; the page's own nav covers mobile. */
+  .side-menu {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .side-menu {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .side-menu-inner {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    .side-menu-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    .side-menu-link {
+      border-bottom: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      color: #1b2e38;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      text-align: left;
+      text-decoration: none;
+      transition: background-color 0.25s ease;
+    }
+
+    .side-menu-link:last-child {
+      border-bottom: 0;
+    }
+
+    /* Inline rather than a flex marker, so a link that wraps to a second line
+       starts at the left margin the way the source design's does. */
+    .side-menu-chevron {
+      display: inline-block; /* Preflight makes svg a block. */
+      margin-right: 6px;
+      vertical-align: -1px;
+    }
+
+    .side-menu-link:hover,
+    .side-menu-link:focus-visible {
+      background-color: rgba(241, 241, 241, 0.77);
+    }
+
+    .side-menu-link:focus-visible {
+      outline: 2px solid #3b6278;
+      outline-offset: -2px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .side-menu {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+</style>

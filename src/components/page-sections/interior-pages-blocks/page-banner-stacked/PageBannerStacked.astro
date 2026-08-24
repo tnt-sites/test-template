@@ -1,0 +1,188 @@
+---
+/**
+ * Page banner with a stacked pair of headings over a background image — the
+ * section name above (h3) and the page title below (h1).
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="page-banner-stacked" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="pbs-box">
+    <h3 class="pbs-heading">{heading}</h3>
+    {subheading && <h1 class="pbs-heading2">{subheading}</h1>}
+  </div>
+</div>
+<style>
+  .page-banner-stacked {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .pbs-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pbs-heading {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbs-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .page-banner-stacked {
+      justify-content: flex-start;
+    }
+
+    .pbs-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .page-banner-stacked {
+      text-align: left;
+    }
+
+    .pbs-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .pbs-heading6 {
+    line-height: 24px;
+  }
+  .pbs-heading {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .pbs-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-heading6 {
+      line-height: 24px;
+    }
+
+    .pbs-heading {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .pbs-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pbs-heading6 {
+      line-height: 24px;
+    }
+
+    .pbs-heading {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,286 @@
+---
+/**
+ * Dentist Littleton Co — migrated from  [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  subheading = "",
+  heading2 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  backgroundImage = "/wp-content/uploads/2023/11/homeBanner-columbone-1.jpg",
+  headingColor = "#3b6278",
+  buttonTextColor = "#3b6278",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonTextHoverColor = "#203743",
+  hoverBackgroundColor = "rgba(255, 255, 255, 0.84)",
+  buttonBackgroundHoverColor = "#49ab71",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="dentist-littleton-co" id={id || undefined} style={`--hd:${headingColor};--btntx:${buttonTextColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${buttonTextHoverColor};--c6:${hoverBackgroundColor};--c7:${buttonBackgroundHoverColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="dlc-box">
+    <div class="dlc-box2">
+      <h1 class="dlc-heading">{heading}</h1>
+      {subheading && <h2 class="dlc-heading2" set:html={subheading} />}
+      {heading2 && <h3 class="dlc-heading3" set:html={heading2} />}
+      <div class="dlc-box3">
+        {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="dlc-btn" text={buttonText} link={buttonLink || "#"} />}
+        {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="dlc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .dentist-littleton-co {
+    background-image: url("/wp-content/uploads/2023/11/mobile-bnr-columbine-creek.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Roboto, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .dlc-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 330px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .dlc-box2 {
+    box-sizing: border-box;
+    color: #3b6278;
+  }
+
+  .dlc-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .dlc-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    line-height: 31.2px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  .dlc-heading3 {
+    display: none;
+  }
+
+  .dlc-box3 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  :global(.dlc-btn) {
+    box-sizing: border-box;
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 20px 0px 0px;
+    padding: 10px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.dlc-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.dlc-btn2) {
+    background-color: var(--btnbg);
+    box-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px 0px;
+    box-sizing: border-box;
+    color: var(--c4);
+    display: block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 10px 0px 0px 0px;
+    padding: 10px 15px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.dlc-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.dlc-btn):hover {
+    background-color: var(--c6);
+    color: var(--c5);
+  }
+
+  :global(.dlc-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .dentist-littleton-co {
+      background-image: url("/wp-content/uploads/2023/11/mobile-bnr-columbine-creek-1.jpg");
+    }
+
+    .dlc-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+
+    .dlc-heading2 {
+      font-size: 45px;
+      line-height: 54px;
+    }
+
+    :global(.dlc-btn) {
+      border: 1px solid #3b6278;
+      display: inline;
+      margin-top: 0px;
+    }
+
+    :global(.dlc-btn2) {
+      display: inline;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dentist-littleton-co {
+      align-items: center;
+      background-image: var(--bgimg, none);
+      background-position: 100% 50%;
+      background-repeat: no-repeat;
+      min-height: 500px;
+      padding-top: 30px;
+      text-align: left;
+    }
+
+    .dlc-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+      min-height: auto;
+    }
+
+    .dlc-box2 {
+      width: 50%;
+    }
+
+    .dlc-heading {
+      line-height: 36px;
+    }
+
+    .dlc-heading3 {
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 15px;
+    }
+
+    .dlc-box3 {
+      margin-top: 30px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .dlc-heading {
+    color: rgb(59, 98, 120);
+    font-weight: 400;
+  }
+  .dlc-heading2 {
+    color: rgb(59, 98, 120);
+    font-weight: 400;
+  }
+  :global(.dlc-btn) {
+    align-items: normal;
+    color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  :global(.dlc-btn2) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .dlc-heading {
+      color: rgb(59, 98, 120);
+      font-weight: 400;
+    }
+
+    .dlc-heading2 {
+      color: rgb(59, 98, 120);
+      font-weight: 400;
+    }
+
+    :global(.dlc-btn) {
+      align-items: normal;
+      color: rgb(59, 98, 120);
+      justify-content: normal;
+    }
+
+    :global(.dlc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    .dlc-heading {
+      color: rgb(59, 98, 120);
+      font-weight: 400;
+    }
+
+    .dlc-heading2 {
+      color: rgb(59, 98, 120);
+      font-weight: 400;
+    }
+
+    .dlc-heading3 {
+      color: rgb(59, 98, 120);
+      font-weight: 400;
+    }
+
+    :global(.dlc-btn) {
+      align-items: normal;
+      color: rgb(59, 98, 120);
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.dlc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

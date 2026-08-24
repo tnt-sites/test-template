@@ -115,7 +115,7 @@ pageSections:
           Advertising as managed by the Digital Advertising Alliance (DAA). You
           may opt out of receiving targeted ads from companies that perform ad
           targeting services, including some that we may work with via the DAA
-          website <a href="http://optout.aboutads.info" target="_blank"
+          website <a href="http://optout.aboutads.info/" target="_blank"
           rel="nofollow noopener">here.</a>
 
 

@@ -1,0 +1,182 @@
+---
+/**
+ * Section G — migrated from dental-implants-littleton-co [9] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  headingColor = "#040404",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section-g" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="sg-box">
+    <div class="sg-box2">
+      <div class="sg-box3">
+        {image && <img class="sg-media" src={image} alt={imageAlt || ""} loading="lazy" width="253" height="116" />}
+      </div>
+      <div class="sg-box4">
+        <div class="sg-box5">
+          <h4 class="sg-heading" set:html={heading} />
+        </div>
+      </div>
+      <div class="sg-box6">
+        <div class="sg-box7">
+          {text && <p class="sg-text" set:html={text} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .section-g {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    text-align: left;
+  }
+
+  .sg-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sg-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sg-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sg-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .sg-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sg-box5 {
+    box-sizing: border-box;
+  }
+
+  .sg-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sg-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 19.2px;
+    font-weight: 300;
+    line-height: 28.8px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sg-box7 {
+    box-sizing: border-box;
+  }
+
+  .sg-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .sg-box {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sg-box {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sg-box5 {
+    color: rgb(4, 4, 4);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .sg-heading {
+    color: rgb(27, 46, 56);
+    font-size: 19.2px;
+    font-weight: 300;
+    line-height: 28.8px;
+  }
+  .sg-box2 {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .sg-box5 {
+      color: rgb(4, 4, 4);
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .sg-heading {
+      color: rgb(27, 46, 56);
+      font-size: 19.2px;
+      font-weight: 300;
+      line-height: 28.8px;
+    }
+
+    .sg-box2 {
+      text-align: center;
+    }
+  }
+  @media (min-width: 1440px) {
+  }
+  .sg-text {
+    font-size: 19.2px;
+    line-height: 28.8px;
+  }
+/* wpmig:corrections:end */
+</style>

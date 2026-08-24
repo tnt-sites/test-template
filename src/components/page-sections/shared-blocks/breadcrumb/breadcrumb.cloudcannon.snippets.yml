@@ -1,0 +1,10 @@
+_snippets:
+  breadcrumb:
+    template: astro_component
+    inline: false
+    preview:
+      text: Breadcrumb
+    definitions:
+      component_name: page-sections/shared-blocks/breadcrumb
+    _inputs_from_glob:
+      - /src/components/page-sections/shared-blocks/breadcrumb/breadcrumb.cloudcannon.inputs.yml

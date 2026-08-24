@@ -1,0 +1,18 @@
+label: Lp Heading Pair
+icon: interests
+description: In The Office section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-heading-pair
+  id: ""
+  heading: ""
+  subheading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - Lp Heading Pair
+  icon: interests
+picker_preview:
+  text: Lp Heading Pair
+  subtext: In The Office section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-heading-pair/lp-heading-pair.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  section_f:
+    template: astro_component
+    inline: false
+    preview:
+      text: Section F
+    definitions:
+      component_name: page-sections/landing-pages-blocks/section-f
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/section-f/section-f.cloudcannon.inputs.yml

@@ -1,0 +1,106 @@
+---
+/**
+ * Cosmetic Dentistry — migrated from dental-services/cosmetic-dentistry/dental-bridges [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="cosmetic-dentistry" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="cd-box">
+    {eyebrow && <h3 class="cd-eyebrow" set:html={eyebrow} />}
+    {heading && <h1 class="cd-heading2" set:html={heading} />}
+  </div>
+</div>
+<style>
+  .cosmetic-dentistry {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .cd-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cd-eyebrow {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .cosmetic-dentistry {
+      justify-content: flex-start;
+    }
+
+    .cd-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cosmetic-dentistry {
+      text-align: left;
+    }
+
+    .cd-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cd-eyebrow {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .cd-eyebrow {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cd-eyebrow {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

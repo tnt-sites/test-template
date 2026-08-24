@@ -1,0 +1,10 @@
+_snippets:
+  columbine_creek_has_a:
+    template: astro_component
+    inline: false
+    preview:
+      text: Columbine Creek Has A
+    definitions:
+      component_name: page-sections/landing-pages-blocks/columbine-creek-has-a
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/columbine-creek-has-a/columbine-creek-has-a.cloudcannon.inputs.yml

@@ -1,0 +1,31 @@
+label: Online Scheduling
+icon: grid_view
+description: Online Scheduling section with editable cards. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/online-scheduling
+  id: ""
+  cards:
+    - link: ""
+      image: ""
+      imageAlt: ""
+      title: ""
+      buttonText: ""
+      buttonLink: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg.jpg
+  titleColor: "#1b2e38"
+  textColor: "#5bb781"
+  hoverColor: "#3b6278"
+  textHoverColor: "#223a47"
+  hoverBackgroundColor: rgba(255, 255, 255, 0.77)
+  hoverColor2: "#46a96f"
+  hoverColor3: "#49ab71"
+  hoverColor4: "#4bad73"
+preview:
+  text:
+    - Online Scheduling
+  icon: grid_view
+picker_preview:
+  text: Online Scheduling
+  subtext: Online Scheduling section with editable cards. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/online-scheduling/online-scheduling.cloudcannon.inputs.yml

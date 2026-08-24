@@ -1,0 +1,22 @@
+label: We Are Here For
+icon: vertical_split
+description: We Are Here For section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/we-are-here-for
+  id: ""
+  heading: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - We Are Here For
+  icon: vertical_split
+picker_preview:
+  text: We Are Here For
+  subtext: We Are Here For section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/we-are-here-for/we-are-here-for.cloudcannon.inputs.yml

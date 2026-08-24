@@ -1,0 +1,421 @@
+---
+/**
+ * No More Pain — migrated from lp/dental-emergency [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  buttonText = "",
+  buttonLink = "",
+  items = [],
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  titleColor = "#3b6278",
+  textColor = "#3b6278",
+  buttonBackgroundHoverColor = "#49ab71",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="no-more-pain" id={id || undefined} style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="nmp-box">
+    <div class="nmp-box2">
+      <div class="nmp-grid">
+        {list.map((it) => (
+          <div class="nmp-box3">
+            <div class="nmp-box4">
+              <h3 class="nmp-heading">{it.title}</h3>
+            </div>
+            <div class="nmp-box5">
+              <div class="nmp-box6">
+                <p class="nmp-text">{it.text}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <section class="nmp-box15">
+        <div class="nmp-box16">
+          <div class="nmp-box17">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nmp-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<style>
+  .no-more-pain {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .no-more-pain :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .nmp-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1195px;
+    position: relative;
+  }
+
+  .nmp-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .nmp-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 753px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .nmp-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .nmp-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .nmp-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .nmp-box4 {
+    border-top: 2px solid #5bb781;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    max-width: 100%;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .nmp-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .nmp-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .nmp-box6 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .nmp-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .nmp-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .nmp-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .nmp-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .nmp-box16 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .nmp-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .nmp-box17 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.nmp-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.nmp-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.nmp-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.nmp-btn):hover {
+    background-color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .no-more-pain {
+      left: -39px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      right: 39px;
+    }
+
+    .nmp-box2 {
+      min-height: auto;
+    }
+
+    .nmp-box3 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      min-height: 272px;
+    }
+
+    .nmp-box4 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      text-align: start;
+    }
+
+    .nmp-heading {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .nmp-box5 {
+      text-align: start;
+    }
+
+    .nmp-text {
+      font-size: 20px;
+      line-height: 35px;
+    }
+
+    .nmp-box15 {
+      margin-bottom: 0px;
+      margin-top: 50px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .no-more-pain {
+      left: -165px;
+      padding-bottom: 83px;
+      padding-top: 0px;
+      right: 165px;
+    }
+
+    .nmp-box {
+      flex-wrap: nowrap;
+      margin-left: 122.5px;
+      margin-right: 122.5px;
+    }
+
+    .nmp-grid {
+      flex: 0 0 97.02%;
+      flex-wrap: nowrap;
+      margin-left: 17.5px;
+      margin-right: 17.5px;
+      max-width: 97.02%;
+    }
+
+    .nmp-box3 {
+      min-height: auto;
+    }
+
+    .nmp-box6 {
+      margin-bottom: 12px;
+    }
+
+    .nmp-text {
+      font-size: 22px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .nmp-box16 {
+    color: rgb(59, 98, 120);
+    font-size: 22px;
+    font-weight: 300;
+    justify-content: normal;
+    line-height: 30px;
+    text-align: center;
+  }
+  :global(.nmp-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+  .nmp-box3 {
+    text-align: center;
+  }
+  .nmp-box15 {
+    text-align: center;
+  }
+  .nmp-box17 {
+    text-align: left;
+  }
+  .nmp-box {
+    justify-content: center;
+  }
+  .nmp-box2 {
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+
+    .nmp-box6 {
+      color: rgb(59, 98, 120);
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    .nmp-box17 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+    }
+
+    .nmp-box4 {
+      color: rgb(59, 98, 120);
+      font-family: Montserrat, sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .nmp-box3 {
+      text-align: start;
+    }
+
+    .nmp-box16 {
+      justify-content: normal;
+      text-align: center;
+    }
+
+    .nmp-box {
+      justify-content: center;
+    }
+
+    .nmp-box2 {
+      justify-content: normal;
+    }
+
+    .nmp-box15 {
+      justify-content: center;
+    }
+  }
+  @media (min-width: 1440px) {
+
+    :global(.nmp-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .nmp-text {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 35px;
+  }
+  .nmp-heading {
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,113 @@
+# Footer link columns.
+#
+# The footer's shape on most sites: a brand column carrying the logo and the
+# social badges, then two to four headed lists. Modelled as columns rather than
+# as one flat list of links because the grouping *is* the layout — a single
+# array of twenty links cannot be rendered back into the columns it came from,
+# whatever order it is in.
+linkColumns:
+  style: modal
+  values:
+    - label: Link Column
+      icon: view_column
+      description: A titled column of footer links.
+      value:
+        title: ""
+        links: []
+      preview:
+        text:
+          - key: title
+          - Link Column
+        subtext:
+          - key: links
+          - No links yet
+      picker_preview:
+        text: Link Column
+        subtext: A titled column of footer links.
+        icon: view_column
+      _inputs:
+        title:
+          type: text
+          comment: Heading shown above the column, with a rule beneath it.
+        links:
+          type: array
+          label: Links
+          comment: The links in this column, in order.
+          options:
+            structures:
+              - label: Column Link
+                icon: link
+                value:
+                  name: ""
+                  path: ""
+                  icon: ""
+                preview:
+                  text:
+                    - key: name
+                    - Column Link
+                  subtext:
+                    - key: path
+                    - Add path
+                _inputs:
+                  name:
+                    type: text
+                    comment: Display text for the link.
+                  path:
+                    type: text
+                    comment: "URL, or a tel: / mailto: address."
+                  icon:
+                    type: select
+                    comment: Optional icon drawn beside the label.
+                    options:
+                      values: _select_data.icons
+                  iconAfter:
+                    type: checkbox
+                    label: Icon after label
+                    comment: Draw the icon after the label instead of before it.
+                  color:
+                    type: color
+                    comment: Overrides the column's link colour, for a link meant to stand out.
+                  external:
+                    type: checkbox
+                    label: Open in new tab
+                    comment: Adds target="_blank" to the link.
+
+    - label: Brand Column
+      icon: photo_library
+      description: The logo-and-socials column, usually first.
+      value:
+        title: ""
+        brand: true
+        logo:
+          source: ""
+          alt: ""
+        links: []
+      preview:
+        text: Brand Column
+        subtext:
+          - key: logo.alt
+          - Logo and social links
+      picker_preview:
+        text: Brand Column
+        subtext: The logo-and-socials column, usually first.
+        icon: photo_library
+      _inputs:
+        title:
+          type: hidden
+        brand:
+          type: hidden
+        links:
+          type: hidden
+        logo:
+          type: object
+          comment: The logo shown at the top of this column.
+        "$.logo.source":
+          type: image
+          label: Logo
+          options:
+            paths:
+              uploads: src/assets/images
+        "$.logo.alt":
+          type: text
+          label: Logo alt text
+          comment: Read aloud in place of the logo. Name the practice, not the theme it came from.

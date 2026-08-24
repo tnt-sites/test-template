@@ -1,0 +1,208 @@
+---
+/**
+ * What Our Patients Say — migrated from  [7] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+const {
+  heading = "",
+  subheading = "",
+  heading2 = "",
+  images = [],
+  backgroundColor = "#e6eff4",
+  headingColor = "#3b6278",
+  hoverColor = "#5bb781",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+
+<section
+  class="what-our-patients-say"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--c3:${hoverColor}`}
+  {...rest}
+>
+  <div class="wops-box">
+    <div class="wops-box2">
+      <h2 class="wops-heading">{heading}</h2>
+      {subheading && <h4 class="wops-heading2">{subheading}</h4>}
+    </div>
+    <div class="wops-box3">
+      <div class="wops-box5">
+        {heading2 && <h2 class="wops-heading3" set:html={heading2} />}
+        <div class="wops-grid">
+          {
+            list.map((it) => (
+              <a class="wops-box6" href={it.link || "#"}>
+                {it.image && (
+                  <img class="wops-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" />
+                )}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .what-our-patients-say {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .wops-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .wops-box2 {
+    box-sizing: border-box;
+    min-height: 214px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .wops-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  .wops-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+
+  .wops-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .wops-box5 {
+    background-color: #3b6278;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 95px 30px;
+  }
+
+  .wops-heading3 {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 42px;
+    margin-bottom: 8px;
+    margin-top: 0;
+  }
+
+  .wops-heading3 :global(b),
+  .wops-heading3 :global(strong) {
+    display: block;
+    font-weight: 700;
+  }
+
+  .wops-grid {
+    box-sizing: border-box;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  .wops-box6 {
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    transition: all 0.25s ease;
+  }
+
+  .wops-media {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .wops-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .wops-box2 {
+      max-width: 100%;
+      min-height: 118px;
+    }
+
+    .wops-box5 {
+      flex: 0 0 auto;
+      max-width: 600px;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wops-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+  }
+
+  /* wpmig:corrections:begin */
+  .wops-box6 {
+    color: rgb(27, 46, 56);
+  }
+  .wops-media {
+    color: rgb(27, 46, 56);
+  }
+  @media (min-width: 768px) {
+    .wops-box6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .wops-media {
+      color: rgb(27, 46, 56);
+    }
+  }
+  @media (min-width: 1440px) {
+    .wops-box6 {
+      color: rgb(27, 46, 56);
+    }
+
+    .wops-media {
+      color: rgb(27, 46, 56);
+    }
+  }
+
+  /* wpmig:corrections:end */
+</style>

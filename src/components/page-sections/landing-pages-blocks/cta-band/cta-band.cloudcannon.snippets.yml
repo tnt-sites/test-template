@@ -1,0 +1,10 @@
+_snippets:
+  cta_band:
+    template: astro_component
+    inline: false
+    preview:
+      text: Cta Band
+    definitions:
+      component_name: page-sections/landing-pages-blocks/cta-band
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/cta-band/cta-band.cloudcannon.inputs.yml

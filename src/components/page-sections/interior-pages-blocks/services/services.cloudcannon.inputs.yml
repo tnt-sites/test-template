@@ -1,0 +1,244 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  secondaryButtonText6:
+    type: text
+  secondaryButtonLink6:
+    type: url
+  secondaryButtonText7:
+    type: text
+  secondaryButtonLink7:
+    type: url
+  secondaryButtonText8:
+    type: text
+  secondaryButtonLink8:
+    type: url
+  secondaryButtonText9:
+    type: text
+  secondaryButtonLink9:
+    type: url
+  secondaryButtonText10:
+    type: text
+  secondaryButtonLink10:
+    type: url
+  secondaryButtonText11:
+    type: text
+  secondaryButtonLink11:
+    type: url
+  secondaryButtonText12:
+    type: text
+  secondaryButtonLink12:
+    type: url
+  secondaryButtonText13:
+    type: text
+  secondaryButtonLink13:
+    type: url
+  secondaryButtonText14:
+    type: text
+  secondaryButtonLink14:
+    type: url
+  secondaryButtonText15:
+    type: text
+  secondaryButtonLink15:
+    type: url
+  secondaryButtonText16:
+    type: text
+  secondaryButtonLink16:
+    type: url
+  secondaryButtonText17:
+    type: text
+  secondaryButtonLink17:
+    type: url
+  secondaryButtonText18:
+    type: text
+  secondaryButtonLink18:
+    type: url
+  secondaryButtonText19:
+    type: text
+  secondaryButtonLink19:
+    type: url
+  secondaryButtonText20:
+    type: text
+  secondaryButtonLink20:
+    type: url
+  secondaryButtonText21:
+    type: text
+  secondaryButtonLink21:
+    type: url
+  secondaryButtonText22:
+    type: text
+  secondaryButtonLink22:
+    type: url
+  secondaryButtonText23:
+    type: text
+  secondaryButtonLink23:
+    type: url
+  secondaryButtonText24:
+    type: text
+  secondaryButtonLink24:
+    type: url
+  secondaryButtonText25:
+    type: text
+  secondaryButtonLink25:
+    type: url
+  secondaryButtonText26:
+    type: text
+  secondaryButtonLink26:
+    type: url
+  secondaryButtonText27:
+    type: text
+  secondaryButtonLink27:
+    type: url
+  secondaryButtonText28:
+    type: text
+  secondaryButtonLink28:
+    type: url
+  subheading:
+    type: text
+  text:
+    type: html
+  heading2:
+    type: text
+  secondaryButtonText29:
+    type: text
+  secondaryButtonLink29:
+    type: url
+  heading3:
+    type: text
+  text2:
+    type: html
+  heading4:
+    type: text
+  secondaryButtonText30:
+    type: text
+  secondaryButtonLink30:
+    type: url
+  heading5:
+    type: text
+  text3:
+    type: html
+  heading6:
+    type: text
+  secondaryButtonText31:
+    type: text
+  secondaryButtonLink31:
+    type: url
+  heading7:
+    type: text
+  text4:
+    type: html
+  heading8:
+    type: text
+  secondaryButtonText32:
+    type: text
+  secondaryButtonLink32:
+    type: url
+  heading9:
+    type: text
+  text5:
+    type: html
+  secondaryButtonText33:
+    type: text
+  secondaryButtonLink33:
+    type: url
+  heading10:
+    type: text
+  text6:
+    type: html
+  secondaryButtonText34:
+    type: text
+  secondaryButtonLink34:
+    type: url
+  items:
+    type: array
+    options:
+      structures: _structures.services_item
+  items2:
+    type: array
+    options:
+      structures: _structures.services_item
+  items3:
+    type: array
+    options:
+      structures: _structures.services_item
+  items4:
+    type: array
+    options:
+      structures: _structures.services_item
+  items5:
+    type: array
+    options:
+      structures: _structures.services_item
+  items6:
+    type: array
+    options:
+      structures: _structures.services_item
+  items7:
+    type: array
+    options:
+      structures: _structures.services_item
+  items8:
+    type: array
+    options:
+      structures: _structures.services_item
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  buttonTextColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor2:
+    type: color
+  textColor2:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color
+  textHoverColor:
+    type: color
+  hoverColor:
+    type: color
+_structures:
+  services_item:
+    values:
+      - value:
+          buttonText: ""
+          buttonLink: ""
+        _inputs:
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

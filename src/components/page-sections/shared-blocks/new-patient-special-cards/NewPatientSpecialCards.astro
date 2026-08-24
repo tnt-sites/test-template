@@ -1,0 +1,226 @@
+---
+/**
+ * The two-up "New Patient Specials" price cards — a blue band naming the
+ * offer, the price beneath it, and an optional list of what it includes.
+ *
+ * Lifted out of the new-patients page component, which was one whole page
+ * baked into a single file. It renders as an `interior-content` block so the
+ * cards keep sitting inside the content column beside the side menu, the same
+ * way `ServiceCardGrid` does.
+ *
+ * Two things the migrated copy measured rather than meant are not reproduced:
+ *
+ * - A 398px `min-height` on each card, holding the pair level. The cards
+ *   stretch to the row instead, so the pair stays level at any content length.
+ * - A mobile rule dropping the band's background to transparent while leaving
+ *   its heading white — white text on the near-white card, i.e. invisible. The
+ *   band is blue at every width here.
+ *
+ * `cards`: [{ heading, note, price, items: [{ text }] }]. `price` and
+ * `heading` take HTML, since the source copy carries `<sup>` and `<br>`.
+ */
+const {
+  heading = "",
+  headingLevel = "h3",
+  cards = [],
+  backgroundColor = "#f9fafa",
+  bandColor = "#3b6278",
+  bandTextColor = "#ffffff",
+  priceColor = "#555555",
+  checkColor = "#1b2e38",
+  ...rest
+} = Astro.props;
+
+const clean = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+
+type Card = { heading?: string; note?: string; price?: string; items?: { text?: string }[] };
+
+const list: Card[] = (Array.isArray(cards) ? cards : [])
+  .filter((c): c is Card => !!c && typeof c === "object")
+  .filter((c) => clean(c.heading) || clean(c.price) || (Array.isArray(c.items) && c.items.length > 0));
+
+const HEADING_TAGS: Record<string, string> = { h2: "h2", h3: "h3", h4: "h4", h5: "h5" };
+const HeadingTag = (HEADING_TAGS[clean(headingLevel).toLowerCase()] ?? "h3") as any;
+---
+
+{
+  list.length > 0 && (
+    <div
+      class="npsc"
+      style={`--bg:${backgroundColor};--band:${bandColor};--bandtx:${bandTextColor};--price:${priceColor};--check:${checkColor}`}
+      {...rest}
+    >
+      {heading && <HeadingTag class="npsc-heading" set:html={heading} />}
+      <div class="npsc-row">
+        {list.map((card) => {
+          const items = (Array.isArray(card.items) ? card.items : []).filter((i) => i && clean(i.text));
+          return (
+            <div class="npsc-cell">
+              <div class="npsc-card">
+                <div class="npsc-band">
+                  {card.heading && <h4 class="npsc-card-heading" set:html={card.heading} />}
+                  {card.note && <span class="npsc-note">{card.note}</span>}
+                </div>
+                {card.price && <div class="npsc-price" set:html={card.price} />}
+                {items.length > 0 && (
+                  <ul class="npsc-list no-check">
+                    {items.map((item) => (
+                      <li class="npsc-item">
+                        <span class="npsc-item-inner">
+                          <svg class="npsc-check" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false">
+                            <circle cx="8" cy="8" r="8" fill="currentColor" />
+                            <path
+                              d="M4.5 8.2l2.2 2.2 4.8-4.8"
+                              fill="none"
+                              stroke="#ffffff"
+                              stroke-width="1.8"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                          <span class="npsc-item-text">{item.text}</span>
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  )
+}
+
+<style>
+  /* Only the cells are inset — the heading lines up with the rest of the
+     content column's headings, as it does in the source design. */
+  .npsc {
+    box-sizing: border-box;
+  }
+
+  .npsc-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 0 10px;
+  }
+
+  .npsc-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .npsc-cell {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  /* Stretching to the row is what keeps a pair of cards level — the source
+     held them level with a measured min-height instead. */
+  .npsc-card {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+  }
+
+  .npsc-band {
+    background-color: var(--band);
+    box-sizing: border-box;
+    padding: 20px 0;
+  }
+
+  .npsc-card-heading {
+    box-sizing: border-box;
+    color: var(--bandtx);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28.8px;
+    margin: 0;
+  }
+
+  .npsc-note {
+    box-sizing: border-box;
+    color: var(--bandtx);
+    font-family: Montserrat, sans-serif;
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+
+  .npsc-price {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--price);
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Montserrat, sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 97.5px;
+    padding: 40px 0;
+  }
+
+  /* The source sets the currency at roughly a third of the figure and hangs it
+     off the top of the digits, rather than at `sup`'s own default size. */
+  .npsc-price :global(sup) {
+    font-size: 0.43em;
+    position: relative;
+    top: -0.45em;
+    vertical-align: baseline;
+  }
+
+  .npsc-list {
+    box-sizing: border-box;
+    line-height: 16px;
+    list-style: none;
+    margin: 0;
+    padding: 0 12.5% 20px;
+    text-align: center;
+  }
+
+  .npsc-item {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 17px 0;
+  }
+
+  /* A hairline between items only — the list closes on the card's own edge. */
+  .npsc-item + .npsc-item {
+    border-top: 1px solid #ddd;
+  }
+
+  /* Icon and label centre as one group, so rows of different lengths sit
+     centred rather than sharing a common icon column. */
+  .npsc-item-inner {
+    align-items: center;
+    display: inline-flex;
+    gap: 11px;
+    text-align: left;
+  }
+
+  .npsc-check {
+    color: var(--check);
+    flex: 0 0 auto;
+  }
+
+  @media (min-width: 768px) {
+    .npsc-cell {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+</style>

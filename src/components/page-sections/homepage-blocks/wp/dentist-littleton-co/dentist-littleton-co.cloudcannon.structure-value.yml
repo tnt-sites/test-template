@@ -1,0 +1,30 @@
+label: Dentist Littleton Co
+icon: vertical_split
+description: Dentist Littleton Co section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/dentist-littleton-co
+  id: ""
+  heading: ""
+  subheading: ""
+  heading2: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  backgroundImage: /wp-content/uploads/2023/11/homeBanner-columbone-1.jpg
+  headingColor: "#3b6278"
+  buttonTextColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonTextHoverColor: "#203743"
+  hoverBackgroundColor: rgba(255, 255, 255, 0.84)
+  buttonBackgroundHoverColor: "#49ab71"
+preview:
+  text:
+    - Dentist Littleton Co
+  icon: vertical_split
+picker_preview:
+  text: Dentist Littleton Co
+  subtext: Dentist Littleton Co section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/dentist-littleton-co/dentist-littleton-co.cloudcannon.inputs.yml

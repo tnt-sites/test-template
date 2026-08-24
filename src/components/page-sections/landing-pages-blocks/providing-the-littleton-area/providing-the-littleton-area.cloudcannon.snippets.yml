@@ -1,0 +1,10 @@
+_snippets:
+  providing_the_littleton_area:
+    template: astro_component
+    inline: false
+    preview:
+      text: Providing The Littleton Area
+    definitions:
+      component_name: page-sections/landing-pages-blocks/providing-the-littleton-area
+    _inputs_from_glob:
+      - /src/components/page-sections/landing-pages-blocks/providing-the-littleton-area/providing-the-littleton-area.cloudcannon.inputs.yml

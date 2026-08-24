@@ -1,0 +1,216 @@
+---
+/**
+ * Service card grid — the icon / title / "Read More" card row that appears
+ * under a "Our <X> Services Include:" subheading.
+ *
+ * This is a shared partial, not a CloudCannon-selectable section. The dental
+ * service pages (general, restorative, cosmetic) were each migrated with their
+ * own inlined copy of this markup and CSS, so a change to one silently skipped
+ * the others. They now all render this.
+ *
+ * Each item: { image, imageAlt, text, text2, link }.
+ */
+const { items = [], accentColor = "#d44d5c", class: className, ...rest } = Astro.props;
+
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+
+const escapeHtml = (value: string) =>
+  value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+
+/**
+ * Break a title across two lines at the word boundary nearest its midpoint, so
+ * every card in a row is the same height regardless of title length.
+ */
+const twoLineTitle = (value: unknown) => {
+  const text = typeof value === "string" ? value.trim() : "";
+
+  if (!text) return "";
+  const words = text.split(/\s+/);
+
+  if (words.length < 2) return escapeHtml(text);
+
+  let splitIndex = 1;
+  let bestDiff = Infinity;
+  let runningLength = 0;
+
+  for (let i = 0; i < words.length - 1; i++) {
+    runningLength += words[i].length + 1;
+    const diff = Math.abs(runningLength - text.length / 2);
+
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      splitIndex = i + 1;
+    }
+  }
+  return `${escapeHtml(words.slice(0, splitIndex).join(" "))}<br />${escapeHtml(words.slice(splitIndex).join(" "))}`;
+};
+---
+
+{
+  list.length > 0 && (
+    <div class:list={["service-card-grid", className]} style={`--scg-accent:${accentColor}`} {...rest}>
+      {list.map((item) => (
+        <div class="service-card-column">
+          <a class="service-card" href={item.link || undefined}>
+            <div class="service-card-figure">
+              {item.image && (
+                <img
+                  class="service-card-icon"
+                  src={item.image}
+                  alt={item.imageAlt || ""}
+                  loading="lazy"
+                  width="64"
+                  height="64"
+                />
+              )}
+            </div>
+            <div class="service-card-heading">
+              <div class="service-card-title" set:html={twoLineTitle(item.text)} />
+            </div>
+            {item.text2 && (
+              <div class="service-card-more">
+                <p class="service-card-more-text">{item.text2}</p>
+              </div>
+            )}
+          </a>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+<style>
+  .service-card-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .service-card-column {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .service-card {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    color: inherit;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition:
+      background-color 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .service-card[href]:hover,
+  .service-card[href]:focus-visible {
+    background-color: transparent;
+    border-color: rgba(84, 89, 95, 0.4);
+    box-shadow: 0 6px 16px rgba(27, 46, 56, 0.18);
+    transform: translateY(-3px);
+  }
+
+  .service-card[href]:focus-visible {
+    outline: 2px solid var(--scg-accent);
+    outline-offset: 2px;
+  }
+
+  .service-card-figure {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .service-card-icon {
+    box-sizing: border-box;
+    display: inline-block;
+    height: auto;
+    width: 64px;
+  }
+
+  .service-card-heading {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .service-card-title {
+    box-sizing: border-box;
+    margin-top: -8px;
+    /* Reserve both lines so a one-word title still aligns with its row. */
+    min-height: calc(2 * 1.5em);
+    transition: color 0.25s ease;
+  }
+
+  .service-card[href]:hover .service-card-title,
+  .service-card[href]:focus-visible .service-card-title {
+    color: var(--scg-accent);
+  }
+
+  .service-card-more {
+    display: none;
+  }
+
+  .service-card-more-text {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .service-card-column {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .service-card-more {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+
+    .service-card-more-text {
+      box-sizing: border-box;
+      color: var(--scg-accent);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      text-align: center;
+    }
+
+    .service-card[href]:hover .service-card-more-text,
+    .service-card[href]:focus-visible .service-card-more-text {
+      text-decoration: underline;
+    }
+  }
+</style>

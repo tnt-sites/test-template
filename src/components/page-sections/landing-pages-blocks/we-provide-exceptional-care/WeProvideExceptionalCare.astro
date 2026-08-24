@@ -1,0 +1,199 @@
+---
+/**
+ * We Provide Exceptional Care — migrated from invisalign-littleton-co [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  image = "",
+  imageAlt = "",
+  backgroundImage = "/wp-content/uploads/2020/03/Hero-BG-Photo.jpg",
+  backgroundColor = "#eeeeee",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="we-provide-exceptional-care" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="wpec-box">
+    <div class="wpec-box2">
+      <div class="wpec-box3">
+        <h1 class="wpec-heading">{heading}</h1>
+      </div>
+      <div class="wpec-box4">
+        {subheading && <h2 class="wpec-heading2">{subheading}</h2>}
+      </div>
+    </div>
+    <div class="wpec-box5">
+      {image && <img class="wpec-media" src={image} alt={imageAlt || ""} loading="lazy" width="2048" height="1476" />}
+    </div>
+  </div>
+</section>
+<style>
+  .we-provide-exceptional-care {
+    background-color: var(--bg);
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+  .wpec-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .wpec-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .wpec-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: 24px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wpec-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wpec-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .wpec-heading2 {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    line-height: 28.8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .wpec-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: end;
+  }
+
+  .wpec-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .wpec-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 277px;
+    }
+
+    .wpec-box3 {
+      margin-left: 4px;
+      margin-top: 0px;
+      text-align: left;
+    }
+
+    .wpec-heading {
+      font-size: 14.4px;
+      line-height: 14.4px;
+    }
+
+    .wpec-box4 {
+      text-align: left;
+    }
+
+    .wpec-box5 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wpec-box {
+      flex-wrap: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1370px;
+    }
+
+    .wpec-box2 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      min-height: 592px;
+    }
+
+    .wpec-heading {
+      font-size: 25.6px;
+      line-height: 25.6px;
+    }
+
+    .wpec-heading2 {
+      font-size: 88px;
+      line-height: 79.2px;
+    }
+
+    .wpec-box5 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wpec-box4 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: 700;
+    line-height: 16px;
+  }
+  .wpec-box5 {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-align: center;
+  }
+  .wpec-heading {
+    font-family: Open Sans Condensed, sans-serif;
+    font-size: 25.6px;
+    font-weight: 700;
+    line-height: 25.6px;
+  }
+  .wpec-heading2 {
+    font-family: Open Sans Condensed, sans-serif;
+    font-size: 88px;
+    font-weight: 700;
+    line-height: 79.2px;
+  }
+/* wpmig:corrections:end */
+</style>

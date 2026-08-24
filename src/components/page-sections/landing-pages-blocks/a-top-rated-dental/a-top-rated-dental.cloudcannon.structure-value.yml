@@ -1,0 +1,27 @@
+label: A Top Rated Dental
+icon: vertical_split
+description: A Top Rated Dental section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/a-top-rated-dental
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+  hoverColor: "#ffffff"
+preview:
+  text:
+    - A Top Rated Dental
+  icon: vertical_split
+picker_preview:
+  text: A Top Rated Dental
+  subtext: A Top Rated Dental section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/a-top-rated-dental/a-top-rated-dental.cloudcannon.inputs.yml

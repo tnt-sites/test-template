@@ -1,0 +1,46 @@
+_inputs:
+  items:
+    type: array
+    options:
+      structures: _structures.condition_card_grid_item
+  titleColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color
+_structures:
+  condition_card_grid_item:
+    values:
+      - value:
+          title: ""
+          text: ""
+          buttonText: ""
+          buttonLink: ""
+          text2: ""
+          text3: ""
+          buttonText2: ""
+          buttonLink2: ""
+        _inputs:
+          title:
+            type: text
+          text:
+            type: textarea
+          buttonText:
+            type: text
+          buttonLink:
+            type: url
+          text2:
+            type: textarea
+          text3:
+            type: textarea
+          buttonText2:
+            type: text
+          buttonLink2:
+            type: url

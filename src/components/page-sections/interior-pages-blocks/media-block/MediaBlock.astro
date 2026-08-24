@@ -1,0 +1,70 @@
+---
+/**
+ * Section — migrated from about-us [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  image = "",
+  imageWidth = "",
+  imageHeight = "",
+  imageAlt = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section" id={id || undefined} {...rest}>
+  <div class="se-box">
+    <div class="se-box2">
+      {image && <img class="se-media" src={image} alt={imageAlt || ""} loading="lazy" width={imageWidth || 900} height={imageHeight || 577} />}
+    </div>
+  </div>
+</section>
+<style>
+  .section {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .se-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .se-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .se-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      max-width: 690px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section {
+      max-width: 1110px;
+    }
+  }
+</style>

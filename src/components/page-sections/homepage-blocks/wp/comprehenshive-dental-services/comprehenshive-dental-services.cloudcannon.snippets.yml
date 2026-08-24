@@ -1,0 +1,10 @@
+_snippets:
+  comprehenshive_dental_services:
+    template: astro_component
+    inline: false
+    preview:
+      text: Comprehenshive Dental Services
+    definitions:
+      component_name: page-sections/homepage-blocks/wp/comprehenshive-dental-services
+    _inputs_from_glob:
+      - /src/components/page-sections/homepage-blocks/wp/comprehenshive-dental-services/comprehenshive-dental-services.cloudcannon.inputs.yml

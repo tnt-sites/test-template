@@ -1,0 +1,22 @@
+label: Lp Hero Stacked
+icon: vertical_split
+description: We Are Here If section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-hero-stacked
+  id: ""
+  heading: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Lp Hero Stacked
+  icon: vertical_split
+picker_preview:
+  text: Lp Hero Stacked
+  subtext: We Are Here If section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-hero-stacked/lp-hero-stacked.cloudcannon.inputs.yml

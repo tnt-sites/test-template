@@ -1,0 +1,78 @@
+label: In-Network Insurance
+icon: grid_view
+description: In-Network Insurance section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/interior-pages-blocks/in-network-insurance
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  text: ""
+  subheading: ""
+  heading2: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  text2: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  secondaryButtonText7: ""
+  secondaryButtonLink7: ""
+  secondaryButtonText8: ""
+  secondaryButtonLink8: ""
+  heading3: ""
+  secondaryButtonText9: ""
+  secondaryButtonLink9: ""
+  text3: ""
+  secondaryButtonText10: ""
+  secondaryButtonLink10: ""
+  secondaryButtonText11: ""
+  secondaryButtonLink11: ""
+  secondaryButtonText12: ""
+  secondaryButtonLink12: ""
+  text4: ""
+  secondaryButtonText13: ""
+  secondaryButtonLink13: ""
+  secondaryButtonText14: ""
+  secondaryButtonLink14: ""
+  heading4: ""
+  heading5: ""
+  secondaryButtonText15: ""
+  secondaryButtonLink15: ""
+  heading6: ""
+  secondaryButtonText16: ""
+  secondaryButtonLink16: ""
+  secondaryButtonText17: ""
+  secondaryButtonLink17: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverColor: "#09498c"
+  textHoverColor: "#09498c"
+  hoverColor2: "#064d96"
+preview:
+  text:
+    - In-Network Insurance
+  icon: grid_view
+picker_preview:
+  text: In-Network Insurance
+  subtext: In-Network Insurance section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/in-network-insurance/in-network-insurance.cloudcannon.inputs.yml

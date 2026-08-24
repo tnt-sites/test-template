@@ -1,0 +1,176 @@
+---
+/**
+ * Full-width YouTube embed used on the About Us page.
+ *
+ * The video URL is hardcoded in the iframe below — the component takes no
+ * props beyond `id`, so changing the video means editing this file.
+ */
+const {
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="video-embed" id={id || undefined} {...rest}>
+  <div class="sb-box">
+    <div class="sb-box2">
+      <div class="sb-spacer" aria-hidden="true"></div>
+    </div>
+    <div class="sb-box3">
+      <iframe class="sb-embed" src="https://www.youtube.com/embed/cmzlzKGBpLk" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+    <div class="sb-box4">
+      <div class="sb-spacer2" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+<style>
+  .video-embed {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .sb-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sb-spacer {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sb-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sb-embed {
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .sb-box4 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sb-spacer2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 1px;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .video-embed {
+      max-width: 690px;
+    }
+
+    .sb-box {
+      max-width: 1024px;
+    }
+
+    .sb-box2 {
+      flex: 0 0 8.99%;
+      max-width: 8.99%;
+    }
+
+    .sb-spacer {
+      height: 314px;
+      min-height: 314px;
+    }
+
+    .sb-box3 {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+
+    .sb-box4 {
+      flex: 0 0 12.17%;
+      max-width: 12.17%;
+    }
+
+    .sb-spacer2 {
+      height: 314px;
+      min-height: 314px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .video-embed {
+      max-width: 1110px;
+    }
+
+    .sb-box {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .sb-box2 {
+      flex: 0 0 9.01%;
+      max-width: 9.01%;
+    }
+
+    .sb-spacer {
+      height: 500px;
+      min-height: 500px;
+    }
+
+    .sb-box4 {
+      flex: 0 0 12.25%;
+      max-width: 12.25%;
+    }
+
+    .sb-spacer2 {
+      height: 500px;
+      min-height: 500px;
+    }
+  }
+</style>

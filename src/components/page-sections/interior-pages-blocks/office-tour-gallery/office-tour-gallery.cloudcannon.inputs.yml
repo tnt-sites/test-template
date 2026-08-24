@@ -1,0 +1,37 @@
+_inputs:
+  subheading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  buttonTextColor:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverColor:
+    type: color
+  hoverColor2:
+    type: color

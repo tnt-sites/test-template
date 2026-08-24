@@ -1,0 +1,296 @@
+---
+/**
+ * Comprehenshive Dental Services — migrated from  [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  cards = [],
+  backgroundImage = "/wp-content/uploads/2020/03/Hero-BG-Photo.jpg",
+  headingColor = "#3b6278",
+  textColor = "#1b2e38",
+  titleColor = "#4e4e4e",
+  textColor2 = "#ffffff",
+  textColor2HoverColor = "#1b2e38",
+  hoverColor = "#5bb781",
+  hoverColor2 = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<section class="comprehenshive-dental-services" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--tt:${titleColor};--c4:${textColor2};--c5:${textColor2HoverColor};--c6:${hoverColor};--c7:${hoverColor2}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="cds-box">
+    <div class="cds-box2">
+      <h2 class="cds-heading">{heading}</h2>
+      {text && <p class="cds-text">{text}</p>}
+    </div>
+    <div class="cds-grid">
+      {list.map((c) => (
+        <div class="cds-box3">
+          <a
+            class="cds-box4"
+            href={c.buttonLink || undefined}
+            style={c.backgroundImage ? `--cardbg:url('${c.backgroundImage}')` : undefined}
+          >
+            <div class="cds-box5">
+              {c.image && <img class="cds-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />}
+            </div>
+            <div class="cds-box6">
+              <h3 class="cds-heading2">{c.title}</h3>
+              <p class="cds-text2">{c.text}</p>
+            </div>
+            {c.buttonText && <Button element="span" variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cds-btn" text={c.buttonText} editable={false} />}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .comprehenshive-dental-services {
+    background-image: var(--bgimg, none);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: left;
+  }
+
+  .cds-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cds-box2 {
+    box-sizing: border-box;
+    min-height: 297px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cds-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .cds-text {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .cds-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .cds-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cds-box4 {
+    background-image: var(--cardbg, url("/wp-content/uploads/2021/12/General-Dentistry_bg.jpg"));
+    box-sizing: border-box;
+    color: inherit;
+    display: block;
+    padding: 25px;
+    text-align: center;
+    text-decoration: none;
+    transition:
+      box-shadow 0.2s ease-in-out,
+      transform 0.2s ease-in-out;
+  }
+
+  .cds-box4[href]:hover,
+  .cds-box4[href]:focus-visible {
+    box-shadow: 0 8px 20px rgba(27, 46, 56, 0.25);
+    transform: translateY(-4px);
+  }
+
+  .cds-box4[href]:focus-visible {
+    outline: 2px solid var(--c6);
+    outline-offset: 3px;
+  }
+
+  .cds-box4[href]:hover .cds-heading2,
+  .cds-box4[href]:focus-visible .cds-heading2 {
+    color: var(--c6);
+  }
+
+  .cds-box5 {
+    box-sizing: border-box;
+  }
+
+  .cds-media {
+    box-sizing: border-box;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 11px;
+    width: 80px;
+  }
+
+  .cds-box6 {
+    box-sizing: border-box;
+  }
+
+  .cds-heading2 {
+    box-sizing: border-box;
+    color: var(--tt);
+    transition: color 0.2s ease-in-out;
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .cds-text2 {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-top: 0px;
+    padding-bottom: 15px;
+  }
+
+  :global(.cds-btn) {
+    background-color: #000000;
+    box-sizing: border-box;
+    color: var(--c4);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px;
+    padding: 15px 20px;
+    transition: all 0.15s ease-in-out;
+    white-space: nowrap;
+  }
+
+  :global(.cds-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cds-box4[href]:hover :global(.cds-btn),
+  .cds-box4[href]:focus-visible :global(.cds-btn) {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: var(--c7);
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .cds-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cds-box2 {
+      max-width: 100%;
+      min-height: 177px;
+    }
+
+    .cds-box3 {
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 435px;
+    }
+
+    .cds-box4 {
+      margin-bottom: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cds-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cds-box2 {
+      min-height: 129px;
+    }
+
+    .cds-box3 {
+      min-height: 347px;
+    }
+
+    .cds-box4 {
+      margin-bottom: 10px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  :global(.cds-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  .cds-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cds-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.cds-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cds-text {
+      line-height: 24px;
+    }
+
+    .cds-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.cds-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cds-text {
+      line-height: 24px;
+    }
+
+    .cds-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

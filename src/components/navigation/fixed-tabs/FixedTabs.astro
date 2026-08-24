@@ -1,5 +1,6 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
+import { isSchedulingLink } from "@component-utils/scheduling-links";
 
 type FixedTab = {
   enabled?: boolean;
@@ -60,7 +61,8 @@ if (!_component && visibleTabs.length === 0) {
         typeof tab.newTab === "string" ? tab.newTab.trim().toLowerCase() === "true" : !!tab.newTab;
       const target = isModalLink
         ? undefined
-        : tab.target?.trim() || (openInNewTab ? "_blank" : undefined);
+        : tab.target?.trim() ||
+          (openInNewTab || isSchedulingLink(normalizedHref) ? "_blank" : undefined);
       const rel = tab.rel?.trim() || (target === "_blank" ? "noopener noreferrer" : undefined);
       const tabContent = (
         <>

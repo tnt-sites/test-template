@@ -12,6 +12,7 @@ import postcssImport from "postcss-import";
 import postcssNested from "postcss-nested";
 
 import mdx from "@astrojs/mdx";
+import rehypeSchedulingLinks from "./src/components/utils/rehype-scheduling-links.mjs";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -28,6 +29,9 @@ export default defineConfig({
   },
   server: {
     port: 4321,
+  },
+  markdown: {
+    rehypePlugins: [rehypeSchedulingLinks],
   },
   image: {
     domains: ["assets.imgix.net", "picsum.photos", "placebear.com", "placehold.co"],

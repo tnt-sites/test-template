@@ -1,0 +1,10 @@
+_snippets:
+  contact_us_today:
+    template: astro_component
+    inline: false
+    preview:
+      text: Contact Us Today
+    definitions:
+      component_name: page-sections/interior-pages-blocks/contact-us-today
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/contact-us-today/contact-us-today.cloudcannon.inputs.yml

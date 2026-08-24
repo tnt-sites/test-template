@@ -1,0 +1,31 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: text
+  heading2:
+    type: html
+  images:
+    type: array
+    options:
+      structures: _structures.what_our_patients_say_item
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  hoverColor:
+    type: color
+_structures:
+  what_our_patients_say_item:
+    values:
+      - value:
+          link: ""
+          image: ""
+          imageAlt: ""
+        _inputs:
+          link:
+            type: url
+          image:
+            type: image
+          imageAlt:
+            type: text

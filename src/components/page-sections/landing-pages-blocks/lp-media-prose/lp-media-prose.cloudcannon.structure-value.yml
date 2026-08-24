@@ -1,0 +1,25 @@
+label: Lp Media Prose
+icon: vertical_split
+description: Paperless Check In section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/lp-media-prose
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+preview:
+  text:
+    - Lp Media Prose
+  icon: vertical_split
+picker_preview:
+  text: Lp Media Prose
+  subtext: Paperless Check In section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/lp-media-prose/lp-media-prose.cloudcannon.inputs.yml

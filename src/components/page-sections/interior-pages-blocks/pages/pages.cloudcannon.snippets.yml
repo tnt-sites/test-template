@@ -1,0 +1,10 @@
+_snippets:
+  pages:
+    template: astro_component
+    inline: false
+    preview:
+      text: Pages
+    definitions:
+      component_name: page-sections/interior-pages-blocks/pages
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/pages/pages.cloudcannon.inputs.yml

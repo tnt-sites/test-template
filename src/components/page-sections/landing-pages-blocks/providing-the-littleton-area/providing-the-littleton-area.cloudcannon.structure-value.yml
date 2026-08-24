@@ -1,0 +1,19 @@
+label: Providing The Littleton Area
+icon: interests
+description: Providing The Littleton Area section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/providing-the-littleton-area
+  id: ""
+  heading: ""
+  subheading: ""
+  embedUrl: ""
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Providing The Littleton Area
+  icon: interests
+picker_preview:
+  text: Providing The Littleton Area
+  subtext: Providing The Littleton Area section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/providing-the-littleton-area/providing-the-littleton-area.cloudcannon.inputs.yml

@@ -1,0 +1,65 @@
+---
+/**
+ * The "Call us today" band — a full-width blue bar closing a page with the
+ * practice's phone number.
+ *
+ * A shared partial, not a CloudCannon-selectable section. Nine migrated
+ * components carried their own copy, all under the same `cutt-` class prefix,
+ * distinguished only by Astro's scoping hash.
+ *
+ * The migration also put the bar's blue on the wrong element: the paragraph
+ * above it took the background while the bar itself stayed transparent, so
+ * every one of these pages rendered dark body text on a dark blue block and
+ * lost the bar entirely. Values here are measured off the WordPress original.
+ *
+ * `heading` is HTML — the copy carries a `<br>` and a `tel:` link.
+ */
+const { heading = "", class: className, ...rest } = Astro.props;
+
+const html = typeof heading === "string" ? heading.trim() : "";
+---
+
+{
+  html && (
+    <section class:list={["call-us-bar", className]} {...rest}>
+      <div class="call-us-bar-inner">
+        <h4 class="call-us-bar-heading" set:html={html} />
+      </div>
+    </section>
+  )
+}
+
+<style>
+  .call-us-bar {
+    background-color: #3b6278;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  .call-us-bar-inner {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .call-us-bar-heading {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .call-us-bar-heading :global(a) {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  .call-us-bar-heading :global(a:hover),
+  .call-us-bar-heading :global(a:focus-visible) {
+    text-decoration: underline;
+  }
+</style>

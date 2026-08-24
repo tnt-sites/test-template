@@ -1,0 +1,16 @@
+label: Section E
+icon: panorama
+description: Section E section with imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/section-e
+  id: ""
+  backgroundImage: /wp-content/uploads/2020/03/swirl-bottom.png
+preview:
+  text:
+    - Section E
+  icon: panorama
+picker_preview:
+  text: Section E
+  subtext: Section E section with imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/section-e/section-e.cloudcannon.inputs.yml

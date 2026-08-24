@@ -1,0 +1,30 @@
+label: Contact Us Today
+icon: vertical_split
+description: Contact Us Today section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/interior-pages-blocks/contact-us-today
+  id: ""
+  heading: ""
+  text: ""
+  embedUrl: ""
+  image: ""
+  imageAlt: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  text2: ""
+  embedUrl2: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  hoverColor: "#064d96"
+  hoverColor2: "#09498c"
+preview:
+  text:
+    - Contact Us Today
+  icon: vertical_split
+picker_preview:
+  text: Contact Us Today
+  subtext: Contact Us Today section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/contact-us-today/contact-us-today.cloudcannon.inputs.yml

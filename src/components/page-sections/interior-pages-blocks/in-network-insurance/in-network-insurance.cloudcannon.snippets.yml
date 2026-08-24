@@ -1,0 +1,10 @@
+_snippets:
+  in_network_insurance:
+    template: astro_component
+    inline: false
+    preview:
+      text: In-Network Insurance
+    definitions:
+      component_name: page-sections/interior-pages-blocks/in-network-insurance
+    _inputs_from_glob:
+      - /src/components/page-sections/interior-pages-blocks/in-network-insurance/in-network-insurance.cloudcannon.inputs.yml

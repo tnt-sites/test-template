@@ -1,0 +1,43 @@
+_inputs:
+  text:
+    type: html
+  subheading:
+    type: text
+  image:
+    type: image
+  imageAlt:
+    type: text
+  text2:
+    type: html
+  text3:
+    type: text
+  text4:
+    type: html
+  images:
+    type: array
+    options:
+      structures: _structures.we_offer_several_options_item
+  textColor:
+    type: color
+  textColor2:
+    type: color
+_structures:
+  we_offer_several_options_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+          text: ""
+          text2: ""
+          link: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text
+          text:
+            type: textarea
+          text2:
+            type: textarea
+          link:
+            type: url

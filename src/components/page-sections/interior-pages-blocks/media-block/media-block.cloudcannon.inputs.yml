@@ -1,0 +1,9 @@
+_inputs:
+  image:
+    type: image
+  imageAlt:
+    type: text
+  imageWidth:
+    type: number
+  imageHeight:
+    type: number

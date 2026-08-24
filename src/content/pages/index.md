@@ -1,238 +1,205 @@
 ---
 _schema: default
-title: Astro Component Starter
+_mig:
+  v: 0.1.0
+  gen: wpmig
+  hash: ""
+title: Dentist Littleton CO
+description: ""
+canonical: /
 pageSections:
-  - _component: page-sections/heroes/hero-center
-    id: ''
-    eyebrow:
-    heading: The Astro Component Starter for building any site
-    subtext: >-
-      Built on web fundamentals. Easy to customize, fast to use, and simple to
-      maintain.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: secondary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Built for Astro
-    heading: Fast, modern, and easy to work with
-    subtext: >-
-      The Component Starter takes full advantage of Astro's zero-JS-by-default
-      approach. You get fast pages, simple routing, and a component system that
-      stays easy to use as your site grows.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-feature.svg
-    imageAlt: Website Feature
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: CloudCannon Ready
-    heading: Easy visual editing
-    subtext: >-
-      Every component is built to work seamlessly in CloudCannon's Visual
-      Editor. Developers can create and style custom Page Sections with Astro.
-      Editors can click, change, and rearrange content right on the page without
-      touching the code or guessing where anything lives.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-split.svg
-    imageAlt: Website Split
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme:
-    backgroundColor:
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-    paddingVertical: lg
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Performance
-    heading: Fast by architecture, not by accident
-    subtext: >-
-      Your components render to static HTML, keeping bundles lean and pages
-      instant. Your users get instant page loads. You get a modern developer
-      experience.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-hero.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Documentation
-    heading: Every component, clearly documented
-    subtext: >-
-      Each component comes with straightforward docs, real examples, full
-      descriptions of every property, and clear guidance without having to dig
-      through source files.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-documented.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-reviews
-    id: reviews
-    heading: What Our Patients Say
-    reviews:
-      - text: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          vehicula felis nec urna tincidunt, vitae fermentum nulla condimentum.
-        authorName: First L.
-        socialIcon:
-        reviewerImage: /src/assets/images/component-library/profile1.jpg
-      - text: >-
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Proin euismod erat vel ligula facilisis.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-      - text: >-
-          Sed posuere consectetur est at lobortis. Donec sed odio dui. Cras
-          mattis consectetur purus sit amet fermentum.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-    showQuoteIcon: true
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    class: peek
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Ready to start building?
-    anchorName: ''
-    subtext: >-
-      Browse the complete Astro Component Starter and see live examples of every
-      component in action. All components are ready to use in CloudCannon and
-      are fully customizable.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: tertiary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: contrast
-    backgroundColor: surface
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/ctas/request-bar
-    id: ''
-    heading: Ready to Get Started?
-    buttonText: Request an Appointment
-    buttonLink: /request-an-appointment
-    buttonVariant: primary
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-description: ''
+  - _component: page-sections/homepage-blocks/wp/dentist-littleton-co
+    id: ""
+    heading: Dentist Littleton CO
+    subheading: |-
+      <span>Your Comfort &amp; Care</span>
+                      <span>are our #1 Priority</span>
+    heading2: At Columbine Creek Dentistry, exceptional dental care meets total comfort.  Imagine a relaxing environment where your smile gets the star treatment it deserves.
+    buttonText: Learn More About Us
+    buttonLink: /about-us/
+    secondaryButtonText: View our Dental Services
+    secondaryButtonLink: /dental-services/
+    backgroundImage: /wp-content/uploads/2023/11/homeBanner-columbone-1.jpg
+    headingColor: "#3b6278"
+    buttonTextColor: "#3b6278"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor2: "#ffffff"
+    buttonTextHoverColor: "#203743"
+    hoverBackgroundColor: rgba(255, 255, 255, 0.84)
+    buttonBackgroundHoverColor: "#49ab71"
+  - _component: page-sections/homepage-blocks/wp/appointments-now-available
+    id: ""
+    heading: Appointments Now Available!!
+    buttonText: 24/7 Online Scheduling
+    buttonLink: https://www.flexbook.me/schedulecc/1
+    backgroundColor: "#3b6278"
+    headingColor: "#ffffff"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor: "#ffffff"
+    buttonTextHoverColor: "#3b6278"
+  - _component: page-sections/homepage-blocks/wp/dental-savers-plan
+    id: ""
+    heading: Dental Savers Plan
+    text: |-
+      <p>Our Dental Savers Plan is designed to make high-quality dental care affordable for all patients. For one low annual fee, members receive significant discounts on routine cleanings, exams, X-rays, and many other treatments—plus additional savings on restorative and cosmetic services.</p>
+      <p>Whether you need preventive care or more extensive treatment, this plan helps you stay on top of your oral health while keeping costs manageable. It’s a simple, stress-free way to prioritize your smile and get the care you need, when you need it.</p>
+    buttonText: LEARN MORE
+    buttonLink: /payment-options/dental-savers-plan/
+    backgroundColor: "#e6eff4"
+    headingColor: "#1b2e38"
+    textColor: "#1b2e38"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor: "#ffffff"
+    buttonTextHoverColor: "#3b6278"
+  - _component: page-sections/homepage-blocks/wp/online-scheduling
+    id: ""
+    cards:
+      - link: https://www.flexbook.me/schedulecc/1
+        image: /wp-content/themes/ColumbineCreek/img/book-now-icon.png
+        imageAlt: Make an Appointment
+        title: 24/7 Online Scheduling
+        buttonText: Book Now
+        buttonLink: https://www.flexbook.me/schedulecc/1
+      - link: /new-patients/your-first-visit/
+        image: /wp-content/themes/ColumbineCreek/img/your-first-visit.png
+        imageAlt: Your First Visit
+        title: Your First Visit
+        buttonText: Learn More
+        buttonLink: /new-patients/your-first-visit/
+      - link: /dental-services/
+        image: /wp-content/themes/ColumbineCreek/img/services-icon.png
+        imageAlt: Our Services
+        title: Our Services
+        buttonText: View All Services
+        buttonLink: /dental-services/
+      - link: /about-us/meet-the-team/
+        image: /wp-content/themes/ColumbineCreek/img/meet-the-team-icon.png
+        imageAlt: Meet the Team
+        title: Meet the Team
+        buttonText: View Now
+        buttonLink: /about-us/meet-the-team/
+    backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg.jpg
+    titleColor: "#1b2e38"
+    textColor: "#5bb781"
+    hoverColor: "#3b6278"
+    textHoverColor: "#223a47"
+    hoverBackgroundColor: rgba(255, 255, 255, 0.77)
+    hoverColor2: "#46a96f"
+    hoverColor3: "#49ab71"
+    hoverColor4: "#4bad73"
+  - _component: page-sections/homepage-blocks/wp/columbine-creek-dentistry
+    id: ""
+    heading: Columbine Creek Dentistry
+    text: What makes Columbine Creek Dentistry different from most of the dental offices you have been to in the past? We make every effort to provide a comfortable, convenient place for you to get the best dental care for your family. Expect to be pampered with comfort amenities and treated like our special guest every time you come to our office. The goal of our dentist Littleton is to put you at ease while we provide you with excellent dental care services to benefit your smile.
+    buttonText: Learn more about Columbine Creek Dentistry
+    buttonLink: /about-us/
+    headingColor: "#1b2e38"
+    textColor: "#1b2e38"
+    hoverColor: "#223a47"
+    hoverBackgroundColor: rgba(255, 255, 255, 0.77)
+  - _component: page-sections/homepage-blocks/wp/comprehenshive-dental-services
+    id: ""
+    heading: Comprehenshive Dental Services
+    text: When choosing Columbine Creek Dentistry as your family's home for dental care, you can trust that we are able to care for every aspect of your smile through each stage of life. We have a comprehensive menu of dental services, ranging from routine pediatric cleanings to dental implants and orthodontics.
+    cards:
+      - image: /wp-content/uploads/2021/12/General-Dentistry_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/General-Dentistry_bg.jpg
+        title: General Dentistry
+        text: Mouth Guards, Regular Check ups, Tooth Colored Fillings, Crowns, & more!
+        buttonText: Read More
+        buttonLink: /dental-services/general-dentistry/
+      - image: /wp-content/uploads/2021/12/Pediatric-Dentistry_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/Pediatric-Dentistry_bg.jpg
+        title: Pediatric Dentistry
+        text: Dental Sealants, Fluoride Applications, Fillings, Crowns, & more!
+        buttonText: Read More
+        buttonLink: /dental-services/pediatric-dentistry/
+      - image: /wp-content/uploads/2021/12/Cosmetic-Dentistry_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/Cosmetic-Dentistry_bg.jpg
+        title: Cosmetic Dentistry
+        text: Cosmetic dental treatments can provide you with the extra push you need to achieve...
+        buttonText: Read More
+        buttonLink: /dental-services/cosmetic-dentistry/
+      - image: /wp-content/uploads/2021/12/Emergency-Dentistry_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/Emergency-Dentistry_bg.jpg
+        title: Emergency Dentistry
+        text: Dental emergencies happen all the time, and our staff is ready for these unexpected moments.
+        buttonText: Read More
+        buttonLink: /dental-services/emergency-dentistry/
+      - image: /wp-content/uploads/2021/12/crown_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/crown_bg.jpg
+        title: Dental Crowns
+        text: Patients who lose or severely damage teeth can expect to receive top-quality restorations at Columbine Creek Dentistry.
+        buttonText: Read More
+        buttonLink: /dental-services/pediatric-dentistry/
+      - image: /wp-content/uploads/2021/12/implant_icon.png
+        imageAlt: ""
+        backgroundImage: /wp-content/uploads/2021/12/implant_bg.jpg
+        title: Dental Implant
+        text: An often overlooked portion of a tooth’s structure is the root. A successful root system does more
+        buttonText: Read More
+        buttonLink: /dental-services/restorative-dentistry/dental-implants/
+    backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+    headingColor: "#3b6278"
+    textColor: "#1b2e38"
+    titleColor: "#4e4e4e"
+    textColor2: "#ffffff"
+    textColor2HoverColor: "#1b2e38"
+    hoverColor: "#5bb781"
+    hoverColor2: "#1b2e38"
+  - _component: page-sections/homepage-blocks/wp/schedule-your-appointment-today
+    id: ""
+    heading: Schedule your appointment today!
+    image: /wp-content/themes/ColumbineCreek/img/calendar-icon.png
+    imageAlt: Emergency Dental
+    buttonText: 24/7 Online Scheduling
+    buttonLink: https://www.flexbook.me/schedulecc/1
+    backgroundColor: "#3b6278"
+    headingColor: "#ffffff"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor: "#ffffff"
+    buttonTextHoverColor: "#223a47"
+    buttonBackgroundHoverColor: rgba(255, 255, 255, 0.77)
+  - _component: page-sections/homepage-blocks/wp/what-our-patients-say
+    id: ""
+    heading: What Our Patients Say About Us
+    subheading: Our Patients Are Our Biggest Fans!
+    heading2: People From Everywhere <b>Love Us!</b>
+    images:
+      - link: https://search.google.com/local/reviews?placeid=ChIJ7e9wJxJ-a4cRYpoiF-HR0xo
+        image: /wp-content/uploads/2021/12/google_icon1.png
+        imageAlt: 5-Star Google Reviews - Columbine Creek Dentistry
+      - link: https://www.facebook.com/pg/ColumbineCreekDentistry/reviews/?ref=page_internal
+        image: /wp-content/uploads/2021/12/logo-fb_icon.png
+        imageAlt: 5-Star Facebook Reviews - Columbine Creek Dentistry
+      - link: https://www.yelp.com/biz/columbine-creek-dentistry-littleton
+        image: /wp-content/uploads/2021/12/Yelp_Logo.png
+        imageAlt: 5-Star Yelp Reviews - Columbine Creek Dentistry
+    backgroundColor: "#e6eff4"
+    headingColor: "#3b6278"
+    hoverColor: "#5bb781"
+  - _component: page-sections/homepage-blocks/wp/new-patient-specials
+    id: ""
+    heading: New Patient Specials
+    subheading: We want your visits to be efficient and gentle. Columbine Creek Dentistry is dedicated to being your dentist in Littleton, CO.
+    text: Emergency Exam
+    text2: <sup>$</sup>39
+    text3: Same-Day Emergency Exam - Full Value $81
+    text4: "*For new patients only. Cannot be combined with other offers. Expires in 4 weeks."
+    buttonText: 24/7 Online Scheduling
+    buttonLink: https://www.flexbook.me/schedulecc/1
+    backgroundColor: "#f4f7f8"
+    headingColor: "#1b2e38"
+    textColor: "#ffffff"
+    textColor2: "#1b2e38"
+    textColor3: "#868686"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor: "#ffffff"
+    hoverColor: "#3b6278"
+    buttonTextHoverColor: "#46a96f"
 ---

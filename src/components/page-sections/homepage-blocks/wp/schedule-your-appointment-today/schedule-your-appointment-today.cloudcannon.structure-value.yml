@@ -1,0 +1,26 @@
+label: Schedule Your Appointment Today
+icon: vertical_split
+description: Schedule Your Appointment Today section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/homepage-blocks/wp/schedule-your-appointment-today
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#223a47"
+  buttonBackgroundHoverColor: rgba(255, 255, 255, 0.77)
+preview:
+  text:
+    - Schedule Your Appointment Today
+  icon: vertical_split
+picker_preview:
+  text: Schedule Your Appointment Today
+  subtext: Schedule Your Appointment Today section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/wp/schedule-your-appointment-today/schedule-your-appointment-today.cloudcannon.inputs.yml

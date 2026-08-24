@@ -1,0 +1,23 @@
+label: Cta Band
+icon: interests
+description: Dont Wait Get Relief section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/landing-pages-blocks/cta-band
+  id: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+preview:
+  text:
+    - Cta Band
+  icon: interests
+picker_preview:
+  text: Cta Band
+  subtext: Dont Wait Get Relief section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/landing-pages-blocks/cta-band/cta-band.cloudcannon.inputs.yml

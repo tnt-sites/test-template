@@ -1,0 +1,568 @@
+---
+/**
+ * Same Day Emergency Treatments — migrated from lp/dental-emergency [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  image = "",
+  imageAlt = "",
+  backgroundColor = "#3b6278",
+  headingColor = "#ffffff",
+  textColor = "#ffffff",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#ffffff",
+  buttonTextColor2 = "#5bb781",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonTextColor2HoverColor = "#ffffff",
+  buttonBackgroundColor2HoverColor = "#40a569",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="same-day-emergency-treatments" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="sdet-box">
+    <div class="sdet-box2">
+      <div class="sdet-box3">
+        <h1 class="sdet-heading">{heading}</h1>
+      </div>
+      <div class="sdet-box4">
+        {text && <p class="sdet-text">{text}</p>}
+      </div>
+      <div class="sdet-box5">
+        <div class="sdet-box6">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdet-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+      <div class="sdet-box7">
+        <div class="sdet-box8">
+          <div class="sdet-box9">
+            {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdet-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          </div>
+        </div>
+      </div>
+      <div class="sdet-box10">
+        <div class="sdet-box11">
+          <p class="sdet-box12">
+            {secondaryButtonText2 && <a class="sdet-link" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="sdet-box13">
+      <div class="sdet-box14">
+        <div class="sdet-box15">
+          {image && <img class="sdet-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="787" />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .same-day-emergency-treatments {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .same-day-emergency-treatments :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .sdet-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box2 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 30px;
+    position: relative;
+  }
+
+  .sdet-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sdet-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .sdet-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sdet-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sdet-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdet-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box6 {
+    box-sizing: border-box;
+  }
+
+  .sdet-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.sdet-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sdet-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sdet-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .sdet-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdet-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box8 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  .sdet-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sdet-box9 {
+    box-sizing: border-box;
+  }
+
+  .sdet-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.sdet-btn2) {
+    background-color: var(--c6);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--c7);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sdet-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sdet-btn2) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .sdet-box10 {
+    display: none;
+  }
+
+  .sdet-box11 {
+    display: none;
+  }
+
+  .sdet-box12 {
+    display: none;
+  }
+
+  .sdet-link {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .sdet-box13 {
+    align-content: center;
+    align-items: center;
+    background-image: url("/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .sdet-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdet-box15 {
+    box-sizing: border-box;
+  }
+
+  .sdet-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  :global(.sdet-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sdet-btn2):hover {
+    background-color: var(--c10);
+    color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .same-day-emergency-treatments {
+      left: -39px;
+      right: 39px;
+    }
+
+    .sdet-box {
+      flex-direction: row;
+    }
+
+    .sdet-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sdet-box3 {
+      text-align: left;
+    }
+
+    .sdet-heading {
+      font-size: 40px;
+      line-height: 40px;
+    }
+
+    .sdet-box4 {
+      margin-bottom: 15px;
+      text-align: start;
+    }
+
+    .sdet-text {
+      font-size: 25px;
+      line-height: 36px;
+    }
+
+    .sdet-box5 {
+      text-align: left;
+    }
+
+    :global(.sdet-btn) {
+      text-align: center;
+    }
+
+    .sdet-box7 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+      text-align: left;
+    }
+
+    .sdet-box8 {
+      display: none;
+      margin-top: 0px;
+    }
+
+    .sdet-box9 {
+      display: none;
+    }
+
+    :global(.sdet-btn2) {
+      background-color: #ffffff;
+      color: #5bb781;
+      display: none;
+      white-space: normal;
+    }
+
+    .sdet-box10 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .sdet-box11 {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .sdet-box12 {
+      box-sizing: border-box;
+      color: #ffffff;
+      display: block;
+      font-family: Quicksand, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .sdet-link {
+      box-sizing: border-box;
+      display: inline;
+    }
+
+    .sdet-box13 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      transform: matrix(1, 0, 0, 1, 20.49, 0);
+    }
+
+    .sdet-box14 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .sdet-box15 {
+      display: none;
+    }
+
+    .sdet-media {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .same-day-emergency-treatments {
+      left: -165px;
+      right: 165px;
+    }
+
+    .sdet-box {
+      flex-wrap: nowrap;
+    }
+
+    .sdet-box2 {
+      padding: 70px 50px;
+    }
+
+    .sdet-heading {
+      font-size: 55px;
+      line-height: 55px;
+    }
+
+    .sdet-box4 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .sdet-text {
+      font-size: 32px;
+    }
+
+    .sdet-box5 {
+      margin-bottom: 20px;
+    }
+
+    .sdet-box13 {
+      transform: matrix(1, 0, 0, 1, 16.99, 0);
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sdet-box5 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 30px;
+  }
+  :global(.sdet-btn) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  :global(.sdet-btn2) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .sdet-box5 {
+      color: rgb(255, 255, 255);
+      font-size: 25px;
+      line-height: 36px;
+      text-align: start;
+    }
+
+    .sdet-box10 {
+      text-align: start;
+    }
+
+    .sdet-box11 {
+      text-align: start;
+    }
+
+    .sdet-box12 {
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .sdet-link {
+      color: rgb(255, 255, 255);
+      line-height: 24px;
+      text-align: start;
+    }
+
+    :global(.sdet-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sdet-box10 {
+      text-align: start;
+    }
+
+    .sdet-box11 {
+      text-align: start;
+    }
+
+    .sdet-box12 {
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .sdet-link {
+      color: rgb(255, 255, 255);
+      line-height: 24px;
+      text-align: start;
+    }
+
+    :global(.sdet-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  .sdet-text {
+    font-size: 32px;
+    line-height: 36px;
+  }
+/* wpmig:corrections:end */
+</style>

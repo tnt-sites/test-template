@@ -1,0 +1,161 @@
+---
+/**
+ * Columbine Creek Dentistry — migrated from  [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  hoverColor = "#223a47",
+  hoverBackgroundColor = "rgba(255, 255, 255, 0.77)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="columbine-creek-dentistry" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverBackgroundColor}`} {...rest}>
+  <div class="ccd-box">
+    <div class="ccd-box2">
+      <div class="ccd-box3">
+        <div class="ccd-box4">
+          <h2 class="ccd-heading">{heading}</h2>
+          {text && <p class="ccd-text">{text}</p>}
+          {buttonText && <a class="ccd-link" href={buttonLink || "#"}>{buttonText}</a>}
+        </div>
+      </div>
+      <div class="ccd-decor" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+<style>
+  .columbine-creek-dentistry {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .ccd-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ccd-box2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .ccd-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .ccd-box4 {
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  .ccd-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 37px;
+    font-weight: 300;
+    line-height: 44.4px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  .ccd-text {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ccd-link {
+    box-sizing: border-box;
+    color: #5bb781;
+    display: block;
+    font-family: Montserrat, sans-serif;
+    margin-top: 20px;
+    transition: all 0.25s ease;
+  }
+
+  .ccd-decor {
+    display: none;
+  }
+
+  .ccd-link:hover {
+    background-color: var(--c4);
+    border-top-color: #3b6278;
+    color: var(--c3);
+  }
+
+  @media (min-width: 768px) {
+    .ccd-box3 {
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ccd-box3 {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+    }
+
+    .ccd-box4 {
+      padding-bottom: 0px;
+      padding-top: 0px;
+      text-align: left;
+    }
+
+    .ccd-decor {
+      background-image: url("/wp-content/themes/ColumbineCreek/img/aboutus-homepage.jpg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 400px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ccd-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .ccd-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ccd-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

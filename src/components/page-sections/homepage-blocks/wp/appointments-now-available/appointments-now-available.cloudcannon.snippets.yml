@@ -1,0 +1,10 @@
+_snippets:
+  appointments_now_available:
+    template: astro_component
+    inline: false
+    preview:
+      text: Appointments Now Available
+    definitions:
+      component_name: page-sections/homepage-blocks/wp/appointments-now-available
+    _inputs_from_glob:
+      - /src/components/page-sections/homepage-blocks/wp/appointments-now-available/appointments-now-available.cloudcannon.inputs.yml

@@ -1,0 +1,1903 @@
+---
+/**
+ * Payment Options H — migrated from payment-options/dental-insurance [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  heading2 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  text2 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  heading3 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  text3 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  secondaryButtonText11 = "",
+  secondaryButtonLink11 = "",
+  secondaryButtonText12 = "",
+  secondaryButtonLink12 = "",
+  text4 = "",
+  secondaryButtonText13 = "",
+  secondaryButtonLink13 = "",
+  secondaryButtonText14 = "",
+  secondaryButtonLink14 = "",
+  heading4 = "",
+  heading5 = "",
+  secondaryButtonText15 = "",
+  secondaryButtonLink15 = "",
+  heading6 = "",
+  secondaryButtonText16 = "",
+  secondaryButtonLink16 = "",
+  secondaryButtonText17 = "",
+  secondaryButtonLink17 = "",
+  items = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverColor = "#09498c",
+  textHoverColor = "#09498c",
+  hoverColor2 = "#064d96",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="in-network-insurance" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`} {...rest}>
+  <div class="ini-box">
+    <div class="ini-box2">
+      <SideMenu heading={eyebrow} links={[{ text: buttonText, link: buttonLink }, { text: secondaryButtonText, link: secondaryButtonLink }, { text: secondaryButtonText2, link: secondaryButtonLink2 }, { text: secondaryButtonText3, link: secondaryButtonLink3 }]} />
+      <div class="ini-box5">
+        <div class="ini-box6">
+          <div class="ini-box7">
+            <div class="ini-box8">
+              <h2 class="ini-heading2">{heading}</h2>
+            </div>
+            <div class="ini-box9">
+              <div class="ini-box10">
+                {text && <p class="ini-text">{text}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="ini-box11">
+            <div class="ini-box12">
+              <div class="ini-decor" aria-hidden="true"></div>
+            </div>
+            <div class="ini-box13">
+              {subheading && <h2 class="ini-heading3">{subheading}</h2>}
+            </div>
+            <div class="ini-box14">
+              <div class="ini-box15">
+                <div class="ini-box16">
+                  {heading2 && <h4 class="ini-heading4">{heading2}</h4>}
+                </div>
+                <ul class="ini-box17">
+                  <li class="ini-box18">
+                    {secondaryButtonText4 && <a class="ini-link" href={secondaryButtonLink4 || "#"}>{secondaryButtonText4}</a>}
+                  </li>
+                  <li class="ini-box19">
+                    {secondaryButtonText5 && <a class="ini-link2" href={secondaryButtonLink5 || "#"}>{secondaryButtonText5}</a>}
+                  </li>
+                  {text2 && <li class="ini-text2" set:html={text2} />}
+                  <li class="ini-box20">
+                    {secondaryButtonText6 && <a class="ini-link3" href={secondaryButtonLink6 || "#"}>{secondaryButtonText6}</a>}
+                  </li>
+                  <li class="ini-box21">
+                    {secondaryButtonText7 && <a class="ini-link4" href={secondaryButtonLink7 || "#"}>{secondaryButtonText7}</a>}
+                  </li>
+                  <li class="ini-box22">
+                    {secondaryButtonText8 && <a class="ini-link5" href={secondaryButtonLink8 || "#"}>{secondaryButtonText8}</a>}
+                  </li>
+                </ul>
+              </div>
+              <div class="ini-box23">
+                <div class="ini-box24">
+                  {heading3 && <h4 class="ini-heading5">{heading3}</h4>}
+                </div>
+                <ul class="ini-box25">
+                  <li class="ini-box26">
+                    {secondaryButtonText9 && <a class="ini-link6" href={secondaryButtonLink9 || "#"}>{secondaryButtonText9}</a>}
+                  </li>
+                  {text3 && <li class="ini-text3" set:html={text3} />}
+                  <li class="ini-box27">
+                    {secondaryButtonText10 && <a class="ini-link7" href={secondaryButtonLink10 || "#"}>{secondaryButtonText10}</a>}
+                  </li>
+                  <li class="ini-box28">
+                    {secondaryButtonText11 && <a class="ini-link8" href={secondaryButtonLink11 || "#"}>{secondaryButtonText11}</a>}
+                  </li>
+                  <li class="ini-box29">
+                    {secondaryButtonText12 && <a class="ini-link9" href={secondaryButtonLink12 || "#"}>{secondaryButtonText12}</a>}
+                  </li>
+                  {text4 && <li class="ini-text4" set:html={text4} />}
+                  <li class="ini-box30">
+                    {secondaryButtonText13 && <a class="ini-link10" href={secondaryButtonLink13 || "#"}>{secondaryButtonText13}</a>}
+                  </li>
+                  <li class="ini-box31">
+                    {secondaryButtonText14 && <a class="ini-link11" href={secondaryButtonLink14 || "#"}>{secondaryButtonText14}</a>}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="ini-box32">
+              <div class="ini-box33">
+                <div class="ini-box34">
+                  {heading4 && <h4 class="ini-heading6">{heading4}</h4>}
+                </div>
+                <ul class="ini-grid">
+                  {list.map((it) => (
+                    <li class="ini-box35">
+                      {it.buttonText && <a class="ini-link12" href={it.buttonLink || "#"}>{it.buttonText}</a>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="ini-box37">
+                <div class="ini-box38">
+                  {heading5 && <h4 class="ini-heading7">{heading5}</h4>}
+                </div>
+                <li class="ini-box39">
+                  {secondaryButtonText15 && <a class="ini-link14" href={secondaryButtonLink15 || "#"}>{secondaryButtonText15}</a>}
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="ini-box40">
+            <div class="ini-box41">
+              <div class="ini-decor2" aria-hidden="true"></div>
+            </div>
+            <div class="ini-box42">
+              {heading6 && <h2 class="ini-heading8">{heading6}</h2>}
+            </div>
+            <div class="ini-box43">
+              <div class="ini-box44">
+                {secondaryButtonText16 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="ini-btn5" text={secondaryButtonText16} link={secondaryButtonLink16 || "#"} />}
+              </div>
+            </div>
+            <div class="ini-box45">
+              <div class="ini-box46">
+                <div class="ini-box47">
+                  {secondaryButtonText17 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="ini-btn6" text={secondaryButtonText17} link={secondaryButtonLink17 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .in-network-insurance {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .ini-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ini-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .ini-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .ini-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box6 {
+    box-sizing: border-box;
+  }
+
+  .ini-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box10 {
+    box-sizing: border-box;
+  }
+
+  .ini-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ini-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .ini-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .ini-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box14 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    padding-left: 0px;
+  }
+
+  .ini-box17 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box18 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box18 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box19 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box19 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-text2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-text2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box20 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box20 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link3 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box21 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box21 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link4 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box22 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  .ini-box22 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link5 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box23 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box23 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    padding-left: 0px;
+  }
+
+  .ini-box25 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box26 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box26 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link6 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-text3 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-text3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box27 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box27 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link7 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box28 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box28 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link8 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box29 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box29 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link9 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-text4 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-text4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box30 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box30 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link10 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box31 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 5px;
+    position: relative;
+  }
+
+  .ini-box31 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link11 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box32 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box32 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box33 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box33 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-grid {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    max-width: 100%;
+    padding-left: 0px;
+  }
+
+  .ini-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box35 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 5px;
+    position: relative;
+  }
+
+  .ini-box35 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link12 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box37 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box37 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box38 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading7 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box39 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box39 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-link14 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .ini-link14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ini-box40 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ini-box41 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .ini-decor2 {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .ini-box42 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ini-heading8 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ini-box43 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box44 {
+    box-sizing: border-box;
+  }
+
+  :global(.ini-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.ini-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .ini-box45 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ini-box46 {
+    box-sizing: border-box;
+  }
+
+  .ini-box47 {
+    box-sizing: border-box;
+  }
+
+  :global(.ini-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.ini-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .ini-link:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link2:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link3:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link4:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link5:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link6:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link7:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link8:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link9:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link10:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link11:hover {
+    border-top-color: #09498c;
+    color: var(--c10);
+  }
+
+  .ini-link12:hover {
+    border-top-color: #09498c;
+    color: var(--c11);
+  }
+
+  .ini-link14:hover {
+    border-top-color: #064d96;
+    color: var(--c12);
+  }
+
+  :global(.ini-btn5):hover {
+    background-color: #49ab71;
+  }
+
+  :global(.ini-btn6):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .ini-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    :global(.ini-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.ini-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.ini-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .ini-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .ini-heading2 {
+      line-height: 32px;
+    }
+
+    .ini-heading3 {
+      line-height: 32px;
+    }
+
+    .ini-box15 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 350px;
+    }
+
+    .ini-heading4 {
+      line-height: 24px;
+    }
+
+    .ini-box23 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ini-heading5 {
+      line-height: 24px;
+    }
+
+    .ini-box33 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ini-heading6 {
+      line-height: 24px;
+    }
+
+    .ini-box37 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 146px;
+    }
+
+    .ini-heading7 {
+      line-height: 24px;
+    }
+
+    .ini-heading8 {
+      line-height: 32px;
+    }
+
+    .ini-box45 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .ini-box46 {
+      display: none;
+    }
+
+    .ini-box47 {
+      display: none;
+    }
+
+    :global(.ini-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ini-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    :global(.ini-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .ini-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .ini-box14 {
+      flex-wrap: nowrap;
+    }
+
+    .ini-box15 {
+      min-height: 326px;
+    }
+
+    .ini-box32 {
+      flex-wrap: nowrap;
+    }
+
+    .ini-box37 {
+      min-height: 122px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ini-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .ini-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .ini-box24 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .ini-box34 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .ini-box38 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .ini-box42 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .ini-box44 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.ini-btn5) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .ini-box45 {
+
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .ini-box17 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link2 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link3 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link4 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link5 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box25 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link6 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link7 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link8 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link9 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link10 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link11 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-grid {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link12 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-link14 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+  }
+  .ini-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box18 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box19 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box20 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box21 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box22 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box26 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box27 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box28 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box29 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box30 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box31 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .ini-box35 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .ini-box13 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .ini-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .ini-box24 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .ini-box34 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .ini-box38 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .ini-box42 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .ini-box44 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .ini-box17 {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .ini-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link3 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link4 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link5 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-box25 {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .ini-link6 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link7 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link8 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link9 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link10 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link11 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-grid {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .ini-link12 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link14 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+    }
+
+    .ini-text {
+      line-height: 24px;
+    }
+
+    .ini-box18 {
+      line-height: 24px;
+    }
+
+    .ini-box19 {
+      line-height: 24px;
+    }
+
+    .ini-text2 {
+      line-height: 24px;
+    }
+
+    .ini-box20 {
+      line-height: 24px;
+    }
+
+    .ini-box21 {
+      line-height: 24px;
+    }
+
+    .ini-box22 {
+      line-height: 24px;
+    }
+
+    .ini-box26 {
+      line-height: 24px;
+    }
+
+    .ini-text3 {
+      line-height: 24px;
+    }
+
+    .ini-box27 {
+      line-height: 24px;
+    }
+
+    .ini-box28 {
+      line-height: 24px;
+    }
+
+    .ini-box29 {
+      line-height: 24px;
+    }
+
+    .ini-text4 {
+      line-height: 24px;
+    }
+
+    .ini-box30 {
+      line-height: 24px;
+    }
+
+    .ini-box31 {
+      line-height: 24px;
+    }
+
+    .ini-box35 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+
+    .ini-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link3 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link4 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link5 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link6 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link7 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link8 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link9 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link10 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link11 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link12 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .ini-link14 {
+      color: rgb(27, 46, 56);
+    }
+
+    :global(.ini-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .ini-text {
+      line-height: 24px;
+    }
+
+    .ini-box17 {
+      line-height: 24px;
+    }
+
+    .ini-box18 {
+      line-height: 24px;
+    }
+
+    .ini-box19 {
+      line-height: 24px;
+    }
+
+    .ini-text2 {
+      line-height: 24px;
+    }
+
+    .ini-box20 {
+      line-height: 24px;
+    }
+
+    .ini-box21 {
+      line-height: 24px;
+    }
+
+    .ini-box22 {
+      line-height: 24px;
+    }
+
+    .ini-box25 {
+      line-height: 24px;
+    }
+
+    .ini-box26 {
+      line-height: 24px;
+    }
+
+    .ini-text3 {
+      line-height: 24px;
+    }
+
+    .ini-box27 {
+      line-height: 24px;
+    }
+
+    .ini-box28 {
+      line-height: 24px;
+    }
+
+    .ini-box29 {
+      line-height: 24px;
+    }
+
+    .ini-text4 {
+      line-height: 24px;
+    }
+
+    .ini-box30 {
+      line-height: 24px;
+    }
+
+    .ini-box31 {
+      line-height: 24px;
+    }
+
+    .ini-grid {
+      line-height: 24px;
+    }
+
+    .ini-box35 {
+      line-height: 24px;
+    }
+  }
+  .ini-heading4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .ini-heading5 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .ini-heading6 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .ini-heading7 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .ini-heading3 {
+    font-weight: 400;
+  }
+  .ini-heading8 {
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

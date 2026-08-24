@@ -1,0 +1,34 @@
+label: Convenient Scheduling
+icon: vertical_split
+description: Convenient Scheduling section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/interior-pages-blocks/convenient-scheduling
+  id: ""
+  heading: ""
+  text: ""
+  embedUrl: ""
+  text2: ""
+  image: ""
+  imageAlt: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  text3: ""
+  subheading: ""
+  text4: ""
+  heading2: ""
+  text5: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  hoverColor: "#064d96"
+  hoverColor2: "#09498c"
+preview:
+  text:
+    - Convenient Scheduling
+  icon: vertical_split
+picker_preview:
+  text: Convenient Scheduling
+  subtext: Convenient Scheduling section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/interior-pages-blocks/convenient-scheduling/convenient-scheduling.cloudcannon.inputs.yml
