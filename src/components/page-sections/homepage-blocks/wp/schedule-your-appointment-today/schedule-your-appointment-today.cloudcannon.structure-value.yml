@@ -11,7 +11,7 @@ value:
   buttonLink: ""
   backgroundColor: "#3b6278"
   headingColor: "#ffffff"
-  buttonBackgroundColor: "#5bb781"
+  buttonBackgroundColor: "#3a8358"
   buttonTextColor: "#ffffff"
   buttonTextHoverColor: "#223a47"
   buttonBackgroundHoverColor: rgba(255, 255, 255, 0.77)

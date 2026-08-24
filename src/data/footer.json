@@ -135,7 +135,7 @@
           "path": "https://www.google.com/maps?ll=39.579658,-105.0517&z=16&t=m&hl=en-US&gl=US&mapclient=embed&saddr&daddr=Columbine+Creek+Dentistry,+4760+W+Mineral+Ave+Suite+60,+Littleton,+CO+80128&dirflg=d",
           "icon": "arrow-right",
           "iconAfter": true,
-          "color": "rgb(91, 183, 129)",
+          "color": "rgb(58, 131, 88)",
           "external": true
         }
       ]

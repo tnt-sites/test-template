@@ -12,10 +12,10 @@ value:
   imageAlt: ""
   headingColor: "#3b6278"
   textColor: "#3b6278"
-  buttonBackgroundColor: "#5bb781"
+  buttonBackgroundColor: "#3a8358"
   buttonTextColor: "#ffffff"
   buttonTextHoverColor: "#1b2e38"
-  hoverColor: "#5bb781"
+  hoverColor: "#3a8358"
   hoverBackgroundColor: "#ffffff"
 preview:
   text:

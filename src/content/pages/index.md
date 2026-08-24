@@ -22,7 +22,7 @@ pageSections:
     backgroundImage: /wp-content/uploads/2023/11/homeBanner-columbone-1.jpg
     headingColor: "#3b6278"
     buttonTextColor: "#3b6278"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor2: "#ffffff"
     buttonTextHoverColor: "#203743"
     hoverBackgroundColor: rgba(255, 255, 255, 0.84)
@@ -34,7 +34,7 @@ pageSections:
     buttonLink: https://www.flexbook.me/schedulecc/1
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#3b6278"
   - _component: page-sections/homepage-blocks/wp/dental-savers-plan
@@ -48,7 +48,7 @@ pageSections:
     backgroundColor: "#e6eff4"
     headingColor: "#1b2e38"
     textColor: "#1b2e38"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#3b6278"
   - _component: page-sections/homepage-blocks/wp/online-scheduling
@@ -80,7 +80,7 @@ pageSections:
         buttonLink: /about-us/meet-the-team/
     backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg.jpg
     titleColor: "#1b2e38"
-    textColor: "#5bb781"
+    textColor: "#3a8358"
     hoverColor: "#3b6278"
     textHoverColor: "#223a47"
     hoverBackgroundColor: rgba(255, 255, 255, 0.77)
@@ -150,7 +150,7 @@ pageSections:
     titleColor: "#4e4e4e"
     textColor2: "#ffffff"
     textColor2HoverColor: "#1b2e38"
-    hoverColor: "#5bb781"
+    hoverColor: "#3a8358"
     hoverColor2: "#1b2e38"
   - _component: page-sections/homepage-blocks/wp/schedule-your-appointment-today
     id: ""
@@ -161,7 +161,7 @@ pageSections:
     buttonLink: https://www.flexbook.me/schedulecc/1
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#223a47"
     buttonBackgroundHoverColor: rgba(255, 255, 255, 0.77)
@@ -182,7 +182,7 @@ pageSections:
         imageAlt: 5-Star Yelp Reviews - Columbine Creek Dentistry
     backgroundColor: "#e6eff4"
     headingColor: "#3b6278"
-    hoverColor: "#5bb781"
+    hoverColor: "#3a8358"
   - _component: page-sections/homepage-blocks/wp/new-patient-specials
     id: ""
     heading: New Patient Specials
@@ -197,8 +197,8 @@ pageSections:
     headingColor: "#1b2e38"
     textColor: "#ffffff"
     textColor2: "#1b2e38"
-    textColor3: "#868686"
-    buttonBackgroundColor: "#5bb781"
+    textColor3: "#707070"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     hoverColor: "#3b6278"
     buttonTextHoverColor: "#46a96f"

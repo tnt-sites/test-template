@@ -13,7 +13,7 @@ value:
       buttonLink: ""
   backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg.jpg
   titleColor: "#1b2e38"
-  textColor: "#5bb781"
+  textColor: "#3a8358"
   hoverColor: "#3b6278"
   textHoverColor: "#223a47"
   hoverBackgroundColor: rgba(255, 255, 255, 0.77)

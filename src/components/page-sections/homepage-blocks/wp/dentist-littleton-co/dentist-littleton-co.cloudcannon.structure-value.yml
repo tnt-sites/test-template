@@ -14,7 +14,7 @@ value:
   backgroundImage: /wp-content/uploads/2023/11/homeBanner-columbone-1.jpg
   headingColor: "#3b6278"
   buttonTextColor: "#3b6278"
-  buttonBackgroundColor: "#5bb781"
+  buttonBackgroundColor: "#3a8358"
   buttonTextColor2: "#ffffff"
   buttonTextHoverColor: "#203743"
   hoverBackgroundColor: rgba(255, 255, 255, 0.84)

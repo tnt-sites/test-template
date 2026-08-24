@@ -23,10 +23,10 @@ pageSections:
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
     textColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonBackgroundColor2: "#ffffff"
-    buttonTextColor2: "#5bb781"
+    buttonTextColor2: "#3a8358"
     buttonBackgroundHoverColor: "#49ab71"
     buttonTextColor2HoverColor: "#ffffff"
     buttonBackgroundColor2HoverColor: "#40a569"
@@ -44,7 +44,7 @@ pageSections:
     buttonLink: https://www.flexbook.me/schedulecc/1
     headingColor: "#3b6278"
     textColor: "#3b6278"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
   - _component: page-sections/landing-pages-blocks/media-prose
     id: ""
@@ -56,10 +56,10 @@ pageSections:
     imageAlt: ""
     headingColor: "#3b6278"
     textColor: "#3b6278"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
-    hoverColor: "#5bb781"
+    hoverColor: "#3a8358"
     hoverBackgroundColor: "#ffffff"
   - _component: page-sections/landing-pages-blocks/lp-heading-pair
     id: ""
@@ -77,7 +77,7 @@ pageSections:
         text: ""
       - title: Pleasant Cleaning
         text: A teeth cleaning experience that is gentle on your mouth but tough on tartar (in the absence of periodontal disease).
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     titleColor: "#3b6278"
     textColor: "#3b6278"
@@ -92,7 +92,7 @@ pageSections:
     buttonLink: /about-us/meet-the-team/
     headingColor: "#3b6278"
     textColor: "#3b6278"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
     hoverColor: "#ffffff"

@@ -19,7 +19,7 @@ pageSections:
     secondaryButtonLink: "#booking"
     backgroundColor: "#3b6278"
     textColor: "#1b2e38"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
   - _component: page-sections/landing-pages-blocks/we-provide-exceptional-care
     id: ""
@@ -86,7 +86,7 @@ pageSections:
     buttonLink: "#booking"
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
   - _component: page-sections/landing-pages-blocks/columbine-creek-has-a
@@ -109,7 +109,7 @@ pageSections:
     buttonLink: "#booking"
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
   - _component: page-sections/landing-pages-blocks/section-e

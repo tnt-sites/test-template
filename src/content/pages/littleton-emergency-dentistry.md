@@ -20,7 +20,7 @@ pageSections:
     backgroundColor: "#3b6278"
     textColor: "#1b2e38"
     buttonBackgroundColor: "#40a569"
-    buttonTextColor: "#5bb781"
+    buttonTextColor: "#3a8358"
   - _component: page-sections/landing-pages-blocks/lp-hero-stacked
     id: ""
     heading: WE ARE HERE IF YOU HAVE AN EMERGENCY!
@@ -74,7 +74,7 @@ pageSections:
     buttonLink: "#booking"
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
   - _component: page-sections/landing-pages-blocks/columbine-creek-has-a
@@ -97,7 +97,7 @@ pageSections:
     buttonLink: "#booking"
     backgroundColor: "#3b6278"
     headingColor: "#ffffff"
-    buttonBackgroundColor: "#5bb781"
+    buttonBackgroundColor: "#3a8358"
     buttonTextColor: "#ffffff"
     buttonTextHoverColor: "#1b2e38"
   - _component: page-sections/landing-pages-blocks/section-e
