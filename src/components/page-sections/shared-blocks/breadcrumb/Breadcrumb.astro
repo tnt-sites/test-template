@@ -23,7 +23,20 @@ const knownPaths = new Set(
   })
 );
 
-const segments = Astro.url.pathname.split("/").filter(Boolean);
+function getPathname(): string {
+  if (Astro.url?.pathname) return Astro.url.pathname;
+  const requestUrl = Astro.request?.url;
+  if (requestUrl) {
+    try {
+      return new URL(requestUrl).pathname;
+    } catch {
+      return "";
+    }
+  }
+  return "";
+}
+
+const segments = getPathname().split("/").filter(Boolean);
 
 const crumbs = segments.map((segment, index) => {
   const href = `/${segments.slice(0, index + 1).join("/")}/`;
