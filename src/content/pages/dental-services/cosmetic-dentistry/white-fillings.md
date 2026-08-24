@@ -16,7 +16,6 @@ pageSections:
     headingColor: "#1b2e38"
   - _component: page-sections/shared-blocks/breadcrumb
     id: ""
-    text: <span><a title="Go to Columbine Creek Dentistry - Dentist Littleton." href=""><span>Home</span></a></span> &gt; <span><a title="Go to Dental Services Littleton CO." href="/dental-services/"><span>Dental Services Littleton CO</span></a></span> &gt; <span><a title="Go to Cosmetic Dentist Littleton CO." href="/dental-services/cosmetic-dentistry/"><span>Cosmetic Dentist Littleton CO</span></a></span> &gt; <span>White Fillings Littleton CO</span>
     textColor: "#1b2e38"
   - _component: page-sections/shared-blocks/interior-content
     id: ''

@@ -1,19 +1,56 @@
 ---
 /**
- * Home About Us — migrated from about-us [1] (auto) by wp-migrator.
+ * Breadcrumb — auto-generated from the current page's URL path.
  *
- * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ * Baked in: layout, spacing, typography. Props: colours.
  */
-const {
-  text = "",
-  textColor = "#1b2e38",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const { textColor = "#1b2e38", id, _component, ...rest } = Astro.props;
+
+function humanize(segment: string): string {
+  return segment
+    .split("-")
+    .map((word) => (word ? word[0].toUpperCase() + word.slice(1) : word))
+    .join(" ");
+}
+
+const pages = await getCollection("pages");
+const knownPaths = new Set(
+  pages.map((page: CollectionEntry<"pages">) => {
+    const slug = page.id.replace(/index$/, "");
+    return slug.length === 0 ? "/" : `/${slug.replace(/\/$/, "")}/`;
+  })
+);
+
+const segments = Astro.url.pathname.split("/").filter(Boolean);
+
+const crumbs = segments.map((segment, index) => {
+  const href = `/${segments.slice(0, index + 1).join("/")}/`;
+  const isLast = index === segments.length - 1;
+  return {
+    label: humanize(segment),
+    href,
+    isLink: !isLast && knownPaths.has(href),
+  };
+});
 ---
 <div class="home-about-us" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
-  {text && <div class="hau-text" set:html={text} />}
+  <div class="hau-text breadcrumb">
+    <span><a title="Go to Home." href="/"><span>Home</span></a></span>
+    {
+      crumbs.map((crumb) => (
+        <>
+          {" "}&gt;{" "}
+          {crumb.isLink ? (
+            <span><a title={`Go to ${crumb.label}.`} href={crumb.href}><span>{crumb.label}</span></a></span>
+          ) : (
+            <span>{crumb.label}</span>
+          )}
+        </>
+      ))
+    }
+  </div>
 </div>
 <style>
   .home-about-us {

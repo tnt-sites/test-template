@@ -16,7 +16,6 @@ pageSections:
     headingColor: '#1b2e38'
   - _component: page-sections/shared-blocks/breadcrumb
     id: ""
-    text: <span><a title="Go to Columbine Creek Dentistry - Dentist Littleton." href=""><span>Home</span></a></span> &gt; <span><a title="Go to Payment Options." href="/payment-options/"><span>Payment Options</span></a></span> &gt; <span>Dental Insurance</span>
     textColor: "#1b2e38"
   - _component: page-sections/interior-pages-blocks/in-network-insurance
     id: ""
