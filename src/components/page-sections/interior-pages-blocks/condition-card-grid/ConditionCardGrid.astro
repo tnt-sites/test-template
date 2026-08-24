@@ -26,35 +26,35 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
   <div class="bf-box">
     <section class="bf-box2">
       <div class="bf-grid">
-        {list.map((it) => (
+        {list.map((it, i) => (
           <section class="bf-box3">
             <div class="bf-box4">
               <div class="bf-box5">
                 <div class="bf-box6">
-                  <h2 class="bf-heading">{it.title}</h2>
+                  <h2 class="bf-heading" data-prop={`items.${i}.title`}>{it.title}</h2>
                 </div>
                 <div class="bf-box7">
                   <div class="bf-decor" aria-hidden="true"></div>
                 </div>
                 <div class="bf-box8">
-                  <div class="bf-text">{it.text}</div>
+                  <div class="bf-text" data-prop={`items.${i}.text`}>{it.text}</div>
                 </div>
                 <div class="bf-box9">
-                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn" text={it.buttonText} link={it.buttonLink || "#"} data-prop={`items.${i}.buttonText`} />}
                 </div>
               </div>
               <div class="bf-box10">
                 <div class="bf-box11">
-                  <h2 class="bf-heading2">{it.text2}</h2>
+                  <h2 class="bf-heading2" data-prop={`items.${i}.text2`}>{it.text2}</h2>
                 </div>
                 <div class="bf-box12">
                   <div class="bf-decor2" aria-hidden="true"></div>
                 </div>
                 <div class="bf-box13">
-                  <div class="bf-text2">{it.text3}</div>
+                  <div class="bf-text2" data-prop={`items.${i}.text3`}>{it.text3}</div>
                 </div>
                 <div class="bf-box14">
-                  {it.buttonText2 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn2" text={it.buttonText2} link={it.buttonLink2 || "#"} />}
+                  {it.buttonText2 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn2" text={it.buttonText2} link={it.buttonLink2 || "#"} data-prop={`items.${i}.buttonText2`} />}
                 </div>
               </div>
             </div>
@@ -133,7 +133,6 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
   .bf-box6 {
     box-sizing: border-box;
     flex: 0 0 100%;
-    margin-bottom: -10px;
     max-width: 100%;
     text-align: center;
   }
@@ -224,7 +223,6 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
   .bf-box11 {
     box-sizing: border-box;
     flex: 0 0 100%;
-    margin-bottom: -10px;
     max-width: 100%;
     text-align: center;
   }
@@ -359,8 +357,8 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
 
     .bf-box {
-      margin-left: 150px;
-      margin-right: 150px;
+      margin-left: auto;
+      margin-right: auto;
       max-width: 1140px;
     }
 
@@ -408,24 +406,16 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     font-weight: 500;
     line-height: 31.2px;
   }
-  .bf-box6 {
-    text-align: left;
-  }
-  .bf-box11 {
-    text-align: left;
-  }
   :global(.bf-btn) {
     align-items: normal;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(27, 46, 56);
+    color: var(--c3);
     font-size: 16px;
     justify-content: normal;
     line-height: 24px;
   }
   :global(.bf-btn2) {
     align-items: normal;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgb(27, 46, 56);
+    color: var(--c3);
     font-size: 16px;
     justify-content: normal;
     line-height: 24px;
@@ -446,18 +436,9 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 31.2px;
     }
 
-    .bf-box6 {
-      text-align: left;
-    }
-
-    .bf-box11 {
-      text-align: left;
-    }
-
     :global(.bf-btn) {
       align-items: normal;
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
+      color: var(--c3);
       font-size: 16px;
       justify-content: normal;
       line-height: 24px;
@@ -465,8 +446,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
 
     :global(.bf-btn2) {
       align-items: normal;
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
+      color: var(--c3);
       font-size: 16px;
       justify-content: normal;
       line-height: 24px;
