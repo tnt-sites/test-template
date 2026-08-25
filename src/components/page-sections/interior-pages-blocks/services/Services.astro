@@ -72,8 +72,8 @@ const sectionsList = toList(sections).map((sec) => {
             </div>
           </div>
           <ButtonGroup buttonSections={buttonSectionsList} alignX="start" />
-          <ButtonGroup buttonSections={buttonSections2List} alignX="start" />
-          {sectionsList.map((sec) => (
+          <ButtonGroup buttonSections={buttonSections2List} propName="buttonSections2" alignX="start" />
+          {sectionsList.map((sec, i) => (
             <Fragment>
               <div class="se-rule">
                 <div class="se-rule-inner">
@@ -110,7 +110,7 @@ const sectionsList = toList(sections).map((sec) => {
                       ))}
                     </div>
                   )}
-                  <ButtonGroup buttonSections={sec.buttonsList} alignX="start" />
+                  <ButtonGroup buttonSections={sec.buttonsList} propName={`sections.${i}.buttons`} alignX="start" />
                 </div>
               </section>
             </Fragment>

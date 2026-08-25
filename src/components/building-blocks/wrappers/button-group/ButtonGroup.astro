@@ -6,6 +6,11 @@ const {
   alignX = "start",
   width = "full",
   buttonSections,
+  /* Data path CloudCannon binds the buttons to. Defaults to the prop's own name,
+     which is right when the array sits at the top of the component; a caller that
+     renders a nested array (e.g. `sections.0.buttons`) must pass its real path, or
+     the editor writes edits back to the top-level `buttonSections` instead. */
+  propName = "buttonSections",
   editable = true,
   class: className,
   label,
@@ -52,7 +57,7 @@ if (!_component && !hasButtonSections && !hasSlotContent) return;
   <slot>
     {
       buttonSections && buttonSections.length > 0 && (
-        <Component contentSections={buttonSections} editable={editable} propName="buttonSections" />
+        <Component contentSections={buttonSections} editable={editable} propName={propName} />
       )
     }
   </slot>
