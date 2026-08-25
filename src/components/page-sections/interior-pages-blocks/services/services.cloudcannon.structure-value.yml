@@ -9,76 +9,6 @@ value:
   sideMenuLinks:
     - buttonText: ""
       buttonLink: ""
-  subheading: ""
-  text: ""
-  heading2: ""
-  ctaButton:
-    - _component: building-blocks/core-elements/button
-      text: View General Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
-  heading3: ""
-  text2: ""
-  heading4: ""
-  ctaButton2:
-    - _component: building-blocks/core-elements/button
-      text: View Cosmetic Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
-  heading5: ""
-  text3: ""
-  heading6: ""
-  ctaButton3:
-    - _component: building-blocks/core-elements/button
-      text: View Restorative Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
-  heading7: ""
-  text4: ""
-  heading8: ""
-  ctaButton4:
-    - _component: building-blocks/core-elements/button
-      text: View Sedation Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
-  heading9: ""
-  text5: ""
-  ctaButton5:
-    - _component: building-blocks/core-elements/button
-      text: View Pediatric Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
-  heading10: ""
-  text6: ""
-  ctaButton6:
-    - _component: building-blocks/core-elements/button
-      text: View Emergency Dentistry
-      hideText: false
-      link: ""
-      iconName: ""
-      iconPosition: before
-      variant: primary
-      size: md
   buttonSections:
     - _component: building-blocks/core-elements/button
       text: My Button
@@ -97,24 +27,20 @@ value:
       iconPosition: before
       variant: primary
       size: md
-  items3:
-    - buttonText: ""
-      buttonLink: ""
-  items4:
-    - buttonText: ""
-      buttonLink: ""
-  items5:
-    - buttonText: ""
-      buttonLink: ""
-  items6:
-    - buttonText: ""
-      buttonLink: ""
-  items7:
-    - buttonText: ""
-      buttonLink: ""
-  items8:
-    - buttonText: ""
-      buttonLink: ""
+  sections:
+    - heading: Service Section
+      text: ""
+      listHeading: ""
+      links: []
+      buttons:
+        - _component: building-blocks/core-elements/button
+          text: View Services
+          hideText: false
+          link: ""
+          iconName: ""
+          iconPosition: before
+          variant: primary
+          size: md
   eyebrowColor: "#1b2e38"
   headingColor: "#1b2e38"
   buttonTextColor: "#1b2e38"

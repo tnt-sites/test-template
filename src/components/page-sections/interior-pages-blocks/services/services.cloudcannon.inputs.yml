@@ -9,74 +9,6 @@ _inputs:
     comment: Links shown in the side navigation column.
     options:
       structures: _structures.services_item
-  subheading:
-    type: text
-  text:
-    type: html
-  heading2:
-    type: text
-  ctaButton:
-    type: array
-    label: General Dentistry CTA Button
-    comment: Call-to-action button for the General Dentistry section.
-    options:
-      structures: _structures.buttonSections
-  heading3:
-    type: text
-  text2:
-    type: html
-  heading4:
-    type: text
-  ctaButton2:
-    type: array
-    label: Cosmetic Dentistry CTA Button
-    comment: Call-to-action button for the Cosmetic Dentistry section.
-    options:
-      structures: _structures.buttonSections
-  heading5:
-    type: text
-  text3:
-    type: html
-  heading6:
-    type: text
-  ctaButton3:
-    type: array
-    label: Restorative Dentistry CTA Button
-    comment: Call-to-action button for the Restorative Dentistry section.
-    options:
-      structures: _structures.buttonSections
-  heading7:
-    type: text
-  text4:
-    type: html
-  heading8:
-    type: text
-  ctaButton4:
-    type: array
-    label: Sedation Dentistry CTA Button
-    comment: Call-to-action button for the Sedation Dentistry section.
-    options:
-      structures: _structures.buttonSections
-  heading9:
-    type: text
-  text5:
-    type: html
-  ctaButton5:
-    type: array
-    label: Pediatric Dentistry CTA Button
-    comment: Call-to-action button for the Pediatric Dentistry section.
-    options:
-      structures: _structures.buttonSections
-  heading10:
-    type: text
-  text6:
-    type: html
-  ctaButton6:
-    type: array
-    label: Emergency Dentistry CTA Button
-    comment: Call-to-action button for the Emergency Dentistry section.
-    options:
-      structures: _structures.buttonSections
   buttonSections:
     type: array
     label: Buttons (Primary Categories)
@@ -89,30 +21,12 @@ _inputs:
     comment: Buttons for the second row of service categories.
     options:
       structures: _structures.buttonSections
-  items3:
+  sections:
     type: array
+    label: Service Sections
+    comment: Each service category block, in the order they appear on the page.
     options:
-      structures: _structures.services_item
-  items4:
-    type: array
-    options:
-      structures: _structures.services_item
-  items5:
-    type: array
-    options:
-      structures: _structures.services_item
-  items6:
-    type: array
-    options:
-      structures: _structures.services_item
-  items7:
-    type: array
-    options:
-      structures: _structures.services_item
-  items8:
-    type: array
-    options:
-      structures: _structures.services_item
+      structures: _structures.services_section
   eyebrowColor:
     type: color
   headingColor:
@@ -138,6 +52,42 @@ _inputs:
   hoverColor:
     type: color
 _structures:
+  services_section:
+    values:
+      - label: Service Section
+        icon: article
+        value:
+          heading: ""
+          text: ""
+          listHeading: ""
+          links: []
+          buttons: []
+        preview:
+          text:
+            - key: heading
+            - Service Section
+          subtext:
+            - key: listHeading
+        _inputs:
+          heading:
+            type: text
+            comment: Section title.
+          text:
+            type: html
+            comment: Intro copy for this section.
+          listHeading:
+            type: text
+            comment: Optional heading above the list of links.
+          links:
+            type: array
+            comment: Links listed under this section. Split into two columns on desktop.
+            options:
+              structures: _structures.services_item
+          buttons:
+            type: array
+            comment: Call-to-action button for this section.
+            options:
+              structures: _structures.buttonSections
   services_item:
     values:
       - label: Service Link

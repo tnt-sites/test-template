@@ -10,36 +10,9 @@ const {
   eyebrow = "",
   heading = "",
   sideMenuLinks = [],
-  subheading = "",
-  text = "",
-  heading2 = "",
-  ctaButton = [],
-  heading3 = "",
-  text2 = "",
-  heading4 = "",
-  ctaButton2 = [],
-  heading5 = "",
-  text3 = "",
-  heading6 = "",
-  ctaButton3 = [],
-  heading7 = "",
-  text4 = "",
-  heading8 = "",
-  ctaButton4 = [],
-  heading9 = "",
-  text5 = "",
-  ctaButton5 = [],
-  heading10 = "",
-  text6 = "",
-  ctaButton6 = [],
   buttonSections = [],
   buttonSections2 = [],
-  items3 = [],
-  items4 = [],
-  items5 = [],
-  items6 = [],
-  items7 = [],
-  items8 = [],
+  sections = [],
   eyebrowColor = "#1b2e38",
   headingColor = "#1b2e38",
   buttonTextColor = "#1b2e38",
@@ -56,21 +29,34 @@ const {
   _component,
   ...rest
 } = Astro.props;
-const sideMenuLinksList = Array.isArray(sideMenuLinks) ? sideMenuLinks.filter(Boolean) : [];
-const buttonSectionsList = Array.isArray(buttonSections) ? buttonSections.filter(Boolean) : [];
-const buttonSections2List = Array.isArray(buttonSections2) ? buttonSections2.filter(Boolean) : [];
-const ctaButtonList = Array.isArray(ctaButton) ? ctaButton.filter(Boolean) : [];
-const ctaButton2List = Array.isArray(ctaButton2) ? ctaButton2.filter(Boolean) : [];
-const ctaButton3List = Array.isArray(ctaButton3) ? ctaButton3.filter(Boolean) : [];
-const ctaButton4List = Array.isArray(ctaButton4) ? ctaButton4.filter(Boolean) : [];
-const ctaButton5List = Array.isArray(ctaButton5) ? ctaButton5.filter(Boolean) : [];
-const ctaButton6List = Array.isArray(ctaButton6) ? ctaButton6.filter(Boolean) : [];
-const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
-const items4List = Array.isArray(items4) ? items4.filter(Boolean) : [];
-const items5List = Array.isArray(items5) ? items5.filter(Boolean) : [];
-const items6List = Array.isArray(items6) ? items6.filter(Boolean) : [];
-const items7List = Array.isArray(items7) ? items7.filter(Boolean) : [];
-const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
+
+const toList = (value) => (Array.isArray(value) ? value.filter(Boolean) : []);
+
+const sideMenuLinksList = toList(sideMenuLinks);
+const buttonSectionsList = toList(buttonSections);
+const buttonSections2List = toList(buttonSections2);
+
+/* The source design ran each section's links as two desktop columns, filling the
+   first before the second; below 768px `.se-section-lists` unwraps to one column
+   and the split stops mattering. */
+const splitColumns = (links) => {
+  if (links.length === 0) return [];
+  if (links.length === 1) return [links];
+  const firstLength = Math.ceil(links.length / 2);
+  return [links.slice(0, firstLength), links.slice(firstLength)];
+};
+
+const sectionsList = toList(sections).map((sec) => {
+  const linksList = toList(sec.links);
+  return {
+    heading: sec.heading ?? "",
+    text: sec.text ?? "",
+    listHeading: sec.listHeading ?? "",
+    linksList,
+    linkColumns: splitColumns(linksList),
+    buttonsList: toList(sec.buttons),
+  };
+});
 ---
 <div class="services" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${textColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${textHoverColor};--c12:${hoverColor}`} {...rest}>
   <div class="se-box">
@@ -87,192 +73,48 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
           </div>
           <ButtonGroup buttonSections={buttonSectionsList} alignX="start" />
           <ButtonGroup buttonSections={buttonSections2List} alignX="start" />
-          <div class="se-box28">
-            <div class="se-box29">
-              <div class="se-decor" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box30">
-            <div class="se-box31">
-              <div class="se-box32">
-                {subheading && <h3 class="se-heading3">{subheading}</h3>}
-              </div>
-              <div class="se-box33">
-                <div class="se-box34">
-                  {text && <p class="se-text" set:html={text} />}
+          {sectionsList.map((sec) => (
+            <Fragment>
+              <div class="se-rule">
+                <div class="se-rule-inner">
+                  <div class="se-decor" aria-hidden="true" />
                 </div>
               </div>
-              <div class="se-box35">
-                {heading2 && <h4 class="se-heading4">{heading2}</h4>}
-              </div>
-              <div class="se-box36">
-                <div class="se-box37">
-                  <ul class="se-grid3">
-                    {items3List.map((it) => (
-                      <li class="se-box38">
-                        {it.buttonText && <a class="se-link" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div class="se-box43">
-                  <ul class="se-grid4">
-                    {items4List.map((it) => (
-                      <li class="se-box44">
-                        {it.buttonText && <a class="se-link6" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <section class="se-box48">
-                <div class="se-box49">
-                  <div class="se-box50">
-                    <div class="se-box51">
-                      <div class="se-box52">
-                        <div class="se-box53">
-                          <ul class="se-grid5">
-                            {items5List.map((it) => (
-                              <li class="se-box54">
-                                {it.buttonText && <a class="se-link10" href={it.buttonLink || "#"}>{it.buttonText}</a>}
+              <section class="se-section">
+                <div class="se-section-inner">
+                  <div class="se-section-head">
+                    {sec.heading && <h3 class="se-section-heading">{sec.heading}</h3>}
+                  </div>
+                  <div class="se-section-body">
+                    <div>
+                      {sec.text && <p class="se-section-text" set:html={sec.text} />}
+                    </div>
+                  </div>
+                  {sec.listHeading && (
+                    <div class="se-section-subhead">
+                      <h4 class="se-section-subheading">{sec.listHeading}</h4>
+                    </div>
+                  )}
+                  {sec.linksList.length > 0 && (
+                    <div class="se-section-lists">
+                      {sec.linkColumns.map((col) => (
+                        <div class="se-section-list-col">
+                          <ul class="se-section-list">
+                            {col.map((it) => (
+                              <li class="se-section-list-item">
+                                {it.buttonText && <a class="se-section-link" href={it.buttonLink || "#"}>{it.buttonText}</a>}
                               </li>
                             ))}
                           </ul>
                         </div>
-                      </div>
+                      ))}
                     </div>
-                  </div>
+                  )}
+                  <ButtonGroup buttonSections={sec.buttonsList} alignX="start" />
                 </div>
               </section>
-              <ButtonGroup buttonSections={ctaButtonList} alignX="start" />
-            </div>
-          </section>
-          <div class="se-box71">
-            <div class="se-box72">
-              <div class="se-decor2" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box73">
-            <div class="se-box74">
-              <div class="se-box75">
-                {heading3 && <h3 class="se-heading5">{heading3}</h3>}
-              </div>
-              <div class="se-box76">
-                <div class="se-box77">
-                  {text2 && <p class="se-text2" set:html={text2} />}
-                </div>
-              </div>
-              <div class="se-box78">
-                {heading4 && <h4 class="se-heading6">{heading4}</h4>}
-              </div>
-              <div class="se-box79">
-                <ul class="se-grid6">
-                  {items6List.map((it) => (
-                    <li class="se-box80">
-                      {it.buttonText && <a class="se-link21" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <ButtonGroup buttonSections={ctaButton2List} alignX="start" />
-            </div>
-          </section>
-          <div class="se-box91">
-            <div class="se-box92">
-              <div class="se-decor3" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box93">
-            <div class="se-box94">
-              <div class="se-box95">
-                {heading5 && <h3 class="se-heading7">{heading5}</h3>}
-              </div>
-              <div class="se-box96">
-                <div class="se-box97">
-                  {text3 && <p class="se-text3" set:html={text3} />}
-                </div>
-              </div>
-              <div class="se-box98">
-                {heading6 && <h4 class="se-heading8">{heading6}</h4>}
-              </div>
-              <div class="se-box99">
-                <ul class="se-grid7">
-                  {items7List.map((it) => (
-                    <li class="se-box100">
-                      {it.buttonText && <a class="se-link26" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <ButtonGroup buttonSections={ctaButton3List} alignX="start" />
-            </div>
-          </section>
-          <div class="se-box110">
-            <div class="se-box111">
-              <div class="se-decor4" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box112">
-            <div class="se-box113">
-              <div class="se-box114">
-                {heading7 && <h3 class="se-heading9">{heading7}</h3>}
-              </div>
-              <div class="se-box115">
-                <div class="se-box116">
-                  {text4 && <p class="se-text4" set:html={text4} />}
-                </div>
-              </div>
-              <div class="se-box117">
-                {heading8 && <h4 class="se-heading10">{heading8}</h4>}
-              </div>
-              <div class="se-box118">
-                <ul class="se-grid8">
-                  {items8List.map((it) => (
-                    <li class="se-box119">
-                      {it.buttonText && <a class="se-link30" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <ButtonGroup buttonSections={ctaButton4List} alignX="start" />
-            </div>
-          </section>
-          <div class="se-box128">
-            <div class="se-box129">
-              <div class="se-decor5" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box130">
-            <div class="se-box131">
-              <div class="se-box132">
-                {heading9 && <h3 class="se-heading11">{heading9}</h3>}
-              </div>
-              <div class="se-box133">
-                <div class="se-box134">
-                  {text5 && <p class="se-text5" set:html={text5} />}
-                </div>
-              </div>
-              <ButtonGroup buttonSections={ctaButton5List} alignX="start" />
-            </div>
-          </section>
-          <div class="se-box141">
-            <div class="se-box142">
-              <div class="se-decor6" aria-hidden="true"></div>
-            </div>
-          </div>
-          <section class="se-box143">
-            <div class="se-box144">
-              <div class="se-box145">
-                {heading10 && <h3 class="se-heading12">{heading10}</h3>}
-              </div>
-              <div class="se-box146">
-                <div class="se-box147">
-                  {text6 && <p class="se-text6" set:html={text6} />}
-                </div>
-              </div>
-              <ButtonGroup buttonSections={ctaButton6List} alignX="start" />
-            </div>
-          </section>
+            </Fragment>
+          ))}
         </div>
       </div>
     </div>
@@ -361,23 +203,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-  .se-box28 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box29 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
 
   .se-decor {
     border-top: 1px solid #e8e8e8;
@@ -388,14 +214,216 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     min-height: 1px;
   }
 
-  .se-box30 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
 
 
-  .se-box31 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Section rhythm: a hairline rule, then the section block. Values carried over
+     from the migrated per-section rules, which were identical apart from their
+     numbering. */
+  .se-rule {
     align-content: flex-start;
     box-sizing: border-box;
     display: flex;
@@ -404,14 +432,38 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     position: relative;
   }
 
+  .se-rule-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
 
-  .se-box32 {
+  .se-section {
+    box-sizing: border-box;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .se-section-inner {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .se-section-head,
+  .se-section-subhead {
     box-sizing: border-box;
     flex: 0 0 100%;
     max-width: 100%;
   }
 
-  .se-heading3 {
+  .se-section-heading {
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
     font-size: 28px;
@@ -420,7 +472,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     margin-top: 0px;
   }
 
-  .se-box33 {
+  .se-section-body {
     box-sizing: border-box;
     flex: 0 0 100%;
     margin-bottom: 20px;
@@ -428,22 +480,12 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     position: relative;
   }
 
-  .se-box34 {
-    box-sizing: border-box;
-  }
-
-  .se-text {
+  .se-section-text {
     box-sizing: border-box;
     margin-top: 0px;
   }
 
-  .se-box35 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading4 {
+  .se-section-subheading {
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
     font-size: 24px;
@@ -452,247 +494,28 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     margin-top: 0px;
   }
 
-  .se-box36 {
-    display: none;
-  }
-
-
-  .se-box37 {
-    display: none;
-  }
-
-
-  .se-grid3 {
-    display: none;
-  }
-
-
-  .se-box38 {
-    display: none;
-  }
-
-
-  .se-link {
-    display: none;
-    transition: all 0.25s ease;
-  }
-
-
-  .se-box43 {
-    display: none;
-  }
-
-
-  .se-grid4 {
-    display: none;
-  }
-
-
-  .se-box44 {
-    display: none;
-  }
-
-
-  .se-link6 {
-    display: none;
-    transition: all 0.25s ease;
-  }
-
-
-  .se-box48 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-  }
-
-
-  .se-box49 {
+  /* One column by default; the 768px rule opens it to the design's two. */
+  .se-section-lists {
     box-sizing: border-box;
     display: flex;
+    flex: 0 0 100%;
     flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
-
-
-  .se-box50 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
     max-width: 100%;
-    min-height: 1px;
     position: relative;
   }
 
-
-  .se-box51 {
+  .se-section-list-col {
     align-content: flex-start;
     box-sizing: border-box;
     display: flex;
     flex: 0 0 100%;
     flex-wrap: wrap;
     max-width: 100%;
-    padding: 10px;
+    padding: 0 10px;
     position: relative;
   }
 
-
-  .se-box52 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-    position: relative;
-  }
-
-
-  .se-box53 {
-    box-sizing: border-box;
-  }
-
-
-  .se-grid5 {
-    box-sizing: border-box;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    padding-left: 0px;
-  }
-
-
-  .se-box54 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    padding-bottom: 12.5px;
-    position: relative;
-  }
-
-
-  .se-link10 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    font-family: Montserrat, sans-serif;
-    max-width: 100%;
-    transition: all 0.25s ease;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  .se-box71 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box72 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-
-  .se-decor2 {
-    border-top: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-  }
-
-  .se-box73 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
-
-
-  .se-box74 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-box75 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading5 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box76 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .se-box77 {
-    box-sizing: border-box;
-  }
-
-  .se-text2 {
-    box-sizing: border-box;
-    margin-top: 0px;
-  }
-
-  .se-box78 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading6 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box79 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-grid6 {
+  .se-section-list {
     box-sizing: border-box;
     flex: 0 0 100%;
     margin-bottom: 0px;
@@ -701,8 +524,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     padding-left: 0px;
   }
 
-
-  .se-box80 {
+  .se-section-list-item {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -710,8 +532,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     position: relative;
   }
 
-
-  .se-link21 {
+  .se-section-link {
     align-items: center;
     box-sizing: border-box;
     display: flex;
@@ -721,530 +542,35 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     transition: all 0.25s ease;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-  .se-box91 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box92 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-
-  .se-decor3 {
-    border-top: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-  }
-
-  .se-box93 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
-
-
-  .se-box94 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-box95 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading7 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box96 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .se-box97 {
-    box-sizing: border-box;
-  }
-
-  .se-text3 {
-    box-sizing: border-box;
-    margin-top: 0px;
-  }
-
-  .se-box98 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading8 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box99 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-grid7 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    max-width: 100%;
-    padding-left: 0px;
-  }
-
-
-  .se-box100 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    padding-bottom: 12.5px;
-    position: relative;
-  }
-
-
-  .se-link26 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    font-family: Montserrat, sans-serif;
-    max-width: 100%;
-    transition: all 0.25s ease;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  .se-box110 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box111 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-
-  .se-decor4 {
-    border-top: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-  }
-
-  .se-box112 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
-
-
-  .se-box113 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-box114 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading9 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box115 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .se-box116 {
-    box-sizing: border-box;
-  }
-
-  .se-text4 {
-    box-sizing: border-box;
-    margin-top: 0px;
-  }
-
-  .se-box117 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading10 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box118 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
-
-
-  .se-grid8 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    max-width: 100%;
-    padding-left: 0px;
-  }
-
-
-  .se-box119 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    padding-bottom: 12.5px;
-    position: relative;
-  }
-
-
-  .se-link30 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    font-family: Montserrat, sans-serif;
-    max-width: 100%;
-    transition: all 0.25s ease;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  .se-box128 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box129 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-
-  .se-decor5 {
-    border-top: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-  }
-
-  .se-box130 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
-
-  .se-box131 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box132 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading11 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box133 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .se-box134 {
-    box-sizing: border-box;
-  }
-
-  .se-text5 {
-    box-sizing: border-box;
-    margin-top: 0px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-  .se-box141 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box142 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-bottom: 15px;
-    padding-top: 15px;
-  }
-
-  .se-decor6 {
-    border-top: 1px solid #e8e8e8;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-  }
-
-  .se-box143 {
-    box-sizing: border-box;
-    margin-top: 20px;
-    position: relative;
-  }
-
-  .se-box144 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
-    position: relative;
-  }
-
-  .se-box145 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .se-heading12 {
-    box-sizing: border-box;
-    font-family: Montserrat, sans-serif;
-    font-size: 28px;
-    line-height: 28px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-  }
-
-  .se-box146 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-bottom: 20px;
-    max-width: 100%;
-    position: relative;
-  }
-
-  .se-box147 {
-    box-sizing: border-box;
-  }
-
-  .se-text6 {
-    box-sizing: border-box;
-    margin-top: 0px;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-  .se-link:hover {
-    border-top-color: #064d96;
+  .se-section-link:hover {
     color: var(--c11);
   }
 
-  .se-link6:hover {
-    border-top-color: #064d96;
-    color: #064d96;
-  }
-
-  .se-link10:hover {
-    border-top-color: #0056b3;
-    color: #0056b3;
-  }
-
-
-  .se-link21:hover {
-    border-top-color: #09498c;
-    color: #09498c;
-  }
-
-
-  .se-link26:hover {
-    border-top-color: #09498c;
-    color: #09498c;
-  }
-
-
-  .se-link30:hover {
-    border-top-color: #064d96;
-    color: #064d96;
-  }
-
-
-
-
   @media (min-width: 768px) {
+    .se-section-heading {
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .se-section-subheading {
+      line-height: 24px;
+    }
+
+    .se-section-list-col {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 10px;
+    }
+
     .se-box {
       margin-left: auto;
       margin-right: auto;
       max-width: 720px;
     }
 
-    :global(.se-btn) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn11) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn22) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn26) :global(.label-text) {
-      white-space: nowrap;
-    }
 
     .se-box11 {
       flex: 0 0 66.67%;
@@ -1266,142 +592,6 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-heading4 {
-      line-height: 24px;
-    }
-
-    .se-box36 {
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 0 100%;
-      flex-wrap: wrap;
-      max-width: 100%;
-      position: relative;
-    }
-
-    .se-box37 {
-      align-content: flex-start;
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 0 50%;
-      flex-wrap: wrap;
-      max-width: 50%;
-      padding: 10px;
-      position: relative;
-    }
-
-    .se-grid3 {
-      box-sizing: border-box;
-      display: block;
-      flex: 0 0 100%;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      max-width: 100%;
-      padding-left: 0px;
-    }
-
-    .se-box38 {
-      align-items: center;
-      box-sizing: border-box;
-      display: flex;
-      padding-bottom: 12.5px;
-      position: relative;
-    }
-
-    .se-link {
-      align-items: center;
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 0 100%;
-      font-family: Montserrat, sans-serif;
-      max-width: 100%;
-    }
-
-    .se-box43 {
-      align-content: flex-start;
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 0 50%;
-      flex-wrap: wrap;
-      max-width: 50%;
-      min-height: 288px;
-      padding: 10px;
-      position: relative;
-    }
-
-    .se-grid4 {
-      box-sizing: border-box;
-      display: block;
-      flex: 0 0 100%;
-      margin-bottom: 0px;
-      margin-top: 0px;
-      max-width: 100%;
-      padding-left: 0px;
-    }
-
-    .se-box44 {
-      align-items: center;
-      box-sizing: border-box;
-      display: flex;
-      padding-bottom: 12.5px;
-      position: relative;
-    }
-
-    .se-link6 {
-      align-items: center;
-      box-sizing: border-box;
-      display: flex;
-      flex: 0 0 100%;
-      font-family: Montserrat, sans-serif;
-      max-width: 100%;
-    }
-
-    .se-box48 {
-      display: none;
-      flex: 0 1 auto;
-      max-width: none;
-    }
-
-    .se-box49 {
-      display: none;
-      max-width: 1024px;
-    }
-
-    .se-box50 {
-      display: none;
-      flex: 0 1 auto;
-      max-width: none;
-    }
-
-    .se-box51 {
-      display: none;
-      flex: 0 1 auto;
-      max-width: none;
-    }
-
-    .se-box52 {
-      display: none;
-      flex: 0 1 auto;
-      max-width: none;
-    }
-
-    .se-box53 {
-      display: none;
-    }
-
-    .se-grid5 {
-      display: none;
-    }
-
-    .se-box54 {
-      display: none;
-    }
-
-    .se-link10 {
-      display: none;
-      flex: 0 1 auto;
-      max-width: none;
-    }
 
 
 
@@ -1410,9 +600,6 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-heading6 {
-      line-height: 24px;
-    }
 
 
 
@@ -1421,9 +608,6 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-heading8 {
-      line-height: 24px;
-    }
 
 
 
@@ -1432,9 +616,24 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-heading10 {
-      line-height: 24px;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1465,13 +664,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       max-width: 1140px;
     }
 
-    :global(.se-btn17) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn28) :global(.label-text) {
-      white-space: nowrap;
-    }
 
     .se-box11 {
       flex: 0 0 75%;
@@ -1484,13 +677,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box36 {
-      flex-wrap: nowrap;
-    }
 
-    .se-box43 {
-      min-height: 240px;
-    }
 
 
 
@@ -1529,33 +716,6 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     text-align: center;
   }
   @media (min-width: 768px) {
-    .se-heading3 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading5 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading7 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading9 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading11 {
-      text-align: left;
-    }
-
-    .se-heading12 {
-      text-align: left;
-    }
 
 
 
@@ -1563,133 +723,40 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box132 {
-      font-family: Montserrat, sans-serif;
-      font-size: 28px;
-      line-height: 28px;
-      text-align: left;
-    }
-
-    .se-box144 {
-      font-family: Montserrat, sans-serif;
-      font-size: 28px;
-      line-height: 28px;
-      text-align: left;
-    }
-
-    .se-box117 {
-      font-family: Montserrat, sans-serif;
-      font-size: 24px;
-      text-align: left;
-    }
-
-    .se-heading10 {
-      text-align: left;
-    }
 
 
 
-    .se-link {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
-
-    .se-link6 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
 
 
-    .se-link21 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
 
 
-    .se-link26 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
 
 
-    .se-grid8 {
-      align-items: center;
-      line-height: 24px;
-    }
 
-    .se-box119 {
-      font-family: Montserrat, sans-serif;
-      line-height: 24px;
-    }
 
-    .se-link30 {
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      line-height: 24px;
-    }
 
-    .se-text {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid3 {
-      line-height: 24px;
-    }
 
-    .se-box38 {
-      line-height: 24px;
-    }
 
-    .se-grid4 {
-      line-height: 24px;
-    }
 
-    .se-box44 {
-      line-height: 24px;
-    }
 
-    .se-text2 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid6 {
-      line-height: 24px;
-    }
 
-    .se-box80 {
-      line-height: 24px;
-    }
 
-    .se-text3 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid7 {
-      line-height: 24px;
-    }
 
-    .se-box100 {
-      line-height: 24px;
-    }
 
-    .se-text4 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-text5 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-text6 {
-      font-family: Roboto, sans-serif;
-      line-height: 24px;
-      text-align: left;
-    }
+
+
+
+
+
+
+
+
+
 
     .se-box2 {
       text-align: left;
@@ -1712,57 +779,21 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box28 {
-      text-align: left;
-    }
 
-    .se-box29 {
-      text-align: left;
-    }
 
     .se-decor {
       text-align: left;
     }
 
-    .se-box30 {
-      text-align: left;
-    }
 
-    .se-box31 {
-      text-align: left;
-    }
 
-    .se-box32 {
-      text-align: left;
-    }
 
-    .se-box33 {
-      text-align: left;
-    }
 
-    .se-box34 {
-      text-align: left;
-    }
 
-    .se-box35 {
-      text-align: left;
-    }
 
-    .se-heading4 {
-      text-align: left;
-    }
 
-    .se-box36 {
-      text-align: left;
-    }
 
-    .se-box37 {
-      text-align: left;
-    }
 
-    .se-box43 {
-      text-align: left;
-    }
 
 
 
@@ -1772,49 +803,16 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box71 {
-      text-align: left;
-    }
 
-    .se-box72 {
-      text-align: left;
-    }
 
-    .se-decor2 {
-      text-align: left;
-    }
 
-    .se-box73 {
-      text-align: left;
-    }
 
-    .se-box74 {
-      text-align: left;
-    }
 
-    .se-box75 {
-      text-align: left;
-    }
 
-    .se-box76 {
-      text-align: left;
-    }
 
-    .se-box77 {
-      text-align: left;
-    }
 
-    .se-box78 {
-      text-align: left;
-    }
 
-    .se-heading6 {
-      text-align: left;
-    }
 
-    .se-box79 {
-      text-align: left;
-    }
 
 
 
@@ -1824,49 +822,16 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box91 {
-      text-align: left;
-    }
 
-    .se-box92 {
-      text-align: left;
-    }
 
-    .se-decor3 {
-      text-align: left;
-    }
 
-    .se-box93 {
-      text-align: left;
-    }
 
-    .se-box94 {
-      text-align: left;
-    }
 
-    .se-box95 {
-      text-align: left;
-    }
 
-    .se-box96 {
-      text-align: left;
-    }
 
-    .se-box97 {
-      text-align: left;
-    }
 
-    .se-box98 {
-      text-align: left;
-    }
 
-    .se-heading8 {
-      text-align: left;
-    }
 
-    .se-box99 {
-      text-align: left;
-    }
 
 
 
@@ -1876,41 +841,14 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box110 {
-      text-align: left;
-    }
 
-    .se-box111 {
-      text-align: left;
-    }
 
-    .se-decor4 {
-      text-align: left;
-    }
 
-    .se-box112 {
-      text-align: left;
-    }
 
-    .se-box113 {
-      text-align: left;
-    }
 
-    .se-box114 {
-      text-align: left;
-    }
 
-    .se-box115 {
-      text-align: left;
-    }
 
-    .se-box116 {
-      text-align: left;
-    }
 
-    .se-box118 {
-      text-align: left;
-    }
 
 
 
@@ -1919,33 +857,12 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box128 {
-      text-align: left;
-    }
 
-    .se-box129 {
-      text-align: left;
-    }
 
-    .se-decor5 {
-      text-align: left;
-    }
 
-    .se-box130 {
-      text-align: left;
-    }
 
-    .se-box131 {
-      text-align: left;
-    }
 
-    .se-box133 {
-      text-align: left;
-    }
 
-    .se-box134 {
-      text-align: left;
-    }
 
 
 
@@ -1954,42 +871,12 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box141 {
-      text-align: left;
-    }
 
-    .se-box142 {
-      text-align: left;
-    }
 
-    .se-decor6 {
-      text-align: left;
-    }
 
-    .se-box143 {
-      text-align: left;
-    }
 
-    .se-box145 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box146 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box147 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
 
 
@@ -1997,148 +884,40 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
   }
   @media (min-width: 1440px) {
-    .se-heading3 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading5 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading7 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading9 {
-      font-weight: 400;
-      text-align: left;
-    }
-
-    .se-heading11 {
-      font-family: Montserrat, sans-serif;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 28px;
-      text-align: left;
-    }
-
-    .se-heading12 {
-      font-family: Montserrat, sans-serif;
-      font-size: 28px;
-      font-weight: 400;
-      line-height: 28px;
-      text-align: left;
-    }
-
-
-
-    .se-link {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
-
-    .se-link6 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
-
-
-    .se-link21 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
-
-
-    .se-link26 {
-      color: rgb(27, 46, 56);
-      line-height: 24px;
-    }
-
-
-    .se-link30 {
-      color: rgb(27, 46, 56);
-      font-family: Montserrat, sans-serif;
-      line-height: 24px;
-    }
 
 
 
 
-    .se-text {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid3 {
-      line-height: 24px;
-    }
 
-    .se-box38 {
-      line-height: 24px;
-    }
 
-    .se-grid4 {
-      line-height: 24px;
-    }
 
-    .se-box44 {
-      line-height: 24px;
-    }
 
-    .se-text2 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid6 {
-      line-height: 24px;
-    }
 
-    .se-box80 {
-      line-height: 24px;
-    }
 
-    .se-text3 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid7 {
-      line-height: 24px;
-    }
 
-    .se-box100 {
-      line-height: 24px;
-    }
 
-    .se-text4 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-grid8 {
-      align-items: normal;
-      line-height: 24px;
-    }
 
-    .se-box119 {
-      font-family: Roboto, sans-serif;
-      line-height: 24px;
-    }
 
-    .se-text5 {
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-text6 {
-      font-family: Roboto, sans-serif;
-      line-height: 24px;
-      text-align: left;
-    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     .se-box2 {
       text-align: left;
@@ -2161,57 +940,21 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box28 {
-      text-align: left;
-    }
 
-    .se-box29 {
-      text-align: left;
-    }
 
     .se-decor {
       text-align: left;
     }
 
-    .se-box30 {
-      text-align: left;
-    }
 
-    .se-box31 {
-      text-align: left;
-    }
 
-    .se-box32 {
-      text-align: left;
-    }
 
-    .se-box33 {
-      text-align: left;
-    }
 
-    .se-box34 {
-      text-align: left;
-    }
 
-    .se-box35 {
-      text-align: left;
-    }
 
-    .se-heading4 {
-      text-align: left;
-    }
 
-    .se-box36 {
-      text-align: left;
-    }
 
-    .se-box37 {
-      text-align: left;
-    }
 
-    .se-box43 {
-      text-align: left;
-    }
 
 
 
@@ -2221,49 +964,16 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box71 {
-      text-align: left;
-    }
 
-    .se-box72 {
-      text-align: left;
-    }
 
-    .se-decor2 {
-      text-align: left;
-    }
 
-    .se-box73 {
-      text-align: left;
-    }
 
-    .se-box74 {
-      text-align: left;
-    }
 
-    .se-box75 {
-      text-align: left;
-    }
 
-    .se-box76 {
-      text-align: left;
-    }
 
-    .se-box77 {
-      text-align: left;
-    }
 
-    .se-box78 {
-      text-align: left;
-    }
 
-    .se-heading6 {
-      text-align: left;
-    }
 
-    .se-box79 {
-      text-align: left;
-    }
 
 
 
@@ -2273,49 +983,16 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box91 {
-      text-align: left;
-    }
 
-    .se-box92 {
-      text-align: left;
-    }
 
-    .se-decor3 {
-      text-align: left;
-    }
 
-    .se-box93 {
-      text-align: left;
-    }
 
-    .se-box94 {
-      text-align: left;
-    }
 
-    .se-box95 {
-      text-align: left;
-    }
 
-    .se-box96 {
-      text-align: left;
-    }
 
-    .se-box97 {
-      text-align: left;
-    }
 
-    .se-box98 {
-      text-align: left;
-    }
 
-    .se-heading8 {
-      text-align: left;
-    }
 
-    .se-box99 {
-      text-align: left;
-    }
 
 
 
@@ -2325,53 +1002,16 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box110 {
-      text-align: left;
-    }
 
-    .se-box111 {
-      text-align: left;
-    }
 
-    .se-decor4 {
-      text-align: left;
-    }
 
-    .se-box112 {
-      text-align: left;
-    }
 
-    .se-box113 {
-      text-align: left;
-    }
 
-    .se-box114 {
-      text-align: left;
-    }
 
-    .se-box115 {
-      text-align: left;
-    }
 
-    .se-box116 {
-      text-align: left;
-    }
 
-    .se-box117 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      text-align: left;
-    }
 
-    .se-heading10 {
-      font-family: Montserrat, sans-serif;
-      font-size: 24px;
-      text-align: left;
-    }
 
-    .se-box118 {
-      text-align: left;
-    }
 
 
 
@@ -2381,40 +1021,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box128 {
-      text-align: left;
-    }
 
-    .se-box129 {
-      text-align: left;
-    }
 
-    .se-decor5 {
-      text-align: left;
-    }
 
-    .se-box130 {
-      text-align: left;
-    }
 
-    .se-box131 {
-      text-align: left;
-    }
 
-    .se-box132 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box133 {
-      text-align: left;
-    }
 
-    .se-box134 {
-      text-align: left;
-    }
 
 
 
@@ -2424,49 +1037,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 
 
 
-    .se-box141 {
-      text-align: left;
-    }
 
-    .se-box142 {
-      text-align: left;
-    }
 
-    .se-decor6 {
-      text-align: left;
-    }
 
-    .se-box143 {
-      text-align: left;
-    }
 
-    .se-box144 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box145 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box146 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box147 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
 
 
