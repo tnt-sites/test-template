@@ -107,20 +107,38 @@ pageSections:
     text6: When you have unexpected dental problems, you need a dental office that can provide you with emergency dental care. At Columbine Creek Dentistry, we keep room in our schedule to handle dental emergencies for our patients. We offer same-day appointments and extended hours to handle urgent&nbsp;<a href="/contact-us/">dental needs&nbsp;at our office in Littleton.</a>
     secondaryButtonText34: View Emergency Dentistry
     secondaryButtonLink34: /dental-services/emergency-dentistry/
-    items:
-      - buttonText: General Dentistry
-        buttonLink: /dental-services/general-dentistry/
-      - buttonText: Cosmetic Dentistry
-        buttonLink: /dental-services/cosmetic-dentistry/
-      - buttonText: Restorative Dentistry
-        buttonLink: /dental-services/restorative-dentistry/
-    items2:
-      - buttonText: Sedation Dentistry
-        buttonLink: /dental-services/sedation-dentistry/
-      - buttonText: Pediatric Dentistry
-        buttonLink: /dental-services/pediatric-dentistry/
-      - buttonText: Emergency Dentistry
-        buttonLink: /dental-services/emergency-dentistry/
+    buttonSections:
+      - _component: building-blocks/core-elements/button
+        text: General Dentistry
+        link: /dental-services/general-dentistry/
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: Cosmetic Dentistry
+        link: /dental-services/cosmetic-dentistry/
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: Restorative Dentistry
+        link: /dental-services/restorative-dentistry/
+        variant: primary
+        size: md
+    buttonSections2:
+      - _component: building-blocks/core-elements/button
+        text: Sedation Dentistry
+        link: /dental-services/sedation-dentistry/
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: Pediatric Dentistry
+        link: /dental-services/pediatric-dentistry/
+        variant: primary
+        size: md
+      - _component: building-blocks/core-elements/button
+        text: Emergency Dentistry
+        link: /dental-services/emergency-dentistry/
+        variant: primary
+        size: md
     items3:
       - buttonText: Cleanings & Check Ups
         buttonLink: /dental-services/general-dentistry/cleanings-check-ups/

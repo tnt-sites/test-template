@@ -65,14 +65,18 @@ _inputs:
     type: text
   secondaryButtonLink34:
     type: url
-  items:
+  buttonSections:
     type: array
+    label: Buttons (Primary Categories)
+    comment: Buttons for the top row of primary service categories.
     options:
-      structures: _structures.services_item
-  items2:
+      structures: _structures.buttonSections
+  buttonSections2:
     type: array
+    label: Buttons (Secondary Categories)
+    comment: Buttons for the second row of service categories.
     options:
-      structures: _structures.services_item
+      structures: _structures.buttonSections
   items3:
     type: array
     options:

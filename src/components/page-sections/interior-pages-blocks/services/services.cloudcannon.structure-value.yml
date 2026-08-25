@@ -37,12 +37,24 @@ value:
   text6: ""
   secondaryButtonText34: ""
   secondaryButtonLink34: ""
-  items:
-    - buttonText: ""
-      buttonLink: ""
-  items2:
-    - buttonText: ""
-      buttonLink: ""
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  buttonSections2:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   items3:
     - buttonText: ""
       buttonLink: ""

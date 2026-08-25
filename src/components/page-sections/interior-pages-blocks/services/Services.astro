@@ -2,9 +2,10 @@
 /**
  * Services — migrated from dental-services [2] (auto) by wp-migrator.
  *
- * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `sideMenuLinks`, `items`, `items2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`.
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `sideMenuLinks`, `buttonSections`, `buttonSections2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`.
  */
 import Button from "@core-elements/button/Button.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
 const {
   eyebrow = "",
@@ -38,8 +39,8 @@ const {
   text6 = "",
   secondaryButtonText34 = "",
   secondaryButtonLink34 = "",
-  items = [],
-  items2 = [],
+  buttonSections = [],
+  buttonSections2 = [],
   items3 = [],
   items4 = [],
   items5 = [],
@@ -63,8 +64,8 @@ const {
   ...rest
 } = Astro.props;
 const sideMenuLinksList = Array.isArray(sideMenuLinks) ? sideMenuLinks.filter(Boolean) : [];
-const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
-const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+const buttonSectionsList = Array.isArray(buttonSections) ? buttonSections.filter(Boolean) : [];
+const buttonSections2List = Array.isArray(buttonSections2) ? buttonSections2.filter(Boolean) : [];
 const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
 const items4List = Array.isArray(items4) ? items4.filter(Boolean) : [];
 const items5List = Array.isArray(items5) ? items5.filter(Boolean) : [];
@@ -85,24 +86,8 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
               </div>
             </div>
           </div>
-          <div class="se-grid">
-            {itemsList.map((it) => (
-              <div class="se-box16">
-                <div class="se-box17">
-                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn30" text={it.buttonText} link={it.buttonLink || "#"} />}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div class="se-grid2">
-            {items2List.map((it) => (
-              <div class="se-box22">
-                <div class="se-box23">
-                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn33" text={it.buttonText} link={it.buttonLink || "#"} />}
-                </div>
-              </div>
-            ))}
-          </div>
+          <ButtonGroup buttonSections={buttonSectionsList} alignX="start" />
+          <ButtonGroup buttonSections={buttonSections2List} alignX="start" />
           <div class="se-box28">
             <div class="se-box29">
               <div class="se-decor" aria-hidden="true"></div>
@@ -451,97 +436,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     margin-top: 0px;
   }
 
-  .se-grid {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box16 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    margin-top: 18px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box17 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-    text-align: center;
-  }
 
-  :global(.se-btn30) {
-    background-color: var(--color-brand-muted);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c7);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 20px;
-    margin: 0px;
-    padding: 12px 24px;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn30) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-grid2 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box22 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    margin-top: 8px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box23 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn33) {
-    background-color: var(--color-brand-muted);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c7);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn33) :global(.label-text) {
-    white-space: nowrap;
-  }
 
   .se-box28 {
     align-content: flex-start;
@@ -1884,9 +1787,6 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     position: relative;
   }
 
-  :global(.se-btn33):hover {
-    background-color: var(--c10);
-  }
 
   .se-link:hover {
     border-top-color: #064d96;
@@ -1979,39 +1879,11 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       margin-bottom: 10px;
     }
 
-    .se-grid {
-      gap: 12px;
-      max-width: 1024px;
-    }
 
-    .se-box16 {
-      flex: 0 0 auto;
-      margin-top: 0px;
-      max-width: none;
-      padding: 0;
-    }
 
-    :global(.se-btn30) {
-      font-size: 15px;
-      line-height: 15px;
-      white-space: nowrap;
-    }
 
-    .se-grid2 {
-      gap: 12px;
-      max-width: 1024px;
-    }
 
-    .se-box22 {
-      flex: 0 0 auto;
-      margin-top: 0px;
-      max-width: none;
-      padding: 0;
-    }
 
-    :global(.se-btn33) {
-      white-space: nowrap;
-    }
 
     .se-heading4 {
       line-height: 24px;
@@ -2381,31 +2253,11 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       max-width: 75%;
     }
 
-    .se-grid {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn30) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn30) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-grid2 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn33) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn33) :global(.label-text) {
-      white-space: nowrap;
-    }
 
     .se-box36 {
       flex-wrap: nowrap;
@@ -2676,15 +2528,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    :global(.se-btn30) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
-    :global(.se-btn33) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link {
       color: rgb(27, 46, 56);
@@ -2816,25 +2660,10 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-grid {
-      text-align: left;
-    }
 
-    .se-box16 {
-      text-align: left;
-    }
 
-    .se-grid2 {
-      text-align: left;
-    }
 
-    .se-box22 {
-      text-align: left;
-    }
 
-    .se-box23 {
-      text-align: left;
-    }
 
     .se-box28 {
       text-align: left;
@@ -3306,15 +3135,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    :global(.se-btn30) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
-    :global(.se-btn33) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link {
       color: rgb(27, 46, 56);
@@ -3479,25 +3300,10 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-grid {
-      text-align: left;
-    }
 
-    .se-box16 {
-      text-align: left;
-    }
 
-    .se-grid2 {
-      text-align: left;
-    }
 
-    .se-box22 {
-      text-align: left;
-    }
 
-    .se-box23 {
-      text-align: left;
-    }
 
     .se-box28 {
       text-align: left;
