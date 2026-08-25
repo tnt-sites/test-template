@@ -15,56 +15,68 @@ _inputs:
     type: html
   heading2:
     type: text
-  secondaryButtonText29:
-    type: text
-  secondaryButtonLink29:
-    type: url
+  ctaButton:
+    type: array
+    label: General Dentistry CTA Button
+    comment: Call-to-action button for the General Dentistry section.
+    options:
+      structures: _structures.buttonSections
   heading3:
     type: text
   text2:
     type: html
   heading4:
     type: text
-  secondaryButtonText30:
-    type: text
-  secondaryButtonLink30:
-    type: url
+  ctaButton2:
+    type: array
+    label: Cosmetic Dentistry CTA Button
+    comment: Call-to-action button for the Cosmetic Dentistry section.
+    options:
+      structures: _structures.buttonSections
   heading5:
     type: text
   text3:
     type: html
   heading6:
     type: text
-  secondaryButtonText31:
-    type: text
-  secondaryButtonLink31:
-    type: url
+  ctaButton3:
+    type: array
+    label: Restorative Dentistry CTA Button
+    comment: Call-to-action button for the Restorative Dentistry section.
+    options:
+      structures: _structures.buttonSections
   heading7:
     type: text
   text4:
     type: html
   heading8:
     type: text
-  secondaryButtonText32:
-    type: text
-  secondaryButtonLink32:
-    type: url
+  ctaButton4:
+    type: array
+    label: Sedation Dentistry CTA Button
+    comment: Call-to-action button for the Sedation Dentistry section.
+    options:
+      structures: _structures.buttonSections
   heading9:
     type: text
   text5:
     type: html
-  secondaryButtonText33:
-    type: text
-  secondaryButtonLink33:
-    type: url
+  ctaButton5:
+    type: array
+    label: Pediatric Dentistry CTA Button
+    comment: Call-to-action button for the Pediatric Dentistry section.
+    options:
+      structures: _structures.buttonSections
   heading10:
     type: text
   text6:
     type: html
-  secondaryButtonText34:
-    type: text
-  secondaryButtonLink34:
-    type: url
+  ctaButton6:
+    type: array
+    label: Emergency Dentistry CTA Button
+    comment: Call-to-action button for the Emergency Dentistry section.
+    options:
+      structures: _structures.buttonSections
   buttonSections:
     type: array
     label: Buttons (Primary Categories)

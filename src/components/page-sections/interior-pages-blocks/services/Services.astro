@@ -4,7 +4,6 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `sideMenuLinks`, `buttonSections`, `buttonSections2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`.
  */
-import Button from "@core-elements/button/Button.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
 const {
@@ -14,31 +13,25 @@ const {
   subheading = "",
   text = "",
   heading2 = "",
-  secondaryButtonText29 = "",
-  secondaryButtonLink29 = "",
+  ctaButton = [],
   heading3 = "",
   text2 = "",
   heading4 = "",
-  secondaryButtonText30 = "",
-  secondaryButtonLink30 = "",
+  ctaButton2 = [],
   heading5 = "",
   text3 = "",
   heading6 = "",
-  secondaryButtonText31 = "",
-  secondaryButtonLink31 = "",
+  ctaButton3 = [],
   heading7 = "",
   text4 = "",
   heading8 = "",
-  secondaryButtonText32 = "",
-  secondaryButtonLink32 = "",
+  ctaButton4 = [],
   heading9 = "",
   text5 = "",
-  secondaryButtonText33 = "",
-  secondaryButtonLink33 = "",
+  ctaButton5 = [],
   heading10 = "",
   text6 = "",
-  secondaryButtonText34 = "",
-  secondaryButtonLink34 = "",
+  ctaButton6 = [],
   buttonSections = [],
   buttonSections2 = [],
   items3 = [],
@@ -66,6 +59,12 @@ const {
 const sideMenuLinksList = Array.isArray(sideMenuLinks) ? sideMenuLinks.filter(Boolean) : [];
 const buttonSectionsList = Array.isArray(buttonSections) ? buttonSections.filter(Boolean) : [];
 const buttonSections2List = Array.isArray(buttonSections2) ? buttonSections2.filter(Boolean) : [];
+const ctaButtonList = Array.isArray(ctaButton) ? ctaButton.filter(Boolean) : [];
+const ctaButton2List = Array.isArray(ctaButton2) ? ctaButton2.filter(Boolean) : [];
+const ctaButton3List = Array.isArray(ctaButton3) ? ctaButton3.filter(Boolean) : [];
+const ctaButton4List = Array.isArray(ctaButton4) ? ctaButton4.filter(Boolean) : [];
+const ctaButton5List = Array.isArray(ctaButton5) ? ctaButton5.filter(Boolean) : [];
+const ctaButton6List = Array.isArray(ctaButton6) ? ctaButton6.filter(Boolean) : [];
 const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
 const items4List = Array.isArray(items4) ? items4.filter(Boolean) : [];
 const items5List = Array.isArray(items5) ? items5.filter(Boolean) : [];
@@ -145,21 +144,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   </div>
                 </div>
               </section>
-              <section class="se-box65">
-                <div class="se-box66">
-                  <div class="se-box67">
-                    <div class="se-box68">
-                      {secondaryButtonText29 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn36" text={secondaryButtonText29} link={secondaryButtonLink29 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box69">
-                    <div class="se-spacer" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box70">
-                    <div class="se-spacer2" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButtonList} alignX="start" />
             </div>
           </section>
           <div class="se-box71">
@@ -189,21 +174,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   ))}
                 </ul>
               </div>
-              <section class="se-box85">
-                <div class="se-box86">
-                  <div class="se-box87">
-                    <div class="se-box88">
-                      {secondaryButtonText30 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn37" text={secondaryButtonText30} link={secondaryButtonLink30 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box89">
-                    <div class="se-spacer3" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box90">
-                    <div class="se-spacer4" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButton2List} alignX="start" />
             </div>
           </section>
           <div class="se-box91">
@@ -233,21 +204,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   ))}
                 </ul>
               </div>
-              <section class="se-box104">
-                <div class="se-box105">
-                  <div class="se-box106">
-                    <div class="se-box107">
-                      {secondaryButtonText31 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn38" text={secondaryButtonText31} link={secondaryButtonLink31 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box108">
-                    <div class="se-spacer5" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box109">
-                    <div class="se-spacer6" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButton3List} alignX="start" />
             </div>
           </section>
           <div class="se-box110">
@@ -277,21 +234,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   ))}
                 </ul>
               </div>
-              <section class="se-box122">
-                <div class="se-box123">
-                  <div class="se-box124">
-                    <div class="se-box125">
-                      {secondaryButtonText32 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn39" text={secondaryButtonText32} link={secondaryButtonLink32 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box126">
-                    <div class="se-spacer7" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box127">
-                    <div class="se-spacer8" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButton4List} alignX="start" />
             </div>
           </section>
           <div class="se-box128">
@@ -309,21 +252,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   {text5 && <p class="se-text5" set:html={text5} />}
                 </div>
               </div>
-              <section class="se-box135">
-                <div class="se-box136">
-                  <div class="se-box137">
-                    <div class="se-box138">
-                      {secondaryButtonText33 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn40" text={secondaryButtonText33} link={secondaryButtonLink33 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box139">
-                    <div class="se-spacer9" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box140">
-                    <div class="se-spacer10" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButton5List} alignX="start" />
             </div>
           </section>
           <div class="se-box141">
@@ -341,21 +270,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
                   {text6 && <p class="se-text6" set:html={text6} />}
                 </div>
               </div>
-              <section class="se-box148">
-                <div class="se-box149">
-                  <div class="se-box150">
-                    <div class="se-box151">
-                      {secondaryButtonText34 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="se-btn41" text={secondaryButtonText34} link={secondaryButtonLink34 || "#"} />}
-                    </div>
-                  </div>
-                  <div class="se-box152">
-                    <div class="se-spacer11" aria-hidden="true"></div>
-                  </div>
-                  <div class="se-box153">
-                    <div class="se-spacer12" aria-hidden="true"></div>
-                  </div>
-                </div>
-              </section>
+              <ButtonGroup buttonSections={ctaButton6List} alignX="start" />
             </div>
           </section>
         </div>
@@ -664,101 +579,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
   }
 
 
-  .se-box65 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box66 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box67 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box68 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn36) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn36) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box69 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box70 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer2 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
   .se-box71 {
     align-content: flex-start;
@@ -893,101 +722,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
   }
 
 
-  .se-box85 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box86 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box87 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box88 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn37) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn37) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box89 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer3 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box90 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer4 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
   .se-box91 {
     align-content: flex-start;
@@ -1122,101 +865,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
   }
 
 
-  .se-box104 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box105 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box106 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box107 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn38) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn38) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box108 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer5 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box109 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer6 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
   .se-box110 {
     align-content: flex-start;
@@ -1351,101 +1008,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
   }
 
 
-  .se-box122 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box123 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box124 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box125 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn39) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn39) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box126 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer7 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box127 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer8 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
   .se-box128 {
     align-content: flex-start;
@@ -1521,101 +1092,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     margin-top: 0px;
   }
 
-  .se-box135 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box136 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box137 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box138 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn40) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn40) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box139 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer9 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box140 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer10 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
   .se-box141 {
     align-content: flex-start;
@@ -1691,101 +1176,15 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     margin-top: 0px;
   }
 
-  .se-box148 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    margin-top: 10px;
-    max-width: 100%;
-    position: relative;
-  }
 
-  .se-box149 {
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 767px;
-    position: relative;
-  }
 
-  .se-box150 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    max-width: 100%;
-    padding: 10px;
-    position: relative;
-  }
 
-  .se-box151 {
-    box-sizing: border-box;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  :global(.se-btn41) {
-    background-color: var(--btnbg);
-    border-radius: 3px;
-    box-sizing: border-box;
-    color: var(--c6);
-    display: inline-block;
-    font-family: Montserrat, sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 15px;
-    margin: 0px;
-    padding: 12px 24px;
-    text-align: center;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-  }
 
-  :global(.se-btn41) :global(.label-text) {
-    white-space: nowrap;
-  }
 
-  .se-box152 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer11 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-box153 {
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
-  .se-spacer12 {
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex: 0 0 100%;
-    flex-wrap: wrap;
-    height: 1px;
-    max-width: 100%;
-    min-height: 1px;
-    position: relative;
-  }
 
 
   .se-link:hover {
@@ -1803,44 +1202,26 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     color: #0056b3;
   }
 
-  :global(.se-btn36):hover {
-    background-color: #49ab71;
-  }
 
   .se-link21:hover {
     border-top-color: #09498c;
     color: #09498c;
   }
 
-  :global(.se-btn37):hover {
-    background-color: #49ab71;
-  }
 
   .se-link26:hover {
     border-top-color: #09498c;
     color: #09498c;
   }
 
-  :global(.se-btn38):hover {
-    background-color: #4bad73;
-  }
 
   .se-link30:hover {
     border-top-color: #064d96;
     color: #064d96;
   }
 
-  :global(.se-btn39):hover {
-    background-color: #4bad73;
-  }
 
-  :global(.se-btn40):hover {
-    background-color: #49ab71;
-  }
 
-  :global(.se-btn41):hover {
-    background-color: #4eaf76;
-  }
 
   @media (min-width: 768px) {
     .se-box {
@@ -2022,215 +1403,59 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       max-width: none;
     }
 
-    .se-box66 {
-      max-width: 1024px;
-    }
 
-    .se-box67 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    :global(.se-btn36) {
-      white-space: normal;
-    }
 
-    .se-box69 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box70 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer2 {
-      height: 89px;
-      min-height: 89px;
-    }
 
     .se-heading6 {
       line-height: 24px;
     }
 
-    .se-box86 {
-      max-width: 1024px;
-    }
 
-    .se-box87 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    :global(.se-btn37) {
-      white-space: normal;
-    }
 
-    .se-box89 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer3 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box90 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer4 {
-      height: 89px;
-      min-height: 89px;
-    }
 
     .se-heading8 {
       line-height: 24px;
     }
 
-    .se-box105 {
-      max-width: 1024px;
-    }
 
-    .se-box106 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    :global(.se-btn38) {
-      white-space: normal;
-    }
 
-    .se-box108 {
-      flex: 0 0 31.16%;
-      max-width: 31.16%;
-    }
 
-    .se-spacer5 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box109 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer6 {
-      height: 89px;
-      min-height: 89px;
-    }
 
     .se-heading10 {
       line-height: 24px;
     }
 
-    .se-box123 {
-      max-width: 1024px;
-    }
 
-    .se-box124 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    :global(.se-btn39) {
-      white-space: normal;
-    }
 
-    .se-box126 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer7 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box127 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer8 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box136 {
-      max-width: 1024px;
-    }
 
-    .se-box137 {
-      flex: 0 0 40%;
-      max-width: 40%;
-    }
 
-    :global(.se-btn40) {
-      white-space: normal;
-    }
 
-    .se-box139 {
-      flex: 0 0 25%;
-      max-width: 25%;
-    }
 
-    .se-spacer9 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box140 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer10 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box149 {
-      max-width: 1024px;
-    }
 
-    .se-box150 {
-      flex: 0 0 40%;
-      max-width: 40%;
-    }
 
-    :global(.se-btn41) {
-      white-space: normal;
-    }
 
-    .se-box152 {
-      flex: 0 0 25%;
-      max-width: 25%;
-    }
 
-    .se-spacer11 {
-      height: 89px;
-      min-height: 89px;
-    }
 
-    .se-box153 {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
 
-    .se-spacer12 {
-      height: 89px;
-      min-height: 89px;
-    }
   }
 
   @media (min-width: 1440px) {
@@ -2267,148 +1492,36 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       min-height: 240px;
     }
 
-    .se-box66 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn36) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn36) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-spacer {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer2 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-box86 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn37) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn37) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-spacer3 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer4 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-box105 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn38) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn38) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-box108 {
-      flex: 0 0 31.06%;
-      max-width: 31.06%;
-    }
 
-    .se-spacer5 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer6 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-box123 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn39) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn39) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-spacer7 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer8 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-box136 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn40) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn40) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-spacer9 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer10 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-box149 {
-      flex-wrap: nowrap;
-      max-width: 1140px;
-    }
 
-    :global(.se-btn41) {
-      white-space: nowrap;
-    }
 
-    :global(.se-btn41) :global(.label-text) {
-      white-space: nowrap;
-    }
 
-    .se-spacer11 {
-      height: 59px;
-      min-height: 59px;
-    }
 
-    .se-spacer12 {
-      height: 59px;
-      min-height: 59px;
-    }
   }
 
 /* wpmig:corrections:begin */
@@ -2444,65 +1557,11 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box125 {
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      line-height: 15px;
-      text-align: center;
-    }
 
-    :global(.se-btn39) {
-      align-items: normal;
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      justify-content: normal;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box137 {
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      line-height: 15px;
-      text-align: center;
-    }
 
-    :global(.se-btn40) {
-      align-items: normal;
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      justify-content: normal;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box150 {
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      line-height: 15px;
-      text-align: center;
-    }
 
-    :global(.se-btn41) {
-      align-items: normal;
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      justify-content: normal;
-      line-height: 24px;
-      text-align: left;
-    }
 
     .se-box132 {
       font-family: Montserrat, sans-serif;
@@ -2540,30 +1599,18 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       line-height: 24px;
     }
 
-    :global(.se-btn36) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link21 {
       color: rgb(27, 46, 56);
       line-height: 24px;
     }
 
-    :global(.se-btn37) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link26 {
       color: rgb(27, 46, 56);
       line-height: 24px;
     }
 
-    :global(.se-btn38) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-grid8 {
       align-items: center;
@@ -2717,37 +1764,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box65 {
-      text-align: left;
-    }
 
-    .se-box66 {
-      text-align: left;
-    }
 
-    .se-box67 {
-      text-align: left;
-    }
 
-    .se-box68 {
-      text-align: left;
-    }
 
-    .se-box69 {
-      text-align: left;
-    }
 
-    .se-spacer {
-      text-align: left;
-    }
 
-    .se-box70 {
-      text-align: left;
-    }
 
-    .se-spacer2 {
-      text-align: left;
-    }
 
     .se-box71 {
       text-align: left;
@@ -2793,37 +1816,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box85 {
-      text-align: left;
-    }
 
-    .se-box86 {
-      text-align: left;
-    }
 
-    .se-box87 {
-      text-align: left;
-    }
 
-    .se-box88 {
-      text-align: left;
-    }
 
-    .se-box89 {
-      text-align: left;
-    }
 
-    .se-spacer3 {
-      text-align: left;
-    }
 
-    .se-box90 {
-      text-align: left;
-    }
 
-    .se-spacer4 {
-      text-align: left;
-    }
 
     .se-box91 {
       text-align: left;
@@ -2869,37 +1868,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box104 {
-      text-align: left;
-    }
 
-    .se-box105 {
-      text-align: left;
-    }
 
-    .se-box106 {
-      text-align: left;
-    }
 
-    .se-box107 {
-      text-align: left;
-    }
 
-    .se-box108 {
-      text-align: left;
-    }
 
-    .se-spacer5 {
-      text-align: left;
-    }
 
-    .se-box109 {
-      text-align: left;
-    }
 
-    .se-spacer6 {
-      text-align: left;
-    }
 
     .se-box110 {
       text-align: left;
@@ -2937,33 +1912,12 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box122 {
-      text-align: left;
-    }
 
-    .se-box123 {
-      text-align: left;
-    }
 
-    .se-box124 {
-      text-align: left;
-    }
 
-    .se-box126 {
-      text-align: left;
-    }
 
-    .se-spacer7 {
-      text-align: left;
-    }
 
-    .se-box127 {
-      text-align: left;
-    }
 
-    .se-spacer8 {
-      text-align: left;
-    }
 
     .se-box128 {
       text-align: left;
@@ -2993,37 +1947,12 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box135 {
-      text-align: left;
-    }
 
-    .se-box136 {
-      text-align: left;
-    }
 
-    .se-box138 {
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box139 {
-      text-align: left;
-    }
 
-    .se-spacer9 {
-      text-align: left;
-    }
 
-    .se-box140 {
-      text-align: left;
-    }
 
-    .se-spacer10 {
-      text-align: left;
-    }
 
     .se-box141 {
       text-align: left;
@@ -3062,41 +1991,10 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box148 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box149 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box151 {
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box152 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-spacer11 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
   }
   @media (min-width: 1440px) {
     .se-heading3 {
@@ -3147,30 +2045,18 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       line-height: 24px;
     }
 
-    :global(.se-btn36) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link21 {
       color: rgb(27, 46, 56);
       line-height: 24px;
     }
 
-    :global(.se-btn37) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link26 {
       color: rgb(27, 46, 56);
       line-height: 24px;
     }
 
-    :global(.se-btn38) {
-      align-items: normal;
-      justify-content: normal;
-    }
 
     .se-link30 {
       color: rgb(27, 46, 56);
@@ -3178,38 +2064,8 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       line-height: 24px;
     }
 
-    :global(.se-btn39) {
-      align-items: normal;
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      justify-content: normal;
-      line-height: 15px;
-      text-align: center;
-    }
 
-    :global(.se-btn40) {
-      align-items: normal;
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      justify-content: normal;
-      line-height: 15px;
-      text-align: center;
-    }
 
-    :global(.se-btn41) {
-      align-items: normal;
-      background-color: rgb(58, 131, 88);
-      color: rgb(255, 255, 255);
-      font-family: Montserrat, sans-serif;
-      font-size: 15px;
-      justify-content: normal;
-      line-height: 15px;
-      text-align: center;
-    }
 
     .se-text {
       line-height: 24px;
@@ -3357,37 +2213,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box65 {
-      text-align: left;
-    }
 
-    .se-box66 {
-      text-align: left;
-    }
 
-    .se-box67 {
-      text-align: left;
-    }
 
-    .se-box68 {
-      text-align: left;
-    }
 
-    .se-box69 {
-      text-align: left;
-    }
 
-    .se-spacer {
-      text-align: left;
-    }
 
-    .se-box70 {
-      text-align: left;
-    }
 
-    .se-spacer2 {
-      text-align: left;
-    }
 
     .se-box71 {
       text-align: left;
@@ -3433,37 +2265,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box85 {
-      text-align: left;
-    }
 
-    .se-box86 {
-      text-align: left;
-    }
 
-    .se-box87 {
-      text-align: left;
-    }
 
-    .se-box88 {
-      text-align: left;
-    }
 
-    .se-box89 {
-      text-align: left;
-    }
 
-    .se-spacer3 {
-      text-align: left;
-    }
 
-    .se-box90 {
-      text-align: left;
-    }
 
-    .se-spacer4 {
-      text-align: left;
-    }
 
     .se-box91 {
       text-align: left;
@@ -3509,37 +2317,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box104 {
-      text-align: left;
-    }
 
-    .se-box105 {
-      text-align: left;
-    }
 
-    .se-box106 {
-      text-align: left;
-    }
 
-    .se-box107 {
-      text-align: left;
-    }
 
-    .se-box108 {
-      text-align: left;
-    }
 
-    .se-spacer5 {
-      text-align: left;
-    }
 
-    .se-box109 {
-      text-align: left;
-    }
 
-    .se-spacer6 {
-      text-align: left;
-    }
 
     .se-box110 {
       text-align: left;
@@ -3589,42 +2373,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box122 {
-      text-align: left;
-    }
 
-    .se-box123 {
-      text-align: left;
-    }
 
-    .se-box124 {
-      text-align: left;
-    }
 
-    .se-box125 {
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box126 {
-      text-align: left;
-    }
 
-    .se-spacer7 {
-      text-align: left;
-    }
 
-    .se-box127 {
-      text-align: left;
-    }
 
-    .se-spacer8 {
-      text-align: left;
-    }
 
     .se-box128 {
       text-align: left;
@@ -3661,46 +2416,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box135 {
-      text-align: left;
-    }
 
-    .se-box136 {
-      text-align: left;
-    }
 
-    .se-box137 {
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box138 {
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box139 {
-      text-align: left;
-    }
 
-    .se-spacer9 {
-      text-align: left;
-    }
 
-    .se-box140 {
-      text-align: left;
-    }
 
-    .se-spacer10 {
-      text-align: left;
-    }
 
     .se-box141 {
       text-align: left;
@@ -3746,64 +2468,13 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       text-align: left;
     }
 
-    .se-box148 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box149 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box150 {
-      background-color: rgba(0, 0, 0, 0);
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box151 {
-      color: rgb(27, 46, 56);
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box152 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-spacer11 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-box153 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
 
-    .se-spacer12 {
-      font-family: Roboto, sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: left;
-    }
   }
 /* wpmig:corrections:end */
 </style>

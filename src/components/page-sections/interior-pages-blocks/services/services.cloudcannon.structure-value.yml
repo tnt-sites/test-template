@@ -12,31 +12,73 @@ value:
   subheading: ""
   text: ""
   heading2: ""
-  secondaryButtonText29: ""
-  secondaryButtonLink29: ""
+  ctaButton:
+    - _component: building-blocks/core-elements/button
+      text: View General Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   heading3: ""
   text2: ""
   heading4: ""
-  secondaryButtonText30: ""
-  secondaryButtonLink30: ""
+  ctaButton2:
+    - _component: building-blocks/core-elements/button
+      text: View Cosmetic Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   heading5: ""
   text3: ""
   heading6: ""
-  secondaryButtonText31: ""
-  secondaryButtonLink31: ""
+  ctaButton3:
+    - _component: building-blocks/core-elements/button
+      text: View Restorative Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   heading7: ""
   text4: ""
   heading8: ""
-  secondaryButtonText32: ""
-  secondaryButtonLink32: ""
+  ctaButton4:
+    - _component: building-blocks/core-elements/button
+      text: View Sedation Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   heading9: ""
   text5: ""
-  secondaryButtonText33: ""
-  secondaryButtonLink33: ""
+  ctaButton5:
+    - _component: building-blocks/core-elements/button
+      text: View Pediatric Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   heading10: ""
   text6: ""
-  secondaryButtonText34: ""
-  secondaryButtonLink34: ""
+  ctaButton6:
+    - _component: building-blocks/core-elements/button
+      text: View Emergency Dentistry
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
   buttonSections:
     - _component: building-blocks/core-elements/button
       text: My Button

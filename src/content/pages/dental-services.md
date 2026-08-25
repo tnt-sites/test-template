@@ -83,8 +83,12 @@ pageSections:
       or need crucial treatments to restore your oral health, our general
       dentistry services can protect your smile.
     heading2: 'Our General Dentistry Services Include:'
-    secondaryButtonText29: View General Dentistry
-    secondaryButtonLink29: /dental-services/general-dentistry/
+    ctaButton:
+      - _component: building-blocks/core-elements/button
+        text: View General Dentistry
+        link: /dental-services/general-dentistry/
+        variant: primary
+        size: md
     heading3: Cosmetic Dentistry Services
     text2: >-
       A beautiful smile can bolster your self-confidence and help you make a
@@ -94,8 +98,12 @@ pageSections:
       smile&nbsp;so you can feel confident whenever you flash your pearly
       whites.
     heading4: 'Our Cosmetic Dentistry Services Include:'
-    secondaryButtonText30: View Cosmetic Dentistry
-    secondaryButtonLink30: /dental-services/cosmetic-dentistry/
+    ctaButton2:
+      - _component: building-blocks/core-elements/button
+        text: View Cosmetic Dentistry
+        link: /dental-services/cosmetic-dentistry/
+        variant: primary
+        size: md
     heading5: Restorative Dentistry Services
     text3: >-
       Missing teeth can change your smile and affect your overall health.
@@ -104,8 +112,12 @@ pageSections:
       dentistry services give you choices to find the right option to replace
       your missing teeth.
     heading6: 'Our Restorative Dentistry Services Include:'
-    secondaryButtonText31: View Restorative Dentistry
-    secondaryButtonLink31: /dental-services/restorative-dentistry/
+    ctaButton3:
+      - _component: building-blocks/core-elements/button
+        text: View Restorative Dentistry
+        link: /dental-services/restorative-dentistry/
+        variant: primary
+        size: md
     heading7: Sedation Dentistry Services
     text4: >-
       Many people have anxiety when they contemplate having dental work
@@ -116,8 +128,12 @@ pageSections:
       is not enough, we also have sedation dentistry options if you need extra
       help to relax while we care for your smile
     heading8: 'Our Sedation Dentistry Services Include:'
-    secondaryButtonText32: View Sedation Dentistry
-    secondaryButtonLink32: /blog/sedation-dentistry
+    ctaButton4:
+      - _component: building-blocks/core-elements/button
+        text: View Sedation Dentistry
+        link: /blog/sedation-dentistry
+        variant: primary
+        size: md
     heading9: Pediatric Dentistry
     text5: >-
       Your children depend on you for everything they need to grow up healthy
@@ -128,8 +144,12 @@ pageSections:
       to be chosen to care for the young smiles that come into our office. We
       take this responsibility seriously and give the best possible&nbsp;dental
       care treatments&nbsp;to those growing smiles.
-    secondaryButtonText33: View Pediatric Dentistry
-    secondaryButtonLink33: /dental-services/pediatric-dentistry/
+    ctaButton5:
+      - _component: building-blocks/core-elements/button
+        text: View Pediatric Dentistry
+        link: /dental-services/pediatric-dentistry/
+        variant: primary
+        size: md
     heading10: Emergency Dentistry
     text6: >-
       When you have unexpected dental problems, you need a dental office that
@@ -138,14 +158,18 @@ pageSections:
       patients. We offer same-day appointments and extended hours to handle
       urgent&nbsp;<a href="/contact-us/">dental needs&nbsp;at our office in
       Littleton.</a>
-    secondaryButtonText34: View Emergency Dentistry
-    secondaryButtonLink34: /dental-services/emergency-dentistry/
+    ctaButton6:
+      - _component: building-blocks/core-elements/button
+        text: View Emergency Dentistry
+        link: /dental-services/emergency-dentistry/
+        variant: primary
+        size: md
     buttonSections:
       - _component: building-blocks/core-elements/button
         id: ''
-        text: Sedation Dentistry
+        text: General Dentistry
         hideText: false
-        link: /dental-services/sedation-dentistry/
+        link: /dental-services/general-dentistry/
         modalTarget: ''
         iconName: ''
         iconPosition: before
@@ -159,9 +183,9 @@ pageSections:
         uppercase: false
       - _component: building-blocks/core-elements/button
         id: ''
-        text: Pediatric Dentistry
+        text: Cosmetic Dentistry
         hideText: false
-        link: /dental-services/pediatric-dentistry/
+        link: /dental-services/cosmetic-dentistry/
         modalTarget: ''
         iconName: ''
         iconPosition: before
@@ -175,9 +199,9 @@ pageSections:
         uppercase: false
       - _component: building-blocks/core-elements/button
         id: ''
-        text: Emergency Dentistry
+        text: Restorative Dentistry
         hideText: false
-        link: /dental-services/emergency-dentistry/
+        link: /dental-services/restorative-dentistry/
         modalTarget: ''
         iconName: ''
         iconPosition: before
