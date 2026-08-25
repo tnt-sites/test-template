@@ -2,71 +2,14 @@
 /**
  * Services — migrated from dental-services [2] (auto) by wp-migrator.
  *
- * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`.
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `sideMenuLinks`, `items`, `items2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`.
  */
 import Button from "@core-elements/button/Button.astro";
 import SideMenu from "@page-sections/shared-blocks/side-menu/SideMenu.astro";
 const {
   eyebrow = "",
   heading = "",
-  buttonText = "",
-  buttonLink = "",
-  secondaryButtonText = "",
-  secondaryButtonLink = "",
-  secondaryButtonText2 = "",
-  secondaryButtonLink2 = "",
-  secondaryButtonText3 = "",
-  secondaryButtonLink3 = "",
-  secondaryButtonText4 = "",
-  secondaryButtonLink4 = "",
-  secondaryButtonText5 = "",
-  secondaryButtonLink5 = "",
-  secondaryButtonText6 = "",
-  secondaryButtonLink6 = "",
-  secondaryButtonText7 = "",
-  secondaryButtonLink7 = "",
-  secondaryButtonText8 = "",
-  secondaryButtonLink8 = "",
-  secondaryButtonText9 = "",
-  secondaryButtonLink9 = "",
-  secondaryButtonText10 = "",
-  secondaryButtonLink10 = "",
-  secondaryButtonText11 = "",
-  secondaryButtonLink11 = "",
-  secondaryButtonText12 = "",
-  secondaryButtonLink12 = "",
-  secondaryButtonText13 = "",
-  secondaryButtonLink13 = "",
-  secondaryButtonText14 = "",
-  secondaryButtonLink14 = "",
-  secondaryButtonText15 = "",
-  secondaryButtonLink15 = "",
-  secondaryButtonText16 = "",
-  secondaryButtonLink16 = "",
-  secondaryButtonText17 = "",
-  secondaryButtonLink17 = "",
-  secondaryButtonText18 = "",
-  secondaryButtonLink18 = "",
-  secondaryButtonText19 = "",
-  secondaryButtonLink19 = "",
-  secondaryButtonText20 = "",
-  secondaryButtonLink20 = "",
-  secondaryButtonText21 = "",
-  secondaryButtonLink21 = "",
-  secondaryButtonText22 = "",
-  secondaryButtonLink22 = "",
-  secondaryButtonText23 = "",
-  secondaryButtonLink23 = "",
-  secondaryButtonText24 = "",
-  secondaryButtonLink24 = "",
-  secondaryButtonText25 = "",
-  secondaryButtonLink25 = "",
-  secondaryButtonText26 = "",
-  secondaryButtonLink26 = "",
-  secondaryButtonText27 = "",
-  secondaryButtonLink27 = "",
-  secondaryButtonText28 = "",
-  secondaryButtonLink28 = "",
+  sideMenuLinks = [],
   subheading = "",
   text = "",
   heading2 = "",
@@ -119,6 +62,7 @@ const {
   _component,
   ...rest
 } = Astro.props;
+const sideMenuLinksList = Array.isArray(sideMenuLinks) ? sideMenuLinks.filter(Boolean) : [];
 const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
 const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
 const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
@@ -131,7 +75,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 <div class="services" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${textColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${textHoverColor};--c12:${hoverColor}`} {...rest}>
   <div class="se-box">
     <div class="se-box2">
-      <SideMenu heading={eyebrow} links={[{ text: buttonText, link: buttonLink }, { text: secondaryButtonText, link: secondaryButtonLink }, { text: secondaryButtonText2, link: secondaryButtonLink2 }, { text: secondaryButtonText3, link: secondaryButtonLink3 }, { text: secondaryButtonText4, link: secondaryButtonLink4 }, { text: secondaryButtonText5, link: secondaryButtonLink5 }, { text: secondaryButtonText6, link: secondaryButtonLink6 }, { text: secondaryButtonText7, link: secondaryButtonLink7 }, { text: secondaryButtonText8, link: secondaryButtonLink8 }, { text: secondaryButtonText9, link: secondaryButtonLink9 }, { text: secondaryButtonText10, link: secondaryButtonLink10 }, { text: secondaryButtonText11, link: secondaryButtonLink11 }, { text: secondaryButtonText12, link: secondaryButtonLink12 }, { text: secondaryButtonText13, link: secondaryButtonLink13 }, { text: secondaryButtonText14, link: secondaryButtonLink14 }, { text: secondaryButtonText15, link: secondaryButtonLink15 }, { text: secondaryButtonText16, link: secondaryButtonLink16 }, { text: secondaryButtonText17, link: secondaryButtonLink17 }, { text: secondaryButtonText18, link: secondaryButtonLink18 }, { text: secondaryButtonText19, link: secondaryButtonLink19 }, { text: secondaryButtonText20, link: secondaryButtonLink20 }, { text: secondaryButtonText21, link: secondaryButtonLink21 }, { text: secondaryButtonText22, link: secondaryButtonLink22 }, { text: secondaryButtonText23, link: secondaryButtonLink23 }, { text: secondaryButtonText24, link: secondaryButtonLink24 }, { text: secondaryButtonText25, link: secondaryButtonLink25 }, { text: secondaryButtonText26, link: secondaryButtonLink26 }, { text: secondaryButtonText27, link: secondaryButtonLink27 }, { text: secondaryButtonText28, link: secondaryButtonLink28 }]} />
+      <SideMenu heading={eyebrow} links={sideMenuLinksList.map((it) => ({ text: it.buttonText, link: it.buttonLink }))} />
       <div class="se-box11">
         <div class="se-box12">
           <div class="se-box13">

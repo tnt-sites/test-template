@@ -20,64 +20,65 @@ pageSections:
     id: ""
     eyebrow: Services
     heading: Our Services
-    buttonText: General Dentistry
-    buttonLink: ""
-    secondaryButtonText: Cleanings & Check Ups
-    secondaryButtonLink: /dental-services/general-dentistry/cleanings-check-ups/
-    secondaryButtonText2: Cracked Tooth Repair
-    secondaryButtonLink2: /dental-services/general-dentistry/cracked-tooth-repair/
-    secondaryButtonText3: Dental Crowns
-    secondaryButtonLink3: /dental-services/general-dentistry/dental-crowns/
-    secondaryButtonText4: Gum Disease
-    secondaryButtonLink4: /dental-services/general-dentistry/gum-disease/
-    secondaryButtonText5: Halitosis Treatment
-    secondaryButtonLink5: /dental-services/general-dentistry/halitosis-treatment/
-    secondaryButtonText6: Periodontal Therapy
-    secondaryButtonLink6: /dental-services/general-dentistry/periodontal-therapy/
-    secondaryButtonText7: Root Canal Therapy
-    secondaryButtonLink7: /dental-services/general-dentistry/root-canal-therapy/
-    secondaryButtonText8: Same Day Dentistry
-    secondaryButtonLink8: /dental-services/general-dentistry/same-day-dentistry/
-    secondaryButtonText9: Tooth Extractions
-    secondaryButtonLink9: /dental-services/general-dentistry/tooth-extractions/
-    secondaryButtonText10: Cosmetic Dentistry
-    secondaryButtonLink10: ""
-    secondaryButtonText11: Invisalign
-    secondaryButtonLink11: /dental-services/cosmetic-dentistry/invisalign/
-    secondaryButtonText12: Teeth Whitening
-    secondaryButtonLink12: /dental-services/cosmetic-dentistry/teeth-whitening/
-    secondaryButtonText13: Porcelain Veneers
-    secondaryButtonLink13: /dental-services/cosmetic-dentistry/porcelain-veneers/
-    secondaryButtonText14: Dental Bridges
-    secondaryButtonLink14: /dental-services/cosmetic-dentistry/dental-bridges/
-    secondaryButtonText15: White Fillings
-    secondaryButtonLink15: /dental-services/cosmetic-dentistry/white-fillings/
-    secondaryButtonText16: Restorative Dentistry
-    secondaryButtonLink16: ""
-    secondaryButtonText17: Dentures
-    secondaryButtonLink17: /dental-services/restorative-dentistry/dentures/
-    secondaryButtonText18: Implant Supported Dentures
-    secondaryButtonLink18: /dental-services/restorative-dentistry/implant-supported-dentures/
-    secondaryButtonText19: Dental Implants
-    secondaryButtonLink19: /dental-services/restorative-dentistry/dental-implants/
-    secondaryButtonText20: Implant Restorations
-    secondaryButtonLink20: /dental-services/restorative-dentistry/implant-restorations/
-    secondaryButtonText21: Sedation Dentistry
-    secondaryButtonLink21: ""
-    secondaryButtonText22: Oral Conscious Sedation
-    secondaryButtonLink22: /dental-services/sedation-dentistry/oral-conscious-sedation/
-    secondaryButtonText23: Nitrous Oxide
-    secondaryButtonLink23: /dental-services/sedation-dentistry/nitrous-oxide/
-    secondaryButtonText24: IV Sedation Dentistry
-    secondaryButtonLink24: /dental-services/sedation-dentistry/iv-sedation-dentistry/
-    secondaryButtonText25: Pediatric Dentistry
-    secondaryButtonLink25: ""
-    secondaryButtonText26: Pediatric Dentistry
-    secondaryButtonLink26: /dental-services/pediatric-dentistry/
-    secondaryButtonText27: Emergency Dentistry
-    secondaryButtonLink27: ""
-    secondaryButtonText28: Emergency Dentistry
-    secondaryButtonLink28: /dental-services/emergency-dentistry/
+    sideMenuLinks:
+      - buttonText: General Dentistry
+        buttonLink: ""
+      - buttonText: Cleanings & Check Ups
+        buttonLink: /dental-services/general-dentistry/cleanings-check-ups/
+      - buttonText: Cracked Tooth Repair
+        buttonLink: /dental-services/general-dentistry/cracked-tooth-repair/
+      - buttonText: Dental Crowns
+        buttonLink: /dental-services/general-dentistry/dental-crowns/
+      - buttonText: Gum Disease
+        buttonLink: /dental-services/general-dentistry/gum-disease/
+      - buttonText: Halitosis Treatment
+        buttonLink: /dental-services/general-dentistry/halitosis-treatment/
+      - buttonText: Periodontal Therapy
+        buttonLink: /dental-services/general-dentistry/periodontal-therapy/
+      - buttonText: Root Canal Therapy
+        buttonLink: /dental-services/general-dentistry/root-canal-therapy/
+      - buttonText: Same Day Dentistry
+        buttonLink: /dental-services/general-dentistry/same-day-dentistry/
+      - buttonText: Tooth Extractions
+        buttonLink: /dental-services/general-dentistry/tooth-extractions/
+      - buttonText: Cosmetic Dentistry
+        buttonLink: ""
+      - buttonText: Invisalign
+        buttonLink: /dental-services/cosmetic-dentistry/invisalign/
+      - buttonText: Teeth Whitening
+        buttonLink: /dental-services/cosmetic-dentistry/teeth-whitening/
+      - buttonText: Porcelain Veneers
+        buttonLink: /dental-services/cosmetic-dentistry/porcelain-veneers/
+      - buttonText: Dental Bridges
+        buttonLink: /dental-services/cosmetic-dentistry/dental-bridges/
+      - buttonText: White Fillings
+        buttonLink: /dental-services/cosmetic-dentistry/white-fillings/
+      - buttonText: Restorative Dentistry
+        buttonLink: ""
+      - buttonText: Dentures
+        buttonLink: /dental-services/restorative-dentistry/dentures/
+      - buttonText: Implant Supported Dentures
+        buttonLink: /dental-services/restorative-dentistry/implant-supported-dentures/
+      - buttonText: Dental Implants
+        buttonLink: /dental-services/restorative-dentistry/dental-implants/
+      - buttonText: Implant Restorations
+        buttonLink: /dental-services/restorative-dentistry/implant-restorations/
+      - buttonText: Sedation Dentistry
+        buttonLink: ""
+      - buttonText: Oral Conscious Sedation
+        buttonLink: /dental-services/sedation-dentistry/oral-conscious-sedation/
+      - buttonText: Nitrous Oxide
+        buttonLink: /dental-services/sedation-dentistry/nitrous-oxide/
+      - buttonText: IV Sedation Dentistry
+        buttonLink: /dental-services/sedation-dentistry/iv-sedation-dentistry/
+      - buttonText: Pediatric Dentistry
+        buttonLink: ""
+      - buttonText: Pediatric Dentistry
+        buttonLink: /dental-services/pediatric-dentistry/
+      - buttonText: Emergency Dentistry
+        buttonLink: ""
+      - buttonText: Emergency Dentistry
+        buttonLink: /dental-services/emergency-dentistry/
     subheading: General Dentistry Services
     text: Columbine Creek Dentistry&nbsp;is your local source for excellence in general dental care for your family. Our team, headed by Alexandra Kantor, DDS, can care for all your oral health needs at our office in Littleton. Whether you just need to maintain a healthy smile through preventive care or need crucial treatments to restore your oral health, our general dentistry services can protect your smile.
     heading2: "Our General Dentistry Services Include:"
