@@ -1,6 +1,7 @@
 ---
 import FontelloIcon from "@core-elements/fontello-icon/FontelloIcon.astro";
-import { Icon as AstroIcon } from "astro-icon/components";
+
+import { getIconSvg } from "@core-elements/icon/icons";
 
 const props = Astro.props as any;
 const {
@@ -21,6 +22,12 @@ const isFontelloName = normalizedName.startsWith("icon-");
 if (!_component && !isValidName) {
   return;
 }
+
+const svgMarkup = isFontelloName ? "" : getIconSvg(normalizedName);
+
+if (import.meta.env.DEV && !isFontelloName && isValidName && !svgMarkup) {
+  console.warn(`[Icon] No icon found at src/icons/${normalizedName}.svg`);
+}
 ---
 
 <div
@@ -39,7 +46,7 @@ if (!_component && !isValidName) {
     isFontelloName ? (
       <FontelloIcon name={normalizedName} size={size} />
     ) : (
-      <AstroIcon name={normalizedName} is:inline />
+      svgMarkup && <Fragment set:html={svgMarkup} />
     )
   }
 </div>

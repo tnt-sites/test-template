@@ -1,5 +1,5 @@
 ---
-import { Icon as AstroIcon } from "astro-icon/components";
+import { getIconSvg } from "@core-elements/icon/icons";
 import CarouselSlide from "./CarouselSlide.astro";
 
 const {
@@ -121,7 +121,7 @@ const carouselStyles = `
       <slot name="prev-arrow">
         {
           prevIcon ? (
-            <AstroIcon name={prevIcon} is:inline />
+            <Fragment set:html={getIconSvg(prevIcon)} />
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -148,7 +148,7 @@ const carouselStyles = `
       <slot name="next-arrow">
         {
           nextIcon ? (
-            <AstroIcon name={nextIcon} is:inline />
+            <Fragment set:html={getIconSvg(nextIcon)} />
           ) : (
             <svg
               xmlns="http://www.w3.org/2000/svg"

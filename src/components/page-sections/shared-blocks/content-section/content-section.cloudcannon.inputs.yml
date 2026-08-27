@@ -29,6 +29,29 @@ _structures:
           type: eyebrow
           html: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: &content_section_block_types
+                - id: eyebrow
+                  name: Eyebrow
+                - id: heading
+                  name: Heading
+                - id: subheading
+                  name: Subheading
+                - id: prose
+                  name: Prose
+                - id: list
+                  name: List
+                - id: image
+                  name: Image
+                - id: buttons
+                  name: Buttons
+                - id: cards
+                  name: Cards
+                - id: reviews
+                  name: Reviews
           html:
             type: html
             label: Text
@@ -38,6 +61,11 @@ _structures:
           type: heading
           html: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           html:
             type: html
             label: Heading
@@ -47,6 +75,11 @@ _structures:
           type: subheading
           html: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           html:
             type: html
             label: Subheading
@@ -56,6 +89,11 @@ _structures:
           type: prose
           html: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           html:
             type: html
             label: Content
@@ -65,6 +103,11 @@ _structures:
           type: list
           html: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           html:
             type: html
             label: List
@@ -75,6 +118,11 @@ _structures:
           source: ""
           alt: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           source:
             type: image
             label: Image
@@ -89,6 +137,11 @@ _structures:
             - text: ""
               link: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           buttons:
             type: array
             options:
@@ -102,6 +155,11 @@ _structures:
               text: ""
               buttons: []
         _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
           items:
             type: array
             options:
@@ -111,6 +169,12 @@ _structures:
         description: The practice's Google reviews as a rotating slider.
         value:
           type: reviews
+        _inputs:
+          type:
+            type: select
+            comment: Which kind of block this is.
+            options:
+              values: *content_section_block_types
 
   content_section_button:
     values:
@@ -150,6 +214,15 @@ _structures:
           alt: ""
           side: right
         _inputs:
+          type:
+            type: select
+            comment: Which kind of media rail this is.
+            options:
+              values: &content_section_media_types
+                - id: image
+                  name: Image
+                - id: embed
+                  name: Booking form
           source:
             type: image
             label: Image
@@ -174,6 +247,11 @@ _structures:
             text: ""
             link: ""
         _inputs:
+          type:
+            type: select
+            comment: Which kind of media rail this is.
+            options:
+              values: *content_section_media_types
           url:
             type: url
             label: Form URL

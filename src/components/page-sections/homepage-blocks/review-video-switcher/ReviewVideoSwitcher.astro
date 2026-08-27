@@ -1,5 +1,5 @@
 ---
-import { Icon as AstroIcon } from "astro-icon/components";
+import { getIconSvg } from "@core-elements/icon/icons";
 import Carousel from "@wrappers/carousel/Carousel.astro";
 import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
 import CustomSection from "@builders/custom-section/CustomSection.astro";
@@ -134,7 +134,7 @@ const uid = `rvs-${Math.random().toString(36).slice(2, 7)}`;
                           />
                         )}
                         {!review.reviewerImage && review.socialIcon && (
-                          <AstroIcon name={review.socialIcon} class="social-icon" />
+                          <Fragment set:html={getIconSvg(review.socialIcon, "social-icon")} />
                         )}
                         <div class="author-details">
                           <span class="stars" aria-label="5 out of 5 stars">
@@ -317,7 +317,9 @@ const uid = `rvs-${Math.random().toString(36).slice(2, 7)}`;
     width: 3.5rem;
   }
 
-  .social-icon {
+  /* :global because the icon SVG is inlined via set:html and so never receives
+     Astro's scoping attribute. */
+  :global(.social-icon) {
     flex-shrink: 0;
     height: 2.5rem;
     width: 2.5rem;
