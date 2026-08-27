@@ -10,11 +10,17 @@ value:
       title: ""
       text: ""
   textColor: "#000000"
+  textColorHex: ""
   titleColor: "#000000"
+  titleColorHex: ""
   hoverColor: "#ffffff"
-  hoverBackgroundColor: rgba(0, 0, 0, 0.44)
-  hoverColor2: "#e087ed"
+  hoverColorHex: ""
+  hoverBackgroundColor: "#000000"
+  hoverBackgroundColorHex: ""
+  hoverColor2: ""
+  hoverColor2Hex: "#e087ed"
   hoverBackgroundColor2: "#ffffff"
+  hoverBackgroundColor2Hex: ""
 preview:
   text:
     - Doctor Cards

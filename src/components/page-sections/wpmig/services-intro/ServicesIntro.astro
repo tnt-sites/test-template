@@ -8,16 +8,25 @@ const {
   eyebrow = "",
   heading = "",
   text = "",
-  backgroundColor = "#f6fffe",
-  eyebrowColor = "#117d6f",
+  backgroundColor = "#ffffff",
+  backgroundColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
-  textColor = "#4d4d4d",
+  headingColorHex = "",
+  textColor = "",
+  textColorHex = "#4d4d4d",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#f6fffe";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#4d4d4d";
 ---
-<div class="services-intro" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+<div class="services-intro" id={id || undefined} style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="si-box">
     <div class="si-box2">
       {eyebrow && <p class="si-text">{eyebrow}</p>}

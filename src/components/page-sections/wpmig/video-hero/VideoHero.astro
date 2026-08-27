@@ -10,6 +10,7 @@ const {
   backgroundImage = "",
   videoSource = "",
   headingColor = "#ffffff",
+  headingColorHex = "",
   id,
   _component,
   // legacy migrated props, intentionally ignored
@@ -23,13 +24,15 @@ const {
   textColor3HoverColor,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
 
 const uid = `vh-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`;
 ---
 <section
   class="video-hero"
   id={id || undefined}
-  style={`--hd:${headingColor};${backgroundImage ? `background-image:url("${backgroundImage}")` : ""}`}
+  style={`--hd:${headingColorValue};${backgroundImage ? `background-image:url("${backgroundImage}")` : ""}`}
   {...rest}
 >
   <div class="vh-overlay" aria-hidden="true"></div>

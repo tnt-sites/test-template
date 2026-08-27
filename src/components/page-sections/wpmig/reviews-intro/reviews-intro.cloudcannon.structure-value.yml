@@ -7,9 +7,12 @@ value:
   eyebrow: ""
   heading: ""
   text: ""
-  eyebrowColor: "#117d6f"
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
+  headingColorHex: ""
   textColor: "#000000"
+  textColorHex: ""
 preview:
   text:
     - Reviews Intro

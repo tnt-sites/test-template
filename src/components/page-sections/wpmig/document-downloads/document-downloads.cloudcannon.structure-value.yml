@@ -37,11 +37,17 @@ value:
   secondaryButtonText9: ""
   secondaryButtonLink9: ""
   backgroundColor: "#ffffff"
-  eyebrowColor: "#117d6f"
+  backgroundColorHex: ""
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
-  buttonTextColor: "#117d6f"
-  buttonTextHoverColor: "#e087ed"
+  headingColorHex: ""
+  buttonTextColor: ""
+  buttonTextColorHex: "#117d6f"
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#e087ed"
   hoverBackgroundColor: "#ffffff"
+  hoverBackgroundColorHex: ""
 preview:
   text:
     - Document Downloads

@@ -6,16 +6,23 @@
  */
 const {
   items = [],
-  backgroundColor = "#d8fffb",
+  backgroundColor = "var(--color-brand)",
+  backgroundColorHex = "",
   titleColor = "#ffffff",
+  titleColorHex = "",
   textColor = "#ffffff",
+  textColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#d8fffb";
+const titleColorValue = titleColorHex || titleColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="why-choose-us-cards" id={id || undefined} style={`--bg:${backgroundColor};--tt:${titleColor};--tx:${textColor}`} {...rest}>
+<div class="why-choose-us-cards" id={id || undefined} style={`--bg:${backgroundColorValue};--tt:${titleColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="wc-grid">
     {list.map((it) => (
       <div class="wc-box">

@@ -8,14 +8,19 @@ const {
   heading = "",
   subheading = "",
   text = "",
-  headingColor = "#117d6f",
+  headingColor = "",
+  headingColorHex = "#117d6f",
   textColor = "#000000",
+  textColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const headingColorValue = headingColorHex || headingColor || "#117d6f";
+const textColorValue = textColorHex || textColor || "#000000";
 ---
-<div class="office-intro" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+<div class="office-intro" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="oi-box">
     <div class="oi-box2">
       <div class="oi-box3">

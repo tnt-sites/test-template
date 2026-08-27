@@ -9,11 +9,7 @@ value:
   text2: ""
   text3: ""
   headingColor: "#ffffff"
-  textColor: "#000000"
-  textColor2: "#ffffff"
-  textColor3: "#e087ed"
-  hoverColor: "#000000"
-  textColor3HoverColor: "#000000"
+  headingColorHex: ""
 preview:
   text:
     - Video Hero

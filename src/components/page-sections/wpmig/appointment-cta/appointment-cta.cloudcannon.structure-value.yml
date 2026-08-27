@@ -10,11 +10,17 @@ value:
   buttonText: ""
   buttonLink: ""
   backgroundColor: "#ffffff"
-  eyebrowColor: "#117d6f"
+  backgroundColorHex: ""
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
+  headingColorHex: ""
   textColor: "#000000"
+  textColorHex: ""
   buttonTextColor: "#000000"
+  buttonTextColorHex: ""
   hoverColor: "#000000"
+  hoverColorHex: ""
 preview:
   text:
     - Appointment CTA

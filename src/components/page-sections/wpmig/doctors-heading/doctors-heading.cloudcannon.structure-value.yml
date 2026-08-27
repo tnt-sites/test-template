@@ -7,12 +7,16 @@ value:
   eyebrow: ""
   heading: ""
   text: ""
-  eyebrowColor: "#117d6f"
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
+  headingColorHex: ""
   textColor: "#000000"
+  textColorHex: ""
   backgroundImage: ""
-  backgroundPosition: "50% 50%"
-  overlayColor: "rgba(36, 215, 195, 0.29)"
+  backgroundPosition: 50% 50%
+  overlayColor: ""
+  overlayColorHex: rgba(36, 215, 195, 0.29)
 preview:
   text:
     - Doctors Heading

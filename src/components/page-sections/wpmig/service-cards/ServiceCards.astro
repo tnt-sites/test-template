@@ -6,19 +6,32 @@
  */
 const {
   items = [],
-  backgroundColor = "#f6fffe",
+  backgroundColor = "#ffffff",
+  backgroundColorHex = "",
   titleColor = "#ffffff",
+  titleColorHex = "",
   textColor = "#ffffff",
+  textColorHex = "",
   hoverColor = "#000000",
+  hoverColorHex = "",
   hoverColor2 = "#ffffff",
-  hoverBackgroundColor = "rgba(0, 0, 0, 0.44)",
+  hoverColor2Hex = "",
+  hoverBackgroundColor = "#000000",
+  hoverBackgroundColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#f6fffe";
+const titleColorValue = titleColorHex || titleColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+const hoverColorValue = hoverColorHex || hoverColor || "#000000";
+const hoverColor2Value = hoverColor2Hex || hoverColor2 || "#ffffff";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "rgba(0, 0, 0, 0.44)";
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="service-cards" id={id || undefined} style={`--bg:${backgroundColor};--tt:${titleColor};--tx:${textColor};--c4:${hoverColor};--c5:${hoverColor2};--c6:${hoverBackgroundColor}`} {...rest}>
+<div class="service-cards" id={id || undefined} style={`--bg:${backgroundColorValue};--tt:${titleColorValue};--tx:${textColorValue};--c4:${hoverColorValue};--c5:${hoverColor2Value};--c6:${hoverBackgroundColorValue}`} {...rest}>
   <div class="sc-grid">
     {list.map((it) => (
       <div class="sc-box">

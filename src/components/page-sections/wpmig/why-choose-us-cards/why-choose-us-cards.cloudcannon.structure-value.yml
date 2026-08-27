@@ -7,9 +7,12 @@ value:
   items:
     - title: ""
       text: ""
-  backgroundColor: "#d8fffb"
+  backgroundColor: var(--color-brand)
+  backgroundColorHex: ""
   titleColor: "#ffffff"
+  titleColorHex: ""
   textColor: "#ffffff"
+  textColorHex: ""
 preview:
   text:
     - Why Choose Us Cards

@@ -8,12 +8,18 @@ value:
     - link: ""
       title: ""
       text: ""
-  backgroundColor: "#f6fffe"
+  backgroundColor: "#ffffff"
+  backgroundColorHex: ""
   titleColor: "#ffffff"
+  titleColorHex: ""
   textColor: "#ffffff"
+  textColorHex: ""
   hoverColor: "#000000"
+  hoverColorHex: ""
   hoverColor2: "#ffffff"
-  hoverBackgroundColor: rgba(0, 0, 0, 0.44)
+  hoverColor2Hex: ""
+  hoverBackgroundColor: "#000000"
+  hoverBackgroundColorHex: ""
 preview:
   text:
     - Service Cards

@@ -11,8 +11,11 @@ value:
   buttonLink: ""
   backgroundImage: ""
   backgroundColor: "#000000"
+  backgroundColorHex: ""
   headingColor: "#ffffff"
-  hoverBackgroundColor: "#117d6f"
+  headingColorHex: ""
+  hoverBackgroundColor: ""
+  hoverBackgroundColorHex: "#117d6f"
 preview:
   text:
     - key: heading

@@ -7,10 +7,14 @@ value:
   eyebrow: ""
   heading: ""
   text: ""
-  backgroundColor: "#f6fffe"
-  eyebrowColor: "#117d6f"
+  backgroundColor: "#ffffff"
+  backgroundColorHex: ""
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
-  textColor: "#4d4d4d"
+  headingColorHex: ""
+  textColor: ""
+  textColorHex: "#4d4d4d"
 preview:
   text:
     - Services Intro

@@ -14,13 +14,20 @@ const {
   buttonLink = "",
   backgroundImage = "",
   backgroundColor = "#000000",
+  backgroundColorHex = "",
   headingColor = "#ffffff",
-  hoverBackgroundColor = "#117d6f",
+  headingColorHex = "",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#117d6f",
   showButton = true,
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#000000";
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#117d6f";
 
 const hasButton = showButton && Boolean(buttonText);
 ---
@@ -28,7 +35,7 @@ const hasButton = showButton && Boolean(buttonText);
 <div
   class="page-hero"
   id={id || undefined}
-  style={`--bg:${backgroundColor};--hd:${headingColor};--c3:${hoverBackgroundColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  style={`--bg:${backgroundColorValue};--hd:${headingColorValue};--c3:${hoverBackgroundColorValue}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
   {...rest}
 >
   {backgroundImage && <div class="ph-overlay" aria-hidden="true" />}

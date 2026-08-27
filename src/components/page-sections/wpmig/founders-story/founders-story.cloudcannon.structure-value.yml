@@ -9,10 +9,14 @@ value:
   text: ""
   buttonText: ""
   buttonLink: ""
-  eyebrowColor: "#117d6f"
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
+  headingColorHex: ""
   textColor: "#000000"
+  textColorHex: ""
   buttonTextColor: "#000000"
+  buttonTextColorHex: ""
 preview:
   text:
     - Founders Story

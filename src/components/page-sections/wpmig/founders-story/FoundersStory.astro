@@ -11,16 +11,25 @@ const {
   text = "",
   buttonText = "",
   buttonLink = "",
-  eyebrowColor = "#117d6f",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
+  headingColorHex = "",
   textColor = "#000000",
+  textColorHex = "",
   buttonTextColor = "#000000",
+  buttonTextColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#000000";
 ---
-<div class="founders-story" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btntx:${buttonTextColor}`} {...rest}>
+<div class="founders-story" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--btntx:${buttonTextColorValue}`} {...rest}>
   <div class="fs-box">
     <div class="fs-decor" aria-hidden="true"></div>
     <div class="fs-box2">

@@ -8,18 +8,31 @@ import Button from "@core-elements/button/Button.astro";
 const {
   items = [],
   textColor = "#000000",
+  textColorHex = "",
   titleColor = "#000000",
+  titleColorHex = "",
   hoverColor = "#ffffff",
-  hoverBackgroundColor = "rgba(0, 0, 0, 0.44)",
-  hoverColor2 = "#e087ed",
+  hoverColorHex = "",
+  hoverBackgroundColor = "#000000",
+  hoverBackgroundColorHex = "",
+  hoverColor2 = "",
+  hoverColor2Hex = "#e087ed",
   hoverBackgroundColor2 = "#ffffff",
+  hoverBackgroundColor2Hex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const textColorValue = textColorHex || textColor || "#000000";
+const titleColorValue = titleColorHex || titleColor || "#000000";
+const hoverColorValue = hoverColorHex || hoverColor || "#ffffff";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "rgba(0, 0, 0, 0.44)";
+const hoverColor2Value = hoverColor2Hex || hoverColor2 || "#e087ed";
+const hoverBackgroundColor2Value = hoverBackgroundColor2Hex || hoverBackgroundColor2 || "#ffffff";
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<section class="doctor-cards" id={id || undefined} style={`--tx:${textColor};--tt:${titleColor};--c3:${hoverColor};--c4:${hoverBackgroundColor};--c5:${hoverColor2};--c6:${hoverBackgroundColor2}`} {...rest}>
+<section class="doctor-cards" id={id || undefined} style={`--tx:${textColorValue};--tt:${titleColorValue};--c3:${hoverColorValue};--c4:${hoverBackgroundColorValue};--c5:${hoverColor2Value};--c6:${hoverBackgroundColor2Value}`} {...rest}>
   <div class="dc-box">
     <div class="dc-grid">
       {list.map((it) => (

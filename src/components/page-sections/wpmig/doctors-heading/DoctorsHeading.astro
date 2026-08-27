@@ -8,18 +8,27 @@ const {
   eyebrow = "",
   heading = "",
   text = "",
-  eyebrowColor = "#117d6f",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
+  headingColorHex = "",
   textColor = "#000000",
+  textColorHex = "",
   backgroundImage = "",
   backgroundPosition = "50% 50%",
-  overlayColor = "rgba(36, 215, 195, 0.29)",
+  overlayColor = "",
+  overlayColorHex = "rgba(36, 215, 195, 0.29)",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const overlayColorValue = overlayColorHex || overlayColor || "rgba(36, 215, 195, 0.29)";
 ---
-<div class="doctors-heading" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--bgpos:${backgroundPosition};--overlay:${overlayColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+<div class="doctors-heading" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--bgpos:${backgroundPosition};--overlay:${overlayColorValue}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
   {backgroundImage && <div class="dh-overlay" aria-hidden="true"></div>}
   <div class="dh-box">
     <div class="dh-box2">

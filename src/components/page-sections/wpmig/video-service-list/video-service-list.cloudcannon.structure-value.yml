@@ -19,12 +19,13 @@ value:
   heading4: ""
   text8: ""
   backgroundColor: "#ffffff"
-  eyebrowColor: "#117d6f"
+  backgroundColorHex: ""
+  eyebrowColor: ""
+  eyebrowColorHex: "#117d6f"
   headingColor: "#000000"
+  headingColorHex: ""
   textColor: "#000000"
-  textColor2: "#ffffff"
-  textColor3: "#e087ed"
-  hoverColor: "#000000"
+  textColorHex: ""
 preview:
   text:
     - Video Service List

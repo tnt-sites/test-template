@@ -10,20 +10,27 @@ const {
   heading = "",
   text = "",
   images = [],
-  eyebrowColor = "#117d6f",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
+  headingColorHex = "",
   textColor = "#000000",
+  textColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
 const list = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
 
 <div
   class="logo-strip"
   id={id || undefined}
-  style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`}
+  style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue}`}
   {...rest}
 >
   <div class="ls-box">

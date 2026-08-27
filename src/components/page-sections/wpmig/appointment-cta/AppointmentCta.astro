@@ -13,17 +13,30 @@ const {
   buttonText = "",
   buttonLink = "",
   backgroundColor = "#ffffff",
-  eyebrowColor = "#117d6f",
+  backgroundColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
+  headingColorHex = "",
   textColor = "#000000",
+  textColorHex = "",
   buttonTextColor = "#000000",
+  buttonTextColorHex = "",
   hoverColor = "#000000",
+  hoverColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#ffffff";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#000000";
+const hoverColorValue = hoverColorHex || hoverColor || "#000000";
 ---
-<div class="appointment-cta" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btntx:${buttonTextColor};--c6:${hoverColor}`} {...rest}>
+<div class="appointment-cta" id={id || undefined} style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--btntx:${buttonTextColorValue};--c6:${hoverColorValue}`} {...rest}>
   <div class="ac-box">
     <div class="ac-box2">
       <div class="ac-box3">

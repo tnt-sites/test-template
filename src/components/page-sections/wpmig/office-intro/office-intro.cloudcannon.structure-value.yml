@@ -7,8 +7,10 @@ value:
   heading: ""
   subheading: ""
   text: ""
-  headingColor: "#117d6f"
+  headingColor: ""
+  headingColorHex: "#117d6f"
   textColor: "#000000"
+  textColorHex: ""
 preview:
   text:
     - Office Intro

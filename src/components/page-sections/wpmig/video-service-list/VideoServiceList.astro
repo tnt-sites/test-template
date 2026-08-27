@@ -21,9 +21,13 @@ const {
   poster = "",
   services = [],
   backgroundColor = "#ffffff",
-  eyebrowColor = "#117d6f",
+  backgroundColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
+  headingColorHex = "",
   textColor = "#000000",
+  textColorHex = "",
   id,
   _component,
   // legacy migrated props, intentionally ignored
@@ -43,6 +47,11 @@ const {
   hoverColor,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#ffffff";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
 
 const list = Array.isArray(services) ? services.filter(Boolean) : [];
 const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`;
@@ -50,7 +59,7 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
 <section
   class="video-service-list"
   id={id || undefined}
-  style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`}
+  style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue}`}
   {...rest}
 >
   <div class="vsl-inner">

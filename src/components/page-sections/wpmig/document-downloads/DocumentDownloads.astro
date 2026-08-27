@@ -39,15 +39,28 @@ const {
   secondaryButtonText9 = "",
   secondaryButtonLink9 = "",
   backgroundColor = "#ffffff",
-  eyebrowColor = "#117d6f",
+  backgroundColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
-  buttonTextColor = "#117d6f",
-  buttonTextHoverColor = "#e087ed",
+  headingColorHex = "",
+  buttonTextColor = "",
+  buttonTextColorHex = "#117d6f",
+  buttonTextHoverColor = "",
+  buttonTextHoverColorHex = "#e087ed",
   hoverBackgroundColor = "#ffffff",
+  hoverBackgroundColorHex = "",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#ffffff";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#117d6f";
+const buttonTextHoverColorValue = buttonTextHoverColorHex || buttonTextHoverColor || "#e087ed";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#ffffff";
 const raw0 = `<svg><g>	<path></path>	<path></path></g></svg>`;
 const raw1 = `<svg><g>	<path></path>	<path></path></g></svg>`;
 const raw2 = `<svg><g>	<path></path>	<path></path></g></svg>`;
@@ -59,7 +72,7 @@ const raw7 = `<svg><g><path></path><path></path><path></path><path></path></g><p
 const raw8 = `<svg><path></path><path></path><path></path><path></path><path></path><path></path><path></path></svg>`;
 const raw9 = `<svg><g>	<path></path>	<path></path>	<path></path>	<path></path></g></svg>`;
 ---
-<div class="document-downloads" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverBackgroundColor}`} {...rest}>
+<div class="document-downloads" id={id || undefined} style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--btntx:${buttonTextColorValue};--c5:${buttonTextHoverColorValue};--c6:${hoverBackgroundColorValue}`} {...rest}>
   <div class="dd-box">
     <div class="dd-box2">
       <div class="dd-box3">

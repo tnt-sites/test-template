@@ -10,17 +10,24 @@ const {
   buttonText = "",
   buttonLink = "",
   backgroundColor = "#000000",
+  backgroundColorHex = "",
   headingColor = "#ffffff",
-  hoverBackgroundColor = "#117d6f",
+  headingColorHex = "",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#117d6f",
   id,
   _component,
   ...rest
 } = Astro.props;
+// Palette selection, hex override, or the shade measured at migration time.
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#000000";
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#117d6f";
 const raw0 = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
 	<path d="M738,99l262-93V0H0v5.6L738,99z"></path>
 </svg>`;
 ---
-<div class="home-hero" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--c3:${hoverBackgroundColor}`} {...rest}>
+<div class="home-hero" id={id || undefined} style={`--bg:${backgroundColorValue};--hd:${headingColorValue};--c3:${hoverBackgroundColorValue}`} {...rest}>
   <div class="hh-box">
     <video class="hh-embed" role="presentation" autoplay muted playsinline loop src="https://toothbar.com/wp-content/uploads/2024/10/893d09db414e3856ee7f8806624a7daa.mp4#t=2"></video>
   </div>
