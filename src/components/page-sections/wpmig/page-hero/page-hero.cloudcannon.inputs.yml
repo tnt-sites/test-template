@@ -1,0 +1,34 @@
+_inputs:
+  heading:
+    type: html
+    comment: Page title, shown as the H1.
+  subheading:
+    type: html
+  showButton:
+    type: switch
+    comment: Turn off for a banner with no call to action.
+  buttonText:
+    type: text
+    options:
+      visible_when:
+        key: showButton
+        equals: true
+  buttonLink:
+    type: url
+    options:
+      visible_when:
+        key: showButton
+        equals: true
+  backgroundImage:
+    type: image
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  hoverBackgroundColor:
+    type: color
+    comment: Button background on hover.
+    options:
+      visible_when:
+        key: showButton
+        equals: true

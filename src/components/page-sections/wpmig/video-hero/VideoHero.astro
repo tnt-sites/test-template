@@ -1,0 +1,209 @@
+---
+/**
+ * Video Hero — full-bleed background image with a centred heading and a play
+ * button that opens the section's video in a modal <dialog>. Migrated from
+ * index.html by wp-migrator, then rebuilt by hand.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  heading = "",
+  backgroundImage = "",
+  videoSource = "",
+  headingColor = "#ffffff",
+  id,
+  _component,
+  // legacy migrated props, intentionally ignored
+  text,
+  text2,
+  text3,
+  textColor,
+  textColor2,
+  textColor3,
+  hoverColor,
+  textColor3HoverColor,
+  ...rest
+} = Astro.props;
+
+const uid = `vh-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`;
+---
+<section
+  class="video-hero"
+  id={id || undefined}
+  style={`--hd:${headingColor};${backgroundImage ? `background-image:url("${backgroundImage}")` : ""}`}
+  {...rest}
+>
+  <div class="vh-overlay" aria-hidden="true"></div>
+  <div class="vh-inner">
+    {heading && <h2 class="vh-heading" set:html={heading} />}
+    {
+      videoSource && (
+        <button type="button" class="vh-play" data-vh-open={uid} aria-label="Play video">
+          <span class="vh-play-icon" aria-hidden="true"><Icon name="play-circle" /></span>
+        </button>
+      )
+    }
+  </div>
+
+  {
+    videoSource && (
+      <dialog class="vh-modal" id={uid} aria-label={heading || "Video"}>
+        <button type="button" class="vh-modal-close" data-vh-close aria-label="Close video">
+          <Icon name="x-mark" size="none" />
+        </button>
+        <video class="vh-video" src={videoSource} controls playsinline preload="none"></video>
+      </dialog>
+    )
+  }
+</section>
+
+{
+  videoSource && (
+    <script is:inline define:vars={{ uid }}>
+      (() => {
+        const dialog = document.getElementById(uid);
+        if (!(dialog instanceof HTMLDialogElement)) return;
+        const video = dialog.querySelector("video");
+        const opener = document.querySelector(`[data-vh-open="${uid}"]`);
+        const open = () => {
+          if (typeof dialog.showModal === "function") dialog.showModal();
+          else dialog.setAttribute("open", "");
+        };
+        const stop = () => {
+          if (video) {
+            video.pause();
+            try { video.currentTime = 0; } catch (e) {}
+          }
+        };
+        opener?.addEventListener("click", open);
+        dialog.addEventListener("close", stop);
+        dialog.querySelector("[data-vh-close]")?.addEventListener("click", () => dialog.close());
+        // click on backdrop closes
+        dialog.addEventListener("click", (e) => {
+          if (e.target === dialog) dialog.close();
+        });
+      })();
+    </script>
+  )
+}
+
+<style>
+  .video-hero {
+    background-color: #1a1a1a;
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    position: relative;
+  }
+
+  .vh-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .vh-inner {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: center;
+    min-height: 340px;
+    padding: 60px 24px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .vh-heading {
+    color: var(--hd);
+    font-family: Lato, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.15;
+    margin: 0;
+    max-width: 900px;
+    text-shadow: rgba(0, 0, 0, 0.85) 1px -1px 7px;
+    text-transform: uppercase;
+  }
+
+  .vh-play {
+    background: transparent;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    line-height: 0;
+    padding: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .vh-play:hover {
+    color: #117d6f;
+    transform: scale(1.08);
+  }
+
+  .vh-play-icon :global(svg) {
+    display: block;
+    height: 82px;
+    width: 82px;
+  }
+
+  .vh-modal {
+    background: #000;
+    border: 0;
+    border-radius: 10px;
+    max-width: min(960px, calc(100vw - 2rem));
+    padding: 0;
+    width: 100%;
+  }
+
+  .vh-modal::backdrop {
+    background: rgb(0 0 0 / 70%);
+  }
+
+  .vh-video {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: auto;
+    max-height: calc(100vh - 4rem);
+    width: 100%;
+  }
+
+  .vh-modal-close {
+    align-items: center;
+    background-color: #117d6f;
+    border: 0;
+    border-radius: 999px;
+    color: #000;
+    cursor: pointer;
+    display: inline-flex;
+    height: 2.25rem;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 2.25rem;
+    z-index: 3;
+  }
+
+  .vh-modal-close :global(svg) {
+    height: 1.1rem;
+    width: 1.1rem;
+  }
+
+  @media (min-width: 768px) {
+    .vh-inner {
+      min-height: 460px;
+      padding: 90px 100px;
+    }
+    .vh-heading {
+      font-size: 34px;
+    }
+    .vh-play-icon :global(svg) {
+      height: 100px;
+      width: 100px;
+    }
+  }
+</style>

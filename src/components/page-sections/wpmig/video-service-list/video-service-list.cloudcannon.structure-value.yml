@@ -1,0 +1,36 @@
+label: Video Service List
+icon: format_list_bulleted
+description: Video poster on one side; eyebrow, heading, intro and an icon-led service list on the other.
+value:
+  _component: page-sections/wpmig/video-service-list
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  subheading: ""
+  text5: ""
+  heading2: ""
+  text6: ""
+  heading3: ""
+  text7: ""
+  heading4: ""
+  text8: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+  textColor2: "#ffffff"
+  textColor3: "#e087ed"
+  hoverColor: "#000000"
+preview:
+  text:
+    - Video Service List
+  icon: format_list_bulleted
+picker_preview:
+  text: Video Service List
+  subtext: Video poster on one side; eyebrow, heading, intro and an icon-led service list on the other.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/video-service-list/video-service-list.cloudcannon.inputs.yml

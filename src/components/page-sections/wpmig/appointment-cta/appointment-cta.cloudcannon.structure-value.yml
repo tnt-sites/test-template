@@ -1,0 +1,26 @@
+label: Appointment CTA
+icon: event_available
+description: Eyebrow, heading, copy and a button prompting visitors to book.
+value:
+  _component: page-sections/wpmig/appointment-cta
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+  buttonTextColor: "#000000"
+  hoverColor: "#000000"
+preview:
+  text:
+    - Appointment CTA
+  icon: event_available
+picker_preview:
+  text: Appointment CTA
+  subtext: Eyebrow, heading, copy and a button prompting visitors to book.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/appointment-cta/appointment-cta.cloudcannon.inputs.yml

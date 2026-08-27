@@ -1,0 +1,53 @@
+label: Document Downloads
+icon: download
+description: Eyebrow, heading and a list of documents, each with a view and download link.
+value:
+  _component: page-sections/wpmig/document-downloads
+  id: ""
+  eyebrow: ""
+  heading: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  heading2: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  heading3: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  heading4: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  heading5: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  heading6: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  heading7: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  heading8: ""
+  secondaryButtonText7: ""
+  secondaryButtonLink7: ""
+  heading9: ""
+  secondaryButtonText8: ""
+  secondaryButtonLink8: ""
+  heading10: ""
+  secondaryButtonText9: ""
+  secondaryButtonLink9: ""
+  backgroundColor: "#ffffff"
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  buttonTextColor: "#117d6f"
+  buttonTextHoverColor: "#e087ed"
+  hoverBackgroundColor: "#ffffff"
+preview:
+  text:
+    - Document Downloads
+  icon: download
+picker_preview:
+  text: Document Downloads
+  subtext: Eyebrow, heading and a list of documents, each with a view and download link.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/document-downloads/document-downloads.cloudcannon.inputs.yml

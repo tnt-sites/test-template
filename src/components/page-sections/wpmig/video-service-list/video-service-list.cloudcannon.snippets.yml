@@ -1,0 +1,10 @@
+_snippets:
+  video_service_list:
+    template: astro_component
+    inline: false
+    preview:
+      text: Video Service List
+    definitions:
+      component_name: page-sections/wpmig/video-service-list
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/video-service-list/video-service-list.cloudcannon.inputs.yml

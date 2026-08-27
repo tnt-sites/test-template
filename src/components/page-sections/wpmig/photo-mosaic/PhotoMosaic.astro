@@ -1,0 +1,130 @@
+---
+/**
+ * Photo Mosaic — migrated from  [12] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+const {
+  images = [],
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+
+/* Baked-in collage layout: four equal columns whose tiles have fixed heights,
+   so the photos crop into the staggered pattern instead of stacking at their
+   natural aspect ratios. `mh` is the height under 768px, where the columns
+   become full-width rows; `mh: 0` drops the tile from the mobile collage. */
+const columns = [
+  { row: true, items: [{ h: 294 }, { h: 294 }] },
+  { items: [{ h: 143, mh: 0 }, { h: 294, mh: 235 }, { h: 141, mh: 0 }] },
+  { items: [{ h: 294, mh: 191 }, { h: 294, mh: 294 }] },
+  { items: [{ h: 143, mh: 0 }, { h: 294, mh: 0 }, { h: 141, mh: 141 }] },
+];
+
+let next = 0;
+const filled = columns.map((col) => ({
+  ...col,
+  items: col.items
+    .map((slot) => ({ ...slot, item: list[next++] }))
+    .filter((slot) => slot.item),
+}));
+/* Anything beyond the ten baked slots keeps the tall tile size in the last column. */
+const overflow = list.slice(next).map((item) => ({ h: 294, mh: 294, item }));
+filled[filled.length - 1].items.push(...overflow);
+const cols = filled.filter((col) => col.items.length);
+---
+<div class="photo-mosaic" id={id || undefined} {...rest}>
+  <div class="pm-grid">
+    {cols.map((col) => (
+      <div class:list={["pm-col", col.row && "pm-col-row"]}>
+        {col.items.map(({ h, mh, item }) => (
+          item.image && (
+            <div class="pm-box" style={`--h:${h}px;--mh:${mh === undefined ? h : mh}px`} data-mobile-hidden={mh === 0 ? "" : undefined}>
+              <img class="pm-media" src={item.image} alt={item.imageAlt || ""} loading="lazy" />
+            </div>
+          )
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+<style>
+  .photo-mosaic {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pm-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    width: 100%;
+  }
+
+  .pm-col {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    gap: 10px 0;
+    min-width: 0;
+  }
+
+  .pm-box {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .pm-media {
+    box-sizing: border-box;
+    display: block;
+    height: var(--mh);
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .pm-box[data-mobile-hidden] {
+      display: none;
+    }
+
+    /* The first column pairs its two photos side by side above the stack. */
+    .pm-col-row {
+      aspect-ratio: 2 / 1;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .pm-col-row .pm-box:first-child {
+      flex: 0 0 60%;
+    }
+
+    .pm-col-row .pm-box:last-child {
+      flex: 0 0 40%;
+    }
+
+    .pm-col-row .pm-box,
+    .pm-col-row .pm-media {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .pm-col {
+      flex: 1 1 0;
+    }
+
+    .pm-media {
+      height: var(--h);
+    }
+  }
+</style>

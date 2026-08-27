@@ -1,0 +1,10 @@
+_snippets:
+  doctors_heading:
+    template: astro_component
+    inline: false
+    preview:
+      text: Doctors Heading
+    definitions:
+      component_name: page-sections/wpmig/doctors-heading
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/doctors-heading/doctors-heading.cloudcannon.inputs.yml

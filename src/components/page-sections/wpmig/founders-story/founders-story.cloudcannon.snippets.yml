@@ -1,0 +1,10 @@
+_snippets:
+  founders_story:
+    template: astro_component
+    inline: false
+    preview:
+      text: Founders Story
+    definitions:
+      component_name: page-sections/wpmig/founders-story
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/founders-story/founders-story.cloudcannon.inputs.yml

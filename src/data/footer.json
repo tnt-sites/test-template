@@ -1,30 +1,65 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
-  "links": [
+  "logoSource": "/wp-content/uploads/2024/10/logo-3.png",
+  "logoAlt": "Toothbar logo with stylized dental bar graphic in Austin, TX",
+  "formEyebrow": "Get in Touch",
+  "formTitle": "Contact Toothbar",
+  "formEmbedUrl": "https://forms.liine.com/251904010398958?isIframeEmbed=1",
+  "mapEmbedUrl": "https://maps.google.com/maps?q=Toothbar,+211+Walter+Seaholm+Dr,+Austin,+TX+78701&t=&z=15&ie=UTF8&iwloc=B&output=embed",
+  "addressCardTitle": "Our Address:",
+  "officeHoursTitle": "Working Hours:",
+  "phoneCardTitle": "Phone Number:",
+  "navTitle": "Navigation",
+  "navLinks": [
     {
       "name": "Home",
       "path": "/"
     },
     {
-      "name": "Why",
-      "path": "/why/"
+      "name": "About",
+      "path": "/who-we-are/"
     },
     {
-      "name": "Blog",
-      "path": "/blog/"
-    }
-  ],
-  "contactTitle": "Contact Us",
-  "officeHoursTitle": "Office Hours",
-  "legalLinks": [
+      "name": "New Patient",
+      "path": "/new-patients/"
+    },
     {
-      "name": "Sitemap",
-      "path": "/sitemap"
+      "name": "Contact",
+      "path": "/contact/"
     },
     {
       "name": "Privacy Policy",
-      "path": "/privacy-policy"
+      "path": "/toothbar-hipaa-notice-of-privacy-practices/"
+    },
+    {
+      "name": "Opt-out preferences",
+      "path": "/opt-out-preferences/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf"
     }
-  ]
+  ],
+  "featuredTitle": "Featured Services",
+  "featuredLinks": [
+    {
+      "name": "Jaw Botox",
+      "path": "/jaw-botox/"
+    },
+    {
+      "name": "Smile Makeover",
+      "path": "/smile-makeover/"
+    },
+    {
+      "name": "Teeth Whitening",
+      "path": "/teeth-whitening/"
+    },
+    {
+      "name": "Dental Bonding",
+      "path": "/dental-bonding/"
+    }
+  ],
+  "contactTitle": "Contact",
+  "bookText": "Book Appointment",
+  "bookLink": "https://schedule.jarvisanalytics.com/frame/toothbar?location_id=7180&lnsg=01a02a31-b958-70c0-866c-0e5c829775c4",
+  "siteName": "Toothbar"
 }

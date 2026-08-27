@@ -1,0 +1,10 @@
+_snippets:
+  why_choose_us_cards:
+    template: astro_component
+    inline: false
+    preview:
+      text: Why Choose Us Cards
+    definitions:
+      component_name: page-sections/wpmig/why-choose-us-cards
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/why-choose-us-cards/why-choose-us-cards.cloudcannon.inputs.yml

@@ -1,0 +1,217 @@
+---
+/**
+ * Service Cards — migrated from  [10] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  items = [],
+  backgroundColor = "#f6fffe",
+  titleColor = "#ffffff",
+  textColor = "#ffffff",
+  hoverColor = "#000000",
+  hoverColor2 = "#ffffff",
+  hoverBackgroundColor = "rgba(0, 0, 0, 0.44)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="service-cards" id={id || undefined} style={`--bg:${backgroundColor};--tt:${titleColor};--tx:${textColor};--c4:${hoverColor};--c5:${hoverColor2};--c6:${hoverBackgroundColor}`} {...rest}>
+  <div class="sc-grid">
+    {list.map((it) => (
+      <div class="sc-box">
+        <div class="sc-box2">
+          <a class="sc-box3" href={it.link || "#"}>
+            <div class="sc-box4">
+              <div
+                class="sc-spacer"
+                style={it.image ? `background-image:url("${it.image}")` : undefined}
+                aria-hidden="true"
+              ></div>
+              <div class="sc-decor" aria-hidden="true"></div>
+            </div>
+            <div class="sc-box5">
+              <h2 class="sc-heading">{it.title}</h2>
+              <div class="sc-text">{it.text}</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+<style>
+  .service-cards {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .sc-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 0px;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .sc-box {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sc-box2 {
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .sc-box3 {
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    color: #e087ed;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    transform-origin: center;
+    transition: all 0.5s ease;
+  }
+
+  .sc-box4 {
+    bottom: 0px;
+    box-sizing: border-box;
+    filter: brightness(0.6) grayscale(0);
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .sc-spacer {
+    background-position: 50% 50%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    height: 205px;
+    left: 0px;
+    min-height: 205px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .sc-decor {
+    background-color: rgba(0, 0, 0, 0.44);
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    min-height: 205px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .sc-box5 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 35px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .sc-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    flex: 0 0 100%;
+    font-family: Lato, sans-serif;
+    font-size: 33px;
+    line-height: 33px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    max-width: 100%;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .sc-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    flex: 0 0 100%;
+    line-height: 18px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sc-box3:hover {
+    transform: scale(1.05);
+  }
+
+  @media (min-width: 768px) {
+    .sc-grid {
+      max-width: min(100%, 1024px);
+    }
+
+    .sc-box {
+      flex: 0 0 50%;
+      flex-wrap: nowrap;
+      max-width: 50%;
+    }
+
+    .sc-spacer {
+      height: 280px;
+      min-height: 280px;
+    }
+
+    .sc-decor {
+      min-height: 280px;
+    }
+
+    .sc-box5 {
+      min-height: 280px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sc-grid {
+      margin-left: 140px;
+      margin-right: 140px;
+      max-width: min(100%, 1140px);
+    }
+  }
+</style>

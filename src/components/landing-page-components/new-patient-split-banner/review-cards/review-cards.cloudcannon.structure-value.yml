@@ -27,6 +27,6 @@ value:
         alt: Google logo
   cardBackgroundColor: "#484846"
   textColor: "#ffffff"
-  starColor: "#febb21"
+  starColor: "#946200"
 _inputs_from_glob:
   - /src/components/landing-page-components/new-patient-split-banner/review-cards/review-cards.cloudcannon.inputs.yml

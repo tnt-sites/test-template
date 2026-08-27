@@ -1,0 +1,11 @@
+_inputs:
+  heading:
+    type: html
+  subheading:
+    type: html
+  text:
+    type: html
+  headingColor:
+    type: color
+  textColor:
+    type: color

@@ -1,0 +1,24 @@
+label: Founders Story
+icon: history_edu
+description: Eyebrow, heading and long-form copy telling the practice's story.
+value:
+  _component: page-sections/wpmig/founders-story
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+  buttonTextColor: "#000000"
+preview:
+  text:
+    - Founders Story
+  icon: history_edu
+picker_preview:
+  text: Founders Story
+  subtext: Eyebrow, heading and long-form copy telling the practice's story.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/founders-story/founders-story.cloudcannon.inputs.yml

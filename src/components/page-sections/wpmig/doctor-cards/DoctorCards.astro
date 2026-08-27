@@ -1,0 +1,344 @@
+---
+/**
+ * Doctor Cards — migrated from  [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  items = [],
+  textColor = "#000000",
+  titleColor = "#000000",
+  hoverColor = "#ffffff",
+  hoverBackgroundColor = "rgba(0, 0, 0, 0.44)",
+  hoverColor2 = "#e087ed",
+  hoverBackgroundColor2 = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="doctor-cards" id={id || undefined} style={`--tx:${textColor};--tt:${titleColor};--c3:${hoverColor};--c4:${hoverBackgroundColor};--c5:${hoverColor2};--c6:${hoverBackgroundColor2}`} {...rest}>
+  <div class="dc-box">
+    <div class="dc-grid">
+      {list.map((it) => (
+        <div class="dc-box2">
+          <div class="dc-box3" style={it.image ? `background-image:url("${it.image}")` : undefined}>
+            <div class="dc-box4">
+              <div class="dc-box5">
+                <div class="dc-box6">
+                  <div class="dc-spacer" aria-hidden="true"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dc-box7">
+            <div class="dc-box8">
+              {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="dc-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+            </div>
+          </div>
+          <div class="dc-box9">
+            <h2 class="dc-heading">{it.title}</h2>
+          </div>
+          <div class="dc-box10">
+            <p class="dc-text">{it.text}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .doctor-cards {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    position: relative;
+  }
+
+  .doctor-cards :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .dc-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-grid {
+    box-sizing: border-box;
+    column-gap: 0px;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    row-gap: 20px;
+  }
+
+  .dc-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .dc-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-box3 {
+    align-self: stretch;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .dc-box4 {
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    pointer-events: none;
+    position: relative;
+  }
+
+  .dc-box4::before {
+    border-radius: 0px;
+    bottom: -1px;
+    content: "";
+    left: -1px;
+    opacity: 0.5;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+  }
+
+  .dc-box5 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .dc-box6 {
+    box-sizing: border-box;
+  }
+
+  .dc-spacer {
+    box-sizing: border-box;
+    height: 330px;
+    min-height: 330px;
+  }
+
+  .dc-box7 {
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .dc-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-box8 {
+    box-sizing: border-box;
+  }
+
+  .dc-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.dc-btn) {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #117d6f;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 15px;
+    margin: 0px;
+    padding: 8px 17px 8px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.dc-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.dc-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .dc-box9 {
+    box-sizing: border-box;
+    margin-top: -7px;
+    transition: all 0.3s ease;
+  }
+
+  .dc-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .dc-box10 {
+    box-sizing: border-box;
+    margin-bottom: -15px;
+  }
+
+  .dc-text {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  :global(.dc-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    letter-spacing: normal;
+  }
+
+  :global(.dc-btn):hover .dc-box9 {
+    border-top-color: #ffffff;
+    color: var(--c3);
+    letter-spacing: 1.4px;
+  }
+
+  @media (min-width: 768px) {
+    .dc-grid {
+      max-width: min(100%, 1024px);
+    }
+
+    .dc-box2 {
+      flex: 0 0 47.99%;
+      flex-wrap: nowrap;
+      max-width: 47.99%;
+    }
+
+    .dc-box3 {
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+
+    .dc-box5 {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .dc-spacer {
+      height: 408px;
+      min-height: 408px;
+    }
+
+    :global(.dc-btn) {
+      padding: 10px 30px;
+    }
+
+    .dc-box9 {
+      padding-top: 20px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dc-grid {
+      margin-left: 140px;
+      margin-right: 140px;
+      max-width: min(100%, 1140px);
+    }
+
+    .dc-box2 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    .dc-box5 {
+      max-width: min(100%, 1140px);
+    }
+
+    .dc-spacer {
+      height: 349px;
+      min-height: 349px;
+    }
+
+    .dc-box7 {
+      margin-right: 10px;
+    }
+
+    .dc-box9 {
+      padding-top: 0px;
+    }
+  }
+</style>

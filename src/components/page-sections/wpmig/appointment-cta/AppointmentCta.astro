@@ -1,0 +1,389 @@
+---
+/**
+ * Appointment CTA — migrated from  [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  image = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#ffffff",
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#000000",
+  buttonTextColor = "#000000",
+  hoverColor = "#000000",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="appointment-cta" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btntx:${buttonTextColor};--c6:${hoverColor}`} {...rest}>
+  <div class="ac-box">
+    <div class="ac-box2">
+      <div class="ac-box3">
+        <div class="ac-box4" style={image ? `background-image:url("${image}")` : undefined}>
+          <div class="ac-box5">
+            <div class="ac-box6">
+              <div class="ac-box7">
+                <div class="ac-spacer" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ac-box8">
+          <div class="ac-box9">
+            {eyebrow && <p class="ac-text">{eyebrow}</p>}
+          </div>
+          <div class="ac-box10">
+            <div class="ac-box11">
+              <div class="ac-decor" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="ac-box12">
+            <h2 class="ac-heading" set:html={heading} />
+          </div>
+          <div class="ac-box13">
+            {text && <div class="ac-body" set:html={text} />}
+          </div>
+          <div class="ac-box14">
+            <div class="ac-box15">
+              {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="default" borderWidth="xs" uppercase class="ac-btn" text={buttonText} link={buttonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .appointment-cta {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ac-box {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: min(100%, 767px);
+    padding-top: 50px;
+  }
+
+  .ac-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ac-box3 {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+    margin-top: 15px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ac-box4 {
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ac-box5 {
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .ac-box5::before {
+    border-radius: 0px;
+    bottom: -1px;
+    content: "";
+    left: -1px;
+    opacity: 0.5;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+  }
+
+  .ac-box6 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .ac-box7 {
+    box-sizing: border-box;
+  }
+
+  .ac-spacer {
+    box-sizing: border-box;
+    height: 371px;
+    min-height: 371px;
+  }
+
+  .ac-box8 {
+    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 14.8px;
+    position: relative;
+  }
+
+  .ac-box9 {
+    box-sizing: border-box;
+    margin-bottom: -17px;
+  }
+
+  .ac-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .ac-box10 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ac-box11 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: left;
+  }
+
+  .ac-decor {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 20%;
+    margin-right: 303.4px;
+    max-width: 20%;
+    min-height: 1px;
+  }
+
+  .ac-box12 {
+    box-sizing: border-box;
+    margin-top: -7px;
+  }
+
+  .ac-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .ac-box13 {
+    box-sizing: border-box;
+  }
+
+  .ac-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  .ac-box14 {
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .ac-box15 {
+    box-sizing: border-box;
+  }
+
+  :global(.ac-btn) {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #117d6f;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 15px;
+    margin: 0px;
+    padding: 8px 17px 8px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.ac-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.ac-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    letter-spacing: normal;
+  }
+
+  @media (min-width: 768px) {
+    .ac-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .ac-box2 {
+      flex-wrap: nowrap;
+      min-height: 1130px;
+    }
+
+    .ac-box3 {
+      flex-wrap: nowrap;
+      margin-bottom: 45px;
+      margin-top: 50px;
+    }
+
+    .ac-box4 {
+      align-self: flex-start;
+      flex-wrap: nowrap;
+      margin-right: 30px;
+      padding: 30px;
+      width: 56.02%;
+    }
+
+    .ac-box6 {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .ac-spacer {
+      height: 545px;
+      min-height: 545px;
+    }
+
+    .ac-box8 {
+      flex-wrap: nowrap;
+      padding-top: 29.9px;
+    }
+
+    .ac-decor {
+      margin-right: 613.4px;
+    }
+
+    .ac-box12 {
+      padding-top: 20px;
+    }
+
+    .ac-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    :global(.ac-btn) {
+      padding: 10px 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ac-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: min(100%, 1140px);
+    }
+
+    .ac-box2 {
+      min-height: 652px;
+    }
+
+    .ac-box3 {
+      flex-direction: row-reverse;
+    }
+
+    .ac-box4 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .ac-box6 {
+      max-width: min(100%, 1140px);
+    }
+
+    .ac-box8 {
+      flex: 0 0 60%;
+      max-width: 60%;
+      padding-right: 112px;
+      padding-top: 0px;
+    }
+
+    .ac-decor {
+      margin-right: 446.3px;
+    }
+
+    .ac-box12 {
+      padding-top: 0px;
+    }
+
+    .ac-box14 {
+      margin-right: 10px;
+    }
+  }
+</style>

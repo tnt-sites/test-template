@@ -1,0 +1,21 @@
+label: Reviews Intro
+icon: reviews
+description: Eyebrow, heading and copy introducing patient reviews.
+value:
+  _component: page-sections/wpmig/reviews-intro
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+preview:
+  text:
+    - Reviews Intro
+  icon: reviews
+picker_preview:
+  text: Reviews Intro
+  subtext: Eyebrow, heading and copy introducing patient reviews.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/reviews-intro/reviews-intro.cloudcannon.inputs.yml

@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "Toothbar",
   "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "description": "Experience top-tier dental care at Toothbar in Austin, where our dentists offer innovative treatments and a patient-first approach.",
+  "logoSource": "/wp-content/uploads/2024/10/logo-3.png",
+  "titleFormat": "{title} | Toothbar",
   "twitterHandle": "@yourusername"
 }

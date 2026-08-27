@@ -1,87 +1,48 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
-  "navData": [
+  "logoSource": "/wp-content/uploads/2024/10/logo-3.png",
+  "logoAlt": "Toothbar",
+  "bookText": "Book Appointment",
+  "bookLink": "https://schedule.jarvisanalytics.com/frame/toothbar?location_id=7180",
+  "phoneDisplay": "(512) 949-8202",
+  "phoneHref": "tel:5129498202",
+  "overlayNav": [
+    { "name": "Home", "path": "/", "icon": "home" },
+    { "name": "Meet the Doctors", "path": "/who-we-are/#doctors", "icon": "user-group" },
+    { "name": "About Our Practice", "path": "/who-we-are/", "icon": "information-circle" },
+    { "name": "New Patients", "path": "/new-patients/", "icon": "users" },
+    { "name": "Blog", "path": "/blog/", "icon": "document-text" },
+    { "name": "Contact", "path": "/contact/", "icon": "envelope" }
+  ],
+  "servicesTitle": "Services",
+  "services": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
-      "children": [
-        {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
-          "children": [
-            {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
-            }
-          ]
-        },
-        {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
-          "children": [
-            {
-              "name": "More Implants",
-              "path": "/dental-implants"
-            }
-          ]
-        }
+      "heading": "Restorative Dentistry",
+      "links": [
+        { "name": "Cavities & Fillings Austin", "path": "/cavities-fillings/" },
+        { "name": "Crowns and Bridges Austin", "path": "/crowns-and-bridges/" },
+        { "name": "Dental Implants Austin", "path": "/dental-implants/" },
+        { "name": "Partial Dentures Austin", "path": "/partial-dentures/" }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
-      "children": []
+      "heading": "Cosmetic Dentistry",
+      "links": [
+        { "name": "Dental Bonding Austin", "path": "/dental-bonding/" },
+        { "name": "Veneers Austin", "path": "/dental-veneers/" },
+        { "name": "Invisalign Austin", "path": "/invisalign/" },
+        { "name": "Jaw Botox Austin", "path": "/jaw-botox/" },
+        { "name": "Smile Makeover Austin", "path": "/smile-makeover/" },
+        { "name": "Teeth Whitening Austin", "path": "/teeth-whitening/" }
+      ]
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
-    }
-  ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ],
-  "pageButtons": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Request an Appointment",
-      "hideText": false,
-      "link": "/request-an-appointment/",
-      "modalTarget": "",
-      "iconName": "",
-      "iconPosition": "before",
-      "variant": "primary",
-      "size": "md",
-      "width": "md",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
+      "heading": "Preventive Dentistry",
+      "links": [
+        { "name": "Digital Imaging Austin", "path": "/digital-imaging/" },
+        { "name": "Nitrous Oxide Sedation Austin", "path": "/nitrous-sedation/" },
+        { "name": "Teeth Cleaning Austin", "path": "/teeth-cleaning/" },
+        { "name": "Tooth Extractions Austin", "path": "/tooth-extractions/" }
+      ]
     }
   ]
 }

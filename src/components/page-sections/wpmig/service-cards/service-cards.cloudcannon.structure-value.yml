@@ -1,0 +1,25 @@
+label: Service Cards
+icon: dashboard
+description: Grid of linked service cards with image, title and summary.
+value:
+  _component: page-sections/wpmig/service-cards
+  id: ""
+  items:
+    - link: ""
+      title: ""
+      text: ""
+  backgroundColor: "#f6fffe"
+  titleColor: "#ffffff"
+  textColor: "#ffffff"
+  hoverColor: "#000000"
+  hoverColor2: "#ffffff"
+  hoverBackgroundColor: rgba(0, 0, 0, 0.44)
+preview:
+  text:
+    - Service Cards
+  icon: dashboard
+picker_preview:
+  text: Service Cards
+  subtext: Grid of linked service cards with image, title and summary.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/service-cards/service-cards.cloudcannon.inputs.yml

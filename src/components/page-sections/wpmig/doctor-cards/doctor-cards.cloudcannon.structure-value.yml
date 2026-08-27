@@ -1,0 +1,26 @@
+label: Doctor Cards
+icon: badge
+description: Grid of practitioner cards with photo, name, bio and a link.
+value:
+  _component: page-sections/wpmig/doctor-cards
+  id: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+      title: ""
+      text: ""
+  textColor: "#000000"
+  titleColor: "#000000"
+  hoverColor: "#ffffff"
+  hoverBackgroundColor: rgba(0, 0, 0, 0.44)
+  hoverColor2: "#e087ed"
+  hoverBackgroundColor2: "#ffffff"
+preview:
+  text:
+    - Doctor Cards
+  icon: badge
+picker_preview:
+  text: Doctor Cards
+  subtext: Grid of practitioner cards with photo, name, bio and a link.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/doctor-cards/doctor-cards.cloudcannon.inputs.yml

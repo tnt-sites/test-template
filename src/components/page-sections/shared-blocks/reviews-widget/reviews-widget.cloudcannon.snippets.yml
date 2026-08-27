@@ -1,0 +1,10 @@
+_snippets:
+  reviews_widget:
+    template: astro_component
+    inline: false
+    preview:
+      text: Reviews Slider
+    definitions:
+      component_name: page-sections/shared-blocks/reviews-widget
+    _inputs_from_glob:
+      - /src/components/page-sections/shared-blocks/reviews-widget/reviews-widget.cloudcannon.inputs.yml

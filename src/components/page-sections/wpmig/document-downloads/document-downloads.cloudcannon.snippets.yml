@@ -1,0 +1,10 @@
+_snippets:
+  document_downloads:
+    template: astro_component
+    inline: false
+    preview:
+      text: Document Downloads
+    definitions:
+      component_name: page-sections/wpmig/document-downloads
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/document-downloads/document-downloads.cloudcannon.inputs.yml

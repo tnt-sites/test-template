@@ -1,0 +1,116 @@
+---
+/**
+ * The booking-form card that sits in the rail of a service page: the practice
+ * logo on a dark plate, a teal prompt band, a "call us" line, and the embedded
+ * scheduling form.
+ *
+ * It is its own component because the same card recurs beside the content on
+ * every service page, and because the embed is a third-party form whose markup
+ * and permissions are a unit worth keeping in one place. `content-section`
+ * renders it in its media rail; it can also stand alone.
+ */
+const {
+  logo = "",
+  heading = "",
+  url = "",
+  buttonText = "",
+  buttonLink = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+---
+
+<aside class:list={["sidebar-form", className]} {...rest}>
+  {
+    logo && (
+      <div class="sidebar-form-logo">
+        <img src={logo} alt="Toothbar" loading="lazy" />
+      </div>
+    )
+  }
+  {heading && <h2 class="sidebar-form-band" set:html={heading} />}
+  {
+    buttonText && (
+      <a class="sidebar-form-call" href={buttonLink || "#"}>
+        {buttonText}
+      </a>
+    )
+  }
+  {
+    url && (
+      <iframe
+        class="sidebar-form-embed"
+        src={url}
+        title={heading || "Book an appointment"}
+        loading="lazy"
+        allow="geolocation; microphone; camera; fullscreen; payment"
+      />
+    )
+  }
+</aside>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .sidebar-form {
+      background: #fff;
+      border: 1px solid var(--color-border-subtle, #e6e6e6);
+      border-radius: var(--radius-md, 10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .sidebar-form-logo {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing-lg, 1.5rem) var(--spacing-lg, 1.5rem) var(--spacing-md, 1rem);
+    }
+
+    .sidebar-form-logo img {
+      background: #0d0f12;
+      border: 1px solid var(--color-brand, #117d6f);
+      border-radius: var(--radius-sm, 6px);
+      display: block;
+      height: auto;
+      max-width: 220px;
+      padding: 0.9rem 1.4rem;
+      width: 70%;
+    }
+
+    .sidebar-form-band {
+      background: var(--color-brand, #117d6f);
+      color: #fff;
+      font-size: var(--font-size-xl, 1.4rem);
+      font-weight: var(--font-weight-semibold, 600);
+      letter-spacing: 0.02em;
+      margin: 0;
+      padding: var(--spacing-md, 1rem) var(--spacing-lg, 1.5rem);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .sidebar-form-call {
+      color: var(--color-text-strong, #222);
+      display: block;
+      font-weight: var(--font-weight-semibold, 600);
+      padding: var(--spacing-md, 1rem) var(--spacing-lg, 1.5rem) 0;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover {
+        color: var(--color-brand, #117d6f);
+      }
+    }
+
+    .sidebar-form-embed {
+      border: none;
+      min-height: 640px;
+      padding: 0 var(--spacing-sm, 0.5rem);
+      width: 100%;
+    }
+  }
+</style>

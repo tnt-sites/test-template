@@ -6,41 +6,26 @@ value:
   id: ""
   logoSource: ""
   logoAlt: "Logo"
-  links: []
+  formEyebrow: Get in Touch
+  formTitle: Contact Us
+  formEmbedUrl: ""
+  mapEmbedUrl: ""
+  addressCardTitle: "Our Address:"
+  officeHoursTitle: "Working Hours:"
+  phoneCardTitle: "Phone Number:"
+  navTitle: Navigation
+  navLinks: []
+  featuredTitle: Featured Services
+  featuredLinks: []
+  contactTitle: Contact
+  bookText: Book Appointment
+  bookLink: "#"
   socials: []
   siteName: "Turlock Dental Studio"
-  contactTitle: Contact Us
-  phoneText: "(209) 216-3530"
-  phoneHref: tel:+12092163530
-  addressHref: https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A
-  addressLines:
-    - 1801 Colorado Ave. Suite 280
-    - Turlock, CA 95382
-  officeHoursTitle: Office Hours
-  officeHours:
-    - day: Monday
-      hours: 8:00 am - 5:00 pm
-    - day: Tuesday
-      hours: 8:00 am - 5:00 pm
-    - day: Wednesday
-      hours: 8:00 am - 5:00 pm
-      note: (Alternating Wednesdays)
-    - day: Thursday
-      hours: 8:00 am - 5:00 pm
-    - day: Friday
-      hours: 8:00 am - 2:00 pm
-  officeHoursNote: Closed on Sundays
   legalLinks:
-    - name: Sitemap
-      path: /sitemap
     - name: Privacy Policy
       path: /privacy-policy
-  mapEmbedUrl: ""
   legalBlurb: ""
-  addressLinkColor: ""
-  addressLinkHoverColor: ""
-  phoneLinkColor: ""
-  phoneLinkHoverColor: ""
   offices: []
 preview:
   text:

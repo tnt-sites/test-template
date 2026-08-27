@@ -1,0 +1,177 @@
+---
+/**
+ * Services Intro — migrated from  [9] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  backgroundColor = "#f6fffe",
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#4d4d4d",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="services-intro" id={id || undefined} style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="si-box">
+    <div class="si-box2">
+      {eyebrow && <p class="si-text">{eyebrow}</p>}
+    </div>
+    <div class="si-box3">
+      <div class="si-box4">
+        <div class="si-decor" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="si-box5">
+      <h3 class="si-heading" set:html={heading} />
+    </div>
+    <div class="si-box6">
+      <div class="si-box7">
+        {text && <p class="si-text2">{text}</p>}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .services-intro {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .si-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding: 50px 20px 10px;
+  }
+
+  .si-box2 {
+    box-sizing: border-box;
+    margin-bottom: -25px;
+    text-align: center;
+  }
+
+  .si-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .si-box3 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .si-box4 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+
+  .si-decor {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 17.95%;
+    margin-left: 159.9px;
+    margin-right: 159.9px;
+    max-width: 17.95%;
+    min-height: 1px;
+  }
+
+  .si-box5 {
+    box-sizing: border-box;
+    margin-top: -10px;
+    text-align: center;
+  }
+
+  .si-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .si-box6 {
+    box-sizing: border-box;
+    color: #4d4d4d;
+    font-weight: 500;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .si-box7 {
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    margin-top: -2px;
+  }
+
+  .si-text2 {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .si-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .si-decor {
+      flex: 0 0 17.97%;
+      margin-left: 314.9px;
+      margin-right: 314.9px;
+      max-width: 17.97%;
+    }
+
+    .si-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .si-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: min(100%, 1140px);
+    }
+
+    .si-decor {
+      flex: 0 0 17.98%;
+      margin-left: 467.4px;
+      margin-right: 467.4px;
+      max-width: 17.98%;
+    }
+  }
+</style>

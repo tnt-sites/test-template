@@ -1,0 +1,25 @@
+label: Video Hero
+icon: play_circle
+description: Full-bleed background image with a centred heading and a play button that opens a video in a modal.
+value:
+  _component: page-sections/wpmig/video-hero
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  text3: ""
+  headingColor: "#ffffff"
+  textColor: "#000000"
+  textColor2: "#ffffff"
+  textColor3: "#e087ed"
+  hoverColor: "#000000"
+  textColor3HoverColor: "#000000"
+preview:
+  text:
+    - Video Hero
+  icon: play_circle
+picker_preview:
+  text: Video Hero
+  subtext: Full-bleed background image with a centred heading and a play button that opens a video in a modal.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/video-hero/video-hero.cloudcannon.inputs.yml

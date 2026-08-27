@@ -1,0 +1,22 @@
+label: Home Hero
+icon: smart_display
+description: Homepage hero with heading, subheading and a button over a looping background video.
+value:
+  _component: page-sections/wpmig/home-hero
+  id: ""
+  heading: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#000000"
+  headingColor: "#ffffff"
+  hoverBackgroundColor: "#117d6f"
+preview:
+  text:
+    - Home Hero
+  icon: smart_display
+picker_preview:
+  text: Home Hero
+  subtext: Homepage hero with heading, subheading and a button over a looping background video.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-hero/home-hero.cloudcannon.inputs.yml

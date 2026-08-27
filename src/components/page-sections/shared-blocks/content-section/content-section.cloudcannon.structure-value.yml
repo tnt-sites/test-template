@@ -1,0 +1,27 @@
+label: Content Section
+icon: view_agenda
+description: A column of typed content blocks, with an optional photo or booking form beside it.
+value:
+  _component: page-sections/shared-blocks/content-section
+  id: ""
+  blocks:
+    - type: eyebrow
+      html: ""
+    - type: heading
+      html: ""
+    - type: prose
+      html: ""
+  media: null
+  backgroundColor: ""
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+preview:
+  text:
+    - Content Section
+  icon: view_agenda
+picker_preview:
+  text: Content Section
+  subtext: A column of typed content blocks, with an optional photo or booking form beside it.
+_inputs_from_glob:
+  - /src/components/page-sections/shared-blocks/content-section/content-section.cloudcannon.inputs.yml

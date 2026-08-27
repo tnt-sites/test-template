@@ -1,0 +1,10 @@
+_snippets:
+  photo_mosaic:
+    template: astro_component
+    inline: false
+    preview:
+      text: Photo Mosaic
+    definitions:
+      component_name: page-sections/wpmig/photo-mosaic
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/photo-mosaic/photo-mosaic.cloudcannon.inputs.yml

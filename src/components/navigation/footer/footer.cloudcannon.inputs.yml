@@ -4,9 +4,59 @@ logoSource:
 logoAlt:
   type: text
   comment: "Alt text for the logo image for accessibility."
+formEyebrow:
+  type: text
+  comment: "Small label shown above the contact form heading (e.g. Get in Touch)."
+formTitle:
+  type: text
+  comment: "Heading above the contact form/map (e.g. Contact Toothbar)."
+formEmbedUrl:
+  type: text
+  comment: "Contact form embed URL (iframe src). Leave blank to hide the form/map section."
+mapEmbedUrl:
+  type: text
+  comment: "Optional Google Maps embed URL (iframe src). Leave blank to auto-generate from the first office's address."
+addressCardTitle:
+  type: text
+  comment: "Heading for the address info card."
+officeHoursTitle:
+  type: text
+  comment: "Heading for the office hours info card."
+phoneCardTitle:
+  type: text
+  comment: "Heading for the phone info card."
+navTitle:
+  type: text
+  comment: "Heading for the navigation links column."
+navLinks:
+  type: array
+  comment: "Navigation links to display in the footer."
+"$.navLinks[*].name":
+  type: text
+"$.navLinks[*].path":
+  type: text
+featuredTitle:
+  type: text
+  comment: "Heading for the featured services column."
+featuredLinks:
+  type: array
+  comment: "Featured service links to display in the footer."
+"$.featuredLinks[*].name":
+  type: text
+"$.featuredLinks[*].path":
+  type: text
+contactTitle:
+  type: text
+  comment: "Heading for the contact column (e.g. Contact)."
+bookText:
+  type: text
+  comment: "Visible text for the book appointment link."
+bookLink:
+  type: text
+  comment: "Book appointment link URL."
 offices:
   type: array
-  comment: "Optional office contact override. Leave empty to use siteInfo offices."
+  comment: "Optional office contact override. Leave empty to use siteInfo offices. Only the first office's phone and address are shown."
   options:
     structures: _structures.officeSections
 "$.offices[*].name":
@@ -30,134 +80,15 @@ offices:
 "$.offices[*].addresses[*].mapUrl":
   type: url
   comment: "Google Maps link for the address."
-"$.offices[*].officeHours":
-  type: array
-  comment: "Office hours entries."
-"$.offices[*].officeHours[*].day":
-  type: text
-"$.offices[*].officeHours[*].hours":
-  type: text
-"$.offices[*].officeHoursNote":
-  type: text
-  comment: "Optional note displayed below the hours list."
-links:
-  type: array
-  comment: "Array of navigation links to display in the footer."
 socials:
   type: array
   comment: "Array of social media links to display in the footer."
 siteName:
   type: text
   comment: "Business or site name used in the footer copyright line."
-contactTitle:
-  type: text
-  comment: "Heading for the contact column (e.g. Contact Us)."
-phoneText:
-  type: text
-  comment: "Visible phone number text."
-phoneHref:
-  type: text
-  comment: "Phone link URL (e.g. tel:+12092163530)."
-addressHref:
-  type: text
-  comment: "Map/location link URL for the address block."
-addressLines:
-  type: array
-  comment: "Address lines shown as stacked text."
-officeHoursTitle:
-  type: text
-  comment: "Heading for office hours column."
-officeHours:
-  type: array
-  comment: "Office hours entries with day, hours, and optional note shown beneath each row."
-officeHoursNote:
-  type: text
-  comment: "General note displayed below the full office hours list (e.g. Closed on Sundays)."
-officeHoursNotes:
-  type: array
-  comment: "Optional list of general notes displayed below the full office hours list."
 legalLinks:
   type: array
-  comment: "Legal/utility links shown next to Sitemap/Privacy Policy (e.g. HIPAA Notice)."
-mapEmbedUrl:
-  type: text
-  comment: "Optional Google Maps embed URL (iframe src value)."
+  comment: "Legal/utility links shown next to the copyright line (e.g. Privacy Policy)."
 legalBlurb:
   type: textarea
   comment: "Optional legal/disclaimer text shown below the copyright row."
-addressLinkColor:
-  type: select
-  comment: "Color of address links."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-addressLinkHoverColor:
-  type: select
-  comment: "Color of address links on hover."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-phoneLinkColor:
-  type: select
-  comment: "Color of phone links."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-phoneLinkHoverColor:
-  type: select
-  comment: "Color of phone links on hover."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)

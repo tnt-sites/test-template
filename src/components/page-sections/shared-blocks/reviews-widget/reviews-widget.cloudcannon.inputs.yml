@@ -1,0 +1,43 @@
+_inputs:
+  heading:
+    type: html
+    comment: Optional heading above the slider.
+  text:
+    type: html
+    comment: Optional intro copy above the slider.
+  reviews:
+    type: array
+    comment: Leave empty to use the shared reviews in src/data/reviews.json.
+    options:
+      structures: _structures.reviews_widget_review
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+
+_structures:
+  reviews_widget_review:
+    values:
+      - label: Review
+        icon: rate_review
+        value:
+          name: ""
+          date: ""
+          rating: 5
+          text: ""
+        _inputs:
+          name:
+            type: text
+            comment: Reviewer name — also seeds the avatar initials and colour.
+          date:
+            type: text
+          rating:
+            type: number
+            options:
+              min: 1
+              max: 5
+              step: 1
+          text:
+            type: textarea

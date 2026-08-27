@@ -1,0 +1,20 @@
+label: Office Intro
+icon: storefront
+description: Heading, subheading and copy describing the office.
+value:
+  _component: page-sections/wpmig/office-intro
+  id: ""
+  heading: ""
+  subheading: ""
+  text: ""
+  headingColor: "#117d6f"
+  textColor: "#000000"
+preview:
+  text:
+    - Office Intro
+  icon: storefront
+picker_preview:
+  text: Office Intro
+  subtext: Heading, subheading and copy describing the office.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/office-intro/office-intro.cloudcannon.inputs.yml

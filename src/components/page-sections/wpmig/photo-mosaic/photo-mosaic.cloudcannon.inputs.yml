@@ -1,0 +1,16 @@
+_inputs:
+  images:
+    type: array
+    options:
+      structures: _structures.photo_mosaic_item
+_structures:
+  photo_mosaic_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text

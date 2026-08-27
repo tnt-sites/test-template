@@ -1,0 +1,43 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: html
+  text:
+    type: text
+  text2:
+    type: html
+  text3:
+    type: text
+  text4:
+    type: textarea
+  subheading:
+    type: html
+  text5:
+    type: textarea
+  heading2:
+    type: html
+  text6:
+    type: textarea
+  heading3:
+    type: html
+  text7:
+    type: html
+  heading4:
+    type: html
+  text8:
+    type: textarea
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  textColor3:
+    type: color
+  hoverColor:
+    type: color

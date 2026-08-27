@@ -1,0 +1,28 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: html
+  text:
+    type: textarea
+  images:
+    type: array
+    options:
+      structures: _structures.logo_strip_item
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  logo_strip_item:
+    values:
+      - value:
+          image: ""
+          imageAlt: ""
+        _inputs:
+          image:
+            type: image
+          imageAlt:
+            type: text

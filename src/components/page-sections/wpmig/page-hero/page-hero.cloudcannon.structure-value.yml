@@ -1,0 +1,25 @@
+label: Page Hero
+icon: title
+description: Page title banner with heading, subheading and an optional button over a background image.
+value:
+  _component: page-sections/wpmig/page-hero
+  id: ""
+  heading: ""
+  subheading: ""
+  showButton: true
+  buttonText: ""
+  buttonLink: ""
+  backgroundImage: ""
+  backgroundColor: "#000000"
+  headingColor: "#ffffff"
+  hoverBackgroundColor: "#117d6f"
+preview:
+  text:
+    - key: heading
+    - Page Hero
+  icon: title
+picker_preview:
+  text: Page Hero
+  subtext: Page title banner with heading, subheading and an optional button over a background image.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/page-hero/page-hero.cloudcannon.inputs.yml

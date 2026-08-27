@@ -1,20 +1,25 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
+  "colorBrand": "#d8fffb",
+  "colorBrandSecondary": "#007bff",
+  "colorBrandTertiary": "#acbad5",
+  "colorBrandSubtle": "#f6bb06",
   "colorBrandOn": "",
-  "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
+  "colorTextOnBrand": "#262626",
+  "colorLink": "#cc3366",
+  "colorLinkHover": "#333366",
   "extraColors": [],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "Montserrat, sans-serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "Lato, sans-serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "/wp-content/uploads/elementor/google-fonts/css/marcellus.css",
+    "/wp-content/uploads/elementor/google-fonts/css/overpass.css",
+    "/wp-content/uploads/elementor/google-fonts/css/montserrat.css",
+    "/wp-content/uploads/elementor/google-fonts/css/lato.css",
+    "/wp-content/uploads/elementor/google-fonts/css/poppins.css",
+    "/wp-content/uploads/elementor/google-fonts/css/outfit.css"
   ]
 }

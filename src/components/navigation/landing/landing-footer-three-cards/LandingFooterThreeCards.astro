@@ -336,10 +336,14 @@ const normalizedServiceLinks = Array.isArray(featuredServicesLinks) ? featuredSe
       --bg-gradient:
         var(
           --lp-footer-bg-gradient,
-          linear-gradient(180deg, color-mix(in srgb, #2c363c 88%, black) 0%, #2c363c 100%)
+          linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-bg-dark) 88%, black) 0%,
+            var(--color-bg-dark) 100%
+          )
         );
 
-      background-color: var(--lp-footer-bg-color, #2c363c);
+      background-color: var(--lp-footer-bg-color, var(--color-bg-dark));
       color: #fff;
       padding: 20px;
       padding-top: 1.4rem;

@@ -1,0 +1,350 @@
+---
+/**
+ * Page Hero — the title banner at the top of a page: heading, rule, subheading
+ * and an optional button over a full-bleed background image.
+ *
+ * Consolidated from the wp-migrator's page-banner / -c / -d / -f / -h copies,
+ * which differed only in default image and a few rounding artefacts.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+const {
+  heading = "",
+  subheading = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundImage = "",
+  backgroundColor = "#000000",
+  headingColor = "#ffffff",
+  hoverBackgroundColor = "#117d6f",
+  showButton = true,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const hasButton = showButton && Boolean(buttonText);
+---
+
+<div
+  class="page-hero"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--c3:${hoverBackgroundColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
+  {backgroundImage && <div class="ph-overlay" aria-hidden="true" />}
+  <div class="ph-inner">
+    <div class="ph-heading-wrap">
+      {heading && <h1 class="ph-heading" set:html={heading} />}
+    </div>
+    <div class="ph-rule-wrap">
+      <div class="ph-rule-inner">
+        <div class="ph-rule" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="ph-subheading-wrap">
+      {subheading && <h2 class="ph-subheading" set:html={subheading} />}
+    </div>
+    {
+      hasButton && (
+        <div class="ph-actions">
+          <div class="ph-actions-inner">
+            <a class="ph-link" href={buttonLink || "#"}>
+              <span class="ph-link-icon" aria-hidden="true">
+                <Icon name="user-plus" size="none" />
+              </span>
+              {buttonText}
+            </a>
+          </div>
+        </div>
+      )
+    }
+  </div>
+  <div class="ph-shape" aria-hidden="true">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+      <path d="M738,99l262-93V0H0v5.6L738,99z"></path>
+    </svg>
+  </div>
+</div>
+<style>
+  .page-hero {
+    align-items: stretch;
+    background-color: var(--bg);
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    gap: 0;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding-bottom: 117px;
+    padding-top: 62.4px;
+    position: relative;
+  }
+
+  .page-hero :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .ph-overlay {
+    background-color: rgba(0, 0, 0, 0.45);
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .ph-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-flow: column wrap;
+    gap: 20px;
+    margin-top: 50px;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+    z-index: 15;
+  }
+
+  .ph-inner :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .ph-heading-wrap {
+    box-sizing: border-box;
+  }
+
+  .ph-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Lato, sans-serif;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 44px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-shadow: rgba(0, 0, 0, 0.67) 0 0 17px;
+  }
+
+  .ph-rule-wrap {
+    box-sizing: border-box;
+    margin-bottom: -12px;
+    margin-top: -7px;
+  }
+
+  .ph-rule-inner {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: left;
+  }
+
+  .ph-rule {
+    border-top: 1px solid #117d6f;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ph-subheading-wrap {
+    box-sizing: border-box;
+  }
+
+  .ph-subheading {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Outfit, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1.4px;
+    line-height: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-shadow: rgba(0, 0, 0, 0.7) 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  .ph-actions {
+    align-items: stretch;
+    align-self: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 15;
+  }
+
+  .ph-actions :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .ph-actions-inner {
+    box-sizing: border-box;
+    flex: 0 0 75%;
+    max-width: 75%;
+    text-align: center;
+  }
+
+  .ph-actions-inner :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .ph-link {
+    align-items: center;
+    background-image: linear-gradient(130deg, #117d6f 29%, #90ece2 93%);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 4px 10px 0;
+    box-sizing: border-box;
+    color: #fff;
+    display: inline-flex;
+    font-weight: 500;
+    gap: 10px;
+    letter-spacing: 0.7px;
+    line-height: 15px;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .ph-link-icon {
+    display: block;
+    flex-shrink: 0;
+    line-height: 0;
+  }
+
+  .ph-link-icon :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .ph-shape {
+    bottom: -1px;
+    left: 0;
+    line-height: 0;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+  }
+
+  .ph-shape svg {
+    display: block;
+    height: 65px;
+    width: calc(100% + 1.3px);
+  }
+
+  .ph-shape path {
+    fill: #117d6f;
+  }
+
+  @media (min-width: 768px) {
+    .ph-shape svg {
+      height: 106px;
+    }
+  }
+
+  .ph-link:hover {
+    background-color: var(--c3);
+    border-top-color: #e087ed;
+    transform: matrix(1.06664, 0, 0, 1.06664, 0, 0);
+  }
+
+  @media (min-width: 768px) {
+    .page-hero {
+      flex-wrap: nowrap;
+      padding-bottom: 76.8px;
+      padding-top: 38.4px;
+    }
+
+    .ph-inner {
+      flex: 0 0 82.94%;
+      flex-wrap: nowrap;
+      max-width: 82.94%;
+    }
+
+    .ph-heading {
+      font-size: 68px;
+      line-height: 68px;
+    }
+
+    .ph-rule-wrap {
+      margin-bottom: 20px;
+      margin-top: -14px;
+    }
+
+    .ph-subheading-wrap {
+      margin-top: -18px;
+    }
+
+    .ph-subheading {
+      font-size: 19px;
+      line-height: 19px;
+    }
+
+    .ph-actions {
+      flex-wrap: nowrap;
+      width: 86.06%;
+    }
+
+    .ph-actions-inner {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .page-hero {
+      padding-bottom: 144px;
+      padding-top: 72px;
+    }
+
+    .ph-inner {
+      flex: 0 0 82.99%;
+      max-width: 82.99%;
+    }
+
+    .ph-rule {
+      flex: 0 0 66.67%;
+      margin-right: 403.2px;
+      max-width: 66.67%;
+    }
+
+    .ph-actions {
+      width: 33.33%;
+    }
+
+    .ph-actions-inner {
+      flex: 0 0 66.67%;
+      margin-right: 10px;
+      max-width: 66.67%;
+      text-align: left;
+    }
+
+    .ph-link {
+      text-align: center;
+    }
+  }
+</style>

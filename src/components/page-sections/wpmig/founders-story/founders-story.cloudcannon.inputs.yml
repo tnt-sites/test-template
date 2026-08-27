@@ -1,0 +1,19 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: html
+  text:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  buttonTextColor:
+    type: color

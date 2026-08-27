@@ -1,0 +1,21 @@
+_inputs:
+  heading:
+    type: html
+  text:
+    type: text
+  text2:
+    type: html
+  text3:
+    type: text
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  textColor3:
+    type: color
+  hoverColor:
+    type: color
+  textColor3HoverColor:
+    type: color

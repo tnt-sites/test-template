@@ -20,6 +20,6 @@ value:
   textColor: "#fff"
   mobileTextColor: "#000"
   authorAlignX: left
-  starColor: "#febb21"
+  starColor: "#946200"
 _inputs_from_glob:
   - /src/components/landing-page-components/new-patient-emergency-combo/reviews/reviews.cloudcannon.inputs.yml

@@ -12,7 +12,7 @@ value:
     alt: "Patients smiling"
   headingColor: "#2691CA"
   borderColor: "var(--color-brand-secondary)"
-  starColor: "#febb21"
+  starColor: "#946200"
   reviews:
     - googleLogo:
         source: ""

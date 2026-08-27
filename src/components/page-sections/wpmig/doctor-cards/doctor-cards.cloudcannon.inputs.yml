@@ -1,0 +1,34 @@
+_inputs:
+  items:
+    type: array
+    options:
+      structures: _structures.doctor_cards_item
+  textColor:
+    type: color
+  titleColor:
+    type: color
+  hoverColor:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverColor2:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+_structures:
+  doctor_cards_item:
+    values:
+      - value:
+          buttonText: ""
+          buttonLink: ""
+          title: ""
+          text: ""
+        _inputs:
+          buttonText:
+            type: text
+          buttonLink:
+            type: url
+          title:
+            type: text
+          text:
+            type: textarea

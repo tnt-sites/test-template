@@ -1,0 +1,240 @@
+---
+/**
+ * Logo Strip — centred eyebrow, heading and copy above a wrapping row of logos
+ * (used for insurance providers). Migrated by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, colours. Arrays: `images`.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  images = [],
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#000000",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+
+<div
+  class="logo-strip"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
+  <div class="ls-box">
+    <div class="ls-box2">
+      <div class="ls-box3">
+        {eyebrow && <p class="ls-text">{eyebrow}</p>}
+      </div>
+    </div>
+    <div class="ls-box4">
+      <div class="ls-box5">
+        <div class="ls-decor" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="ls-box6">
+      <h2 class="ls-heading" set:html={heading} />
+    </div>
+    <div class="ls-box7">
+      {text && <p class="ls-text2">{text}</p>}
+    </div>
+    <div class="ls-grid">
+      {
+        list.map((it) => (
+          <div class="ls-box8">
+            {it.image && (
+              <img
+                class="ls-media"
+                src={it.image}
+                alt={it.imageAlt || ""}
+                loading="lazy"
+                width="164"
+                height="75"
+              />
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+<style>
+  .logo-strip {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ls-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column wrap;
+    flex-grow: 1;
+    gap: 21px 0;
+    justify-content: center;
+    max-width: min(100%, 767px);
+    padding: 50px 20px;
+  }
+
+  .ls-box2 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .ls-box3 {
+    box-sizing: border-box;
+    margin-bottom: -33px;
+  }
+
+  .ls-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  .ls-box4 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  .ls-box5 {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .ls-decor {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    flex: 0 0 17.95%;
+    max-width: 17.95%;
+    min-height: 1px;
+  }
+
+  .ls-box6 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .ls-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+
+  .ls-box7 {
+    box-sizing: border-box;
+    margin-top: -13px;
+    text-align: center;
+  }
+
+  .ls-text2 {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0;
+  }
+
+  .ls-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    place-content: flex-start center;
+    width: 100%;
+  }
+
+  .ls-box8 {
+    box-sizing: border-box;
+    flex: 0 0 calc(33.33% - 14px);
+    max-width: calc(33.33% - 14px);
+    text-align: center;
+  }
+
+  .ls-media {
+    box-sizing: border-box;
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ls-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .ls-decor {
+      flex: 0 0 17.97%;
+      max-width: 17.97%;
+    }
+
+    .ls-box6 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 561px;
+    }
+
+    .ls-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    .ls-box8 {
+      flex: 0 0 14.39%;
+      max-width: 14.39%;
+    }
+
+    .ls-media {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ls-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: min(100%, 1140px);
+    }
+
+    .ls-decor {
+      flex: 0 0 17.98%;
+      max-width: 17.98%;
+    }
+
+    .ls-box7 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 780px;
+    }
+  }
+</style>

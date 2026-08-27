@@ -1,0 +1,379 @@
+---
+/**
+ * The practice's Google reviews as a rotating slider.
+ *
+ * The source site used a Trustindex widget whose live rendering is locked to
+ * the production domain, so it renders nothing anywhere else (a CloudCannon
+ * preview included). The reviews it shows are public, though, so they are
+ * captured to `src/data/reviews.json` and rendered here as a self-contained
+ * Embla carousel — same cards (avatar, name, date, stars, text, "Read more"),
+ * working on any domain and editable as data.
+ */
+import reviewsData from "@data/reviews.json";
+
+const {
+  reviews: reviewsProp,
+  heading = "",
+  text = "",
+  headingColor = "",
+  textColor = "",
+  backgroundColor = "",
+  id = "",
+  // Present when placed as a page section; not markup attributes.
+  _component,
+  editable,
+  widgetId,
+  ...rest
+} = Astro.props;
+
+// An empty array from the CMS means "use the shared set", not "render nothing".
+const reviews =
+  Array.isArray(reviewsProp) && reviewsProp.length > 0 ? reviewsProp : reviewsData;
+
+// Rendered as a standalone page section when placed directly on a page, and as
+// a bare slider when embedded in another component (ContentSection, ReviewsIntro).
+const asSection = !!_component;
+
+const sectionVars = [
+  headingColor ? `--rv-hd:${headingColor}` : "",
+  textColor ? `--rv-tx:${textColor}` : "",
+  backgroundColor ? `--rv-bg:${backgroundColor}` : "",
+]
+  .filter(Boolean)
+  .join(";");
+
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .map((w: string) => w[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join("")
+    .toUpperCase();
+
+// A stable, on-brand colour per reviewer so avatars don't all match.
+const avatarColors = ["#c0396b", "#b94c77", "#8e44ad", "#227f73", "#ac5d30", "#3a7ca5"];
+const colorFor = (name: string) =>
+  avatarColors[[...name].reduce((a, c) => a + c.charCodeAt(0), 0) % avatarColors.length];
+---
+
+<div
+  class:list={["reviews-slider", { "as-section": asSection, "has-bg": asSection && !!backgroundColor }]}
+  id={(asSection && id) || undefined}
+  style={(asSection && sectionVars) || undefined}
+  {...(asSection ? rest : {})}
+>
+  {asSection && heading && <h2 class="rv-section-heading" set:html={heading} />}
+  {asSection && text && <div class="rv-section-text" set:html={text} />}
+
+  <div class="rv-viewport">
+    <div class="rv-container">
+      {
+        reviews.map((r: any) => (
+          <article class="rv-card">
+            <div class="rv-avatar" style={`--rv-av:${colorFor(r.name)}`}>
+              <span>{initials(r.name)}</span>
+              <svg class="rv-google" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path
+                  fill="#4285F4"
+                  d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.5h6.4c-.3 1.5-1.1 2.7-2.4 3.6v3h3.9c2.3-2.1 3.6-5.2 3.6-8.8z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M12 24c3.2 0 6-1.1 8-2.9l-3.9-3c-1.1.7-2.5 1.2-4.1 1.2-3.1 0-5.8-2.1-6.7-5H1.3v3.1C3.3 21.3 7.3 24 12 24z"
+                />
+                <path fill="#FBBC05" d="M5.3 14.3c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3V6.6H1.3C.5 8.2 0 10 0 12s.5 3.8 1.3 5.4l4-3.1z" />
+                <path
+                  fill="#EA4335"
+                  d="M12 4.8c1.8 0 3.3.6 4.6 1.8l3.4-3.4C18 1.2 15.2 0 12 0 7.3 0 3.3 2.7 1.3 6.6l4 3.1C6.2 6.9 8.9 4.8 12 4.8z"
+                />
+              </svg>
+            </div>
+            <div class="rv-name">{r.name}</div>
+            {r.date && <div class="rv-date">{r.date}</div>}
+            <div class="rv-stars" aria-label={`${r.rating} out of 5 stars`}>
+              {Array.from({ length: 5 }).map((_, i) => (
+                <span class={i < r.rating ? "on" : ""}>★</span>
+              ))}
+            </div>
+            <p class="rv-text clamped">{r.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+
+  <button class="rv-arrow rv-prev" type="button" aria-label="Previous reviews">‹</button>
+  <button class="rv-arrow rv-next" type="button" aria-label="Next reviews">›</button>
+</div>
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  document.querySelectorAll<HTMLElement>(".reviews-slider").forEach((root) => {
+    const viewport = root.querySelector<HTMLElement>(".rv-viewport");
+    if (!viewport || viewport.dataset.emblaInit === "true") return;
+    viewport.dataset.emblaInit = "true";
+
+    const embla = EmblaCarousel(viewport, { loop: true, align: "start" }, [
+      Autoplay({ delay: 4500, stopOnInteraction: false }),
+    ]);
+
+    root.querySelector(".rv-prev")?.addEventListener("click", () => embla.scrollPrev());
+    root.querySelector(".rv-next")?.addEventListener("click", () => embla.scrollNext());
+
+    // Reviews start clamped to keep cards even; add "Read more" only where the
+    // text is actually cut off, and drop the clamp where it fits.
+    root.querySelectorAll<HTMLElement>(".rv-text").forEach((p) => {
+      if (p.scrollHeight - p.clientHeight > 4) {
+        const more = document.createElement("button");
+        more.type = "button";
+        more.className = "rv-more";
+        more.textContent = "Read more";
+        more.addEventListener("click", () => {
+          p.classList.remove("clamped");
+          more.remove();
+          embla.reInit();
+        });
+        p.after(more);
+      } else {
+        p.classList.remove("clamped");
+      }
+    });
+  });
+</script>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .reviews-slider {
+      /* Arrows sit inside this gutter so the widget never needs room from the
+         page container it happens to be dropped into. */
+      --rv-arrow-size: 44px;
+      --rv-gutter: calc(var(--rv-arrow-size) + 0.5rem);
+      margin-top: var(--spacing-xl, 2rem);
+      max-width: 100%;
+      min-width: 0;
+      padding-inline: var(--rv-gutter);
+      position: relative;
+    }
+
+    /* Placed directly on a page: give it a container and section rhythm.
+       Embedded in another component it stays a bare slider. */
+    .reviews-slider.as-section {
+      margin-inline: auto;
+      margin-top: 0;
+      max-width: var(--container-max-width, 1200px);
+      padding-block: var(--spacing-2xl, 4rem);
+      padding-inline: calc(var(--spacing-lg, 1.5rem) + var(--rv-gutter));
+    }
+
+    .reviews-slider.as-section.has-bg {
+      background: var(--rv-bg);
+      max-width: none;
+    }
+
+    .reviews-slider.as-section.has-bg .rv-viewport,
+    .reviews-slider.as-section.has-bg .rv-section-heading,
+    .reviews-slider.as-section.has-bg .rv-section-text {
+      margin-inline: auto;
+      max-width: var(--container-max-width, 1200px);
+    }
+
+    .rv-section-heading {
+      color: var(--rv-hd, var(--color-text-strong, #111));
+      font-size: var(--font-size-3xl, 2rem);
+      line-height: 1.15;
+      margin: 0 0 var(--spacing-md, 1rem);
+      text-align: center;
+    }
+
+    .rv-section-text {
+      color: var(--rv-tx, var(--color-text, #333));
+      line-height: 1.7;
+      margin: 0 auto var(--spacing-md, 1rem);
+      max-width: 60ch;
+      text-align: center;
+
+      :where(p) {
+        margin: 0 0 var(--spacing-sm, 0.75rem);
+      }
+    }
+
+    .rv-viewport {
+      /* Card count keys off the slider's own width, not the page's, so the
+         widget works in a narrow column and full-bleed alike. */
+      container-type: inline-size;
+      max-width: 100%;
+      min-width: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rv-container {
+      --rv-gap: var(--spacing-lg, 1.5rem);
+      /* Cards are sized as an exact fraction of the viewport so a whole number
+         of them always fits — no half-card sliced off at the right edge. */
+      --rv-per-view: 1;
+      display: flex;
+      gap: var(--rv-gap);
+    }
+
+    .rv-card {
+      background: #fff;
+      border: 1px solid var(--color-border-subtle, #e6e6e6);
+      border-radius: var(--radius-md, 10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      flex: 0 0 calc((100% - (var(--rv-per-view) - 1) * var(--rv-gap)) / var(--rv-per-view));
+      min-width: 0;
+      margin-top: 34px;
+      padding: 44px var(--spacing-lg, 1.5rem) var(--spacing-lg, 1.5rem);
+      position: relative;
+      text-align: center;
+    }
+
+    .rv-avatar {
+      align-items: center;
+      background: var(--rv-av, #c0396b);
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      font-size: 1.4rem;
+      font-weight: var(--font-weight-bold, 700);
+      height: 68px;
+      justify-content: center;
+      left: 50%;
+      position: absolute;
+      top: -34px;
+      transform: translateX(-50%);
+      width: 68px;
+    }
+
+    .rv-google {
+      background: #fff;
+      border-radius: 50%;
+      bottom: -2px;
+      padding: 2px;
+      position: absolute;
+      right: -2px;
+    }
+
+    .rv-name {
+      color: var(--color-text-strong, #1a1a1a);
+      font-weight: var(--font-weight-bold, 700);
+    }
+
+    .rv-date {
+      color: var(--color-text-muted, #888);
+      font-size: var(--font-size-sm, 0.85rem);
+      margin-top: 2px;
+    }
+
+    .rv-stars {
+      color: #946200;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      margin: 0.5rem 0 0.75rem;
+
+      span {
+        color: #767676;
+      }
+      span.on {
+        color: #946200;
+      }
+    }
+
+    .rv-text {
+      color: var(--color-text, #444);
+      line-height: 1.6;
+      margin: 0;
+      overflow-wrap: anywhere;
+
+      &.clamped {
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+      }
+    }
+
+    .rv-more {
+      background: none;
+      border: none;
+      color: var(--color-text-muted, #888);
+      cursor: pointer;
+      font-weight: var(--font-weight-semibold, 600);
+      margin-top: 0.5rem;
+      padding: 0;
+    }
+
+    .rv-arrow {
+      align-items: center;
+      background: #fff;
+      border: 1px solid var(--color-border-subtle, #e6e6e6);
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      color: var(--color-text, #444);
+      cursor: pointer;
+      display: flex;
+      flex: none;
+      font-size: 1.5rem;
+      height: var(--rv-arrow-size);
+      justify-content: center;
+      line-height: 1;
+      position: absolute;
+      top: calc(50% + 17px);
+      transform: translateY(-50%);
+      width: var(--rv-arrow-size);
+      z-index: 2;
+
+      &:hover {
+        color: var(--color-brand, #117d6f);
+      }
+    }
+
+    .rv-prev {
+      left: 0;
+    }
+    .rv-next {
+      right: 0;
+    }
+
+    /* In section mode the box also carries container padding, so sit the arrows
+       just outside the viewport rather than at the very edge of the section. */
+    .reviews-slider.as-section .rv-prev {
+      left: var(--spacing-lg, 1.5rem);
+    }
+    .reviews-slider.as-section .rv-next {
+      right: var(--spacing-lg, 1.5rem);
+    }
+
+    /* Breakpoints chosen so cards land near the original ~340px target and
+       never stretch: the columns this widget sits in are ~590px wide. */
+    @container (min-width: 560px) {
+      .rv-container {
+        --rv-per-view: 2;
+      }
+    }
+
+    @container (min-width: 940px) {
+      .rv-container {
+        --rv-per-view: 3;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .reviews-slider {
+        padding-inline: 0;
+      }
+
+      .reviews-slider.as-section {
+        padding-inline: var(--spacing-lg, 1.5rem);
+      }
+
+      .rv-arrow {
+        display: none;
+      }
+    }
+  }
+</style>

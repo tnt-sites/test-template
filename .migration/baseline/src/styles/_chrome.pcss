@@ -1,0 +1,49 @@
+/* mig:generated v=0.1.0 gen=wpmig-chrome hash=1c6a768683c0d34b */
+
+/*
+ * Site chrome, measured from the source render by `wpmig dev-chrome`.
+ *
+ * Generated — edit the source site or the migrator, not this file.
+ *
+ * These are the *source's* values, not the target's design decisions. The
+ * header and footer components read them with their own fallbacks, so a token
+ * that is absent here (because the source had no such element) leaves the
+ * component's own styling in place rather than blanking it.
+ */
+
+:root {
+  --chrome-footer-color: rgb(0, 0, 0);
+  --chrome-footer-heading-color: rgb(0, 0, 0);
+  --chrome-footer-heading-font: "Montserrat", sans-serif;
+  --chrome-footer-heading-size: 10px;
+  --chrome-footer-heading-weight: 500;
+  --chrome-footer-link-color: rgb(224, 135, 237);
+  --chrome-footer-link-font: "Montserrat", sans-serif;
+  --chrome-footer-link-gap: 0px;
+  --chrome-footer-link-size: 14px;
+  --chrome-footer-link-weight: 500;
+  --chrome-footer-logo-width: 213px;
+  --chrome-footer-pad-block: 0px;
+  --chrome-header-logo-pad-right: 0px;
+  --chrome-header-logo-width: 134px;
+  --chrome-header-pad-bottom: 0px;
+  --chrome-header-pad-top: 0px;
+  --chrome-header-phone-color: rgb(255, 255, 255);
+  --chrome-header-phone-font: "Montserrat", sans-serif;
+  --chrome-header-phone-size: 15px;
+  --chrome-header-phone-weight: 300;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --chrome-footer-heading-size: 15px;
+    --chrome-footer-link-size: 15px;
+    --chrome-header-logo-width: 193px;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --chrome-header-logo-width: 196px;
+  }
+}

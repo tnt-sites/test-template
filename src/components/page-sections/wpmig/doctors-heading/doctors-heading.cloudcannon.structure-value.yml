@@ -1,0 +1,24 @@
+label: Doctors Heading
+icon: groups
+description: Standalone eyebrow and heading introducing the team.
+value:
+  _component: page-sections/wpmig/doctors-heading
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+  backgroundImage: ""
+  backgroundPosition: "50% 50%"
+  overlayColor: "rgba(36, 215, 195, 0.29)"
+preview:
+  text:
+    - Doctors Heading
+  icon: groups
+picker_preview:
+  text: Doctors Heading
+  subtext: Standalone eyebrow and heading introducing the team.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/doctors-heading/doctors-heading.cloudcannon.inputs.yml

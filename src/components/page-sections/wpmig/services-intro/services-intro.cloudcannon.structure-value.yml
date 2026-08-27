@@ -1,0 +1,22 @@
+label: Services Intro
+icon: medical_services
+description: Eyebrow, heading and copy introducing the services list.
+value:
+  _component: page-sections/wpmig/services-intro
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  backgroundColor: "#f6fffe"
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#4d4d4d"
+preview:
+  text:
+    - Services Intro
+  icon: medical_services
+picker_preview:
+  text: Services Intro
+  subtext: Eyebrow, heading and copy introducing the services list.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/services-intro/services-intro.cloudcannon.inputs.yml

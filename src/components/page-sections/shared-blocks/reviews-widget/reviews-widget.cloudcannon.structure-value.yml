@@ -1,0 +1,21 @@
+label: Reviews Slider
+icon: reviews
+description: The practice's Google reviews as a rotating slider.
+value:
+  _component: page-sections/shared-blocks/reviews-widget
+  id: ""
+  heading: ""
+  text: ""
+  reviews: []
+  backgroundColor: ""
+  headingColor: ""
+  textColor: ""
+preview:
+  text:
+    - Reviews Slider
+  icon: reviews
+picker_preview:
+  text: Reviews Slider
+  subtext: The practice's Google reviews as a rotating slider.
+_inputs_from_glob:
+  - /src/components/page-sections/shared-blocks/reviews-widget/reviews-widget.cloudcannon.inputs.yml

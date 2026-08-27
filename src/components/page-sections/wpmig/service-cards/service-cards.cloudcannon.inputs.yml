@@ -1,0 +1,31 @@
+_inputs:
+  items:
+    type: array
+    options:
+      structures: _structures.service_cards_item
+  backgroundColor:
+    type: color
+  titleColor:
+    type: color
+  textColor:
+    type: color
+  hoverColor:
+    type: color
+  hoverColor2:
+    type: color
+  hoverBackgroundColor:
+    type: color
+_structures:
+  service_cards_item:
+    values:
+      - value:
+          link: ""
+          title: ""
+          text: ""
+        _inputs:
+          link:
+            type: url
+          title:
+            type: text
+          text:
+            type: textarea

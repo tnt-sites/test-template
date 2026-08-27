@@ -1,0 +1,315 @@
+---
+/**
+ * Reviews Intro — migrated from  [7] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ * The homepage reviews strip: renders the Google reviews slider under the text.
+ */
+import ReviewsWidget from "@components/page-sections/shared-blocks/reviews-widget/ReviewsWidget.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#000000",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="reviews-intro" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="ri-box">
+    <div class="ri-box2">
+      <div class="ri-box3">
+        <div class="ri-box4">
+          <div class="ri-box5">
+            <div class="ri-box6">
+              <div class="ri-spacer" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ri-box7">
+        <div class="ri-box8">
+          {eyebrow && <p class="ri-text">{eyebrow}</p>}
+        </div>
+        <div class="ri-box9">
+          <div class="ri-box10">
+            <div class="ri-decor" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="ri-box11">
+          <h2 class="ri-heading" set:html={heading} />
+        </div>
+        <div class="ri-box12">
+          {text && <p class="ri-text2" set:html={text} />}
+          <ReviewsWidget />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .reviews-intro {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    position: relative;
+  }
+
+  .ri-box {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .ri-box2 {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+    margin-inline: auto;
+    margin-top: 15px;
+    max-width: min(100%, var(--container-max-width, 1200px));
+    padding: 10px;
+    position: relative;
+  }
+
+  .ri-box3 {
+    align-self: flex-start;
+    background-image: url("/wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ri-box4 {
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: -90px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .ri-box4::before {
+    border-radius: 0px;
+    bottom: -1px;
+    content: "";
+    left: -1px;
+    opacity: 0.5;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+  }
+
+  .ri-box5 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .ri-box6 {
+    box-sizing: border-box;
+  }
+
+  .ri-spacer {
+    box-sizing: border-box;
+    height: 352px;
+    min-height: 352px;
+  }
+
+  .ri-box7 {
+    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    min-height: 273px;
+    min-width: 0;
+    padding-top: 14.8px;
+    position: relative;
+  }
+
+  .ri-box8 {
+    box-sizing: border-box;
+    margin-bottom: -17px;
+  }
+
+  .ri-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .ri-box9 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ri-box10 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: left;
+  }
+
+  .ri-decor {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 20%;
+    max-width: 20%;
+    min-height: 1px;
+  }
+
+  .ri-box11 {
+    box-sizing: border-box;
+    margin-top: -7px;
+  }
+
+  .ri-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .ri-box12 {
+    box-sizing: border-box;
+    margin-top: -13px;
+    min-width: 0;
+  }
+
+  .ri-text2 {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    overflow-wrap: anywhere;
+  }
+
+  @media (min-width: 768px) {
+    .ri-box {
+      min-height: 529px;
+    }
+
+    .ri-box2 {
+      flex-wrap: nowrap;
+      margin-bottom: 45px;
+      margin-top: 50px;
+      padding-inline: var(--spacing-lg, 1.5rem);
+    }
+
+    .ri-box3 {
+      flex: 0 0 36.46%;
+      flex-wrap: nowrap;
+      margin-right: 30px;
+      max-width: 36.46%;
+      padding: 30px;
+    }
+
+    .ri-box5 {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .ri-spacer {
+      height: 442px;
+      min-height: 442px;
+    }
+
+    .ri-box7 {
+      flex: 0 0 60%;
+      flex-wrap: nowrap;
+      max-width: 60%;
+      min-height: 293px;
+      padding-top: 30.7px;
+    }
+
+    .ri-decor {
+      flex: 0 0 17.9%;
+      max-width: 17.9%;
+    }
+
+    .ri-box11 {
+      padding-top: 20px;
+    }
+
+    .ri-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ri-box {
+      min-height: 687px;
+    }
+
+    .ri-box3 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .ri-box5 {
+      max-width: min(100%, 1140px);
+    }
+
+    .ri-spacer {
+      height: 600px;
+      min-height: 600px;
+    }
+
+    .ri-box7 {
+      min-height: 194px;
+      padding-left: 86.4px;
+      padding-top: 0px;
+    }
+
+    .ri-decor {
+      flex: 0 0 17.98%;
+      max-width: 17.98%;
+    }
+
+    .ri-box11 {
+      padding-top: 0px;
+    }
+  }
+</style>

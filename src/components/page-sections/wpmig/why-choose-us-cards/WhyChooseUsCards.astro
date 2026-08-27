@@ -1,0 +1,239 @@
+---
+/**
+ * Why Choose Us Cards — migrated from  [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  items = [],
+  backgroundColor = "#d8fffb",
+  titleColor = "#ffffff",
+  textColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="why-choose-us-cards" id={id || undefined} style={`--bg:${backgroundColor};--tt:${titleColor};--tx:${textColor}`} {...rest}>
+  <div class="wc-grid">
+    {list.map((it) => (
+      <div class="wc-box">
+        <div class="wc-box2">
+          <div class="wc-box3">
+            <div class="wc-box4">
+              <div class="wc-box5">
+                <div
+                  class="wc-decor"
+                  style={it.image ? `background-image:url("${it.image}")` : undefined}
+                  aria-hidden="true"
+                ></div>
+                <div class="wc-decor2" aria-hidden="true"></div>
+              </div>
+              <div class="wc-box6">
+                <h2 class="wc-heading">{it.title}</h2>
+                <div class="wc-text">{it.text}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+<style>
+  .why-choose-us-cards {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wc-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 0px;
+    max-width: min(100%, 767px);
+    padding-bottom: 29px;
+  }
+
+  .wc-box {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .wc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .wc-box3 {
+    border-radius: 11px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .wc-box4 {
+    background-color: #1a1a1a;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .wc-box5 {
+    bottom: 0px;
+    box-sizing: border-box;
+    filter: brightness(0.6) grayscale(0);
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .wc-decor {
+    background-position: 50% 50%;
+    background-size: cover;
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    min-height: 243px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .wc-decor2 {
+    background-color: rgba(0, 0, 0, 0.44);
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    min-height: 243px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+  }
+
+  .wc-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 170px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 35px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .wc-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    flex: 0 0 100%;
+    font-family: Lato, sans-serif;
+    font-size: 26.4px;
+    font-weight: 300;
+    line-height: 26.4px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    max-width: 100%;
+    position: relative;
+    text-transform: uppercase;
+  }
+
+  .wc-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    flex: 0 0 100%;
+    line-height: 18px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .wc-grid {
+      max-width: min(100%, 1024px);
+      padding-bottom: 53px;
+      padding-top: 53px;
+    }
+
+    .wc-box2 {
+      flex-wrap: nowrap;
+      max-width: 100%;
+    }
+
+    .wc-decor {
+      min-height: 170px;
+    }
+
+    .wc-decor2 {
+      min-height: 170px;
+    }
+
+    .wc-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wc-grid {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: min(100%, 1140px);
+    }
+
+    .wc-box {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    .wc-box2 {
+      max-width: min(100%, 1140px);
+    }
+
+    .wc-decor {
+      min-height: 280px;
+    }
+
+    .wc-decor2 {
+      min-height: 280px;
+    }
+
+    .wc-box6 {
+      min-height: 280px;
+    }
+  }
+</style>

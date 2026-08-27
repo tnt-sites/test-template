@@ -1,0 +1,10 @@
+_snippets:
+  appointment_cta:
+    template: astro_component
+    inline: false
+    preview:
+      text: Appointment CTA
+    definitions:
+      component_name: page-sections/wpmig/appointment-cta
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/appointment-cta/appointment-cta.cloudcannon.inputs.yml

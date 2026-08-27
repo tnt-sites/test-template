@@ -15,7 +15,7 @@ value:
   googleLogoImage:
     source: ""
     alt: Google Reviews
-  starColor: "#febb21"
+  starColor: "#946200"
   bracketColor: "var(--color-brand-secondary)"
   googlePanelColor: "rgba(203, 116, 40, 0.06)"
   fontHeadings: ""

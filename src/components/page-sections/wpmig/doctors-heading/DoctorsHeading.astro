@@ -1,0 +1,225 @@
+---
+/**
+ * Doctors Heading — migrated from  [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#000000",
+  backgroundImage = "",
+  backgroundPosition = "50% 50%",
+  overlayColor = "rgba(36, 215, 195, 0.29)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="doctors-heading" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--bgpos:${backgroundPosition};--overlay:${overlayColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  {backgroundImage && <div class="dh-overlay" aria-hidden="true"></div>}
+  <div class="dh-box">
+    <div class="dh-box2">
+      {eyebrow && (
+        <div class="dh-box3">
+          <p class="dh-text">{eyebrow}</p>
+        </div>
+      )}
+      {eyebrow && (
+        <div class="dh-box4">
+          <div class="dh-box5">
+            <div class="dh-decor" aria-hidden="true"></div>
+          </div>
+        </div>
+      )}
+      <div class:list={["dh-box6", { "dh-box6-tight": eyebrow }]}>
+        <h2 class="dh-heading" set:html={heading} />
+      </div>
+      {text && (
+        <div class="dh-box7">
+          <p class="dh-body" set:html={text} />
+        </div>
+      )}
+    </div>
+  </div>
+</div>
+<style>
+  .doctors-heading {
+    background-color: var(--bg, transparent);
+    background-image: var(--bgimg, none);
+    background-position: var(--bgpos);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .dh-overlay {
+    background-color: var(--overlay);
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .doctors-heading > .dh-box {
+    position: relative;
+    z-index: 1;
+  }
+
+  .dh-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding: 10px 20px;
+  }
+
+  .dh-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .dh-box3 {
+    box-sizing: border-box;
+    margin-bottom: -17px;
+    text-align: center;
+  }
+
+  .dh-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .dh-box4 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .dh-box5 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: center;
+  }
+
+  .dh-decor {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 20%;
+    margin-left: 143.5px;
+    margin-right: 143.5px;
+    max-width: 20%;
+    min-height: 1px;
+  }
+
+  .dh-box6 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .dh-box6.dh-box6-tight {
+    margin-top: -20px;
+  }
+
+  .dh-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
+    text-transform: uppercase;
+  }
+
+  .dh-box7 {
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+
+  .dh-body {
+    box-sizing: border-box;
+    color: var(--tx);
+    margin: 0;
+    text-shadow: rgba(0, 0, 0, 0.3) 0 0 10px;
+  }
+
+  @media (min-width: 768px) {
+    .dh-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .dh-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .dh-decor {
+      flex: 0 0 17.99%;
+      margin-left: 298.5px;
+      margin-right: 298.5px;
+      max-width: 17.99%;
+    }
+
+    .dh-box6 {
+      padding-top: 20px;
+    }
+
+    .dh-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dh-box {
+      margin-left: 140px;
+      margin-right: 140px;
+      max-width: min(100%, 1140px);
+    }
+
+    .dh-decor {
+      flex: 0 0 20%;
+      margin-left: 459.2px;
+      margin-right: 459.2px;
+      max-width: 20%;
+    }
+
+    .dh-box6 {
+      padding-top: 0px;
+    }
+  }
+</style>

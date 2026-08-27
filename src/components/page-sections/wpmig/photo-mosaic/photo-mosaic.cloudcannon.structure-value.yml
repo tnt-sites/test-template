@@ -1,0 +1,18 @@
+label: Photo Mosaic
+icon: photo_library
+description: Multi-column mosaic of photos at varying tile heights.
+value:
+  _component: page-sections/wpmig/photo-mosaic
+  id: ""
+  images:
+    - image: ""
+      imageAlt: ""
+preview:
+  text:
+    - Photo Mosaic
+  icon: photo_library
+picker_preview:
+  text: Photo Mosaic
+  subtext: Multi-column mosaic of photos at varying tile heights.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/photo-mosaic/photo-mosaic.cloudcannon.inputs.yml

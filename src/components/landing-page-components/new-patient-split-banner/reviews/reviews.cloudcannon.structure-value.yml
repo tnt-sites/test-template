@@ -16,7 +16,7 @@ value:
   googleLogoImage:
     source: ""
     alt: Google Reviews
-  starColor: "#febb21"
+  starColor: "#946200"
   fontHeadings: ""
 _inputs_from_glob:
   - /src/components/landing-page-components/new-patient-split-banner/reviews/reviews.cloudcannon.inputs.yml

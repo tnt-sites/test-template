@@ -1,0 +1,321 @@
+---
+/**
+ * One content section for an interior page: a column of typed blocks, in the
+ * order the page states them, with an optional media rail beside it — a photo,
+ * or the booking `SidebarForm`.
+ *
+ * This is the single component the migrator's per-section output collapses
+ * onto. Every card-grid / media-prose / prose-block variant the WordPress
+ * export produced was the same shape — an eyebrow, a run of headings and prose,
+ * maybe a list, some buttons, a photo, or a booking form — captured at a
+ * different length. Modelling that as a `blocks` array plus a `media` rail lets
+ * one component render all of them.
+ */
+import SidebarForm from "@components/page-sections/shared-blocks/sidebar-form/SidebarForm.astro";
+import ReviewsWidget from "@components/page-sections/shared-blocks/reviews-widget/ReviewsWidget.astro";
+
+const {
+  blocks = [],
+  media = null,
+  backgroundColor = "",
+  eyebrowColor = "",
+  headingColor = "",
+  textColor = "",
+  id = "",
+  _component,
+  ...rest
+} = Astro.props;
+
+const styleVars = [
+  backgroundColor ? `--cs-bg:${backgroundColor}` : "",
+  eyebrowColor ? `--cs-eb:${eyebrowColor}` : "",
+  headingColor ? `--cs-hd:${headingColor}` : "",
+  textColor ? `--cs-tx:${textColor}` : "",
+]
+  .filter(Boolean)
+  .join(";");
+
+const hasMedia = media && (media.source || media.url);
+---
+
+<section
+  class:list={[
+    "content-section",
+    { "has-media": hasMedia, "has-bg": !!backgroundColor, "media-left": media?.side === "left" },
+  ]}
+  id={id || undefined}
+  style={styleVars || undefined}
+  {...rest}
+>
+  <div class="cs-inner">
+    <div class="cs-main">
+      {
+        blocks.map((block: any) => {
+          switch (block?.type) {
+            case "eyebrow":
+              return (
+                <p class="cs-eyebrow">
+                  <span class="cs-eyebrow-rule" aria-hidden="true" />
+                  <span set:html={block.html ?? block.text ?? ""} />
+                </p>
+              );
+            case "heading":
+              return <h2 class="cs-heading" set:html={block.html ?? ""} />;
+            case "subheading":
+              return <h3 class="cs-subheading" set:html={block.html ?? ""} />;
+            case "prose":
+            case "list":
+              return <div class="cs-prose" set:html={block.html ?? ""} />;
+            case "reviews":
+              return <ReviewsWidget widgetId={block.widgetId} />;
+            case "image":
+              return block.source ? (
+                <img class="cs-image" src={block.source} alt={block.alt || ""} loading="lazy" />
+              ) : null;
+            case "buttons":
+              return Array.isArray(block.buttons) && block.buttons.length ? (
+                <div class="cs-buttons">
+                  {block.buttons.map((b: any) =>
+                    b?.text ? (
+                      <a class="cs-button" href={b.link || "#"}>
+                        {b.text}
+                      </a>
+                    ) : null
+                  )}
+                </div>
+              ) : null;
+            case "cards":
+              return Array.isArray(block.items) && block.items.length ? (
+                <div class="cs-cards">
+                  {block.items.map((card: any) => (
+                    <div class="cs-card">
+                      {card.title && <h3 class="cs-card-title" set:html={card.title} />}
+                      {card.text && <div class="cs-card-text" set:html={card.text} />}
+                      {Array.isArray(card.buttons) &&
+                        card.buttons.map((b: any) =>
+                          b?.text ? (
+                            <a class="cs-button" href={b.link || "#"}>
+                              {b.text}
+                            </a>
+                          ) : null
+                        )}
+                    </div>
+                  ))}
+                </div>
+              ) : null;
+            default:
+              return null;
+          }
+        })
+      }
+    </div>
+
+    {
+      hasMedia &&
+        (media.type === "embed" && media.url ? (
+          <SidebarForm
+            logo={media.logo}
+            heading={media.title}
+            url={media.url}
+            buttonText={media.button?.text}
+            buttonLink={media.button?.link}
+          />
+        ) : media.source ? (
+          <div class="cs-media" style={`background-image:url("${media.source}")`}>
+            <span class="sr-only">{media.alt || ""}</span>
+          </div>
+        ) : null)
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .content-section {
+      --cs-eb: var(--color-brand, #117d6f);
+      --cs-hd: var(--color-text-strong, #111);
+      --cs-tx: var(--color-text, #333);
+      padding-block: var(--spacing-2xl, 4rem);
+
+      &.has-bg {
+        background: var(--cs-bg);
+      }
+
+      .cs-inner {
+        margin-inline: auto;
+        max-width: var(--container-max-width, 1200px);
+        padding-inline: var(--spacing-lg, 1.5rem);
+      }
+
+      &.has-media .cs-inner {
+        align-items: stretch;
+        display: grid;
+        gap: var(--spacing-2xl, 3rem);
+        grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+      }
+
+      &.media-left .cs-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      }
+
+      &.media-left .cs-main {
+        order: 2;
+      }
+
+      .cs-main {
+        align-self: center;
+        min-width: 0;
+      }
+
+      .cs-eyebrow {
+        align-items: center;
+        color: var(--cs-eb);
+        display: flex;
+        font-size: var(--font-size-sm, 0.85rem);
+        font-weight: var(--font-weight-semibold, 600);
+        gap: 0.75em;
+        letter-spacing: 0.12em;
+        margin: 0 0 var(--spacing-sm, 0.75rem);
+        text-transform: uppercase;
+      }
+
+      .cs-eyebrow-rule {
+        background: var(--cs-eb);
+        display: inline-block;
+        height: 2px;
+        width: 2.5rem;
+      }
+
+      .cs-heading {
+        color: var(--cs-hd);
+        font-size: var(--font-size-3xl, 2rem);
+        line-height: 1.15;
+        margin: 0 0 var(--spacing-md, 1rem);
+      }
+
+      .cs-subheading {
+        color: var(--cs-hd);
+        font-size: var(--font-size-xl, 1.35rem);
+        line-height: 1.2;
+        margin: var(--spacing-lg, 1.5rem) 0 var(--spacing-sm, 0.75rem);
+      }
+
+      .cs-prose {
+        color: var(--cs-tx);
+        line-height: 1.7;
+        margin: 0 0 var(--spacing-md, 1rem);
+
+        :where(p) {
+          margin: 0 0 var(--spacing-md, 1rem);
+        }
+
+        :where(a) {
+          color: var(--color-link, #cc3366);
+          text-decoration: underline;
+        }
+
+        :where(ul, ol) {
+          margin: 0 0 var(--spacing-md, 1rem);
+          padding-left: 1.25rem;
+        }
+
+        :where(li) {
+          margin-bottom: 0.35rem;
+        }
+
+        :where(strong, b) {
+          color: var(--cs-hd);
+        }
+      }
+
+      .cs-image {
+        border-radius: var(--radius-md, 8px);
+        display: block;
+        height: auto;
+        margin: var(--spacing-md, 1rem) 0;
+        max-width: 100%;
+      }
+
+      .cs-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm, 0.75rem);
+        margin: var(--spacing-lg, 1.5rem) 0 0;
+      }
+
+      .cs-button {
+        background: var(--color-brand, #117d6f);
+        border-radius: var(--radius-sm, 4px);
+        color: var(--color-text-on-brand, #fff);
+        display: inline-block;
+        font-weight: var(--font-weight-semibold, 600);
+        letter-spacing: 0.04em;
+        padding: 0.75em 1.6em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: filter 0.2s ease;
+
+        &:hover {
+          filter: brightness(1.06);
+        }
+      }
+
+      .cs-cards {
+        display: grid;
+        gap: var(--spacing-lg, 1.5rem);
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin: var(--spacing-lg, 1.5rem) 0;
+      }
+
+      .cs-card {
+        background: var(--color-bg-subtle, #f6f7f8);
+        border-radius: var(--radius-md, 8px);
+        padding: var(--spacing-lg, 1.5rem);
+      }
+
+      .cs-card-title {
+        color: var(--cs-hd);
+        font-size: var(--font-size-lg, 1.2rem);
+        margin: 0 0 var(--spacing-sm, 0.5rem);
+      }
+
+      .cs-card-text {
+        color: var(--cs-tx);
+        line-height: 1.6;
+      }
+
+      /* A photo the source baked into the section, shown as a filled rail. */
+      .cs-media {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: var(--radius-md, 8px);
+        min-height: 320px;
+        min-width: 0;
+      }
+
+      .sr-only {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      @media (max-width: 900px) {
+        &.has-media .cs-inner,
+        &.media-left .cs-inner {
+          grid-template-columns: 1fr;
+        }
+        &.media-left .cs-main {
+          order: 0;
+        }
+        .cs-media {
+          min-height: 220px;
+        }
+      }
+    }
+  }
+</style>

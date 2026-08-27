@@ -1,20 +1,30 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Toothbar",
   "socials": [
-    {
-      "label": "Facebook",
-      "icon": "social/facebook",
-      "link": "https://facebook.com"
-    },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/thetoothbar/"
     },
     {
-      "label": "LinkedIn",
+      "label": "Youtube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UC_BEsFiHV6EA9twEQOqA1Mw/featured"
+    },
+    {
+      "label": "Facebook",
+      "icon": "social/facebook",
+      "link": "https://www.facebook.com/toothbar/"
+    },
+    {
+      "label": "Linkedin",
       "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "link": "https://www.linkedin.com/in/tooth-bar-90b898170/"
+    },
+    {
+      "label": "Yelp",
+      "icon": "social/yelp",
+      "link": "https://www.yelp.com/biz/toothbar-austin"
     }
   ],
   "offices": [
@@ -22,10 +32,13 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "211 Walter Seaholm Drive",
+            "LR 160"
+          ],
+          "city": "Austin",
+          "state": "TX",
+          "postalCode": "78701",
           "country": null,
           "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
         }
@@ -33,14 +46,14 @@
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(512) 949-8202",
+          "href": "tel:5129498202"
         }
       ],
       "emails": [
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "display": "info@toothbar.com",
+          "href": "mailto:info@toothbar.com"
         }
       ],
       "officeHours": [
@@ -74,8 +87,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

@@ -1,0 +1,464 @@
+---
+import Icon from "@core-elements/icon/Icon.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  logoSource,
+  logoAlt = "Toothbar",
+  bookText = "Book Appointment",
+  bookLink = "#",
+  phoneDisplay = "",
+  phoneHref = "#",
+  overlayNav = [],
+  servicesTitle = "Services",
+  services = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const toggleId = `tb-nav-toggle`;
+
+const currentPath = Astro.url.pathname;
+const isCurrent = (path: string) => {
+  if (!path) return false;
+  const clean = path.split("#")[0].replace(/\/$/, "");
+  const here = currentPath.replace(/\/$/, "");
+  return clean !== "" && clean === here;
+};
+---
+
+<header class:list={["tb-header", className]} {...htmlAttributes}>
+  <input type="checkbox" id={toggleId} class="tb-toggle" autocomplete="off" />
+
+  <div class="tb-bar">
+    <label for={toggleId} class="tb-hamburger" aria-label="Open menu" tabindex="0">
+      <span class="tb-hamburger-line tb-hamburger-line-1"></span>
+      <span class="tb-hamburger-line tb-hamburger-line-2"></span>
+      <span class="tb-hamburger-line tb-hamburger-line-3"></span>
+    </label>
+
+    <a class="tb-logo" href="/" aria-label={logoAlt}>
+      <Image source={logoSource} alt={logoAlt} editable={false} />
+    </a>
+
+    <div class="tb-actions">
+      {
+        phoneDisplay && (
+          <a class="tb-phone" href={phoneHref}>
+            <Icon name="phone" size="none" aria-hidden="true" />
+            <span>{phoneDisplay}</span>
+          </a>
+        )
+      }
+      <a class="tb-book" href={bookLink}>
+        <Icon name="calendar" size="none" aria-hidden="true" />
+        <span>{bookText}</span>
+      </a>
+    </div>
+  </div>
+
+  <nav class="tb-overlay" aria-label="Main navigation">
+    <label for={toggleId} class="tb-close" aria-label="Close menu" tabindex="0">
+      <Icon name="x-mark" size="none" aria-hidden="true" />
+    </label>
+
+    <div class="tb-overlay-inner">
+      <ul class="tb-icon-nav">
+        {
+          overlayNav.map((item: any) => (
+            <li>
+              <a href={item.path} aria-current={isCurrent(item.path) ? "page" : undefined}>
+                <span class="tb-icon-nav-icon">
+                  <Icon name={item.icon || "chevron-right"} size="none" aria-hidden="true" />
+                </span>
+                <span class="tb-icon-nav-label">{item.name}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="tb-cta-bar">
+        <a class="tb-cta" href={bookLink}>
+          <Icon name="calendar" size="none" aria-hidden="true" />
+          <span>{bookText}</span>
+        </a>
+        {
+          phoneDisplay && (
+            <a class="tb-cta" href={phoneHref}>
+              <Icon name="phone" size="none" aria-hidden="true" />
+              <span>{phoneDisplay}</span>
+            </a>
+          )
+        }
+      </div>
+
+      {
+        services.length > 0 && (
+          <div class="tb-services">
+            <h2 class="tb-services-title">{servicesTitle}</h2>
+            <div class="tb-services-cols">
+              {services.map((col: any) => (
+                <div class="tb-services-col">
+                  <h3 class="tb-services-heading">{col.heading}</h3>
+                  <ul>
+                    {(col.links || []).map((link: any) => (
+                      <li>
+                        <a
+                          href={link.path}
+                          aria-current={isCurrent(link.path) ? "page" : undefined}
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById("tb-nav-toggle") as HTMLInputElement | null;
+  if (toggle) {
+    const sync = () => {
+      document.body.style.overflow = toggle.checked ? "hidden" : "";
+    };
+    toggle.addEventListener("change", sync);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && toggle.checked) {
+        toggle.checked = false;
+        sync();
+      }
+    });
+    // Close the overlay after navigating to an in-page anchor
+    document.querySelectorAll<HTMLAnchorElement>(".tb-overlay a").forEach((a) => {
+      a.addEventListener("click", () => {
+        toggle.checked = false;
+        sync();
+      });
+    });
+  }
+</script>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .tb-header {
+      --tb-fg: #ffffff;
+      position: absolute;
+      inset: 0 0 auto 0;
+      z-index: var(--layer-5, 50);
+    }
+
+    .tb-toggle {
+      display: none;
+    }
+
+    /* ---- Top bar ---- */
+    .tb-bar {
+      align-items: stretch;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: var(--spacing-md);
+      padding: 0;
+      /* subtle scrim so white marks stay legible over any first section */
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0));
+
+      > .tb-logo,
+      > .tb-actions {
+        margin-block: var(--spacing-md);
+      }
+
+      > .tb-logo {
+        margin-inline-end: var(--spacing-lg);
+      }
+
+      > .tb-actions {
+        margin-inline-end: var(--spacing-lg);
+      }
+    }
+
+    .tb-hamburger {
+      align-items: flex-end;
+      background: #117d6f;
+      cursor: pointer;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 6px;
+      height: 64px;
+      justify-content: center;
+      justify-self: start;
+      padding-inline-end: 18px;
+      width: 64px;
+
+      .tb-hamburger-line {
+        background: #ffffff;
+        border-radius: 2px;
+        display: block;
+        height: 3px;
+      }
+
+      .tb-hamburger-line-1 {
+        width: 22px;
+      }
+
+      .tb-hamburger-line-2 {
+        width: 28px;
+      }
+
+      .tb-hamburger-line-3 {
+        width: 16px;
+      }
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+
+    .tb-logo {
+      justify-self: center;
+
+      img {
+        display: block;
+        height: auto;
+        margin: 0;
+        max-height: 34px;
+        width: auto;
+      }
+    }
+
+    .tb-actions {
+      align-items: center;
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: flex-end;
+      justify-self: end;
+    }
+
+    .tb-phone,
+    .tb-book {
+      align-items: center;
+      color: var(--tb-fg);
+      display: inline-flex;
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-semibold);
+      gap: 0.5em;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      text-transform: none;
+      white-space: nowrap;
+
+      .icon {
+        font-size: 1.6em;
+      }
+    }
+
+    .tb-phone {
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: var(--radius-sm, 4px);
+      padding: 0.6em 1em;
+
+      &:hover {
+        border-color: var(--color-brand, #117d6f);
+        color: var(--color-brand, #117d6f);
+      }
+    }
+
+    .tb-book:hover {
+      color: var(--color-brand, #117d6f);
+    }
+
+    @media (max-width: 767px) {
+      .tb-bar {
+        grid-template-columns: auto 1fr auto;
+      }
+      .tb-actions .tb-book span,
+      .tb-actions .tb-phone span {
+        display: none;
+      }
+      .tb-phone,
+      .tb-book {
+        padding: 0.5em;
+      }
+    }
+
+    /* ---- Full-screen overlay ---- */
+    .tb-overlay {
+      background: linear-gradient(135deg, #1f9f92 0%, #2ab8a6 45%, #33d2bd 100%);
+      color: #ffffff;
+      inset: 0;
+      opacity: 0;
+      overflow-y: auto;
+      padding: clamp(var(--spacing-xl), 6vw, 96px) var(--spacing-lg) var(--spacing-2xl);
+      pointer-events: none;
+      position: fixed;
+      transition: opacity var(--animation-normal, 0.25s) ease;
+      visibility: hidden;
+      z-index: var(--layer-6, 60);
+    }
+
+    .tb-toggle:checked ~ .tb-overlay {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+
+    .tb-close {
+      color: #ffffff;
+      cursor: pointer;
+      position: absolute;
+      right: clamp(var(--spacing-md), 3vw, 40px);
+      top: clamp(var(--spacing-md), 3vw, 32px);
+
+      .icon {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    .tb-overlay-inner {
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .tb-icon-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-lg);
+      justify-content: center;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+
+      a {
+        align-items: center;
+        color: rgba(255, 255, 255, 0.92);
+        display: flex;
+        flex-direction: column;
+        gap: 0.75em;
+        max-width: 8rem;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        font-size: var(--font-size-sm);
+
+        &:hover,
+        &[aria-current="page"] {
+          color: #ffffff;
+        }
+      }
+
+      .tb-icon-nav-icon .icon {
+        font-size: 2.6rem;
+        stroke-width: 1.2;
+      }
+    }
+
+    .tb-cta-bar {
+      align-items: center;
+      border-block: 1px solid rgba(255, 255, 255, 0.35);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-xl);
+      justify-content: center;
+      margin: var(--spacing-xl) auto;
+      max-width: 760px;
+      padding: var(--spacing-md) 0;
+    }
+
+    .tb-cta {
+      align-items: center;
+      color: #ffffff;
+      display: inline-flex;
+      font-size: var(--font-size-sm);
+      gap: 0.6em;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      .icon {
+        font-size: 1.1em;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .tb-services-title {
+      color: #ffffff;
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-normal);
+      letter-spacing: 0.06em;
+      margin: 0 0 var(--spacing-lg);
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .tb-services-cols {
+      display: grid;
+      gap: var(--spacing-xl);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    .tb-services-heading {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      color: #ffffff;
+      font-size: var(--font-size-lg);
+      font-weight: var(--font-weight-bold);
+      margin: 0 0 var(--spacing-md);
+      padding-bottom: var(--spacing-xs);
+    }
+
+    .tb-services-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tb-services-col li {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .tb-services-col a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+
+      &:hover,
+      &[aria-current="page"] {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .tb-services-cols {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+      }
+      .tb-services-heading {
+        display: inline-block;
+      }
+      .tb-icon-nav {
+        gap: var(--spacing-md);
+      }
+      .tb-icon-nav .tb-icon-nav-icon .icon {
+        font-size: 2rem;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,22 @@
+_inputs:
+  items:
+    type: array
+    options:
+      structures: _structures.office_introtem
+  backgroundColor:
+    type: color
+  titleColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  office_introtem:
+    values:
+      - value:
+          title: ""
+          text: ""
+        _inputs:
+          title:
+            type: text
+          text:
+            type: textarea

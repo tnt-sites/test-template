@@ -1,0 +1,324 @@
+---
+/**
+ * Founders Story — migrated from  [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  eyebrowColor = "#117d6f",
+  headingColor = "#000000",
+  textColor = "#000000",
+  buttonTextColor = "#000000",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="founders-story" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btntx:${buttonTextColor}`} {...rest}>
+  <div class="fs-box">
+    <div class="fs-decor" aria-hidden="true"></div>
+    <div class="fs-box2">
+      <div class="fs-box3">
+        {eyebrow && <p class="fs-text">{eyebrow}</p>}
+      </div>
+      <div class="fs-box4">
+        <div class="fs-box5">
+          <div class="fs-decor2" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="fs-box6">
+        <h2 class="fs-heading" set:html={heading} />
+      </div>
+      <div class="fs-box7">
+        {text && <div class="fs-body" set:html={text} />}
+      </div>
+      <div class="fs-box8">
+        <div class="fs-box9">
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="default" borderWidth="xs" uppercase class="fs-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .founders-story {
+    align-items: stretch;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    gap: 10px;
+    line-height: 24px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .founders-story :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .fs-box {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0px;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fs-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .fs-decor {
+    background-image: url("/wp-content/uploads/2023/04/Toothbar-5.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    min-height: 376px;
+    position: relative;
+    width: 100%;
+  }
+
+  .fs-box2 {
+    align-self: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-left: 7.8px;
+    padding-top: 35.1px;
+    position: relative;
+  }
+
+  .fs-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .fs-box3 {
+    box-sizing: border-box;
+    margin-bottom: -17px;
+  }
+
+  .fs-text {
+    box-sizing: border-box;
+    color: var(--eb);
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .fs-box4 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fs-box5 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    text-align: left;
+  }
+
+  .fs-decor2 {
+    border-top: 1px solid #e087ed;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 20%;
+    margin-right: 313.4px;
+    max-width: 20%;
+    min-height: 1px;
+  }
+
+  .fs-box6 {
+    box-sizing: border-box;
+    margin-top: -7px;
+    padding-top: 20px;
+  }
+
+  .fs-heading {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .fs-box7 {
+    box-sizing: border-box;
+  }
+
+  .fs-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
+
+  .fs-box8 {
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  .fs-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  .fs-box9 {
+    box-sizing: border-box;
+  }
+
+  .fs-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.fs-btn) {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #117d6f;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 15px;
+    margin: 0px;
+    padding: 8px 17px 8px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.fs-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.fs-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.fs-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    letter-spacing: normal;
+  }
+
+  @media (min-width: 768px) {
+    .founders-story {
+      flex-wrap: nowrap;
+    }
+
+    .fs-box {
+      flex-wrap: nowrap;
+      margin-bottom: 1px;
+      margin-top: 0px;
+    }
+
+    .fs-decor {
+      flex-wrap: nowrap;
+      min-height: 658px;
+    }
+
+    .fs-box2 {
+      flex-wrap: nowrap;
+      padding-left: 15.4px;
+      padding-top: 69.1px;
+    }
+
+    .fs-decor2 {
+      flex: 0 0 17.93%;
+      margin-right: 617.2px;
+      max-width: 17.93%;
+    }
+
+    .fs-heading {
+      font-size: 34px;
+      line-height: 34px;
+    }
+
+    :global(.fs-btn) {
+      padding: 10px 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .fs-box {
+      flex-direction: row;
+    }
+
+    .fs-decor {
+      flex: 0 0 45.42%;
+      max-width: 45.42%;
+      min-height: 940px;
+    }
+
+    .fs-box2 {
+      flex: 0 0 54.58%;
+      max-width: 54.58%;
+      padding-bottom: 72px;
+      padding-left: 158.4px;
+      padding-top: 72px;
+    }
+
+    .fs-decor2 {
+      flex: 0 0 17.99%;
+      margin-right: 514.8px;
+      max-width: 17.99%;
+    }
+
+    .fs-box6 {
+      padding-top: 0px;
+    }
+
+    .fs-box8 {
+      margin-right: 10px;
+    }
+  }
+</style>

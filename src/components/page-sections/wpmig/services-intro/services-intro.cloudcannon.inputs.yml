@@ -1,0 +1,15 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: html
+  text:
+    type: textarea
+  backgroundColor:
+    type: color
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color

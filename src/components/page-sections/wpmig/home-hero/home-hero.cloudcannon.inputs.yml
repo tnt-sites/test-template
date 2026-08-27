@@ -1,0 +1,15 @@
+_inputs:
+  heading:
+    type: html
+  subheading:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  hoverBackgroundColor:
+    type: color

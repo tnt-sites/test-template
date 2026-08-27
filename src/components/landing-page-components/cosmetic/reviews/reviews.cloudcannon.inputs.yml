@@ -95,7 +95,7 @@ afterImage:
 
 starColor:
   type: color
-  comment: Color for the star rating icons (default "#fcd800").
+  comment: Color for the star rating icons (default "#946200").
 
 accentColor:
   type: select

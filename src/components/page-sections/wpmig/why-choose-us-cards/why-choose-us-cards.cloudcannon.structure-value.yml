@@ -1,0 +1,21 @@
+label: Why Choose Us Cards
+icon: style
+description: Row of image cards, each with a title and short paragraph.
+value:
+  _component: page-sections/wpmig/why-choose-us-cards
+  id: ""
+  items:
+    - title: ""
+      text: ""
+  backgroundColor: "#d8fffb"
+  titleColor: "#ffffff"
+  textColor: "#ffffff"
+preview:
+  text:
+    - Why Choose Us Cards
+  icon: style
+picker_preview:
+  text: Why Choose Us Cards
+  subtext: Row of image cards, each with a title and short paragraph.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/why-choose-us-cards/why-choose-us-cards.cloudcannon.inputs.yml

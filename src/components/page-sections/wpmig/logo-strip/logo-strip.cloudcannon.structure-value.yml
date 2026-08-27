@@ -1,0 +1,24 @@
+label: Logo Strip
+icon: apps
+description: Centred eyebrow, heading and copy above a wrapping row of logos.
+value:
+  _component: page-sections/wpmig/logo-strip
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  images:
+    - image: ""
+      imageAlt: ""
+  eyebrowColor: "#117d6f"
+  headingColor: "#000000"
+  textColor: "#000000"
+preview:
+  text:
+    - Logo Strip
+  icon: apps
+picker_preview:
+  text: Logo Strip
+  subtext: Centred eyebrow, heading and copy above a wrapping row of logos.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/logo-strip/logo-strip.cloudcannon.inputs.yml
