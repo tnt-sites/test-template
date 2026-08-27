@@ -7,7 +7,7 @@ title: Cavities & Fillings Austin
 description: ""
 canonical: /cavities-fillings/
 pageSections:
-  - _component: page-sections/wpmig/page-banner-c
+  - _component: page-sections/wpmig/page-hero
     id: ""
     heading: Cavities &amp; Fillings Austin
     subheading: Top Cosmetic Dentists Serving the Austin Community
