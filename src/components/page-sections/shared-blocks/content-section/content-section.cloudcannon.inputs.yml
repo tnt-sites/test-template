@@ -214,15 +214,6 @@ _structures:
           alt: ""
           side: right
         _inputs:
-          type:
-            type: select
-            comment: Which kind of media rail this is.
-            options:
-              values: &content_section_media_types
-                - id: image
-                  name: Image
-                - id: embed
-                  name: Booking form
           source:
             type: image
             label: Image
@@ -247,11 +238,6 @@ _structures:
             text: ""
             link: ""
         _inputs:
-          type:
-            type: select
-            comment: Which kind of media rail this is.
-            options:
-              values: *content_section_media_types
           url:
             type: url
             label: Form URL
