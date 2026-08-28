@@ -11,6 +11,7 @@ const pageSchema = z.object({
     .array(z.any())
     .nullish()
     .transform((v) => v ?? []),
+  hideFooterContact: z.boolean().optional(),
 });
 
 const docsPageSchema = z.object({

@@ -5,6 +5,7 @@
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
 import Button from "@core-elements/button/Button.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 const {
   eyebrow = "",
   heading = "",
@@ -35,12 +36,20 @@ const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
 const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#000000";
 const hoverColorValue = hoverColorHex || hoverColor || "#000000";
+/* The photo is painted with `background-image` on the panel itself rather than
+   an <img>, so it goes through backgroundImageCss/`.bg-layers` — the same
+   optimiser the Image component uses. Position matches the old `50% 100%`. */
+const bgImage = await backgroundImageCss({
+  source: image,
+  positionVertical: "bottom",
+  positionHorizontal: "center",
+});
 ---
 <div class="appointment-cta" id={id || undefined} style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--btntx:${buttonTextColorValue};--c6:${hoverColorValue}`} {...rest}>
   <div class="ac-box">
     <div class="ac-box2">
       <div class="ac-box3">
-        <div class="ac-box4" style={image ? `background-image:url("${image}")` : undefined}>
+        <div class="ac-box4 bg-layers" style={bgImage.style || undefined}>
           <div class="ac-box5">
             <div class="ac-box6">
               <div class="ac-box7">
@@ -124,9 +133,6 @@ const hoverColorValue = hoverColorHex || hoverColor || "#000000";
   }
 
   .ac-box4 {
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 6px;
     box-sizing: border-box;
     display: flex;

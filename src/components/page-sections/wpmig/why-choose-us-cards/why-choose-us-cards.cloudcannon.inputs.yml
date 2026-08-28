@@ -97,9 +97,17 @@ _structures:
   office_introtem:
     values:
       - value:
+          image: ""
           title: ""
           text: ""
         _inputs:
+          image:
+            type: image
+            comment: Photo for this card. Painted as the tile background under the scrim, so it needs no alt text.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
           title:
             type: text
           text:

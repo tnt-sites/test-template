@@ -9,6 +9,15 @@ _inputs:
     comment: Optional rail beside the content — a photo, or the booking form.
     options:
       structures: _structures.content_section_media
+  align:
+    type: select
+    comment: Centre the eyebrow and heading over the column. Left-aligned when blank.
+    options:
+      values:
+      - id: ''
+        name: Left
+      - id: center
+        name: Centered
   backgroundColor:
     type: color
   eyebrowColor:

@@ -5,6 +5,7 @@
  * in a modal <dialog>. Right: eyebrow, heading, intro, and a list of services,
  * each with its icon.
  */
+import Image from "@core-elements/image/Image.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import whitening from "./icons/whitening.svg?raw";
 import detox from "./icons/detox.svg?raw";
@@ -64,7 +65,18 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
 >
   <div class="vsl-inner">
     <div class="vsl-media">
-      {poster && <img class="vsl-poster" src={poster} alt="" loading="lazy" />}
+      {
+        poster && (
+          <Image
+            class="vsl-poster"
+            source={poster}
+            alt=""
+            widths={[600, 900, 1200]}
+            sizes="(min-width: 900px) 50vw, 100vw"
+            editable={false}
+          />
+        )
+      }
       {
         videoSource && (
           <button type="button" class="vsl-play" data-vsl-open={uid} aria-label="Play video">
@@ -168,8 +180,16 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
     display: block;
     height: 100%;
     inset: 0;
-    object-fit: cover;
+    overflow: hidden;
     position: absolute;
+    width: 100%;
+  }
+
+  /* The <img> is rendered inside the Image component, so it sits outside this
+     file's scope — reach it globally to fill the poster frame. */
+  :global(.vsl-poster img) {
+    height: 100%;
+    object-fit: cover;
     width: 100%;
   }
 

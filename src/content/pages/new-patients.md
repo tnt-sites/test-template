@@ -53,14 +53,38 @@ pageSections:
         html: GET IN TOUCH
       - type: heading
         html: Schedule Your First Visit To<br>Toothbar
-      - type: cards
-        items:
-          - text: First Name
-          - text: Last Name
-      - type: cards
-        items:
-          - text: Phone Number
-          - text: Email
+      - type: form
+        action: ""
+        submitText: Send
+        subject: New Patients - Appointment Request
+        redirect: ""
+        fields:
+          - name: first_name
+            label: First Name
+            type: text
+            width: half
+            required: true
+          - name: last_name
+            label: Last Name
+            type: text
+            width: half
+            required: true
+          - name: phone
+            label: Phone Number
+            type: tel
+            width: half
+            required: true
+          - name: email
+            label: Email Address
+            type: email
+            width: half
+            required: true
+          - name: message
+            label: Your Message
+            type: textarea
+            width: full
+            required: false
+    align: center
     eyebrowColor: "#117d6f"
     headingColor: "#000000"
     textColor: "#000000"

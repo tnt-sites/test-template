@@ -5,6 +5,7 @@
  * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
  */
 import Button from "@core-elements/button/Button.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 const {
   items = [],
   textColor = "#000000",
@@ -31,13 +32,26 @@ const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColo
 const hoverColor2Value = hoverColor2Hex || hoverColor2 || "#e087ed";
 const hoverBackgroundColor2Value = hoverBackgroundColor2Hex || hoverBackgroundColor2 || "#ffffff";
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
+/* The portrait is painted with `background-image` on the tile itself rather
+   than an <img>, so it goes through backgroundImageCss/`.bg-layers` — the same
+   optimiser the Image component uses. Position matches the old `50% 0%`. */
+const cards = await Promise.all(
+  list.map(async (it) => ({
+    ...it,
+    bg: await backgroundImageCss({
+      source: it.image,
+      positionVertical: "top",
+      positionHorizontal: "center",
+    }),
+  }))
+);
 ---
 <section class="doctor-cards" id={id || undefined} style={`--tx:${textColorValue};--tt:${titleColorValue};--c3:${hoverColorValue};--c4:${hoverBackgroundColorValue};--c5:${hoverColor2Value};--c6:${hoverBackgroundColor2Value}`} {...rest}>
   <div class="dc-box">
     <div class="dc-grid">
-      {list.map((it) => (
+      {cards.map((it) => (
         <div class="dc-box2">
-          <div class="dc-box3" style={it.image ? `background-image:url("${it.image}")` : undefined}>
+          <div class="dc-box3 bg-layers" style={it.bg.style || undefined}>
             <div class="dc-box4">
               <div class="dc-box5">
                 <div class="dc-box6">
@@ -136,9 +150,6 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
 
   .dc-box3 {
     align-self: stretch;
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 6px;
     box-sizing: border-box;
     display: flex;

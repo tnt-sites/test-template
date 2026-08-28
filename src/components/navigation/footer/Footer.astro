@@ -14,6 +14,7 @@ const {
   formTitle = "Contact Toothbar",
   formEmbedUrl = "",
   mapEmbedUrl = "",
+  hideContact = false,
   addressCardTitle = "Our Address:",
   officeHoursTitle = "Working Hours:",
   phoneCardTitle = "Phone Number:",
@@ -69,7 +70,8 @@ const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
 
 <footer class="footer" {...htmlAttributes}>
   {
-    (formSrc || mapSrc) && (
+    !hideContact &&
+      (formSrc || mapSrc) && (
       <CustomSection
         class="footer-contact"
         maxContentWidth="2xl"

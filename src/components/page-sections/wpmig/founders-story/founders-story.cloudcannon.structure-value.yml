@@ -4,6 +4,7 @@ description: Eyebrow, heading and long-form copy telling the practice's story.
 value:
   _component: page-sections/wpmig/founders-story
   id: ""
+  backgroundImage: /wp-content/uploads/2023/04/Toothbar-5.jpg
   eyebrow: ""
   heading: ""
   text: ""

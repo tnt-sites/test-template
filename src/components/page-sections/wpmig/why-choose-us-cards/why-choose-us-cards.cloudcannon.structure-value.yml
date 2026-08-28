@@ -5,7 +5,8 @@ value:
   _component: page-sections/wpmig/why-choose-us-cards
   id: ""
   items:
-    - title: ""
+    - image: ""
+      title: ""
       text: ""
   backgroundColor: var(--color-brand)
   backgroundColorHex: ""

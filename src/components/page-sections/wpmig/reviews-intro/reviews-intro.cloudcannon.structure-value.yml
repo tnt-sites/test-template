@@ -4,6 +4,7 @@ description: Eyebrow, heading and copy introducing patient reviews.
 value:
   _component: page-sections/wpmig/reviews-intro
   id: ""
+  backgroundImage: /wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg
   eyebrow: ""
   heading: ""
   text: ""

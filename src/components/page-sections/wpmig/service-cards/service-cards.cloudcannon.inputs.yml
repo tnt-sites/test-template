@@ -187,10 +187,18 @@ _structures:
   service_cards_item:
     values:
       - value:
+          image: ""
           link: ""
           title: ""
           text: ""
         _inputs:
+          image:
+            type: image
+            comment: Photo for this card. Painted as the tile background, so it needs no alt text.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
           link:
             type: url
           title:

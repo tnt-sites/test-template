@@ -17,6 +17,7 @@ type Props = {
     image?: string;
     canonical?: string;
     pageSections?: any[];
+    hideFooterContact?: boolean;
   };
   title?: string;
   description?: string;
@@ -62,6 +63,8 @@ const navOffices =
     ? (mainNav as any).offices
     : (siteInfo as any)?.offices;
 const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
+// Pages that carry their own contact block hide the footer's duplicate.
+const hideFooterContact = frontmatter?.hideFooterContact === true;
 ---
 
 <Layout
@@ -87,6 +90,7 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
     siteName={footerSiteName}
     offices={footerOffices}
     socials={footerSocials}
+    hideContact={hideFooterContact}
     data-fixed-tabs-active={hasActiveFixedTabs ? "true" : undefined}
   />
   <FixedTabs {...fixedTabs} />

@@ -7,6 +7,7 @@
  * which differed only in default image and a few rounding artefacts.
  */
 import Icon from "@core-elements/icon/Icon.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 const {
   heading = "",
   subheading = "",
@@ -30,14 +31,40 @@ const headingColorValue = headingColorHex || headingColor || "#ffffff";
 const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#117d6f";
 
 const hasButton = showButton && Boolean(buttonText);
+
+/* The banner photo stays a `background-image` on the element that holds the
+   heading — an absolutely-positioned <img> layer is invisible to the ancestor
+   walk WAVE/axe use, which reports false contrast errors on this white-on-photo
+   text. `.bg-layers` + backgroundImageCss run it through the same optimiser the
+   Image component uses. Position matches the old `50% 50%`. */
+const bgImage = await backgroundImageCss({
+  source: backgroundImage,
+  positionVertical: "center",
+  positionHorizontal: "center",
+  priority: true,
+});
+
+const heroStyle = [
+  `--bg:${backgroundColorValue}`,
+  `--hd:${headingColorValue}`,
+  `--c3:${hoverBackgroundColorValue}`,
+  bgImage.style,
+]
+  .filter(Boolean)
+  .join(";");
 ---
 
-<div
-  class="page-hero"
-  id={id || undefined}
-  style={`--bg:${backgroundColorValue};--hd:${headingColorValue};--c3:${hoverBackgroundColorValue}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
-  {...rest}
->
+{
+  bgImage.preload && (
+    <link
+      rel="preload"
+      as="image"
+      href={bgImage.preload.href}
+      imagesrcset={bgImage.preload.imagesrcset}
+    />
+  )
+}
+<div class="page-hero bg-layers" id={id || undefined} style={heroStyle} {...rest}>
   {backgroundImage && <div class="ph-overlay" aria-hidden="true" />}
   <div class="ph-inner">
     <div class="ph-heading-wrap">
@@ -73,13 +100,12 @@ const hasButton = showButton && Boolean(buttonText);
   </div>
 </div>
 <style>
+  /* Background image/position/repeat/size come from the shared `.bg-layers`
+     rule (src/styles/base/_background-image.pcss) — do not redeclare them here,
+     these unlayered styles would override it. */
   .page-hero {
     align-items: stretch;
     background-color: var(--bg);
-    background-image: var(--bgimg, none);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
@@ -253,7 +279,7 @@ const hasButton = showButton && Boolean(buttonText);
     line-height: 0;
     position: absolute;
     right: 0;
-    transform: rotate(180deg);
+    transform: rotate(180deg) scaleX(-1);
     z-index: 1;
   }
 

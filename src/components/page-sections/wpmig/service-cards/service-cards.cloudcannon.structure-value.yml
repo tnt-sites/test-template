@@ -5,7 +5,8 @@ value:
   _component: page-sections/wpmig/service-cards
   id: ""
   items:
-    - link: ""
+    - image: ""
+      link: ""
       title: ""
       text: ""
   backgroundColor: "#ffffff"

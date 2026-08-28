@@ -5,6 +5,7 @@
  * index.html by wp-migrator, then rebuilt by hand.
  */
 import Icon from "@core-elements/icon/Icon.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 const {
   heading = "",
   backgroundImage = "",
@@ -28,13 +29,32 @@ const {
 const headingColorValue = headingColorHex || headingColor || "#ffffff";
 
 const uid = `vh-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`;
+
+/* The hero photo stays a `background-image` on the element that holds the
+   heading — an absolutely-positioned <img> layer is invisible to the ancestor
+   walk WAVE/axe use, which reports false contrast errors on this white-on-photo
+   text. `.bg-layers` + backgroundImageCss run it through the same optimiser the
+   Image component uses. Position matches the old `50% 50%`. */
+const bgImage = await backgroundImageCss({
+  source: backgroundImage,
+  positionVertical: "center",
+  positionHorizontal: "center",
+  priority: true,
+});
+
+const heroStyle = [`--hd:${headingColorValue}`, bgImage.style].filter(Boolean).join(";");
 ---
-<section
-  class="video-hero"
-  id={id || undefined}
-  style={`--hd:${headingColorValue};${backgroundImage ? `background-image:url("${backgroundImage}")` : ""}`}
-  {...rest}
->
+{
+  bgImage.preload && (
+    <link
+      rel="preload"
+      as="image"
+      href={bgImage.preload.href}
+      imagesrcset={bgImage.preload.imagesrcset}
+    />
+  )
+}
+<section class="video-hero bg-layers" id={id || undefined} style={heroStyle} {...rest}>
   <div class="vh-overlay" aria-hidden="true"></div>
   <div class="vh-inner">
     {heading && <h2 class="vh-heading" set:html={heading} />}
@@ -90,10 +110,11 @@ const uid = `vh-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`
 }
 
 <style>
+  /* Background image/position/repeat/size come from the shared `.bg-layers`
+     rule (src/styles/base/_background-image.pcss) — do not redeclare them here,
+     these unlayered styles would override it. */
   .video-hero {
     background-color: #1a1a1a;
-    background-position: 50% 50%;
-    background-size: cover;
     box-sizing: border-box;
     font-family: Montserrat, sans-serif;
     position: relative;

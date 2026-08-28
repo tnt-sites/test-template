@@ -4,6 +4,8 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
+
 const {
   eyebrow = "",
   heading = "",
@@ -27,8 +29,36 @@ const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
 const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
 const overlayColorValue = overlayColorHex || overlayColor || "rgba(36, 215, 195, 0.29)";
+
+/* The banner photo stays a `background-image` on the element that holds the
+   heading — an absolutely-positioned <img> layer is invisible to the ancestor
+   walk WAVE/axe use, which reports false contrast errors on text over a photo.
+   `.bg-layers` + backgroundImageCss run it through the same optimiser the Image
+   component uses. `backgroundPosition` is still a raw CSS position pair, so it
+   is split back into the two axes backgroundImageCss takes. */
+const [positionHorizontal = "center", positionVertical = "center"] = String(
+  backgroundPosition || "50% 50%"
+)
+  .trim()
+  .split(/\s+/);
+
+const bgImage = await backgroundImageCss({
+  source: backgroundImage,
+  positionHorizontal,
+  positionVertical,
+});
+
+const headingStyle = [
+  `--eb:${eyebrowColorValue}`,
+  `--hd:${headingColorValue}`,
+  `--tx:${textColorValue}`,
+  `--overlay:${overlayColorValue}`,
+  bgImage.style,
+]
+  .filter(Boolean)
+  .join(";");
 ---
-<div class="doctors-heading" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--bgpos:${backgroundPosition};--overlay:${overlayColorValue}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+<div class="doctors-heading bg-layers" id={id || undefined} style={headingStyle} {...rest}>
   {backgroundImage && <div class="dh-overlay" aria-hidden="true"></div>}
   <div class="dh-box">
     <div class="dh-box2">
@@ -56,12 +86,11 @@ const overlayColorValue = overlayColorHex || overlayColor || "rgba(36, 215, 195,
   </div>
 </div>
 <style>
+  /* Background image/position/repeat/size come from the shared `.bg-layers`
+     rule (src/styles/base/_background-image.pcss) — do not redeclare them here,
+     these unlayered styles would override it. */
   .doctors-heading {
     background-color: var(--bg, transparent);
-    background-image: var(--bgimg, none);
-    background-position: var(--bgpos);
-    background-repeat: no-repeat;
-    background-size: cover;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

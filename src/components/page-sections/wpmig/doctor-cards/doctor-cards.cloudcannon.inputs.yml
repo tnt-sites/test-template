@@ -187,11 +187,19 @@ _structures:
   doctor_cards_item:
     values:
       - value:
+          image: ""
           buttonText: ""
           buttonLink: ""
           title: ""
           text: ""
         _inputs:
+          image:
+            type: image
+            comment: Portrait for this card. Painted as the tile background, so it needs no alt text.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
           buttonText:
             type: text
           buttonLink:

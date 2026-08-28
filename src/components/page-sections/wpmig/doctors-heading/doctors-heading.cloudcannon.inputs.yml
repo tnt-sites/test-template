@@ -97,6 +97,10 @@ _inputs:
     comment: Optional custom hex that overrides the textColor selection.
   backgroundImage:
     type: image
+    options:
+      paths:
+        uploads: src/assets/images
+        static: ""
   backgroundPosition:
     type: text
   overlayColor:

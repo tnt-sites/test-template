@@ -21,6 +21,10 @@ _inputs:
         equals: true
   backgroundImage:
     type: image
+    options:
+      paths:
+        uploads: src/assets/images
+        static: ""
   backgroundColor:
     type: select
     comment: Background colour, from the site palette.

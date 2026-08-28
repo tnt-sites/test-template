@@ -11,12 +11,15 @@
  * different length. Modelling that as a `blocks` array plus a `media` rail lets
  * one component render all of them.
  */
+import Image from "@core-elements/image/Image.astro";
 import SidebarForm from "@components/page-sections/shared-blocks/sidebar-form/SidebarForm.astro";
 import ReviewsWidget from "@components/page-sections/shared-blocks/reviews-widget/ReviewsWidget.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 
 const {
   blocks = [],
   media = null,
+  align = "",
   backgroundColor = "",
   eyebrowColor = "",
   headingColor = "",
@@ -29,6 +32,7 @@ const {
 const styleVars = [
   backgroundColor ? `--cs-bg:${backgroundColor}` : "",
   eyebrowColor ? `--cs-eb:${eyebrowColor}` : "",
+  eyebrowColor ? `--cs-icon:${eyebrowColor}` : "",
   headingColor ? `--cs-hd:${headingColor}` : "",
   textColor ? `--cs-tx:${textColor}` : "",
 ]
@@ -36,12 +40,31 @@ const styleVars = [
   .join(";");
 
 const hasMedia = media && (media.source || media.url);
+
+/**
+ * The shape every migrated "request an appointment" form used: a two-up run of
+ * name / contact fields over a full-width message box. A `form` block that
+ * states no fields of its own gets these.
+ */
+const defaultFormFields = [
+  { name: "first_name", label: "First Name", type: "text", width: "half", required: true },
+  { name: "last_name", label: "Last Name", type: "text", width: "half", required: true },
+  { name: "phone", label: "Phone Number", type: "tel", width: "half", required: true },
+  { name: "email", label: "Email Address", type: "email", width: "half", required: true },
+  { name: "message", label: "Your Message", type: "textarea", width: "full", required: false },
+];
 ---
 
 <section
   class:list={[
     "content-section",
-    { "has-media": hasMedia, "has-bg": !!backgroundColor, "media-left": media?.side === "left" },
+    {
+      "has-media": hasMedia,
+      "has-map": media?.type === "map",
+      "has-bg": !!backgroundColor,
+      "media-left": media?.side === "left",
+      "is-centered": align === "center",
+    },
   ]}
   id={id || undefined}
   style={styleVars || undefined}
@@ -50,7 +73,7 @@ const hasMedia = media && (media.source || media.url);
   <div class="cs-inner">
     <div class="cs-main">
       {
-        blocks.map((block: any) => {
+        blocks.map((block: any, blockIndex: number) => {
           switch (block?.type) {
             case "eyebrow":
               return (
@@ -66,11 +89,76 @@ const hasMedia = media && (media.source || media.url);
             case "prose":
             case "list":
               return <div class="cs-prose" set:html={block.html ?? ""} />;
+            case "embed":
+              return block.url ? (
+                <iframe
+                  class="cs-embed"
+                  src={block.url}
+                  title={block.title || "Form"}
+                  loading="lazy"
+                  allow="geolocation; microphone; camera; fullscreen; payment"
+                />
+              ) : null;
+            case "form": {
+              const fields = Array.isArray(block.fields) && block.fields.length
+                ? block.fields
+                : defaultFormFields;
+              return (
+                <form class="cs-form" action={block.action || "#"} method={block.method || "post"}>
+                  <div class="cs-form-fields">
+                    {fields.map((field: any) => {
+                      const label = field?.label ?? "";
+                      const name = field?.name || label.toLowerCase().replace(/[^a-z0-9]+/g, "_");
+                      const isArea = field?.type === "textarea";
+                      return (
+                        <p
+                          class:list={[
+                            "cs-field",
+                            { "cs-field-full": isArea || field?.width === "full" },
+                          ]}
+                        >
+                          {isArea ? (
+                            <textarea
+                              name={name}
+                              placeholder={label}
+                              aria-label={label}
+                              required={!!field?.required}
+                              rows={4}
+                            />
+                          ) : (
+                            <input
+                              type={field?.type || "text"}
+                              name={name}
+                              placeholder={label}
+                              aria-label={label}
+                              required={!!field?.required}
+                            />
+                          )}
+                        </p>
+                      );
+                    })}
+                  </div>
+                  <div class="cs-form-actions">
+                    <button class="cs-form-submit" type="submit">
+                      {block.submitText || "Send"}
+                    </button>
+                  </div>
+                  {block.subject && <input type="hidden" name="_subject" value={block.subject} />}
+                  {block.redirect && <input type="hidden" name="_redirect" value={block.redirect} />}
+                </form>
+              );
+            }
             case "reviews":
               return <ReviewsWidget widgetId={block.widgetId} />;
             case "image":
               return block.source ? (
-                <img class="cs-image" src={block.source} alt={block.alt || ""} loading="lazy" />
+                <Image
+                  class="cs-image"
+                  source={block.source}
+                  alt={block.alt || ""}
+                  data-prop-src={`blocks.${blockIndex}.source`}
+                  data-prop-alt={`blocks.${blockIndex}.alt`}
+                />
               ) : null;
             case "buttons":
               return Array.isArray(block.buttons) && block.buttons.length ? (
@@ -88,7 +176,12 @@ const hasMedia = media && (media.source || media.url);
               return Array.isArray(block.items) && block.items.length ? (
                 <div class="cs-cards">
                   {block.items.map((card: any) => (
-                    <div class="cs-card">
+                    <div class:list={["cs-card", { "has-icon": !!card.icon }]}>
+                      {card.icon && (
+                        <div class="cs-card-icon" aria-hidden="true">
+                          <Icon name={card.icon} size="4xl" />
+                        </div>
+                      )}
                       {card.title && <h3 class="cs-card-title" set:html={card.title} />}
                       {card.text && <div class="cs-card-text" set:html={card.text} />}
                       {Array.isArray(card.buttons) &&
@@ -112,9 +205,20 @@ const hasMedia = media && (media.source || media.url);
 
     {
       hasMedia &&
-        (media.type === "embed" && media.url ? (
+        (media.type === "map" && media.url ? (
+          <div class="cs-map">
+            <iframe
+              src={media.url}
+              title={media.title || "Office location map"}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            />
+          </div>
+        ) : media.type === "embed" && media.url ? (
           <SidebarForm
             logo={media.logo}
+            logoAlt={media.logoAlt || undefined}
             heading={media.title}
             url={media.url}
             buttonText={media.button?.text}
@@ -156,6 +260,14 @@ const hasMedia = media && (media.source || media.url);
 
       &.media-left .cs-inner {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      }
+
+      &.has-map .cs-inner {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      }
+
+      &.has-map.media-left .cs-inner {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
       }
 
       &.media-left .cs-main {
@@ -228,6 +340,15 @@ const hasMedia = media && (media.source || media.url);
         }
       }
 
+      /* A third-party form embedded in the content column itself. */
+      .cs-embed {
+        border: 0;
+        display: block;
+        margin: var(--spacing-lg, 1.5rem) 0 0;
+        min-height: 720px;
+        width: 100%;
+      }
+
       .cs-image {
         border-radius: var(--radius-md, 8px);
         display: block;
@@ -260,6 +381,108 @@ const hasMedia = media && (media.source || media.url);
         }
       }
 
+      /* A section that stands on its own — no media rail — can centre its
+         header over the column, the way the appointment forms do. */
+      &.is-centered .cs-main {
+        text-align: center;
+      }
+
+      /* Inline-block so the block centres on the column but the rule below it
+         still measures the text rather than the whole width. */
+      &.is-centered .cs-eyebrow {
+        display: inline-block;
+        margin-bottom: var(--spacing-xs, 0.5rem);
+        padding-bottom: var(--spacing-xs, 0.5rem);
+        position: relative;
+      }
+
+      /* Centred, the rule reads better as an underline than a leading dash. */
+      &.is-centered .cs-eyebrow-rule {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+
+      &.is-centered .cs-heading {
+        margin-bottom: var(--spacing-xl, 2rem);
+        text-transform: uppercase;
+      }
+
+      /* The appointment form: fields on a tinted plate, ruled underneath. */
+      .cs-form {
+        margin-inline: auto;
+        max-width: 46rem;
+        text-align: start;
+      }
+
+      .cs-form-fields {
+        display: grid;
+        gap: var(--spacing-md, 1rem);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .cs-field {
+        margin: 0;
+        min-width: 0;
+      }
+
+      .cs-field-full {
+        grid-column: 1 / -1;
+      }
+
+      .cs-form :where(input, textarea) {
+        background: var(--color-bg-subtle, #f8f8f8);
+        border: 0;
+        border-bottom: 2px solid var(--cs-eb);
+        border-radius: 0;
+        color: var(--cs-tx);
+        display: block;
+        font: inherit;
+        padding: 0.9em 1em;
+        width: 100%;
+      }
+
+      .cs-form :where(textarea) {
+        min-height: 8rem;
+        resize: vertical;
+      }
+
+      .cs-form :where(input, textarea)::placeholder {
+        color: var(--color-text-muted, #8a8a8a);
+      }
+
+      .cs-form :where(input, textarea):focus {
+        box-shadow: 0 2px 0 0 var(--cs-eb);
+        outline: none;
+      }
+
+      .cs-form-actions {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: var(--spacing-lg, 1.5rem);
+      }
+
+      .cs-form-submit {
+        background: transparent;
+        border: 1px solid var(--color-link, #cc3366);
+        color: var(--color-link, #cc3366);
+        cursor: pointer;
+        font: inherit;
+        letter-spacing: 0.12em;
+        min-width: 20rem;
+        padding: 0.9em 2em;
+        text-transform: uppercase;
+        transition:
+          background 0.2s ease,
+          color 0.2s ease;
+
+        &:hover {
+          background: var(--color-link, #cc3366);
+          color: #fff;
+        }
+      }
+
       .cs-cards {
         display: grid;
         gap: var(--spacing-lg, 1.5rem);
@@ -271,6 +494,60 @@ const hasMedia = media && (media.source || media.url);
         background: var(--color-bg-subtle, #f6f7f8);
         border-radius: var(--radius-md, 8px);
         padding: var(--spacing-lg, 1.5rem);
+      }
+
+      /* An icon card stands on its own plate, centred under its glyph. */
+      .cs-card.has-icon {
+        background: #fff;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
+        display: grid;
+        gap: var(--spacing-sm, 0.75rem);
+        justify-items: center;
+        padding: var(--spacing-xl, 2.25rem) var(--spacing-lg, 1.5rem);
+        text-align: center;
+      }
+
+      .cs-card-icon {
+        color: var(--cs-icon, #117d6f);
+        line-height: 0;
+      }
+
+      .cs-card-icon :where(svg) {
+        height: 3.5rem;
+        stroke-width: 1.6;
+        width: 3.5rem;
+      }
+
+      .cs-card.has-icon .cs-card-title {
+        font-size: var(--font-size-lg, 1.15rem);
+        letter-spacing: 0.04em;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .cs-card.has-icon .cs-card-text {
+        margin: 0;
+      }
+
+      /* The map rides in the media rail opposite the form. */
+      .cs-map {
+        /* Sits at the top of the rail rather than stretching beside a tall
+           form, and follows the reader down as they fill the form in. */
+        align-self: start;
+        border-radius: var(--radius-md, 8px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        min-width: 0;
+        overflow: hidden;
+        position: sticky;
+        top: var(--spacing-lg, 1.5rem);
+      }
+
+      .cs-map iframe {
+        border: 0;
+        display: block;
+        height: 100%;
+        min-height: 620px;
+        width: 100%;
       }
 
       .cs-card-title {
@@ -314,6 +591,19 @@ const hasMedia = media && (media.source || media.url);
         }
         .cs-media {
           min-height: 220px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .cs-form-fields {
+          grid-template-columns: 1fr;
+        }
+        .cs-form-actions {
+          justify-content: stretch;
+        }
+        .cs-form-submit {
+          min-width: 0;
+          width: 100%;
         }
       }
     }

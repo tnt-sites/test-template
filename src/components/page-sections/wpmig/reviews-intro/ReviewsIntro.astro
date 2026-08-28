@@ -6,11 +6,15 @@
  * The homepage reviews strip: renders the Google reviews slider under the text.
  */
 import ReviewsWidget from "@components/page-sections/shared-blocks/reviews-widget/ReviewsWidget.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 
 const {
   eyebrow = "",
   heading = "",
   text = "",
+  /* Was hard-coded in this file's CSS, so editors had no way to change it. The
+     default keeps existing content rendering the same photo. */
+  backgroundImage = "/wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg",
   eyebrowColor = "",
   eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
@@ -25,11 +29,20 @@ const {
 const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
 const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
+
+/* The photo is painted with `background-image` on the panel rather than an
+   <img>, so it goes through backgroundImageCss/`.bg-layers` — the same optimiser
+   the Image component uses. Position matches the old `50% 100%`. */
+const bgImage = await backgroundImageCss({
+  source: backgroundImage,
+  positionVertical: "bottom",
+  positionHorizontal: "center",
+});
 ---
 <section class="reviews-intro" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="ri-box">
     <div class="ri-box2">
-      <div class="ri-box3">
+      <div class="ri-box3 bg-layers" style={bgImage.style || undefined}>
         <div class="ri-box4">
           <div class="ri-box5">
             <div class="ri-box6">
@@ -85,12 +98,11 @@ const textColorValue = textColorHex || textColor || "#000000";
     position: relative;
   }
 
+  /* Background image/position/repeat/size come from the shared `.bg-layers`
+     rule (src/styles/base/_background-image.pcss) — do not redeclare them here,
+     these unlayered styles would override it. */
   .ri-box3 {
     align-self: flex-start;
-    background-image: url("/wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg");
-    background-position: 50% 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 6px;
     box-sizing: border-box;
     display: flex;

@@ -4,6 +4,7 @@ description: Video poster on one side; eyebrow, heading, intro and an icon-led s
 value:
   _component: page-sections/wpmig/video-service-list
   id: ""
+  poster: ""
   eyebrow: ""
   heading: ""
   text: ""

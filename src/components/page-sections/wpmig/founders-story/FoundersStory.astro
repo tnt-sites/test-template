@@ -5,12 +5,16 @@
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
 import Button from "@core-elements/button/Button.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
 const {
   eyebrow = "",
   heading = "",
   text = "",
   buttonText = "",
   buttonLink = "",
+  /* Was hard-coded in this file's CSS, so editors had no way to change it. The
+     default keeps existing content rendering the same photo. */
+  backgroundImage = "/wp-content/uploads/2023/04/Toothbar-5.jpg",
   eyebrowColor = "",
   eyebrowColorHex = "#117d6f",
   headingColor = "#000000",
@@ -28,10 +32,19 @@ const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
 const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
 const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#000000";
+
+/* The photo is painted with `background-image` on its own layer rather than an
+   <img>, so it goes through backgroundImageCss/`.bg-layers` — the same optimiser
+   the Image component uses. Position matches the old `50% 50%`. */
+const bgImage = await backgroundImageCss({
+  source: backgroundImage,
+  positionVertical: "center",
+  positionHorizontal: "center",
+});
 ---
 <div class="founders-story" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--btntx:${buttonTextColorValue}`} {...rest}>
   <div class="fs-box">
-    <div class="fs-decor" aria-hidden="true"></div>
+    <div class="fs-decor bg-layers" style={bgImage.style || undefined} aria-hidden="true" />
     <div class="fs-box2">
       <div class="fs-box3">
         {eyebrow && <p class="fs-text">{eyebrow}</p>}
@@ -98,11 +111,10 @@ const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#000000";
     width: 15px;
   }
 
+  /* Background image/position/repeat/size come from the shared `.bg-layers`
+     rule (src/styles/base/_background-image.pcss) — do not redeclare them here,
+     these unlayered styles would override it. */
   .fs-decor {
-    background-image: url("/wp-content/uploads/2023/04/Toothbar-5.jpg");
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;

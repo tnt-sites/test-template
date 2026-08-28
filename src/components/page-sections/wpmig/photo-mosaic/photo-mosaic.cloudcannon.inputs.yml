@@ -12,5 +12,9 @@ _structures:
         _inputs:
           image:
             type: image
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
           imageAlt:
             type: text

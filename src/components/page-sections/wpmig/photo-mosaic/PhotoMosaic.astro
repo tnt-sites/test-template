@@ -4,13 +4,19 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
  */
+import Image from "@core-elements/image/Image.astro";
+
 const {
   images = [],
   id,
   _component,
   ...rest
 } = Astro.props;
-const list = Array.isArray(images) ? images.filter(Boolean) : [];
+/* The original index is carried through the collage so the visual editor
+   writes back to the right `images` entry. */
+const list = (Array.isArray(images) ? images : [])
+  .map((item, index) => (item ? { ...item, index } : null))
+  .filter(Boolean);
 
 /* Baked-in collage layout: four equal columns whose tiles have fixed heights,
    so the photos crop into the staggered pattern instead of stacking at their
@@ -42,7 +48,15 @@ const cols = filled.filter((col) => col.items.length);
         {col.items.map(({ h, mh, item }) => (
           item.image && (
             <div class="pm-box" style={`--h:${h}px;--mh:${mh === undefined ? h : mh}px`} data-mobile-hidden={mh === 0 ? "" : undefined}>
-              <img class="pm-media" src={item.image} alt={item.imageAlt || ""} loading="lazy" />
+              <Image
+                class="pm-media"
+                source={item.image}
+                alt={item.imageAlt || ""}
+                widths={[400, 600, 800]}
+                sizes="(min-width: 768px) 25vw, 100vw"
+                data-prop-src={`images.${item.index}.image`}
+                data-prop-alt={`images.${item.index}.imageAlt`}
+              />
             </div>
           )
         ))}
@@ -87,6 +101,14 @@ const cols = filled.filter((col) => col.items.length);
     box-sizing: border-box;
     display: block;
     height: var(--mh);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  /* The <img> is rendered inside the Image component, so it sits outside this
+     file's scope — reach it globally to crop the photo to the tile height. */
+  :global(.pm-media img) {
+    height: 100%;
     object-fit: cover;
     object-position: center center;
     width: 100%;

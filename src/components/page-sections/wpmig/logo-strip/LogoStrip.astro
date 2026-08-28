@@ -5,6 +5,8 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, colours. Arrays: `images`.
  */
+import Image from "@core-elements/image/Image.astro";
+
 const {
   eyebrow = "",
   heading = "",
@@ -24,7 +26,11 @@ const {
 const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
 const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
-const list = Array.isArray(images) ? images.filter(Boolean) : [];
+/* The original index is kept so the visual editor writes back to the right
+   `images` entry. */
+const list = (Array.isArray(images) ? images : [])
+  .map((item, index) => (item ? { ...item, index } : null))
+  .filter(Boolean);
 ---
 
 <div
@@ -55,13 +61,14 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
         list.map((it) => (
           <div class="ls-box8">
             {it.image && (
-              <img
+              <Image
                 class="ls-media"
-                src={it.image}
+                source={it.image}
                 alt={it.imageAlt || ""}
-                loading="lazy"
-                width="164"
-                height="75"
+                widths={[164, 328]}
+                sizes="164px"
+                data-prop-src={`images.${it.index}.image`}
+                data-prop-alt={`images.${it.index}.imageAlt`}
               />
             )}
           </div>
@@ -187,11 +194,15 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
     text-align: center;
   }
 
+  /* Was a bare 164x75 <img>; the Image component's wrapper carries that cap so
+     the logo never outgrows its column. */
   .ls-media {
     box-sizing: border-box;
-    display: inline-block;
+    display: block;
     height: auto;
-    max-width: 100%;
+    margin-inline: auto;
+    max-width: min(164px, 100%);
+    width: 100%;
   }
 
   @media (min-width: 768px) {

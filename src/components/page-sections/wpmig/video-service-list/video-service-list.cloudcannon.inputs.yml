@@ -1,4 +1,11 @@
 _inputs:
+  poster:
+    type: image
+    comment: Still shown in the video frame before playback. Decorative — the play button carries the label.
+    options:
+      paths:
+        uploads: src/assets/images
+        static: ""
   eyebrow:
     type: text
   heading:

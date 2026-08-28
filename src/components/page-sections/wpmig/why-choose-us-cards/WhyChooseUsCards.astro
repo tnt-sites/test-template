@@ -4,6 +4,8 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
  */
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
+
 const {
   items = [],
   backgroundColor = "var(--color-brand)",
@@ -21,20 +23,30 @@ const backgroundColorValue = backgroundColorHex || backgroundColor || "#d8fffb";
 const titleColorValue = titleColorHex || titleColor || "#ffffff";
 const textColorValue = textColorHex || textColor || "#ffffff";
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
+/* The card photo is painted with `background-image` on its own layer, under the
+   `.wc-decor2` scrim, rather than an <img> — so it goes through
+   backgroundImageCss/`.bg-layers`, the same optimiser the Image component uses.
+   Position matches the old `50% 50%`. */
+const cards = await Promise.all(
+  list.map(async (it) => ({
+    ...it,
+    bg: await backgroundImageCss({
+      source: it.image,
+      positionVertical: "center",
+      positionHorizontal: "center",
+    }),
+  }))
+);
 ---
 <div class="why-choose-us-cards" id={id || undefined} style={`--bg:${backgroundColorValue};--tt:${titleColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="wc-grid">
-    {list.map((it) => (
+    {cards.map((it) => (
       <div class="wc-box">
         <div class="wc-box2">
           <div class="wc-box3">
             <div class="wc-box4">
               <div class="wc-box5">
-                <div
-                  class="wc-decor"
-                  style={it.image ? `background-image:url("${it.image}")` : undefined}
-                  aria-hidden="true"
-                ></div>
+                <div class="wc-decor bg-layers" style={it.bg.style || undefined} aria-hidden="true" />
                 <div class="wc-decor2" aria-hidden="true"></div>
               </div>
               <div class="wc-box6">
@@ -124,8 +136,6 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
   }
 
   .wc-decor {
-    background-position: 50% 50%;
-    background-size: cover;
     bottom: 0px;
     box-sizing: border-box;
     left: 0px;

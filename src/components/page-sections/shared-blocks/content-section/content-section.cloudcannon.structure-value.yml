@@ -3,263 +3,649 @@ icon: view_agenda
 description: A column of typed content blocks, with an optional photo or booking form beside it.
 value:
   _component: page-sections/shared-blocks/content-section
-  id: ""
+  id: ''
   blocks:
-    - type: eyebrow
-      html: ""
-    - type: heading
-      html: ""
-    - type: prose
-      html: ""
+  - type: eyebrow
+    html: ''
+  - type: heading
+    html: ''
+  - type: prose
+    html: ''
   media: null
-  backgroundColor: ""
-  eyebrowColor: "#117d6f"
-  headingColor: "#000000"
-  textColor: "#000000"
+  align: ''
+  backgroundColor: ''
+  eyebrowColor: '#117d6f'
+  headingColor: '#000000'
+  textColor: '#000000'
 preview:
   text:
-    - Content Section
+  - Content Section
   icon: view_agenda
 picker_preview:
   text: Content Section
   subtext: A column of typed content blocks, with an optional photo or booking form beside it.
 _inputs_from_glob:
-  - /src/components/page-sections/shared-blocks/content-section/content-section.cloudcannon.inputs.yml
+- /src/components/page-sections/shared-blocks/content-section/content-section.cloudcannon.inputs.yml
 _structures:
   content_section_block:
     id_key: type
     style: modal
     values:
-      - label: Eyebrow
-        icon: label
-        value:
-          type: eyebrow
-          html: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: &content_section_block_types
-                - id: eyebrow
-                  name: Eyebrow
-                - id: heading
-                  name: Heading
-                - id: subheading
-                  name: Subheading
-                - id: prose
-                  name: Prose
-                - id: list
-                  name: List
-                - id: image
-                  name: Image
-                - id: buttons
-                  name: Buttons
-                - id: cards
-                  name: Cards
-                - id: reviews
-                  name: Reviews
-          html:
-            type: html
-            label: Text
-      - label: Heading
-        icon: title
-        value:
-          type: heading
-          html: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          html:
-            type: html
-            label: Heading
-      - label: Subheading
-        icon: subtitles
-        value:
-          type: subheading
-          html: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          html:
-            type: html
-            label: Subheading
-      - label: Prose
-        icon: notes
-        value:
-          type: prose
-          html: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          html:
-            type: html
-            label: Content
-      - label: List
-        icon: format_list_bulleted
-        value:
-          type: list
-          html: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          html:
-            type: html
-            label: List
-      - label: Image
-        icon: image
-        value:
+    - label: Eyebrow
+      icon: label
+      value:
+        type: eyebrow
+        html: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        html:
+          type: html
+          label: Text
+    - label: Heading
+      icon: title
+      value:
+        type: heading
+        html: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        html:
+          type: html
+          label: Heading
+    - label: Subheading
+      icon: subtitles
+      value:
+        type: subheading
+        html: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        html:
+          type: html
+          label: Subheading
+    - label: Prose
+      icon: notes
+      value:
+        type: prose
+        html: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        html:
+          type: html
+          label: Content
+    - label: List
+      icon: format_list_bulleted
+      value:
+        type: list
+        html: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        html:
+          type: html
+          label: List
+    - label: Image
+      icon: image
+      value:
+        type: image
+        source: ''
+        alt: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        source:
           type: image
-          source: ""
-          alt: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          source:
-            type: image
-            label: Image
-          alt:
-            type: text
-            label: Alt text
-      - label: Buttons
-        icon: smart_button
-        value:
-          type: buttons
-          buttons:
-            - text: ""
-              link: ""
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          buttons:
-            type: array
-            options:
-              structures: _structures.content_section_button
-      - label: Cards
-        icon: grid_view
-        value:
-          type: cards
-          items:
-            - title: ""
-              text: ""
-              buttons: []
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-          items:
-            type: array
-            options:
-              structures: _structures.content_section_card
-      - label: Reviews
-        icon: reviews
-        description: The practice's Google reviews as a rotating slider.
-        value:
-          type: reviews
-        _inputs:
-          type:
-            type: select
-            comment: Which kind of block this is.
-            options:
-              values: *content_section_block_types
-
+          label: Image
+          options:
+            paths:
+              uploads: src/assets/images
+              static: ''
+        alt:
+          type: text
+          label: Alt text
+    - label: Buttons
+      icon: smart_button
+      value:
+        type: buttons
+        buttons:
+        - text: ''
+          link: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        buttons:
+          type: array
+          options:
+            structures: _structures.content_section_button
+    - label: Cards
+      icon: grid_view
+      value:
+        type: cards
+        items:
+        - title: ''
+          text: ''
+          buttons: []
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        items:
+          type: array
+          options:
+            structures: _structures.content_section_card
+    - label: Embed
+      icon: dynamic_form
+      description: A third-party form or widget embedded in the content column.
+      value:
+        type: embed
+        url: ''
+        title: ''
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        url:
+          type: url
+          label: Embed URL
+        title:
+          type: text
+          label: Title
+          comment: Accessible title for the embedded frame.
+    - label: Form
+      icon: contact_mail
+      description: An appointment request form rendered in the site's own styling.
+      value:
+        type: form
+        action: ''
+        submitText: Send
+        subject: ''
+        redirect: ''
+        fields:
+        - name: first_name
+          label: First Name
+          type: text
+          width: half
+          required: true
+        - name: last_name
+          label: Last Name
+          type: text
+          width: half
+          required: true
+        - name: phone
+          label: Phone Number
+          type: tel
+          width: half
+          required: true
+        - name: email
+          label: Email Address
+          type: email
+          width: half
+          required: true
+        - name: message
+          label: Your Message
+          type: textarea
+          width: full
+          required: false
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
+        action:
+          type: text
+          label: Form action URL
+          comment: Where the submission is posted. Leave blank and the form goes nowhere.
+        submitText:
+          type: text
+          label: Button text
+        subject:
+          type: text
+          label: Email subject
+          comment: Sent as the _subject hidden field.
+        redirect:
+          type: text
+          label: Redirect URL
+          comment: Sent as the _redirect hidden field — where the visitor lands after submitting.
+        fields:
+          type: array
+          label: Fields
+          comment: Leave empty to use the standard name / phone / email / message set.
+          options:
+            structures: _structures.content_section_form_field
+    - label: Reviews
+      icon: reviews
+      description: The practice's Google reviews as a rotating slider.
+      value:
+        type: reviews
+      _inputs:
+        type:
+          type: select
+          comment: Which kind of block this is.
+          options:
+            values:
+            - id: eyebrow
+              name: Eyebrow
+            - id: heading
+              name: Heading
+            - id: subheading
+              name: Subheading
+            - id: prose
+              name: Prose
+            - id: list
+              name: List
+            - id: image
+              name: Image
+            - id: buttons
+              name: Buttons
+            - id: cards
+              name: Cards
+            - id: embed
+              name: Embed
+            - id: form
+              name: Form
+            - id: reviews
+              name: Reviews
   content_section_button:
     values:
-      - value:
-          text: ""
-          link: ""
-        _inputs:
-          text:
-            type: text
-          link:
-            type: text
-
+    - value:
+        text: ''
+        link: ''
+      _inputs:
+        text:
+          type: text
+        link:
+          type: text
   content_section_card:
     values:
-      - value:
-          title: ""
-          text: ""
-          buttons: []
-        _inputs:
-          title:
-            type: html
-          text:
-            type: html
-          buttons:
-            type: array
-            options:
-              structures: _structures.content_section_button
+    - value:
+        icon: ''
+        title: ''
+        text: ''
+        buttons: []
+      _inputs:
+        icon:
+          type: text
+          label: Icon
+          comment: Name of an icon in src/icons, without the .svg (e.g. map, clock, phone). Leave blank for a plain card.
+        title:
+          type: html
+        text:
+          type: html
+        buttons:
+          type: array
+          options:
+            structures: _structures.content_section_button
+  content_section_form_field:
+    values:
+    - value:
+        name: ''
+        label: ''
+        type: text
+        width: half
+        required: false
+      _inputs:
+        name:
+          type: text
+          comment: The submitted field name. Derived from the label when blank.
+        label:
+          type: text
+          comment: Shown as the placeholder, and read out as the field's accessible name.
+        type:
+          type: select
+          options:
+            values:
+            - id: text
+              name: Text
+            - id: email
+              name: Email
+            - id: tel
+              name: Phone
+            - id: textarea
+              name: Message box
+        width:
+          type: select
+          comment: Half-width fields pair up; a message box always spans the row.
+          options:
+            values:
+            - id: half
+              name: Half
+            - id: full
+              name: Full
+        required:
+          type: switch
 
   content_section_media:
     id_key: type
     values:
-      - label: Image
-        icon: image
-        value:
+    - label: Image
+      icon: image
+      value:
+        type: image
+        source: ''
+        alt: ''
+        side: right
+      _inputs:
+        source:
           type: image
-          source: ""
-          alt: ""
-          side: right
-        _inputs:
-          source:
-            type: image
-            label: Image
-          alt:
-            type: text
-            label: Alt text
-          side:
-            type: select
-            options:
-              values:
-                - left
-                - right
-      - label: Booking form
-        icon: assignment
-        value:
-          type: embed
-          url: ""
-          title: ""
-          logo: ""
-          side: right
-          button:
-            text: ""
-            link: ""
-        _inputs:
-          url:
-            type: url
-            label: Form URL
-          title:
-            type: text
-            label: Heading
-          logo:
-            type: image
-          side:
-            type: select
-            options:
-              values:
-                - left
-                - right
-          button:
-            type: object
-            options:
-              structures: _structures.content_section_button
+          label: Image
+          options:
+            paths:
+              uploads: src/assets/images
+              static: ''
+        alt:
+          type: text
+          label: Alt text
+        side:
+          type: select
+          options:
+            values:
+            - left
+            - right
+    - label: Map
+      icon: map
+      value:
+        type: map
+        url: ''
+        title: ''
+        side: right
+      _inputs:
+        url:
+          type: url
+          label: Map embed URL
+        title:
+          type: text
+          label: Map title
+        side:
+          type: select
+          options:
+            values:
+            - left
+            - right
+    - label: Booking form
+      icon: assignment
+      value:
+        type: embed
+        url: ''
+        title: ''
+        logo: ''
+        logoAlt: ''
+        side: right
+        button:
+          text: ''
+          link: ''
+      _inputs:
+        url:
+          type: url
+          label: Form URL
+        title:
+          type: text
+          label: Heading
+        logo:
+          type: image
+          label: Logo
+          options:
+            paths:
+              uploads: src/assets/images
+              static: ''
+        logoAlt:
+          type: text
+          label: Logo alt text
+          comment: Describes the logo for screen readers. Defaults to the practice name when blank.
+        side:
+          type: select
+          options:
+            values:
+            - left
+            - right
+        button:
+          type: object
+          options:
+            structures: _structures.content_section_button

@@ -5,7 +5,8 @@ value:
   _component: page-sections/wpmig/doctor-cards
   id: ""
   items:
-    - buttonText: ""
+    - image: ""
+      buttonText: ""
       buttonLink: ""
       title: ""
       text: ""

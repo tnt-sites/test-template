@@ -1,4 +1,11 @@
 _inputs:
+  backgroundImage:
+    type: image
+    comment: Photo beside the story. Painted as the background, so it needs no alt text.
+    options:
+      paths:
+        uploads: src/assets/images
+        static: ""
   eyebrow:
     type: text
   heading:
