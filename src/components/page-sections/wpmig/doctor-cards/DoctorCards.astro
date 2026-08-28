@@ -234,6 +234,10 @@ const cards = await Promise.all(
   :global(.dc-btn) {
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #117d6f;
+    /* The transparent background above beats .button's layered rule (unlayered
+       CSS wins over @layer), so the inherited --color-text-on-brand white would
+       leave the label invisible. Match the border's brand teal instead. */
+    color: var(--color-brand);
     border-radius: 5px;
     box-sizing: border-box;
     display: inline-block;
