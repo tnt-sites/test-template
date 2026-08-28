@@ -1,10 +1,10 @@
 {
-  "colorBrand": "#d8fffb",
+  "colorBrand": "#117d6f",
   "colorBrandSecondary": "#007bff",
   "colorBrandTertiary": "#acbad5",
   "colorBrandSubtle": "#f6bb06",
   "colorBrandOn": "",
-  "colorTextOnBrand": "#262626",
+  "colorTextOnBrand": "#ffffff",
   "colorLink": "#cc3366",
   "colorLinkHover": "#333366",
   "extraColors": [],

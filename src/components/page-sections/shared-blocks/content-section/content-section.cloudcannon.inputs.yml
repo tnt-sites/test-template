@@ -18,10 +18,22 @@ align:
     - id: center
       name: Centered
 backgroundColor:
-  type: color
+  type: select
+  comment: Section background color.
+  options:
+    values: _select_data.brandColors
 eyebrowColor:
-  type: color
+  type: select
+  comment: Eyebrow (kicker) text color.
+  options:
+    values: _select_data.brandColors
 headingColor:
-  type: color
+  type: select
+  comment: Heading and subheading color.
+  options:
+    values: _select_data.brandColors
 textColor:
-  type: color
+  type: select
+  comment: Body copy color.
+  options:
+    values: _select_data.brandColors

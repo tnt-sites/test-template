@@ -41,7 +41,7 @@ pageSections:
       <p><span>Dr. Jacobsen brings empathy and innovation to Toothbar, inspired by her childhood experiences with dental trauma. Committed to patient-centered care, she focuses on making visits anxiety-free with the help of the latest technologies. A native of Chicago, Dr. Jacobsen is deeply involved in Austin’s dental community, leading study groups and working toward advanced certifications. Outside the office, she’s an avid runner who can be found exploring Lady Bird Lake or cheering on her beloved Chicago Bears. Together, Dr. Barclay and Dr. Jacobsen lead Toothbar with a vision of care that goes beyond the ordinary—making every visit a positive experience.</span></p>
     buttonText: LEARN ABOUT THE TEAM
     buttonLink: /who-we-are/
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
     buttonTextColor: "#000000"
@@ -62,7 +62,7 @@ pageSections:
     buttonText: BOOK APPOINTMENT
     buttonLink: https://schedule.jarvisanalytics.com/frame/toothbar?location_id=7180&lnsg=01a02b5a-9649-716d-b158-8f432126c698
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
     buttonTextColor: "#000000"
@@ -71,7 +71,7 @@ pageSections:
     id: ""
     eyebrow: OUR DENTAL TEAM
     heading: Meet Our Doctors
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
   - _component: page-sections/wpmig/doctor-cards
     id: ""
@@ -112,7 +112,7 @@ pageSections:
     eyebrow: REVIEWS
     heading: What Our Patients Say
     text: If you have always wanted a great smile with whiter and straighter teeth you may be looking for&nbsp;<strong>cosmetic dentistry near your location</strong>. Let our expert doctors pamper you and take care of that smile. Sit back and relax at our&nbsp;<strong>cosmetic dental office in downtown Austin</strong>.
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/wpmig/video-service-list
@@ -136,7 +136,7 @@ pageSections:
         title: Happy Hour
         text: Want a unique way to celebrate a bachelorette party or a special birthday? At our Happy Hour, you and your friends can blast your favorite music, pop some bubbly and have your own private teeth whitening party to kick off a fun weekend in Austin.
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/wpmig/services-intro
@@ -145,7 +145,7 @@ pageSections:
     heading: Dental Services for Every Need
     text: Want your next experience at the dentist to defy your expectations? At Toothbar’s flagship preventive dentist location, we’re revolutionizing the patient experience. Let our qualified team of Cosmetic Dentists in Downtown help you look and feel your best. Call today for an evaluation appointment.
     backgroundColor: "#f6fffe"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#4d4d4d"
   - _component: page-sections/wpmig/service-cards
@@ -186,7 +186,7 @@ pageSections:
     heading: Our Office
     subheading: One Of The Best Cosmetic Dentists In Austin
     text: Think of us as a bar that tends to teeth. Not everyone is a fan of the dentist. We get it.<br>Knowing that, we thoughtfully designed our dental suites to transport you somewhere else.
-    headingColor: "#117d6f"
+    headingColor: var(--color-brand)
     textColor: "#000000"
   - _component: page-sections/wpmig/photo-mosaic
     id: ""
@@ -235,7 +235,7 @@ pageSections:
         imageAlt: Logo of Aetna, a provider of health insurance plans and services.
       - image: /wp-content/uploads/2024/10/plan_6.png
         imageAlt: Logo of United Healthcare, emphasizing their comprehensive health care services
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
 ---

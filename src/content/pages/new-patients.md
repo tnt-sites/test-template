@@ -20,7 +20,7 @@ pageSections:
     blocks:
       - type: prose
         html: <span>At Toothbar, we are excited to welcome new clients into our downtown Austin dental family. Whether you’re visiting for preventive care, cosmetic enhancements, or restorative services, our goal is to make your first experience seamless, comfortable, and personalized to meet your needs. From the moment you step through our doors, you’ll discover a different kind of dental care—where advanced technology meets a spa-like environment, designed to make you feel at ease.</span>
-    backgroundColor: "#117d6f"
+    backgroundColor: var(--color-brand)
     textColor: "#ffffff"
   - _component: page-sections/shared-blocks/content-section
     id: ""
@@ -43,7 +43,7 @@ pageSections:
       alt: ""
       side: left
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section
@@ -85,7 +85,7 @@ pageSections:
             width: full
             required: false
     align: center
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section
@@ -103,7 +103,7 @@ pageSections:
       source: /wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg
       alt: ""
       side: left
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
 ---

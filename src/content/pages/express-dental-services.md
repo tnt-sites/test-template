@@ -22,7 +22,7 @@ pageSections:
     blocks:
       - type: prose
         html: <span>Welcome to The Lounge at Toothbar—Austin’s premier destination for express dental services, where we make quick smile boosts effortless and enjoyable. Designed with busy professionals in mind, The Lounge offers a fast, relaxing way to refresh your smile without compromising on comfort. Whether you need a whitening treatment or a quick polish, our services provide everything you love about going to the dentist—without it feeling like you’re at the dentist.</span>
-    backgroundColor: "#117d6f"
+    backgroundColor: var(--color-brand)
     textColor: "#ffffff"
   - _component: page-sections/shared-blocks/content-section
     id: ""
@@ -44,7 +44,7 @@ pageSections:
           - title: "THE DETOX: EXPRESS CLEANINGS"
             text: Need a quick refresh between your regular dental cleanings? The Detox is a streamlined version of your traditional 6-month cleaning, designed to polish away surface stains, floss thoroughly, and leave you with a bright smile. It’s an excellent pre-whitening treatment or a quick pick-me-up to keep your smile looking its best.
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section
@@ -71,7 +71,7 @@ pageSections:
           <p><span>Our express dental services are all about convenience, comfort, and results. Whether you need a last-minute touch-up before a big event or simply want to maintain your smile’s brilliance between appointments, The Lounge at Toothbar is here to help. We’ve created an environment where dental care fits seamlessly into your life, complete with luxurious amenities and top-tier care. </span></p>
           <p><span>At Toothbar, we believe that your smile deserves more than just routine maintenance—it deserves to shine on your schedule. Visit The Lounge at Toothbar and discover how easy and enjoyable maintaining a radiant smile can be!</span></p>
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section
@@ -89,7 +89,7 @@ pageSections:
       source: /wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg
       alt: ""
       side: left
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
 ---

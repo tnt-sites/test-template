@@ -35,7 +35,7 @@ pageSections:
       url: https://maps.google.com/maps?q=Toothbar,+211+Walter+Seaholm+Dr,+Austin,+TX+78701&t=&z=15&ie=UTF8&iwloc=B&output=embed
       title: Toothbar — 211 Walter Seaholm Drive, Austin, TX
       side: right
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section

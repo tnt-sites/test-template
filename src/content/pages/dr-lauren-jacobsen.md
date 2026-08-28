@@ -40,7 +40,7 @@ pageSections:
           <p><span>Toothbar is the neighborhood dentist that provides everything from general dentistry to Invisalign, to crowns and veneers and even Botox. Toothbar’s approach is a modern take on dentistry that leverages technology to provide comprehensive patient care.In her spare time, Dr. Jacobsen can be found running around Town Lake, volunteering with the Special Olympics, or cheering on her hometown football team, the Chicago Bears.</span></p>
       - type: heading
         html: Dr. Lauren Jacobsen, D.M.D.
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
   - _component: page-sections/shared-blocks/content-section
@@ -58,7 +58,7 @@ pageSections:
       source: /wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg
       alt: ""
       side: left
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
 ---

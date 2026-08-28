@@ -135,7 +135,7 @@ pageSections:
       source: /wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg
       alt: ""
       side: left
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"
 ---

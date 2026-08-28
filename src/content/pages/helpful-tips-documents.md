@@ -52,7 +52,7 @@ pageSections:
     secondaryButtonText9: VIEW & DOWNLOAD
     secondaryButtonLink9: /wp-content/uploads/2024/12/Tooth-Extractions-Protocol.pdf
     backgroundColor: "#ffffff"
-    eyebrowColor: "#117d6f"
+    eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     buttonTextColor: "#117d6f"
     buttonTextHoverColor: "#e087ed"
