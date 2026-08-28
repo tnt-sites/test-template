@@ -115,3 +115,7 @@ _inputs:
   hoverBackgroundColorHex:
     type: color
     comment: Optional custom hex that overrides the hoverBackgroundColor selection.
+  lightShape:
+    type: switch
+    comment: Fill the angled shape at the bottom of the hero with the light mint tint
+      instead of the brand colour.

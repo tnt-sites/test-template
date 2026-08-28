@@ -21,6 +21,7 @@ const {
   hoverBackgroundColor = "",
   hoverBackgroundColorHex = "#117d6f",
   showButton = true,
+  lightShape = false,
   id,
   _component,
   ...rest
@@ -29,6 +30,9 @@ const {
 const backgroundColorValue = backgroundColorHex || backgroundColor || "#000000";
 const headingColorValue = headingColorHex || headingColor || "#ffffff";
 const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#117d6f";
+/* The angled wedge sits against the section below it, so it either picks up the
+   brand colour or the lighter mint tint those sections are painted with. */
+const shapeColorValue = lightShape ? "#d8fffb" : "var(--color-brand, #117d6f)";
 
 const hasButton = showButton && Boolean(buttonText);
 
@@ -48,6 +52,7 @@ const heroStyle = [
   `--bg:${backgroundColorValue}`,
   `--hd:${headingColorValue}`,
   `--c3:${hoverBackgroundColorValue}`,
+  `--shape:${shapeColorValue}`,
   bgImage.style,
 ]
   .filter(Boolean)
@@ -290,7 +295,7 @@ const heroStyle = [
   }
 
   .ph-shape path {
-    fill: #117d6f;
+    fill: var(--shape);
   }
 
   @media (min-width: 768px) {

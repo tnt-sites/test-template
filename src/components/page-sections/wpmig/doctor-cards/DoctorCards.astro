@@ -49,7 +49,7 @@ const cards = await Promise.all(
 <section class="doctor-cards" id={id || undefined} style={`--tx:${textColorValue};--tt:${titleColorValue};--c3:${hoverColorValue};--c4:${hoverBackgroundColorValue};--c5:${hoverColor2Value};--c6:${hoverBackgroundColor2Value}`} {...rest}>
   <div class="dc-box">
     <div class="dc-grid">
-      {cards.map((it) => (
+      {cards.map((it, index) => (
         <div class="dc-box2">
           <div class="dc-box3 bg-layers" style={it.bg.style || undefined}>
             <div class="dc-box4">
@@ -62,7 +62,7 @@ const cards = await Promise.all(
           </div>
           <div class="dc-box7">
             <div class="dc-box8">
-              {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="dc-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+              {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="dc-btn" text={it.buttonText} link={it.buttonLink || "#"} data-prop={`items.${index}.buttonText`} />}
             </div>
           </div>
           <div class="dc-box9">

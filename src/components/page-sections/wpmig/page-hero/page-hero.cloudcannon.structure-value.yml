@@ -16,6 +16,7 @@ value:
   headingColorHex: ""
   hoverBackgroundColor: ""
   hoverBackgroundColorHex: "#117d6f"
+  lightShape: false
 preview:
   text:
     - key: heading

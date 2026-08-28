@@ -16,6 +16,7 @@ pageSections:
     backgroundColor: "#000000"
     headingColor: "#ffffff"
     hoverBackgroundColor: "#117d6f"
+    lightShape: true
   - _component: page-sections/wpmig/why-choose-us-cards
     id: ""
     items:
