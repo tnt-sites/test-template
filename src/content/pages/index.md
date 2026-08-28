@@ -217,20 +217,9 @@ pageSections:
     poster: /wp-content/uploads/2024/10/lounge-poster.jpg
     eyebrow: LOUNGE BAR SERVICE
     heading: Step into The Lounge at Toothbar
-    text:
-    text2: ''
-    text3: ''
-    text4: The Lounge is Austin’s dental salon for express cleanings or whitening
+    text: The Lounge is Austin’s dental salon for express cleanings or whitening
       treatments. It’s a perfect way for busy professionals to get a quick smile
       boost.
-    subheading: ''
-    text5: ''
-    heading2: ''
-    text6: ''
-    heading3: ''
-    text7: ''
-    heading4: ''
-    text8: ''
     backgroundColor: '#ffffff'
     backgroundColorHex: ''
     eyebrowColor: var(--color-brand)

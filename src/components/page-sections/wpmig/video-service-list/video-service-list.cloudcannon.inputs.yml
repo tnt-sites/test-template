@@ -1,39 +1,36 @@
 _inputs:
+  eyebrow:
+    type: text
+    comment: Small uppercase label above the heading.
+  heading:
+    type: html
+  text:
+    type: textarea
+    label: Intro
+    comment: Introductory paragraph shown under the heading, above the service list.
   poster:
     type: image
+    label: Video Poster
     comment: Still shown in the video frame before playback. Decorative — the play button carries the label.
     options:
       paths:
         uploads: src/assets/images
         static: ""
-  eyebrow:
-    type: text
-  heading:
-    type: html
-  text:
-    type: text
-  text2:
-    type: html
-  text3:
-    type: text
-  text4:
-    type: textarea
-  subheading:
-    type: html
-  text5:
-    type: textarea
-  heading2:
-    type: html
-  text6:
-    type: textarea
-  heading3:
-    type: html
-  text7:
-    type: html
-  heading4:
-    type: html
-  text8:
-    type: textarea
+  videoSource:
+    type: file
+    label: Video Source
+    comment: Video played in the modal. Must be mp4 so every modern browser can play it. Leave empty to show the poster with no play button.
+    options:
+      accepts_mime_types:
+        - video/mp4
+      paths:
+        uploads: public/videos
+        static: public
+  services:
+    type: array
+    comment: The services listed beside the video.
+    options:
+      structures: _structures.video_service_list_service
   backgroundColor:
     type: select
     comment: Background colour, from the site palette.
@@ -154,3 +151,28 @@ _inputs:
   textColorHex:
     type: color
     comment: Optional custom hex that overrides the textColor selection.
+_structures:
+  video_service_list_service:
+    values:
+      - value:
+          icon: whitening
+          title: ""
+          text: ""
+        _inputs:
+          icon:
+            type: select
+            comment: Illustration shown beside this service.
+            options:
+              values:
+                - id: whitening
+                  name: Whitening
+                - id: detox
+                  name: Detox
+                - id: chaser
+                  name: Chaser
+                - id: happyhour
+                  name: Happy Hour
+          title:
+            type: text
+          text:
+            type: html

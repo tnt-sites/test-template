@@ -153,7 +153,7 @@ const defaultFormFields = [
             case "image":
               return block.source ? (
                 <Image
-                  class="cs-image"
+                  class="cs-image photo-frame"
                   source={block.source}
                   alt={block.alt || ""}
                   data-prop-src={`blocks.${blockIndex}.source`}
@@ -225,7 +225,7 @@ const defaultFormFields = [
             buttonLink={media.button?.link}
           />
         ) : media.source ? (
-          <div class="cs-media" style={`background-image:url("${media.source}")`}>
+          <div class="cs-media photo-frame" style={`background-image:url("${media.source}")`}>
             <span class="sr-only">{media.alt || ""}</span>
           </div>
         ) : null)

@@ -1,0 +1,42 @@
+/* Inset hairline frame over a photo — the decoration the Appointment CTA carries
+ * (see `.ac-box5` in AppointmentCta.astro, where it is baked into the migrated
+ * markup as a real element). Three sides only: the verticals run off the bottom
+ * edge rather than closing, which is what gives it its lift.
+ *
+ * Apply `.photo-frame` to the element that paints the photo. That element needs
+ * to establish a containing block and clip — both are set here — so it works on
+ * a `background-image` panel and on an `.image` wrapper alike. The frame is
+ * drawn on `::after`, so a host that already uses `::after` for something else
+ * needs its own rule instead.
+ *
+ * Rendered over `<img>`-based photos the frame has to out-stack the image, which
+ * is why the pseudo-element is given a z-index and the img is not.
+ */
+@layer base {
+  .photo-frame {
+    --photo-frame-inset: 1rem;
+    --photo-frame-color: rgb(255 255 255 / 85%);
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      border: 1px solid var(--photo-frame-color);
+      border-bottom: 0;
+      content: "";
+
+      /* A bare white hairline disappears over a bright photo — the interior
+         shots on the service pages are mostly highlight. This is enough to hold
+         the line's edge without reading as a second, grey line. */
+      filter: drop-shadow(0 0 1px rgb(0 0 0 / 35%));
+      inset: var(--photo-frame-inset) var(--photo-frame-inset) 0;
+      pointer-events: none;
+      position: absolute;
+      z-index: 1;
+    }
+
+    /* Matches the 30px the CTA panel insets its frame by once there is room. */
+    @media (min-width: 768px) {
+      --photo-frame-inset: 30px;
+    }
+  }
+}

@@ -17,7 +17,7 @@ const ICONS: Record<string, string> = { whitening, detox, chaser, happyhour };
 const {
   eyebrow = "",
   heading = "",
-  text4 = "",
+  text = "",
   videoSource = "",
   poster = "",
   services = [],
@@ -31,18 +31,20 @@ const {
   textColorHex = "",
   id,
   _component,
-  // legacy migrated props, intentionally ignored
-  text,
+  // Numbered leftovers from the WordPress migration. The section only ever
+  // rendered one intro paragraph (the old `text4`), so the rest are swallowed
+  // here to keep them off the <section> element in older content.
   text2,
   text3,
-  subheading,
+  text4,
   text5,
-  heading2,
   text6,
-  heading3,
   text7,
-  heading4,
   text8,
+  subheading,
+  heading2,
+  heading3,
+  heading4,
   textColor2,
   textColor3,
   hoverColor,
@@ -54,6 +56,7 @@ const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#117d6f";
 const headingColorValue = headingColorHex || headingColor || "#000000";
 const textColorValue = textColorHex || textColor || "#000000";
 
+const intro = text || text4 || "";
 const list = Array.isArray(services) ? services.filter(Boolean) : [];
 const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}`;
 ---
@@ -64,7 +67,7 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
   {...rest}
 >
   <div class="vsl-inner">
-    <div class="vsl-media">
+    <div class="vsl-media photo-frame">
       {
         poster && (
           <Image
@@ -77,6 +80,7 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
           />
         )
       }
+      <div class="vsl-scrim" aria-hidden="true"></div>
       {
         videoSource && (
           <button type="button" class="vsl-play" data-vsl-open={uid} aria-label="Play video">
@@ -89,7 +93,7 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
     <div class="vsl-content">
       {eyebrow && <p class="vsl-eyebrow">{eyebrow}</p>}
       {heading && <h2 class="vsl-heading" set:html={heading} />}
-      {text4 && <p class="vsl-intro">{text4}</p>}
+      {intro && <p class="vsl-intro">{intro}</p>}
 
       <div class="vsl-services">
         {
@@ -166,14 +170,29 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
     padding: 60px 24px;
   }
 
+  /* Dark base, matching the video hero: the play glyph is a white outline, so
+     the frame has to stay dark even when the poster is pale or absent. */
   .vsl-media {
     align-items: center;
+    background-color: #1a1a1a;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     min-height: 280px;
     overflow: hidden;
     position: relative;
+  }
+
+  .vsl-scrim {
+    background-color: rgba(0, 0, 0, 0.35);
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  /* Above the scrim, below the play button. */
+  .vsl-media.photo-frame::after {
+    z-index: 2;
   }
 
   .vsl-poster {
@@ -185,8 +204,14 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
     width: 100%;
   }
 
-  /* The <img> is rendered inside the Image component, so it sits outside this
-     file's scope — reach it globally to fill the poster frame. */
+  /* The <picture>/<img> pair is rendered inside the Image component, so it sits
+     outside this file's scope — reach it globally. The <picture> needs the
+     explicit height too: without it the img's `height: 100%` resolves against
+     an auto-height parent and collapses back to the image's natural height. */
+  :global(.vsl-poster picture) {
+    height: 100%;
+  }
+
   :global(.vsl-poster img) {
     height: 100%;
     object-fit: cover;
@@ -202,7 +227,7 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
     padding: 0;
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease;
-    z-index: 1;
+    z-index: 3;
   }
 
   .vsl-play:hover {
@@ -261,14 +286,14 @@ const uid = `vsl-${(id && String(id)) || Math.random().toString(36).slice(2, 8)}
 
   .vsl-icon :global(svg) {
     display: block;
-    fill: currentColor;
+    fill: currentcolor;
     height: 100%;
     width: 100%;
   }
 
   .vsl-icon :global(svg path),
   .vsl-icon :global(svg g) {
-    fill: currentColor;
+    fill: currentcolor;
   }
 
   .vsl-service-body {

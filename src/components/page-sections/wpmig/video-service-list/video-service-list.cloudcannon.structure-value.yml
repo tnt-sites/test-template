@@ -4,21 +4,15 @@ description: Video poster on one side; eyebrow, heading, intro and an icon-led s
 value:
   _component: page-sections/wpmig/video-service-list
   id: ""
-  poster: ""
   eyebrow: ""
   heading: ""
   text: ""
-  text2: ""
-  text3: ""
-  text4: ""
-  subheading: ""
-  text5: ""
-  heading2: ""
-  text6: ""
-  heading3: ""
-  text7: ""
-  heading4: ""
-  text8: ""
+  poster: ""
+  videoSource: ""
+  services:
+    - icon: whitening
+      title: ""
+      text: ""
   backgroundColor: "#ffffff"
   backgroundColorHex: ""
   eyebrowColor: ""
