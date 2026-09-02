@@ -1,0 +1,544 @@
+---
+/**
+ * HomeOverview — the homepage's three stacked bands, rebuilt by hand to match the
+ * source (the migrator emitted one flattened block with absolutely-positioned
+ * captions and a negative-margin full-bleed hack, which broke the layout):
+ *
+ *   1. "Dentist Sandy, UT" — centred intro over the fixed welcome-bg photo.
+ *   2. "Our Team at Taylor Dental Care" — half-screen photo beside the copy.
+ *   3. "Our Services" — copy column beside a 2x2 grid of hover-caption tiles.
+ *
+ * Props are unchanged, so the page front matter still drives it.
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  image = "/wp-content/themes/ekwa/images/welcome-bg.jpg",
+  subheading = "",
+  text2 = "",
+  teamImage = "/wp-content/uploads/2021/08/meet-the-doctors-pic.jpg",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  heading2 = "",
+  heading3 = "",
+  text3 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  cards = [],
+  headingColor = "#000000",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  buttonBackgroundColor = "",
+  buttonBackgroundColorHex = "#a6ce39",
+  buttonTextColor = "",
+  buttonTextColorHex = "#111111",
+  cardBackgroundColor = "",
+  cardBackgroundColorHex = "#111111",
+  titleColor = "#ffffff",
+  titleColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const buttonBackgroundColorValue = buttonBackgroundColorHex || buttonBackgroundColor || "#a6ce39";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#111111";
+const cardBackgroundColorValue = cardBackgroundColorHex || cardBackgroundColor || "#111111";
+const titleColorValue = titleColorHex || titleColor || "#ffffff";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+
+<section
+  class="home-overview"
+  id={id || undefined}
+  style={`--hd:${headingColorValue};--tx:${textColorValue};--btnbg:${buttonBackgroundColorValue};--btntx:${buttonTextColorValue};--cardbg:${cardBackgroundColorValue};--tt:${titleColorValue};--cardtx:${textColor2Value};--welcome-bg:url("${image}");--team-photo:url("${teamImage}")`}
+  {...rest}
+>
+  <div class="cg-welcome">
+    <div class="cg-container">
+      {heading && <h1 class="cg-heading">{heading}</h1>}
+      {text && <div class="cg-text" set:html={text} />}
+      {
+        buttonText && (
+          <div class="cg-welcome-cta">
+            <Button
+              variant="secondary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              uppercase
+              class="cg-btn"
+              text={buttonText}
+              link={buttonLink || "#"}
+              editable={false}
+            />
+          </div>
+        )
+      }
+    </div>
+  </div>
+
+  <div class="cg-team">
+    <div class="cg-team-photo" role="img" aria-label={subheading || "Taylor Dental Care team"}></div>
+    <div class="cg-team-content">
+      {subheading && <h2 class="cg-team-heading" set:html={subheading} />}
+      {text2 && <p class="cg-team-text">{text2}</p>}
+      <div class="cg-team-cta">
+        {
+          secondaryButtonText && (
+            <Button
+              variant="secondary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              uppercase
+              class="cg-btn"
+              text={secondaryButtonText}
+              link={secondaryButtonLink || "#"}
+              editable={false}
+            />
+          )
+        }
+        {
+          secondaryButtonText2 && (
+            <Button
+              variant="secondary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              uppercase
+              class="cg-btn"
+              text={secondaryButtonText2}
+              link={secondaryButtonLink2 || "#"}
+              editable={false}
+            />
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="cg-services">
+    <div class="cg-services-content">
+      {heading2 && <h2 class="cg-services-heading" set:html={heading2} />}
+      {heading3 && <h3 class="cg-services-subheading" set:html={heading3} />}
+      {text3 && <div class="cg-services-body" set:html={text3} />}
+      {
+        secondaryButtonText3 && (
+          <Button
+            variant="secondary"
+            size="md"
+            width="none"
+            borderRadius="none"
+            uppercase
+            class="cg-btn"
+            text={secondaryButtonText3}
+            link={secondaryButtonLink3 || "#"}
+            editable={false}
+          />
+        )
+      }
+    </div>
+    <div class="cg-services-grid">
+      {
+        list.map((c) => (
+          <figure class="cg-tile">
+            {c.image && <img class="cg-tile-img" src={c.image} alt="" loading="lazy" />}
+            <figcaption class="cg-tile-caption">
+              <h2 class="cg-tile-title">{c.title}</h2>
+              <p class="cg-tile-text">{c.text}</p>
+              <a class="cg-tile-link" href={c.buttonLink || "#"}>
+                {c.buttonText || "View more"}
+              </a>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .home-overview {
+      --cg-navy: #30475e;
+      --cg-green: #639a67;
+
+      box-sizing: border-box;
+      line-height: 24px;
+      position: relative;
+      width: 100%;
+    }
+
+    .home-overview .cg-container {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      width: 100%;
+    }
+
+    /* ---- 1. Dentist Sandy, UT ---- */
+    .home-overview .cg-welcome {
+      box-sizing: border-box;
+      overflow: hidden;
+      padding-block: 60px 90px;
+      position: relative;
+      text-align: center;
+    }
+
+    @media (min-width: 767px) {
+      .home-overview .cg-welcome {
+        background-attachment: fixed;
+        background-image: var(--welcome-bg);
+        background-position: 60% 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .home-overview .cg-welcome {
+        padding-block: 90px 120px;
+      }
+    }
+
+    .home-overview .cg-heading {
+      color: var(--hd);
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 0 30px;
+      text-transform: capitalize;
+    }
+
+    .home-overview .cg-text,
+    .home-overview .cg-text :where(p, span) {
+      color: var(--tx);
+      line-height: 30px;
+    }
+
+    .home-overview .cg-text :where(p) {
+      margin-block: 0 30px;
+    }
+
+    .home-overview .cg-welcome-cta {
+      margin-top: 40px;
+    }
+
+    /* ---- 2. Our Team at Taylor Dental Care ---- */
+    .home-overview .cg-team {
+      background-color: #e9f4f5;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .home-overview .cg-team-photo {
+      background-image: var(--team-photo);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      flex: 0 0 100%;
+      height: 400px;
+      max-width: 100%;
+    }
+
+    .home-overview .cg-team-content {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 30px 30px 90px;
+      text-align: center;
+    }
+
+    @media (min-width: 992px) {
+      /* Photo takes exactly half the screen and matches the copy's height. */
+      .home-overview .cg-team-photo {
+        flex: 0 0 50%;
+        height: auto;
+        max-width: 50%;
+      }
+
+      .home-overview .cg-team-content {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-top: 60px;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .home-overview .cg-team-content {
+        padding: 90px 60px 120px;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .home-overview .cg-team-content {
+        padding-right: 7.5%;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .home-overview .cg-team-content {
+        padding-right: 15%;
+      }
+    }
+
+    .home-overview .cg-team-heading {
+      color: var(--cg-navy);
+      font-size: 24px;
+      line-height: 1.4;
+      margin-block: 20px;
+      text-transform: capitalize;
+    }
+
+    .home-overview .cg-team-text {
+      color: var(--tx);
+      line-height: 30px;
+      margin-block: 0 15px;
+    }
+
+    .home-overview .cg-team-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    @media (min-width: 992px) {
+      .home-overview .cg-team-cta {
+        justify-content: flex-start;
+      }
+    }
+
+    /* ---- 3. Our Services ---- */
+    .home-overview .cg-services {
+      /* flex-start keeps the tile grid at its natural height instead of
+         stretching the rows and exposing the tiles' black backing. */
+      align-items: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      padding-block: 5px 0;
+    }
+
+    .home-overview .cg-services-content {
+      box-sizing: border-box;
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 30px 30px 90px;
+      text-align: center;
+    }
+
+    .home-overview .cg-services-grid {
+      box-sizing: border-box;
+      display: grid;
+      flex: 0 0 100%;
+      gap: 5px;
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      /* 2x2 grid of service tiles. */
+      .home-overview .cg-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .home-overview .cg-services-content {
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding-top: 60px;
+        text-align: left;
+      }
+
+      .home-overview .cg-services-grid {
+        flex: 0 0 66.6667%;
+        max-width: 66.6667%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .home-overview .cg-services-content {
+        padding: 90px 60px 120px;
+      }
+    }
+
+    .home-overview .cg-services-heading {
+      color: var(--cg-navy);
+      font-size: 36px;
+      line-height: 1.4;
+      margin-block: 0 30px;
+      text-transform: capitalize;
+    }
+
+    .home-overview .cg-services-heading :where(strong) {
+      color: inherit;
+    }
+
+    .home-overview .cg-services-subheading {
+      color: var(--cg-green);
+      font-size: 30px;
+      line-height: 1.4;
+      margin-block: 30px;
+      text-transform: capitalize;
+    }
+
+    .home-overview .cg-services-subheading :where(strong) {
+      color: inherit;
+    }
+
+    .home-overview .cg-services-body :where(p) {
+      color: var(--tx);
+      line-height: 30px;
+      margin-block: 0 30px;
+    }
+
+    .home-overview .cg-services-body :where(ul) {
+      margin-block: 0 30px;
+      text-align: left;
+    }
+
+    /* ---- Service tiles: caption reveal on hover ("effect-sadie") ---- */
+    .home-overview .cg-tile {
+      background: var(--cardbg);
+      cursor: pointer;
+      margin: 0;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+
+    .home-overview .cg-tile-img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      opacity: 0.75;
+      position: relative;
+      width: 100%;
+    }
+
+    .home-overview .cg-tile-caption {
+      /* The tile's only permanent darkening was the image's own 0.75 opacity
+         over the #111 card, leaving the white caption at 1.74:1 on a light
+         photo -- the ::before below is the hover reveal and is transparent at
+         rest. This always-on ramp is light across the top of the photo and
+         deepens toward the bottom, so the centred title clears ~5:1 and the
+         paragraph revealed at the foot clears ~6.5:1, whatever image is set. */
+      background-image: linear-gradient(
+        to bottom,
+        rgb(17 17 17 / 18%) 0%,
+        rgb(17 17 17 / 48%) 30%,
+        rgb(17 17 17 / 62%) 100%
+      );
+      backface-visibility: hidden;
+      color: var(--tt);
+      inset: 0;
+      position: absolute;
+    }
+
+    .home-overview .cg-tile-caption::before {
+      background-image: linear-gradient(to bottom, rgb(17 17 17 / 0%) 0%, rgb(17 17 17 / 20%) 75%);
+      content: "";
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transform: translate3d(0, 50%, 0);
+      transition:
+        opacity 0.35s,
+        transform 0.35s;
+    }
+
+    .home-overview .cg-tile-title {
+      color: var(--tt);
+      font-size: 24px;
+      left: 0;
+      line-height: 1;
+      margin: 0;
+      padding: 0 2em;
+      position: absolute;
+      text-shadow: 1px 1px 1px rgb(0 0 0 / 100%);
+      text-transform: capitalize;
+      top: 50%;
+      transform: translate3d(0, -50%, 0);
+      transition:
+        transform 0.35s,
+        color 0.35s;
+      width: 100%;
+    }
+
+    .home-overview .cg-tile-text {
+      bottom: 0;
+      color: var(--cardtx);
+      left: 0;
+      line-height: normal;
+      margin: 0;
+      opacity: 0;
+      padding: 2em;
+      position: absolute;
+      transform: translate3d(0, 10px, 0);
+      transition:
+        opacity 0.35s,
+        transform 0.35s;
+      width: 100%;
+    }
+
+    .home-overview .cg-tile-link {
+      font-size: 0;
+      inset: 0;
+      opacity: 0;
+      position: absolute;
+      white-space: nowrap;
+      z-index: 10;
+    }
+
+    .home-overview .cg-tile:hover .cg-tile-title {
+      color: #cde37a;
+      transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+    }
+
+    .home-overview .cg-tile:hover .cg-tile-caption::before,
+    .home-overview .cg-tile:hover .cg-tile-text {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+
+    @media (min-width: 1200px) {
+      .home-overview .cg-tile-title {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+
+    /* ---- Shared green CTA button ---- */
+    .home-overview .cg-btn.button {
+      background-color: var(--btnbg);
+      border-color: transparent;
+      color: var(--btntx);
+      font-weight: 700;
+    }
+
+    .home-overview .cg-btn.button:hover {
+      background-color: #93b830;
+      color: var(--btntx);
+    }
+  }
+</style>

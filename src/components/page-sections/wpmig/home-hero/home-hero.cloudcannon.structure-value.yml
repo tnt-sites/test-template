@@ -1,0 +1,60 @@
+label: Home Hero
+icon: view_carousel
+description: The homepage's rotating banner.
+value:
+  _component: page-sections/wpmig/home-hero
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  buttonText: ""
+  buttonLink: ""
+  image2: ""
+  image2Alt: ""
+  text: Home Hero
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  image3: ""
+  image3Alt: ""
+  text2: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  image4: ""
+  image4Alt: ""
+  text3: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  image5: ""
+  image5Alt: ""
+  text4: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  backgroundColor: "#000000"
+  backgroundColorHex: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#a6ce39"
+  buttonTextColor: ""
+  buttonTextColorHex: "#111111"
+  textColor: "#ffffff"
+  textColorHex: ""
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#677e28"
+  buttonTextHoverColor2: ""
+  buttonTextHoverColor2Hex: "#a6ce39"
+  hoverColor: "#000000"
+  hoverColorHex: ""
+preview:
+  text:
+    - Home Hero
+  icon: view_carousel
+picker_preview:
+  text: Home Hero
+  subtext: The homepage's rotating banner.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-hero/our-pride-is-your.cloudcannon.inputs.yml

@@ -1,30 +1,29 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2021/08/logo-white.png",
+  "logoAlt": "Taylor Dental Care",
   "links": [
     {
       "name": "Home",
       "path": "/"
     },
     {
-      "name": "Why",
-      "path": "/why/"
+      "name": "Meet Our Sandy Dental Team",
+      "path": "/meet-the-team/"
     },
     {
-      "name": "Blog",
-      "path": "/blog/"
+      "name": "Contact Our Dental Office in Sandy",
+      "path": "/contact-us/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/wp-content/uploads/2021/08/taylor-street-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+    },
+    {
+      "name": "Site Map",
+      "path": "/site-map/"
     }
   ],
   "contactTitle": "Contact Us",
   "officeHoursTitle": "Office Hours",
-  "legalLinks": [
-    {
-      "name": "Sitemap",
-      "path": "/sitemap"
-    },
-    {
-      "name": "Privacy Policy",
-      "path": "/privacy-policy"
-    }
-  ]
+  "legalLinks": []
 }

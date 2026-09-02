@@ -1,0 +1,10 @@
+_snippets:
+  patient_results:
+    template: astro_component
+    inline: false
+    preview:
+      text: Patient Results
+    definitions:
+      component_name: page-sections/wpmig/patient-results
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/patient-results/patient-results.cloudcannon.inputs.yml

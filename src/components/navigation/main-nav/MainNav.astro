@@ -1,105 +1,63 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
-import Image from "@core-elements/image/Image.astro";
-import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Button from "@core-elements/button/Button.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import siteInfoData from "@data/siteInfo.json";
 
 const {
   logoSource,
   logoAlt = "logo",
   navData = [],
-  buttonSections = [],
   pageButtons = [],
   socials = [],
   class: className,
   offices = [],
-  legalLinks = [],
   phoneText = "",
   phoneHref = "",
-  addressHref = "",
   addressLines = [],
-  emailHref = "",
-  emailText = [],
-  officeHoursTitle = "Office Hours",
   officeHours = [],
   officeHoursNote = "",
   officeHoursNotes = [],
+  transparent = false,
   _component,
   ...htmlAttributes
 } = Astro.props;
-
-const defaultSearchButtonSections = [
-  {
-    _component: "building-blocks/core-elements/button",
-    text: "Search",
-    hideText: true,
-    link: "/search/",
-    iconName: "magnifying-glass",
-    iconPosition: "before",
-    variant: "ghost",
-    size: "lg",
-    width: "xs",
-  },
-];
-
-const resolvedSearchButtonSections =
-  Array.isArray(buttonSections) && buttonSections.length > 0
-    ? buttonSections
-    : defaultSearchButtonSections;
 
 const sanitizeButtonSection = (button: any) => ({
   ...button,
   text: typeof button?.text === "string" ? button.text : "",
 });
 
-const searchButtons = resolvedSearchButtonSections.map((button: any) =>
-  sanitizeButtonSection(button)
-);
-
 const buttons = pageButtons.map((button: any) => sanitizeButtonSection(button));
 
 const mobileNavData = [
   ...navData,
-  ...searchButtons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
   ...buttons.map((button: any) => ({
     name: button.text || "Button",
     path: button.link || button.href || "#",
-    children: [],
+    children: Array.isArray(button.dropdown)
+      ? button.dropdown.map((sub: any) => ({
+          name: sub.text || "Button",
+          path: sub.link || sub.href || "#",
+          children: [],
+        }))
+      : [],
   })),
 ];
 
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
-
 const resolvedOffices =
   Array.isArray(offices) && offices.length > 0
     ? offices
     : hasLegacyOffice
       ? [
           {
-            name: "",
             addresses:
               Array.isArray(addressLines) && addressLines.length > 0
-                ? [
-                    {
-                      lines: addressLines,
-                      mapUrl: addressHref || "",
-                    },
-                  ]
+                ? [{ lines: addressLines }]
                 : [],
-            phones: phoneText
-              ? [
-                  {
-                    display: phoneText,
-                    href: phoneHref || "",
-                  },
-                ]
-              : [],
+            phones: phoneText ? [{ display: phoneText, href: phoneHref || "" }] : [],
             officeHours,
             officeHoursNote,
             officeHoursNotes,
@@ -108,108 +66,106 @@ const resolvedOffices =
         ]
       : ((siteInfoData as any).offices ?? []);
 
+const office = resolvedOffices[0] ?? {};
+const address = office?.addresses?.[0];
+const phone = office?.phones?.[0];
+
+const addressLinesOut = address
+  ? [
+      ...(Array.isArray(address.lines) ? address.lines : []),
+      [address.city, [address.state, address.postalCode].filter(Boolean).join(" ")]
+        .filter(Boolean)
+        .join(", "),
+    ].filter((l: string) => l && l.trim().length > 0)
+  : [];
+
 const sharedSocials =
   Array.isArray(socials) && socials.length > 0
     ? socials
-    : Array.isArray(resolvedOffices[0]?.socials)
-      ? resolvedOffices[0].socials
+    : Array.isArray(office?.socials)
+      ? office.socials
       : ((siteInfoData as any).socials ?? []);
-
-const formatAddressLines = (address: any) => {
-  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
-  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
-  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
-  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
-
-  return [...lineItems, locationLine].filter(
-    (line) => typeof line === "string" && line.trim().length > 0
-  );
-};
 ---
 
-<CustomSection
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="none"
-  class:list={["main-nav", className]}
-  {...htmlAttributes}
->
-  <div class="hd-content">
-    <a class="logo-link" href="/">
-      <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
-    </a>
-    <!-- Desktop Nav -->
-    <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
+<header class:list={["main-nav", { "is-transparent": transparent }, className]} {...htmlAttributes}>
+  <!-- Top teal bar: primary nav + appointment CTA -->
+  <div class="tdc-topbar">
+    <div class="tdc-topbar-inner">
+      <Bar navData={navData} class="tdc-nav" />
+      <div class="tdc-topbar-actions">
         {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
-
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
-
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
+          buttons.map((button: any) =>
+            Array.isArray(button.dropdown) && button.dropdown.length > 0 ? (
+              <div class="appointment-dropdown">
+                <button
+                  type="button"
+                  class="button variant-secondary appointment-trigger"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <Icon name={button.iconName} size="none" />
+                  <span class="label-text">{button.text}</span>
+                  <Icon name="chevron-down" size="none" class="appointment-caret" />
+                </button>
+                <div class="appointment-panel" role="menu">
+                  {button.dropdown.map((sub: any) => (
+                    <Button
+                      element="a"
+                      link={sub.link}
+                      text={sub.text}
+                      iconName={sub.iconName}
+                      variant={sub.variant === "secondary" ? "primary" : "secondary"}
+                      width="none"
+                      editable={false}
+                      role="menuitem"
+                    />
+                  ))}
+                </div>
               </div>
-            </>
-          ))
+            ) : (
+              <Button {...button} variant="secondary" editable={false} />
+            )
+          )
         }
       </div>
-      {
-        buttons.length > 0 && (
-          <div class="hd-btns page-buttons">
-            <ButtonGroup
-              direction="row"
-              align="center"
-              class="desktop-button-group"
-              buttonSections={buttons}
-              editable={false}
-            />
-          </div>
-        )
-      }
-      <div class="hd-nav">
-        <div class="nav-end">
-          <Bar navData={navData} class="desktop-main-nav" />
-
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
-        </div>
-      </div>
-      <!-- End Desktop Nav -->
     </div>
   </div>
+
+  <!-- Logo band: address · centered logo · call us -->
+  <div class="tdc-logobar">
+    <div class="tdc-logobar-inner">
+      {
+        addressLinesOut.length > 0 ? (
+          <a class="tdc-address" href={address?.mapUrl || "#"} target="_blank" rel="noopener noreferrer">
+            <Icon name="map-pin" size="none" />
+            <span class="tdc-address-lines">
+              {addressLinesOut.map((line: string) => (
+                <span class="tdc-address-line">{line}</span>
+              ))}
+            </span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+
+      <a class="tdc-logo" href="/">
+        <img src={logoSource} alt={logoAlt} />
+      </a>
+
+      {
+        phone?.display ? (
+          <a class="tdc-call" href={phone.href || "#"}>
+            <Icon name="phone" size="none" />
+            <span class="tdc-call-label">Call Us</span>
+          </a>
+        ) : (
+          <span />
+        )
+      }
+    </div>
+  </div>
+
   <!-- Mobile Nav -->
   <Mobile
     logoSource={logoSource}
@@ -219,184 +175,483 @@ const formatAddressLines = (address: any) => {
     offices={resolvedOffices}
     sharedSocials={sharedSocials}
   />
-  <!-- End Mobile Nav -->
-</CustomSection>
+</header>
 
-<!-- Adds --site-header-height CSS variable based on header height. Works with multiple screen sizes. -->
 <script>
   const initMainNavHeaderHeight = () => {
     document.querySelectorAll(".main-nav").forEach((mainNav) => {
       if (mainNav.getAttribute("data-header-height-initialized") === "true") return;
-
-      const syncHeaderHeight = () => {
+      const sync = () =>
         document.documentElement.style.setProperty(
           "--site-header-height",
           `${Math.round(mainNav.getBoundingClientRect().height)}px`
         );
-      };
-
-      syncHeaderHeight();
-
-      if (typeof ResizeObserver !== "undefined") {
-        const resizeObserver = new ResizeObserver(syncHeaderHeight);
-        resizeObserver.observe(mainNav);
-      }
-
+      sync();
+      if (typeof ResizeObserver !== "undefined") new ResizeObserver(sync).observe(mainNav);
       mainNav.setAttribute("data-header-height-initialized", "true");
     });
   };
-
-  if (document.readyState === "loading") {
+  if (document.readyState === "loading")
     document.addEventListener("DOMContentLoaded", initMainNavHeaderHeight);
-  } else {
-    initMainNavHeaderHeight();
-  }
+  else initMainNavHeaderHeight();
+
+  // Transparent (homepage) header: it overlays the hero, then re-pins as a
+  // compact solid bar once the hero scrolls past — same behaviour as the source.
+  const initStickyHeader = () => {
+    document.querySelectorAll<HTMLElement>(".main-nav").forEach((nav) => {
+      if (nav.dataset.stickReady) return;
+      nav.dataset.stickReady = "true";
+      // Measured once, in the un-stuck state: the compact header is shorter, so a
+      // live measurement would flip-flop around the threshold.
+      const threshold = Math.max(80, nav.getBoundingClientRect().height * 0.6);
+      const sync = () => nav.classList.toggle("is-stuck", window.scrollY > threshold);
+      sync();
+      window.addEventListener("scroll", sync, { passive: true });
+    });
+  };
+  initStickyHeader();
+  document.addEventListener("astro:page-load", initStickyHeader);
+
+  // Appointment dropdown: keyboard/tap support in addition to :hover.
+  const initApptDropdown = () => {
+    document.querySelectorAll<HTMLElement>(".appointment-dropdown").forEach((dd) => {
+      if (dd.dataset.ready) return;
+      dd.dataset.ready = "true";
+      const trigger = dd.querySelector<HTMLButtonElement>(".appointment-trigger");
+      trigger?.addEventListener("click", (e) => {
+        e.preventDefault();
+        const open = trigger.getAttribute("aria-expanded") === "true";
+        trigger.setAttribute("aria-expanded", open ? "false" : "true");
+        dd.classList.toggle("is-open", !open);
+      });
+      document.addEventListener("click", (e) => {
+        if (!dd.contains(e.target as Node)) {
+          trigger?.setAttribute("aria-expanded", "false");
+          dd.classList.remove("is-open");
+        }
+      });
+    });
+  };
+  initApptDropdown();
+  document.addEventListener("astro:page-load", initApptDropdown);
 </script>
 
 <style lang="pcss" is:global>
   @layer page-sections {
     .main-nav {
-      z-index: var(--layer-2);
-      background-color: var(--color-bg); 
-      padding-block: var(--spacing-md);
-      position: sticky; 
+      position: sticky;
       top: 0;
+      z-index: var(--layer-3, 50);
+      background: var(--color-brand, #177982);
+    }
 
-      .desktop-main-nav.bar,
-      .desktop-button-group.button-group {
-        @media (max-width: 1024px) {
-          display: none;
+    /* ---- Transparent overlay header (homepage hero sits behind it) ---- */
+    @media (min-width: 1025px) {
+      .main-nav.is-transparent {
+        position: absolute;
+        inset: 0 0 auto;
+        z-index: 999;
+        background: transparent;
+      }
+
+      .main-nav.is-transparent .tdc-topbar {
+        background: rgb(15 102 110 / 92%);
+      }
+
+      /* The address and Call Us links are white, and in overlay mode this band
+         had no ground of its own — they sat straight on the hero photo, which
+         is whatever image the CMS has set. A teal veil, continuing the topbar's
+         hue and fading out along the bottom edge so the header still dissolves
+         into the hero, holds them at ~5.3:1 over even a white frame. */
+      .main-nav.is-transparent .tdc-logobar {
+        background: linear-gradient(
+          to bottom,
+          rgb(15 102 110 / 90%) 0%,
+          rgb(15 102 110 / 90%) 80%,
+          rgb(15 102 110 / 0%) 100%
+        );
+      }
+
+      /* Re-pin as a compact solid bar once the hero has scrolled past. */
+      .main-nav.is-transparent.is-stuck {
+        position: fixed;
+        animation: tdc-header-drop 0.4s ease both;
+      }
+
+      @keyframes tdc-header-drop {
+        from {
+          transform: translateY(-100%);
+        }
+
+        to {
+          transform: translateY(0);
         }
       }
+    }
 
-      .main-nav-logo {
-        margin-top: 0 !important;
+    /* ---- Top teal bar: nav + CTA ---- */
+    .main-nav .tdc-topbar {
+      background: linear-gradient(90deg, #166a83 0%, var(--color-brand, #177982) 55%, #417b1e 100%);
+    }
+
+    .main-nav .tdc-topbar-inner {
+      max-width: var(--content-width-2xl, 1300px);
+      margin-inline: auto;
+      padding: 0 var(--spacing-md, 1rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--spacing-md, 1rem);
+      min-height: 52px;
+    }
+
+    /* Bar (nav) styling on the teal bar */
+    .main-nav .tdc-nav.bar {
+      margin: 0;
+    }
+
+    .main-nav .tdc-nav :where(a, button, .bar-link, span) {
+      color: #fff;
+    }
+
+    .main-nav .tdc-nav a:hover {
+      color: #eaffd0;
+    }
+
+    /* Strip the boxed chevron toggles; keep a small downward caret */
+    .main-nav .tdc-nav .nav-item-icon {
+      border: 0 !important;
+      background: transparent !important;
+      box-shadow: none !important;
+      padding: 0;
+      margin-left: 0.15em;
+      transform: rotate(90deg);
+      font-size: 0.7em;
+      opacity: 0.9;
+    }
+
+    .main-nav .tdc-nav .nav-item-trigger {
+      border: 0;
+      background: transparent;
+      padding-block: 0.9rem;
+      font-weight: var(--font-weight-semibold, 600);
+    }
+
+    .main-nav .tdc-nav > .bar-list > .nav-item > :where(a, .nav-item-trigger) {
+      padding-inline: 0.6rem;
+    }
+
+    /* Nav dropdown panels: the topbar paints every nav link white, so the panels
+       need a dark ground of their own rather than the component default (white). */
+    .main-nav .tdc-nav .nav-item > .nav-item-content {
+      min-width: 240px;
+      margin-top: 0;
+      padding: 0;
+      background: #1e6167;
+      border: 0;
+      border-radius: 0;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 22%);
+    }
+
+    .main-nav .tdc-nav .nav-item-content .nav-item > a,
+    .main-nav .tdc-nav .nav-item-nested .nav-item > a {
+      padding: 0.6rem 1rem;
+      white-space: nowrap;
+      color: #fff;
+    }
+
+    .main-nav .tdc-nav .nav-item-content > .nav-list > .nav-item + .nav-item {
+      border-top: 1px solid rgb(255 255 255 / 22%);
+    }
+
+    .main-nav .tdc-nav .nav-item-content .nav-item > a:hover {
+      background: rgb(255 255 255 / 12%);
+      color: #eaffd0;
+    }
+
+    /* Third level sits inside the panel: darken it a step so it reads as nested. */
+    .main-nav .tdc-nav .nav-item-nested {
+      background: rgb(0 0 0 / 12%);
+    }
+
+    .main-nav .tdc-topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm, 0.6rem);
+      flex: 0 0 auto;
+    }
+
+    /* ---- Logo band ---- */
+    .main-nav .tdc-logobar {
+      background: linear-gradient(90deg, #227077 0%, #177982 50%, #477c1d 100%);
+    }
+
+    .main-nav .tdc-logobar-inner {
+      max-width: var(--content-width-2xl, 1300px);
+      margin-inline: auto;
+      padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: var(--spacing-md, 1rem);
+    }
+
+    .main-nav .tdc-logo {
+      justify-self: center;
+      display: block;
+    }
+
+    .main-nav .tdc-logo img {
+      display: block;
+      height: 64px;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .main-nav .tdc-address,
+    .main-nav .tdc-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      color: #fff;
+      text-decoration: none;
+      font-size: var(--font-size-sm, 0.9rem);
+      line-height: 1.25;
+      transition: opacity 0.2s ease;
+    }
+
+    .main-nav .tdc-address:hover,
+    .main-nav .tdc-call:hover {
+      opacity: 0.85;
+    }
+
+    .main-nav .tdc-address-line {
+      display: block;
+    }
+
+    .main-nav .tdc-address {
+      justify-self: start;
+      font-weight: var(--font-weight-semibold, 600);
+      letter-spacing: 0.02em;
+    }
+
+    .main-nav .tdc-call {
+      justify-self: end;
+      text-align: right;
+      font-size: var(--font-size-lg, 1.15rem);
+    }
+
+    .main-nav .tdc-call .icon,
+    .main-nav .tdc-address .icon {
+      font-size: 1.25em;
+    }
+
+    .main-nav .tdc-call-label {
+      display: block;
+      font-weight: var(--font-weight-semibold, 600);
+      letter-spacing: 0.02em;
+    }
+
+    /* ---- Compact scrolled header: contact row above the nav ---- */
+    @media (min-width: 1025px) {
+      .main-nav.is-stuck {
+        display: flex;
+        flex-direction: column;
+        background: rgb(15 102 110 / 95%);
       }
 
-      .nav-hamburger.mobile-button {
-        @media (min-width: 1025px) {
-          display: none;
-        }
+      /* The logo band sits second in the DOM; lift it above the nav when stuck. */
+      .main-nav.is-stuck .tdc-logobar {
+        order: 1;
+        background: transparent;
       }
 
-      > .outer-content .hd-content {
+      .main-nav.is-stuck .tdc-topbar {
+        order: 2;
+        background: transparent;
+      }
+
+      .main-nav.is-stuck .tdc-logobar-inner {
+        display: flex;
         align-items: center;
-        container-type: inline-size;
+        gap: var(--spacing-md, 1rem);
+        padding-block: 0.5rem;
+        border-bottom: 1px solid rgb(255 255 255 / 45%);
+      }
+
+      .main-nav.is-stuck .tdc-logo {
+        order: 1;
+        margin-inline-end: auto;
+      }
+
+      .main-nav.is-stuck .tdc-logo img {
+        height: 42px;
+      }
+
+      .main-nav.is-stuck .tdc-call {
+        order: 2;
+        font-size: var(--font-size-sm, 0.9rem);
+      }
+
+      .main-nav.is-stuck .tdc-address {
+        order: 3;
+      }
+
+      /* Address collapses to a single comma-separated line in the compact row. */
+      .main-nav.is-stuck .tdc-address-lines {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--spacing-md);
-
-        > a > .image img {
-          height: 1.8em;
-          max-width: min(20em, 100%);
-          width: auto;
-        }
-
-        .button-group {
-          margin-top: 0;
-        }
+        gap: 0.3em;
       }
 
-      > .outer-content .hd-content .hd-right {
-        display: flex;
-        flex: 0 1 700px;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-left: auto;
-        align-items: end;
-        margin-right: 20px;
+      .main-nav.is-stuck .tdc-address-line {
+        display: inline;
       }
 
-      > .outer-content .hd-content .hd-actions {
-        align-items: center;
-        display: flex;
-        gap: var(--spacing-sm);
-        justify-content: flex-end;
+      .main-nav.is-stuck .tdc-address-line:not(:last-child)::after {
+        content: ",";
       }
 
-      > .outer-content .hd-content .nav-end {
-        align-items: center;
-        display: inline-flex;
-        flex: 0 0 auto;
-        gap: var(--spacing-xs);
-        justify-content: flex-end;
-      }
-
-      > .outer-content .hd-content .nav-end > .desktop-main-nav.bar {
-        flex: 0 1 auto;
-      }
-
-      > .outer-content .hd-content .nav-end > .desktop-button-group.button-group {
-        flex: 0 0 30px;
-        margin-top: 0;
-        width: auto;
-      }
-
-      > .outer-content .hd-content .page-buttons {
-        flex: 0 0 auto;
-
-        > .button-group {
-          container-type: normal;
-          margin-left: 0;
-        }
+      .main-nav.is-stuck .tdc-topbar-inner {
+        min-height: 46px;
       }
     }
 
-    .hd-info{display: flex; justify-content: space-between; align-items: center;}
-    .main-nav .phy{display: block; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text); line-height: 1; transition: .3s;}
-      .main-nav .pho{font-weight: var(--font-weight-bold); color: var(--color-brand); font-size: var(--font-size-2xl); line-height: 1; transition: .3s; display: block; margin: 0 auto 5px;}
-
-    .main-nav .pho:hover, .main-nav .phy:hover{color: var(--color-brand-secondary)}
-
-    .mobile-nav-button{min-width: 10px;border-radius: 0; border: none; height: 70px; width: 70px; background-color: var(--color-brand); color: var(--color-text-on-brand); display: flex; align-items: center; justify-content: center;}
-    .nav-hamburger .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
+    /* ---- Appointment dropdown (green CTA on the teal bar) ---- */
+    .appointment-dropdown {
+      position: relative;
+      display: inline-block;
     }
 
-    .nav-hamburger .mobile-nav-button .icon svg path {
-      stroke-width: 2.25;
+    .appointment-dropdown .appointment-trigger {
+      gap: 0.4em;
+      background-color: var(--color-brand-secondary, #a6ce39);
+      border-color: transparent;
+      color: #111;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      white-space: nowrap;
+      min-width: 0;
+      padding-inline: 1.1em;
+      border-radius: 0;
     }
 
-    .mobile-close .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
+    .appointment-dropdown .appointment-trigger .label-text {
+      white-space: nowrap;
     }
 
-    .mobile-close .mobile-nav-button .icon svg path {
-      stroke-width: 2.25;
+    /* Reference design: label + caret only, no leading icon. */
+    .appointment-dropdown .appointment-trigger > .icon:not(.appointment-caret) {
+      display: none;
     }
 
-    .mobile-nav-close {}
+    .appointment-dropdown .appointment-trigger:hover {
+      background-color: #93b830;
+      color: #111;
+    }
 
+    .appointment-dropdown .appointment-caret {
+      font-size: 0.75em;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .appointment-dropdown .appointment-panel {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      z-index: 60;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      min-width: max(100%, 360px);
+      margin-top: 0;
+      padding: 0.45rem;
+      background: #8ab52e;
+      border-radius: 0;
+      box-shadow: 0 12px 30px rgb(0 0 0 / 22%);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-6px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    }
+
+    .appointment-dropdown .appointment-panel::before {
+      content: "";
+      position: absolute;
+      inset: -0.3rem 0 auto 0;
+      height: 0.3rem;
+    }
+
+    .appointment-dropdown:hover .appointment-panel,
+    .appointment-dropdown:focus-within .appointment-panel,
+    .appointment-dropdown.is-open .appointment-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .appointment-dropdown:hover .appointment-caret,
+    .appointment-dropdown.is-open .appointment-caret {
+      transform: rotate(180deg);
+    }
+
+    .appointment-dropdown .appointment-panel .button {
+      width: 100%;
+      justify-content: center;
+      white-space: nowrap;
+      background-color: var(--color-brand-secondary, #a6ce39);
+      border: 0;
+      border-radius: 0;
+      color: #111;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      padding-block: 0.85em;
+    }
+
+    /* Reference design: centred label only, no leading icon, single line. */
+    .appointment-dropdown .appointment-panel .button .icon {
+      display: none;
+    }
+
+    .appointment-dropdown .appointment-panel .button > * {
+      white-space: nowrap;
+    }
+
+    .appointment-dropdown .appointment-panel .button + .button {
+      border-top: 1px solid rgb(0 0 0 / 25%);
+    }
+
+    .appointment-dropdown .appointment-panel .button:hover {
+      background-color: #93b830;
+      color: #111;
+    }
+
+    /* ---- Responsive ---- */
+    .main-nav .mobile-main-nav,
+    .main-nav .nav-hamburger,
+    .main-nav .nav-toggle {
+      display: none;
+    }
 
     @media (max-width: 1024px) {
-      .main-nav{padding: 0;}
-      .main-nav > .outer-content > .content {
-        align-items: center;
-        display: flex;
-        gap: var(--spacing-sm);
-        justify-content: space-between;
-        padding-right: 0;
+      .main-nav {
+        padding: 0;
       }
 
-      .main-nav > .outer-content .hd-content {
-        align-items: center;
-        display: flex;
-        flex: 1 1 auto;
-        min-width: 0;
+      .main-nav .tdc-topbar,
+      .main-nav .tdc-logobar {
+        display: none;
       }
 
-      .main-nav > .outer-content .hd-content .logo-link {
-        display: block;
-        flex: 0 0 auto;
-      }
-
-      .main-nav > .outer-content .hd-content .logo-link .image img {
+      .main-nav .mobile-main-nav {
         display: block;
       }
 
-      .hd-info, .top-bar{display: none;}
-      .main-nav > .outer-content .hd-content .hd-right {display: none;}
+      .main-nav .nav-hamburger {
+        display: flex;
+      }
     }
   }
-
 </style>

@@ -1,0 +1,10 @@
+_snippets:
+  closing_cta:
+    template: astro_component
+    inline: false
+    preview:
+      text: Closing Call To Action
+    definitions:
+      component_name: page-sections/wpmig/closing-cta
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/closing-cta/closing-cta.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  home_callouts:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Callouts
+    definitions:
+      component_name: page-sections/wpmig/home-callouts
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-callouts/home-callouts.cloudcannon.inputs.yml

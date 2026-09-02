@@ -1,0 +1,183 @@
+_inputs:
+  blocks:
+    type: array
+    comment: The section's content, in the order it renders.
+    options:
+      structures: _structures.content_block
+  media:
+    type: object
+    comment: Optional photo or embed the copy wraps around.
+    options:
+      structures: _structures.content_media
+  align:
+    type: select
+    comment: Centred reads as a page intro; left is a body section.
+    options:
+      values:
+        - id: left
+          name: Left
+        - id: center
+          name: Centred
+  backgroundColor:
+    type: color
+    comment: Leave empty for a plain section; set it to make the section a band.
+  headingColor:
+    type: color
+  subheadingColor:
+    type: color
+  textColor:
+    type: color
+  eyebrowColor:
+    type: color
+
+_structures:
+  content_block:
+    style: modal
+    values:
+      - label: Heading
+        icon: title
+        value:
+          type: heading
+          html: ""
+        _inputs:
+          type:
+            type: hidden
+          html:
+            type: html
+            options:
+              bold: true
+              italic: true
+          level:
+            type: number
+            comment: 1 for the page title; leave empty for a normal section heading.
+      - label: Subheading
+        icon: subtitles
+        value:
+          type: subheading
+          html: ""
+        _inputs:
+          type:
+            type: hidden
+          html:
+            type: html
+      - label: Prose
+        icon: notes
+        value:
+          type: prose
+          html: ""
+          columns: 1
+        _inputs:
+          type:
+            type: hidden
+          html:
+            type: markdown
+          columns:
+            type: select
+            comment: Two columns suit a long list; copy should stay at one.
+            options:
+              values:
+                - id: 1
+                  name: One column
+                - id: 2
+                  name: Two columns
+      - label: Divider
+        icon: horizontal_rule
+        value:
+          type: divider
+        _inputs:
+          type:
+            type: hidden
+      - label: Eyebrow
+        icon: short_text
+        value:
+          type: eyebrow
+          html: ""
+        _inputs:
+          type:
+            type: hidden
+          html:
+            type: html
+      - label: Image
+        icon: image
+        value:
+          type: image
+          source: ""
+          alt: ""
+        _inputs:
+          type:
+            type: hidden
+          source:
+            type: image
+          alt:
+            type: text
+      - label: Buttons
+        icon: smart_button
+        value:
+          type: buttons
+          buttons:
+            - text: ""
+              link: ""
+              newTab: false
+        _inputs:
+          type:
+            type: hidden
+          buttons:
+            type: array
+            options:
+              structures: _structures.content_button
+
+  content_button:
+    values:
+      - value:
+          text: ""
+          link: ""
+          newTab: false
+        _inputs:
+          text:
+            type: text
+          link:
+            type: url
+          newTab:
+            type: switch
+            label: Open in new tab
+
+  content_media:
+    values:
+      - label: Photo
+        icon: image
+        value:
+          type: image
+          source: ""
+          alt: ""
+          side: right
+        _inputs:
+          type:
+            type: hidden
+          source:
+            type: image
+          alt:
+            type: text
+          side:
+            type: select
+            options:
+              values:
+                - id: left
+                  name: Left
+                - id: right
+                  name: Right
+      - label: Embed
+        icon: dynamic_form
+        value:
+          type: embed
+          url: ""
+          title: ""
+          side: right
+        _inputs:
+          type:
+            type: hidden
+          url:
+            type: url
+          title:
+            type: text
+          side:
+            type: hidden

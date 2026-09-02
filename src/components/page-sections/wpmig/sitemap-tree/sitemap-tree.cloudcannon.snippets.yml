@@ -1,0 +1,10 @@
+_snippets:
+  sitemap_tree:
+    template: astro_component
+    inline: false
+    preview:
+      text: Sitemap Tree
+    definitions:
+      component_name: page-sections/wpmig/sitemap-tree
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/sitemap-tree/sitemap-tree.cloudcannon.inputs.yml

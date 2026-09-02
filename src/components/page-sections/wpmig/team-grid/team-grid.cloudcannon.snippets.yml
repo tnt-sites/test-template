@@ -1,0 +1,10 @@
+_snippets:
+  team_grid:
+    template: astro_component
+    inline: false
+    preview:
+      text: Team Grid
+    definitions:
+      component_name: page-sections/wpmig/team-grid
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/team-grid/team-grid.cloudcannon.inputs.yml

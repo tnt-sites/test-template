@@ -1,0 +1,78 @@
+---
+import BlogCard from "@page-sections/shared-blocks/blog-card/BlogCard.astro";
+import BlogSidebar from "@page-sections/shared-blocks/blog-sidebar/BlogSidebar.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const slugify = (s: string) =>
+    s
+      .toLowerCase()
+      .replace(/&/g, "and")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/(^-|-$)/g, "");
+
+  const posts = await getCollection("blog");
+  const byCat = new Map<string, { label: string; posts: any[] }>();
+
+  for (const post of posts) {
+    const cats = Array.isArray((post.data as any).categories) ? (post.data as any).categories : [];
+    for (const label of cats) {
+      const slug = slugify(label);
+      if (!byCat.has(slug)) byCat.set(slug, { label, posts: [] });
+      byCat.get(slug)!.posts.push(post);
+    }
+  }
+
+  return [...byCat.entries()].map(([slug, { label, posts }]) => ({
+    params: { category: slug },
+    props: {
+      label,
+      posts: posts.sort(
+        (a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+      ),
+    },
+  }));
+}
+
+const { category } = Astro.params;
+const { label, posts } = Astro.props;
+---
+
+<Page
+  title={`${label} Articles`}
+  description={`Articles about ${label} from Taylor Dental Care in Sandy, UT.`}
+>
+  <CustomSection
+    maxContentWidth="2xl"
+    paddingHorizontal="lg"
+    paddingVertical="none"
+    colorScheme="default"
+    backgroundColor="base"
+    style="padding-block: var(--spacing-3xl);"
+  >
+    <div class="blog-layout">
+      <div class="blog-main">
+        <Heading level="h1" size="lg" style="margin-bottom: var(--spacing-xs);" editable={false}>
+          {label}
+        </Heading>
+        <SimpleText
+          size="sm"
+          style="color: var(--color-text-muted); margin-bottom: var(--spacing-xl);"
+          editable={false}
+        >
+          {posts.length} article{posts.length === 1 ? "" : "s"}
+        </SimpleText>
+        <div class="blog-cards-grid">
+          {posts.map((post: any) => (
+            <BlogCard post={post} />
+          ))}
+        </div>
+      </div>
+      <BlogSidebar activeCategory={category} />
+    </div>
+  </CustomSection>
+</Page>

@@ -1,0 +1,10 @@
+_snippets:
+  why_choose_band:
+    template: astro_component
+    inline: false
+    preview:
+      text: Why Choose Us Band
+    definitions:
+      component_name: page-sections/wpmig/why-choose-band
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/why-choose-band/why-choose-band.cloudcannon.inputs.yml

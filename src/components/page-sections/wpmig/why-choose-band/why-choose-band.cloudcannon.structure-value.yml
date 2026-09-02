@@ -1,0 +1,21 @@
+label: Why Choose Us Band
+icon: verified
+description: Teal-to-lime band with a numbered list of reasons to choose the practice.
+value:
+  _component: page-sections/wpmig/why-choose-band
+  id: ""
+  heading: ""
+  text: Why Choose Us Band
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+preview:
+  text:
+    - Why Choose Us Band
+  icon: verified
+picker_preview:
+  text: Why Choose Us Band
+  subtext: Teal-to-lime band with a numbered list of reasons to choose the practice.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/why-choose-band/why-choose-band.cloudcannon.inputs.yml

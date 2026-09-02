@@ -1,0 +1,42 @@
+---
+/**
+ * PageHeading — the interior page's own `<h1>`, above the lead prose block.
+ *
+ * The migrator emitted this component with its typography intact but no prop
+ * for the text, so three pages rendered an empty `<section>` and shipped with
+ * no `<h1>` at all. The heading is a prop now; the styling is the source's
+ * `.inner-page h1` (36px/700, uppercase, centred, navy).
+ */
+const {
+  heading = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+
+<section class="page-heading" id={id || undefined} {...rest}>
+  {heading && <h1 class="page-heading-title" set:html={heading} />}
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .page-heading {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      width: 100%;
+    }
+
+    .page-heading .page-heading-title {
+      color: #30475e;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 0 36px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+</style>

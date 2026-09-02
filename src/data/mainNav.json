@@ -1,69 +1,249 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2021/08/logo-white.png",
+  "logoAlt": "Taylor Dental Care",
   "navData": [
     {
       "name": "Home",
       "path": "/",
+      "icon": "",
       "children": []
     },
     {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "/dr-michelle-taylor-dds/",
+      "icon": "",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "Dr. Michelle Taylor, DDS",
+          "path": "/dr-michelle-taylor-dds/",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Dr. Glenn Taylor, DDS",
+          "path": "/dr-glenn-taylor-dds/",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Meet Our Sandy Dental Team",
+          "path": "/meet-the-team/",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "icon": "rss",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "/cosmetic-dentistry/",
+      "icon": "",
+      "children": [
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "/cosmetic-dentistry/",
+          "icon": "",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dental Veneers and Laminates",
+              "path": "/dental-veneers-and-laminates/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Smile Makeover",
+              "path": "/smile-makeover/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Teeth Whitening",
+              "path": "/teeth-whitening/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Cerec One Day Crowns",
+              "path": "/cerec-one-day-crowns/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Invisalign",
+              "path": "/invisalign/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Botox",
+              "path": "/botox/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Juv\u00e9derm Sandy",
+              "path": "/juvederm/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Restylane",
+              "path": "/restylane/",
+              "icon": "",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Restorative Dentistry",
+          "path": "/restorative-dentistry/",
+          "icon": "",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Bridges",
+              "path": "/dental-bridges/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Dentures and Partial Dentures",
+              "path": "/dentures-and-partial-dentures/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Full Mouth Reconstruction",
+              "path": "/full-mouth-reconstruction/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Tooth Colored Fillings",
+              "path": "/tooth-colored-fillings/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Root Canal Therapy",
+              "path": "/root-canal-therapy/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Chao Pinhole Technique",
+              "path": "/chao-pinhole-technique/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "General Dentistry",
+          "path": "/general-dentistry/",
+          "icon": "",
+          "children": [
+            {
+              "name": "Pediatric Dentistry",
+              "path": "/pediatric-dentistry/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Emergency Dentistry",
+              "path": "/emergency-dentistry/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Oral DNA",
+              "path": "/oral-dna/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Dental Exam & Checkup",
+              "path": "/dental-exam-checkup/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Sleep Apnea",
+              "path": "/sleep-apnea/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Periodontal Treatment & Perio Protect Trays",
+              "path": "/periodontal-treatment-perio-protect-trays/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Cold Sores",
+              "path": "/cold-sores/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Preventative Dentistry",
+              "path": "/preventative-dentistry/",
+              "icon": "",
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "Patient Info",
+      "path": "/new-patient-registration/",
+      "icon": "information-circle",
+      "children": [
+        {
+          "name": "New Dental Patient Registration Sandy",
+          "path": "/new-patient-registration/",
+          "icon": "information-circle",
+          "children": []
+        },
+        {
+          "name": "Insurances & Financial Options",
+          "path": "/insurances-financial-options/",
+          "icon": "information-circle",
+          "children": []
+        },
+        {
+          "name": "Dental membership plan",
+          "path": "/dental-membership-plan/",
+          "icon": "information-circle",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/",
+      "icon": "",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
+      "name": "Contact Us",
+      "path": "/contact-us/",
+      "icon": "",
       "children": []
     }
   ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
@@ -72,7 +252,7 @@
       "hideText": false,
       "link": "/request-an-appointment/",
       "modalTarget": "",
-      "iconName": "",
+      "iconName": "calendar-days",
       "iconPosition": "before",
       "variant": "primary",
       "size": "md",
@@ -81,7 +261,29 @@
       "borderWidth": "default",
       "borderColor": "default",
       "textColor": "default",
-      "uppercase": false
+      "uppercase": false,
+      "dropdown": [
+        {
+          "text": "Request an Appointment",
+          "link": "/request-an-appointment/",
+          "iconName": "calendar-days",
+          "variant": "primary"
+        },
+        {
+          "text": "Schedule a Hygiene Appointment",
+          "link": "/schedule-a-hygiene-appointment/",
+          "iconName": "calendar",
+          "variant": "secondary"
+        }
+      ]
     }
-  ]
+  ],
+  "topBar": {
+    "label": "Home About Us Services Patient Info Specials Success Stories Smile Gallery Contact Us Request Appointment",
+    "phone": {
+      "display": "(801) 565-9411",
+      "href": "tel:+18015659411",
+      "icon": "phone"
+    }
+  }
 }

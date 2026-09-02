@@ -1,0 +1,139 @@
+---
+/**
+ * TeamGrid — portrait, name and bio per team member (migrated from meet-the-team [3] by wp-migrator).
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+const {
+  cards = [],
+  titleColor = "",
+  titleColorHex = "#177982",
+  textColor = "#000000",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const titleColorValue = titleColorHex || titleColor || "#177982";
+const textColorValue = textColorHex || textColor || "#000000";
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<div class="team-grid">
+  {list.map((c) => (
+    <div class="mpk-box">
+      <figure class="mpk-box2">
+        {c.image && <img class="mpk-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" width="600" height="800" />}
+      </figure>
+      <h2 class="mpk-heading">{c.title}</h2>
+      {c.text && <div class="mpk-body" set:html={c.text} />}
+    </div>
+  ))}
+</div>
+<style>
+  .team-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: Helvetica;
+    gap: 32px;
+    line-height: 24px;
+    margin-bottom: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .mpk-box {
+    box-sizing: border-box;
+    flex-grow: 1;
+    min-height: 1181px;
+  }
+
+  .mpk-box2 {
+    background-color: #111111;
+    box-sizing: border-box;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .mpk-media {
+    box-sizing: border-box;
+    display: block;
+    min-height: 100%;
+    opacity: 0.75;
+    position: relative;
+    width: 100%;
+  }
+
+  .mpk-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    line-height: 33.6px;
+    margin-bottom: 15px;
+    margin-top: 30px;
+    position: relative;
+    text-transform: capitalize;
+  }
+
+  .mpk-heading::after {
+    background-color: #177982;
+    border-radius: 0px;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .mpk-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .team-grid {
+      font-family: "PT Sans";
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+    }
+
+    .mpk-box {
+      min-height: auto;
+    }
+
+    .mpk-box2 {
+      width: 80%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .team-grid {
+      flex-wrap: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1270px;
+    }
+
+    .mpk-box {
+      min-height: 1238px;
+    }
+
+    .mpk-body :global(p) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+/* wpmig:corrections:begin */
+  .mpk-heading {
+    font-size: 24px;
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "Taylor Dental Care",
   "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "description": "Looking for a dentist in Sandy you can trust with all your oral health needs? Give Taylor Dental Care a call today.",
+  "logoSource": "/wp-content/uploads/2021/08/logo-white.png",
+  "titleFormat": "{title} | Taylor Dental Care",
   "twitterHandle": "@yourusername"
 }

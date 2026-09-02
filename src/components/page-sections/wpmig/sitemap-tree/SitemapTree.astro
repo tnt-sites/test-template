@@ -1,0 +1,532 @@
+---
+/**
+ * SitemapTree — the expandable site map (migrated from site-map [1] by wp-migrator).
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`, `items3`.
+ */
+const {
+  text = "",
+  text2 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  items = [],
+  items2 = [],
+  items3 = [],
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "",
+  textColor2Hex = "#1b315e",
+  hoverColor = "",
+  hoverColorHex = "#132342",
+  hoverColor2 = "",
+  hoverColor2Hex = "#111f3b",
+  textColor2HoverColor = "#000000",
+  textColor2HoverColorHex = "",
+  hoverColor3 = "#000000",
+  hoverColor3Hex = "",
+  hoverColor4 = "",
+  hoverColor4Hex = "#0f1b34",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#1b315e";
+const hoverColorValue = hoverColorHex || hoverColor || "#132342";
+const hoverColor2Value = hoverColor2Hex || hoverColor2 || "#111f3b";
+const textColor2HoverColorValue = textColor2HoverColorHex || textColor2HoverColor || "#000000";
+const hoverColor3Value = hoverColor3Hex || hoverColor3 || "#000000";
+const hoverColor4Value = hoverColor4Hex || hoverColor4 || "#0f1b34";
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
+---
+<section class="sitemap-tree" id={id || undefined} style={`--tx:${textColorValue};--c2:${textColor2Value};--c3:${hoverColorValue};--c4:${hoverColor2Value};--c5:${textColor2HoverColorValue};--c6:${hoverColor3Value};--c7:${hoverColor4Value}`} {...rest}>
+  <div class="pbhs-box">
+    <article class="pbhs-box2">
+      {text && <div class="pbhs-text" set:html={text} />}
+      <div class="pbhs-box3">
+        {text2 && <div class="pbhs-text2" set:html={text2} />}
+        <ul class="pbhs-box4">
+          <li class="pbhs-box5">
+            {buttonText && <a class="pbhs-link" href={buttonLink || "#"}>{buttonText}</a>}
+          </li>
+          <li class="pbhs-box6">
+            <div class="pbhs-decor" aria-hidden="true"></div>
+            {secondaryButtonText && <a class="pbhs-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+            <ul class="pbhs-grid">
+              {itemsList.map((it) => (
+                <li class="pbhs-box7">
+                  {it.buttonText && <a class="pbhs-link3" href={it.buttonLink || "#"}>{it.buttonText}</a>}
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li class="pbhs-box11">
+            <div class="pbhs-decor2" aria-hidden="true"></div>
+            {secondaryButtonText2 && <a class="pbhs-link7" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+            <ul class="pbhs-grid2">
+              {items2List.map((it) => (
+                <li class="pbhs-box12">
+                  <div class="pbhs-decor3" aria-hidden="true"></div>
+                  {it.buttonText && <a class="pbhs-link8" href={it.buttonLink || "#"}>{it.buttonText}</a>}
+                  <ul class="pbhs-box13">
+                    <li class="pbhs-box14">
+                      {it.buttonText2 && <a class="pbhs-link9" href={it.buttonLink2 || "#"}>{it.buttonText2}</a>}
+                    </li>
+                    <li class="pbhs-box15">
+                      {it.buttonText3 && <a class="pbhs-link10" href={it.buttonLink3 || "#"}>{it.buttonText3}</a>}
+                    </li>
+                    <li class="pbhs-box16">
+                      {it.buttonText4 && <a class="pbhs-link11" href={it.buttonLink4 || "#"}>{it.buttonText4}</a>}
+                    </li>
+                    <li class="pbhs-box17">
+                      {it.buttonText5 && <a class="pbhs-link12" href={it.buttonLink5 || "#"}>{it.buttonText5}</a>}
+                    </li>
+                    <li class="pbhs-box18">
+                      {it.buttonText6 && <a class="pbhs-link13" href={it.buttonLink6 || "#"}>{it.buttonText6}</a>}
+                    </li>
+                    <li class="pbhs-box19">
+                      {it.buttonText7 && <a class="pbhs-link14" href={it.buttonLink7 || "#"}>{it.buttonText7}</a>}
+                    </li>
+                    <li class="pbhs-box20">
+                      {it.buttonText8 && <a class="pbhs-link15" href={it.buttonLink8 || "#"}>{it.buttonText8}</a>}
+                    </li>
+                    <li class="pbhs-box21">
+                      {it.buttonText9 && <a class="pbhs-link16" href={it.buttonLink9 || "#"}>{it.buttonText9}</a>}
+                    </li>
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li class="pbhs-box41">
+            <div class="pbhs-decor6" aria-hidden="true"></div>
+            {secondaryButtonText3 && <a class="pbhs-link34" href={secondaryButtonLink3 || "#"}>{secondaryButtonText3}</a>}
+            <ul class="pbhs-grid3">
+              {items3List.map((it) => (
+                <li class="pbhs-box42">
+                  {it.buttonText && <a class="pbhs-link35" href={it.buttonLink || "#"}>{it.buttonText}</a>}
+                </li>
+              ))}
+            </ul>
+          </li>
+          <li class="pbhs-box45">
+            {secondaryButtonText4 && <a class="pbhs-link38" href={secondaryButtonLink4 || "#"}>{secondaryButtonText4}</a>}
+          </li>
+          <li class="pbhs-box46">
+            {secondaryButtonText5 && <a class="pbhs-link39" href={secondaryButtonLink5 || "#"}>{secondaryButtonText5}</a>}
+          </li>
+          <li class="pbhs-box47">
+            {secondaryButtonText6 && <a class="pbhs-link40" href={secondaryButtonLink6 || "#"}>{secondaryButtonText6}</a>}
+          </li>
+          <li class="pbhs-box48">
+            {secondaryButtonText7 && <a class="pbhs-link41" href={secondaryButtonLink7 || "#"}>{secondaryButtonText7}</a>}
+          </li>
+          <li class="pbhs-box49">
+            {secondaryButtonText8 && <a class="pbhs-link42" href={secondaryButtonLink8 || "#"}>{secondaryButtonText8}</a>}
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+<style>
+  .sitemap-tree {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .pbhs-box {
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pbhs-box2 {
+    box-sizing: border-box;
+    padding-bottom: 60px;
+    padding-top: 18px;
+  }
+
+  .pbhs-text {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .pbhs-box3 {
+    box-sizing: border-box;
+  }
+
+  .pbhs-text2 {
+    box-sizing: border-box;
+  }
+
+  .pbhs-box4 {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .pbhs-box5 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box6 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-position: 0px -176px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-decor {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default.gif");
+    background-position: -80px -3px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-left: -16px;
+    min-height: 16px;
+  }
+
+  .pbhs-link2 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link3 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box11 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-position: 0px -176px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-decor2 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default.gif");
+    background-position: -80px -3px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-left: -16px;
+    min-height: 16px;
+  }
+
+  .pbhs-link7 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link8 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link9 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link10 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link11 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link12 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link13 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link14 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link15 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link16 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box41 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-position: 0px -176px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-decor6 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default.gif");
+    background-position: -80px -3px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-left: -16px;
+    min-height: 16px;
+  }
+
+  .pbhs-link34 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link35 {
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box45 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link38 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box46 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link39 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box47 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link40 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box48 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link41 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-box49 {
+    background-image: url("/wp-content/themes/ekwa/template-parts/theme-blocks/sitemap-244/treeview-default-line.gif");
+    background-position: 0px -1766px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    padding-top: 3px;
+  }
+
+  .pbhs-link42 {
+    box-sizing: border-box;
+    color: #1b315e;
+    transition: all 0.5s ease;
+  }
+
+  .pbhs-link:hover {
+    border-top-color: #132342;
+    color: var(--c3);
+  }
+
+  .pbhs-link2:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link3:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link7:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link8:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link9:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link10:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link11:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link12:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link13:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link14:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link15:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link16:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link34:hover {
+    border-top-color: #0f1b34;
+    color: var(--c7);
+  }
+
+  .pbhs-link35:hover {
+    border-top-color: #000000;
+    color: var(--c5);
+  }
+
+  .pbhs-link38:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link39:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link40:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link41:hover {
+    border-top-color: #111f3b;
+    color: var(--c4);
+  }
+
+  .pbhs-link42:hover {
+    border-top-color: #132342;
+    color: var(--c3);
+  }
+
+  @media (min-width: 768px) {
+    .sitemap-tree {
+      font-family: "PT Sans";
+    }
+
+    .pbhs-box2 {
+      padding-top: 60px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pbhs-box {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+/* wpmig:corrections:begin */
+  .pbhs-link3 {
+    font-weight: 700;
+    line-height: 45px;
+  }
+  .pbhs-link35 {
+    font-weight: 700;
+    line-height: 45px;
+  }
+  .pbhs-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+/* wpmig:corrections:end */
+</style>

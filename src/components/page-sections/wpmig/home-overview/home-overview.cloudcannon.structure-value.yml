@@ -1,0 +1,63 @@
+label: Home Overview
+icon: home
+description: The homepage's practice intro, half-screen team photo and services grid.
+value:
+  _component: page-sections/wpmig/home-overview
+  id: ""
+  heading: ""
+  text: Home Overview
+  image: /wp-content/themes/ekwa/images/welcome-bg.jpg
+  buttonText: ""
+  buttonLink: ""
+  subheading: ""
+  text2: ""
+  teamImage: /wp-content/uploads/2021/08/meet-the-doctors-pic.jpg
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  heading2: ""
+  heading3: ""
+  text3: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+  headingColor: "#000000"
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#a6ce39"
+  buttonTextColor: ""
+  buttonTextColorHex: "#111111"
+  cardBackgroundColor: ""
+  cardBackgroundColorHex: "#111111"
+  titleColor: "#ffffff"
+  titleColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+  textColor3: ""
+  textColor3Hex: "#1b315e"
+  buttonTextHoverColor: "#000000"
+  buttonTextHoverColorHex: ""
+  hoverColor: "#ffffff"
+  hoverColorHex: ""
+  textHoverColor: "#ffffff"
+  textHoverColorHex: ""
+  hoverColor2: ""
+  hoverColor2Hex: "#111111"
+preview:
+  text:
+    - Home Overview
+  icon: home
+picker_preview:
+  text: Home Overview
+  subtext: The homepage's practice intro, half-screen team photo and services grid.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-overview/home-overview.cloudcannon.inputs.yml

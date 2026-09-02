@@ -1,0 +1,22 @@
+label: Content Section
+icon: article
+description: A run of headings and copy, optionally wrapping a photo.
+value:
+  _component: page-sections/shared-blocks/content-section
+  id: ""
+  align: left
+  blocks:
+    - type: heading
+      html: ""
+    - type: prose
+      html: ""
+preview:
+  text:
+    - blocks[0].html
+    - Content Section
+  icon: article
+picker_preview:
+  text: Content Section
+  subtext: Headings and copy, full width.
+_inputs_from_glob:
+  - /src/components/page-sections/shared-blocks/content-section/content-section.cloudcannon.inputs.yml

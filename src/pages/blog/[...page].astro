@@ -1,14 +1,11 @@
 ---
+import BlogCard from "@page-sections/shared-blocks/blog-card/BlogCard.astro";
+import BlogSidebar from "@page-sections/shared-blocks/blog-sidebar/BlogSidebar.astro";
 import Components from "@components/utils/renderBlock.astro";
-import Heading from "@core-elements/heading/Heading.astro";
-import Image from "@core-elements/image/Image.astro";
 import Pagination from "@core-elements/pagination/Pagination.astro";
 import SimpleText from "@core-elements/simple-text/SimpleText.astro";
 import Page from "@layouts/Page.astro";
 import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
-import Card from "@wrappers/card/Card.astro";
-import Grid from "@wrappers/grid/Grid.astro";
-import GridItem from "@wrappers/grid/GridItem.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
@@ -27,22 +24,34 @@ let heroSections: any[] = [];
 
 try {
   const pages = await getCollection("pages");
-
   blogPage = pages.find((page: any) => page.id === "blog");
-
   if (blogPage?.data?.pageSections) {
     heroSections = blogPage.data.pageSections;
   }
 } catch {}
 
+// The closing call to action belongs under the listing, not above it. The
+// route renders `pageSections` as a lead-in, so the trailing CTA is split off
+// and rendered after the articles.
+const CLOSING = ["media-prose-schedule", "closing-cta"];
+const isClosing = (s: any) =>
+  CLOSING.some((name) => String(s?._component ?? "").endsWith(name));
+const leadSections = heroSections.filter((s: any) => !isClosing(s));
+const closingSections = heroSections.filter(isClosing);
+
 const pageTitle = blogPage?.data?.title ?? "Blog";
 const pageDescription =
   blogPage?.data?.description ??
-  "Read our latest articles and insights on web development, design, and technology.";
+  "Dental health tips, treatment insights, and news from Taylor Dental Care in Sandy, UT.";
+// The source titles the listing in its own words; `title` is the SEO title.
+const listingHeading = blogPage?.data?.listingHeading ?? "Latest From Our Blog";
+// The hero renders into the slot below and brings its own breadcrumb with it.
+const heroOpensWithBanner =
+  heroSections[0]?._component === "page-sections/shared-blocks/page-banner";
 ---
 
-<Page title={pageTitle} description={pageDescription}>
-  {heroSections.length > 0 && <Components contentSections={heroSections} propName="pageSections" />}
+<Page title={pageTitle} description={pageDescription} breadcrumb={!heroOpensWithBanner}>
+  {leadSections.length > 0 && <Components contentSections={leadSections} propName="pageSections" />}
 
   <CustomSection
     maxContentWidth="2xl"
@@ -50,82 +59,64 @@ const pageDescription =
     paddingVertical="none"
     colorScheme="default"
     backgroundColor="base"
-    style="padding-bottom: var(--spacing-4xl);"
+    style="padding-block: var(--spacing-3xl);"
   >
-    {
-      page.data.length > 0 ? (
-        <>
-          <Grid
-            gap="lg"
-            layout="start"
-            minItemWidth="320"
-            maxItemWidth="400"
-            style="margin-top: var(--spacing-2xl)"
-            editable={false}
-          >
-            {page.data.map((post: any) => {
-              const pubDate = post.data.date.toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              });
-
-              // Get slug from id (for glob loader) or slug property (for default loader)
-              const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
-
-              return (
-                <GridItem editable={false}>
-                  <Card
-                    link={`/blog/${slug}`}
-                    rounded={true}
-                    border={true}
-                    paddingVertical="lg"
-                    paddingHorizontal="lg"
-                    editable={false}
-                  >
-                    {post.data.image && (
-                      <Image
-                        slot="before"
-                        source={post.data.image}
-                        alt={post.data.title}
-                        aspectRatio="landscape"
-                        editable={false}
-                      />
-                    )}
-                    <SimpleText
-                      size="sm"
-                      style="color: var(--color-text-muted); margin-bottom: var(--spacing-xs);"
-                      editable={false}
-                    >
-                      {pubDate} • {post.data.author || "Anonymous"}
-                    </SimpleText>
-                    <Heading
-                      level="h3"
-                      size="md"
-                      style="margin-bottom: var(--spacing-md); margin-top: var(--spacing-sm);"
-                      editable={false}
-                    >
-                      {post.data.title}
-                    </Heading>
-                    <SimpleText
-                      size="sm"
-                      style="color: var(--color-text-muted); margin-top: 0;"
-                      editable={false}
-                    >
-                      {post.data.description}
-                    </SimpleText>
-                  </Card>
-                </GridItem>
-              );
-            })}
-          </Grid>
-          <Pagination page={page} showArrows={true} style="margin-top: var(--spacing-2xl);" />
-        </>
-      ) : (
-        <SimpleText alignX="center" style="margin-top: var(--spacing-2xl);" editable={false}>
-          No blog posts yet. Check back soon!
-        </SimpleText>
-      )
-    }
+    <h1 class="blog-page-heading">{listingHeading}</h1>
+    <div class="blog-layout">
+      <div class="blog-main">
+        {
+          page.data.length > 0 ? (
+            <>
+              <div class="blog-cards-grid">
+                {page.data.map((post: any) => (
+                  <BlogCard post={post} />
+                ))}
+              </div>
+              <Pagination page={page} showArrows={true} style="margin-top: var(--spacing-2xl);" />
+            </>
+          ) : (
+            <SimpleText alignX="center" style="margin-top: var(--spacing-2xl);" editable={false}>
+              No blog posts yet. Check back soon!
+            </SimpleText>
+          )
+        }
+      </div>
+      <BlogSidebar />
+    </div>
   </CustomSection>
+
+  {closingSections.length > 0 && <Components contentSections={closingSections} propName="pageSections" />}
 </Page>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .blog-page-heading {
+      color: #30475e;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 0 36px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .blog-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 300px;
+      gap: var(--spacing-2xl, 3rem);
+      align-items: start;
+    }
+
+    .blog-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+      gap: var(--spacing-lg, 1.5rem);
+    }
+
+    @media (max-width: 900px) {
+      .blog-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>

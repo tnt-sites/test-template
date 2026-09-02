@@ -1,0 +1,289 @@
+---
+/**
+ * AppointmentRequest — the bespoke request/contact form section.
+ *
+ * Two columns: the form on the left and, optionally, an office-hours + contact
+ * card on the right. The hygiene-appointment page uses `showHours={false}` to
+ * drop the card (same design, form only); the contact page uses the same shell
+ * with its own fields.
+ *
+ * The form itself comes from one of two sources. Set `formEmbedUrl` to embed a
+ * hosted Liine form (what the live WordPress site does on all three form pages)
+ * — the iframe self-sizes via Liine's embed handler. Leave it empty and the
+ * section falls back to a native `formBlocks` form.
+ */
+import Form from "@forms/form/Form.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  heading = "Request an Appointment",
+  subtext = "",
+  formAction = "./",
+  formBlocks = [],
+  submitText = "Submit",
+  formEmbedUrl = "",
+  formEmbedTitle = "Appointment Form",
+  formEmbedHeight = 539,
+  showHours = true,
+  hoursTitle = "Office Hours",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+/* Accepts either a full https://forms.liine.com/<id> URL or a bare form id. */
+const embedSrc = formEmbedUrl
+  ? /^https?:\/\//.test(formEmbedUrl)
+    ? formEmbedUrl
+    : `https://forms.liine.com/${formEmbedUrl}`
+  : "";
+const embedId = embedSrc.replace(/\/+$/, "").split("/").pop();
+
+const office = (siteInfoData as any)?.offices?.[0] ?? {};
+const address = office?.addresses?.[0];
+const phone = office?.phones?.[0];
+const email = office?.emails?.[0];
+const hours = Array.isArray(office?.officeHours) ? office.officeHours : [];
+
+const addressLine = address
+  ? [...(address.lines || []), [address.city, [address.state, address.postalCode].filter(Boolean).join(" ")].filter(Boolean).join(", ")]
+      .filter(Boolean)
+      .join(", ")
+  : "";
+---
+
+<section class="appointment-request" id={id || undefined} {...rest}>
+  <div class="ar-inner">
+    <div class="ar-form-col">
+      <h2 class="ar-heading" set:html={heading} />
+      {subtext && <p class="ar-subtext" set:html={subtext} />}
+      {
+        embedSrc ? (
+          <div class="ar-embed">
+            <iframe
+              id={`JotFormIFrame-${embedId}`}
+              title={formEmbedTitle}
+              src={embedSrc}
+              allow="geolocation; microphone; camera; fullscreen; payment"
+              scrolling="no"
+              style={`height:${formEmbedHeight}px;`}
+            />
+          </div>
+        ) : (
+          <Form class="ar-form" action={formAction} formBlocks={formBlocks} editable={false}>
+            <button type="submit" class="ar-submit button variant-primary">
+              {submitText}
+            </button>
+          </Form>
+        )
+      }
+    </div>
+
+    {
+      showHours && (
+        <aside class="ar-hours-col">
+          <div class="ar-card">
+            <h2 class="ar-card-title">{hoursTitle}</h2>
+            {hours.length > 0 && (
+              <ul class="ar-hours">
+                {hours.map((h: any) => (
+                  <li>
+                    <span class="ar-day">{h.day}</span>
+                    <span class="ar-time">{h.hours}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+            <div class="ar-contact">
+              {phone?.display && (
+                <a class="ar-contact-item" href={phone.href || "#"}>
+                  {phone.display}
+                </a>
+              )}
+              {email?.display && (
+                <a class="ar-contact-item" href={email.href || "#"}>
+                  {email.display}
+                </a>
+              )}
+              {addressLine && (
+                <a
+                  class="ar-contact-item"
+                  href={address?.mapUrl || "#"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {addressLine}
+                </a>
+              )}
+            </div>
+          </div>
+        </aside>
+      )
+    }
+  </div>
+</section>
+
+{
+  embedSrc && (
+    <Fragment>
+      <script is:inline src="https://forms.liine.com/s/umd/latest/for-form-embed-handler.js" />
+      <script
+        is:inline
+        set:html={`window.jotformEmbedHandler("iframe[id='JotFormIFrame-${embedId}']", "https://forms.liine.com/");`}
+      />
+    </Fragment>
+  )
+}
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .appointment-request {
+      width: 100%;
+      padding: var(--spacing-3xl, 4rem) var(--spacing-md, 1rem);
+      box-sizing: border-box;
+    }
+
+    .appointment-request .ar-inner {
+      width: 100%;
+      max-width: var(--content-width-xl, 1140px);
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: var(--spacing-2xl, 3rem);
+      align-items: start;
+    }
+
+    .appointment-request:has(.ar-form-col:only-child) .ar-inner,
+    .appointment-request .ar-inner:not(:has(.ar-hours-col)) {
+      grid-template-columns: minmax(0, 1fr);
+      max-width: var(--content-width-lg, 820px);
+    }
+
+    .appointment-request .ar-heading {
+      color: var(--color-text-strong, #1b2e38);
+      margin-top: 0;
+      margin-bottom: var(--spacing-sm, 0.75rem);
+    }
+
+    .appointment-request .ar-subtext {
+      color: var(--color-text-muted, #5b6b73);
+      margin-bottom: var(--spacing-lg, 1.5rem);
+    }
+
+    .appointment-request .ar-form.form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md, 1rem);
+      margin-top: 0;
+
+      > editable-array {
+        display: contents;
+      }
+
+      editable-array-item {
+        display: block;
+        min-width: 0;
+      }
+
+      .input,
+      .select,
+      .textarea {
+        width: 100%;
+      }
+
+      editable-array-item:has(.textarea),
+      editable-array-item:has(.choice-group),
+      editable-array-item:has(.form-full) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* Hosted Liine form; the embed handler overwrites the inline height. */
+    .appointment-request .ar-embed iframe {
+      border: 0;
+      display: block;
+      max-width: 100%;
+      min-width: 100%;
+    }
+
+    .appointment-request .ar-submit {
+      grid-column: 1 / -1;
+      justify-self: start;
+    }
+
+    /* Hours / contact card */
+    .appointment-request .ar-card {
+      background: var(--color-bg-brand, #177982);
+      color: var(--color-text-on-brand, #fff);
+      border-radius: var(--radius-lg, 12px);
+      padding: var(--spacing-xl, 2rem);
+      position: sticky;
+      top: calc(var(--site-header-height, 0px) + var(--spacing-md, 1rem));
+    }
+
+    .appointment-request .ar-card-title {
+      margin: 0 0 var(--spacing-md, 1rem);
+      color: var(--color-text-on-brand, #fff);
+      font-size: var(--font-size-xl, 1.4rem);
+    }
+
+    .appointment-request .ar-hours {
+      list-style: none;
+      margin: 0 0 var(--spacing-lg, 1.5rem);
+      padding: 0;
+    }
+
+    .appointment-request .ar-hours li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      margin: 0;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgb(255 255 255 / 22%);
+    }
+
+    .appointment-request .ar-hours li::before {
+      content: none;
+    }
+
+    .appointment-request .ar-hours li:last-child {
+      border-bottom: 0;
+    }
+
+    .appointment-request .ar-day {
+      font-weight: var(--font-weight-semibold, 600);
+    }
+
+    .appointment-request .ar-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-top: var(--spacing-md, 1rem);
+      border-top: 1px solid rgb(255 255 255 / 22%);
+    }
+
+    .appointment-request .ar-contact-item {
+      color: var(--color-text-on-brand, #fff);
+      text-decoration: none;
+      opacity: 0.95;
+    }
+
+    .appointment-request .ar-contact-item:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 860px) {
+      .appointment-request .ar-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .appointment-request .ar-form.form {
+        grid-template-columns: 1fr;
+      }
+
+      .appointment-request .ar-card {
+        position: static;
+      }
+    }
+  }
+</style>

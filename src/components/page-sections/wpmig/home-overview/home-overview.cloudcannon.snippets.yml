@@ -1,0 +1,10 @@
+_snippets:
+  home_overview:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Overview
+    definitions:
+      component_name: page-sections/wpmig/home-overview
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-overview/home-overview.cloudcannon.inputs.yml

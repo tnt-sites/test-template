@@ -1,0 +1,28 @@
+label: Home Callouts
+icon: grid_view
+description: The five bordered icon callouts under the homepage banner.
+value:
+  _component: page-sections/wpmig/home-callouts
+  id: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      link: ""
+  titleColor: ""
+  titleColorHex: "#111111"
+  hoverColor: "#000000"
+  hoverColorHex: ""
+  hoverColor2: "#ffffff"
+  hoverColor2Hex: ""
+  hoverBackgroundColor: ""
+  hoverBackgroundColorHex: "#a6ce39"
+preview:
+  text:
+    - Home Callouts
+  icon: grid_view
+picker_preview:
+  text: Home Callouts
+  subtext: The five bordered icon callouts under the homepage banner.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-callouts/home-callouts.cloudcannon.inputs.yml

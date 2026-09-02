@@ -421,7 +421,7 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       &.variant-secondary {
         background-color: var(--color-bg-brand-secondary);
         border-color: transparent;
-          color: var(--color-text-on-brand);
+        color: var(--color-text-on-brand-secondary, var(--color-text-on-brand));
 
         &:hover,
         &:focus {

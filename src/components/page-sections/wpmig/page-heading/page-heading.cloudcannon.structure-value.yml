@@ -1,0 +1,17 @@
+label: Page Heading
+icon: title
+description: The interior page's own H1, above the lead prose block.
+value:
+  _component: page-sections/wpmig/page-heading
+  id: ""
+  heading: ""
+preview:
+  text:
+    - heading
+    - Page Heading
+  icon: title
+picker_preview:
+  text: Page Heading
+  subtext: The interior page's own H1, above the lead prose block.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/page-heading/page-heading.cloudcannon.inputs.yml

@@ -60,12 +60,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 ---
 
 <input type="checkbox" id={toggleId} class="nav-toggle" autocomplete="off" />
-<label
-  for={toggleId}
-  class="nav-hamburger mobile-button"
-  aria-label="Toggle navigation menu"
-  tabindex="0"
->
+<label for={toggleId} class="nav-hamburger mobile-button" tabindex="0">
+  <span class="visually-hidden">Toggle navigation menu</span>
   <Button
     variant="tertiary"
     size="lg"
@@ -90,11 +86,10 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         />
       </slot>
     </div>
-    <label
-      for={toggleId}
+    <button
+      type="button"
       class="mobile-close mobile-button"
       aria-label="Close navigation menu"
-      tabindex="0"
     >
       <Button
         variant="tertiary"
@@ -104,7 +99,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         hideText="true"
         class="mobile-nav-close mobile-nav-button"
       />
-    </label>
+    </button>
   </div>
 
   <div class="mobile-content">
@@ -163,8 +158,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 role="button"
                 aria-controls={itemData.contentId}
                 tabindex="0"
-                aria-label={`Toggle ${itemData.name} submenu`}
               >
+                <span class="visually-hidden">Toggle {itemData.name} submenu</span>
                 <span class="nav-item-icon">
                   <Icon name="chevron-right" size="none" aria-hidden="true" />
                 </span>
@@ -217,8 +212,8 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           role="button"
                           aria-controls={childData.contentId}
                           tabindex="0"
-                          aria-label={`Toggle ${childData.name} submenu`}
                         >
+                          <span class="visually-hidden">Toggle {childData.name} submenu</span>
                           <span class="nav-item-icon">
                             <Icon name="chevron-right" size="none" aria-hidden="true" />
                           </span>
@@ -432,9 +427,16 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     }
 
     .mobile-button {
+      appearance: none;
+      background: none;
+      border: 0;
       border-radius: var(--radius-xs);
+      color: inherit;
+      cursor: pointer;
       display: inline-block;
+      font: inherit;
       outline-offset: -2px;
+      padding: 0;
     }
 
     .mobile {

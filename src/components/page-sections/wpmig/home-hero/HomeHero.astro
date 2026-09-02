@@ -1,0 +1,327 @@
+---
+/**
+ * HomeHero — the homepage hero carousel (migrated from the source's
+ * rotating banner). Rebuilt by hand as a real one-slide-at-a-time carousel: the
+ * migrator captured the five slides as a 6000px vertical stack, which is not
+ * what the source shows. Props are unchanged (5 slides: image/text/button each).
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  buttonText = "",
+  buttonLink = "",
+  image2 = "",
+  image2Alt = "",
+  text = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  image3 = "",
+  image3Alt = "",
+  text2 = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  image4 = "",
+  image4Alt = "",
+  text3 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  image5 = "",
+  image5Alt = "",
+  text4 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  buttonBackgroundColorHex = "#a6ce39",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+
+const rawSlides = [
+  { image, alt: imageAlt, text: heading, btn: buttonText, link: buttonLink },
+  { image: image2, alt: image2Alt, text, btn: secondaryButtonText, link: secondaryButtonLink },
+  { image: image3, alt: image3Alt, text: text2, btn: secondaryButtonText2, link: secondaryButtonLink2 },
+  { image: image4, alt: image4Alt, text: text3, btn: secondaryButtonText3, link: secondaryButtonLink3 },
+  { image: image5, alt: image5Alt, text: text4, btn: secondaryButtonText4, link: secondaryButtonLink4 },
+];
+const slides = rawSlides.filter((s) => s.image || s.text);
+---
+
+<section
+  class="opiy-hero"
+  id={id || undefined}
+  style={`--hd:${headingColorValue};--btnbg:${buttonBackgroundColorHex}`}
+  data-opiy-carousel
+  {...rest}
+>
+  <div class="opiy-track">
+    {
+      slides.map((slide, i) => (
+        <div class="opiy-slide" data-active={i === 0 ? "true" : undefined}>
+          {slide.image && (
+            <img class="opiy-img" src={slide.image} alt={slide.alt || ""} loading={i === 0 ? "eager" : "lazy"} />
+          )}
+          <div class="opiy-overlay" />
+          <div class="opiy-content">
+            {slide.text && <p class="opiy-text" set:html={slide.text} />}
+            {slide.btn && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                uppercase
+                class="opiy-btn"
+                text={slide.btn}
+                link={slide.link || "#"}
+                editable={false}
+              />
+            )}
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  {
+    slides.length > 1 && (
+      <>
+        <button type="button" class="opiy-nav opiy-prev" aria-label="Previous slide" data-opiy-prev>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button type="button" class="opiy-nav opiy-next" aria-label="Next slide" data-opiy-next>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="opiy-dots" data-opiy-dots>
+          {slides.map((_, i) => (
+            <button type="button" class="opiy-dot" data-active={i === 0 ? "true" : undefined} aria-label={`Go to slide ${i + 1}`} data-opiy-dot={i} />
+          ))}
+        </div>
+      </>
+    )
+  }
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .opiy-hero {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      background: #12232b;
+      isolation: isolate;
+    }
+
+    .opiy-track {
+      position: relative;
+      width: 100%;
+      /* Source banners are 1920x960 and render at full width (2:1). */
+      height: clamp(360px, 50vw, 720px);
+    }
+
+    .opiy-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease-in-out;
+      display: grid;
+      align-items: end;
+      justify-items: center;
+    }
+
+    .opiy-slide[data-active="true"] {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .opiy-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .opiy-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgb(0 0 0 / 10%) 0%,
+        rgb(0 0 0 / 20%) 45%,
+        rgb(0 0 0 / 62%) 100%
+      );
+    }
+
+    .opiy-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-md, 1rem);
+      text-align: center;
+      padding: 0 15% 60px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 1024px) {
+      .opiy-content {
+        padding-bottom: 35px;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .opiy-content {
+        padding-bottom: 30px;
+      }
+    }
+
+    .opiy-text {
+      margin: 0;
+      color: var(--hd, #fff);
+      font-weight: 700;
+      font-size: clamp(1.6rem, 3.6vw, 3rem);
+      line-height: 1.15;
+      text-transform: uppercase;
+      text-shadow: 0 2px 12px rgb(0 0 0 / 45%);
+    }
+
+    .opiy-btn.button {
+      background-color: var(--btnbg, #a6ce39);
+      border-color: transparent;
+      color: #111;
+    }
+
+    .opiy-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border: 0;
+      border-radius: 50%;
+      background: rgb(255 255 255 / 25%);
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .opiy-nav:hover {
+      background: rgb(255 255 255 / 45%);
+    }
+
+    .opiy-nav svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .opiy-prev {
+      left: 1rem;
+    }
+
+    .opiy-next {
+      right: 1rem;
+    }
+
+    /* Source uses Bootstrap's bar indicators: flat white 30x3 rules, half
+       opacity until active. The transparent borders keep the tap target big. */
+    .opiy-dots {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+    }
+
+    .opiy-dot {
+      box-sizing: content-box;
+      flex: 0 1 auto;
+      width: 30px;
+      height: 3px;
+      padding: 0;
+      margin-inline: 3px;
+      border: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-radius: 0;
+      background-color: #fff;
+      background-clip: padding-box;
+      cursor: pointer;
+      opacity: 0.5;
+      transition: opacity 0.6s ease;
+    }
+
+    .opiy-dot[data-active="true"] {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      .opiy-nav {
+        width: 38px;
+        height: 38px;
+      }
+    }
+  }
+</style>
+
+<script>
+  function initOpiyCarousel() {
+    document.querySelectorAll<HTMLElement>("[data-opiy-carousel]").forEach((root) => {
+      if (root.dataset.opiyReady) return;
+      root.dataset.opiyReady = "true";
+      const slides = [...root.querySelectorAll<HTMLElement>(".opiy-slide")];
+      const dots = [...root.querySelectorAll<HTMLElement>("[data-opiy-dot]")];
+      if (slides.length < 2) return;
+      let index = 0;
+      let timer: ReturnType<typeof setInterval> | undefined;
+
+      const show = (n: number) => {
+        index = (n + slides.length) % slides.length;
+        slides.forEach((s, i) => s.setAttribute("data-active", i === index ? "true" : "false"));
+        dots.forEach((d, i) => d.setAttribute("data-active", i === index ? "true" : "false"));
+      };
+      const next = () => show(index + 1);
+      const prev = () => show(index - 1);
+      const start = () => {
+        stop();
+        timer = setInterval(next, 6000);
+      };
+      const stop = () => timer && clearInterval(timer);
+
+      root.querySelector("[data-opiy-next]")?.addEventListener("click", () => {
+        next();
+        start();
+      });
+      root.querySelector("[data-opiy-prev]")?.addEventListener("click", () => {
+        prev();
+        start();
+      });
+      dots.forEach((d, i) =>
+        d.addEventListener("click", () => {
+          show(i);
+          start();
+        })
+      );
+      root.addEventListener("mouseenter", stop);
+      root.addEventListener("mouseleave", start);
+      start();
+    });
+  }
+
+  initOpiyCarousel();
+  document.addEventListener("astro:page-load", initOpiyCarousel);
+</script>

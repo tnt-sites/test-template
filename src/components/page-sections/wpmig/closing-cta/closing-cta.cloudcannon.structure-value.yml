@@ -1,0 +1,43 @@
+label: Closing Call To Action
+icon: event_available
+description: The closing 'Schedule your first visit' band over a photo, with the office map beneath.
+value:
+  _component: page-sections/wpmig/closing-cta
+  id: ""
+  heading: ""
+  image: /wp-content/uploads/2021/08/footer-cta-bg.jpg
+  mapEmbedUrl: ""
+  text: Closing Call To Action
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#a6ce39"
+  buttonTextColor: ""
+  buttonTextColorHex: "#111111"
+  buttonBackgroundColor2: ""
+  buttonBackgroundColor2Hex: "#177982"
+  buttonTextColor2: "#ffffff"
+  buttonTextColor2Hex: ""
+  buttonTextHoverColor: "#000000"
+  buttonTextHoverColorHex: ""
+  buttonBackgroundHoverColor: "#ffffff"
+  buttonBackgroundHoverColorHex: ""
+  buttonTextColor2HoverColor: "#000000"
+  buttonTextColor2HoverColorHex: ""
+  buttonBackgroundColor2HoverColor: "#ffffff"
+  buttonBackgroundColor2HoverColorHex: ""
+preview:
+  text:
+    - Closing Call To Action
+  icon: event_available
+picker_preview:
+  text: Closing Call To Action
+  subtext: The closing 'Schedule your first visit' band over a photo, with the office map beneath.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/closing-cta/closing-cta.cloudcannon.inputs.yml

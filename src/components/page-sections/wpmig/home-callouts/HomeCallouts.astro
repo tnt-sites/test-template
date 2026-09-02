@@ -1,0 +1,185 @@
+---
+/**
+ * HomeCallouts — the five bordered icon callouts under the homepage banner.
+ *
+ * Migrated from the source's `.features` row (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+const {
+  cards = [],
+  titleColor = "",
+  titleColorHex = "#111111",
+  hoverColor = "#000000",
+  hoverColorHex = "",
+  hoverColor2 = "#ffffff",
+  hoverColor2Hex = "",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#a6ce39",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const titleColorValue = titleColorHex || titleColor || "#111111";
+const hoverColorValue = hoverColorHex || hoverColor || "#000000";
+const hoverColor2Value = hoverColor2Hex || hoverColor2 || "#ffffff";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#a6ce39";
+const stripTags = (value: string) => String(value || "").replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<div class="home-callouts" id={id || undefined} style={`--tt:${titleColorValue};--c2:${hoverColorValue};--c3:${hoverColor2Value};--c4:${hoverBackgroundColorValue}`} {...rest}>
+  <div class="wcu-box">
+    <div class="wcu-grid">
+      {list.map((c) => (
+        <div class="wcu-box2">
+          <div class="wcu-box3">
+            <div class="wcu-box4">
+              <div class="wcu-box5">
+                {c.image && <img class="wcu-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" width="400" height="400" />}
+              </div>
+            </div>
+            <h2 class="wcu-heading" set:html={c.title} />
+            {c.link && <a class="wcu-link" href={c.link} aria-label={stripTags(c.title) || "Read more"} />}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+<style>
+  .home-callouts {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    line-height: 24px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+
+  .wcu-box {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .wcu-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wcu-box2 {
+    box-sizing: border-box;
+    flex: 0 0 50%;
+    flex-shrink: 0;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .wcu-box3 {
+    box-sizing: border-box;
+    height: 100%;
+    position: relative;
+  }
+
+  .wcu-box4,
+  .wcu-box5 {
+    transition: box-shadow 0.5s ease;
+  }
+
+  .wcu-box3:hover .wcu-box4,
+  .wcu-box3:hover .wcu-box5 {
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
+  }
+
+  .wcu-link {
+    inset: 0;
+    position: absolute;
+  }
+
+  .wcu-box4 {
+    border: 5px solid #177982;
+    box-sizing: border-box;
+  }
+
+  .wcu-box5 {
+    border: 5px solid #a6ce39;
+    box-sizing: border-box;
+    margin: 7.5px;
+    padding: 15px;
+  }
+
+  .wcu-media {
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .wcu-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  @media (min-width: 768px) {
+    .home-callouts {
+      font-family: "PT Sans";
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+      padding-top: 90px;
+    }
+
+    .wcu-grid {
+      flex-wrap: nowrap;
+    }
+
+    .wcu-box2 {
+      flex: 1 1 auto;
+      flex-grow: 1;
+      flex-shrink: 1;
+      max-width: 20%;
+    }
+
+    /* The 2nd and 4th callouts ride higher than their neighbours. */
+    .wcu-box2:nth-child(2n) {
+      margin-top: -45px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .home-callouts {
+      padding-bottom: 60px;
+      padding-top: 180px;
+    }
+
+    .wcu-box {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .wcu-box5 {
+      padding: 45px;
+    }
+
+    .wcu-heading {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+</style>

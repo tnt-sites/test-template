@@ -1,0 +1,299 @@
+_inputs:
+  heading:
+    type: html
+  image:
+    type: image
+  imageAlt:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  image2:
+    type: image
+  image2Alt:
+    type: text
+  text:
+    type: html
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  image3:
+    type: image
+  image3Alt:
+    type: text
+  text2:
+    type: html
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  image4:
+    type: image
+  image4Alt:
+    type: text
+  text3:
+    type: text
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  image5:
+    type: image
+  image5Alt:
+    type: text
+  text4:
+    type: html
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  secondaryButtonText6:
+    type: text
+  secondaryButtonLink6:
+    type: url
+  backgroundColor:
+    type: select
+    comment: Background colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  backgroundColorHex:
+    type: color
+    comment: Optional custom hex that overrides the backgroundColor selection.
+  headingColor:
+    type: select
+    comment: Heading colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  headingColorHex:
+    type: color
+    comment: Optional custom hex that overrides the headingColor selection.
+  buttonBackgroundColor:
+    type: select
+    comment: ButtonBackground colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonBackgroundColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonBackgroundColor selection.
+  buttonTextColor:
+    type: select
+    comment: ButtonText colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonTextColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonTextColor selection.
+  textColor:
+    type: select
+    comment: Text colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColorHex:
+    type: color
+    comment: Optional custom hex that overrides the textColor selection.
+  buttonTextHoverColor:
+    type: select
+    comment: ButtonTextHover colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonTextHoverColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonTextHoverColor selection.
+  buttonTextHoverColor2:
+    type: select
+    comment: ButtonTextHoverColor2 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonTextHoverColor2Hex:
+    type: color
+    comment: Optional custom hex that overrides the buttonTextHoverColor2 selection.
+  hoverColor:
+    type: select
+    comment: Hover colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hoverColorHex:
+    type: color
+    comment: Optional custom hex that overrides the hoverColor selection.

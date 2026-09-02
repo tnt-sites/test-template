@@ -1,0 +1,348 @@
+---
+/**
+ * ContentSection — the one interior-page content band.
+ *
+ * The migrator emits one component per section it detects, so the same
+ * WordPress layout captured with three headings and captured with twenty
+ * becomes two components that no fixed prop list can ever unify. That is how
+ * this site ended up with `media-prose-b` through `-i`, `card-grid-home-botox`
+ * through `-teeth`, and `prose-block-home-cerec` through `-success`: forty
+ * files for one design at forty lengths.
+ *
+ * The length is the variable, so the content is an ordered `blocks` array and
+ * the design lives here once. What genuinely differs between instances — the
+ * side the photo sits on, the alignment, the band's colours — are inputs.
+ *
+ * Layout follows the source's `.page-section` / `.top-page-section`: the photo
+ * is a floated figure the prose wraps around, not a rigid column, which is why
+ * a section with two paragraphs and one with ten both look right.
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const {
+  blocks = [],
+  media = null,
+  align = "left",
+  backgroundColor = "",
+  headingColor = "",
+  subheadingColor = "",
+  textColor = "",
+  eyebrowColor = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const list = Array.isArray(blocks) ? blocks.filter(Boolean) : [];
+/** Prose that already carries its own block markup renders as-is. */
+const isRich = (html: string) =>
+  /<(?:p|ul|ol|h[1-6]|table|blockquote|div|figure)\b/i.test(String(html || ""));
+const mediaSide = media?.side === "left" ? "left" : "right";
+const style = [
+  backgroundColor && `--cs-bg:${backgroundColor}`,
+  headingColor && `--cs-hd:${headingColor}`,
+  subheadingColor && `--cs-sub:${subheadingColor}`,
+  textColor && `--cs-tx:${textColor}`,
+  eyebrowColor && `--cs-eyebrow:${eyebrowColor}`,
+]
+  .filter(Boolean)
+  .join(";");
+---
+
+<section
+  class="content-section"
+  id={id || undefined}
+  data-align={align === "center" ? "center" : "left"}
+  data-banded={backgroundColor ? "true" : undefined}
+  style={style || undefined}
+  {...rest}
+>
+  <div class="cs-inner">
+    {
+      media?.type === "image" && media.source && (
+        <figure class="cs-media" data-side={mediaSide}>
+          <img src={media.source} alt={media.alt || ""} loading="lazy" />
+        </figure>
+      )
+    }
+    {
+      media?.type === "embed" && media.url && (
+        <div class="cs-embed" data-side={mediaSide}>
+          {media.title && <h3 class="cs-embed-title">{media.title}</h3>}
+          <iframe src={media.url} title={media.title || "Embedded form"} loading="lazy" />
+          {media.button?.text && (
+            <Button
+              variant="secondary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              uppercase
+              class="cs-btn"
+              text={media.button.text}
+              link={media.button.link || "#"}
+              editable={false}
+            />
+          )}
+        </div>
+      )
+    }
+
+    {
+      list.map((block) => {
+        if (block.type === "eyebrow") return <p class="cs-eyebrow" set:html={block.html} />;
+        if (block.type === "heading" && block.level === 1)
+          return <h1 class="cs-title" set:html={block.html} />;
+        if (block.type === "heading") return <h2 class="cs-heading" set:html={block.html} />;
+        if (block.type === "subheading") return <h3 class="cs-subheading" set:html={block.html} />;
+        if (block.type === "image" && block.source)
+          return (
+            <figure class="cs-media" data-side={block.side === "left" ? "left" : "right"}>
+              <img src={block.source} alt={block.alt || ""} loading="lazy" />
+            </figure>
+          );
+        if (block.type === "divider") return <hr class="cs-rule" />;
+        if (block.type === "buttons")
+          return (
+            <div class="cs-buttons">
+              {(block.buttons || []).map((b: any) => (
+                <Button
+                  variant="secondary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  uppercase
+                  class="cs-btn"
+                  text={b.text}
+                  link={b.link || "#"}
+                  target={b.newTab ? "_blank" : undefined}
+                  rel={b.newTab ? "noopener" : undefined}
+                  editable={false}
+                />
+              ))}
+            </div>
+          );
+        // A paragraph stays a paragraph. Wrapping plain copy in a bare `<div>`
+        // reads as a block of text to a browser but as nothing to anything
+        // walking the document — including this repo's own coverage check,
+        // which reported every converted page as having lost its prose.
+        const columns = Number(block.columns) === 2 ? "2" : undefined;
+        return isRich(block.html) ? (
+          <div class="cs-prose" data-columns={columns} set:html={block.html} />
+        ) : (
+          <p class="cs-prose" data-columns={columns} set:html={block.html} />
+        );
+      })
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .content-section {
+      --cs-navy: #30475e;
+      --cs-teal: #177982;
+      --cs-lime: #a6ce39;
+
+      background: var(--cs-bg, transparent);
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .content-section .cs-inner {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding: 0 15px 75px;
+      width: 100%;
+    }
+
+    /* The float has to be contained or the next section rides up beside it. */
+    .content-section .cs-inner::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .content-section[data-align="center"] .cs-inner {
+      text-align: center;
+    }
+
+    .content-section[data-banded="true"] .cs-inner {
+      padding-block: 45px;
+    }
+
+    .content-section + .content-section .cs-inner {
+      padding-top: 0;
+    }
+
+    /* ---- Media: a floated figure the prose wraps, as the source has it ---- */
+    .content-section .cs-media {
+      margin: 0 0 15px;
+      max-width: max-content;
+    }
+
+    .content-section .cs-media img {
+      display: block;
+      height: auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .content-section .cs-media[data-side="left"] {
+        float: left;
+        margin: 0 30px 15px 0;
+      }
+
+      .content-section .cs-media[data-side="right"] {
+        float: right;
+        margin: 0 0 15px 30px;
+      }
+    }
+
+    .content-section .cs-embed {
+      margin-bottom: 30px;
+    }
+
+    .content-section .cs-embed iframe {
+      border: 0;
+      display: block;
+      min-height: 520px;
+      width: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .content-section .cs-embed {
+        float: right;
+        margin: 0 0 30px 30px;
+        max-width: 420px;
+      }
+    }
+
+    /* ---- Typography: the source's `.inner-page` scale ---- */
+    .content-section .cs-title {
+      clear: both;
+      color: var(--cs-hd, var(--cs-navy));
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 0 36px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    /* One converted section can hold several of the source's, so a heading
+       starts a fresh band rather than running alongside the previous float. */
+    .content-section .cs-heading {
+      clear: both;
+      color: var(--cs-hd, var(--cs-teal));
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-block: 30px;
+      position: relative;
+      text-transform: capitalize;
+    }
+
+    /* The 1px rule the source draws under every interior heading. It sits
+       directly under the words — clearing it here pushed it past the figure
+       and took the copy that should wrap beside the photo down with it. */
+    .content-section .cs-heading::after {
+      background-color: var(--cs-hd, var(--cs-teal));
+      content: "";
+      display: block;
+      height: 1px;
+      margin: 15px auto;
+      width: 100%;
+    }
+
+    .content-section .cs-subheading {
+      color: var(--cs-sub, var(--cs-navy));
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 20px 10px;
+    }
+
+    .content-section .cs-eyebrow {
+      color: var(--cs-eyebrow, var(--cs-teal));
+      margin-block: 0 15px;
+    }
+
+    .content-section .cs-prose,
+    .content-section .cs-prose :where(p, li) {
+      color: var(--cs-tx, inherit);
+      line-height: 30px;
+    }
+
+    .content-section .cs-prose :where(p) {
+      margin-block: 0 20px;
+    }
+
+    .content-section .cs-prose :where(p):last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section .cs-prose :where(a) {
+      color: var(--cs-lime);
+    }
+
+    .content-section .cs-prose :where(a):hover {
+      color: var(--cs-teal);
+    }
+
+    .content-section .cs-prose :where(ul, ol) {
+      text-align: left;
+    }
+
+    /* A long single-topic list — the insurance carriers — reads as a lookup
+       table, not as prose, so it splits into columns rather than running the
+       reader down one 30-item rail. Multi-column keeps it one list to anything
+       walking the document; only the painting changes. */
+    @media (min-width: 600px) {
+      .content-section .cs-prose[data-columns="2"] :where(ul, ol) {
+        column-gap: 40px;
+        columns: 2;
+      }
+    }
+
+    .content-section .cs-prose[data-columns="2"] :where(li) {
+      break-inside: avoid;
+    }
+
+    /* The separator the source draws between one carrier's list and the next. */
+    .content-section .cs-rule {
+      background-color: color-mix(in srgb, var(--cs-navy) 20%, transparent);
+      border: 0;
+      clear: both;
+      height: 1px;
+      margin-block: 30px;
+      width: 100%;
+    }
+
+    .content-section .cs-buttons {
+      clear: both;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-block: 20px 0;
+      padding-top: 10px;
+    }
+
+    .content-section[data-align="center"] .cs-buttons {
+      justify-content: center;
+    }
+
+    .content-section .cs-btn.button {
+      background-color: var(--cs-lime);
+      border-color: transparent;
+      color: #111;
+      font-weight: 700;
+    }
+
+    .content-section .cs-btn.button:hover {
+      background-color: #93b830;
+      color: #111;
+    }
+  }
+</style>

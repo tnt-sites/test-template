@@ -1,0 +1,274 @@
+_inputs:
+  text:
+    type: html
+  text2:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  secondaryButtonText6:
+    type: text
+  secondaryButtonLink6:
+    type: url
+  secondaryButtonText7:
+    type: text
+  secondaryButtonLink7:
+    type: url
+  secondaryButtonText8:
+    type: text
+  secondaryButtonLink8:
+    type: url
+  items:
+    type: array
+    options:
+      structures: _structures.prose_block_home_site_item
+  items2:
+    type: array
+    options:
+      structures: _structures.prose_block_home_site_item
+  items3:
+    type: array
+    options:
+      structures: _structures.prose_block_home_site_item
+  textColor:
+    type: select
+    comment: Text colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColorHex:
+    type: color
+    comment: Optional custom hex that overrides the textColor selection.
+  textColor2:
+    type: select
+    comment: TextColor2 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColor2Hex:
+    type: color
+    comment: Optional custom hex that overrides the textColor2 selection.
+  hoverColor:
+    type: select
+    comment: Hover colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hoverColorHex:
+    type: color
+    comment: Optional custom hex that overrides the hoverColor selection.
+  hoverColor2:
+    type: select
+    comment: HoverColor2 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hoverColor2Hex:
+    type: color
+    comment: Optional custom hex that overrides the hoverColor2 selection.
+  textColor2HoverColor:
+    type: select
+    comment: TextColor2Hover colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColor2HoverColorHex:
+    type: color
+    comment: Optional custom hex that overrides the textColor2HoverColor selection.
+  hoverColor3:
+    type: select
+    comment: HoverColor3 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hoverColor3Hex:
+    type: color
+    comment: Optional custom hex that overrides the hoverColor3 selection.
+  hoverColor4:
+    type: select
+    comment: HoverColor4 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hoverColor4Hex:
+    type: color
+    comment: Optional custom hex that overrides the hoverColor4 selection.
+_structures:
+  prose_block_home_site_item:
+    values:
+      - value:
+          buttonText: ""
+          buttonLink: ""
+        _inputs:
+          buttonText:
+            type: text
+          buttonLink:
+            type: url

@@ -1,0 +1,36 @@
+label: Membership Plan
+icon: card_membership
+description: The dental membership plan's tiers and what each includes.
+value:
+  _component: page-sections/wpmig/membership-plan
+  id: ""
+  eyebrow: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text: Membership Plan
+  heading2: ""
+  heading3: ""
+  text2: ""
+  heading4: ""
+  text3: ""
+  items:
+    - text: ""
+  eyebrowColor: "#000000"
+  eyebrowColorHex: ""
+  headingColor: ""
+  headingColorHex: "#30475e"
+  textColor: "#000000"
+  textColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+preview:
+  text:
+    - Membership Plan
+  icon: card_membership
+picker_preview:
+  text: Membership Plan
+  subtext: The dental membership plan's tiers and what each includes.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/membership-plan/membership-plan.cloudcannon.inputs.yml

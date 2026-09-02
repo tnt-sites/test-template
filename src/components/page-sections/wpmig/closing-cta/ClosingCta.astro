@@ -1,0 +1,231 @@
+---
+/**
+ * ClosingCta — the site-wide closing CTA ("Schedule your first
+ * visit") plus the office map, rebuilt by hand to match the source: the copy
+ * sits on a darkened photo, with the Google map embed directly underneath.
+ */
+import Button from "@core-elements/button/Button.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  heading = "",
+  text = "",
+  image = "/wp-content/uploads/2021/08/footer-cta-bg.jpg",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  mapEmbedUrl = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  buttonBackgroundColor = "",
+  buttonBackgroundColorHex = "#a6ce39",
+  buttonTextColor = "",
+  buttonTextColorHex = "#111111",
+  buttonBackgroundColor2 = "",
+  buttonBackgroundColor2Hex = "#177982",
+  buttonTextColor2 = "#ffffff",
+  buttonTextColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+const buttonBackgroundColorValue = buttonBackgroundColorHex || buttonBackgroundColor || "#a6ce39";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#111111";
+const buttonBackgroundColor2Value =
+  buttonBackgroundColor2Hex || buttonBackgroundColor2 || "#177982";
+const buttonTextColor2Value = buttonTextColor2Hex || buttonTextColor2 || "#ffffff";
+// The map is the same office everywhere, so a page that does not set one
+// falls back to the site's own embed rather than rendering an empty iframe.
+const resolvedMapUrl =
+  (typeof mapEmbedUrl === "string" && mapEmbedUrl.trim()) || (siteInfoData as any).mapEmbedUrl || "";
+const embedSrc = String(resolvedMapUrl).trim();
+---
+
+<div
+  class="closing-cta"
+  id={id || undefined}
+  style={`--hd:${headingColorValue};--tx:${textColorValue};--btnbg:${buttonBackgroundColorValue};--btntx:${buttonTextColorValue};--btnbg2:${buttonBackgroundColor2Value};--btntx2:${buttonTextColor2Value};--cta-bg:url("${image}")`}
+  {...rest}
+>
+  <div class="mps-inner">
+    {heading && <h2 class="mps-heading" set:html={heading} />}
+    {text && <p class="mps-text">{text}</p>}
+    <div class="mps-cta">
+      {
+        buttonText && (
+          <Button
+            variant="secondary"
+            size="md"
+            width="none"
+            borderRadius="none"
+            uppercase
+            iconName="calendar"
+            iconPosition="before"
+            class="mps-btn"
+            text={buttonText}
+            link={buttonLink || "#"}
+            editable={false}
+          />
+        )
+      }
+      {
+        secondaryButtonText && (
+          <Button
+            variant="primary"
+            size="md"
+            width="none"
+            borderRadius="none"
+            uppercase
+            iconName="calendar"
+            iconPosition="before"
+            class="mps-btn2"
+            text={secondaryButtonText}
+            link={secondaryButtonLink || "#"}
+            editable={false}
+          />
+        )
+      }
+    </div>
+  </div>
+
+  {
+    embedSrc && (
+      <div class="mps-map">
+        <iframe
+          src={embedSrc}
+          title="Office location map"
+          aria-label="Google Map"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        />
+      </div>
+    )
+  }
+</div>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .closing-cta {
+      background-color: #646464;
+      background-image: var(--cta-bg);
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      overflow: hidden;
+      padding-top: 30px;
+      position: relative;
+      width: 100%;
+    }
+
+    .closing-cta::before {
+      background-image: linear-gradient(35deg, rgb(17 17 17 / 62%), rgb(17 17 17 / 78%));
+      content: "";
+      inset: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    @media (min-width: 992px) {
+      .closing-cta {
+        padding-top: 60px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .closing-cta {
+        padding-top: 90px;
+      }
+    }
+
+    .closing-cta .mps-inner {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .closing-cta .mps-heading {
+      color: var(--hd);
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 1.4;
+      margin-block: 20px;
+      text-transform: capitalize;
+    }
+
+    .closing-cta .mps-text {
+      color: var(--tx);
+      line-height: 30px;
+      margin-block: 0;
+    }
+
+    .closing-cta .mps-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .closing-cta .mps-btn.button {
+      background-color: var(--btnbg);
+      border-color: transparent;
+      color: var(--btntx);
+      font-weight: 700;
+    }
+
+    .closing-cta .mps-btn.button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .closing-cta .mps-btn2.button {
+      background-color: var(--btnbg2);
+      border-color: transparent;
+      color: var(--btntx2);
+      font-weight: 700;
+    }
+
+    .closing-cta .mps-btn2.button:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    /* ---- Office map ---- */
+    .closing-cta .mps-map {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      padding-top: 60px;
+      position: relative;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .closing-cta .mps-map iframe {
+      border: 0;
+      display: block;
+      height: 255px;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .closing-cta .mps-map iframe {
+        height: 300px;
+      }
+    }
+  }
+</style>

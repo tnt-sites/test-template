@@ -1,0 +1,10 @@
+_snippets:
+  page_heading:
+    template: astro_component
+    inline: false
+    preview:
+      text: Page Heading
+    definitions:
+      component_name: page-sections/wpmig/page-heading
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/page-heading/page-heading.cloudcannon.inputs.yml

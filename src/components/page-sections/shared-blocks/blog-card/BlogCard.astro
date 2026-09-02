@@ -1,0 +1,207 @@
+---
+/**
+ * BlogCard — the practice's article card, matching the source's `.ra-item`:
+ * a greyscale photo that colours and zooms on hover, a lime date chip notched
+ * over the top-left of the body, a lime title, a short excerpt, and a
+ * full-width "Read the article" bar across the foot.
+ *
+ * Used by the homepage "Featured Articles" strip, the blog listing and the
+ * category archives so all three match.
+ */
+import Image from "@core-elements/image/Image.astro";
+
+const { post } = Astro.props;
+const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+const href = `/blog/${slug}`;
+const published = post.data.date ? new Date(post.data.date) : null;
+const month = published
+  ? published.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" })
+  : "";
+const day = published
+  ? published.toLocaleDateString("en-US", { day: "2-digit", timeZone: "UTC" })
+  : "";
+---
+
+<article class="blog-card">
+  <div class="blog-card-media">
+    <a href={href} tabindex="-1" aria-hidden="true">
+      {
+        post.data.image ? (
+          <Image
+            source={post.data.image}
+            alt={post.data.title}
+            aspectRatio="landscape"
+            editable={false}
+          />
+        ) : (
+          <span class="blog-card-media-fallback" />
+        )
+      }
+    </a>
+  </div>
+
+  <div class="blog-card-body">
+    {
+      month && (
+        <div class="blog-card-date">
+          <span class="blog-card-month">{month}</span>
+          <span class="blog-card-day">{day}</span>
+        </div>
+      )
+    }
+    <h3 class="blog-card-title">
+      <a href={href}>{post.data.title}</a>
+    </h3>
+    {post.data.description && <p class="blog-card-excerpt">{post.data.description}</p>}
+  </div>
+
+  <div class="blog-card-foot">
+    <a href={href}>Read the article</a>
+  </div>
+</article>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .blog-card {
+      --blog-card-accent: #a6ce39;
+      --blog-card-accent-text: var(--color-text-brand-secondary, #417b1e);
+      --blog-card-text: #30475e;
+
+      background: #fff;
+      box-shadow: 0 5px 5px 0 rgb(0 0 0 / 20%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-card-media {
+      overflow: hidden;
+    }
+
+    .blog-card-media a {
+      display: block;
+    }
+
+    .blog-card-media .image,
+    .blog-card-media img {
+      display: block;
+      filter: grayscale(100%);
+      height: auto;
+      opacity: 0.9;
+      transform: scale(1, 1);
+      transition: all 0.3s ease-in-out 0s;
+      width: 100%;
+    }
+
+    .blog-card:hover .blog-card-media img {
+      filter: none;
+      opacity: 1;
+      transform: scale(1.2, 1.2);
+    }
+
+    .blog-card-media-fallback {
+      aspect-ratio: 16 / 10;
+      background: linear-gradient(135deg, #177982, #a6ce39);
+      display: block;
+      width: 100%;
+    }
+
+    .blog-card-body {
+      background: #fff;
+      flex: 1 1 auto;
+      padding: 20px 15px;
+      position: relative;
+    }
+
+    /* Date chip notched over the top edge of the body. */
+    .blog-card-date {
+      background: var(--blog-card-accent);
+      left: 30px;
+      line-height: 28px;
+      min-height: 28px;
+      min-width: 28px;
+      position: absolute;
+      text-align: center;
+      top: -30px;
+    }
+
+    .blog-card-month {
+      background: var(--blog-card-accent);
+      color: #111;
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 0 10px;
+      text-transform: uppercase;
+    }
+
+    .blog-card-day {
+      color: #111;
+      font-size: 14px;
+    }
+
+    .blog-card-title {
+      margin: 20px 0;
+      min-height: 60px;
+    }
+
+    .blog-card-title a {
+      color: var(--blog-card-accent-text);
+      font-size: 18px;
+      line-height: 1.4;
+      text-align: left;
+      text-decoration: none;
+      text-transform: capitalize;
+      transition: all 0.5s ease 0s;
+    }
+
+    .blog-card-title a:hover {
+      color: var(--blog-card-text);
+      text-decoration: none;
+    }
+
+    .blog-card-excerpt {
+      color: var(--blog-card-text);
+      display: -webkit-box;
+      font-size: 16px;
+      line-clamp: 3;
+      line-height: 30px;
+      margin: 0;
+      min-height: 90px;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+
+    .blog-card-foot {
+      text-align: center;
+    }
+
+    .blog-card-foot a {
+      background: var(--blog-card-accent);
+      color: #111;
+      display: block;
+      font-weight: 700;
+      padding: 15px 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: all 300ms;
+    }
+
+    .blog-card:hover .blog-card-foot a {
+      background: #93b830;
+      text-decoration: none;
+    }
+
+    @media (min-width: 768px) and (max-width: 1366px) {
+      .blog-card-title {
+        min-height: 80px;
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1366px) {
+      .blog-card-excerpt {
+        min-height: 120px;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,74 @@
+label: Sitemap Tree
+icon: account_tree
+description: The expandable site map.
+value:
+  _component: page-sections/wpmig/sitemap-tree
+  id: ""
+  text: Sitemap Tree
+  text2: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  secondaryButtonText7: ""
+  secondaryButtonLink7: ""
+  secondaryButtonText8: ""
+  secondaryButtonLink8: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+  items2:
+    - buttonText: ""
+      buttonLink: ""
+      buttonText2: ""
+      buttonLink2: ""
+      buttonText3: ""
+      buttonLink3: ""
+      buttonText4: ""
+      buttonLink4: ""
+      buttonText5: ""
+      buttonLink5: ""
+      buttonText6: ""
+      buttonLink6: ""
+      buttonText7: ""
+      buttonLink7: ""
+      buttonText8: ""
+      buttonLink8: ""
+      buttonText9: ""
+      buttonLink9: ""
+  items3:
+    - buttonText: ""
+      buttonLink: ""
+  textColor: "#000000"
+  textColorHex: ""
+  textColor2: ""
+  textColor2Hex: "#1b315e"
+  hoverColor: ""
+  hoverColorHex: "#132342"
+  hoverColor2: ""
+  hoverColor2Hex: "#111f3b"
+  textColor2HoverColor: "#000000"
+  textColor2HoverColorHex: ""
+  hoverColor3: "#000000"
+  hoverColor3Hex: ""
+  hoverColor4: ""
+  hoverColor4Hex: "#0f1b34"
+preview:
+  text:
+    - Sitemap Tree
+  icon: account_tree
+picker_preview:
+  text: Sitemap Tree
+  subtext: The expandable site map.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/sitemap-tree/sitemap-tree.cloudcannon.inputs.yml

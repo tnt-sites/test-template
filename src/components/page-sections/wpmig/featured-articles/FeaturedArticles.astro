@@ -1,0 +1,97 @@
+---
+/**
+ * Featured Articles — the homepage's blog strip. Renders the most recent posts
+ * from the blog collection as the practice's own card design (shared with the
+ * main blog listing via <BlogCard />).
+ *
+ * Class names avoid an `fa-` prefix on purpose: FontAwesome ships with the
+ * migrated theme assets and `.fa-heading` is one of its icon classes.
+ */
+import BlogCard from "@page-sections/shared-blocks/blog-card/BlogCard.astro";
+import { getCollection } from "astro:content";
+
+const {
+  heading = "Featured Articles",
+  headingColor = "",
+  headingColorHex = "#177982",
+  count = 3,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const headingColorValue = headingColorHex || headingColor || "#177982";
+const limit = typeof count === "string" ? parseInt(count, 10) || 3 : count;
+
+const posts = (await getCollection("blog"))
+  .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, limit);
+---
+
+<div class="featured-articles" id={id || undefined} style={`--hd:${headingColorValue}`} {...rest}>
+  <div class="feat-inner">
+    {heading && <h2 class="feat-heading" set:html={heading} />}
+    <div class="feat-grid">
+      {posts.map((post: any) => <BlogCard post={post} />)}
+    </div>
+    <div class="feat-cta">
+      <a href="/blog/" class="feat-all">View All Articles</a>
+    </div>
+  </div>
+</div>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .featured-articles {
+      background: #fff;
+      box-sizing: border-box;
+      padding-block: 40px;
+      width: 100%;
+    }
+
+    .featured-articles .feat-inner {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      width: 100%;
+    }
+
+    .featured-articles .feat-heading {
+      box-sizing: border-box;
+      color: var(--hd);
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-block: 0 40px;
+      text-align: center;
+    }
+
+    .featured-articles .feat-grid {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    }
+
+    .featured-articles .feat-cta {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .featured-articles .feat-all {
+      background: #a6ce39;
+      color: #111;
+      display: inline-block;
+      font-weight: 700;
+      padding: 12px 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .featured-articles .feat-all:hover {
+      background: #93b830;
+      color: #111;
+    }
+  }
+</style>

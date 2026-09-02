@@ -1,0 +1,18 @@
+label: Featured Articles
+icon: interests
+description: Featured Articles section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/featured-articles
+  id: ""
+  heading: ""
+  headingColor: ""
+  headingColorHex: "#177982"
+preview:
+  text:
+    - Featured Articles
+  icon: interests
+picker_preview:
+  text: Featured Articles
+  subtext: Featured Articles section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/featured-articles/featured-articles.cloudcannon.inputs.yml

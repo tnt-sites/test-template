@@ -1,0 +1,175 @@
+---
+/**
+ * WhyChooseBand — the teal-to-lime band of numbered reasons (migrated from dental-implants [4] by wp-migrator).
+ *
+ * The list items in `text` are rendered as evenly spaced columns, each headed by a
+ * numbered circle (CSS counters, so the markup stays a plain <ul>).
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+---
+<div class="why-choose-band" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
+  <h2 class="cgw-heading" set:html={heading} />
+  {text && <div class="cgw-body" set:html={text} />}
+</div>
+<style>
+  .why-choose-band {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    line-height: 24px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    padding: 20px 10px 45px 10px;
+    position: relative;
+    text-align: left;
+  }
+
+  .why-choose-band::before {
+    background-image: linear-gradient(-35deg, #177982, #5f7915);
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: -900px;
+    position: absolute;
+    right: -900px;
+    top: 0px;
+    z-index: -1;
+  }
+
+  .cgw-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-size: 26px;
+    line-height: 36.4px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .cgw-heading::after {
+    background-color: #ffffff;
+    border-radius: 0px;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .cgw-body :global(ul) {
+    align-items: flex-start;
+    box-sizing: border-box;
+    color: var(--tx);
+    counter-reset: cgw-item;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-around;
+    list-style: none;
+    margin-bottom: 0px;
+    overflow: visible;
+    margin-top: 0px;
+    padding-left: 0px;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .cgw-body :global(ul li) {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--tx);
+    counter-increment: cgw-item;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: column;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+    max-width: 280px;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+  }
+
+  .cgw-body :global(ul li)::before {
+    align-items: center;
+    background-color: #f2f6e8;
+    border-radius: 50%;
+    color: #2f6b3a;
+    content: counter(cgw-item);
+    display: flex;
+    flex: none;
+    font-family: inherit;
+    font-size: 26px;
+    font-weight: 700;
+    height: 52px;
+    justify-content: center;
+    left: auto;
+    line-height: 1;
+    margin-bottom: 16px;
+    position: static;
+    top: auto;
+    width: 52px;
+  }
+
+  .cgw-body :global(ul li p) {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .why-choose-band {
+      font-family: "PT Sans";
+      margin-left: 0px;
+      margin-right: 0px;
+      max-width: none;
+    }
+
+    .cgw-body :global(ul) {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .cgw-body :global(ul li) {
+      flex: 1 1 0;
+      width: auto;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .why-choose-band {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1270px;
+    }
+
+    .cgw-body :global(ul) {
+      flex-wrap: nowrap;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+/* wpmig:corrections:begin */
+  .cgw-heading {
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

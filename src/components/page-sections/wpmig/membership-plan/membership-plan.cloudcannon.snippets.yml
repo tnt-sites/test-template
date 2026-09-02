@@ -1,0 +1,10 @@
+_snippets:
+  membership_plan:
+    template: astro_component
+    inline: false
+    preview:
+      text: Membership Plan
+    definitions:
+      component_name: page-sections/wpmig/membership-plan
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/membership-plan/membership-plan.cloudcannon.inputs.yml

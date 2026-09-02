@@ -1,0 +1,10 @@
+_snippets:
+  featured_articles:
+    template: astro_component
+    inline: false
+    preview:
+      text: Featured Articles
+    definitions:
+      component_name: page-sections/wpmig/featured-articles
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/featured-articles/featured-articles.cloudcannon.inputs.yml

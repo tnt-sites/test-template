@@ -1,18 +1,51 @@
 ---
-_schema: default
-title: Contact Us
-pageSections:
-  - _component: page-sections/info-blocks/contact
-    id: ""
-    backgroundColor: "var(--color-bg)"
-    backgroundGradient: ""
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    officeHoursTitle: Office Hours
-    mapEmbedUrl: >-
-      https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.989778614257!2d-96.7204146227281!3d32.977671473580436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c23374904d86b%3A0x1d6d5ef027560e48!2sTNT%20Dental!5e0!3m2!1sen!2sus!4v1773839398787!5m2!1sen!2sus
+_mig:
+  v: 0.1.0
+  gen: wpmig
+  hash: ""
+title: Contact Taylor Dental Care
 description: ""
+canonical: /contact-us/
+pageSections:
+  - _component: page-sections/shared-blocks/page-banner
+    id: ""
+    as: span
+    image: /wp-content/uploads/2021/11/a-beautiful-woman-is-smiling-1.jpg
+    imageAlt: Female patient having teeth examined by dentist
+    heading: <span> Contact Us</span>
+    overlayColor: ""
+    overlayColorHex: "#a6ce39"
+    headingColor: "#ffffff"
+    headingColorHex: ""
+  - _component: page-sections/shared-blocks/appointment-request
+    id: ""
+    heading: Contact Us
+    subtext: Questions or comments? Send us a message and we'll get back to you.
+    formEmbedUrl: https://forms.liine.com/252295701223956
+    formEmbedTitle: Taylor Dental Care - Contact Form
+    formEmbedHeight: 539
+    showHours: true
+    hoursTitle: Visit Our Office
+  - _component: page-sections/wpmig/closing-cta
+    id: ""
+    heading: Schedule your first visit
+    text: We are committed to providing quality healthcare to families located in
+      the Sandy area and treat patients of all ages.
+    image: /wp-content/uploads/2021/08/footer-cta-bg.jpg
+    buttonText: REQUEST AN APPOINTMENT
+    buttonLink: /request-an-appointment/
+    secondaryButtonText: SCHEDULE A HYGIENE APPOINTMENT
+    secondaryButtonLink: /schedule-a-hygiene-appointment/
+    headingColor: "#ffffff"
+    headingColorHex: ""
+    textColor: "#ffffff"
+    textColorHex: ""
+    buttonBackgroundColor: ""
+    buttonBackgroundColorHex: "#a6ce39"
+    buttonTextColor: ""
+    buttonTextColorHex: "#111111"
+    buttonBackgroundColor2: ""
+    buttonBackgroundColor2Hex: "#177982"
+    buttonTextColor2: "#ffffff"
+    buttonTextColor2Hex: ""
 ---

@@ -1,0 +1,24 @@
+label: Team Grid
+icon: groups
+description: Portrait, name and bio for each member of the team.
+value:
+  _component: page-sections/wpmig/team-grid
+  id: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+  titleColor: ""
+  titleColorHex: "#177982"
+  textColor: "#000000"
+  textColorHex: ""
+preview:
+  text:
+    - Team Grid
+  icon: groups
+picker_preview:
+  text: Team Grid
+  subtext: Portrait, name and bio for each member of the team.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/team-grid/team-grid.cloudcannon.inputs.yml

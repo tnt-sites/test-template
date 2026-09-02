@@ -1,0 +1,442 @@
+---
+/**
+ * MembershipPlan — the dental membership plan's tiers (migrated from dental-membership-plan [1] by wp-migrator).
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text = "",
+  heading2 = "",
+  heading3 = "",
+  text2 = "",
+  heading4 = "",
+  text3 = "",
+  items = [],
+  eyebrowColor = "#000000",
+  eyebrowColorHex = "",
+  headingColor = "",
+  headingColorHex = "#30475e",
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#000000";
+const headingColorValue = headingColorHex || headingColor || "#30475e";
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="membership-plan" id={id || undefined} style={`--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--c4:${textColor2Value}`} {...rest}>
+  <div class="cghd-box">
+    <article class="cghd-box2">
+      {eyebrow && <div class="cghd-text">{eyebrow}</div>}
+      <h1 class="cghd-heading" set:html={heading} />
+      <div class="cghd-box3">
+        <div class="cghd-box4">
+          <div class="cghd-box5">
+            <div class="cghd-box6">
+              {image && <img class="cghd-media" src={image} alt={imageAlt || ""} loading="lazy" />}
+            </div>
+            <div class="cghd-box7">
+              <div class="cghd-box8">
+                {subheading && <h2 class="cghd-heading2" set:html={subheading} />}
+                {text && <div class="cghd-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cghd-box9">
+          {heading2 && <h2 class="cghd-heading3">{heading2}</h2>}
+          <div class="cghd-grid">
+            {list.map((it) => (
+              <div class="cghd-box10">
+                {it.text && <div class="cghd-body2" set:html={it.text} />}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div class="cghd-box12">
+          {heading3 && <h3 class="cghd-heading4">{heading3}</h3>}
+          {text2 && <div class="cghd-text2" set:html={text2} />}
+        </div>
+        <div class="cghd-box13">
+          {heading4 && <h3 class="cghd-heading5">{heading4}</h3>}
+          {text3 && <div class="cghd-text3" set:html={text3} />}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<style>
+  .membership-plan {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .cghd-box {
+    box-sizing: border-box;
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cghd-box2 {
+    box-sizing: border-box;
+    min-height: 1684px;
+    padding-bottom: 60px;
+    padding-top: 18px;
+  }
+
+  .cghd-text {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .cghd-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-size: 36px;
+    line-height: 50.4px;
+    margin-bottom: 36px;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .cghd-box3 {
+    box-sizing: border-box;
+  }
+
+  .cghd-box4 {
+    background-color: #e0f7dd;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+  }
+
+  .cghd-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cghd-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cghd-media {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+
+  .cghd-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 335px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cghd-box8 {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    min-height: 305px;
+    padding-left: 15px;
+  }
+
+  .cghd-heading2 {
+    box-sizing: border-box;
+    color: #177982;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    position: relative;
+    text-transform: capitalize;
+  }
+
+  .cghd-heading2::after {
+    background-color: #177982;
+    border-radius: 0px;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .cghd-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cghd-body :global(div) {
+    box-sizing: border-box;
+    font-size: 15px;
+    line-height: 22.5px;
+  }
+
+  .cghd-box9 {
+    background-image: linear-gradient(-35deg, #177982, #5f7915);
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .cghd-heading3 {
+    box-sizing: border-box;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    position: relative;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .cghd-heading3::after {
+    background-color: #ffffff;
+    border-radius: 0px;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 15px auto;
+    width: 100%;
+  }
+
+  .cghd-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cghd-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cghd-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cghd-box12 {
+    background-color: #1b315e;
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .cghd-heading4 {
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: 33.6px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .cghd-text2 {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  .cghd-box13 {
+    background-color: #587a00;
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .cghd-heading5 {
+    box-sizing: border-box;
+    font-size: 24px;
+    line-height: 33.6px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .cghd-text3 {
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+  }
+
+  @media (min-width: 768px) {
+    .membership-plan {
+      font-family: "PT Sans";
+    }
+
+    .cghd-box2 {
+      min-height: 1096px;
+      padding-top: 60px;
+    }
+
+    .cghd-box6 {
+      flex: 0 0 50%;
+      flex-shrink: 0;
+      max-width: 50%;
+    }
+
+    .cghd-box7 {
+      flex: 0 0 50%;
+      flex-shrink: 0;
+      max-width: 50%;
+      min-height: 292px;
+    }
+
+    .cghd-box8 {
+      min-height: 260px;
+    }
+
+    .cghd-box10 {
+      flex: 0 0 50%;
+      flex-shrink: 0;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cghd-box {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cghd-box2 {
+      min-height: 1415px;
+    }
+
+    .cghd-box7 {
+      min-height: 503px;
+    }
+
+    .cghd-box8 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      min-height: 307px;
+    }
+
+    .cghd-heading2 {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 30px;
+      margin-top: 88.5px;
+    }
+
+    .cghd-body :global(ul) {
+      margin-bottom: 30px;
+    }
+
+    .cghd-body :global(div) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .cghd-box9 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px;
+    }
+
+    .cghd-heading3 {
+      font-size: 30px;
+      line-height: 42px;
+      margin-bottom: 30px;
+    }
+
+    .cghd-box12 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px;
+    }
+
+    .cghd-heading4 {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    .cghd-text2 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .cghd-box13 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 900px;
+    }
+
+    .cghd-heading5 {
+      font-size: 30px;
+      line-height: 42px;
+    }
+
+    .cghd-text3 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+/* wpmig:corrections:begin */
+  .cghd-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .cghd-heading2 {
+    font-weight: 400;
+  }
+  .cghd-heading3 {
+    font-weight: 400;
+  }
+  .cghd-heading4 {
+    font-weight: 400;
+  }
+  .cghd-heading5 {
+    font-weight: 400;
+  }
+
+  /* The global base layer sets explicit colours on headings and lists, which
+     overrides the white inherited from the plan panels. Re-assert it here. */
+  .cghd-box9,
+  .cghd-box9 .cghd-heading3,
+  .cghd-box9 .cghd-body2 :global(*),
+  .cghd-box12,
+  .cghd-box12 .cghd-heading4,
+  .cghd-box12 .cghd-text2 :global(*),
+  .cghd-box13,
+  .cghd-box13 .cghd-heading5,
+  .cghd-box13 .cghd-text3 :global(*) {
+    color: var(--c4);
+  }
+/* wpmig:corrections:end */
+</style>

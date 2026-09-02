@@ -97,6 +97,7 @@ const blogPostSchema = z.object({
   author: z.string().default("Anonymous"),
   image: z.string().optional(),
   tags: z.array(z.string()).default([]),
+  categories: z.array(z.string()).default([]),
 });
 
 const blogCollection = defineCollection({

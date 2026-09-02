@@ -1,10 +1,14 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
-import Button from "@core-elements/button/Button.astro";
-import Divider from "@core-elements/divider/Divider.astro";
-import Image from "@core-elements/image/Image.astro";
+/**
+ * Footer — rebuilt by hand to match the source: a teal-to-lime gradient band
+ * with a row of secondary links across the top, then the white logo, the
+ * contact block and circular social icons, and finally the copyright line.
+ *
+ * The prop surface is unchanged, so `footer.json` and `siteInfo.json` still
+ * drive it.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
 import siteInfoData from "@data/siteInfo.json";
-import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
   links = [],
@@ -12,25 +16,19 @@ const {
   siteName = "",
   offices = [],
   legalLinks = [],
-  contactTitle = "Contact Us",
   phoneText = "",
   phoneHref = "",
   addressHref = "",
   addressLines = [],
   emailHref = "",
-  emailText = [],
-  officeHoursTitle = "Office Hours",
+  emailText = "",
   officeHours = [],
   officeHoursNote = "",
   officeHoursNotes = [],
   mapEmbedUrl = "",
   legalBlurb = "",
-  addressLinkColor = "",
-  addressLinkHoverColor = "",
-  phoneLinkColor = "",
-  phoneLinkHoverColor = "",
   logoSource,
-  logoAlt,
+  logoAlt = "Logo",
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -43,24 +41,12 @@ const resolvedOffices =
     : hasLegacyOffice
       ? [
           {
-            name: "",
             addresses:
               Array.isArray(addressLines) && addressLines.length > 0
-                ? [
-                    {
-                      lines: addressLines,
-                      mapUrl: addressHref || "",
-                    },
-                  ]
+                ? [{ lines: addressLines, mapUrl: addressHref || "" }]
                 : [],
-            phones: phoneText
-              ? [
-                  {
-                    display: phoneText,
-                    href: phoneHref || "",
-                  },
-                ]
-              : [],
+            phones: phoneText ? [{ display: phoneText, href: phoneHref || "" }] : [],
+            emails: emailText ? [{ display: emailText, href: emailHref || "" }] : [],
             officeHours,
             officeHoursNote,
             officeHoursNotes,
@@ -73,183 +59,134 @@ const displaySiteName = siteName || (siteInfoData as any).siteName || "";
 const sharedSocials =
   Array.isArray(socials) && socials.length > 0
     ? socials
-    : Array.isArray(resolvedOffices[0]?.socials)
+    : Array.isArray(resolvedOffices[0]?.socials) && resolvedOffices[0].socials.length > 0
       ? resolvedOffices[0].socials
       : ((siteInfoData as any).socials ?? []);
 
-const formatAddressLines = (address: any) => {
-  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
-  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
-  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
-  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+const office = resolvedOffices[0] ?? {};
+const address = office?.addresses?.[0];
+const phone = office?.phones?.[0];
+const email = office?.emails?.[0];
 
-  return [...lineItems, locationLine].filter(
-    (line) => typeof line === "string" && line.trim().length > 0
-  );
-};
+const addressText = address
+  ? [
+      ...(Array.isArray(address.lines) ? address.lines : []),
+      [address.city, [address.state, address.postalCode].filter(Boolean).join(" ")]
+        .filter(Boolean)
+        .join(", "),
+    ]
+      .filter((line: string) => line && line.trim().length > 0)
+      .join(", ")
+  : "";
 
-const getOfficeHoursGeneralNotes = (office: any) => {
-  const notes = [
-    office?.officeHoursNote,
-    office?.["office-hours-note"],
-    ...(Array.isArray(office?.officeHoursNotes) ? office.officeHoursNotes : []),
-    ...(Array.isArray(office?.["office-hours-notes"]) ? office["office-hours-notes"] : []),
-  ];
-
-  return notes.filter((note) => typeof note === "string" && note.trim().length > 0);
-};
+// Collapse the weekly hours into the source's one-line summary, e.g.
+// "Monday to Thursday: 8:00 AM - 5:00 PM". Closed days are left out.
+const isClosed = (hours: string) => !hours || /closed/i.test(hours);
+const hoursSummary: string[] = [];
+for (const entry of Array.isArray(office?.officeHours) ? office.officeHours : []) {
+  const hours = String(entry?.hours || "").trim();
+  if (isClosed(hours)) continue;
+  const day = String(entry?.day || "").trim();
+  const last = hoursSummary.length > 0 ? hoursSummary[hoursSummary.length - 1] : null;
+  if (last && last.hours === hours) {
+    last.end = day;
+  } else {
+    hoursSummary.push({ start: day, end: "", hours } as any);
+  }
+}
+const hoursLines = (hoursSummary as any[]).map((group) =>
+  group.end ? `${group.start} to ${group.end}: ${group.hours}` : `${group.start}: ${group.hours}`
+);
 
 const copyYear = new Date().getFullYear();
 const embedSrc = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
 const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
-const getColorValue = (value: any) => {
-  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
 
-  if (typeof raw !== "string") return "";
-
-  const normalized = raw.trim();
-
-  return normalized && normalized !== "none" ? normalized : "";
-};
-const footerStyle = [
-  getColorValue(addressLinkColor)
-    ? `--footer-address-link-color: ${getColorValue(addressLinkColor)}`
-    : "",
-  getColorValue(addressLinkHoverColor)
-    ? `--footer-address-link-hover-color: ${getColorValue(addressLinkHoverColor)}`
-    : "",
-  getColorValue(phoneLinkColor)
-    ? `--footer-phone-link-color: ${getColorValue(phoneLinkColor)}`
-    : "",
-  getColorValue(phoneLinkHoverColor)
-    ? `--footer-phone-link-hover-color: ${getColorValue(phoneLinkHoverColor)}`
-    : "",
-]
-  .filter(Boolean)
-  .join("; ");
+// The address / phone / email already have their own rows below, so keep them
+// out of the link bar even when they were captured into `links`.
+const skipInLinkBar = new Set(
+  [addressText, phone?.display, email?.display, "E-mail Us"].filter(Boolean) as string[]
+);
+const navLinks = (Array.isArray(links) ? links : []).filter(
+  (item: any) => item?.name && !skipInLinkBar.has(item.name)
+);
 ---
 
-<footer class="footer" style={footerStyle || undefined} {...htmlAttributes}>
-  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="2xl">
-    <div class="footer-content">
-      <div class="content-container">
+<footer class="footer" {...htmlAttributes}>
+  <div class="footer-inner">
+    {
+      navLinks.length > 0 && (
+        <nav class="footer-links" aria-label="Footer">
+          {navLinks.map((item: any) => (
+            <a href={item.path || "#"}>{item.name}</a>
+          ))}
+        </nav>
+      )
+    }
+
+    <div class="footer-main">
+      <div class="footer-logo">
         <a href="/">
-          <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
+          <img src={logoSource} alt={logoAlt} />
         </a>
       </div>
-      <!-- <div class="content-container">
-        <Bar navData={links} />
-      </div> -->
-    </div>
 
-    <div id="fo-content" class="fo-content block lg:flex justify-around items-start text-center">
-      <div class="fo-info">
-        <span class="fo-title">{contactTitle}</span>
+      <div class="footer-contact">
         {
-          resolvedOffices.map((office: any) => (
-            <div class="office-block">
-              {office?.name && <span class="office-name">{office.name}</span>}
-              {Array.isArray(office?.phones) &&
-                office.phones.map((phone: any) =>
-                  phone?.display ? (
-                    <a href={phone?.href || "#"} class="pho">
-                      {phone?.label ? `${phone.label}: ` : ""}
-                      {phone.display}
-                    </a>
-                  ) : null
-                )}
-              {Array.isArray(office?.emails) &&
-                office.emails.map((email: any) =>
-                  email?.display ? (
-                    <a href={email?.href || "#"} class="pho">
-                      {email?.label ? `${email.label}: ` : ""}
-                      {email.display}
-                    </a>
-                  ) : null
-                )}
-              {Array.isArray(office?.addresses) &&
-                office.addresses.map((address: any) => {
-                  const formattedLines = formatAddressLines(address);
-
-                  return formattedLines.length > 0 ? (
-                    <a
-                      href={address?.mapUrl || "#"}
-                      class="phy"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {formattedLines.map((line: string, index: number) => (
-                        <>
-                          {line}
-                          {index < formattedLines.length - 1 && <br />}
-                        </>
-                      ))}
-                    </a>
-                  ) : null;
-                })}
-            </div>
-          ))
-        }
-
-        {
-          sharedSocials.length > 0 && (
-            <div class="social">
-              <ButtonGroup alignX="center">
-                {sharedSocials.map((social: any) => (
-                  <Button
-                    variant="ghost"
-                    size="lg"
-                    iconName={social.icon}
-                    link={social.link}
-                    hideText="true"
-                    aria-label={`Visit our ${social.icon} page`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  />
-                ))}
-              </ButtonGroup>
-            </div>
+          addressText && (
+            <a href={address?.mapUrl || "#"} target="_blank" rel="noopener noreferrer">
+              <Icon name="map-pin" size="none" />
+              <span>{addressText}</span>
+            </a>
           )
         }
-      </div>
-
-      <div class="fo-hours">
-        <span class="fo-title">{officeHoursTitle}</span>
         {
-          resolvedOffices.map((office: any) => (
-            <div class="office-hours">
-              {/* {office?.name && <span class="office-name">{office.name}</span>} */}
-              <div class="office-hours-list">
-                {(office?.officeHours || []).map((item: any) => (
-                  <div class="office-hours-row">
-                    <div class="office-hours-line">
-                      <span class="office-hours-day">{item.day || ""}</span>
-                      <span class="office-hours-time">{item.hours || ""}</span>
-                    </div>
-                    {(item?.note || item?.hoursNote || item?.["hours-note"]) && (
-                      <small class="office-hours-note">
-                        {item?.note || item?.hoursNote || item?.["hours-note"]}
-                      </small>
-                    )}
-                  </div>
-                ))}
-              </div>
-              {getOfficeHoursGeneralNotes(office).length > 0 && (
-                <div class="office-hours-general-notes">
-                  {getOfficeHoursGeneralNotes(office).map((note: string) => (
-                    <small class="office-hours-general-note">{note}</small>
-                  ))}
-                </div>
-              )}
-            </div>
+          phone?.display && (
+            <a href={phone.href || "#"}>
+              <Icon name="phone" size="none" />
+              <span>Call Us Today: {phone.display}</span>
+            </a>
+          )
+        }
+        {
+          email?.display && (
+            <a href={email.href || "#"}>
+              <Icon name="envelope" size="none" />
+              <span>E-mail Us</span>
+            </a>
+          )
+        }
+        {
+          hoursLines.map((line: string) => (
+            <span class="footer-hours">
+              <Icon name="clock" size="none" />
+              <span>{line}</span>
+            </span>
           ))
         }
       </div>
+
+      {
+        sharedSocials.length > 0 && (
+          <div class="footer-social">
+            {sharedSocials.map((social: any) => (
+              <a
+                href={social.link}
+                aria-label={social.label || "Social link"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon name={social.icon} size="none" />
+              </a>
+            ))}
+          </div>
+        )
+      }
     </div>
 
     {
       embedSrc && (
-        <div class="footer-map-embed" aria-label="Map location">
+        <div class="footer-map-embed">
           <iframe
             src={embedSrc}
             title="Office location map"
@@ -261,248 +198,227 @@ const footerStyle = [
       )
     }
 
-    <Divider />
-
-    <div class="footer-content">
-      <div class="content-container">
-        <div class="footer-legal-text" id="copy">
-          <span class="footer-legal-line footer-legal-line--primary">
-            &copy;<span class="inline" id="copyDate">{copyYear}</span>
-            {displaySiteName}
-          </span>
-          {
-            legalLinks.length > 0 && (
-              <span class="footer-legal-separator" aria-hidden="true">
-                |
-              </span>
-            )
-          }
-          {
-            legalLinks.length > 0 && (
-              <span class="footer-legal-line footer-legal-line--links">
-                {legalLinks.map((item: any, index: number) => (
-                  <>
-                    <a href={item.path || "#"}>{item.name || "Link"}</a>
-                    {index < legalLinks.length - 1 && <span class="mx-2">|</span>}
-                  </>
-                ))}
-              </span>
-            )
-          }
-          <span class="footer-legal-separator" aria-hidden="true">|</span>
-          <span class="footer-legal-line footer-legal-line--credit">
-            Site designed and maintained by{" "}
-            <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
-              TNT Dental
-            </a>
-          </span>
-        </div>
-        {blurb && <p class="footer-legal-blurb">{blurb}</p>}
-      </div>
+    <div class="footer-copy">
+      <p>
+        &copy; {copyYear} {displaySiteName}. All Rights Reserved.
+        {
+          legalLinks.length > 0 &&
+            legalLinks.map((item: any) => (
+              <>
+                <span class="footer-copy-sep" aria-hidden="true">
+                  |
+                </span>
+                <a href={item.path || "#"}>{item.name || "Link"}</a>
+              </>
+            ))
+        }
+        <span class="footer-copy-sep" aria-hidden="true">|</span>
+        Site designed and maintained by{" "}
+        <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
+          TNT Dental
+        </a>
+      </p>
+      {blurb && <p class="footer-blurb">{blurb}</p>}
     </div>
-  </CustomSection>
+  </div>
 </footer>
 
 <style lang="pcss" is:global>
   @layer page-sections {
     .footer {
-      container-type: inline-size;
+      background: linear-gradient(-35deg, #177982, #5f7915);
+      width: 100%;
 
       &[data-fixed-tabs-active="true"] {
         @media (max-width: 1024px) {
           padding-bottom: calc(72px + env(safe-area-inset-bottom));
         }
       }
+    }
 
-      .button-group {
-        &.align-end {
-          @container (max-width: 599px) {
-            justify-content: center;
-          }
-        }
+    .footer .footer-inner {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding: 30px 15px 15px;
+      width: 100%;
+    }
 
+    /* ---- Secondary link bar (desktop only, matching the source) ---- */
+    .footer .footer-links {
+      display: none;
+    }
 
-      }
-
-      .footer-content {
-        @container (min-width: 600px) {
-          align-items: center;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-        }
-
-        .content-container {
-          flex: 1;
-
-          > a {
-            display: block;
-            text-align: center;
-          }
-        }
-      }
-
-      .footer-map-embed {
-        margin-block: var(--spacing-lg);
-
-        iframe {
-          aspect-ratio: 16 / 9;
-          border: 0;
-          border-radius: var(--radius-md);
-          display: block;
-          width: 100%;
-        }
-      }
-
-      .footer-legal-text {
-        color: var(--color-text-muted);
-        text-align: center;
-        @container (min-width: 600px) {
-          text-align: start;
-        }
-      }
-
-      .footer-legal-blurb {
-        color: var(--color-text-muted);
-        font-size: var(--font-size-sm);
-        line-height: var(--line-height-relaxed);
-        margin-top: var(--spacing-sm);
-        text-align: center;
-
-        @container (min-width: 600px) {
-          text-align: start;
-        }
-      }
-
-      .footer-logo {
-        flex-shrink: 0;
-        margin-top: 0 !important;
-
-        img {
-          margin: 0 auto 30px;
-          width: auto;
-        }
-      }
-
-      .bar .bar-list {
-        flex-flow: column wrap;
-        @container (min-width: 600px) {
-          flex-direction: row;
-          justify-content: end;
-        }
-      }
-
-      .fo-content {
-        margin-block: var(--spacing-lg);
-
-        @container (min-width: 700px) {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .fo-title {
-          color: var(--color-text-strong);
-          display: block;
-          font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-sm);
-          text-align: center;
-        }
-
-        .office-block,
-        .office-hours-block {
-          margin-bottom: var(--spacing-md);
-        }
-
-        .office-name {
-          color: var(--color-text-strong);
-          display: block;
-          font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-xs);
-        }
-
-        .pho,
-        .phy {
-          color: var(--color-text);
-          display: block;
-          margin-bottom: var(--spacing-sm);
-          text-decoration: none;
-
-          &:hover,
-          &:focus-visible {
-            color: var(--color-link-hover);
-          }
-        }
-
-        .pho {
-          color: var(--footer-phone-link-color, var(--color-text));
-
-          &:hover,
-          &:focus-visible {
-            color: var(--footer-phone-link-hover-color, var(--color-link-hover));
-          }
-        }
-
-        .phy {
-          color: var(--footer-address-link-color, var(--color-text));
-
-          &:hover,
-          &:focus-visible {
-            color: var(--footer-address-link-hover-color, var(--color-link-hover));
-          }
-        }
-
-        .office-hours {
-          display: table;
-          margin: 10px auto;
-          text-align: left;
-
-          .fo-title { text-align: center; }
-        }
-
-        .social {
-          margin-top: var(--spacing-sm); 
-
-          .button{min-width: auto;}
-        }
+    @media (min-width: 992px) {
+      .footer .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-bottom: 30px;
       }
     }
 
-    #copy {
-      font-size: var(--font-size-sm);
-      line-height: 1.5;
-      padding: var(--spacing-md) var(--spacing-sm);
+    .footer .footer-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---- Logo · contact · social ---- */
+    .footer .footer-main {
+      align-items: center;
+      display: grid;
+      gap: 30px;
+      grid-template-columns: 1fr;
       text-align: center;
+    }
 
-      .footer-legal-line {
-        display: inline;
+    @media (min-width: 1025px) {
+      .footer .footer-main {
+        grid-template-columns: 3fr 5fr 4fr;
+        text-align: left;
       }
+    }
 
-      .footer-legal-separator {
-        display: inline;
-        margin: 0 0.5rem;
+    .footer .footer-logo img {
+      display: inline-block;
+      height: 60px;
+      width: auto;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .footer .footer-logo img {
+        height: 45px;
       }
+    }
 
-      a {
-        color: var(--color-link);
+    .footer .footer-contact {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
 
-        &:hover,
-        &:focus-visible {
-          color: var(--color-link-hover);
-        }
+    .footer .footer-contact a,
+    .footer .footer-contact .footer-hours {
+      align-items: baseline;
+      color: #fff;
+      display: inline-flex;
+      gap: 0.5em;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    @media (min-width: 1025px) {
+      .footer .footer-contact a,
+      .footer .footer-contact .footer-hours {
+        justify-content: flex-start;
       }
+    }
 
-      @media (max-width: 1024px) {
-        .footer-legal-line {
-          display: block;
-        }
+    .footer .footer-contact a:hover {
+      text-decoration: underline;
+    }
 
-        .footer-legal-line + .footer-legal-line {
-          margin-top: 0.25rem;
-        }
+    .footer .footer-contact .icon {
+      flex-shrink: 0;
+      font-size: 1em;
+    }
 
-        .footer-legal-separator {
-          display: none;
-        }
+    /* ---- Social circles ---- */
+    .footer .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    @media (min-width: 1025px) {
+      .footer .footer-social {
+        justify-content: flex-end;
       }
+    }
+
+    .footer .footer-social a {
+      align-items: center;
+      background: #fff;
+      border: 2px solid #177982;
+      border-radius: 50%;
+      color: #177982;
+      display: inline-flex;
+      height: 44px;
+      justify-content: center;
+      transition:
+        background 0.3s ease,
+        color 0.3s ease;
+      width: 44px;
+    }
+
+    .footer .footer-social a:hover {
+      background: #177982;
+      color: #fff;
+    }
+
+    .footer .footer-social .icon {
+      font-size: 20px;
+    }
+
+    .footer .footer-social svg {
+      height: 20px;
+      width: 20px;
+    }
+
+    /* ---- Map ---- */
+    .footer .footer-map-embed {
+      margin-top: 30px;
+    }
+
+    .footer .footer-map-embed iframe {
+      aspect-ratio: 16 / 9;
+      border: 0;
+      display: block;
+      width: 100%;
+    }
+
+    /* ---- Copyright ---- */
+    .footer .footer-copy {
+      padding-block: 30px 15px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .footer .footer-copy {
+        text-align: left;
+      }
+    }
+
+    .footer .footer-copy p {
+      color: #fff;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    @media (min-width: 1200px) {
+      .footer .footer-copy p {
+        font-size: 16px;
+      }
+    }
+
+    .footer .footer-copy a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .footer .footer-copy-sep {
+      margin-inline: 0.5rem;
+    }
+
+    .footer .footer-blurb {
+      margin-top: 0.5rem;
+      opacity: 0.9;
     }
   }
 </style>

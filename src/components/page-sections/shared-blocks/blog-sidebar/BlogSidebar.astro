@@ -1,0 +1,167 @@
+---
+/**
+ * BlogSidebar — the category menu shown on the right of the blog listing and
+ * blog post pages. Categories and their counts are derived from the blog
+ * collection, so the menu stays in sync as posts are added. Each category links
+ * to its filtered archive at /blog/category/<slug>/.
+ */
+import { getCollection } from "astro:content";
+
+const { activeCategory = "" } = Astro.props;
+
+const posts = await getCollection("blog");
+
+const counts = new Map<string, number>();
+for (const post of posts) {
+  const cats = Array.isArray((post.data as any).categories) ? (post.data as any).categories : [];
+  for (const cat of cats) counts.set(cat, (counts.get(cat) || 0) + 1);
+}
+
+const slugify = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+const categories = [...counts.entries()]
+  .sort((a, b) => a[0].localeCompare(b[0]))
+  .map(([label, count]) => ({ label, count, slug: slugify(label) }));
+
+const recent = [...posts]
+  .sort((a: any, b: any) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+  .slice(0, 5);
+---
+
+<aside class="blog-sidebar">
+  <div class="blog-sidebar-widget">
+    <h2 class="blog-sidebar-title">Categories</h2>
+    <ul class="blog-sidebar-cats">
+      <li class:list={["blog-sidebar-cat", activeCategory === "" && "is-active"]}>
+        <a href="/blog/">All Articles</a>
+      </li>
+      {
+        categories.map((cat) => (
+          <li class:list={["blog-sidebar-cat", activeCategory === cat.slug && "is-active"]}>
+            <a href={`/blog/category/${cat.slug}/`}>
+              <span>{cat.label}</span>
+              <span class="blog-sidebar-count">{cat.count}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="blog-sidebar-widget">
+    <h2 class="blog-sidebar-title">Recent Posts</h2>
+    <ul class="blog-sidebar-recent">
+      {
+        recent.map((post: any) => {
+          const slug = post.id?.replace(/\.mdx?$/, "") || post.slug;
+          return (
+            <li>
+              <a href={`/blog/${slug}`}>{post.data.title}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</aside>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .blog-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xl, 2rem);
+    }
+
+    .blog-sidebar-widget {
+      border: 1px solid var(--color-border-subtle, #eef2f2);
+      border-radius: var(--radius-lg, 12px);
+      padding: var(--spacing-lg, 1.5rem);
+      background: var(--color-bg-surface, #fff);
+    }
+
+    .blog-sidebar-title {
+      margin: 0 0 var(--spacing-md, 1rem);
+      font-size: var(--font-size-lg, 1.2rem);
+      color: var(--color-text-strong, #1b2e38);
+      padding-bottom: var(--spacing-xs, 0.5rem);
+      border-bottom: 2px solid var(--color-bg-brand, #177982);
+    }
+
+    .blog-sidebar-cats,
+    .blog-sidebar-recent {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-sidebar-cats li,
+    .blog-sidebar-recent li {
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .blog-sidebar-cats li::before,
+    .blog-sidebar-recent li::before {
+      content: none;
+    }
+
+    .blog-sidebar-cat a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+      color: var(--color-text, #45555c);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-border-subtle, #f0f4f4);
+      transition: color var(--animation-normal, 0.2s) ease-in-out;
+    }
+
+    .blog-sidebar-cat:last-child a {
+      border-bottom: 0;
+    }
+
+    .blog-sidebar-cat a:hover,
+    .blog-sidebar-cat.is-active a {
+      color: var(--color-brand);
+      font-weight: var(--font-weight-semibold, 600);
+    }
+
+    .blog-sidebar-count {
+      flex: 0 0 auto;
+      font-size: var(--font-size-xs, 0.75rem);
+      background: var(--color-bg-muted, #f1f5f5);
+      color: var(--color-text-muted, #5d6b70);
+      border-radius: var(--radius-full, 30px);
+      padding: 0.1em 0.6em;
+    }
+
+    .blog-sidebar-recent li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--color-border-subtle, #f0f4f4);
+    }
+
+    .blog-sidebar-recent li:last-child {
+      border-bottom: 0;
+    }
+
+    .blog-sidebar-recent a {
+      color: var(--color-text, #45555c);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color var(--animation-normal, 0.2s) ease-in-out;
+    }
+
+    .blog-sidebar-recent a:hover {
+      color: var(--color-brand);
+    }
+  }
+</style>

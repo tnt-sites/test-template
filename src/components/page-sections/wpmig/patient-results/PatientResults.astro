@@ -1,0 +1,476 @@
+---
+/**
+ * PatientResults — the homepage's "Our Happy Patients" figures.
+ *
+ * Migrated (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  cards = [],
+  headingColor = "#000000",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  buttonBackgroundColor = "",
+  buttonBackgroundColorHex = "#a6ce39",
+  buttonTextColor = "",
+  buttonTextColorHex = "#111111",
+  buttonBackgroundColor2 = "",
+  buttonBackgroundColor2Hex = "#177982",
+  buttonTextColor2 = "#ffffff",
+  buttonTextColor2Hex = "",
+  titleColor = "#ffffff",
+  titleColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  textColor3 = "",
+  textColor3Hex = "#1b315e",
+  textColor3HoverColor = "",
+  textColor3HoverColorHex = "#cde37a",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#a6ce39",
+  hoverColor = "#000000",
+  hoverColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const buttonBackgroundColorValue = buttonBackgroundColorHex || buttonBackgroundColor || "#a6ce39";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#111111";
+const buttonBackgroundColor2Value = buttonBackgroundColor2Hex || buttonBackgroundColor2 || "#177982";
+const buttonTextColor2Value = buttonTextColor2Hex || buttonTextColor2 || "#ffffff";
+const titleColorValue = titleColorHex || titleColor || "#ffffff";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const textColor3Value = textColor3Hex || textColor3 || "#1b315e";
+const textColor3HoverColorValue = textColor3HoverColorHex || textColor3HoverColor || "#cde37a";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#a6ce39";
+const hoverColorValue = hoverColorHex || hoverColor || "#000000";
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<section class="patient-results" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--btnbg:${buttonBackgroundColorValue};--btntx:${buttonTextColorValue};--c5:${buttonBackgroundColor2Value};--c6:${buttonTextColor2Value};--tt:${titleColorValue};--c8:${textColor2Value};--c9:${textColor3Value};--c10:${textColor3HoverColorValue};--c11:${hoverBackgroundColorValue};--c12:${hoverColorValue}`} {...rest}>
+  <div class="mp-box">
+    <div class="mp-spacer" aria-hidden="true"></div>
+    <h2 class="mp-heading">{heading}</h2>
+    {text && <p class="mp-text">{text}</p>}
+    <div class="mp-spacer2" aria-hidden="true"></div>
+    <div class="mp-grid">
+      {list.map((c) => (
+        <div class="mp-box2">
+          <div class="mp-box3">
+            <figure class="mp-box4">
+              {c.image && <img class="mp-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />}
+              <figcaption class="mp-box5">
+                <div class="mp-box6">
+                  <h2 class="mp-heading2">{c.title}</h2>
+                  <p class="mp-text2">{c.text}</p>
+                </div>
+                {c.buttonText && <a class="mp-link" href={c.buttonLink || "#"}>{c.buttonText}</a>}
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="mp-spacer3" aria-hidden="true"></div>
+    <div class="mp-box12">
+      <div class="mp-box13">
+        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" uppercase class="mp-btn" text={buttonText} link={buttonLink || "#"} />}
+        {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" uppercase class="mp-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+      </div>
+    </div>
+    <div class="mp-spacer4" aria-hidden="true"></div>
+  </div>
+</section>
+<style>
+  .patient-results {
+    background-image: linear-gradient(35deg, rgba(23, 121, 130, 0.5), rgba(166, 206, 57, 0.5));
+    box-sizing: border-box;
+    font-family: Helvetica;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+    width: 100%;
+  }
+
+  .mp-box {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mp-spacer {
+    box-sizing: border-box;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  .mp-heading {
+    box-sizing: border-box;
+    line-height: 33.6px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-align: center;
+    text-transform: capitalize;
+  }
+
+  .mp-text {
+    box-sizing: border-box;
+    line-height: 30px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .mp-spacer2 {
+    box-sizing: border-box;
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .mp-grid {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .mp-box2 {
+    box-sizing: border-box;
+    flex: 0 0 102.27%;
+    max-width: 102.27%;
+  }
+
+  .mp-box3 {
+    box-sizing: border-box;
+  }
+
+  .mp-box4 {
+    background-color: #111111;
+    box-sizing: border-box;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    text-align: center;
+  }
+
+  .mp-media {
+    box-sizing: border-box;
+    display: block;
+    min-height: 100%;
+    opacity: 0.75;
+    position: relative;
+    width: 100%;
+  }
+
+  .mp-box5 {
+    /* The tile's only permanent darkening was the image's own 0.75 opacity
+       over the #111 card, leaving the white caption at 1.74:1 on a light
+       photo -- the ::before below is the hover reveal and is transparent at
+       rest. This always-on ramp is light across the top of the photo and
+       deepens toward the bottom, so the centred title clears ~5:1 and the
+       paragraph revealed at the foot clears ~6.5:1, whatever image is set. */
+    background-image: linear-gradient(
+      to bottom,
+      rgb(17 17 17 / 18%) 0%,
+      rgb(17 17 17 / 48%) 30%,
+      rgb(17 17 17 / 62%) 100%
+    );
+    bottom: 0px;
+    box-sizing: border-box;
+    color: #ffffff;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .mp-box5::before {
+    background-image: linear-gradient(to bottom, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.2) 75%);
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: translate3d(0, 50%, 0);
+    transition:
+      opacity 0.35s,
+      transform 0.35s;
+  }
+
+  .mp-box6 {
+    box-sizing: border-box;
+  }
+
+  .mp-heading2 {
+    box-sizing: border-box;
+    color: var(--tt);
+    left: 0px;
+    line-height: 33.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: absolute;
+    text-transform: capitalize;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    transition:
+      transform 0.35s,
+      color 0.35s;
+    width: 100%;
+  }
+
+  .mp-text2 {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: var(--c8);
+    left: 0px;
+    line-height: normal;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    opacity: 0;
+    padding: 2em;
+    position: absolute;
+    transform: translate3d(0, 10px, 0);
+    transition:
+      opacity 0.35s,
+      transform 0.35s;
+    width: 100%;
+  }
+
+  .mp-box4:hover .mp-heading2 {
+    color: var(--c10);
+    transform: translate3d(0, -50%, 0) translate3d(0, -40px, 0);
+  }
+
+  .mp-box4:hover .mp-box5::before,
+  .mp-box4:hover .mp-text2 {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .mp-link {
+    bottom: 0px;
+    box-sizing: border-box;
+    color: var(--c9);
+    display: block;
+    font-size: 0px;
+    left: 0px;
+    line-height: 0px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+    z-index: 1000;
+  }
+
+  .mp-spacer3 {
+    box-sizing: border-box;
+    height: 15px;
+    min-height: 15px;
+  }
+
+  .mp-box12 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .mp-box13 {
+    box-sizing: border-box;
+    flex: 0 0 93.61%;
+    max-width: 93.61%;
+    min-height: 64px;
+  }
+
+  :global(.mp-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #a6ce39;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    margin: 0px;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.mp-btn)::before {
+    background-color: #ffffff;
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: matrix(0, 0, 0, 1, 0, 0);
+    z-index: -1;
+  }
+
+  :global(.mp-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.mp-btn2) {
+    background-color: var(--c5);
+    border: 1px solid #177982;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19.6px;
+    margin: 0px;
+    padding: 6px 10px;
+    position: relative;
+    text-transform: uppercase;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.mp-btn2)::before {
+    background-color: #ffffff;
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: matrix(0, 0, 0, 1, 0, 0);
+    z-index: -1;
+  }
+
+  :global(.mp-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .mp-spacer4 {
+    box-sizing: border-box;
+    height: 60px;
+    min-height: 60px;
+  }
+
+  /* The link is a full-bleed hit target only; it must stay invisible. The
+     migrator captured a hover fill here that covered the whole card. */
+  .mp-link:hover {
+    opacity: 0;
+  }
+
+  :global(.mp-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #ffffff;
+    color: #ffffff;
+    transform: none;
+  }
+
+  :global(.mp-btn):hover :global(.mp-btn2) {
+    background-color: #a6ce39;
+    border-top-color: #a6ce39;
+    color: #111111;
+  }
+
+  :global(.mp-btn2):hover {
+    background-color: #a6ce39;
+    border-top-color: #a6ce39;
+    color: #111111;
+  }
+
+  @media (min-width: 768px) {
+    .patient-results {
+      font-family: "PT Sans";
+    }
+
+    .mp-box2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .mp-box13 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    :global(.mp-btn) {
+      font-family: "PT Sans";
+    }
+
+    :global(.mp-btn2) {
+      font-family: "PT Sans";
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .mp-text {
+      font-size: 18px;
+    }
+
+    .mp-box2 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .mp-text2 {
+      font-size: 18px;
+    }
+
+    .mp-box13 {
+      flex: 0 0 27.95%;
+      max-width: 27.95%;
+      min-height: 70px;
+    }
+
+    :global(.mp-btn) {
+      font-size: 16px;
+      line-height: 22.4px;
+      padding: 8px 16px;
+    }
+
+    :global(.mp-btn2) {
+      font-size: 16px;
+      line-height: 22.4px;
+      padding: 8px 16px;
+    }
+  }
+/* wpmig:corrections:begin */
+  .mp-heading {
+    font-size: 24px;
+    font-weight: 400;
+  }
+/* wpmig:corrections:end */
+</style>

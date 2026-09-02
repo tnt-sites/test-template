@@ -1,0 +1,52 @@
+label: Patient Results
+icon: photo_library
+description: Before-and-after photos that reveal their caption on hover.
+value:
+  _component: page-sections/wpmig/patient-results
+  id: ""
+  heading: ""
+  text: Patient Results
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+  headingColor: "#000000"
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#a6ce39"
+  buttonTextColor: ""
+  buttonTextColorHex: "#111111"
+  buttonBackgroundColor2: ""
+  buttonBackgroundColor2Hex: "#177982"
+  buttonTextColor2: "#ffffff"
+  buttonTextColor2Hex: ""
+  titleColor: "#ffffff"
+  titleColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+  textColor3: ""
+  textColor3Hex: "#1b315e"
+  textColor3HoverColor: ""
+  textColor3HoverColorHex: "#cde37a"
+  hoverBackgroundColor: ""
+  hoverBackgroundColorHex: "#a6ce39"
+  hoverColor: "#000000"
+  hoverColorHex: ""
+preview:
+  text:
+    - Patient Results
+  icon: photo_library
+picker_preview:
+  text: Patient Results
+  subtext: Before-and-after photos that reveal their caption on hover.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/patient-results/patient-results.cloudcannon.inputs.yml

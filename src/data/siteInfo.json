@@ -1,20 +1,25 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Taylor Dental Care",
   "socials": [
-    {
-      "label": "Facebook",
-      "icon": "social/facebook",
-      "link": "https://facebook.com"
-    },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "link": "https://www.instagram.com/taylordentalcare/?utm_medium=copy_link"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "Twitter",
+      "icon": "social/x",
+      "link": "https://twitter.com/TaylorDntlCare"
+    },
+    {
+      "label": "Facebook",
+      "icon": "social/facebook",
+      "link": "https://www.facebook.com/TaylorDentalCare"
+    },
+    {
+      "label": "Pinterest",
+      "icon": "social/pinterest",
+      "link": "https://www.pinterest.com/taylordentalcare2/"
     }
   ],
   "offices": [
@@ -22,51 +27,63 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "9924 South 700 E"
+          ],
+          "city": "Sandy",
+          "state": "UT",
+          "postalCode": "84070",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://goo.gl/maps/wcJ8zu7fFQQj8HPX7"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(801) 565-9411",
+          "href": "tel:+18015659411"
         }
       ],
       "emails": [
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "display": "taylordentalom@gmail.com",
+          "href": "mailto:taylordentalom@gmail.com"
         }
       ],
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "hours": "Closed",
+          "note": ""
+        },
+        {
+          "day": "Saturday",
+          "hours": "Closed",
+          "note": ""
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed",
           "note": ""
         }
       ],
@@ -74,8 +91,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
-  "mapEmbedUrl": "",
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12122.78433764327!2d-111.8725113!3d40.5703882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b12a5cd33045c66!2sTaylor%20Dental%20Care!5e0!3m2!1sen!2slk!4v1627884386509!5m2!1sen!2slk",
   "recaptchaSiteKey": ""
 }

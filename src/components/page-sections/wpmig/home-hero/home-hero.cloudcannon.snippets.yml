@@ -1,0 +1,10 @@
+_snippets:
+  home_hero:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Hero
+    definitions:
+      component_name: page-sections/wpmig/home-hero
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-hero/our-pride-is-your.cloudcannon.inputs.yml

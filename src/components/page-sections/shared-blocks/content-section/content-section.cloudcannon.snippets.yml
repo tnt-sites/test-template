@@ -1,0 +1,10 @@
+_snippets:
+  content_section:
+    template: astro_component
+    inline: false
+    preview:
+      text: Content Section
+    definitions:
+      component_name: page-sections/shared-blocks/content-section
+    _inputs_from_glob:
+      - /src/components/page-sections/shared-blocks/content-section/content-section.cloudcannon.inputs.yml

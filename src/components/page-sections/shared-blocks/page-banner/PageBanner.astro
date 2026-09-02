@@ -1,0 +1,154 @@
+---
+/**
+ * PageBanner — the interior page banner: a full-width photo under a 50% lime
+ * wash, with the page name centred over it.
+ *
+ * The migrator emitted four near-identical copies of this section (one per
+ * page family) and positioned the caption with pixels measured at 1440
+ * (`top: 144px; bottom: 90px; transform: matrix(...)`), which puts the text in
+ * a different place at every other width. All four now render this instead.
+ *
+ * `as` follows the source, which is inconsistent on purpose: pages with their
+ * own `<h1>` further down caption the banner with a `<span>`, and pages without
+ * one put the `<h1>` here. Both render identically.
+ *
+ * The banner is the interior page hero, so it also carries the breadcrumb —
+ * rendered directly beneath it. The layout skips its own copy on any page whose
+ * first section is this one (see Page.astro).
+ */
+import Breadcrumb from "@components/page-sections/shared-blocks/breadcrumb/Breadcrumb.astro";
+
+const {
+  heading = "",
+  as = "span",
+  image = "",
+  imageAlt = "",
+  overlayColor = "",
+  overlayColorHex = "",
+  headingColor = "",
+  headingColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+// The migrated pages carry the emitter's colour pair (a palette selection plus
+// an optional custom hex that overrides it), so this takes them directly rather
+// than needing a wrapper per page family to resolve them.
+const overlay = overlayColorHex || overlayColor || "#a6ce39";
+const captionColor = headingColorHex || headingColor || "#ffffff";
+const Heading = as === "h1" ? "h1" : "span";
+---
+
+<section
+  class="page-banner"
+  id={id || undefined}
+  style={`--ov:${overlay};--hd:${captionColor}`}
+  {...rest}
+>
+  {
+    image && (
+      <img
+        class="page-banner-media"
+        src={image}
+        alt={imageAlt || ""}
+        width="1920"
+        height="720"
+        fetchpriority="high"
+      />
+    )
+  }
+  {
+    heading && (
+      <div class="page-banner-inner">
+        <Heading class="page-banner-caption" set:html={heading} />
+      </div>
+    )
+  }
+</section>
+
+<Breadcrumb />
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .page-banner {
+      background-color: #6b7150;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      z-index: 10;
+    }
+
+    .page-banner-media {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+
+    /* The lime wash the source lays over every interior banner photo. */
+    .page-banner::before {
+      background: var(--ov, #a6ce39);
+      content: "";
+      inset: 0;
+      opacity: 0.5;
+      position: absolute;
+      z-index: 100;
+    }
+
+    /* Darkens the lime wash so the white caption clears 4.5:1 over any photo. */
+    .page-banner::after {
+      background: rgb(17 17 17 / 55%);
+      content: "";
+      inset: 0;
+      position: absolute;
+      z-index: 101;
+    }
+
+    .page-banner-inner {
+      box-sizing: border-box;
+      color: var(--hd, #fff);
+      margin-inline: auto;
+      max-width: 1300px;
+      padding-inline: 15px;
+      position: relative;
+      width: 100%;
+      z-index: 200;
+    }
+
+    .page-banner-caption {
+      color: var(--hd, #fff);
+      display: block;
+      font-family: var(--font-headings, "PT Sans"), sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      /* Centred over the photo, at any width — not pinned to measured pixels. */
+      .page-banner-inner {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    /* Below 768px the source drops the wash and moves the caption under the
+       photo as a dark uppercase heading. */
+    @media (max-width: 767px) {
+      .page-banner::before {
+        display: none;
+      }
+
+      .page-banner-caption {
+        color: #30475e;
+        font-size: 28px;
+        margin-top: 45px;
+        text-transform: uppercase;
+      }
+    }
+  }
+</style>

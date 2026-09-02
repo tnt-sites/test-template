@@ -22,6 +22,12 @@
   --color-text-muted: var(--gray-8);
   --color-text-on-muted: var(--gray-12);
   --color-text-on-brand: var(--gray-0);
+  /* The brand secondary is a light lime; white on it is ~1.8:1, so text
+     sitting on it uses a dark ink instead of --color-text-on-brand. */
+  --color-text-on-brand-secondary: var(--gray-12);
+  /* ...and the reverse: the lime is unreadable as text on a light ground, so
+     text tinted with the brand secondary uses this darkened green instead. */
+  --color-text-brand-secondary: #417b1e;
   --color-text-inverse: var(--gray-0);
   --color-link: blue;
   --color-link-hover: darkblue;
@@ -59,3 +65,13 @@
   --color-focus-ring: rgba(0, 87, 255, 0.4);
   --color-error: #f00;
 }
+
+/* mig:begin source-theme */
+:root,
+[data-theme="default"] {
+  --color-bg: #ffffff;
+  --color-text: #414b4d;
+  --color-text-strong: #1b2e38;
+  --color-link: #177982;
+}
+/* mig:end source-theme */
