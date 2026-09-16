@@ -29,29 +29,31 @@ pageSections:
       text: At North County Cosmetic and Implant Dentistry in Vista, CA, we are committed to fully informing
         patients of their options and creating a low pressure environment where you can make the healthcare
         decisions that are right for you and your family.
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery514.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery216.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery316.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery417.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery116.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery621.jpg
-      alt: ''
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    - _component: building-blocks/core-elements/image-row
+      images:
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery514.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery216.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery316.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery417.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery116.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery621.jpg
+        alt: ''
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: none
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

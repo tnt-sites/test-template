@@ -1,0 +1,14 @@
+label: Image Row
+icon: view_column
+description: A row of thumbnails, six across at desktop.
+value:
+  _component: building-blocks/core-elements/image-row
+  id: ""
+  images: []
+preview:
+  text:
+    - Image Row
+  icon: view_column
+picker_preview:
+  text: Image Row
+  subtext: Row of thumbnails.

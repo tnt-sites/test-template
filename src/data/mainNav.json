@@ -9,18 +9,22 @@
         {
           "name": "New Patient Information",
           "path": "https://forms.wv3.io/form?formId=c3ae1726-f1e8-4903-9270-713252293071&companyId=9147c824-9446-4a85-9de2-872257282a9a",
-          "children": [
-            {
-              "name": "Dental Material Facts",
-              "path": "/wp-content/uploads/dental_materials_fact_sheet.pdf",
-              "children": []
-            },
-            {
-              "name": "Privacy Policy",
-              "path": "/wp-content/uploads/north_county_cosmetic_and_implant_dentistry_privacy_policy.pdf",
-              "children": []
-            }
-          ]
+          "children": []
+        },
+        {
+          "name": "Financial Policy",
+          "path": "/financial-policy/",
+          "children": []
+        },
+        {
+          "name": "Dental Material Facts",
+          "path": "/wp-content/uploads/dental_materials_fact_sheet.pdf",
+          "children": []
+        },
+        {
+          "name": "Privacy Policy",
+          "path": "/wp-content/uploads/north_county_cosmetic_and_implant_dentistry_privacy_policy.pdf",
+          "children": []
         },
         {
           "name": "Sleep Apnea History",
@@ -34,6 +38,11 @@
       "path": "/about/",
       "children": [
         {
+          "name": "Meet Dr. Henninger",
+          "path": "/meet-dr-henninger/",
+          "children": []
+        },
+        {
           "name": "Meet Dr. Huenergardt",
           "path": "/meet-dr-craig-huenergardt/",
           "children": []
@@ -41,6 +50,16 @@
         {
           "name": "Office Tour",
           "path": "https://my.matterport.com/show/?m=zxvWUg6ZkYW",
+          "children": []
+        },
+        {
+          "name": "Complete Health Dentistry Membership Club",
+          "path": "/vista-ca/complete-health-dentistry-membership-club/",
+          "children": []
+        },
+        {
+          "name": "Hope For Veterans",
+          "path": "/vista-ca/hope-for-veterans/",
           "children": []
         },
         {
@@ -60,8 +79,38 @@
           "children": []
         },
         {
+          "name": "Single Dental Implants",
+          "path": "/vista-ca/single-dental-implants/",
+          "children": []
+        },
+        {
+          "name": "Teeth in a Day",
+          "path": "/vista-ca/same-day-dental-implants/",
+          "children": []
+        },
+        {
+          "name": "Snap In Dentures",
+          "path": "/vista-ca/snap-in-dentures/",
+          "children": []
+        },
+        {
+          "name": "All-on-4 Dental Implants",
+          "path": "/vista-ca/all-on-4/",
+          "children": []
+        },
+        {
+          "name": "Our Process",
+          "path": "/vista-ca/our-process/",
+          "children": []
+        },
+        {
           "name": "How Much Do Dental Implants Cost?",
           "path": "/vista-ca/the-cost-of-dental-implants/",
+          "children": []
+        },
+        {
+          "name": "Medicare – Dental implants",
+          "path": "/medicare-dental-implants/",
           "children": []
         }
       ]
@@ -69,7 +118,49 @@
     {
       "name": "Dental Anesthesia",
       "path": "/vista-ca/dental-anesthesia/",
-      "children": []
+      "children": [
+        {
+          "name": "Dental Anesthesia",
+          "path": "/vista-ca/dental-anesthesia/",
+          "children": []
+        },
+        {
+          "name": "Special Needs Dentistry",
+          "path": "/vista-ca/special-needs-dentistry/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Sleep Apnea",
+      "path": "/vista-ca/sleep-apnea/",
+      "children": [
+        {
+          "name": "Oral Appliance Therapy",
+          "path": "/vista-ca/oral-appliance-therapy/",
+          "children": []
+        },
+        {
+          "name": "Take Home Sleep Test",
+          "path": "/vista-ca/take-home-sleep-test/",
+          "children": []
+        },
+        {
+          "name": "Treatment For Snoring",
+          "path": "/vista-ca/treatment-for-snoring/",
+          "children": []
+        },
+        {
+          "name": "Nightlase",
+          "path": "/vista-ca/nightlase/",
+          "children": []
+        },
+        {
+          "name": "Sleep Apnea Referral Form",
+          "path": "/wp-content/uploads/Sleep-Apnea-Referral-Form.pdf",
+          "children": []
+        }
+      ]
     },
     {
       "name": "Dental Services",
@@ -83,6 +174,16 @@
         {
           "name": "All-on-4 Dental Implants",
           "path": "/vista-ca/all-on-4/",
+          "children": []
+        },
+        {
+          "name": "CEREC Dentist",
+          "path": "/vista-ca/cerec-dentist/",
+          "children": []
+        },
+        {
+          "name": "Debridement Surgery",
+          "path": "/vista-ca/debridement-surgery/",
           "children": []
         },
         {
@@ -121,8 +222,18 @@
           "children": []
         },
         {
+          "name": "Gum Grafting",
+          "path": "/vista-ca/gum-grafting/",
+          "children": []
+        },
+        {
           "name": "Clear Aligner Therapy",
           "path": "/vista-ca/clear-aligner-therapy-dentist/",
+          "children": []
+        },
+        {
+          "name": "IV Sedation Dentistry",
+          "path": "/vista-ca/iv-sedation-dentistry/",
           "children": []
         },
         {
@@ -131,8 +242,33 @@
           "children": []
         },
         {
+          "name": "LANAP® Periodontal Treatment",
+          "path": "/vista-ca/lanap-periodontal-treatment/",
+          "children": []
+        },
+        {
+          "name": "Laser Deep Cleaning",
+          "path": "/vista-ca/laser-deep-cleaning/",
+          "children": []
+        },
+        {
           "name": "Laser Dentistry",
           "path": "/vista-ca/laser-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Osseous Surgery",
+          "path": "/vista-ca/osseous-surgery/",
+          "children": []
+        },
+        {
+          "name": "Perio Protect",
+          "path": "/vista-ca/perio-protect/",
+          "children": []
+        },
+        {
+          "name": "Periodontal Disease Maintenance",
+          "path": "/vista-ca/periodontal-disease-maintenance/",
           "children": []
         },
         {
@@ -148,6 +284,16 @@
         {
           "name": "Smile Makeover",
           "path": "/vista-ca/smile-makeover/",
+          "children": []
+        },
+        {
+          "name": "Stop Heart Disease and Stroke",
+          "path": "/vista-ca/stop-heart-disease-and-stroke/",
+          "children": []
+        },
+        {
+          "name": "Tooth Whitening",
+          "path": "/vista-ca/tooth-whitening/",
           "children": []
         },
         {
@@ -189,6 +335,11 @@
         {
           "name": "FAQ",
           "path": "/frequently-asked-questions/",
+          "children": []
+        },
+        {
+          "name": "Find a Complete Health Dentist",
+          "path": "/vista-ca/find-a-complete-health-dentist/",
           "children": []
         },
         {
@@ -261,7 +412,64 @@
     {
       "name": "Why Choose Us",
       "path": "#",
+      "children": [
+        {
+          "name": "Smile Gallery",
+          "path": "/smile-gallery/",
+          "children": []
+        },
+        {
+          "name": "Patient Testimonials",
+          "path": "/patient-testimonials/",
+          "children": []
+        },
+        {
+          "name": "Reviews",
+          "path": "/reviews/",
+          "children": []
+        },
+        {
+          "name": "Video Gallery",
+          "path": "/video-gallery/",
+          "children": []
+        },
+        {
+          "name": "Complete Health Dentistry Membership Club",
+          "path": "/vista-ca/complete-health-dentistry-membership-club/",
+          "children": []
+        },
+        {
+          "name": "Hope For Veterans",
+          "path": "/vista-ca/hope-for-veterans/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Medicare Options",
+      "path": "/medicare-options/",
       "children": []
+    },
+    {
+      "name": "Financing",
+      "path": "/financing/",
+      "children": [
+        {
+          "name": "Financing Overview",
+          "path": "/financing/",
+          "children": []
+        },
+        {
+          "name": "Complete Health Dentistry Membership Club",
+          "path": "/vista-ca/complete-health-dentistry-membership-club/",
+          "children": []
+        },
+        {
+          "name": "CareCredit",
+          "path": "/carecredit/",
+          "children": []
+        }
+      ]
     },
     {
       "name": "For Doctors",
@@ -275,6 +483,11 @@
         {
           "name": "Referral Form",
           "path": "/wp-content/uploads/Referral-SlipNC.pdf",
+          "children": []
+        },
+        {
+          "name": "Meet Dr. Henninger",
+          "path": "/meet-dr-henninger/",
           "children": []
         }
       ]

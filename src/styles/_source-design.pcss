@@ -218,8 +218,27 @@
     transition: max-height var(--animation-normal, 200ms) ease-in-out;
   }
 
+  /*
+   * The source fits all 12 top-level items across the bar by running them at
+   * 13px with 15px of side padding. The starter's 16px/16px spacing overflows
+   * the viewport once Sleep Apnea, Medicare Options and Financing are present.
+   */
   .main-nav {
     --chrome-nav-link-size: 13px;
+  }
+
+  .main-nav .desktop-main-nav > .bar-list {
+    gap: 0;
+  }
+
+  .main-nav .desktop-main-nav > .bar-list > .nav-item > a {
+    font-size: var(--chrome-nav-link-size);
+    padding: 8px 4px 8px 15px;
+    white-space: nowrap;
+  }
+
+  .main-nav .desktop-main-nav > .bar-list > .nav-item:not(.has-children) > a {
+    padding-right: 15px;
   }
 
   /*
@@ -803,5 +822,34 @@
 
   main .custom-section.bg-gold li::marker {
     color: #fff;
+  }
+}
+
+@layer overrides {
+  /*
+   * Call-out bubbles. `.custom-section` sets a 2px radius for the grey content
+   * cards, which was flattening the bubble's 10px corners; the source also
+   * centres the text at 16px.
+   */
+  main .custom-section.callout-bubble {
+    border-radius: 10px;
+    max-width: min(850px, 88%);
+    text-align: center;
+  }
+
+  main .custom-section.callout-bubble p,
+  main .custom-section.callout-bubble li {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  /* A 20px tail, not 40px. */
+  main .custom-section.callout-bubble::after {
+    border-width: 20px;
+  }
+
+  /* Image rows are full width inside their section. */
+  main .custom-section.image-row-section {
+    padding: 0;
   }
 }

@@ -38,24 +38,26 @@ pageSections:
         place. Lower dentures in particular usually require sticky, messy adhesive to keep from “floating”
         around in your mouth. This slipping and sliding causes discomfort, sores, difficulty eating and
         speaking, and frustration for many denture wearers.
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery514.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery216.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery316.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery417.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery116.jpg
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/gallery621.jpg
-      alt: ''
+    - _component: building-blocks/core-elements/image-row
+      images:
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery514.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery216.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery316.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery417.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery116.jpg
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/gallery621.jpg
+        alt: ''
     - _component: building-blocks/core-elements/text
       text: After a thorough consultation, depending on your particular needs and factors such as bone
         level, medical history, and finances Dr. Henninger and Dr. Huenegardt will work closely with you

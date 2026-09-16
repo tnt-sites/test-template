@@ -1,0 +1,47 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+/*
+ * A row of thumbnails. The source lays these out as `col s12 l2` — six across
+ * at desktop, full width on mobile — and they appear on the cost, financing,
+ * snap-in-dentures and membership-club pages.
+ */
+const { images = [], class: className, _component, ...rest } = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+{
+  images.length > 0 && (
+    <div class:list={["image-row", className]} {...htmlAttributes}>
+      {images.map((img: any) => (
+        <figure class="ir-item">
+          <Image source={img.source} alt={img.alt || ""} editable={false} />
+        </figure>
+      ))}
+    </div>
+  )
+}
+
+<style lang="pcss">
+  .image-row {
+    display: grid;
+    gap: var(--spacing-sm);
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    margin-block: var(--spacing-md);
+  }
+
+  .ir-item {
+    margin: 0;
+  }
+
+  .ir-item :global(img) {
+    aspect-ratio: 4 / 3;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+</style>

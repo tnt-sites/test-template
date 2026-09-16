@@ -52,15 +52,17 @@ pageSections:
       text: Choose the Plan That’s Right For You
       level: h2
       size: md
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/Adult-Membership-Annual.png
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/Perio-Membership-Annual.png
-      alt: ''
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/Child-Membership-Annual.png
-      alt: ''
+    - _component: building-blocks/core-elements/image-row
+      images:
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/Adult-Membership-Annual.png
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/Perio-Membership-Annual.png
+        alt: ''
+      - _component: building-blocks/core-elements/image
+        source: /src/assets/images/wp/Child-Membership-Annual.png
+        alt: ''
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

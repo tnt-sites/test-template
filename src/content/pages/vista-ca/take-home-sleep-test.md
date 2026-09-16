@@ -95,7 +95,6 @@ pageSections:
     paddingVertical: none
     colorScheme: default
     backgroundColor: none
-    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
