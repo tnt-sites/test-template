@@ -1,0 +1,59 @@
+---
+/*
+ * Full-width map band, as measured on the source at 1440px: a 584px section on
+ * the secondary grey with a centred dotted rule above a 450px map embed.
+ */
+const {
+  embedSrc = "",
+  title = "Office location map",
+  height = 450,
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const frameHeight = Number(height) > 0 ? Number(height) : 450;
+---
+
+{
+  embedSrc && (
+    <section class:list={["location-map", className]} id={id || undefined} {...htmlAttributes}>
+      <div class="lm-divider" aria-hidden="true" />
+      <div class="lm-frame">
+        <iframe
+          src={embedSrc}
+          title={title}
+          height={frameHeight}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        />
+      </div>
+    </section>
+  )
+}
+
+<style lang="pcss">
+  .location-map {
+    background-color: var(--color-bg-highlight);
+    padding-block: 64px 0;
+  }
+
+  .lm-divider {
+    border-top: 5px dotted currentcolor;
+    height: 5px;
+    margin: 0 auto 65px;
+    width: 65px;
+  }
+
+  .lm-frame iframe {
+    border: 0;
+    display: block;
+    width: 100%;
+  }
+</style>

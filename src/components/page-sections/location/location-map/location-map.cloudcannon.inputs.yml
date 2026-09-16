@@ -1,0 +1,9 @@
+embedSrc:
+  type: url
+  comment: Google Maps embed URL for the office location.
+title:
+  type: text
+  comment: Accessible title for the map iframe.
+height:
+  type: number
+  comment: Height of the map embed in pixels.

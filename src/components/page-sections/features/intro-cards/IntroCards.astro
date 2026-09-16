@@ -1,0 +1,276 @@
+---
+import Button from "@core-elements/button/Button.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+/*
+ * Homepage welcome band, as measured on the source at 1440px: one row holding a
+ * 477px intro column (H1 at 45px/49.5, a centred dotted rule, the prose, then an
+ * autoplaying B-roll clip) and three 281px profile cards.
+ *
+ * The cards use `square-crop` — a fixed 150px-tall photo — so their titles line
+ * up across the row regardless of how much copy each one carries. The first card
+ * carries a left border on the source, separating it from the intro column.
+ */
+const {
+  heading = "",
+  contentSections = [],
+  videoSource = "",
+  videoPoster = "",
+  cards = [],
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+type Card = {
+  _component?: string;
+  image?: string;
+  imageAlt?: string;
+  title?: string;
+  description?: string;
+  linkUrl?: string;
+  linkText?: string;
+};
+
+const clean = (value: unknown, fallback = "") =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
+
+const normalizedCards = (Array.isArray(cards) ? cards : [])
+  .filter((card): card is Card => !!card && typeof card === "object")
+  .map((card) => ({
+    image: clean(card.image),
+    imageAlt: clean(card.imageAlt, clean(card.title)),
+    title: clean(card.title),
+    description: clean(card.description),
+    linkUrl: clean(card.linkUrl),
+    linkText: clean(card.linkText),
+  }));
+
+const paragraphs = (Array.isArray(contentSections) ? contentSections : []).filter(
+  (block) => !!block && typeof block === "object"
+);
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["intro-cards", className]} id={id || undefined} {...htmlAttributes}>
+  <div class="ic-inner">
+    <div class="ic-intro">
+      {
+        heading && (
+          <h1 class="ic-heading" data-prop="heading">
+            {heading}
+          </h1>
+        )
+      }
+      <div class="ic-divider" aria-hidden="true"></div>
+      <div class="ic-prose">
+        {paragraphs.map((block: any) => <Text alignX="start" text={block.text} />)}
+      </div>
+      {
+        videoSource && (
+          <video
+            class="ic-video"
+            src={videoSource}
+            poster={videoPoster || undefined}
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="North County Cosmetic and Implant Dentistry office"
+          />
+        )
+      }
+    </div>
+
+    <div
+      class="ic-cards"
+      data-editable={editable ? "array" : undefined}
+      data-component-key={editable ? "_component" : undefined}
+      data-id-key={editable ? "_component" : undefined}
+      data-prop={editable ? "cards" : undefined}
+    >
+      {
+        normalizedCards.map((card) => (
+          <editable-array-item
+            class="ic-card"
+            data-component="page-sections/features/intro-cards/intro-card"
+          >
+            {card.image && (
+              <div class="ic-card-image">
+                <Image source={card.image} alt={card.imageAlt} editable={false} />
+              </div>
+            )}
+            <div class="ic-card-body">
+              {card.title && <h3 class="ic-card-title">{card.title}</h3>}
+              {card.description && <p class="ic-card-text">{card.description}</p>}
+            </div>
+            {card.linkUrl && card.linkText && (
+              <Button
+                class="ic-card-btn"
+                text={card.linkText}
+                link={card.linkUrl}
+                variant="primary"
+                size="sm"
+                borderRadius="2xl"
+                editable={false}
+              />
+            )}
+          </editable-array-item>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .intro-cards {
+      background-color: var(--color-bg);
+      padding-block: 50px;
+    }
+
+    .intro-cards .ic-inner {
+      box-sizing: border-box;
+      display: grid;
+      gap: 0;
+      grid-template-columns: 477px 1fr;
+      margin: 0 auto;
+      max-width: 1440px;
+      padding-inline: 61px;
+    }
+
+    .intro-cards .ic-intro {
+      padding-inline: 30px;
+    }
+
+    .intro-cards .ic-heading {
+      font-family: var(--font-headings);
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 49.5px;
+      margin: 0;
+    }
+
+    .intro-cards .ic-divider {
+      border-top: 5px dotted currentcolor;
+      height: 5px;
+      margin: 12px auto;
+      width: 65px;
+    }
+
+    .intro-cards .ic-prose .text {
+      margin-block: 0 1em;
+    }
+
+    .intro-cards .ic-video {
+      display: block;
+      height: auto;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .intro-cards .ic-cards {
+      align-content: start;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+    }
+
+    /* The source caps the cards at their own content height (469px against a
+       762px intro column) rather than stretching them down the row. */
+    .intro-cards .ic-card {
+      align-self: start;
+      box-sizing: border-box;
+      display: grid;
+      grid-row: span 3;
+      grid-template-rows: subgrid;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Without subgrid support the card still stacks, just without the shared
+       baseline the source gets from matchInnerHeight. */
+    @supports not (grid-template-rows: subgrid) {
+      .intro-cards .ic-card {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    /* The source separates the first card from the intro column with a rule. */
+    .intro-cards .ic-card:first-child {
+      border-left: 1px solid rgb(0 0 0 / 12%);
+    }
+
+    .intro-cards .ic-card-image img {
+      display: block;
+      height: 150px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .intro-cards .ic-card-image .image {
+      margin: 0;
+    }
+
+    .intro-cards .ic-card-title {
+      font-family: var(--font-headings);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26.4px;
+      margin: 20px 0 0;
+    }
+
+    .intro-cards .ic-card-text {
+      margin: 10px 0 0;
+      text-align: left;
+    }
+
+    .intro-cards .ic-card-btn {
+      align-self: center;
+      margin-top: 26px;
+      padding-bottom: 14px;
+    }
+
+    @media (max-width: 1200px) {
+      .intro-cards .ic-inner {
+        gap: 20px;
+        grid-template-columns: 1fr;
+        padding-inline: 32px;
+      }
+
+      .intro-cards .ic-intro {
+        padding-inline: 0;
+      }
+
+      .intro-cards .ic-card:first-child {
+        border-left: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro-cards .ic-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+      }
+
+      .intro-cards .ic-card {
+        display: flex;
+        flex-direction: column;
+        grid-row: auto;
+      }
+
+      .intro-cards .ic-heading {
+        font-size: 34px;
+        line-height: 38px;
+      }
+    }
+  }
+</style>

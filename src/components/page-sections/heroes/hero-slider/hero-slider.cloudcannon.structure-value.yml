@@ -1,0 +1,103 @@
+label: Hero Slider
+icon: slideshow
+description: Full-width rotating homepage hero with the appointment form docked over it.
+value:
+  _component: page-sections/heroes/hero-slider
+  id: ""
+  slides:
+    - _component: page-sections/heroes/hero-slider/hero-slide
+      imageSource: ""
+      imageAlt: Hero image
+      heading: Heading text
+      subtext: Supporting line for this slide.
+      buttons:
+        - _component: page-sections/heroes/hero-slider/hero-slide-button
+          text: Call Now
+          link: "tel:+1-760-940-2273"
+          newTab: false
+  formId: "251056297507965"
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeading: Request An Appointment
+  formHeight: 420
+preview:
+  text:
+    - Hero Slider
+  subtext:
+    - key: slides[0].heading
+  icon: slideshow
+picker_preview:
+  text: Hero Slider
+  subtext: Rotating homepage hero with a docked appointment form.
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/hero-slider/hero-slider.cloudcannon.inputs.yml
+_structures:
+  heroSlides:
+    values:
+      - label: Hero Slide
+        icon: image
+        value:
+          _component: page-sections/heroes/hero-slider/hero-slide
+          imageSource: ""
+          imageAlt: Hero image
+          heading: Heading text
+          subtext: Supporting line for this slide.
+          buttons:
+            - _component: page-sections/heroes/hero-slider/hero-slide-button
+              text: Call Now
+              link: "tel:+1-760-940-2273"
+              newTab: false
+        preview:
+          text:
+            - key: heading
+            - Hero Slide
+          subtext:
+            - key: subtext
+          image:
+            - key: imageSource
+        _inputs:
+          imageSource:
+            type: image
+            comment: Background photo for this slide.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the slide photo.
+          heading:
+            type: text
+            comment: Slide headline.
+          subtext:
+            type: text
+            comment: Supporting line beneath the headline.
+          buttons:
+            type: array
+            comment: Call-to-action buttons for this slide.
+            options:
+              structures: _structures.heroSlideButtons
+  heroSlideButtons:
+    values:
+      - label: Hero Button
+        icon: smart_button
+        value:
+          _component: page-sections/heroes/hero-slider/hero-slide-button
+          text: Call Now
+          link: "tel:+1-760-940-2273"
+          newTab: false
+        preview:
+          text:
+            - key: text
+            - Hero Button
+          subtext:
+            - key: link
+        _inputs:
+          text:
+            type: text
+            comment: Button label.
+          link:
+            type: url
+            comment: Button destination.
+          newTab:
+            type: switch
+            comment: Open this link in a new tab.

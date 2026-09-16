@@ -1,0 +1,27 @@
+heading:
+  type: text
+  comment: Heading for the intro column.
+contentSections:
+  type: array
+  comment: Paragraphs shown beneath the heading.
+  options:
+    structures: _structures.contentSections
+videoSource:
+  type: file
+  comment: Optional looping video shown under the intro copy.
+  options:
+    paths:
+      uploads: public/videos
+      static: ""
+videoPoster:
+  type: image
+  comment: Poster frame for the intro video.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+cards:
+  type: array
+  comment: Cards shown alongside the intro column.
+  options:
+    structures: _structures.introCards

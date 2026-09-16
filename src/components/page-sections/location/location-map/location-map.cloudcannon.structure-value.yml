@@ -1,0 +1,20 @@
+label: Location Map
+icon: map
+description: Full-width map band for the office location.
+value:
+  _component: page-sections/location/location-map
+  id: ""
+  embedSrc: ""
+  title: Office location map
+  height: 450
+preview:
+  text:
+    - Location Map
+  subtext:
+    - key: title
+  icon: map
+picker_preview:
+  text: Location Map
+  subtext: Full-width map band for the office location.
+_inputs_from_glob:
+  - /src/components/page-sections/location/location-map/location-map.cloudcannon.inputs.yml

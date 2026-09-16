@@ -1,0 +1,17 @@
+slides:
+  type: array
+  comment: Full-width hero slides. The first slide shows before the rotation starts.
+  options:
+    structures: _structures.heroSlides
+formId:
+  type: text
+  comment: Liine form ID for the appointment form docked over the hero. Leave blank to hide the form.
+formTitle:
+  type: text
+  comment: Accessible title for the appointment form iframe.
+formHeading:
+  type: text
+  comment: Heading shown in the form card's title bar.
+formHeight:
+  type: number
+  comment: Height of the embedded form in pixels.

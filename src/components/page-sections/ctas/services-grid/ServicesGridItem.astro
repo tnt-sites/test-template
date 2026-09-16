@@ -35,64 +35,63 @@ const normalizedLinks = Array.isArray(links)
 ---
 
 <div class:list={["services-grid-item", isTrue(wide) && "is-wide", className]} {...htmlAttributes}>
-  {
-    imageSource && (
-      <figure class="services-grid-figure">
-        <Image
-          source={imageSource}
-          alt={imageAlt}
-          editable={editable}
-          data-editable={editable ? "image" : undefined}
-          data-prop-src={editable ? "imageSource" : undefined}
-          data-prop-alt={editable ? "imageAlt" : undefined}
-        />
-      </figure>
-    )
-  }
-
-  <article class="services-grid-content">
-    <h3 class="services-grid-title">
-      <a
-        href={href}
-        data-editable={editable ? "text" : undefined}
-        data-prop={editable ? "title" : undefined}
-      >
-        <Fragment set:html={titleHtml} />
-      </a>
-    </h3>
-
+  <a class="services-grid-link" href={href}>
     {
-      normalizedLinks.length > 0 && (
-        <ul
-          class="services-grid-links"
-          data-editable={editable ? "array" : undefined}
-          data-component-key={editable ? "_component" : undefined}
-          data-id-key={editable ? "_component" : undefined}
-          data-prop={editable ? "links" : undefined}
-        >
-          {normalizedLinks.map((link) => {
-            const label =
-              typeof link.label === "string" && link.label.trim().length > 0
-                ? link.label.trim()
-                : typeof link.text === "string"
-                  ? link.text.trim()
-                  : "";
-            const linkHref =
-              typeof link.href === "string" && link.href.trim().length > 0 ? link.href : "#";
-            return (
-              <editable-array-item data-component="page-sections/ctas/services-grid/service-link">
-                <a
-                  href={linkHref}
-                  data-editable={editable ? "text" : undefined}
-                  data-prop={editable ? "label" : undefined}
-                >
-                  {label}
-                </a>
-              </editable-array-item>
-            );
-          })}
-        </ul>
+      imageSource && (
+        <figure class="services-grid-figure">
+          <Image
+            source={imageSource}
+            alt={imageAlt}
+            editable={editable}
+            data-editable={editable ? "image" : undefined}
+            data-prop-src={editable ? "imageSource" : undefined}
+            data-prop-alt={editable ? "imageAlt" : undefined}
+          />
+          <figcaption class="services-grid-caption">
+            <h2
+              class="services-grid-title"
+              data-editable={editable ? "text" : undefined}
+              data-prop={editable ? "title" : undefined}
+            >
+              <Fragment set:html={titleHtml} />
+            </h2>
+          </figcaption>
+        </figure>
       )
     }
-  </article>
+  </a>
+
+  {
+    normalizedLinks.length > 0 && (
+      <ul
+        class="services-grid-links"
+        data-editable={editable ? "array" : undefined}
+        data-component-key={editable ? "_component" : undefined}
+        data-id-key={editable ? "_component" : undefined}
+        data-prop={editable ? "links" : undefined}
+      >
+        {normalizedLinks.map((link) => {
+          const label =
+            typeof link.label === "string" && link.label.trim().length > 0
+              ? link.label.trim()
+              : typeof link.text === "string"
+                ? link.text.trim()
+                : "";
+          const linkHref =
+            typeof link.href === "string" && link.href.trim().length > 0 ? link.href : "#";
+          return (
+            <editable-array-item data-component="page-sections/ctas/services-grid/service-link">
+              <a
+                href={linkHref}
+                data-editable={editable ? "text" : undefined}
+                data-prop={editable ? "label" : undefined}
+              >
+                {label}
+              </a>
+            </editable-array-item>
+          );
+        })}
+      </ul>
+    )
+  }
 </div>

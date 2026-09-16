@@ -1,0 +1,418 @@
+---
+import Button from "@core-elements/button/Button.astro";
+import Image from "@core-elements/image/Image.astro";
+import LiineForm from "@page-sections/forms/liine-form/LiineFormEmbed.astro";
+
+/*
+ * Homepage hero, as measured on the source at 1440px: a 600px full-bleed slider
+ * with the appointment form docked over its right side.
+ *
+ * The caption is a 450px panel of 75% white sitting on the photo, right-aligned,
+ * with a 45px/45 Raleway title. The form card is 312px wide, starts 90px below
+ * the top of the slider and carries the same grey title bar as the interior
+ * page banner. Below 992px the source drops the form card entirely
+ * (`hide-on-med-and-down`), so the caption takes the full width.
+ */
+const {
+  slides = [],
+  formId = "251056297507965",
+  formTitle = "North County Cosmetic and Implant Dentistry - Request an Appointment Form",
+  formHeading = "Request An Appointment",
+  formHeight = 420,
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+type Slide = {
+  _component?: string;
+  imageSource?: string;
+  imageAlt?: string;
+  heading?: string;
+  subtext?: string;
+  buttons?: { text?: string; link?: string; newTab?: boolean | string }[];
+};
+
+const isTrue = (value: unknown) =>
+  typeof value === "string" ? value.trim().toLowerCase() === "true" : !!value;
+
+const clean = (value: unknown, fallback = "") =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
+
+const normalized = (Array.isArray(slides) ? slides : [])
+  .filter((slide): slide is Slide => !!slide && typeof slide === "object")
+  .map((slide) => ({
+    imageSource: clean(slide.imageSource),
+    imageAlt: clean(slide.imageAlt, clean(slide.heading)),
+    heading: clean(slide.heading),
+    subtext: clean(slide.subtext),
+    buttons: (Array.isArray(slide.buttons) ? slide.buttons : [])
+      .filter((button) => !!button && typeof button === "object")
+      .map((button) => ({
+        text: clean(button.text),
+        link: clean(button.link, "#"),
+        newTab: isTrue(button.newTab),
+      }))
+      .filter((button) => button.text.length > 0),
+  }))
+  .filter((slide) => slide.imageSource.length > 0);
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const multiple = normalized.length > 1;
+---
+
+<section class:list={["hero-slider", className]} id={id || undefined} {...htmlAttributes}>
+  <div
+    class="hs-slides"
+    data-hero-slider={multiple ? "true" : undefined}
+    data-editable={editable ? "array" : undefined}
+    data-component-key={editable ? "_component" : undefined}
+    data-id-key={editable ? "_component" : undefined}
+    data-prop={editable ? "slides" : undefined}
+  >
+    {
+      normalized.map((slide, index) => (
+        <editable-array-item
+          class:list={["hs-slide", index === 0 && "is-active"]}
+          data-component="page-sections/heroes/hero-slider/hero-slide"
+        >
+          <Image
+            class="hs-image"
+            source={slide.imageSource}
+            alt={slide.imageAlt}
+            editable={false}
+            priority={index === 0}
+          />
+          <div class="hs-caption">
+            <div class="hs-panel">
+              {slide.heading && <div class="hs-title">{slide.heading}</div>}
+              {slide.subtext && <p class="hs-subtext">{slide.subtext}</p>}
+              {slide.buttons.length > 0 && (
+                <div class="hs-buttons">
+                  {slide.buttons.map((button) => (
+                    <Button
+                      class="hs-btn"
+                      text={button.text}
+                      link={button.link}
+                      variant="primary"
+                      size="md"
+                      borderRadius="2xl"
+                      editable={false}
+                      target={button.newTab ? "_blank" : undefined}
+                      rel={button.newTab ? "noopener" : undefined}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </editable-array-item>
+      ))
+    }
+  </div>
+
+  {
+    multiple && (
+      <div class="hs-dots" role="tablist" aria-label="Hero slides">
+        {normalized.map((slide, index) => (
+          <button
+            type="button"
+            class:list={["hs-dot", index === 0 && "is-active"]}
+            data-hero-dot={index}
+            role="tab"
+            aria-selected={index === 0 ? "true" : "false"}
+            aria-label={slide.heading || `Slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    )
+  }
+
+  {
+    formId && (
+      <div class="hs-form">
+        <div class="hs-form-card">
+          <div class="hs-form-title">{formHeading}</div>
+          <div class="hs-form-body">
+            <LiineForm formId={formId} title={formTitle} height={formHeight} />
+          </div>
+        </div>
+      </div>
+    )
+  }
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .hero-slider {
+      background-color: #9e9e9e;
+      height: 600px;
+      position: relative;
+      width: 100%;
+    }
+
+    /* Clipping lives on the slide track so the form card can hang past the
+       band's bottom edge the way it does on the source. */
+    .hero-slider .hs-slides {
+      overflow: hidden;
+    }
+
+    .hero-slider .hs-slides {
+      height: 100%;
+      position: relative;
+      width: 100%;
+    }
+
+    .hero-slider .hs-slide {
+      display: block;
+      height: 100%;
+      inset: 0;
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.5s ease-in-out;
+      width: 100%;
+    }
+
+    .hero-slider .hs-slide.is-active {
+      opacity: 1;
+    }
+
+    /* With JS off only the first slide is ever marked active, so the hero still
+       reads as the static image the source falls back to. */
+    .hero-slider .hs-image,
+    .hero-slider .hs-image > *,
+    .hero-slider .hs-image picture,
+    .hero-slider .hs-image img {
+      display: block;
+      height: 100%;
+      margin: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    /* The source centres the 450px panel in the band (x=559 at 1440px) rather
+       than flushing it to the gutter, leaving the photo readable on both sides. */
+    .hero-slider .hs-caption {
+      align-items: center;
+      display: flex;
+      inset: 0;
+      justify-content: center;
+      padding-inline: 72px;
+      position: absolute;
+    }
+
+    /* The source puts the panel at x=559, i.e. just left of the form card.
+       Anchoring it to the right edge of the content column reproduces that
+       without letting it slide under the card. */
+    @media (min-width: 993px) {
+      .hero-slider .hs-caption {
+        justify-content: flex-end;
+        padding-right: 431px;
+      }
+    }
+
+    .hero-slider .hs-panel {
+      background-color: rgb(255 255 255 / 75%);
+      box-sizing: border-box;
+      max-width: 100%;
+      padding: 14px;
+      text-align: right;
+      width: 450px;
+    }
+
+    .hero-slider .hs-title {
+      color: #000;
+      font-family: var(--font-headings);
+      font-size: 45px;
+      font-weight: 400;
+      line-height: 45px;
+      margin: 0;
+    }
+
+    .hero-slider .hs-subtext {
+      color: #000;
+      font-size: 22.5px;
+      font-weight: 300;
+      line-height: 27px;
+      margin: 22px 0 0;
+    }
+
+    .hero-slider .hs-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
+      margin-top: 56px;
+      padding-bottom: 8px;
+    }
+
+    .hero-slider .hs-dots {
+      bottom: 18px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      left: 0;
+      position: absolute;
+      right: 0;
+      z-index: 3;
+    }
+
+    .hero-slider .hs-dot {
+      background-color: rgb(255 255 255 / 55%);
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 12px;
+      padding: 0;
+      width: 12px;
+    }
+
+    .hero-slider .hs-dot.is-active {
+      background-color: #fff;
+    }
+
+    .hero-slider .hs-form {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto;
+      max-width: 1440px;
+      padding-inline: 72px;
+      pointer-events: none;
+      position: absolute;
+      inset: 90px 0 auto;
+      z-index: 899;
+    }
+
+    .hero-slider .hs-form-card {
+      background-color: #f7f7f7;
+      box-shadow:
+        0 2px 2px 0 rgb(0 0 0 / 14%),
+        0 3px 1px -2px rgb(0 0 0 / 12%),
+        0 1px 5px 0 rgb(0 0 0 / 20%);
+      padding-bottom: 15px;
+      pointer-events: auto;
+      width: 312px;
+    }
+
+    .hero-slider .hs-form-title {
+      background-color: #dcdcdc;
+      color: #000;
+      font-family: var(--font-headings);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .hero-slider .hs-form-body {
+      padding-block: 22px 27px;
+      padding-inline: 8px;
+    }
+
+    @media (max-width: 1200px) {
+      .hero-slider .hs-caption,
+      .hero-slider .hs-form {
+        padding-inline: 32px;
+      }
+    }
+
+    /* The source hides the form below 992px (`hide-on-med-and-down`). */
+    @media (max-width: 992px) {
+      .hero-slider {
+        height: 460px;
+      }
+
+      .hero-slider .hs-form {
+        display: none;
+      }
+
+      .hero-slider .hs-caption {
+        justify-content: center;
+      }
+
+      .hero-slider .hs-title {
+        font-size: 34px;
+        line-height: 36px;
+      }
+
+      .hero-slider .hs-subtext {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero-slider {
+        height: 400px;
+      }
+
+      .hero-slider .hs-caption {
+        padding-inline: 16px;
+      }
+
+      .hero-slider .hs-panel {
+        text-align: center;
+      }
+
+      .hero-slider .hs-buttons {
+        justify-content: center;
+      }
+    }
+  }
+</style>
+
+<script>
+  // Cross-fades the slides on the same 6s cadence as the source, pausing while
+  // the tab is hidden or the pointer is over the hero.
+  const INTERVAL = 6000;
+
+  document.querySelectorAll<HTMLElement>("[data-hero-slider]").forEach((track) => {
+    const slides = Array.from(track.querySelectorAll<HTMLElement>(".hs-slide"));
+    if (slides.length < 2) return;
+
+    const hero = track.closest<HTMLElement>(".hero-slider");
+    const dots = hero ? Array.from(hero.querySelectorAll<HTMLElement>(".hs-dot")) : [];
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let timer: number | undefined;
+
+    const show = (next: number) => {
+      index = (next + slides.length) % slides.length;
+      slides.forEach((slide, i) => slide.classList.toggle("is-active", i === index));
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("is-active", i === index);
+        dot.setAttribute("aria-selected", i === index ? "true" : "false");
+      });
+    };
+
+    const stop = () => {
+      if (timer !== undefined) window.clearInterval(timer);
+      timer = undefined;
+    };
+
+    const start = () => {
+      if (motion.matches || timer !== undefined) return;
+      timer = window.setInterval(() => show(index + 1), INTERVAL);
+    };
+
+    dots.forEach((dot, i) =>
+      dot.addEventListener("click", () => {
+        show(i);
+        stop();
+        start();
+      })
+    );
+
+    hero?.addEventListener("mouseenter", stop);
+    hero?.addEventListener("mouseleave", start);
+    document.addEventListener("visibilitychange", () => (document.hidden ? stop() : start()));
+
+    start();
+  });
+</script>

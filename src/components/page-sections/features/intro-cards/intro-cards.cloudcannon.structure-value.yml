@@ -1,0 +1,75 @@
+label: Intro Cards
+icon: view_column
+description: Intro column with supporting cards alongside it.
+value:
+  _component: page-sections/features/intro-cards
+  id: ""
+  heading: Welcome
+  contentSections:
+    - _component: building-blocks/core-elements/text
+      text: Intro paragraph.
+  videoSource: ""
+  videoPoster: ""
+  cards:
+    - _component: page-sections/features/intro-cards/intro-card
+      image: ""
+      imageAlt: Card image
+      title: Card title
+      description: Card description.
+      linkUrl: /about/
+      linkText: Learn More
+preview:
+  text:
+    - Intro Cards
+  subtext:
+    - key: heading
+  icon: view_column
+picker_preview:
+  text: Intro Cards
+  subtext: Intro column with supporting cards alongside it.
+_inputs_from_glob:
+  - /src/components/page-sections/features/intro-cards/intro-cards.cloudcannon.inputs.yml
+_structures:
+  introCards:
+    values:
+      - label: Intro Card
+        icon: crop_square
+        value:
+          _component: page-sections/features/intro-cards/intro-card
+          image: ""
+          imageAlt: Card image
+          title: Card title
+          description: Card description.
+          linkUrl: /about/
+          linkText: Learn More
+        preview:
+          text:
+            - key: title
+            - Intro Card
+          subtext:
+            - key: description
+          image:
+            - key: image
+        _inputs:
+          image:
+            type: image
+            comment: Card photo.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the card photo.
+          title:
+            type: text
+            comment: Card heading.
+          description:
+            type: markdown
+            comment: Card body copy.
+          linkUrl:
+            type: url
+            comment: Destination for the card button.
+          linkText:
+            type: text
+            comment: Label for the card button.
