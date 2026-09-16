@@ -90,11 +90,11 @@ pageSections:
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
       aspectRatio: widescreen
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
     colorScheme: default
-    backgroundColor: none
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

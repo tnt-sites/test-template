@@ -102,8 +102,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
-        Aligner Therapy vs Traditional Braces Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our Clear Aligner Therapy services on Yelp: Clear Aligner Therapy vs Traditional Braces Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

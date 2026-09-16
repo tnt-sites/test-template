@@ -54,7 +54,8 @@ pageSections:
       patient care that we provide. Other practices do the same, and this allows you to glance quickly
       at the dental offices listed to see who is truly the best in the area based on patient experiences.
   - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our dental services on Yelp: Best Dentist in Vista'
+    text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about our
+      dental services on Yelp: Best Dentist in Vista'
   - _component: building-blocks/core-elements/heading
     text: Social Media
     level: h3
@@ -101,7 +102,8 @@ pageSections:
   label: ''
   contentSections:
   - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our dental services on Yelp: Best Dentist in Vista'
+    text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about our
+      dental services on Yelp: Best Dentist in Vista'
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

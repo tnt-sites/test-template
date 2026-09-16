@@ -49,17 +49,17 @@ pageSections:
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/gallery621.jpg
         alt: ''
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
     colorScheme: default
-    backgroundColor: none
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our The Cost of Dental Implants services on Yelp:
-        The Cost of Dental Implants Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our The Cost of Dental Implants services on Yelp: The Cost of Dental Implants Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

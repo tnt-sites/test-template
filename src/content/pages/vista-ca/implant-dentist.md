@@ -68,8 +68,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our implant dental services on Yelp: Implant Dentist
-        Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our implant dental services on Yelp: Implant Dentist Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

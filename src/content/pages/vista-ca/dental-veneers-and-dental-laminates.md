@@ -117,8 +117,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our dental veneer and laminate services on Yelp: Veneers
-        and Laminates Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our dental veneer and laminate services on Yelp: Veneers and Laminates Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

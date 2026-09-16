@@ -94,8 +94,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our damaged denture support services on Yelp: What
-        Do I Do If I Damage My Dentures in Vista?'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our damaged denture support services on Yelp: What Do I Do If I Damage My Dentures in Vista?'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -108,8 +108,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our wisdom teeth extraction services on Yelp: Wisdom
-        Teeth Extraction Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our wisdom teeth extraction services on Yelp: Wisdom Teeth Extraction Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

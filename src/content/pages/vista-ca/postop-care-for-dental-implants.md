@@ -84,8 +84,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our implant support services on Yelp: Post-Op Care
-        for Dental Implants Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our implant support services on Yelp: Post-Op Care for Dental Implants Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

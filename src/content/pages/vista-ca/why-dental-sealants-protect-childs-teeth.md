@@ -70,8 +70,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about the extra protection of dental sealants on Yelp: Why
-        Dental Sealants Play an Important Part in Protecting Your Child''s Teeth Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        the extra protection of dental sealants on Yelp: Why Dental Sealants Play an Important Part in
+        Protecting Your Child''s Teeth Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

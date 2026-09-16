@@ -96,8 +96,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our root canal support services on Yelp: Do I Need
-        a Root Canal'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our root canal support services on Yelp: Do I Need a Root Canal'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

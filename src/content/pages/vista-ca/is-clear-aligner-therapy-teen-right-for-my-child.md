@@ -90,8 +90,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our Clear Aligner Therapy Teen services on Yelp: Clear
-        Aligner Therapy Teen Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our Clear Aligner Therapy Teen services on Yelp: Clear Aligner Therapy Teen Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -62,8 +62,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our properly fitted custom-made mouth guards on Yelp:
-        Reduce Sports Injuries With Mouth Guards Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our properly fitted custom-made mouth guards on Yelp: Reduce Sports Injuries With Mouth Guards
+        Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

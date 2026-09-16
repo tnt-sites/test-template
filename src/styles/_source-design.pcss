@@ -853,3 +853,20 @@
     padding: 0;
   }
 }
+
+@layer overrides {
+  /*
+   * The Yelp call-out opens with a Yelp glyph on the source
+   * (<i class="fa fa-yelp fa-lg">). Font Awesome is not available here, so the
+   * marker is drawn from the project's own Yelp icon.
+   */
+  .yelp-mark {
+    background-color: currentcolor;
+    display: inline-block;
+    height: 1.05em;
+    margin-right: 0.35em;
+    mask: url("/images/yelp-mark.svg") no-repeat center / contain;
+    vertical-align: -0.16em;
+    width: 1.05em;
+  }
+}

@@ -94,8 +94,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our dental services on Yelp: Can a Cracked Tooth be
-        Saved with a Root Canal and Crown Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our dental services on Yelp: Can a Cracked Tooth be Saved with a Root Canal and Crown Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

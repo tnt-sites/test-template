@@ -136,8 +136,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our general dentistry services on Yelp: General Dentistry
-        Services Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our general dentistry services on Yelp: General Dentistry Services Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

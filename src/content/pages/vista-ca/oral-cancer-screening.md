@@ -72,8 +72,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our oral cancer screening services on Yelp: Oral Cancer
-        Screening Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our oral cancer screening services on Yelp: Oral Cancer Screening Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

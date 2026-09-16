@@ -100,8 +100,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our sleep apnea support services on Yelp: Do I Have
-        Sleep Apnea?'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our sleep apnea support services on Yelp: Do I Have Sleep Apnea?'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

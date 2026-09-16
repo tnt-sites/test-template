@@ -82,8 +82,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our denture and partial denture services on Yelp:
-        Dentures and Partial Dentures Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our denture and partial denture services on Yelp: Dentures and Partial Dentures Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

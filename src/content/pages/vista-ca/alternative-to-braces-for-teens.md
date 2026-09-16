@@ -121,8 +121,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our alternative to braces on Yelp: Alternative to
-        Braces for Teens Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our alternative to braces on Yelp: Alternative to Braces for Teens Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

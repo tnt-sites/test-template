@@ -90,8 +90,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our emergency dental services on Yelp: Emergency Dental
-        Care Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our emergency dental services on Yelp: Emergency Dental Care Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

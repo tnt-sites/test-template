@@ -186,8 +186,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our dental services on Yelp: Partial Dentures for
-        Back Teeth Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our dental services on Yelp: Partial Dentures for Back Teeth Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

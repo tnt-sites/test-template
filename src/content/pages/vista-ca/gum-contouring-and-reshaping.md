@@ -116,8 +116,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our gum contouring services on Yelp: What Is Gum Contouring
-        and Reshaping Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our gum contouring services on Yelp: What Is Gum Contouring and Reshaping Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

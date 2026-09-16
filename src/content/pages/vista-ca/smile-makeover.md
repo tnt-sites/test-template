@@ -93,8 +93,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our smile makeover and restoration services on Yelp:
-        Smile Makeover Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our smile makeover and restoration services on Yelp: Smile Makeover Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

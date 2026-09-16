@@ -44,8 +44,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our in-office tooth whitening on Yelp: Whitening Vista
-        in-office tooth whitening'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our in-office tooth whitening on Yelp: Whitening Vista in-office tooth whitening'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

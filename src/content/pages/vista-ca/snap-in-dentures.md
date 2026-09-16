@@ -104,8 +104,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our Snap In Dentures services on Yelp: Snap In Dentures
-        Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our Snap In Dentures services on Yelp: Snap In Dentures Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

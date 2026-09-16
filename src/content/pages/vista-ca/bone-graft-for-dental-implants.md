@@ -103,8 +103,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our oral health support services on Yelp: Will I Need
-        a Bone Graft for Dental Implants? Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our oral health support services on Yelp: Will I Need a Bone Graft for Dental Implants? Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -108,7 +108,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our dental services on Yelp: Routine Dental Care Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our dental services on Yelp: Routine Dental Care Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

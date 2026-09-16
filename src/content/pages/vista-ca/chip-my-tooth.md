@@ -67,8 +67,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our chipped tooth support services on Yelp: What Should
-        I Do If I Chip My Tooth in Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our chipped tooth support services on Yelp: What Should I Do If I Chip My Tooth in Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

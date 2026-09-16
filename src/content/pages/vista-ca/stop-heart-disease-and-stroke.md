@@ -65,8 +65,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our complete health dentistry on Yelp: BaleDoneen
-        Method Vista BaleDoneen Method Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our complete health dentistry on Yelp: BaleDoneen Method Vista BaleDoneen Method Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

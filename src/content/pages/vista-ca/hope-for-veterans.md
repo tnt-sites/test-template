@@ -56,7 +56,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: Are you a veteran or know a veteran in need? Sign up for this year’s Stand Down at https://ncstanddown.org/
+      text: <span class="yelp-mark" aria-hidden="true"></span> Are you a veteran or know a veteran in
+        need? Sign up for this year’s Stand Down at https://ncstanddown.org/
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -103,8 +103,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our All-on-4 Implants services on Yelp: All-on-4 Implants
-        Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our All-on-4 Implants services on Yelp: All-on-4 Implants Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

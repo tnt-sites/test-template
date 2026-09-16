@@ -147,8 +147,8 @@ pageSections:
         you can come into our dental office, the more options you will have for restoring the damaged
         tooth. This is especially true if you had a tooth fall out and are trying to save it.
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our cosmetic dentistry services on Yelp: Cosmetic
-        Dentist Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our cosmetic dentistry services on Yelp: Cosmetic Dentist Vista'
     - _component: building-blocks/core-elements/heading
       text: Preventative Care
       level: h3
@@ -188,8 +188,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 'Check out what others are saying about our cosmetic dentistry services on Yelp: Cosmetic
-        Dentist Vista'
+      text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
+        our cosmetic dentistry services on Yelp: Cosmetic Dentist Vista'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
