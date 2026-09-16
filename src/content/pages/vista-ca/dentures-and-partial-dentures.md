@@ -30,32 +30,14 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Dentures and Partial Dentures Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Dentures and Partial Dentures Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: You have probably heard about partial and full dentures as treatments for tooth loss. If you
-        are now facing this problem and want to do something about your smile, these are great solutions.
-        Living with missing teeth can make things difficult for eating, but it can also affect your self-esteem.
-        Dentures and partial dentures are practical solutions to restore mouth function and help patients
-        enjoy smiling once again.
-    - _component: building-blocks/core-elements/text
-      text: Dentures and partial dentures are available at North County Cosmetic and Implant Dentistry
-        in Vista and the surrounding area. Our team can evaluate your condition and determine which option
-        is the right fit for you. Whether you are missing a few teeth, several teeth, or all your teeth,
-        dentures may provide the relief you have been anticipating. Because our professionals have the
-        necessary knowledge and training, you can feel at ease knowing we can set you on the path to a
-        beautiful smile.
     - _component: building-blocks/core-elements/text
       text: Call our office today at (760) 940-2273 so you can make an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Dentures Can Help Prevent Further Oral Health Issues
     contentSections:
@@ -102,7 +84,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: highlight
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -227,7 +209,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Other Tooth Replacement Options
     contentSections:
@@ -257,7 +239,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Helping Dentures Last With Proper Care
     contentSections:
@@ -289,7 +271,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: highlight
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Common Misconceptions About Dentures
     contentSections:

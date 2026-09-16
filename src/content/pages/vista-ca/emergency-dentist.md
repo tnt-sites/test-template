@@ -26,21 +26,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Emergency Dentist Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Emergency Dentist Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: An emergency dentist can provide urgent professional dental care for issues such as infection,
-        damaged teeth, knocked out teeth and more. Emergency dental care is a standard service offered
-        at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: No matter how much someone attempts to prepare ahead of time, accidents happen. Dental accidents
-        and emergencies are no exception. Dental emergencies can include infections, tooth decay, damaged
-        teeth, trauma to the mouth and more. By visiting an emergency dentist, you are seeking the immediate
-        care your teeth need.
     - _component: building-blocks/core-elements/text
       text: Prolonging the time between injuring one's teeth and seeing an emergency dentist will only
         increase the chance of the issue causing, irreversible damage. By seeking treatment with us, we
@@ -53,7 +39,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Do I need emergency dentistry? Call us if…
     contentSections:
@@ -88,7 +74,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: highlight
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Reasons for Needing an Emergency Dental Visit
     contentSections:
@@ -146,7 +132,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

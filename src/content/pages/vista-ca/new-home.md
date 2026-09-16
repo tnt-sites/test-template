@@ -76,7 +76,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Eat. Smile. Laugh. Work. Participate. Live.
   contentSections:
@@ -118,7 +118,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -132,7 +132,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: Committed to Your Better, Healthier Life
   contentSections:
@@ -160,7 +160,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -174,7 +174,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: No More Dentures! with San Diego dentist, Christopher Henninger, DMD.
   contentSections:
@@ -186,7 +186,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why Choose Dental Implants?
   contentSections:

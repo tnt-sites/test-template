@@ -25,22 +25,7 @@ pageSections:
   buttonText: ''
   buttonLink: ''
 - _component: page-sections/builders/custom-section
-  label: Find a Complete Health Dentist Vista, CA
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Find a Complete Health Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Complete health dentistry emphasizes the connection between oral health and overall health.
-      Taking good care of your mouth helps ensure the health of the rest of your body. A complete health
-      dentist is one who cares for the patient’s well-being including and beyond oral health.
-  - _component: building-blocks/core-elements/text
-    text: Complete health dentistry is available from North County Cosmetic and Implant Dentistry in Vista
-      and the surrounding area. We take this approach because we believe it leads to a better quality
-      of care for our patients. The mouth is connected to the digestive and respiratory systems, taking
-      in nutrients that help these systems function optimally. Therefore, we should focus on the mouth
-      as the gateway to the rest of the body.
   - _component: building-blocks/core-elements/text
     text: Learn more about the oral health connection to your overall well-being. Choose a dentist who
       offers a complete health perspective. Call 760-940-2273 to schedule an appointment today.
@@ -48,7 +33,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Oral Health Reflecting Overall Health
   contentSections:
@@ -96,7 +81,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Lifestyle Habits To Support Complete Health Dentistry
   contentSections:
@@ -168,7 +153,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions About Complete Health Dentistry
   contentSections:
@@ -215,7 +200,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

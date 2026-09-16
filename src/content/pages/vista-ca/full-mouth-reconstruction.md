@@ -26,21 +26,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Full Mouth Reconstruction Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Full Mouth Reconstruction Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: Full mouth reconstruction involves one or several restorative dental procedures to restore
-        and replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered
-        at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: People with multiple oral health issues such as tooth decay, missing teeth or damaged teeth
-        may benefit from full mouth reconstruction. No matter the cause, people will find it incredibly
-        challenging to live without a full set of functional teeth. Fortunately, we can use full mouth
-        reconstruction to restore both the functionality and appearance of teeth.
     - _component: building-blocks/core-elements/text
       text: Instead of only focusing on one aspect of the mouth, we can help address multiple aspects.
         Along with ensuring that the teeth are customized to fit each patient's unique needs, we will
@@ -53,7 +39,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Trauma
     contentSections:
@@ -105,7 +91,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

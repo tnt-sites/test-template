@@ -28,22 +28,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Dental Implants Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Dental Implants Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
-        not only the functionality of teeth but can provide a great new look as well. Dental implants
-        are a standard cosmetic dental option offered at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: People tend to assume that the gap left behind after losing a permanent adult tooth can remain
-        empty. The reality is that an exposed tooth socket faces the risk of infection, can cause teeth
-        to shift out of alignment, and can cause other issues as well. With a dental implant, we can help
-        patients avoid those oral health issues We have the tools and skills necessary to provide patients
-        with a customized dental implant to meet their specific needs.
     - _component: building-blocks/core-elements/text
       text: Dental implants can even help prevent facial structure from changing, providing the functionality
         needed to perform the same as before the original tooth was damaged. Supplementing them with a
@@ -56,7 +41,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Facts from the American Academy of Implant Dentistry (aaid.com)
     contentSections:
@@ -91,7 +76,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: highlight
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: The Process of Installing Implants
     contentSections:
@@ -142,7 +127,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

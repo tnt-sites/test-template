@@ -23,19 +23,7 @@ pageSections:
   buttonText: ''
   buttonLink: ''
 - _component: page-sections/builders/custom-section
-  label: Eliminate Dental Fears with Dental Anesthesia Vista, CA
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Eliminate Dental Fears with Dental Anesthesia Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we realize that dental fear and anxiety keeps
-      thousands of people from getting the dental treatment they need. With dental anesthesia, we can
-      help correct years of dental neglect in as little as one visit.
-  - _component: building-blocks/core-elements/text
-    text: 'Dr. Henninger has successfully administered dental sedation to countless patients while delivering
-      effective, long-lasting results. Patients confidently choose Dr. Henninger because he:'
   - _component: building-blocks/core-elements/text
     text: Is one of only five percent of restorative dentists who are certified in IV sedation.
   - _component: building-blocks/core-elements/text
@@ -51,7 +39,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Do Not Let Dental Anxiety Get in the Way
   contentSections:
@@ -119,7 +107,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Patient Recommendation
   contentSections:
@@ -137,7 +125,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Best Candidates for Sedation Dentistry
   contentSections:
@@ -180,7 +168,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: Choose a Dentist Who Believes in Safety and Certification
   contentSections:
@@ -205,7 +193,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: How Dental Anesthesia Works
   contentSections:
@@ -224,7 +212,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Frequently Askes Questions
   contentSections:
@@ -259,7 +247,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Contact Us
   contentSections:

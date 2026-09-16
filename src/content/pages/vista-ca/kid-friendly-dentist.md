@@ -27,22 +27,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Kid Friendly Dentist Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Kid Friendly Dentist Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: A kid friendly dentist creates a healthy and comfortable professional environment, providing
-        the age-appropriate dental treatment a child needs for healthy teeth. North County Cosmetic and
-        Implant Dentistry is a kid friendly dentist office in the greater Vista area.
-    - _component: building-blocks/core-elements/text
-      text: As a kid friendly dentist, we strive to create a comfortable and welcoming environment to
-        help kids have a positive experience with visiting the dentist. It is no surprise that many children,
-        and adults, are not always fond of dental treatment. However, by creating a positive experience
-        with the dentist at a young age, children will have a more positive view of oral hygiene as a
-        whole.
     - _component: building-blocks/core-elements/text
       text: We will also help to instill healthy oral hygiene habits the parent or guardian can continue
         at home, to help make brushing teeth fun for the child. Our goal is to help children maintain
@@ -55,7 +40,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: What You Should Know
     contentSections:
@@ -116,7 +101,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

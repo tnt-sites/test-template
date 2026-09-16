@@ -25,22 +25,7 @@ pageSections:
   buttonText: ''
   buttonLink: ''
 - _component: page-sections/builders/custom-section
-  label: How Proper Oral Hygiene May Improve Overall Health Vista, CA
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: How Proper Oral Hygiene May Improve Overall Health Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Oral hygiene is an essential aspect of overall health and may have a larger impact on one's
-      total health than many realize. Complete health dentists are practitioners who use patients' oral
-      health to identify and evaluate potential and existing diseases they may have. The oral health connection
-      is the corollary between oral health and general wellness.
-  - _component: building-blocks/core-elements/text
-    text: A complete health dentist is available at North County Cosmetic and Implant Dentistry in Vista
-      and the surrounding area. This type of dentist strives to improve a patient's overall wellness by
-      examining and caring for oral health. A complete health dentist is an alternative to a traditional
-      practitioner and may be beneficial for many patients.
   - _component: building-blocks/core-elements/text
     text: Improving your overall wellbeing requires proper care for oral health. We help patients understand
       how oral health and overall wellness intertwine so they can improve their quality of life. Call
@@ -49,7 +34,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Oral Hygiene Impacts the Heart
   contentSections:
@@ -90,7 +75,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Healthy Habits Mean Better Oral and General Health
   contentSections:
@@ -153,7 +138,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions About Oral Hygiene and Overall Health
   contentSections:
@@ -202,7 +187,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

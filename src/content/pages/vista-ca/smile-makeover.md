@@ -27,21 +27,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Smile Makeover Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Smile Makeover Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: A smile makeover involves multiple reconstructive and professional dental procedures to restore
-        and enhance various aspects of the patient's teeth and mouth. Smile makeovers are a commonly offered
-        cosmetic solution provided at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: With a smile makeover, it's possible to change, restore or alter multiple aspects of a patient's
-        mouth, including the appearance and functionality of teeth. To begin the smile makeover, we will
-        examine a patient's teeth and recommend procedures that will meet the patient's wants and needs.
-        We will then customize the treatment to the patient's teeth before scheduling the appointments.
     - _component: building-blocks/core-elements/text
       text: Since a smile makeover addresses multiple aspects of a patient's mouth, they may need to make
         multiple appointments. We will outline the treatment plan during a consultation and guide the
@@ -54,7 +40,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: What procedures are used in a typical smile makeover?
     contentSections:
@@ -111,7 +97,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

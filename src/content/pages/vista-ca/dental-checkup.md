@@ -26,21 +26,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Dental Checkup Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Dental Checkup Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: A regular dental checkup offers patients professional dental cleaning services to detect and
-        prevent tooth infections while helping maintain healthy teeth. Regular dental checkups are a standard
-        service offered at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: No matter the age, most people tend to avoid the subject when hearing that they have another
-        dental checkup soon. However, regular dental checkups are crucial to maintaining oral health.
-        With a dental checkup every six months, patients can receive the professional care they need for
-        their teeth.
     - _component: building-blocks/core-elements/text
       text: During a checkup, we can not only clean your teeth and gums, but can also look for signs of
         any oral health issues. If an issue should be found, we can treat it as soon as possible. We can
@@ -52,7 +38,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Why You Need a Dental Checkup
     contentSections:
@@ -95,7 +81,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

@@ -26,20 +26,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Dental Crowns Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Dental Crowns Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: Dental crowns are caps that restore the shape and size of teeth after they have been damaged,
-        and offer protection from further damage. Dental crowns are a great option for restoring damaged
-        teeth and are a standard procedure offered at North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: When a tooth is damaged, there is always hope that it can heal on its own. Unfortunately,
-        teeth do not heal or restore damaged enamel on their surface. However, we can help to protect
-        and restore a tooth with a dental crown.
     - _component: building-blocks/core-elements/text
       text: Dental crowns are a versatile treatment which can protect a weak tooth from infection, restore
         a damaged tooth, cover a dental implant, hold a dental bridge in place and provide a great, natural
@@ -51,7 +38,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: What are dental crowns?
     contentSections:
@@ -128,7 +115,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

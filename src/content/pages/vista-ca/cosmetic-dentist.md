@@ -130,7 +130,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Vista, California Cosmetic Dentist
     contentSections:

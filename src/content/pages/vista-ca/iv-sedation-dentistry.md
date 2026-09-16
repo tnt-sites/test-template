@@ -27,23 +27,7 @@ pageSections:
   buttonText: ''
   buttonLink: ''
 - _component: page-sections/builders/custom-section
-  label: IV Sedation Dentistry Vista, CA
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: IV Sedation Dentistry Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Dr. Christopher Henninger and our team at North County Cosmetic and Implant Dentistry understand
-      the challenges of finding a dentist for a patient who has a medical condition that can make receiving
-      professional dental care. From patients with dental anxiety to other challenges, our team is dedicated
-      to ensuring all patients can experience the benefits of the oral health care they need. We can help
-      to provide the dental care patients need with IV sedation dentistry.
-  - _component: building-blocks/core-elements/text
-    text: IV sedation dentistry involves using an intravenous form of sedation to help patients relax
-      and remain still during the appointment and treatment. This way, the patient will be able to receive
-      the care they need without their health issues getting in the way. We will help customize the treatment
-      experience for each patient and determine if IV sedation dentistry is the right form of treatment.
   - _component: building-blocks/core-elements/text
     text: Call us at 760-940-2273 to learn more about IV sedation dentistry or schedule an appointment.
   maxContentWidth: xl
@@ -74,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Benefits of IV Sedation
   contentSections:
@@ -110,7 +94,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Multiple Types of Sedation
   contentSections:
@@ -141,7 +125,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: The IV Sedation Process
   contentSections:
@@ -168,7 +152,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:

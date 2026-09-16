@@ -27,21 +27,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Dental Veneers and Dental Laminates Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Dental Veneers and Dental Laminates Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: A dental veneer is a porcelain shell that dental professionals can customize to enhance the
-        size, shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at
-        North County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: If you have chipped, discolored or crooked teeth and want to change them, then dental veneers
-        may be the solution you are looking for. Consisting of a thin porcelain shell, dental veneers
-        can blend in with your surrounding teeth for a uniform appearance. While altering the size, shape
-        and shade of your teeth, we can also prevent further damage to the surface of the tooth.
     - _component: building-blocks/core-elements/text
       text: Far too often, people will try to avoid seeking professional dental treatment and live with
         damaged or crooked teeth. By avoiding treatment, people are only increasing the chance of pain
@@ -54,7 +40,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: What is a Dental Veneer?
     contentSections:
@@ -134,7 +120,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

@@ -27,21 +27,7 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    label: Root Canal Treatment Vista, CA
     contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Root Canal Treatment Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/text
-      text: Root canal treatment involves removing the infected dental pulp of a tooth, cleaning the tooth
-        and placing a filling to prevent further infection. Root canals are a service offered at North
-        County Cosmetic and Implant Dentistry.
-    - _component: building-blocks/core-elements/text
-      text: While teeth can seem invincible pearly whites that break down food and help make a great smile,
-        they have layers and can weaken over time. Without proper care, a tooth can sustain enough damage
-        to expose the inner layer, known as the dental pulp. Infected dental pulp will cause varying levels
-        of pain when eating, speaking or at any time of day. Fortunately, we can help.
     - _component: building-blocks/core-elements/text
       text: We can use root canal treatment to help remove the infected dental pulp, preventing the spread
         of the infection to other teeth and helping to relieve pain. This procedure will also help to
@@ -54,7 +40,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Why do most people need a root canal?
     contentSections:
@@ -109,7 +95,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

@@ -24,22 +24,7 @@ pageSections:
   buttonText: ''
   buttonLink: ''
 - _component: page-sections/builders/custom-section
-  label: Sleep Apnea Vista, CA
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Sleep Apnea Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Sleep apnea is a common disorder affecting millions of people that impacts their quality of
-      sleep and life. During sleep, the muscles in the throat relax, which narrows the airway and impedes
-      on a sufferer’s ability to breathe. This is known as the most common form– obstructive sleep apnea
-      (OSA).
-  - _component: building-blocks/core-elements/text
-    text: During a sleep apnea event, you may stop breathing for several seconds to several minutes at
-      a time and this can occur multiple times throughout the night. Each time this occurs, your brain
-      will realize you’re not getting oxygen to breathe, so it briefly alerts the body to wake up and
-      gasp for air.
   - _component: building-blocks/core-elements/text
     text: These awakenings prevent you from getting into a deep sleep, which further affects your body’s
       ability to function properly the next day. However, because these arousals are so quick, you may
@@ -91,7 +76,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Health Risks of Sleep Apnea
   contentSections:
@@ -125,7 +110,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Treating Sleep Apnea with Dr. Henninger
   contentSections:
@@ -159,7 +144,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: FAQs About Sleep Apnea
   contentSections:
@@ -206,7 +191,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
