@@ -19,7 +19,16 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://www.ultimatesmiles.com",
+  // The source site exposes /yelp/, /google/ and /facebook/ as vanity URLs whose
+  // only purpose is to send visitors to the practice's review profiles.
+  redirects: {
+    "/yelp": "https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2",
+    "/google":
+      "https://www.google.com/maps/place/North+County+Cosmetic+and+Implant+Dentistry/@33.183882,-117.282445,15z",
+    "/facebook": "https://www.facebook.com/ultimatesmiles4161",
+  },
+
   build: {
     inlineStylesheets: "always",
   },
