@@ -39,7 +39,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Do Not Let Dental Anxiety Get in the Way
   contentSections:
@@ -107,7 +107,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Patient Recommendation
   contentSections:
@@ -125,7 +125,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Best Candidates for Sedation Dentistry
   contentSections:
@@ -168,7 +168,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Choose a Dentist Who Believes in Safety and Certification
   contentSections:
@@ -193,7 +193,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: How Dental Anesthesia Works
   contentSections:
@@ -212,7 +212,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Askes Questions
   contentSections:
@@ -247,7 +247,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Contact Us
   contentSections:

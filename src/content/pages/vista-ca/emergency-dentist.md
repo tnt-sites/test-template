@@ -39,7 +39,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: highlight
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Do I need emergency dentistry? Call us if…
     contentSections:
@@ -74,7 +74,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Reasons for Needing an Emergency Dental Visit
     contentSections:
@@ -132,7 +132,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -385,15 +385,18 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Glossary of Dental Terms](http://www.ada.org/en/publications/cdt/glossary-of-dental-clinical-and-administrative-ter)'
+        text: American Dental Association (ADA). [Glossary of Dental Terms](http://www.ada.org/en/publications/cdt/glossary-of-dental-clinical-and-administrative-ter).
+          2015
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Home Page](http://www.aacd.com/)'
+        text: American Academy of Cosmetic Dentistry® (AACD). [Home Page](http://www.aacd.com/). 2015
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Lost Filling Or Crown](http://www.colgateprofessional.com/patient-education/articles/lost-filling-or-crown)'
+        text: Colgate®. [Lost Filling Or Crown](http://www.colgateprofessional.com/patient-education/articles/lost-filling-or-crown).
+          2016
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Toothache & Denture Pain Relief](https://www.orajel.com/en/resource-center?category=Tooth+%26+Denture+Pain+Relief)'
+        text: Orajel™. [Toothache & Denture Pain Relief](https://www.orajel.com/en/resource-center?category=Tooth+%26+Denture+Pain+Relief).
+          2016
       - _component: building-blocks/core-elements/list/list-item
-        text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+        text: WebMD. [WebMD's Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm). 2015
     - _component: building-blocks/core-elements/heading
       text: About our business, license, and website security
       level: h3
@@ -411,13 +414,13 @@ pageSections:
         text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
           Escondido and San Diego'
       - _component: building-blocks/core-elements/list/list-item
-        text: 'CA (License #57722) . View License Information and Specifics'
+        text: 'CA (License #57722). [View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
       - _component: building-blocks/core-elements/list/list-item
-        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+        text: National Provider Identifier Database (1710040134). [View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)
       - _component: building-blocks/core-elements/list/list-item
-        text: Norton Safe Web . View Details
+        text: Norton Safe Web. [View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)
       - _component: building-blocks/core-elements/list/list-item
-        text: Trend Micro Site Safety Center . View Details
+        text: Trend Micro Site Safety Center. [View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

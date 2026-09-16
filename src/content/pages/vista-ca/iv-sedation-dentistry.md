@@ -30,11 +30,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: Call us at 760-940-2273 to learn more about IV sedation dentistry or schedule an appointment.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Understanding IV Sedation Dentistry
   contentSections:
@@ -58,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Benefits of IV Sedation
   contentSections:
@@ -94,7 +95,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Multiple Types of Sedation
   contentSections:
@@ -125,7 +126,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The IV Sedation Process
   contentSections:
@@ -152,7 +153,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:

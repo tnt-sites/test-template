@@ -29,11 +29,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: Learn more about the oral health connection to your overall well-being. Choose a dentist who
       offers a complete health perspective. Call 760-940-2273 to schedule an appointment today.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Oral Health Reflecting Overall Health
   contentSections:
@@ -81,7 +82,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Lifestyle Habits To Support Complete Health Dentistry
   contentSections:
@@ -153,7 +154,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions About Complete Health Dentistry
   contentSections:
@@ -200,7 +201,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

@@ -76,7 +76,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Health Risks of Sleep Apnea
   contentSections:
@@ -110,7 +110,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Treating Sleep Apnea with Dr. Henninger
   contentSections:
@@ -144,7 +144,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: dark
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: FAQs About Sleep Apnea
   contentSections:
@@ -191,7 +191,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
