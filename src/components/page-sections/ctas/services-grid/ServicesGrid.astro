@@ -293,6 +293,29 @@ const htmlAttributes = Object.fromEntries(
       text-align: center;
     }
 
+    /* Gold wash that fades out towards the top, revealed on hover. It sits
+       under the title but over the photo. */
+    .services-grid .services-grid-caption::before {
+      background-image: linear-gradient(
+        to top,
+        rgb(186 151 100 / 100%) 0%,
+        rgb(186 151 100 / 55%) 55%,
+        rgb(186 151 100 / 0%) 100%
+      );
+      content: "";
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+      transition: opacity 0.35s ease;
+      z-index: 0;
+    }
+
+    .services-grid .services-grid-link:hover .services-grid-caption::before,
+    .services-grid .services-grid-link:focus-visible .services-grid-caption::before {
+      opacity: 1;
+    }
+
     /* Light first word, heavy second — the source splits it on a <span>. */
     .services-grid .services-grid-title {
       color: #fff;
@@ -301,7 +324,25 @@ const htmlAttributes = Object.fromEntries(
       font-weight: 300;
       line-height: 1.1;
       margin: 0;
+      position: relative;
       text-transform: none;
+      transition: transform 0.35s ease;
+      z-index: 1;
+    }
+
+    /* The source raises the title on hover (translateY -20.6px to -60.6px,
+       i.e. 54px below the tile top to 14px); the tile is 150px tall, so
+       lifting it by 40px lands it at the top edge. */
+    .services-grid .services-grid-link:hover .services-grid-title,
+    .services-grid .services-grid-link:focus-visible .services-grid-title {
+      transform: translateY(-40px);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .services-grid .services-grid-title,
+      .services-grid .services-grid-caption::before {
+        transition: none;
+      }
     }
 
     .services-grid .services-grid-title span {
