@@ -26,30 +26,9 @@ pageSections:
       CA this may seem like a daunting task, however, it is easier than you may think. Here's how -
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our dental services on Yelp: Best Dentist in Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: We invite you to visit our dental office, discuss your oral health concerns and learn how we
-      can provide solutions for all of your family's dental needs.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Read Reviews
   contentSections:
@@ -115,9 +94,19 @@ pageSections:
       more information and to make sure that they offer the services your family needs.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our dental services on Yelp: Best Dentist in Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Research
   contentSections:
@@ -136,9 +125,20 @@ pageSections:
       of your family.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: We invite you to visit our dental office, discuss your oral health concerns and learn how we
+      can provide solutions for all of your family's dental needs.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/info-blocks/faq-section
   heading: Questions Answered on This Page
   headingLevel: h2
@@ -166,9 +166,9 @@ pageSections:
     contentSections: []
   maxContentWidth: xl
   paddingHorizontal: xl
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Definition of Dental Terminology
   contentSections:
@@ -228,7 +228,7 @@ pageSections:
         dental pulp.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -257,7 +257,7 @@ pageSections:
       text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -290,7 +290,7 @@ pageSections:
       text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -313,7 +313,7 @@ pageSections:
       text: '[Dental Office](/vista-ca/dental-office/)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 ---

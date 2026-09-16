@@ -1,0 +1,17 @@
+label: Content with Sidebar
+icon: vertical_split
+description: Two-column interior page layout - main content with a narrow right rail.
+value:
+  _component: page-sections/builders/content-with-sidebar
+  id: ""
+  main: []
+  sidebar: []
+  maxContentWidth: 2xl
+  paddingVertical: xl
+preview:
+  text:
+    - Content with Sidebar
+  icon: vertical_split
+picker_preview:
+  text: Content with Sidebar
+  subtext: Main content column with a right rail.

@@ -32,17 +32,6 @@ pageSections:
   backgroundGradient: ''
   paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our Snap In Dentures services on Yelp: Snap In Dentures
-      Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
   label: Are you tired of loose or ill fitting dentures?
   contentSections:
   - _component: building-blocks/core-elements/heading
@@ -97,9 +86,9 @@ pageSections:
       mouth is eliminated.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Kay is thrilled with the result of her implant supported dentures from North Country Dentistry
   contentSections:
@@ -109,9 +98,20 @@ pageSections:
     size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our Snap In Dentures services on Yelp: Snap In Dentures
+      Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -121,7 +121,7 @@ pageSections:
       to schedule your complimentary consultation today!
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -137,7 +137,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

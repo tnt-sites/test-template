@@ -32,17 +32,6 @@ pageSections:
   backgroundGradient: ''
   paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our gum disease maintenance on Yelp: Periodontal Maintenance
-      Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
   label: Stay ahead of your gum disease.
   contentSections:
   - _component: building-blocks/core-elements/heading
@@ -58,9 +47,20 @@ pageSections:
       for regular gum disease maintenance.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our gum disease maintenance on Yelp: Periodontal Maintenance
+      Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Stay proactive. Stay healthy.
   contentSections:
@@ -91,7 +91,7 @@ pageSections:
       text: Laser deep cleaning every 24 months
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -107,7 +107,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

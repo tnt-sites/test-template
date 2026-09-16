@@ -32,17 +32,6 @@ pageSections:
   backgroundGradient: ''
   paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our complete health dentistry on Yelp: BaleDoneen Method
-      Vista BaleDoneen Method Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
   label: We’re trained in the BaleDoneen Method
   contentSections:
   - _component: building-blocks/core-elements/heading
@@ -59,9 +48,9 @@ pageSections:
       and treatment you need to prevent and treat dangerous plaque buildup and stay healthy and thriving.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: See how prevention can protect your heart and brain
   contentSections:
@@ -71,9 +60,20 @@ pageSections:
     size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our complete health dentistry on Yelp: BaleDoneen Method
+      Vista BaleDoneen Method Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Arterial health starts in your mouth
   contentSections:
@@ -112,7 +112,7 @@ pageSections:
       text: Laser therapy--the use of lasers to remove diseased tissue and bacteria
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -128,7 +128,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

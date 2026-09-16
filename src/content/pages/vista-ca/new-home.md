@@ -42,9 +42,9 @@ pageSections:
       life to the fullest.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Real Relationships. Real Results.
   contentSections:
@@ -84,7 +84,7 @@ pageSections:
       for you. We even bill Medicare for medically necessary care.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -126,7 +126,7 @@ pageSections:
       but regain the confidence and health you need to enjoy life again.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: highlight
 - _component: page-sections/builders/custom-section
@@ -140,9 +140,9 @@ pageSections:
       easy. Dr. Henninger is the best." - Cory A.'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Committed to Your Better, Healthier Life
   contentSections:
@@ -168,7 +168,7 @@ pageSections:
       of life that goes with it. Because you deserve it.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -182,9 +182,9 @@ pageSections:
       recommend this practice!” - Robert M.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: No More Dentures! with San Diego dentist, Christopher Henninger, DMD.
   contentSections:
@@ -194,7 +194,7 @@ pageSections:
     size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -222,7 +222,7 @@ pageSections:
       text: Why our patients love their experience at NCCID
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/forms/liine-form

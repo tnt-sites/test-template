@@ -30,17 +30,6 @@ pageSections:
   backgroundGradient: ''
   paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our Single Dental Implants services on Yelp: Single
-      Dental Implants Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
   label: The best way to describe a single dental implant is to compare it to a real tooth.
   contentSections:
   - _component: building-blocks/core-elements/heading
@@ -57,9 +46,9 @@ pageSections:
       to six months.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Dental implants offer permanent solution for patients with missing teeth
   contentSections:
@@ -69,9 +58,20 @@ pageSections:
     size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our Single Dental Implants services on Yelp: Single
+      Dental Implants Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: When this initial phase of healing is completed
   contentSections:
@@ -120,7 +120,7 @@ pageSections:
         dentures, while others are not able to adapt.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -136,7 +136,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

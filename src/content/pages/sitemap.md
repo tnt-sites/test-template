@@ -333,7 +333,7 @@ pageSections:
       text: Search our Sitemap
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 ---

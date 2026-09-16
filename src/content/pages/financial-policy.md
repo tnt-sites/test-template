@@ -21,7 +21,7 @@ pageSections:
       flexible financing options available.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -39,7 +39,7 @@ pageSections:
       services rendered will be due at the time of treatment.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -64,9 +64,9 @@ pageSections:
       days, as required by law, you may become liable for the balance.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Medical Insurance
   contentSections:
@@ -84,7 +84,7 @@ pageSections:
       fee may apply.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -101,7 +101,7 @@ pageSections:
       to treat Medicare patients. To learn more click HERE.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -119,9 +119,9 @@ pageSections:
       treatment or sleep apnea treatment.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Financing
   contentSections:
@@ -136,7 +136,7 @@ pageSections:
       allow you to make affordable monthly payments towards the dental treatment you need.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -152,7 +152,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 ---

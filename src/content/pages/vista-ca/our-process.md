@@ -35,16 +35,6 @@ pageSections:
   label: ''
   contentSections:
   - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our Our Process services on Yelp: Our Process Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
     text: All of our implant procedures are planned through the use of our in-office 3D ICAT® CT scanner.
       This technology allows us to virtually place implants in your mouth before we actually perform the
       procedure for you. We also utilize this technology to perform CT guided implant placement. This
@@ -52,9 +42,19 @@ pageSections:
       implants in places where other dentists thought that it might not be possible.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our Our Process services on Yelp: Our Process Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -64,7 +64,7 @@ pageSections:
       940-2273.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -76,7 +76,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

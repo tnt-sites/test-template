@@ -34,17 +34,6 @@ pageSections:
   label: ''
   contentSections:
   - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our The Cost of Dental Implants services on Yelp: The
-      Cost of Dental Implants Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry in Vista, CA, we are committed to fully informing
       patients of their options and creating a low pressure environment where you can make the healthcare
       decisions that are right for you and your family.
@@ -68,9 +57,20 @@ pageSections:
     alt: ''
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our The Cost of Dental Implants services on Yelp: The
+      Cost of Dental Implants Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: 'Factors that influence dental implant costs:'
   contentSections:
@@ -107,7 +107,7 @@ pageSections:
       extractions are separate procedures and can affect the overall cost of dental implants.'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -125,7 +125,7 @@ pageSections:
       teeth, dental implants are more cost effective treatment option in the long term.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -144,7 +144,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

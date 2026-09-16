@@ -15,7 +15,7 @@ pageSections:
       to our patients.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -40,7 +40,7 @@ pageSections:
       FJ Cruiser out climbing.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -67,7 +67,7 @@ pageSections:
       text: Fellow of the Academy of General Dentistry
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 ---

@@ -34,16 +34,6 @@ pageSections:
   backgroundGradient: ''
   paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: Check out what others are saying about our services on Yelp Services Vista
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
   label: The care your patients need to move forward.
   contentSections:
   - _component: building-blocks/core-elements/heading
@@ -59,9 +49,9 @@ pageSections:
       help.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Dr. Henninger is one of only 5% of dentists in the country with IV sedation credentials.
   contentSections:
@@ -71,9 +61,19 @@ pageSections:
     size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: Check out what others are saying about our services on Yelp Services Vista
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Here to help serve your patients.
   contentSections:
@@ -107,7 +107,7 @@ pageSections:
         one-visit dentistry, a Fontana CO2 laser, and has an onsite lab.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -121,9 +121,9 @@ pageSections:
       patients like myself!” --Matt
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss How to Refer Your Patients
   contentSections:
@@ -137,7 +137,7 @@ pageSections:
     text: (760) 940-2273
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/forms/liine-form

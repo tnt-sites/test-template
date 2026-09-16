@@ -58,7 +58,7 @@ pageSections:
     text: PATIENT TESTIMONIALS - NORTH COUNTY COSMETIC & IMPLANT DENTISTRY
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -103,7 +103,7 @@ pageSections:
     text: DR. HENNINGER TALKS ABOUT OPTIONS FOR DENTAL ANESTHESIA IN VISTA, CA
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -131,7 +131,7 @@ pageSections:
     text: INVISALIGN DENTISTRY - OCEANSIDE, CA - STRAIGHT AND CROOKED TEETH
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 ---

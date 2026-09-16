@@ -14,7 +14,7 @@ pageSections:
       smiles with lasting beauty.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -36,7 +36,7 @@ pageSections:
       Kayla and Emmy. He is also an avid pilot and fisherman.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 ---

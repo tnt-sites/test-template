@@ -65,7 +65,7 @@ pageSections:
     text: Give us a call today at (760) 940-2273 .
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -82,7 +82,7 @@ pageSections:
     text: Help your family enjoy greater health with cutting-edge Complete Health Dentistry.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/ctas/services-grid

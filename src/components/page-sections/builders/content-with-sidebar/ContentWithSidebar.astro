@@ -1,0 +1,72 @@
+---
+import Component from "@components/utils/renderBlock.astro";
+
+/*
+ * Interior pages on the source site are a two-column layout: the main content
+ * column (l9) with a narrow right rail (l3) holding Related Topics and the
+ * "Explore additional topics" list. Measured at 1440px the rail is 307px wide
+ * and starts at x=1061.
+ */
+const {
+  main = [],
+  sidebar = [],
+  maxContentWidth = "2xl",
+  paddingVertical = "xl",
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["content-with-sidebar", className]} {...htmlAttributes}>
+  <div class="cws-inner" data-max-width={maxContentWidth} data-pad={paddingVertical}>
+    <div class="cws-main">
+      <Component contentSections={main} propName="main" />
+    </div>
+    {
+      sidebar.length > 0 && (
+        <aside class="cws-side">
+          <Component contentSections={sidebar} propName="sidebar" />
+        </aside>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss">
+  .cws-inner {
+    display: grid;
+    gap: var(--spacing-xl);
+    margin-inline: auto;
+    max-width: var(--content-width-2xl);
+    padding-block: var(--spacing-xl);
+    padding-inline: var(--spacing-lg);
+  }
+
+  @media (min-width: 1025px) {
+    .cws-inner {
+      grid-template-columns: minmax(0, 1fr) 307px;
+      align-items: start;
+    }
+  }
+
+  .cws-main > :global(.section:first-child) {
+    padding-top: 0;
+  }
+
+  .cws-side > :global(.section) {
+    padding-block: var(--spacing-md);
+  }
+
+  @media (min-width: 1025px) {
+    .cws-side {
+      position: sticky;
+      top: var(--spacing-lg);
+    }
+  }
+</style>

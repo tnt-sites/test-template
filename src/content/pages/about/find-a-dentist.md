@@ -27,34 +27,9 @@ pageSections:
       North County Cosmetic and Implant Dentistry.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our dental services on Yelp: Dentist in Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: How do I find a dentist and schedule an appointment?
-    level: h2
-    size: xl
-  - _component: building-blocks/core-elements/text
-    text: If you are looking to find a dentist in the Vista CA area, call 760-940-2273 and schedule an
-      appointment. We are looking forward to meeting you and your family.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Read our Reviews
   contentSections:
@@ -120,9 +95,19 @@ pageSections:
       you can see why patients choose our dental office in Vista.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/text
+    text: 'Check out what others are saying about our dental services on Yelp: Dentist in Vista'
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Your Health is Our Top Priority
   contentSections:
@@ -143,7 +128,22 @@ pageSections:
       to come.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: How do I find a dentist and schedule an appointment?
+    level: h2
+    size: xl
+  - _component: building-blocks/core-elements/text
+    text: If you are looking to find a dentist in the Vista CA area, call 760-940-2273 and schedule an
+      appointment. We are looking forward to meeting you and your family.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/info-blocks/faq-section
@@ -173,9 +173,9 @@ pageSections:
     contentSections: []
   maxContentWidth: xl
   paddingHorizontal: xl
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Definition of Dental Terminology
   contentSections:
@@ -235,7 +235,7 @@ pageSections:
         dental pulp.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: accent
 - _component: page-sections/builders/custom-section
@@ -264,7 +264,7 @@ pageSections:
       text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: surface
 - _component: page-sections/builders/custom-section
@@ -297,7 +297,7 @@ pageSections:
       text: '[General Dentistry Services](/vista-ca/general-dentistry-services/)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 - _component: page-sections/builders/custom-section
@@ -320,7 +320,7 @@ pageSections:
       text: '[Find the Best Dentist in Vista](/about/find-best-dentist/)'
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
 ---

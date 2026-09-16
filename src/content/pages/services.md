@@ -18,6 +18,18 @@ pageSections:
       entire body healthy.
     level: h5
     size: sm
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Complete Health Dentistry
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Complete Health Dentistry
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Your mouth is the gateway to your body.
     level: h5
@@ -37,6 +49,18 @@ pageSections:
       text: Improve Your Health
     - _component: building-blocks/core-elements/list/list-item
       text: Preventative Care
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: General & Family Dentistry
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: General & Family Dentistry
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Preventative and restorative care for your entire family.
     level: h5
@@ -47,11 +71,25 @@ pageSections:
     - _component: building-blocks/core-elements/list/list-item
       text: Checkups (Wellness Visit)
     - _component: building-blocks/core-elements/list/list-item
+      text: Routine Cleaning and Exams
+    - _component: building-blocks/core-elements/list/list-item
       text: Kid Friendly Care
     - _component: building-blocks/core-elements/list/list-item
       text: Root Canal Treatment
     - _component: building-blocks/core-elements/list/list-item
       text: Wisdom Teeth Removal
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Cosmetic Dental Services
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Cosmetic Dental Services
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Get the smile you’ve always dreamed of.
     level: h5
@@ -71,6 +109,18 @@ pageSections:
       text: Clear Aligner Therapy
     - _component: building-blocks/core-elements/list/list-item
       text: Whitening
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Dental Implants & Dentures
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Dental Implants & Dentures
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Enjoy life again with a full mouth of strong, durable teeth.
     level: h5
@@ -88,6 +138,18 @@ pageSections:
       text: Dentures and Partial Dentures
     - _component: building-blocks/core-elements/list/list-item
       text: Snap-in Dentures
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Cutting-edge Technology
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Cutting-edge Technology
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Take advantage of the latest dental innovations.
     level: h5
@@ -105,6 +167,18 @@ pageSections:
       text: Special Needs Dentistry
     - _component: building-blocks/core-elements/list/list-item
       text: Full Mouth Reconstruction
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Treating Dental Anxiety
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Treating Dental Anxiety
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: We’ll help you stay relaxed and comfortable.
     level: h5
@@ -122,6 +196,18 @@ pageSections:
       text: Dental Anesthesia
     - _component: building-blocks/core-elements/list/list-item
       text: Solutions for Dental Anxiety
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Local Emergency Dentistry
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Local Emergency Dentistry
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Accidents happen! We’re always ready to help.
     level: h5
@@ -139,6 +225,18 @@ pageSections:
       text: Emergency Dentist vs. Emergency Room
     - _component: building-blocks/core-elements/list/list-item
       text: Find a Dentist in Vista, CA
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Periodontics
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Periodontics
+    level: h4
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Keep your smile bright and your body healthy.
     level: h5
@@ -156,6 +254,14 @@ pageSections:
       text: Laser Deep Cleaning
     - _component: building-blocks/core-elements/list/list-item
       text: Stop Heart Disease and Stroke
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: North County Cosmetic and Implant Dentistry Services Offered
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: North County Cosmetic and Implant Dentistry Services Offered
     level: h3
@@ -171,6 +277,14 @@ pageSections:
     text: We offer a wide variety of services for patients throughout the Vista California area. Our patients
       depend on Dr. Henninger to meet all of their oral healthcare needs. Whether you need preventative
       care, restorative solutions or a smile makeover, we can help.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Cosmetic Dental Care
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dental Care
     level: h4
@@ -183,6 +297,14 @@ pageSections:
       teeth and will allow you to continue life as normal. If you are interested in enhancing your smile,
       do not hesitate to give us a call and schedule an appointment. We will go over the possible options
       and customize your smile to what you want.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Dental Procedures
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Procedures
     level: h4
@@ -194,6 +316,14 @@ pageSections:
       or flossing. Our dental procedures can help to restore, replace or repair teeth to the best condition
       possible. By scheduling an appointment, we will be able to help treat any pain your experience with
       your teeth and help to brighten your smile.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Dental Services
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Services
     level: h4
@@ -205,6 +335,14 @@ pageSections:
       method. At a regular appointment, we will conduct a cleaning of the teeth, gums, and mouth, to ensure
       that the patient is in good oral health. We will answer any questions the patient has before the
       procedure if the patient has any worries.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: Helpful Dental Information
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: Helpful Dental Information
     level: h4
@@ -220,67 +358,7 @@ pageSections:
       before we begin the procedure.
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: 4xl
+  paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/features/info-card-grid
-  heading: ''
-  cards:
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-routine-dental-care.png
-    imageAlt: Vista, CA Routine Dental Care
-    title: Complete Health Dentistry
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-cosmetic-dental-services.png
-    imageAlt: Vista, CA Cosmetic Dental Services
-    title: General & Family Dentistry
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-dental-implants.png
-    imageAlt: Vista, CA Dental Implant Services
-    title: Cosmetic Dental Services
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-dentures.png
-    imageAlt: Vista, CA Denture Services
-    title: Dental Implants & Dentures
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-clear-braces.png
-    imageAlt: Vista, CA Clear Aligners - Almost Invisible Braces
-    title: Cutting-edge Technology
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-dental-emergency.png
-    imageAlt: Vista, CA Help! Dental Emergency!
-    title: Treating Dental Anxiety
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-get-help.png
-    imageAlt: Vista, CA Dental Search
-    title: Local Emergency Dentistry
-    description: ''
-    linkUrl: ''
-  - _component: page-sections/features/info-card-grid/card
-    image: /src/assets/images/wp/icon-cosmetic-dental-services.png
-    imageAlt: Vista, CA Dental Search
-    title: Periodontics
-    description: ''
-    linkUrl: ''
-  minItemWidth: 280
-  backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

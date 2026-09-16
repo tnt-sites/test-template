@@ -34,254 +34,259 @@ pageSections:
   backgroundColor: base
   backgroundGradient: ''
   paddingVertical: 2xl
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: 'Check out what others are saying about our properly fitted custom-made mouth guards on Yelp:
-      Reduce Sports Injuries With Mouth Guards Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: ''
-  contentSections:
-  - _component: building-blocks/core-elements/text
-    text: If you are interested in getting a properly fitted mouth guard for your child, then give us
-      a call at (760) 940-2273 and schedule an appointment today.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: Risks of Store-Bought Mouth Guards
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Risks of Store-Bought Mouth Guards
-    level: h2
-    size: xl
-  - _component: building-blocks/core-elements/text
-    text: While many parents will invest in a store-bought mouth guard, they may not realize the risk.
-      With store-bought mouth guards, the mouth guard will not be a perfect fit for the child's teeth.
-      Due to the improper fit, a child will face a greater risk of damaging his or her teeth during the
-      sport or game. A professional mouth guard will be a perfect fit to the child's teeth that will not
-      run the risk of falling out during the game.
-  - _component: building-blocks/core-elements/text
-    text: 'Several reasons why a professional mouth guard will be much better than a store-bought brand
-      over the counter include:'
-  - _component: building-blocks/core-elements/list
-    listType: bullet
+- _component: page-sections/builders/content-with-sidebar
+  main:
+  - _component: page-sections/builders/custom-section
+    label: Risks of Store-Bought Mouth Guards
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Risks of Store-Bought Mouth Guards
+      level: h2
+      size: xl
+    - _component: building-blocks/core-elements/text
+      text: While many parents will invest in a store-bought mouth guard, they may not realize the risk.
+        With store-bought mouth guards, the mouth guard will not be a perfect fit for the child's teeth.
+        Due to the improper fit, a child will face a greater risk of damaging his or her teeth during
+        the sport or game. A professional mouth guard will be a perfect fit to the child's teeth that
+        will not run the risk of falling out during the game.
+    - _component: building-blocks/core-elements/text
+      text: 'Several reasons why a professional mouth guard will be much better than a store-bought brand
+        over the counter include:'
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Less of a chance for the mouth guard falling out on a regular basis
+      - _component: building-blocks/core-elements/list/list-item
+        text: The mouth guard will be a comfortable fit for the child
+      - _component: building-blocks/core-elements/list/list-item
+        text: Better and more efficient protection for the teeth
+      - _component: building-blocks/core-elements/list/list-item
+        text: Made with a more durable yet still completely harmless material
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: base
+  - _component: page-sections/builders/custom-section
+    label: ''
+    contentSections:
+    - _component: building-blocks/core-elements/text
+      text: 'Check out what others are saying about our properly fitted custom-made mouth guards on Yelp:
+        Reduce Sports Injuries With Mouth Guards Vista'
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: accent
+  - _component: page-sections/builders/custom-section
+    label: The Mouth Guard Process
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: The Mouth Guard Process
+      level: h2
+      size: xl
+    - _component: building-blocks/core-elements/text
+      text: The process for a mouth guard is harmless and does not normally take more than two appointments.
+        During the first appointment, we will take a mold of the child's mouth and images as well. Next,
+        we will send the measurements and mold to a dental lab where they will custom-make the mouth guard.
+        The child will return to our office once the mouth guard is complete. We will see if the mouth
+        guard fits and make any necessary adjustments. After the appointment, the child will have the
+        necessary protection to help keep his or her teeth safe during physical activities.
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: base
+  - _component: page-sections/builders/custom-section
+    label: ''
+    contentSections:
+    - _component: building-blocks/core-elements/text
+      text: If you are interested in getting a properly fitted mouth guard for your child, then give us
+        a call at (760) 940-2273 and schedule an appointment today.
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: accent
+  - _component: page-sections/info-blocks/faq-section
+    heading: Questions Answered on This Page
+    headingLevel: h2
+    headingSize: lg
+    singleOpen: true
+    openFirst: false
     items:
-    - _component: building-blocks/core-elements/list/list-item
-      text: Less of a chance for the mouth guard falling out on a regular basis
-    - _component: building-blocks/core-elements/list/list-item
-      text: The mouth guard will be a comfortable fit for the child
-    - _component: building-blocks/core-elements/list/list-item
-      text: Better and more efficient protection for the teeth
-    - _component: building-blocks/core-elements/list/list-item
-      text: Made with a more durable yet still completely harmless material
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: base
-- _component: page-sections/builders/custom-section
-  label: The Mouth Guard Process
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The Mouth Guard Process
-    level: h2
-    size: xl
-  - _component: building-blocks/core-elements/text
-    text: The process for a mouth guard is harmless and does not normally take more than two appointments.
-      During the first appointment, we will take a mold of the child's mouth and images as well. Next,
-      we will send the measurements and mold to a dental lab where they will custom-make the mouth guard.
-      The child will return to our office once the mouth guard is complete. We will see if the mouth guard
-      fits and make any necessary adjustments. After the appointment, the child will have the necessary
-      protection to help keep his or her teeth safe during physical activities.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: base
-- _component: page-sections/info-blocks/faq-section
-  heading: Questions Answered on This Page
-  headingLevel: h2
-  headingSize: lg
-  singleOpen: true
-  openFirst: false
-  items:
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Are professional mouth guards better than store-bought brands?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Why should I wear a mouth guard?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What is the process for getting a mouth guard?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Why do people wear mouth guards?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Why would I need to wear a night guard?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What should I do after chipping my tooth?
-    contentSections: []
-  maxContentWidth: xl
-  paddingHorizontal: xl
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: Definition of Family Dental Terminology
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Definition of Family Dental Terminology
-    level: h3
-    size: md
-  - _component: building-blocks/core-elements/definition-list
-    items:
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Custom Impression
-      text: Custom impression involves using trays to create an exact replica of the patient’s teeth before
-        creating the necessary restoration to enhance the overall experience.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Dentist
-      text: A dentist, also known as a dental surgeon, is a doctor who specializes in the diagnosis, prevention,
-        and treatment of diseases and conditions of the oral cavity.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Injection-Molded Mouthguards
-      text: Injection-Molded Mouthguards help to create a much more specific fit with a type of molding
-        material that fills available space instead of requiring a patient to boil the mouthguard in hot
-        water.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Laminated Pressure-Formed Mouthguards
-      text: Laminated pressure-formed mouthguards requires a process that involves applying high heat
-        and pressure to form a mouthguard that meets the needs of the patient.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Mandible Fracture
-      text: A mandible fracture is a fracture in the lower jaw that breaks through the mandibular bone
-        and is normally a result of trauma.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Oral Trauma
-      text: Oral trauma is any form of trauma or force that results in an injury of the mouth or teeth.
-        Oral trauma can occur after an accident, injury or disease.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Occlusion
-      text: Occlusion describes the mandibular and maxillary rows of teeth meeting when the patient bites
-        down. If a patient does not have a healthy bite, they are struggling with malocclusion.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Overjet
-      text: An overjet is a bite orientation that results from the maxillary central incisors (top center
-        teeth) protruding over the mandibular central incisors (bottom front teeth); this may also be
-        known as "buck teeth" by patients.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Storage Modulus
-      text: The storage modulus is the temperature at which we can store certain elastic materials in
-        dental composite resins.
-    - _component: building-blocks/core-elements/definition-list/definition-list-item
-      title: Vacuum Formed Mouthguard
-      text: A vacuum formed mouthguard involves customizing the mouthguard to match a mold of the individual
-        patient’s teeth for a perfect fit.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/builders/custom-section
-  label: Helpful Related Links
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Helpful Related Links
-    level: h3
-    size: md
-  - _component: building-blocks/core-elements/list
-    listType: bullet
-    items:
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Glossary of Dental Terms](http://www.ada.org/en/publications/cdt/glossary-of-dental-clinical-and-administrative-ter)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Home Page](http://www.aacd.com/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: surface
-- _component: page-sections/builders/custom-section
-  label: Related Topics
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Related Topics
-    level: h3
-    size: md
-  - _component: building-blocks/core-elements/list
-    listType: bullet
-    items:
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Dental Bonding](/vista-ca/dental-bonding/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Dental Checkup](/vista-ca/dental-checkup/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Dental Cleaning and Examinations](/vista-ca/dental-cleaning-and-examinations/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Dental Sealants](/vista-ca/dental-sealants/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Oral Cancer Screening](/vista-ca/oral-cancer-screening/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Preventative Dental Care](/vista-ca/preventative-dental-care/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Why Dental Sealants Play an Important Part in Protecting Your Child''s Teeth](/vista-ca/why-dental-sealants-protect-childs-teeth/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: base
-- _component: page-sections/builders/custom-section
-  label: 'Explore additional topics covered on our website:'
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: 'Explore additional topics covered on our website:'
-    level: h3
-    size: md
-  - _component: building-blocks/core-elements/list
-    listType: bullet
-    items:
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[General Dentistry Services](/vista-ca/general-dentistry-services/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Mouth Guards](/vista-ca/mouth-guards/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Night Guards](/vista-ca/night-guards/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Routine Dental Care](/vista-ca/routine-dental-care/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Wisdom Teeth Extraction](/vista-ca/wisdom-teeth-extraction/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Dental Office](/vista-ca/dental-office/)'
-    - _component: building-blocks/core-elements/list/list-item
-      text: '[Find the Best Dentist in Vista](/about/find-best-dentist/)'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
-  colorScheme: default
-  backgroundColor: base
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: Are professional mouth guards better than store-bought brands?
+      contentSections: []
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: Why should I wear a mouth guard?
+      contentSections: []
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: What is the process for getting a mouth guard?
+      contentSections: []
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: Why do people wear mouth guards?
+      contentSections: []
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: Why would I need to wear a night guard?
+      contentSections: []
+    - _component: building-blocks/wrappers/accordion/accordion-item
+      title: What should I do after chipping my tooth?
+      contentSections: []
+    maxContentWidth: xl
+    paddingHorizontal: xl
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: surface
+  - _component: page-sections/builders/custom-section
+    label: Definition of Family Dental Terminology
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Definition of Family Dental Terminology
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/definition-list
+      items:
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Custom Impression
+        text: Custom impression involves using trays to create an exact replica of the patient’s teeth
+          before creating the necessary restoration to enhance the overall experience.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Dentist
+        text: A dentist, also known as a dental surgeon, is a doctor who specializes in the diagnosis,
+          prevention, and treatment of diseases and conditions of the oral cavity.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Injection-Molded Mouthguards
+        text: Injection-Molded Mouthguards help to create a much more specific fit with a type of molding
+          material that fills available space instead of requiring a patient to boil the mouthguard in
+          hot water.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Laminated Pressure-Formed Mouthguards
+        text: Laminated pressure-formed mouthguards requires a process that involves applying high heat
+          and pressure to form a mouthguard that meets the needs of the patient.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Mandible Fracture
+        text: A mandible fracture is a fracture in the lower jaw that breaks through the mandibular bone
+          and is normally a result of trauma.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Oral Trauma
+        text: Oral trauma is any form of trauma or force that results in an injury of the mouth or teeth.
+          Oral trauma can occur after an accident, injury or disease.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Occlusion
+        text: Occlusion describes the mandibular and maxillary rows of teeth meeting when the patient
+          bites down. If a patient does not have a healthy bite, they are struggling with malocclusion.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Overjet
+        text: An overjet is a bite orientation that results from the maxillary central incisors (top center
+          teeth) protruding over the mandibular central incisors (bottom front teeth); this may also be
+          known as "buck teeth" by patients.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Storage Modulus
+        text: The storage modulus is the temperature at which we can store certain elastic materials in
+          dental composite resins.
+      - _component: building-blocks/core-elements/definition-list/definition-list-item
+        title: Vacuum Formed Mouthguard
+        text: A vacuum formed mouthguard involves customizing the mouthguard to match a mold of the individual
+          patient’s teeth for a perfect fit.
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: accent
+  - _component: page-sections/builders/custom-section
+    label: Helpful Related Links
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Helpful Related Links
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Glossary of Dental Terms](http://www.ada.org/en/publications/cdt/glossary-of-dental-clinical-and-administrative-ter)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Home Page](http://www.aacd.com/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
+    colorScheme: default
+    backgroundColor: surface
+  sidebar:
+  - _component: page-sections/builders/custom-section
+    label: Related Topics
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Related Topics
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Dental Bonding](/vista-ca/dental-bonding/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Dental Checkup](/vista-ca/dental-checkup/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Dental Cleaning and Examinations](/vista-ca/dental-cleaning-and-examinations/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Dental Sealants](/vista-ca/dental-sealants/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Oral Cancer Screening](/vista-ca/oral-cancer-screening/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Preventative Dental Care](/vista-ca/preventative-dental-care/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Why Dental Sealants Play an Important Part in Protecting Your Child''s Teeth](/vista-ca/why-dental-sealants-protect-childs-teeth/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
+    maxContentWidth: none
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: default
+    backgroundColor: base
+  - _component: page-sections/builders/custom-section
+    label: 'Explore additional topics covered on our website:'
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: 'Explore additional topics covered on our website:'
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[General Dentistry Services](/vista-ca/general-dentistry-services/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Mouth Guards](/vista-ca/mouth-guards/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Night Guards](/vista-ca/night-guards/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Routine Dental Care](/vista-ca/routine-dental-care/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Wisdom Teeth Extraction](/vista-ca/wisdom-teeth-extraction/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Dental Office](/vista-ca/dental-office/)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: '[Find the Best Dentist in Vista](/about/find-best-dentist/)'
+    maxContentWidth: none
+    paddingHorizontal: md
+    paddingVertical: md
+    colorScheme: default
+    backgroundColor: base
+  maxContentWidth: 2xl
+  paddingVertical: xl
 - _component: page-sections/forms/liine-form
   formId: '251056297507965'
   heading: Request an Appointment

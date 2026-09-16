@@ -18,6 +18,14 @@
  */
 
 :where(:root) {
+  /*
+   * Source content column: the section is 966px wide with 30px of padding, so
+   * the text measures 906px. The starter's `xl` (1024px) plus its own padding
+   * runs noticeably wider, which is why migrated pages read as edge-to-edge.
+   */
+  --content-width-xl: 966px;
+  --content-width-lg: 906px;
+
   /* The source sets headings in Raleway and body copy in Source Sans. */
   --font-body: "Source Sans 3", "Source Sans Pro", sans-serif;
   --font-headings: Raleway, sans-serif;
@@ -119,6 +127,35 @@
 }
 
 @layer overrides {
+  /* The source lays definition lists out in two columns (2 x 464px inside a
+     929px row); ours stacked them into one narrow column. */
+  .definition-list {
+    display: grid;
+    gap: var(--spacing-xs) var(--spacing-lg);
+  }
+
+  @media (min-width: 900px) {
+    .definition-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .definition-list > div,
+  .definition-list .definition-list-item {
+    break-inside: avoid;
+  }
+
+  /*
+   * Call-outs on the source are a compact centred bubble (850px, 88% max,
+   * 25px padding, 10px radius) - not a full-bleed band. The migrated version
+   * paints the whole section green, so constrain the inner content instead.
+   */
+  .section[data-bg="accent"] > .inner-content,
+  .bg-accent > .inner-content {
+    margin-inline: auto;
+    max-width: 88%;
+  }
+
   /* The green definition/call-out panels need dark text, as on the source:
      #79a37b is light enough that white body copy is hard to read. */
   .section[style*="79a37b"],
