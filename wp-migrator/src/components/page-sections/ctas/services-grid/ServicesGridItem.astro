@@ -1,0 +1,98 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  title = "Service",
+  href = "#",
+  imageSource = "",
+  imageAlt = "",
+  wide = false,
+  links = [],
+  editable = true,
+  _component,
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const isTrue = (value: unknown) =>
+  typeof value === "string" ? value.trim().toLowerCase() === "true" : !!value;
+
+const titleHtml =
+  typeof title === "string" && title.trim().length > 0
+    ? title
+        .trim()
+        .replace(/<\/p>\s*<p(?:\s[^>]*)?>/gi, "<br>")
+        .replace(/^<p(?:\s[^>]*)?>/i, "")
+        .replace(/<\/p>\s*$/i, "")
+    : "Service";
+
+const normalizedLinks = Array.isArray(links)
+  ? links.filter(
+      (link): link is { label?: string; text?: string; href?: string } =>
+        !!link && typeof link === "object"
+    )
+  : [];
+---
+
+<div class:list={["services-grid-item", isTrue(wide) && "is-wide", className]} {...htmlAttributes}>
+  {
+    imageSource && (
+      <figure class="services-grid-figure">
+        <Image
+          source={imageSource}
+          alt={imageAlt}
+          editable={editable}
+          data-editable={editable ? "image" : undefined}
+          data-prop-src={editable ? "imageSource" : undefined}
+          data-prop-alt={editable ? "imageAlt" : undefined}
+        />
+      </figure>
+    )
+  }
+
+  <article class="services-grid-content">
+    <h3 class="services-grid-title">
+      <a
+        href={href}
+        data-editable={editable ? "text" : undefined}
+        data-prop={editable ? "title" : undefined}
+      >
+        <Fragment set:html={titleHtml} />
+      </a>
+    </h3>
+
+    {
+      normalizedLinks.length > 0 && (
+        <ul
+          class="services-grid-links"
+          data-editable={editable ? "array" : undefined}
+          data-component-key={editable ? "_component" : undefined}
+          data-id-key={editable ? "_component" : undefined}
+          data-prop={editable ? "links" : undefined}
+        >
+          {normalizedLinks.map((link) => {
+            const label =
+              typeof link.label === "string" && link.label.trim().length > 0
+                ? link.label.trim()
+                : typeof link.text === "string"
+                  ? link.text.trim()
+                  : "";
+            const linkHref =
+              typeof link.href === "string" && link.href.trim().length > 0 ? link.href : "#";
+            return (
+              <editable-array-item data-component="page-sections/ctas/services-grid/service-link">
+                <a
+                  href={linkHref}
+                  data-editable={editable ? "text" : undefined}
+                  data-prop={editable ? "label" : undefined}
+                >
+                  {label}
+                </a>
+              </editable-array-item>
+            );
+          })}
+        </ul>
+      )
+    }
+  </article>
+</div>

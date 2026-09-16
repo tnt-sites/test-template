@@ -1,0 +1,329 @@
+---
+/**
+ * Geha Employers In Littleton — migrated from geha-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="geha-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="geil-box">
+    <div class="geil-box2">
+      <div class="geil-box3">
+        <div class="geil-box4">
+          <div class="geil-box5">
+            {image && <img class="geil-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+          </div>
+        </div>
+        <div class="geil-box6">
+          <div class="geil-box7">
+            <h2 class="geil-heading">{heading}</h2>
+          </div>
+          <div class="geil-box8">
+            {text && <div class="geil-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="geil-box9">
+        <div class="geil-box10">
+          {subheading && <h2 class="geil-heading2">{subheading}</h2>}
+        </div>
+        <div class="geil-box11">
+          {text2 && <div class="geil-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="geil-box12">
+        <div class="geil-box13">
+          {heading2 && <h2 class="geil-heading3">{heading2}</h2>}
+        </div>
+        <div class="geil-box14">
+          {text3 && <div class="geil-text3">{text3}</div>}
+        </div>
+      </div>
+      <div class="geil-box15">
+        <div class="geil-box16">
+          {heading3 && <h2 class="geil-heading4">{heading3}</h2>}
+        </div>
+        <div class="geil-box17">
+          <div class="geil-box18">
+            {text4 && <div class="geil-body" set:html={text4} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .geha-employers-in-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .geil-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .geil-box2 {
+    box-sizing: border-box;
+  }
+
+  .geil-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .geil-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .geil-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .geil-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .geil-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .geil-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .geil-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .geil-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .geil-text {
+    box-sizing: border-box;
+  }
+
+  .geil-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .geil-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .geil-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .geil-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .geil-text2 {
+    box-sizing: border-box;
+  }
+
+  .geil-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .geil-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .geil-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .geil-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .geil-text3 {
+    box-sizing: border-box;
+  }
+
+  .geil-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .geil-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .geil-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .geil-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .geil-box18 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .geil-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .geil-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .geil-box3 {
+      max-width: 1024px;
+    }
+
+    .geil-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 544px;
+    }
+
+    .geil-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .geil-box18 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .geil-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .geil-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .geil-box4 {
+      min-height: auto;
+    }
+
+    .geil-box6 {
+      min-height: 402px;
+    }
+
+    .geil-box18 {
+      min-height: 136px;
+    }
+  }
+</style>

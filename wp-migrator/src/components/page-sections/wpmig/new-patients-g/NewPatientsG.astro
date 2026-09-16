@@ -1,0 +1,1004 @@
+---
+/**
+ * New Patients G — migrated from new-patients/your-first-visit [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  heading3 = "",
+  text3 = "",
+  heading4 = "",
+  text4 = "",
+  heading5 = "",
+  text5 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="new-patients-g" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="npg-box">
+    <div class="npg-box2">
+      <div class="npg-box3">
+        <div class="npg-box4">
+          {eyebrow && <h4 class="npg-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="npg-box5">
+        <div class="npg-box6">
+          <div class="npg-box7">
+            <div class="npg-box8">
+              <h2 class="npg-heading2">{heading}</h2>
+            </div>
+            <div class="npg-box9">
+              <div class="npg-box10">
+                {text && <p class="npg-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="npg-box11">
+            <div class="npg-box12">
+              {image && <img class="npg-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="443" />}
+            </div>
+          </div>
+          <div class="npg-box13">
+            <div class="npg-box14">
+              {subheading && <h3 class="npg-heading3">{subheading}</h3>}
+            </div>
+            <div class="npg-box15">
+              <div class="npg-box16">
+                {text2 && <p class="npg-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="npg-box17">
+            <div class="npg-box18">
+              {heading2 && <h3 class="npg-heading4">{heading2}</h3>}
+            </div>
+            <div class="npg-box19">
+              <div class="npg-box20">
+                {heading3 && <h5 class="npg-heading5">{heading3}</h5>}
+              </div>
+              <div class="npg-box21">
+                <div class="npg-box22">
+                  {text3 && <p class="npg-text3">{text3}</p>}
+                </div>
+              </div>
+            </div>
+            <div class="npg-box23">
+              <div class="npg-box24">
+                {heading4 && <h5 class="npg-heading6">{heading4}</h5>}
+              </div>
+              <div class="npg-box25">
+                {text4 && <div class="npg-text4">{text4}</div>}
+              </div>
+            </div>
+          </div>
+          <div class="npg-box26">
+            <div class="npg-box27">
+              <div class="npg-decor" aria-hidden="true"></div>
+            </div>
+            <div class="npg-box28">
+              {heading5 && <h2 class="npg-heading7">{heading5}</h2>}
+            </div>
+            <div class="npg-box29">
+              <div class="npg-box30">
+                {text5 && <p class="npg-text5" set:html={text5} />}
+              </div>
+            </div>
+            <div class="npg-box31">
+              <div class="npg-box32">
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="npg-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+            <div class="npg-box33">
+              <div class="npg-box34">
+                <div class="npg-box35">
+                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="npg-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .new-patients-g {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .npg-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .npg-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .npg-box3 {
+    display: none;
+  }
+
+  .npg-box4 {
+    display: none;
+  }
+
+  .npg-heading {
+    display: none;
+  }
+
+  :global(.npg-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npg-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npg-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npg-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .npg-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .npg-box6 {
+    box-sizing: border-box;
+  }
+
+  .npg-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box10 {
+    box-sizing: border-box;
+  }
+
+  .npg-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .npg-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .npg-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .npg-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box16 {
+    box-sizing: border-box;
+  }
+
+  .npg-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .npg-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box22 {
+    box-sizing: border-box;
+    margin-top: -9px;
+  }
+
+  .npg-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .npg-box23 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-text4 {
+    box-sizing: border-box;
+    margin-top: -9px;
+  }
+
+  .npg-box26 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npg-box27 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .npg-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .npg-box28 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npg-heading7 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npg-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box30 {
+    box-sizing: border-box;
+  }
+
+  .npg-text5 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .npg-box31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box32 {
+    box-sizing: border-box;
+  }
+
+  :global(.npg-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.npg-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .npg-box33 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npg-box34 {
+    box-sizing: border-box;
+  }
+
+  .npg-box35 {
+    box-sizing: border-box;
+  }
+
+  :global(.npg-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.npg-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.npg-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.npg-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.npg-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.npg-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.npg-btn5):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.npg-btn6):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .npg-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .npg-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1574px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .npg-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .npg-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.npg-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npg-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npg-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npg-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npg-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.npg-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .npg-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .npg-heading2 {
+      line-height: 32px;
+    }
+
+    .npg-heading3 {
+      line-height: 28px;
+    }
+
+    .npg-heading4 {
+      line-height: 28px;
+    }
+
+    .npg-heading5 {
+      line-height: 20px;
+    }
+
+    .npg-heading6 {
+      line-height: 20px;
+    }
+
+    .npg-heading7 {
+      line-height: 32px;
+    }
+
+    .npg-box33 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .npg-box34 {
+      display: none;
+    }
+
+    .npg-box35 {
+      display: none;
+    }
+
+    :global(.npg-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .npg-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .npg-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1400px;
+    }
+
+    :global(.npg-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.npg-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .npg-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .npg-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .npg-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .npg-box27 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .npg-heading7 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .npg-box11 {
+    text-align: center;
+  }
+  .npg-media {
+    text-align: left;
+  }
+  .npg-text5 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .npg-box32 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .npg-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .npg-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .npg-box19 {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .npg-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .npg-text3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .npg-heading6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .npg-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .npg-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .npg-heading3 {
+      font-weight: 400;
+    }
+
+    .npg-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .npg-decor {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .npg-heading7 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.npg-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npg-box31 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .npg-box18 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .npg-box20 {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .npg-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .npg-box23 {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .npg-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .npg-text {
+      line-height: 24px;
+    }
+
+    .npg-text2 {
+      line-height: 24px;
+    }
+
+    .npg-text3 {
+      line-height: 24px;
+    }
+
+    .npg-text5 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .npg-heading3 {
+      font-weight: 400;
+    }
+
+    .npg-heading4 {
+      font-weight: 400;
+    }
+
+    .npg-heading7 {
+      font-weight: 400;
+    }
+
+    :global(.npg-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npg-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .npg-text {
+      line-height: 24px;
+    }
+
+    .npg-text2 {
+      line-height: 24px;
+    }
+
+    .npg-text3 {
+      line-height: 24px;
+    }
+
+    .npg-text5 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

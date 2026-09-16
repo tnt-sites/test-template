@@ -1,0 +1,10 @@
+_snippets:
+  what_are_dental_implants:
+    template: astro_component
+    inline: false
+    preview:
+      text: What Are Dental Implants
+    definitions:
+      component_name: page-sections/wpmig/what-are-dental-implants
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/what-are-dental-implants/what-are-dental-implants.cloudcannon.inputs.yml

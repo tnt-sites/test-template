@@ -1,0 +1,25 @@
+label: Call Us Today To E
+icon: vertical_split
+description: Call Us Today To E section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-to-e
+  id: ""
+  text: ""
+  text2: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text3: ""
+  heading: ""
+  text4: ""
+  heading2: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today To E
+  icon: vertical_split
+picker_preview:
+  text: Call Us Today To E
+  subtext: Call Us Today To E section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-to-e/call-us-today-to-e.cloudcannon.inputs.yml

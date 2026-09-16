@@ -1,0 +1,19 @@
+label: We Have Received Your
+icon: interests
+description: We Have Received Your section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-have-received-your
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - We Have Received Your
+  icon: interests
+picker_preview:
+  text: We Have Received Your
+  subtext: We Have Received Your section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-have-received-your/we-have-received-your.cloudcannon.inputs.yml

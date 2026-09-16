@@ -1,0 +1,39 @@
+label: Clear Dental Aligners
+icon: vertical_split
+description: Clear Dental Aligners section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/clear-dental-aligners
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  image2: ""
+  image2Alt: ""
+  text2: ""
+  subheading: ""
+  image3: ""
+  image3Alt: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  buttonBackgroundHoverColor: "#49ab71"
+  buttonBackgroundColor2HoverColor: "#54595f"
+preview:
+  text:
+    - Clear Dental Aligners
+  icon: vertical_split
+picker_preview:
+  text: Clear Dental Aligners
+  subtext: Clear Dental Aligners section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/clear-dental-aligners/clear-dental-aligners.cloudcannon.inputs.yml

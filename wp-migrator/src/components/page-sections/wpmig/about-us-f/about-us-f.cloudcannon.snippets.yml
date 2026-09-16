@@ -1,0 +1,10 @@
+_snippets:
+  about_us_f:
+    template: astro_component
+    inline: false
+    preview:
+      text: About Us F
+    definitions:
+      component_name: page-sections/wpmig/about-us-f
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/about-us-f/about-us-f.cloudcannon.inputs.yml

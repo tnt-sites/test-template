@@ -1,0 +1,10 @@
+_snippets:
+  childrens_dentistry:
+    template: astro_component
+    inline: false
+    preview:
+      text: Childrens Dentistry
+    definitions:
+      component_name: page-sections/wpmig/childrens-dentistry
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/childrens-dentistry/childrens-dentistry.cloudcannon.inputs.yml

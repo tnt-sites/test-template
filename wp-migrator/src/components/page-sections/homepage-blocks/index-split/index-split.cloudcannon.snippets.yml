@@ -1,0 +1,35 @@
+indexSplit:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Index Split
+    icon: add
+  definitions:
+    component_name: IndexSplit
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+    # Add your component arguments here
+    # Example:
+    # - editor_key: text
+    #   type: string
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/index-split/index-split.cloudcannon.inputs.yml

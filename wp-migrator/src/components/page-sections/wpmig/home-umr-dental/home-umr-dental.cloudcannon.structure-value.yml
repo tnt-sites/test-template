@@ -1,0 +1,17 @@
+label: Home Umr Dental
+icon: interests
+description: Home Umr Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-umr-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Umr Dental
+  icon: interests
+picker_preview:
+  text: Home Umr Dental
+  subtext: Home Umr Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-umr-dental/home-umr-dental.cloudcannon.inputs.yml

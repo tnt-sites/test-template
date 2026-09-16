@@ -1,0 +1,18 @@
+label: Sitemap
+icon: vertical_split
+description: Sitemap section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/sitemap
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Sitemap
+  icon: vertical_split
+picker_preview:
+  text: Sitemap
+  subtext: Sitemap section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/sitemap/sitemap.cloudcannon.inputs.yml

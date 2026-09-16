@@ -1,0 +1,18 @@
+label: Aetna Dental
+icon: vertical_split
+description: Aetna Dental section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/aetna-dental
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Aetna Dental
+  icon: vertical_split
+picker_preview:
+  text: Aetna Dental
+  subtext: Aetna Dental section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/aetna-dental/aetna-dental.cloudcannon.inputs.yml

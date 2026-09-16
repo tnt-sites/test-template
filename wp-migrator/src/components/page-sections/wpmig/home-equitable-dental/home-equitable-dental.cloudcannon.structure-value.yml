@@ -1,0 +1,17 @@
+label: Home Equitable Dental
+icon: interests
+description: Home Equitable Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-equitable-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Equitable Dental
+  icon: interests
+picker_preview:
+  text: Home Equitable Dental
+  subtext: Home Equitable Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-equitable-dental/home-equitable-dental.cloudcannon.inputs.yml

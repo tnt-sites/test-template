@@ -1,0 +1,10 @@
+_snippets:
+  home_dental_conditions:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Dental Conditions
+    definitions:
+      component_name: page-sections/wpmig/home-dental-conditions
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-dental-conditions/home-dental-conditions.cloudcannon.inputs.yml

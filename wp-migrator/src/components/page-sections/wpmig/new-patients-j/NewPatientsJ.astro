@@ -1,0 +1,1027 @@
+---
+/**
+ * New Patients J — migrated from frequently-asked-questions [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  text5 = "",
+  text6 = "",
+  text7 = "",
+  text8 = "",
+  text9 = "",
+  text10 = "",
+  text11 = "",
+  text12 = "",
+  text13 = "",
+  text14 = "",
+  text15 = "",
+  text16 = "",
+  text17 = "",
+  text18 = "",
+  subheading = "",
+  text19 = "",
+  text20 = "",
+  text21 = "",
+  text22 = "",
+  heading2 = "",
+  text23 = "",
+  text24 = "",
+  text25 = "",
+  text26 = "",
+  text27 = "",
+  text28 = "",
+  heading3 = "",
+  items = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#333333",
+  titleColor = "#1b2e38",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="new-patients-j" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--tt:${titleColor};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3}`} {...rest}>
+  <div class="npj-box">
+    <div class="npj-box2">
+      <div class="npj-box3">
+        <div class="npj-box4">
+          {eyebrow && <h4 class="npj-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="npj-box5">
+        <div class="npj-box6">
+          <div class="npj-box7">
+            <div class="npj-box8">
+              <h2 class="npj-heading2">{heading}</h2>
+            </div>
+            <div class="npj-box9">
+              <div class="npj-box10">
+                <div class="npj-box11">
+                  {text && <div class="npj-text" set:html={text} />}
+                  <div class="npj-box12" aria-labelledby="whats-the-best-way-to-whiten-my-teeth">
+                    {text2 && <p class="npj-text2" set:html={text2} />}
+                  </div>
+                </div>
+                <div class="npj-box13">
+                  {text3 && <div class="npj-text3" set:html={text3} />}
+                  {text4 && <div class="npj-text4" set:html={text4} />}
+                </div>
+                <div class="npj-box14">
+                  {text5 && <div class="npj-text5" set:html={text5} />}
+                  {text6 && <div class="npj-text6" set:html={text6} />}
+                </div>
+                <div class="npj-box15">
+                  {text7 && <div class="npj-text7" set:html={text7} />}
+                  {text8 && <div class="npj-text8" set:html={text8} />}
+                </div>
+                <div class="npj-box16">
+                  {text9 && <div class="npj-text9" set:html={text9} />}
+                  {text10 && <div class="npj-text10" set:html={text10} />}
+                </div>
+                <div class="npj-box17">
+                  {text11 && <div class="npj-text11" set:html={text11} />}
+                  {text12 && <div class="npj-text12" set:html={text12} />}
+                </div>
+                <div class="npj-box18">
+                  {text13 && <div class="npj-text13" set:html={text13} />}
+                  {text14 && <div class="npj-text14" set:html={text14} />}
+                </div>
+                <div class="npj-box19">
+                  {text15 && <div class="npj-text15" set:html={text15} />}
+                  {text16 && <div class="npj-text16" set:html={text16} />}
+                </div>
+                <div class="npj-box20">
+                  {text17 && <div class="npj-text17" set:html={text17} />}
+                  {text18 && <div class="npj-text18" set:html={text18} />}
+                </div>
+              </div>
+            </div>
+          </div>
+          <section class="npj-box21">
+            <div class="npj-box22">
+              <div class="npj-box23">
+                {subheading && <h2 class="npj-heading3">{subheading}</h2>}
+              </div>
+              <div class="npj-box24">
+                <div class="npj-box25">
+                  <div class="npj-box26">
+                    {text19 && <div class="npj-text19" set:html={text19} />}
+                    <div class="npj-box27" aria-labelledby="what-is-considered-a-dental-emergency">
+                      {text20 && <p class="npj-text20" set:html={text20} />}
+                    </div>
+                  </div>
+                  <div class="npj-box28">
+                    {text21 && <div class="npj-text21" set:html={text21} />}
+                    {text22 && <div class="npj-text22" set:html={text22} />}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="npj-box29">
+            <div class="npj-box30">
+              <div class="npj-box31">
+                {heading2 && <h2 class="npj-heading4">{heading2}</h2>}
+              </div>
+              <div class="npj-box32">
+                <div class="npj-box33">
+                  <div class="npj-box34">
+                    {text23 && <div class="npj-text23" set:html={text23} />}
+                    {text24 && <div class="npj-text24" set:html={text24} />}
+                  </div>
+                  <div class="npj-box35">
+                    {text25 && <div class="npj-text25" set:html={text25} />}
+                    <div class="npj-box36" aria-labelledby="what-type-of-toothbrush-and-toothpaste-should-i-use">
+                      {text26 && <div class="npj-body" set:html={text26} />}
+                    </div>
+                  </div>
+                  <div class="npj-box37">
+                    {text27 && <div class="npj-text26" set:html={text27} />}
+                    {text28 && <div class="npj-text27" set:html={text28} />}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="npj-box38">
+            <div class="npj-box39">
+              <div class="npj-box40">
+                {heading3 && <h2 class="npj-heading5">{heading3}</h2>}
+              </div>
+              <div class="npj-box41">
+                <div class="npj-grid">
+                  {list.map((it) => (
+                    <div class="npj-box42">
+                      <div class="npj-text28">{it.title}</div>
+                      <div class="npj-text29">{it.text}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .new-patients-j {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .npj-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .npj-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .npj-box3 {
+    display: none;
+  }
+
+  .npj-box4 {
+    display: none;
+  }
+
+  .npj-heading {
+    display: none;
+  }
+
+  :global(.npj-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npj-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npj-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npj-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .npj-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1623px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .npj-box6 {
+    box-sizing: border-box;
+  }
+
+  .npj-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npj-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npj-box9 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-box10 {
+    box-sizing: border-box;
+  }
+
+  .npj-box11 {
+    box-sizing: border-box;
+  }
+
+  .npj-text {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-box12::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box12::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box13 {
+    box-sizing: border-box;
+  }
+
+  .npj-text3 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text4::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text4::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box14 {
+    box-sizing: border-box;
+  }
+
+  .npj-text5 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text6::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text6::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box15 {
+    box-sizing: border-box;
+  }
+
+  .npj-text7 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text8::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text8::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box16 {
+    box-sizing: border-box;
+  }
+
+  .npj-text9 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text10::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text10::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box17 {
+    box-sizing: border-box;
+  }
+
+  .npj-text11 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text12::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text12::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box18 {
+    box-sizing: border-box;
+  }
+
+  .npj-text13 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text14::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text14::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box19 {
+    box-sizing: border-box;
+  }
+
+  .npj-text15 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text16::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text16::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box20 {
+    box-sizing: border-box;
+  }
+
+  .npj-text17 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text18::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text18::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box21 {
+    box-sizing: border-box;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .npj-box22 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npj-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npj-box24 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-box25 {
+    box-sizing: border-box;
+  }
+
+  .npj-box26 {
+    box-sizing: border-box;
+  }
+
+  .npj-text19 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-box27::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box27::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box28 {
+    box-sizing: border-box;
+  }
+
+  .npj-text21 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text22::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text22::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box29 {
+    box-sizing: border-box;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .npj-box30 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npj-box31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npj-box32 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-box33 {
+    box-sizing: border-box;
+  }
+
+  .npj-box34 {
+    box-sizing: border-box;
+  }
+
+  .npj-text23 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text24::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text24::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box35 {
+    box-sizing: border-box;
+  }
+
+  .npj-text25 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-box36::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box36::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box37 {
+    box-sizing: border-box;
+  }
+
+  .npj-text26 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text27::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text27::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-box38 {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .npj-box39 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npj-box40 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npj-box41 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npj-grid {
+    box-sizing: border-box;
+  }
+
+  .npj-box42 {
+    box-sizing: border-box;
+  }
+
+  .npj-text28 {
+    align-items: center;
+    background-color: #e6eff4;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    line-height: 16px;
+    padding: 15px;
+  }
+
+  .npj-text29::before {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  .npj-text29::after {
+    border-radius: 0px;
+    content: " ";
+  }
+
+  :global(.npj-btn):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.npj-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.npj-btn3):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.npj-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .npj-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .npj-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1424px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .npj-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .npj-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.npj-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npj-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npj-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npj-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npj-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.npj-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .npj-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+      min-height: 1424px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .npj-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .npj-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1379px;
+    }
+
+    :global(.npj-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.npj-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .npj-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+      min-height: 1379px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  @media (min-width: 768px) {
+    :global(.npj-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.npj-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npj-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

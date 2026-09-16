@@ -1,0 +1,1224 @@
+---
+/**
+ * About Us I — migrated from about-us/comfort-amenities [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `images`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  text = "",
+  image = "",
+  imageAlt = "",
+  text2 = "",
+  subheading = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  heading3 = "",
+  text5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  items = [],
+  images = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<div class="about-us-i" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="aui-box">
+    <div class="aui-box2">
+      <div class="aui-box3">
+        <div class="aui-box4">
+          {eyebrow && <h4 class="aui-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+        </div>
+      </div>
+      <div class="aui-box5">
+        <div class="aui-box6">
+          <div class="aui-box7">
+            <div class="aui-box8">
+              <h2 class="aui-heading2">{heading}</h2>
+            </div>
+            <div class="aui-box9">
+              <div class="aui-box10">
+                {text && <p class="aui-text">{text}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aui-box11">
+            <div class="aui-box12">
+              {image && <img class="aui-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="683" />}
+            </div>
+          </div>
+          <div class="aui-box13">
+            <div class="aui-box14">
+              <div class="aui-box15">
+                {text2 && <div class="aui-body" set:html={text2} />}
+              </div>
+            </div>
+          </div>
+          <div class="aui-box16">
+            <div class="aui-box17">
+              {subheading && <h3 class="aui-heading3">{subheading}</h3>}
+            </div>
+            <div class="aui-grid">
+              {itemsList.map((it) => (
+                <div class="aui-box18">
+                  <div class="aui-box19">
+                    {it.text && <div class="aui-body2" set:html={it.text} />}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <section class="aui-box22">
+              <div class="aui-box23">
+                <div class="aui-box24">
+                  <div class="aui-box25">
+                    <div class="aui-box26">
+                      <div class="aui-box27">
+                        {text3 && <div class="aui-body4" set:html={text3} />}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="aui-grid2">
+            {imagesList.map((it) => (
+              <div class="aui-box28">
+                <div class="aui-box29">
+                  {it.image && <img class="aui-media2" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="650" height="454" />}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="aui-box32">
+            <div class="aui-box33">
+              {heading2 && <h3 class="aui-heading4">{heading2}</h3>}
+            </div>
+            <div class="aui-box34">
+              <div class="aui-box35">
+                {text4 && <p class="aui-text2">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aui-box36">
+            <div class="aui-box37">
+              <div class="aui-decor" aria-hidden="true"></div>
+            </div>
+            <div class="aui-box38">
+              {heading3 && <h2 class="aui-heading5">{heading3}</h2>}
+            </div>
+            <div class="aui-box39">
+              <div class="aui-box40">
+                {text5 && <p class="aui-text3" set:html={text5} />}
+              </div>
+            </div>
+            <div class="aui-box41">
+              <div class="aui-box42">
+                {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aui-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+              </div>
+            </div>
+            <div class="aui-box43">
+              <div class="aui-box44">
+                <div class="aui-box45">
+                  {secondaryButtonText7 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aui-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-us-i {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .aui-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aui-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .aui-box3 {
+    display: none;
+  }
+
+  .aui-box4 {
+    display: none;
+  }
+
+  .aui-heading {
+    display: none;
+  }
+
+  :global(.aui-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aui-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aui-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aui-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aui-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aui-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .aui-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .aui-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box6 {
+    box-sizing: border-box;
+  }
+
+  .aui-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aui-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aui-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box10 {
+    box-sizing: border-box;
+  }
+
+  .aui-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aui-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .aui-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .aui-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box15 {
+    box-sizing: border-box;
+  }
+
+  .aui-body :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .aui-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box16 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aui-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aui-grid {
+    display: none;
+  }
+
+  .aui-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box18 {
+    display: none;
+  }
+
+  .aui-box18 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box19 {
+    display: none;
+  }
+
+  .aui-box19 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box22 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box23 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .aui-box23 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box24 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .aui-box24 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box25 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box25 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box26 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-box27 {
+    box-sizing: border-box;
+  }
+
+  .aui-box27 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .aui-body4 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .aui-grid2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .aui-box28 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .aui-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .aui-box32 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box33 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aui-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aui-box34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box35 {
+    box-sizing: border-box;
+  }
+
+  .aui-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aui-box36 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aui-box37 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .aui-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .aui-box38 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aui-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aui-box39 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box40 {
+    box-sizing: border-box;
+  }
+
+  .aui-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aui-box41 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box42 {
+    box-sizing: border-box;
+  }
+
+  :global(.aui-btn7) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.aui-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .aui-box43 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aui-box44 {
+    box-sizing: border-box;
+  }
+
+  .aui-box45 {
+    box-sizing: border-box;
+  }
+
+  :global(.aui-btn8) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.aui-btn8) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.aui-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.aui-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.aui-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.aui-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.aui-btn5):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.aui-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.aui-btn7):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.aui-btn8):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .aui-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .aui-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1930px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .aui-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aui-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.aui-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aui-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aui-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aui-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .aui-heading2 {
+      line-height: 32px;
+    }
+
+    .aui-heading3 {
+      line-height: 28px;
+    }
+
+    .aui-grid {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .aui-box18 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 50%;
+      flex-wrap: wrap;
+      max-width: 50%;
+      min-height: 178px;
+      padding: 10px;
+      position: relative;
+    }
+
+    .aui-box19 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .aui-body2 :global(ul) {
+      box-sizing: border-box;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 0px;
+    }
+
+    .aui-box22 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .aui-box23 {
+      display: none;
+      max-width: 1024px;
+    }
+
+    .aui-box24 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .aui-box25 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .aui-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .aui-box27 {
+      display: none;
+    }
+
+    .aui-grid2 {
+      max-width: 1024px;
+    }
+
+    .aui-box28 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .aui-heading4 {
+      line-height: 28px;
+    }
+
+    .aui-heading5 {
+      line-height: 32px;
+    }
+
+    .aui-box43 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .aui-box44 {
+      display: none;
+    }
+
+    .aui-box45 {
+      display: none;
+    }
+
+    :global(.aui-btn8) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .aui-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .aui-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1916px;
+    }
+
+    :global(.aui-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.aui-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aui-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .aui-grid {
+      flex-wrap: nowrap;
+    }
+
+    .aui-box18 {
+      min-height: auto;
+    }
+
+    .aui-grid2 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  @media (min-width: 768px) {
+    .aui-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aui-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aui-box33 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aui-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aui-decor {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .aui-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.aui-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aui-box28 {
+      text-align: center;
+    }
+
+    .aui-media2 {
+      text-align: left;
+    }
+
+    .aui-box41 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .aui-text {
+      line-height: 24px;
+    }
+
+    .aui-text2 {
+      line-height: 24px;
+    }
+
+    .aui-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .aui-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.aui-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aui-btn7) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .aui-text {
+      line-height: 24px;
+    }
+
+    .aui-text2 {
+      line-height: 24px;
+    }
+
+    .aui-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

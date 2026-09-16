@@ -1,0 +1,87 @@
+label: FAQ Section
+icon: help_outline
+description: Section displaying frequently asked questions in an accordion format.
+value:
+  _component: page-sections/info-blocks/faq-section
+  id: ""
+  heading: Frequently Asked Questions
+  headingLevel: h2
+  headingSize: lg
+  singleOpen: true
+  openFirst: false
+  items: []
+  maxContentWidth: xl
+  paddingHorizontal: xl
+  paddingVertical: 4xl
+  colorScheme: inherit
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - FAQ Section
+  subtext:
+    - key: heading
+  icon: help_outline
+picker_preview:
+  text: FAQ Section
+  subtext: Accordion of frequently asked questions.
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/faq-section/faq-section.cloudcannon.inputs.yml
+_structures:
+  faqItems:
+    values:
+      - label: FAQ Item
+        icon: help_outline
+        value:
+          _component: building-blocks/wrappers/accordion/accordion-item
+          title: Question text
+          contentSections:
+            - _component: building-blocks/core-elements/text
+              text: Answer text goes here.
+        preview:
+          text:
+            - key: title
+            - FAQ Item
+          subtext:
+            - key: contentSections.0.text
+            - Add answer text
+        _inputs:
+          title:
+            type: text
+            comment: The question text.
+          contentSections:
+            type: array
+            label: Answer Content
+            comment: Content sections for the answer (typically text).
+            options:
+              structures:
+                - label: Text
+                  icon: text_fields
+                  value:
+                    _component: building-blocks/core-elements/text
+                    text: Answer text goes here.
+                  preview:
+                    text:
+                      - key: text
+                      - Text content
+                  _inputs:
+                    text:
+                      type: markdown
+                      comment: The answer text content.
+                      options:
+                        blockquote: false
+                        bold: true
+                        format:
+                        italic: true
+                        link: true
+                        strike: false
+                        subscript: true
+                        superscript: true
+                        underline: false
+                        bulletedlist: false
+                        numberedlist: false

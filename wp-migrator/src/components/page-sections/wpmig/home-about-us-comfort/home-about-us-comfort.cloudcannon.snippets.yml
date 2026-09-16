@@ -1,0 +1,10 @@
+_snippets:
+  home_about_us_comfort:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home About Us Comfort
+    definitions:
+      component_name: page-sections/wpmig/home-about-us-comfort
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-about-us-comfort/home-about-us-comfort.cloudcannon.inputs.yml

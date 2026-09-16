@@ -1,0 +1,1056 @@
+---
+/**
+ * General Dentistry E — migrated from dental-services/general-dentistry/dental-crowns [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="gde-box">
+    <div class="gde-box2">
+      <div class="gde-box3">
+        <div class="gde-box4">
+          {eyebrow && <h4 class="gde-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gde-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gde-box5">
+        <div class="gde-box6">
+          <div class="gde-box7">
+            <div class="gde-box8">
+              <h2 class="gde-heading2">{heading}</h2>
+            </div>
+            <div class="gde-box9">
+              <div class="gde-box10">
+                {text && <p class="gde-text">{text}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gde-box11">
+            <div class="gde-box12">
+              {subheading && <h3 class="gde-heading3">{subheading}</h3>}
+            </div>
+            <div class="gde-box13">
+              <div class="gde-box14">
+                {text2 && <p class="gde-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gde-box15">
+            <div class="gde-box16">
+              {heading2 && <h3 class="gde-heading4">{heading2}</h3>}
+            </div>
+            <div class="gde-box17">
+              <div class="gde-box18">
+                {text3 && <div class="gde-body" set:html={text3} />}
+              </div>
+            </div>
+          </div>
+          <div class="gde-box19">
+            <div class="gde-box20">
+              <div class="gde-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gde-box21">
+              {heading3 && <h2 class="gde-heading5">{heading3}</h2>}
+            </div>
+            <div class="gde-box22">
+              <div class="gde-box23">
+                {text4 && <p class="gde-text3" set:html={text4} />}
+              </div>
+            </div>
+            <div class="gde-box24">
+              <div class="gde-box25">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gde-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gde-box26">
+              <div class="gde-box27">
+                <div class="gde-box28">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gde-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-e {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gde-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gde-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gde-box3 {
+    display: none;
+  }
+
+  .gde-box4 {
+    display: none;
+  }
+
+  .gde-heading {
+    display: none;
+  }
+
+  :global(.gde-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gde-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gde-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gde-box6 {
+    box-sizing: border-box;
+  }
+
+  .gde-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gde-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gde-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gde-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box10 {
+    box-sizing: border-box;
+  }
+
+  .gde-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gde-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gde-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gde-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gde-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box14 {
+    box-sizing: border-box;
+  }
+
+  .gde-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gde-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gde-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gde-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gde-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box18 {
+    box-sizing: border-box;
+    min-height: 256px;
+  }
+
+  .gde-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gde-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gde-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gde-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gde-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gde-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gde-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box23 {
+    box-sizing: border-box;
+  }
+
+  .gde-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gde-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box25 {
+    box-sizing: border-box;
+  }
+
+  :global(.gde-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gde-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gde-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gde-box27 {
+    box-sizing: border-box;
+  }
+
+  .gde-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.gde-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gde-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gde-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gde-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gde-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gde-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gde-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gde-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gde-btn7):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gde-btn8):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gde-btn9):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gde-btn10):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gde-btn11):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .gde-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gde-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1242px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gde-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gde-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gde-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gde-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gde-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gde-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gde-heading2 {
+      line-height: 32px;
+    }
+
+    .gde-heading3 {
+      line-height: 28px;
+    }
+
+    .gde-heading4 {
+      line-height: 28px;
+    }
+
+    .gde-box18 {
+      min-height: 232px;
+    }
+
+    .gde-heading5 {
+      line-height: 32px;
+    }
+
+    .gde-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gde-box27 {
+      display: none;
+    }
+
+    .gde-box28 {
+      display: none;
+    }
+
+    :global(.gde-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gde-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gde-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 874px;
+    }
+
+    :global(.gde-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gde-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gde-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gde-box18 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gde-heading2 {
+    font-weight: 400;
+  }
+  .gde-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gde-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gde-box20 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gde-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gde-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gde-box25 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gde-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gde-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gde-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gde-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gde-heading2 {
+      font-weight: 400;
+    }
+
+    .gde-heading3 {
+      font-weight: 400;
+    }
+
+    .gde-heading4 {
+      font-weight: 400;
+    }
+
+    .gde-box21 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gde-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gde-box25 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gde-text {
+      line-height: 24px;
+    }
+
+    .gde-text2 {
+      line-height: 24px;
+    }
+
+    .gde-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gde-heading2 {
+      font-weight: 400;
+    }
+
+    .gde-heading3 {
+      font-weight: 400;
+    }
+
+    .gde-heading4 {
+      font-weight: 400;
+    }
+
+    .gde-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.gde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gde-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gde-text {
+      line-height: 24px;
+    }
+
+    .gde-text2 {
+      line-height: 24px;
+    }
+
+    .gde-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

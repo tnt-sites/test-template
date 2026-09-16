@@ -1,0 +1,242 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Component from "@components/utils/renderBlock.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+
+const {
+  id,
+  closeLabel = "Close modal",
+  showCloseButton = true,
+  contentSections,
+  propName = "contentSections",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<dialog id={id} class:list={["modal", className]} tabindex="-1" {...htmlAttributes}>
+  {
+    showCloseButton && (
+      <button type="button" class="modal-close" data-modal-close aria-label={closeLabel}>
+        <Icon name="x-mark" size="none" />
+      </button>
+    )
+  }
+  <div class="modal-body">
+    {
+      contentSections && contentSections.length > 0 && (
+        <CustomSection
+          maxContentWidth="2xl"
+          paddingHorizontal="none"
+          paddingVertical="none"
+          colorScheme="inherit"
+          backgroundColor="none"
+        >
+          <Component contentSections={contentSections} propName={propName} />
+        </CustomSection>
+      )
+    }
+  </div>
+</dialog>
+
+<script>
+  (() => {
+    const modalWindow = window as Window & { __modalControllerInitialized?: boolean };
+
+    // If modal already initialized, do nothing
+    if (modalWindow.__modalControllerInitialized) return;
+
+    modalWindow.__modalControllerInitialized = true;
+
+    const getTargetModal = (target: string | null) => {
+      if (!target) return null;
+
+      const noHash = target.replace(/^#/, "");
+      const dialog = document.getElementById(noHash);
+      return dialog instanceof HTMLDialogElement ? dialog : null;
+    };
+
+    const stopModalVids = (dialog: HTMLDialogElement | null) => {
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      const mediaElements = dialog.querySelectorAll("video, audio");
+      mediaElements.forEach((media) => {
+        if (media instanceof HTMLMediaElement) {
+          media.pause();
+          if (Number.isFinite(media.currentTime)) {
+            media.currentTime = 0;
+          }
+        }
+      });
+
+      // Generic iframe handling
+      const iframeElements = dialog.querySelectorAll("iframe");
+      iframeElements.forEach((iframe) => {
+        const src = iframe.getAttribute("src");
+        if (!src) return;
+
+        // Reset iframe src to stop third-party players like YouTube/Vimeo.
+        iframe.setAttribute("src", src);
+      });
+
+      // Lite YouTube player handling
+      const liteYoutubeVids = dialog.querySelectorAll("lite-youtube");
+      liteYoutubeVids.forEach((player) => {
+        const litePlayer = player as unknown as {
+          shadowRoot: ShadowRoot | null;
+          isIframeLoaded?: boolean;
+        };
+        const shadowRoot = litePlayer.shadowRoot;
+        if (!shadowRoot) return;
+
+        const iframe = shadowRoot.querySelector("iframe");
+        iframe?.contentWindow?.postMessage(
+          '{"event":"command","func":"pauseVideo","args":""}',
+          "*"
+        );
+        iframe?.remove();
+        shadowRoot.querySelector("#frame")?.classList.remove("activated");
+        litePlayer.isIframeLoaded = false;
+      });
+
+      // Lite Vimeo player handling
+      const liteVimeoVids = dialog.querySelectorAll("lite-vimeo");
+      liteVimeoVids.forEach((player) => {
+        const litePlayer = player as unknown as {
+          shadowRoot: ShadowRoot | null;
+          iframeLoaded?: boolean;
+        };
+        const shadowRoot = litePlayer.shadowRoot;
+        if (!shadowRoot) return;
+
+        shadowRoot.querySelector("iframe")?.remove();
+        shadowRoot.querySelector("#frame")?.classList.remove("lvo-activated");
+        litePlayer.iframeLoaded = false;
+      });
+    };
+
+    const openDialog = (dialog: HTMLDialogElement | null) => {
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+
+      dialog.focus();
+    };
+
+    const closeDialog = (dialog: HTMLDialogElement | null) => {
+      if (!(dialog instanceof HTMLDialogElement)) return;
+
+      if (typeof dialog.close === "function") {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+        stopModalVids(dialog);
+      }
+    };
+
+    const modals = document.querySelectorAll<HTMLDialogElement>("dialog.modal");
+    modals.forEach((modal) => {
+      modal.addEventListener("close", () => {
+        stopModalVids(modal);
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const openTrigger = target.closest(
+        "[data-modal-target], a[class*='modal'][href^='#'], a[href^='#']"
+      );
+      if (openTrigger instanceof HTMLElement) {
+        const modalTarget =
+          openTrigger.getAttribute("data-modal-target") || openTrigger.getAttribute("href");
+        const dialog = getTargetModal(modalTarget);
+        if (!dialog) return;
+
+        event.preventDefault();
+        openDialog(dialog);
+        return;
+      }
+
+      const closeTrigger = target.closest("[data-modal-close], .modal-close");
+      if (closeTrigger instanceof HTMLElement) {
+        event.preventDefault();
+
+        const dialog = closeTrigger.closest("dialog");
+        if (dialog instanceof HTMLDialogElement) {
+          closeDialog(dialog);
+        }
+        return;
+      }
+
+      if (target instanceof HTMLDialogElement && target.classList.contains("modal")) {
+        closeDialog(target);
+      }
+    });
+  })();
+</script>
+
+<style lang="pcss" is:global>
+  @layer components {
+    .modal {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      inset: 0;
+      margin: auto;
+      max-width: min(680px, calc(100vw - 2rem));
+      padding: var(--spacing-xl);
+      position: fixed;
+      width: 100%;
+
+      &::backdrop {
+        background: rgb(0 0 0 / 45%);
+      }
+    }
+
+    
+
+    .modal-header {
+      align-items: flex-start;
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: space-between;
+    }
+
+    .modal-title {
+      margin: 0;
+    }
+
+    .modal-close {
+      align-items: center;
+      background-color: var(--color-brand);
+      color: var(--color-text-on-brand);
+      cursor: pointer;
+      display: inline-flex;
+      flex-shrink: 0;
+      justify-content: center;
+      min-height: 2rem;
+      min-width: 2rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .modal-body {
+      margin-top: var(--spacing-lg);
+
+      > :first-child {
+        margin-top: 0;
+      }
+    }
+  }
+</style>

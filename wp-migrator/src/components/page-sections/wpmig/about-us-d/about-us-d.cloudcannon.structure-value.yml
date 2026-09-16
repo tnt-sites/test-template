@@ -1,0 +1,19 @@
+label: About Us D
+icon: vertical_split
+description: About Us D section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-d
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - About Us D
+  icon: vertical_split
+picker_preview:
+  text: About Us D
+  subtext: About Us D section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-d/about-us-d.cloudcannon.inputs.yml

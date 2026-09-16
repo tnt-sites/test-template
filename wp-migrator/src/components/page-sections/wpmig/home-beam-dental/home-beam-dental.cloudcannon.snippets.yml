@@ -1,0 +1,10 @@
+_snippets:
+  home_beam_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Beam Dental
+    definitions:
+      component_name: page-sections/wpmig/home-beam-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-beam-dental/home-beam-dental.cloudcannon.inputs.yml

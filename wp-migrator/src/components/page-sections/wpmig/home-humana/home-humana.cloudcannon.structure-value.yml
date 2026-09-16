@@ -1,0 +1,17 @@
+label: Home Humana
+icon: interests
+description: Home Humana section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-humana
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Humana
+  icon: interests
+picker_preview:
+  text: Home Humana
+  subtext: Home Humana section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-humana/home-humana.cloudcannon.inputs.yml

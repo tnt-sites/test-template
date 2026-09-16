@@ -1,0 +1,42 @@
+referralForm:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Referral Form
+    icon: add
+  definitions:
+    component_name: ReferralForm
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: subtext
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: formAction
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: formBlocks
+        type: array
+        optional: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/forms/referral-form/referral-form.cloudcannon.inputs.yml

@@ -1,0 +1,68 @@
+---
+/**
+ * Section C — migrated from about-us [7] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  image = "",
+  imageAlt = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section-c" id={id || undefined} {...rest}>
+  <div class="sc-box">
+    <div class="sc-box2">
+      {image && <img class="sc-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="443" />}
+    </div>
+  </div>
+</section>
+<style>
+  .section-c {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .sc-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sc-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sc-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .section-c {
+      max-width: 690px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section-c {
+      max-width: 1110px;
+    }
+  }
+</style>

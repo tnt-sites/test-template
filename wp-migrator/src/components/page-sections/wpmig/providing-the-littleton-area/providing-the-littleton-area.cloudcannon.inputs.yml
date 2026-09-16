@@ -1,0 +1,9 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: html
+  embedUrl:
+    type: url
+  headingColor:
+    type: color

@@ -1,0 +1,10 @@
+_snippets:
+  metlife_employers_in_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Metlife Employers In Littleton
+    definitions:
+      component_name: page-sections/wpmig/metlife-employers-in-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/metlife-employers-in-littleton/metlife-employers-in-littleton.cloudcannon.inputs.yml

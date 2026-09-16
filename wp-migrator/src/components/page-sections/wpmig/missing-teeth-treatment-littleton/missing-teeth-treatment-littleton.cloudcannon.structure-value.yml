@@ -1,0 +1,18 @@
+label: Missing Teeth Treatment Littleton
+icon: vertical_split
+description: Missing Teeth Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/missing-teeth-treatment-littleton
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Missing Teeth Treatment Littleton
+  icon: vertical_split
+picker_preview:
+  text: Missing Teeth Treatment Littleton
+  subtext: Missing Teeth Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/missing-teeth-treatment-littleton/missing-teeth-treatment-littleton.cloudcannon.inputs.yml

@@ -1,0 +1,23 @@
+_inputs:
+  text:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  image:
+    type: image
+  imageAlt:
+    type: text
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  backgroundColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color

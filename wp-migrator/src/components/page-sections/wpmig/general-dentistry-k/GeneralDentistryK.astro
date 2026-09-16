@@ -1,0 +1,1070 @@
+---
+/**
+ * General Dentistry K — migrated from dental-services/general-dentistry/tooth-extractions [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.77)",
+  buttonBackgroundHoverColor = "#49ab71",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-k" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${hoverBackgroundColor4};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="gdk-box">
+    <div class="gdk-box2">
+      <div class="gdk-box3">
+        <div class="gdk-box4">
+          {eyebrow && <h4 class="gdk-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdk-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdk-box5">
+        <div class="gdk-box6">
+          <div class="gdk-box7">
+            <div class="gdk-box8">
+              <h2 class="gdk-heading2">{heading}</h2>
+            </div>
+            <div class="gdk-box9">
+              <div class="gdk-box10">
+                {text && <div class="gdk-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdk-box11">
+            <div class="gdk-box12">
+              {subheading && <h3 class="gdk-heading3">{subheading}</h3>}
+            </div>
+            <div class="gdk-box13">
+              <div class="gdk-box14">
+                {text2 && <p class="gdk-text">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdk-box15">
+            <div class="gdk-box16">
+              {heading2 && <h2 class="gdk-heading4">{heading2}</h2>}
+            </div>
+            <div class="gdk-box17">
+              <div class="gdk-box18">
+                {text3 && <p class="gdk-text2">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdk-box19">
+            <div class="gdk-box20">
+              <div class="gdk-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdk-box21">
+              {heading3 && <h2 class="gdk-heading5">{heading3}</h2>}
+            </div>
+            <div class="gdk-box22">
+              <div class="gdk-box23">
+                {text4 && <p class="gdk-text3" set:html={text4} />}
+              </div>
+            </div>
+            <div class="gdk-box24">
+              <div class="gdk-box25">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdk-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gdk-box26">
+              <div class="gdk-box27">
+                <div class="gdk-box28">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdk-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-k {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdk-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdk-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdk-box3 {
+    display: none;
+  }
+
+  .gdk-box4 {
+    display: none;
+  }
+
+  .gdk-heading {
+    display: none;
+  }
+
+  :global(.gdk-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdk-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdk-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdk-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdk-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdk-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdk-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdk-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box10 {
+    box-sizing: border-box;
+    min-height: 304px;
+  }
+
+  .gdk-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdk-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdk-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdk-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdk-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box14 {
+    box-sizing: border-box;
+  }
+
+  .gdk-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdk-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdk-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdk-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdk-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box18 {
+    box-sizing: border-box;
+  }
+
+  .gdk-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdk-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdk-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdk-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdk-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdk-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdk-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box23 {
+    box-sizing: border-box;
+  }
+
+  .gdk-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdk-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box25 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdk-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdk-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdk-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdk-box27 {
+    box-sizing: border-box;
+  }
+
+  .gdk-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdk-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdk-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdk-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdk-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdk-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdk-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdk-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdk-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdk-btn7):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdk-btn8):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdk-btn9):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdk-btn10):hover {
+    background-color: var(--c12);
+  }
+
+  :global(.gdk-btn11):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .gdk-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdk-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1266px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdk-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdk-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdk-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdk-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdk-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdk-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdk-heading2 {
+      line-height: 32px;
+    }
+
+    .gdk-box10 {
+      min-height: 256px;
+    }
+
+    .gdk-heading3 {
+      line-height: 28px;
+    }
+
+    .gdk-heading4 {
+      line-height: 32px;
+    }
+
+    .gdk-heading5 {
+      line-height: 32px;
+    }
+
+    .gdk-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdk-box27 {
+      display: none;
+    }
+
+    .gdk-box28 {
+      display: none;
+    }
+
+    :global(.gdk-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdk-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdk-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 878px;
+    }
+
+    :global(.gdk-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdk-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdk-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdk-box10 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdk-heading2 {
+    font-weight: 400;
+  }
+  .gdk-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdk-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gdk-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdk-box20 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gdk-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdk-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdk-box25 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdk-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gdk-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdk-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdk-heading2 {
+      font-weight: 400;
+    }
+
+    .gdk-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdk-box15 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdk-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdk-box20 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdk-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdk-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdk-text3 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gdk-box12 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .gdk-text {
+      line-height: 24px;
+    }
+
+    .gdk-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdk-heading2 {
+      font-weight: 400;
+    }
+
+    .gdk-heading3 {
+      font-weight: 400;
+    }
+
+    .gdk-heading4 {
+      font-weight: 400;
+    }
+
+    .gdk-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.gdk-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdk-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdk-text {
+      line-height: 24px;
+    }
+
+    .gdk-text2 {
+      line-height: 24px;
+    }
+
+    .gdk-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

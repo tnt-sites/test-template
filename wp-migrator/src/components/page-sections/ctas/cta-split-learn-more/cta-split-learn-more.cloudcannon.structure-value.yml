@@ -1,0 +1,50 @@
+label: CTA Split Learn More
+icon: star
+description: Side-by-side CTA with copy on one side and stacked buttons on the other. Includes feature for hidden learn more content.
+value:
+  _component: page-sections/ctas/cta-split-learn-more
+  id: ""
+  heading: Heading text
+  anchorName: ""
+  subtext: Subtext placeholder text that will be replaced with actual content.
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt: CTA image
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  learnMoreButtonText: Learn More About Heading text
+  learnMoreSections:
+    - _component: building-blocks/core-elements/heading
+      text: Learn More Details
+      level: h3
+      size: lg
+      alignX: start
+    - _component: building-blocks/core-elements/text
+      text: Add supporting information, key details, or additional context here.
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+  rounded: false
+preview:
+  text:
+    - CTA Split Learn More
+  subtext:
+    - key: heading
+  icon: hero
+picker_preview:
+  text: CTA Split Learn More
+  subtext: Split layout CTA with button stack and hidden learn more content.
+_inputs_from_glob:
+  - /src/components/page-sections/ctas/cta-split-learn-more/cta-split-learn-more.cloudcannon.inputs.yml

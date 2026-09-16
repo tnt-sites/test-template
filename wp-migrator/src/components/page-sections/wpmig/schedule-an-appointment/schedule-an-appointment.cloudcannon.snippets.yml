@@ -1,0 +1,10 @@
+_snippets:
+  schedule_an_appointment:
+    template: astro_component
+    inline: false
+    preview:
+      text: Schedule An Appointment
+    definitions:
+      component_name: page-sections/wpmig/schedule-an-appointment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/schedule-an-appointment/schedule-an-appointment.cloudcannon.inputs.yml

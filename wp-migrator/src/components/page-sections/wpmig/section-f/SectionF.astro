@@ -1,0 +1,29 @@
+---
+/**
+ * Section F — migrated from invisalign-littleton-co [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  backgroundImage = "/wp-content/uploads/2020/03/swirl-bottom.png",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section-f" id={id || undefined} style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+</section>
+<style>
+  .section-f {
+    background-image: var(--bgimg, none);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+</style>

@@ -1,0 +1,10 @@
+_snippets:
+  umr_dental_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Umr Dental Employers In
+    definitions:
+      component_name: page-sections/wpmig/umr-dental-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/umr-dental-employers-in/umr-dental-employers-in.cloudcannon.inputs.yml

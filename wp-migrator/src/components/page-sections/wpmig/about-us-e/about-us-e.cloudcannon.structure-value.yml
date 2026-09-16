@@ -1,0 +1,44 @@
+label: About Us E
+icon: vertical_split
+description: About Us E section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-e
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text: ""
+  text2: ""
+  text3: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#54595f"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor4: rgba(241, 241, 241, 0.77)
+preview:
+  text:
+    - About Us E
+  icon: vertical_split
+picker_preview:
+  text: About Us E
+  subtext: About Us E section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-e/about-us-e.cloudcannon.inputs.yml

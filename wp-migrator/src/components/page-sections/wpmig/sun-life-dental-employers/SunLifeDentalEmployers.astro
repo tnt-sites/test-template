@@ -1,0 +1,407 @@
+---
+/**
+ * Sun Life Dental Employers — migrated from sunlife-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="sun-life-dental-employers" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="slde-box">
+    <div class="slde-box2">
+      <div class="slde-box3">
+        <div class="slde-box4">
+          <div class="slde-box5">
+            {image && <img class="slde-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+          </div>
+        </div>
+        <div class="slde-box6">
+          <div class="slde-box7">
+            <h2 class="slde-heading">{heading}</h2>
+          </div>
+          <div class="slde-box8">
+            {text && <p class="slde-text">{text}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="slde-box9">
+        <div class="slde-box10">
+          {subheading && <h2 class="slde-heading2">{subheading}</h2>}
+        </div>
+        <div class="slde-box11">
+          <div class="slde-box12">
+            {text2 && <p class="slde-text2">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="slde-box13">
+        <div class="slde-box14">
+          {heading2 && <h2 class="slde-heading3" set:html={heading2} />}
+        </div>
+        <div class="slde-box15">
+          <div class="slde-box16">
+            {text3 && <p class="slde-text3">{text3}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="slde-box17">
+        <div class="slde-box18">
+          {heading3 && <h2 class="slde-heading4">{heading3}</h2>}
+        </div>
+        <div class="slde-box19">
+          <div class="slde-box20">
+            {text4 && <p class="slde-text4">{text4}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .sun-life-dental-employers {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .slde-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .slde-box2 {
+    box-sizing: border-box;
+  }
+
+  .slde-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .slde-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .slde-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .slde-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .slde-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .slde-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slde-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .slde-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slde-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .slde-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .slde-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slde-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .slde-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .slde-box12 {
+    box-sizing: border-box;
+  }
+
+  .slde-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .slde-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .slde-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slde-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .slde-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .slde-box16 {
+    box-sizing: border-box;
+  }
+
+  .slde-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .slde-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .slde-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .slde-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .slde-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .slde-box20 {
+    box-sizing: border-box;
+  }
+
+  .slde-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .slde-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .slde-box3 {
+      max-width: 1024px;
+    }
+
+    .slde-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 512px;
+    }
+
+    .slde-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .slde-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .slde-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .slde-box4 {
+      min-height: auto;
+    }
+
+    .slde-box6 {
+      min-height: 405px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .slde-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .slde-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .slde-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .slde-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .slde-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .slde-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .slde-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .slde-text {
+      line-height: 24px;
+    }
+
+    .slde-text2 {
+      line-height: 24px;
+    }
+
+    .slde-text3 {
+      line-height: 24px;
+    }
+
+    .slde-text4 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .slde-text {
+      line-height: 24px;
+    }
+
+    .slde-text2 {
+      line-height: 24px;
+    }
+
+    .slde-text3 {
+      line-height: 24px;
+    }
+
+    .slde-text4 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

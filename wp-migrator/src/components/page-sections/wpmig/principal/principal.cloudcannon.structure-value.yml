@@ -1,0 +1,18 @@
+label: Principal
+icon: vertical_split
+description: Principal section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/principal
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Principal
+  icon: vertical_split
+picker_preview:
+  text: Principal
+  subtext: Principal section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/principal/principal.cloudcannon.inputs.yml

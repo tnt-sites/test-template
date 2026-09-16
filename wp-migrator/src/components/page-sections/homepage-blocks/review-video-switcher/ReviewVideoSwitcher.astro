@@ -1,0 +1,370 @@
+---
+import { Icon as AstroIcon } from "astro-icon/components";
+import Carousel from "@wrappers/carousel/Carousel.astro";
+import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+
+interface VideoItem {
+  youtubeId: string;
+  title?: string;
+}
+
+interface ReviewItem {
+  text: string;
+  authorName: string;
+  socialIcon?: string;
+  reviewerImage?: string;
+}
+
+const {
+  heading = "",
+  watchLabel = "Watch",
+  readLabel = "Read",
+  videos = [] as VideoItem[],
+  reviews = [] as ReviewItem[],
+  showQuoteIcon = false,
+  backgroundColor = "base",
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const uid = `rvs-${Math.random().toString(36).slice(2, 7)}`;
+---
+
+<CustomSection
+  class:list={["review-video-switcher", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+
+  <div class="tab-switcher" data-uid={uid}>
+    <input
+      type="radio"
+      class="tab-input"
+      name={`rvs-tabs-${uid}`}
+      id={`tab-videos-${uid}`}
+      value="videos"
+      checked
+    />
+    <input
+      type="radio"
+      class="tab-input"
+      name={`rvs-tabs-${uid}`}
+      id={`tab-reviews-${uid}`}
+      value="reviews"
+    />
+
+    <div class="tab-nav" role="tablist">
+      <label
+        for={`tab-videos-${uid}`}
+        class="tab-label"
+        role="tab"
+        aria-selected="true"
+        data-prop="watchLabel"
+      >
+        {watchLabel}
+      </label>
+      <label
+        for={`tab-reviews-${uid}`}
+        class="tab-label"
+        role="tab"
+        aria-selected="false"
+        data-prop="readLabel"
+      >
+        {readLabel}
+      </label>
+    </div>
+
+    <div class="panels">
+      <!-- Videos Panel -->
+      <div class="panel panel-videos" role="tabpanel" aria-hidden="false">
+        {
+          videos.length > 0 ? (
+            <Carousel editable={false} class="rvs-video-carousel">
+              {videos.map((video: VideoItem) => (
+                <CarouselSlide>
+                  <div class="video-slide">
+                    <lite-youtube
+                      videoid={video.youtubeId}
+                      videotitle={video.title || "Testimonial Video"}
+                    />
+                  </div>
+                </CarouselSlide>
+              ))}
+            </Carousel>
+          ) : (
+            <p class="empty-state">No videos added yet.</p>
+          )
+        }
+      </div>
+
+      <!-- Reviews Panel -->
+      <div class="panel panel-reviews" role="tabpanel" aria-hidden="true">
+        {
+          reviews.length > 0 ? (
+            <Carousel editable={false} class="rvs-review-carousel">
+              {reviews.map((review: ReviewItem) => {
+                const hasMeta = !!(review.reviewerImage || review.socialIcon);
+                return (
+                  <CarouselSlide>
+                    <div class="review-slide">
+                      {showQuoteIcon && <i class="icon-quote quote-icon" aria-hidden="true" />}
+                      <p class="review-text">{review.text}</p>
+                      <div class:list={["review-author", { "has-meta": hasMeta }]}>
+                        {review.reviewerImage && (
+                          <img
+                            class="reviewer-img"
+                            src={review.reviewerImage}
+                            alt={review.authorName}
+                          />
+                        )}
+                        {!review.reviewerImage && review.socialIcon && (
+                          <AstroIcon name={review.socialIcon} class="social-icon" />
+                        )}
+                        <div class="author-details">
+                          <span class="stars" aria-label="5 out of 5 stars">
+                            ★★★★★
+                          </span>
+                          <span class="author-name">{review.authorName}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselSlide>
+                );
+              })}
+            </Carousel>
+          ) : (
+            <p class="empty-state">No reviews added yet.</p>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</CustomSection>
+
+<script>
+  // Update ARIA state on tab switch and trigger Embla's resize handler
+  // so the carousel in the newly-visible panel recalculates its dimensions.
+  function setupSwitchers() {
+    document.querySelectorAll<HTMLElement>(".tab-switcher").forEach((switcher) => {
+      if (switcher.hasAttribute("data-rvs-ready")) return;
+      switcher.setAttribute("data-rvs-ready", "true");
+
+      const inputs = Array.from(switcher.querySelectorAll<HTMLInputElement>(".tab-input"));
+      const labels = Array.from(switcher.querySelectorAll<HTMLElement>(".tab-label"));
+      const panels = Array.from(switcher.querySelectorAll<HTMLElement>(".panel"));
+
+      inputs.forEach((input, i) => {
+        input.addEventListener("change", () => {
+          labels.forEach((label, j) => label.setAttribute("aria-selected", String(i === j)));
+          panels.forEach((panel, j) => panel.setAttribute("aria-hidden", String(i !== j)));
+          // Give the browser one frame to apply display:block, then poke Embla
+          setTimeout(() => window.dispatchEvent(new Event("resize")), 50);
+        });
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupSwitchers);
+  } else {
+    setupSwitchers();
+  }
+  document.addEventListener("astro:page-load", setupSwitchers);
+</script>
+
+<style>
+  .tab-switcher {
+    margin-top: var(--spacing-2xl);
+  }
+
+  .tab-input {
+    display: none;
+  }
+
+  /* Tab navigation */
+  .tab-nav {
+    align-items: center;
+    display: flex;
+    gap: 0;
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .tab-label {
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0.09em;
+    padding: var(--spacing-xs) var(--spacing-md);
+    position: relative;
+    text-transform: uppercase;
+    transition: color var(--animation-normal, 0.2s) ease;
+  }
+
+  .tab-label + .tab-label::before {
+    background-color: currentcolor;
+    content: "";
+    height: 1.2em;
+    inset-inline-start: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+  }
+
+  /* Active tab underline */
+  .tab-input:nth-of-type(1):checked ~ .tab-nav .tab-label:nth-of-type(1),
+  .tab-input:nth-of-type(2):checked ~ .tab-nav .tab-label:nth-of-type(2) {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Panel visibility */
+  .panel {
+    display: none;
+  }
+
+  .tab-input:nth-of-type(1):checked ~ .panels .panel:nth-of-type(1),
+  .tab-input:nth-of-type(2):checked ~ .panels .panel:nth-of-type(2) {
+    display: block;
+  }
+
+  /* Divider bar */
+  .divider {
+    background-color: currentcolor;
+    display: block;
+    height: 4px;
+    margin: var(--spacing-md) auto;
+    max-width: 100%;
+    opacity: 0.6;
+    width: 273px;
+  }
+
+  /* Video slide YouTube embed */
+  :global(.review-video-switcher lite-youtube) {
+    aspect-ratio: 16 / 9;
+    display: block;
+    margin: var(--spacing-md) auto;
+    max-width: 100%;
+  }
+
+  /* Review slide content */
+  .review-slide {
+    padding: 0 var(--spacing-md);
+    position: relative;
+    text-align: center;
+  }
+
+  .quote-icon {
+    color: currentcolor;
+    display: block;
+    font-size: 6rem;
+    line-height: 0.8;
+    opacity: 0.15;
+    transform: rotate(180deg);
+  }
+
+  .review-text {
+    font-size: clamp(1rem, 2.5vw, 1.375rem);
+    line-height: 1.3;
+    margin: 0 auto var(--spacing-md);
+    max-width: 500px;
+  }
+
+  .review-author {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .review-author.has-meta {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    text-align: left;
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .reviewer-img {
+    border-radius: var(--radius-full, 50%);
+    flex-shrink: 0;
+    height: 3.5rem;
+    object-fit: cover;
+    width: 3.5rem;
+  }
+
+  .social-icon {
+    flex-shrink: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  :global(.social-icon[data-icon="social/google"]) {
+    color: var(--color-social-google);
+  }
+  :global(.social-icon[data-icon="social/facebook"]) {
+    color: var(--color-social-facebook);
+  }
+  :global(.social-icon[data-icon="social/yelp"]) {
+    color: var(--color-social-yelp);
+  }
+  :global(.social-icon[data-icon="social/instagram"]) {
+    color: var(--color-social-instagram);
+  }
+  :global(.social-icon[data-icon="social/x"]) {
+    color: var(--color-social-twitter);
+  }
+  :global(.social-icon[data-icon="social/youtube"]) {
+    color: var(--color-social-youtube);
+  }
+  :global(.social-icon[data-icon="social/tiktok"]) {
+    color: var(--color-social-tiktok);
+  }
+  :global(.social-icon[data-icon="social/bluesky"]) {
+    color: var(--color-social-bluesky);
+  }
+
+  .stars {
+    color: var(--color-star, #febb21);
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  .author-name {
+    font-size: 1.375rem;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  /* Empty state */
+  .empty-state {
+    opacity: 0.6;
+    padding: var(--spacing-2xl);
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,17 @@
+label: Home Payment Options Flexible
+icon: interests
+description: Home Payment Options Flexible section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-payment-options-flexible
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Payment Options Flexible
+  icon: interests
+picker_preview:
+  text: Home Payment Options Flexible
+  subtext: Home Payment Options Flexible section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-payment-options-flexible/home-payment-options-flexible.cloudcannon.inputs.yml

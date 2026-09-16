@@ -1,0 +1,10 @@
+_snippets:
+  aetna_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Aetna Dental
+    definitions:
+      component_name: page-sections/wpmig/aetna-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/aetna-dental/aetna-dental.cloudcannon.inputs.yml

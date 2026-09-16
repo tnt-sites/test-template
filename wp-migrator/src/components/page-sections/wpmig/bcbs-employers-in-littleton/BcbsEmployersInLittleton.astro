@@ -1,0 +1,354 @@
+---
+/**
+ * Bcbs Employers In Littleton — migrated from blue-cross-blue-shield-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  text5 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="bcbs-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="beil-box">
+    <div class="beil-box2">
+      <div class="beil-box3">
+        <div class="beil-box4">
+          <div class="beil-box5">
+            {image && <img class="beil-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="474" />}
+          </div>
+        </div>
+        <div class="beil-box6">
+          <div class="beil-box7">
+            <h2 class="beil-heading">{heading}</h2>
+          </div>
+          <div class="beil-box8">
+            {text && <div class="beil-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="beil-box9">
+        <div class="beil-box10">
+          {subheading && <h2 class="beil-heading2">{subheading}</h2>}
+        </div>
+        <div class="beil-box11">
+          {text2 && <div class="beil-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="beil-box12">
+        <div class="beil-box13">
+          {heading2 && <h2 class="beil-heading3">{heading2}</h2>}
+        </div>
+        <div class="beil-box14">
+          {text3 && <div class="beil-text3">{text3}</div>}
+        </div>
+      </div>
+      <div class="beil-box15">
+        <div class="beil-box16">
+          {heading3 && <h2 class="beil-heading4">{heading3}</h2>}
+        </div>
+        <div class="beil-box17">
+          {text4 && <div class="beil-text4">{text4}</div>}
+          <div class="beil-box18">
+            {text5 && <div class="beil-body" set:html={text5} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .bcbs-employers-in-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .beil-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .beil-box2 {
+    box-sizing: border-box;
+  }
+
+  .beil-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .beil-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .beil-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .beil-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .beil-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .beil-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .beil-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .beil-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .beil-text {
+    box-sizing: border-box;
+  }
+
+  .beil-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .beil-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .beil-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .beil-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .beil-text2 {
+    box-sizing: border-box;
+  }
+
+  .beil-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .beil-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .beil-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .beil-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .beil-text3 {
+    box-sizing: border-box;
+  }
+
+  .beil-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .beil-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .beil-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .beil-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .beil-text4 {
+    box-sizing: border-box;
+  }
+
+  .beil-box18 {
+    box-sizing: border-box;
+  }
+
+  .beil-body :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .beil-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .beil-box3 {
+      max-width: 1024px;
+    }
+
+    .beil-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 424px;
+    }
+
+    .beil-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .beil-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .beil-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .beil-box4 {
+      min-height: auto;
+    }
+
+    .beil-box6 {
+      min-height: 429px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .beil-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .beil-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .beil-box3 {
+    text-align: center;
+  }
+  .beil-box4 {
+    text-align: center;
+  }
+  .beil-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .beil-media {
+    text-align: left;
+  }
+/* wpmig:corrections:end */
+</style>

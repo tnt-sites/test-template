@@ -1,0 +1,26 @@
+label: Call Us Today To B
+icon: grid_view
+description: Call Us Today To B section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-to-b
+  id: ""
+  text: ""
+  text2: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text3: ""
+  text4: ""
+  heading: ""
+  items:
+    - text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today To B
+  icon: grid_view
+picker_preview:
+  text: Call Us Today To B
+  subtext: Call Us Today To B section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-to-b/call-us-today-to-b.cloudcannon.inputs.yml

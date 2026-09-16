@@ -1,0 +1,1145 @@
+---
+/**
+ * General Dentistry H — migrated from dental-services/general-dentistry/periodontal-therapy [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  heading2 = "",
+  text5 = "",
+  heading3 = "",
+  text6 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="gdh-box">
+    <div class="gdh-box2">
+      <div class="gdh-box3">
+        <div class="gdh-box4">
+          {eyebrow && <h4 class="gdh-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdh-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdh-box5">
+        <div class="gdh-box6">
+          <div class="gdh-box7">
+            <div class="gdh-box8">
+              <h2 class="gdh-heading2">{heading}</h2>
+            </div>
+            <div class="gdh-box9">
+              <div class="gdh-box10">
+                {text && <p class="gdh-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdh-box11">
+            <div class="gdh-box12">
+              {subheading && <h3 class="gdh-heading3">{subheading}</h3>}
+            </div>
+            <div class="gdh-box13">
+              <div class="gdh-box14">
+                {text2 && <p class="gdh-text2">{text2}</p>}
+              </div>
+            </div>
+            <div class="gdh-box15">
+              {text3 && <div class="gdh-body" set:html={text3} />}
+            </div>
+            <div class="gdh-box16">
+              <div class="gdh-box17">
+                {text4 && <p class="gdh-text3">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdh-box18">
+            <div class="gdh-box19">
+              {heading2 && <h3 class="gdh-heading4" set:html={heading2} />}
+            </div>
+            <div class="gdh-box20">
+              <div class="gdh-box21">
+                {text5 && <div class="gdh-body2" set:html={text5} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdh-box22">
+            <div class="gdh-box23">
+              <div class="gdh-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdh-box24">
+              {heading3 && <h2 class="gdh-heading5">{heading3}</h2>}
+            </div>
+            <div class="gdh-box25">
+              <div class="gdh-box26">
+                {text6 && <p class="gdh-text4" set:html={text6} />}
+              </div>
+            </div>
+            <div class="gdh-box27">
+              <div class="gdh-box28">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdh-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gdh-box29">
+              <div class="gdh-box30">
+                <div class="gdh-box31">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdh-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-h {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdh-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdh-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdh-box3 {
+    display: none;
+  }
+
+  .gdh-box4 {
+    display: none;
+  }
+
+  .gdh-heading {
+    display: none;
+  }
+
+  :global(.gdh-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdh-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdh-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdh-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdh-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdh-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdh-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdh-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdh-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdh-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box10 {
+    box-sizing: border-box;
+  }
+
+  .gdh-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdh-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdh-box11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdh-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdh-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdh-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box14 {
+    box-sizing: border-box;
+  }
+
+  .gdh-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdh-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdh-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdh-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .gdh-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box17 {
+    box-sizing: border-box;
+  }
+
+  .gdh-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdh-box18 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdh-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdh-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdh-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box21 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .gdh-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdh-box22 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdh-box23 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdh-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdh-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdh-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdh-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box26 {
+    box-sizing: border-box;
+  }
+
+  .gdh-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdh-box27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdh-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdh-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdh-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdh-box30 {
+    box-sizing: border-box;
+  }
+
+  .gdh-box31 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdh-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdh-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdh-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdh-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdh-btn3):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdh-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdh-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdh-btn6):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdh-btn7):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdh-btn8):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdh-btn9):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdh-btn10):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdh-btn11):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .gdh-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdh-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1604px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdh-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdh-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdh-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdh-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdh-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdh-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdh-heading2 {
+      line-height: 32px;
+    }
+
+    .gdh-heading3 {
+      line-height: 28px;
+    }
+
+    .gdh-heading4 {
+      line-height: 28px;
+    }
+
+    .gdh-box21 {
+      min-height: 304px;
+    }
+
+    .gdh-heading5 {
+      line-height: 32px;
+    }
+
+    .gdh-box29 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdh-box30 {
+      display: none;
+    }
+
+    .gdh-box31 {
+      display: none;
+    }
+
+    :global(.gdh-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdh-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdh-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1172px;
+    }
+
+    :global(.gdh-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdh-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdh-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdh-box21 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdh-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdh-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdh-decor {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gdh-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdh-box27 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdh-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gdh-box19 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  :global(.gdh-btn10) {
+    align-items: normal;
+    background-color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  .gdh-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdh-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdh-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdh-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdh-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdh-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdh-decor {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdh-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdh-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdh-box27 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gdh-box12 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .gdh-box19 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .gdh-text {
+      line-height: 24px;
+    }
+
+    .gdh-text2 {
+      line-height: 24px;
+    }
+
+    .gdh-text3 {
+      line-height: 24px;
+    }
+
+    .gdh-text4 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdh-heading3 {
+      font-weight: 400;
+    }
+
+    .gdh-heading4 {
+      font-weight: 400;
+    }
+
+    .gdh-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.gdh-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdh-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdh-text {
+      line-height: 24px;
+    }
+
+    .gdh-text2 {
+      line-height: 24px;
+    }
+
+    .gdh-text3 {
+      line-height: 24px;
+    }
+
+    .gdh-text4 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

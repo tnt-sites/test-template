@@ -1,0 +1,55 @@
+label: About Us G
+icon: vertical_split
+description: About Us G section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-g
+  id: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  image: ""
+  imageAlt: ""
+  heading: ""
+  text: ""
+  image2: ""
+  image2Alt: ""
+  heading2: ""
+  text2: ""
+  image3: ""
+  image3Alt: ""
+  heading3: ""
+  text3: ""
+  image4: ""
+  image4Alt: ""
+  heading4: ""
+  text4: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor4: rgba(241, 241, 241, 0.68)
+  buttonBackgroundHoverColor: "#4bad73"
+preview:
+  text:
+    - About Us G
+  icon: vertical_split
+picker_preview:
+  text: About Us G
+  subtext: About Us G section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-g/about-us-g.cloudcannon.inputs.yml

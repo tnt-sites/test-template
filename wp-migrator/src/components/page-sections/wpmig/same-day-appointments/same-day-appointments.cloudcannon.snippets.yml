@@ -1,0 +1,10 @@
+_snippets:
+  same_day_appointments:
+    template: astro_component
+    inline: false
+    preview:
+      text: Same Day Appointments
+    definitions:
+      component_name: page-sections/wpmig/same-day-appointments
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/same-day-appointments/same-day-appointments.cloudcannon.inputs.yml

@@ -1,0 +1,17 @@
+label: Home United Healthcare
+icon: interests
+description: Home United Healthcare section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-united-healthcare
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home United Healthcare
+  icon: interests
+picker_preview:
+  text: Home United Healthcare
+  subtext: Home United Healthcare section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-united-healthcare/home-united-healthcare.cloudcannon.inputs.yml

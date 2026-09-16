@@ -1,0 +1,85 @@
+---
+/**
+ * Cosmetic Dentistry Dentist In — migrated from partners [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="cosmetic-dentistry-dentist-in" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="cddi-box">
+    <div class="cddi-box2">
+      <div class="cddi-box3">
+        {text && <div class="cddi-body" set:html={text} />}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cosmetic-dentistry-dentist-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cddi-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cddi-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cddi-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1248px;
+  }
+
+  .cddi-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .cddi-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cddi-box3 {
+      min-height: 864px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cddi-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cddi-box3 {
+      min-height: 624px;
+    }
+  }
+</style>

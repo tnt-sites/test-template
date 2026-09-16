@@ -1,0 +1,17 @@
+label: Home Tooth Pain Treatment
+icon: interests
+description: Home Tooth Pain Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-tooth-pain-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Tooth Pain Treatment
+  icon: interests
+picker_preview:
+  text: Home Tooth Pain Treatment
+  subtext: Home Tooth Pain Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-tooth-pain-treatment/home-tooth-pain-treatment.cloudcannon.inputs.yml

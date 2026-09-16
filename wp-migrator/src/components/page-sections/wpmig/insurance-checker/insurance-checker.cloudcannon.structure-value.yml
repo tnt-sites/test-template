@@ -1,0 +1,18 @@
+label: Insurance Checker
+icon: vertical_split
+description: Insurance Checker section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/insurance-checker
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Insurance Checker
+  icon: vertical_split
+picker_preview:
+  text: Insurance Checker
+  subtext: Insurance Checker section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/insurance-checker/insurance-checker.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  home_tooth_pain_treatment:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Tooth Pain Treatment
+    definitions:
+      component_name: page-sections/wpmig/home-tooth-pain-treatment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-tooth-pain-treatment/home-tooth-pain-treatment.cloudcannon.inputs.yml

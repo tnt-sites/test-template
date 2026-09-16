@@ -1,0 +1,10 @@
+_snippets:
+  if_youre_experiencing_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: If Youre Experiencing Dental
+    definitions:
+      component_name: page-sections/wpmig/if-youre-experiencing-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/if-youre-experiencing-dental/if-youre-experiencing-dental.cloudcannon.inputs.yml

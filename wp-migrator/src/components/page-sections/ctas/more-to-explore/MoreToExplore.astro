@@ -1,0 +1,93 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  maxContentWidth,
+  paddingHorizontal,
+  buttonSections = [],
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  paddingVertical = "4xl",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["more-to-explore", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <Heading
+    class="more-to-explore__heading mt-12"
+    level="h6"
+    size="xl"
+    alignX="center"
+    text={heading}
+    data-prop="heading"
+  />
+  <ButtonGroup class="buttons" buttonSections={buttonSections} alignX="center" />
+</CustomSection>
+
+<style is:global>
+  .more-to-explore {
+    .more-to-explore__heading {
+      font-size: 70px;
+      line-height:;
+    }
+  }
+
+  @layer components {
+    .more-to-explore__heading .heading-text .color {
+      color: var(--color-brand);
+    }
+
+    .more-to-explore .buttons,
+    .more-to-explore .buttons > editable-array {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      justify-content: center;
+    }
+
+    .more-to-explore .buttons .button {
+      flex: 0 0 350px;
+      min-width: 350px;
+      width: 350px;
+    }
+
+    @media (max-width: 768px) {
+      .more-to-explore .buttons,
+      .more-to-explore .buttons > editable-array {
+        flex-direction: column;
+      }
+
+      .more-to-explore .buttons > editable-array-item,
+      .more-to-explore .buttons > editable-array > editable-array-item {
+        width: 100%;
+      }
+
+      .more-to-explore .buttons .button {
+        flex-basis: 100%;
+        min-width: auto;
+        width: 100%;
+      }
+    }
+  }
+</style>

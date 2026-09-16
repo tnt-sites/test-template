@@ -1,0 +1,10 @@
+_snippets:
+  dental_conditions:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dental Conditions
+    definitions:
+      component_name: page-sections/wpmig/dental-conditions
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dental-conditions/dental-conditions.cloudcannon.inputs.yml

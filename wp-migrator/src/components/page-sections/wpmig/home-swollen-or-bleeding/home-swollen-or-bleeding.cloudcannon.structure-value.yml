@@ -1,0 +1,17 @@
+label: Home Swollen Or Bleeding
+icon: interests
+description: Home Swollen Or Bleeding section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-swollen-or-bleeding
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Swollen Or Bleeding
+  icon: interests
+picker_preview:
+  text: Home Swollen Or Bleeding
+  subtext: Home Swollen Or Bleeding section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-swollen-or-bleeding/home-swollen-or-bleeding.cloudcannon.inputs.yml

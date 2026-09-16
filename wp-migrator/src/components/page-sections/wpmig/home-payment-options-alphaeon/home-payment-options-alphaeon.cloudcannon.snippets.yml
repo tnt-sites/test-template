@@ -1,0 +1,10 @@
+_snippets:
+  home_payment_options_alphaeon:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Payment Options Alphaeon
+    definitions:
+      component_name: page-sections/wpmig/home-payment-options-alphaeon
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-payment-options-alphaeon/home-payment-options-alphaeon.cloudcannon.inputs.yml

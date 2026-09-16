@@ -1,0 +1,17 @@
+label: Everything From Scheduling Appointments
+icon: interests
+description: Everything From Scheduling Appointments section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/everything-from-scheduling-appointments
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Everything From Scheduling Appointments
+  icon: interests
+picker_preview:
+  text: Everything From Scheduling Appointments
+  subtext: Everything From Scheduling Appointments section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/everything-from-scheduling-appointments/everything-from-scheduling-appointments.cloudcannon.inputs.yml

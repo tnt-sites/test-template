@@ -1,0 +1,10 @@
+_snippets:
+  weve_considered_every_detail:
+    template: astro_component
+    inline: false
+    preview:
+      text: Weve Considered Every Detail
+    definitions:
+      component_name: page-sections/wpmig/weve-considered-every-detail
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/weve-considered-every-detail/weve-considered-every-detail.cloudcannon.inputs.yml

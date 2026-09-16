@@ -1,0 +1,18 @@
+label: Lp
+icon: vertical_split
+description: Lp section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/lp
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Lp
+  icon: vertical_split
+picker_preview:
+  text: Lp
+  subtext: Lp section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/lp/lp.cloudcannon.inputs.yml

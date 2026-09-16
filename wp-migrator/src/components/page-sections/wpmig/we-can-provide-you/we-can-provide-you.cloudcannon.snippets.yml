@@ -1,0 +1,10 @@
+_snippets:
+  we_can_provide_you:
+    template: astro_component
+    inline: false
+    preview:
+      text: We Can Provide You
+    definitions:
+      component_name: page-sections/wpmig/we-can-provide-you
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/we-can-provide-you/we-can-provide-you.cloudcannon.inputs.yml

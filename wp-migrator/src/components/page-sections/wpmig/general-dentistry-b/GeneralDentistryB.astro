@@ -1,0 +1,1128 @@
+---
+/**
+ * General Dentistry B — migrated from dental-services/general-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  heading2 = "",
+  text2 = "",
+  heading3 = "",
+  text3 = "",
+  heading4 = "",
+  text4 = "",
+  images = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#d44d5c",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<div class="general-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`} {...rest}>
+  <div class="gdb-box">
+    <div class="gdb-box2">
+      <div class="gdb-box3">
+        <div class="gdb-box4">
+          {eyebrow && <h4 class="gdb-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdb-box5">
+        <div class="gdb-box6">
+          <div class="gdb-box7">
+            <div class="gdb-box8">
+              <h2 class="gdb-heading2">{heading}</h2>
+            </div>
+            <div class="gdb-box9">
+              {text && <div class="gdb-text" set:html={text} />}
+            </div>
+            <div class="gdb-box10">
+              {subheading && <h4 class="gdb-heading3">{subheading}</h4>}
+            </div>
+            <div class="gdb-grid">
+              {list.map((it) => (
+                <div class="gdb-box11">
+                  <div class="gdb-box12">
+                    <div class="gdb-box13">
+                      {it.image && <img class="gdb-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="150" height="150" />}
+                    </div>
+                    <div class="gdb-box14">
+                      <div class="gdb-text2">{it.text}</div>
+                    </div>
+                    <div class="gdb-box15">
+                      <p class="gdb-text3">{it.text2}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <section class="gdb-box56">
+            <div class="gdb-box57">
+              <div class="gdb-box58">
+                {heading2 && <h2 class="gdb-heading4">{heading2}</h2>}
+              </div>
+              <div class="gdb-box59">
+                <div class="gdb-box60">
+                  {text2 && <p class="gdb-text20">{text2}</p>}
+                </div>
+              </div>
+              <div class="gdb-box61">
+                {heading3 && <h4 class="gdb-heading5" set:html={heading3} />}
+              </div>
+              <div class="gdb-box62">
+                <div class="gdb-box63">
+                  {text3 && <p class="gdb-text21">{text3}</p>}
+                </div>
+              </div>
+              <div class="gdb-box64">
+                {heading4 && <h4 class="gdb-heading6">{heading4}</h4>}
+              </div>
+              <div class="gdb-box65">
+                <div class="gdb-box66">
+                  {text4 && <p class="gdb-text22" set:html={text4} />}
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdb-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdb-box3 {
+    display: none;
+  }
+
+  .gdb-box4 {
+    display: none;
+  }
+
+  .gdb-heading {
+    display: none;
+  }
+
+  :global(.gdb-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdb-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdb-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 2545px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdb-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdb-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 1500px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdb-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdb-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdb-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdb-text {
+    box-sizing: border-box;
+  }
+
+  .gdb-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdb-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdb-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+  }
+
+  .gdb-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .gdb-box12 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdb-box13 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .gdb-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .gdb-box14 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .gdb-text2 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .gdb-box15 {
+    display: none;
+  }
+
+  .gdb-text3 {
+    display: none;
+  }
+
+  .gdb-box56 {
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    position: relative;
+  }
+
+  .gdb-box57 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdb-box58 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdb-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdb-box59 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdb-box60 {
+    box-sizing: border-box;
+  }
+
+  .gdb-text20 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdb-box61 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdb-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdb-box62 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdb-box63 {
+    box-sizing: border-box;
+  }
+
+  .gdb-text21 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdb-box64 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdb-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdb-box65 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdb-box66 {
+    box-sizing: border-box;
+  }
+
+  .gdb-text22 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  :global(.gdb-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.gdb-btn2):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.gdb-btn3):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.gdb-btn4):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.gdb-btn5):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.gdb-btn6):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdb-btn7):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.gdb-btn8):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdb-btn9):hover {
+    background-color: var(--c8);
+  }
+
+  @media (min-width: 768px) {
+    .gdb-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdb-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1900px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdb-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdb-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdb-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdb-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdb-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdb-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+      min-height: 1900px;
+    }
+
+    .gdb-box7 {
+      min-height: 1064px;
+    }
+
+    .gdb-heading2 {
+      line-height: 32px;
+    }
+
+    .gdb-heading3 {
+      line-height: 24px;
+    }
+
+    .gdb-box12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gdb-box13 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .gdb-media {
+      width: 100%;
+    }
+
+    .gdb-box14 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .gdb-box15 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+      text-align: center;
+    }
+
+    .gdb-text3 {
+      box-sizing: border-box;
+      color: var(--c5);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .gdb-heading4 {
+      line-height: 32px;
+    }
+
+    .gdb-heading5 {
+      line-height: 24px;
+    }
+
+    .gdb-heading6 {
+      line-height: 24px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdb-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdb-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1527px;
+    }
+
+    :global(.gdb-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdb-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdb-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+      min-height: 1527px;
+    }
+
+    .gdb-box7 {
+      min-height: 907px;
+    }
+
+    .gdb-box12 {
+      flex: 0 0 90.05%;
+      max-width: 90.05%;
+    }
+
+    .gdb-box13 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .gdb-box14 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .gdb-box15 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdb-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdb-box62 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+  }
+  .gdb-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdb-text20 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdb-text21 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdb-text22 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdb-box63 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdb-box15 {
+      color: rgb(212, 77, 92);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+    }
+
+    .gdb-text3 {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .gdb-box58 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
+    .gdb-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdb-box12 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      text-align: center;
+    }
+
+    .gdb-text20 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .gdb-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .gdb-text21 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .gdb-box11 {
+      align-items: center;
+      background-color: rgb(245, 245, 245);
+    }
+
+    .gdb-box62 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-box63 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.gdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdb-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdb-text20 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .gdb-text21 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-text22 {
+      line-height: 24px;
+    }
+
+    .gdb-box15 {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-text3 {
+      color: rgb(212, 77, 92);
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      text-align: center;
+    }
+
+    .gdb-box58 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
+    .gdb-box62 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-box63 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdb-box12 {
+      align-items: center;
+      background-color: rgb(245, 245, 245);
+      text-align: left;
+    }
+
+    .gdb-heading5 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+    }
+
+    .gdb-heading6 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+    }
+
+    .gdb-box11 {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+    }
+  }
+/* wpmig:corrections:end */
+</style>

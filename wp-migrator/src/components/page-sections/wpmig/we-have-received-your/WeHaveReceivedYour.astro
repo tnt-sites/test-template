@@ -1,0 +1,112 @@
+---
+/**
+ * We Have Received Your — migrated from thank-you-for-your-payment [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="we-have-received-your" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="whry-box">
+    <div class="whry-box2">
+      <div class="whry-box3">
+        <h2 class="whry-heading">{heading}</h2>
+      </div>
+      <div class="whry-box4">
+        {text && <div class="whry-text" set:html={text} />}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .we-have-received-your {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .whry-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .whry-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .whry-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .whry-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .whry-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .whry-text {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .whry-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .whry-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .whry-heading {
+    font-weight: 400;
+  }
+  @media (min-width: 768px) {
+    .whry-heading {
+      font-weight: 400;
+    }
+  }
+  @media (min-width: 1440px) {
+    .whry-heading {
+      font-weight: 400;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,10 @@
+_snippets:
+  paperless_check_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Paperless Check In
+    definitions:
+      component_name: page-sections/wpmig/paperless-check-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/paperless-check-in/paperless-check-in.cloudcannon.inputs.yml

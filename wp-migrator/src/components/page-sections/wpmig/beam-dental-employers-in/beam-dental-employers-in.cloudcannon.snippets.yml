@@ -1,0 +1,10 @@
+_snippets:
+  beam_dental_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Beam Dental Employers In
+    definitions:
+      component_name: page-sections/wpmig/beam-dental-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/beam-dental-employers-in/beam-dental-employers-in.cloudcannon.inputs.yml

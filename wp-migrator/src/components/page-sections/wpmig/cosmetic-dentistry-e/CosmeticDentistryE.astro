@@ -1,0 +1,935 @@
+---
+/**
+ * Cosmetic Dentistry E — migrated from dental-services/cosmetic-dentistry/white-fillings [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  heading3 = "",
+  text5 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="cosmetic-dentistry-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${buttonBackgroundHoverColor};--c11:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="cde-box">
+    <div class="cde-box2">
+      <div class="cde-box3">
+        <div class="cde-box4">
+          {eyebrow && <h4 class="cde-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+        </div>
+      </div>
+      <div class="cde-box5">
+        <div class="cde-box6">
+          <div class="cde-box7">
+            <div class="cde-box8">
+              <h2 class="cde-heading2">{heading}</h2>
+            </div>
+            <div class="cde-box9">
+              <div class="cde-box10">
+                {text && <div class="cde-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="cde-box11">
+            <div class="cde-box12">
+              {subheading && <h3 class="cde-heading3">{subheading}</h3>}
+            </div>
+            <div class="cde-box13">
+              {text2 && <div class="cde-body2" set:html={text2} />}
+            </div>
+            <div class="cde-box14">
+              <div class="cde-box15">
+                {text3 && <p class="cde-text">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cde-box16">
+            <div class="cde-box17">
+              {heading2 && <h3 class="cde-heading4">{heading2}</h3>}
+            </div>
+            <div class="cde-box18">
+              <div class="cde-box19">
+                {text4 && <p class="cde-text2">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cde-box20">
+            <div class="cde-box21">
+              <div class="cde-decor" aria-hidden="true"></div>
+            </div>
+            <div class="cde-box22">
+              {heading3 && <h2 class="cde-heading5">{heading3}</h2>}
+            </div>
+            <div class="cde-box23">
+              <div class="cde-box24">
+                {text5 && <div class="cde-text3" set:html={text5} />}
+              </div>
+            </div>
+            <div class="cde-box25">
+              <div class="cde-box26">
+                {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cde-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+              </div>
+            </div>
+            <div class="cde-box27">
+              <div class="cde-box28">
+                <div class="cde-box29">
+                  {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cde-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cosmetic-dentistry-e {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cde-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cde-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .cde-box3 {
+    display: none;
+  }
+
+  .cde-box4 {
+    display: none;
+  }
+
+  .cde-heading {
+    display: none;
+  }
+
+  :global(.cde-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cde-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cde-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cde-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cde-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .cde-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cde-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cde-box6 {
+    box-sizing: border-box;
+  }
+
+  .cde-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cde-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cde-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cde-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cde-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box10 {
+    box-sizing: border-box;
+    min-height: 280px;
+  }
+
+  .cde-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cde-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cde-box11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cde-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cde-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cde-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cde-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .cde-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .cde-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box15 {
+    box-sizing: border-box;
+  }
+
+  .cde-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cde-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cde-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cde-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cde-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box19 {
+    box-sizing: border-box;
+  }
+
+  .cde-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cde-box20 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cde-box21 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cde-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .cde-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cde-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cde-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box24 {
+    box-sizing: border-box;
+  }
+
+  .cde-text3 {
+    box-sizing: border-box;
+  }
+
+  .cde-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box26 {
+    box-sizing: border-box;
+  }
+
+  :global(.cde-btn6) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cde-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cde-box27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cde-box28 {
+    box-sizing: border-box;
+  }
+
+  .cde-box29 {
+    box-sizing: border-box;
+  }
+
+  :global(.cde-btn7) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cde-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cde-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cde-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cde-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cde-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cde-btn5):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cde-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.cde-btn7):hover {
+    background-color: var(--c11);
+  }
+
+  @media (min-width: 768px) {
+    .cde-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cde-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1509px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .cde-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cde-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.cde-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cde-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .cde-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .cde-heading2 {
+      line-height: 32px;
+    }
+
+    .cde-box10 {
+      min-height: 208px;
+    }
+
+    .cde-heading3 {
+      line-height: 28px;
+    }
+
+    .cde-heading4 {
+      line-height: 28px;
+    }
+
+    .cde-heading5 {
+      line-height: 32px;
+    }
+
+    .cde-box27 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .cde-box28 {
+      display: none;
+    }
+
+    .cde-box29 {
+      display: none;
+    }
+
+    :global(.cde-btn7) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cde-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cde-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1121px;
+    }
+
+    .cde-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .cde-box10 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cde-heading2 {
+    font-weight: 400;
+  }
+  .cde-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cde-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cde-box21 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .cde-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cde-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cde-box26 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cde-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cde-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cde-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cde-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cde-heading2 {
+      font-weight: 400;
+    }
+
+    .cde-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cde-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cde-box21 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cde-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.cde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .cde-text3 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .cde-box12 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cde-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cde-text {
+      line-height: 24px;
+    }
+
+    .cde-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cde-heading2 {
+      font-weight: 400;
+    }
+
+    .cde-heading3 {
+      font-weight: 400;
+    }
+
+    .cde-heading4 {
+      font-weight: 400;
+    }
+
+    .cde-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.cde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cde-btn6) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cde-text {
+      line-height: 24px;
+    }
+
+    .cde-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

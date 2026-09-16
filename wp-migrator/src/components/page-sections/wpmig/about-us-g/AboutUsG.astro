@@ -1,0 +1,1299 @@
+---
+/**
+ * About Us G — migrated from about-us/patient-reviews [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  subheading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  image = "",
+  imageAlt = "",
+  heading = "",
+  text = "",
+  image2 = "",
+  image2Alt = "",
+  heading2 = "",
+  text2 = "",
+  image3 = "",
+  image3Alt = "",
+  heading3 = "",
+  text3 = "",
+  image4 = "",
+  image4Alt = "",
+  heading4 = "",
+  text4 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="about-us-g" id={id || undefined} style={`--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3};--c8:${hoverBackgroundColor4};--c9:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="aug-box">
+    <div class="aug-box2">
+      <div class="aug-box3">
+        <div class="aug-box4">
+          {subheading && <h4 class="aug-heading">{subheading}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+        </div>
+      </div>
+      <div class="aug-box5">
+        <div class="aug-box6">
+          <div class="aug-box7">
+            <div class="aug-box8">
+              {image && <img class="aug-media" src={image} alt={imageAlt || ""} loading="lazy" width="413" height="77" />}
+            </div>
+            <div class="aug-box9">
+              <h4 class="aug-heading2">{heading}</h4>
+            </div>
+            <div class="aug-box10">
+              <div class="aug-box11">
+                {text && <p class="aug-text">{text}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aug-box12">
+            <div class="aug-box13">
+              <div class="aug-decor" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="aug-box14">
+            <div class="aug-box15">
+              {image2 && <img class="aug-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="413" height="77" />}
+            </div>
+            <div class="aug-box16">
+              {heading2 && <h4 class="aug-heading3">{heading2}</h4>}
+            </div>
+            <div class="aug-box17">
+              <div class="aug-box18">
+                {text2 && <p class="aug-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aug-box19">
+            <div class="aug-box20">
+              <div class="aug-decor2" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="aug-box21">
+            <div class="aug-box22">
+              {image3 && <img class="aug-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="413" height="77" />}
+            </div>
+            <div class="aug-box23">
+              {heading3 && <h4 class="aug-heading4">{heading3}</h4>}
+            </div>
+            <div class="aug-box24">
+              <div class="aug-box25">
+                {text3 && <p class="aug-text3">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aug-box26">
+            <div class="aug-box27">
+              <div class="aug-decor3" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="aug-box28">
+            <div class="aug-box29">
+              {image4 && <img class="aug-media4" src={image4} alt={image4Alt || ""} loading="lazy" width="413" height="77" />}
+            </div>
+            <div class="aug-box30">
+              {heading4 && <h4 class="aug-heading5">{heading4}</h4>}
+            </div>
+            <div class="aug-box31">
+              <div class="aug-box32">
+                {text4 && <p class="aug-text4">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="aug-box33">
+            <div class="aug-box34">
+              {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aug-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-us-g {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .aug-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aug-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .aug-box3 {
+    display: none;
+  }
+
+  .aug-box4 {
+    display: none;
+  }
+
+  .aug-heading {
+    display: none;
+  }
+
+  :global(.aug-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aug-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aug-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aug-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aug-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aug-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .aug-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .aug-box6 {
+    box-sizing: border-box;
+  }
+
+  .aug-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aug-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .aug-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: -10px;
+    max-width: 100%;
+  }
+
+  .aug-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aug-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aug-box11 {
+    box-sizing: border-box;
+  }
+
+  .aug-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aug-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box13 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .aug-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .aug-box14 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aug-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .aug-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: -10px;
+    max-width: 100%;
+  }
+
+  .aug-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aug-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aug-box18 {
+    box-sizing: border-box;
+  }
+
+  .aug-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aug-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .aug-decor2 {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .aug-box21 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aug-media3 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .aug-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: -10px;
+    max-width: 100%;
+  }
+
+  .aug-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aug-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aug-box25 {
+    box-sizing: border-box;
+  }
+
+  .aug-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aug-box26 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box27 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .aug-decor3 {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .aug-box28 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aug-media4 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .aug-box30 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-top: -10px;
+    max-width: 100%;
+  }
+
+  .aug-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aug-box31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aug-box32 {
+    box-sizing: border-box;
+  }
+
+  .aug-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .aug-box33 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aug-box34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  :global(.aug-btn7) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c4);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.aug-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.aug-btn):hover {
+    background-color: var(--c5);
+  }
+
+  :global(.aug-btn2):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.aug-btn3):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.aug-btn4):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.aug-btn5):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.aug-btn6):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.aug-btn7):hover {
+    background-color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .aug-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .aug-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1184px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .aug-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aug-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.aug-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aug-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aug-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aug-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .aug-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .aug-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 944px;
+    }
+
+    :global(.aug-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.aug-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aug-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .aug-heading2 {
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .aug-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .aug-media3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .aug-media4 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .aug-box8 {
+    text-align: start;
+  }
+  .aug-media {
+    text-align: start;
+  }
+  .aug-box14 {
+    text-align: start;
+  }
+  .aug-box15 {
+    text-align: start;
+  }
+  .aug-decor2 {
+    text-align: start;
+  }
+  .aug-box21 {
+    text-align: start;
+  }
+  .aug-decor3 {
+    text-align: start;
+  }
+  .aug-box28 {
+    text-align: start;
+  }
+  .aug-box33 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .aug-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .aug-text2 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-text3 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-text4 {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  .aug-media2 {
+    text-align: left;
+  }
+  .aug-box17 {
+    text-align: left;
+  }
+  .aug-box18 {
+    text-align: left;
+  }
+  .aug-box22 {
+    text-align: left;
+  }
+  .aug-box23 {
+    text-align: left;
+  }
+  .aug-box24 {
+    text-align: left;
+  }
+  .aug-box25 {
+    text-align: left;
+  }
+  .aug-box29 {
+    text-align: left;
+  }
+  .aug-box30 {
+    text-align: left;
+  }
+  .aug-box31 {
+    text-align: left;
+  }
+  .aug-box32 {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .aug-heading2 {
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .aug-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-box23 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .aug-box30 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    :global(.aug-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aug-box8 {
+      text-align: start;
+    }
+
+    .aug-media {
+      text-align: start;
+    }
+
+    .aug-box15 {
+      text-align: start;
+    }
+
+    .aug-media2 {
+      text-align: start;
+    }
+
+    .aug-box21 {
+      text-align: start;
+    }
+
+    .aug-box22 {
+      text-align: start;
+    }
+
+    .aug-box28 {
+      text-align: start;
+    }
+
+    .aug-box29 {
+      text-align: start;
+    }
+
+    .aug-box34 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .aug-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-text {
+      line-height: 24px;
+    }
+
+    .aug-text2 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-text3 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-text4 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-box16 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-media3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-media4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-box14 {
+      text-align: left;
+    }
+
+    .aug-box17 {
+      text-align: left;
+    }
+
+    .aug-box18 {
+      text-align: left;
+    }
+
+    .aug-decor2 {
+      text-align: left;
+    }
+
+    .aug-box24 {
+      text-align: left;
+    }
+
+    .aug-box25 {
+      text-align: left;
+    }
+
+    .aug-decor3 {
+      text-align: left;
+    }
+
+    .aug-box31 {
+      text-align: left;
+    }
+
+    .aug-box32 {
+      text-align: left;
+    }
+
+    .aug-box33 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+  @media (min-width: 1440px) {
+    .aug-heading2 {
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    .aug-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-heading5 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    :global(.aug-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aug-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aug-box8 {
+      text-align: start;
+    }
+
+    .aug-media {
+      text-align: start;
+    }
+
+    .aug-box15 {
+      text-align: start;
+    }
+
+    .aug-media2 {
+      text-align: start;
+    }
+
+    .aug-box22 {
+      text-align: start;
+    }
+
+    .aug-media3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: start;
+    }
+
+    .aug-box29 {
+      text-align: start;
+    }
+
+    .aug-media4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: start;
+    }
+
+    :global(.aug-btn7) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .aug-text {
+      line-height: 24px;
+    }
+
+    .aug-text2 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-text3 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-text4 {
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-box16 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-box23 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-box30 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: left;
+    }
+
+    .aug-box14 {
+      text-align: left;
+    }
+
+    .aug-box17 {
+      text-align: left;
+    }
+
+    .aug-box18 {
+      text-align: left;
+    }
+
+    .aug-decor2 {
+      text-align: left;
+    }
+
+    .aug-box21 {
+      text-align: left;
+    }
+
+    .aug-box24 {
+      text-align: left;
+    }
+
+    .aug-box25 {
+      text-align: left;
+    }
+
+    .aug-decor3 {
+      text-align: left;
+    }
+
+    .aug-box28 {
+      text-align: left;
+    }
+
+    .aug-box31 {
+      text-align: left;
+    }
+
+    .aug-box32 {
+      text-align: left;
+    }
+
+    .aug-box33 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aug-box34 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

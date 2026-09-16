@@ -1,0 +1,228 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Carousel from "@wrappers/carousel/Carousel.astro";
+import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
+import { Icon as AstroIcon } from "astro-icon/components";
+
+interface ReviewItem {
+  text: string;
+  authorName: string;
+  socialIcon?: string;
+  reviewerImage?: string;
+}
+
+const {
+  heading = "",
+  reviews = [] as ReviewItem[],
+  showQuoteIcon = false,
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+// In peek mode the carousel is edge-to-edge with slides capped at 600px.
+// Embla measures offsetWidth at init so max-width must be in CSS before init.
+const isPeek = String(className ?? "")
+  .split(" ")
+  .includes("peek");
+---
+
+<CustomSection
+  class:list={["index-reviews", className]}
+  maxContentWidth={isPeek ? undefined : "2xl"}
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  backgroundGradient={backgroundGradient}
+  {...htmlAttributes}
+>
+  {heading && <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />}
+
+  {
+    reviews.length > 0 ? (
+      <Carousel
+        editable={false}
+        class="index-reviews-carousel"
+        maxSlideWidth={isPeek ? 600 : 0}
+        {...(isPeek ? { "data-no-contain-scroll": true, "data-slides-to-scroll": "1" } : {})}
+      >
+        {reviews.map((review: ReviewItem) => {
+          const hasMeta = !!(review.reviewerImage || review.socialIcon);
+          return (
+            <CarouselSlide>
+              <div class="review-slide">
+                {showQuoteIcon && <i class="icon-quote quote-icon" aria-hidden="true" />}
+                <p class="review-text">{review.text}</p>
+                <div class:list={["review-author", { "has-meta": hasMeta }]}>
+                  {review.reviewerImage && (
+                    <img class="reviewer-img" src={review.reviewerImage} alt={review.authorName} />
+                  )}
+                  {!review.reviewerImage && review.socialIcon && (
+                    <AstroIcon name={review.socialIcon} class="social-icon" />
+                  )}
+                  <div class="author-details">
+                    <span class="stars" aria-label="5 out of 5 stars">
+                      ★★★★★
+                    </span>
+                    <span class="author-name">{review.authorName}</span>
+                  </div>
+                </div>
+              </div>
+            </CarouselSlide>
+          );
+        })}
+      </Carousel>
+    ) : (
+      <p class="empty-state">No reviews added yet.</p>
+    )
+  }
+</CustomSection>
+
+<style>
+  .review-slide {
+    padding: 0 var(--spacing-md);
+    position: relative;
+    text-align: center;
+  }
+
+  .quote-icon {
+    color: currentcolor;
+    display: block;
+    font-size: 6rem;
+    line-height: 0.8;
+    opacity: 0.15;
+    transform: rotate(180deg);
+  }
+
+  .review-text {
+    font-size: clamp(1rem, 2.5vw, 1.375rem);
+    line-height: 1.3;
+    margin: 0 auto var(--spacing-md);
+    max-width: 500px;
+  }
+
+  .review-author {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .review-author.has-meta {
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    text-align: left;
+  }
+
+  .author-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  .reviewer-img {
+    border-radius: var(--radius-full, 50%);
+    flex-shrink: 0;
+    height: 3.5rem;
+    object-fit: cover;
+    width: 3.5rem;
+  }
+
+  .social-icon {
+    flex-shrink: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  :global(.social-icon[data-icon="social/google"]) {
+    color: var(--color-social-google);
+  }
+  :global(.social-icon[data-icon="social/facebook"]) {
+    color: var(--color-social-facebook);
+  }
+  :global(.social-icon[data-icon="social/yelp"]) {
+    color: var(--color-social-yelp);
+  }
+  :global(.social-icon[data-icon="social/instagram"]) {
+    color: var(--color-social-instagram);
+  }
+  :global(.social-icon[data-icon="social/x"]) {
+    color: var(--color-social-twitter);
+  }
+  :global(.social-icon[data-icon="social/youtube"]) {
+    color: var(--color-social-youtube);
+  }
+  :global(.social-icon[data-icon="social/tiktok"]) {
+    color: var(--color-social-tiktok);
+  }
+  :global(.social-icon[data-icon="social/bluesky"]) {
+    color: var(--color-social-bluesky);
+  }
+
+  .stars {
+    color: var(--color-star, #febb21);
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+  }
+
+  .author-name {
+    font-size: 1.375rem;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .empty-state {
+    opacity: 0.6;
+    padding: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  /*
+    PEEK LAYOUT 
+    Toggle by adding class "peek" to IndexReviews in index.md:
+      class: peek
+   
+    Shows adjacent slides peeking in from the sides at half opacity.
+    Slide width is set at render time via slideWidthPercent (see isPeek above).
+    The ClassNames plugin (embla-carousel-class-names) adds "is-snapped" to
+    the selected slide, which drives the opacity.
+   */
+
+  /* Break carousel out of the padded content wrapper so it's truly full-width.
+     The heading retains its padding via the parent. */
+  :global(.index-reviews.peek .index-reviews-carousel) {
+    margin-inline: calc(-1 * var(--spacing-lg));
+    width: calc(100% + 2 * var(--spacing-lg));
+  }
+
+  :global(.index-reviews.peek) {
+    overflow: hidden;
+  }
+
+  :global(.index-reviews.peek .index-reviews-carousel > .viewport) {
+    overflow: visible;
+  }
+
+  :global(.index-reviews.peek .slide) {
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  :global(.index-reviews.peek .slide.is-snapped) {
+    opacity: 1;
+  }
+</style>

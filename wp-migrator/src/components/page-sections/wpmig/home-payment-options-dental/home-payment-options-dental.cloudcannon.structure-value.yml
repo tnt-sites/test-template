@@ -1,0 +1,17 @@
+label: Home Payment Options Dental
+icon: interests
+description: Home Payment Options Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-payment-options-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Payment Options Dental
+  icon: interests
+picker_preview:
+  text: Home Payment Options Dental
+  subtext: Home Payment Options Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-payment-options-dental/home-payment-options-dental.cloudcannon.inputs.yml

@@ -1,0 +1,18 @@
+label: Emergency Dentist Littleton Co
+icon: vertical_split
+description: Emergency Dentist Littleton Co section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/emergency-dentist-littleton-co
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Emergency Dentist Littleton Co
+  icon: vertical_split
+picker_preview:
+  text: Emergency Dentist Littleton Co
+  subtext: Emergency Dentist Littleton Co section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/emergency-dentist-littleton-co/emergency-dentist-littleton-co.cloudcannon.inputs.yml

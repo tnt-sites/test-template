@@ -1,0 +1,10 @@
+_snippets:
+  missing_teeth_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Missing Teeth Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/missing-teeth-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/missing-teeth-treatment-littleton/missing-teeth-treatment-littleton.cloudcannon.inputs.yml

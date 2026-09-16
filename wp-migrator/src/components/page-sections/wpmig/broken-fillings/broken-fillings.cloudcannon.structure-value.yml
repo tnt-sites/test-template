@@ -1,0 +1,30 @@
+label: Broken Fillings
+icon: grid_view
+description: Broken Fillings section with editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/broken-fillings
+  id: ""
+  items:
+    - title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+      text2: ""
+      text3: ""
+      buttonText2: ""
+      buttonLink2: ""
+  titleColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#ffffff"
+  hoverBackgroundColor: "#49ab71"
+  hoverBackgroundColor2: "#4bad73"
+  hoverBackgroundColor3: "#4eaf76"
+preview:
+  text:
+    - Broken Fillings
+  icon: grid_view
+picker_preview:
+  text: Broken Fillings
+  subtext: Broken Fillings section with editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/broken-fillings/broken-fillings.cloudcannon.inputs.yml

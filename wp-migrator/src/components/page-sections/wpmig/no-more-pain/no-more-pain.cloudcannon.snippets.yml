@@ -1,0 +1,10 @@
+_snippets:
+  no_more_pain:
+    template: astro_component
+    inline: false
+    preview:
+      text: No More Pain
+    definitions:
+      component_name: page-sections/wpmig/no-more-pain
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/no-more-pain/no-more-pain.cloudcannon.inputs.yml

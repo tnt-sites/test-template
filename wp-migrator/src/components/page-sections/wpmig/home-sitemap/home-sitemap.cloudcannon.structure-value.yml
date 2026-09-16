@@ -1,0 +1,17 @@
+label: Home Sitemap
+icon: interests
+description: Home Sitemap section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-sitemap
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Sitemap
+  icon: interests
+picker_preview:
+  text: Home Sitemap
+  subtext: Home Sitemap section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-sitemap/home-sitemap.cloudcannon.inputs.yml

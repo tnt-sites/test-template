@@ -1,0 +1,18 @@
+label: Cracked Tooth Treatment Littleton
+icon: vertical_split
+description: Cracked Tooth Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cracked-tooth-treatment-littleton
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Cracked Tooth Treatment Littleton
+  icon: vertical_split
+picker_preview:
+  text: Cracked Tooth Treatment Littleton
+  subtext: Cracked Tooth Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cracked-tooth-treatment-littleton/cracked-tooth-treatment-littleton.cloudcannon.inputs.yml

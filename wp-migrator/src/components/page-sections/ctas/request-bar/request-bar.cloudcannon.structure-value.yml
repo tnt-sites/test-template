@@ -1,0 +1,28 @@
+label: Request Bar
+icon: calendar_month
+description: Centered heading with a call-to-action button.
+value:
+  _component: page-sections/ctas/request-bar
+  id: ""
+  heading: Ready to Get Started?
+  buttonText: Request an Appointment
+  buttonLink: /request-an-appointment
+  buttonVariant: primary
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Request Bar
+  subtext:
+    - key: heading
+  icon: calendar_month
+picker_preview:
+  text: Request Bar
+  subtext: Centered heading with a call-to-action button.
+_inputs_from_glob:
+  - /src/components/page-sections/ctas/request-bar/request-bar.cloudcannon.inputs.yml

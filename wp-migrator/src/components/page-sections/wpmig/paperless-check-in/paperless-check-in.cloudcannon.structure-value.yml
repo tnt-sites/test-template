@@ -1,0 +1,25 @@
+label: Paperless Check In
+icon: vertical_split
+description: Paperless Check In section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/paperless-check-in
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+preview:
+  text:
+    - Paperless Check In
+  icon: vertical_split
+picker_preview:
+  text: Paperless Check In
+  subtext: Paperless Check In section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/paperless-check-in/paperless-check-in.cloudcannon.inputs.yml

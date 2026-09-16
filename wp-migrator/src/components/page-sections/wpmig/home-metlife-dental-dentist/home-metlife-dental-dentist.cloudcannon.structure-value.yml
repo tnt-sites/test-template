@@ -1,0 +1,17 @@
+label: Home Metlife Dental Dentist
+icon: interests
+description: Home Metlife Dental Dentist section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-metlife-dental-dentist
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Metlife Dental Dentist
+  icon: interests
+picker_preview:
+  text: Home Metlife Dental Dentist
+  subtext: Home Metlife Dental Dentist section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-metlife-dental-dentist/home-metlife-dental-dentist.cloudcannon.inputs.yml

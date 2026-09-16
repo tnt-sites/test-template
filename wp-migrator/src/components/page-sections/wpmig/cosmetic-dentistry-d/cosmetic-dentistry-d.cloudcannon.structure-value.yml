@@ -1,0 +1,52 @@
+label: Cosmetic Dentistry D
+icon: interests
+description: Cosmetic Dentistry D section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cosmetic-dentistry-d
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  heading4: ""
+  text5: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.58)
+  buttonBackgroundHoverColor: "#4eaf76"
+  buttonBackgroundColor2HoverColor: "#54595f"
+preview:
+  text:
+    - Cosmetic Dentistry D
+  icon: interests
+picker_preview:
+  text: Cosmetic Dentistry D
+  subtext: Cosmetic Dentistry D section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cosmetic-dentistry-d/cosmetic-dentistry-d.cloudcannon.inputs.yml

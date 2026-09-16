@@ -1,0 +1,18 @@
+label: Swollen Or Bleeding Gums
+icon: vertical_split
+description: Swollen Or Bleeding Gums section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/swollen-or-bleeding-gums
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Swollen Or Bleeding Gums
+  icon: vertical_split
+picker_preview:
+  text: Swollen Or Bleeding Gums
+  subtext: Swollen Or Bleeding Gums section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/swollen-or-bleeding-gums/swollen-or-bleeding-gums.cloudcannon.inputs.yml

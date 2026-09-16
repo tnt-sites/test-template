@@ -1,0 +1,55 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import Form from "@forms/form/Form.astro";
+
+const {
+  heading = "Refer a Patient",
+  subtext = "",
+  formAction = "./",
+  formBlocks = [],
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["referral-form", className]}
+  maxContentWidth="md"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />
+  {subtext && <Text alignX="center" data-prop="subtext">{subtext}</Text>}
+  <Form action={formAction} formBlocks={formBlocks?.length > 0 ? formBlocks : []}>
+    <slot />
+  </Form>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .referral-form {
+      .submit { display: block; margin-inline: auto; }
+
+      editable-array-item:has(.submit) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+</style>

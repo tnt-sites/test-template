@@ -1,0 +1,111 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for anchor linking.
+heading:
+  type: markdown
+  comment: Main heading displayed above the Watch/Read controls.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+watchLabel:
+  type: text
+  comment: Label for the tab that shows video testimonials. Defaults to "Watch".
+readLabel:
+  type: text
+  comment: Label for the tab that shows written reviews. Defaults to "Read".
+videos:
+  type: array
+  label: Video Testimonials
+  comment: YouTube video testimonials shown in the Watch tab.
+  options:
+    structures: _structures.reviewVideoItems
+reviews:
+  type: array
+  label: Written Reviews
+  comment: Written reviews shown in the Read tab.
+  options:
+    structures: _structures.reviewTextItems
+showQuoteIcon:
+  type: checkbox
+  comment: Show a large decorative opening quote mark on each review slide.
+backgroundColor:
+  type: select
+  comment: Background color applied behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+backgroundGradient:
+  type: textarea
+  comment: Optional CSS gradient applied behind the section (e.g. linear-gradient(120deg, #0f172a, #1d4ed8)).
+backgroundImage:
+  type: object
+  comment: Optional background image for the section.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  type: image
+  comment: URL or path to the background image.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  type: textarea
+  comment: Alt text for the background image.
+backgroundImage.positionVertical:
+  type: select
+  comment: Vertical focal point for the background image.
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  type: select
+  comment: Horizontal focal point for the background image.
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

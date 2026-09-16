@@ -1,0 +1,86 @@
+---
+/**
+ * Section E — migrated from dental-implants-littleton-co [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  backgroundImage = "/wp-content/uploads/2020/03/swirl-bottom.png",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section-e" id={id || undefined} style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+</section>
+<style>
+  .section-e {
+    background-image: var(--bgimg, none);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    position: relative;
+    text-align: left;
+  }
+
+/* wpmig:corrections:begin */
+  .se-box5 {
+    color: rgb(4, 4, 4);
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    line-height: 32px;
+  }
+  .se-heading {
+    color: rgb(27, 46, 56);
+    font-size: 19.2px;
+    font-weight: 300;
+    line-height: 28.8px;
+  }
+  .se-text {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: left;
+  }
+  .se-box2 {
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .se-box5 {
+      color: rgb(4, 4, 4);
+      font-family: "Open Sans Condensed", sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .se-heading {
+      color: rgb(27, 46, 56);
+      font-size: 19.2px;
+      font-weight: 300;
+      line-height: 28.8px;
+    }
+
+    .se-text {
+      font-family: Roboto, sans-serif;
+      font-weight: 400;
+      line-height: 16px;
+      text-align: left;
+    }
+
+    .se-box2 {
+      text-align: center;
+    }
+  }
+  @media (min-width: 1440px) {
+    .se-text {
+      font-size: 19.2px;
+      line-height: 28.8px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

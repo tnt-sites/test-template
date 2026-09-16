@@ -1,0 +1,10 @@
+_snippets:
+  home_ameritas:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Ameritas
+    definitions:
+      component_name: page-sections/wpmig/home-ameritas
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-ameritas/home-ameritas.cloudcannon.inputs.yml

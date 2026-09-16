@@ -1,0 +1,251 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import Text from "@core-elements/text/Text.astro";
+import Modal from "@page-sections/info-blocks/modal/Modal.astro";
+
+const {
+  heading = "",
+  subtext = "",
+  emergencyItems = [],
+  backgroundColor = "none",
+  backgroundGradient = "",
+  backgroundImage,
+  gridIndex,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const toSafeIndex = (value: unknown) => {
+  if (typeof value === "number" && Number.isInteger(value) && value >= 0) return value;
+  if (typeof value === "string" && /^\d+$/.test(value.trim())) return Number.parseInt(value, 10);
+  return undefined;
+};
+
+const dataPropMatch =
+  typeof htmlAttributes["data-prop"] === "string"
+    ? htmlAttributes["data-prop"].match(/(?:^|\.)pageSections\.(\d+)(?:\.|$)/)
+    : null;
+const resolvedGridIndex = toSafeIndex(gridIndex) ?? toSafeIndex(dataPropMatch?.[1]) ?? 0;
+const emergencyGridId = `emergency-grid-${resolvedGridIndex}`;
+
+const emergencyIconNames = new Set([
+  "toothache",
+  "chipped-tooth",
+  "cracked-tooth",
+  "sensitivity-hot-cold",
+  "knocked-out-tooth",
+  "lost-filling-crown",
+  "broken-denture",
+  "loose-tooth",
+  "gum-lip-tongue-injury",
+  "jaw-pain-clenching",
+  "stuck-between-teeth",
+]);
+
+const normalizeKey = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
+const items = emergencyItems.map((item: any, index: number) => {
+  const title = typeof item?.title === "string" ? item.title.trim() : "";
+  const iconPresetRaw = typeof item?.iconPreset === "string" ? item.iconPreset.trim() : "";
+  const contentSections = Array.isArray(item?.contentSections) ? item.contentSections : [];
+  const normalizedIconPreset = normalizeKey(iconPresetRaw);
+  const iconPreset = emergencyIconNames.has(normalizedIconPreset) ? normalizedIconPreset : "";
+
+  return {
+    title,
+    iconPreset,
+    contentSections,
+    modalId: `${emergencyGridId}-modal-${index + 1}`,
+  };
+});
+
+const hasModalItems = items.some((item: any) => item.contentSections.length > 0);
+---
+
+<CustomSection
+  class:list={["emergency-grid", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+
+  <Text alignX="center" data-prop="subtext">
+    {subtext}
+  </Text>
+
+  <editable-array
+    class="emergency-grid-icons"
+    data-editable="array"
+    data-component-key="_component"
+    data-id-key="_component"
+    data-prop="emergencyItems"
+  >
+    {
+      items.map((item: any) => {
+        const title = item.title;
+        const iconName = item.iconPreset ? `emergency/${item.iconPreset}` : "emergency/toothache";
+
+        return (
+          <editable-array-item data-component="page-sections/info-blocks/emergency-grid/emergency-item">
+            {item.contentSections.length > 0 ? (
+              // If the item has a modal, render a button that triggers the modal
+              <button
+                type="button"
+                class="emergency-grid-item"
+                data-modal-target={item.modalId}
+                aria-haspopup="dialog"
+                aria-controls={item.modalId}
+              >
+                <div class="emergency-grid-item-icon" aria-hidden="true">
+                  <Icon name={iconName} size="none" />
+                </div>
+                <h3 class="emergency-grid-item-title">{title}</h3>
+              </button>
+            ) : (
+              // If the item does not have a modal, render a div
+              <div class="emergency-grid-item">
+                <div class="emergency-grid-item-icon" aria-hidden="true">
+                  <Icon name={iconName} size="none" />
+                </div>
+                <h3 class="emergency-grid-item-title">{title}</h3>
+              </div>
+            )}
+          </editable-array-item>
+        );
+      })
+    }
+  </editable-array>
+
+  {
+    hasModalItems && (
+      <div class="emergency-grid-popups">
+        {items.map((item: any, index: number) => {
+          if (item.contentSections.length === 0) return null;
+
+          const closeLabel = item.title
+            ? `Close ${item.title}`
+            : `Close Emergency Item ${index + 1}`;
+          return (
+            <Modal
+              id={item.modalId}
+              class="emergency-grid-modal"
+              closeLabel={closeLabel}
+              contentSections={item.contentSections}
+              propName={`emergencyItems.${index}.contentSections`}
+            />
+          );
+        })}
+      </div>
+    )
+  }
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .emergency-grid {
+      .emergency-grid-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px auto;
+        max-width: 1400px;
+        text-align: center;
+
+        > * {
+          display: block;
+          flex: 0 1 180px;
+          margin: 10px auto;
+          padding: 5px;
+        }
+      }
+
+      .emergency-grid-item {
+        background: transparent;
+        border: 0;
+        color: var(--color-text-strong);
+        cursor: pointer;
+        display: block;
+        text-decoration: none;
+        width: 100%;
+      }
+
+      .emergency-grid-item-icon {
+        align-items: center;
+        display: flex;
+        height: 80px;
+        justify-content: center;
+
+        .icon {
+          align-items: center;
+          color: var(--color-text-strong);
+          display: flex;
+          flex-direction: column;
+          height: 80px;
+          justify-content: center;
+          width: 80px;
+
+          svg {
+            height: 100%;
+            width: 100%;
+          }
+
+
+          .ic-color {
+            color: var(--color-brand);
+            fill: var(--color-brand);
+            stroke: var(--color-brand);
+          }
+
+          path:not(.ic-color),
+          circle:not(.ic-color),
+          ellipse:not(.ic-color),
+          polygon:not(.ic-color),
+          rect:not(.ic-color) {
+            fill: currentColor;
+          }
+        }
+      }
+
+      .emergency-grid-item-title {
+        font-size: 22px;
+        line-height: 1.1;
+        margin: 5px auto;
+      }
+
+      .emergency-grid-item:hover,
+      .emergency-grid-item:focus-visible {
+        .emergency-grid-item-title {
+          color: var(--color-brand);
+        }
+
+        .emergency-grid-item-icon .icon .ic-color {
+          color: var(--color-brand);
+          fill: var(--color-brand);
+          stroke: var(--color-brand);
+        }
+      }
+
+      .emergency-grid-modal-body {
+        margin-top: 0;
+      }
+    }
+  }
+</style>

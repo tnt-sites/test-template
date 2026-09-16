@@ -1,0 +1,10 @@
+_snippets:
+  home_united_healthcare:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home United Healthcare
+    definitions:
+      component_name: page-sections/wpmig/home-united-healthcare
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-united-healthcare/home-united-healthcare.cloudcannon.inputs.yml

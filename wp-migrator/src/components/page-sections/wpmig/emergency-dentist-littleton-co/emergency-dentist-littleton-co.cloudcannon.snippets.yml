@@ -1,0 +1,10 @@
+_snippets:
+  emergency_dentist_littleton_co:
+    template: astro_component
+    inline: false
+    preview:
+      text: Emergency Dentist Littleton Co
+    definitions:
+      component_name: page-sections/wpmig/emergency-dentist-littleton-co
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/emergency-dentist-littleton-co/emergency-dentist-littleton-co.cloudcannon.inputs.yml

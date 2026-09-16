@@ -1,0 +1,18 @@
+label: Facial Swelling Treatment Littleton
+icon: vertical_split
+description: Facial Swelling Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/facial-swelling-treatment-littleton
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Facial Swelling Treatment Littleton
+  icon: vertical_split
+picker_preview:
+  text: Facial Swelling Treatment Littleton
+  subtext: Facial Swelling Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/facial-swelling-treatment-littleton/facial-swelling-treatment-littleton.cloudcannon.inputs.yml

@@ -1,0 +1,19 @@
+label: Office Amenities
+icon: interests
+description: Office Amenities section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/office-amenities
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Office Amenities
+  icon: interests
+picker_preview:
+  text: Office Amenities
+  subtext: Office Amenities section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/office-amenities/office-amenities.cloudcannon.inputs.yml

@@ -1,0 +1,25 @@
+label: State Of The Art
+icon: grid_view
+description: State Of The Art section with editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/state-of-the-art
+  id: ""
+  buttonText: ""
+  buttonLink: ""
+  items:
+    - title: ""
+      text: ""
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  titleColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundHoverColor: "#4bad73"
+preview:
+  text:
+    - State Of The Art
+  icon: grid_view
+picker_preview:
+  text: State Of The Art
+  subtext: State Of The Art section with editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/state-of-the-art/state-of-the-art.cloudcannon.inputs.yml

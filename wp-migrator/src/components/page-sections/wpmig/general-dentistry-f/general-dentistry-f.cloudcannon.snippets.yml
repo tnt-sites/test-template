@@ -1,0 +1,10 @@
+_snippets:
+  general_dentistry_f:
+    template: astro_component
+    inline: false
+    preview:
+      text: General Dentistry F
+    definitions:
+      component_name: page-sections/wpmig/general-dentistry-f
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/general-dentistry-f/general-dentistry-f.cloudcannon.inputs.yml

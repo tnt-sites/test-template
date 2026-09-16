@@ -1,0 +1,107 @@
+/**
+ * The computed-style properties worth capturing — a superset of the 16 that
+ * compare.mjs proved out during the Artisan migration, extended with the
+ * layout/visual properties the hand-ported components ended up needing.
+ *
+ * Everything else a stylesheet could set is deliberately ignored: capturing
+ * the full computed style of every node reproduces the browser's defaults as
+ * authored CSS and buries the real design in noise.
+ */
+
+export const STYLE_PROPS = [
+  // layout
+  "display",
+  "position",
+  "top",
+  "right",
+  "bottom",
+  "left",
+  "flexDirection",
+  "flexWrap",
+  "flexGrow",
+  "flexShrink",
+  "flexBasis",
+  "gridTemplateColumns",
+  "rowGap",
+  "columnGap",
+  "alignItems",
+  "alignContent",
+  "alignSelf",
+  "justifyContent",
+  "order",
+  // box
+  "boxSizing",
+  "maxWidth",
+  "minHeight",
+  "marginTop",
+  "marginRight",
+  "marginBottom",
+  "marginLeft",
+  "paddingTop",
+  "paddingRight",
+  "paddingBottom",
+  "paddingLeft",
+  "overflowX",
+  "overflowY",
+  // typography
+  "fontFamily",
+  "fontSize",
+  "fontWeight",
+  "fontStyle",
+  "lineHeight",
+  "letterSpacing",
+  "textTransform",
+  "textAlign",
+  "textDecorationLine",
+  "textShadow",
+  "whiteSpace",
+  // visual
+  "color",
+  "backgroundColor",
+  "backgroundImage",
+  "backgroundSize",
+  "backgroundPosition",
+  "backgroundRepeat",
+  "borderTopWidth",
+  "borderRightWidth",
+  "borderBottomWidth",
+  "borderLeftWidth",
+  "borderTopStyle",
+  "borderTopColor",
+  "borderTopLeftRadius",
+  "borderTopRightRadius",
+  "borderBottomRightRadius",
+  "borderBottomLeftRadius",
+  "boxShadow",
+  "opacity",
+  "mixBlendMode",
+  "filter",
+  "objectFit",
+  "objectPosition",
+  "listStyleType",
+  "zIndex",
+  "transform",
+  "transitionProperty",
+  "transitionDuration",
+  "transitionTimingFunction",
+  "cursor",
+  "visibility",
+];
+
+/** Properties that inherit — equal-to-parent values are cascade, not authorship. */
+export const INHERITED = new Set([
+  "color",
+  "cursor",
+  "fontFamily",
+  "fontSize",
+  "fontStyle",
+  "fontWeight",
+  "letterSpacing",
+  "lineHeight",
+  "listStyleType",
+  "textAlign",
+  "textShadow",
+  "textTransform",
+  "visibility",
+  "whiteSpace",
+]);

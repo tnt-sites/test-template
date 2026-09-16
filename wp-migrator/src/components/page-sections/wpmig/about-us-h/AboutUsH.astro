@@ -1,0 +1,852 @@
+---
+/**
+ * About Us H — migrated from about-us/meet-the-doctors [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  image2 = "",
+  image2Alt = "",
+  heading3 = "",
+  text3 = "",
+  text4 = "",
+  heading4 = "",
+  items = [],
+  items2 = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+---
+<div class="about-us-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3}`} {...rest}>
+  <div class="auh-box">
+    <div class="auh-box2">
+      <div class="auh-box3">
+        <div class="auh-box4">
+          {eyebrow && <h4 class="auh-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+        </div>
+      </div>
+      <div class="auh-box5">
+        <div class="auh-box6">
+          <section class="auh-box7">
+            <div class="auh-box8">
+              <div class="auh-box9">
+                <div class="auh-box10">
+                  <div class="auh-box11">
+                    <div class="auh-box12">
+                      {image && <img class="auh-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="auh-box13">
+                <div class="auh-box14">
+                  <div class="auh-box15">
+                    <div class="auh-box16">
+                      <h2 class="auh-heading2">{heading}</h2>
+                    </div>
+                  </div>
+                  <div class="auh-box17">
+                    <div class="auh-box18">
+                      {text && <p class="auh-text">{text}</p>}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="auh-box19">
+            <div class="auh-box20">
+              <div class="auh-box21">
+                <div class="auh-box22">
+                  <div class="auh-box23">
+                    <div class="auh-box24">
+                      {subheading && <h3 class="auh-heading3">{subheading}</h3>}
+                    </div>
+                  </div>
+                  <div class="auh-box25">
+                    <div class="auh-box26">
+                      {text2 && <div class="auh-body" set:html={text2} />}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="auh-box27">
+            <div class="auh-box28">
+              <div class="auh-box29">
+                <div class="auh-box30">
+                  <div class="auh-box31">
+                    <div class="auh-box32">
+                      {heading2 && <h4 class="auh-heading4">{heading2}</h4>}
+                    </div>
+                  </div>
+                  <section class="auh-box33">
+                    <div class="auh-grid">
+                      {itemsList.map((it) => (
+                        <div class="auh-box34">
+                          <div class="auh-box35">
+                            <div class="auh-box36">
+                              <div class="auh-box37">
+                                {it.text && <div class="auh-body2" set:html={it.text} />}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="auh-box42">
+            <div class="auh-box43">
+              <div class="auh-box44">
+                {image2 && <img class="auh-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="600" height="600" />}
+              </div>
+            </div>
+            <div class="auh-box45">
+              <div class="auh-box46">
+                {heading3 && <h2 class="auh-heading5">{heading3}</h2>}
+              </div>
+              <div class="auh-box47">
+                {text3 && <div class="auh-text2" set:html={text3} />}
+                <div class="auh-spacer" aria-hidden="true"></div>
+                {text4 && <div class="auh-text3" set:html={text4} />}
+              </div>
+            </div>
+          </div>
+          <section class="auh-box48">
+            <div class="auh-box49">
+              <div class="auh-box50">
+                {heading4 && <h4 class="auh-heading6">{heading4}</h4>}
+              </div>
+              <div class="auh-grid2">
+                {items2List.map((it) => (
+                  <div class="auh-box51">
+                    <div class="auh-box52">
+                      {it.text && <div class="auh-body4" set:html={it.text} />}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-us-h {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .auh-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .auh-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .auh-box3 {
+    display: none;
+  }
+
+  .auh-box4 {
+    display: none;
+  }
+
+  .auh-heading {
+    display: none;
+  }
+
+  :global(.auh-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auh-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auh-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auh-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auh-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auh-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .auh-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1274px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .auh-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box6 {
+    box-sizing: border-box;
+  }
+
+  .auh-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box27 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box28 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box29 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box30 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box33 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box34 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box35 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box36 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box37 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box42 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .auh-box43 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auh-box44 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .auh-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .auh-box45 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auh-box46 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .auh-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .auh-box47 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .auh-text2 {
+    box-sizing: border-box;
+  }
+
+  .auh-spacer {
+    box-sizing: border-box;
+    height: 24px;
+    min-height: 24px;
+  }
+
+  .auh-text3 {
+    box-sizing: border-box;
+  }
+
+  .auh-box48 {
+    background-color: #c6d7dc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    padding: 24px;
+    position: relative;
+  }
+
+  .auh-box48 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box49 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auh-box49 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box50 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .auh-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .auh-grid2 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .auh-grid2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box51 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auh-box51 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-box52 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .auh-box52 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .auh-body4 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  :global(.auh-btn):hover {
+    background-color: var(--c5);
+  }
+
+  :global(.auh-btn2):hover {
+    background-color: var(--c5);
+  }
+
+  :global(.auh-btn3):hover {
+    background-color: var(--c5);
+  }
+
+  :global(.auh-btn4):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.auh-btn5):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.auh-btn6):hover {
+    background-color: var(--c6);
+  }
+
+  @media (min-width: 768px) {
+    .auh-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .auh-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1062px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .auh-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .auh-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.auh-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.auh-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.auh-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auh-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+      min-height: 1062px;
+    }
+
+    .auh-box42 {
+      max-width: 1024px;
+    }
+
+    .auh-box43 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      min-height: 656px;
+    }
+
+    .auh-box45 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .auh-box51 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .auh-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .auh-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 670px;
+    }
+
+    :global(.auh-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.auh-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auh-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+      min-height: 670px;
+    }
+
+    .auh-box42 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .auh-box43 {
+      min-height: 360px;
+    }
+
+    .auh-grid2 {
+      flex-wrap: nowrap;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .auh-heading6 {
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.auh-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .auh-heading6 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.auh-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.auh-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .auh-heading6 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

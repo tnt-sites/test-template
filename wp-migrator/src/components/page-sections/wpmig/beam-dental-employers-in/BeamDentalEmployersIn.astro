@@ -1,0 +1,371 @@
+---
+/**
+ * Beam Dental Employers In — migrated from beam-dental-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="beam-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="bdei-box">
+    <div class="bdei-box2">
+      <div class="bdei-box3">
+        <div class="bdei-box4">
+          <div class="bdei-box5">
+            {image && <img class="bdei-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+          </div>
+        </div>
+        <div class="bdei-box6">
+          <div class="bdei-box7">
+            <h2 class="bdei-heading">{heading}</h2>
+          </div>
+          <div class="bdei-box8">
+            {text && <div class="bdei-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="bdei-box9">
+        <div class="bdei-box10">
+          {subheading && <h2 class="bdei-heading2">{subheading}</h2>}
+        </div>
+        <div class="bdei-box11">
+          {text2 && <div class="bdei-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="bdei-box12">
+        <div class="bdei-box13">
+          {heading2 && <h2 class="bdei-heading3" set:html={heading2} />}
+        </div>
+        <div class="bdei-box14">
+          <div class="bdei-box15">
+            {text3 && <div class="bdei-body" set:html={text3} />}
+          </div>
+        </div>
+      </div>
+      <div class="bdei-box16">
+        <div class="bdei-box17">
+          {heading3 && <h2 class="bdei-heading4">{heading3}</h2>}
+        </div>
+        <div class="bdei-box18">
+          <div class="bdei-box19">
+            {text4 && <p class="bdei-text3">{text4}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .beam-dental-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .bdei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .bdei-box2 {
+    box-sizing: border-box;
+  }
+
+  .bdei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .bdei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bdei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .bdei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .bdei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bdei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bdei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bdei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .bdei-text {
+    box-sizing: border-box;
+  }
+
+  .bdei-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bdei-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bdei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bdei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .bdei-text2 {
+    box-sizing: border-box;
+  }
+
+  .bdei-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bdei-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bdei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bdei-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .bdei-box15 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .bdei-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .bdei-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .bdei-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .bdei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .bdei-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .bdei-box19 {
+    box-sizing: border-box;
+  }
+
+  .bdei-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .bdei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .bdei-box3 {
+      max-width: 1024px;
+    }
+
+    .bdei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 472px;
+    }
+
+    .bdei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .bdei-box15 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .bdei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .bdei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .bdei-box4 {
+      min-height: auto;
+    }
+
+    .bdei-box6 {
+      min-height: 405px;
+    }
+
+    .bdei-box15 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .bdei-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .bdei-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .bdei-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .bdei-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .bdei-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

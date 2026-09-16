@@ -1,0 +1,10 @@
+_snippets:
+  blue_cross_blue_shield:
+    template: astro_component
+    inline: false
+    preview:
+      text: Blue Cross Blue Shield
+    definitions:
+      component_name: page-sections/wpmig/blue-cross-blue-shield
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/blue-cross-blue-shield/blue-cross-blue-shield.cloudcannon.inputs.yml

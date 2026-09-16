@@ -1,0 +1,10 @@
+_snippets:
+  home_equitable_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Equitable Dental
+    definitions:
+      component_name: page-sections/wpmig/home-equitable-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-equitable-dental/home-equitable-dental.cloudcannon.inputs.yml

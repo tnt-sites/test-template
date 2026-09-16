@@ -1,0 +1,26 @@
+label: We Can Provide You B
+icon: interests
+description: We Can Provide You B section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-can-provide-you-b
+  id: ""
+  heading: ""
+  text: ""
+  subheading: ""
+  heading2: ""
+  text2: ""
+  text3: ""
+  heading3: ""
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#ffffff"
+preview:
+  text:
+    - We Can Provide You B
+  icon: interests
+picker_preview:
+  text: We Can Provide You B
+  subtext: We Can Provide You B section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-can-provide-you-b/we-can-provide-you-b.cloudcannon.inputs.yml

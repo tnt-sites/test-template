@@ -1,0 +1,27 @@
+label: Lincoln Financial Group Employers
+icon: vertical_split
+description: Lincoln Financial Group Employers section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/lincoln-financial-group-employers
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Lincoln Financial Group Employers
+  icon: vertical_split
+picker_preview:
+  text: Lincoln Financial Group Employers
+  subtext: Lincoln Financial Group Employers section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/lincoln-financial-group-employers/lincoln-financial-group-employers.cloudcannon.inputs.yml

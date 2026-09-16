@@ -1,0 +1,10 @@
+_snippets:
+  new_patients:
+    template: astro_component
+    inline: false
+    preview:
+      text: New Patients
+    definitions:
+      component_name: page-sections/wpmig/new-patients
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/new-patients/new-patients.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  lincoln_financial_group_employers:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lincoln Financial Group Employers
+    definitions:
+      component_name: page-sections/wpmig/lincoln-financial-group-employers
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/lincoln-financial-group-employers/lincoln-financial-group-employers.cloudcannon.inputs.yml

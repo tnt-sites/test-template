@@ -1,0 +1,25 @@
+label: Same Day Appointments
+icon: vertical_split
+description: Same Day Appointments section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/same-day-appointments
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+preview:
+  text:
+    - Same Day Appointments
+  icon: vertical_split
+picker_preview:
+  text: Same Day Appointments
+  subtext: Same Day Appointments section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/same-day-appointments/same-day-appointments.cloudcannon.inputs.yml

@@ -1,0 +1,122 @@
+---
+/**
+ * Office Amenities — migrated from about-us [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="office-amenities" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="oa-box">
+    <div class="oa-box2">
+      <h3 class="oa-heading">{heading}</h3>
+    </div>
+    <div class="oa-box3">
+      <div class="oa-box4">
+        {text && <p class="oa-text">{text}</p>}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .office-amenities {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .oa-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .oa-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .oa-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .oa-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .oa-box4 {
+    box-sizing: border-box;
+  }
+
+  .oa-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .office-amenities {
+      max-width: 690px;
+    }
+
+    .oa-heading {
+      line-height: 28px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .office-amenities {
+      max-width: 1110px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .oa-heading {
+    font-weight: 400;
+  }
+  @media (min-width: 768px) {
+    .oa-heading {
+      font-weight: 400;
+    }
+
+    .oa-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .oa-heading {
+      font-weight: 400;
+    }
+
+    .oa-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

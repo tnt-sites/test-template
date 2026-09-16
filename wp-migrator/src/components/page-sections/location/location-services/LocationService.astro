@@ -1,0 +1,52 @@
+---
+/**
+ * One service card — photo above a two-line heading ("I Need A" / "Checkup &
+ * Cleaning"). Becomes a modal trigger when the parent hands it a `modalId`.
+ */
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  imageSource = "",
+  imageAlt = "",
+  modalId = null,
+  editable = true,
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+if (!_component && !heading && !imageSource) return;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const Tag = modalId ? "a" : "div";
+const triggerAttributes = modalId ? { href: `#${modalId}`, role: "button" } : {};
+
+const editableAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+---
+
+<Tag class:list={["service", className]} {...triggerAttributes} {...htmlAttributes}>
+  {
+    imageSource && (
+      <figure>
+        <Image
+          source={imageSource}
+          alt={imageAlt || heading}
+          editable={editable}
+          data-prop-src="imageSource"
+          data-prop-alt="imageAlt"
+          data-editable="image"
+        />
+      </figure>
+    )
+  }
+  <h3>
+    {eyebrow && <small {...editableAttributes("eyebrow")}>{eyebrow}</small>}
+    <span {...editableAttributes("heading")}>{heading}</span>
+  </h3>
+</Tag>

@@ -1,0 +1,27 @@
+label: Dont Wait Call Us
+icon: interests
+description: Dont Wait Call Us section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dont-wait-call-us
+  id: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  heading3: ""
+  text5: ""
+  heading4: ""
+  heading5: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Dont Wait Call Us
+  icon: interests
+picker_preview:
+  text: Dont Wait Call Us
+  subtext: Dont Wait Call Us section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dont-wait-call-us/dont-wait-call-us.cloudcannon.inputs.yml

@@ -1,0 +1,17 @@
+label: Home About Us Patient
+icon: interests
+description: Home About Us Patient section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-about-us-patient
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home About Us Patient
+  icon: interests
+picker_preview:
+  text: Home About Us Patient
+  subtext: Home About Us Patient section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-about-us-patient/home-about-us-patient.cloudcannon.inputs.yml

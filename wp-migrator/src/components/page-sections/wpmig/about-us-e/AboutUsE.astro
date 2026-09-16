@@ -1,0 +1,637 @@
+---
+/**
+ * About Us E — migrated from about-us/meet-the-team [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#54595f",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.77)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="about-us-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3};--c9:${hoverBackgroundColor4}`} {...rest}>
+  <div class="aue-box">
+    <div class="aue-box2">
+      <div class="aue-box3">
+        <div class="aue-box4">
+          {eyebrow && <h4 class="aue-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+        </div>
+      </div>
+      <div class="aue-box5">
+        <div class="aue-box6">
+          <div class="aue-box7">
+            <h2 class="aue-heading2">{heading}</h2>
+          </div>
+          <div class="aue-box8">
+            <div class="aue-decor" aria-hidden="true"></div>
+          </div>
+          <div class="aue-box9">
+            <div class="aue-box10">
+              <div class="aue-box11">
+                {image && <img class="aue-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+              </div>
+            </div>
+            <div class="aue-box12">
+              <div class="aue-box13">
+                {subheading && <h4 class="aue-heading3">{subheading}</h4>}
+              </div>
+              <div class="aue-box14">
+                {text && <div class="aue-text" set:html={text} />}
+              </div>
+              <div class="aue-box15">
+                {text2 && <div class="aue-text2" set:html={text2} />}
+                <div class="aue-spacer" aria-hidden="true"></div>
+                {text3 && <div class="aue-text3" set:html={text3} />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-us-e {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .aue-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aue-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .aue-box3 {
+    display: none;
+  }
+
+  .aue-box4 {
+    display: none;
+  }
+
+  .aue-heading {
+    display: none;
+  }
+
+  :global(.aue-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aue-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aue-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aue-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aue-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.aue-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .aue-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .aue-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aue-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aue-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aue-box8 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .aue-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .aue-box9 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aue-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aue-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aue-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .aue-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .aue-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .aue-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aue-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .aue-text {
+    box-sizing: border-box;
+    margin-top: -13px;
+  }
+
+  .aue-box15 {
+    box-sizing: border-box;
+    color: #54595f;
+    flex: 0 0 100%;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-top: -9px;
+    max-width: 100%;
+  }
+
+  .aue-text2 {
+    box-sizing: border-box;
+  }
+
+  .aue-spacer {
+    box-sizing: border-box;
+    height: 23px;
+    min-height: 23px;
+  }
+
+  .aue-text3 {
+    box-sizing: border-box;
+  }
+
+  :global(.aue-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.aue-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.aue-btn3):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.aue-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.aue-btn5):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.aue-btn6):hover {
+    background-color: var(--c9);
+  }
+
+  @media (min-width: 768px) {
+    .aue-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .aue-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 844px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .aue-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .aue-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.aue-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aue-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.aue-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aue-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .aue-heading2 {
+      line-height: 32px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .aue-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .aue-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 524px;
+    }
+
+    :global(.aue-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.aue-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .aue-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .aue-box9 {
+      flex-wrap: nowrap;
+    }
+
+    .aue-box10 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 401px;
+    }
+
+    .aue-box12 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .aue-box11 {
+    text-align: start;
+  }
+  .aue-media {
+    text-align: start;
+  }
+  .aue-heading3 {
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.aue-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aue-box11 {
+      text-align: start;
+    }
+
+    .aue-media {
+      text-align: start;
+    }
+
+    .aue-heading3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.aue-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.aue-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aue-box11 {
+      text-align: start;
+    }
+
+    .aue-media {
+      text-align: start;
+    }
+
+    .aue-heading3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

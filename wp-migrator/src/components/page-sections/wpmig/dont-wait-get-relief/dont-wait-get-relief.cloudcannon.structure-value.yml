@@ -1,0 +1,23 @@
+label: Dont Wait Get Relief
+icon: interests
+description: Dont Wait Get Relief section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dont-wait-get-relief
+  id: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  backgroundColor: "#3b6278"
+  headingColor: "#ffffff"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+preview:
+  text:
+    - Dont Wait Get Relief
+  icon: interests
+picker_preview:
+  text: Dont Wait Get Relief
+  subtext: Dont Wait Get Relief section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dont-wait-get-relief/dont-wait-get-relief.cloudcannon.inputs.yml

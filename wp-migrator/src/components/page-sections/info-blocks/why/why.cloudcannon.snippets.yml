@@ -1,0 +1,27 @@
+why:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - why
+    icon: add
+  definitions:
+    component_name: Why
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+    # Add your component arguments here
+    # Example:
+    # - editor_key: text
+    #   type: string
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/why/why.cloudcannon.inputs.yml

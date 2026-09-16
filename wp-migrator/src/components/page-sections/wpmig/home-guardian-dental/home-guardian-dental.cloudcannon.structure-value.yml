@@ -1,0 +1,17 @@
+label: Home Guardian Dental
+icon: interests
+description: Home Guardian Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-guardian-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Guardian Dental
+  icon: interests
+picker_preview:
+  text: Home Guardian Dental
+  subtext: Home Guardian Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-guardian-dental/home-guardian-dental.cloudcannon.inputs.yml

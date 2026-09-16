@@ -1,0 +1,1239 @@
+---
+/**
+ * Payment Options B — migrated from payment-options [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  heading4 = "",
+  text5 = "",
+  heading5 = "",
+  text6 = "",
+  text7 = "",
+  heading6 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#7a7a7a",
+  buttonBackgroundColor = "#d44d5c",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#98535d",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const raw0 = `<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Monthly</th>
+      <th>Annually</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">1</th>-->
+      <td>Member</td>
+      <td>$19.99*</td>
+      <td>$199*</td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">1</th>-->
+      <td>Member + Familiy</td>
+      <td>$29.99*</td>
+      <td>$299*</td>
+    </tr>
+  </tbody>
+</table>`;
+const raw1 = `<table>
+  <thead>
+    <tr>
+      <th>Treatment</th>
+      <th>Them*</th>
+      <th>Us**</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">1</th>-->
+      <td>Exams &amp; X-Rays</td>
+      <td>$256</td>
+      <td><b>$0</b></td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">2</th>-->
+      <td>Extraction (Single Tooth)</td>
+      <td>$328</td>
+      <td><b>$262</b></td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">3</th>-->
+      <td>Tooth-Colored Filling</td>
+      <td>$366</td>
+      <td><b>$293</b></td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">3</th>-->
+      <td>Root Canal</td>
+      <td>$1215</td>
+      <td><b>$972</b></td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">3</th>-->
+      <td>Porcelain Crown</td>
+      <td>$1329</td>
+      <td><b>$1064</b></td>
+    </tr>
+    <!--row-->
+    <tr>
+      <!--<th scope="row">3</th>-->
+      <td>Denture</td>
+      <td>$2070</td>
+      <td><b>$1656</b></td>
+    </tr>
+  </tbody>
+</table>`;
+---
+<div class="payment-options-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--btnbg:${buttonBackgroundColor};--c7:${buttonTextColor2};--c8:${buttonBackgroundColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="pob-box">
+    <div class="pob-box2">
+      <div class="pob-box3">
+        <div class="pob-box4">
+          {eyebrow && <h4 class="pob-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="pob-box5">
+        <div class="pob-box6">
+          <div class="pob-box7">
+            <div class="pob-box8">
+              <h2 class="pob-heading2">{heading}</h2>
+            </div>
+            <div class="pob-box9">
+              <div class="pob-box10">
+                {text && <p class="pob-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="pob-box11">
+            <div class="pob-box12">
+              {subheading && <h3 class="pob-heading3">{subheading}</h3>}
+            </div>
+            <div class="pob-box13">
+              <div class="pob-box14">
+                {text2 && <p class="pob-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="pob-box15">
+            <div class="pob-box16">
+              <div class="pob-decor" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="pob-box17">
+            <div class="pob-box18">
+              {heading2 && <h3 class="pob-heading4">{heading2}</h3>}
+            </div>
+            <div class="pob-box19">
+              {text3 && <div class="pob-body" set:html={text3} />}
+            </div>
+          </div>
+          <div class="pob-box20">
+            <div class="pob-box21">
+              <div class="pob-decor2" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="pob-box22">
+            <div class="pob-box23">
+              {heading3 && <h3 class="pob-heading5">{heading3}</h3>}
+            </div>
+            <div class="pob-box24">
+              <div class="pob-box25">
+                {text4 && <p class="pob-text3">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="pob-box26">
+            <div class="pob-box27">
+              {heading4 && <h4 class="pob-heading6">{heading4}</h4>}
+            </div>
+            <div class="pob-box28">
+              <div class="pob-box29">
+                <div class="pob-raw"><Fragment set:html={raw0} /></div>
+              </div>
+            </div>
+            <div class="pob-box30">
+              <div class="pob-box31">
+                {text5 && <p class="pob-text4">{text5}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="pob-box32">
+            <div class="pob-box33">
+              {heading5 && <h4 class="pob-heading7">{heading5}</h4>}
+            </div>
+            <div class="pob-box34">
+              {text6 && <div class="pob-body2" set:html={text6} />}
+            </div>
+            <div class="pob-box35">
+              <div class="pob-raw2"><Fragment set:html={raw1} /></div>
+            </div>
+            <div class="pob-box36">
+              <div class="pob-box37">
+                {text7 && <p class="pob-text5" set:html={text7} />}
+              </div>
+            </div>
+          </div>
+          <div class="pob-box38">
+            <div class="pob-box39">
+              <div class="pob-decor3" aria-hidden="true"></div>
+            </div>
+            <div class="pob-box40">
+              {heading6 && <h2 class="pob-heading8">{heading6}</h2>}
+            </div>
+            <div class="pob-box41">
+              <div class="pob-box42">
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pob-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+            <div class="pob-box43">
+              <div class="pob-box44">
+                <div class="pob-box45">
+                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pob-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .payment-options-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .pob-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pob-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .pob-box3 {
+    display: none;
+  }
+
+  .pob-box4 {
+    display: none;
+  }
+
+  .pob-heading {
+    display: none;
+  }
+
+  :global(.pob-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pob-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pob-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pob-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .pob-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .pob-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pob-box6 {
+    box-sizing: border-box;
+  }
+
+  .pob-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pob-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box10 {
+    box-sizing: border-box;
+  }
+
+  .pob-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box14 {
+    box-sizing: border-box;
+  }
+
+  .pob-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box16 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .pob-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .pob-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 424px;
+  }
+
+  .pob-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box20 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box21 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .pob-decor2 {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .pob-box22 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box25 {
+    box-sizing: border-box;
+  }
+
+  .pob-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box26 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box28 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box29 {
+    box-sizing: border-box;
+  }
+
+  .pob-raw {
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 16px;
+  }
+
+  .pob-box30 {
+    box-sizing: border-box;
+    color: #7a7a7a;
+    flex: 0 0 100%;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box31 {
+    box-sizing: border-box;
+  }
+
+  .pob-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box32 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box32 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pob-box33 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading7 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-box34 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pob-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .pob-box35 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-raw2 {
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 16px;
+  }
+
+  .pob-box36 {
+    box-sizing: border-box;
+    color: #7a7a7a;
+    flex: 0 0 100%;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box37 {
+    box-sizing: border-box;
+  }
+
+  .pob-text5 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pob-box38 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pob-box39 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .pob-decor3 {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .pob-box40 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pob-heading8 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pob-box41 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box42 {
+    box-sizing: border-box;
+  }
+
+  :global(.pob-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c7);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.pob-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .pob-box43 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pob-box44 {
+    box-sizing: border-box;
+  }
+
+  .pob-box45 {
+    box-sizing: border-box;
+  }
+
+  :global(.pob-btn6) {
+    background-color: var(--c8);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c7);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.pob-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.pob-btn):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.pob-btn2):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.pob-btn3):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.pob-btn4):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.pob-btn5):hover {
+    background-color: var(--c12);
+  }
+
+  :global(.pob-btn6):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .pob-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .pob-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 2426px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .pob-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pob-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.pob-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.pob-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .pob-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .pob-heading2 {
+      line-height: 32px;
+    }
+
+    .pob-heading3 {
+      line-height: 28px;
+    }
+
+    .pob-heading4 {
+      line-height: 28px;
+    }
+
+    .pob-box19 {
+      min-height: 352px;
+    }
+
+    .pob-heading5 {
+      line-height: 28px;
+    }
+
+    .pob-heading6 {
+      line-height: 24px;
+    }
+
+    .pob-heading7 {
+      line-height: 24px;
+    }
+
+    .pob-heading8 {
+      line-height: 32px;
+    }
+
+    .pob-box43 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .pob-box44 {
+      display: none;
+    }
+
+    .pob-box45 {
+      display: none;
+    }
+
+    :global(.pob-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pob-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .pob-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 2010px;
+    }
+
+    :global(.pob-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.pob-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .pob-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .pob-box19 {
+      min-height: 184px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  @media (min-width: 768px) {
+    .pob-heading3 {
+      font-weight: 400;
+    }
+
+    .pob-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pob-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pob-box40 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .pob-heading8 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.pob-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pob-box42 {
+      background-color: rgb(212, 77, 92);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .pob-box18 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .pob-box23 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .pob-box27 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+    }
+
+    .pob-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .pob-box33 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+    }
+
+    .pob-heading7 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .pob-box29 {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+
+    .pob-raw {
+      color: rgb(122, 122, 122);
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+    }
+
+    .pob-box35 {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+
+    .pob-raw2 {
+      color: rgb(122, 122, 122);
+      font-family: Roboto, sans-serif;
+      font-size: 14px;
+    }
+
+    .pob-text {
+      line-height: 24px;
+    }
+
+    .pob-text2 {
+      line-height: 24px;
+    }
+
+    .pob-text3 {
+      line-height: 24px;
+    }
+
+    .pob-text4 {
+      line-height: 24px;
+    }
+
+    .pob-text5 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .pob-heading3 {
+      font-weight: 400;
+    }
+
+    .pob-heading4 {
+      font-weight: 400;
+    }
+
+    .pob-heading5 {
+      font-weight: 400;
+    }
+
+    .pob-heading8 {
+      font-weight: 400;
+    }
+
+    :global(.pob-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pob-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pob-text4 {
+      color: rgb(122, 122, 122);
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .pob-text5 {
+      color: rgb(122, 122, 122);
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    :global(.pob-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .pob-text {
+      line-height: 24px;
+    }
+
+    .pob-text2 {
+      line-height: 24px;
+    }
+
+    .pob-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

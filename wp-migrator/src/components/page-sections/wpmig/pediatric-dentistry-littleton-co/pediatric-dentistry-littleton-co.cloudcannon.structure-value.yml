@@ -1,0 +1,18 @@
+label: Pediatric Dentistry Littleton Co
+icon: vertical_split
+description: Pediatric Dentistry Littleton Co section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/pediatric-dentistry-littleton-co
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Pediatric Dentistry Littleton Co
+  icon: vertical_split
+picker_preview:
+  text: Pediatric Dentistry Littleton Co
+  subtext: Pediatric Dentistry Littleton Co section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/pediatric-dentistry-littleton-co/pediatric-dentistry-littleton-co.cloudcannon.inputs.yml

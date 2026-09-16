@@ -1,0 +1,16 @@
+label: Index Banner
+icon: add
+description: Description for Index Banner component.
+value:
+  _component: page-sections/homepage-blocks/index-banner
+  id: ""
+  heading: Index Banner <span class="heading-color">Heading</span>
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-banner/index-banner.cloudcannon.inputs.yml

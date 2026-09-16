@@ -1,0 +1,115 @@
+label: Review Video Switcher
+icon: rate_review
+description: Tabbed Watch/Read section — YouTube video carousel and written review carousel with autoplay.
+value:
+  _component: page-sections/homepage-blocks/review-video-switcher
+  id: ""
+  heading: Nobody Says It Better
+  watchLabel: Watch
+  readLabel: Read
+  videos:
+    - youtubeId: hlWiI4xVXKY
+      title: Patient Testimonial
+    - youtubeId: hlWiI4xVXKY
+      title: Patient Testimonial
+  reviews:
+    - text: >-
+        This is a great dental practice. The entire team is terrific — helpful,
+        friendly, welcoming, and professional.
+      authorName: Helen W
+      rating: 5
+    - text: >-
+        Dr. Fils Aime and the team continue to go above and beyond, always being
+        proactive and coming up with new suggestions to improve your dental health.
+      authorName: Michele
+      rating: 5
+    - text: >-
+        She is exceptional with her care for each and every patient. She takes her
+        time and is thorough in her explanation and her dentistry.
+      authorName: Susan F
+      rating: 5
+  showQuoteIcon: false
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Review Video Switcher
+  subtext:
+    - key: heading
+  icon: rate_review
+picker_preview:
+  text: Review Video Switcher
+  subtext: Tabbed Watch/Read section with video testimonials and written reviews.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/review-video-switcher/review-video-switcher.cloudcannon.inputs.yml
+_structures:
+  reviewVideoItems:
+    values:
+      - label: Video
+        icon: videocam
+        value:
+          youtubeId: ""
+          title: Patient Testimonial
+        preview:
+          text:
+            - key: title
+            - Video Testimonial
+          subtext:
+            - key: youtubeId
+          icon: videocam
+        _inputs:
+          youtubeId:
+            type: text
+            comment: YouTube video ID — the value of `v=` in the video URL (e.g. `hlWiI4xVXKY`).
+          title:
+            type: text
+            comment: Accessible title for the video embed.
+  reviewTextItems:
+    values:
+      - label: Review
+        icon: format_quote
+        value:
+          text: ""
+          authorName: ""
+          socialIcon: ""
+          reviewerImage: ""
+        preview:
+          text:
+            - key: authorName
+            - Review
+          subtext:
+            - key: text
+          icon: format_quote
+        _inputs:
+          text:
+            type: textarea
+            comment: The body text of the review.
+          authorName:
+            type: text
+            comment: Name displayed below the review text.
+          socialIcon:
+            type: select
+            comment: Optional review platform icon shown next to the author name and stars.
+            options:
+              allow_empty: true
+              values:
+                - id: social/google
+                  name: Google
+                - id: social/facebook
+                  name: Facebook
+                - id: social/yelp
+                  name: Yelp
+                - id: social/instagram
+                  name: Instagram
+          reviewerImage:
+            type: image
+            comment: Optional circular photo of the reviewer shown next to their name.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""

@@ -1,0 +1,360 @@
+---
+/**
+ * Careington Employers In Littleton — migrated from careington-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="careington-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="ceil-box">
+    <div class="ceil-box2">
+      <div class="ceil-box3">
+        <div class="ceil-box4">
+          <div class="ceil-box5">
+            {image && <img class="ceil-media" src={image} alt={imageAlt || ""} loading="lazy" width="575" height="410" />}
+          </div>
+        </div>
+        <div class="ceil-box6">
+          <div class="ceil-box7">
+            <h2 class="ceil-heading">{heading}</h2>
+          </div>
+          <div class="ceil-box8">
+            {text && <div class="ceil-body" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="ceil-box9">
+        <div class="ceil-box10">
+          {subheading && <h2 class="ceil-heading2">{subheading}</h2>}
+        </div>
+        <div class="ceil-box11">
+          {text2 && <div class="ceil-text">{text2}</div>}
+        </div>
+      </div>
+      <div class="ceil-box12">
+        <div class="ceil-box13">
+          {heading2 && <h2 class="ceil-heading3" set:html={heading2} />}
+        </div>
+        <div class="ceil-box14">
+          <div class="ceil-box15">
+            {text3 && <div class="ceil-body2" set:html={text3} />}
+          </div>
+        </div>
+      </div>
+      <div class="ceil-box16">
+        <div class="ceil-box17">
+          {heading3 && <h2 class="ceil-heading4">{heading3}</h2>}
+        </div>
+        <div class="ceil-box18">
+          {text4 && <div class="ceil-text2">{text4}</div>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .careington-employers-in-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .ceil-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ceil-box2 {
+    box-sizing: border-box;
+  }
+
+  .ceil-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .ceil-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ceil-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ceil-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .ceil-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ceil-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ceil-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ceil-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 440px;
+  }
+
+  .ceil-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ceil-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ceil-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ceil-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ceil-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ceil-text {
+    box-sizing: border-box;
+  }
+
+  .ceil-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ceil-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ceil-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ceil-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ceil-box15 {
+    box-sizing: border-box;
+    min-height: 328px;
+  }
+
+  .ceil-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ceil-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ceil-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ceil-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ceil-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ceil-text2 {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .ceil-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .ceil-box3 {
+      max-width: 1024px;
+    }
+
+    .ceil-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 592px;
+    }
+
+    .ceil-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ceil-box15 {
+      min-height: 184px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ceil-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ceil-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .ceil-box4 {
+      min-height: auto;
+    }
+
+    .ceil-box8 {
+      min-height: 272px;
+    }
+
+    .ceil-box15 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ceil-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .ceil-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .ceil-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .ceil-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

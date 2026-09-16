@@ -1,0 +1,10 @@
+_snippets:
+  aetna_dental_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Aetna Dental Employers In
+    definitions:
+      component_name: page-sections/wpmig/aetna-dental-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/aetna-dental-employers-in/aetna-dental-employers-in.cloudcannon.inputs.yml

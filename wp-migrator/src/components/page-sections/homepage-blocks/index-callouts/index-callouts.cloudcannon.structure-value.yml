@@ -1,0 +1,16 @@
+label: Index Callouts
+icon: add
+description: Description for Index Callouts component.
+value:
+  _component: page-sections/homepage-blocks/index-callouts
+  id: ""
+  heading: Index Callouts <span class="heading-color">Heading</span>
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-callouts/index-callouts.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  delta_dental_dentist_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Delta Dental Dentist In
+    definitions:
+      component_name: page-sections/wpmig/delta-dental-dentist-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/delta-dental-dentist-in/delta-dental-dentist-in.cloudcannon.inputs.yml

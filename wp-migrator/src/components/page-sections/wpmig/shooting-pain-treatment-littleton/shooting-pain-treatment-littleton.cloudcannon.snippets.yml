@@ -1,0 +1,10 @@
+_snippets:
+  shooting_pain_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Shooting Pain Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/shooting-pain-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/shooting-pain-treatment-littleton/shooting-pain-treatment-littleton.cloudcannon.inputs.yml

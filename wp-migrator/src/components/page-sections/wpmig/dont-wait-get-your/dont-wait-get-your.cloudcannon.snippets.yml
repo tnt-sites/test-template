@@ -1,0 +1,10 @@
+_snippets:
+  dont_wait_get_your:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dont Wait Get Your
+    definitions:
+      component_name: page-sections/wpmig/dont-wait-get-your
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dont-wait-get-your/dont-wait-get-your.cloudcannon.inputs.yml

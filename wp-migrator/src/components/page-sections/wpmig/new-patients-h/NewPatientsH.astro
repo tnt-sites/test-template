@@ -1,0 +1,595 @@
+---
+/**
+ * New Patients H — migrated from new-patients/new-patient-specials [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#ffffff",
+  textColor2 = "#1b2e38",
+  textColor3 = "#868686",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.58)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="new-patients-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${textColor3};--btnbg:${buttonBackgroundColor};--c8:${buttonTextColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${hoverBackgroundColor4}`} {...rest}>
+  <div class="nph-box">
+    <div class="nph-box2">
+      <div class="nph-box3">
+        <div class="nph-box4">
+          {eyebrow && <h4 class="nph-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="nph-box5">
+        <div class="nph-box6">
+          <div class="nph-box7">
+            <div class="nph-box8">
+              <h2 class="nph-heading2">{heading}</h2>
+            </div>
+          </div>
+          <div class="nph-box9">
+            <div class="nph-box10">
+              <div class="nph-box11">
+                <div class="nph-box12">
+                  <div class="nph-box13">
+                    {text && <div class="nph-text">{text}</div>}
+                    {text2 && <div class="nph-text2" set:html={text2} />}
+                    <div class="nph-box14">
+                      <div class="nph-decor" aria-hidden="true"></div>
+                      {text3 && <span class="nph-text3">{text3}</span>}
+                    </div>
+                  </div>
+                </div>
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="nph-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .new-patients-h {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .nph-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nph-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .nph-box3 {
+    display: none;
+  }
+
+  .nph-box4 {
+    display: none;
+  }
+
+  .nph-heading {
+    display: none;
+  }
+
+  :global(.nph-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.nph-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.nph-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.nph-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .nph-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .nph-box6 {
+    box-sizing: border-box;
+  }
+
+  .nph-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .nph-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .nph-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .nph-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .nph-box10 {
+    background-color: #ffffff;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .nph-box11 {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .nph-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    min-height: 356px;
+  }
+
+  .nph-box13 {
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 5px 0px;
+    box-sizing: border-box;
+    flex: 0 0 97.06%;
+    max-width: 97.06%;
+  }
+
+  .nph-text {
+    background-color: #006594;
+    box-sizing: border-box;
+    color: var(--tx);
+    font-family: Montserrat, sans-serif;
+    font-size: 21px;
+    line-height: 31.5px;
+    padding: 13px;
+  }
+
+  .nph-text2 {
+    background-color: #ebf2f6;
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 117px;
+    padding: 6px;
+  }
+
+  .nph-box14 {
+    box-sizing: border-box;
+    min-height: 135px;
+    padding: 13px;
+  }
+
+  .nph-decor {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-top-style: solid;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    min-height: 1px;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+
+  .nph-text3 {
+    box-sizing: border-box;
+    color: var(--c6);
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+
+  :global(.nph-btn5) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--c8);
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 30px 0px 20px 0px;
+    padding: 15px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.nph-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.nph-btn):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.nph-btn2):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.nph-btn3):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.nph-btn4):hover {
+    background-color: var(--c12);
+  }
+
+  :global(.nph-btn5):hover {
+    background-color: #49ab71;
+  }
+
+  @media (min-width: 768px) {
+    .nph-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .nph-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 587px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .nph-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nph-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.nph-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.nph-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.nph-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.nph-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.nph-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.nph-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .nph-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .nph-heading2 {
+      line-height: 32px;
+    }
+
+    .nph-box11 {
+      max-width: 720px;
+    }
+
+    .nph-box12 {
+      justify-content: center;
+      min-height: 411px;
+    }
+
+    .nph-box13 {
+      flex: 0 0 47.67%;
+      max-width: 47.67%;
+    }
+
+    .nph-box14 {
+      min-height: 159px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .nph-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .nph-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 585px;
+    }
+
+    :global(.nph-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.nph-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .nph-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .nph-box11 {
+      max-width: 1140px;
+    }
+
+    .nph-box12 {
+      min-height: 0px;
+    }
+
+    .nph-box13 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 399px;
+    }
+
+    .nph-box14 {
+      min-height: 111px;
+    }
+
+    :global(.nph-btn5) {
+      margin-left: 262.5px;
+      margin-right: 262.5px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .nph-text {
+    background-color: rgb(235, 242, 246);
+    color: rgb(27, 46, 56);
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 117px;
+  }
+  .nph-text2 {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .nph-box12 {
+    background-color: rgb(255, 255, 255);
+  }
+  .nph-box13 {
+    background-color: rgb(0, 101, 148);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 21px;
+    line-height: 31.5px;
+  }
+  .nph-box14 {
+    color: rgb(128, 128, 128);
+  }
+  .nph-decor {
+    color: rgb(134, 134, 134);
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+  .nph-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.nph-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .nph-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    :global(.nph-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.nph-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.nph-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .nph-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    :global(.nph-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

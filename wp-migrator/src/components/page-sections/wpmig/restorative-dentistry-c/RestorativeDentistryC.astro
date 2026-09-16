@@ -1,0 +1,809 @@
+---
+/**
+ * Restorative Dentistry C — migrated from dental-services/restorative-dentistry/dentures [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="restorative-dentistry-c" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="rdc-box">
+    <div class="rdc-box2">
+      <div class="rdc-box3">
+        <div class="rdc-box4">
+          {eyebrow && <h4 class="rdc-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdc-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="rdc-box5">
+        <div class="rdc-box6">
+          <div class="rdc-box7">
+            <div class="rdc-box8">
+              <h2 class="rdc-heading2">{heading}</h2>
+            </div>
+            <div class="rdc-box9">
+              <div class="rdc-box10">
+                {text && <p class="rdc-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="rdc-box11">
+            <div class="rdc-box12">
+              {subheading && <h3 class="rdc-heading3">{subheading}</h3>}
+            </div>
+            <div class="rdc-box13">
+              {text2 && <div class="rdc-body" set:html={text2} />}
+            </div>
+          </div>
+          <div class="rdc-box14">
+            <div class="rdc-box15">
+              {heading2 && <h3 class="rdc-heading4">{heading2}</h3>}
+            </div>
+            <div class="rdc-box16">
+              <div class="rdc-box17">
+                {text3 && <p class="rdc-text2">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="rdc-box18">
+            <div class="rdc-box19">
+              <div class="rdc-decor" aria-hidden="true"></div>
+            </div>
+            <div class="rdc-box20">
+              {heading3 && <h2 class="rdc-heading5">{heading3}</h2>}
+            </div>
+            <div class="rdc-box21">
+              <div class="rdc-box22">
+                {text4 && <p class="rdc-text3" set:html={text4} />}
+              </div>
+            </div>
+            <div class="rdc-box23">
+              <div class="rdc-box24">
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+            <div class="rdc-box25">
+              <div class="rdc-box26">
+                <div class="rdc-box27">
+                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdc-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .restorative-dentistry-c {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .rdc-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rdc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .rdc-box3 {
+    display: none;
+  }
+
+  .rdc-box4 {
+    display: none;
+  }
+
+  .rdc-heading {
+    display: none;
+  }
+
+  :global(.rdc-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdc-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdc-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdc-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .rdc-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .rdc-box6 {
+    box-sizing: border-box;
+  }
+
+  .rdc-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdc-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdc-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdc-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdc-box10 {
+    box-sizing: border-box;
+  }
+
+  .rdc-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdc-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdc-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdc-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdc-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 512px;
+  }
+
+  .rdc-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdc-box14 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdc-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdc-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdc-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdc-box17 {
+    box-sizing: border-box;
+  }
+
+  .rdc-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdc-box18 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdc-box19 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .rdc-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .rdc-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdc-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdc-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdc-box22 {
+    box-sizing: border-box;
+  }
+
+  .rdc-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdc-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdc-box24 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdc-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdc-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .rdc-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdc-box26 {
+    box-sizing: border-box;
+  }
+
+  .rdc-box27 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdc-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdc-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.rdc-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.rdc-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.rdc-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.rdc-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.rdc-btn5):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.rdc-btn6):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .rdc-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .rdc-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1346px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .rdc-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rdc-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.rdc-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdc-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdc-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.rdc-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdc-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdc-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .rdc-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .rdc-heading2 {
+      line-height: 32px;
+    }
+
+    .rdc-heading3 {
+      line-height: 28px;
+    }
+
+    .rdc-box13 {
+      min-height: 416px;
+    }
+
+    .rdc-heading4 {
+      line-height: 28px;
+    }
+
+    .rdc-heading5 {
+      line-height: 32px;
+    }
+
+    .rdc-box25 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .rdc-box26 {
+      display: none;
+    }
+
+    .rdc-box27 {
+      display: none;
+    }
+
+    :global(.rdc-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .rdc-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .rdc-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 986px;
+    }
+
+    :global(.rdc-btn4) {
+      white-space: nowrap;
+    }
+
+    :global(.rdc-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .rdc-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .rdc-box13 {
+      min-height: 248px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .rdc-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdc-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdc-decor {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .rdc-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdc-box23 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .rdc-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .rdc-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  :global(.rdc-btn5) {
+    align-items: normal;
+    background-color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  .rdc-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .rdc-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .rdc-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .rdc-heading3 {
+      font-weight: 400;
+    }
+
+    .rdc-heading4 {
+      font-weight: 400;
+    }
+
+    .rdc-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.rdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .rdc-text {
+      line-height: 24px;
+    }
+
+    .rdc-text2 {
+      line-height: 24px;
+    }
+
+    .rdc-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .rdc-heading3 {
+      font-weight: 400;
+    }
+
+    .rdc-heading4 {
+      font-weight: 400;
+    }
+
+    .rdc-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.rdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdc-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .rdc-text {
+      line-height: 24px;
+    }
+
+    .rdc-text2 {
+      line-height: 24px;
+    }
+
+    .rdc-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

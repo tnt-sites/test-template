@@ -1,0 +1,28 @@
+label: Toothache Cracked Tooth Filling
+icon: vertical_split
+description: Toothache Cracked Tooth Filling section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/toothache-cracked-tooth-filling
+  id: ""
+  heading: ""
+  text: ""
+  buttonText: ""
+  buttonLink: ""
+  image: ""
+  imageAlt: ""
+  headingColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonTextHoverColor: "#1b2e38"
+  hoverColor: "#5bb781"
+  hoverBackgroundColor: "#ffffff"
+preview:
+  text:
+    - Toothache Cracked Tooth Filling
+  icon: vertical_split
+picker_preview:
+  text: Toothache Cracked Tooth Filling
+  subtext: Toothache Cracked Tooth Filling section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/toothache-cracked-tooth-filling/toothache-cracked-tooth-filling.cloudcannon.inputs.yml

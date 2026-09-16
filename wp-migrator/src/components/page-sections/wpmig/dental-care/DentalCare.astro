@@ -1,0 +1,123 @@
+---
+/**
+ * Dental Care — migrated from about-us [8] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="dental-care" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="dc-box">
+    <div class="dc-box2">
+      <h3 class="dc-heading">{heading}</h3>
+    </div>
+    <div class="dc-box3">
+      <div class="dc-box4">
+        {text && <div class="dc-body" set:html={text} />}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .dental-care {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .dc-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .dc-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .dc-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .dc-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .dc-box4 {
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+
+  .dc-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .dental-care {
+      max-width: 690px;
+    }
+
+    .dc-heading {
+      line-height: 28px;
+    }
+
+    .dc-box4 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .dental-care {
+      max-width: 1110px;
+    }
+
+    .dc-box4 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .dc-heading {
+    font-weight: 400;
+  }
+  @media (min-width: 768px) {
+    .dc-heading {
+      font-weight: 400;
+    }
+  }
+  @media (min-width: 1440px) {
+    .dc-heading {
+      font-weight: 400;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

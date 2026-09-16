@@ -1,0 +1,1027 @@
+---
+/**
+ * General Dentistry L — migrated from dental-services/general-dentistry/cleanings-check-ups [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  heading4 = "",
+  text5 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-l" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="gdl-box">
+    <div class="gdl-box2">
+      <div class="gdl-box3">
+        <div class="gdl-box4">
+          {eyebrow && <h4 class="gdl-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdl-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdl-box5">
+        <div class="gdl-box6">
+          <div class="gdl-box7">
+            <div class="gdl-box8">
+              <h2 class="gdl-heading2" set:html={heading} />
+            </div>
+            <div class="gdl-box9">
+              <div class="gdl-box10">
+                {text && <div class="gdl-body" set:html={text} />}
+              </div>
+            </div>
+            <div class="gdl-box11">
+              {subheading && <h4 class="gdl-heading3">{subheading}</h4>}
+            </div>
+            <div class="gdl-box12">
+              <div class="gdl-box13">
+                {text2 && <p class="gdl-text">{text2}</p>}
+              </div>
+            </div>
+            <div class="gdl-box14">
+              {heading2 && <h4 class="gdl-heading4">{heading2}</h4>}
+            </div>
+            <div class="gdl-box15">
+              <div class="gdl-box16">
+                {text3 && <p class="gdl-text2">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdl-box17">
+            <div class="gdl-box18">
+              {heading3 && <h3 class="gdl-heading5">{heading3}</h3>}
+            </div>
+            <div class="gdl-box19">
+              {text4 && <div class="gdl-text3">{text4}</div>}
+            </div>
+          </div>
+          <div class="gdl-box20">
+            <div class="gdl-box21">
+              <div class="gdl-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdl-box22">
+              {heading4 && <h2 class="gdl-heading6">{heading4}</h2>}
+            </div>
+            <div class="gdl-box23">
+              <div class="gdl-box24">
+                {text5 && <p class="gdl-text4" set:html={text5} />}
+              </div>
+            </div>
+            <div class="gdl-box25">
+              <div class="gdl-box26">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdl-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gdl-box27">
+              <div class="gdl-box28">
+                <div class="gdl-box29">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdl-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-l {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdl-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdl-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdl-box3 {
+    display: none;
+  }
+
+  .gdl-box4 {
+    display: none;
+  }
+
+  .gdl-heading {
+    display: none;
+  }
+
+  :global(.gdl-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdl-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdl-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdl-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdl-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdl-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdl-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdl-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box10 {
+    box-sizing: border-box;
+    min-height: 304px;
+  }
+
+  .gdl-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdl-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdl-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdl-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box13 {
+    box-sizing: border-box;
+  }
+
+  .gdl-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdl-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdl-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdl-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box16 {
+    box-sizing: border-box;
+  }
+
+  .gdl-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdl-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdl-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdl-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdl-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-text3 {
+    box-sizing: border-box;
+  }
+
+  .gdl-box20 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdl-box21 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdl-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdl-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdl-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdl-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box24 {
+    box-sizing: border-box;
+  }
+
+  .gdl-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdl-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box26 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdl-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdl-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdl-box27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdl-box28 {
+    box-sizing: border-box;
+  }
+
+  .gdl-box29 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdl-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdl-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdl-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdl-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdl-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdl-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdl-btn5):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdl-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdl-btn7):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdl-btn8):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdl-btn9):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdl-btn10):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdl-btn11):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .gdl-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdl-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1462px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdl-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdl-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdl-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdl-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdl-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdl-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdl-heading2 {
+      line-height: 32px;
+    }
+
+    .gdl-box10 {
+      min-height: 232px;
+    }
+
+    .gdl-heading3 {
+      line-height: 24px;
+    }
+
+    .gdl-heading4 {
+      line-height: 24px;
+    }
+
+    .gdl-heading5 {
+      line-height: 28px;
+    }
+
+    .gdl-heading6 {
+      line-height: 32px;
+    }
+
+    .gdl-box27 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdl-box28 {
+      display: none;
+    }
+
+    .gdl-box29 {
+      display: none;
+    }
+
+    :global(.gdl-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdl-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdl-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1006px;
+    }
+
+    :global(.gdl-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdl-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdl-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdl-box10 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdl-heading5 {
+    font-weight: 400;
+  }
+  .gdl-heading6 {
+    font-weight: 400;
+  }
+  .gdl-box28 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.gdl-btn10) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  .gdl-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdl-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdl-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdl-heading5 {
+      font-weight: 400;
+    }
+
+    .gdl-heading6 {
+      font-weight: 400;
+    }
+
+    :global(.gdl-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdl-text {
+      line-height: 24px;
+    }
+
+    .gdl-text2 {
+      line-height: 24px;
+    }
+
+    .gdl-text4 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdl-heading5 {
+      font-weight: 400;
+    }
+
+    .gdl-heading6 {
+      font-weight: 400;
+    }
+
+    :global(.gdl-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdl-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdl-text {
+      line-height: 24px;
+    }
+
+    .gdl-text2 {
+      line-height: 24px;
+    }
+
+    .gdl-text4 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

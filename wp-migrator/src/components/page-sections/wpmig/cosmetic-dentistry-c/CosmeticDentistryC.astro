@@ -1,0 +1,896 @@
+---
+/**
+ * Cosmetic Dentistry C — migrated from dental-services/cosmetic-dentistry/porcelain-veneers [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="cosmetic-dentistry-c" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="cdc-box">
+    <div class="cdc-box2">
+      <div class="cdc-box3">
+        <div class="cdc-box4">
+          {eyebrow && <h4 class="cdc-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdc-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+        </div>
+      </div>
+      <div class="cdc-box5">
+        <div class="cdc-box6">
+          <div class="cdc-box7">
+            <div class="cdc-box8">
+              <h2 class="cdc-heading2">{heading}</h2>
+            </div>
+            <div class="cdc-box9">
+              <div class="cdc-box10">
+                {text && <div class="cdc-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="cdc-box11">
+            <div class="cdc-box12">
+              {subheading && <h3 class="cdc-heading3">{subheading}</h3>}
+            </div>
+            <div class="cdc-box13">
+              <div class="cdc-box14">
+                {text2 && <p class="cdc-text">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cdc-box15">
+            <div class="cdc-box16">
+              {heading2 && <h3 class="cdc-heading4">{heading2}</h3>}
+            </div>
+            <div class="cdc-box17">
+              <div class="cdc-box18">
+                {text3 && <p class="cdc-text2">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cdc-box19">
+            <div class="cdc-box20">
+              <div class="cdc-decor" aria-hidden="true"></div>
+            </div>
+            <div class="cdc-box21">
+              {heading3 && <h2 class="cdc-heading5">{heading3}</h2>}
+            </div>
+            <div class="cdc-box22">
+              <div class="cdc-box23">
+                {text4 && <p class="cdc-text3" set:html={text4} />}
+              </div>
+            </div>
+            <div class="cdc-box24">
+              <div class="cdc-box25">
+                {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdc-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+              </div>
+            </div>
+            <div class="cdc-box26">
+              <div class="cdc-box27">
+                <div class="cdc-box28">
+                  {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdc-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cosmetic-dentistry-c {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cdc-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cdc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .cdc-box3 {
+    display: none;
+  }
+
+  .cdc-box4 {
+    display: none;
+  }
+
+  .cdc-heading {
+    display: none;
+  }
+
+  :global(.cdc-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdc-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdc-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdc-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdc-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .cdc-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cdc-box6 {
+    box-sizing: border-box;
+  }
+
+  .cdc-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdc-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdc-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdc-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box10 {
+    box-sizing: border-box;
+    min-height: 280px;
+  }
+
+  .cdc-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdc-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdc-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdc-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdc-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box14 {
+    box-sizing: border-box;
+  }
+
+  .cdc-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdc-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdc-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdc-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdc-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box18 {
+    box-sizing: border-box;
+  }
+
+  .cdc-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdc-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdc-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cdc-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .cdc-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdc-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdc-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box23 {
+    box-sizing: border-box;
+  }
+
+  .cdc-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdc-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box25 {
+    box-sizing: border-box;
+  }
+
+  :global(.cdc-btn6) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cdc-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cdc-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdc-box27 {
+    box-sizing: border-box;
+  }
+
+  .cdc-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.cdc-btn7) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cdc-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cdc-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cdc-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cdc-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.cdc-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.cdc-btn5):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cdc-btn6):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.cdc-btn7):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .cdc-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cdc-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1282px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .cdc-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cdc-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.cdc-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdc-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .cdc-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .cdc-heading2 {
+      line-height: 32px;
+    }
+
+    .cdc-box10 {
+      min-height: 208px;
+    }
+
+    .cdc-heading3 {
+      line-height: 28px;
+    }
+
+    .cdc-heading4 {
+      line-height: 28px;
+    }
+
+    .cdc-heading5 {
+      line-height: 32px;
+    }
+
+    .cdc-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .cdc-box27 {
+      display: none;
+    }
+
+    .cdc-box28 {
+      display: none;
+    }
+
+    :global(.cdc-btn7) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cdc-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cdc-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 922px;
+    }
+
+    .cdc-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .cdc-box10 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cdc-heading2 {
+    font-weight: 400;
+  }
+  .cdc-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdc-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdc-box20 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .cdc-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdc-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cdc-box25 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cdc-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cdc-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cdc-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cdc-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cdc-heading2 {
+      font-weight: 400;
+    }
+
+    .cdc-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cdc-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cdc-box20 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cdc-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.cdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .cdc-text3 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .cdc-box12 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cdc-box15 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cdc-text {
+      line-height: 24px;
+    }
+
+    .cdc-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cdc-heading2 {
+      font-weight: 400;
+    }
+
+    .cdc-heading3 {
+      font-weight: 400;
+    }
+
+    .cdc-heading4 {
+      font-weight: 400;
+    }
+
+    .cdc-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.cdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdc-btn6) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cdc-text {
+      line-height: 24px;
+    }
+
+    .cdc-text2 {
+      line-height: 24px;
+    }
+
+    .cdc-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

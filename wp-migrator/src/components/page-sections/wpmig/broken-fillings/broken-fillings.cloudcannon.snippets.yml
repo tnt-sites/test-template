@@ -1,0 +1,10 @@
+_snippets:
+  broken_fillings:
+    template: astro_component
+    inline: false
+    preview:
+      text: Broken Fillings
+    definitions:
+      component_name: page-sections/wpmig/broken-fillings
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/broken-fillings/broken-fillings.cloudcannon.inputs.yml

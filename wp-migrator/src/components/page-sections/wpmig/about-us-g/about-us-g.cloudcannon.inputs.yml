@@ -1,0 +1,81 @@
+_inputs:
+  subheading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  image:
+    type: image
+  imageAlt:
+    type: text
+  heading:
+    type: text
+  text:
+    type: textarea
+  image2:
+    type: image
+  image2Alt:
+    type: text
+  heading2:
+    type: text
+  text2:
+    type: textarea
+  image3:
+    type: image
+  image3Alt:
+    type: text
+  heading3:
+    type: text
+  text3:
+    type: textarea
+  image4:
+    type: image
+  image4Alt:
+    type: text
+  heading4:
+    type: text
+  text4:
+    type: textarea
+  secondaryButtonText6:
+    type: text
+  secondaryButtonLink6:
+    type: url
+  buttonTextColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor2:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color
+  hoverBackgroundColor4:
+    type: color
+  buttonBackgroundHoverColor:
+    type: color

@@ -1,0 +1,69 @@
+label: Meet Landing
+icon: add
+description: Description for Meet Landing component.
+value:
+  _component: page-sections/people/meet-landing
+  id: ""
+  variant: button
+  doctors:
+    - _component: page-sections/people/meet-landing/meet-landing-person
+      name: Dr. David Schram
+      href: dr-david-schram.html
+      imageSource: /src/assets/images/meet-our-dentists-schram.webp
+      imageAlt: Dr. David Schram
+    - _component: page-sections/people/meet-landing/meet-landing-person
+      name: Dr. Blake Smith
+      href: dr-blake-smith.html
+      imageSource: /src/assets/images/meet-our-dentists-smith.webp
+      imageAlt: Dr. Blake Smith
+    - _component: page-sections/people/meet-landing/meet-landing-person
+      name: Dr. Andrew Weaver
+      href: dr-andrew-weaver.html
+      imageSource: /src/assets/images/meet-our-dentists-weaver.webp
+      imageAlt: Dr. Andrew Weaver
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/people/meet-landing/meet-landing.cloudcannon.inputs.yml
+_structures:
+  meetLandingPeople:
+    values:
+      - label: Doctor
+        icon: person
+        value:
+          _component: page-sections/people/meet-landing/meet-landing-person
+          name: Doctor Name
+          href: provider-page.html
+          imageSource: /src/assets/images/component-library/profile.jpg
+          imageAlt: Doctor Name
+        preview:
+          text:
+            - key: name
+            - Doctor
+          subtext:
+            - key: href
+            - provider-page.html
+          image:
+            - key: imageSource
+        _inputs:
+          name:
+            type: text
+            comment: Doctor display name.
+          href:
+            type: text
+            comment: Link URL for the provider profile page.
+          imageSource:
+            type: image
+            comment: Doctor image.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the doctor image.

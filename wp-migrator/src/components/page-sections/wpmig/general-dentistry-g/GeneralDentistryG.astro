@@ -1,0 +1,1292 @@
+---
+/**
+ * General Dentistry G — migrated from dental-services/general-dentistry/halitosis-treatment [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  text4 = "",
+  heading3 = "",
+  text5 = "",
+  heading4 = "",
+  text6 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  items = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="general-dentistry-g" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${hoverBackgroundColor4};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="gdg-box">
+    <div class="gdg-box2">
+      <div class="gdg-box3">
+        <div class="gdg-box4">
+          {eyebrow && <h4 class="gdg-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdg-box5">
+        <div class="gdg-box6">
+          <div class="gdg-box7">
+            <div class="gdg-box8">
+              <h2 class="gdg-heading2">{heading}</h2>
+            </div>
+            <div class="gdg-box9">
+              <div class="gdg-box10">
+                {text && <p class="gdg-text">{text}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdg-box11">
+            <div class="gdg-box12">
+              {subheading && <h3 class="gdg-heading3">{subheading}</h3>}
+            </div>
+            <div class="gdg-box13">
+              <div class="gdg-box14">
+                {text2 && <p class="gdg-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdg-box15">
+            <div class="gdg-box16">
+              {heading2 && <h3 class="gdg-heading4">{heading2}</h3>}
+            </div>
+            <div class="gdg-grid">
+              {list.map((it) => (
+                <div class="gdg-box17">
+                  <div class="gdg-box18">
+                    {it.text && <div class="gdg-body" set:html={it.text} />}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <section class="gdg-box21">
+              <div class="gdg-box22">
+                <div class="gdg-box23">
+                  <div class="gdg-box24">
+                    <div class="gdg-box25">
+                      <div class="gdg-box26">
+                        {text3 && <div class="gdg-body3" set:html={text3} />}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="gdg-box27">
+              <div class="gdg-box28">
+                {text4 && <p class="gdg-text3">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdg-box29">
+            <div class="gdg-box30">
+              {heading3 && <h3 class="gdg-heading5">{heading3}</h3>}
+            </div>
+            <div class="gdg-box31">
+              <div class="gdg-box32">
+                {text5 && <div class="gdg-body4" set:html={text5} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdg-box33">
+            <div class="gdg-box34">
+              <div class="gdg-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdg-box35">
+              {heading4 && <h2 class="gdg-heading6">{heading4}</h2>}
+            </div>
+            <div class="gdg-box36">
+              <div class="gdg-box37">
+                {text6 && <p class="gdg-text4" set:html={text6} />}
+              </div>
+            </div>
+            <div class="gdg-box38">
+              <div class="gdg-box39">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdg-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gdg-box40">
+              <div class="gdg-box41">
+                <div class="gdg-box42">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdg-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-g {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdg-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdg-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdg-box3 {
+    display: none;
+  }
+
+  .gdg-box4 {
+    display: none;
+  }
+
+  .gdg-heading {
+    display: none;
+  }
+
+  :global(.gdg-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdg-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdg-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdg-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdg-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdg-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdg-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdg-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdg-box10 {
+    box-sizing: border-box;
+  }
+
+  .gdg-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdg-box11 {
+    display: none;
+  }
+
+  .gdg-box12 {
+    display: none;
+  }
+
+  .gdg-heading3 {
+    display: none;
+  }
+
+  .gdg-box13 {
+    display: none;
+  }
+
+  .gdg-box14 {
+    display: none;
+  }
+
+  .gdg-text2 {
+    display: none;
+  }
+
+  .gdg-box15 {
+    display: none;
+  }
+
+  .gdg-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box16 {
+    display: none;
+  }
+
+  .gdg-heading4 {
+    display: none;
+  }
+
+  .gdg-grid {
+    display: none;
+  }
+
+  .gdg-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box17 {
+    display: none;
+  }
+
+  .gdg-box17 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box18 {
+    display: none;
+  }
+
+  .gdg-box18 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box21 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box22 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box23 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box24 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box25 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box26 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdg-box27 {
+    display: none;
+  }
+
+  .gdg-box28 {
+    display: none;
+  }
+
+  .gdg-text3 {
+    display: none;
+  }
+
+  .gdg-box29 {
+    display: none;
+  }
+
+  .gdg-box30 {
+    display: none;
+  }
+
+  .gdg-heading5 {
+    display: none;
+  }
+
+  .gdg-box31 {
+    display: none;
+  }
+
+  .gdg-box32 {
+    display: none;
+  }
+
+  .gdg-box33 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdg-box34 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdg-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdg-box35 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdg-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdg-box36 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdg-box37 {
+    box-sizing: border-box;
+  }
+
+  .gdg-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdg-box38 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdg-box39 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdg-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdg-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdg-box40 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdg-box41 {
+    box-sizing: border-box;
+  }
+
+  .gdg-box42 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdg-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdg-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdg-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdg-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdg-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdg-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdg-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdg-btn6):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdg-btn7):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdg-btn8):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdg-btn9):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdg-btn10):hover {
+    background-color: var(--c12);
+  }
+
+  :global(.gdg-btn11):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .gdg-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdg-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1566px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdg-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdg-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdg-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdg-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdg-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdg-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdg-heading2 {
+      line-height: 32px;
+    }
+
+    .gdg-box11 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      position: relative;
+    }
+
+    .gdg-box12 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gdg-heading3 {
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .gdg-box13 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .gdg-box14 {
+      box-sizing: border-box;
+      display: block;
+    }
+
+    .gdg-text2 {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 0px;
+    }
+
+    .gdg-box15 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      position: relative;
+    }
+
+    .gdg-box16 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gdg-heading4 {
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .gdg-grid {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .gdg-box17 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 50%;
+      flex-wrap: wrap;
+      max-width: 50%;
+      padding: 10px;
+      position: relative;
+    }
+
+    .gdg-box18 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gdg-body :global(ul) {
+      box-sizing: border-box;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 0px;
+    }
+
+    .gdg-box27 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 170px;
+      position: relative;
+    }
+
+    .gdg-box28 {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .gdg-text3 {
+      box-sizing: border-box;
+      display: block;
+      margin-top: 0px;
+    }
+
+    .gdg-box29 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      position: relative;
+    }
+
+    .gdg-box30 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .gdg-heading5 {
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .gdg-box31 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .gdg-box32 {
+      box-sizing: border-box;
+      display: block;
+      min-height: 232px;
+    }
+
+    .gdg-body4 :global(p) {
+      box-sizing: border-box;
+      margin-top: 0px;
+    }
+
+    .gdg-heading6 {
+      line-height: 32px;
+    }
+
+    .gdg-box40 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdg-box41 {
+      display: none;
+    }
+
+    .gdg-box42 {
+      display: none;
+    }
+
+    :global(.gdg-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdg-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdg-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1182px;
+    }
+
+    :global(.gdg-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdg-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdg-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdg-grid {
+      flex-wrap: nowrap;
+    }
+
+    .gdg-box27 {
+      min-height: 98px;
+    }
+
+    .gdg-box32 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  @media (min-width: 768px) {
+    .gdg-heading3 {
+      font-weight: 400;
+    }
+
+    .gdg-heading4 {
+      font-weight: 400;
+    }
+
+    .gdg-heading5 {
+      font-weight: 400;
+    }
+
+    .gdg-box35 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdg-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdg-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdg-box39 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gdg-text {
+      line-height: 24px;
+    }
+
+    .gdg-text2 {
+      line-height: 24px;
+    }
+
+    .gdg-text3 {
+      line-height: 24px;
+    }
+
+    .gdg-text4 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdg-heading3 {
+      font-weight: 400;
+    }
+
+    .gdg-heading4 {
+      font-weight: 400;
+    }
+
+    .gdg-heading5 {
+      font-weight: 400;
+    }
+
+    .gdg-heading6 {
+      font-weight: 400;
+    }
+
+    :global(.gdg-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdg-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdg-text {
+      line-height: 24px;
+    }
+
+    .gdg-text2 {
+      line-height: 24px;
+    }
+
+    .gdg-text3 {
+      line-height: 24px;
+    }
+
+    .gdg-text4 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

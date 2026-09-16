@@ -1,0 +1,33 @@
+label: Call Us Today To D
+icon: vertical_split
+description: Call Us Today To D section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-to-d
+  id: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  image: ""
+  imageAlt: ""
+  heading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  heading3: ""
+  text5: ""
+  heading4: ""
+  text6: ""
+  text7: ""
+  heading5: ""
+  text8: ""
+  heading6: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today To D
+  icon: vertical_split
+picker_preview:
+  text: Call Us Today To D
+  subtext: Call Us Today To D section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-to-d/call-us-today-to-d.cloudcannon.inputs.yml

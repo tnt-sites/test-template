@@ -1,0 +1,10 @@
+_snippets:
+  state_of_the_art:
+    template: astro_component
+    inline: false
+    preview:
+      text: State Of The Art
+    definitions:
+      component_name: page-sections/wpmig/state-of-the-art
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/state-of-the-art/state-of-the-art.cloudcannon.inputs.yml

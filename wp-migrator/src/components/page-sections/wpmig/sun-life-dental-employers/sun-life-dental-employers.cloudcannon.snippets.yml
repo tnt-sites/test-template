@@ -1,0 +1,10 @@
+_snippets:
+  sun_life_dental_employers:
+    template: astro_component
+    inline: false
+    preview:
+      text: Sun Life Dental Employers
+    definitions:
+      component_name: page-sections/wpmig/sun-life-dental-employers
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/sun-life-dental-employers/sun-life-dental-employers.cloudcannon.inputs.yml

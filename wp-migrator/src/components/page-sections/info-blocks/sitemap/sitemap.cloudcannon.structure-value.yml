@@ -1,0 +1,16 @@
+label: Sitemap
+icon: add
+description: Description for Sitemap component.
+value:
+  _component: page-sections/info-blocks/sitemap
+  id: ""
+  heading: Sitemap <span class="heading-color">Heading</span>
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/sitemap/sitemap.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  sedation_dentistry_e:
+    template: astro_component
+    inline: false
+    preview:
+      text: Sedation Dentistry E
+    definitions:
+      component_name: page-sections/wpmig/sedation-dentistry-e
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/sedation-dentistry-e/sedation-dentistry-e.cloudcannon.inputs.yml

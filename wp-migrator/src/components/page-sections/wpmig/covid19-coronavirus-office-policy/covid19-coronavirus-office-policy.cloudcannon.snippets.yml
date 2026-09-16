@@ -1,0 +1,10 @@
+_snippets:
+  covid19_coronavirus_office_policy:
+    template: astro_component
+    inline: false
+    preview:
+      text: Covid19 Coronavirus Office Policy
+    definitions:
+      component_name: page-sections/wpmig/covid19-coronavirus-office-policy
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/covid19-coronavirus-office-policy/covid19-coronavirus-office-policy.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  united_concordia_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: United Concordia Employers In
+    definitions:
+      component_name: page-sections/wpmig/united-concordia-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/united-concordia-employers-in/united-concordia-employers-in.cloudcannon.inputs.yml

@@ -1,0 +1,17 @@
+label: Home New Patients
+icon: interests
+description: Home New Patients section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-new-patients
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home New Patients
+  icon: interests
+picker_preview:
+  text: Home New Patients
+  subtext: Home New Patients section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-new-patients/home-new-patients.cloudcannon.inputs.yml

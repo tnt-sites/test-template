@@ -1,0 +1,23 @@
+label: For Help With Any
+icon: grid_view
+description: For Help With Any section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/for-help-with-any
+  id: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text: ""
+  heading: ""
+  items:
+    - text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - For Help With Any
+  icon: grid_view
+picker_preview:
+  text: For Help With Any
+  subtext: For Help With Any section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/for-help-with-any/for-help-with-any.cloudcannon.inputs.yml

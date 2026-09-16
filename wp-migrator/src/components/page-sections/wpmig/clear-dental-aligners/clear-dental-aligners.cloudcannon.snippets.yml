@@ -1,0 +1,10 @@
+_snippets:
+  clear_dental_aligners:
+    template: astro_component
+    inline: false
+    preview:
+      text: Clear Dental Aligners
+    definitions:
+      component_name: page-sections/wpmig/clear-dental-aligners
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/clear-dental-aligners/clear-dental-aligners.cloudcannon.inputs.yml

@@ -1,0 +1,90 @@
+---
+/**
+ * Full-bleed banner image at the top of a location page.
+ *
+ * Hand-rolls its own <picture> because the shared Image component has no
+ * art-direction support and this banner swaps to a separately cropped image
+ * below 790px.
+ */
+import { getImage } from "astro:assets";
+import LocationSection from "../LocationSection.astro";
+import { hasText } from "../utils";
+
+const {
+  id = "",
+  imageSource = "",
+  imageSourceMobile = "",
+  imageAlt = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+// Same resolution approach the shared AstroImage component uses, so the
+// `/src/assets/images/...` paths CloudCannon writes keep working.
+const assets = import.meta.glob("/src/assets/images/**/*", { import: "default", eager: true });
+
+function resolve(source: string) {
+  if (!hasText(source)) return null;
+  const key = Object.keys(assets).find((path) => path.endsWith(source));
+
+  return key ? (assets[key] as ImageMetadata) : null;
+}
+
+const desktopAsset = resolve(imageSource);
+const mobileAsset = resolve(imageSourceMobile);
+
+if (!_component && !desktopAsset) return;
+
+const desktop = desktopAsset
+  ? await getImage({ src: desktopAsset, widths: [800, 1200, 1600, 2000], format: "avif" })
+  : null;
+const mobile = mobileAsset
+  ? await getImage({ src: mobileAsset, widths: [400, 600, 800], format: "avif" })
+  : null;
+
+const imageAttributes = editable
+  ? {
+      "data-editable": "image",
+      "data-prop-src": "imageSource",
+      "data-prop-alt": "imageAlt",
+    }
+  : {};
+---
+
+<LocationSection id={id} class:list={["location-banner", className]} {...htmlAttributes}>
+  {
+    desktop && (
+      <picture>
+        {mobile && <source media="(max-width: 790px)" srcset={mobile.srcSet.attribute} />}
+        <img
+          src={desktop.src}
+          srcset={desktop.srcSet.attribute}
+          alt={imageAlt}
+          width={desktop.attributes.width}
+          height={desktop.attributes.height}
+          fetchpriority="high"
+          {...imageAttributes}
+        />
+      </picture>
+    )
+  }
+</LocationSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .location-page-section.location-banner picture {
+      display: block;
+      margin: 0;
+      padding: 0;
+
+      img {
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0;
+        width: 100%;
+      }
+    }
+  }
+</style>

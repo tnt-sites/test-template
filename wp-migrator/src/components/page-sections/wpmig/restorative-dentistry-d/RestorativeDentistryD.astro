@@ -1,0 +1,740 @@
+---
+/**
+ * Restorative Dentistry D — migrated from dental-services/restorative-dentistry/implant-restorations [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="restorative-dentistry-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="rdd-box">
+    <div class="rdd-box2">
+      <div class="rdd-box3">
+        <div class="rdd-box4">
+          {eyebrow && <h4 class="rdd-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="rdd-box5">
+        <div class="rdd-box6">
+          <div class="rdd-box7">
+            <div class="rdd-box8">
+              <h2 class="rdd-heading2">{heading}</h2>
+            </div>
+            <div class="rdd-box9">
+              {text && <div class="rdd-body" set:html={text} />}
+            </div>
+          </div>
+          <div class="rdd-box10">
+            <div class="rdd-box11">
+              {subheading && <h3 class="rdd-heading3">{subheading}</h3>}
+            </div>
+            <div class="rdd-box12">
+              <div class="rdd-box13">
+                {text2 && <p class="rdd-text">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="rdd-box14">
+            <div class="rdd-box15">
+              <div class="rdd-decor" aria-hidden="true"></div>
+            </div>
+            <div class="rdd-box16">
+              {heading2 && <h2 class="rdd-heading4">{heading2}</h2>}
+            </div>
+            <div class="rdd-box17">
+              <div class="rdd-box18">
+                {text3 && <p class="rdd-text2" set:html={text3} />}
+              </div>
+            </div>
+            <div class="rdd-box19">
+              <div class="rdd-box20">
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdd-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+            <div class="rdd-box21">
+              <div class="rdd-box22">
+                <div class="rdd-box23">
+                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdd-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .restorative-dentistry-d {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .rdd-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rdd-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .rdd-box3 {
+    display: none;
+  }
+
+  .rdd-box4 {
+    display: none;
+  }
+
+  .rdd-heading {
+    display: none;
+  }
+
+  :global(.rdd-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdd-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdd-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdd-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .rdd-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .rdd-box6 {
+    box-sizing: border-box;
+  }
+
+  .rdd-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdd-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdd-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdd-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 696px;
+  }
+
+  .rdd-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdd-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdd-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdd-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdd-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdd-box13 {
+    box-sizing: border-box;
+  }
+
+  .rdd-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdd-box14 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdd-box15 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .rdd-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .rdd-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdd-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdd-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdd-box18 {
+    box-sizing: border-box;
+  }
+
+  .rdd-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdd-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdd-box20 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdd-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdd-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .rdd-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdd-box22 {
+    box-sizing: border-box;
+  }
+
+  .rdd-box23 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdd-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdd-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.rdd-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.rdd-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.rdd-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.rdd-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.rdd-btn5):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.rdd-btn6):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .rdd-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .rdd-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1334px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .rdd-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rdd-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.rdd-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdd-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdd-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.rdd-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdd-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdd-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .rdd-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .rdd-heading2 {
+      line-height: 32px;
+    }
+
+    .rdd-box9 {
+      min-height: 552px;
+    }
+
+    .rdd-heading3 {
+      line-height: 28px;
+    }
+
+    .rdd-heading4 {
+      line-height: 32px;
+    }
+
+    .rdd-box21 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .rdd-box22 {
+      display: none;
+    }
+
+    .rdd-box23 {
+      display: none;
+    }
+
+    :global(.rdd-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .rdd-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .rdd-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 894px;
+    }
+
+    :global(.rdd-btn4) {
+      white-space: nowrap;
+    }
+
+    :global(.rdd-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .rdd-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .rdd-box9 {
+      min-height: 312px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .rdd-heading3 {
+    font-weight: 400;
+  }
+  .rdd-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .rdd-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdd-box20 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.rdd-btn5) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .rdd-box21 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .rdd-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .rdd-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .rdd-heading3 {
+      font-weight: 400;
+    }
+
+    .rdd-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .rdd-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.rdd-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .rdd-box20 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .rdd-text {
+      line-height: 24px;
+    }
+
+    .rdd-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .rdd-heading3 {
+      font-weight: 400;
+    }
+
+    .rdd-heading4 {
+      font-weight: 400;
+    }
+
+    :global(.rdd-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdd-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .rdd-text {
+      line-height: 24px;
+    }
+
+    .rdd-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

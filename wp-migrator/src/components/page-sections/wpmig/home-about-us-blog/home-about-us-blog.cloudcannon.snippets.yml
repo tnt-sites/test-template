@@ -1,0 +1,10 @@
+_snippets:
+  home_about_us_blog:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home About Us Blog
+    definitions:
+      component_name: page-sections/wpmig/home-about-us-blog
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-about-us-blog/home-about-us-blog.cloudcannon.inputs.yml

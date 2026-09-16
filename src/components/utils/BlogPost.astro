@@ -1,0 +1,128 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Page from "@layouts/Page.astro";
+import CustomSection from "@page-sections/builders/custom-section/CustomSection.astro";
+import { render, type CollectionEntry } from "astro:content";
+
+// Automatically import all components from building-blocks and page-sections for MDX
+const buildingBlocksImports = import.meta.glob("../building-blocks/**/*.astro", { eager: true });
+const pageSectionsImports = import.meta.glob("../page-sections/**/*.astro", { eager: true });
+const componentImports = { ...buildingBlocksImports, ...pageSectionsImports };
+
+const mdxComponents: Record<string, any> = {};
+Object.entries(componentImports).forEach(([path, module]) => {
+  const fileName = path.split("/").pop()!.replace(".astro", "");
+  mdxComponents[fileName] = (module as any).default;
+});
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const date = post.data.date.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+---
+
+<Page title={post.data.title} description={post.data.description} image={post.data.image}>
+  <CustomSection
+    maxContentWidth="xl"
+    paddingHorizontal="lg"
+    paddingVertical="4xl"
+    colorScheme="default"
+    backgroundColor="base"
+  >
+    <SimpleText size="sm" style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
+      {date} • {post.data.author}
+    </SimpleText>
+
+    <Heading level="h1" size="2xl" style="margin-bottom: var(--spacing-xs);">
+      {post.data.title}
+    </Heading>
+
+    {
+      post.data.description && (
+        <SimpleText
+          size="lg"
+          style="color: var(--color-text-muted); margin-bottom: 0; margin-top: var(--spacing-xs);"
+        >
+          {post.data.description}
+        </SimpleText>
+      )
+    }
+
+    {
+      post.data.image && (
+        <Image
+          source={post.data.image}
+          alt={post.data.title}
+          rounded={true}
+          editable={false}
+          class="post-image"
+          aspectRatio="horizontal-strip"
+          positionVertical="center"
+        />
+      )
+    }
+
+    <div class="post">
+      <Content components={mdxComponents} />
+    </div>
+  </CustomSection>
+</Page>
+
+<style>
+  .post {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 70ch)
+      minmax(0, 1fr);
+    margin-inline: auto;
+    margin-top: var(--spacing-xl);
+  }
+
+  .post > :global(*) {
+    grid-column: 2;
+  }
+
+  .post > :global(.wide),
+  .post > :global(pre),
+  .post > :global(.image),
+  .post > :global(.video) {
+    grid-column: 1 / -1;
+  }
+
+  .post > :global(h1),
+  .post > :global(h2),
+  .post > :global(h3),
+  .post > :global(h4),
+  .post > :global(h5),
+  .post > :global(h6) {
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+
+  .post > :global(h1:first-child),
+  .post > :global(h2:first-child),
+  .post > :global(h3:first-child),
+  .post > :global(h4:first-child),
+  .post > :global(h5:first-child),
+  .post > :global(h6:first-child) {
+    margin-top: 0;
+  }
+
+  .post > :global(.astro-code) {
+    margin-block: var(--spacing-xl);
+  }
+
+  .post-image {
+    margin-top: var(--spacing-xl);
+  }
+</style>

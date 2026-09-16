@@ -1,0 +1,10 @@
+_snippets:
+  facial_swelling_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Facial Swelling Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/facial-swelling-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/facial-swelling-treatment-littleton/facial-swelling-treatment-littleton.cloudcannon.inputs.yml

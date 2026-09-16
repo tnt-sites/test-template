@@ -1,0 +1,632 @@
+---
+/**
+ * Sedation Dentistry C — migrated from dental-services/sedation-dentistry/iv-sedation-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  buttonBackgroundHoverColor = "#4eaf76",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="sedation-dentistry-c" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${buttonBackgroundHoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="sdc-box">
+    <div class="sdc-box2">
+      <div class="sdc-box3">
+        <div class="sdc-box4">
+          {eyebrow && <h4 class="sdc-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+        </div>
+      </div>
+      <div class="sdc-box5">
+        <div class="sdc-box6">
+          <div class="sdc-box7">
+            <div class="sdc-box8">
+              <h2 class="sdc-heading2">{heading}</h2>
+            </div>
+            <div class="sdc-box9">
+              <div class="sdc-box10">
+                {text && <div class="sdc-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="sdc-box11">
+            <div class="sdc-box12">
+              <div class="sdc-decor" aria-hidden="true"></div>
+            </div>
+            <div class="sdc-box13">
+              {subheading && <h2 class="sdc-heading3">{subheading}</h2>}
+            </div>
+            <div class="sdc-box14">
+              <div class="sdc-box15">
+                {text2 && <p class="sdc-text" set:html={text2} />}
+              </div>
+            </div>
+            <div class="sdc-box16">
+              <div class="sdc-box17">
+                {secondaryButtonText3 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sdc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+              </div>
+            </div>
+            <div class="sdc-box18">
+              <div class="sdc-box19">
+                <div class="sdc-box20">
+                  {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sdc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .sedation-dentistry-c {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .sdc-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sdc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .sdc-box3 {
+    display: none;
+  }
+
+  .sdc-box4 {
+    display: none;
+  }
+
+  .sdc-heading {
+    display: none;
+  }
+
+  :global(.sdc-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sdc-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sdc-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .sdc-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .sdc-box6 {
+    box-sizing: border-box;
+  }
+
+  .sdc-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdc-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sdc-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sdc-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdc-box10 {
+    box-sizing: border-box;
+    min-height: 256px;
+  }
+
+  .sdc-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .sdc-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdc-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .sdc-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .sdc-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sdc-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sdc-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdc-box15 {
+    box-sizing: border-box;
+  }
+
+  .sdc-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .sdc-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdc-box17 {
+    box-sizing: border-box;
+  }
+
+  :global(.sdc-btn4) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sdc-btn4) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .sdc-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdc-box19 {
+    box-sizing: border-box;
+  }
+
+  .sdc-box20 {
+    box-sizing: border-box;
+  }
+
+  :global(.sdc-btn5) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sdc-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sdc-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sdc-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sdc-btn3):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sdc-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.sdc-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  @media (min-width: 768px) {
+    .sdc-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .sdc-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 634px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .sdc-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sdc-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.sdc-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.sdc-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.sdc-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sdc-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .sdc-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .sdc-heading2 {
+      line-height: 32px;
+    }
+
+    .sdc-box10 {
+      min-height: 184px;
+    }
+
+    .sdc-heading3 {
+      line-height: 32px;
+    }
+
+    .sdc-box18 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .sdc-box19 {
+      display: none;
+    }
+
+    .sdc-box20 {
+      display: none;
+    }
+
+    :global(.sdc-btn5) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sdc-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .sdc-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 490px;
+    }
+
+    :global(.sdc-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.sdc-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sdc-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.sdc-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .sdc-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .sdc-box10 {
+      min-height: 112px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sdc-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .sdc-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .sdc-box17 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.sdc-btn4) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .sdc-box18 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .sdc-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .sdc-box13 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .sdc-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.sdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .sdc-box17 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .sdc-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sdc-heading3 {
+      font-weight: 400;
+    }
+
+    :global(.sdc-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdc-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdc-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdc-btn4) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .sdc-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,129 @@
+---
+/**
+ * Weve Considered Every Detail — migrated from lp/new-patient [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  headingColor = "#3b6278",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="weve-considered-every-detail" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+  <div class="wced-box">
+    <div class="wced-box2">
+      <div class="wced-box3">
+        <h2 class="wced-heading">{heading}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .weve-considered-every-detail {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    padding-top: 30px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .wced-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wced-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .wced-box3 {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+
+  .wced-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .weve-considered-every-detail {
+      left: -39px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      right: 39px;
+    }
+
+    .wced-box2 {
+      flex: 0 0 70.05%;
+      max-width: 70.05%;
+    }
+
+    .wced-heading {
+      font-size: 40px;
+      line-height: 48px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .weve-considered-every-detail {
+      left: -165px;
+      padding-bottom: 50px;
+      padding-top: 50px;
+      right: 165px;
+    }
+
+    .wced-box {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1195px;
+    }
+
+    .wced-box2 {
+      flex: 0 0 70.04%;
+      max-width: 70.04%;
+    }
+
+    .wced-heading {
+      font-size: 50px;
+      line-height: 60px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wced-heading {
+    font-weight: 400;
+  }
+  @media (min-width: 768px) {
+    .wced-heading {
+      font-weight: 400;
+    }
+  }
+  @media (min-width: 1440px) {
+    .wced-heading {
+      font-weight: 400;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

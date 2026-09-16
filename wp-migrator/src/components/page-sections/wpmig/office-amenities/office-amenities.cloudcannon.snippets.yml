@@ -1,0 +1,10 @@
+_snippets:
+  office_amenities:
+    template: astro_component
+    inline: false
+    preview:
+      text: Office Amenities
+    definitions:
+      component_name: page-sections/wpmig/office-amenities
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/office-amenities/office-amenities.cloudcannon.inputs.yml

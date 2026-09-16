@@ -1,0 +1,10 @@
+_snippets:
+  dont_wait_get_relief:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dont Wait Get Relief
+    definitions:
+      component_name: page-sections/wpmig/dont-wait-get-relief
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dont-wait-get-relief/dont-wait-get-relief.cloudcannon.inputs.yml

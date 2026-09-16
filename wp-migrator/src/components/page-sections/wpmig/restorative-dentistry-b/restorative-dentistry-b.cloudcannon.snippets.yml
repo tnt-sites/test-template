@@ -1,0 +1,10 @@
+_snippets:
+  restorative_dentistry_b:
+    template: astro_component
+    inline: false
+    preview:
+      text: Restorative Dentistry B
+    definitions:
+      component_name: page-sections/wpmig/restorative-dentistry-b
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/restorative-dentistry-b/restorative-dentistry-b.cloudcannon.inputs.yml

@@ -1,0 +1,417 @@
+---
+/**
+ * Ameritas Dentist Insurance In — migrated from ameritas-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="ameritas-dentist-insurance-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="adii-box">
+    <div class="adii-box2">
+      <div class="adii-box3">
+        <div class="adii-box4">
+          <div class="adii-box5">
+            {image && <img class="adii-media" src={image} alt={imageAlt || ""} loading="lazy" width="575" height="410" />}
+          </div>
+        </div>
+        <div class="adii-box6">
+          <div class="adii-box7">
+            <h2 class="adii-heading">{heading}</h2>
+          </div>
+          <div class="adii-box8">
+            {text && <div class="adii-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="adii-box9">
+        <div class="adii-box10">
+          {subheading && <h2 class="adii-heading2">{subheading}</h2>}
+        </div>
+        <div class="adii-box11">
+          <div class="adii-box12">
+            {text2 && <div class="adii-body" set:html={text2} />}
+          </div>
+        </div>
+      </div>
+      <div class="adii-box13">
+        <div class="adii-box14">
+          {heading2 && <h2 class="adii-heading3">{heading2}</h2>}
+        </div>
+        <div class="adii-box15">
+          {text3 && <div class="adii-body2" set:html={text3} />}
+        </div>
+      </div>
+      <div class="adii-box16">
+        <div class="adii-box17">
+          {heading3 && <h2 class="adii-heading4">{heading3}</h2>}
+        </div>
+        <div class="adii-box18">
+          <div class="adii-box19">
+            {text4 && <div class="adii-body3" set:html={text4} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .ameritas-dentist-insurance-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .adii-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .adii-box2 {
+    box-sizing: border-box;
+  }
+
+  .adii-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .adii-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adii-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .adii-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .adii-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adii-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adii-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adii-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .adii-text {
+    box-sizing: border-box;
+  }
+
+  .adii-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adii-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adii-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adii-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .adii-box12 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .adii-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .adii-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adii-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adii-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adii-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 704px;
+  }
+
+  .adii-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .adii-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .adii-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adii-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adii-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adii-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .adii-box19 {
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+
+  .adii-body3 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .adii-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .adii-box3 {
+      max-width: 1024px;
+    }
+
+    .adii-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 472px;
+    }
+
+    .adii-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .adii-box12 {
+      min-height: 208px;
+    }
+
+    .adii-box15 {
+      min-height: 368px;
+    }
+
+    .adii-box19 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .adii-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .adii-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .adii-box4 {
+      min-height: auto;
+    }
+
+    .adii-box6 {
+      min-height: 401px;
+    }
+
+    .adii-box12 {
+      min-height: 136px;
+    }
+
+    .adii-box15 {
+      min-height: 224px;
+    }
+
+    .adii-box19 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .adii-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .adii-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .adii-box3 {
+    text-align: center;
+  }
+  .adii-box4 {
+    text-align: center;
+  }
+  .adii-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .adii-media {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .adii-box14 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .adii-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .adii-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .adii-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

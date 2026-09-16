@@ -2,16 +2,19 @@
 import footerData from "@data/footer.json";
 import mainNavData from "@data/mainNav.json";
 import Page from "@layouts/Page.astro";
+import BlogPost from "@components/utils/BlogPost.astro";
 import { getCollection, render, type CollectionEntry } from "astro:content";
 
 export interface Props {
-  page: CollectionEntry<"pages">;
+  page?: CollectionEntry<"pages">;
+  post?: CollectionEntry<"blog">;
 }
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
+  const posts = await getCollection("blog");
 
-  return pages
+  const pageRoutes = pages
     .filter((page) => {
       const slug = page.id.replace(/index$/, "");
       return slug !== "blog";
@@ -22,12 +25,32 @@ export async function getStaticPaths() {
       if (slug.length === 0) return { params: { slug: undefined }, props: { page } };
       return { params: { slug }, props: { page } };
     });
+
+  // Blog posts keep their original WordPress URLs at the site root (/<slug>/),
+  // not /blog/<slug>/. Pages are added first so a page always wins a slug clash.
+  const taken = new Set(pageRoutes.map((r) => r.params.slug));
+  const postRoutes = posts
+    .map((post: CollectionEntry<"blog">) => post.id?.replace(/\.mdx?$/, "") || post.slug)
+    .filter((slug: string) => !taken.has(slug))
+    .map((slug: string) => ({
+      params: { slug },
+      props: { post: posts.find((p) => (p.id?.replace(/\.mdx?$/, "") || p.slug) === slug) },
+    }));
+
+  return [...pageRoutes, ...postRoutes];
 }
 
-const { page } = Astro.props;
-const { Content } = await render(page);
+const { page, post } = Astro.props;
+const rendered = page ? await render(page) : null;
+const Content = rendered?.Content;
 ---
 
-<Page frontmatter={page.data} mainNav={mainNavData} footer={footerData}>
-  <Content />
-</Page>
+{
+  post ? (
+    <BlogPost post={post} />
+  ) : (
+    <Page frontmatter={page!.data} mainNav={mainNavData} footer={footerData}>
+      <Content />
+    </Page>
+  )
+}

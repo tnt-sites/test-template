@@ -1,0 +1,19 @@
+label: General Dentistry C
+icon: vertical_split
+description: General Dentistry C section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/general-dentistry-c
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - General Dentistry C
+  icon: vertical_split
+picker_preview:
+  text: General Dentistry C
+  subtext: General Dentistry C section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/general-dentistry-c/general-dentistry-c.cloudcannon.inputs.yml

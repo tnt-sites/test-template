@@ -1,0 +1,236 @@
+label: Emergency Grid
+icon: shield-check
+description: Service-icons style emergency card grid with optional modal dialogs.
+value:
+  _component: page-sections/info-blocks/emergency-grid
+  id: ""
+  heading: Most Common Dental Emergencies
+  subtext: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+  emergencyItems:
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Toothache
+      iconPreset: toothache
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Toothaches
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Chipped Tooth
+      iconPreset: chipped-tooth
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Chipped Tooth
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Cracked Tooth
+      iconPreset: cracked-tooth
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Cracked Tooth
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Sensitivity to Hot and Cold
+      iconPreset: sensitivity-hot-cold
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Sensitivity to Hot and Cold
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Loose Tooth
+      iconPreset: loose-tooth
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Loose Tooth
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Jaw Pain or Clenching
+      iconPreset: jaw-pain-clenching
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Jaw Pain or Clenching
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Knocked-Out Tooth
+      iconPreset: knocked-out-tooth
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Knocked-Out Tooth
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Lost Filling or Crown
+      iconPreset: lost-filling-crown
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Lost Filling or Crown
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Broken Denture
+      iconPreset: broken-denture
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Broken Denture
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Gum, Lip or Tongue Injury
+      iconPreset: gum-lip-tongue-injury
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Gum, Lip or Tongue Injury
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+    - _component: page-sections/info-blocks/emergency-grid/emergency-item
+      title: Something Stuck Between Teeth
+      iconPreset: stuck-between-teeth
+      contentSections:
+        - _component: building-blocks/core-elements/heading
+          text: Something Stuck Between Teeth
+          level: h3
+          size: default
+          alignX: start
+          iconName: null
+          iconPosition: before
+        - _component: building-blocks/core-elements/text
+          text: |
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+  enableModals: true
+  backgroundColor: base
+  backgroundGradient: ""
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/emergency-grid/emergency-grid.cloudcannon.inputs.yml
+_structures:
+  emergencyItems:
+    values:
+      - label: Emergency Item
+        icon: shield-check
+        value:
+          _component: page-sections/info-blocks/emergency-grid/emergency-item
+          title: Emergency Item
+          iconPreset: toothache
+          contentSections: []
+        preview:
+          text:
+            - key: title
+            - Emergency Item
+          image:
+            - template: src/icons/emergency/{iconPreset}.svg
+        _inputs:
+          title:
+            type: text
+            comment: Label displayed under the icon.
+          iconPreset:
+            type: select
+            comment: Legacy emergency icon to display for this item.
+            options:
+              values:
+                - id: toothache
+                  name: Toothache
+                - id: chipped-tooth
+                  name: Chipped Tooth
+                - id: cracked-tooth
+                  name: Cracked Tooth
+                - id: sensitivity-hot-cold
+                  name: Sensitivity to Hot and Cold
+                - id: knocked-out-tooth
+                  name: Knocked-Out Tooth
+                - id: lost-filling-crown
+                  name: Lost Filling or Crown
+                - id: broken-denture
+                  name: Broken Denture
+                - id: loose-tooth
+                  name: Loose Tooth
+                - id: gum-lip-tongue-injury
+                  name: Gums, Lips or Tongue Injury
+                - id: jaw-pain-clenching
+                  name: Jaw Pain or Clenching
+                - id: stuck-between-teeth
+                  name: Something Stuck Between Teeth
+          contentSections:
+            type: array
+            comment: Custom component blocks shown inside the modal.
+            options:
+              structures: _structures.cardSections

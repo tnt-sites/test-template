@@ -1,0 +1,33 @@
+label: About Us F
+icon: interests
+description: About Us F section. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-f
+  id: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  buttonTextColor: "#1b2e38"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverColor: "#0e4174"
+  hoverColor2: "#0b457f"
+preview:
+  text:
+    - About Us F
+  icon: interests
+picker_preview:
+  text: About Us F
+  subtext: About Us F section. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-f/about-us-f.cloudcannon.inputs.yml

@@ -1,0 +1,17 @@
+label: Cosmetic Dentistry Dentist In
+icon: interests
+description: Cosmetic Dentistry Dentist In section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cosmetic-dentistry-dentist-in
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Cosmetic Dentistry Dentist In
+  icon: interests
+picker_preview:
+  text: Cosmetic Dentistry Dentist In
+  subtext: Cosmetic Dentistry Dentist In section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cosmetic-dentistry-dentist-in/cosmetic-dentistry-dentist-in.cloudcannon.inputs.yml

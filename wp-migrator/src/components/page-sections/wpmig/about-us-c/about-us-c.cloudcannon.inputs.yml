@@ -1,0 +1,86 @@
+_inputs:
+  subheading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  secondaryButtonText4:
+    type: text
+  secondaryButtonLink4:
+    type: url
+  secondaryButtonText5:
+    type: text
+  secondaryButtonLink5:
+    type: url
+  text:
+    type: html
+  cards:
+    type: array
+    options:
+      structures: _structures.about_us_c_item
+  buttonTextColor:
+    type: color
+  textColor:
+    type: color
+  cardBackgroundColor:
+    type: color
+  titleColor:
+    type: color
+  textColor2:
+    type: color
+  textColor3:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color
+  hoverColor:
+    type: color
+  textHoverColor:
+    type: color
+  hoverColor2:
+    type: color
+_structures:
+  about_us_c_item:
+    values:
+      - value:
+          link: ""
+          image: ""
+          imageAlt: ""
+          title: ""
+          text: ""
+          buttonText: ""
+          buttonLink: ""
+          text2: ""
+        _inputs:
+          link:
+            type: url
+          image:
+            type: image
+          imageAlt:
+            type: text
+          title:
+            type: text
+          text:
+            type: textarea
+          buttonText:
+            type: text
+          buttonLink:
+            type: url
+          text2:
+            type: textarea

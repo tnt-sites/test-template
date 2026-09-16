@@ -1,0 +1,18 @@
+label: In The Office
+icon: interests
+description: In The Office section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/in-the-office
+  id: ""
+  heading: ""
+  subheading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - In The Office
+  icon: interests
+picker_preview:
+  text: In The Office
+  subtext: In The Office section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/in-the-office/in-the-office.cloudcannon.inputs.yml

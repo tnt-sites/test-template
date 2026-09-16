@@ -1,0 +1,40 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  anchorName = "",
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  paddingVertical = "4xl",
+  class: className,
+  rounded = false,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["cta-center", className]}
+  maxContentWidth="lg"
+  paddingHorizontal="lg"
+  paddingVertical={paddingVertical}
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  rounded={rounded}
+  {...htmlAttributes}
+>
+  {anchorName && <a name={anchorName} class="anchor-name-offset" aria-hidden="true" />}
+  <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />
+  <Text alignX="center" data-prop="subtext" text={subtext} />
+  <ButtonGroup class="buttons" buttonSections={buttonSections} alignX="center" />
+</CustomSection>

@@ -1,0 +1,183 @@
+---
+/**
+ * In The Office — migrated from lp/new-patient [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  headingColor = "#3b6278",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="in-the-office" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+  <div class="ito-box">
+    <div class="ito-box2">
+      <div class="ito-box3">
+        <h2 class="ito-heading">{heading}</h2>
+      </div>
+    </div>
+    <div class="ito-box4">
+      <div class="ito-box5">
+        {subheading && <h2 class="ito-heading2">{subheading}</h2>}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .in-the-office {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .ito-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ito-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .ito-box3 {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+
+  .ito-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ito-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .ito-box5 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .ito-heading2 {
+    box-sizing: border-box;
+    color: #3b6278;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .in-the-office {
+      left: -39px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      right: 39px;
+    }
+
+    .ito-box2 {
+      flex: 0 0 70.05%;
+      max-width: 70.05%;
+    }
+
+    .ito-heading {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .ito-heading2 {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .in-the-office {
+      left: -165px;
+      padding-bottom: 30px;
+      padding-top: 82px;
+      right: 165px;
+    }
+
+    .ito-box {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1195px;
+    }
+
+    .ito-box2 {
+      flex: 0 0 70.04%;
+      max-width: 70.04%;
+    }
+
+    .ito-heading {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    .ito-box5 {
+      margin-bottom: 12px;
+    }
+
+    .ito-heading2 {
+      font-size: 32px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ito-heading {
+    font-weight: 400;
+  }
+  .ito-heading2 {
+    font-family: Roboto, sans-serif;
+  }
+  @media (min-width: 768px) {
+    .ito-heading {
+      font-weight: 400;
+    }
+
+    .ito-heading2 {
+      font-family: Roboto, sans-serif;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ito-heading {
+      font-weight: 400;
+    }
+
+    .ito-heading2 {
+      font-family: Roboto, sans-serif;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

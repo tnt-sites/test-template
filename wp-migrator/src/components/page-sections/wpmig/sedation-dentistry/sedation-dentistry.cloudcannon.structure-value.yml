@@ -1,0 +1,19 @@
+label: Sedation Dentistry
+icon: vertical_split
+description: Sedation Dentistry section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/sedation-dentistry
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Sedation Dentistry
+  icon: vertical_split
+picker_preview:
+  text: Sedation Dentistry
+  subtext: Sedation Dentistry section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/sedation-dentistry/sedation-dentistry.cloudcannon.inputs.yml

@@ -31,3 +31,9 @@ yarn-error.log*
 # temporary files
 *.tmp
 *.temp
+
+# WordPress source exports (461MB .wpress archive + WXR XMLs)
+site/
+
+# wp-migrator scratch (snapshot, IR, compare reports, generated pages)
+wp-migrator/.wpmig/

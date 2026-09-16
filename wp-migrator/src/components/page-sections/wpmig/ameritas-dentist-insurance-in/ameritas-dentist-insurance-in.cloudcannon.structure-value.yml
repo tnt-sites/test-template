@@ -1,0 +1,27 @@
+label: Ameritas Dentist Insurance In
+icon: vertical_split
+description: Ameritas Dentist Insurance In section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/ameritas-dentist-insurance-in
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Ameritas Dentist Insurance In
+  icon: vertical_split
+picker_preview:
+  text: Ameritas Dentist Insurance In
+  subtext: Ameritas Dentist Insurance In section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/ameritas-dentist-insurance-in/ameritas-dentist-insurance-in.cloudcannon.inputs.yml

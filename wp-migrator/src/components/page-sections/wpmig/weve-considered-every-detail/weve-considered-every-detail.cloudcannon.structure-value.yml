@@ -1,0 +1,17 @@
+label: Weve Considered Every Detail
+icon: interests
+description: Weve Considered Every Detail section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/weve-considered-every-detail
+  id: ""
+  heading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - Weve Considered Every Detail
+  icon: interests
+picker_preview:
+  text: Weve Considered Every Detail
+  subtext: Weve Considered Every Detail section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/weve-considered-every-detail/weve-considered-every-detail.cloudcannon.inputs.yml

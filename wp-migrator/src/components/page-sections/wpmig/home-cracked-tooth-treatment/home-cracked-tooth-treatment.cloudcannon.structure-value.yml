@@ -1,0 +1,17 @@
+label: Home Cracked Tooth Treatment
+icon: interests
+description: Home Cracked Tooth Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-cracked-tooth-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Cracked Tooth Treatment
+  icon: interests
+picker_preview:
+  text: Home Cracked Tooth Treatment
+  subtext: Home Cracked Tooth Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-cracked-tooth-treatment/home-cracked-tooth-treatment.cloudcannon.inputs.yml

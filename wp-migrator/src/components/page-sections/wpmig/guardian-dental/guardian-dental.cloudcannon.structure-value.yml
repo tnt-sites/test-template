@@ -1,0 +1,18 @@
+label: Guardian Dental
+icon: vertical_split
+description: Guardian Dental section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/guardian-dental
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Guardian Dental
+  icon: vertical_split
+picker_preview:
+  text: Guardian Dental
+  subtext: Guardian Dental section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/guardian-dental/guardian-dental.cloudcannon.inputs.yml

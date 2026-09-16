@@ -1,0 +1,385 @@
+---
+/**
+ * Humana Employers In Littleton — migrated from humana-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="humana-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="heil-box">
+    <div class="heil-box2">
+      <div class="heil-box3">
+        <div class="heil-box4">
+          <div class="heil-box5">
+            {image && <img class="heil-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="514" />}
+          </div>
+        </div>
+        <div class="heil-box6">
+          <div class="heil-box7">
+            <h2 class="heil-heading">{heading}</h2>
+          </div>
+          <div class="heil-box8">
+            {text && <div class="heil-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="heil-box9">
+        <div class="heil-box10">
+          {subheading && <h2 class="heil-heading2">{subheading}</h2>}
+        </div>
+        <div class="heil-box11">
+          <div class="heil-box12">
+            {text2 && <div class="heil-body" set:html={text2} />}
+          </div>
+        </div>
+      </div>
+      <div class="heil-box13">
+        <div class="heil-box14">
+          {heading2 && <h2 class="heil-heading3">{heading2}</h2>}
+        </div>
+        <div class="heil-box15">
+          {text3 && <div class="heil-text2" set:html={text3} />}
+        </div>
+      </div>
+      <div class="heil-box16">
+        <div class="heil-box17">
+          {heading3 && <h2 class="heil-heading4">{heading3}</h2>}
+        </div>
+        <div class="heil-box18">
+          {text4 && <div class="heil-text3">{text4}</div>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .humana-employers-in-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .heil-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .heil-box2 {
+    box-sizing: border-box;
+  }
+
+  .heil-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .heil-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .heil-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .heil-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .heil-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .heil-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .heil-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .heil-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .heil-text {
+    box-sizing: border-box;
+  }
+
+  .heil-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .heil-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .heil-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .heil-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .heil-box12 {
+    box-sizing: border-box;
+    min-height: 376px;
+  }
+
+  .heil-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .heil-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .heil-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .heil-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .heil-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .heil-text2 {
+    box-sizing: border-box;
+  }
+
+  .heil-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .heil-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .heil-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .heil-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .heil-text3 {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .heil-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .heil-box3 {
+      max-width: 1024px;
+    }
+
+    .heil-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 520px;
+    }
+
+    .heil-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .heil-box12 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .heil-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .heil-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .heil-box4 {
+      min-height: auto;
+    }
+
+    .heil-box6 {
+      min-height: 464px;
+    }
+
+    .heil-box12 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .heil-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .heil-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .heil-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .heil-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .heil-box14 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .heil-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .heil-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .heil-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

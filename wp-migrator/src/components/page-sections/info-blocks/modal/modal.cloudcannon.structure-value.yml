@@ -1,0 +1,21 @@
+label: Modal
+icon: window
+description: Add a pop up modal for displaying additional content. Be sure to add a button with the modal option selected to the modal's ID.
+value:
+  _component: page-sections/info-blocks/modal
+  id: sample-modal
+  closeLabel: Close modal
+  showCloseButton: true
+  class: ""
+  contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Modal Heading
+      level: h3
+      size: default
+      alignX: start
+      iconName: null
+      iconPosition: before
+    - _component: building-blocks/core-elements/text
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/modal/modal.cloudcannon.inputs.yml

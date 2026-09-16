@@ -1,0 +1,17 @@
+label: Home Dental Conditions
+icon: interests
+description: Home Dental Conditions section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-dental-conditions
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Dental Conditions
+  icon: interests
+picker_preview:
+  text: Home Dental Conditions
+  subtext: Home Dental Conditions section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-dental-conditions/home-dental-conditions.cloudcannon.inputs.yml

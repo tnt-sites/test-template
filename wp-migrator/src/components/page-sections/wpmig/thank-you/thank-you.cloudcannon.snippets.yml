@@ -1,0 +1,10 @@
+_snippets:
+  thank_you:
+    template: astro_component
+    inline: false
+    preview:
+      text: Thank You
+    definitions:
+      component_name: page-sections/wpmig/thank-you
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/thank-you/thank-you.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  well_get_you_back:
+    template: astro_component
+    inline: false
+    preview:
+      text: Well Get You Back
+    definitions:
+      component_name: page-sections/wpmig/well-get-you-back
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/well-get-you-back/well-get-you-back.cloudcannon.inputs.yml

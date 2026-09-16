@@ -1,0 +1,33 @@
+servicesGrid:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Services Grid
+    icon: add
+  definitions:
+    component_name: ServicesGrid
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: services
+        type: array
+        optional: true
+      - editor_key: ctaCard
+        type: object
+        optional: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/ctas/services-grid/services-grid.cloudcannon.inputs.yml

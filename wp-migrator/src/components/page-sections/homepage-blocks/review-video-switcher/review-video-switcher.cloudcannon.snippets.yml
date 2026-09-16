@@ -1,0 +1,51 @@
+reviewVideoSwitcher:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Review Video Switcher
+    subtext:
+      - key: heading
+    icon: rate_review
+  definitions:
+    component_name: ReviewVideoSwitcher
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: watchLabel
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: readLabel
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: videos
+        type: array
+        optional: true
+      - editor_key: reviews
+        type: array
+        optional: true
+      - editor_key: showQuoteIcon
+        type: boolean
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/homepage-blocks/review-video-switcher/review-video-switcher.cloudcannon.inputs.yml

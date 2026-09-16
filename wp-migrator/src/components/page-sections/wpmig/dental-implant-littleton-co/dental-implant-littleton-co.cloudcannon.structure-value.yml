@@ -1,0 +1,18 @@
+label: Dental Implant Littleton Co
+icon: vertical_split
+description: Dental Implant Littleton Co section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dental-implant-littleton-co
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Dental Implant Littleton Co
+  icon: vertical_split
+picker_preview:
+  text: Dental Implant Littleton Co
+  subtext: Dental Implant Littleton Co section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dental-implant-littleton-co/dental-implant-littleton-co.cloudcannon.inputs.yml

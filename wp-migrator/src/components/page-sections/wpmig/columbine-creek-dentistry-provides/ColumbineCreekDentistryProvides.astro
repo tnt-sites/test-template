@@ -1,0 +1,299 @@
+---
+/**
+ * Columbine Creek Dentistry Provides — migrated from about-us [10] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  items = [],
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="columbine-creek-dentistry-provides" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="ccdp-box">
+    <div class="ccdp-box2">
+      <h3 class="ccdp-heading">{heading}</h3>
+    </div>
+    <div class="ccdp-grid">
+      {list.map((it) => (
+        <div class="ccdp-box3">
+          <div class="ccdp-box4">
+            {it.text && <div class="ccdp-body" set:html={it.text} />}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="ccdp-box7">
+      <div class="ccdp-box8">
+        <div class="ccdp-box9">
+          {text && <div class="ccdp-body3" set:html={text} />}
+        </div>
+      </div>
+    </div>
+    <div class="ccdp-box10">
+      <div class="ccdp-box11">
+        <div class="ccdp-box12">
+          {text2 && <p class="ccdp-text" set:html={text2} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .columbine-creek-dentistry-provides {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .columbine-creek-dentistry-provides :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccdp-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ccdp-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ccdp-grid {
+    display: none;
+  }
+
+  .ccdp-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box3 {
+    display: none;
+  }
+
+  .ccdp-box3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box4 {
+    display: none;
+  }
+
+  .ccdp-box4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccdp-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ccdp-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-box9 {
+    box-sizing: border-box;
+  }
+
+  .ccdp-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .ccdp-body3 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .ccdp-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccdp-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ccdp-box12 {
+    box-sizing: border-box;
+  }
+
+  .ccdp-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .columbine-creek-dentistry-provides {
+      max-width: 690px;
+    }
+
+    .ccdp-grid {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .ccdp-box3 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 50%;
+      flex-wrap: wrap;
+      max-width: 50%;
+      padding: 10px;
+      position: relative;
+    }
+
+    .ccdp-box4 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .ccdp-body :global(ul) {
+      box-sizing: border-box;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 0px;
+    }
+
+    .ccdp-box8 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .ccdp-box9 {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .columbine-creek-dentistry-provides {
+      max-width: 1110px;
+    }
+
+    .ccdp-grid {
+      flex-wrap: nowrap;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ccdp-heading {
+    font-weight: 400;
+  }
+  .ccdp-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .ccdp-heading {
+      font-weight: 400;
+    }
+
+    .ccdp-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ccdp-heading {
+      font-weight: 400;
+    }
+
+    .ccdp-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

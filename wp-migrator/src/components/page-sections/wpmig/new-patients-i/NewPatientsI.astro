@@ -1,0 +1,564 @@
+---
+/**
+ * New Patients I — migrated from new-patients/new-patient-forms [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4eaf76",
+  buttonBackgroundHoverColor2 = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="new-patients-i" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${buttonBackgroundHoverColor};--c10:${buttonBackgroundHoverColor2}`} {...rest}>
+  <div class="npi-box">
+    <div class="npi-box2">
+      <div class="npi-box3">
+        <div class="npi-box4">
+          {eyebrow && <h4 class="npi-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npi-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npi-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npi-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npi-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="npi-box5">
+        <div class="npi-box6">
+          <div class="npi-box7">
+            <h2 class="npi-heading2">{heading}</h2>
+          </div>
+          <div class="npi-box8">
+            <div class="npi-box9">
+              {text && <p class="npi-text">{text}</p>}
+            </div>
+          </div>
+          <div class="npi-box10">
+            <div class="npi-box11">
+              {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="npi-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+            </div>
+          </div>
+          <div class="npi-box12">
+            <div class="npi-box13">
+              {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="npi-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+            </div>
+          </div>
+          <div class="npi-box14">
+            {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="npi-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .new-patients-i {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .npi-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .npi-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .npi-box3 {
+    display: none;
+  }
+
+  .npi-box4 {
+    display: none;
+  }
+
+  .npi-heading {
+    display: none;
+  }
+
+  :global(.npi-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npi-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npi-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.npi-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .npi-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .npi-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .npi-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .npi-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npi-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npi-box9 {
+    box-sizing: border-box;
+    margin-top: -9px;
+  }
+
+  .npi-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .npi-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npi-box11 {
+    box-sizing: border-box;
+  }
+
+  :global(.npi-btn5) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    max-width: max-content;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.npi-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .npi-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .npi-box13 {
+    box-sizing: border-box;
+  }
+
+  :global(.npi-btn6) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    max-width: max-content;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.npi-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .npi-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  :global(.npi-btn7) {
+    background-color: var(--btnbg);
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    max-width: max-content;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.npi-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.npi-btn):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.npi-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.npi-btn3):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.npi-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.npi-btn5):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.npi-btn6):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.npi-btn7):hover {
+    background-color: var(--c10);
+  }
+
+  @media (min-width: 768px) {
+    .npi-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .npi-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 304px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .npi-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .npi-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.npi-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .npi-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .npi-heading2 {
+      line-height: 32px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .npi-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .npi-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 280px;
+    }
+
+    :global(.npi-btn4) {
+      white-space: nowrap;
+    }
+
+    :global(.npi-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .npi-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  :global(.npi-btn5) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  :global(.npi-btn6) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  :global(.npi-btn7) {
+    align-items: normal;
+    justify-content: normal;
+  }
+  .npi-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.npi-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    :global(.npi-btn6) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    :global(.npi-btn7) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .npi-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.npi-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.npi-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    :global(.npi-btn6) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    :global(.npi-btn7) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .npi-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

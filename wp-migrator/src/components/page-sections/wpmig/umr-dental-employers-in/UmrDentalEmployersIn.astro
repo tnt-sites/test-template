@@ -1,0 +1,454 @@
+---
+/**
+ * Umr Dental Employers In — migrated from umr-dental-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="umr-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="udei-box">
+    <div class="udei-box2">
+      <div class="udei-box3">
+        <div class="udei-box4">
+          <div class="udei-box5">
+            {image && <img class="udei-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+          </div>
+        </div>
+        <div class="udei-box6">
+          <div class="udei-box7">
+            <h2 class="udei-heading">{heading}</h2>
+          </div>
+          <div class="udei-box8">
+            <div class="udei-box9">
+              {text && <p class="udei-text">{text}</p>}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="udei-box10">
+        <div class="udei-box11">
+          {subheading && <h2 class="udei-heading2">{subheading}</h2>}
+        </div>
+        <div class="udei-box12">
+          <div class="udei-box13">
+            {text2 && <p class="udei-text2">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="udei-box14">
+        <div class="udei-box15">
+          {heading2 && <h2 class="udei-heading3" set:html={heading2} />}
+        </div>
+        <div class="udei-box16">
+          {text3 && <div class="udei-body" set:html={text3} />}
+        </div>
+      </div>
+      <div class="udei-box17">
+        <div class="udei-box18">
+          {heading3 && <h2 class="udei-heading4">{heading3}</h2>}
+        </div>
+        <div class="udei-box19">
+          <div class="udei-box20">
+            {text4 && <p class="udei-text3">{text4}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .umr-dental-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .udei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .udei-box2 {
+    box-sizing: border-box;
+  }
+
+  .udei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .udei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .udei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .udei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .udei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .udei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .udei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .udei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .udei-box9 {
+    box-sizing: border-box;
+  }
+
+  .udei-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .udei-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .udei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .udei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .udei-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .udei-box13 {
+    box-sizing: border-box;
+  }
+
+  .udei-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .udei-box14 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .udei-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .udei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .udei-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 488px;
+  }
+
+  .udei-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .udei-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .udei-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .udei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .udei-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .udei-box20 {
+    box-sizing: border-box;
+  }
+
+  .udei-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .udei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .udei-box3 {
+      max-width: 1024px;
+    }
+
+    .udei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 416px;
+    }
+
+    .udei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .udei-box16 {
+      min-height: 272px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .udei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .udei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .udei-box4 {
+      min-height: auto;
+    }
+
+    .udei-box6 {
+      min-height: 405px;
+    }
+
+    .udei-box16 {
+      min-height: 200px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .udei-box11 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .udei-heading2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .udei-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .udei-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .udei-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .udei-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .udei-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .udei-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .udei-box11 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .udei-heading2 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .udei-box14 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .udei-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .udei-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .udei-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .udei-text {
+      line-height: 24px;
+    }
+
+    .udei-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .udei-text {
+      line-height: 24px;
+    }
+
+    .udei-text2 {
+      line-height: 24px;
+    }
+
+    .udei-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

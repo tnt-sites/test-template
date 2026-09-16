@@ -1,0 +1,331 @@
+---
+/**
+ * About Us D — migrated from about-us/comfort-amenities [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="about-us-d" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="aud-box">
+    <h3 class="aud-heading">{heading}</h3>
+    {subheading && <h1 class="aud-heading2" set:html={subheading} />}
+  </div>
+</div>
+<style>
+  .about-us-d {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .aud-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .aud-heading {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .aud-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .about-us-d {
+      justify-content: flex-start;
+    }
+
+    .aud-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .about-us-d {
+      text-align: left;
+    }
+
+    .aud-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .aud-heading {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .aud-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aud-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aud-box33 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aud-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aud-decor {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .aud-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aud-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-box28 {
+      text-align: center;
+    }
+
+    .aud-media2 {
+      text-align: left;
+    }
+
+    .aud-box41 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .aud-text {
+      line-height: 24px;
+    }
+
+    .aud-text2 {
+      line-height: 24px;
+    }
+
+    .aud-text3 {
+      line-height: 24px;
+    }
+
+    .aud-heading {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .aud-heading5 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    .aud-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .aud-btn7 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .aud-text {
+      line-height: 24px;
+    }
+
+    .aud-text2 {
+      line-height: 24px;
+    }
+
+    .aud-text3 {
+      line-height: 24px;
+    }
+
+    .aud-box17 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aud-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aud-box33 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .aud-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+
+    .aud-decor {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .aud-box28 {
+      text-align: left;
+    }
+
+    .aud-media2 {
+      text-align: center;
+    }
+
+    .aud-box41 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aud-box42 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .aud-heading {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>
