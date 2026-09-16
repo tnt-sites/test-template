@@ -66,7 +66,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental implant surgery services on Yelp: Dental Implant Surgery Vista'
+        our dental implant surgery services on Yelp: [Dental Implant Surgery Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -131,9 +131,9 @@ pageSections:
           implants can make it easier to eat, speak, and engage in normal daily activities. If you have
           worn dentures for some time, you may be suffering from resorption. If this is the case, your
           jawbone may not have sufficient density to support an implant. When this happens, we may recommend
-          a bone graft prior to beginning. To discuss this further, call 760-940-2273 and schedule an
-          examination. After physically examining your teeth and taking X-rays, we can create a full treatment
-          plan for you.
+          a bone graft prior to beginning. To discuss this further, call [760-940-2273](tel:+1-760-940-2273)
+          and schedule an examination. After physically examining your teeth and taking X-rays, we can
+          create a full treatment plan for you.
       - _component: building-blocks/core-elements/list/list-item
         text: Q. Dental Implant Surgery - What to Expect From Your Consultation
       - _component: building-blocks/core-elements/list/list-item
@@ -141,7 +141,7 @@ pageSections:
           of your jawbone. This appointment will be non-invasive and comfortable. We can present you with
           all of the options available to you and discuss the ins and outs of each treatment solution.
           This will allow you to ask questions and select the option that is best for you. To begin, call
-          our Vista dental office at (760) 940-2273.
+          our Vista dental office at [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

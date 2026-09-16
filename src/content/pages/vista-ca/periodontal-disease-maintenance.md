@@ -33,10 +33,10 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If not properly maintained, gum disease can wreak havoc in your mouth. Dangerous bacteria
         will build up, eat away at your gum, teeth, and bone, and even hop a ride into your bloodstream
-        and travel around your body. Bad oral bacteria has been linked to a wide variety of systemic diseases
-        in the body, including diabetes, rheumatoid arthritis, Alzheimer’s disease, heart attack and stroke,
-        certain cancers, and more. We don’t want that for you! That’s why it’s so important that you visit
-        our office for regular gum disease maintenance.
+        and travel around your body. Bad oral bacteria has been linked to a wide variety of [systemic
+        diseases](/vista-ca/find-a-complete-health-dentist/) in the body, including diabetes, rheumatoid
+        arthritis, Alzheimer’s disease, heart attack and stroke, certain cancers, and more. We don’t want
+        that for you! That’s why it’s so important that you visit our office for regular gum disease maintenance.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -47,7 +47,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our gum disease maintenance on Yelp: Periodontal Maintenance Vista'
+        our gum disease maintenance on Yelp: [Periodontal Maintenance Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -95,10 +95,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

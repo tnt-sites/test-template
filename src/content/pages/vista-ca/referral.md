@@ -31,12 +31,12 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Your patients may be struggling with their oral health for a variety of reasons. Whether it’s
-        special needs patients who have aged out of children’s hospitals and need sedation for routine
-        dental care, addiction recovery patients who have lost teeth and bone or and are not good candidates
-        for normal implants, or any other medically complex oral need, it’s vital that they receive the
-        treatment and dental care so they can continue to heal and thrive. As specialists in complex cases,
-        we can help.
+      text: Your patients may be [struggling with their oral health](/services/) for a variety of reasons.
+        Whether it’s special needs patients who have aged out of children’s hospitals and need sedation
+        for routine dental care, addiction recovery patients who have lost teeth and bone or and are not
+        good candidates for normal implants, or any other medically complex oral need, it’s vital that
+        they receive the treatment and dental care so they can continue to heal and thrive. As specialists
+        in complex cases, we can help.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -64,7 +64,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: <span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our services on Yelp Services Vista
+        our services on Yelp [Services Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -80,7 +80,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: 'Our practice is uniquely equipped to help people with complex cases, particularly stemming
-        from medical conditions. A few of the services we offer include:'
+        from medical conditions. A few of the [services we offer](/services/) include:'
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
@@ -129,10 +129,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

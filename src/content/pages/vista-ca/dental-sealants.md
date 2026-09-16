@@ -82,7 +82,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental sealants on Yelp: Dental Sealants Vista'
+        our dental sealants on Yelp: [Dental Sealants Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -125,10 +125,11 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA or the surrounding area, call 760-940-2273 to schedule an appointment
-        with our dental office. At North County Cosmetic and Implant Dentistry, we can examine you and
-        your children's teeth before letting you know if sealants are a good solution for you. We can
-        provide you with all of the information you need to make an educated decision and to get started.
+      text: If you live in Vista, CA or the surrounding area, call [760-940-2273](tel:+1-760-940-2273)
+        to schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry,
+        we can examine you and your children's teeth before letting you know if sealants are a good solution
+        for you. We can provide you with all of the information you need to make an educated decision
+        and to get started.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

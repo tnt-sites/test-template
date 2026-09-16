@@ -47,8 +47,8 @@ pageSections:
         care, we can help our patients live a full life. After all, a major tooth infection can create
         oral pain and make it difficult to enjoy even the most basic of normal activities like eating
         your favorite piece of pie or playing a game of softball. If you don't currently have a dentist,
-        call (760) 940-2273 to schedule an appointment and experience how our general dentistry services
-        can keep you and your family in good oral health.
+        call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment and experience how our general
+        dentistry services can keep you and your family in good oral health.
     - _component: building-blocks/core-elements/heading
       text: Painless Dentistry
       level: h3
@@ -93,8 +93,9 @@ pageSections:
         from having a full set of teeth.
     - _component: building-blocks/core-elements/text
       text: To learn more about what options are available for restoring or replacing your teeth, call
-        760-940-2273 to schedule your appointment. We will conduct a thorough exam and make recommendations
-        for what can be done to restore the full functionality and appearance of your smile.
+        [760-940-2273](tel:+1-760-940-2273) to schedule your appointment. We will conduct a thorough exam
+        and make recommendations for what can be done to restore the full functionality and appearance
+        of your smile.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -105,7 +106,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our general dental services on Yelp: General Dentist Vista'
+        our general dental services on Yelp: [General Dentist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -131,12 +132,13 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you are located in the greater Vista area, visit us at North County Cosmetic and Implant
-        Dentistry to discuss the goals you have for your smile. Our team works with patients to create
+      text: If you are located in the greater Vista area, visit us at [North County Cosmetic and Implant
+        Dentistry]() to discuss the goals you have for your smile. Our team works with patients to create
         a beautiful smile that they can be proud of. Our general dentistry office has the solutions patients'
         need for transforming their smile into something that is straight, bright, white, and beautiful.
         Regardless of why you do not like your smile, we can help by fixing any cosmetic or health issues
-        to create something beautiful and natural. To learn more, call (760) 940-2273 to schedule an appointment.
+        to create something beautiful and natural. To learn more, call [(760) 940-2273](tel:+1-760-940-2273)
+        to schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

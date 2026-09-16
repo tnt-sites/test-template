@@ -53,7 +53,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: In our dental office , we believe in the importance of patient education. We take the time
+      text: In our dental office, we believe in the importance of patient education. We take the time
         to speak with each patient and discuss ways that they can improve their oral health. This may
         involve us demonstrating how to brush teeth correctly, floss or discuss dietary changes that can
         strengthen teeth. For example, many people do not know that acidic foods are bad for teeth and
@@ -88,8 +88,8 @@ pageSections:
         pulled.
     - _component: building-blocks/core-elements/text
       text: If a tooth does fall out due to an accident or infection, we can assist with that as well.
-        In our Vista dental office , we can replace missing teeth using a variety of methods. Some of
-        the most common methods are removable dentures, dental bridges, and dental implants. While losing
+        In our Vista dental office, we can replace missing teeth using a variety of methods. Some of the
+        most common methods are removable dentures, dental bridges, and dental implants. While losing
         a tooth can be traumatic, it does not have to be permanent when working with Dr. Henninger.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -101,7 +101,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Office Vista'
+        our dental services on Yelp: [Dental Office Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

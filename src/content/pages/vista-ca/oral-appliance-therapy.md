@@ -79,7 +79,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Oral Appliance Therapy services on Yelp: Oral Appliance Therapy Vista'
+        our Oral Appliance Therapy services on Yelp: [Oral Appliance Therapy Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -94,7 +94,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Oral appliances are a discreet, quiet , and comfortable way to keep your airway open and treat
+      text: Oral appliances are a discreet, quiet, and comfortable way to keep your airway open and treat
         sleep apnea. Resembling a dental retainer, an oral appliance can easily be used without causing
         a disturbance to those around you. The tactful nature of an oral appliance makes it more convenient
         than CPAP therapy, which is a major reason why many patients prefer oral appliances over other
@@ -154,11 +154,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

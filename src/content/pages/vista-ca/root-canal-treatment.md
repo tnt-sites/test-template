@@ -93,7 +93,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our root canal services on Yelp: Root Canal Vista'
+        our root canal services on Yelp: [Root Canal Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -144,8 +144,8 @@ pageSections:
         getting a dental bridge or having dental implants installed. These are all viable solutions but
         take additional time, and the recovery period is longer since the procedures will take several
         steps. Therefore, one possible solution is for us to attempt to save your tooth by performing
-        a root canal endodontics procedure. To learn more about this option call North County Cosmetic
-        and Implant Dentistry at 760-940-2273 and schedule an appointment.
+        a root canal endodontics procedure. To learn more about this option call [North County Cosmetic
+        and Implant Dentistry]() at [760-940-2273](tel:+1-760-940-2273) and schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -155,8 +155,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

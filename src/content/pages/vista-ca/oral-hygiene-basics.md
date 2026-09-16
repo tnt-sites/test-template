@@ -84,7 +84,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral hygiene support services on Yelp: Oral Hygiene Basics Vista'
+        our oral hygiene support services on Yelp: [Oral Hygiene Basics Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -117,10 +117,10 @@ pageSections:
         a fluoride treatment, at least once a year. Statistically, these treatments reduce the risk of
         getting cavities by 30 percent. This is significant considering that tooth decay is one of the
         primary reasons children miss days from school. Adults can also benefit from receiving a fluoride
-        treatment and if you would like to find out if it is right for you, call 760-940-2273 to schedule
-        an appointment. The treatment itself only takes a couple of minutes. The fluoride is applied directly
-        to the teeth. It has no odor or smell and after a few minutes, patients are free to leave. It
-        is one of the easiest ways to prevent cavities.
+        treatment and if you would like to find out if it is right for you, call [760-940-2273](tel:+1-760-940-2273)
+        to schedule an appointment. The treatment itself only takes a couple of minutes. The fluoride
+        is applied directly to the teeth. It has no odor or smell and after a few minutes, patients are
+        free to leave. It is one of the easiest ways to prevent cavities.
     - _component: building-blocks/core-elements/heading
       text: How to select the right toothbrush
       level: h3
@@ -145,7 +145,7 @@ pageSections:
         it can lead to enamel erosion. At North County Cosmetic and Implant Dentistry, we recommend that
         you eat a diet high in green leafy vegetables, lean protein, dairy, and nuts since they can help
         to remineralize and strengthen your teeth. For more tips on how to eat a mouth-healthy diet, call
-        (760) 940-2273 and schedule an appointment to speak with Dr. Henninger.
+        [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment to speak with Dr. Henninger.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

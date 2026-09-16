@@ -73,10 +73,10 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: 'IV sedation helps to quickly deliver anesthesia to the patient''s system so they can easily
-        relax during treatment. The American Dental Association, ADA, explains that local anesthesia is
-        "a type of medication used to prevent pain in a specific area of your mouth during treatment by
-        blocking the nerves that sense or transmit pain." Along with that application, there are other
-        benefits to using IV sedation including:'
+        relax during treatment. The [American Dental Association](https://www.mouthhealthy.org/en/az-topics/a/anesthesia-and-sedation),
+        ADA, explains that local anesthesia is "a type of medication used to prevent pain in a specific
+        area of your mouth during treatment by blocking the nerves that sense or transmit pain." Along
+        with that application, there are other benefits to using IV sedation including:'
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
@@ -212,10 +212,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

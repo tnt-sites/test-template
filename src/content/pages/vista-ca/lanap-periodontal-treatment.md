@@ -74,10 +74,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -41,7 +41,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you do need to have a tooth extraction , there are several ways that we can go about the
+      text: If you do need to have a tooth extraction, there are several ways that we can go about the
         procedure. First, we will numb the area of your mouth so that you do not feel any direct discomfort.
         You will feel pressure during the procedure but otherwise remain relaxed and comfortable. If your
         tooth has matured and broken through the gums, we can use dental tools to wiggle the tooth and
@@ -89,7 +89,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our tooth extraction services on Yelp: Tooth Extraction Vista'
+        our tooth extraction services on Yelp: [Tooth Extraction Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -112,8 +112,8 @@ pageSections:
         in an emergency situation. If you feel intense discomfort in your tooth or your jaw, give us a
         call since this could be a sign of a dental abscess or severe infection. Simultaneously, if it
         hurts when you bite down or chew this can also be an indication of a cavity or infection. Other
-        signs like puss or bleeding indicate that you should call 760-940-2273 and schedule an appointment
-        with our family dentistry office right away.
+        signs like puss or bleeding indicate that you should call [760-940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our family dentistry office right away.
     - _component: building-blocks/core-elements/heading
       text: What you should know about wisdom teeth removal
       level: h3
@@ -128,8 +128,8 @@ pageSections:
         when and why we perform the procedure. At North County Cosmetic and Implant Dentistry, we typically
         recommend wisdom teeth removal in the teenage years. General extractions are more common as people
         age and have a tooth that needs to be removed due to a severe infection or significant damage.
-        To find out whether or not you should keep your wisdom teeth, call (760) 940-2273 to schedule
-        an appointment to speak with Dr. Henninger.
+        To find out whether or not you should keep your wisdom teeth, call [(760) 940-2273](tel:+1-760-940-2273)
+        to schedule an appointment to speak with Dr. Henninger.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -35,11 +35,11 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: At North County Cosmetic and Implant Dentistry, we welcome you to call (760) 940-2273 and
-        schedule an appointment with our Vista, CA dental office. At the appointment, we can examine your
-        teen and let you know if Clear Aligner Therapy is right for them. During this appointment, we
-        will answer any questions that you or they have so that they can be empowered to decide how to
-        proceed. After all, while your teen is still a child, an orthodontics treatment requires their
+      text: At North County Cosmetic and Implant Dentistry, we welcome you to call [(760) 940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our Vista, CA dental office. At the appointment, we can examine
+        your teen and let you know if Clear Aligner Therapy is right for them. During this appointment,
+        we will answer any questions that you or they have so that they can be empowered to decide how
+        to proceed. After all, while your teen is still a child, an orthodontics treatment requires their
         involvement and commitment. Once we have it, their treatment will go smoothly and their smile
         will be transformed into something beautiful.
     - _component: building-blocks/core-elements/heading
@@ -103,7 +103,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligner Therapy services on Yelp: Clear Aligner Therapy vs Traditional Braces Vista'
+        our Clear Aligner Therapy services on Yelp: [Clear Aligner Therapy vs Traditional Braces Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -159,10 +159,11 @@ pageSections:
         office, we can explain the various options for retainers but typically recommend a clear, full
         retainer that closely resembles the aligners they are accustomed to.
     - _component: building-blocks/core-elements/text
-      text: Call our Vista, California dental office at 760-940-2273 to discuss this solution in further
-        detail. At North County Cosmetic and Implant Dentistry, we can answer your questions and help
-        your teen to make an informed decision regarding their orthodontics treatment. We are located
-        in the Vista area and look forward to meeting you to discuss Clear Aligner Therapy Teen®.
+      text: Call our Vista, California dental office at [760-940-2273](tel:+1-760-940-2273) to discuss
+        this solution in further detail. At North County Cosmetic and Implant Dentistry, we can answer
+        your questions and help your teen to make an informed decision regarding their orthodontics treatment.
+        We are located in the Vista area and look forward to meeting you to discuss Clear Aligner Therapy
+        Teen®.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -176,7 +177,8 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call (760) 940-2273 and schedule a consultation with North County Cosmetic and Implant Dentistry.
+      text: Call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation with North County Cosmetic
+        and Implant Dentistry.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

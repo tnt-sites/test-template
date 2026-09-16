@@ -130,7 +130,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our root scaling services on Yelp: Root Scaling and Planing Vista'
+        our root scaling services on Yelp: [Root Scaling and Planing Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -165,8 +165,8 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we enjoy discussing oral health. If you have
-        questions about your gums or a root scaling and planing procedure, call (760) 940-2273 and schedule
-        an appointment with our Vista, CA dental office.
+        questions about your gums or a root scaling and planing procedure, call [(760) 940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our Vista, CA dental office.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

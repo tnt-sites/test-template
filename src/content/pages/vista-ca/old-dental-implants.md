@@ -78,12 +78,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If one or more of your teeth fall out, you may qualify for dental implants as a way to permanently
         replace the missing teeth. In order to find out, schedule an appointment with our Vista dentist
-        office by calling (760) 940-2273. We will examine your mouth and jawbone to determine if the procedure
-        is right for you. Before we begin the procedure, your gums need to be healthy, and your jawbone
-        needs to be strong. If we identify any cavities or signs of gum disease, we will need to treat
-        it prior to the dental implant procedure.
+        office by calling [(760) 940-2273](tel:+1-760-940-2273). We will examine your mouth and jawbone
+        to determine if the procedure is right for you. Before we begin the procedure, your gums need
+        to be healthy, and your jawbone needs to be strong. If we identify any cavities or signs of gum
+        disease, we will need to treat it prior to the dental implant procedure.
     - _component: building-blocks/core-elements/text
-      text: Once you are cleared for the procedure, the team at North County Cosmetic and Implant Dentistry
+      text: Once you are cleared for the procedure, the team at [North County Cosmetic and Implant Dentistry]()
         will take an impression of your mouth to create a new tooth in a dental lab. Each synthetic tooth
         will match the size and shape of the surrounding teeth, along with having a perfect color match.
         This way your smile will appear completely natural once we complete the procedure. Many patients
@@ -100,11 +100,11 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: The next step in the procedure is to implant a metal post under the gum line. This aspect
-        of the procedure is what sets an implant apart from other forms of cosmetic dentistry. The metal
-        post is secured to the jawbone in order to create a durable, synthetic root system that rivals
-        the strength of natural roots; with one exception that the metal cannot face infection. Over the
-        course of a couple of months, the metal post and jawbone will fuse together. This creates a level
-        of durability that cannot be replicated in other types of procedures.
+        of the procedure is what sets an implant apart from other forms of [cosmetic dentistry](/vista-ca/cosmetic-dentist/).
+        The metal post is secured to the jawbone in order to create a durable, synthetic root system that
+        rivals the strength of natural roots; with one exception that the metal cannot face infection.
+        Over the course of a couple of months, the metal post and jawbone will fuse together. This creates
+        a level of durability that cannot be replicated in other types of procedures.
     - _component: building-blocks/core-elements/text
       text: Afterward, we will secure the new synthetic tooth to the metal post at the surface of the
         gums. The new tooth is attached so securely, that patients can eat their favorite foods, maintain
@@ -138,7 +138,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant services on Yelp: Dental Implants Vista'
+        our implant services on Yelp: [Dental Implants Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -169,10 +169,10 @@ pageSections:
         implants in jeopardy because in order to stay secure, the jawbone must be in good health. If it
         becomes infected, your dental implants and all of your teeth will be in jeopardy.
     - _component: building-blocks/core-elements/text
-      text: If you currently have implants and your teeth start to hurt, call 760-940-2273 to schedule
-        an appointment immediately. This way we can identify any infection and treat it before it can
-        spread into the jawbone. As long as you follow these simple preventative care steps, your implants
-        and natural teeth should remain in good health.
+      text: If you currently have implants and your teeth start to hurt, call [760-940-2273](tel:+1-760-940-2273)
+        to schedule an appointment immediately. This way we can identify any infection and treat it before
+        it can spread into the jawbone. As long as you follow these simple preventative care steps, your
+        implants and natural teeth should remain in good health.
     - _component: building-blocks/core-elements/text
       text: There is 40 years of data behind dental implants, with success rates of about 98 percent
     - _component: building-blocks/core-elements/heading
@@ -180,13 +180,13 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: In order to find out if implants are right for you, call (760) 940-2273. The team at North
-        County Cosmetic and Implant Dentistry are friendly, welcoming, and will take the time to inform
-        you of all of your options. We will make a detailed recommendation about the best choice for your
-        oral health by customizing it to your needs. Just remember that you can have a beautiful and natural
-        looking smile by working with a professional implant dentist. If you are suffering from missing
-        teeth, we can help you by transforming your smile. Schedule an appointment and let us transform
-        your smile into something as beautiful as you are.
+      text: In order to find out if implants are right for you, call [(760) 940-2273](tel:+1-760-940-2273).
+        The team at North County Cosmetic and Implant Dentistry are friendly, welcoming, and will take
+        the time to inform you of all of your options. We will make a detailed recommendation about the
+        best choice for your oral health by customizing it to your needs. Just remember that you can have
+        a beautiful and natural looking smile by working with a professional implant dentist. If you are
+        suffering from missing teeth, we can help you by transforming your smile. Schedule an appointment
+        and let us transform your smile into something as beautiful as you are.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -209,7 +209,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Ancient dental implants have been traced back to around 600 AD, when tooth-like pieces of
         shell were hammered into the jaw of a Mayan woman. Thank goodness for contemporary dentistry!
-        Read more
+        [Read more](https://dentalimplants.com/history-of-dental-implants.php)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -52,7 +52,7 @@ pageSections:
         is that their teeth may continue to grow and if so, the restored tooth may appear shorter and
         need to be touched up when they become an adult. By working in restorative dentistry, we can help
         patients now and in the future. If someone in your family has a damaged tooth, give us a call
-        at 760-940-2273 so that we can restore it to full functionality.
+        at [760-940-2273](tel:+1-760-940-2273) so that we can restore it to full functionality.
     - _component: building-blocks/core-elements/heading
       text: Restorative Dentistry for Seniors
       level: h2
@@ -128,7 +128,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our restorative dental services on Yelp: Restorative Dentistry Vista'
+        our restorative dental services on Yelp: [Restorative Dentistry Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -160,7 +160,7 @@ pageSections:
         or bite down on anything inedible, avoid grinding your teeth, etc. If you do so and have regular
         dental checkups, you may be wearing your restoration for twenty years or more. For more information
         about restorative dentistry, or to schedule an appointment with our Vista dentist office, call
-        (760) 940-2273.
+        [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -170,8 +170,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

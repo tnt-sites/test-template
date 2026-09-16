@@ -33,13 +33,13 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA, we invite you to call (760) 940-2273 and schedule a consultation
-        to speak with Dr. Henninger. During your appointment, we will examine your teeth and discuss the
-        goals that you have for your smile. Since there are so many types of procedures to choose from,
-        it is important to understand what you are trying to accomplish so that we can customize a recommendation
-        that fits your lifestyle and timeframe goals.
+      text: If you live in Vista, CA, we invite you to call [(760) 940-2273](tel:+1-760-940-2273) and
+        schedule a consultation to speak with Dr. Henninger. During your appointment, we will examine
+        your teeth and discuss the goals that you have for your smile. Since there are so many types of
+        procedures to choose from, it is important to understand what you are trying to accomplish so
+        that we can customize a recommendation that fits your lifestyle and timeframe goals.
     - _component: building-blocks/core-elements/text
-      text: Before we schedule any cosmetic dental services , we will want to ensure that your teeth and
+      text: Before we schedule any cosmetic dental services, we will want to ensure that your teeth and
         gums are in good health. It is essential that they are. Otherwise, you will take longer to heal,
         and your teeth will continue to deteriorate over time. Starting with healthy teeth, or restoring
         damaged ones during the process, is important for keeping your new smile looking fabulous for
@@ -60,7 +60,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Cosmetic Dental Services Vista'
+        our dental services on Yelp: [Cosmetic Dental Services Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -91,7 +91,7 @@ pageSections:
         we are closing gaps between teeth, changing their overall shape or size, covering dark stains,
         straightening teeth, or restoring teeth, our cosmetic dental services can give you the smile you
         have always wanted. For more information or to speak with North County Cosmetic and Implant Dentistry
-        call 760-940-2273.
+        call [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -289,7 +289,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

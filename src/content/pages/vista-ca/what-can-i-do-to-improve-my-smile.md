@@ -35,12 +35,12 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call (760) 940-2273 and schedule a teeth cleaning with our dental office. We can get you scheduled
-        right away, and you will be amazed by how much better your teeth look when they are clean and
-        the plaque and tartar have been removed. Plaque can make your teeth appear yellow and stained,
-        even when they are not actually dirty. The good news is that a teeth cleaning can usually be completed
-        in under an hour. After all, a cleaning is even more important for your health than it is for
-        your appearance.
+      text: Call [(760) 940-2273](tel:+1-760-940-2273) and schedule a teeth cleaning with our dental office.
+        We can get you scheduled right away, and you will be amazed by how much better your teeth look
+        when they are clean and the plaque and tartar have been removed. Plaque can make your teeth appear
+        yellow and stained, even when they are not actually dirty. The good news is that a teeth cleaning
+        can usually be completed in under an hour. After all, a cleaning is even more important for your
+        health than it is for your appearance.
     - _component: building-blocks/core-elements/heading
       text: Teeth Whitening Options
       level: h3
@@ -89,7 +89,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral health support services on Yelp: What Can I Do to Improve My Smile? Vista'
+        our oral health support services on Yelp: [What Can I Do to Improve My Smile? Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -131,8 +131,8 @@ pageSections:
         welcoming, encouraging, playful and exciting — all the things you are and want to be. The key
         is for you to be confident enough in how your smile looks to be willing to show it off. The good
         news is that by visiting our dental office, your smile can be drastically improved, even if you
-        only have a week or two before the big event. To get started, call 760-940-2273 and schedule an
-        appointment with North County Cosmetic and Implant Dentistry.
+        only have a week or two before the big event. To get started, call [760-940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with North County Cosmetic and Implant Dentistry.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

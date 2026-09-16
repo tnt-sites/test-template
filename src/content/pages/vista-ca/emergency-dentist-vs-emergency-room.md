@@ -62,7 +62,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our emergency dental services on Yelp: Emergency Dentist vs. Emergency Room'
+        our emergency dental services on Yelp: [Emergency Dentist vs. Emergency Room](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -102,8 +102,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, California call (760) 940-2273 and schedule your appointment to experience
-        why patients trust North County Cosmetic and Implant Dentistry with their child's dental needs.
+      text: If you live in Vista, California call [(760) 940-2273](tel:+1-760-940-2273) and schedule your
+        appointment to experience why patients trust [North County Cosmetic and Implant Dentistry]() with
+        their child's dental needs.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

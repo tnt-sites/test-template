@@ -91,7 +91,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligner Therapy Teen services on Yelp: Clear Aligner Therapy Teen Vista'
+        our Clear Aligner Therapy Teen services on Yelp: [Clear Aligner Therapy Teen Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -106,12 +106,12 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: The process is simple. Call 760-940-2273 and schedule an appointment with our dental office.
-        We can examine your teen's teeth, let you know if they are ready for Clear Aligner Therapy now,
-        or when they will be. Next, we will discuss all of the steps involved in the process with you
-        and your teen, so that everyone understands what to expect. There will be some paperwork to sign
-        and financial considerations to discuss with our office manager. If you need help financing the
-        treatment, let us know now so that we can help you find a solution.
+      text: The process is simple. Call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+        with our dental office. We can examine your teen's teeth, let you know if they are ready for Clear
+        Aligner Therapy now, or when they will be. Next, we will discuss all of the steps involved in
+        the process with you and your teen, so that everyone understands what to expect. There will be
+        some paperwork to sign and financial considerations to discuss with our office manager. If you
+        need help financing the treatment, let us know now so that we can help you find a solution.
     - _component: building-blocks/core-elements/text
       text: Next, we will schedule a visit to take digital images of your teen's mouth, along with measurements.
         These images will be uploaded into the computer so that we can begin to project out the treatment
@@ -135,9 +135,9 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about Clear Aligner Therapy Teen® and whether it is right for your child, call
-        (760) 940-2273 and schedule an appointment with our Vista, California dental office. At North
-        County Cosmetic and Implant Dentistry we can answer all of your questions, ensure that their treatment
-        goes smoothly, and help your teen to gain a bright and beautiful smile.
+        [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista, California dental
+        office. At North County Cosmetic and Implant Dentistry we can answer all of your questions, ensure
+        that their treatment goes smoothly, and help your teen to gain a bright and beautiful smile.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

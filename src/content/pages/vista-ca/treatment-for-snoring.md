@@ -28,12 +28,13 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Heavy snoring is a common symptom of sleep apnea, a serious medical condition that can damage
-        your health. But even if your snoring isn’t related to sleep apnea, it can still impact your life.
-        Loud snoring is especially detrimental to the people around you.
+      text: Heavy snoring is a common symptom of [sleep apnea](/vista-ca/sleep-apnea/), a serious medical
+        condition that can damage your health. But even if your snoring isn’t related to sleep apnea,
+        it can still impact your life. Loud snoring is especially detrimental to the people around you.
     - _component: building-blocks/core-elements/text
-      text: In fact, over half of snorers say it disturbs the people closest to them. This is particularly
-        true when it comes to your spouse or sleeping partner.
+      text: In fact, [over half of snorers](https://www.sleepfoundation.org/sites/default/files/inline-files/2005_summary_of_findings.pdf)
+        say it disturbs the people closest to them. This is particularly true when it comes to your spouse
+        or sleeping partner.
     - _component: building-blocks/core-elements/text
       text: It might not bother you, but your snoring can cause the person who shares your bed to miss
         out on essential sleep. This often leads to tension in a relationship. Snoring can also damage
@@ -56,7 +57,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Treatment For Snoring services on Yelp: Treatment For Snoring Vista'
+        our Treatment For Snoring services on Yelp: [Treatment For Snoring Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -72,9 +73,9 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Our dentist have the necessary training and experience to treat your snoring, and they’ll
-        use this to find the remedy that works best for you. Many of our patients get relief with oral
-        appliance therapy. This is a small device that you wear while sleeping to prevent friction in
-        the airway that causes snoring.
+        use this to find the remedy that works best for you. Many of our patients get relief with [oral
+        appliance therapy](/vista-ca/oral-appliance-therapy/). This is a small device that you wear while
+        sleeping to prevent friction in the airway that causes snoring.
     - _component: building-blocks/core-elements/text
       text: We feature several types of oral appliances, so we’ll be able to recommend the one that’s
         right for you. You can take your oral appliance anywhere because it’s quiet, convenient, and easy
@@ -153,11 +154,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

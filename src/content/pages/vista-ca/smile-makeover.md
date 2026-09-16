@@ -60,8 +60,8 @@ pageSections:
         tray is created in a dental lab. It is made to fit perfectly so that the whitening solution stays
         in place, and your teeth feel comfortable. If necessary, we will provide you with a whitening
         solution that can be used at home so that you can improve the appearance of your teeth regardless
-        of where you are or how busy your schedule is. To learn more, call 760-940-2273 and schedule a
-        consultation.
+        of where you are or how busy your schedule is. To learn more, call [760-940-2273](tel:+1-760-940-2273)
+        and schedule a consultation.
     - _component: building-blocks/core-elements/heading
       text: Dental Veneers
       level: h3
@@ -94,7 +94,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our smile makeover and restoration services on Yelp: Smile Makeover Vista'
+        our smile makeover and restoration services on Yelp: [Smile Makeover Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -127,9 +127,9 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Our patients trust our team at North County Cosmetic and Implant Dentistry to replace their
-        missing teeth in a way that looks completely natural. Dental implants are an excellent way to
-        restore missing teeth because once the procedure is completed; you can enjoy all of your favorite
+      text: Our patients trust our team at [North County Cosmetic and Implant Dentistry]() to replace
+        their missing teeth in a way that looks completely natural. Dental implants are an excellent way
+        to restore missing teeth because once the procedure is completed; you can enjoy all of your favorite
         activities and foods without worrying about the tooth falling out or becoming loose. This is important
         because, with other procedures like dentures, teeth can get loose while running around or eating
         lunch with friends. Dental implants are so durable that you will not be able to tell the difference
@@ -158,8 +158,8 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: To get started on your smile makeover call our Vista dentist office and schedule an appointment
-        with Dr. Henninger. You can reach us at (760) 940-2273 and we will be happy to schedule a time
-        that is convenient for your schedule.
+        with Dr. Henninger. You can reach us at [(760) 940-2273](tel:+1-760-940-2273) and we will be happy
+        to schedule a time that is convenient for your schedule.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -356,7 +356,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

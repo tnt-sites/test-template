@@ -61,8 +61,8 @@ pageSections:
         and Implant Dentistry, we can create customized treatment plans for the needs of each patient.
         With this in mind, we will provide you with all of the information you need in order to make an
         informed decision as to whether or not clear braces are for you. If you live in the Vista area,
-        call (760) 940-2273 to schedule your consultation to ask about Clear Aligner Therapy for Teens
-        .
+        call [(760) 940-2273](tel:+1-760-940-2273) to schedule your consultation to ask about Clear Aligner
+        Therapy for Teens.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -73,7 +73,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligner Therapy services on Yelp: Clear Aligner Therapy Vista'
+        our Clear Aligner Therapy services on Yelp: [Clear Aligner Therapy Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -106,13 +106,13 @@ pageSections:
         metal braces may be extremely uncomfortable. With Clear Aligner Therapy, this is not an issue.
         The better we understand your needs, the more equipped we are to make the right treatment recommendation.
     - _component: building-blocks/core-elements/text
-      text: At North County Cosmetic and Implant Dentistry, we treat teens and adults, using Clear Aligner
-        Therapy to transform smiles. Perhaps the biggest difference between treating adults and teens
-        is that teenagers may have a lot more going on. While adults are busy with work and family obligations.
-        Teenagers will have school, extracurricular activities and spending time with friends each day.
-        With this in mind, you can take your aligner out when you have to so that it doesn't slow you
-        down. This may delay your treatment time slightly, but it will also make it possible to have fun
-        without worrying about your teeth.
+      text: At [North County Cosmetic and Implant Dentistry](), we treat teens and adults, using Clear
+        Aligner Therapy to transform smiles. Perhaps the biggest difference between treating adults and
+        teens is that teenagers may have a lot more going on. While adults are busy with work and family
+        obligations. Teenagers will have school, extracurricular activities and spending time with friends
+        each day. With this in mind, you can take your aligner out when you have to so that it doesn't
+        slow you down. This may delay your treatment time slightly, but it will also make it possible
+        to have fun without worrying about your teeth.
     - _component: building-blocks/core-elements/heading
       text: Advantages of Clear Aligner Therapy compared to traditional braces
       level: h3
@@ -148,7 +148,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: For more information on Clear Aligner Therapy Teen or to schedule a consultation, call 760-940-2273.
+      text: For more information on Clear Aligner Therapy Teen or to schedule a consultation, call [760-940-2273](tel:+1-760-940-2273).
         Call today so you can have a beautiful smile tomorrow.
     maxContentWidth: none
     paddingHorizontal: none

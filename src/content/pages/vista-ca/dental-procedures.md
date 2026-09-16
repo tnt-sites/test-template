@@ -64,7 +64,7 @@ pageSections:
         worked on and at times, simply need to relax. Whether you do so through sedation or friendly conversation,
         we are here to help. With more intensive procedures, we will ensure that you do not feel any discomfort
         along the way. To learn more or to schedule an appointment with our Vista dentist office, call
-        760-940-2273.
+        [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -75,7 +75,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Procedures Vista'
+        our dental services on Yelp: [Dental Procedures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

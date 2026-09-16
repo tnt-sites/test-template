@@ -40,13 +40,13 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are looking for a Vista dentist that can prevent infections, treat them, and beautifully
         restore or transform your smile; we offer all of those solutions as part of our dental work. If
-        you live or work near the Vista area, we invite you to call (760) 940-2273 and schedule an appointment.
-        During your initial examination, we will inspect your teeth and gums to determine if there are
-        any cavities or if an infection is present. Early detection is important since it allows us to
-        provide treatment before you experience any discomfort. Unlike other physical ailments that may
-        not manifest until you are in pain, oral health problems show signs along the way. When we see
-        those signs, we can prevent you from getting a full-blown infection by providing early treatment.
-        For this reason, we recommend that you schedule a dental exam twice a year.
+        you live or work near the Vista area, we invite you to call [(760) 940-2273](tel:+1-760-940-2273)
+        and schedule an appointment. During your initial examination, we will inspect your teeth and gums
+        to determine if there are any cavities or if an infection is present. Early detection is important
+        since it allows us to provide treatment before you experience any discomfort. Unlike other physical
+        ailments that may not manifest until you are in pain, oral health problems show signs along the
+        way. When we see those signs, we can prevent you from getting a full-blown infection by providing
+        early treatment. For this reason, we recommend that you schedule a dental exam twice a year.
     - _component: building-blocks/core-elements/text
       text: In addition to examining and cleaning your teeth, we offer dental services to restore the
         health of infected teeth as well. Whether this involves treating a cavity, performing a root canal
@@ -60,7 +60,7 @@ pageSections:
         stains, straighten the teeth, or replace missing teeth. Whatever the case may be, we have the
         skills and experience to successfully complete the transformation and restore your teeth to good
         health in the process. For more information or to schedule an appointment with North County Cosmetic
-        and Implant Dentistry call 760-940-2273.
+        and Implant Dentistry call [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -71,7 +71,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Services Vista'
+        our dental services on Yelp: [Dental Services Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

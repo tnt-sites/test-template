@@ -870,3 +870,21 @@
     width: 1.05em;
   }
 }
+
+@layer overrides {
+  /*
+   * Free-standing rules inside content sections. The source draws these at 1px
+   * with 12px margins, the same weight as the rule under a heading; the
+   * starter's divider is a 2px light grey line with no margin of its own.
+   */
+  main .cws-main .custom-section .divider,
+  main .content-with-sidebar .custom-section .divider {
+    margin-block: 12px;
+  }
+
+  main .cws-main .custom-section .divider hr,
+  main .content-with-sidebar .custom-section .divider hr {
+    border-top: 1px solid var(--color-border, #d2cec7);
+    margin: 0;
+  }
+}

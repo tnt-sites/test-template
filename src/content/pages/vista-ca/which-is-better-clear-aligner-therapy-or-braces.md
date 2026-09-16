@@ -82,7 +82,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligner Therapy services on Yelp: Clear Aligner Therapy Vista'
+        our Clear Aligner Therapy services on Yelp: [Clear Aligner Therapy Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -134,8 +134,8 @@ pageSections:
         what is better, Clear Aligner Therapy or braces. Our portion of the discussing will revolve around
         the physical changes that will take place with your teeth and bite. You will need to give feedback
         on your lifestyle and expectations so that together, we can create a treatment plan that will
-        work today and a year from now. To learn more, call 760-940-2273 and schedule an appointment with
-        our Vista, CA dental office.
+        work today and a year from now. To learn more, call [760-940-2273](tel:+1-760-940-2273) and schedule
+        an appointment with our Vista, CA dental office.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

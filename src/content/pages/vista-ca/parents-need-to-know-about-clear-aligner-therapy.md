@@ -114,7 +114,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligner Therapy services on Yelp: Clear Aligner Therapy Vista'
+        our Clear Aligner Therapy services on Yelp: [Clear Aligner Therapy Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -129,8 +129,8 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call 760-940-2273 and schedule a consultation with North County Cosmetic and Implant Dentistry
-        today.
+      text: Call [760-940-2273](tel:+1-760-940-2273) and schedule a consultation with North County Cosmetic
+        and Implant Dentistry today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

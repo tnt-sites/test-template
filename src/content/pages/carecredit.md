@@ -43,10 +43,10 @@ pageSections:
       opened since CareCredit began nearly 30 years ago, they are the trusted source for healthcare credit
       cards.
   - _component: building-blocks/core-elements/text
-    text: Learn more by visiting www.carecredit.com or contacting our office. Ready to apply? Apply online
-      for your CareCredit healthcare credit card today.
+    text: Learn more by visiting [www.carecredit.com](https://www.carecredit.com/go/ZTX273/) or contacting
+      our office. Ready to apply? Apply online for your CareCredit healthcare credit card today.
   - _component: building-blocks/core-elements/text
-    text: You’ll be smiling brighter in no time! Apply Now
+    text: You’ll be smiling brighter in no time! [Apply Now](https://www.carecredit.com/go/ZTX273/)
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/carecredit_button_apply.png
     alt: Care Credit Image
@@ -91,10 +91,12 @@ pageSections:
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
+  - _component: building-blocks/core-elements/divider
+    paddingVertical: none
   - _component: building-blocks/core-elements/text
-    text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
+    text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/kJihkspTKfYxY2JS8).
   - _component: building-blocks/core-elements/text
-    text: (760) 940-2273
+    text: '[(760) 940-2273](tel:+1-760-940-2273)'
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

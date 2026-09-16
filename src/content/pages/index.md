@@ -139,7 +139,7 @@ pageSections:
           Dentist in Vista, CA explaining dental implants to patient using model at North County Cosmetic
           and Implant Dentistry
         title: Dental <span>Implants</span>
-        href: /vista-ca/implants/
+        href: /vista-ca/implants-vs-mini-implants/
         wide: false
         links: []
       - _component: page-sections/ctas/services-grid/services-grid-item

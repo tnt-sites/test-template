@@ -31,6 +31,16 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
+    contentSections:
+    - _component: building-blocks/core-elements/text
+      text: For more information on our Snore & Sleep Solutions please [CLICK HERE](https://www.westcoastsleepsolutions.com/index.php).
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
     label: Signs & Symptoms of Sleep Apnea
     contentSections:
     - _component: building-blocks/core-elements/heading
@@ -139,7 +149,7 @@ pageSections:
         encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       aspectRatio: widescreen
     - _component: building-blocks/core-elements/text
-      text: Click Here for Our Sleep Apnea Referral Form
+      text: '[Click Here for Our Sleep Apnea Referral Form](/wp-content/uploads/Sleep-Apnea-Referral-Form.pdf)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -218,10 +228,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

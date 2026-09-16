@@ -98,7 +98,7 @@ pageSections:
     text: Wondering if you can get dental implants with Medicare? Dr. Henninger is a Medicare-certified
       provider for dental implants. This means that at our office, Medicare will cover medically necessary
       oral surgery related to dental implant procedures. Very few dentists in the United States are certified
-      to treat Medicare patients. To learn more click HERE.
+      to treat Medicare patients. To learn more click [HERE](/medicare-dental-implants/).
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -147,9 +147,9 @@ pageSections:
     level: h2
     size: md
   - _component: building-blocks/core-elements/text
-    text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
+    text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
   - _component: building-blocks/core-elements/text
-    text: (760) 940-2273
+    text: '[(760) 940-2273](tel:+1-760-940-2273)'
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

@@ -72,7 +72,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Denture Adjustments and Repairs Vista'
+        our dental services on Yelp: [Denture Adjustments and Repairs Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -97,7 +97,7 @@ pageSections:
       text: We will adjust or repair the dentures so that the patient will be able to use them comfortably
         on a regular basis. We will send out regular reminders when it is time for another checkup appointment.
         If you need a new pair of dentures, adjustments or more information on dentures as a tooth replacement,
-        give us a call at (760) 940-2273 today.
+        give us a call at [(760) 940-2273](tel:+1-760-940-2273) today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -107,8 +107,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -104,7 +104,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral health support services on Yelp: Will I Need a Bone Graft for Dental Implants? Vista'
+        our oral health support services on Yelp: [Will I Need a Bone Graft for Dental Implants? Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -159,8 +159,8 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: The best way to find out if you need a bone grafting procedure is to call 760-940-2273 and
-        schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry,
+      text: The best way to find out if you need a bone grafting procedure is to call [760-940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry,
         we can take X-rays and let you know if your bone is lacking in density. We can then make a recommendation
         for treatment and let you know if you need to see a specialist.
     maxContentWidth: xl

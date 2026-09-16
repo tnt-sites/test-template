@@ -64,11 +64,11 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If your breath is smelly, you do not have to live with it. Call 760-940-2273 to schedule a
-        dental examination and bad breath treatment. Very often, this is caused by a cavity, infection,
-        or gum disease. By cleaning your teeth and your tongue, we can typically remove the cause of your
-        bad breath. If you have another issue, like dry mouth, that is causing the problem, we can discuss
-        further ways to improve it.
+      text: If your breath is smelly, you do not have to live with it. Call [760-940-2273](tel:+1-760-940-2273)
+        to schedule a dental examination and bad breath treatment. Very often, this is caused by a cavity,
+        infection, or gum disease. By cleaning your teeth and your tongue, we can typically remove the
+        cause of your bad breath. If you have another issue, like dry mouth, that is causing the problem,
+        we can discuss further ways to improve it.
     - _component: building-blocks/core-elements/heading
       text: Treating gum disease.
       level: h3
@@ -137,7 +137,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our general dentistry services on Yelp: General Dentistry Services Vista'
+        our general dentistry services on Yelp: [General Dentistry Services Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -159,7 +159,7 @@ pageSections:
         family how to brush your teeth properly, how to select the right toothbrush, what foods to avoid
         and what foods to eat for a healthy mouth and beautiful smile. We can also provide you with specific
         instructions that relate to your personal oral health. To learn more or to schedule an appointment,
-        call (760) 940-2273.
+        call [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

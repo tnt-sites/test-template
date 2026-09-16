@@ -43,8 +43,8 @@ pageSections:
         of your sleep. With expert precision, the laser is directed toward the tissue in your mouth surrounding
         your airway that causes snoring.
     - _component: building-blocks/core-elements/text
-      text: Superficial heat penetration causes the tissue to tighten , removing obstruction from your
-        airway. This lessens the volume of your snoring by as much as 50% after the first treatment.
+      text: Superficial heat penetration causes the tissue to tighten, removing obstruction from your
+        airway. This lessens the volume of your snoring by as much as [50% after the first treatment](https://www.laserandhealthacademy.com/en/articles/?id=3263).
     - _component: building-blocks/core-elements/text
       text: In addition to being extremely effective, this treatment is also gentle enough to be used
         on sensitive tissue without adverse effects.
@@ -63,7 +63,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Nightlase services on Yelp: Nightlase Vista'
+        our Nightlase services on Yelp: [Nightlase Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -142,11 +142,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

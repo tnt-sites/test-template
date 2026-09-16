@@ -86,7 +86,7 @@ pageSections:
           that stands out when you smile or one that blends in. Patients do not have to worry about other
           people noticing the tooth-colored fillings. Another advantage is not having any mercury in the
           filling and decreasing the risk of other health risks. To learn more about this option, call
-          760-940-2273 and schedule an appointment with our Vista, CA dental office.
+          [760-940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista, CA dental office.
       - _component: building-blocks/core-elements/list/list-item
         text: Q. How are composite fillings used?
       - _component: building-blocks/core-elements/list/list-item
@@ -138,8 +138,8 @@ pageSections:
           material on your tooth and shape it before the hardening. The shape needs to be just right so
           your bite will fit together correctly. It can take a couple of days to get used to eating on
           the tooth. Thus, while it will not be particularly uncomfortable, you may have one day where
-          you feel as though you are adjusting. For more specific information, call (760) 940-2273 to
-          schedule an appointment.
+          you feel as though you are adjusting. For more specific information, call [(760) 940-2273](tel:+1-760-940-2273)
+          to schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -150,7 +150,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our composite fillings on Yelp: Composite Fillings Vista'
+        our composite fillings on Yelp: [Composite Fillings Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

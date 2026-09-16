@@ -36,14 +36,14 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: We invite you to call (760) 940-2273 and schedule an appointment with our dental center. If
-        you are currently in search of a dentist, you can be confident that visiting our office will give
-        you access to comprehensive dental care that will address all of your oral health concerns along
-        with the goals that you have for your smile. We are located in Vista and offer appointment times
-        that work for you. If you want to learn more about our office, we invite you to stop by the office,
-        meet our team, or you can read our reviews to hear what our patients have to say. The biggest
-        compliment we can receive is when a patient refers their friends and family to us. We are pleased
-        that so many of our patients have made the effort to write a review.
+      text: We invite you to call [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment with
+        our dental center. If you are currently in search of a dentist, you can be confident that visiting
+        our office will give you access to comprehensive dental care that will address all of your oral
+        health concerns along with the goals that you have for your smile. We are located in Vista and
+        offer appointment times that work for you. If you want to learn more about our office, we invite
+        you to stop by the office, meet our team, or you can read our reviews to hear what our patients
+        have to say. The biggest compliment we can receive is when a patient refers their friends and
+        family to us. We are pleased that so many of our patients have made the effort to write a review.
     - _component: building-blocks/core-elements/heading
       text: Our Philosophy of Care
       level: h3
@@ -53,7 +53,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: When you visit our Vista, CA dental center , we will begin by examining your teeth and gums.
+      text: When you visit our Vista, CA dental center, we will begin by examining your teeth and gums.
         The examination allows us to identify any cavities that require treatment or gum disease that
         we need to deal with before viewing other treatment possibilities. Since our first priority is
         your health, we will address these issues before anything else. Next, we will discuss what you
@@ -71,7 +71,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Center Vista'
+        our dental services on Yelp: [Dental Center Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -144,7 +144,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What can I do to repair damaged teeth?](/vista-ca/dental-center/#repair-damaged-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can dental veneers do for my teeth?](/vista-ca/dental-center/#dental veneers-for-my-teeth)
+        text: Q. [What can dental veneers do for my teeth?](/vista-ca/dental-center/#dental-veneers-for-my-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

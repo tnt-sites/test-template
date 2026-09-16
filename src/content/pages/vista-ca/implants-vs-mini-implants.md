@@ -46,7 +46,7 @@ pageSections:
         creates more opportunities regarding tooth replacement options for adults suffering from tooth
         loss along with our elderly patients that tend to suffer from resorption on a more regular basis.
         That is good news and if you have been told that you cannot get implants due to a lack of bone
-        density, call 760-940-2273 for a second opinion.
+        density, call [760-940-2273](tel:+1-760-940-2273) for a second opinion.
     - _component: building-blocks/core-elements/text
       text: The one downfall of using a smaller implant is that the implant itself may not be as strong
         or as durable, simply because it receives less support from the jawbone than a traditional implant
@@ -78,8 +78,8 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant support services on Yelp: The Difference Between Dental Implants and Mini Dental Implants
-        Vista'
+        our implant support services on Yelp: [The Difference Between Dental Implants and Mini Dental
+        Implants Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -154,8 +154,8 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in learning more, we encourage you to call our Vista, CA dental office
-        at (760) 940-2273. At North County Cosmetic and Implant Dentistry, we can also provide you with
-        specific information that is related to your situation.
+        at [(760) 940-2273](tel:+1-760-940-2273). At North County Cosmetic and Implant Dentistry, we can
+        also provide you with specific information that is related to your situation.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

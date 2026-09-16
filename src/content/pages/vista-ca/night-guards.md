@@ -61,7 +61,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our night guards on Yelp: Night Guards Vista'
+        our night guards on Yelp: [Night Guards Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -154,7 +154,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about night guards and how they can help you, call our Vista dental office to
-        schedule an appointment. You can reach us at (760) 940-2273.
+        schedule an appointment. You can reach us at [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -176,7 +176,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [Why would I need to wear a night guard?](/vista-ca/night-guards/#why-would-i-need-a-night-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How long will the night guard last?](/vista-ca/night-guards/#how-long-will the-night-guard-last)
+        text: Q. [How long will the night guard last?](/vista-ca/night-guards/#how-long-will-the-night-guard-last)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

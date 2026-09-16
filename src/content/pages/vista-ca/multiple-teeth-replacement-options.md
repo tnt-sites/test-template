@@ -37,10 +37,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: 'The sooner you call (760) 940-2273 and schedule a consultation, the better. We can examine
-        you, take X-rays, and make recommendations regarding which procedure is likely to work the best
-        for your particular situation. Here are a few of the procedures that can be used to replace multiple
-        teeth:'
+      text: 'The sooner you call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation, the
+        better. We can examine you, take X-rays, and make recommendations regarding which procedure is
+        likely to work the best for your particular situation. Here are a few of the procedures that can
+        be used to replace multiple teeth:'
     - _component: building-blocks/core-elements/heading
       text: Dental Implants
       level: h3
@@ -114,7 +114,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Multiple Teeth Replacement Options Vista'
+        our dental services on Yelp: [Multiple Teeth Replacement Options Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -138,7 +138,7 @@ pageSections:
         At North County Cosmetic and Implant Dentistry, we want you to have full use of your teeth and
         to feel confident in the appearance of your smile. This is all possible when you visit our Vista
         dental office to replace your missing teeth. To learn more about your options or to start the
-        process, call 760-940-2273 today.
+        process, call [760-940-2273](tel:+1-760-940-2273) today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

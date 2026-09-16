@@ -81,7 +81,7 @@ pageSections:
         throughout Vista CA. Even a backyard game of basketball can lead to someone damaging a tooth or
         someone knocking a player's tooth out. The same holds true for kids playing sports as well. While
         there are ways to protect yourself like wearing a mouth guard, a dental emergency is still possible.
-        When an emergency strikes call 760-940-2273.
+        When an emergency strikes call [760-940-2273](tel:+1-760-940-2273).
     - _component: building-blocks/core-elements/text
       text: Car accidents are another leading cause of tooth injury. While the enamel on your teeth is
         strong, it may not be strong enough to prevent your tooth from breaking when colliding with the
@@ -96,7 +96,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Severe and sudden toothaches are another reason people in California end up needing an emergency
-        dentist . We can examine teeth and determine what is causing the pain. It may be a little cavity
+        dentist. We can examine teeth and determine what is causing the pain. It may be a little cavity
         that grew into a big one and now requires a root canal. Another possibility is gum disease, which
         can cause the gums to recede, exposing the tooth and roots. Both can lead to intense pain and
         require emergency treatment. We do not want patients of North County Cosmetic and Implant Dentistry
@@ -109,7 +109,7 @@ pageSections:
         Henninger.
     - _component: building-blocks/core-elements/text
       text: 99% of dental related emergency room trips could have been handled by an emergency dental
-        office for a fraction of the cost. AHRQ, November 2012
+        office for a fraction of the cost. [AHRQ, November 2012](http://www.hcup-us.ahrq.gov/reports/statbriefs/sb143.pdf)
     - _component: building-blocks/core-elements/heading
       text: How can I relieve dental pain while waiting for an emergency dental appointment?
       level: h3
@@ -131,7 +131,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 99% of dental related emergency room trips could have been handled by an emergency dental
-        office for a fraction of the cost. AHRQ, November 2012
+        office for a fraction of the cost. [AHRQ, November 2012](http://www.hcup-us.ahrq.gov/reports/statbriefs/sb143.pdf)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -143,7 +143,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our emergency dental services on Yelp: Emergency Dentist Vista'
+        our emergency dental services on Yelp: [Emergency Dentist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -174,7 +174,7 @@ pageSections:
         dental veneers and a dental crown. Both are excellent options and can restore your tooth to full
         functionality while keeping it natural looking. As an emergency dental facility, we can provide
         you with information on what your options are and the best way to restore your tooth while achieving
-        the goals that you have for your smile. To schedule an appointment, call (760) 940-2273.
+        the goals that you have for your smile. To schedule an appointment, call [(760) 940-2273](tel:+1-760-940-2273).
     - _component: building-blocks/core-elements/text
       text: When a tooth is infected… As an emergency dentist, we will assess the situation and inform
         you of where the infection is and the best way to quickly treat it. Our job is to keep you comfortable,
@@ -187,15 +187,15 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: At North County Cosmetic and Implant Dentistry we strive to keep our patients comfortable
+      text: At [North County Cosmetic and Implant Dentistry]() we strive to keep our patients comfortable
         and free from injury or pain. As such, we are cognizant of the fact that most dental emergencies
-        are unplanned. If your tooth has been damaged or you are in pain, call 760-940-2273 right away
-        so that we can schedule your appointment and treat the issue quickly. Our friendly team will do
-        our best to accommodate your schedule and ensure that you can get back to a life that is free
-        from oral pain. While many dentists, require you to schedule appointments far in advance – our
-        team will work with you in each situation to get you the necessary treatment right away. You can
-        also help to avoid dental emergencies by receiving teeth cleanings twice a year and maintaining
-        a healthy diet year-round.
+        are unplanned. If your tooth has been damaged or you are in pain, call [760-940-2273](tel:+1-760-940-2273)
+        right away so that we can schedule your appointment and treat the issue quickly. Our friendly
+        team will do our best to accommodate your schedule and ensure that you can get back to a life
+        that is free from oral pain. While many dentists, require you to schedule appointments far in
+        advance – our team will work with you in each situation to get you the necessary treatment right
+        away. You can also help to avoid dental emergencies by receiving teeth cleanings twice a year
+        and maintaining a healthy diet year-round.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -278,7 +278,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: 88% of all emergency dental visits could have been prevented by routine care. Read more
+      text: 88% of all emergency dental visits could have been prevented by routine care. [Read more](http://www.pewtrusts.org/~/media/Assets/2012/01/16/A-Costly-Dental-Destination.pdf)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

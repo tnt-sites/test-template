@@ -80,7 +80,7 @@ pageSections:
         of milk, then come to our Vista, CA dental office right away. There is a possibility that the
         tooth can be put back in your mouth. Otherwise, we can discuss replacement options that include
         dentures, a dental bridge, or a dental implant. All of these are possibilities that can appear
-        completely natural so to learn more about them, call 760-940-2273.
+        completely natural so to learn more about them, call [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -91,7 +91,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our emergency dental services on Yelp: Emergency Dental Care Vista'
+        our emergency dental services on Yelp: [Emergency Dental Care Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -112,12 +112,12 @@ pageSections:
         and we can provide relief. The good news is that it does not have to be. At North County Cosmetic
         and Implant Dentistry, we have found that most toothaches do not happen without warning. Typically,
         there are signs that can include discomfort when biting down, sensitivity to heat or cold, irritation
-        when brushing or flossing, etc. If you sense any of these things, we encourage you to call (760)
-        940-2273 and schedule an appointment for a dental exam. We can examine your teeth, look for any
-        signs of infection or decay and treat the problem before you go from moderate discomfort to a
-        raging toothache. Our friendly Vista team can work with you to schedule an appointment that fits
-        within your schedule so that you have no reason to delay in seeking treatment. However, if you
-        do not come in right away and do develop a bad toothache, we want to see you.
+        when brushing or flossing, etc. If you sense any of these things, we encourage you to call [(760)
+        940-2273](tel:+1-760-940-2273) and schedule an appointment for a dental exam. We can examine your
+        teeth, look for any signs of infection or decay and treat the problem before you go from moderate
+        discomfort to a raging toothache. Our friendly Vista team can work with you to schedule an appointment
+        that fits within your schedule so that you have no reason to delay in seeking treatment. However,
+        if you do not come in right away and do develop a bad toothache, we want to see you.
     - _component: building-blocks/core-elements/text
       text: One of the common reasons for a bad toothache is severe decay or an infection. To resolve
         this issue, we may need to perform a root canal. We can do this while providing you with emergency
@@ -142,16 +142,15 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA or the surrounding area, call 760-940-2273 if you have any type of
-        dental emergency. We will work to get you treated right away so that your discomfort can be relieved,
-        your tooth restored, and your smile improved. We can also discuss any other oral health concerns
-        that you may have.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+      text: If you live in Vista, CA or the surrounding area, call [760-940-2273](tel:+1-760-940-2273)
+        if you have any type of dental emergency. We will work to get you treated right away so that your
+        discomfort can be relieved, your tooth restored, and your smile improved. We can also discuss
+        any other oral health concerns that you may have.
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
     colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:

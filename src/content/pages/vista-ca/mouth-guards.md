@@ -95,7 +95,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our mouth guards on Yelp: Mouth Guards Vista'
+        our mouth guards on Yelp: [Mouth Guards Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -147,7 +147,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: Start protecting yourself and your children today by having your custom mouth guards created.
-        Call 760-940-2273 to schedule an appointment with our dental office.
+        Call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment with our dental office.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

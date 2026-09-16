@@ -1,0 +1,10 @@
+import { chromium } from "playwright";
+const b=await chromium.launch(); const p=await b.newPage({viewport:{width:1440,height:1200}});
+await p.goto(process.argv[2],{waitUntil:"networkidle",timeout:60000}); await p.waitForTimeout(2500);
+await p.evaluate(async()=>{await new Promise(r=>{let y=0;const t=setInterval(()=>{window.scrollTo(0,y);y+=800;
+  if(y>document.body.scrollHeight){clearInterval(t);window.scrollTo(0,0);r();}},40);});});
+await p.waitForTimeout(600);
+const h=await p.evaluateHandle(()=>document.querySelector(".image-row")?.closest(".custom-section"));
+const el=h.asElement();
+if(el) await el.screenshot({path:process.argv[3]}); else console.log("not found");
+await b.close();

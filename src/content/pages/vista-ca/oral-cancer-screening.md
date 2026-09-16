@@ -39,8 +39,8 @@ pageSections:
       text: Unfortunately, no. Most people never have an oral cancer screening, and this is why the cancer
         is not detected at an early stage. At our Vista, CA dental practice, we suggest that you visit
         us for a screening right away if you have never received one. Otherwise, you can generally have
-        this done bi-annually. If you live in or near the Vista area, call (760) 940-2273 to schedule
-        an appointment with our office.
+        this done bi-annually. If you live in or near the Vista area, call [(760) 940-2273](tel:+1-760-940-2273)
+        to schedule an appointment with our office.
     - _component: building-blocks/core-elements/heading
       text: What does an oral cancer screening entail?
       level: h3
@@ -73,7 +73,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral cancer screening services on Yelp: Oral Cancer Screening Vista'
+        our oral cancer screening services on Yelp: [Oral Cancer Screening Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -150,7 +150,8 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Regular oral cancer screenings can save your life. If you live in Vista, CA, we encourage
-        you to call 760-940-2273 and schedule an appointment with our dental office today.
+        you to call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment with our dental office
+        today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

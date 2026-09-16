@@ -64,7 +64,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Gum Grafting on Yelp: Perio Protect Vista'
+        our Gum Grafting on Yelp: [Perio Protect Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -148,15 +148,17 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: Contact Us to Discuss Your Treatment Options
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/heading
       text: Contact Us to Discuss Your Treatment Options
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

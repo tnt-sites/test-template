@@ -83,7 +83,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our denture and partial denture services on Yelp: Dentures and Partial Dentures Vista'
+        our denture and partial denture services on Yelp: [Dentures and Partial Dentures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -256,10 +256,10 @@ pageSections:
         pull the dentures out of the person’s mouth. If the person notices any damage to the base or artificial
         teeth, they should contact our office right away.
     - _component: building-blocks/core-elements/text
-      text: People should not try to fix the dentures without professional assistance. An article on the
-        American Dental Association website offers more information on the subject of maintaining dentures
-        and what to do if the break. In all cases of the dentures sustaining damage, it is crucial to
-        call us for repairs.
+      text: People should not try to fix the dentures without professional assistance. [An article on
+        the American Dental Association website](https://www.ada.org/en/member-center/oral-health-topics/dentures)
+        offers more information on the subject of maintaining dentures and what to do if the break. In
+        all cases of the dentures sustaining damage, it is crucial to call us for repairs.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

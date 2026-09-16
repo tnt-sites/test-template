@@ -72,7 +72,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental cosmetic services on Yelp: Dental Cosmetics Vista'
+        our dental cosmetic services on Yelp: [Dental Cosmetics Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -156,7 +156,7 @@ pageSections:
         are perfect for your individual needs and provide you with dental cosmetics that work to keep
         you smiling now and as you age. Whether you have lost a tooth or are dealing with an infected
         and damaged one, we can help. To schedule an appointment to speak with North County Cosmetic and
-        Implant Dentistry call 760-940-2273. We look forward to assisting you.
+        Implant Dentistry call [760-940-2273](tel:+1-760-940-2273). We look forward to assisting you.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -166,8 +166,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -364,7 +364,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

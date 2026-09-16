@@ -85,7 +85,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our denture services on Yelp: What to Expect When Getting Dentures Vista'
+        our denture services on Yelp: [What to Expect When Getting Dentures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -128,7 +128,7 @@ pageSections:
         Attempting to repair the dentures without professional experience can result in catastrophic results.
     - _component: building-blocks/core-elements/text
       text: For more information on the denture process and if dentures are the right choice for you,
-        give us a call at (760) 940-2273 to schedule a consultation today.
+        give us a call at [(760) 940-2273](tel:+1-760-940-2273) to schedule a consultation today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -138,8 +138,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

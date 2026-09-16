@@ -122,7 +122,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our alternative to braces on Yelp: Alternative to Braces for Teens Vista'
+        our alternative to braces on Yelp: [Alternative to Braces for Teens Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -137,8 +137,9 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call 760-940-2273 to schedule a consultation with North County
-        Cosmetic and Implant Dentistry. We are located at 1934 Via Centre Ste A Vista, CA 92081.
+      text: If you live in the Vista area, call [760-940-2273](tel:+1-760-940-2273) to schedule a consultation
+        with North County Cosmetic and Implant Dentistry. We are located at [1934 Via Centre Ste A Vista,
+        CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

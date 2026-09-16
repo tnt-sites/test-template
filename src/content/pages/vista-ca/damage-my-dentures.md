@@ -40,7 +40,7 @@ pageSections:
         they only need to be adjusted so they can fit perfectly.
     - _component: building-blocks/core-elements/text
       text: We are an emergency dentist, so if you did indeed damage them, we encourage you to schedule
-        an appointment with our dental practice right away. You can do so by calling 760-940-2273.
+        an appointment with our dental practice right away. You can do so by calling [760-940-2273](tel:+1-760-940-2273).
     - _component: building-blocks/core-elements/heading
       text: Home Care Tips
       level: h2
@@ -95,7 +95,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our damaged denture support services on Yelp: What Do I Do If I Damage My Dentures in Vista?'
+        our damaged denture support services on Yelp: [What Do I Do If I Damage My Dentures in Vista?](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -153,12 +153,13 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If your dentures need to be repaired, call (760) 940-2273 and schedule an appointment with
-        our dental center right away. We can adjust them so the fit is improved, have damage corrected
-        at the dental lab, and make sure your dentures fit as well as they possibly can. Since we are
-        an emergency dentist office, we can schedule your appointment for the same day in many cases.
-        If, however, you are tired of life with dentures, we are a cosmetic dentistry office and can provide
-        you with alternatives that make it easier to enjoy life without thinking about your teeth.
+      text: If your dentures need to be repaired, call [(760) 940-2273](tel:+1-760-940-2273) and schedule
+        an appointment with our dental center right away. We can adjust them so the fit is improved, have
+        damage corrected at the dental lab, and make sure your dentures fit as well as they possibly can.
+        Since we are an emergency dentist office, we can schedule your appointment for the same day in
+        many cases. If, however, you are tired of life with dentures, we are a cosmetic dentistry office
+        and can provide you with alternatives that make it easier to enjoy life without thinking about
+        your teeth.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -38,7 +38,7 @@ pageSections:
         completed. In some cases, dental damage is only part of the problem and immediate solutions are
         necessary. If possible, we will restore the tooth using dental bonding, dental veneers, or dental
         crowns. However, if the problem is urgent, a tooth extraction may be necessary. If you do need
-        an emergency dentist, call (760) 940-2273 to schedule an appointment.
+        an emergency dentist, call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment.
     - _component: building-blocks/core-elements/heading
       text: An infection has spread.
       level: h3
@@ -62,7 +62,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our tooth extraction support services on Yelp: When Is a Tooth Extraction Necessary Vista'
+        our tooth extraction support services on Yelp: [When Is a Tooth Extraction Necessary Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -171,10 +171,10 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: To find out if you need a tooth extraction, call 760-940-2273 and schedule an appointment
-        with North County Cosmetic and Implant Dentistry. We will be happy to answer any questions you
-        have, schedule your procedure, and replace your teeth with dental implants or dental crowns and
-        bridges once the extraction has been completed.
+      text: To find out if you need a tooth extraction, call [760-940-2273](tel:+1-760-940-2273) and schedule
+        an appointment with North County Cosmetic and Implant Dentistry. We will be happy to answer any
+        questions you have, schedule your procedure, and replace your teeth with dental implants or dental
+        crowns and bridges once the extraction has been completed.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

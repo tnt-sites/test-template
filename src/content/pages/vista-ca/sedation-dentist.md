@@ -97,7 +97,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our sedation dental services on Yelp: Sedation Dentist Vista'
+        our sedation dental services on Yelp: [Sedation Dentist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -112,19 +112,19 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area and are interested in visiting a sedation dentist, call (760)
-        940-2273 to schedule your appointment. At North County Cosmetic and Implant Dentistry, we will
-        take the time to get to know you and understand what all of your concerns are prior to making
-        a formal recommendation as to the type of sedation dentistry that you should consider. We will
-        also need to know if you have any other health issues, risks, or are allergic to anything. Typically,
-        if you have responded well to pain medication or sedation in other medical treatments, you will
-        do well with sedation dentistry and not experience any negative side effects. Still, if you have
-        questions or concerns be sure to discuss them with us. With any type of dental work, it is important
-        to be well informed and make a decision that you feel is best for your health and your goals.
-        As such, we want you to be an informed and educated patient. Thanks to modern technology, if you
-        are afraid of having dental work done or visiting the dentist in general, you no longer have to
-        be. As a sedation dentist, we can ensure that your experience is a positive one. Call 760-940-2273
-        for more information or to get started.
+      text: If you live in the Vista area and are interested in visiting a sedation dentist, call [(760)
+        940-2273](tel:+1-760-940-2273) to schedule your appointment. At North County Cosmetic and Implant
+        Dentistry, we will take the time to get to know you and understand what all of your concerns are
+        prior to making a formal recommendation as to the type of sedation dentistry that you should consider.
+        We will also need to know if you have any other health issues, risks, or are allergic to anything.
+        Typically, if you have responded well to pain medication or sedation in other medical treatments,
+        you will do well with sedation dentistry and not experience any negative side effects. Still,
+        if you have questions or concerns be sure to discuss them with us. With any type of dental work,
+        it is important to be well informed and make a decision that you feel is best for your health
+        and your goals. As such, we want you to be an informed and educated patient. Thanks to modern
+        technology, if you are afraid of having dental work done or visiting the dentist in general, you
+        no longer have to be. As a sedation dentist, we can ensure that your experience is a positive
+        one. Call [760-940-2273](tel:+1-760-940-2273) for more information or to get started.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -134,8 +134,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -58,8 +58,8 @@ pageSections:
         a strong metal that the body treats like natural matter. As a result, the implant and jaw bone
         will fuse together through the process of osseointegration. This takes a few months, but once
         complete, a new root system is developed, and when the new tooth is attached, it will be as secure
-        as a natural one. To learn more about this process, call 760-940-2273 and schedule an appointment
-        with our dental office.
+        as a natural one. To learn more about this process, call [760-940-2273](tel:+1-760-940-2273) and
+        schedule an appointment with our dental office.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -70,7 +70,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral surgery services on Yelp: Oral Surgery Vista'
+        our oral surgery services on Yelp: [Oral Surgery Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -143,9 +143,9 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To find out if you need oral surgery or to discuss a surgical procedure in greater detail,
-        call (760) 940-2273 and schedule a consultation. We will be happy to answer any questions you
-        have and set you on the road to surgery and a full recovery. Our offices are conveniently located
-        in Vista, CA, and we are currently accepting new patients.
+        call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation. We will be happy to answer
+        any questions you have and set you on the road to surgery and a full recovery. Our offices are
+        conveniently located in Vista, CA, and we are currently accepting new patients.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

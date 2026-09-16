@@ -67,7 +67,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Clear Aligners on Yelp: Clear Aligners Vista'
+        our Clear Aligners on Yelp: [Clear Aligners Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -130,7 +130,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in clear aligners or need us to replace some lost aligners, give us
         a call to schedule an appointment. We will go over options and determine if clear aligners are
-        the best treatment for straightening your teeth. Give us a call at (760) 940-2273 today.
+        the best treatment for straightening your teeth. Give us a call at [(760) 940-2273](tel:+1-760-940-2273)
+        today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

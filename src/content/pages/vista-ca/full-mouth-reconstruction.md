@@ -90,7 +90,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our full mouth reconstruction and restoration services on Yelp: Full Mouth Reconstruction Vista'
+        our full mouth reconstruction and restoration services on Yelp: [Full Mouth Reconstruction Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -110,10 +110,10 @@ pageSections:
         foods, types of citrus, beverages, acid reflux, grinding and more are all causes for a patient
         to lose his or her teeth more quickly.
     - _component: building-blocks/core-elements/text
-      text: At North County Cosmetic and Implant Dentistry we can monitor the teeth at least once every
-        six months and help patients remain healthy. For patients who experience these issues on a regular
-        basis and have teeth that are wearing down, we can use full mouth reconstruction to address multiple
-        issues.
+      text: At [North County Cosmetic and Implant Dentistry]() we can monitor the teeth at least once
+        every six months and help patients remain healthy. For patients who experience these issues on
+        a regular basis and have teeth that are wearing down, we can use full mouth reconstruction to
+        address multiple issues.
     - _component: building-blocks/core-elements/heading
       text: Reconstruction methods
       level: h3
@@ -183,11 +183,11 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you or a loved one are in need of a full mouth reconstruction for any reason, do not hesitate
-        to call North County Cosmetic and Implant Dentistry at 760-940-2273 and schedule an appointment
-        today. Our team will go over all concerns and questions that you may have before the appointment.
-        Once you arrive for the appointment, we will make sure that you have a complete understanding
-        of the procedure and what happens after. Call and begin a new life with a full set of healthy,
-        natural-appearing and functional teeth.
+        to call North County Cosmetic and Implant Dentistry at [760-940-2273](tel:+1-760-940-2273) and
+        schedule an appointment today. Our team will go over all concerns and questions that you may have
+        before the appointment. Once you arrive for the appointment, we will make sure that you have a
+        complete understanding of the procedure and what happens after. Call and begin a new life with
+        a full set of healthy, natural-appearing and functional teeth.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

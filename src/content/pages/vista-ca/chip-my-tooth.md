@@ -68,7 +68,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our chipped tooth support services on Yelp: What Should I Do If I Chip My Tooth in Vista'
+        our chipped tooth support services on Yelp: [What Should I Do If I Chip My Tooth in Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -119,9 +119,9 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call our cosmetic dental services office at 760-940-2273 and schedule an appointment to be
-        seen as soon as possible. We will do our best to work around your schedule so you can have your
-        tooth restored immediately.
+      text: Call our cosmetic dental services office at [760-940-2273](tel:+1-760-940-2273) and schedule
+        an appointment to be seen as soon as possible. We will do our best to work around your schedule
+        so you can have your tooth restored immediately.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -188,7 +188,7 @@ pageSections:
         to call our our practice. At North County Cosmetic and Implant Dentistry we always try to treat
         you right away so you do not experience unnecessary discomfort. Simultaneously, we will try everything
         in our power to restore your tooth in a way that is both beautiful and natural-looking. To schedule
-        an appointment, call (760) 940-2273.
+        an appointment, call [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

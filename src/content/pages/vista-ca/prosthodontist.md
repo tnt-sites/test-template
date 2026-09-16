@@ -44,10 +44,10 @@ pageSections:
         necessary to not only replace missing teeth, but to do so in a way that looks entirely natural
         and feels comfortable, so both the form and function of your smile can be restored. As a oral
         prosthetics doctor, we are also referred to as a prosthetic dentist. If you have suffered from
-        tooth loss, we encourage you to call 760-940-2273 and schedule an appointment to speak with us.
-        At North County Cosmetic and Implant Dentistry, we are confident in our ability to provide you
-        with a durable tooth replacement that will allow you to speak and smile with confidence and eat
-        your favorite foods without restriction. To learn more, visit our dental office today.
+        tooth loss, we encourage you to call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+        to speak with us. At North County Cosmetic and Implant Dentistry, we are confident in our ability
+        to provide you with a durable tooth replacement that will allow you to speak and smile with confidence
+        and eat your favorite foods without restriction. To learn more, visit our dental office today.
     - _component: building-blocks/core-elements/heading
       text: Why should I see a Prosthodontist over a regular dentist?
       level: h3
@@ -67,7 +67,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant dental services on Yelp: Prosthodontist Vista'
+        our implant dental services on Yelp: [Prosthodontist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -147,9 +147,9 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: That is simple – call (760) 940-2273 to schedule an appointment with Dr. Henninger. As a Vista,
-        CA prosthodontist, we can provide you with a superior level of dental care, and we welcome your
-        calls, even if you are currently under the care of another family dentist.
+      text: That is simple – call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment with
+        Dr. Henninger. As a Vista, CA prosthodontist, we can provide you with a superior level of dental
+        care, and we welcome your calls, even if you are currently under the care of another family dentist.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

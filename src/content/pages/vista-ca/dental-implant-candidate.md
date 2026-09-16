@@ -83,7 +83,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Dental Implants support services on Yelp: Am I a Candidate for Dental Implants Vista'
+        our Dental Implants support services on Yelp: [Am I a Candidate for Dental Implants Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -106,7 +106,8 @@ pageSections:
         natural one. Patients appreciate how durable this solution is and how it allows them to maintain
         an active lifestyle while eating all their favorite foods. If you are simultaneously evaluating
         dentures or a dental bridge, consider how dental implants can positively impact your lifestyle
-        and then call 760-940-2273 to schedule an appointment with North County Cosmetic and Implant Dentistry.
+        and then call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment with North County
+        Cosmetic and Implant Dentistry.
     - _component: building-blocks/core-elements/heading
       text: Can I get implants if I have gum disease?
       level: h3
@@ -159,9 +160,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn how this solution can work for you, call and schedule an appointment by calling (760)
-        940-2273. North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista,
-        CA 92081.
+      text: To learn how this solution can work for you, call and schedule an appointment by calling [(760)
+        940-2273](tel:+1-760-940-2273). North County Cosmetic and Implant Dentistry is located at [1934
+        Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

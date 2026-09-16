@@ -75,7 +75,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental bridge services on Yelp: Dental Bridges Vista'
+        our dental bridge services on Yelp: [Dental Bridges Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -148,8 +148,8 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about dental bridges and how they can be used to replace your missing teeth,
-        call 760-940-2273. Our Vista, CA dental office is conveniently located, and we are currently accepting
-        new patients.
+        call [760-940-2273](tel:+1-760-940-2273). Our Vista, CA dental office is conveniently located,
+        and we are currently accepting new patients.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

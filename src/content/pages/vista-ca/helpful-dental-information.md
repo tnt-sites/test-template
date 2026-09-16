@@ -108,7 +108,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Helpful Dental Information Vista'
+        our dental services on Yelp: [Helpful Dental Information Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -119,9 +119,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: For more helpful dental information, read our website or call (760) 940-2273 to schedule an
-        appointment with Dr. Henninger. At North County Cosmetic and Implant Dentistry we will be happy
-        to answer any questions you have about oral health from our Vista dental office.
+      text: For more helpful dental information, read our website or call [(760) 940-2273](tel:+1-760-940-2273)
+        to schedule an appointment with Dr. Henninger. At North County Cosmetic and Implant Dentistry
+        we will be happy to answer any questions you have about oral health from our Vista dental office.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

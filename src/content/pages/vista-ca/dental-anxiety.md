@@ -66,7 +66,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental anxiety support services on Yelp: Dental Anxiety Vista'
+        our dental anxiety support services on Yelp: [Dental Anxiety Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -156,12 +156,12 @@ pageSections:
         than traditional dental tools. With the dental laser, there will be less bleeding and swelling
         than normal. Dental lasers can also help treat tooth decay, gum disease, and has applications
         in restorative procedures. If you want a more comfortable experience and to reduce your dental
-        anxiety , we highly recommend visiting a laser dentistry office. To learn about the procedures
-        that we perform using lasers, call (760) 940-2273 and schedule an appointment. At North County
-        Cosmetic and Implant Dentistry, we find that many of our patients no longer need sedation or pain
-        medication because the common factors that create fear of dentists are eliminated. For example,
-        the noise, heat, and vibration that is traditionally associated with the dental drill is not present
-        when using lasers.
+        anxiety, we highly recommend visiting a laser dentistry office. To learn about the procedures
+        that we perform using lasers, call [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment.
+        At North County Cosmetic and Implant Dentistry, we find that many of our patients no longer need
+        sedation or pain medication because the common factors that create fear of dentists are eliminated.
+        For example, the noise, heat, and vibration that is traditionally associated with the dental drill
+        is not present when using lasers.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -59,7 +59,7 @@ pageSections:
         they are firmly in place, we can snap in your dentures. These implants are an alternative to simply
         hoping your dentures stay in place or using adhesive to ensure they do. With implants to secure
         to, your teeth will not fall out, even if you are going on a run or eating pizza. For more information,
-        call our Vista, CA dental office at 760-940-2273.
+        call our Vista, CA dental office at [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -70,7 +70,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant supported denture services on Yelp: Implant Supported Dentures Vista'
+        our implant supported denture services on Yelp: [Implant Supported Dentures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -144,8 +144,8 @@ pageSections:
           be messy, and if your dentures slip, it can be uncomfortable and inconvenient. With implant
           dentures, your dentures snap into position, secured in place by the implants themselves. Your
           new teeth will look natural and be entirely secure, adding further enjoyment to your daily life.
-          To learn more about this procedure, call (760) 940-2273. We will be happy to meet with you and
-          discuss all your options.
+          To learn more about this procedure, call [(760) 940-2273](tel:+1-760-940-2273). We will be happy
+          to meet with you and discuss all your options.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

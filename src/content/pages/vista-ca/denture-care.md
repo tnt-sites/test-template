@@ -71,7 +71,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our denture and partial denture services on Yelp: Denture Care Vista'
+        our denture and partial denture services on Yelp: [Denture Care Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -117,15 +117,14 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in restoring your smile with a fully-functional set of teeth, give us
-        a call at (760) 940-2273. We will schedule an appointment as soon as possible and help you on
-        the path to a better, brighter smile. We will customize the dentures to match the size of your
-        mouth and fit perfectly.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+        a call at [(760) 940-2273](tel:+1-760-940-2273). We will schedule an appointment as soon as possible
+        and help you on the path to a better, brighter smile. We will customize the dentures to match
+        the size of your mouth and fit perfectly.
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
     colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:

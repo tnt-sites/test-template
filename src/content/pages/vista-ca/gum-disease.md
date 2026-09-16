@@ -76,8 +76,8 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Loose teeth
     - _component: building-blocks/core-elements/text
-      text: If you notice any of these symptoms, we recommend that you call 760-940-2273 to schedule an
-        examination with our dental office.
+      text: If you notice any of these symptoms, we recommend that you call [760-940-2273](tel:+1-760-940-2273)
+        to schedule an examination with our dental office.
     - _component: building-blocks/core-elements/heading
       text: Treatment Options for Gum Disease
       level: h3
@@ -120,7 +120,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Gum Disease Vista'
+        our dental services on Yelp: [Gum Disease Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -164,8 +164,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good dental health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good dental health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

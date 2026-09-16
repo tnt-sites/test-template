@@ -71,8 +71,8 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        the extra protection of dental sealants on Yelp: Why Dental Sealants Play an Important Part in
-        Protecting Your Child''s Teeth Vista'
+        the extra protection of dental sealants on Yelp: [Why Dental Sealants Play an Important Part in
+        Protecting Your Child''s Teeth Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

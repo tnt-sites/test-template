@@ -61,7 +61,8 @@ pageSections:
         lasers can also be used to help stop the bleeding so that when a more intensive procedure is being
         performed, gauze may be unnecessary or only used temporarily. Patients can appreciate the opportunity
         to have dental work completed in this non-invasive way. If you would like to experience laser
-        dentistry for yourself, we invite you to call 760-940-2273 and schedule an appointment.
+        dentistry for yourself, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule
+        an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -72,7 +73,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our laser dentistry services on Yelp: Laser Dentistry Vista'
+        our laser dentistry services on Yelp: [Laser Dentistry Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -145,7 +146,8 @@ pageSections:
         entire body, we offer Laser Bacterial Reduction (LBR). Using a laser, we loosen and remove bacteria
         and buildup on teeth, roots, and below the gum line. The gentle power of light means that the
         process is fast, safe, and minimally invasive, helping you recover from your treatment faster.
-        Check out our pages on laser deep cleaning and the Perio Program for more information.
+        Check out our pages on [laser deep cleaning](/vista-ca/laser-deep-cleaning/) and the [Perio Program](/vista-ca/perio-protect/)
+        for more information.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

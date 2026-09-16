@@ -33,6 +33,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'If you are wondering, "my tooth hurts, do I need a root canal?" the answer is – not necessarily.
         We know that your tooth could hurt for several reasons, including:'
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
@@ -97,7 +99,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our root canal support services on Yelp: Do I Need a Root Canal'
+        our root canal support services on Yelp: [Do I Need a Root Canal](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -112,7 +114,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you have any of these symptoms, you should call our emergency dentist office at 760-940-2273
+      text: If you have any of these symptoms, you should call our emergency dentist office at [760-940-2273](tel:+1-760-940-2273)
         and schedule an appointment to be seen right away.
     - _component: building-blocks/core-elements/list
       listType: bullet
@@ -179,13 +181,12 @@ pageSections:
       text: We can treat your damaged or infected tooth, along with improving the appearance of your smile.
         We do so by offering additional solutions like teeth whitening, dental veneers, dental implants,
         dental crowns, and bridges. To schedule a tooth examination or to learn more about a root canal,
-        call (760) 940-2273.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+        call [(760) 940-2273](tel:+1-760-940-2273).
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: xl
     colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:

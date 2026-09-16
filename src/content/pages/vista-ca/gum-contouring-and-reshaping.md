@@ -46,8 +46,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Typically, this is a highly personal decision that is made based on how you feel about your
         gums. If your gums are uneven, or they cover too much or too little of your teeth, then you may
-        be a good candidate for gum contouring or gum reshaping. To find out, call 760-940-2273 and schedule
-        an appointment with our dental office.
+        be a good candidate for gum contouring or gum reshaping. To find out, call [760-940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our dental office.
     - _component: building-blocks/core-elements/heading
       text: Is there pain associated with the procedure?
       level: h3
@@ -117,7 +117,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our gum contouring services on Yelp: What Is Gum Contouring and Reshaping Vista'
+        our gum contouring services on Yelp: [What Is Gum Contouring and Reshaping Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -149,13 +149,14 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you do not like the appearance of your smile, call (760) 940-2273 and schedule an appointment
-        with our dental office. We can conduct a thorough examination and take X-rays before discussing
-        what you do not like about your smile. We can then make a series of recommendations for how to
-        address it. If you don't need gum reshaping for medical reasons, you can always have other cosmetic
-        procedures like teeth whitening or dental bonding completed first to see if the impact is significant
-        enough for you. Otherwise, if your gums remain an obvious issue, you should explore gum contouring
-        further, and we can then make a recommendation for the best way for you to proceed.
+      text: If you do not like the appearance of your smile, call [(760) 940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our dental office. We can conduct a thorough examination and
+        take X-rays before discussing what you do not like about your smile. We can then make a series
+        of recommendations for how to address it. If you don't need gum reshaping for medical reasons,
+        you can always have other cosmetic procedures like teeth whitening or dental bonding completed
+        first to see if the impact is significant enough for you. Otherwise, if your gums remain an obvious
+        issue, you should explore gum contouring further, and we can then make a recommendation for the
+        best way for you to proceed.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -346,7 +347,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

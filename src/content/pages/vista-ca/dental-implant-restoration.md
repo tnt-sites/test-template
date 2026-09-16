@@ -73,7 +73,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant restoration services on Yelp: Dental Implant Restoration Vista'
+        our implant restoration services on Yelp: [Dental Implant Restoration Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -153,7 +153,7 @@ pageSections:
         of your jawbone. At that point, we will let you know if we can assist you or if you need to be
         referred to a Vista specialist. At North County Cosmetic and Implant Dentistry our focus is on
         your complete oral health and ensuring that you have access to the procedures you need. To learn
-        more, call our dental office at 760-940-2273.
+        more, call our dental office at [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

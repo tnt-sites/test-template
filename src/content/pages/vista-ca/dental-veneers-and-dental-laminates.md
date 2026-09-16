@@ -53,7 +53,7 @@ pageSections:
         teeth, we can close gaps, make teeth even in length, cover dark stains and create a uniform looking
         smile. In this way, veneers can create a smile that rivals the most famous Hollywood stars. The
         nice thing is that you do not have to be famous to improve your smile. You simply need to call
-        760-940-2273 and schedule an appointment to see Dr. Henninger.
+        [760-940-2273](tel:+1-760-940-2273) and schedule an appointment to see Dr. Henninger.
     - _component: building-blocks/core-elements/heading
       text: Vista, California Veneers
       level: h3
@@ -78,10 +78,10 @@ pageSections:
         it is important to brush your teeth gently and avoid eating any foods that may push it out of
         place. Since it is secured by removable glue, it can be moved fairly easily.
     - _component: building-blocks/core-elements/text
-      text: When your permanent veneers are ready, you will come back into our North County Cosmetic and
-        Implant Dentistry offices so that we can remove the temporary and ensure that the new veneer is
-        a perfect fit. It is typically attached using a water based solution to see how it looks. If any
-        adjustments need to be made, it will be done at this time. Otherwise, the tooth will be cleaned,
+      text: When your permanent veneers are ready, you will come back into our [North County Cosmetic
+        and Implant Dentistry]() offices so that we can remove the temporary and ensure that the new veneer
+        is a perfect fit. It is typically attached using a water based solution to see how it looks. If
+        any adjustments need to be made, it will be done at this time. Otherwise, the tooth will be cleaned,
         and the dental veneer will be bonded to the tooth. Patients will enjoy how the results look. They
         are instant, and you can start flashing your smile right away.
     - _component: building-blocks/core-elements/heading
@@ -118,7 +118,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental veneer and laminate services on Yelp: Veneers and Laminates Vista'
+        our dental veneer and laminate services on Yelp: [Veneers and Laminates Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -339,7 +339,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

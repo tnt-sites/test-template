@@ -62,7 +62,7 @@ pageSections:
       our site through a different search engine, information might be gathered by them, as well. This
       information is for analytical purposes and collected automatically when visiting our site. The information
       is not manually transferred and if you want more information on Google's Privacy Policy, you can
-      click here.
+      click [here](http://www.google.com/intl/en/policies/privacy/).
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -201,7 +201,7 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: We make every effort to ensure the accuracy, quality, ease of use, and technology of our website.
       Please do not hesitate to contact us with any creative suggestions or technical issues you might
-      encounter. A list of pages included in this site is available here on our sitemap.
+      encounter. A list of pages included in this site is available [here](/sitemap.xml) on our sitemap.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -217,8 +217,8 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: You agree to receive informational messages (appointment reminders, account notifications, etc.)
       from North Country Cosmetic and Implant Dentistry. Message frequency varies. Message and data rates
-      may apply. For help, reply HELP or email us at frontdesk@ultimatesmiles.com. You can opt out at
-      any time by replying STOP.
+      may apply. For help, reply HELP or email us at [frontdesk@ultimatesmiles.com](mailto:frontdesk@ultimatesmiles.com).
+      You can opt out at any time by replying STOP.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -253,7 +253,7 @@ pageSections:
     text: If you have questions about our Privacy Policy or how we collect, store, and share data, you
       can email us using the form on our https://www.ultimatesmiles.com/contact-us/ or call (760) 940-2273.
       We will be happy to answer your questions. North County Cosmetic and Implant Dentistry is located
-      at 1934 Via Centre Ste A Vista, CA 92081.
+      at [1934 Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

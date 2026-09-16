@@ -49,7 +49,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: As an implant dentist , we replace teeth on a regular basis using a surgical procedure. To
+      text: As an implant dentist, we replace teeth on a regular basis using a surgical procedure. To
         determine if you qualify for implant surgery, we need to examine your gums and take X-rays to
         find out if you have enough bone density for the procedure. If you do not, we can discuss other
         options like mini dental implants or the All-on-4 procedure which are also implanted, but the
@@ -69,7 +69,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant dental services on Yelp: Implant Dentist Vista'
+        our implant dental services on Yelp: [Implant Dentist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -102,15 +102,16 @@ pageSections:
         by an cosmetic dentist are significantly higher than the number of procedures performed by a traditional
         family dentist. As with any surgery, the more often a dentist completes the procedure, the faster
         and more accurate they will be at doing so. For this reason, if you live in Vista, CA or the surrounding
-        area, we invite you to call 760-940-2273 and schedule an appointment for a consultation. During
-        your appointment, we can answer your questions and provide you with more information regarding
-        the number of procedures we perform and the additional training that we have received.
+        area, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment for
+        a consultation. During your appointment, we can answer your questions and provide you with more
+        information regarding the number of procedures we perform and the additional training that we
+        have received.
     - _component: building-blocks/core-elements/heading
       text: The procedures we perform
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: As an implant dentist , we have several types of implant procedures that we perform. The one
+      text: As an implant dentist, we have several types of implant procedures that we perform. The one
         that we recommend will be based on the density of your jawbone.
     - _component: building-blocks/core-elements/heading
       text: Traditional Dental Implants
@@ -144,9 +145,10 @@ pageSections:
         secured to a set of four implants. When you come in for the second appointment, the four implants
         are placed, and the new set of teeth are secured to them. You can leave with a full set of natural
         looking teeth that are incredibly durable. If you live in the Vista, CA area, we invite you to
-        call 760-940-2273 and learn more about this procedure. For those looking for a fast solution to
-        tooth loss, this is a fantastic option that will remain in place when you speak, eat and engage
-        in high impact activities. To get started, visit our Vista dental office today.
+        call [760-940-2273](tel:+1-760-940-2273) and learn more about this procedure. For those looking
+        for a fast solution to tooth loss, this is a fantastic option that will remain in place when you
+        speak, eat and engage in high impact activities. To get started, visit our Vista dental office
+        today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

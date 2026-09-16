@@ -50,9 +50,9 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: In some cases, oral health can be an early warning sign for other health issues. Sudden changes
-        in gum or dental health may reflect conditions such as diabetes. According to WebMD, oral health
-        can both contribute to and be affected by a diverse range of conditions, from heart disease to
-        osteoporosis.
+        in gum or dental health may reflect conditions such as diabetes. According to [WebMD](https://www.webmd.com/oral-health/features/oral-health-affects-wellness),
+        oral health can both contribute to and be affected by a diverse range of conditions, from heart
+        disease to osteoporosis.
     - _component: building-blocks/core-elements/text
       text: Patient saliva also shows signs of general health. For example, dry mouth can reflect dehydration
         or an adverse reaction to some medications. Some autoimmune diseases also cause reduced or changed
@@ -128,9 +128,9 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: The mouth is home to more bacteria than there are people on Earth. Despite this, there is
-        typically little risk because these bacteria are mostly harmless. However, according to the Mayo
-        Clinic, bacteria left unchecked can manifest infections both in the oral cavity and elsewhere
-        in the body.
+        typically little risk because these bacteria are mostly harmless. However, according to the [Mayo
+        Clinic](https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/dental/art-20047475),
+        bacteria left unchecked can manifest infections both in the oral cavity and elsewhere in the body.
     - _component: building-blocks/core-elements/text
       text: A complete health dentist helps patients to better manage their oral health, including eliminating
         bacteria. Much of this is achieved by teaching and encouraging healthy dental habits. Additionally,
@@ -175,9 +175,9 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Gum disease can cause chronic inflammation in the mouth. Although complete health dentistry
         does not fully understand the connection, it is known that gum disease correlates with a greater
-        risk of heart disease. According to WebMD, research suggests that ongoing inflammation of the
-        gums may lead to inflammation elsewhere, including the heart. This can cause or worsen heart disease
-        and other cardiovascular conditions.
+        risk of heart disease. According to [WebMD](https://www.webmd.com/oral-health/features/oral-health-affects-wellness),
+        research suggests that ongoing inflammation of the gums may lead to inflammation elsewhere, including
+        the heart. This can cause or worsen heart disease and other cardiovascular conditions.
     - _component: building-blocks/core-elements/text
       text: Can poor dental health affect the rest of my body?
     - _component: building-blocks/core-elements/text
@@ -213,11 +213,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

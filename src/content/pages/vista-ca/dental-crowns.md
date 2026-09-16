@@ -86,10 +86,10 @@ pageSections:
         similar. Before getting started, an impression is taken of the teeth so that the new crown or
         bridge can be created in a dental lab.
     - _component: building-blocks/core-elements/text
-      text: When placing a dental crown around a tooth, North County Cosmetic and Implant Dentistry starts
-        by preparing the tooth. We will need to remove a portion of the enamel so that there is room for
-        the new crown to surround the tooth without pushing other teeth out of place. Once complete, we
-        will clean the tooth and secure a temporary crown to it using removable glue. Patients typically
+      text: When placing a dental crown around a tooth, [North County Cosmetic and Implant Dentistry]()
+        starts by preparing the tooth. We will need to remove a portion of the enamel so that there is
+        room for the new crown to surround the tooth without pushing other teeth out of place. Once complete,
+        we will clean the tooth and secure a temporary crown to it using removable glue. Patients typically
         wear a temporary crown for around two weeks while waiting for a permanent one to be created in
         the lab. During this time, it is important to be careful with what you eat and how you brush your
         teeth since the temporary is designed to come off.
@@ -112,7 +112,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental crown and bridges on Yelp: Dental Crowns and Dental Bridges Vista'
+        our dental crown and bridges on Yelp: [Dental Crowns and Dental Bridges Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -140,9 +140,10 @@ pageSections:
         cracked or chipped tooth or have undergone a root canal. Similarly, a bridge makes it possible
         to eat and speak like normal without worrying about your new tooth becoming loose or falling out.
         They are both ideal for people that have active lifestyles and don't want to be constrained by
-        their teeth. To find out if the procedure is right for you, call 760-940-2273 to schedule an appointment
-        with us and discuss your options. At North County Cosmetic and Implant Dentistry, we make it easier
-        for patients throughout Vista to have a beautiful and functional smile.
+        their teeth. To find out if the procedure is right for you, call [760-940-2273](tel:+1-760-940-2273)
+        to schedule an appointment with us and discuss your options. At North County Cosmetic and Implant
+        Dentistry, we make it easier for patients throughout Vista to have a beautiful and functional
+        smile.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -152,8 +153,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

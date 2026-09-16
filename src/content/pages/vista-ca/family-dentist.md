@@ -95,7 +95,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our family dental services on Yelp: Family Dentist Vista'
+        our family dental services on Yelp: [Family Dentist Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -111,14 +111,15 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: We welcome patients throughout the Vista CA area to schedule an appointment with our family
-        dentist office by calling 760-940-2273. Everyone should have their teeth cleaned and examined
-        at least twice a year so if it has been awhile since you visited a dentist, don't delay in scheduling
-        an appointment. During these ongoing dental exams we will make sure that your teeth are thoroughly
-        cleaned and look for any signs of cavities or gum disease. If any are found, they will be treated
-        right away before they can spread and create additional problems. Early detection and treatment
-        are important for reducing any pain that may come as a result of an infection. For example, if
-        gum disease is caught early, it can be treated with a thorough deep cleaning. If gum disease is
-        left undiagnosed, surgery may eventually be required in order to correct it.
+        dentist office by calling [760-940-2273](tel:+1-760-940-2273). Everyone should have their teeth
+        cleaned and examined at least twice a year so if it has been awhile since you visited a dentist,
+        don't delay in scheduling an appointment. During these ongoing dental exams we will make sure
+        that your teeth are thoroughly cleaned and look for any signs of cavities or gum disease. If any
+        are found, they will be treated right away before they can spread and create additional problems.
+        Early detection and treatment are important for reducing any pain that may come as a result of
+        an infection. For example, if gum disease is caught early, it can be treated with a thorough deep
+        cleaning. If gum disease is left undiagnosed, surgery may eventually be required in order to correct
+        it.
     - _component: building-blocks/core-elements/text
       text: Understanding the importance of these regular dental exams, the team at North County Cosmetic
         and Implant Dentistry work to make each patient extremely comfortable. This includes being welcoming
@@ -128,7 +129,7 @@ pageSections:
         patients that are looking for gentle dental care.
     - _component: building-blocks/core-elements/text
       text: 40% of people over the age of 65 do not have all of their teeth. Don't be a statistic, come
-        see us! Read more
+        see us! [Read more](http://www.nidcr.nih.gov/DataStatistics/FindDataByTopic/ToothLoss/ToothLossSeniors65andOlder.htm)
     - _component: building-blocks/core-elements/heading
       text: Age Groups
       level: h4
@@ -142,11 +143,11 @@ pageSections:
         their teeth healthy and free from cavities. This often involves additional treatments to strengthen
         and protect their teeth as preventative measures. We know that it is far easier to keep a child's
         teeth healthy and free from cavities than to try and get them comfortable with a major dental
-        treatment. If you have children, call (760) 940-2273 to schedule an appointment so that they can
-        stay in good oral health as they grow.
+        treatment. If you have children, call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment
+        so that they can stay in good oral health as they grow.
     - _component: building-blocks/core-elements/text
       text: 3 out of 4 people suffer from some form of gum disease. See your Family Dentist at least twice
-        a year to keep your mouth as healthy as possible. Read more
+        a year to keep your mouth as healthy as possible. [Read more](http://www.perio.org/consumer/love_the_gums_you%27re_with)
     - _component: building-blocks/core-elements/text
       text: In adults, we also focus on keeping teeth healthy with preventative care but end up treating
         a large number of patients that have damaged their teeth and need restorative solutions. With
@@ -158,13 +159,13 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Seniors, on the other hand, often struggle with gum disease and oral infections. As people
         age, their teeth can become weaker and infected more easily. Bone loss is incredibly common with
-        seniors and by conducting regular dental exams, the team at North County Cosmetic and Implant
-        Dentistry can help seniors to have strong teeth and reduce the risk of them falling out. Since
+        seniors and by conducting regular dental exams, the team at [North County Cosmetic and Implant
+        Dentistry]() can help seniors to have strong teeth and reduce the risk of them falling out. Since
         over seventy percent of U.S. adults suffer from tooth loss, preventative care is important.
     - _component: building-blocks/core-elements/text
       text: We welcome patients from throughout the Vista area to schedule an appointment with our office.
         We are committed to providing high-quality dental care that is painless and comfortable. To schedule
-        an appointment call 760-940-2273.
+        an appointment call [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -175,7 +176,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 40% of people over the age of 65 do not have all of their teeth. Don't be a statistic, come
-        see us! Read more
+        see us! [Read more](http://www.nidcr.nih.gov/DataStatistics/FindDataByTopic/ToothLoss/ToothLossSeniors65andOlder.htm)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -187,7 +188,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 3 out of 4 people suffer from some form of gum disease. See your Family Dentist at least twice
-        a year to keep your mouth as healthy as possible. Read more
+        a year to keep your mouth as healthy as possible. [Read more](http://www.perio.org/consumer/love_the_gums_you%27re_with)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -251,8 +252,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -299,7 +300,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 50% of people say that your smile is the first thing they notice. Make a great first impression,
-        keep your teeth healthy. Read more
+        keep your teeth healthy. [Read more](http://www.knowyourteeth.com/infobites/abc/article/?abc=s&iid=184&aid=1215)
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

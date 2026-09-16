@@ -112,7 +112,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental restoration services on Yelp: Dental Restorations Vista'
+        our dental restoration services on Yelp: [Dental Restorations Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -129,8 +129,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: At times, patients need dental restorations to replace teeth. Whether a tooth has been knocked
         out or has fallen out due to an infection, there are several ways that it can be replaced. In
-        order to determine what procedure is right for you, call 760-940-2273 to schedule an appointment
-        and consultation.
+        order to determine what procedure is right for you, call [760-940-2273](tel:+1-760-940-2273) to
+        schedule an appointment and consultation.
     - _component: building-blocks/core-elements/text
       text: In many cases, the patient wears temporary dentures while deciding how they want to permanently
         replace their tooth. These temporary dentures are held in place by a wire that is similar to wearing
@@ -157,8 +157,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

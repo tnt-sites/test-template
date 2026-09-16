@@ -63,8 +63,8 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our properly fitted custom-made mouth guards on Yelp: Reduce Sports Injuries With Mouth Guards
-        Vista'
+        our properly fitted custom-made mouth guards on Yelp: [Reduce Sports Injuries With Mouth Guards
+        Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -95,7 +95,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in getting a properly fitted mouth guard for your child, then give us
-        a call at (760) 940-2273 and schedule an appointment today.
+        a call at [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

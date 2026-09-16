@@ -109,7 +109,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our wisdom teeth extraction services on Yelp: Wisdom Teeth Extraction Vista'
+        our wisdom teeth extraction services on Yelp: [Wisdom Teeth Extraction Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -140,7 +140,7 @@ pageSections:
         your teeth and your third molars, they can stay in place. There is no point in removing something
         that grows in straight and is healthy. However, any tooth that grows in impacted needs to be removed
         because it is posing a direct threat to your other teeth and roots in addition to being a target
-        for infections. The best way to find out if your wisdom teeth should be removed is to call 760-940-2273
+        for infections. The best way to find out if your wisdom teeth should be removed is to call [760-940-2273](tel:+1-760-940-2273)
         and schedule an appointment with our Vista dentist office. We can make a recommendation and answer
         any other questions you have about the procedure itself.
     maxContentWidth: xl
@@ -152,8 +152,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good dental health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good dental health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

@@ -83,7 +83,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our denture services on Yelp: Solutions for Common Denture Problems Vista'
+        our denture services on Yelp: [Solutions for Common Denture Problems Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -168,8 +168,8 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you are interested in dentures or are experiencing issues with your dentures, give us a
-        call at (760) 940-2273 today. We will schedule a consultation and recommend the best course of
-        action to help you solve the problem and continue to live a healthy life.
+        call at [(760) 940-2273](tel:+1-760-940-2273) today. We will schedule a consultation and recommend
+        the best course of action to help you solve the problem and continue to live a healthy life.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

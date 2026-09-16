@@ -51,7 +51,7 @@ pageSections:
         to examine their toy's teeth. These little steps can help children to feel comfortable when getting
         their own teeth cleaned. By doing so twice a year, their baby teeth are more likely to stay in
         until they are supposed to fall out, and their adult teeth will also stay healthier. If you have
-        questions about scheduling an appointment for your child call 760-940-2273.
+        questions about scheduling an appointment for your child call [760-940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -62,7 +62,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Cleaning Vista'
+        our dental services on Yelp: [Dental Cleaning Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -128,10 +128,10 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: During the teeth cleaning and examination, we will also discuss ways that you can keep your
-        teeth and gums healthy at home. At North County Cosmetic and Implant Dentistry, we believe that
-        good oral hygiene at home is important to do in conjunction with visiting our office. We recommend
-        that you use a soft toothbrush to brush your teeth twice a day and use fluoride toothpaste. This
-        will keep harmful sugar and bacteria off of your teeth and the fluoride will help to strengthen
+        teeth and gums healthy at home. At [North County Cosmetic and Implant Dentistry](), we believe
+        that good oral hygiene at home is important to do in conjunction with visiting our office. We
+        recommend that you use a soft toothbrush to brush your teeth twice a day and use fluoride toothpaste.
+        This will keep harmful sugar and bacteria off of your teeth and the fluoride will help to strengthen
         them. You will also benefit from flossing daily to get food particles and bacteria out of hard
         to reach places. Following up with an antibacterial mouthwash will help to kill any remaining
         germs.
@@ -140,7 +140,7 @@ pageSections:
         a diet that contains dairy products, lean protein, green vegetables and complex carbs so that
         your body gets the nutrients it needs to stay healthy. We can provide additional tips and information
         during your dental cleaning and examinations. To schedule your appointment with North County Cosmetic
-        and Implant Dentistry call (760) 940-2273.
+        and Implant Dentistry call [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

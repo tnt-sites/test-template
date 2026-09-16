@@ -103,10 +103,10 @@ pageSections:
         and sealed so that the bone can start to regenerate.
     - _component: building-blocks/core-elements/text
       text: These procedures combined can help to both heal and restore your gums. In order to tell which
-        procedures are necessary for you, call 760-940-2273 and schedule a consultation with Dr. Henninger.
-        At North County Cosmetic and Implant Dentistry, we may start with a deep cleaning to see how well
-        your gums react and start to heal. If they do not recover in short order, we may move to surgical
-        procedures as necessary.
+        procedures are necessary for you, call [760-940-2273](tel:+1-760-940-2273) and schedule a consultation
+        with Dr. Henninger. At [North County Cosmetic and Implant Dentistry](), we may start with a deep
+        cleaning to see how well your gums react and start to heal. If they do not recover in short order,
+        we may move to surgical procedures as necessary.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -117,7 +117,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Periodontics Vista'
+        our dental services on Yelp: [Periodontics Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -148,8 +148,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

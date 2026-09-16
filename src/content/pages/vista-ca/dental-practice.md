@@ -50,7 +50,8 @@ pageSections:
         cleaning is so important. We can prevent gum disease by performing a deep cleaning to remove all
         of the plaque and tartar from your mouth. If we identify early signs of gum disease, we can treat
         it right away before it causes irritation or gum recession. If you live in the Vista area, we
-        invite you to call 760-940-2273 to schedule an appointment for your dental cleaning today.
+        invite you to call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment for your dental
+        cleaning today.
     - _component: building-blocks/core-elements/heading
       text: Visit a dental practice in Vista if your tooth becomes damaged
       level: h3
@@ -79,10 +80,10 @@ pageSections:
         of cancer, the sooner it is detected and treated, the better chance you have of successfully irradiating
         it. We also recommend that you self-examine at home by running your tongue along your gums and
         cheeks on a daily basis. Look for any bumps, lumps, or rough spots that were not there before.
-        If they do not go away after a couple of days. Call 760-940-2273 to schedule an examination with
-        our dental office. At North County Cosmetic and Implant Dentistry, we do not treat cancer, but
-        we can help to determine if anything looks out of the ordinary and whether or not you need further
-        testing.
+        If they do not go away after a couple of days. Call [760-940-2273](tel:+1-760-940-2273) to schedule
+        an examination with our dental office. At North County Cosmetic and Implant Dentistry, we do not
+        treat cancer, but we can help to determine if anything looks out of the ordinary and whether or
+        not you need further testing.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -93,7 +94,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Practice Vista'
+        our dental services on Yelp: [Dental Practice Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -129,8 +130,8 @@ pageSections:
         twice a year. This will help to prevent cavities and gum disease. Your treatment plan should also
         include steps that can be taken to keep your smile bright and beautiful. For example, we can whiten
         your teeth on a set schedule. When you visit our dental office, we can work together to create
-        a plan that works for your health both now and well into the future. To get started, call (760)
-        940-2273.
+        a plan that works for your health both now and well into the future. To get started, call [(760)
+        940-2273](tel:+1-760-940-2273).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -140,8 +141,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -163,8 +164,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What can I do if I damage my tooth?](/vista-ca/dental-practice/#damage-my-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What do I need to do to ensure that my restoration is in great shape?](/vista-ca/dental-practice/#dental-restorations
-          inspected)
+        text: Q. [What do I need to do to ensure that my restoration is in great shape?](/vista-ca/dental-practice/#dental-restorations-inspected)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

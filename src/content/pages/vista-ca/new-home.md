@@ -89,6 +89,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: It’s all possible with dental implants in San Diego from North County Cosmetic and Implant
         Dentistry.
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/image
       source: /src/assets/images/wp/Woman-with-implant.jpg
       alt: ''
@@ -205,6 +207,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Learn what implants could do for your smile and your health with our free ebook: The Art,
         Science, and Beauty of Dental Implants'
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/heading
       text: 'Inside you’ll learn:'
       level: h4

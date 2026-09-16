@@ -105,7 +105,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our oral health support services on Yelp: I Think My Gums Are Receding Vista'
+        our oral health support services on Yelp: [I Think My Gums Are Receding Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -153,7 +153,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about gum recession and how to treat it, call our dental office at (760) 940-2273.
+      text: To learn more about gum recession and how to treat it, call our dental office at [(760) 940-2273](tel:+1-760-940-2273).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

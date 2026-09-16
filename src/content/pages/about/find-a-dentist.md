@@ -23,8 +23,8 @@ pageSections:
     text: As a local dentist, we understand the needs of our patients and their families. We offer a variety
       of dental procedures that make it possible to keep your teeth and gums in excellent oral health
       while also providing cosmetic dentistry solutions for improving the look and feel of your smile.
-      To learn more about the services we provide call (760) 940-2273 and schedule an appointment with
-      North County Cosmetic and Implant Dentistry.
+      To learn more about the services we provide call [(760) 940-2273](tel:+1-760-940-2273) and schedule
+      an appointment with North County Cosmetic and Implant Dentistry.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -58,7 +58,7 @@ pageSections:
       everyone in the family has an appointment scheduled for a time that is convenient for you. This
       often means scheduling multiple teeth cleanings at once so that you only have to make one trip to
       the dentist. Our dental office is conveniently located in the Vista area, and you can schedule an
-      appointment by calling 760-940-2273.
+      appointment by calling [760-940-2273](tel:+1-760-940-2273).
   - _component: building-blocks/core-elements/text
     text: If you have children, our team will help them to feel comfortable during their dental exam and
       treatment. Understanding that many children are worried about something new, we take the time to
@@ -81,15 +81,15 @@ pageSections:
     size: md
   - _component: building-blocks/core-elements/text
     text: As a Vista dentist, we perform cosmetic dentistry that can be used to transform your smile from
-      ordinary into extraordinary. If you want a stunning, Hollywood style smile, call (760) 940-2273
+      ordinary into extraordinary. If you want a stunning, Hollywood style smile, call [(760) 940-2273](tel:+1-760-940-2273)
       and schedule your consultation. There are a variety of methods to help with cosmetic dentistry work,
-      including teeth whitening, dental veneers, dental crowns, and dental implants. These procedures,
-      alone or together, can restore teeth to a beautiful and youthful appearance.
+      including teeth whitening, dental veneers, dental crowns, and [dental implants](/vista-ca/dental-implants/).
+      These procedures, alone or together, can restore teeth to a beautiful and youthful appearance.
   - _component: building-blocks/core-elements/text
     text: We use cosmetic dentistry to close gaps in teeth, make teeth even in length, cover dark stains,
       and transform the appearance of teeth overall. We can do this seamlessly to create a smile that
       is both beautiful and functional. You can see some pictures of transformed smiles and read testimonials
-      about patients that have been treated at North County Cosmetic and Implant Dentistry by visiting
+      about patients that have been treated at [North County Cosmetic and Implant Dentistry]() by visiting
       Yelp, Google, and Facebook. When our patients review our practice, we feel fortunate that they are
       taking the time to share their experience about us online. By reading reviews and looking at pictures,
       you can see why patients choose our dental office in Vista.
@@ -103,7 +103,7 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about our
-      dental services on Yelp: Dentist in Vista'
+      dental services on Yelp: [Dentist in Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -140,8 +140,8 @@ pageSections:
     level: h2
     size: md
   - _component: building-blocks/core-elements/text
-    text: If you are looking to find a dentist in the Vista CA area, call 760-940-2273 and schedule an
-      appointment. We are looking forward to meeting you and your family.
+    text: If you are looking to find a dentist in the Vista CA area, call [760-940-2273](tel:+1-760-940-2273)
+      and schedule an appointment. We are looking forward to meeting you and your family.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

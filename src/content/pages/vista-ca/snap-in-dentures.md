@@ -38,6 +38,8 @@ pageSections:
         place. Lower dentures in particular usually require sticky, messy adhesive to keep from “floating”
         around in your mouth. This slipping and sliding causes discomfort, sores, difficulty eating and
         speaking, and frustration for many denture wearers.
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/image-row
       images:
       - _component: building-blocks/core-elements/image
@@ -58,6 +60,8 @@ pageSections:
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/gallery621.jpg
         alt: ''
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
       text: After a thorough consultation, depending on your particular needs and factors such as bone
         level, medical history, and finances Dr. Henninger and Dr. Huenegardt will work closely with you
@@ -105,7 +109,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our Snap In Dentures services on Yelp: Snap In Dentures Vista'
+        our Snap In Dentures services on Yelp: [Snap In Dentures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -115,6 +119,8 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
       text: If you are currently wearing ill-fitting dentures and are frustrated with them, or would like
         to talk to one of our doctors to find out if snap in dentures are an option for you, call our
@@ -133,10 +139,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -77,7 +77,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our denture and partial denture services on Yelp: Adjusting to New Dentures Vista'
+        our denture and partial denture services on Yelp: [Adjusting to New Dentures Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -128,7 +128,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we will go over all of the necessary steps
         for denture care and how long the adjustment process will take. Once the patient adjusts to the
-        dentures, we are confident that the dentures will be a perfect fit. Call us at (760) 940-2273,
+        dentures, we are confident that the dentures will be a perfect fit. Call us at [(760) 940-2273](tel:+1-760-940-2273),
         if you have any interest or questions about dentures. We will schedule an appointment to examine
         your teeth and determine the best form of dentures to give you the appearance and functionality
         of a full smile.

@@ -101,7 +101,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our sleep apnea support services on Yelp: Do I Have Sleep Apnea?'
+        our sleep apnea support services on Yelp: [Do I Have Sleep Apnea?](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -165,7 +165,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about sleep apnea or discuss your oral health in general, call 760-940-2273
+      text: To learn more about sleep apnea or discuss your oral health in general, call [760-940-2273](tel:+1-760-940-2273)
         and schedule an appointment with our Vista dental office. At North County Cosmetic and Implant
         Dentistry, we are happy to discuss your health challenges and make recommendations, even if we
         have to refer you to a specialist for treatment.

@@ -43,15 +43,15 @@ pageSections:
         metal braces. While the treatment works, it can also negatively impact a persons' appearance while
         doing so. This has led many people to seek out a better option, one that we provide.
     - _component: building-blocks/core-elements/text
-      text: As an elite provider of clear braces , we offer our patients an alternative to traditional
+      text: As an elite provider of clear braces, we offer our patients an alternative to traditional
         metal braces. Patients that have concerns about how metal braces may impact their appearance can
         receive the same benefit of straight teeth without having a mouth full of metal in order to do
         so. Clear braces offer patients the chance to wear tooth-colored wires and brackets that blend
         in with the natural color of the teeth. This option is not a practical solution for children but
         is extremely effective for older patients. Not everyone provides this option, so it is important
         to work with a dentist before the procedure. If you live in or near Vista CA, we invite you to
-        call (760) 940-2273 and schedule a consultation to determine if invisible orthodontics are right
-        for you.
+        call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation to determine if invisible
+        orthodontics are right for you.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -62,7 +62,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our clear braces on Yelp: Clear Braces Vista'
+        our clear braces on Yelp: [Clear Braces Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -113,8 +113,8 @@ pageSections:
         for a photo. With clear aligners, there is no need to adjust what you eat or worry about getting
         food stuck between the brackets. Patients can remove clear aligners for any reason, so long as
         they continue to wear the aligners for at least 22 hours per day. If you are interested in learning
-        more about the process, we invite you to call 760-940-2273 and schedule an appointment with our
-        Vista office.
+        more about the process, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule
+        an appointment with our Vista office.
     - _component: building-blocks/core-elements/heading
       text: Teen Braces and Adult Braces
       level: h2
@@ -140,7 +140,8 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in clear aligners or need us to replace some lost aligners, give us
         a call to schedule an appointment. We will go over options and determine if clear aligners are
-        the best treatment for straightening your teeth. Give us a call at (760) 940-2273 today.
+        the best treatment for straightening your teeth. Give us a call at [(760) 940-2273](tel:+1-760-940-2273)
+        today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

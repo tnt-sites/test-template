@@ -98,7 +98,7 @@ pageSections:
         layer that replaces your lost enamel and reduces or eliminates any sensitivity that you may be
         feeling. This is one procedure that can be easily performed during routine dental care and will
         often prevent the need for crowns in the future. To learn more about bonding, we invite you to
-        call 760-940-2273 and schedule an appointment with our Vista dental office.
+        call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista dental office.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -109,7 +109,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Routine Dental Care Vista'
+        our dental services on Yelp: [Routine Dental Care Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

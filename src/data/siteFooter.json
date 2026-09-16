@@ -8,10 +8,19 @@
   "officeTitle": "Office",
   "contactTitle": "Contact",
   "phoneLabel": "Phone:",
-  "copyright": "Copyright © 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
+  "copyright": "Copyright \u00a9 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
   "legalLinks": [
-    { "name": "Opt-out preferences", "path": "/opt-out-preferences/" },
-    { "name": "Privacy Policy", "path": "/privacy-policy/" },
-    { "name": "Sitemap", "path": "/sitemap/" }
+    {
+      "name": "Privacy Preferences",
+      "path": "/privacy-policy/"
+    },
+    {
+      "name": "Privacy Policy",
+      "path": "/privacy-policy/"
+    },
+    {
+      "name": "Sitemap",
+      "path": "/sitemap/"
+    }
   ]
 }

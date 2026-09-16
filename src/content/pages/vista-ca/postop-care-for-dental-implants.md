@@ -85,7 +85,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant support services on Yelp: Post-Op Care for Dental Implants Vista'
+        our implant support services on Yelp: [Post-Op Care for Dental Implants Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -149,9 +149,9 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about post-op care for dental implants, call 760-940-2273 and schedule an appointment
-        with our Vista, CA dental office. We will be happy to answer any questions you have, so you can
-        be confident in your decision to get started.
+      text: To learn more about post-op care for dental implants, call [760-940-2273](tel:+1-760-940-2273)
+        and schedule an appointment with our Vista, CA dental office. We will be happy to answer any questions
+        you have, so you can be confident in your decision to get started.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

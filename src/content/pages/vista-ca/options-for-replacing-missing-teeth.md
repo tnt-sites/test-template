@@ -90,7 +90,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental restoration services on Yelp: Options for Replacing Missing Teeth Vista'
+        our dental restoration services on Yelp: [Options for Replacing Missing Teeth Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -122,11 +122,11 @@ pageSections:
         you then go to replace the tooth, your options could be more limited. This makes losing a tooth
         an urgent matter to attend to.
     - _component: building-blocks/core-elements/text
-      text: We recommend that you call 760-940-2273 and schedule an appointment with our dental office
-        as soon as your tooth has either fallen or been knocked out. During your appointment, we will
-        examine your gums, take X-rays, and make a recommendation as to which tooth replacement option
-        will be best suited for your needs. Acting on this quickly will help in restoring your appearance
-        and oral health.
+      text: We recommend that you call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+        with our dental office as soon as your tooth has either fallen or been knocked out. During your
+        appointment, we will examine your gums, take X-rays, and make a recommendation as to which tooth
+        replacement option will be best suited for your needs. Acting on this quickly will help in restoring
+        your appearance and oral health.
     - _component: building-blocks/core-elements/text
       text: To learn more about dental options for replacing missing teeth, call and schedule an appointment
         with our Vista dentist office today.

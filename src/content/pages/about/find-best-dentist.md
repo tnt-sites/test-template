@@ -15,15 +15,16 @@ pageSections:
     size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for the best dentist in Vista to treat you and your family, we invite you
-      to schedule an exam with our dental office by calling (760) 940-2273. At North County Cosmetic and
-      Implant Dentistry, we offer high-quality patient care and would be delighted to assist you. If you
-      prefer to do research in order to determine which dentist is right one for you, it is important
-      to start by understanding what specific character traits or services you are looking for. As an
-      example, not all dentists in the Vista area treat children. If you have any little ones, you may
-      want to seek out the best family dentist that can provide comprehensive care for your entire family.
-      On the other hand, if you need to replace damaged teeth with permanent, natural looking ones, you
-      may be interested in locating the best cosmetic dentist in Vista. Given the number of dentists in
-      CA this may seem like a daunting task, however, it is easier than you may think. Here's how -
+      to schedule an exam with our dental office by calling [(760) 940-2273](tel:+1-760-940-2273). At
+      North County Cosmetic and Implant Dentistry, we offer high-quality patient care and would be delighted
+      to assist you. If you prefer to do research in order to determine which dentist is right one for
+      you, it is important to start by understanding what specific character traits or services you are
+      looking for. As an example, not all dentists in the Vista area treat children. If you have any little
+      ones, you may want to seek out the best family dentist that can provide comprehensive care for your
+      entire family. On the other hand, if you need to replace damaged teeth with permanent, natural looking
+      ones, you may be interested in locating the best cosmetic dentist in Vista. Given the number of
+      dentists in CA this may seem like a daunting task, however, it is easier than you may think. Here's
+      how -
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl
@@ -55,7 +56,7 @@ pageSections:
       at the dental offices listed to see who is truly the best in the area based on patient experiences.
   - _component: building-blocks/core-elements/text
     text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about our
-      dental services on Yelp: Best Dentist in Vista'
+      dental services on Yelp: [Best Dentist in Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
   - _component: building-blocks/core-elements/heading
     text: Social Media
     level: h3
@@ -103,7 +104,7 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about our
-      dental services on Yelp: Best Dentist in Vista'
+      dental services on Yelp: [Best Dentist in Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

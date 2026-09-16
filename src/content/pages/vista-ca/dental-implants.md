@@ -187,10 +187,11 @@ pageSections:
       size: sm
     - _component: building-blocks/core-elements/text
       text: While the lifespan of a dental implant is greater than any other tooth-replacement option,
-        its longevity mostly depends on how you care for it. Dental implants are immune to disease and
-        infection, but that doesn’t apply to the rest of your smile. If you don’t properly care for your
-        teeth, you may develop gum disease or other conditions that can cause the implant to fail. However,
-        if you practice strong oral hygiene habits, your dental implant could last for more than 25 years.
+        [its longevity mostly depends on how you care for it](/the-longevity-of-dental-implants-a-smile-that-lasts-a-lifetime/).
+        Dental implants are immune to disease and infection, but that doesn’t apply to the rest of your
+        smile. If you don’t properly care for your teeth, you may develop gum disease or other conditions
+        that can cause the implant to fail. However, if you practice strong oral hygiene habits, your
+        dental implant could last for more than 25 years.
     - _component: building-blocks/core-elements/heading
       text: What is the cost of a Dental Implant?
       level: h4
@@ -240,10 +241,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

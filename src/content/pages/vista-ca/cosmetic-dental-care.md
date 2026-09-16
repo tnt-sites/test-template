@@ -67,7 +67,8 @@ pageSections:
         tooth loss may not be a good candidate for dental bridges, since a dental bridge requires healthy,
         natural teeth to hold it in place. Otherwise, they are a good non-surgical solution for tooth
         loss and can look completely natural. If you live in the Vista area and are tired of wearing dentures
-        or are considering tooth replacement options, we invite you to call 760-940-2273 and learn more.
+        or are considering tooth replacement options, we invite you to call [760-940-2273](tel:+1-760-940-2273)
+        and learn more.
     - _component: building-blocks/core-elements/heading
       text: Dental Implants
       level: h3
@@ -108,7 +109,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Cosmetic Dental Care Vista'
+        our dental services on Yelp: [Cosmetic Dental Care Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -149,7 +150,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about cosmetic dental care and which options would be best for you, call 760-940-2273
+      text: To learn more about cosmetic dental care and which options would be best for you, call [760-940-2273](tel:+1-760-940-2273)
         to schedule an appointment with our dental office.
     maxContentWidth: none
     paddingHorizontal: none
@@ -349,7 +350,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/ page)'
+        text: '[Botox](/vista-ca/botox/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item

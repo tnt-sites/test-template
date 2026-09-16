@@ -79,7 +79,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our dental services on Yelp: Dental Checkup Vista'
+        our dental services on Yelp: [Dental Checkup Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -94,17 +94,17 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: We invite you to call 760-940-2273 and schedule your dental checkup right away. When you come
-        in, our friendly team will make sure everything is ready to go. Next, we will take images of your
-        teeth and gums to see if there are any infections or decay that are under the surface. We will
-        also perform a visual inspection of your gums and each one of your teeth. During this time, we
-        will also be looking for signs of infection, tooth decay, gum disease, and oral cancer. If we
-        identify any of these issues, we will discuss treatment options with you and may even be able
-        to treat minor cavities that day. Before starting any procedures we will discuss them in detail
-        to ensure that you are comfortable. We will also clean your teeth before you go to ensure that
-        you do not have any lingering plaque or bacteria in your mouth. When you visit our Vista, CA dental
-        office, we will provide you the highest quality of care we can, by completing your dental checkup
-        efficiently and gently.
+      text: We invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule your dental checkup
+        right away. When you come in, our friendly team will make sure everything is ready to go. Next,
+        we will take images of your teeth and gums to see if there are any infections or decay that are
+        under the surface. We will also perform a visual inspection of your gums and each one of your
+        teeth. During this time, we will also be looking for signs of infection, tooth decay, gum disease,
+        and oral cancer. If we identify any of these issues, we will discuss treatment options with you
+        and may even be able to treat minor cavities that day. Before starting any procedures we will
+        discuss them in detail to ensure that you are comfortable. We will also clean your teeth before
+        you go to ensure that you do not have any lingering plaque or bacteria in your mouth. When you
+        visit our Vista, CA dental office, we will provide you the highest quality of care we can, by
+        completing your dental checkup efficiently and gently.
     - _component: building-blocks/core-elements/heading
       text: The Benefits of Coming in Now
       level: h3
@@ -116,9 +116,9 @@ pageSections:
         it to grow and spread. In many cases, we can help you to avoid experiencing any significant discomfort
         by simply removing the decayed area while it is still small. Otherwise, you may find yourself
         with a dental emergency as an untreated cavity spreads. Fortunately, we make it easy to schedule
-        a dental checkup with our Vista dentist office. All you need to do is call (760) 940-2273 to schedule
-        an appointment. We will work within your schedule to ensure that you receive the care you need,
-        when you need it.
+        a dental checkup with our Vista dentist office. All you need to do is call [(760) 940-2273](tel:+1-760-940-2273)
+        to schedule an appointment. We will work within your schedule to ensure that you receive the care
+        you need, when you need it.
     - _component: building-blocks/core-elements/heading
       text: Why You Shouldn't Wait for Dental Care
       level: h3
@@ -140,8 +140,8 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
-        can remain in good health or receive treatment for a current condition.
+      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+        dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

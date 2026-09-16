@@ -164,8 +164,8 @@ pageSections:
         factors such as the patient, the dentist, the techniques used, and the number of implants involved.
         When done by an experienced dentist, the risks of the procedure are minimal.
     - _component: building-blocks/core-elements/text
-      text: To learn more about the dental implant procedure, call our office at (760) 940-2273 to request
-        an appointment.
+      text: To learn more about the dental implant procedure, call our office at [(760) 940-2273](tel:+1-760-940-2273)
+        to request an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -215,7 +215,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our implant dentistry services on Yelp: Dental Implant Procedure Vista'
+        our implant dentistry services on Yelp: [Dental Implant Procedure Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

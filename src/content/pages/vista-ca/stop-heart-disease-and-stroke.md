@@ -31,14 +31,14 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: The BaleDoneen Method focuses on prevention--helping you screen and treat atherosclerosis
-        (the thickening or hardening of arteries due to plaque) before it leads to a major health event
-        like heart disease or stroke. Recent research has shown that many varieties of dangerous oral
-        bacteria can lead to increased risk of blood clots when released into the bloodstream through
-        gum disease. At North County Cosmetic and Implant Dentistry, we’re committed to helping you improve
-        your overall health, which is why we’re trained in the BaleDoneen Method, so we can give you the
-        support, screening, and treatment you need to prevent and treat dangerous plaque buildup and stay
-        healthy and thriving.
+      text: The [BaleDoneen Method](https://baledoneen.com/the-baledoneen-method/) focuses on prevention--helping
+        you screen and treat atherosclerosis (the thickening or hardening of arteries due to plaque) before
+        it leads to a major health event like heart disease or stroke. Recent research has shown that
+        many varieties of dangerous oral bacteria can lead to increased risk of blood clots when released
+        into the bloodstream through gum disease. At North County Cosmetic and Implant Dentistry, we’re
+        committed to helping you improve your overall health, which is why we’re trained in the BaleDoneen
+        Method, so we can give you the support, screening, and treatment you need to prevent and treat
+        dangerous plaque buildup and stay healthy and thriving.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -66,7 +66,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: '<span class="yelp-mark" aria-hidden="true"></span> Check out what others are saying about
-        our complete health dentistry on Yelp: BaleDoneen Method Vista BaleDoneen Method Vista'
+        our complete health dentistry on Yelp: BaleDoneen Method Vista [BaleDoneen Method Vista](https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2)'
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -122,10 +122,10 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

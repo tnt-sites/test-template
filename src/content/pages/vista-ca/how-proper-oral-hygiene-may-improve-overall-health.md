@@ -68,9 +68,10 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Pregnant women have a higher risk of developing gum disease. According to the CDC, up to 75%
-        of women develop mild periodontal disease during pregnancy. This has been linked to low birth
-        weight, and preterm birth, so pregnant women should take proper care to maintain their oral health.
+      text: Pregnant women have a higher risk of developing gum disease. According to the CDC, [up to
+        75% of women develop mild periodontal disease during pregnancy.](https://www.cdc.gov/oralhealth/publications/features/pregnancy-and-oral-health.html) This
+        has been linked to low birth weight, and preterm birth, so pregnant women should take proper care
+        to maintain their oral health.
     - _component: building-blocks/core-elements/heading
       text: Osteoporosis Concerns
       level: h3
@@ -165,11 +166,11 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: What is the science behind the oral health connection to overall wellbeing?
     - _component: building-blocks/core-elements/text
-      text: The first U.S. Surgeon General's Report on Oral Health was released in 2000 and suggested
-        that oral health is crucial for overall wellness. Bacteria often enter the body through the body,
-        and infections that occur in the gums can spread quickly through the bloodstream, resulting in
-        systemic diseases. Many diseases have symptoms that first appear in the mouth, so dental exams
-        can allow for an early diagnosis that may improve prognosis.
+      text: The first [U.S. Surgeon General's Report on Oral Health](https://www.nidcr.nih.gov/research/data-statistics/surgeon-general) was
+        released in 2000 and suggested that oral health is crucial for overall wellness. Bacteria often
+        enter the body through the body, and infections that occur in the gums can spread quickly through
+        the bloodstream, resulting in systemic diseases. Many diseases have symptoms that first appear
+        in the mouth, so dental exams can allow for an early diagnosis that may improve prognosis.
     - _component: building-blocks/core-elements/text
       text: How often should patients visit a complete health dentist?
     - _component: building-blocks/core-elements/text
@@ -200,11 +201,13 @@ pageSections:
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
+    - _component: building-blocks/core-elements/divider
+      paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA
-        92081.
+      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
+        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: (760) 940-2273
+      text: '[(760) 940-2273](tel:+1-760-940-2273)'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
