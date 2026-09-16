@@ -2,26 +2,17 @@
   "enabled": true,
   "ctas": [
     {
-      "lines": [
-        "1934 Via Centre Ste A",
-        "Vista, CA 92081"
-      ],
+      "lines": ["1934 Via Centre Ste A", "Vista, CA 92081"],
       "buttonText": "Get Directions",
       "buttonLink": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
     },
     {
-      "lines": [
-        "Book Today!",
-        "(760) 940-2273"
-      ],
+      "lines": ["Book Today!", "(760) 940-2273"],
       "buttonText": "Request Appointment",
       "buttonLink": "/contact-us/"
     },
     {
-      "lines": [
-        "Comments or",
-        "Suggestions?"
-      ],
+      "lines": ["Comments or", "Suggestions?"],
       "buttonText": "Contact Us",
       "buttonLink": "/contact-us/"
     }
@@ -29,23 +20,28 @@
   "logos": [
     {
       "source": "/src/assets/images/wp/logo_ADA.png",
-      "alt": "American Dental Association"
+      "alt": "American Dental Association",
+      "wide": true
     },
     {
       "source": "/src/assets/images/wp/logo_ADSA.png",
-      "alt": "American Dental Society of Anesthesiology"
+      "alt": "American Dental Society of Anesthesiology",
+      "wide": false
     },
     {
       "source": "/src/assets/images/wp/logo_AGD.png",
-      "alt": "Academy of General Dentistry Fellow"
+      "alt": "Academy of General Dentistry Fellow",
+      "wide": false
     },
     {
       "source": "/src/assets/images/wp/logo_CDA.png",
-      "alt": "California Dental Association"
+      "alt": "California Dental Association",
+      "wide": false
     },
     {
       "source": "/src/assets/images/wp/MemberLogoF.jpg",
-      "alt": "American Academy of Dental Sleep Medicine"
+      "alt": "American Academy of Dental Sleep Medicine",
+      "wide": false
     }
   ]
 }
