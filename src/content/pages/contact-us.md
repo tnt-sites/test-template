@@ -16,7 +16,7 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: Our office offers a full array of dental services to help you create a satisfying smile. For
       any business or financial matters, you can reach North County Cosmetic and Implant Dentistry at
-      (760) 206-6478.
+      (760) 940-2273.
   - _component: building-blocks/core-elements/text
     text: Simply call, or you can provide us with the following information and we will contact you shortly
       to confirm your appointment. We're looking forward to meeting you.

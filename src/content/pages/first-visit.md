@@ -96,7 +96,7 @@ pageSections:
     size: sm
   - _component: building-blocks/core-elements/text
     text: We are happy to hear from you, answer your questions, and schedule an appointment. Call North
-      County Cosmetic and Implant Dentistry at (760) 206-6450 or stop by our office. 1934 Via Centre Ste
+      County Cosmetic and Implant Dentistry at (760) 940-2273 or stop by our office. 1934 Via Centre Ste
       A Vista, CA 92081
   - _component: building-blocks/core-elements/text
     text: 'Forms:'
@@ -114,9 +114,10 @@ pageSections:
       North County Cosmetic and Implant Dentistry in Vista, CA
     title: Making an Appointment
     description: It is easy to make an appointment for your initial examination and dental treatments
-      with North County Cosmetic and Implant Dentistry. Simply call (760) 206-6450 and one of our friendly
+      with North County Cosmetic and Implant Dentistry. Simply call (760) 940-2273 and one of our friendly
       team members will be happy to assist you. If you schedule an appointment and something comes up,
       please call and cancel 24 hours in advance so that we can accommodate other patient requests.
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/what-to-expect.jpg
     imageAlt: Blonde woman smiling in dental chair after successful dental treatment at North County Cosmetic
@@ -126,6 +127,7 @@ pageSections:
       with new patient paperwork that includes a health questionnaire, request for your insurance information
       and contact information. We will also provide you with information to familiarize you with our office
       and how we handle things like patient privacy.
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/initial-examination.jpg
     imageAlt: Older man in shirt and tie ready for new patient dental exam at North County Cosmetic and
@@ -137,6 +139,7 @@ pageSections:
       choices to improve their oral health. We will demonstrate how to properly care for your teeth and
       make additional suggestions as needed. Our dental hygienist will clean your teeth then Dr. Henninger
       will complete your examination and make recommendations for proposed dental treatments.
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/pain-concerns.jpg
     imageAlt: Man rubbing his jaw in pain, needing dental treatment at North County Cosmetic and Implant
@@ -147,17 +150,19 @@ pageSections:
       to discuss your pain tolerance and create a plan for pain management. Working together, we will
       treat your dental health problems in a way that minimizes pain and enables you to get back to your
       life faster.
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/dental-insurance-1.jpg
     imageAlt: Dental insurance form on clipboard at North County Cosmetic and Implant Dentistry in Vista,
       CA
     title: Dental Insurance
     description: We accept a variety of insurance providers and endeavor to accommodate our patients'
-      request. Please call our office at (760) 206-6450 to see if we are currently working with your insurance
+      request. Please call our office at (760) 940-2273 to see if we are currently working with your insurance
       provider. Our pricing structure is designed to ensure that patients are able to receive the high
       quality dental care they deserve. If your dental insurance will not cover all of your dental treatments,
       we will work with you to identify a payment solution. We are health care professionals first and
       will work with you to make sure you receive the treatment you need.
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/financial-policy-428x320.jpg
     imageAlt: Credit card being swiped for dental payment at North County Cosmetic and Implant Dentistry
@@ -170,6 +175,7 @@ pageSections:
       cash, check, financing, and credit cards. We provide budget friendly dental care so call today and
       learn how North County Cosmetic and Implant Dentistry is the solution to all of your oral health
       needs.
+    linkUrl: ''
   minItemWidth: 280
   backgroundColor: base
 - _component: page-sections/forms/liine-form

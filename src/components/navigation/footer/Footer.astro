@@ -7,6 +7,7 @@ import siteInfoData from "@data/siteInfo.json";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
+  credit,
   links = [],
   socials = [],
   siteName = "",
@@ -289,13 +290,25 @@ const footerStyle = [
               </span>
             )
           }
-          <span class="footer-legal-separator" aria-hidden="true">|</span>
-          <span class="footer-legal-line footer-legal-line--credit">
-            Site designed and maintained by{" "}
-            <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
-              TNT Dental
-            </a>
-          </span>
+          {
+            credit?.name && (
+              <>
+                <span class="footer-legal-separator" aria-hidden="true">
+                  |
+                </span>
+                <span class="footer-legal-line footer-legal-line--credit">
+                  {credit.prefix || "Site designed and maintained by"}{" "}
+                  {credit.url ? (
+                    <a href={credit.url} target="_blank" rel="noopener noreferrer">
+                      {credit.name}
+                    </a>
+                  ) : (
+                    credit.name
+                  )}
+                </span>
+              </>
+            )
+          }
         </div>
         {blurb && <p class="footer-legal-blurb">{blurb}</p>}
       </div>

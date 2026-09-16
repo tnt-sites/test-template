@@ -7,12 +7,20 @@
       "path": "/"
     },
     {
-      "name": "Why",
-      "path": "/why/"
+      "name": "About",
+      "path": "/about/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
     },
     {
       "name": "Blog",
       "path": "/blog/"
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us/"
     }
   ],
   "contactTitle": "Contact Us",
@@ -20,26 +28,25 @@
   "legalLinks": [
     {
       "name": "Sitemap",
-      "path": "/sitemap"
+      "path": "/sitemap/"
     },
     {
       "name": "Privacy Policy",
-      "path": "/privacy-policy"
-    }
-  ],
-  "linkColumns": [
+      "path": "/privacy-policy/"
+    },
     {
-      "title": "Contact",
-      "links": [
-        {
-          "name": "(760) 206-6474",
-          "path": "tel:+1-(760) 206-6474"
-        }
-      ]
+      "name": "Opt-out preferences",
+      "path": "/opt-out-preferences/"
     }
   ],
   "copyright": {
     "text": "Copyright \u00a9 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
     "links": []
-  }
+  },
+  "credit": {
+    "prefix": "Site designed and maintained by",
+    "name": "",
+    "url": ""
+  },
+  "legalBlurb": "We are committed to providing quality healthcare to families located in the Vista area and treat patients of all ages."
 }

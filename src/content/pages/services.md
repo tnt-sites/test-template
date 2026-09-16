@@ -231,41 +231,49 @@ pageSections:
     imageAlt: Vista, CA Routine Dental Care
     title: Complete Health Dentistry
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-cosmetic-dental-services.png
     imageAlt: Vista, CA Cosmetic Dental Services
     title: General & Family Dentistry
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-dental-implants.png
     imageAlt: Vista, CA Dental Implant Services
     title: Cosmetic Dental Services
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-dentures.png
     imageAlt: Vista, CA Denture Services
     title: Dental Implants & Dentures
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-clear-braces.png
     imageAlt: Vista, CA Clear Aligners - Almost Invisible Braces
     title: Cutting-edge Technology
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-dental-emergency.png
     imageAlt: Vista, CA Help! Dental Emergency!
     title: Treating Dental Anxiety
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-get-help.png
     imageAlt: Vista, CA Dental Search
     title: Local Emergency Dentistry
     description: ''
+    linkUrl: ''
   - _component: page-sections/features/info-card-grid/card
     image: /src/assets/images/wp/icon-cosmetic-dental-services.png
     imageAlt: Vista, CA Dental Search
     title: Periodontics
     description: ''
+    linkUrl: ''
   minItemWidth: 280
   backgroundColor: base
 - _component: page-sections/forms/liine-form

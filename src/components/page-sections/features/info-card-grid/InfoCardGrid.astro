@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Image from "@core-elements/image/Image.astro";
+import Button from "@core-elements/button/Button.astro";
 import Text from "@core-elements/text/Text.astro";
 import Card from "@wrappers/card/Card.astro";
 
@@ -42,6 +43,17 @@ const htmlAttributes = Object.fromEntries(
           <div class="icg-body">
             {card.title && <Heading level="h3" size="sm" alignX="start" text={card.title} />}
             {card.description && <Text alignX="start" text={card.description} />}
+            {card.linkUrl && card.linkText && (
+              <Button
+                class="icg-cta"
+                text={card.linkText}
+                link={card.linkUrl}
+                variant="primary"
+                size="sm"
+                borderRadius="2xl"
+                editable={false}
+              />
+            )}
           </div>
         </Card>
       ))
