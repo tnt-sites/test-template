@@ -1,0 +1,37 @@
+label: Before / After Gallery
+icon: compare
+description: Paired before and after patient photos in a two-column grid.
+value:
+  _component: page-sections/features/before-after-gallery
+  id: ""
+  heading: Smile Gallery
+  beforeLabel: Before
+  afterLabel: After
+  pairs: []
+  backgroundColor: base
+preview:
+  text:
+    - key: heading
+    - Before / After Gallery
+  icon: compare
+picker_preview:
+  text: Before / After Gallery
+  subtext: Paired patient photos.
+_inputs_from_glob:
+  - /src/components/page-sections/features/before-after-gallery/before-after-gallery.cloudcannon.inputs.yml
+_structures:
+  pairs:
+    values:
+      - label: Before / After Pair
+        icon: compare
+        value:
+          _component: page-sections/features/before-after-gallery/pair
+          beforeSource: ""
+          beforeAlt: ""
+          afterSource: ""
+          afterAlt: ""
+        _inputs:
+          beforeSource:
+            type: image
+          afterSource:
+            type: image

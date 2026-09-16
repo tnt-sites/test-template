@@ -1,0 +1,25 @@
+heading:
+  type: text
+  comment: Optional heading shown above the gallery.
+beforeLabel:
+  type: text
+  comment: Caption under each "before" photo.
+afterLabel:
+  type: text
+  comment: Caption under each "after" photo.
+pairs:
+  type: array
+  label: Before / after pairs
+  comment: Each row shows one patient's before and after photos side by side.
+backgroundColor:
+  type: select
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
