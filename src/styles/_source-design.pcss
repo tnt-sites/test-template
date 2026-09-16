@@ -182,7 +182,7 @@
    * 25px padding, 10px radius) - not a full-bleed band. The migrated version
    * paints the whole section green, so constrain the inner content instead.
    */
-  .section[data-bg="accent"] > .inner-content,
+  .custom-section.bg-accent > .outer-content,
   .bg-accent > .inner-content {
     margin-inline: auto;
     max-width: 88%;
@@ -190,7 +190,7 @@
 
   /* The green definition/call-out panels need dark text, as on the source:
      #79a37b is light enough that white body copy is hard to read. */
-  .section[style*="79a37b"],
+  .custom-section.bg-accent,
   .bg-accent,
   [data-bg="accent"] {
     --color-text: #1a1a1a;
@@ -381,8 +381,8 @@
    */
 
   /* Decorative rule under content headings. */
-  .cws-main .section h2,
-  .cws-main .section h3,
+  .cws-main .custom-section h2,
+  .cws-main .custom-section h3,
   .content-with-sidebar h2,
   .content-with-sidebar h3 {
     border-bottom: 1px solid var(--color-border, #d2cec7);
@@ -445,13 +445,12 @@
   }
 
   /* Vertical rhythm between content blocks. */
-  .cws-main > * > .section + .section,
-  .cws-main .section + .section {
+  .cws-main .custom-section + .custom-section {
     margin-top: 30px;
   }
 
   /* Sidebar panels sit on grey with generous padding. */
-  .cws-side .section {
+  .cws-side .custom-section {
     background-color: #e6e6e6;
     margin-bottom: 30px;
     padding: 30px;
@@ -513,7 +512,7 @@
   .cws-main p,
   .content-with-sidebar p,
   .pb-intro p,
-  .section p {
+  .custom-section p {
     font-size: 1.031rem;
     font-weight: 300;
     line-height: 1.5;
@@ -580,8 +579,7 @@
    * 40px/30px padding, a 2px radius and 30px vertical margins. (I originally
    * read this the other way round, as white cards on grey.)
    */
-  .cws-main > * > .section,
-  .cws-main .section {
+  .cws-main .custom-section {
     border-radius: 2px;
   }
 
@@ -623,9 +621,9 @@
    * Scoped to the components rather than the page wrapper so the rules survive
    * regeneration, and specific enough to beat the starter's own `a` rule.
    */
-  main .section p a,
-  main .section li a,
-  main .section .text a,
+  main .custom-section p a,
+  main .custom-section li a,
+  main .custom-section .text a,
   main ul.list li a,
   main .callout-bubble a,
   main .cws-main a {
@@ -634,8 +632,8 @@
     text-underline-offset: 2px;
   }
 
-  main .section p a:hover,
-  main .section li a:hover,
+  main .custom-section p a:hover,
+  main .custom-section li a:hover,
   main ul.list li a:hover,
   main .cws-main a:hover {
     color: var(--color-text-strong);
@@ -721,9 +719,21 @@
     padding-top: 10px;
   }
 
-  /* Vertical separation between every coloured block in the content column. */
-  main .cws-main > editable-array > editable-array-item + editable-array-item > .section,
-  main .cws-main > editable-array > editable-array-item > .section {
+  /*
+   * Vertical separation between every coloured block in the content column.
+   * The source runs 30px top and bottom on each .section-block (they collapse
+   * to a 30px gap). CustomSection renders class="custom-section", never a bare
+   * ".section", and CloudCannon wraps each one in <editable-array-item> — so a
+   * `.cws-main > * > .section` selector never matches.
+   */
+  main .cws-main .custom-section,
+  main .cws-main .page-banner,
+  main .cws-main .before-after-gallery,
+  main .cws-main .info-card-grid {
     margin-block: 30px;
+  }
+
+  main .cws-main .callout-bubble {
+    margin-block: 40px;
   }
 }
