@@ -6,6 +6,34 @@ seo:
   description: Need urgent dental care? North County Cosmetic and Implant Dentistry in Vista, CA offers
     prompt emergency dentistry for fast relief.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Emergency Dentist Vista, CA
+  subtext: An emergency dentist can provide urgent professional dental care for issues such as infection,
+    damaged teeth, knocked out teeth and more. Emergency dental care is a standard service offered at
+    North County Cosmetic and Implant Dentistry. No matter how much someone attempts to prepare ahead
+    of time, accidents happen. Dental accidents and emergencies are no exception. Dental emergencies can
+    include infections, tooth decay, damaged teeth, trauma to the mouth and more. By visiting an emergency
+    dentist, you are seeking the immediate care your teeth need.
+  imageSource: /src/assets/images/wp/emergency-dentist-header.jpg
+  imageAlt: Emergency Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Emergency Dentist Vista, CA
   contentSections:
@@ -45,7 +73,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -56,7 +84,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -67,7 +95,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -79,7 +107,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -89,7 +117,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Do I need emergency dentistry? Call us if…
   contentSections:
@@ -124,7 +152,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Reasons for Needing an Emergency Dental Visit
   contentSections:
@@ -333,7 +361,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -366,7 +394,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -439,4 +467,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

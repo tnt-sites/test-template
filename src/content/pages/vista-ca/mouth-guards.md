@@ -6,26 +6,35 @@ seo:
   description: Proper mouth guards can help keep your teeth safe and strong. Protect your winning smile
     with a custom mouth guard
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Mouth Guards Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Mouth Guards Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth
-      guards that can serve to protect the teeth. You only get one set of permanent teeth, making it critical
-      to take the steps necessary to preserve them. We always recommends starting by keeping your teeth
-      healthy. When your teeth are free of decay or infection, they will be stronger and less likely to
-      become damaged in an accident. To keep them healthy and strong, we suggest visiting our Vista, CA
-      dental office twice a year for a routine teeth cleaning. You can schedule an appointment by calling
-      (760) 940-2273.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Mouth Guards Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth
+    guards that can serve to protect the teeth. You only get one set of permanent teeth, making it critical
+    to take the steps necessary to preserve them. We always recommends starting by keeping your teeth
+    healthy. When your teeth are free of decay or infection, they will be stronger and less likely to
+    become damaged in an accident. To keep them healthy and strong, we suggest visiting our Vista, CA
+    dental office twice a year for a routine teeth cleaning. You can schedule an appointment by calling
+    (760) 205-3417.
+  imageSource: /src/assets/images/wp/mouth-guards.jpg
+  imageAlt: Mouth Guards Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Extra Protection for Your Teeth
   contentSections:
@@ -235,7 +244,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -264,7 +273,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -323,4 +332,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

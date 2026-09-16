@@ -7,24 +7,33 @@ seo:
   description: Recapture a healthy, gorgeous smile with dental restoration procedures. Learn about affordable
     dental restorations and how they can transform your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Restorations Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Restorations Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer dental restorations so that patients
-      can stay in excellent oral health. We can complete restorations in a way that restores the functionality
-      and appearance of a tooth. This is important for ensuring that once the dental work is complete,
-      no one can tell your tooth was ever damaged. If your tooth is cracked, chipped or damaged in any
-      way, call (760) 940-2273 to schedule your appointment.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Restorations Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we offer dental restorations so that patients
+    can stay in excellent oral health. We can complete restorations in a way that restores the functionality
+    and appearance of a tooth. This is important for ensuring that once the dental work is complete, no
+    one can tell your tooth was ever damaged. If your tooth is cracked, chipped or damaged in any way,
+    call (760) 940-2273 to schedule your appointment.
+  imageSource: /src/assets/images/wp/dental-restorations.jpg
+  imageAlt: Dental Restorations Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why Dental Restorations Are Necessary
   contentSections:
@@ -244,7 +253,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -273,7 +282,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -338,4 +347,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

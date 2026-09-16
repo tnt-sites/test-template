@@ -7,24 +7,33 @@ seo:
   description: Want to learn more about how endodontic surgery may help save your tooth? Are you experiencing
     continuous pain? Increased sensitivity? Tenderness? Swelling? Endodontic surgery explained
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Endodontic Surgery Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Endodontic Surgery Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: While some people may believe that most dental procedures require the same level of experience,
-      there are actually many separate areas of dentistry that require a specialist. There are multiple
-      conditions and illnesses that require the experience of an endodontic surgeon instead of a general
-      dentist. When a nonsurgical root canal or other procedure is not enough for treatment, endodontic
-      surgery may be the better solution.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Endodontic Surgery Vista, CA
+  subtext: While some people may believe that most dental procedures require the same level of experience,
+    there are actually many separate areas of dentistry that require a specialist. There are multiple
+    conditions and illnesses that require the experience of an endodontic surgeon instead of a general
+    dentist. When a nonsurgical root canal or other procedure is not enough for treatment, endodontic
+    surgery may be the better solution.
+  imageSource: /src/assets/images/wp/endodontic-surgery.jpg
+  imageAlt: Endodontic Surgery Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -45,7 +54,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The type of issues an endodontist treats
   contentSections:
@@ -219,7 +228,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -248,7 +257,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -309,4 +318,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

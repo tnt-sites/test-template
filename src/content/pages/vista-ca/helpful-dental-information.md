@@ -7,26 +7,35 @@ seo:
   description: North County Cosmetic and Implant Dentistry is committed to providing patients with the
     helpful dental information needed to make informed dental health choices
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Helpful Dental Information Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Helpful Dental Information Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
-      that our patients have the tools and resources they need to maintain healthy teeth for a lifetime.
-      As a rule of thumb, this demands ongoing, preventative dental care. It also requires education so
-      that you become aware of your dental solutions and what you can do to stay healthy at home. Here,
-      we provide some helpful dental information on oral health. We encourage you to find the section
-      you are interested in and read more details on our website. If you have further questions, call
-      our dental office at (760) 940-2273.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Helpful Dental Information Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
+    that our patients have the tools and resources they need to maintain healthy teeth for a lifetime.
+    As a rule of thumb, this demands ongoing, preventative dental care. It also requires education so
+    that you become aware of your dental solutions and what you can do to stay healthy at home. Here,
+    we provide some helpful dental information on oral health. We encourage you to find the section you
+    are interested in and read more details on our website. If you have further questions, call our dental
+    office at (760) 940-2273.
+  imageSource: /src/assets/images/wp/helpful-dental-information.jpg
+  imageAlt: Helpful Dental Information Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -49,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: 'Q & A: Common Dental Questions'
   contentSections:
@@ -124,7 +133,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/info-blocks/faq-section
   heading: Questions Answered on This Page
   headingLevel: h2
@@ -216,7 +225,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -245,7 +254,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -286,4 +295,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

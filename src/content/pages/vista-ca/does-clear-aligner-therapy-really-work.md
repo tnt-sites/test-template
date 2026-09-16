@@ -7,27 +7,36 @@ seo:
   description: Don't want traditional braces? Wondering does Clear Aligner Therapy really work as well
     as braces? Is it for you? North County Cosmetic and Implant Dentistry breaks it all down
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Does Clear Aligner Therapy Really Work Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Does Clear Aligner Therapy Really Work Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we are regularly asked about Clear Aligner Therapy
-      and how effective it is at straightening teeth. This is an understandable question, because the
-      process of using clear aligners is relatively new in comparison to wearing metal braces. As with
-      any new technology, people often wonder, "Does Clear Aligner Therapy really work?" and the answer
-      is, yes. If you want a straight and beautiful smile without making it obvious that you are undergoing
-      dental care, this is the best solution for you. As with any procedure, you will need to follow our
-      instructions to ensure that your teeth move correctly and as quickly as possible. For example, aligners
-      need to be worn for around 22 hours a day.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Does Clear Aligner Therapy Really Work Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we are regularly asked about Clear Aligner
+    Therapy and how effective it is at straightening teeth. This is an understandable question, because
+    the process of using clear aligners is relatively new in comparison to wearing metal braces. As with
+    any new technology, people often wonder, "Does Clear Aligner Therapy really work?" and the answer
+    is, yes. If you want a straight and beautiful smile without making it obvious that you are undergoing
+    dental care, this is the best solution for you. As with any procedure, you will need to follow our
+    instructions to ensure that your teeth move correctly and as quickly as possible. For example, aligners
+    need to be worn for around 22 hours a day.
+  imageSource: /src/assets/images/wp/does-clear-aligner-therapy-really-work.jpeg
+  imageAlt: Does Clear Aligner Therapy Really Work Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -250,7 +259,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -279,7 +288,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -338,4 +347,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,6 +6,35 @@ seo:
   description: Save your tooth with root canal treatment at North County Cosmetic and Implant Dentistry
     in Vista, CA. Gentle, pain-free care to restore your smile.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Root Canal Treatment Vista, CA
+  subtext: Root canal treatment involves removing the infected dental pulp of a tooth, cleaning the tooth
+    and placing a filling to prevent further infection. Root canals are a service offered at North County
+    Cosmetic and Implant Dentistry. While teeth can seem invincible pearly whites that break down food
+    and help make a great smile, they have layers and can weaken over time. Without proper care, a tooth
+    can sustain enough damage to expose the inner layer, known as the dental pulp. Infected dental pulp
+    will cause varying levels of pain when eating, speaking or at any time of day. Fortunately, we can
+    help.
+  imageSource: /src/assets/images/wp/root-canal-treatment.jpg
+  imageAlt: Root Canal Treatment Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Root Canal Treatment Vista, CA
   contentSections:
@@ -44,7 +73,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -55,7 +84,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why do most people need a root canal?
   contentSections:
@@ -239,7 +268,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -268,7 +297,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -327,4 +356,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

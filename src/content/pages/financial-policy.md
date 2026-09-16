@@ -66,7 +66,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Medical Insurance
   contentSections:
@@ -121,7 +121,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Financing
   contentSections:

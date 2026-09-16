@@ -7,29 +7,38 @@ seo:
   description: Learn all about dental implant surgery from your reputable team at North County Cosmetic
     and Implant Dentistry in Vista, CA. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Implant Surgery Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Implant Surgery Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
-      to replace your missing tooth. Even with the improvements of oral health care, the majority of adults
-      still lose at least one tooth during their lifetime. Whether this is due to old age, an accident,
-      or gum disease, we have the most durable solution for replacing your teeth. This is the only procedure
-      that replaces both your lost root and tooth, since dentures and dental bridges only replace the
-      visible portion of your tooth. In order to place implants, we must conduct dental implant surgery.
-      During the surgery, we will insert a titanium post under the gums and secure it to the jawbone.
-      The bone and metal will fuse together through the process of osseointegration, creating a durable
-      root system to attach your new tooth (crown). If you are considering this procedure, we encourage
-      you to call (760) 940-2273 to schedule a consultation with our Vista dental office.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Implant Surgery Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
+    to replace your missing tooth. Even with the improvements of oral health care, the majority of adults
+    still lose at least one tooth during their lifetime. Whether this is due to old age, an accident,
+    or gum disease, we have the most durable solution for replacing your teeth. This is the only procedure
+    that replaces both your lost root and tooth, since dentures and dental bridges only replace the visible
+    portion of your tooth. In order to place implants, we must conduct dental implant surgery. During
+    the surgery, we will insert a titanium post under the gums and secure it to the jawbone. The bone
+    and metal will fuse together through the process of osseointegration, creating a durable root system
+    to attach your new tooth (crown). If you are considering this procedure, we encourage you to call
+    (760) 940-2273 to schedule a consultation with our Vista dental office.
+  imageSource: /src/assets/images/wp/dental-implant-surgery.jpg
+  imageAlt: Dental Implant Surgery Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -40,7 +49,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: 'Dental Implant Surgery: What to Expect From the Actual Procedure'
   contentSections:
@@ -177,7 +186,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -206,7 +215,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -277,4 +286,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,20 +6,29 @@ seo:
   description: Replace a missing tooth with single dental implants at North County Cosmetic and Implant
     Dentistry in Vista, CA. Restore your smile with natural results.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Single Dental Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Single Dental Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: 'Many people ask us: What is a dental implant?'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Single Dental Implants Vista, CA
+  subtext: 'Many people ask us: What is a dental implant?'
+  imageSource: /src/assets/images/wp/single-cta-1.jpg
+  imageAlt: Single Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -30,7 +39,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The best way to describe a single dental implant is to compare it to a real tooth.
   contentSections:
@@ -50,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Dental implants offer permanent solution for patients with missing teeth
   contentSections:
@@ -130,4 +139,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,25 +6,34 @@ seo:
   description: Wondering if you'll need a bone graft for dental implants? North County Cosmetic and Implant
     Dentistry in Vista, CA provides expert evaluations.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Will I Need a Bone Graft for Dental Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Will I Need a Bone Graft for Dental Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are considering getting dental implants, you are already on the road to restoring your
-      smile. Since dental implants are surgically placed and inserted into the jawbone, one of the questions
-      our Vista patients ask is whether or not they will need a bone graft prior to the procedure. We
-      encourage you to visit our dental office for an examination and X-rays so that we can answer this
-      question based on your health. You can schedule an appointment by calling (760) 940-2273. In the
-      meantime, here are some answers to frequently asked questions about the bone graft procedure.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Will I Need a Bone Graft for Dental Implants Vista, CA
+  subtext: If you are considering getting dental implants, you are already on the road to restoring your
+    smile. Since dental implants are surgically placed and inserted into the jawbone, one of the questions
+    our Vista patients ask is whether or not they will need a bone graft prior to the procedure. We encourage
+    you to visit our dental office for an examination and X-rays so that we can answer this question based
+    on your health. You can schedule an appointment by calling (760) 940-2273. In the meantime, here are
+    some answers to frequently asked questions about the bone graft procedure.
+  imageSource: /src/assets/images/wp/bone-graft-for-dental-implants.jpg
+  imageAlt: Will I Need a Bone Graft for Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -252,7 +261,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -281,7 +290,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -352,4 +361,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

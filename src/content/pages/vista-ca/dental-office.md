@@ -7,25 +7,34 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental office with great results! Affordable dental
     services can transform your smile. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Office Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Office Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: We are a Vista dental office and provide patients with the dental care they need to stay in
-      excellent oral health. At North County Cosmetic and Implant Dentistry, we understand the importance
-      of offering comprehensive dental services so that regardless of whether you need a general teeth
-      cleaning or a full restoration, we have the solutions for a perfectly healthy and functioning smile.
-      If you live in or around the Vista area, we invite you to call (760) 940-2273 and schedule an appointment
-      to meet Dr. Henninger and have your teeth examined.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Office Vista, CA
+  subtext: We are a Vista dental office and provide patients with the dental care they need to stay in
+    excellent oral health. At North County Cosmetic and Implant Dentistry, we understand the importance
+    of offering comprehensive dental services so that regardless of whether you need a general teeth cleaning
+    or a full restoration, we have the solutions for a perfectly healthy and functioning smile. If you
+    live in or around the Vista area, we invite you to call (760) 940-2273 and schedule an appointment
+    to meet Dr. Henninger and have your teeth examined.
+  imageSource: /src/assets/images/wp/dental-office.jpg
+  imageAlt: Dental Office Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Convenience for your Family
   contentSections:
@@ -225,7 +234,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -254,7 +263,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -297,4 +306,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

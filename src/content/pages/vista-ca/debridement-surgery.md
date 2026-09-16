@@ -6,22 +6,31 @@ seo:
   description: Debridement surgery for severe gum disease at North County Cosmetic and Implant Dentistry
     in Vista, CA. Restore your gum health with expert care.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Save Your Implants With Debridement Surgery Treat peri-implantitis and preserve your implants.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Save Your Implants With Debridement Surgery Treat peri-implantitis and preserve your implants.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: With the right care, your dental implants can last a lifetime. But what happens if your implant
-      gets infected and starts to fail? Using debridement and other surgical techniques, North County
-      Cosmetic and Implant Dentistry can help you return your dental implants to full health.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Save Your Implants With Debridement Surgery Treat peri-implantitis and preserve your implants.
+  subtext: With the right care, your dental implants can last a lifetime. But what happens if your implant
+    gets infected and starts to fail? Using debridement and other surgical techniques, North County Cosmetic
+    and Implant Dentistry can help you return your dental implants to full health.
+  imageSource: /src/assets/images/wp/Debridement-Surgery.jpg
+  imageAlt: Save Your Implants With Debridement Surgery Treat peri-implantitis and preserve your implants.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What causes implants to fail?
   contentSections:
@@ -64,7 +73,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Keep Your Smile Healthy and Strong
   contentSections:
@@ -117,4 +126,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

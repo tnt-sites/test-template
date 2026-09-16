@@ -6,26 +6,34 @@ seo:
   description: Wondering what to do if you chip your tooth? North County Cosmetic and Implant Dentistry
     in Vista, CA offers expert chipped tooth repair services.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: What Should I Do If I Chip My Tooth Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: What Should I Do If I Chip My Tooth Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if
-      I chip my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage
-      you to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
-      and treat you right away.
-  - _component: building-blocks/core-elements/text
-    text: As an emergency dentist, the first thing we want to do is determine how serious the damage is.
-      In order to do so, we will ask you several questions when you call to schedule an appointment.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: What Should I Do If I Chip My Tooth Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if
+    I chip my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage
+    you to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
+    and treat you right away. As an emergency dentist, the first thing we want to do is determine how
+    serious the damage is. In order to do so, we will ask you several questions when you call to schedule
+    an appointment.
+  imageSource: /src/assets/images/wp/chip-my-tooth.jpg
+  imageAlt: What Should I Do If I Chip My Tooth Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Do you feel any pain?
   contentSections:
@@ -265,7 +273,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -294,7 +302,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -345,4 +353,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -7,28 +7,35 @@ seo:
   description: Learn all about the dental implant procedure from your reputable team at North County Cosmetic
     and Implant Dentistry. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: The Dental Implant Procedure Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The Dental Implant Procedure Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
-      to restore full dental functions and the appearance of your smile. They offer a more natural tooth
-      replacement option than other tooth replacement options. The dental implant procedure involves the
-      insertion of metal, screw-like posts into the jawbone to replace the root of the lost tooth, and
-      provide support for an artificial tooth.
-  - _component: building-blocks/core-elements/text
-    text: The dental implant procedure is available at North County Cosmetic and Implant Dentistry in
-      Vista and the surrounding area. To get dental implants, you must be in good health and have healthy
-      and adequate bone density. Contact our office at (760) 940-2273 for a consultation.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: The Dental Implant Procedure Vista, CA
+  subtext: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
+    to restore full dental functions and the appearance of your smile. They offer a more natural tooth
+    replacement option than other tooth replacement options. The dental implant procedure involves the
+    insertion of metal, screw-like posts into the jawbone to replace the root of the lost tooth, and provide
+    support for an artificial tooth. The dental implant procedure is available at North County Cosmetic
+    and Implant Dentistry in Vista and the surrounding area. To get dental implants, you must be in good
+    health and have healthy and adequate bone density. Contact our office at (760) 940-2273 for a consultation.
+  imageSource: /src/assets/images/wp/dental-implant-procedure.jpg
+  imageAlt: The Dental Implant Procedure Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Dental Implant Procedure
   contentSections:
@@ -294,7 +301,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -323,7 +330,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -394,4 +401,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

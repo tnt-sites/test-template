@@ -7,28 +7,35 @@ seo:
   description: Avoid the embarrassment of living without teeth. An immediate denture is a complete denture
     or partial denture inserted on the same day, immediately following the removal of natural teeth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Immediate Dentures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Immediate Dentures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: During the transition process for adjusting to dentures, there are a few functions that dentures
-      will impact. The first is chewing. Immediately following the denture process, patients will have
-      to eat soft foods for a few days. The second is speech. Once an individual receives dentures, he
-      or she will have to adjust to speaking with dentures. There will also most likely be a period of
-      time in which the patient has to go without teeth before receiving the new dentures.
-  - _component: building-blocks/core-elements/text
-    text: Due to these impacts on the individual, we offer patients immediate dentures. These dentures
-      only take one day for placement and are more efficient than natural dentures. However, immediate
-      dentures may not be for everyone.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Immediate Dentures Vista, CA
+  subtext: During the transition process for adjusting to dentures, there are a few functions that dentures
+    will impact. The first is chewing. Immediately following the denture process, patients will have to
+    eat soft foods for a few days. The second is speech. Once an individual receives dentures, he or she
+    will have to adjust to speaking with dentures. There will also most likely be a period of time in
+    which the patient has to go without teeth before receiving the new dentures. Due to these impacts
+    on the individual, we offer patients immediate dentures. These dentures only take one day for placement
+    and are more efficient than natural dentures. However, immediate dentures may not be for everyone.
+  imageSource: /src/assets/images/wp/immediate-dentures.jpg
+  imageAlt: Immediate Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -49,7 +56,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Dentures without the wait
   contentSections:
@@ -236,7 +243,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -265,7 +272,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -334,4 +341,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,23 +6,31 @@ seo:
   description: Join North County Cosmetic and Implant Dentistry’s Membership Club in Vista, CA for affordable,
     stress-free dental care without the need for insurance.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: The North County Cosmetic and Implant Dentistry Membership Club
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The North County Cosmetic and Implant Dentistry Membership Club
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: The easy way to pay for your preventative dental care.
-  - _component: building-blocks/core-elements/text
-    text: Frustrated with your dental insurance or putting off treatment because you have no dental insurance
-      at all? Our membership club makes it easy to afford your dental care.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: The North County Cosmetic and Implant Dentistry Membership Club
+  subtext: The easy way to pay for your preventative dental care. Frustrated with your dental insurance
+    or putting off treatment because you have no dental insurance at all? Our membership club makes it
+    easy to afford your dental care.
+  imageSource: /src/assets/images/wp/single-cta-1.jpg
+  imageAlt: The North County Cosmetic and Implant Dentistry Membership Club
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -33,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Paying for your preventative care has never been easier.
   contentSections:
@@ -55,7 +63,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Choose the Plan That’s Right For You
   contentSections:
@@ -114,7 +122,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss Your Treatment Options
   contentSections:
@@ -131,4 +139,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

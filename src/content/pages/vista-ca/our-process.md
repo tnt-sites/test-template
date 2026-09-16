@@ -5,25 +5,32 @@ seo:
   title: ''
   description: ''
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Our Process Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Our Process Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: In many cases, successful dental implant procedures require greater preparation. At North County
-      Cosmetic and Implant Dentistry, patient comfort, patient safety, and successful outcomes are what
-      makes us leaders in dental implant therapy.
-  - _component: building-blocks/core-elements/text
-    text: Our training in the latest techniques and the use of the latest technology is what sets our
-      San Diego implant dentists apart from other dentists.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Our Process Vista, CA
+  subtext: In many cases, successful dental implant procedures require greater preparation. At North County
+    Cosmetic and Implant Dentistry, patient comfort, patient safety, and successful outcomes are what
+    makes us leaders in dental implant therapy. Our training in the latest techniques and the use of the
+    latest technology is what sets our San Diego implant dentists apart from other dentists.
+  imageSource: /src/assets/images/wp/OurProcess.jpg
+  imageAlt: Our Process Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -33,7 +40,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -72,4 +79,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

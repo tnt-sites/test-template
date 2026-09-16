@@ -6,6 +6,36 @@ seo:
   description: Looking for a complete health dentist? North County Cosmetic and Implant Dentistry in Vista,
     CA focuses on overall wellness through oral health care.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Find a Complete Health Dentist Vista, CA
+  subtext: Complete health dentistry emphasizes the connection between oral health and overall health.
+    Taking good care of your mouth helps ensure the health of the rest of your body. A complete health
+    dentist is one who cares for the patient’s well-being including and beyond oral health. Complete health
+    dentistry is available from North County Cosmetic and Implant Dentistry in Vista and the surrounding
+    area. We take this approach because we believe it leads to a better quality of care for our patients.
+    The mouth is connected to the digestive and respiratory systems, taking in nutrients that help these
+    systems function optimally. Therefore, we should focus on the mouth as the gateway to the rest of
+    the body.
+  imageSource: /src/assets/images/wp/Find-a-Complete-Health-Dentist.jpg
+  imageAlt: Find a Complete Health Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Find a Complete Health Dentist Vista, CA
   contentSections:
@@ -150,7 +180,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions About Complete Health Dentistry
   contentSections:
@@ -210,4 +240,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

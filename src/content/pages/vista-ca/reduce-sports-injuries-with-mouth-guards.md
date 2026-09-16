@@ -7,24 +7,33 @@ seo:
   description: Properly fitted custom-made mouth guards offer effective protection to reduce the severity
     and number of sports-related dental injuries. Find out more
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Reduce Sports Injuries With Mouth Guards Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Reduce Sports Injuries With Mouth Guards Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Playing on a sports team is a staple of any childhood from playing little league baseball to
-      playing college football. Regardless of the sport, players will benefit from wearing the proper
-      protection such as shin guards, shoulder pads, helmets, cleats and mouth guards. While most sports
-      go over the necessary gear that the child will need to wear to each game, they may not require mouth
-      guards. With that in mind, mouth guards can be the deciding factor that saves a child's teeth.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Reduce Sports Injuries With Mouth Guards Vista, CA
+  subtext: Playing on a sports team is a staple of any childhood from playing little league baseball to
+    playing college football. Regardless of the sport, players will benefit from wearing the proper protection
+    such as shin guards, shoulder pads, helmets, cleats and mouth guards. While most sports go over the
+    necessary gear that the child will need to wear to each game, they may not require mouth guards. With
+    that in mind, mouth guards can be the deciding factor that saves a child's teeth.
+  imageSource: /src/assets/images/wp/reduce-sports-injuries-with-mouth-guards.jpg
+  imageAlt: Reduce Sports Injuries With Mouth Guards Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Risks of Store-Bought Mouth Guards
   contentSections:
@@ -183,7 +192,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -212,7 +221,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -273,4 +282,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

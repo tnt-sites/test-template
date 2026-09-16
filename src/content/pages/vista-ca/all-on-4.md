@@ -6,23 +6,32 @@ seo:
   description: All-on-4 dental implants offer a full smile restoration at North County Cosmetic and Implant
     Dentistry. Learn more about this efficient and lasting solution.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: All-on-4 Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: All-on-4 Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer the All-on-4® procedure for patients
-      that are looking for a convenient way to replace missing teeth. If you live in the Vista area and
-      have experienced tooth loss, we encourage you to visit our office to discuss the options available
-      to you.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: All-on-4 Implants Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we offer the All-on-4® procedure for patients
+    that are looking for a convenient way to replace missing teeth. If you live in the Vista area and
+    have experienced tooth loss, we encourage you to visit our office to discuss the options available
+    to you.
+  imageSource: /src/assets/images/wp/all-on-4-dental-implants.jpg
+  imageAlt: All-on-4 Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -33,7 +42,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -264,7 +273,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -293,7 +302,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -366,4 +375,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

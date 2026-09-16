@@ -6,27 +6,36 @@ seo:
   description: Learn essential oral hygiene tips from North County Cosmetic and Implant Dentistry in Vista,
     CA to keep your teeth and gums healthy.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Oral Hygiene Basics Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Oral Hygiene Basics Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
-      excellent oral health. With a focus on preventative care, we take the time to get to know each of
-      our patients, creating a plan for lifelong oral health. With only one set of permanent adult teeth,
-      it is important to care for them and be proactive in taking the steps to prevent cavities, infections,
-      and gum disease. We recommend that you visit our dental office for a teeth cleaning twice a year
-      so that we can remove plaque buildup and tartar, keeping your mouth healthy and clean. To schedule
-      an appointment, call (760) 940-2273. In the meantime, here are steps that you can take at home to
-      keep your mouth healthy.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Oral Hygiene Basics Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
+    excellent oral health. With a focus on preventative care, we take the time to get to know each of
+    our patients, creating a plan for lifelong oral health. With only one set of permanent adult teeth,
+    it is important to care for them and be proactive in taking the steps to prevent cavities, infections,
+    and gum disease. We recommend that you visit our dental office for a teeth cleaning twice a year so
+    that we can remove plaque buildup and tartar, keeping your mouth healthy and clean. To schedule an
+    appointment, call (760) 940-2273. In the meantime, here are steps that you can take at home to keep
+    your mouth healthy.
+  imageSource: /src/assets/images/wp/oral-hygiene-basics.jpg
+  imageAlt: Oral Hygiene Basics Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How to brush your teeth properly
   contentSections:
@@ -239,7 +248,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -268,7 +277,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -311,4 +320,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

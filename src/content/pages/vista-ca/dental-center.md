@@ -7,27 +7,36 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental center with great results. Affordable dental
     services can transform your smile at North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Center Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Center Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you live in Vista or the surrounding area, we invite you to schedule an appointment with
-      our dental center . We can treat everyone in your family and ensure that you are in excellent oral
-      health. We understand how essential healthy teeth and gums are to your ability to enjoy life and
-      live without restriction. Your teeth make it possible for you to eat lunch with a friend, smile
-      at your children, and speak with a client at work. Our objective is to prevent you from experiencing
-      this inconvenience by keeping your teeth healthy and intact as you age. This starts with preventative
-      care, making it necessary to visit our dental center and have your teeth examined and cleaned once
-      or twice a year.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Center Vista, CA
+  subtext: If you live in Vista or the surrounding area, we invite you to schedule an appointment with
+    our dental center . We can treat everyone in your family and ensure that you are in excellent oral
+    health. We understand how essential healthy teeth and gums are to your ability to enjoy life and live
+    without restriction. Your teeth make it possible for you to eat lunch with a friend, smile at your
+    children, and speak with a client at work. Our objective is to prevent you from experiencing this
+    inconvenience by keeping your teeth healthy and intact as you age. This starts with preventative care,
+    making it necessary to visit our dental center and have your teeth examined and cleaned once or twice
+    a year.
+  imageSource: /src/assets/images/wp/dental-center.jpg
+  imageAlt: Dental Center Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Selecting a New Dental Center
   contentSections:
@@ -218,7 +227,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -247,7 +256,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -290,4 +299,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

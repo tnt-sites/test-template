@@ -7,23 +7,32 @@ seo:
   description: Using a cosmetic dentist is paramount to getting a healthy, gorgeous smile. Learn about
     cosmetic dentist procedures and how they can enhance your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Cosmetic Dentist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Cosmetic Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
-      the Vista area. We make it possible for our patients to have the beautiful smile they desire using
-      a variety of modern dental techniques. We are committed to high-quality patient care, working to
-      ensure that patients are comfortable during their procedures and delighted with the results.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Cosmetic Dentist Vista, CA
+  subtext: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
+    the Vista area. We make it possible for our patients to have the beautiful smile they desire using
+    a variety of modern dental techniques. We are committed to high-quality patient care, working to ensure
+    that patients are comfortable during their procedures and delighted with the results.
+  imageSource: /src/assets/images/wp/cosmetic-dentist.jpg
+  imageAlt: Cosmetic Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -47,7 +56,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -58,7 +67,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -69,7 +78,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -80,7 +89,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -93,7 +102,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Understanding Your Desire to Change Your Smile
   contentSections:
@@ -149,7 +158,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: The Truth About Cosmetic Dentistry
   contentSections:
@@ -343,7 +352,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -372,7 +381,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -451,4 +460,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

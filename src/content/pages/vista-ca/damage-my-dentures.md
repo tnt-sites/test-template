@@ -6,25 +6,33 @@ seo:
   description: Unsure what to do if you damage your dentures? North County Cosmetic and Implant Dentistry
     in Vista, CA provides denture repair and replacement options.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: What Do I Do If I Damage My Dentures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: What Do I Do If I Damage My Dentures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you have dentures, it is important to handle them with care so they can remain in as good
-      a condition as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can
-      offer the information and tools necessary to address a problem if you have one. At North County
-      Cosmetic and Implant Dentistry can answer any questions you have regarding denture care. To schedule
-      an appointment with our dental office, call (760) 940-2273. In the meantime, here is what you should
-      know.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: What Do I Do If I Damage My Dentures Vista, CA
+  subtext: If you have dentures, it is important to handle them with care so they can remain in as good
+    a condition as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can
+    offer the information and tools necessary to address a problem if you have one. At North County Cosmetic
+    and Implant Dentistry can answer any questions you have regarding denture care. To schedule an appointment
+    with our dental office, call (760) 940-2273. In the meantime, here is what you should know.
+  imageSource: /src/assets/images/wp/damage-my-dentures.jpg
+  imageAlt: What Do I Do If I Damage My Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Where do I start?
   contentSections:
@@ -100,7 +108,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Alternatives to Dentures From a Cosmetic Dentist in Vista, CA
   contentSections:
@@ -239,7 +247,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -268,7 +276,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -337,4 +345,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -7,25 +7,34 @@ seo:
   description: Dental cleaning and examinations are procedures to get a healthy, gorgeous smile. Learn
     about teeth cleaning and how it can enhance your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Cleaning Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Cleaning Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
-      to patients throughout Vista. We believe that preventative care is essential for staying in good
-      oral health. Our goal is to keep our patients as healthy as possible. The best way to do so is through
-      ongoing dental care and teaching our patients how to practice good oral hygiene at home. If you
-      live in the Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay
-      healthy year-round.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Cleaning Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
+    to patients throughout Vista. We believe that preventative care is essential for staying in good oral
+    health. Our goal is to keep our patients as healthy as possible. The best way to do so is through
+    ongoing dental care and teaching our patients how to practice good oral hygiene at home. If you live
+    in the Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay healthy
+    year-round.
+  imageSource: /src/assets/images/wp/dental-cleaning-and-examinations.jpg
+  imageAlt: Dental Cleaning Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Dental Cleanings and Examinations for Children
   contentSections:
@@ -234,7 +243,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -263,7 +272,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -314,4 +323,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

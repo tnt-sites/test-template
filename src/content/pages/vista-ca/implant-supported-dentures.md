@@ -7,24 +7,33 @@ seo:
   description: Implant supported dentures are an excellent alternative to traditional dentures. They fit
     over implants providing exceptional retention, stability & support
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Implant Supported Dentures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Implant Supported Dentures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
-      dentures to give them a dependable and durable alternative to dentures, dental bridges, and traditional
-      dental implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
-      940-2273 and schedule a consultation so we can examine you and determine if you are a good candidate
-      for this procedure.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Implant Supported Dentures Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
+    dentures to give them a dependable and durable alternative to dentures, dental bridges, and traditional
+    dental implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
+    940-2273 and schedule a consultation so we can examine you and determine if you are a good candidate
+    for this procedure.
+  imageSource: /src/assets/images/wp/implant-supported-dentures.jpg
+  imageAlt: Implant Supported Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The Benefits of Implant Supported Dentures
   contentSections:
@@ -166,7 +175,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -195,7 +204,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -266,4 +275,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -5,21 +5,30 @@ seo:
   title: ''
   description: ''
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Teeth In A Day Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Teeth In A Day Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: With our new procedures, you can be eligible for same day dental implants and enjoy a new set
-      of permanent teeth in as little as one day.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Teeth In A Day Vista, CA
+  subtext: With our new procedures, you can be eligible for same day dental implants and enjoy a new set
+    of permanent teeth in as little as one day.
+  imageSource: /src/assets/images/wp/teeth-day-header.jpg
+  imageAlt: Teeth In A Day Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -30,7 +39,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Are You Frustrated with Traditional Dentures?
   contentSections:
@@ -73,7 +82,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Dentist in San Diego, CA offers teeth in a day option for patients seeking immediate dental implants
   contentSections:
@@ -153,4 +162,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

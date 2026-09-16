@@ -7,26 +7,35 @@ seo:
   description: Wondering if Clear Aligner Therapy Teen is right for your child? Should you get clear aligners
     for your teen? North County Cosmetic and Implant Dentistry breaks it all down
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Is Clear Aligner Therapy Teen Right for My Child Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Is Clear Aligner Therapy Teen Right for My Child Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy Teen® as a solution
-      for straightening teeth. Parents may call our dental office looking for information, wondering if
-      Clear Aligner Therapy can sufficiently straighten their child's teeth. Orthodontics is familiar
-      and still effective but Clear Aligner Therapy is relatively new and most parents never had access
-      to this solution. If you are in this situation, the best way to find out about your child's options
-      is to call (760) 940-2273 and schedule an appointment. We are located in the Vista and are happy
-      to answer any questions that you may have.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Is Clear Aligner Therapy Teen Right for My Child Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy Teen® as a solution
+    for straightening teeth. Parents may call our dental office looking for information, wondering if
+    Clear Aligner Therapy can sufficiently straighten their child's teeth. Orthodontics is familiar and
+    still effective but Clear Aligner Therapy is relatively new and most parents never had access to this
+    solution. If you are in this situation, the best way to find out about your child's options is to
+    call (760) 940-2273 and schedule an appointment. We are located in the Vista and are happy to answer
+    any questions that you may have.
+  imageSource: /src/assets/images/wp/is-invisalign-teen-right-for-my-child.jpg
+  imageAlt: Is Clear Aligner Therapy Teen Right for My Child Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -50,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: 'Here are some that we are asked on a regular basis:'
   contentSections:
@@ -105,7 +114,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How do I get started with Clear Aligner Therapy?
   contentSections:
@@ -236,7 +245,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -265,7 +274,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -324,4 +333,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,22 +6,31 @@ seo:
   description: Maintain healthy gums with periodontal disease maintenance at North County Cosmetic and
     Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you’ve been diagnosed with periodontal disease, there’s good news and bad news. The bad news?
-      Gum disease isn’t curable. The good news? With the right maintenance, you can prevent the progression
-      of the disease and even build back some bone and tissue. The key is to stay proactive.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
+  subtext: If you’ve been diagnosed with periodontal disease, there’s good news and bad news. The bad
+    news? Gum disease isn’t curable. The good news? With the right maintenance, you can prevent the progression
+    of the disease and even build back some bone and tissue. The key is to stay proactive.
+  imageSource: /src/assets/images/wp/AdobeStock_241876034.jpg
+  imageAlt: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Stay ahead of your gum disease.
   contentSections:
@@ -51,7 +60,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Stay proactive. Stay healthy.
   contentSections:
@@ -101,4 +110,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

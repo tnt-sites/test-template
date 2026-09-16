@@ -6,29 +6,37 @@ seo:
   description: Straighten your teeth with clear aligner therapy at North County Cosmetic and Implant Dentistry
     in Vista, CA. Comfortable, discreet orthodontic care.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Aligner Therapy Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Aligner Therapy Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
-      teeth can also benefit one's oral health. In fact crooked teeth can trap food between them and lead
-      to infection or bite issues. At North County Cosmetic and Implant Dentistry, we offer Clear Aligner
-      Therapy as a treatment for patients interested in discreetly straightening their teeth.
-  - _component: building-blocks/core-elements/text
-    text: Clear Aligner Therapy is a series of clear aligner trays that cover the teeth, similar to a
-      retainer or mouth guard, but are much more discreet. At least every two weeks or so, the patient
-      will switch to the next set in the series of Clear Aligner Therapy trays. With the custom aligners
-      for each patient, Clear Aligner Therapy will gradually push the teeth into the right position without
-      causing significant amounts of pain.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Aligner Therapy Vista, CA
+  subtext: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
+    teeth can also benefit one's oral health. In fact crooked teeth can trap food between them and lead
+    to infection or bite issues. At North County Cosmetic and Implant Dentistry, we offer Clear Aligner
+    Therapy as a treatment for patients interested in discreetly straightening their teeth. Clear Aligner
+    Therapy is a series of clear aligner trays that cover the teeth, similar to a retainer or mouth guard,
+    but are much more discreet. At least every two weeks or so, the patient will switch to the next set
+    in the series of Clear Aligner Therapy trays. With the custom aligners for each patient, Clear Aligner
+    Therapy will gradually push the teeth into the right position without causing significant amounts
+    of pain.
+  imageSource: /src/assets/images/wp/invisalign.jpg
+  imageAlt: Clear Aligner Therapy Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -247,7 +255,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -276,7 +284,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -335,4 +343,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

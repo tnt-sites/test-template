@@ -6,22 +6,31 @@ seo:
   description: Looking for snap-in dentures in Vista, CA? North County Cosmetic and Implant Dentistry
     offers secure, affordable implant-supported dentures to restore your smile.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Snap In Dentures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Snap In Dentures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Depending upon each patient's needs, we have several tooth replacement options available to
-      treat missing teeth. Whether, it is a partial bridge or snap in dentures we will take great care
-      in ensuring the best possible solution, including fit and comfort for each of our patients.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Snap In Dentures Vista, CA
+  subtext: Depending upon each patient's needs, we have several tooth replacement options available to
+    treat missing teeth. Whether, it is a partial bridge or snap in dentures we will take great care in
+    ensuring the best possible solution, including fit and comfort for each of our patients.
+  imageSource: /src/assets/images/wp/snap-header-image.jpg
+  imageAlt: Snap In Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Are you tired of loose or ill fitting dentures?
   contentSections:
@@ -90,7 +99,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Kay is thrilled with the result of her implant supported dentures from North Country Dentistry
   contentSections:
@@ -114,7 +123,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss Your Treatment Options
   contentSections:
@@ -131,4 +140,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

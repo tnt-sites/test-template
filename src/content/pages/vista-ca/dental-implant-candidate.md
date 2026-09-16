@@ -6,25 +6,34 @@ seo:
   description: Curious about implants and wondering if you are a candidate for dental implants? Your reputable
     team at North County Cosmetic and Implant Dentistry in Vista, CA breaks it all down
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Am I a Candidate for Dental Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Am I a Candidate for Dental Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call
-      (760) 940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct
-      an examination and take X-rays to determine if you qualify for implant surgery, and if not, what
-      it will take to get you there. At North County Cosmetic and Implant Dentistry, we will work with
-      you to come up with the best way to replace your missing teeth, even if that means conducting additional
-      procedures to ensure that you do qualify.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Am I a Candidate for Dental Implants Vista, CA
+  subtext: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call
+    (760) 940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct
+    an examination and take X-rays to determine if you qualify for implant surgery, and if not, what it
+    will take to get you there. At North County Cosmetic and Implant Dentistry, we will work with you
+    to come up with the best way to replace your missing teeth, even if that means conducting additional
+    procedures to ensure that you do qualify.
+  imageSource: /src/assets/images/wp/dental-implant-candidate.jpg
+  imageAlt: Am I a Candidate for Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -47,7 +56,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Am I a candidate for dental implants if I have crowded teeth?
   contentSections:
@@ -250,7 +259,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -279,7 +288,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -350,4 +359,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

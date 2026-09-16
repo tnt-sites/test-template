@@ -7,26 +7,35 @@ seo:
   description: Shown to reduce tooth decay by up to 60 percent, why the extra protection of dental sealants
     act as a barrier to prevent cavities. Find out more
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Standing behind the child with a stern expression, parents will do just about anything to ensure
-      their children brush and floss on a regular basis. Much to the parents' efforts, children still
-      seem to attract tooth decay or infection. The risk of tooth decay for children can even begin before
-      they reach the age of 3. While a child becomes more capable of brushing his or her teeth without
-      a parent's assistance, the child may not properly brush or reach all of the necessary areas of the
-      mouth to remove plaque. If most adults cannot reach the areas they need to, then a child will definitely
-      not be able to reach every area with a toothbrush and allow plaque to build up over time.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth Vista, CA
+  subtext: Standing behind the child with a stern expression, parents will do just about anything to ensure
+    their children brush and floss on a regular basis. Much to the parents' efforts, children still seem
+    to attract tooth decay or infection. The risk of tooth decay for children can even begin before they
+    reach the age of 3. While a child becomes more capable of brushing his or her teeth without a parent's
+    assistance, the child may not properly brush or reach all of the necessary areas of the mouth to remove
+    plaque. If most adults cannot reach the areas they need to, then a child will definitely not be able
+    to reach every area with a toothbrush and allow plaque to build up over time.
+  imageSource: /src/assets/images/wp/why-dental-sealants-protect-childs-teeth.jpg
+  imageAlt: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Extra Protection with Dental Sealants
   contentSections:
@@ -153,7 +162,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -182,7 +191,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -251,4 +260,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

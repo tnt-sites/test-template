@@ -7,24 +7,33 @@ seo:
   description: Missing one or more molars - now what? Removable partial dentures are an option to get
     a complete, gorgeous smile. Learn about how removable partial dentures (RPD) can replace back teeth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Partial Dentures for Back Teeth Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Partial Dentures for Back Teeth Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Partial dentures are a fantastic solution for patients who are missing multiple back teeth.
-      There are all sorts of benefits to partial dentures for back teeth, ranging from the comparably
-      low cost to superior comfort and improved oral health. With partial dentures for your back teeth,
-      you will be able to eat, drink, talk and smile without reservation. Let's take a look at some of
-      the most frequently asked questions about this oral health solution.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Partial Dentures for Back Teeth Vista, CA
+  subtext: Partial dentures are a fantastic solution for patients who are missing multiple back teeth.
+    There are all sorts of benefits to partial dentures for back teeth, ranging from the comparably low
+    cost to superior comfort and improved oral health. With partial dentures for your back teeth, you
+    will be able to eat, drink, talk and smile without reservation. Let's take a look at some of the most
+    frequently asked questions about this oral health solution.
+  imageSource: /src/assets/images/wp/partial-dentures-for-back-teeth.jpg
+  imageAlt: Partial Dentures for Back Teeth Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/info-blocks/faq-section
   heading: How many partial dentures are required for each arch?
   headingLevel: h2
@@ -177,7 +186,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -206,7 +215,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -275,4 +284,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

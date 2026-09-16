@@ -6,6 +6,36 @@ seo:
   description: Get a healthy, gorgeous smile with dental implants. Learn about affordable implants and
     how they can transform your smile from North County Cosmetic and Implant Dentistry
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Implants Vista, CA
+  subtext: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
+    not only the functionality of teeth but can provide a great new look as well. Dental implants are
+    a standard cosmetic dental option offered at North County Cosmetic and Implant Dentistry. People tend
+    to assume that the gap left behind after losing a permanent adult tooth can remain empty. The reality
+    is that an exposed tooth socket faces the risk of infection, can cause teeth to shift out of alignment,
+    and can cause other issues as well. With a dental implant, we can help patients avoid those oral health
+    issues We have the tools and skills necessary to provide patients with a customized dental implant
+    to meet their specific needs.
+  imageSource: /src/assets/images/wp/dental-implants-header.jpg
+  imageAlt: Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Dental Implants Vista, CA
   contentSections:
@@ -47,7 +77,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -57,7 +87,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -67,7 +97,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -78,7 +108,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Facts from the American Academy of Implant Dentistry (aaid.com)
   contentSections:
@@ -113,7 +143,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: The Process of Installing Implants
   contentSections:
@@ -338,7 +368,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -367,7 +397,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -436,4 +466,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

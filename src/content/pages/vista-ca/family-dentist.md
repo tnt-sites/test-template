@@ -7,30 +7,37 @@ seo:
   description: Affordable dental care for the entire family. Parents, kids and seniors, get fantastic,
     healthy smiles in a caring environment. Family Dentist Office
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Family Dentist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Family Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
-      patients of all ages and do so in a warm and welcoming environment. Our office is located in Vista,
-      and we welcome patients to schedule an appointment and experience how we can keep everyone in the
-      family in optimal oral health.
-  - _component: building-blocks/core-elements/text
-    text: Our team focuses on improving the overall experience of our patients whenever possible. The
-      moment you walk into the North County Cosmetic and Implant Dentistry offices, you will be greeted
-      with a warm smile and welcomed by our friendly team. We understand that visiting a new dentist can
-      make patients unsure about what they will experience. We work diligently so that patients enjoy
-      their visit – every time. To schedule your appointment, call (760) 940-2273. If you reach us after
-      hours or on the weekend, we will do our best to return calls as quickly as possible.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Family Dentist Vista, CA
+  subtext: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
+    patients of all ages and do so in a warm and welcoming environment. Our office is located in Vista,
+    and we welcome patients to schedule an appointment and experience how we can keep everyone in the
+    family in optimal oral health. Our team focuses on improving the overall experience of our patients
+    whenever possible. The moment you walk into the North County Cosmetic and Implant Dentistry offices,
+    you will be greeted with a warm smile and welcomed by our friendly team. We understand that visiting
+    a new dentist can make patients unsure about what they will experience. We work diligently so that
+    patients enjoy their visit – every time. To schedule your appointment, call (760) 733-6254. If you
+    reach us after hours or on the weekend, we will do our best to return calls as quickly as possible.
+  imageSource: /src/assets/images/wp/family-dentist.jpg
+  imageAlt: Family Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -40,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -51,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -62,7 +69,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -73,7 +80,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -84,7 +91,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: At-Home Tips to Surprise Us During Your Routine Visit
   contentSections:
@@ -114,7 +121,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Philosophy of Care
   contentSections:
@@ -305,7 +312,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -334,7 +341,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -403,4 +410,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

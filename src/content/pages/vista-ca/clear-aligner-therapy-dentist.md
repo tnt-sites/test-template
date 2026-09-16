@@ -5,18 +5,29 @@ seo:
   title: ''
   description: ''
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Aligner Therapy Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Aligner Therapy Vista, CA
-    level: h1
-    size: 2xl
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Aligner Therapy Vista, CA
+  subtext: ''
+  imageSource: /src/assets/images/wp/CHD-020.jpg
+  imageAlt: Clear Aligner Therapy Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Clear Aligner Therapy takes a modern approach to straightening teeth, using a custom-made series
     of aligners created for you and only you.
@@ -54,7 +65,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Why our San Diego Dentists Recommend Clear Aligner Therapy
   contentSections:
@@ -169,4 +180,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

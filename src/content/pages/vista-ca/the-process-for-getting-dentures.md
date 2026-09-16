@@ -7,30 +7,37 @@ seo:
   description: With recent advancements in dental technology, the process of getting dentures is easier
     than ever before. Removable partial dentures are an option to get a complete, gorgeous smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: The Process for Getting Dentures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The Process for Getting Dentures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: People may find it difficult to hear that they need dentures. After all, losing a few teeth
-      can cause enough difficulty. The very notion that one is going to need artificial teeth instead
-      can be difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust
-      to dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance
-      and remain fully functional.
-  - _component: building-blocks/core-elements/text
-    text: People may find it difficult to hear that they need dentures. After all, losing a few teeth
-      can cause enough difficulty. The very notion that one is going to need artificial teeth instead
-      can be difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust
-      to dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance
-      and remain fully functional.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: The Process for Getting Dentures Vista, CA
+  subtext: People may find it difficult to hear that they need dentures. After all, losing a few teeth
+    can cause enough difficulty. The very notion that one is going to need artificial teeth instead can
+    be difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust to
+    dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance
+    and remain fully functional. People may find it difficult to hear that they need dentures. After all,
+    losing a few teeth can cause enough difficulty. The very notion that one is going to need artificial
+    teeth instead can be difficult to adjust to. Fortunately, we have the tools and experience to help
+    patients adjust to dentures in order to live a comfortable lifestyle. In fact, dentures can provide
+    a natural appearance and remain fully functional.
+  imageSource: /src/assets/images/wp/the-process-for-getting-dentures.jpg
+  imageAlt: The Process for Getting Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -41,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -52,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The type of issues an endodontist treats
   contentSections:
@@ -213,7 +220,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -242,7 +249,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -311,4 +318,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

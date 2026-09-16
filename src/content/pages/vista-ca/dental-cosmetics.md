@@ -7,25 +7,34 @@ seo:
   description: Get a healthy, dream smile with affordable dental cosmetics from North County Cosmetic
     and Implant Dentistry. Learn about cosmetic dental procedures
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Cosmetics Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Cosmetics Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Visit North County Cosmetic and Implant Dentistry for dental cosmetics. We provide comprehensive
-      dental care for patients throughout the Vista area and we can help you to remain in excellent oral
-      health while also improving your smile. We believe that patients can have teeth that are highly
-      functional and look amazing. After all, your teeth are yours for a lifetime, making it important
-      to care for them and enjoy the way they look. To schedule a consultation to discuss possible procedures,
-      call (760) 940-2273.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Cosmetics Vista, CA
+  subtext: Visit North County Cosmetic and Implant Dentistry for dental cosmetics. We provide comprehensive
+    dental care for patients throughout the Vista area and we can help you to remain in excellent oral
+    health while also improving your smile. We believe that patients can have teeth that are highly functional
+    and look amazing. After all, your teeth are yours for a lifetime, making it important to care for
+    them and enjoy the way they look. To schedule a consultation to discuss possible procedures, call
+    (760) 940-2273.
+  imageSource: /src/assets/images/wp/dental-cosmetics.jpg
+  imageAlt: Dental Cosmetics Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -47,7 +56,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why You Should Consider Dental Cosmetics
   contentSections:
@@ -254,7 +263,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -283,7 +292,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -364,4 +373,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

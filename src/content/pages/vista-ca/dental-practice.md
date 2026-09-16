@@ -7,31 +7,39 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental practice with great results! Affordable local
     dentist can recover your smile. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Practice Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Practice Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: When you visit our dental practice in Vista, we will spend time getting to know you and learning
-      about any health concerns you have. By conducting an examination and taking X-rays, we can determine
-      the current health of your teeth, gums, and jawbone. We will also discuss your lifestyle with you
-      and any goals you have for your smile. This will allow us to create a comprehensive treatment plan.
-      At North County Cosmetic and Implant Dentistry, we provide dental care to patients throughout the
-      Vista area. We do so by creating treatment plans that address any issues you may have, rather than
-      focusing on one isolated problem. For example, if you have a cracked tooth, but simultaneously do
-      not like the appearance of your smile, we can recommend procedures to address both at the same time.
-      With a focus on both form and function, we can help your smile stay healthy and beautiful.
-  - _component: building-blocks/core-elements/text
-    text: In addition to performing routine teeth cleanings and completing stunning smile makeovers, there
-      are a variety of procedures we complete on a daily basis that are important for your oral health.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Practice Vista, CA
+  subtext: When you visit our dental practice in Vista, we will spend time getting to know you and learning
+    about any health concerns you have. By conducting an examination and taking X-rays, we can determine
+    the current health of your teeth, gums, and jawbone. We will also discuss your lifestyle with you
+    and any goals you have for your smile. This will allow us to create a comprehensive treatment plan.
+    At North County Cosmetic and Implant Dentistry, we provide dental care to patients throughout the
+    Vista area. We do so by creating treatment plans that address any issues you may have, rather than
+    focusing on one isolated problem. For example, if you have a cracked tooth, but simultaneously do
+    not like the appearance of your smile, we can recommend procedures to address both at the same time.
+    With a focus on both form and function, we can help your smile stay healthy and beautiful. In addition
+    to performing routine teeth cleanings and completing stunning smile makeovers, there are a variety
+    of procedures we complete on a daily basis that are important for your oral health.
+  imageSource: /src/assets/images/wp/dental-practice.jpg
+  imageAlt: Dental Practice Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -41,7 +49,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -52,7 +60,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Visit a dental practice in Vista to reduce your risk of getting gum disease
   contentSections:
@@ -232,7 +240,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -261,7 +269,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -304,4 +312,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

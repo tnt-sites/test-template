@@ -7,27 +7,36 @@ seo:
   description: Effective preventative dental care helps you avoid dental problems and save money. Combine
     at-home procedures and pro treatment for overall dental health
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Preventative Dental Care Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Preventative Dental Care Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
-      throughout the Vista area and invite you to schedule a dental exam today. We know that if you have
-      your teeth cleaned on a regular basis, you can decrease your risk of getting cavities or experiencing
-      gum disease. Overall, taking the time to have your teeth cleaned can prevent general discomfort
-      and even tooth loss. If you haven't been to the dentist in a while, now is the time to schedule
-      an exam so that you can prevent many common oral health issues that can negative impact your quality
-      of life. We provide preventative dental care and will ensure that your appointment is a positive
-      one and that you remain comfortable during your dental exam and treatments.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Preventative Dental Care Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
+    throughout the Vista area and invite you to schedule a dental exam today. We know that if you have
+    your teeth cleaned on a regular basis, you can decrease your risk of getting cavities or experiencing
+    gum disease. Overall, taking the time to have your teeth cleaned can prevent general discomfort and
+    even tooth loss. If you haven't been to the dentist in a while, now is the time to schedule an exam
+    so that you can prevent many common oral health issues that can negative impact your quality of life.
+    We provide preventative dental care and will ensure that your appointment is a positive one and that
+    you remain comfortable during your dental exam and treatments.
+  imageSource: /src/assets/images/wp/preventative-dental-care.jpg
+  imageAlt: Preventative Dental Care Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The Facts
   contentSections:
@@ -237,7 +246,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -266,7 +275,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -325,4 +334,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

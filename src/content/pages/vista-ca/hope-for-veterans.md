@@ -6,20 +6,31 @@ seo:
   description: Supporting North County Veterans Stand Down, North County Cosmetic and Implant Dentistry
     offers dental care for veterans at a special event in Vista, CA
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
     Veterans Stand Down.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
-      Veterans Stand Down.
-    level: h1
-    size: 2xl
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+  subtext: ''
+  imageSource: /src/assets/images/wp/IMG_6467.jpg
+  imageAlt: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
+    Veterans Stand Down.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -29,7 +40,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Committed to Changing Lives
   contentSections:
@@ -88,7 +99,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:
@@ -152,4 +163,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

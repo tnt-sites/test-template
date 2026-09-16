@@ -7,26 +7,35 @@ seo:
   description: Dental procedures can transform your smile. Modern affordable dental work in a fun, caring
     environment. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Procedures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Procedures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Our dental procedures can keep you and your family in excellent oral health, restore damaged
-      teeth and transform your smile into something truly beautiful. At North County Cosmetic and Implant
-      Dentistry, we understand that each of our patients' smiles is unique and so are their health concerns.
-      As such, we meet with each patient to discuss any health concerns and goals prior to recommending
-      specific dental procedures . If you live in Vista, we invite you to schedule an appointment by calling
-      (760) 940-2273. During your examination, we can look for any signs of infection or cavities; discuss
-      what you do and do not like about your smile; and determine the best way to proceed.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Procedures Vista, CA
+  subtext: Our dental procedures can keep you and your family in excellent oral health, restore damaged
+    teeth and transform your smile into something truly beautiful. At North County Cosmetic and Implant
+    Dentistry, we understand that each of our patients' smiles is unique and so are their health concerns.
+    As such, we meet with each patient to discuss any health concerns and goals prior to recommending
+    specific dental procedures . If you live in Vista, we invite you to schedule an appointment by calling
+    (760) 940-2273. During your examination, we can look for any signs of infection or cavities; discuss
+    what you do and do not like about your smile; and determine the best way to proceed.
+  imageSource: /src/assets/images/wp/dental-procedures.jpg
+  imageAlt: Dental Procedures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Available Options for Dental Care
   contentSections:
@@ -168,7 +177,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -197,7 +206,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -256,4 +265,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

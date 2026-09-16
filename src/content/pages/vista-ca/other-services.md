@@ -7,18 +7,29 @@ seo:
   description: Modern dentistry that is affordable in a fun, caring environment. Our passion is crafting
     beautiful, comfortable smiles. Learn more at North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Other Services Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Other Services Vista, CA
-    level: h1
-    size: 2xl
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Other Services Vista, CA
+  subtext: ''
+  imageSource: /src/assets/images/wp/other-services.jpg
+  imageAlt: Other Services Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: General Information
   contentSections:
@@ -107,4 +118,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

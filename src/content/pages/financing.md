@@ -144,7 +144,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Preferred Provider Organization (PPO) Dental Insurance
   contentSections:

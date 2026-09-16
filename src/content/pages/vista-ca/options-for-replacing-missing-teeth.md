@@ -6,25 +6,34 @@ seo:
   description: Explore options for replacing missing teeth at North County Cosmetic and Implant Dentistry
     in Vista, CA. Learn about dental implants, dentures, and more.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Options for Replacing Missing Teeth Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Options for Replacing Missing Teeth Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
-      teeth. If you have a tooth that has been knocked out in an accident or was removed due to decay,
-      we can perform a procedure to replace it so you can regain the full functionality and appearance
-      of your smile. If you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule
-      an appointment with our dental office. After examining you, we will make a recommendation as to
-      which procedure is likely to provide the best results for your appearance and lifestyle goals.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Options for Replacing Missing Teeth Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
+    teeth. If you have a tooth that has been knocked out in an accident or was removed due to decay, we
+    can perform a procedure to replace it so you can regain the full functionality and appearance of your
+    smile. If you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule an appointment
+    with our dental office. After examining you, we will make a recommendation as to which procedure is
+    likely to provide the best results for your appearance and lifestyle goals.
+  imageSource: /src/assets/images/wp/options-for-replacing-missing-teeth.jpg
+  imageAlt: Options for Replacing Missing Teeth Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How can I tell which missing tooth replacement options are right for me?
   contentSections:
@@ -242,7 +251,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -271,7 +280,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -342,4 +351,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

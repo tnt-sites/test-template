@@ -6,23 +6,30 @@ seo:
   description: Get same-day CEREC crowns at North County Cosmetic and Implant Dentistry in Vista, CA.
     Quick, high-quality restorations in just one appointment.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Single Visit Dental Crowns Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Single Visit Dental Crowns Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Permanent, perfect restorations in a single-visit. Schedule an appointment, you'll only need
-      one.
-  - _component: building-blocks/core-elements/text
-    text: Lorem
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Single Visit Dental Crowns Vista, CA
+  subtext: Permanent, perfect restorations in a single-visit. Schedule an appointment, you'll only need
+    one.
+  imageSource: /src/assets/images/wp/cerec-header.jpg
+  imageAlt: Single Visit Dental Crowns Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: WHAT IS CEREC®?
   contentSections:
@@ -152,4 +159,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

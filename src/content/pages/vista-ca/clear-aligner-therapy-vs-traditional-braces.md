@@ -7,25 +7,34 @@ seo:
   description: Don't want traditional braces? Looking for Clear Aligners vs Traditional Braces comparison?
     North County Cosmetic and Implant Dentistry breaks it all down
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Aligner Therapy vs Traditional Braces Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Aligner Therapy vs Traditional Braces Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are looking into orthodontics options for your teen, it is important to consider Clear
-      Aligner Therapy vs. traditional braces for teens. You should also know what both solutions look
-      like on a daily basis. Essentially, any orthodontic solution will move teeth by applying pressure.
-      This pressure has to be placed on the right teeth at the right time so that gradually, they move
-      into position. Both solutions do an excellent job. At the end of the day it really comes down to
-      lifestyle, convenience, and what your teen will feel confident wearing.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Aligner Therapy vs Traditional Braces Vista, CA
+  subtext: If you are looking into orthodontics options for your teen, it is important to consider Clear
+    Aligner Therapy vs. traditional braces for teens. You should also know what both solutions look like
+    on a daily basis. Essentially, any orthodontic solution will move teeth by applying pressure. This
+    pressure has to be placed on the right teeth at the right time so that gradually, they move into position.
+    Both solutions do an excellent job. At the end of the day it really comes down to lifestyle, convenience,
+    and what your teen will feel confident wearing.
+  imageSource: /src/assets/images/wp/invisalign-vs-traditional-braces.jpg
+  imageAlt: Clear Aligner Therapy vs Traditional Braces Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -276,7 +285,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -305,7 +314,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -364,4 +373,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

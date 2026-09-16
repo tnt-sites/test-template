@@ -6,6 +6,38 @@ seo:
   description: Restore your smile with dentures and partial dentures at North County Cosmetic and Implant
     Dentistry in Vista, CA. Custom, comfortable tooth replacements.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dentures and Partial Dentures Vista, CA
+  subtext: You have probably heard about partial and full dentures as treatments for tooth loss. If you
+    are now facing this problem and want to do something about your smile, these are great solutions.
+    Living with missing teeth can make things difficult for eating, but it can also affect your self-esteem.
+    Dentures and partial dentures are practical solutions to restore mouth function and help patients
+    enjoy smiling once again. Dentures and partial dentures are available at North County Cosmetic and
+    Implant Dentistry in Vista and the surrounding area. Our team can evaluate your condition and determine
+    which option is the right fit for you. Whether you are missing a few teeth, several teeth, or all
+    your teeth, dentures may provide the relief you have been anticipating. Because our professionals
+    have the necessary knowledge and training, you can feel at ease knowing we can set you on the path
+    to a beautiful smile.
+  imageSource: /src/assets/images/wp/dentures-and-partial-dentures.jpg
+  imageAlt: Dentures and Partial Dentures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Dentures and Partial Dentures Vista, CA
   contentSections:
@@ -42,7 +74,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Dentures Can Help Prevent Further Oral Health Issues
   contentSections:
@@ -88,7 +120,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Choosing Dentures for Tooth Replacement
   contentSections:
@@ -260,7 +292,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Common Misconceptions About Dentures
   contentSections:
@@ -372,7 +404,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -401,7 +433,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -470,4 +502,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

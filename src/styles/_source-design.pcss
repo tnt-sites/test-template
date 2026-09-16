@@ -119,6 +119,15 @@
 }
 
 @layer overrides {
+  /* The green definition/call-out panels need dark text, as on the source:
+     #79a37b is light enough that white body copy is hard to read. */
+  .section[style*="79a37b"],
+  .bg-accent,
+  [data-bg="accent"] {
+    --color-text: #1a1a1a;
+    --color-text-strong: #14290f;
+  }
+
   /*
    * Header. The source renders the logo at 143x85 in a 114px-tall band: a
    * 50px top strip (address + gold CTA pills) over a 64px nav row. The

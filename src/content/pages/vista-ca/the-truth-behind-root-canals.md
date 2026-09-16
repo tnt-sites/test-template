@@ -7,24 +7,33 @@ seo:
   description: You've heard the myths, and want to know what is fact and what is fiction. Learn the truth
     about 5 top root canal myths. Stop the pain and save your tooth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: The Truth Behind Root Canals Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The Truth Behind Root Canals Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
-      believe that professional dental care will be painful. In reality, most dental visits are not nearly
-      as painful as people fear. The truth is that the patient will feel more pain if he or she avoids
-      seeking professional treatment. Regardless, there is one procedure that people seem to fear above
-      the rest: the root canal.'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: The Truth Behind Root Canals Vista, CA
+  subtext: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
+    believe that professional dental care will be painful. In reality, most dental visits are not nearly
+    as painful as people fear. The truth is that the patient will feel more pain if he or she avoids seeking
+    professional treatment. Regardless, there is one procedure that people seem to fear above the rest:
+    the root canal.'
+  imageSource: /src/assets/images/wp/the-truth-behind-root-canals.jpg
+  imageAlt: The Truth Behind Root Canals Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The Need for a Root Canal Procedure
   contentSections:
@@ -206,7 +215,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -235,7 +244,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -296,4 +305,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

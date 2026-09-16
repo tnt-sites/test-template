@@ -6,25 +6,34 @@ seo:
   description: Learn when a tooth extraction is necessary at North County Cosmetic and Implant Dentistry
     in Vista, CA. We offer safe, comfortable extractions.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: When Is a Tooth Extraction Necessary Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: When Is a Tooth Extraction Necessary Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
-      This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
-      beneficial. We are not interested in extracting teeth unless absolutely necessary. In fact, if you
-      damage a tooth, our preferred method of treatment is to restore it using dental veneers or dental
-      crowns. There are times, however, where we do recommend visiting our dental office located at 1934
-      Via Centre Ste A Vista, CA 92081 for an extraction.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: When Is a Tooth Extraction Necessary Vista, CA
+  subtext: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
+    This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
+    beneficial. We are not interested in extracting teeth unless absolutely necessary. In fact, if you
+    damage a tooth, our preferred method of treatment is to restore it using dental veneers or dental
+    crowns. There are times, however, where we do recommend visiting our dental office located at 1934
+    Via Centre Ste A Vista, CA 92081 for an extraction.
+  imageSource: /src/assets/images/wp/when-is-tooth-extraction-necessary.jpg
+  imageAlt: When Is a Tooth Extraction Necessary Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -156,7 +165,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: The Recovery Process After a Tooth Extraction
   contentSections:
@@ -268,7 +277,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -297,7 +306,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -354,4 +363,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

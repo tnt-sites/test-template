@@ -7,27 +7,36 @@ seo:
   description: I need multiple teeth replaced, what are my options? Complete info on replacement options
     for multiple missing teeth to achieve a fully-functional smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Multiple Teeth Replacement Options Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Multiple Teeth Replacement Options Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: I Need Multiple Teeth Replaced, What Are My Options? At North County Cosmetic and Implant Dentistry,
-      we can replace your missing teeth in our Vista, CA dental office. As a general dentist, our goal
-      is to help you maintain excellent oral health so you do not lose your teeth. However, if your teeth
-      are lost due to an accident, infection, or age, then you need to replace them right away in order
-      to limit resorption. Within the first year after tooth loss, your jawbone can lose up to 25 percent
-      of its density in that particular area. This can negatively impact the health of your jaw and remaining
-      teeth, in addition to giving you a sunken and aged appearance. Fortunately, this is something we
-      can help prevent in our dental office.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Multiple Teeth Replacement Options Vista, CA
+  subtext: I Need Multiple Teeth Replaced, What Are My Options? At North County Cosmetic and Implant Dentistry,
+    we can replace your missing teeth in our Vista, CA dental office. As a general dentist, our goal is
+    to help you maintain excellent oral health so you do not lose your teeth. However, if your teeth are
+    lost due to an accident, infection, or age, then you need to replace them right away in order to limit
+    resorption. Within the first year after tooth loss, your jawbone can lose up to 25 percent of its
+    density in that particular area. This can negatively impact the health of your jaw and remaining teeth,
+    in addition to giving you a sunken and aged appearance. Fortunately, this is something we can help
+    prevent in our dental office.
+  imageSource: /src/assets/images/wp/multiple-teeth-replacement-options.jpg
+  imageAlt: Multiple Teeth Replacement Options Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Schedule a Consultation
   contentSections:
@@ -229,7 +238,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -258,7 +267,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -329,4 +338,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

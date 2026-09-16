@@ -7,26 +7,34 @@ seo:
   description: Questions about daily cleaning, brushing, soaking, rising, and general handling of dentures
     and partials? Learn a few tips on how to maintain your dentures and keep that complete, gorgeous smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Denture Care Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Denture Care Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Proper denture care depends on the type of dentures and the patient's overall oral health. Without
-      proper care, the dentures will not last nearly as long as they can. With the proper care, patients
-      will not need to worry about their dentures so much. However, dentures need specific care that differs
-      from typical brushing and flossing.
-  - _component: building-blocks/core-elements/text
-    text: On this page, we break down the various form of denture care and the steps one will have to
-      take. To begin, dentures need daily cleaning and care, just like teeth.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Denture Care Vista, CA
+  subtext: Proper denture care depends on the type of dentures and the patient's overall oral health.
+    Without proper care, the dentures will not last nearly as long as they can. With the proper care,
+    patients will not need to worry about their dentures so much. However, dentures need specific care
+    that differs from typical brushing and flossing. On this page, we break down the various form of denture
+    care and the steps one will have to take. To begin, dentures need daily cleaning and care, just like
+    teeth.
+  imageSource: /src/assets/images/wp/denture-care.jpg
+  imageAlt: Denture Care Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -50,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Taking care of dentures
   contentSections:
@@ -199,7 +207,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -228,7 +236,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -297,4 +305,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

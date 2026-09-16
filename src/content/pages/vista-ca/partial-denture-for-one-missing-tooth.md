@@ -7,24 +7,33 @@ seo:
   description: Missing a tooth - now what? Removable partial dentures are an option to get a complete,
     gorgeous smile. Learn about how removable partial dentures (RPD) can enhance your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Partial Denture for One Missing Tooth Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Partial Denture for One Missing Tooth Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are missing a tooth, don't resign yourself to the situation. There is a solution available
-      in the form of a partial denture. Partial dentures will likely become the standard tooth replacement
-      option in the near future. Though the average dentist does not perform this procedure at a high
-      frequency, it is effective and rapidly growing in popularity. Let's take a look at some of the most
-      commonly asked questions about partial dentures for a single tooth.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Partial Denture for One Missing Tooth Vista, CA
+  subtext: If you are missing a tooth, don't resign yourself to the situation. There is a solution available
+    in the form of a partial denture. Partial dentures will likely become the standard tooth replacement
+    option in the near future. Though the average dentist does not perform this procedure at a high frequency,
+    it is effective and rapidly growing in popularity. Let's take a look at some of the most commonly
+    asked questions about partial dentures for a single tooth.
+  imageSource: /src/assets/images/wp/partial-denture-for-one-missing-tooth.jpg
+  imageAlt: Partial Denture for One Missing Tooth Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How many visits does it require?
   contentSections:
@@ -247,7 +256,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -276,7 +285,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -345,4 +354,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,6 +6,35 @@ seo:
   description: Get a custom smile makeover at North County Cosmetic and Implant Dentistry in Vista, CA.
     Veneers, whitening, and more for a stunning smile transformation.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Smile Makeover Vista, CA
+  subtext: A smile makeover involves multiple reconstructive and professional dental procedures to restore
+    and enhance various aspects of the patient's teeth and mouth. Smile makeovers are a commonly offered
+    cosmetic solution provided at North County Cosmetic and Implant Dentistry. With a smile makeover,
+    it's possible to change, restore or alter multiple aspects of a patient's mouth, including the appearance
+    and functionality of teeth. To begin the smile makeover, we will examine a patient's teeth and recommend
+    procedures that will meet the patient's wants and needs. We will then customize the treatment to the
+    patient's teeth before scheduling the appointments.
+  imageSource: /src/assets/images/wp/smile-makeover-header.jpg
+  imageAlt: Smile Makeover Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Smile Makeover Vista, CA
   contentSections:
@@ -45,7 +74,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -248,7 +277,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -277,7 +306,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -358,4 +387,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

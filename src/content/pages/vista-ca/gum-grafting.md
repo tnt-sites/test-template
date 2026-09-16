@@ -6,21 +6,30 @@ seo:
   description: Treat receding gums with gum grafting at North County Cosmetic and Implant Dentistry in
     Vista, CA. Restore gum health and improve your smile.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Gum Grafting Treat receding gums and improve your oral health.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Gum Grafting Treat receding gums and improve your oral health.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you have gum recession due to periodontitis, brushing habits, or even genetics, the dentists
-      at North County Cosmetic and Implant Dentistry can help.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Gum Grafting Treat receding gums and improve your oral health.
+  subtext: If you have gum recession due to periodontitis, brushing habits, or even genetics, the dentists
+    at North County Cosmetic and Implant Dentistry can help.
+  imageSource: /src/assets/images/wp/Gum-Grafting.jpg
+  imageAlt: Gum Grafting Treat receding gums and improve your oral health.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -30,7 +39,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Protect your teeth, gums, and bone.
   contentSections:
@@ -95,7 +104,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:
@@ -155,4 +164,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

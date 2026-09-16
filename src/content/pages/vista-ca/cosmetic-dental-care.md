@@ -7,28 +7,37 @@ seo:
   description: Cosmetic dental care can transform your smile. Reputable source with great results in Vista,
     CA. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Cosmetic Dental Care Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Cosmetic Dental Care Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
-      throughout the Vista area. If you are looking for a local dentist that can transform your smile
-      and restore your confidence, call (760) 940-2273 to schedule an appointment. We will examine your
-      teeth, take X-rays, and discuss the goals you have for your smile. These appointments are an excellent
-      opportunity for us to get to know you and to learn more about your lifestyle. The more we know,
-      the better recommendations we can make regarding what type of dental work will be in your best interest
-      to consider. Many patients do not realize that there are several ways to address even the most common
-      aesthetic and health issues. There is no one-size-fits-all answer in cosmetic dental care, but rather,
-      customized solutions for your particular needs.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Cosmetic Dental Care Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
+    throughout the Vista area. If you are looking for a local dentist that can transform your smile and
+    restore your confidence, call (760) 940-2273 to schedule an appointment. We will examine your teeth,
+    take X-rays, and discuss the goals you have for your smile. These appointments are an excellent opportunity
+    for us to get to know you and to learn more about your lifestyle. The more we know, the better recommendations
+    we can make regarding what type of dental work will be in your best interest to consider. Many patients
+    do not realize that there are several ways to address even the most common aesthetic and health issues.
+    There is no one-size-fits-all answer in cosmetic dental care, but rather, customized solutions for
+    your particular needs.
+  imageSource: /src/assets/images/wp/cosmetic-dental-care.jpg
+  imageAlt: Cosmetic Dental Care Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -49,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Here are a few such solutions that we may discuss during your consultation.
   contentSections:
@@ -235,7 +244,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -264,7 +273,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -345,4 +354,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

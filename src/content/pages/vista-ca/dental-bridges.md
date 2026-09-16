@@ -7,27 +7,36 @@ seo:
   description: Dental bridges are an affordable way to replace missing teeth. Learn about how bridges
     can get you the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Bridges Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Bridges Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are missing some of your teeth, we can replace them using a dental bridge. This is a
-      secure and permanent alternative to wearing dentures. We can work to make a dental bridge look entirely
-      natural after we place it on your teeth. We begin the procedure by taking precise measurements of
-      your teeth in our dentist office. We will also take an impression, so the dental lab has all the
-      information they need to create replacement teeth that look like your natural ones. To find out
-      if you are a good candidate for the procedure, call (760) 940-2273 and schedule a consultation.
-      At North County Cosmetic and Implant Dentistry, we offer several solutions for replacing missing
-      teeth, so if a bridge is not suited to your needs, we will recommend a different solution.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Bridges Vista, CA
+  subtext: If you are missing some of your teeth, we can replace them using a dental bridge. This is a
+    secure and permanent alternative to wearing dentures. We can work to make a dental bridge look entirely
+    natural after we place it on your teeth. We begin the procedure by taking precise measurements of
+    your teeth in our dentist office. We will also take an impression, so the dental lab has all the information
+    they need to create replacement teeth that look like your natural ones. To find out if you are a good
+    candidate for the procedure, call (760) 940-2273 and schedule a consultation. At North County Cosmetic
+    and Implant Dentistry, we offer several solutions for replacing missing teeth, so if a bridge is not
+    suited to your needs, we will recommend a different solution.
+  imageSource: /src/assets/images/wp/dental-bridges.jpg
+  imageAlt: Dental Bridges Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -49,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What is a dental bridge?
   contentSections:
@@ -243,7 +252,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -272,7 +281,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -337,4 +346,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -7,31 +7,40 @@ seo:
   description: In pain? Want it to stop? Need a tooth pulled? Learn about tooth extraction procedures
     including wisdom teeth, severe decay, infection, and to create room
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Tooth Extraction Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Tooth Extraction Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we perform
-      tooth extractions on a regular basis. We are always looking for ways to avoid an extraction by keeping
-      your oral health in good shape. We will clean your teeth on a regular basis, discuss a healthy diet
-      with you, and treat gum disease, cavities, and infections to the best of our abilities; in order
-      to keep your teeth healthy and intact. As a general dentist, we will also work to restore your tooth
-      if it has been damaged – all of which can help you to maintain your natural teeth for years to come.
-      If you are experiencing discomfort or your tooth is in need of repair, we invite you to call our
-      dental office at (760) 940-2273 to schedule an appointment. During your examination, we will let
-      you know if your tooth can be saved or if a tooth extraction is the best option for preventing the
-      spread of infection and eliminating your discomfort. In our dentist office, we will take the steps
-      necessary to ensure your comfort so that regardless of which treatment option you select, you will
-      feel relaxed during the process.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Tooth Extraction Vista, CA
+  subtext: While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we
+    perform tooth extractions on a regular basis. We are always looking for ways to avoid an extraction
+    by keeping your oral health in good shape. We will clean your teeth on a regular basis, discuss a
+    healthy diet with you, and treat gum disease, cavities, and infections to the best of our abilities;
+    in order to keep your teeth healthy and intact. As a general dentist, we will also work to restore
+    your tooth if it has been damaged – all of which can help you to maintain your natural teeth for years
+    to come. If you are experiencing discomfort or your tooth is in need of repair, we invite you to call
+    our dental office at (760) 940-2273 to schedule an appointment. During your examination, we will let
+    you know if your tooth can be saved or if a tooth extraction is the best option for preventing the
+    spread of infection and eliminating your discomfort. In our dentist office, we will take the steps
+    necessary to ensure your comfort so that regardless of which treatment option you select, you will
+    feel relaxed during the process.
+  imageSource: /src/assets/images/wp/tooth-extraction.jpg
+  imageAlt: Tooth Extraction Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -42,7 +51,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The process of having a tooth extraction
   contentSections:
@@ -224,7 +233,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -253,7 +262,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -312,4 +321,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

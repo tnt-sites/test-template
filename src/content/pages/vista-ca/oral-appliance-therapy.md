@@ -6,24 +6,32 @@ seo:
   description: Treat sleep apnea and snoring with oral appliance therapy at North County Cosmetic and
     Implant Dentistry in Vista, CA. Custom devices for better sleep
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Oral Appliance Therapy Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Oral Appliance Therapy Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: For patients who want a comfortable and convenient form of treatment for sleep apnea, oral appliances
-      offer many benefits. While CPAP therapy tends to be more common, it’s bulky and noisy and isn’t
-      the end-all for sleep apnea or snoring issues.
-  - _component: building-blocks/core-elements/text
-    text: Explore some of the reasons why you may opt for an oral appliance over a CPAP device.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Oral Appliance Therapy Vista, CA
+  subtext: For patients who want a comfortable and convenient form of treatment for sleep apnea, oral
+    appliances offer many benefits. While CPAP therapy tends to be more common, it’s bulky and noisy and
+    isn’t the end-all for sleep apnea or snoring issues. Explore some of the reasons why you may opt for
+    an oral appliance over a CPAP device.
+  imageSource: /src/assets/images/wp/Oral-Appliance-Therapy.jpg
+  imageAlt: Oral Appliance Therapy Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +42,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Your Path to a Quality Sleep Begins with Us
   contentSections:
@@ -83,7 +91,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Why Choose an Oral Appliance?
   contentSections:
@@ -160,4 +168,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

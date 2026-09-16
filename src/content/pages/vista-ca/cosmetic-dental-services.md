@@ -6,24 +6,33 @@ seo:
   description: Cosmetic dental services can transform your smile. Get the healthy, gorgeous smile you
     deserve. Reputable Vista, CA source with great results
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Cosmetic Dental Services Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Cosmetic Dental Services Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer cosmetic dental services in Vista.
-      Patients can benefit from having a single procedure or having a full smile makeover. We understand
-      that a persons' smile can transform their entire appearance, restore self-confidence, and make it
-      easier to speak clearly. Whether your goal is to improve your appearance or to improve the functionality
-      of your teeth – we can help.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Cosmetic Dental Services Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we offer cosmetic dental services in Vista.
+    Patients can benefit from having a single procedure or having a full smile makeover. We understand
+    that a persons' smile can transform their entire appearance, restore self-confidence, and make it
+    easier to speak clearly. Whether your goal is to improve your appearance or to improve the functionality
+    of your teeth – we can help.
+  imageSource: /src/assets/images/wp/cosmetic-dental-services.jpg
+  imageAlt: Cosmetic Dental Services Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Schedule a Cosmetic Dental Procedure Today
   contentSections:
@@ -177,7 +186,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -206,7 +215,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -289,4 +298,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,24 +6,29 @@ seo:
   description: North County Cosmetic and Implant Dentistry offers dental implants in San Diego. For complete
     oral restoration, contact us now.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Transform Your Smile. Transform Your Life.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Transform Your Smile. Transform Your Life.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Dental implants in San Diego, CA.
-  - _component: building-blocks/core-elements/heading
-    text: Restore Confidence | Love Your Life | Be Your Best Self
-    level: h3
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Transform Your Smile. Transform Your Life.
+  subtext: ''
+  imageSource: /src/assets/images/wp/Couple-on-beach.jpg
+  imageAlt: Transform Your Smile. Transform Your Life.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
     size: md
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: A New YOU is Waiting
   contentSections:
@@ -39,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Real Relationships. Real Results.
   contentSections:
@@ -137,7 +142,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Committed to Your Better, Healthier Life
   contentSections:
@@ -179,7 +184,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: No More Dentures! with San Diego dentist, Christopher Henninger, DMD.
   contentSections:
@@ -219,5 +224,12 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
+  backgroundColor: surface
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
   backgroundColor: surface
 ---

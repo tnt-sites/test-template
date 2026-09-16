@@ -6,31 +6,38 @@ seo:
   description: Explore comprehensive dental services at North County Cosmetic and Implant Dentistry in
     Vista, CA. From checkups to implants, we care for your smile.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Services Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Services Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: We offer comprehensive dental services for families and patients. We understand that you have
-      many options in dental care and aim to provide you with the highest quality of care possible. By
-      leveraging modern dental technology and having a highly trained team, we can ensure that you and
-      your family stay in excellent oral health. We practice gentle dentistry and will ensure that your
-      experience is positive and that you stay comfortable during your dental treatments.
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer flexible appointment times since we
-      understand how busy life can be. Whether you are a busy professional or a mom on the go, we can
-      work with you to arrange a time that is convenient for your schedule. If you have multiple family
-      members that need to have their teeth cleaned, let us know. We can try to arrange everyone's appointment
-      for around the same time so that you only have to visit the dentist twice a year, instead of multiple
-      times.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Services Vista, CA
+  subtext: We offer comprehensive dental services for families and patients. We understand that you have
+    many options in dental care and aim to provide you with the highest quality of care possible. By leveraging
+    modern dental technology and having a highly trained team, we can ensure that you and your family
+    stay in excellent oral health. We practice gentle dentistry and will ensure that your experience is
+    positive and that you stay comfortable during your dental treatments. At North County Cosmetic and
+    Implant Dentistry, we offer flexible appointment times since we understand how busy life can be. Whether
+    you are a busy professional or a mom on the go, we can work with you to arrange a time that is convenient
+    for your schedule. If you have multiple family members that need to have their teeth cleaned, let
+    us know. We can try to arrange everyone's appointment for around the same time so that you only have
+    to visit the dentist twice a year, instead of multiple times.
+  imageSource: /src/assets/images/wp/dental-services.jpg
+  imageAlt: Dental Services Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -40,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Our Dental Services
   contentSections:
@@ -168,7 +175,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -197,7 +204,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -240,4 +247,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

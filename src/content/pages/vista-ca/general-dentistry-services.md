@@ -7,28 +7,36 @@ seo:
   description: Healthier teeth is a happier you. Primary dental care provider serving the Vista, CA area.
     Affordable general dentistry services can transform your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: General Dentistry Services Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: General Dentistry Services Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
-      with our Vista dental office. We focus on providing preventative dental care, performing a variety
-      of dental procedures to keep patients in excellent oral health. By providing comprehensive care,
-      we can ensure your teeth remain as healthy as possible and that if anything does develop, we can
-      treat the condition as soon as possible. Whether you are concerned about your bad breath, have a
-      toothache, or want to improve the appearance of your smile, we can help. At North County Cosmetic
-      and Implant Dentistry, our team is warm and friendly. We will take the time to understand your oral
-      health concerns and provide you with the information and services you need to maintain lifelong
-      oral health.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: General Dentistry Services Vista, CA
+  subtext: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
+    with our Vista dental office. We focus on providing preventative dental care, performing a variety
+    of dental procedures to keep patients in excellent oral health. By providing comprehensive care, we
+    can ensure your teeth remain as healthy as possible and that if anything does develop, we can treat
+    the condition as soon as possible. Whether you are concerned about your bad breath, have a toothache,
+    or want to improve the appearance of your smile, we can help. At North County Cosmetic and Implant
+    Dentistry, our team is warm and friendly. We will take the time to understand your oral health concerns
+    and provide you with the information and services you need to maintain lifelong oral health.
+  imageSource: /src/assets/images/wp/general-dentistry-services.jpg
+  imageAlt: General Dentistry Services Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: 'Our general dentistry services include:'
   contentSections:
@@ -255,7 +263,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -284,7 +292,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -341,4 +349,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

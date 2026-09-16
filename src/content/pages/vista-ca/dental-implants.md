@@ -6,22 +6,31 @@ seo:
   description: North County Cosmetic and Implant Dentistry offers dental implants for complete oral restoration,
     giving you the smile you've always wanted.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Get Back to Your Life with Dental Implants
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Get Back to Your Life with Dental Implants
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: From single tooth replacements to an entire arch of teeth, North County Cosmetic and Implant
-      Dentistry is here to help with cutting edge technology and customized treatment plans so you can
-      enjoy your favorite foods, improve your health, and love life again.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Get Back to Your Life with Dental Implants
+  subtext: From single tooth replacements to an entire arch of teeth, North County Cosmetic and Implant
+    Dentistry is here to help with cutting edge technology and customized treatment plans so you can enjoy
+    your favorite foods, improve your health, and love life again.
+  imageSource: /src/assets/images/wp/AdobeStock_236124705.jpg
+  imageAlt: Get Back to Your Life with Dental Implants
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Become the better, healthier version of yourself
   contentSections:
@@ -50,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: No More Dentures! with San Diego dentist Christopher Henninger, DMD
   contentSections:
@@ -241,4 +250,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

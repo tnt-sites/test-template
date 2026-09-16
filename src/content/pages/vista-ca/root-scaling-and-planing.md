@@ -7,26 +7,35 @@ seo:
   description: Preserve your teeth and gums. North County Cosmetic and Implant Dentistry focuses on gentle
     gum treatments including meticulous cleaning of root surfaces to remove dental plaque
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Root Scaling and Planing Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Root Scaling and Planing Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you have gum disease, you may need a root scaling and planing procedure to help get rid of
-      it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
-      every treatment we can to prevent gum disease and other painful conditions. At North County Cosmetic
-      and Implant Dentistry, we recommend that you visit our dental office twice per year so we can do
-      just that. We want to remove plaque and tartar before they can cause gum disease, gum recession,
-      and the need for this procedure. However, if you do need a root scaling and planing procedure, we
-      can help and we can ensure that you are as comfortable as possible during it.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Root Scaling and Planing Vista, CA
+  subtext: If you have gum disease, you may need a root scaling and planing procedure to help get rid
+    of it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
+    every treatment we can to prevent gum disease and other painful conditions. At North County Cosmetic
+    and Implant Dentistry, we recommend that you visit our dental office twice per year so we can do just
+    that. We want to remove plaque and tartar before they can cause gum disease, gum recession, and the
+    need for this procedure. However, if you do need a root scaling and planing procedure, we can help
+    and we can ensure that you are as comfortable as possible during it.
+  imageSource: /src/assets/images/wp/root-scaling-and-planing.jpg
+  imageAlt: Root Scaling and Planing Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -270,7 +279,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -299,7 +308,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -358,4 +367,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

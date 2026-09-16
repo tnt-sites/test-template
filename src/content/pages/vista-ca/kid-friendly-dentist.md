@@ -6,6 +6,35 @@ seo:
   description: Compassionate children's dentistry at North County Cosmetic and Implant Dentistry in Vista,
     CA. Gentle care for kids of all ages.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Kid Friendly Dentist Vista, CA
+  subtext: A kid friendly dentist creates a healthy and comfortable professional environment, providing
+    the age-appropriate dental treatment a child needs for healthy teeth. North County Cosmetic and Implant
+    Dentistry is a kid friendly dentist office in the greater Vista area. As a kid friendly dentist, we
+    strive to create a comfortable and welcoming environment to help kids have a positive experience with
+    visiting the dentist. It is no surprise that many children, and adults, are not always fond of dental
+    treatment. However, by creating a positive experience with the dentist at a young age, children will
+    have a more positive view of oral hygiene as a whole.
+  imageSource: /src/assets/images/wp/kid-friendly-dentist.jpg
+  imageAlt: Kid Friendly Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Kid Friendly Dentist Vista, CA
   contentSections:
@@ -45,7 +74,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What You Should Know
   contentSections:
@@ -221,7 +250,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -250,7 +279,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -319,4 +348,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

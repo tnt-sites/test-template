@@ -6,22 +6,30 @@ seo:
   description: Curious about the cost of dental implants? North County Cosmetic and Implant Dentistry
     offers affordable options and works with insurance to fit your budget
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: The Cost of Dental Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: The Cost of Dental Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: There are many factors that influence the cost of dental implants in the San Diego Area.
-  - _component: building-blocks/core-elements/text
-    text: There are also many options to choose from based upon your dental needs and your budget.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: The Cost of Dental Implants Vista, CA
+  subtext: There are many factors that influence the cost of dental implants in the San Diego Area. There
+    are also many options to choose from based upon your dental needs and your budget.
+  imageSource: /src/assets/images/wp/The-Cost-of-Dental-Implants-Header.jpg
+  imageAlt: The Cost of Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +40,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -101,7 +109,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Dental Implants Mean Long-Term Savings
   contentSections:
@@ -139,4 +147,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

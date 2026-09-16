@@ -6,29 +6,38 @@ seo:
   description: Learn the differences between clear aligner therapy and braces at North County Cosmetic
     and Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Which is Better Clear Aligner Therapy or Braces Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Which is Better Clear Aligner Therapy or Braces Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we understand the important role that orthodontics
-      can play in creating a healthy and beautiful smile. If you or your teen has crooked teeth, overly
-      crowded teeth, an underbite or an overbite, correcting these challenges can prolong the lifespan
-      of natural teeth by helping them to remain in good condition. Both Clear Aligner Therapy and braces
-      can do so by applying pressure to the teeth or by working in combination with other orthodontic
-      measures like spacers. When determining which is better, Clear Aligner Therapy or braces, you must
-      really evaluate your lifestyle and determine which solution will work within it. From a day-to-day
-      perspective, patients prefer Clear Aligner Therapy due to the flexibility that it provides. If you
-      live in the Vista area, we encourage you to schedule an examination so that we can determine the
-      best way to proceed with straightening your teeth. You can do so by calling (760) 940-2273.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Which is Better Clear Aligner Therapy or Braces Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we understand the important role that orthodontics
+    can play in creating a healthy and beautiful smile. If you or your teen has crooked teeth, overly
+    crowded teeth, an underbite or an overbite, correcting these challenges can prolong the lifespan of
+    natural teeth by helping them to remain in good condition. Both Clear Aligner Therapy and braces can
+    do so by applying pressure to the teeth or by working in combination with other orthodontic measures
+    like spacers. When determining which is better, Clear Aligner Therapy or braces, you must really evaluate
+    your lifestyle and determine which solution will work within it. From a day-to-day perspective, patients
+    prefer Clear Aligner Therapy due to the flexibility that it provides. If you live in the Vista area,
+    we encourage you to schedule an examination so that we can determine the best way to proceed with
+    straightening your teeth. You can do so by calling (760) 940-2273.
+  imageSource: /src/assets/images/wp/which-is-better-clear-aligner-therpy-or-braces.jpg
+  imageAlt: Which is Better Clear Aligner Therapy or Braces Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Can Clear Aligner Therapy work as well as braces?
   contentSections:
@@ -235,7 +244,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -264,7 +273,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -323,4 +332,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

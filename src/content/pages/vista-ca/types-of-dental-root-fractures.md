@@ -7,24 +7,33 @@ seo:
   description: Can a fractured tooth root heal itself? Tenderness? Swelling? Inconsistent or erratic pain?
     Learn how we can help stop the pain and potentially save your tooth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Types of Dental Root Fractures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Types of Dental Root Fractures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Contrary to what some people may assume, there are multiple types of fractures for the roots
-      of teeth. The part of the teeth that people brush and use to chew food or speak is known as the
-      crown. The crown consists of the outer shell known as the enamel and is what most people refer to
-      when they mention anything about the teeth. However, the teeth have roots that actually go deeper
-      into the gums and jawbone.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Types of Dental Root Fractures Vista, CA
+  subtext: Contrary to what some people may assume, there are multiple types of fractures for the roots
+    of teeth. The part of the teeth that people brush and use to chew food or speak is known as the crown.
+    The crown consists of the outer shell known as the enamel and is what most people refer to when they
+    mention anything about the teeth. However, the teeth have roots that actually go deeper into the gums
+    and jawbone.
+  imageSource: /src/assets/images/wp/types-of-dental-root-fractures.jpg
+  imageAlt: Types of Dental Root Fractures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Understanding the Layers of Teeth
   contentSections:
@@ -250,7 +259,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -279,7 +288,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -340,4 +349,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

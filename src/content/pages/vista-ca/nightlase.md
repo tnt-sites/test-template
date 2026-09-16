@@ -6,25 +6,33 @@ seo:
   description: North County Cosmetic and Implant Dentistry in Vista, CA offers Nightlase®, a non-invasive
     laser treatment for sleep apnea and snoring.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Nightlase® Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Nightlase® Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Do you suffer from the effects of sleep apnea, such as waking up groggy with little to no energy,
-      snoring that disrupts you and your partner’s sleep, and frustration from not getting a good night’s
-      rest? Dr. Christopher Henninger has the solution.
-  - _component: building-blocks/core-elements/text
-    text: Our team is proud to use the most up-to-date technology to give our patients the best care possible.
-      With the Fotona Lightwalker, we can treat your sleep apnea in a way that’s safe, simple and effective
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Nightlase® Vista, CA
+  subtext: Do you suffer from the effects of sleep apnea, such as waking up groggy with little to no energy,
+    snoring that disrupts you and your partner’s sleep, and frustration from not getting a good night’s
+    rest? Dr. Christopher Henninger has the solution. Our team is proud to use the most up-to-date technology
+    to give our patients the best care possible. With the Fotona Lightwalker, we can treat your sleep
+    apnea in a way that’s safe, simple and effective
+  imageSource: /src/assets/images/wp/Nightlase.jpg
+  imageAlt: Nightlase® Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +42,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: No Surgery, No CPAP, No More Snoring
   contentSections:
@@ -94,7 +102,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:
@@ -149,4 +157,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -7,26 +7,35 @@ seo:
   description: Simple tips and strategies to help with post-op care for dental implants from your reputable
     team at North County Cosmetic and Implant Dentistry in Vista, CA
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Post-Op Care for Dental Implants Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Post-Op Care for Dental Implants Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
-      post-op care for dental implants. This is the most durable and natural-looking way to replace your
-      missing teeth, but it requires oral surgery, meaning there is a recovery process that must be taken
-      into consideration. When you visit our Vista, CA dental office, we can conduct an examination, take
-      X-rays, and let you know what to expect from the implants procedure. This also includes what to
-      expect during your recovery process. For more information, we encourage you to call (760) 940-2273
-      and schedule an appointment with Dr. Henninger. In the meantime, here is what you should know.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Post-Op Care for Dental Implants Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
+    post-op care for dental implants. This is the most durable and natural-looking way to replace your
+    missing teeth, but it requires oral surgery, meaning there is a recovery process that must be taken
+    into consideration. When you visit our Vista, CA dental office, we can conduct an examination, take
+    X-rays, and let you know what to expect from the implants procedure. This also includes what to expect
+    during your recovery process. For more information, we encourage you to call (760) 940-2273 and schedule
+    an appointment with Dr. Henninger. In the meantime, here is what you should know.
+  imageSource: /src/assets/images/wp/postop-care-for-dental-implants.jpg
+  imageAlt: Post-Op Care for Dental Implants Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -49,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What happens before the implant procedure?
   contentSections:
@@ -282,7 +291,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -311,7 +320,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -382,4 +391,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

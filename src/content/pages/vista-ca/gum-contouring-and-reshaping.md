@@ -7,26 +7,35 @@ seo:
   description: What can gum sculpting do for your smile? Sometimes, your teeth aren't the problem with
     your smile. See how a gum contouring treatment can help you
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: What Is Gum Contouring & Reshaping Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: What Is Gum Contouring & Reshaping Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with
-      the appearance or shape of their gums. While most people think of things like teeth whitening when
-      considering how to improve their smile, the appearance of the gums also makes a significant impact.
-      If you feel that yours are too large or have receded and are too small, call (760) 940-2273 and
-      schedule an appointment with our dental office. We can examine you, make recommendations, and let
-      you know whether we can assist you or if you should see a specialist. In the meantime, here are
-      a few frequently asked questions about gum contouring and our answers to them.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: What Is Gum Contouring & Reshaping Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied
+    with the appearance or shape of their gums. While most people think of things like teeth whitening
+    when considering how to improve their smile, the appearance of the gums also makes a significant impact.
+    If you feel that yours are too large or have receded and are too small, call (760) 940-2273 and schedule
+    an appointment with our dental office. We can examine you, make recommendations, and let you know
+    whether we can assist you or if you should see a specialist. In the meantime, here are a few frequently
+    asked questions about gum contouring and our answers to them.
+  imageSource: /src/assets/images/wp/gum-contouring-and-reshaping.jpg
+  imageAlt: What Is Gum Contouring & Reshaping Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What is gum contouring?
   contentSections:
@@ -233,7 +242,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -262,7 +271,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -343,4 +352,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -7,25 +7,34 @@ seo:
   description: Loose or wobbly dentures? Dentures will occasionally need to be repaired, relined, or adjusted
     to ensure that they fit well and work properly. We can help with denture adjustments and repairs
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Denture Adjustments and Repairs Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Denture Adjustments and Repairs Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: While we customize dentures to fit the patient‘s jaw and not cause irritation, the jaw may change
-      shape over time. Resorption is the process in which the body leaches calcium from the bone structure
-      underneath the jaw once there are no teeth to stimulate the jawbone. Since there is no stimulation,
-      the body takes the calcium and distributes it to other areas of the body over time. Due to this
-      process, the jawbone recedes and the dentures may not fit as well as before. With this in mind,
-      we can provide continued maintenance of the dentures.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Denture Adjustments and Repairs Vista, CA
+  subtext: While we customize dentures to fit the patient‘s jaw and not cause irritation, the jaw may
+    change shape over time. Resorption is the process in which the body leaches calcium from the bone
+    structure underneath the jaw once there are no teeth to stimulate the jawbone. Since there is no stimulation,
+    the body takes the calcium and distributes it to other areas of the body over time. Due to this process,
+    the jawbone recedes and the dentures may not fit as well as before. With this in mind, we can provide
+    continued maintenance of the dentures.
+  imageSource: /src/assets/images/wp/denture-adjustments.jpg
+  imageAlt: Denture Adjustments and Repairs Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -47,7 +56,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Keep Up Proper Denture Care
   contentSections:
@@ -186,7 +195,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -215,7 +224,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -284,4 +293,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,6 +6,35 @@ seo:
   description: North County Cosmetic and Implant Dentistry in Vista, CA offers advanced sleep apnea treatment
     options to improve your sleep and overall health.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Sleep Apnea Vista, CA
+  subtext: Sleep apnea is a common disorder affecting millions of people that impacts their quality of
+    sleep and life. During sleep, the muscles in the throat relax, which narrows the airway and impedes
+    on a sufferer’s ability to breathe. This is known as the most common form– obstructive sleep apnea
+    (OSA). During a sleep apnea event, you may stop breathing for several seconds to several minutes at
+    a time and this can occur multiple times throughout the night. Each time this occurs, your brain will
+    realize you’re not getting oxygen to breathe, so it briefly alerts the body to wake up and gasp for
+    air.
+  imageSource: /src/assets/images/wp/somnodent.jpg
+  imageAlt: Sleep Apnea Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Sleep Apnea Vista, CA
   contentSections:
@@ -108,7 +137,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Treating Sleep Apnea with Dr. Henninger
   contentSections:
@@ -206,7 +235,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Contact Us
   contentSections:
@@ -223,4 +252,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

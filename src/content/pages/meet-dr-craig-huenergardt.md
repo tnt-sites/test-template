@@ -16,7 +16,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

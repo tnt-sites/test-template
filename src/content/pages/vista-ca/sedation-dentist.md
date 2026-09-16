@@ -6,26 +6,34 @@ seo:
   description: Overcome dental anxiety with sedation dentistry at North County Cosmetic and Implant Dentistry
     in Vista, CA. Relax and enjoy stress-free dental care.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Sedation Dentist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Sedation Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you need to have dental work completed, we recommend visiting a sedation dentist. At North
-      County Cosmetic and Implant Dentistry, we offer sedation dentistry for patients living in and around
-      the Vista area. We understand that for millions of adults, visiting the dentist can be an overwhelming
-      or frightening experience due to dental anxiety. This common condition typically starts with a negative
-      experience or becoming fearful of the general idea of dentistry. While common, you do not have to
-      be concerned about visiting our dentist office because we work to ensure your comfort the entire
-      time.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Sedation Dentist Vista, CA
+  subtext: If you need to have dental work completed, we recommend visiting a sedation dentist. At North
+    County Cosmetic and Implant Dentistry, we offer sedation dentistry for patients living in and around
+    the Vista area. We understand that for millions of adults, visiting the dentist can be an overwhelming
+    or frightening experience due to dental anxiety. This common condition typically starts with a negative
+    experience or becoming fearful of the general idea of dentistry. While common, you do not have to
+    be concerned about visiting our dentist office because we work to ensure your comfort the entire time.
+  imageSource: /src/assets/images/wp/sedation-dentist.jpg
+  imageAlt: Sedation Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -47,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What You Need to Know About Sedation Dentistry
   contentSections:
@@ -228,7 +236,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -257,7 +265,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -320,4 +328,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

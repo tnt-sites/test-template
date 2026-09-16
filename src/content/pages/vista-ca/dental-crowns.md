@@ -6,6 +6,34 @@ seo:
   description: Restore damaged or missing teeth with crowns and bridges at North County Cosmetic and Implant
     Dentistry in Vista, CA. Durable, natural-looking solutions.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Crowns Vista, CA
+  subtext: Dental crowns are caps that restore the shape and size of teeth after they have been damaged,
+    and offer protection from further damage. Dental crowns are a great option for restoring damaged teeth
+    and are a standard procedure offered at North County Cosmetic and Implant Dentistry. When a tooth
+    is damaged, there is always hope that it can heal on its own. Unfortunately, teeth do not heal or
+    restore damaged enamel on their surface. However, we can help to protect and restore a tooth with
+    a dental crown.
+  imageSource: /src/assets/images/wp/dental-crowns-header.jpg
+  imageAlt: Dental Crowns Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Dental Crowns Vista, CA
   contentSections:
@@ -43,7 +71,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -54,7 +82,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What are dental crowns?
   contentSections:
@@ -244,7 +272,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -273,7 +301,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -332,4 +360,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

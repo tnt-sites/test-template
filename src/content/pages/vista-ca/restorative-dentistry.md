@@ -7,28 +7,37 @@ seo:
   description: Accident? Neglect? Enhancement? Reputable cosmetic dentist in Vista offers the latest in
     restoration dentistry treatments and technologies to help restore your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Restorative Dentistry Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Restorative Dentistry Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding
-      how essential your teeth are to the overall health of your mouth, jawbone, and body, we seek to
-      restore and preserve your teeth whenever possible. If you live in Vista, CA and damage your tooth,
-      we encourage you to call our office at (760) 940-2273. We will examine you and determine the best
-      way to save your natural tooth and prevent it from needing to be pulled. Using the latest in dental
-      technology, this is possible if you visit our office quickly and don't delay. The more extensive
-      the damage is, or the more infected your tooth becomes, the more challenging it can be to save it,
-      making it imperative that you seek us out quickly. Our team is friendly and accommodating, and we
-      will do whatever we can to get your appointment scheduled for a time that is convenient for you.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Restorative Dentistry Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding
+    how essential your teeth are to the overall health of your mouth, jawbone, and body, we seek to restore
+    and preserve your teeth whenever possible. If you live in Vista, CA and damage your tooth, we encourage
+    you to call our office at (760) 940-2273. We will examine you and determine the best way to save your
+    natural tooth and prevent it from needing to be pulled. Using the latest in dental technology, this
+    is possible if you visit our office quickly and don't delay. The more extensive the damage is, or
+    the more infected your tooth becomes, the more challenging it can be to save it, making it imperative
+    that you seek us out quickly. Our team is friendly and accommodating, and we will do whatever we can
+    to get your appointment scheduled for a time that is convenient for you.
+  imageSource: /src/assets/images/wp/restorative-dentistry.jpg
+  imageAlt: Restorative Dentistry Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -50,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Restorative Dentistry for Kids
   contentSections:
@@ -265,7 +274,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -294,7 +303,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -359,4 +368,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

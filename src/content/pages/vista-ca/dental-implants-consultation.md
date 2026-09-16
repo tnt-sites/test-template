@@ -7,26 +7,35 @@ seo:
   description: Curious about dental implants? Have questions? Get them all answered. Dental implants provide
     the best long term results for replacing missing teeth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Questions to Ask at Your Dental Implants Consultation Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Questions to Ask at Your Dental Implants Consultation Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
-      to tooth loss that can restore both the appearance and function of our patients' smiles. If you
-      have lost a tooth due to an accident, infection, or age, we encourage you to call (760) 940-2273
-      and schedule an appointment with our dental office. We will be happy to answer any questions that
-      you have after completing an examination and taking X-rays. Here are some questions you should ask
-      so that you can become comfortable with the procedure and be confident in the dentist that you have
-      chosen to work with.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Questions to Ask at Your Dental Implants Consultation Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
+    to tooth loss that can restore both the appearance and function of our patients' smiles. If you have
+    lost a tooth due to an accident, infection, or age, we encourage you to call (760) 940-2273 and schedule
+    an appointment with our dental office. We will be happy to answer any questions that you have after
+    completing an examination and taking X-rays. Here are some questions you should ask so that you can
+    become comfortable with the procedure and be confident in the dentist that you have chosen to work
+    with.
+  imageSource: /src/assets/images/wp/dental-implants-consultation.jpg
+  imageAlt: Questions to Ask at Your Dental Implants Consultation Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -37,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What type of experience do you have to make the process go smoothly?
   contentSections:
@@ -269,7 +278,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -298,7 +307,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -369,4 +378,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

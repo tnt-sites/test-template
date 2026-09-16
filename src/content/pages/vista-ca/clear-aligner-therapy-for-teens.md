@@ -7,30 +7,37 @@ seo:
   description: Clear Aligners for teens are the virtually invisible alternative to metal braces. Get your
     teen the smile they always wanted clear braces
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Aligner Therapy for Teens Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Aligner Therapy for Teens Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so
-      that you can straighten your teeth without anyone noticing. If you want to improve your appearance,
-      this is an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there
-      are several things that you should know.
-  - _component: building-blocks/core-elements/text
-    text: Metal braces are a reliable solution for straightening your teeth that have been used by people
-      for decades. In fact, your parents may have used them when they were teenagers. While they work
-      well, the technology is similar in that you still need to have a metal bracket placed on each tooth
-      with a wire threaded between them and secured with rubber bands. Some kids like how they can pick
-      out fun rubber band colors to match their mood or a holiday. If that is not your idea of fun, metal
-      braces may not be for you.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Aligner Therapy for Teens Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so
+    that you can straighten your teeth without anyone noticing. If you want to improve your appearance,
+    this is an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there are
+    several things that you should know. Metal braces are a reliable solution for straightening your teeth
+    that have been used by people for decades. In fact, your parents may have used them when they were
+    teenagers. While they work well, the technology is similar in that you still need to have a metal
+    bracket placed on each tooth with a wire threaded between them and secured with rubber bands. Some
+    kids like how they can pick out fun rubber band colors to match their mood or a holiday. If that is
+    not your idea of fun, metal braces may not be for you.
+  imageSource: /src/assets/images/wp/invisalign-for-teens.jpg
+  imageAlt: Clear Aligner Therapy for Teens Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -41,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -52,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Clear Aligner Therapy Vs. Clear Braces
   contentSections:
@@ -251,7 +258,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -280,7 +287,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -339,4 +346,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

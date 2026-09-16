@@ -6,23 +6,32 @@ seo:
   description: Manage gum disease with Perio Protect at North County Cosmetic and Implant Dentistry in
     Vista, CA. Gentle, effective treatment for healthier gums.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Fight Gum Disease with Perio Protect Prevent and treat periodontitis the simple, non-invasive
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Fight Gum Disease with Perio Protect Prevent and treat periodontitis the simple, non-invasive
     way.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Fight Gum Disease with Perio Protect Prevent and treat periodontitis the simple, non-invasive
-      way.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: There’s more to gum disease than just bleeding gums or bad breath. Harmful bacteria can enter
-      your bloodstream through your gums, putting your entire body at risk for systemic and chronic disease.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+  subtext: There’s more to gum disease than just bleeding gums or bad breath. Harmful bacteria can enter
+    your bloodstream through your gums, putting your entire body at risk for systemic and chronic disease.
+  imageSource: /src/assets/images/wp/D2-Product-Environmental-1857.jpg
+  imageAlt: Fight Gum Disease with Perio Protect Prevent and treat periodontitis the simple, non-invasive
+    way.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Perio Protect helps heal your gums in minutes a day.
   contentSections:
@@ -51,7 +60,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Safeguard your health with simple tray therapy
   contentSections:
@@ -120,4 +129,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

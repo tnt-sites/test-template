@@ -7,24 +7,33 @@ seo:
   description: Replace missing teeth and restore your healthy, gorgeous smile with help from an implant
     dentist. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Implant Dentist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Implant Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
-      your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
-      tooth loss, we encourage you to call (760) 940-2273 and schedule an appointment with our Vista,
-      CA dental office to determine if you are a good candidate for this procedure. In the meantime, here
-      are some questions that are commonly asked about dental implants.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Implant Dentist Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
+    your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
+    tooth loss, we encourage you to call (760) 940-2273 and schedule an appointment with our Vista, CA
+    dental office to determine if you are a good candidate for this procedure. In the meantime, here are
+    some questions that are commonly asked about dental implants.
+  imageSource: /src/assets/images/wp/implant-dentist.jpg
+  imageAlt: Implant Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why are implants better than dentures or dental bridges?
   contentSections:
@@ -241,7 +250,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -270,7 +279,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -343,4 +352,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

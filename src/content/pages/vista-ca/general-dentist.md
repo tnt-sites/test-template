@@ -6,31 +6,40 @@ seo:
   description: Primary dental care provider for the whole family. Modern dentistry in a fun, caring environment.
     General Dentist North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: General Dentist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: General Dentist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
-      health. Your teeth and gums impact the health of the entire body. If you don't take care of them,
-      you can get sick more often and increase your risk for diseases. Things like cavities, gum disease,
-      and tooth decay can cause incredible pain that makes it difficult to enjoy life, let alone your
-      favorite foods. At North County Cosmetic and Implant Dentistry, we understand the importance of
-      maintaining good oral health and provide general dentistry care to help our patients live life fully.
-      Taking simple steps like getting your teeth cleaned regularly, fixing cavities, and having regular
-      dental examinations can prevent gum disease and additional dental health problems. Our highly trained
-      team provides preventative care and general dentistry services for patients of all ages. Whether
-      a child getting their teeth cleaned for the first time, a patient suffering from tooth sensitivity,
-      or someone needing a major dental procedure, the highly trained team at North County Cosmetic and
-      Implant Dentistry will provide excellent dental care.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: General Dentist Vista, CA
+  subtext: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
+    health. Your teeth and gums impact the health of the entire body. If you don't take care of them,
+    you can get sick more often and increase your risk for diseases. Things like cavities, gum disease,
+    and tooth decay can cause incredible pain that makes it difficult to enjoy life, let alone your favorite
+    foods. At North County Cosmetic and Implant Dentistry, we understand the importance of maintaining
+    good oral health and provide general dentistry care to help our patients live life fully. Taking simple
+    steps like getting your teeth cleaned regularly, fixing cavities, and having regular dental examinations
+    can prevent gum disease and additional dental health problems. Our highly trained team provides preventative
+    care and general dentistry services for patients of all ages. Whether a child getting their teeth
+    cleaned for the first time, a patient suffering from tooth sensitivity, or someone needing a major
+    dental procedure, the highly trained team at North County Cosmetic and Implant Dentistry will provide
+    excellent dental care.
+  imageSource: /src/assets/images/wp/general-dentist.jpg
+  imageAlt: General Dentist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -41,7 +50,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Who Benefits From Our General Dentist Services
   contentSections:
@@ -230,7 +239,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -259,7 +268,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -322,4 +331,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

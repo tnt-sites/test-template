@@ -6,29 +6,38 @@ seo:
   description: One-visit dental restoration. We know your time is priceless. Same day dentistry procedures
     to get a healthy, gorgeous smile in one visit
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Same Day Dentistry Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Same Day Dentistry Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are looking for solutions to any esthetic challenges with your smile or any oral health
-      problems, call our office for same day dentistry . We are conveniently located in Vista, and you
-      can schedule an appointment by calling (760) 940-2273. In our dental office, we are passionate about
-      oral health and believe in the critical nature of preventative dental care. For this reason, we
-      recommend having your teeth professionally cleaned and examined once or twice a year. Our objective
-      is to use these appointments to prevent many common oral health problems like cavities and gum disease.
-      While our hope is that all of our patients receive this regular dental care, we know that many people
-      are concerned about the time it will take for this or other procedures. When you visit our dental
-      office, you can be confident that we will perform your teeth cleaning and examination promptly and
-      comfortably. In most cases, your appointment will be over before your lunch break ends.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Same Day Dentistry Vista, CA
+  subtext: If you are looking for solutions to any esthetic challenges with your smile or any oral health
+    problems, call our office for same day dentistry . We are conveniently located in Vista, and you can
+    schedule an appointment by calling (760) 940-2273. In our dental office, we are passionate about oral
+    health and believe in the critical nature of preventative dental care. For this reason, we recommend
+    having your teeth professionally cleaned and examined once or twice a year. Our objective is to use
+    these appointments to prevent many common oral health problems like cavities and gum disease. While
+    our hope is that all of our patients receive this regular dental care, we know that many people are
+    concerned about the time it will take for this or other procedures. When you visit our dental office,
+    you can be confident that we will perform your teeth cleaning and examination promptly and comfortably.
+    In most cases, your appointment will be over before your lunch break ends.
+  imageSource: /src/assets/images/wp/same-day-dentistry.jpg
+  imageAlt: Same Day Dentistry Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -50,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Same Day Dentistry and Teeth Whitening
   contentSections:
@@ -223,7 +232,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -252,7 +261,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -295,4 +304,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

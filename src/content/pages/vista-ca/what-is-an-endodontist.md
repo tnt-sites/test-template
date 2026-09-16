@@ -7,23 +7,32 @@ seo:
   description: Confused about what an endodontist is? Is an endodontist different from a dentist? Want
     to learn more about how endodontic surgery may help save your tooth?
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: What is an Endodontist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: What is an Endodontist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: People may not realize that there are multiple forms of care within the field of dentistry.
-      The teeth are more complex than some people realize, with layers of protection, nerves and blood
-      vessels, while also connecting to the gums and jawbone. If something happens to any of the layers
-      of the tooth, the body can feel repercussions from the damage.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: What is an Endodontist Vista, CA
+  subtext: People may not realize that there are multiple forms of care within the field of dentistry.
+    The teeth are more complex than some people realize, with layers of protection, nerves and blood vessels,
+    while also connecting to the gums and jawbone. If something happens to any of the layers of the tooth,
+    the body can feel repercussions from the damage.
+  imageSource: /src/assets/images/wp/what-is-an-endodontist.jpg
+  imageAlt: What is an Endodontist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -45,7 +54,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The type of issues an endodontist treats
   contentSections:
@@ -227,7 +236,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -256,7 +265,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -317,4 +326,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

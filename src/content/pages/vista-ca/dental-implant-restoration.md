@@ -7,24 +7,33 @@ seo:
   description: Having issues with your existing implants? Dental implant restoration is a procedure that
     can provide you a stable, secure, and confident smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Dental Implant Restoration Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Dental Implant Restoration Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an
-      appointment with our Vista, CA dental office. It is critical that we examine your dental implant
-      right away and that you do not try to self-diagnose the problem. This can lead to further irritation
-      and dental challenges. During an examination, we can let you know if you need a dental implant restoration
-      and the best way to proceed.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Implant Restoration Vista, CA
+  subtext: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an
+    appointment with our Vista, CA dental office. It is critical that we examine your dental implant right
+    away and that you do not try to self-diagnose the problem. This can lead to further irritation and
+    dental challenges. During an examination, we can let you know if you need a dental implant restoration
+    and the best way to proceed.
+  imageSource: /src/assets/images/wp/dental-implant-restoration.jpg
+  imageAlt: Dental Implant Restoration Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How common are dental implant problems?
   contentSections:
@@ -245,7 +254,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -274,7 +283,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -345,4 +354,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

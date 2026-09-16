@@ -6,6 +6,34 @@ seo:
   description: Schedule your dental checkup at North County Cosmetic and Implant Dentistry in Vista, CA.
     Preventive care for healthy teeth and gums.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Checkup Vista, CA
+  subtext: A regular dental checkup offers patients professional dental cleaning services to detect and
+    prevent tooth infections while helping maintain healthy teeth. Regular dental checkups are a standard
+    service offered at North County Cosmetic and Implant Dentistry. No matter the age, most people tend
+    to avoid the subject when hearing that they have another dental checkup soon. However, regular dental
+    checkups are crucial to maintaining oral health. With a dental checkup every six months, patients
+    can receive the professional care they need for their teeth.
+  imageSource: /src/assets/images/wp/dental-checkup-header.jpg
+  imageAlt: Dental Checkup Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Dental Checkup Vista, CA
   contentSections:
@@ -43,7 +71,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -54,7 +82,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why You Need a Dental Checkup
   contentSections:
@@ -239,7 +267,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -268,7 +296,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -327,4 +355,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,24 +6,33 @@ seo:
   description: Refer patients with special needs or complex oral health cases to North County Cosmetic
     and Implant Dentistry in Vista, CA for expert care and IV sedation
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
     complex patients receive essential oral care.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
-      complex patients receive essential oral care.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Partner with North County Cosmetic and Implant Dentistry referral program to refer your patients
-      to a dentist with the experience, certifications, and technology to treat the effects that disease
-      and treatment have caused in their mouths.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+  subtext: Partner with North County Cosmetic and Implant Dentistry referral program to refer your patients
+    to a dentist with the experience, certifications, and technology to treat the effects that disease
+    and treatment have caused in their mouths.
+  imageSource: /src/assets/images/wp/Dr-Henniger-surgery-rm.jpg
+  imageAlt: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
+    complex patients receive essential oral care.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -33,7 +42,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: The care your patients need to move forward.
   contentSections:
@@ -52,7 +61,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Dr. Henninger is one of only 5% of dentists in the country with IV sedation credentials.
   contentSections:
@@ -114,7 +123,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss How to Refer Your Patients
   contentSections:
@@ -131,4 +140,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

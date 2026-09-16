@@ -7,28 +7,35 @@ seo:
   description: Don't live with denture problems. Find explanations, causes, and solutions to your common
     denture problems. Regain that complete, gorgeous smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Solutions for Common Denture Problems Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Solutions for Common Denture Problems Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
-      appearance. We can measure the patient's mouth and develop dentures for the patient's teeth, but
-      we cannot be at the patient's home 24/7. There may be times in which the patient damages the dentures
-      and needs to seek treatment at our office.
-  - _component: building-blocks/core-elements/text
-    text: While damage or natural wear and tear to dentures is inevitable, we can help patients prevent
-      possible damage and other issues by going over the best methods for effective denture use prior
-      to receiving dentures. Here are a few problems that patients with dentures struggle with and the
-      solution to each.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Solutions for Common Denture Problems Vista, CA
+  subtext: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
+    appearance. We can measure the patient's mouth and develop dentures for the patient's teeth, but we
+    cannot be at the patient's home 24/7. There may be times in which the patient damages the dentures
+    and needs to seek treatment at our office. While damage or natural wear and tear to dentures is inevitable,
+    we can help patients prevent possible damage and other issues by going over the best methods for effective
+    denture use prior to receiving dentures. Here are a few problems that patients with dentures struggle
+    with and the solution to each.
+  imageSource: /src/assets/images/wp/solutions-for-common-denture-problems.jpg
+  imageAlt: Solutions for Common Denture Problems Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -39,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -195,7 +202,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -224,7 +231,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -293,4 +300,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

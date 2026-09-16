@@ -7,25 +7,34 @@ seo:
   description: Reputable Vista, CA dentist outlines affordable routine dental procedures and services
     that can transform your smile. Friendly, gentle dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Routine Dental Procedures Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Routine Dental Procedures Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
-      that can help your teeth and gums to remain healthy for a lifetime. We prefer to see patients twice
-      a year for a routine teeth cleaning and dental exam because this is the best way to prevent cavities
-      and gum disease. If you have not been to the dentist in a while and are concerned that going may
-      be uncomfortable, do not be. We are a Vista, CA gentle dentistry office and can help to keep you
-      comfortable during your appointment.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Routine Dental Procedures Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
+    that can help your teeth and gums to remain healthy for a lifetime. We prefer to see patients twice
+    a year for a routine teeth cleaning and dental exam because this is the best way to prevent cavities
+    and gum disease. If you have not been to the dentist in a while and are concerned that going may be
+    uncomfortable, do not be. We are a Vista, CA gentle dentistry office and can help to keep you comfortable
+    during your appointment.
+  imageSource: /src/assets/images/wp/routine-dental-procedures.jpg
+  imageAlt: Routine Dental Procedures Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: 'Here are some of the routine dental procedures that we perform on a regular basis:'
   contentSections:
@@ -205,7 +214,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -234,7 +243,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -293,4 +302,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

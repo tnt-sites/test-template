@@ -7,30 +7,39 @@ seo:
   description: Your smile depends on it. Modern, relaxing, gentle dentist outlines affordable routine
     dental care and services that can transform your smile
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Routine Dental Care Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Routine Dental Care Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we practice routine dental care in addition
-      to performing restorations and addressing any other complex dental issues that you may have. In
-      our Vista dental office, we have found that by taking care of your teeth and planning for routine
-      visits, you can prevent many common oral health problems like cavities, tooth infections, and gum
-      disease. If you want to keep your adult teeth intact, it is critical that you continue to receive
-      routine dental care, regardless of how old you are. Many adults skip their annual dental visit because
-      they associate the need with children and the elderly. As a dentist, we know that the reason many
-      adults lose teeth and have oral health problems with age is because they don't have preventative
-      care visits in their 20s, 30s, 40s, and 50s. You only have one set of teeth and we recommend that
-      you do what you can to take care of them now, while you still can. If you haven't visited the dentist
-      in a while, we invite you to call (760) 940-2273 and schedule an appointment for your dental exam.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Routine Dental Care Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we practice routine dental care in addition
+    to performing restorations and addressing any other complex dental issues that you may have. In our
+    Vista dental office, we have found that by taking care of your teeth and planning for routine visits,
+    you can prevent many common oral health problems like cavities, tooth infections, and gum disease.
+    If you want to keep your adult teeth intact, it is critical that you continue to receive routine dental
+    care, regardless of how old you are. Many adults skip their annual dental visit because they associate
+    the need with children and the elderly. As a dentist, we know that the reason many adults lose teeth
+    and have oral health problems with age is because they don't have preventative care visits in their
+    20s, 30s, 40s, and 50s. You only have one set of teeth and we recommend that you do what you can to
+    take care of them now, while you still can. If you haven't visited the dentist in a while, we invite
+    you to call (760) 940-2273 and schedule an appointment for your dental exam.
+  imageSource: /src/assets/images/wp/routine-dental-care.jpg
+  imageAlt: Routine Dental Care Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -40,7 +49,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: How often should I visit the dentist?
   contentSections:
@@ -223,7 +232,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -252,7 +261,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -303,4 +312,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

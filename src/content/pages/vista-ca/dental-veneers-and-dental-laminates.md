@@ -6,6 +6,35 @@ seo:
   description: Transform your smile with custom veneers and laminates at North County Cosmetic and Implant
     Dentistry in Vista, CA.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Dental Veneers and Dental Laminates Vista, CA
+  subtext: A dental veneer is a porcelain shell that dental professionals can customize to enhance the
+    size, shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at North
+    County Cosmetic and Implant Dentistry. If you have chipped, discolored or crooked teeth and want to
+    change them, then dental veneers may be the solution you are looking for. Consisting of a thin porcelain
+    shell, dental veneers can blend in with your surrounding teeth for a uniform appearance. While altering
+    the size, shape and shade of your teeth, we can also prevent further damage to the surface of the
+    tooth.
+  imageSource: /src/assets/images/wp/dental-veneers-and-dental-laminates.jpg
+  imageAlt: Dental Veneers and Dental Laminates Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Dental Veneers and Dental Laminates Vista, CA
   contentSections:
@@ -45,7 +74,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What is a Dental Veneer?
   contentSections:
@@ -233,7 +262,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -262,7 +291,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -343,4 +372,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

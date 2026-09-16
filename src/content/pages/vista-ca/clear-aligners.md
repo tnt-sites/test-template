@@ -7,28 +7,36 @@ seo:
   description: Clear aligners are the virtually invisible alternative to metal braces. Get the straight
     teeth you always wanted without braces from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Aligners Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Aligners Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
-      By straightening teeth, patients also gain health benefits from teeth that do not have as many places
-      to trap food in them as crooked teeth. However, many patients do not prefer the obvious and cumbersome
-      metal braces that they have to wear in order to straighten their teeth.
-  - _component: building-blocks/core-elements/text
-    text: Fortunately, we offer clear aligners as an alternative to braces that are just as effective.
-      Patients will be able to benefit from wearing clear aligners while also straightening their teeth
-      in a discreet manner. Clear aligners are an efficient alternative to traditional braces. Here are
-      a few key factors that people need to understand about clear aligners.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Aligners Vista, CA
+  subtext: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
+    By straightening teeth, patients also gain health benefits from teeth that do not have as many places
+    to trap food in them as crooked teeth. However, many patients do not prefer the obvious and cumbersome
+    metal braces that they have to wear in order to straighten their teeth. Fortunately, we offer clear
+    aligners as an alternative to braces that are just as effective. Patients will be able to benefit
+    from wearing clear aligners while also straightening their teeth in a discreet manner. Clear aligners
+    are an efficient alternative to traditional braces. Here are a few key factors that people need to
+    understand about clear aligners.
+  imageSource: /src/assets/images/wp/clear-aligners.jpg
+  imageAlt: Clear Aligners Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +46,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -232,7 +240,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -261,7 +269,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -320,4 +328,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

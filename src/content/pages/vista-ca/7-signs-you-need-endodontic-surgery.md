@@ -7,24 +7,32 @@ seo:
   description: Do you have the tell-tale signs that you might need endodontic surgery? Continuous pain?
     Increased sensitivity? Tenderness? Swelling? Stop the pain and save your tooth
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Tooth Replacement Options Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Tooth Replacement Options Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: To understand the signs and reasons for why you need endodontic surgery, it is important to
-      understand the inner layers of a tooth. The outermost layer of the tooth is the enamel, which protects
-      the tooth and acts as the main surface for chewing food. The next level is the dentin that surrounds
-      the third layer, known as the pulp. The pulp contains all of the nerves and blood vessels in the
-      tooth.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Tooth Replacement Options Vista, CA
+  subtext: To understand the signs and reasons for why you need endodontic surgery, it is important to
+    understand the inner layers of a tooth. The outermost layer of the tooth is the enamel, which protects
+    the tooth and acts as the main surface for chewing food. The next level is the dentin that surrounds
+    the third layer, known as the pulp. The pulp contains all of the nerves and blood vessels in the tooth.
+  imageSource: /src/assets/images/wp/7-signs-you-need-endodontic-surgery.jpg
+  imageAlt: Tooth Replacement Options Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +54,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Signs That You Need Endodontic Surgery
   contentSections:
@@ -210,7 +218,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -239,7 +247,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -300,4 +308,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

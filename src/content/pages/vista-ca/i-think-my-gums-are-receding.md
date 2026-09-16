@@ -6,26 +6,35 @@ seo:
   description: Think your gums are receding? Visit North County Cosmetic and Implant Dentistry in Vista,
     CA for expert gum care and treatment options.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: I Think My Gums Are Receding Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: I Think My Gums Are Receding Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
-      just as much as we do on their teeth. We understand the critical nature of the gums and the role
-      they play in keeping teeth healthy, strong, and intact. Through regular dental care, we can work
-      to prevent gum disease. In certain situations, regular dental care is all a patient needs. However,
-      if you do notice that your gums begin to recede, call (760) 940-2273 and schedule an appointment
-      with our Vista, CA dental office. Since gum recession can lead to further health challenges, it
-      is important to address the issue right away.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: I Think My Gums Are Receding Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
+    just as much as we do on their teeth. We understand the critical nature of the gums and the role they
+    play in keeping teeth healthy, strong, and intact. Through regular dental care, we can work to prevent
+    gum disease. In certain situations, regular dental care is all a patient needs. However, if you do
+    notice that your gums begin to recede, call (760) 940-2273 and schedule an appointment with our Vista,
+    CA dental office. Since gum recession can lead to further health challenges, it is important to address
+    the issue right away.
+  imageSource: /src/assets/images/wp/i-think-my-gums-are-receding.jpg
+  imageAlt: I Think My Gums Are Receding Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -36,7 +45,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -46,7 +55,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Why are gums receding from my teeth?
   contentSections:
@@ -229,7 +238,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -258,7 +267,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -309,4 +318,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

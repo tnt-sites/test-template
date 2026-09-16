@@ -6,22 +6,31 @@ seo:
   description: Learn how oral health impacts heart disease and stroke prevention at North County Cosmetic
     and Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Stop Heart Disease and Stroke Improving your cardiovascular health starts with your mouth.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Stop Heart Disease and Stroke Improving your cardiovascular health starts with your mouth.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Your risk for cardiovascular disease isn’t just about your age or health history. Dangerous
-      bacteria from your mouth can actually contribute to the buildup of blot clots in your arteries and
-      lead to heart attack and stroke. Luckily, we can help.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Stop Heart Disease and Stroke Improving your cardiovascular health starts with your mouth.
+  subtext: Your risk for cardiovascular disease isn’t just about your age or health history. Dangerous
+    bacteria from your mouth can actually contribute to the buildup of blot clots in your arteries and
+    lead to heart attack and stroke. Luckily, we can help.
+  imageSource: /src/assets/images/wp/Heart-disease.jpg
+  imageAlt: Stop Heart Disease and Stroke Improving your cardiovascular health starts with your mouth.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -32,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: We’re trained in the BaleDoneen Method
   contentSections:
@@ -52,7 +61,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: See how prevention can protect your heart and brain
   contentSections:
@@ -122,4 +131,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

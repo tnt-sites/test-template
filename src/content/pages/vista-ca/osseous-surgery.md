@@ -6,25 +6,34 @@ seo:
   description: Osseous surgery for advanced periodontal disease at North County Cosmetic and Implant Dentistry
     in Vista, CA.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
     to severe gum disease.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
-      to severe gum disease.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: If you’ve been diagnosed with moderate to severe peridontitis (gum disease), it’s likely that
-      you have hard deposits of bacteria underneath your gums, where brushing and flossing can’t reach.
-      Osseous surgery, also known as pocket reduction surgery, can help remove those deposits so your
-      mouth can start to heal.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+  subtext: If you’ve been diagnosed with moderate to severe peridontitis (gum disease), it’s likely that
+    you have hard deposits of bacteria underneath your gums, where brushing and flossing can’t reach.
+    Osseous surgery, also known as pocket reduction surgery, can help remove those deposits so your mouth
+    can start to heal.
+  imageSource: /src/assets/images/wp/AdobeStock_376411039.jpg
+  imageAlt: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
+    to severe gum disease.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -34,7 +43,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: What are dental pockets and why do they need to be reduced?
   contentSections:
@@ -55,7 +64,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: What is osseous surgery?
   contentSections:
@@ -124,4 +133,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

@@ -6,6 +6,34 @@ seo:
   description: Restore your smile with full mouth reconstruction at North County Cosmetic and Implant
     Dentistry in Vista, CA. Personalized care for complete dental health.
 pageSections:
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Full Mouth Reconstruction Vista, CA
+  subtext: Full mouth reconstruction involves one or several restorative dental procedures to restore
+    and replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered
+    at North County Cosmetic and Implant Dentistry. People with multiple oral health issues such as tooth
+    decay, missing teeth or damaged teeth may benefit from full mouth reconstruction. No matter the cause,
+    people will find it incredibly challenging to live without a full set of functional teeth. Fortunately,
+    we can use full mouth reconstruction to restore both the functionality and appearance of teeth.
+  imageSource: /src/assets/images/wp/full-mouth-reconstruction.jpg
+  imageAlt: Full Mouth Reconstruction Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
+  colorScheme: default
+  backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: Full Mouth Reconstruction Vista, CA
   contentSections:
@@ -45,7 +73,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -58,7 +86,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -292,7 +320,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -321,7 +349,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -386,4 +414,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

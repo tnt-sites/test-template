@@ -7,25 +7,34 @@ seo:
   description: Get rid of ugly metal braces. Clear braces are the virtually invisible alternative. Get
     the straight teeth you always wanted from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Clear Braces Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Clear Braces Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
-      area. Straight teeth are important for your overall oral health. When teeth are crooked, they can
-      become stained and infected more easily. By straightening teeth, we can improve your appearance
-      and decrease the risk of getting cavities at the same time. We can also address issues that you
-      may have with your jaw by aligning your bite. Clear braces are truly a comprehensive way and discreet
-      way to address oral health concerns.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Clear Braces Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
+    area. Straight teeth are important for your overall oral health. When teeth are crooked, they can
+    become stained and infected more easily. By straightening teeth, we can improve your appearance and
+    decrease the risk of getting cavities at the same time. We can also address issues that you may have
+    with your jaw by aligning your bite. Clear braces are truly a comprehensive way and discreet way to
+    address oral health concerns.
+  imageSource: /src/assets/images/wp/clear-braces.jpg
+  imageAlt: Clear Braces Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -35,7 +44,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -239,7 +248,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -268,7 +277,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -327,4 +336,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

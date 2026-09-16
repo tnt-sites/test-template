@@ -6,21 +6,30 @@ seo:
   description: Laser deep cleaning at North County Cosmetic and Implant Dentistry in Vista, CA effectively
     treats gum disease and improves oral health.
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: Remove hard-to-reach buildup below the gumline to help slow down your gum disease and get rid
-      of dangerous bacteria that threaten your oral and overall health.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
+  subtext: Remove hard-to-reach buildup below the gumline to help slow down your gum disease and get rid
+    of dangerous bacteria that threaten your oral and overall health.
+  imageSource: /src/assets/images/wp/laser-dentist-2106.jpg
+  imageAlt: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -31,7 +40,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Laser deep cleaning for places your toothbrush and floss can’t reach.
   contentSections:
@@ -49,7 +58,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Cleaner Teeth. Healthier Life.
   contentSections:
@@ -106,4 +115,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

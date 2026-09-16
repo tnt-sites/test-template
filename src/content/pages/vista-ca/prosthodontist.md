@@ -6,28 +6,37 @@ seo:
   description: Replace teeth and restore your healthy, gorgeous smile with help from a Prosthodontist.
     Concentrating in the restoration and replacement of teeth and other oral structures
 pageSections:
-- _component: page-sections/builders/custom-section
-  label: Prosthodontist Vista, CA
-  contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: Prosthodontist Vista, CA
-    level: h1
-    size: 2xl
-  - _component: building-blocks/core-elements/text
-    text: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
-      a prosthodontist and why patients should visit one. There are specialties in dentistry just like
-      there are in the medical field. Prosthodontics is one of those specialties and centers around replacing
-      teeth. If you struggle with tooth loss, visiting a prosthodontist will likely produce better results
-      than if you were to visit a general dentist, because you will be visiting someone with more educational
-      and clinical experience. With that in mind, we encourage you to visit our dental office and discuss
-      your teeth replacement solutions, even if you are under the current care of a general family dentist.
-      To schedule an appointment, call (760) 940-2273. In the meantime, here are the answers to a few
-      frequently asked questions.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: 4xl
+- _component: page-sections/heroes/hero-split
+  eyebrow: ''
+  eyebrowColor: ''
+  heading: Prosthodontist Vista, CA
+  subtext: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
+    a prosthodontist and why patients should visit one. There are specialties in dentistry just like there
+    are in the medical field. Prosthodontics is one of those specialties and centers around replacing
+    teeth. If you struggle with tooth loss, visiting a prosthodontist will likely produce better results
+    than if you were to visit a general dentist, because you will be visiting someone with more educational
+    and clinical experience. With that in mind, we encourage you to visit our dental office and discuss
+    your teeth replacement solutions, even if you are under the current care of a general family dentist.
+    To schedule an appointment, call (760) 940-2273. In the meantime, here are the answers to a few frequently
+    asked questions.
+  imageSource: /src/assets/images/wp/prosthodontist.jpg
+  imageAlt: Prosthodontist Vista, CA
+  imageAspectRatio: none
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Request an Appointment
+    hideText: false
+    link: /contact-us/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    borderRadius: 2xl
+  reverse: false
   colorScheme: default
   backgroundColor: base
+  backgroundGradient: ''
+  paddingVertical: 2xl
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -38,7 +47,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -253,7 +262,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Helpful Related Links
   contentSections:
@@ -282,7 +291,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Related Topics
   contentSections:
@@ -353,4 +362,11 @@ pageSections:
   paddingVertical: 4xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---
