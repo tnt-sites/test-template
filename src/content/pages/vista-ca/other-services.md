@@ -10,7 +10,7 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Other Services
   location: Vista, CA
-  intro: ''
+  intro: []
   imageSource: /src/assets/images/wp/other-services.jpg
   imageAlt: Other Services
   formId: '251056297507965'

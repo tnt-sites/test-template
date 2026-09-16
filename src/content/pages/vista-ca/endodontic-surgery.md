@@ -10,11 +10,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Endodontic Surgery
   location: Vista, CA
-  intro: While some people may believe that most dental procedures require the same level of experience,
-    there are actually many separate areas of dentistry that require a specialist. There are multiple
-    conditions and illnesses that require the experience of an endodontic surgeon instead of a general
-    dentist. When a nonsurgical root canal or other procedure is not enough for treatment, endodontic
-    surgery may be the better solution.
+  intro:
+  - While some people may believe that most dental procedures require the same level of experience, there
+    are actually many separate areas of dentistry that require a specialist. There are multiple conditions
+    and illnesses that require the experience of an endodontic surgeon instead of a general dentist. When
+    a nonsurgical root canal or other procedure is not enough for treatment, endodontic surgery may be
+    the better solution.
   imageSource: /src/assets/images/wp/endodontic-surgery.jpg
   imageAlt: Endodontic Surgery
   formId: '251056297507965'
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The type of issues an endodontist treats
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: An endodontist will mainly use endodontic surgery when non-surgical procedure are not enough
         or when the fracture is small enough that they are not visible on X-rays. In other cases, endodontic
@@ -92,7 +93,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: What you need to know
       level: h3

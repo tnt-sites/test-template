@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Is Clear Aligner Therapy Teen Right for My Child
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy Teen® as a solution
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy Teen® as a solution
     for straightening teeth. Parents may call our dental office looking for information, wondering if
     Clear Aligner Therapy can sufficiently straighten their child's teeth. Orthodontics is familiar and
     still effective but Clear Aligner Therapy is relatively new and most parents never had access to this
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Here are some that we are asked on a regular basis:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/definition-list
       items:
       - _component: building-blocks/core-elements/definition-list/definition-list-item
@@ -103,7 +104,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How do I get started with Clear Aligner Therapy?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The process is simple. Call 760-940-2273 and schedule an appointment with our dental office.
         We can examine your teen's teeth, let you know if they are ready for Clear Aligner Therapy now,

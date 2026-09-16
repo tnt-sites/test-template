@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Post-Op Care for Dental Implants
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
-    post-op care for dental implants. This is the most durable and natural-looking way to replace your
-    missing teeth, but it requires oral surgery, meaning there is a recovery process that must be taken
-    into consideration. When you visit our Vista, CA dental office, we can conduct an examination, take
-    X-rays, and let you know what to expect from the implants procedure. This also includes what to expect
-    during your recovery process. For more information, we encourage you to call (760) 940-2273 and schedule
-    an appointment with Dr. Henninger. In the meantime, here is what you should know.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can provide you with information regarding post-op
+    care for dental implants. This is the most durable and natural-looking way to replace your missing
+    teeth, but it requires oral surgery, meaning there is a recovery process that must be taken into consideration.
+    When you visit our Vista, CA dental office, we can conduct an examination, take X-rays, and let you
+    know what to expect from the implants procedure. This also includes what to expect during your recovery
+    process. For more information, we encourage you to call (760) 940-2273 and schedule an appointment
+    with Dr. Henninger. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/postop-care-for-dental-implants.jpg
   imageAlt: Post-Op Care for Dental Implants
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What happens before the implant procedure?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Prior to getting started, we will conduct an examination to determine if you have cavities
         or infections in any of your other teeth or if you have gum disease. If so, these things will
@@ -97,7 +98,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Do I need to do anything to treat the site of the surgery or my gums in general?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We will provide you with gauze before you leave our Vista, CA dental office. It is natural
         to experience some bleeding. Before you leave, we will ensure that any bleeding is at a manageable

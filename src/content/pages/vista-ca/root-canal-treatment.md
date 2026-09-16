@@ -9,13 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Root Canal Treatment
   location: Vista, CA
-  intro: Root canal treatment involves removing the infected dental pulp of a tooth, cleaning the tooth
-    and placing a filling to prevent further infection. Root canals are a service offered at North County
-    Cosmetic and Implant Dentistry. While teeth can seem invincible pearly whites that break down food
-    and help make a great smile, they have layers and can weaken over time. Without proper care, a tooth
-    can sustain enough damage to expose the inner layer, known as the dental pulp. Infected dental pulp
-    will cause varying levels of pain when eating, speaking or at any time of day. Fortunately, we can
-    help.
+  intro:
+  - Root canal treatment involves removing the infected dental pulp of a tooth, cleaning the tooth and
+    placing a filling to prevent further infection. Root canals are a service offered at North County
+    Cosmetic and Implant Dentistry.
+  - While teeth can seem invincible pearly whites that break down food and help make a great smile, they
+    have layers and can weaken over time. Without proper care, a tooth can sustain enough damage to expose
+    the inner layer, known as the dental pulp. Infected dental pulp will cause varying levels of pain
+    when eating, speaking or at any time of day. Fortunately, we can help.
+  - We can use root canal treatment to help remove the infected dental pulp, preventing the spread of
+    the infection to other teeth and helping to relieve pain. This procedure will also help to protect
+    the tooth from further infection. Root canal procedures may be the sturdy and lasting solution to
+    an infected tooth.
+  - If you notice pain or sensitivity in a tooth, call us and schedule an appointment to see if root canal
+    treatment can help.
   imageSource: /src/assets/images/wp/root-canal-treatment.jpg
   imageAlt: Root Canal Treatment
   formId: '251056297507965'
@@ -27,27 +34,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: We can use root canal treatment to help remove the infected dental pulp, preventing the spread
-        of the infection to other teeth and helping to relieve pain. This procedure will also help to
-        protect the tooth from further infection. Root canal procedures may be the sturdy and lasting
-        solution to an infected tooth.
-    - _component: building-blocks/core-elements/text
-      text: If you notice pain or sensitivity in a tooth, call us and schedule an appointment to see if
-        root canal treatment can help.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/builders/custom-section
     label: Why do most people need a root canal?
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Why do most people need a root canal?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When a tooth becomes infected, that infection can spread into the center of the tooth. This
         area is called the dental pulp. Inside of the dental pulp is the nerves, connective tissue, and
@@ -78,7 +70,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista, California Root Canal Treatment
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Why should I have a root canal endodontics treatment?
       level: h3
@@ -113,7 +105,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What about discomfort?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We work to help patients to feel comfortable during their root canal endodontics procedure
         by using sedation dentistry. We have a variety of ways that we can eliminate both discomfort and

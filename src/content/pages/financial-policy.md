@@ -30,7 +30,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treatment Estimates
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: We strive to give you an accurate estimate of the total investment for your recommended dental
       treatment. Occasionally, additional treatment may be recommended based on a change in your dental
@@ -48,7 +48,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preferred Provider Organization (PPO) Dental Insurance
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: If all of your insurance information has been received on the day of your appointment, as a
       courtesy to you we will be happy to file claims for you at no additional charge. We accept dental
@@ -73,7 +73,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Medical Insurance
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: We are one of a very few dental offices that will help you file medical insurance claims for
       medically necessary dental related services. Most major medical insurances have Out-of-Network Benefits,
@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Medicare and Dental Implants
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: Wondering if you can get dental implants with Medicare? Dr. Henninger is a Medicare-certified
       provider for dental implants. This means that at our office, Medicare will cover medically necessary
@@ -110,7 +110,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Military and Veterans
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: In addition to traditional dental benefit programs, we are approved providers for the Active
       Duty Dental Plan (ADDP) for active duty military members and for patients who are eligible to receive
@@ -128,7 +128,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Financing
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: We have many flexible financing options to help you gain access to quality dental treatment.
       We accept the CareCredit Healthcare Financing Credit Card, Lending Club Financing (formerly Springstone
@@ -145,7 +145,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

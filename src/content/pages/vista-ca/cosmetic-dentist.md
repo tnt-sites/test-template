@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Cosmetic Dentist
   location: Vista, CA
-  intro: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
+  intro:
+  - North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
     the Vista area. We make it possible for our patients to have the beautiful smile they desire using
     a variety of modern dental techniques. We are committed to high-quality patient care, working to ensure
     that patients are comfortable during their procedures and delighted with the results.
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Understanding Your Desire to Change Your Smile
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We take the time to get to know each patient and the goals that the patient has for his or
         her smile. This process often involves correcting a problem with how a particular tooth, or teeth,
@@ -59,7 +60,7 @@ pageSections:
       text: 'According to the American Association of Cosmetic Dentistry, the top cosmetic dental treatments
         are:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
@@ -98,7 +99,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Truth About Cosmetic Dentistry
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Some people hear the word cosmetic and assume that we only treat people that are looking to
         create a Hollywood smile. The cosmetic field of dentistry involves much more than creating a stunning
@@ -137,7 +138,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista, California Cosmetic Dentist
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We can make restorations that appear so natural, no one can tell that there are artificial
         teeth in the patient's smile. This can be a lifesaver for people that want to live an active lifestyle

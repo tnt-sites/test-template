@@ -9,9 +9,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Wisdom Teeth Extraction
   location: Vista, CA
-  intro: You may need a wisdom teeth extraction at some point in your life. It is rare for a person to
-    have enough room for all of their wisdom teeth, and as a result, they tend to grow in impacted. This
-    can be uncomfortable, pushing your other teeth forward and creating a space for food to become trapped;
+  intro:
+  - You may need a wisdom teeth extraction at some point in your life. It is rare for a person to have
+    enough room for all of their wisdom teeth, and as a result, they tend to grow in impacted. This can
+    be uncomfortable, pushing your other teeth forward and creating a space for food to become trapped;
     it can also increase your risk of infection and decay. This is why we often recommend that our patients
     have their wisdom teeth removed. When you schedule an appointment with North County Cosmetic and Implant
     Dentistry, we can examine you, take X-rays, and let you know if and when you should schedule an extraction
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is an extraction?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: This is a dental procedure where your wisdom teeth are removed. How they are removed will
         be based on their current location and whether or not they are impacted.
@@ -121,7 +122,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How to prevent an infection after removal?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As a dentist, we are always concerned about infections post-surgery. Whether you have a wisdom
         teeth extraction or need to have another tooth removed, there is always the risk that the area

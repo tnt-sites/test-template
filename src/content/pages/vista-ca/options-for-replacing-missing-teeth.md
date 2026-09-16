@@ -9,12 +9,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Options for Replacing Missing Teeth
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
-    teeth. If you have a tooth that has been knocked out in an accident or was removed due to decay, we
-    can perform a procedure to replace it so you can regain the full functionality and appearance of your
-    smile. If you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule an appointment
-    with our dental office. After examining you, we will make a recommendation as to which procedure is
-    likely to provide the best results for your appearance and lifestyle goals.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we have several options for replacing missing teeth.
+    If you have a tooth that has been knocked out in an accident or was removed due to decay, we can perform
+    a procedure to replace it so you can regain the full functionality and appearance of your smile. If
+    you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule an appointment with
+    our dental office. After examining you, we will make a recommendation as to which procedure is likely
+    to provide the best results for your appearance and lifestyle goals.
   imageSource: /src/assets/images/wp/options-for-replacing-missing-teeth.jpg
   imageAlt: Options for Replacing Missing Teeth
   formId: '251056297507965'
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How can I tell which missing tooth replacement options are right for me?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: In our Vista dental office, we understand the importance of choice. We know that when we see
         10 people with tooth loss, each of them will have a slightly different goal and their lifestyles
@@ -102,7 +103,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Options for Replacing Missing Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Will my missing tooth replacement options be influenced by my age?
       level: h3

@@ -10,11 +10,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Cosmetic Dental Care
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
-    throughout the Vista area. If you are looking for a local dentist that can transform your smile and
-    restore your confidence, call (760) 940-2273 to schedule an appointment. We will examine your teeth,
-    take X-rays, and discuss the goals you have for your smile. These appointments are an excellent opportunity
-    for us to get to know you and to learn more about your lifestyle. The more we know, the better recommendations
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients throughout
+    the Vista area. If you are looking for a local dentist that can transform your smile and restore your
+    confidence, call (760) 940-2273 to schedule an appointment. We will examine your teeth, take X-rays,
+    and discuss the goals you have for your smile. These appointments are an excellent opportunity for
+    us to get to know you and to learn more about your lifestyle. The more we know, the better recommendations
     we can make regarding what type of dental work will be in your best interest to consider. Many patients
     do not realize that there are several ways to address even the most common aesthetic and health issues.
     There is no one-size-fits-all answer in cosmetic dental care, but rather, customized solutions for
@@ -35,7 +36,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Here are a few such solutions that we may discuss during your consultation.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Dental Crowns
       level: h3

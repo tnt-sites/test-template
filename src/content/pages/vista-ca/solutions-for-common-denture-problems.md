@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Solutions for Common Denture Problems
   location: Vista, CA
-  intro: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
-    appearance. We can measure the patient's mouth and develop dentures for the patient's teeth, but we
-    cannot be at the patient's home 24/7. There may be times in which the patient damages the dentures
-    and needs to seek treatment at our office. While damage or natural wear and tear to dentures is inevitable,
-    we can help patients prevent possible damage and other issues by going over the best methods for effective
-    denture use prior to receiving dentures. Here are a few problems that patients with dentures struggle
-    with and the solution to each.
+  intro:
+  - Dentures can replace missing teeth and give a patient a fully-functional smile with a natural appearance.
+    We can measure the patient's mouth and develop dentures for the patient's teeth, but we cannot be
+    at the patient's home 24/7. There may be times in which the patient damages the dentures and needs
+    to seek treatment at our office.
+  - While damage or natural wear and tear to dentures is inevitable, we can help patients prevent possible
+    damage and other issues by going over the best methods for effective denture use prior to receiving
+    dentures. Here are a few problems that patients with dentures struggle with and the solution to each.
   imageSource: /src/assets/images/wp/solutions-for-common-denture-problems.jpg
   imageAlt: Solutions for Common Denture Problems
   formId: '251056297507965'

@@ -9,16 +9,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Same Day Dentistry
   location: Vista, CA
-  intro: If you are looking for solutions to any esthetic challenges with your smile or any oral health
-    problems, call our office for same day dentistry . We are conveniently located in Vista, and you can
-    schedule an appointment by calling (760) 940-2273. In our dental office, we are passionate about oral
-    health and believe in the critical nature of preventative dental care. For this reason, we recommend
-    having your teeth professionally cleaned and examined once or twice a year. Our objective is to use
-    these appointments to prevent many common oral health problems like cavities and gum disease. While
-    our hope is that all of our patients receive this regular dental care, we know that many people are
-    concerned about the time it will take for this or other procedures. When you visit our dental office,
-    you can be confident that we will perform your teeth cleaning and examination promptly and comfortably.
-    In most cases, your appointment will be over before your lunch break ends.
+  intro:
+  - If you are looking for solutions to any esthetic challenges with your smile or any oral health problems,
+    call our office for same day dentistry . We are conveniently located in Vista, and you can schedule
+    an appointment by calling (760) 940-2273. In our dental office, we are passionate about oral health
+    and believe in the critical nature of preventative dental care. For this reason, we recommend having
+    your teeth professionally cleaned and examined once or twice a year. Our objective is to use these
+    appointments to prevent many common oral health problems like cavities and gum disease. While our
+    hope is that all of our patients receive this regular dental care, we know that many people are concerned
+    about the time it will take for this or other procedures. When you visit our dental office, you can
+    be confident that we will perform your teeth cleaning and examination promptly and comfortably. In
+    most cases, your appointment will be over before your lunch break ends.
   imageSource: /src/assets/images/wp/same-day-dentistry.jpg
   imageAlt: Same Day Dentistry
   formId: '251056297507965'
@@ -35,7 +36,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Same Day Dentistry and Teeth Whitening
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you are looking to see a rapid improvement to the appearance of your teeth, we recommend
         that you schedule a teeth whitening procedure. This same day dentistry solution can whiten your
@@ -81,7 +82,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Same Day Dentistry and Dental Crowns
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you have significantly damaged your tooth, you may likely need a dental crown to restore
         its appearance and to strengthen it. It is critical that you visit our dental office as soon as

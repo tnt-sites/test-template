@@ -10,15 +10,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Family Dentist
   location: Vista, CA
-  intro: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
-    patients of all ages and do so in a warm and welcoming environment. Our office is located in Vista,
-    and we welcome patients to schedule an appointment and experience how we can keep everyone in the
-    family in optimal oral health. Our team focuses on improving the overall experience of our patients
-    whenever possible. The moment you walk into the North County Cosmetic and Implant Dentistry offices,
-    you will be greeted with a warm smile and welcomed by our friendly team. We understand that visiting
-    a new dentist can make patients unsure about what they will experience. We work diligently so that
-    patients enjoy their visit – every time. To schedule your appointment, call (760) 733-6254. If you
-    reach us after hours or on the weekend, we will do our best to return calls as quickly as possible.
+  intro:
+  - North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat patients
+    of all ages and do so in a warm and welcoming environment. Our office is located in Vista, and we
+    welcome patients to schedule an appointment and experience how we can keep everyone in the family
+    in optimal oral health.
+  - Our team focuses on improving the overall experience of our patients whenever possible. The moment
+    you walk into the North County Cosmetic and Implant Dentistry offices, you will be greeted with a
+    warm smile and welcomed by our friendly team. We understand that visiting a new dentist can make patients
+    unsure about what they will experience. We work diligently so that patients enjoy their visit – every
+    time. To schedule your appointment, call (760) 733-6254. If you reach us after hours or on the weekend,
+    we will do our best to return calls as quickly as possible.
   imageSource: /src/assets/images/wp/family-dentist.jpg
   imageAlt: Family Dentist
   formId: '251056297507965'
@@ -65,7 +67,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Philosophy of Care
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The team at North County Cosmetic and Implant Dentistry believe in the importance of preventative
         care. We focus on keeping patients in good oral health so that they can live a full, healthy,

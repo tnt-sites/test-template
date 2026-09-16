@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Procedures
   location: Vista, CA
-  intro: Our dental procedures can keep you and your family in excellent oral health, restore damaged
-    teeth and transform your smile into something truly beautiful. At North County Cosmetic and Implant
-    Dentistry, we understand that each of our patients' smiles is unique and so are their health concerns.
-    As such, we meet with each patient to discuss any health concerns and goals prior to recommending
-    specific dental procedures . If you live in Vista, we invite you to schedule an appointment by calling
-    (760) 940-2273. During your examination, we can look for any signs of infection or cavities; discuss
-    what you do and do not like about your smile; and determine the best way to proceed.
+  intro:
+  - Our dental procedures can keep you and your family in excellent oral health, restore damaged teeth
+    and transform your smile into something truly beautiful. At North County Cosmetic and Implant Dentistry,
+    we understand that each of our patients' smiles is unique and so are their health concerns. As such,
+    we meet with each patient to discuss any health concerns and goals prior to recommending specific
+    dental procedures . If you live in Vista, we invite you to schedule an appointment by calling (760)
+    940-2273. During your examination, we can look for any signs of infection or cavities; discuss what
+    you do and do not like about your smile; and determine the best way to proceed.
   imageSource: /src/assets/images/wp/dental-procedures.jpg
   imageAlt: Dental Procedures
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Available Options for Dental Care
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: In the past, there were not as many options for treating or restoring teeth. Fortunately,
         technology has revolutionized dentistry, and there are now a variety of options for treating all

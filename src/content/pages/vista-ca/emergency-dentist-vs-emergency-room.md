@@ -10,10 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Emergency Dentist vs. Emergency Room
   location: Vista, CA
-  intro: Regardless of the type of dental emergency, there are a few set steps a patient needs to take
-    as a response. The first step is to seek immediate medical attention at an emergency room. If the
-    individual has any large cuts, broken bones or other injuries, then get to the emergency room as soon
-    as possible. An emergency room will be able to treat all wounds and stop any bleeding.
+  intro:
+  - Regardless of the type of dental emergency, there are a few set steps a patient needs to take as a
+    response. The first step is to seek immediate medical attention at an emergency room. If the individual
+    has any large cuts, broken bones or other injuries, then get to the emergency room as soon as possible.
+    An emergency room will be able to treat all wounds and stop any bleeding.
   imageSource: /src/assets/images/wp/emergency-dentist-vs-emergency-room.jpg
   imageAlt: Emergency Dentist vs. Emergency Room
   formId: '251056297507965'
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Treatment Options for Damaged Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'If the individual damages a tooth in the accident, an emergency room will be able to stop
         the bleeding, but will not be able to repair or even possibly save the tooth itself. Thus, once
@@ -74,7 +75,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Receive Emergency Treatment When Necessary
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The individual may already be shaken up from the accident and may have difficulty remaining
         calm. Visiting a general dentist for emergency dental care may not be the type of care that the

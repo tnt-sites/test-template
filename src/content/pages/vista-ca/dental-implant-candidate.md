@@ -9,7 +9,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Am I a Candidate for Dental Implants
   location: Vista, CA
-  intro: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call (760)
+  intro:
+  - If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call (760)
     940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct an
     examination and take X-rays to determine if you qualify for implant surgery, and if not, what it will
     take to get you there. At North County Cosmetic and Implant Dentistry, we will work with you to come
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Am I a candidate for dental implants if I have crowded teeth?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Yes, you are. However, you may need to wear an orthodontic solution to create space for the
         implant first. It is unwise to attempt to place an implant when there is not sufficient space.
@@ -95,7 +96,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Are implants the right solution for missing teeth?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Absolutely. Dental implants were designed to replace missing teeth. Whether you have lost
         one or several teeth due to age, infection, decay, or damage, we can replace them with durable

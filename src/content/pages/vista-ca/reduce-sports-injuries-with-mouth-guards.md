@@ -10,8 +10,9 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Reduce Sports Injuries With Mouth Guards
   location: Vista, CA
-  intro: Playing on a sports team is a staple of any childhood from playing little league baseball to
-    playing college football. Regardless of the sport, players will benefit from wearing the proper protection
+  intro:
+  - Playing on a sports team is a staple of any childhood from playing little league baseball to playing
+    college football. Regardless of the sport, players will benefit from wearing the proper protection
     such as shin guards, shoulder pads, helmets, cleats and mouth guards. While most sports go over the
     necessary gear that the child will need to wear to each game, they may not require mouth guards. With
     that in mind, mouth guards can be the deciding factor that saves a child's teeth.
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Risks of Store-Bought Mouth Guards
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While many parents will invest in a store-bought mouth guard, they may not realize the risk.
         With store-bought mouth guards, the mouth guard will not be a perfect fit for the child's teeth.
@@ -75,7 +76,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Mouth Guard Process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The process for a mouth guard is harmless and does not normally take more than two appointments.
         During the first appointment, we will take a mold of the child's mouth and images as well. Next,

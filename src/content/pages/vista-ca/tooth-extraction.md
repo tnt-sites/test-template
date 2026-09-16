@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Tooth Extraction
   location: Vista, CA
-  intro: While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we perform
+  intro:
+  - While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we perform
     tooth extractions on a regular basis. We are always looking for ways to avoid an extraction by keeping
     your oral health in good shape. We will clean your teeth on a regular basis, discuss a healthy diet
     with you, and treat gum disease, cavities, and infections to the best of our abilities; in order to
@@ -38,7 +39,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The process of having a tooth extraction
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you do need to have a tooth extraction , there are several ways that we can go about the
         procedure. First, we will numb the area of your mouth so that you do not feel any direct discomfort.
@@ -101,7 +102,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Tooth Extraction
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Signs that you might need a tooth extraction
       level: h3

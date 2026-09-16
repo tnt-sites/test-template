@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Helpful Dental Information
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
-    that our patients have the tools and resources they need to maintain healthy teeth for a lifetime.
-    As a rule of thumb, this demands ongoing, preventative dental care. It also requires education so
-    that you become aware of your dental solutions and what you can do to stay healthy at home. Here,
-    we provide some helpful dental information on oral health. We encourage you to find the section you
-    are interested in and read more details on our website. If you have further questions, call our dental
-    office at (760) 940-2273.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring that
+    our patients have the tools and resources they need to maintain healthy teeth for a lifetime. As a
+    rule of thumb, this demands ongoing, preventative dental care. It also requires education so that
+    you become aware of your dental solutions and what you can do to stay healthy at home. Here, we provide
+    some helpful dental information on oral health. We encourage you to find the section you are interested
+    in and read more details on our website. If you have further questions, call our dental office at
+    (760) 940-2273.
   imageSource: /src/assets/images/wp/helpful-dental-information.jpg
   imageAlt: Helpful Dental Information
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Q & A: Common Dental Questions'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/definition-list
       items:
       - _component: building-blocks/core-elements/definition-list/definition-list-item

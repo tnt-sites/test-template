@@ -9,13 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Veneers and Dental Laminates
   location: Vista, CA
-  intro: A dental veneer is a porcelain shell that dental professionals can customize to enhance the size,
+  intro:
+  - A dental veneer is a porcelain shell that dental professionals can customize to enhance the size,
     shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at North County
-    Cosmetic and Implant Dentistry. If you have chipped, discolored or crooked teeth and want to change
-    them, then dental veneers may be the solution you are looking for. Consisting of a thin porcelain
-    shell, dental veneers can blend in with your surrounding teeth for a uniform appearance. While altering
-    the size, shape and shade of your teeth, we can also prevent further damage to the surface of the
-    tooth.
+    Cosmetic and Implant Dentistry.
+  - If you have chipped, discolored or crooked teeth and want to change them, then dental veneers may
+    be the solution you are looking for. Consisting of a thin porcelain shell, dental veneers can blend
+    in with your surrounding teeth for a uniform appearance. While altering the size, shape and shade
+    of your teeth, we can also prevent further damage to the surface of the tooth.
+  - Far too often, people will try to avoid seeking professional dental treatment and live with damaged
+    or crooked teeth. By avoiding treatment, people are only increasing the chance of pain or infection.
+    A chipped tooth can risk exposing the inside of the tooth, causing pain when eating, drinking or biting
+    down on something.
+  - By investing in a dental veneer treatment, we can help you change the size, shape and shade of your
+    teeth for your specific needs.
   imageSource: /src/assets/images/wp/dental-veneers-and-dental-laminates.jpg
   imageAlt: Dental Veneers and Dental Laminates
   formId: '251056297507965'
@@ -27,27 +34,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Far too often, people will try to avoid seeking professional dental treatment and live with
-        damaged or crooked teeth. By avoiding treatment, people are only increasing the chance of pain
-        or infection. A chipped tooth can risk exposing the inside of the tooth, causing pain when eating,
-        drinking or biting down on something.
-    - _component: building-blocks/core-elements/text
-      text: By investing in a dental veneer treatment, we can help you change the size, shape and shade
-        of your teeth for your specific needs.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/builders/custom-section
     label: What is a Dental Veneer?
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: What is a Dental Veneer?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A veneer is a thin shell that is made out of porcelain or ceramic. The shade of the veneer,
         along with its shape and size will be made to match your surrounding teeth so that it blends in
@@ -139,7 +131,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista, California Dental Laminates
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: The Downside
       level: h3

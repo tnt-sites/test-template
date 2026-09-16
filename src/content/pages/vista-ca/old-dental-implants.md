@@ -9,14 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Implants
   location: Vista, CA
-  intro: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
-    not only the functionality of teeth but can provide a great new look as well. Dental implants are
-    a standard cosmetic dental option offered at North County Cosmetic and Implant Dentistry. People tend
-    to assume that the gap left behind after losing a permanent adult tooth can remain empty. The reality
-    is that an exposed tooth socket faces the risk of infection, can cause teeth to shift out of alignment,
-    and can cause other issues as well. With a dental implant, we can help patients avoid those oral health
-    issues We have the tools and skills necessary to provide patients with a customized dental implant
-    to meet their specific needs.
+  intro:
+  - Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore not
+    only the functionality of teeth but can provide a great new look as well. Dental implants are a standard
+    cosmetic dental option offered at North County Cosmetic and Implant Dentistry.
+  - People tend to assume that the gap left behind after losing a permanent adult tooth can remain empty.
+    The reality is that an exposed tooth socket faces the risk of infection, can cause teeth to shift
+    out of alignment, and can cause other issues as well. With a dental implant, we can help patients
+    avoid those oral health issues We have the tools and skills necessary to provide patients with a customized
+    dental implant to meet their specific needs.
+  - Dental implants can even help prevent facial structure from changing, providing the functionality
+    needed to perform the same as before the original tooth was damaged. Supplementing them with a dental
+    crown can also ensure that the dental implant looks perfectly natural along with your other teeth.
+  - If you are looking for a sturdy, lasting, and discreet replacement tooth, then call us to learn more
+    about our dental implant procedures today.
   imageSource: /src/assets/images/wp/dental-implants-header.jpg
   imageAlt: Dental Implants
   formId: '251056297507965'
@@ -27,21 +33,6 @@ pageSections:
   buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Dental implants can even help prevent facial structure from changing, providing the functionality
-        needed to perform the same as before the original tooth was damaged. Supplementing them with a
-        dental crown can also ensure that the dental implant looks perfectly natural along with your other
-        teeth.
-    - _component: building-blocks/core-elements/text
-      text: If you are looking for a sturdy, lasting, and discreet replacement tooth, then call us to
-        learn more about our dental implant procedures today.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Facts from the American Academy of Implant Dentistry (aaid.com)
     contentSections:
@@ -83,7 +74,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Process of Installing Implants
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If one or more of your teeth fall out, you may qualify for dental implants as a way to permanently
         replace the missing teeth. In order to find out, schedule an appointment with our Vista dentist
@@ -159,7 +150,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Caring for Dental Implants
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Once implants have been installed, they are extremely easy to care for. We hear patients throughout
         Vista ask questions that range from "Do implants come out" to "How do I brush my teeth". Fortunately,

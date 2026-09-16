@@ -9,9 +9,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: I Think My Gums Are Receding
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
-    just as much as we do on their teeth. We understand the critical nature of the gums and the role they
-    play in keeping teeth healthy, strong, and intact. Through regular dental care, we can work to prevent
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums just
+    as much as we do on their teeth. We understand the critical nature of the gums and the role they play
+    in keeping teeth healthy, strong, and intact. Through regular dental care, we can work to prevent
     gum disease. In certain situations, regular dental care is all a patient needs. However, if you do
     notice that your gums begin to recede, call (760) 940-2273 and schedule an appointment with our Vista,
     CA dental office. Since gum recession can lead to further health challenges, it is important to address
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why are gums receding from my teeth?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: There can be several reasons for this, and some of them may have to do with lifestyle. For
         example, it is important to brush your teeth at least twice a day and floss once a day. However,
@@ -117,7 +118,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How do you prevent gum recession?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The best way to prevent gum recession is to visit our dental office for a teeth cleaning twice
         per year. We can remove the plaque and tartar that has built up over time in order to give your

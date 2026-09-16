@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: What Is Gum Contouring & Reshaping
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with
-    the appearance or shape of their gums. While most people think of things like teeth whitening when
-    considering how to improve their smile, the appearance of the gums also makes a significant impact.
-    If you feel that yours are too large or have receded and are too small, call (760) 940-2273 and schedule
-    an appointment with our dental office. We can examine you, make recommendations, and let you know
-    whether we can assist you or if you should see a specialist. In the meantime, here are a few frequently
-    asked questions about gum contouring and our answers to them.
+  intro:
+  - At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with the
+    appearance or shape of their gums. While most people think of things like teeth whitening when considering
+    how to improve their smile, the appearance of the gums also makes a significant impact. If you feel
+    that yours are too large or have receded and are too small, call (760) 940-2273 and schedule an appointment
+    with our dental office. We can examine you, make recommendations, and let you know whether we can
+    assist you or if you should see a specialist. In the meantime, here are a few frequently asked questions
+    about gum contouring and our answers to them.
   imageSource: /src/assets/images/wp/gum-contouring-and-reshaping.jpg
   imageAlt: What Is Gum Contouring & Reshaping
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is gum contouring?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Gum contouring is a cosmetic procedure that can change the shape of your gums. A dentist can
         use this procedure to cut away excessive gum tissue that is giving you a "gummy" smile or to restore
@@ -129,7 +130,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Will insurance pay for it?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: That really depends on your insurance company and whether you are getting the procedure to
         restore gums ravaged by gum disease or if you are having it done to simply remove a gummy smile

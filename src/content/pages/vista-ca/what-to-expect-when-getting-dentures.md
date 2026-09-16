@@ -10,10 +10,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: What to Expect When Getting Dentures
   location: Vista, CA
-  intro: While we can customize dentures to fit a patient's teeth perfectly at North County Cosmetic and
-    Implant Dentistry, there are still a few key factors that patients need to understand before getting
-    dentures. Fortunately, advancements in dental technology allow for this process to be easier than
-    ever before.
+  intro:
+  - While we can customize dentures to fit a patient's teeth perfectly at North County Cosmetic and Implant
+    Dentistry, there are still a few key factors that patients need to understand before getting dentures.
+    Fortunately, advancements in dental technology allow for this process to be easier than ever before.
   imageSource: /src/assets/images/wp/what-to-expect-when-getting-dentures.jpg
   imageAlt: What to Expect When Getting Dentures
   formId: '251056297507965'
@@ -30,7 +30,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Dentures Process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: There are different types of dentures, two of which are removable dentures and implant dentures.
         Removable dentures are a more traditional option that requires the patient to remove them at night
@@ -98,7 +98,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Other factors to expect with getting dentures
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The dentures that one gets from our office will be a custom fit to the individual's mouth,
         but may take some time before the individual has complete mastery of the dentures. Dentures also

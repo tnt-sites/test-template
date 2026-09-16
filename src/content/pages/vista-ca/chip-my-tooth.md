@@ -9,12 +9,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: What Should I Do If I Chip My Tooth
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if I
-    chip my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage
-    you to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
-    and treat you right away. As an emergency dentist, the first thing we want to do is determine how
-    serious the damage is. In order to do so, we will ask you several questions when you call to schedule
-    an appointment.
+  intro:
+  - At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if I chip
+    my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage you
+    to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
+    and treat you right away.
+  - As an emergency dentist, the first thing we want to do is determine how serious the damage is. In
+    order to do so, we will ask you several questions when you call to schedule an appointment.
   imageSource: /src/assets/images/wp/chip-my-tooth.jpg
   imageAlt: What Should I Do If I Chip My Tooth
   formId: '251056297507965'
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Do you feel any pain?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: After chipping a tooth, you may not be in pain or uncomfortable. It really depends on the
         extent of the chip, where your tooth was chipped, and which tooth was damaged. Some people, for
@@ -80,7 +81,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Steps to Take After Chipping a Tooth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you have ever wondered, "What should I do if I chip my tooth?" this information is good
         to keep in your back pocket. We always welcome your calls, questions, and visits to our dental
@@ -132,7 +133,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Ways We Restore Chipped Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When looking for a "dentist near me" to treat a chipped tooth, be sure to visit a cosmetic
         dentist. We are an emergency dentist and a cosmetic dentist, which means we can treat you right
@@ -140,7 +141,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'As a cosmetic dentist, we have several ways to restore a chipped tooth, including:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Dental bonding.
       level: h3

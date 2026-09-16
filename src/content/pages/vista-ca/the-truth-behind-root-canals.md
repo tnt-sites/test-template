@@ -10,11 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: The Truth Behind Root Canals
   location: Vista, CA
-  intro: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
-    believe that professional dental care will be painful. In reality, most dental visits are not nearly
-    as painful as people fear. The truth is that the patient will feel more pain if he or she avoids seeking
-    professional treatment. Regardless, there is one procedure that people seem to fear above the rest:
-    the root canal.'
+  intro:
+  - 'Many people seem to have a phobia of dental care and the variety of procedures in which they believe
+    that professional dental care will be painful. In reality, most dental visits are not nearly as painful
+    as people fear. The truth is that the patient will feel more pain if he or she avoids seeking professional
+    treatment. Regardless, there is one procedure that people seem to fear above the rest: the root canal.'
   imageSource: /src/assets/images/wp/the-truth-behind-root-canals.jpg
   imageAlt: The Truth Behind Root Canals
   formId: '251056297507965'
@@ -31,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Need for a Root Canal Procedure
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The root canal is a crucial procedure for removing infected dental pulp from within a tooth.
         Beneath the outer shell of the tooth, known as the enamel, is the dentin and then the dental pulp.

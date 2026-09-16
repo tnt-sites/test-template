@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Office
   location: Vista, CA
-  intro: We are a Vista dental office and provide patients with the dental care they need to stay in excellent
+  intro:
+  - We are a Vista dental office and provide patients with the dental care they need to stay in excellent
     oral health. At North County Cosmetic and Implant Dentistry, we understand the importance of offering
     comprehensive dental services so that regardless of whether you need a general teeth cleaning or a
     full restoration, we have the solutions for a perfectly healthy and functioning smile. If you live
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Convenience for your Family
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Understanding how busy life can be, we aim to make receiving dental care as easy as possible.
         Our dental office is located in Vista, CA, and offers flexible appointment times. We will do everything
@@ -112,7 +113,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Technology
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Dental offices have the advantage of using modern technology to improve dental care. The advancements
         in modern dentistry open up a world of possibilities. There is virtually no oral health or appearance
@@ -123,7 +124,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Our Team
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We work as a team to keep patients throughout Vista, CA in excellent oral health. We can restore
         damaged teeth and transform smiles. Our friendly office team provides an office environment where

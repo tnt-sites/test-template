@@ -246,10 +246,44 @@ const formatAddressLines = (address: any) => {
     });
   };
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMainNavHeaderHeight);
-  } else {
+  /* The source swaps a `.large` class for `.small` once the page scrolls,
+     shrinking the header from 114px to 90px: the logo halves in height and
+     the utility bar loses its vertical padding. Mirrored here as
+     `.is-scrolled`, toggled past the same 20px threshold. */
+  const initMainNavScrollState = () => {
+    const headers = document.querySelectorAll(".main-nav");
+    if (!headers.length) return;
+
+    let ticking = false;
+
+    const sync = () => {
+      const scrolled = window.scrollY > 20;
+      headers.forEach((header) => header.classList.toggle("is-scrolled", scrolled));
+      ticking = false;
+    };
+
+    sync();
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(sync);
+      },
+      { passive: true }
+    );
+  };
+
+  const initMainNav = () => {
     initMainNavHeaderHeight();
+    initMainNavScrollState();
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initMainNav);
+  } else {
+    initMainNav();
   }
 </script>
 
@@ -271,6 +305,30 @@ const formatAddressLines = (address: any) => {
 
       .main-nav-logo {
         margin-top: 0 !important;
+      }
+
+      /* --- Scrolled state ------------------------------------------------
+         The source shrinks the header from 114px to 90px once scrolled: the
+         logo drops from 85px tall to 45px and the utility row loses its
+         vertical padding. Only the sizes change, so the bar keeps its
+         position and nothing reflows underneath it. */
+      &.is-scrolled {
+        padding-block: 0;
+      }
+
+      &.is-scrolled > .outer-content .hd-info {
+        font-size: 0.8125rem;
+        padding-block: 2px;
+      }
+
+      &.is-scrolled > .outer-content .hd-nav {
+        padding-block: 0;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .main-nav-logo img {
+          transition: none;
+        }
       }
 
       .nav-hamburger.mobile-button {

@@ -9,13 +9,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Do I Need a Root Canal
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, patients ask, "my tooth hurts, do I need a root
-    canal?" Toothaches can be terribly inconvenient. They make it difficult to eat, speak, or even function.
-    As a family dentist in Vista, CA, we realize that a common toothache is something most people can
-    live with until it suddenly turns a corner and becomes unbearable. The key is to visit our dental
-    office at that initial stage before you reach the point of severe discomfort. This will give you the
-    largest amount of options for how to treat the problem. To schedule an appointment with our family
-    dental office, call (760) 940-2273.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, patients ask, "my tooth hurts, do I need a root canal?"
+    Toothaches can be terribly inconvenient. They make it difficult to eat, speak, or even function. As
+    a family dentist in Vista, CA, we realize that a common toothache is something most people can live
+    with until it suddenly turns a corner and becomes unbearable. The key is to visit our dental office
+    at that initial stage before you reach the point of severe discomfort. This will give you the largest
+    amount of options for how to treat the problem. To schedule an appointment with our family dental
+    office, call (760) 940-2273.
   imageSource: /src/assets/images/wp/do-i-need-a-root-canal.jpg
   imageAlt: Do I Need a Root Canal
   formId: '251056297507965'
@@ -63,7 +64,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Other Factors You Need to Consider
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: However, there are many times where a root canal is the right treatment option, so to answer
         the question, "my tooth hurts, do I need a root canal?" we must also look at the surrounding circumstances.
@@ -109,7 +110,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: When to Call Our Emergency Dentist Office
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you have any of these symptoms, you should call our emergency dentist office at 760-940-2273
         and schedule an appointment to be seen right away.

@@ -9,7 +9,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Do I Have Sleep Apnea
   location: Vista, CA
-  intro: If you feel as though you have no energy and are too tired to keep up with your friends and family,
+  intro:
+  - If you feel as though you have no energy and are too tired to keep up with your friends and family,
     you should visit our dental office to talk about sleep apnea. This may be what is causing your issues,
     and a simple non-invasive treatment may be just what you need to feel like yourself again. To schedule
     an appointment with our dental office, call (760) 940-2273. We will be happy to discuss your treatment
@@ -113,7 +114,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What are the two main types of sleep apnea?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:

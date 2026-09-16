@@ -10,9 +10,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Center
   location: Vista, CA
-  intro: If you live in Vista or the surrounding area, we invite you to schedule an appointment with our
-    dental center . We can treat everyone in your family and ensure that you are in excellent oral health.
-    We understand how essential healthy teeth and gums are to your ability to enjoy life and live without
+  intro:
+  - If you live in Vista or the surrounding area, we invite you to schedule an appointment with our dental
+    center . We can treat everyone in your family and ensure that you are in excellent oral health. We
+    understand how essential healthy teeth and gums are to your ability to enjoy life and live without
     restriction. Your teeth make it possible for you to eat lunch with a friend, smile at your children,
     and speak with a client at work. Our objective is to prevent you from experiencing this inconvenience
     by keeping your teeth healthy and intact as you age. This starts with preventative care, making it
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Selecting a New Dental Center
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We invite you to call (760) 940-2273 and schedule an appointment with our dental center. If
         you are currently in search of a dentist, you can be confident that visiting our office will give
@@ -82,7 +83,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Some examples of the procedures we perform:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Dental restorations
       level: h3

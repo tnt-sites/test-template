@@ -295,6 +295,21 @@ if (!htmlAttributes.id && label) {
         background-color: var(--color-bg-highlight);
       }
 
+      &.bg-gold {
+        /* the source's bg-tertiary band, #ba9764 */
+        background-color: var(--color-bg-gold, #ba9764);
+        color: #fff;
+
+        :global(h1),
+        :global(h2),
+        :global(h3),
+        :global(h4),
+        :global(h5),
+        :global(a) {
+          color: #fff;
+        }
+      }
+
       &.bg-dark {
         background-color: var(--color-bg-dark);
       }

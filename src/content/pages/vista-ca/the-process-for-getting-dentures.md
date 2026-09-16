@@ -10,15 +10,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: The Process for Getting Dentures
   location: Vista, CA
-  intro: People may find it difficult to hear that they need dentures. After all, losing a few teeth can
-    cause enough difficulty. The very notion that one is going to need artificial teeth instead can be
-    difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust to dentures
-    in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance and remain
-    fully functional. People may find it difficult to hear that they need dentures. After all, losing
-    a few teeth can cause enough difficulty. The very notion that one is going to need artificial teeth
-    instead can be difficult to adjust to. Fortunately, we have the tools and experience to help patients
-    adjust to dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural
-    appearance and remain fully functional.
+  intro:
+  - People may find it difficult to hear that they need dentures. After all, losing a few teeth can cause
+    enough difficulty. The very notion that one is going to need artificial teeth instead can be difficult
+    to adjust to. Fortunately, we have the tools and experience to help patients adjust to dentures in
+    order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance and remain
+    fully functional.
+  - People may find it difficult to hear that they need dentures. After all, losing a few teeth can cause
+    enough difficulty. The very notion that one is going to need artificial teeth instead can be difficult
+    to adjust to. Fortunately, we have the tools and experience to help patients adjust to dentures in
+    order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance and remain
+    fully functional.
   imageSource: /src/assets/images/wp/the-process-for-getting-dentures.jpg
   imageAlt: The Process for Getting Dentures
   formId: '251056297507965'
@@ -35,7 +37,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The type of issues an endodontist treats
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Resorption and tooth loss
       level: h3
@@ -90,7 +92,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Dentures Process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: To begin the dentures process, we will need to examine the patient and determine the best
         choice from full dentures, partial dentures, or another option. In some cases, if the remaining

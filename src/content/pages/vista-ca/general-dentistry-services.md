@@ -10,14 +10,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: General Dentistry Services
   location: Vista, CA
-  intro: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
-    with our Vista dental office. We focus on providing preventative dental care, performing a variety
-    of dental procedures to keep patients in excellent oral health. By providing comprehensive care, we
-    can ensure your teeth remain as healthy as possible and that if anything does develop, we can treat
-    the condition as soon as possible. Whether you are concerned about your bad breath, have a toothache,
-    or want to improve the appearance of your smile, we can help. At North County Cosmetic and Implant
-    Dentistry, our team is warm and friendly. We will take the time to understand your oral health concerns
-    and provide you with the information and services you need to maintain lifelong oral health.
+  intro:
+  - If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment with
+    our Vista dental office. We focus on providing preventative dental care, performing a variety of dental
+    procedures to keep patients in excellent oral health. By providing comprehensive care, we can ensure
+    your teeth remain as healthy as possible and that if anything does develop, we can treat the condition
+    as soon as possible. Whether you are concerned about your bad breath, have a toothache, or want to
+    improve the appearance of your smile, we can help. At North County Cosmetic and Implant Dentistry,
+    our team is warm and friendly. We will take the time to understand your oral health concerns and provide
+    you with the information and services you need to maintain lifelong oral health.
   imageSource: /src/assets/images/wp/general-dentistry-services.jpg
   imageAlt: General Dentistry Services
   formId: '251056297507965'
@@ -34,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Our general dentistry services include:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Teeth cleanings and examinations.
       level: h3
@@ -149,7 +150,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Preventative Care Tips From Our General Dentistry Office
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As a provider of general dentistry services, we understand the power and importance of education.
         We believe that when our patients are better informed, they can make healthier decisions that

@@ -10,8 +10,9 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Implant Surgery
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
-    to replace your missing tooth. Even with the improvements of oral health care, the majority of adults
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery to
+    replace your missing tooth. Even with the improvements of oral health care, the majority of adults
     still lose at least one tooth during their lifetime. Whether this is due to old age, an accident,
     or gum disease, we have the most durable solution for replacing your teeth. This is the only procedure
     that replaces both your lost root and tooth, since dentures and dental bridges only replace the visible
@@ -36,7 +37,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Dental Implant Surgery: What to Expect From the Actual Procedure'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: On the day you visit our California dental office for surgery, you will be given anesthesia
         so you will not feel anything while we place the implant. The procedure itself can take anywhere

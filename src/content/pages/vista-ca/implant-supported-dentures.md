@@ -10,11 +10,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Implant Supported Dentures
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
-    dentures to give them a dependable and durable alternative to dentures, dental bridges, and traditional
-    dental implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
-    940-2273 and schedule a consultation so we can examine you and determine if you are a good candidate
-    for this procedure.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported dentures
+    to give them a dependable and durable alternative to dentures, dental bridges, and traditional dental
+    implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760) 940-2273
+    and schedule a consultation so we can examine you and determine if you are a good candidate for this
+    procedure.
   imageSource: /src/assets/images/wp/implant-supported-dentures.jpg
   imageAlt: Implant Supported Dentures
   formId: '251056297507965'
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Benefits of Implant Supported Dentures
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you are looking for a durable and comfortable way to replace missing teeth, you should
         consider this solution. Implant supported dentures make it easier to eat your favorite meals and
@@ -43,7 +44,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'The Process of Getting Implant Supported Dentures: The Procedure'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Before we can begin the actual procedure, we will need to examine your gums to ensure you
         do not have any gum disease that needs to be addressed. If you do, we will treat it first. Next,

@@ -9,14 +9,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Anxiety
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can perform dental work on patients that are
-    struggling with dental anxiety . If you avoid the dentist due to fear of what a procedure may be like
-    or simply do not enjoy dental work, give us a call. In our Vista, dental office, we can ensure that
-    you are comfortable and relaxed, regardless of the dental procedure. When you visit our office, we
-    will meet with you to discuss what treatments you need and create a plan for how to keep your mouth
-    healthy while easing any fears that you have about dentistry in general. We will keep you informed
-    about the entire process so that you can make decisions regarding dental care without experiencing
-    any anxiety.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can perform dental work on patients that are struggling
+    with dental anxiety . If you avoid the dentist due to fear of what a procedure may be like or simply
+    do not enjoy dental work, give us a call. In our Vista, dental office, we can ensure that you are
+    comfortable and relaxed, regardless of the dental procedure. When you visit our office, we will meet
+    with you to discuss what treatments you need and create a plan for how to keep your mouth healthy
+    while easing any fears that you have about dentistry in general. We will keep you informed about the
+    entire process so that you can make decisions regarding dental care without experiencing any anxiety.
   imageSource: /src/assets/images/wp/dental-anxiety.jpg
   imageAlt: Dental Anxiety
   formId: '251056297507965'
@@ -33,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How can I ease my fears about dental care without medication?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When you visit our dental office, we can discuss ways that you can prevent experiencing anxiety
         while receiving dental care. Give us a call to go over any and all methods for dealing with dental
@@ -79,7 +79,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Dental Anxiety
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Sedation Dentistry Can Reduce Your Dental Anxiety
       level: h3

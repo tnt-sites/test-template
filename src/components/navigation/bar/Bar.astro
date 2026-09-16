@@ -470,6 +470,123 @@ function createNavItemData(item, level, parentGroupId) {
         border-radius: 0;
         padding-left: var(--spacing-xl);
       }
+
+      /* --- Desktop mega-panel -------------------------------------------
+         A full-bleed gold panel drops under the bar, with the first child
+         ("View all Services") as a 24px heading over a rule and the rest of
+         the links in three columns.
+
+         The panel is opened by clicking the caret, which drives the existing
+         checkbox toggle — not by hover — so it can be dismissed deliberately
+         and works the same for keyboard and touch. */
+      @media (min-width: 993px) {
+        &.desktop-main-nav {
+          position: static;
+
+          .nav-item.has-children {
+            position: static;
+          }
+
+          /* The caret is the control that opens the panel, so it stays
+             visible. Borderless, to sit with the wordmark rather than read
+             as a button of its own. */
+          > .bar-list > .nav-item > .nav-item-trigger {
+            background: none;
+            border: 0;
+            min-height: auto;
+            min-width: auto;
+            padding: 0 0 0 2px;
+          }
+
+          > .bar-list > .nav-item > .nav-item-trigger:hover,
+          > .bar-list > .nav-item > .nav-item-trigger:focus-visible {
+            background: none;
+            border: 0;
+            color: var(--color-brand-secondary);
+          }
+
+          /* Points down when closed, flips up once the panel is open. */
+          > .bar-list > .nav-item > .nav-item-trigger .nav-item-icon {
+            transform: rotate(90deg);
+          }
+
+          > .bar-list > .nav-item > .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+            transform: rotate(-90deg);
+          }
+
+          .nav-item > .nav-item-content {
+            background: var(--color-brand-secondary);
+            border: 0;
+            border-radius: 0;
+            box-shadow: 0 6px 12px rgb(0 0 0 / 12%);
+            left: 50%;
+            margin-top: 0;
+            margin-left: -50vw;
+            padding: 30px 0 40px;
+            top: 100%;
+            transform: none;
+            width: 100vw;
+          }
+
+          .nav-item > .nav-item-toggle:checked ~ .nav-item-content {
+            animation: none;
+            display: block;
+          }
+
+          .nav-item > .nav-item-content > .nav-list {
+            box-sizing: border-box;
+            columns: 3;
+            column-gap: 24px;
+            margin: 0 auto;
+            max-width: 1023px;
+            padding: 0;
+          }
+
+          .nav-item-content .nav-item {
+            break-inside: avoid;
+            display: block;
+          }
+
+          .nav-item-content .nav-item > a {
+            color: #fff;
+            display: block;
+            font-size: 0.8125rem; /* 13px */
+            font-weight: 500;
+            padding: 12px 0;
+            text-decoration: none;
+          }
+
+          .nav-item-content .nav-item > a:hover,
+          .nav-item-content .nav-item > a:focus-visible {
+            text-decoration: underline;
+          }
+
+          /* First child is the section link — the source renders it as a
+             24px/300 heading spanning the full panel, above a rule. */
+          .nav-item-content .nav-list > .nav-item:first-child {
+            column-span: all;
+            margin-bottom: 18px;
+          }
+
+          .nav-item-content .nav-list > .nav-item:first-child > a {
+            border-bottom: 1px solid rgb(255 255 255 / 45%);
+            font-size: 1.5rem; /* 24px */
+            font-weight: 300;
+            padding: 0 0 18px;
+          }
+
+          .nav-item-content .nav-item > .nav-item-trigger {
+            display: none;
+          }
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nav-item-toggle:checked ~ .nav-item-content,
+        .nav-item-toggle:checked ~ .nav-item-nested {
+          animation: none;
+        }
+      }
     }
   }
 </style>

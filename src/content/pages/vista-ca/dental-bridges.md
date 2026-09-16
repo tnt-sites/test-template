@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Bridges
   location: Vista, CA
-  intro: If you are missing some of your teeth, we can replace them using a dental bridge. This is a secure
+  intro:
+  - If you are missing some of your teeth, we can replace them using a dental bridge. This is a secure
     and permanent alternative to wearing dentures. We can work to make a dental bridge look entirely natural
     after we place it on your teeth. We begin the procedure by taking precise measurements of your teeth
     in our dentist office. We will also take an impression, so the dental lab has all the information
@@ -34,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is a dental bridge?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A bridge is a fixed prosthetic that can be an effective solution in cases of partial tooth
         loss. It is exactly as the name suggests, a bridge that replaces lost teeth between your remaining
@@ -46,7 +47,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why should I get a dental bridge?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: There are several reasons to get a dental bridge, including restoring the appearance of your
         smile; giving you the ability to eat and speak normally; preserving the shape and structure of
@@ -54,7 +55,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How does a dental bridge compare to standard dentures?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When you visit our dental office, we can discuss what the differences will be like from the
         perspective of the treatment and process. Generally speaking, the most significant difference
@@ -87,7 +88,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Will my dental bridge look natural?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Absolutely. At North County Cosmetic and Implant Dentistry, we will take every step necessary
         to ensure they look natural and fit perfectly. We begin by taking accurate measurements and also
@@ -97,7 +98,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How long does a dental bridge last?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The duration of a dental bridge is different for everyone and is impacted by your daily habits.
         However, fixed dental bridges can last for 15 years or even longer. On the short end, they tend
@@ -111,7 +112,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What can I expect from the procedure?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When you visit our dentist office for a dental bridge, we will begin by conducting an examination
         and taking X-rays. We need to determine whether your remaining teeth are strong enough to support
@@ -131,7 +132,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Will getting a dental bridge be uncomfortable?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we can provide you with anesthesia to help
         you remain comfortable while getting your new dental bridge. The only time anesthesia may be necessary

@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Partial Dentures for Back Teeth
   location: Vista, CA
-  intro: Partial dentures are a fantastic solution for patients who are missing multiple back teeth. There
+  intro:
+  - Partial dentures are a fantastic solution for patients who are missing multiple back teeth. There
     are all sorts of benefits to partial dentures for back teeth, ranging from the comparably low cost
     to superior comfort and improved oral health. With partial dentures for your back teeth, you will
     be able to eat, drink, talk and smile without reservation. Let's take a look at some of the most frequently

@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Questions to Ask at Your Dental Implants Consultation
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
     to tooth loss that can restore both the appearance and function of our patients' smiles. If you have
     lost a tooth due to an accident, infection, or age, we encourage you to call (760) 940-2273 and schedule
     an appointment with our dental office. We will be happy to answer any questions that you have after
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What type of experience do you have to make the process go smoothly?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Whenever you visit a dentist for a major restorative procedure, you should ask about their
         experience both educationally and clinically. It is important to work with a dentist that performs
@@ -80,7 +81,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What are the requirements to qualify for a dental implants procedure?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we place dental implants in patients for a
         variety of reasons. One of the key, qualifying factors is health. If you have any other oral health

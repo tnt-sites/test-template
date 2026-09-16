@@ -10,11 +10,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Denture Care
   location: Vista, CA
-  intro: Proper denture care depends on the type of dentures and the patient's overall oral health. Without
+  intro:
+  - Proper denture care depends on the type of dentures and the patient's overall oral health. Without
     proper care, the dentures will not last nearly as long as they can. With the proper care, patients
     will not need to worry about their dentures so much. However, dentures need specific care that differs
-    from typical brushing and flossing. On this page, we break down the various form of denture care and
-    the steps one will have to take. To begin, dentures need daily cleaning and care, just like teeth.
+    from typical brushing and flossing.
+  - On this page, we break down the various form of denture care and the steps one will have to take.
+    To begin, dentures need daily cleaning and care, just like teeth.
   imageSource: /src/assets/images/wp/denture-care.jpg
   imageAlt: Denture Care
   formId: '251056297507965'
@@ -31,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Taking care of dentures
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: For a patient with removable dentures, it is crucial to remove them at night and thoroughly
         clean them. At least once a day, preferably at night, the individual needs to remove the dentures
@@ -82,7 +84,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Keeping up oral health
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If a patient, who wears dentures, does not take care of his or her mouth, then there is a
         greater chance for infection to form; even when one cares for the dentures. For patients who can

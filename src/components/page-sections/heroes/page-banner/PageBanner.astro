@@ -31,6 +31,12 @@ const {
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
 );
+
+// `intro` may be a single string or an array of paragraphs; the source runs up
+// to six in the banner column and each is its own <p>.
+const introParagraphs = (Array.isArray(intro) ? intro : [intro])
+  .map((p: any) => (typeof p === "string" ? p.trim() : ""))
+  .filter(Boolean);
 ---
 
 <section class:list={["page-banner", className]} {...htmlAttributes}>
@@ -44,7 +50,15 @@ const htmlAttributes = Object.fromEntries(
         <span class="pb-name" data-prop="heading">{heading}</span>
         {location && <span class="pb-location" data-prop="location">{location}</span>}
       </h1>
-      {intro && <Text class="pb-intro" alignX="start" text={intro} data-prop="intro" />}
+      {
+        introParagraphs.length > 0 && (
+          <div class="pb-intro" data-prop="intro">
+            {introParagraphs.map((p: string) => (
+              <Text alignX="start" text={p} editable={false} />
+            ))}
+          </div>
+        )
+      }
       {
         buttonText && buttonLink && (
           <Button text={buttonText} link={buttonLink} variant="primary" size="md" borderRadius="2xl" editable={false} />
@@ -78,26 +92,31 @@ const htmlAttributes = Object.fromEntries(
 
   @media (min-width: 993px) {
     .pb-grid {
-      align-items: stretch;
+      align-items: center;
       grid-template-columns: repeat(3, 1fr);
     }
   }
 
   .pb-media {
-    align-self: stretch;
+    /* the source keeps the photo at 550px and centres it against a taller
+       text column rather than stretching it */
+    align-self: center;
+  }
+
+  .pb-intro :global(p) + :global(p) {
+    margin-top: 0.85em;
   }
 
   .pb-media :global(img) {
     display: block;
-    height: 100%;
-    min-height: 550px;
+    height: 550px;
     object-fit: cover;
     width: 100%;
   }
 
   .pb-body {
-    /* source: 410px of text starting at x=530 inside the 480px column */
-    padding-block: 126px var(--spacing-xl);
+    /* the grid centres the columns, so no top padding is needed */
+    padding-block: 0 var(--spacing-xl);
     padding-left: 50px;
     padding-right: 20px;
   }
@@ -123,6 +142,9 @@ const htmlAttributes = Object.fromEntries(
   }
 
   .pb-location {
+    /* The source is inconsistent here - dental-anesthesia renders the location
+       in gold, most others in black. Gold everywhere, per the brief. */
+    color: var(--color-brand-secondary, #ba9764);
     display: block;
     font-size: 1.5rem; /* 24px, measured */
     font-weight: 200;

@@ -10,10 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: When a Situation Calls for an Emergency Dental Surgery
   location: Vista, CA
-  intro: No matter how many precautions you take to protect your teeth, there is always a chance for a
-    dental accident or injury to occur. When this happens, there is a chance that you will need emergency
-    surgery from a professional endodontist. By seeking services from an endodontic specialist, you will
-    be able to ensure that you receive the proper treatment for your teeth.
+  intro:
+  - No matter how many precautions you take to protect your teeth, there is always a chance for a dental
+    accident or injury to occur. When this happens, there is a chance that you will need emergency surgery
+    from a professional endodontist. By seeking services from an endodontic specialist, you will be able
+    to ensure that you receive the proper treatment for your teeth.
   imageSource: /src/assets/images/wp/when-a-situation-calls-for-an-emergency-surgery.jpg
   imageAlt: When a Situation Calls for an Emergency Dental Surgery
   formId: '251056297507965'
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Types of Dental Damage
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'When a dental emergency occurs, a general dentist may not have the experience and technology
         to repair the damage. In these cases, emergency surgery from an endodontic specialist will be
@@ -106,7 +107,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Misconceptions about emergency surgery
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While any form of emergency surgery can be an uncomfortable and negative topic for people,
         there are many misconceptions about surgery that people believe. When it comes to emergency endodontic

@@ -9,13 +9,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: General Dentist
   location: Vista, CA
-  intro: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
-    health. Your teeth and gums impact the health of the entire body. If you don't take care of them,
-    you can get sick more often and increase your risk for diseases. Things like cavities, gum disease,
-    and tooth decay can cause incredible pain that makes it difficult to enjoy life, let alone your favorite
-    foods. At North County Cosmetic and Implant Dentistry, we understand the importance of maintaining
-    good oral health and provide general dentistry care to help our patients live life fully. Taking simple
-    steps like getting your teeth cleaned regularly, fixing cavities, and having regular dental examinations
+  intro:
+  - Practicing good oral hygiene, along with regular checkups, is essential for maintaining good health.
+    Your teeth and gums impact the health of the entire body. If you don't take care of them, you can
+    get sick more often and increase your risk for diseases. Things like cavities, gum disease, and tooth
+    decay can cause incredible pain that makes it difficult to enjoy life, let alone your favorite foods.
+    At North County Cosmetic and Implant Dentistry, we understand the importance of maintaining good oral
+    health and provide general dentistry care to help our patients live life fully. Taking simple steps
+    like getting your teeth cleaned regularly, fixing cavities, and having regular dental examinations
     can prevent gum disease and additional dental health problems. Our highly trained team provides preventative
     care and general dentistry services for patients of all ages. Whether a child getting their teeth
     cleaned for the first time, a patient suffering from tooth sensitivity, or someone needing a major
@@ -37,7 +38,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Who Benefits From Our General Dentist Services
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We work with patients throughout the Vista area to provide ongoing and preventative oral health
         care. We can treat patients of all ages and focus on ensuring that they are comfortable during
@@ -62,7 +63,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista, California General Dentist
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: What is General Dentist?
       level: h3

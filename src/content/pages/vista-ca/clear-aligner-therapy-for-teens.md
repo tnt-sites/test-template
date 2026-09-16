@@ -10,15 +10,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Clear Aligner Therapy for Teens
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so that
-    you can straighten your teeth without anyone noticing. If you want to improve your appearance, this
-    is an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there are several
-    things that you should know. Metal braces are a reliable solution for straightening your teeth that
-    have been used by people for decades. In fact, your parents may have used them when they were teenagers.
-    While they work well, the technology is similar in that you still need to have a metal bracket placed
-    on each tooth with a wire threaded between them and secured with rubber bands. Some kids like how
-    they can pick out fun rubber band colors to match their mood or a holiday. If that is not your idea
-    of fun, metal braces may not be for you.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so that you
+    can straighten your teeth without anyone noticing. If you want to improve your appearance, this is
+    an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there are several
+    things that you should know.
+  - Metal braces are a reliable solution for straightening your teeth that have been used by people for
+    decades. In fact, your parents may have used them when they were teenagers. While they work well,
+    the technology is similar in that you still need to have a metal bracket placed on each tooth with
+    a wire threaded between them and secured with rubber bands. Some kids like how they can pick out fun
+    rubber band colors to match their mood or a holiday. If that is not your idea of fun, metal braces
+    may not be for you.
   imageSource: /src/assets/images/wp/invisalign-for-teens.jpg
   imageAlt: Clear Aligner Therapy for Teens
   formId: '251056297507965'
@@ -35,7 +37,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Clear Aligner Therapy Vs. Clear Braces
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Clear Aligner Therapy is different. This is an orthodontics treatment for teens that want
         to straighten their teeth without standing out. Most people cannot tell that you are wearing anything
@@ -84,7 +86,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Clear Aligner Therapy for Teens
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/image
       source: /src/assets/images/wp/sure-smile.jpeg
       alt: Clear Aligner Therapy for Teens

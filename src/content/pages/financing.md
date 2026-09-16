@@ -27,7 +27,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: CareCredit healthcare credit card for dental procedure financing.
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: We are pleased to accept the CareCredit healthcare, credit card. CareCredit lets you say "Yes"
       to recommended surgical and non-surgical dental procedures like crowns, oral surgery or even a general
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: We Love your Dental Insurance!
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: Call us today to find out how we can maximize your insurance plan and give you better care!
   - _component: building-blocks/core-elements/image
@@ -151,7 +151,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preferred Provider Organization (PPO) Dental Insurance
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: If all of your insurance information has been received on the day of your appointment, as a
       courtesy to you we will be happy to file claims for you at no additional charge. We accept dental

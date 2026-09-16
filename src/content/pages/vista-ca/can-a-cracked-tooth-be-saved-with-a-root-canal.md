@@ -10,12 +10,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Can a Cracked Tooth be Saved with a Root Canal and Crown
   location: Vista, CA
-  intro: 'When you crack a tooth, there are multiple tools and techniques to repair the damage. However,
-    there is one option that stands above the rest: the dental crown. A crown is a cap, typically consisting
+  intro:
+  - 'When you crack a tooth, there are multiple tools and techniques to repair the damage. However, there
+    is one option that stands above the rest: the dental crown. A crown is a cap, typically consisting
     of porcelain that matches the shape and size of the tooth. The crown acts as a strong cover that protects
-    the tooth from infection and losing the tooth. Without the crown, the tooth will not even be able
-    to handle the pressure of chewing. It is important to treat a cracked tooth as soon as possible by
-    seeking treatment from a professional endodontist.'
+    the tooth from infection and losing the tooth.'
+  - Without the crown, the tooth will not even be able to handle the pressure of chewing. It is important
+    to treat a cracked tooth as soon as possible by seeking treatment from a professional endodontist.
   imageSource: /src/assets/images/wp/can-a-cracked-tooth-be-saved-with-a-root-canal.jpg
   imageAlt: Can a Cracked Tooth be Saved with a Root Canal and Crown
   formId: '251056297507965'
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Symptoms of a cracked tooth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'To understand the symptoms of a cracked tooth, it is crucial to understand that the teeth
         have layers. The outer layer is known as the enamel, followed by the dentin and then the pulp.
@@ -66,7 +67,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The dental crown process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: By customizing the crown, the endodontist can ensure that the crown fits properly on the tooth
         and the surrounding teeth. Not only will the crown protect the tooth, it will also have the appearance
@@ -107,7 +108,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Taking care of a dental crown
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Since a dental crown is artificial, you will not need to worry about the crown becoming infected.
         However, you will need to continue cleaning the teeth and gums, being sure to keep any food from

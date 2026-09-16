@@ -10,12 +10,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Cleaning
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
-    to patients throughout Vista. We believe that preventative care is essential for staying in good oral
-    health. Our goal is to keep our patients as healthy as possible. The best way to do so is through
-    ongoing dental care and teaching our patients how to practice good oral hygiene at home. If you live
-    in the Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay healthy
-    year-round.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations to patients
+    throughout Vista. We believe that preventative care is essential for staying in good oral health.
+    Our goal is to keep our patients as healthy as possible. The best way to do so is through ongoing
+    dental care and teaching our patients how to practice good oral hygiene at home. If you live in the
+    Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay healthy year-round.
   imageSource: /src/assets/images/wp/dental-cleaning-and-examinations.jpg
   imageAlt: Dental Cleaning
   formId: '251056297507965'
@@ -32,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Dental Cleanings and Examinations for Children
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Our team works with patients of various ages and knows how to help children to feel comfortable
         while visiting the dentist. Families throughout California visit our dentist office to for their
@@ -74,7 +74,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Dental Cleaning and Examinations
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Adults
       level: h3

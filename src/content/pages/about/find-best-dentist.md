@@ -35,7 +35,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Read Reviews
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: We recommend conducting a search for the best dentist in Vista. If you are interested in a particular
       service or need them to treat a specific age group, add those keywords to your search; keywords
@@ -113,7 +113,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Research
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: Another way to find the best dentist in Vista is to conduct research. Similar to when you were
       looking for reviews, conduct a search for the "best dentist in Vista" for the service that you are

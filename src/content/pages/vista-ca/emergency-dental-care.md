@@ -10,8 +10,9 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Emergency Dental Care
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps to
-    restore a tooth that sustains damage from an accident or infection. If you live in Vista or the surrounding
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps to restore
+    a tooth that sustains damage from an accident or infection. If you live in Vista or the surrounding
     area, we encourage you to save our phone number. Since there is no way to tell if or when you may
     have a dental emergency, putting (760) 940-2273 in your contact list can save you a trip to the emergency
     room.
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why we provide emergency dental care
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We provide emergency dental care to ensure that patients can get the help they need right
         away. If you leave a damaged or infected tooth alone, you will risk the infection spreading.
@@ -103,7 +104,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Toothaches.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: With emergency dental care, we see a lot of California patients that are suffering from a
         major toothache. This is a top reason that people seek out care right away instead of waiting
@@ -139,7 +140,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Call North County Cosmetic and Implant Dentistry for Emergency Dental Care
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you live in Vista, CA or the surrounding area, call 760-940-2273 if you have any type of
         dental emergency. We will work to get you treated right away so that your discomfort can be relieved,

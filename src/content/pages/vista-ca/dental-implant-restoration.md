@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Implant Restoration
   location: Vista, CA
-  intro: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an appointment
+  intro:
+  - If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an appointment
     with our Vista, CA dental office. It is critical that we examine your dental implant right away and
     that you do not try to self-diagnose the problem. This can lead to further irritation and dental challenges.
     During an examination, we can let you know if you need a dental implant restoration and the best way
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How common are dental implant problems?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: They are actually very rare. At North County Cosmetic and Implant Dentistry one of the reasons
         that we recommend dental implants is due to their high success rate. Depending on the dentist
@@ -43,7 +44,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why do dental implants become loose?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If your implant has become loose, it may be due to the fact that osseointegration never took
         place. Osseointegration is the process where the titanium implant fuses with the actual jawbone.
@@ -58,7 +59,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What do I do if my dental implant has become loose?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Call us right away. The implant will not tighten on its own, nor will the problem correct
         itself. If you attempt to self-diagnose and treat, you can end up damaging your bone.

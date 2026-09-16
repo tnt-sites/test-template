@@ -10,9 +10,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can understand why teen patients prefer Clear
-    Aligner Therapy to other products. As a parent, we encourage you to explore this option so that your
-    teen can gain a beautiful smile that they are confident to show off. Now is an excellent time to straighten
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can understand why teen patients prefer Clear Aligner
+    Therapy to other products. As a parent, we encourage you to explore this option so that your teen
+    can gain a beautiful smile that they are confident to show off. Now is an excellent time to straighten
     their teeth before the teen heads off to college. Orthodontics, under your supervision, can be an
     effective treatment that gives them a confidence boost for the rest of their life. To find out if
     your teen qualifies, call (760) 940-2273 and schedule an appointment to speak with our team.
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Here are seven things you should know about Clear Aligner Therapy prior to visiting our office.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'While minor issues such as plaque buildup or even a minor chip in the tooth may only need
         the services of a general dentist, there are many other issues that require specialist services.

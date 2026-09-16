@@ -9,10 +9,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Why Are My Gums Bleeding
   location: Vista, CA
-  intro: If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North
-    County Cosmetic and Implant Dentistry we can examine you and determine whether they are bleeding due
-    to simple irritation or if there is a greater health concern. You can schedule an appointment with
-    our office by calling (760) 940-2273. In the meantime, here is what you need to know about your gums.
+  intro:
+  - If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North County
+    Cosmetic and Implant Dentistry we can examine you and determine whether they are bleeding due to simple
+    irritation or if there is a greater health concern. You can schedule an appointment with our office
+    by calling (760) 940-2273. In the meantime, here is what you need to know about your gums.
   imageSource: /src/assets/images/wp/why-are-my-gums-bleeding.jpg
   imageAlt: Why Are My Gums Bleeding
   formId: '251056297507965'
@@ -29,7 +30,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Symptoms of Gum Disease that You Should Watch For
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we encourage you to keep an eye on your gum
         health and call us if any of these signs persist for longer than a week –
@@ -126,7 +127,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Q&A
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Why do my gums bleed when I brush my teeth?
       level: h3

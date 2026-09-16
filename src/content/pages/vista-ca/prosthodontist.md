@@ -9,15 +9,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Prosthodontist
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
-    a prosthodontist and why patients should visit one. There are specialties in dentistry just like there
-    are in the medical field. Prosthodontics is one of those specialties and centers around replacing
-    teeth. If you struggle with tooth loss, visiting a prosthodontist will likely produce better results
-    than if you were to visit a general dentist, because you will be visiting someone with more educational
-    and clinical experience. With that in mind, we encourage you to visit our dental office and discuss
-    your teeth replacement solutions, even if you are under the current care of a general family dentist.
-    To schedule an appointment, call (760) 940-2273. In the meantime, here are the answers to a few frequently
-    asked questions.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being a prosthodontist
+    and why patients should visit one. There are specialties in dentistry just like there are in the medical
+    field. Prosthodontics is one of those specialties and centers around replacing teeth. If you struggle
+    with tooth loss, visiting a prosthodontist will likely produce better results than if you were to
+    visit a general dentist, because you will be visiting someone with more educational and clinical experience.
+    With that in mind, we encourage you to visit our dental office and discuss your teeth replacement
+    solutions, even if you are under the current care of a general family dentist. To schedule an appointment,
+    call (760) 940-2273. In the meantime, here are the answers to a few frequently asked questions.
   imageSource: /src/assets/images/wp/prosthodontist.jpg
   imageAlt: Prosthodontist
   formId: '251056297507965'
@@ -34,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is a Prosthodontist?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A Prosthodontist is a licensed dentist who has received additional training to specialize
         in the branch of dentistry that focuses on restoring and maintaining the functionality of the
@@ -80,7 +80,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Oral Prosthetics Doctor
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: What types of procedures does a Prosthodontist perform?
       level: h3

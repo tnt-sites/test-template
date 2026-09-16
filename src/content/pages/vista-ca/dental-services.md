@@ -9,16 +9,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Services
   location: Vista, CA
-  intro: We offer comprehensive dental services for families and patients. We understand that you have
-    many options in dental care and aim to provide you with the highest quality of care possible. By leveraging
+  intro:
+  - We offer comprehensive dental services for families and patients. We understand that you have many
+    options in dental care and aim to provide you with the highest quality of care possible. By leveraging
     modern dental technology and having a highly trained team, we can ensure that you and your family
     stay in excellent oral health. We practice gentle dentistry and will ensure that your experience is
-    positive and that you stay comfortable during your dental treatments. At North County Cosmetic and
-    Implant Dentistry, we offer flexible appointment times since we understand how busy life can be. Whether
-    you are a busy professional or a mom on the go, we can work with you to arrange a time that is convenient
-    for your schedule. If you have multiple family members that need to have their teeth cleaned, let
-    us know. We can try to arrange everyone's appointment for around the same time so that you only have
-    to visit the dentist twice a year, instead of multiple times.
+    positive and that you stay comfortable during your dental treatments.
+  - At North County Cosmetic and Implant Dentistry, we offer flexible appointment times since we understand
+    how busy life can be. Whether you are a busy professional or a mom on the go, we can work with you
+    to arrange a time that is convenient for your schedule. If you have multiple family members that need
+    to have their teeth cleaned, let us know. We can try to arrange everyone's appointment for around
+    the same time so that you only have to visit the dentist twice a year, instead of multiple times.
   imageSource: /src/assets/images/wp/dental-services.jpg
   imageAlt: Dental Services
   formId: '251056297507965'
@@ -35,7 +36,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Our Dental Services
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you are looking for a Vista dentist that can prevent infections, treat them, and beautifully
         restore or transform your smile; we offer all of those solutions as part of our dental work. If

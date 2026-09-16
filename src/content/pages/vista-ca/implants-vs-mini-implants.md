@@ -11,12 +11,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: The Difference Between Dental Implants and Mini Dental Implants
   location: Vista, CA
-  intro: Our goal is to provide you with a replacement tooth that is long-lasting, durable, and looks
-    natural. Since every patient is unique, the only way to determine which type of implant is right for
-    you is to conduct a physical examination and to take X-rays. Once we do, we can discuss whether a
-    traditional implant or mini dental implants would be the best way to replace your teeth. We will then
-    answer any questions that you may have, prior to scheduling an appointment for the procedure. At North
-    County Cosmetic and Implant Dentistry, we will ensure that you remain comfortable throughout the process.
+  intro:
+  - Our goal is to provide you with a replacement tooth that is long-lasting, durable, and looks natural.
+    Since every patient is unique, the only way to determine which type of implant is right for you is
+    to conduct a physical examination and to take X-rays. Once we do, we can discuss whether a traditional
+    implant or mini dental implants would be the best way to replace your teeth. We will then answer any
+    questions that you may have, prior to scheduling an appointment for the procedure. At North County
+    Cosmetic and Implant Dentistry, we will ensure that you remain comfortable throughout the process.
   imageSource: /src/assets/images/wp/implants-vs-mini-implants.jpg
   imageAlt: The Difference Between Dental Implants and Mini Dental Implants
   formId: '251056297507965'
@@ -36,7 +37,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: It all comes down to size.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A traditional dental implant generally has a diameter of 3 to 6mm. A mini dental implant is
         typically half of the size of a traditional one. There are several reasons why a mini dental implant
@@ -90,7 +91,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What they are made of.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we place dental implants that are made of
         titanium. In our dental office, we understand how unique and valuable titanium is since it is

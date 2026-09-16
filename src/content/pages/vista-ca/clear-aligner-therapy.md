@@ -9,15 +9,16 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Clear Aligner Therapy
   location: Vista, CA
-  intro: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
+  intro:
+  - Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
     teeth can also benefit one's oral health. In fact crooked teeth can trap food between them and lead
     to infection or bite issues. At North County Cosmetic and Implant Dentistry, we offer Clear Aligner
-    Therapy as a treatment for patients interested in discreetly straightening their teeth. Clear Aligner
-    Therapy is a series of clear aligner trays that cover the teeth, similar to a retainer or mouth guard,
-    but are much more discreet. At least every two weeks or so, the patient will switch to the next set
-    in the series of Clear Aligner Therapy trays. With the custom aligners for each patient, Clear Aligner
-    Therapy will gradually push the teeth into the right position without causing significant amounts
-    of pain.
+    Therapy as a treatment for patients interested in discreetly straightening their teeth.
+  - Clear Aligner Therapy is a series of clear aligner trays that cover the teeth, similar to a retainer
+    or mouth guard, but are much more discreet. At least every two weeks or so, the patient will switch
+    to the next set in the series of Clear Aligner Therapy trays. With the custom aligners for each patient,
+    Clear Aligner Therapy will gradually push the teeth into the right position without causing significant
+    amounts of pain.
   imageSource: /src/assets/images/wp/invisalign.jpg
   imageAlt: Clear Aligner Therapy
   formId: '251056297507965'
@@ -34,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: To begin, we will need to conduct a consultation and examination. This examination will involve
         reviewing the patient's medical history, current state of health, any pre-existing conditions
@@ -93,7 +94,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Keep up regular oral hygiene
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While wearing Clear Aligners, patients will not have to brush and floss between brackets with
         difficulty. In fact, the patient will be able to brush and floss as normal by just removing the
@@ -141,7 +142,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How do I get started with Clear Aligner Therapy?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Call (760) 940-2273 and schedule a consultation with Dr. Henninger.
     maxContentWidth: none

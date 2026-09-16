@@ -10,13 +10,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: The Dental Implant Procedure
   location: Vista, CA
-  intro: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
-    to restore full dental functions and the appearance of your smile. They offer a more natural tooth
-    replacement option than other tooth replacement options. The dental implant procedure involves the
-    insertion of metal, screw-like posts into the jawbone to replace the root of the lost tooth, and provide
-    support for an artificial tooth. The dental implant procedure is available at North County Cosmetic
-    and Implant Dentistry in Vista and the surrounding area. To get dental implants, you must be in good
-    health and have healthy and adequate bone density. Contact our office at (760) 940-2273 for a consultation.
+  intro:
+  - Losing one or more teeth can be devastating and life-changing, but dental implants allow you to restore
+    full dental functions and the appearance of your smile. They offer a more natural tooth replacement
+    option than other tooth replacement options. The dental implant procedure involves the insertion of
+    metal, screw-like posts into the jawbone to replace the root of the lost tooth, and provide support
+    for an artificial tooth.
+  - The dental implant procedure is available at North County Cosmetic and Implant Dentistry in Vista
+    and the surrounding area. To get dental implants, you must be in good health and have healthy and
+    adequate bone density. Contact our office at (760) 940-2273 for a consultation.
   imageSource: /src/assets/images/wp/dental-implant-procedure.jpg
   imageAlt: The Dental Implant Procedure
   formId: '251056297507965'
@@ -33,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Dental Implant Procedure
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The process of placing dental implants depends on the condition of the patient. The procedure
         takes multiple stages spread over several months to ensure the success of the implant procedure
@@ -78,7 +80,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Preparing for Dental Implant Procedure
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'Ahead of the implant placement, patients can do the following to make the process as seamless
         as possible:'
@@ -103,7 +105,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Placing the Dental Implant
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: During the procedure, the dentist will make an incision over the gums to reveal the bone.
         They will put the implant post at the site of the lost tooth. Although every patient is different,

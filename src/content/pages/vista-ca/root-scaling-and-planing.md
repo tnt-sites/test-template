@@ -10,10 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Root Scaling and Planing
   location: Vista, CA
-  intro: If you have gum disease, you may need a root scaling and planing procedure to help get rid of
-    it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
-    every treatment we can to prevent gum disease and other painful conditions. At North County Cosmetic
-    and Implant Dentistry, we recommend that you visit our dental office twice per year so we can do just
+  intro:
+  - If you have gum disease, you may need a root scaling and planing procedure to help get rid of it.
+    This is a serious condition that can lead to eventual bone and tooth loss. We will go through every
+    treatment we can to prevent gum disease and other painful conditions. At North County Cosmetic and
+    Implant Dentistry, we recommend that you visit our dental office twice per year so we can do just
     that. We want to remove plaque and tartar before they can cause gum disease, gum recession, and the
     need for this procedure. However, if you do need a root scaling and planing procedure, we can help
     and we can ensure that you are as comfortable as possible during it.
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is periodontal scaling and root planing?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: In this procedure, the plaque and tartar underneath the gum tissue is removed. This can be
         done using a metal dental tool, ultrasound energy, and lasers. A dentist will break up the plaque
@@ -142,7 +143,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Will I need follow-up procedures?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Typically, you will need to return to your Vista dentist within six months for a follow-up
         visit. This is to ensure that your gum health has improved. However, the only real follow-up procedure

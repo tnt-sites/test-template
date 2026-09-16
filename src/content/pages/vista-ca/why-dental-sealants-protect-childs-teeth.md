@@ -10,9 +10,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth
   location: Vista, CA
-  intro: Standing behind the child with a stern expression, parents will do just about anything to ensure
-    their children brush and floss on a regular basis. Much to the parents' efforts, children still seem
-    to attract tooth decay or infection. The risk of tooth decay for children can even begin before they
+  intro:
+  - Standing behind the child with a stern expression, parents will do just about anything to ensure their
+    children brush and floss on a regular basis. Much to the parents' efforts, children still seem to
+    attract tooth decay or infection. The risk of tooth decay for children can even begin before they
     reach the age of 3. While a child becomes more capable of brushing his or her teeth without a parent's
     assistance, the child may not properly brush or reach all of the necessary areas of the mouth to remove
     plaque. If most adults cannot reach the areas they need to, then a child will definitely not be able
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Extra Protection with Dental Sealants
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The food particles a child misses with a toothbrush will feed the plaque on the teeth, which
         will help to promote tooth decay. We understand that balancing a family schedule with work, school,
@@ -44,7 +45,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The type of issues an endodontist treats
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Most parents, upon hearing about a dental sealant procedure for their children, think, "There's
         no way my child will remain calm or even want to set foot in the dentist." With the care that

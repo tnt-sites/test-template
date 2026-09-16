@@ -10,10 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: What is an Endodontist
   location: Vista, CA
-  intro: People may not realize that there are multiple forms of care within the field of dentistry. The
-    teeth are more complex than some people realize, with layers of protection, nerves and blood vessels,
-    while also connecting to the gums and jawbone. If something happens to any of the layers of the tooth,
-    the body can feel repercussions from the damage.
+  intro:
+  - People may not realize that there are multiple forms of care within the field of dentistry. The teeth
+    are more complex than some people realize, with layers of protection, nerves and blood vessels, while
+    also connecting to the gums and jawbone. If something happens to any of the layers of the tooth, the
+    body can feel repercussions from the damage.
   imageSource: /src/assets/images/wp/what-is-an-endodontist.jpg
   imageAlt: What is an Endodontist
   formId: '251056297507965'
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The type of issues an endodontist treats
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A professional endodontist is a dentist who completes the extra training to specialize in
         maintaining teeth through procedures that involve the soft tissue of the teeth. The soft tissue
@@ -106,7 +107,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While some general dentists offer basic root canal services, they will not have the necessary
         experience or technology to deal with serious cases. Thus, visiting an endodontist is crucial

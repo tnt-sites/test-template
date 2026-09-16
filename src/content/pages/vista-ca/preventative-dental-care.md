@@ -10,14 +10,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Preventative Dental Care
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
-    throughout the Vista area and invite you to schedule a dental exam today. We know that if you have
-    your teeth cleaned on a regular basis, you can decrease your risk of getting cavities or experiencing
-    gum disease. Overall, taking the time to have your teeth cleaned can prevent general discomfort and
-    even tooth loss. If you haven't been to the dentist in a while, now is the time to schedule an exam
-    so that you can prevent many common oral health issues that can negative impact your quality of life.
-    We provide preventative dental care and will ensure that your appointment is a positive one and that
-    you remain comfortable during your dental exam and treatments.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients throughout
+    the Vista area and invite you to schedule a dental exam today. We know that if you have your teeth
+    cleaned on a regular basis, you can decrease your risk of getting cavities or experiencing gum disease.
+    Overall, taking the time to have your teeth cleaned can prevent general discomfort and even tooth
+    loss. If you haven't been to the dentist in a while, now is the time to schedule an exam so that you
+    can prevent many common oral health issues that can negative impact your quality of life. We provide
+    preventative dental care and will ensure that your appointment is a positive one and that you remain
+    comfortable during your dental exam and treatments.
   imageSource: /src/assets/images/wp/preventative-dental-care.jpg
   imageAlt: Preventative Dental Care
   formId: '251056297507965'
@@ -34,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Facts
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We practice preventative dental care and are regularly asked why it is so important. Virtually
         everyone is at risk for tooth decay. Tooth decay is so common that it is the number one infectious
@@ -107,7 +108,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Deep Cleaning Can Prevent Tooth Loss
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Another way that preventative dental care can save you money is in the realm of tooth loss.
         A leading causes of tooth loss among adults is gum disease. If plaque and bacteria are left on

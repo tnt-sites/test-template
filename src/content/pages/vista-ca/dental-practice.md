@@ -10,17 +10,18 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Practice
   location: Vista, CA
-  intro: When you visit our dental practice in Vista, we will spend time getting to know you and learning
-    about any health concerns you have. By conducting an examination and taking X-rays, we can determine
-    the current health of your teeth, gums, and jawbone. We will also discuss your lifestyle with you
-    and any goals you have for your smile. This will allow us to create a comprehensive treatment plan.
-    At North County Cosmetic and Implant Dentistry, we provide dental care to patients throughout the
-    Vista area. We do so by creating treatment plans that address any issues you may have, rather than
-    focusing on one isolated problem. For example, if you have a cracked tooth, but simultaneously do
-    not like the appearance of your smile, we can recommend procedures to address both at the same time.
-    With a focus on both form and function, we can help your smile stay healthy and beautiful. In addition
-    to performing routine teeth cleanings and completing stunning smile makeovers, there are a variety
-    of procedures we complete on a daily basis that are important for your oral health.
+  intro:
+  - When you visit our dental practice in Vista, we will spend time getting to know you and learning about
+    any health concerns you have. By conducting an examination and taking X-rays, we can determine the
+    current health of your teeth, gums, and jawbone. We will also discuss your lifestyle with you and
+    any goals you have for your smile. This will allow us to create a comprehensive treatment plan. At
+    North County Cosmetic and Implant Dentistry, we provide dental care to patients throughout the Vista
+    area. We do so by creating treatment plans that address any issues you may have, rather than focusing
+    on one isolated problem. For example, if you have a cracked tooth, but simultaneously do not like
+    the appearance of your smile, we can recommend procedures to address both at the same time. With a
+    focus on both form and function, we can help your smile stay healthy and beautiful.
+  - In addition to performing routine teeth cleanings and completing stunning smile makeovers, there are
+    a variety of procedures we complete on a daily basis that are important for your oral health.
   imageSource: /src/assets/images/wp/dental-practice.jpg
   imageAlt: Dental Practice
   formId: '251056297507965'
@@ -37,7 +38,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Visit a dental practice in Vista to reduce your risk of getting gum disease
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While most people think professional teeth cleanings are only to prevent cavities, they also
         serve another important purpose in preventing gum disease. Adult tooth loss is incredibly common,
@@ -104,7 +105,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Visit a dental practice in Vista to have your restorations inspected
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: In our Vista, CA dental office, we can inspect your restorations to ensure they are holding
         up. Dental fillings, for example, are not designed to last forever. They can become worn down

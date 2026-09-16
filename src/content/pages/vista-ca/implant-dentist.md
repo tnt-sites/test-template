@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Implant Dentist
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
     your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
     tooth loss, we encourage you to call (760) 940-2273 and schedule an appointment with our Vista, CA
     dental office to determine if you are a good candidate for this procedure. In the meantime, here are
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why are implants better than dentures or dental bridges?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As an implant dentist, we can replace both the root and tooth. When you use dentures or a
         dental bridge to replace teeth, they only replace the visible portion of the tooth. While an effective
@@ -81,7 +82,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Implant Dentist
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Our qualifications as an implant dentist
       level: h3

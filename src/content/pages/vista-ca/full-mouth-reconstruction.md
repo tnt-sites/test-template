@@ -9,12 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Full Mouth Reconstruction
   location: Vista, CA
-  intro: Full mouth reconstruction involves one or several restorative dental procedures to restore and
-    replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered at
-    North County Cosmetic and Implant Dentistry. People with multiple oral health issues such as tooth
-    decay, missing teeth or damaged teeth may benefit from full mouth reconstruction. No matter the cause,
-    people will find it incredibly challenging to live without a full set of functional teeth. Fortunately,
-    we can use full mouth reconstruction to restore both the functionality and appearance of teeth.
+  intro:
+  - Full mouth reconstruction involves one or several restorative dental procedures to restore and replace
+    the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered at North County
+    Cosmetic and Implant Dentistry.
+  - People with multiple oral health issues such as tooth decay, missing teeth or damaged teeth may benefit
+    from full mouth reconstruction. No matter the cause, people will find it incredibly challenging to
+    live without a full set of functional teeth. Fortunately, we can use full mouth reconstruction to
+    restore both the functionality and appearance of teeth.
+  - Instead of only focusing on one aspect of the mouth, we can help address multiple aspects. Along with
+    ensuring that the teeth are customized to fit each patient's unique needs, we will replace missing
+    teeth to create a uniform smile. This way, they can enjoy the benefits of a functional and sturdy
+    set of teeth that also provide a great, natural appearance.
+  - If you want to restore the functionality and appearance of your teeth with full mouth reconstruction,
+    schedule an appointment with us today.
   imageSource: /src/assets/images/wp/full-mouth-reconstruction.jpg
   imageAlt: Full Mouth Reconstruction
   formId: '251056297507965'
@@ -25,21 +33,6 @@ pageSections:
   buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Instead of only focusing on one aspect of the mouth, we can help address multiple aspects.
-        Along with ensuring that the teeth are customized to fit each patient's unique needs, we will
-        replace missing teeth to create a uniform smile. This way, they can enjoy the benefits of a functional
-        and sturdy set of teeth that also provide a great, natural appearance.
-    - _component: building-blocks/core-elements/text
-      text: If you want to restore the functionality and appearance of your teeth with full mouth reconstruction,
-        schedule an appointment with us today.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Trauma
     contentSections:
@@ -110,7 +103,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Long-term wear
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: For some people, proper dental care is not a common part of daily life. When one chooses to
         not practice proper dental care, the teeth wear down more quickly as a result. Acid from certain

@@ -9,12 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Emergency Dentist
   location: Vista, CA
-  intro: An emergency dentist can provide urgent professional dental care for issues such as infection,
-    damaged teeth, knocked out teeth and more. Emergency dental care is a standard service offered at
-    North County Cosmetic and Implant Dentistry. No matter how much someone attempts to prepare ahead
-    of time, accidents happen. Dental accidents and emergencies are no exception. Dental emergencies can
-    include infections, tooth decay, damaged teeth, trauma to the mouth and more. By visiting an emergency
-    dentist, you are seeking the immediate care your teeth need.
+  intro:
+  - An emergency dentist can provide urgent professional dental care for issues such as infection, damaged
+    teeth, knocked out teeth and more. Emergency dental care is a standard service offered at North County
+    Cosmetic and Implant Dentistry.
+  - No matter how much someone attempts to prepare ahead of time, accidents happen. Dental accidents and
+    emergencies are no exception. Dental emergencies can include infections, tooth decay, damaged teeth,
+    trauma to the mouth and more. By visiting an emergency dentist, you are seeking the immediate care
+    your teeth need.
+  - Prolonging the time between injuring one's teeth and seeing an emergency dentist will only increase
+    the chance of the issue causing, irreversible damage. By seeking treatment with us, we will provide
+    the treatment needed to help prevent further damage or tooth loss. Our goal is to save as many natural
+    teeth as possible while preserving the patient's oral health.
+  - If you need an emergency dentist, do not hesitate to contact us as soon as possible for professional
+    dental treatment.
   imageSource: /src/assets/images/wp/emergency-dentist-header.jpg
   imageAlt: Emergency Dentist
   formId: '251056297507965'
@@ -25,21 +33,6 @@ pageSections:
   buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Prolonging the time between injuring one's teeth and seeing an emergency dentist will only
-        increase the chance of the issue causing, irreversible damage. By seeking treatment with us, we
-        will provide the treatment needed to help prevent further damage or tooth loss. Our goal is to
-        save as many natural teeth as possible while preserving the patient's oral health.
-    - _component: building-blocks/core-elements/text
-      text: If you need an emergency dentist, do not hesitate to contact us as soon as possible for professional
-        dental treatment.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Do I need emergency dentistry? Call us if…
     contentSections:
@@ -81,7 +74,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Reasons for Needing an Emergency Dental Visit
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The American Dental Association reported that the number one cause of adult tooth damage every
         year is playing sports. This spans all types of athletics and creates the need for emergency appointments
@@ -163,7 +156,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Treatment Options
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When a tooth has fallen out… If your tooth has been knocked out, try to find it. Once located,
         rinse the tooth under warm water without scrubbing it. Next, place it in a cup of milk and bring

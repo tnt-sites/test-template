@@ -9,16 +9,18 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dentures and Partial Dentures
   location: Vista, CA
-  intro: You have probably heard about partial and full dentures as treatments for tooth loss. If you
-    are now facing this problem and want to do something about your smile, these are great solutions.
-    Living with missing teeth can make things difficult for eating, but it can also affect your self-esteem.
-    Dentures and partial dentures are practical solutions to restore mouth function and help patients
-    enjoy smiling once again. Dentures and partial dentures are available at North County Cosmetic and
-    Implant Dentistry in Vista and the surrounding area. Our team can evaluate your condition and determine
-    which option is the right fit for you. Whether you are missing a few teeth, several teeth, or all
-    your teeth, dentures may provide the relief you have been anticipating. Because our professionals
-    have the necessary knowledge and training, you can feel at ease knowing we can set you on the path
-    to a beautiful smile.
+  intro:
+  - You have probably heard about partial and full dentures as treatments for tooth loss. If you are now
+    facing this problem and want to do something about your smile, these are great solutions. Living with
+    missing teeth can make things difficult for eating, but it can also affect your self-esteem. Dentures
+    and partial dentures are practical solutions to restore mouth function and help patients enjoy smiling
+    once again.
+  - Dentures and partial dentures are available at North County Cosmetic and Implant Dentistry in Vista
+    and the surrounding area. Our team can evaluate your condition and determine which option is the right
+    fit for you. Whether you are missing a few teeth, several teeth, or all your teeth, dentures may provide
+    the relief you have been anticipating. Because our professionals have the necessary knowledge and
+    training, you can feel at ease knowing we can set you on the path to a beautiful smile.
+  - Call our office today at (760) 940-2273 so you can make an appointment.
   imageSource: /src/assets/images/wp/dentures-and-partial-dentures.jpg
   imageAlt: Dentures and Partial Dentures
   formId: '251056297507965'
@@ -30,22 +32,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Call our office today at (760) 940-2273 so you can make an appointment.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
-  - _component: page-sections/builders/custom-section
     label: Dentures Can Help Prevent Further Oral Health Issues
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Dentures Can Help Prevent Further Oral Health Issues
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The purpose of dental care and oral hygiene is to prevent tooth loss as much as possible.
         However, there are cases in which tooth loss is unavoidable. When an infection advances to later
@@ -75,7 +67,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Other Benefits
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While dentures and partial dentures may not be for everyone, they can help people experience
         the satisfaction of a full smile and eating favorite foods again. Dentures closely resemble natural
@@ -104,7 +96,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Choosing Dentures for Tooth Replacement
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Dentures and partial dentures only represent one of the many options patients can choose from.
     - _component: building-blocks/core-elements/heading
@@ -217,7 +209,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Other Tooth Replacement Options
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: In addition to dentures and partial dentures, patients may want to consider other ways to
         replace missing teeth. When deciding which option to choose, there are a few factors to consider,
@@ -247,7 +239,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Helping Dentures Last With Proper Care
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Dentures can work effectively for up to 10 years. This time frame will depend mainly on the
         person’s commitment and diligence to maintaining the appliance. Just as patients should brush
@@ -279,7 +271,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Common Misconceptions About Dentures
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we hear a lot of myths about dentures. In
         some cases, people have inaccurate information about this treatment. We make sure every step of

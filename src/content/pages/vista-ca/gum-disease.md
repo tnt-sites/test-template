@@ -10,12 +10,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Gum Disease
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we work diligently to prevent gum disease in
-    our patients. Gum disease is a common condition and most adults will suffer from some form of gum
-    disease during their lifetime. The challenge is that gum disease can lead to bone and tooth loss,
-    making it incredibly important to both prevent and treat it. If you live in Vista or the surrounding
-    area, we can examine you and let you know if you are showing any signs of the condition, along with
-    making recommendations for how to prevent it. To schedule an appointment, call (760) 940-2273.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we work diligently to prevent gum disease in our patients.
+    Gum disease is a common condition and most adults will suffer from some form of gum disease during
+    their lifetime. The challenge is that gum disease can lead to bone and tooth loss, making it incredibly
+    important to both prevent and treat it. If you live in Vista or the surrounding area, we can examine
+    you and let you know if you are showing any signs of the condition, along with making recommendations
+    for how to prevent it. To schedule an appointment, call (760) 940-2273.
   imageSource: /src/assets/images/wp/gum-disease.jpg
   imageAlt: Gum Disease
   formId: '251056297507965'
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Causes of Gum Disease
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: There are several reasons that gum disease develops. The primary causes are plaque and tartar.
         Anything that becomes stuck between your teeth, gums or under the gum tissue, can cause irritation
@@ -60,7 +61,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Common Signs of Gum Disease
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'Some of the most common signs of gum disease are:'
     - _component: building-blocks/core-elements/list
@@ -131,7 +132,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why You Could Need a Bone Graft Following Severe Gum Disease
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Severe gum disease can drastically and negatively impact your oral health. As gum disease
         progresses, your gums will swell and then begin to recede or pull away from your tooth structure.

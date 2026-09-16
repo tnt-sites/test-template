@@ -10,11 +10,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Types of Dental Root Fractures
   location: Vista, CA
-  intro: Contrary to what some people may assume, there are multiple types of fractures for the roots
-    of teeth. The part of the teeth that people brush and use to chew food or speak is known as the crown.
-    The crown consists of the outer shell known as the enamel and is what most people refer to when they
-    mention anything about the teeth. However, the teeth have roots that actually go deeper into the gums
-    and jawbone.
+  intro:
+  - Contrary to what some people may assume, there are multiple types of fractures for the roots of teeth.
+    The part of the teeth that people brush and use to chew food or speak is known as the crown. The crown
+    consists of the outer shell known as the enamel and is what most people refer to when they mention
+    anything about the teeth. However, the teeth have roots that actually go deeper into the gums and
+    jawbone.
   imageSource: /src/assets/images/wp/types-of-dental-root-fractures.jpg
   imageAlt: Types of Dental Root Fractures
   formId: '251056297507965'
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Understanding the Layers of Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Within the tooth, there are layers that people may not be aware of. Underneath the enamel
         is the dentin. The dentin is the second layer of the tooth and contains the dental pulp. The dental
@@ -93,7 +94,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Types of fractures
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Oblique supragingival fracture
       level: h3

@@ -10,14 +10,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Clear Aligners
   location: Vista, CA
-  intro: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
-    By straightening teeth, patients also gain health benefits from teeth that do not have as many places
+  intro:
+  - Straightening teeth can be beneficial for more than just the overall appearance of one's teeth. By
+    straightening teeth, patients also gain health benefits from teeth that do not have as many places
     to trap food in them as crooked teeth. However, many patients do not prefer the obvious and cumbersome
-    metal braces that they have to wear in order to straighten their teeth. Fortunately, we offer clear
-    aligners as an alternative to braces that are just as effective. Patients will be able to benefit
-    from wearing clear aligners while also straightening their teeth in a discreet manner. Clear aligners
-    are an efficient alternative to traditional braces. Here are a few key factors that people need to
-    understand about clear aligners.
+    metal braces that they have to wear in order to straighten their teeth.
+  - Fortunately, we offer clear aligners as an alternative to braces that are just as effective. Patients
+    will be able to benefit from wearing clear aligners while also straightening their teeth in a discreet
+    manner. Clear aligners are an efficient alternative to traditional braces. Here are a few key factors
+    that people need to understand about clear aligners.
   imageSource: /src/assets/images/wp/clear-aligners.jpg
   imageAlt: Clear Aligners
   formId: '251056297507965'
@@ -34,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Removable and nearly invisible
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Clear aligners are the preferable choice for many patients since they are removable and are
         not obvious to other people. The clear aligners come in a set, with each aligner being at a different
@@ -78,7 +79,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Not for kids
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Clear aligners are not always the best treatment for children or children in their early teens.
         Since clear aligners require more responsibility to care for, children are not always responsible
@@ -91,7 +92,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Clear says it all
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While clear aligners are great for being a discreet straightening option, patients need to
         clean their teeth after each meal before placing the aligners back in. Patients remove the clear
@@ -103,7 +104,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Don't take them out for too long
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While clear aligners are removable and the patient needs to take them out for certain situations,
         the patient needs to put them back in fairly quickly. With braces, the patient does not have the
@@ -124,7 +125,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Call our office today
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you are interested in clear aligners or need us to replace some lost aligners, give us
         a call to schedule an appointment. We will go over options and determine if clear aligners are

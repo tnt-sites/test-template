@@ -9,7 +9,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: When Is a Tooth Extraction Necessary
   location: Vista, CA
-  intro: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
+  intro:
+  - As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
     This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
     beneficial. We are not interested in extracting teeth unless absolutely necessary. In fact, if you
     damage a tooth, our preferred method of treatment is to restore it using dental veneers or dental
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: You were in an accident.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We can treat patients who have gotten into an accident and need to have immediate dental work
         completed. In some cases, dental damage is only part of the problem and immediate solutions are
@@ -74,7 +75,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The cost to restore the tooth is too great.
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We accept most insurance plans and can also discuss various payment options with you. However,
         we also realize that sometimes restorative dental work can be cost prohibitive. This is not an
@@ -108,7 +109,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Extraction Process
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While the first question we hear is, "When is a tooth extraction necessary?", the second is
         always about the process. We understand that our patients are often intimidated by the prospect
@@ -147,7 +148,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Recovery Process After a Tooth Extraction
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we warn patients that they will be sore for
         several days and that they will experience some swelling. This is perfectly natural and can be

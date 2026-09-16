@@ -10,8 +10,9 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Sealants
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect teeth
-    and prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect teeth and
+    prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
     940-2273 and schedule an appointment with our dental office. We can examine you and your family before
     letting you know if dental sealants are the right preventative care solution for your teeth.
   imageSource: /src/assets/images/wp/dental-sealants.jpg
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What are dental sealants?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Dental sealants are an incredibly thin plastic coating that we brush onto the chewing surfaces
         of your molars or back teeth. We do so to prevent tooth decay.

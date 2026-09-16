@@ -9,13 +9,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Mouth Guards
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth
-    guards that can serve to protect the teeth. You only get one set of permanent teeth, making it critical
-    to take the steps necessary to preserve them. We always recommends starting by keeping your teeth
-    healthy. When your teeth are free of decay or infection, they will be stronger and less likely to
-    become damaged in an accident. To keep them healthy and strong, we suggest visiting our Vista, CA
-    dental office twice a year for a routine teeth cleaning. You can schedule an appointment by calling
-    (760) 205-3417.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth guards
+    that can serve to protect the teeth. You only get one set of permanent teeth, making it critical to
+    take the steps necessary to preserve them. We always recommends starting by keeping your teeth healthy.
+    When your teeth are free of decay or infection, they will be stronger and less likely to become damaged
+    in an accident. To keep them healthy and strong, we suggest visiting our Vista, CA dental office twice
+    a year for a routine teeth cleaning. You can schedule an appointment by calling (760) 205-3417.
   imageSource: /src/assets/images/wp/mouth-guards.jpg
   imageAlt: Mouth Guards
   formId: '251056297507965'
@@ -32,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Extra Protection for Your Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Keep in mind that while healthy teeth are less likely to become damaged, they still can be
         and this is where a mouth guard can be helpful. There are several types of mouth guards that you
@@ -48,7 +48,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What do mouth guards look like?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: It is common for our Vista patients to be interested in mouth guards but aren't sure of whether
         or not they will be comfortable with the appearance of one. This is perfectly natural, since most
@@ -107,7 +107,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Is there a reason to have one created by a dentist?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Once you have made the decision to protect yourself, the best thing to do is to schedule an
         appointment with our Vista, CA dental office. We can examine you, take measurements, make an impression

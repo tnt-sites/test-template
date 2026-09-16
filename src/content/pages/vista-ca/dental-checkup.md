@@ -9,12 +9,18 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Checkup
   location: Vista, CA
-  intro: A regular dental checkup offers patients professional dental cleaning services to detect and
-    prevent tooth infections while helping maintain healthy teeth. Regular dental checkups are a standard
-    service offered at North County Cosmetic and Implant Dentistry. No matter the age, most people tend
-    to avoid the subject when hearing that they have another dental checkup soon. However, regular dental
-    checkups are crucial to maintaining oral health. With a dental checkup every six months, patients
-    can receive the professional care they need for their teeth.
+  intro:
+  - A regular dental checkup offers patients professional dental cleaning services to detect and prevent
+    tooth infections while helping maintain healthy teeth. Regular dental checkups are a standard service
+    offered at North County Cosmetic and Implant Dentistry.
+  - No matter the age, most people tend to avoid the subject when hearing that they have another dental
+    checkup soon. However, regular dental checkups are crucial to maintaining oral health. With a dental
+    checkup every six months, patients can receive the professional care they need for their teeth.
+  - During a checkup, we can not only clean your teeth and gums, but can also look for signs of any oral
+    health issues. If an issue should be found, we can treat it as soon as possible. We can also go over
+    effective cleaning methods and make recommendations to help keep teeth healthy.
+  - If you want to keep your teeth healthy with professional cleaning and examination services, schedule
+    a dental checkup with us today.
   imageSource: /src/assets/images/wp/dental-checkup-header.jpg
   imageAlt: Dental Checkup
   formId: '251056297507965'
@@ -26,26 +32,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: During a checkup, we can not only clean your teeth and gums, but can also look for signs of
-        any oral health issues. If an issue should be found, we can treat it as soon as possible. We can
-        also go over effective cleaning methods and make recommendations to help keep teeth healthy.
-    - _component: building-blocks/core-elements/text
-      text: If you want to keep your teeth healthy with professional cleaning and examination services,
-        schedule a dental checkup with us today.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/builders/custom-section
     label: Why You Need a Dental Checkup
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Why You Need a Dental Checkup
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: There is a direct link between visiting the dentist and keeping your natural teeth. If you
         want to ensure that you have a full mouth of healthy teeth, then visit the dentist. Gallup Poll
@@ -99,7 +91,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Call Us to Schedule a Checkup Today
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We invite you to call 760-940-2273 and schedule your dental checkup right away. When you come
         in, our friendly team will make sure everything is ready to go. Next, we will take images of your

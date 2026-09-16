@@ -9,12 +9,17 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Crowns
   location: Vista, CA
-  intro: Dental crowns are caps that restore the shape and size of teeth after they have been damaged,
-    and offer protection from further damage. Dental crowns are a great option for restoring damaged teeth
-    and are a standard procedure offered at North County Cosmetic and Implant Dentistry. When a tooth
-    is damaged, there is always hope that it can heal on its own. Unfortunately, teeth do not heal or
-    restore damaged enamel on their surface. However, we can help to protect and restore a tooth with
-    a dental crown.
+  intro:
+  - Dental crowns are caps that restore the shape and size of teeth after they have been damaged, and
+    offer protection from further damage. Dental crowns are a great option for restoring damaged teeth
+    and are a standard procedure offered at North County Cosmetic and Implant Dentistry.
+  - When a tooth is damaged, there is always hope that it can heal on its own. Unfortunately, teeth do
+    not heal or restore damaged enamel on their surface. However, we can help to protect and restore a
+    tooth with a dental crown.
+  - Dental crowns are a versatile treatment which can protect a weak tooth from infection, restore a damaged
+    tooth, cover a dental implant, hold a dental bridge in place and provide a great, natural appearance.
+  - If you have a damaged or weak tooth, then strengthen and enhance that tooth by scheduling an appointment
+    with us for a dental crown.
   imageSource: /src/assets/images/wp/dental-crowns-header.jpg
   imageAlt: Dental Crowns
   formId: '251056297507965'
@@ -26,26 +31,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: Dental crowns are a versatile treatment which can protect a weak tooth from infection, restore
-        a damaged tooth, cover a dental implant, hold a dental bridge in place and provide a great, natural
-        appearance.
-    - _component: building-blocks/core-elements/text
-      text: If you have a damaged or weak tooth, then strengthen and enhance that tooth by scheduling
-        an appointment with us for a dental crown.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/builders/custom-section
     label: What are dental crowns?
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: What are dental crowns?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A dental crown is a cap that surrounds the tooth. We typically use a crown to restore a damaged
         tooth, but they can also use it to improve the appearance of a smile. A crown can consist of three
@@ -134,7 +125,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: After the Procedure
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: When getting dental Restoratives, your teeth will be somewhat sensitive after they have been
         prepared. This is why you need to wear a temporary crown while waiting for a permanent one to

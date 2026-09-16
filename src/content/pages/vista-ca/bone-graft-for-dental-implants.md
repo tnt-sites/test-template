@@ -9,9 +9,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Will I Need a Bone Graft for Dental Implants
   location: Vista, CA
-  intro: If you are considering getting dental implants, you are already on the road to restoring your
-    smile. Since dental implants are surgically placed and inserted into the jawbone, one of the questions
-    our Vista patients ask is whether or not they will need a bone graft prior to the procedure. We encourage
+  intro:
+  - If you are considering getting dental implants, you are already on the road to restoring your smile.
+    Since dental implants are surgically placed and inserted into the jawbone, one of the questions our
+    Vista patients ask is whether or not they will need a bone graft prior to the procedure. We encourage
     you to visit our dental office for an examination and X-rays so that we can answer this question based
     on your health. You can schedule an appointment by calling (760) 940-2273. In the meantime, here are
     some answers to frequently asked questions about the bone graft procedure.
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is bone augmentation?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Bone augmentation can be performed multiple ways but the purpose of the procedure is to augment
         or build bone so that your jawbone becomes denser and stronger.
@@ -116,7 +117,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: What is the recovery time and how will I feel afterwards?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Immediately following your bone grafting procedure you will be very sore. To combat this,
         you will want to take ibuprofen and use ice packs for fifteen minutes at a time. You will also

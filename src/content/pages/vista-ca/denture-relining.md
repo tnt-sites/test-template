@@ -10,9 +10,10 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Denture Relining
   location: Vista, CA
-  intro: Even though we customize dentures to each individual patient, there is a high probability that
-    the dentures will not fit as well a few months into wearing them as they do on the first day since
-    the jawbone changes shape and recedes with age.
+  intro:
+  - Even though we customize dentures to each individual patient, there is a high probability that the
+    dentures will not fit as well a few months into wearing them as they do on the first day since the
+    jawbone changes shape and recedes with age.
   imageSource: /src/assets/images/wp/denture-relining.jpg
   imageAlt: Denture Relining
   formId: '251056297507965'
@@ -29,7 +30,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Always Make Sure the Dentures Fit Your Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: During the process known as resorption, the body leaches calcium from the jawbone that no
         longer has teeth stimulating it. The body then distributes the calcium to other areas of the body.
@@ -66,7 +67,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Soft reline
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: A soft reline involves the use of a liquid polymer that we layer into the denture to create
         depth and a cushion. This "cushion" will tend to be more comfortable than a hard reline and is

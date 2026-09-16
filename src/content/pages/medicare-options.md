@@ -45,7 +45,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Medically Necessary Conditions
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: The only way you can be certain if you qualify for Medicare coverage for dental implants is
       to schedule a consultation with Dr. Henninger at our Vista dental practice. But generally, if you
@@ -70,7 +70,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: MEDICARE
     level: h2
-    size: xl
+    size: md
   - _component: building-blocks/core-elements/text
     text: Dr. Henninger is a certified Medicare provider. We are able to bill medically necessary dental
       implant treatment to most Medicare and supplemental insurance companies.

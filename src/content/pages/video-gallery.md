@@ -12,7 +12,12 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Latest in Dental Implants with San Diego Dentist Christopher Henninger, DMD
     level: h2
-    size: xl
+    size: md
+  - _component: building-blocks/core-elements/embed
+    html: <iframe src="https://www.youtube.com/embed/dWZfoROXKUY" title="YouTube video player" frameborder="0"
+      loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen></iframe>
+    aspectRatio: widescreen
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

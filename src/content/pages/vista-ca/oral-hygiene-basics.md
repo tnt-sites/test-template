@@ -9,14 +9,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Oral Hygiene Basics
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
-    excellent oral health. With a focus on preventative care, we take the time to get to know each of
-    our patients, creating a plan for lifelong oral health. With only one set of permanent adult teeth,
-    it is important to care for them and be proactive in taking the steps to prevent cavities, infections,
-    and gum disease. We recommend that you visit our dental office for a teeth cleaning twice a year so
-    that we can remove plaque buildup and tartar, keeping your mouth healthy and clean. To schedule an
-    appointment, call (760) 940-2273. In the meantime, here are steps that you can take at home to keep
-    your mouth healthy.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in excellent
+    oral health. With a focus on preventative care, we take the time to get to know each of our patients,
+    creating a plan for lifelong oral health. With only one set of permanent adult teeth, it is important
+    to care for them and be proactive in taking the steps to prevent cavities, infections, and gum disease.
+    We recommend that you visit our dental office for a teeth cleaning twice a year so that we can remove
+    plaque buildup and tartar, keeping your mouth healthy and clean. To schedule an appointment, call
+    (760) 940-2273. In the meantime, here are steps that you can take at home to keep your mouth healthy.
   imageSource: /src/assets/images/wp/oral-hygiene-basics.jpg
   imageAlt: Oral Hygiene Basics
   formId: '251056297507965'
@@ -33,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How to brush your teeth properly
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As a Vista dentist, we know that how you brush your teeth is just as important as how often
         you brush them. It is important that you use a soft toothbrush that will not irritate your gums
@@ -97,7 +97,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How to prevent tooth decay
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Our team prevents tooth decay every day by helping our patients to have clean and healthy
         teeth. Tooth decay starts when plaque is left on the teeth, and the acid inside of it starts to

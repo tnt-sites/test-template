@@ -9,11 +9,12 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: What Do I Do If I Damage My Dentures
   location: Vista, CA
-  intro: If you have dentures, it is important to handle them with care so they can remain in as good
-    a condition as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can
-    offer the information and tools necessary to address a problem if you have one. At North County Cosmetic
-    and Implant Dentistry can answer any questions you have regarding denture care. To schedule an appointment
-    with our dental office, call (760) 940-2273. In the meantime, here is what you should know.
+  intro:
+  - If you have dentures, it is important to handle them with care so they can remain in as good a condition
+    as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can offer the information
+    and tools necessary to address a problem if you have one. At North County Cosmetic and Implant Dentistry
+    can answer any questions you have regarding denture care. To schedule an appointment with our dental
+    office, call (760) 940-2273. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/damage-my-dentures.jpg
   imageAlt: What Do I Do If I Damage My Dentures
   formId: '251056297507965'
@@ -30,7 +31,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Where do I start?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If your dentures are damaged, visit our dental office so we can examine them and determine
         the best way to fix them. One thing you should keep in mind is that your dentures will need to
@@ -43,7 +44,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Home Care Tips
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'You should never try to fix your dentures on your own since this can cause the damage to
         spread. However, there are certain things you can do at home before heading to the dentist, including:'
@@ -107,7 +108,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Alternatives to Dentures From a Cosmetic Dentist in Vista, CA
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: 'As a cosmetic dentistry office, we can provide you with alternatives to dentures if you are
         interested in a more permanent and convenient solution. This includes:'

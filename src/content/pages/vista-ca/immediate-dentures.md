@@ -10,13 +10,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Immediate Dentures
   location: Vista, CA
-  intro: During the transition process for adjusting to dentures, there are a few functions that dentures
-    will impact. The first is chewing. Immediately following the denture process, patients will have to
-    eat soft foods for a few days. The second is speech. Once an individual receives dentures, he or she
-    will have to adjust to speaking with dentures. There will also most likely be a period of time in
-    which the patient has to go without teeth before receiving the new dentures. Due to these impacts
-    on the individual, we offer patients immediate dentures. These dentures only take one day for placement
-    and are more efficient than natural dentures. However, immediate dentures may not be for everyone.
+  intro:
+  - During the transition process for adjusting to dentures, there are a few functions that dentures will
+    impact. The first is chewing. Immediately following the denture process, patients will have to eat
+    soft foods for a few days. The second is speech. Once an individual receives dentures, he or she will
+    have to adjust to speaking with dentures. There will also most likely be a period of time in which
+    the patient has to go without teeth before receiving the new dentures.
+  - Due to these impacts on the individual, we offer patients immediate dentures. These dentures only
+    take one day for placement and are more efficient than natural dentures. However, immediate dentures
+    may not be for everyone.
   imageSource: /src/assets/images/wp/immediate-dentures.jpg
   imageAlt: Immediate Dentures
   formId: '251056297507965'
@@ -33,7 +35,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Dentures without the wait
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: While some teeth may fall out naturally with age, there are cases in which we need to remove
         the rest of the teeth before placing full dentures. In fact, many people find it easier to replace
@@ -85,7 +87,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Q&A
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: How long will the procedure take?
       level: h3

@@ -9,14 +9,15 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Laser Dentistry
   location: Vista, CA
-  intro: If you are interested in a new, fresh approach to dental care, consider laser dentistry . At
-    North County Cosmetic and Implant Dentistry, we can use laser dentistry to treat our patients' oral
-    health concerns in a way that is comfortable and effective. If you live in Vista or surrounding area
-    and are looking for modern dental care, give us a call. Lasers are revolutionizing dentistry, but
-    a family dentist still typically uses traditional metal dental tools, making it necessary to visit
-    a laser dentist. As a laser dentist in Vista, we can use lasers in the majority of our procedures
-    to correct damage without causing irritation. We invite you to call (760) 940-2273 and experience
-    the difference that laser dentistry can make.
+  intro:
+  - If you are interested in a new, fresh approach to dental care, consider laser dentistry . At North
+    County Cosmetic and Implant Dentistry, we can use laser dentistry to treat our patients' oral health
+    concerns in a way that is comfortable and effective. If you live in Vista or surrounding area and
+    are looking for modern dental care, give us a call. Lasers are revolutionizing dentistry, but a family
+    dentist still typically uses traditional metal dental tools, making it necessary to visit a laser
+    dentist. As a laser dentist in Vista, we can use lasers in the majority of our procedures to correct
+    damage without causing irritation. We invite you to call (760) 940-2273 and experience the difference
+    that laser dentistry can make.
   imageSource: /src/assets/images/wp/laser-dentistry.jpg
   imageAlt: Laser Dentistry
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Laser Dentistry for Those with a Dental Phobia
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you suffer from dental anxiety or avoid visiting the dentist for fear of discomfort, you
         are not alone. This is a common condition that you do not have to live with. Laser dentistry has
@@ -84,7 +85,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Laser Gum Surgery
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Perhaps one of the most significant advances that gentle dentistry has made is associated
         with treating gum disease. This condition is so common that most adults will suffer from some

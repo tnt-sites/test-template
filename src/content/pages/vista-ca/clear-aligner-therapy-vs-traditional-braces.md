@@ -10,10 +10,11 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Clear Aligner Therapy vs Traditional Braces
   location: Vista, CA
-  intro: If you are looking into orthodontics options for your teen, it is important to consider Clear
-    Aligner Therapy vs. traditional braces for teens. You should also know what both solutions look like
-    on a daily basis. Essentially, any orthodontic solution will move teeth by applying pressure. This
-    pressure has to be placed on the right teeth at the right time so that gradually, they move into position.
+  intro:
+  - If you are looking into orthodontics options for your teen, it is important to consider Clear Aligner
+    Therapy vs. traditional braces for teens. You should also know what both solutions look like on a
+    daily basis. Essentially, any orthodontic solution will move teeth by applying pressure. This pressure
+    has to be placed on the right teeth at the right time so that gradually, they move into position.
     Both solutions do an excellent job. At the end of the day it really comes down to lifestyle, convenience,
     and what your teen will feel confident wearing.
   imageSource: /src/assets/images/wp/invisalign-vs-traditional-braces.jpg
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Begin Straightening Your Smile Today
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we welcome you to call (760) 940-2273 and
         schedule an appointment with our Vista, CA dental office. At the appointment, we can examine your
@@ -45,7 +46,7 @@ pageSections:
       text: 'Here are a few things that you should know about the lifestyle differences with Clear Aligner
         Therapy vs. traditional braces for teens:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Costs –
       level: h3
@@ -115,7 +116,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Oral hygiene –
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Another factor to compare when evaluating Clear Aligner Therapy vs. traditional braces for
         teens is oral hygiene. This is a big deal because, as a dentist, we do not want any of our patients
@@ -173,7 +174,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: How do I get started with Clear Aligner Therapy?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Call (760) 940-2273 and schedule a consultation with North County Cosmetic and Implant Dentistry.
     maxContentWidth: none

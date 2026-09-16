@@ -9,7 +9,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Oral Cancer Screening
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we encourage you to schedule an oral cancer screening
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we encourage you to schedule an oral cancer screening
     today. If you have not yet taken this life-saving measure, you should. Oral cancer is a disease not
     frequently discussed. There are few, if any, advertising campaigns, walks, or fundraisers supporting
     its treatment. Still, oral cancer claims one life every day in the United States. The reason for the
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Is it common to have an oral cancer screening?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Unfortunately, no. Most people never have an oral cancer screening, and this is why the cancer
         is not detected at an early stage. At our Vista, CA dental practice, we suggest that you visit
@@ -85,7 +86,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Who is susceptible to getting oral cancer?
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: The common misconception is that only older men get oral cancer. It used to be that men got
         oral cancer at a 10:1 ratio to women. Over time, the statistics have changed, most likely because

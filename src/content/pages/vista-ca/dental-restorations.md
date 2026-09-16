@@ -10,8 +10,9 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Dental Restorations
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we offer dental restorations so that patients
-    can stay in excellent oral health. We can complete restorations in a way that restores the functionality
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we offer dental restorations so that patients can
+    stay in excellent oral health. We can complete restorations in a way that restores the functionality
     and appearance of a tooth. This is important for ensuring that once the dental work is complete, no
     one can tell your tooth was ever damaged. If your tooth is cracked, chipped or damaged in any way,
     call (760) 940-2273 to schedule your appointment.
@@ -31,7 +32,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Why Dental Restorations Are Necessary
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Patients may need to repair teeth after experiencing an accident. An accident can happen at
         any time. Whether it is a car wreck, sports injury, playing with the kids, or falling at work.
@@ -45,7 +46,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Vista, California Dental Restorations
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Types of Restorations
       level: h3
@@ -59,7 +60,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Here are some of the common dental restorations that we offer:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/heading
       text: Dental crowns.
       level: h3
@@ -124,7 +125,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Gain Full Functionality with a Natural Appearance
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At times, patients need dental restorations to replace teeth. Whether a tooth has been knocked
         out or has fallen out due to an infection, there are several ways that it can be replaced. In

@@ -10,13 +10,14 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Composite Fillings
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method
-    for tooth decay. If you live in Vista, CA or surrounding area and are looking for a natural-looking
-    restoration, we encourage you to call (760) 940-2273 and schedule an appointment. Our team has the
-    necessary experience with placing these tooth-colored fillings and can work to ensure that the patient
-    is comfortable throughout the procedure. This is one of our most frequently used procedures, since
-    a filling is typically placed after removing tooth decay (common cavities). If you have amalgam fillings
-    now, we can even replace them with composite ones. To learn more, call and schedule a dental examination.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method for
+    tooth decay. If you live in Vista, CA or surrounding area and are looking for a natural-looking restoration,
+    we encourage you to call (760) 940-2273 and schedule an appointment. Our team has the necessary experience
+    with placing these tooth-colored fillings and can work to ensure that the patient is comfortable throughout
+    the procedure. This is one of our most frequently used procedures, since a filling is typically placed
+    after removing tooth decay (common cavities). If you have amalgam fillings now, we can even replace
+    them with composite ones. To learn more, call and schedule a dental examination.
   imageSource: /src/assets/images/wp/composite-fillings.jpg
   imageAlt: Composite Fillings
   formId: '251056297507965'
@@ -33,7 +34,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: The Benefits of Getting a Tooth-Colored Filling
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We can place a composite resin filling fairly quickly. This is an affordable and durable restoration
         that will look similar to a regular tooth. We make sure to complete the procedure in a way that
@@ -44,7 +45,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Silver vs. Tooth-Colored Filling: What You Should Know'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: Tooth-colored fillings are safer for your health since they consist of resin or a plastic
         material. Silver fillings are typically not silver, but a metal alloy that includes several materials

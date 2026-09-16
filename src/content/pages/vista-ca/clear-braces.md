@@ -10,12 +10,13 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Clear Braces
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
-    area. Straight teeth are important for your overall oral health. When teeth are crooked, they can
-    become stained and infected more easily. By straightening teeth, we can improve your appearance and
-    decrease the risk of getting cavities at the same time. We can also address issues that you may have
-    with your jaw by aligning your bite. Clear braces are truly a comprehensive way and discreet way to
-    address oral health concerns.
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista area.
+    Straight teeth are important for your overall oral health. When teeth are crooked, they can become
+    stained and infected more easily. By straightening teeth, we can improve your appearance and decrease
+    the risk of getting cavities at the same time. We can also address issues that you may have with your
+    jaw by aligning your bite. Clear braces are truly a comprehensive way and discreet way to address
+    oral health concerns.
   imageSource: /src/assets/images/wp/clear-braces.jpg
   imageAlt: Clear Braces
   formId: '251056297507965'
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: A Clear Option for Straightening Teeth
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We understand that while many people want to have straighter teeth, many teens and adults
         are uncomfortable with the traditional metal braces on their teeth for more than one year. While
@@ -73,7 +74,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Clear Braces vs. Metal Braces
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we offer clear alternatives for adults and
         teens the greater Vista area. We can straighten teeth and move them into the perfect position
@@ -116,7 +117,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Teen Braces and Adult Braces
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: We treat both teens and adults and understand that both can benefit from similar treatment
         options. While children may not be able to wear clear braces, teens can wear clear braces if they
@@ -134,7 +135,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Call our office today
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: If you are interested in clear aligners or need us to replace some lost aligners, give us
         a call to schedule an appointment. We will go over options and determine if clear aligners are

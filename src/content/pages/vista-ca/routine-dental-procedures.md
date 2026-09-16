@@ -10,7 +10,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Routine Dental Procedures
   location: Vista, CA
-  intro: At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
+  intro:
+  - At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
     that can help your teeth and gums to remain healthy for a lifetime. We prefer to see patients twice
     a year for a routine teeth cleaning and dental exam because this is the best way to prevent cavities
     and gum disease. If you have not been to the dentist in a while and are concerned that going may be
@@ -32,7 +33,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: 'Here are some of the routine dental procedures that we perform on a regular basis:'
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/list
       listType: numbered
       items:

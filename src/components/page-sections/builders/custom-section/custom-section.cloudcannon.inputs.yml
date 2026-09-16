@@ -93,6 +93,8 @@ backgroundColor:
         name: Accent
       - id: highlight
         name: Highlight
+      - id: gold
+        name: Gold
       - id: dark
         name: Dark
       - id: black

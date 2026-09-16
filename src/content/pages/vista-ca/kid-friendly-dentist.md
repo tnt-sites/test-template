@@ -9,13 +9,20 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Kid Friendly Dentist
   location: Vista, CA
-  intro: A kid friendly dentist creates a healthy and comfortable professional environment, providing
-    the age-appropriate dental treatment a child needs for healthy teeth. North County Cosmetic and Implant
-    Dentistry is a kid friendly dentist office in the greater Vista area. As a kid friendly dentist, we
-    strive to create a comfortable and welcoming environment to help kids have a positive experience with
-    visiting the dentist. It is no surprise that many children, and adults, are not always fond of dental
-    treatment. However, by creating a positive experience with the dentist at a young age, children will
-    have a more positive view of oral hygiene as a whole.
+  intro:
+  - A kid friendly dentist creates a healthy and comfortable professional environment, providing the age-appropriate
+    dental treatment a child needs for healthy teeth. North County Cosmetic and Implant Dentistry is a
+    kid friendly dentist office in the greater Vista area.
+  - As a kid friendly dentist, we strive to create a comfortable and welcoming environment to help kids
+    have a positive experience with visiting the dentist. It is no surprise that many children, and adults,
+    are not always fond of dental treatment. However, by creating a positive experience with the dentist
+    at a young age, children will have a more positive view of oral hygiene as a whole.
+  - We will also help to instill healthy oral hygiene habits the parent or guardian can continue at home,
+    to help make brushing teeth fun for the child. Our goal is to help children maintain healthy teeth
+    as they age so that they can continue to have healthy teeth later in life. We will customize treatment
+    to the child's needs and help ease them into a regular dental routine.
+  - If you want to help build a strong foundation of oral health in your child, contact us and schedule
+    an appointment today.
   imageSource: /src/assets/images/wp/kid-friendly-dentist.jpg
   imageAlt: Kid Friendly Dentist
   formId: '251056297507965'
@@ -27,27 +34,12 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
-    contentSections:
-    - _component: building-blocks/core-elements/text
-      text: We will also help to instill healthy oral hygiene habits the parent or guardian can continue
-        at home, to help make brushing teeth fun for the child. Our goal is to help children maintain
-        healthy teeth as they age so that they can continue to have healthy teeth later in life. We will
-        customize treatment to the child's needs and help ease them into a regular dental routine.
-    - _component: building-blocks/core-elements/text
-      text: If you want to help build a strong foundation of oral health in your child, contact us and
-        schedule an appointment today.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/builders/custom-section
     label: What You Should Know
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: What You Should Know
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As a parent, you naturally want what is best for your child. Many parents are unaware of how
         oral health and dental care plays into that. According to the Center for Disease Control, tooth
@@ -120,7 +112,7 @@ pageSections:
     - _component: building-blocks/core-elements/heading
       text: Prevention
       level: h2
-      size: xl
+      size: md
     - _component: building-blocks/core-elements/text
       text: As a kid friendly dentist office in Vista, we are focused on preventative care. It is far
         better for your child to visit us for a regular teeth cleaning than to only see us with a toothache.
