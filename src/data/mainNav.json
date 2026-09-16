@@ -3,44 +3,285 @@
   "logoAlt": "Logo",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "First Visit",
+      "path": "/first-visit/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "New Patient Information",
+          "path": "https://forms.wv3.io/form?formId=c3ae1726-f1e8-4903-9270-713252293071&companyId=9147c824-9446-4a85-9de2-872257282a9a",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dental Material Facts",
+              "path": "/wp-content/uploads/dental_materials_fact_sheet.pdf",
+              "children": []
+            },
+            {
+              "name": "Privacy Policy",
+              "path": "/wp-content/uploads/north_county_cosmetic_and_implant_dentistry_privacy_policy.pdf",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
-          "children": [
-            {
-              "name": "More Implants",
-              "path": "/dental-implants"
-            }
-          ]
+          "name": "Sleep Apnea History",
+          "path": "/wp-content/uploads/Sleep_Apnea_History.pdf",
+          "children": []
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "About",
+      "path": "/about/",
+      "children": [
+        {
+          "name": "Meet Dr. Huenergardt",
+          "path": "/meet-dr-craig-huenergardt/",
+          "children": []
+        },
+        {
+          "name": "Office Tour",
+          "path": "https://my.matterport.com/show/?m=zxvWUg6ZkYW",
+          "children": []
+        },
+        {
+          "name": "Our Referral Program",
+          "path": "/vista-ca/referral/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Dental Implants",
+      "path": "/vista-ca/dental-implants/",
+      "children": [
+        {
+          "name": "Dental Implants",
+          "path": "/vista-ca/dental-implants/",
+          "children": []
+        },
+        {
+          "name": "How Much Do Dental Implants Cost?",
+          "path": "/vista-ca/the-cost-of-dental-implants/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Dental Anesthesia",
+      "path": "/vista-ca/dental-anesthesia/",
       "children": []
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
+      "name": "Dental Services",
+      "path": "/services/",
+      "children": [
+        {
+          "name": "View all Services",
+          "path": "/services/",
+          "children": []
+        },
+        {
+          "name": "All-on-4 Dental Implants",
+          "path": "/vista-ca/all-on-4/",
+          "children": []
+        },
+        {
+          "name": "Dental Checkup",
+          "path": "/vista-ca/dental-checkup/",
+          "children": []
+        },
+        {
+          "name": "Dental Crowns and Dental Bridges",
+          "path": "/vista-ca/dental-crowns/",
+          "children": []
+        },
+        {
+          "name": "Dental Implants",
+          "path": "/vista-ca/dental-implants/",
+          "children": []
+        },
+        {
+          "name": "Dental Veneers and Dental Laminates",
+          "path": "/vista-ca/dental-veneers-and-dental-laminates/",
+          "children": []
+        },
+        {
+          "name": "Dentures and Partial Dentures",
+          "path": "/vista-ca/dentures-and-partial-dentures/",
+          "children": []
+        },
+        {
+          "name": "Emergency Dentist",
+          "path": "/vista-ca/emergency-dentist/",
+          "children": []
+        },
+        {
+          "name": "Full Mouth Reconstruction",
+          "path": "/vista-ca/full-mouth-reconstruction/",
+          "children": []
+        },
+        {
+          "name": "Clear Aligner Therapy",
+          "path": "/vista-ca/clear-aligner-therapy-dentist/",
+          "children": []
+        },
+        {
+          "name": "Kid Friendly Dentist",
+          "path": "/vista-ca/kid-friendly-dentist/",
+          "children": []
+        },
+        {
+          "name": "Laser Dentistry",
+          "path": "/vista-ca/laser-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Root Canal Treatment",
+          "path": "/vista-ca/root-canal-treatment/",
+          "children": []
+        },
+        {
+          "name": "Sedation Dentist",
+          "path": "/vista-ca/sedation-dentist/",
+          "children": []
+        },
+        {
+          "name": "Smile Makeover",
+          "path": "/vista-ca/smile-makeover/",
+          "children": []
+        },
+        {
+          "name": "Wisdom Teeth Removal",
+          "path": "/vista-ca/wisdom-teeth/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Patient Education",
+      "path": "#",
+      "children": [
+        {
+          "name": "Blog",
+          "path": "/blog/",
+          "children": []
+        },
+        {
+          "name": "Alternative to Braces for Teens",
+          "path": "/vista-ca/alternative-to-braces-for-teens/",
+          "children": []
+        },
+        {
+          "name": "Dental Anxiety",
+          "path": "/vista-ca/dental-anxiety/",
+          "children": []
+        },
+        {
+          "name": "Do I Have Sleep Apnea",
+          "path": "/vista-ca/do-i-have-sleep-apnea/",
+          "children": []
+        },
+        {
+          "name": "Do I Need a Root Canal",
+          "path": "/vista-ca/do-i-need-a-root-canal/",
+          "children": []
+        },
+        {
+          "name": "FAQ",
+          "path": "/frequently-asked-questions/",
+          "children": []
+        },
+        {
+          "name": "I Think My Gums Are Receding",
+          "path": "/vista-ca/i-think-my-gums-are-receding/",
+          "children": []
+        },
+        {
+          "name": "Options For Replacing Missing Teeth",
+          "path": "/vista-ca/options-for-replacing-missing-teeth/",
+          "children": []
+        },
+        {
+          "name": "Oral Cancer Screening",
+          "path": "/vista-ca/oral-cancer-screening/",
+          "children": []
+        },
+        {
+          "name": "Oral Hygiene Basics",
+          "path": "/vista-ca/oral-hygiene-basics/",
+          "children": []
+        },
+        {
+          "name": "Oral Hygiene May Improve Overall Health",
+          "path": "/vista-ca/how-proper-oral-hygiene-may-improve-overall-health/",
+          "children": []
+        },
+        {
+          "name": "What Can I Do to Improve My Smile",
+          "path": "/vista-ca/what-can-i-do-to-improve-my-smile/",
+          "children": []
+        },
+        {
+          "name": "What Do I Do If I Damage My Dentures",
+          "path": "/vista-ca/damage-my-dentures/",
+          "children": []
+        },
+        {
+          "name": "What Should I Do If I Chip My Tooth",
+          "path": "/vista-ca/chip-my-tooth/",
+          "children": []
+        },
+        {
+          "name": "When Is a Tooth Extraction Necessary",
+          "path": "/vista-ca/when-is-tooth-extraction-necessary/",
+          "children": []
+        },
+        {
+          "name": "Which is Better Clear Aligner Therapy or Braces",
+          "path": "/vista-ca/which-is-better-clear-aligner-therapy-or-braces/",
+          "children": []
+        },
+        {
+          "name": "Why Are My Gums Bleeding",
+          "path": "/vista-ca/why-are-my-gums-bleeding/",
+          "children": []
+        },
+        {
+          "name": "Will I Need a Bone Graft for Dental Implants",
+          "path": "/vista-ca/bone-graft-for-dental-implants/",
+          "children": []
+        },
+        {
+          "name": "Wisdom Teeth Extraction",
+          "path": "/vista-ca/wisdom-teeth-extraction/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Why Choose Us",
+      "path": "#",
+      "children": []
+    },
+    {
+      "name": "For Doctors",
+      "path": "/vista-ca/referral/",
+      "children": [
+        {
+          "name": "Why Refer Us",
+          "path": "/vista-ca/referral/",
+          "children": []
+        },
+        {
+          "name": "Referral Form",
+          "path": "/wp-content/uploads/Referral-SlipNC.pdf",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact-us/",
       "children": []
     }
   ],

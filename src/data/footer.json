@@ -1,6 +1,6 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/logo-header.png",
+  "logoAlt": "Visit North County Cosmetic and Implant Dentistry",
   "links": [
     {
       "name": "Home",
@@ -26,5 +26,20 @@
       "name": "Privacy Policy",
       "path": "/privacy-policy"
     }
-  ]
+  ],
+  "linkColumns": [
+    {
+      "title": "Contact",
+      "links": [
+        {
+          "name": "(760) 206-6474",
+          "path": "tel:+1-(760) 206-6474"
+        }
+      ]
+    }
+  ],
+  "copyright": {
+    "text": "Copyright © 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
+    "links": []
+  }
 }

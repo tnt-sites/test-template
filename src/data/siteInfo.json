@@ -1,72 +1,74 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "North County Cosmetic and Implant Dentistry",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/ultimatesmiles4161"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
-    },
-    {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "link": "https://www.instagram.com/northcountydentistry"
     }
   ],
   "offices": [
     {
-      "name": null,
+      "name": "North County Cosmetic and Implant Dentistry",
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
-          "country": null,
+          "lines": [
+            "1934 Via Centre Ste A"
+          ],
+          "city": "Vista",
+          "state": "CA",
+          "postalCode": "92081",
+          "country": "USA",
           "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(760) 940-2273",
+          "href": "tel:+1-760-940-2273"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:30am - 5:00pm",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00am - 5:00pm",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:30am - 5:00pm",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00am - 5:00pm",
           "note": ""
         },
         {
           "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "hours": "Closed",
+          "note": ""
+        },
+        {
+          "day": "Saturday",
+          "hours": "Closed",
+          "note": ""
+        },
+        {
+          "day": "Sunday",
+          "hours": "Closed",
           "note": ""
         }
       ],
@@ -74,8 +76,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

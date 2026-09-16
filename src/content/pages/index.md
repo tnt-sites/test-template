@@ -1,238 +1,160 @@
 ---
 _schema: default
-title: Astro Component Starter
+title: Home
+seo:
+  title: North County Cosmetic and Implant Dentistry | Dentists in Vista, CA
+  description: North County Cosmetic and Implant Dentistry offers expert dental care in Vista, CA, including
+    implants, cosmetic treatments, and family dentistry.
 pageSections:
-  - _component: page-sections/heroes/hero-center
-    id: ''
-    eyebrow:
-    heading: The Astro Component Starter for building any site
-    subtext: >-
-      Built on web fundamentals. Easy to customize, fast to use, and simple to
-      maintain.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: secondary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Built for Astro
-    heading: Fast, modern, and easy to work with
-    subtext: >-
-      The Component Starter takes full advantage of Astro's zero-JS-by-default
-      approach. You get fast pages, simple routing, and a component system that
-      stays easy to use as your site grows.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-feature.svg
-    imageAlt: Website Feature
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: CloudCannon Ready
-    heading: Easy visual editing
-    subtext: >-
-      Every component is built to work seamlessly in CloudCannon's Visual
-      Editor. Developers can create and style custom Page Sections with Astro.
-      Editors can click, change, and rearrange content right on the page without
-      touching the code or guessing where anything lives.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-split.svg
-    imageAlt: Website Split
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme:
-    backgroundColor:
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-    paddingVertical: lg
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Performance
-    heading: Fast by architecture, not by accident
-    subtext: >-
-      Your components render to static HTML, keeping bundles lean and pages
-      instant. Your users get instant page loads. You get a modern developer
-      experience.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-hero.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/features/feature-split
-    id: ''
-    eyebrow: Documentation
-    heading: Every component, clearly documented
-    subtext: >-
-      Each component comes with straightforward docs, real examples, full
-      descriptions of every property, and clear guidance without having to dig
-      through source files.
-    buttonSections: []
-    imageSource: /src/assets/images/component-library/website-documented.svg
-    imageAlt: Website Hero
-    imageAspectRatio: none
-    imageRounded: false
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/homepage-blocks/index-reviews
-    id: reviews
-    heading: What Our Patients Say
-    reviews:
-      - text: >-
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-          vehicula felis nec urna tincidunt, vitae fermentum nulla condimentum.
-        authorName: First L.
-        socialIcon:
-        reviewerImage: /src/assets/images/component-library/profile1.jpg
-      - text: >-
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Proin euismod erat vel ligula facilisis.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-      - text: >-
-          Sed posuere consectetur est at lobortis. Donec sed odio dui. Cras
-          mattis consectetur purus sit amet fermentum.
-        authorName: First L.
-        socialIcon: social/google
-        reviewerImage: ''
-    showQuoteIcon: true
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    class: peek
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Ready to start building?
-    anchorName: ''
-    subtext: >-
-      Browse the complete Astro Component Starter and see live examples of every
-      component in action. All components are ready to use in CloudCannon and
-      are fully customizable.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: Explore Components
-        hideText: false
-        link: /component-library/
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: View in GitHub
-        hideText: false
-        link: https://github.com/CloudCannon/astro-component-starter
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: tertiary
-        size: md
-        width: xs
-        borderRadius: default
-        borderWidth: default
-        borderColor: default
-        textColor: default
-        uppercase: false
-    colorScheme: contrast
-    backgroundColor: surface
-    backgroundGradient: ''
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/ctas/request-bar
-    id: ''
-    heading: Ready to Get Started?
-    buttonText: Request an Appointment
-    buttonLink: /request-an-appointment
-    buttonVariant: primary
-    backgroundColor: none
-    backgroundGradient: ''
-    backgroundImage:
-      source: ''
-      alt: ''
-      positionVertical: top
-      positionHorizontal: center
-description: ''
+- _component: page-sections/builders/custom-section
+  label: Welcome to North County Cosmetic and Implant Dentistry
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Welcome to North County Cosmetic and Implant Dentistry
+    level: h1
+    size: md
+  - _component: building-blocks/core-elements/text
+    text: Whether you’re struggling with complex dental issues or are looking for a warm and friendly
+      place for you and your family, we know that finding a dentist that actually gets to know you feels
+      next to impossible.
+  - _component: building-blocks/core-elements/text
+    text: That’s why, at North County Cosmetic and Implant Dentistry, we take the time to truly understand
+      your needs, goals, and lifestyle. Combining state-of-the-art treatments with authentic human relationships,
+      we’ll help you achieve the healthy lifestyle and beautiful smile you’ve always wanted for you and
+      your family.
+  - _component: building-blocks/core-elements/text
+    text: Give us a call today at (760) 206-6474 .
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/CHD-01155-400x267.jpg
+    alt: Doctor holding 3D-printed model of mouth at North County Cosmetic and Implant Dentistry in Vista,
+      CA
+  - _component: building-blocks/core-elements/heading
+    text: Our Experience
+    level: h3
+    size: md
+  - _component: building-blocks/core-elements/text
+    text: Drs. Henninger and Huenergardt have over 40 years of combined experience providing exceptional
+      care. Whether it's dental implants, family, cosmetic, or sedation dentistry, we are experienced
+      in providing the latest, most affordable dental health care.
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/CHD-088-150-400x267.jpg
+    alt: Dental technician crafting crowns at milling station in North County Cosmetic and Implant Dentistry
+      in Vista, CA
+  - _component: building-blocks/core-elements/heading
+    text: Our Services
+    level: h3
+    size: md
+  - _component: building-blocks/core-elements/text
+    text: Our North County practice uses advanced technology and high-quality materials to provide our
+      patients with optimal, cost-effective treatments. Our patient-first approach allows us to deliver
+      a higher quality of care than your typical dentist’s office.
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/CHD-316-164-768x512-400x267.jpg
+    alt: Dr. Henninger examining patient’s mouth at North County Cosmetic and Implant Dentistry in Vista,
+      CA
+  - _component: building-blocks/core-elements/heading
+    text: Patient Information
+    level: h3
+    size: md
+  - _component: building-blocks/core-elements/text
+    text: We take pride in our collaborative method toward treating our patients. We will always put aside
+      the time to discuss your treatment options in detail, so you can make a confident, fully informed
+      decision.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: 4xl
+  colorScheme: inherit
+  backgroundColor: none
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/logo_ADA.png
+    alt: ''
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/logo_ADSA.png
+    alt: ''
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/logo_AGD.png
+    alt: ''
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/logo_CDA.png
+    alt: ''
+  - _component: building-blocks/core-elements/image
+    source: /src/assets/images/wp/MemberLogoF.jpg
+    alt: ''
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: 4xl
+  colorScheme: inherit
+  backgroundColor: none
+- _component: page-sections/builders/custom-section
+  label: Become Your Best Self
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Become Your Best Self
+    level: h3
+    size: md
+  - _component: building-blocks/core-elements/text
+    text: At North County Cosmetic and Implant Dentistry, we’re committed to providing the personalized,
+      exceptional care you deserve.
+  - _component: building-blocks/core-elements/text
+    text: Help your family enjoy greater health with cutting-edge Complete Health Dentistry.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: 4xl
+  colorScheme: inherit
+  backgroundColor: none
+- _component: page-sections/ctas/services-grid
+  heading: Become Your Best Self
+  services:
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/family-dentistry-box.jpg
+    imageAlt: Family Dentistry
+    title: Family Dentistry
+    href: /vista-ca/family-dentist/
+    wide: false
+    links: []
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/Cosmetic-Dent.jpg
+    imageAlt: Cosmetic Dentistry
+    title: Cosmetic Dentistry
+    href: /vista-ca/cosmetic-dentist/
+    wide: false
+    links: []
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/Dental-Impants-1.jpg
+    imageAlt: Dental Implants
+    title: Dental Implants
+    href: /vista-ca/implants/
+    wide: false
+    links: []
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/Dental-Anes.jpg
+    imageAlt: Dental Anesthesia
+    title: Dental Anesthesia
+    href: /vista-ca/dental-anesthesia/
+    wide: false
+    links: []
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/SingleVisit.jpg
+    imageAlt: Single Visit Dentistry
+    title: Single Visit Dentistry
+    href: /vista-ca/cerec-dentist/
+    wide: false
+    links: []
+  - _component: page-sections/ctas/services-grid/services-grid-item
+    imageSource: /src/assets/images/wp/wisdomteeth.jpg
+    imageAlt: Wisdom Teeth
+    title: Wisdom Teeth
+    href: /vista-ca/wisdom-teeth/
+    wide: false
+    links: []
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

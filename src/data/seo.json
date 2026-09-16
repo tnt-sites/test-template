@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "North County Cosmetic and Implant Dentistry",
   "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "description": "North County Cosmetic and Implant Dentistry offers expert dental care in Vista, CA, including implants, cosmetic treatments, and family dentistry.",
+  "logoSource": "",
+  "titleFormat": "{title}",
   "twitterHandle": "@yourusername"
 }
