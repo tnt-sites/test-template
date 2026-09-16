@@ -13,7 +13,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="insurance-checker" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="insurance-checker"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="ic-box">
     <h1 class="ic-heading">{heading}</h1>
   </div>

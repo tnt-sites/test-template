@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="about-us-d" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="about-us-d"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="aud-box">
     <h3 class="aud-heading">{heading}</h3>
     {subheading && <h1 class="aud-heading2" set:html={subheading} />}
@@ -88,7 +94,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .aud-heading {
     font-size: 16px;
   }
@@ -327,5 +333,5 @@ const {
       font-size: 16px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

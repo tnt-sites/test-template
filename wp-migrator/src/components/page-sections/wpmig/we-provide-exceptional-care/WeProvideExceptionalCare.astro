@@ -17,7 +17,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="we-provide-exceptional-care" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<section
+  class="we-provide-exceptional-care"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="wpec-box">
     <div class="wpec-box2">
       <div class="wpec-box3">
@@ -28,7 +34,18 @@ const {
       </div>
     </div>
     <div class="wpec-box5">
-      {image && <img class="wpec-media" src={image} alt={imageAlt || ""} loading="lazy" width="2048" height="1476" />}
+      {
+        image && (
+          <img
+            class="wpec-media"
+            src={image}
+            alt={imageAlt || ""}
+            loading="lazy"
+            width="2048"
+            height="1476"
+          />
+        )
+      }
     </div>
   </div>
 </section>
@@ -170,7 +187,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wpec-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -195,5 +212,5 @@ const {
     line-height: 28.8px;
     text-align: center;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

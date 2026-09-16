@@ -13,7 +13,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="cosmetic-dentist-littleton-co" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="cosmetic-dentist-littleton-co"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="cdlc-box">
     <h1 class="cdlc-heading">{heading}</h1>
   </div>

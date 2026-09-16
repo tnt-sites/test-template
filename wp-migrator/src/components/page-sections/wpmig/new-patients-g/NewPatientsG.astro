@@ -49,16 +49,74 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patients-g" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="new-patients-g"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="npg-box">
     <div class="npg-box2">
       <div class="npg-box3">
         <div class="npg-box4">
           {eyebrow && <h4 class="npg-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npg-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npg-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npg-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npg-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npg-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="npg-box5">
@@ -75,7 +133,18 @@ const {
           </div>
           <div class="npg-box11">
             <div class="npg-box12">
-              {image && <img class="npg-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="443" />}
+              {
+                image && (
+                  <img
+                    class="npg-media"
+                    src={image}
+                    alt={imageAlt || ""}
+                    loading="lazy"
+                    width="1024"
+                    height="443"
+                  />
+                )
+              }
             </div>
           </div>
           <div class="npg-box13">
@@ -125,13 +194,39 @@ const {
             </div>
             <div class="npg-box31">
               <div class="npg-box32">
-                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="npg-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                {
+                  secondaryButtonText4 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="npg-btn5"
+                      text={secondaryButtonText4}
+                      link={secondaryButtonLink4 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="npg-box33">
               <div class="npg-box34">
                 <div class="npg-box35">
-                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="npg-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                  {
+                    secondaryButtonText5 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="npg-btn6"
+                        text={secondaryButtonText5}
+                        link={secondaryButtonLink5 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -754,7 +849,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .npg-heading3 {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -1000,5 +1095,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

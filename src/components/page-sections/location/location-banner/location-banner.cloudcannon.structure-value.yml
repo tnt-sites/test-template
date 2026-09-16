@@ -3,9 +3,9 @@ icon: panorama
 description: Full-width banner image at the top of a location page, with an optional separate mobile crop.
 value:
   _component: page-sections/location/location-banner
-  id: ''
+  id: ""
   imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-  imageSourceMobile: ''
+  imageSourceMobile: ""
   imageAlt: Banner image
 preview:
   text:

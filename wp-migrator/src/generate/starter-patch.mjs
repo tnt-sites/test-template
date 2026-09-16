@@ -159,13 +159,12 @@ function patchFaqSection(source) {
   // than one of the target's named options. A component that reads only the
   // named prop therefore drops the band — which is how an accordion ended up
   // white beside the grey run it shares a band with in the source.
-  out = out.replace(
-    /  backgroundColor,\n/,
-    `  backgroundColor,\n`
-  ).replace(
-    /  backgroundColor=\{backgroundColor\}/,
-    `  backgroundColor={backgroundColorHex ? undefined : backgroundColor}\n  style={backgroundColorHex ? \`background-color:\${backgroundColorHex}\` : undefined}`
-  );
+  out = out
+    .replace(/  backgroundColor,\n/, `  backgroundColor,\n`)
+    .replace(
+      /  backgroundColor=\{backgroundColor\}/,
+      `  backgroundColor={backgroundColorHex ? undefined : backgroundColor}\n  style={backgroundColorHex ? \`background-color:\${backgroundColorHex}\` : undefined}`
+    );
 
   out = out.replace(
     /<Accordion label=\{label\} singleOpen=\{true\} openFirst=\{false\} items=\{items\} \/>/,

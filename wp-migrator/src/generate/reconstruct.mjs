@@ -26,7 +26,10 @@ export function renameProps(source, rename) {
 
   if (!names.length) return source;
 
-  const pattern = new RegExp(`(?<![\\w$.])(${names.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})(?![\\w$])`, "g");
+  const pattern = new RegExp(
+    `(?<![\\w$.])(${names.map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})(?![\\w$])`,
+    "g"
+  );
 
   return source.replace(pattern, (m) => rename[m] ?? m);
 }
@@ -65,10 +68,7 @@ export function promoteSlotsToRaw(source, propNames) {
   let out = source;
 
   for (const prop of propNames) {
-    const interpolated = new RegExp(
-      `(<([a-z][a-z0-9]*)\\b[^>]*?)>\\{${prop}\\}</\\2>`,
-      "g"
-    );
+    const interpolated = new RegExp(`(<([a-z][a-z0-9]*)\\b[^>]*?)>\\{${prop}\\}</\\2>`, "g");
 
     out = out.replace(interpolated, (_m, open) => `${open} set:html={${prop}} />`);
   }

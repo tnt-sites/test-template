@@ -77,7 +77,9 @@ function decode(value) {
 
 function readCategories(body) {
   const out = [];
-  for (const m of body.matchAll(/<category domain="([^"]+)" nicename="([^"]+)"[^>]*>([\s\S]*?)<\/category>/g)) {
+  for (const m of body.matchAll(
+    /<category domain="([^"]+)" nicename="([^"]+)"[^>]*>([\s\S]*?)<\/category>/g
+  )) {
     out.push({ domain: m[1], slug: m[2], label: decode(m[3]) });
   }
   return out;
@@ -98,8 +100,27 @@ function readMeta(body) {
 // ---------------------------------------------------------------------------
 
 const BLOCK = new Set([
-  "p", "div", "section", "article", "header", "footer", "figure", "figcaption",
-  "h1", "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "pre", "hr", "table",
+  "p",
+  "div",
+  "section",
+  "article",
+  "header",
+  "footer",
+  "figure",
+  "figcaption",
+  "h1",
+  "h2",
+  "h3",
+  "h4",
+  "h5",
+  "h6",
+  "ul",
+  "ol",
+  "li",
+  "blockquote",
+  "pre",
+  "hr",
+  "table",
 ]);
 
 /**
@@ -183,7 +204,11 @@ function renderBlockNode(node, blocks, ctx) {
   if (tag === "blockquote") {
     const inner = [];
     renderChildren(node, inner, ctx);
-    const quoted = inner.join("\n\n").split("\n").map((l) => `> ${l}`.trimEnd()).join("\n");
+    const quoted = inner
+      .join("\n\n")
+      .split("\n")
+      .map((l) => `> ${l}`.trimEnd())
+      .join("\n");
     if (quoted.trim()) blocks.push(quoted);
     return;
   }
@@ -199,7 +224,13 @@ function renderBlockNode(node, blocks, ctx) {
       if (!body) continue;
       const marker = tag === "ol" ? `${index++}. ` : "- ";
       const pad = " ".repeat(marker.length);
-      items.push(marker + body.split("\n").map((l, i) => (i === 0 ? l : pad + l)).join("\n"));
+      items.push(
+        marker +
+          body
+            .split("\n")
+            .map((l, i) => (i === 0 ? l : pad + l))
+            .join("\n")
+      );
     }
     if (items.length) blocks.push(items.join("\n"));
     return;
@@ -284,9 +315,7 @@ function attr(node, name) {
  * Markdown unreadable to the person who edits it next.
  */
 function escapeText(text) {
-  return text
-    .replace(/ /g, " ")
-    .replace(/([{}<>])/g, "\\$1");
+  return text.replace(/ /g, " ").replace(/([{}<>])/g, "\\$1");
 }
 
 function collapse(text) {
@@ -409,7 +438,8 @@ export async function importPosts({
 
   const attachments = new Map();
   for (const item of channel.items) {
-    if (item.type === "attachment" && item.attachmentUrl) attachments.set(item.id, item.attachmentUrl);
+    if (item.type === "attachment" && item.attachmentUrl)
+      attachments.set(item.id, item.attachmentUrl);
   }
 
   let posts = channel.items.filter((i) => i.type === "post" && i.status === "publish");
@@ -440,8 +470,14 @@ export async function importPosts({
 
     const description =
       post.meta._yoast_wpseo_metadesc?.trim() ||
-      htmlToMarkdown(post.excerpt || "", { rewriteUrl }).replace(/\s+/g, " ").trim() ||
-      body.replace(/[#*[\]()>`\\]/g, "").replace(/\s+/g, " ").trim().slice(0, 155);
+      htmlToMarkdown(post.excerpt || "", { rewriteUrl })
+        .replace(/\s+/g, " ")
+        .trim() ||
+      body
+        .replace(/[#*[\]()>`\\]/g, "")
+        .replace(/\s+/g, " ")
+        .trim()
+        .slice(0, 155);
 
     let image = "";
     const thumbUrl = attachments.get(post.meta._thumbnail_id);
@@ -499,7 +535,9 @@ export async function importPosts({
   // A post pointing at an image that never arrived would fail the build (Astro
   // resolves relative image references at compile time), so drop those
   // references rather than ship a broken post.
-  const missingNames = new Set(missing.map((rel) => assets.entries().find(([r]) => r === rel)?.[1]));
+  const missingNames = new Set(
+    missing.map((rel) => assets.entries().find(([r]) => r === rel)?.[1])
+  );
   if (missingNames.size) {
     for (const entry of written) {
       for (const name of missingNames) {

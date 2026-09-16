@@ -35,17 +35,11 @@ const htmlAttributes = Object.fromEntries(
 const Tag = modalId ? "a" : "div";
 const triggerAttributes = modalId ? { href: `#${modalId}`, role: "button" } : {};
 
-const headingAttributes = editable
-  ? { "data-editable": "text", "data-prop": "heading" }
-  : {};
+const headingAttributes = editable ? { "data-editable": "text", "data-prop": "heading" } : {};
 ---
 
 <Tag class:list={["location-icon", icon, className]} {...triggerAttributes} {...htmlAttributes}>
-  {
-    svg && (
-      <div class:list={["svg-container", isNoFill && "no-fill"]} set:html={svg} />
-    )
-  }
+  {svg && <div class:list={["svg-container", isNoFill && "no-fill"]} set:html={svg} />}
   <h3 {...headingAttributes}>{heading}</h3>
 </Tag>
 

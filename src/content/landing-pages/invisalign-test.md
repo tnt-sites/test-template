@@ -7,12 +7,12 @@ landingMainNav:
     logoAlt: Turlock Dental Studio
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request a Free Consultation
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -32,8 +32,8 @@ landingMainNav:
               - 1801 Colorado Ave. Suite 280
             city: Turlock
             state: CA
-            postalCode: '95382'
-            country: ''
+            postalCode: "95382"
+            country: ""
             mapUrl: https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A
         officeHours:
           - day: Monday
@@ -46,20 +46,20 @@ landingMainNav:
             hours: 8:00am - 5:00pm
           - day: Friday
             hours: 8:00am - 5:00pm
-        officeHoursNote: ''
-    addressLinkColor: ''
-    addressLinkHoverColor: ''
-    phoneLinkColor: ''
-    phoneLinkHoverColor: ''
+        officeHoursNote: ""
+    addressLinkColor: ""
+    addressLinkHoverColor: ""
+    phoneLinkColor: ""
+    phoneLinkHoverColor: ""
     mobileCallLabel: Call Today!
     mobileRequestLabel: Request a Free Consultation
     mobileRequestHref: /contact-us/
-    mobileCallBackgroundColor: ''
-    mobileRequestBackgroundColor: ''
-    mobileCallTextColor: ''
-    mobileCallSmallTextColor: ''
-    mobileRequestTextColor: ''
-    mobileRequestSmallTextColor: ''
+    mobileCallBackgroundColor: ""
+    mobileRequestBackgroundColor: ""
+    mobileCallTextColor: ""
+    mobileCallSmallTextColor: ""
+    mobileRequestTextColor: ""
+    mobileRequestSmallTextColor: ""
 landingFooter:
   - _component: navigation/landing/landing-footer-top-bar
     logoSource: /images/logo.svg
@@ -76,8 +76,8 @@ landingFooter:
               - 1801 Colorado Ave. Suite 280
             city: Turlock
             state: CA
-            postalCode: '95382'
-            country: ''
+            postalCode: "95382"
+            country: ""
             mapUrl: https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A
         officeHours:
           - day: Monday
@@ -90,7 +90,7 @@ landingFooter:
             hours: 8:00am - 5:00pm
           - day: Friday
             hours: 8:00am - 5:00pm
-        officeHoursNote: ''
+        officeHoursNote: ""
     mapEmbedUrl: >-
       https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10961.979888105328!2d-120.8360359!3d37.5087999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809106598913e571%3A0x295e982741357d3e!2sTurlock%20Dental%20Studio!5e1!3m2!1sen!2sus!4v1781655306719!5m2!1sen!2sus
     legalLinks:
@@ -98,55 +98,55 @@ landingFooter:
         path: /privacy-policy/
       - name: Sitemap
         path: /sitemap/
-    legalBlurb: ''
+    legalBlurb: ""
     linkColor: brand
     linkHoverColor: brand-secondary
-    addressLinkColor: ''
-    addressLinkHoverColor: ''
-    phoneLinkColor: ''
-    phoneLinkHoverColor: ''
+    addressLinkColor: ""
+    addressLinkHoverColor: ""
+    phoneLinkColor: ""
+    phoneLinkHoverColor: ""
     officeHoursAlignment: right
     backgroundImage:
-      source: ''
-      alt: ''
+      source: ""
+      alt: ""
     backgroundColor: brand-secondary
-    accentColor: '#4f95d0'
+    accentColor: "#4f95d0"
 landingPageSections:
   - _component: landing-page-components/shared/top-bar
-    id: ''
+    id: ""
     backgroundColor: brand
-    backgroundColorHex: ''
+    backgroundColorHex: ""
     textColor: var(--color-text-inverse)
     items:
       - New Patients Welcome!
       - Same Day Appointments
   - _component: landing-page-components/invisalign/banner
-    id: ''
+    id: ""
     heading: Invisalign Day
     preHeading: Join Us For
     postHeading: July 15th
     coupons:
-      - source: ''
+      - source: ""
         alt: Coupon 1
-      - source: ''
+      - source: ""
         alt: Coupon 2
     image:
       source: https://placehold.co/900x760
       alt: Broneil Ishaya, DDS smiling
     figcaption: Broneil Ishaya, DDS
     textPanelBackgroundImage:
-      source: ''
-      alt: ''
-    sectionBackground: '#000'
-    sectionBackgroundHex: ''
-    borderBottomColor: '#4f95d0'
+      source: ""
+      alt: ""
+    sectionBackground: "#000"
+    sectionBackgroundHex: ""
+    borderBottomColor: "#4f95d0"
   - _component: landing-page-components/invisalign/form-review
-    id: ''
+    id: ""
     formHeading: Request a FREE Consultation
-    formAction: ''
+    formAction: ""
     formMethod: post
     formSubject: PPC Ortho - Mid Page Appointment Request
-    formRedirect: ''
+    formRedirect: ""
     reviewHeading: Google Review
     reviewText: >-
       His number one concern is to ensure my teeth are always in tip top shape.
@@ -155,22 +155,22 @@ landingPageSections:
     reviewerName: Jonathan B.
     sectionSpacingTop: 100px
     formBackgroundColor: var(--color-brand)
-    formBackgroundColorHex: ''
-    reviewBackgroundColor: '#fff'
-    reviewBackgroundColorHex: ''
+    formBackgroundColorHex: ""
+    reviewBackgroundColor: "#fff"
+    reviewBackgroundColorHex: ""
   - _component: landing-page-components/invisalign/results
-    id: ''
+    id: ""
     heading: Real Results. Real Smiles.
     images:
       - source: https://placehold.co/460x330
         alt: Result 1
       - source: https://placehold.co/460x330
         alt: Result 2
-    backgroundColor: ''
-    backgroundColorHex: '#4f95d0'
-    textColor: '#ffffff'
+    backgroundColor: ""
+    backgroundColorHex: "#4f95d0"
+    textColor: "#ffffff"
   - _component: landing-page-components/invisalign/benefits
-    id: ''
+    id: ""
     heading: Benefits of Braces & Invisalign
     leftTitle: Braces
     leftItems:
@@ -188,10 +188,10 @@ landingPageSections:
       source: https://placehold.co/500x600
       alt: Woman with Invisalign and braces
     backgroundColor: var(--color-brand)
-    backgroundColorHex: ''
+    backgroundColorHex: ""
     backgroundImage:
-      source: ''
-      alt: ''
+      source: ""
+      alt: ""
   - _component: landing-page-components/invisalign/split
     id: new-smile-new-you
     heading: New Smile, New You
@@ -214,7 +214,7 @@ landingPageSections:
     image:
       source: https://placehold.co/550x430
       alt: Woman holding Invisalign aligners
-    figcaption: ''
+    figcaption: ""
     reverse: false
   - _component: landing-page-components/invisalign/split
     id: orthodontics-all-ages
@@ -225,7 +225,7 @@ landingPageSections:
     image:
       source: https://placehold.co/550x430
       alt: Teens smiling
-    figcaption: ''
+    figcaption: ""
     reverse: true
 head_scripts: []
 footer_scripts: []

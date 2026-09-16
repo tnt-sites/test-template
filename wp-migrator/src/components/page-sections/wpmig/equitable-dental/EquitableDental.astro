@@ -13,7 +13,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="equitable-dental" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="equitable-dental"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="ed-box">
     <h1 class="ed-heading">{heading}</h1>
   </div>

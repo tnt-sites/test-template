@@ -3,19 +3,19 @@ icon: payments
 description: Dark section with intro copy over icon callouts, each opening a pop-up about a payment option.
 value:
   _component: page-sections/location/location-financing
-  id: ''
+  id: ""
   heading: How We Make Dentistry Affordable
   intro: A short introduction to the payment options available.
   icons:
     - _component: page-sections/location/location-icon
       icon: financial-insurance-v2
       heading: We Welcome Dental Insurance
-      modalHeading: ''
+      modalHeading: ""
       modalContent: Detail about insurance goes here.
     - _component: page-sections/location/location-icon
       icon: financial-insurance-v1
       heading: We Happily Accept Flexible Financing
-      modalHeading: ''
+      modalHeading: ""
       modalContent: Detail about financing goes here.
   backgroundColor: "#000000"
   textColor: "#ffffff"
@@ -40,8 +40,8 @@ _structures:
           _component: page-sections/location/location-icon
           icon: office-v1
           heading: Icon heading
-          modalHeading: ''
-          modalContent: ''
+          modalHeading: ""
+          modalContent: ""
         preview:
           text:
             - key: heading

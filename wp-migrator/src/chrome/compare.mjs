@@ -21,44 +21,44 @@
  * guesses, because the markup is the starter's own.
  */
 export const TARGET_ROLES = {
-  headerBand: ['.main-nav .hd-topbar'],
-  headerInner: ['.main-nav .hd-topbar .hd-bar-inner'],
+  headerBand: [".main-nav .hd-topbar"],
+  headerInner: [".main-nav .hd-topbar .hd-bar-inner"],
   // As with the footer, one element in the starter answers for both the inner
   // box and the row the source drew with a separate wrapper.
-  headerRow: ['.main-nav .hd-topbar .hd-bar-inner'],
-  headerLogo: ['.main-nav .hd-topbar .logo-link img'],
-  headerLogoBox: ['.main-nav .hd-topbar .logo-link'],
-  headerAside: ['.main-nav .hd-aside'],
-  headerAsideLabel: ['.main-nav .hd-aside-label'],
-  headerAsidePhone: ['.main-nav .hd-aside-phone'],
+  headerRow: [".main-nav .hd-topbar .hd-bar-inner"],
+  headerLogo: [".main-nav .hd-topbar .logo-link img"],
+  headerLogoBox: [".main-nav .hd-topbar .logo-link"],
+  headerAside: [".main-nav .hd-aside"],
+  headerAsideLabel: [".main-nav .hd-aside-label"],
+  headerAsidePhone: [".main-nav .hd-aside-phone"],
 
-  navBar: ['.main-nav .hd-navbar'],
-  navInner: ['.main-nav .hd-navbar .hd-bar-inner'],
-  navList: ['.main-nav .desktop-main-nav > .bar-list'],
-  navLink: ['.main-nav .desktop-main-nav > .bar-list > .nav-item > a'],
-  navCta: ['.main-nav .hd-navbar-cta .button'],
-  navToggle: ['.main-nav .nav-hamburger'],
-  navPhone: ['.main-nav .hd-navbar-phone'],
+  navBar: [".main-nav .hd-navbar"],
+  navInner: [".main-nav .hd-navbar .hd-bar-inner"],
+  navList: [".main-nav .desktop-main-nav > .bar-list"],
+  navLink: [".main-nav .desktop-main-nav > .bar-list > .nav-item > a"],
+  navCta: [".main-nav .hd-navbar-cta .button"],
+  navToggle: [".main-nav .nav-hamburger"],
+  navPhone: [".main-nav .hd-navbar-phone"],
 
-  dropdownPanel: ['.main-nav .desktop-main-nav .nav-item-content'],
-  dropdownItem: ['.main-nav .desktop-main-nav .nav-item-content .nav-item > a'],
-  dropdownItemIcon: ['.main-nav .desktop-main-nav .nav-item-lead'],
+  dropdownPanel: [".main-nav .desktop-main-nav .nav-item-content"],
+  dropdownItem: [".main-nav .desktop-main-nav .nav-item-content .nav-item > a"],
+  dropdownItemIcon: [".main-nav .desktop-main-nav .nav-item-lead"],
 
-  footerBand: ['footer.footer'],
-  footerInner: ['footer .footer-columns'],
+  footerBand: ["footer.footer"],
+  footerInner: ["footer .footer-columns"],
   // The starter's grid is both the inner box and the row the source drew
   // with a separate wrapper; one element answers for both roles.
-  footerRow: ['footer .footer-columns'],
-  footerColumn: ['footer .footer-column'],
-  footerLogo: ['footer .footer-column-logo img'],
-  footerHeading: ['footer .footer-column-title'],
-  footerRule: ['footer .footer-column-rule'],
-  footerLink: ['footer .footer-column-link'],
-  footerLinkIcon: ['footer .footer-column-icon'],
-  footerSocialImage: ['footer .footer-column-socials img'],
+  footerRow: ["footer .footer-columns"],
+  footerColumn: ["footer .footer-column"],
+  footerLogo: ["footer .footer-column-logo img"],
+  footerHeading: ["footer .footer-column-title"],
+  footerRule: ["footer .footer-column-rule"],
+  footerLink: ["footer .footer-column-link"],
+  footerLinkIcon: ["footer .footer-column-icon"],
+  footerSocialImage: ["footer .footer-column-socials img"],
 
-  copyrightBand: ['footer .footer-copyright'],
-  copyrightInner: ['footer .footer-copyright-inner'],
+  copyrightBand: ["footer .footer-copyright"],
+  copyrightInner: ["footer .footer-copyright-inner"],
 };
 
 /**
@@ -139,7 +139,12 @@ export function compareChrome(source, built) {
        * used them was never rendered.
        */
       missing.push(role);
-      findings.push({ role, kind: "missing", severity: 100, detail: "present in source, absent from build" });
+      findings.push({
+        role,
+        kind: "missing",
+        severity: 100,
+        detail: "present in source, absent from build",
+      });
       continue;
     }
     compared++;
@@ -163,8 +168,13 @@ export function compareChrome(source, built) {
       if (check.kind === "color") {
         if (String(a) === String(b)) continue;
         findings.push({
-          role, kind: "color", prop: check.key, source: a, built: b,
-          severity: 40, detail: `${check.key} ${a} -> ${b}`,
+          role,
+          kind: "color",
+          prop: check.key,
+          source: a,
+          built: b,
+          severity: 40,
+          detail: `${check.key} ${a} -> ${b}`,
         });
         continue;
       }
@@ -172,8 +182,13 @@ export function compareChrome(source, built) {
       if (check.kind === "family") {
         if (primaryFamily(a) === primaryFamily(b)) continue;
         findings.push({
-          role, kind: "type", prop: check.key, source: a, built: b,
-          severity: 50, detail: `font ${primaryFamily(a)} -> ${primaryFamily(b)}`,
+          role,
+          kind: "type",
+          prop: check.key,
+          source: a,
+          built: b,
+          severity: 50,
+          detail: `font ${primaryFamily(a)} -> ${primaryFamily(b)}`,
         });
         continue;
       }
@@ -182,15 +197,27 @@ export function compareChrome(source, built) {
       const nb = num(b);
       if (na == null || nb == null) {
         if (String(a) !== String(b)) {
-          findings.push({ role, kind: check.kind, prop: check.key, source: a, built: b, severity: 30, detail: `${check.key} ${a} -> ${b}` });
+          findings.push({
+            role,
+            kind: check.kind,
+            prop: check.key,
+            source: a,
+            built: b,
+            severity: 30,
+            detail: `${check.key} ${a} -> ${b}`,
+          });
         }
         continue;
       }
       const delta = nb - na;
       if (Math.abs(delta) <= (check.tolerance ?? 0)) continue;
       findings.push({
-        role, kind: check.kind, prop: check.key,
-        source: na, built: nb, delta: Math.round(delta * 100) / 100,
+        role,
+        kind: check.kind,
+        prop: check.key,
+        source: na,
+        built: nb,
+        delta: Math.round(delta * 100) / 100,
         severity: Math.min(100, Math.abs(delta) * (check.kind === "type" ? 8 : 1)),
         detail: `${check.key} ${na} -> ${nb} (${delta > 0 ? "+" : ""}${Math.round(delta)})`,
       });

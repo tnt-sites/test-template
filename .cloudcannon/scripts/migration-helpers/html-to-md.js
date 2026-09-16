@@ -18,9 +18,7 @@ if (!fs.existsSync(folderPath)) {
 }
 
 // Get all .html files in the folder (non-recursive)
-const files = fs.readdirSync(folderPath).filter(file =>
-  file.toLowerCase().endsWith(".html")
-);
+const files = fs.readdirSync(folderPath).filter((file) => file.toLowerCase().endsWith(".html"));
 
 if (files.length === 0) {
   console.log("ℹ️ No .html files found.");

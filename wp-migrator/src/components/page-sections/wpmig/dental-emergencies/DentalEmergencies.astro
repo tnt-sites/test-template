@@ -33,7 +33,13 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="dental-emergencies" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonBackgroundHoverColor};--c8:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="dental-emergencies"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonBackgroundHoverColor};--c8:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="de-box">
     <div class="de-box2">
       <div class="de-box3">
@@ -48,13 +54,13 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
           <h3 class="de-heading">{heading}</h3>
         </div>
         <div class="de-grid">
-          {list.map((it) => (
-            <div class="de-box8">
-              <div class="de-box9">
-                {it.text && <div class="de-body" set:html={it.text} />}
+          {
+            list.map((it) => (
+              <div class="de-box8">
+                <div class="de-box9">{it.text && <div class="de-body" set:html={it.text} />}</div>
               </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
         <section class="de-box12">
           <div class="de-box13">
@@ -99,13 +105,39 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
         </div>
         <div class="de-box29">
           <div class="de-box30">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="de-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="default"
+                  borderWidth="none"
+                  class="de-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="de-box31">
           <div class="de-box32">
             <div class="de-box33">
-              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="de-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+              {
+                secondaryButtonText && (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    width="none"
+                    borderRadius="default"
+                    borderWidth="none"
+                    class="de-btn2"
+                    text={secondaryButtonText}
+                    link={secondaryButtonLink || "#"}
+                  />
+                )
+              }
             </div>
           </div>
         </div>
@@ -670,7 +702,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .de-heading2 {
     font-weight: 400;
   }
@@ -801,5 +833,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -60,7 +60,11 @@ export async function capturePageShots(
 
   for (const width of viewports) {
     await page.setViewportSize({ width, height: 900 });
-    const state = await gotoStable(page, url, { primeLazyLoad: true, reveal: true, freezeMotion: true });
+    const state = await gotoStable(page, url, {
+      primeLazyLoad: true,
+      reveal: true,
+      freezeMotion: true,
+    });
     if (!state.ok) throw new Error(`capture failed at ${width}px for ${url}: ${state.reason}`);
     // Open accordions on BOTH sides before shooting. The source mirror is a
     // pre-JS snapshot whose panels are closed, while the build renders them in
@@ -90,13 +94,23 @@ export async function capturePageShots(
  * Section-level shots are what make a diff actionable — a whole-page diff on a
  * 14,000px page tells you nothing about which section drifted.
  */
-export async function captureElementShots(page, url, selector, outDir, { prefix, viewports = VIEWPORTS } = {}) {
+export async function captureElementShots(
+  page,
+  url,
+  selector,
+  outDir,
+  { prefix, viewports = VIEWPORTS } = {}
+) {
   fs.mkdirSync(outDir, { recursive: true });
   const shots = [];
 
   for (const width of viewports) {
     await page.setViewportSize({ width, height: 900 });
-    const state = await gotoStable(page, url, { primeLazyLoad: true, reveal: true, freezeMotion: true });
+    const state = await gotoStable(page, url, {
+      primeLazyLoad: true,
+      reveal: true,
+      freezeMotion: true,
+    });
     if (!state.ok) continue;
     await suppressOverlays(page);
 

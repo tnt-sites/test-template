@@ -13,7 +13,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="umr-dental" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="umr-dental"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="ud-box">
     <h1 class="ud-heading">{heading}</h1>
   </div>

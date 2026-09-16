@@ -20,7 +20,12 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
 
   const rect = (el) => {
     const r = el.getBoundingClientRect();
-    return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) };
+    return {
+      x: Math.round(r.x),
+      y: Math.round(r.y),
+      w: Math.round(r.width),
+      h: Math.round(r.height),
+    };
   };
 
   const vw = window.innerWidth;
@@ -37,7 +42,8 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
     const cs = getComputedStyle(el);
     if (cs.backgroundImage !== "none") return true;
     if (alphaOf(cs.backgroundColor) > 0.02) return true;
-    if (["Top", "Right", "Bottom", "Left"].some((s) => parseFloat(cs[`border${s}Width`]) > 0)) return true;
+    if (["Top", "Right", "Bottom", "Left"].some((s) => parseFloat(cs[`border${s}Width`]) > 0))
+      return true;
     if (cs.boxShadow !== "none") return true;
     for (const ps of ["::before", "::after"]) {
       const pcs = getComputedStyle(el, ps);
@@ -107,7 +113,11 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
     [".header", ".main-header", "#site-header", ".top-bar"]
       .map((sel) => document.querySelector(sel))
       .find((el) => el && atDocumentTop(el) && !el.closest("main, [role='main'], article"));
-  const footer = findLandmark('footer, [role="contentinfo"]', ["#colophon", ".site-footer", "#footer"]);
+  const footer = findLandmark('footer, [role="contentinfo"]', [
+    "#colophon",
+    ".site-footer",
+    "#footer",
+  ]);
 
   /**
    * The primary navigation is frequently a sibling of the header rather than a
@@ -303,7 +313,11 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
     for (let i = 1; i <= m; i++) {
       const cur = [i];
       for (let j = 1; j <= n; j++) {
-        cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        cur[j] = Math.min(
+          prev[j] + 1,
+          cur[j - 1] + 1,
+          prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1)
+        );
       }
       prev = cur;
     }
@@ -391,9 +405,11 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
     // downstream by the fold-into-previous step instead).
     const parentBox = rect(node);
     const allSpanWidth = kids.every((k) => parentBox.w > 0 && rect(k).w / parentBox.w >= 0.85);
-    if (!allSpanWidth) return keepWhole("children sit side by side rather than stacked — a multi-column layout");
+    if (!allSpanWidth)
+      return keepWhole("children sit side by side rather than stacked — a multi-column layout");
     const tallEnoughShare = kids.filter((k) => rect(k).h >= 40).length / kids.length;
-    if (tallEnoughShare < 0.6) return keepWhole("most children are too short to be sections of their own");
+    if (tallEnoughShare < 0.6)
+      return keepWhole("most children are too short to be sections of their own");
 
     return kids.flatMap((k) => expandCandidate(k, depth + 1));
   };
@@ -465,7 +481,12 @@ function AUTO_SEGMENT({ mark, foldBelowPx, minTextLen, splitSidebars }) {
  */
 export async function autoSegment(page, opts = {}) {
   const { foldBelowPx = 40, minTextLen = 8, splitSidebars = true } = opts;
-  return page.evaluate(AUTO_SEGMENT, { mark: SEGMENT_MARK, foldBelowPx, minTextLen, splitSidebars });
+  return page.evaluate(AUTO_SEGMENT, {
+    mark: SEGMENT_MARK,
+    foldBelowPx,
+    minTextLen,
+    splitSidebars,
+  });
 }
 
 export function sectionSelector(n) {

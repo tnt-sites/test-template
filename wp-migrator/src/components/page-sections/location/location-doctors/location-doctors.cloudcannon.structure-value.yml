@@ -3,33 +3,33 @@ icon: groups
 description: Doctor headshots, a row of credential icons, and bio buttons — all opening the same set of pop-ups.
 value:
   _component: page-sections/location/location-doctors
-  id: ''
+  id: ""
   heading: Introducing Your Experienced Dentists
   doctors:
     - _component: page-sections/location/location-doctors/location-doctor
       name: Dr. Doctor Name
-      credential: ''
+      credential: ""
       imageSource: /src/assets/images/component-library/profile.jpg
       imageAlt: Headshot of Dr. Doctor Name
       bioLinkText: Meet Dr. Doctor Name
-      modalHeading: ''
+      modalHeading: ""
       modalContent: Biography goes here.
   icons:
-      - _component: page-sections/location/location-icon
-        icon: tooth-implant-v1
-        heading: Skilled in Complex Treatments
-        modalHeading: ''
-        modalContent: ''
-      - _component: page-sections/location/location-icon
-        icon: experience-v4
-        heading: Members of Prestigious Dental Organizations
-        modalHeading: ''
-        modalContent: ''
-      - _component: page-sections/location/location-icon
-        icon: family-v1
-        heading: Actively Give Back to the Community
-        modalHeading: ''
-        modalContent: ''
+    - _component: page-sections/location/location-icon
+      icon: tooth-implant-v1
+      heading: Skilled in Complex Treatments
+      modalHeading: ""
+      modalContent: ""
+    - _component: page-sections/location/location-icon
+      icon: experience-v4
+      heading: Members of Prestigious Dental Organizations
+      modalHeading: ""
+      modalContent: ""
+    - _component: page-sections/location/location-icon
+      icon: family-v1
+      heading: Actively Give Back to the Community
+      modalHeading: ""
+      modalContent: ""
   backgroundColor: "#ffffff"
   textColor: "#000000"
   accentColor: var(--color-brand)
@@ -52,11 +52,11 @@ _structures:
         value:
           _component: page-sections/location/location-doctors/location-doctor
           name: Dr. Doctor Name
-          credential: ''
+          credential: ""
           imageSource: /src/assets/images/component-library/profile.jpg
           imageAlt: Headshot of Dr. Doctor Name
           bioLinkText: Meet Dr. Doctor Name
-          modalHeading: ''
+          modalHeading: ""
           modalContent: Biography goes here.
         preview:
           text:
@@ -79,7 +79,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text for the headshot.
@@ -113,8 +113,8 @@ _structures:
           _component: page-sections/location/location-icon
           icon: office-v1
           heading: Icon heading
-          modalHeading: ''
-          modalContent: ''
+          modalHeading: ""
+          modalContent: ""
         preview:
           text:
             - key: heading

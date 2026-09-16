@@ -19,7 +19,13 @@ import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { defineCommand } from "citty";
 import { runCompare } from "./compare.mjs";
-import { planCorrections, applyCorrections, mergePlan, loadState, saveState } from "../src/refine/index.mjs";
+import {
+  planCorrections,
+  applyCorrections,
+  mergePlan,
+  loadState,
+  saveState,
+} from "../src/refine/index.mjs";
 
 const HERE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -32,7 +38,6 @@ function pagesFromIr() {
     .map((f) => f.replace(/\.json$/, ""))
     .sort();
 }
-
 
 function countDecls(plan) {
   let n = 0;
@@ -63,9 +68,11 @@ function reconcilePlans(plans) {
         byValue.set(value, pagesFor);
         pagesFor.add(slug);
       };
-      for (const [sel, decls] of entry.base) for (const [prop, value] of decls) record("base", sel, prop, value);
+      for (const [sel, decls] of entry.base)
+        for (const [prop, value] of decls) record("base", sel, prop, value);
       for (const [width, sels] of entry.media) {
-        for (const [sel, decls] of sels) for (const [prop, value] of decls) record(String(width), sel, prop, value);
+        for (const [sel, decls] of sels)
+          for (const [prop, value] of decls) record(String(width), sel, prop, value);
       }
     }
   }
@@ -87,7 +94,11 @@ function reconcilePlans(plans) {
         dropped++;
         continue;
       }
-      const sels = bucket === "base" ? entry.base : entry.media.get(Number(bucket)) ?? entry.media.set(Number(bucket), new Map()).get(Number(bucket));
+      const sels =
+        bucket === "base"
+          ? entry.base
+          : (entry.media.get(Number(bucket)) ??
+            entry.media.set(Number(bucket), new Map()).get(Number(bucket)));
       const decls = sels.get(sel) ?? new Map();
       sels.set(sel, decls);
       decls.set(prop, value);
@@ -101,24 +112,50 @@ function reconcilePlans(plans) {
 export const devRefineAll = defineCommand({
   meta: {
     name: "dev-refine-all",
-    description: "Measure every generated page against one build, correct them all, rebuild, re-measure.",
+    description:
+      "Measure every generated page against one build, correct them all, rebuild, re-measure.",
   },
   args: {
-    pages: { type: "string", description: "Comma-separated page slugs (default: every page with an IR)", default: "" },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, ".wpmig/static") },
-    dist: { type: "string", description: "Built Astro output", default: path.join(HERE, "../dist") },
+    pages: {
+      type: "string",
+      description: "Comma-separated page slugs (default: every page with an IR)",
+      default: "",
+    },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, ".wpmig/static"),
+    },
+    dist: {
+      type: "string",
+      description: "Built Astro output",
+      default: path.join(HERE, "../dist"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Generated component namespace", default: "wpmig" },
     viewports: { type: "string", description: "Comma-separated widths", default: "1440,768,390" },
-    verify: { type: "string", description: "How many pages to re-measure with screenshots", default: "12" },
+    verify: {
+      type: "string",
+      description: "How many pages to re-measure with screenshots",
+      default: "12",
+    },
     concurrency: { type: "string", description: "Pages measured in parallel", default: "4" },
     build: { type: "boolean", description: "Build before measuring", default: true },
-    "from-state": { type: "boolean", description: "Reuse the corrections already recorded instead of re-measuring", default: false },
+    "from-state": {
+      type: "boolean",
+      description: "Reuse the corrections already recorded instead of re-measuring",
+      default: false,
+    },
   },
   async run({ args }) {
     const targetRoot = path.resolve(args.target);
     const viewports = args.viewports.split(",").map(Number);
-    const pages = args.pages ? args.pages.split(",").map((s) => s.trim()).filter(Boolean) : pagesFromIr();
+    const pages = args.pages
+      ? args.pages
+          .split(",")
+          .map((s) => s.trim())
+          .filter(Boolean)
+      : pagesFromIr();
 
     const build = (label) => {
       process.stdout.write(`${label} … `);
@@ -183,21 +220,23 @@ export const devRefineAll = defineCommand({
       }
       console.log(`reusing recorded corrections from ${plans.size} page(s)`);
     } else {
-    console.log(`\nmeasuring ${pages.length} page(s), ${concurrency} at a time …`);
-    const reports = await measureAll(() => false);
-    for (const slug of pages) {
-      const report = reports.get(slug);
-      if (!report) continue;
-      before.set(slug, report.summary.totalFindings);
+      console.log(`\nmeasuring ${pages.length} page(s), ${concurrency} at a time …`);
+      const reports = await measureAll(() => false);
+      for (const slug of pages) {
+        const report = reports.get(slug);
+        if (!report) continue;
+        before.set(slug, report.summary.totalFindings);
 
-      const { plan } = planCorrections(report, { baseViewport: Math.min(...viewports) });
-      if (!plan.size) continue;
-      const stateFile = path.join(HERE, ".wpmig/corrections", `${slug}.json`);
-      const merged = mergePlan(loadState(stateFile), plan);
-      saveState(stateFile, merged);
-      plans.set(slug, merged);
-      console.log(`  ${slug}: ${report.summary.totalFindings} findings → ${countDecls(merged)} correction(s)`);
-    }
+        const { plan } = planCorrections(report, { baseViewport: Math.min(...viewports) });
+        if (!plan.size) continue;
+        const stateFile = path.join(HERE, ".wpmig/corrections", `${slug}.json`);
+        const merged = mergePlan(loadState(stateFile), plan);
+        saveState(stateFile, merged);
+        plans.set(slug, merged);
+        console.log(
+          `  ${slug}: ${report.summary.totalFindings} findings → ${countDecls(merged)} correction(s)`
+        );
+      }
     }
 
     // A component's corrections live in one region inside that component, but
@@ -250,12 +289,17 @@ export const devRefineAll = defineCommand({
     const scored = rows.filter((r) => r.pixel != null);
     if (scored.length) {
       const mean = scored.reduce((a, r) => a + r.pixel, 0) / scored.length;
-      console.log(`\nmean pixel mismatch across ${scored.length} sampled page(s): ${mean.toFixed(2)}%`);
+      console.log(
+        `\nmean pixel mismatch across ${scored.length} sampled page(s): ${mean.toFixed(2)}%`
+      );
     }
     console.log(`total findings: ${rows.reduce((a, r) => a + r.findings, 0)}`);
 
     const out = path.join(HERE, ".wpmig/compare/site-report.json");
-    fs.writeFileSync(out, JSON.stringify({ generatedAt: new Date().toISOString(), pages: rows }, null, 2));
+    fs.writeFileSync(
+      out,
+      JSON.stringify({ generatedAt: new Date().toISOString(), pages: rows }, null, 2)
+    );
     console.log(`\nreport: ${path.relative(process.cwd(), out)}`);
   },
 });

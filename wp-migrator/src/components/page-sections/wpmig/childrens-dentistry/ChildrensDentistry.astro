@@ -32,7 +32,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="childrens-dentistry" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="childrens-dentistry"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="cd-box">
     <div class="cd-box2">
       <div class="cd-box3">
@@ -89,13 +95,39 @@ const {
         </div>
         <div class="cd-box24">
           <div class="cd-box25">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cd-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="default"
+                  borderWidth="none"
+                  class="cd-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="cd-box26">
           <div class="cd-box27">
             <div class="cd-box28">
-              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+              {
+                secondaryButtonText && (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    width="none"
+                    borderRadius="default"
+                    borderWidth="none"
+                    class="cd-btn2"
+                    text={secondaryButtonText}
+                    link={secondaryButtonLink || "#"}
+                  />
+                )
+              }
             </div>
           </div>
         </div>
@@ -478,7 +510,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cd-heading2 {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -639,5 +671,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

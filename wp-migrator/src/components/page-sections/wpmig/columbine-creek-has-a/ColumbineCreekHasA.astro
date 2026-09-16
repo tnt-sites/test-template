@@ -15,6 +15,7 @@ const {
   ...rest
 } = Astro.props;
 ---
+
 <section class="columbine-creek-has-a" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
   <div class="ccha-box">
     <div class="ccha-box2">
@@ -30,14 +31,33 @@ const {
         <div class="ccha-box7">
           <div class="ccha-box8">
             <div class="ccha-box9">
-              {image && <img class="ccha-media" src={image} alt={imageAlt || ""} loading="lazy" width="135" height="18" />}
+              {
+                image && (
+                  <img
+                    class="ccha-media"
+                    src={image}
+                    alt={imageAlt || ""}
+                    loading="lazy"
+                    width="135"
+                    height="18"
+                  />
+                )
+              }
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="ccha-box10">
-      <iframe class="ccha-embed" src="https://www.youtube.com/embed/cmzlzKGBpLk" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <iframe
+        class="ccha-embed"
+        src="https://www.youtube.com/embed/cmzlzKGBpLk"
+        title="YouTube video"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
     </div>
   </div>
 </section>
@@ -238,7 +258,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ccha-heading {
     font-weight: 700;
   }
@@ -265,5 +285,5 @@ const {
       font-weight: 700;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

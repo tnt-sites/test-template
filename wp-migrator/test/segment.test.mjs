@@ -110,7 +110,11 @@ test("a [sidebar, content] row splits into the rail and the column's own section
   assert.ok(rail, `no sidebar section found in: ${JSON.stringify(previews, null, 2)}`);
 
   // And the content column contributes its three designs separately.
-  for (const heading of ["Your First Visit Thank you", "New Patient Forms Forms", "New Patient Specials Emergency"]) {
+  for (const heading of [
+    "Your First Visit Thank you",
+    "New Patient Forms Forms",
+    "New Patient Specials Emergency",
+  ]) {
     assert.ok(
       sections.some((s) => s.textPreview.startsWith(heading)),
       `expected a section for "${heading}" in: ${JSON.stringify(previews, null, 2)}`
@@ -118,7 +122,10 @@ test("a [sidebar, content] row splits into the rail and the column's own section
   }
   // Nothing should contain both the rail and the prose.
   assert.ok(
-    !sections.some((s) => s.textPreview.includes("Frequently Asked Questions") && s.textPreview.includes("Thank you")),
+    !sections.some(
+      (s) =>
+        s.textPreview.includes("Frequently Asked Questions") && s.textPreview.includes("Thank you")
+    ),
     "sidebar and content column ended up in the same section"
   );
 });

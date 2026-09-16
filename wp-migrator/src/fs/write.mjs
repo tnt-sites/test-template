@@ -172,11 +172,7 @@ export class Writer {
     }
 
     this.#writeSidecar(abs, ".mig-new", next);
-    this.#writeSidecar(
-      abs,
-      ".mig-conflict.diff",
-      merged.result.join("\n")
-    );
+    this.#writeSidecar(abs, ".mig-conflict.diff", merged.result.join("\n"));
     return this.#record(
       abs,
       Outcome.CONFLICT,

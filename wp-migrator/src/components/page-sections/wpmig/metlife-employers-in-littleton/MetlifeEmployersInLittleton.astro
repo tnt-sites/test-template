@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="metlife-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="metlife-employers-in-littleton"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="meil-box">
     <div class="meil-box2">
       <div class="meil-box3">
         <div class="meil-box4">
           <div class="meil-box5">
-            {image && <img class="meil-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="520" />}
+            {
+              image && (
+                <img
+                  class="meil-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="600"
+                  height="520"
+                />
+              )
+            }
           </div>
         </div>
         <div class="meil-box6">
@@ -330,7 +347,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .meil-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -357,5 +374,5 @@ const {
   .meil-media {
     text-align: left;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

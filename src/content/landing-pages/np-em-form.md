@@ -1,19 +1,19 @@
 ---
 _schema: landing-page-form
 title: New Landing Page Form
-parentLandingPage: ''
+parentLandingPage: ""
 landingMainNav:
   - _component: navigation/landing/landing-header
     logoSource: /images/logo.svg
     logoAlt: Logo
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -32,12 +32,12 @@ landingFooter:
     contactTitle: Contact Us
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -59,17 +59,17 @@ landingFooter:
         path: sitemap.html
       - name: Privacy Policy
         path: privacy-policy.html
-    mapEmbedUrl: ''
+    mapEmbedUrl: ""
     backgroundImage:
       positionVertical: top
       positionHorizontal: center
-    backgroundGradient: ''
-    backgroundColor: ''
-    linkColor: ''
-    linkHoverColor: ''
-    legalBlurb: ''
+    backgroundGradient: ""
+    backgroundColor: ""
+    linkColor: ""
+    linkHoverColor: ""
+    legalBlurb: ""
     offices:
-      - name: ''
+      - name: ""
         phones:
           - display: (123) 456-7890
             href: tel:+11234567890
@@ -79,40 +79,40 @@ landingFooter:
               - Suite 200
             city: Dunedin
             state: FL
-            postalCode: '34698'
+            postalCode: "34698"
             country: USA
             mapUrl: https://maps.google.com
         officeHours: []
-        officeHoursNote: ''
+        officeHoursNote: ""
 landingPageSections:
   - _component: landing-page-components/shared/landing-page-form
-    id: ''
+    id: ""
     heading: Request an Appointment
-    formAction: ''
+    formAction: ""
     formBlocks:
       - _component: building-blocks/forms/input
-        id: ''
+        id: ""
         label: Name
         name: Name
         type: text
         placeholder: Name
         required: true
       - _component: building-blocks/forms/input
-        id: ''
+        id: ""
         label: Phone Number
         name: Phone
         type: text
         placeholder: Phone
         required: true
       - _component: building-blocks/forms/input
-        id: ''
+        id: ""
         label: Email Address
         name: email
         type: email
         placeholder: Email
         required: true
       - _component: building-blocks/forms/select
-        id: ''
+        id: ""
         label: Are you a new or existing patient?
         name: Patient
         required: false
@@ -123,7 +123,7 @@ landingPageSections:
             label: Existing Patient
         placeholder: Are You A New Or Existing Patient?
       - _component: building-blocks/forms/select
-        id: ''
+        id: ""
         label: How did you hear about us?
         name: Discover
         required: false
@@ -140,21 +140,21 @@ landingPageSections:
             label: Other
         placeholder: How Did You Hear About Us?
       - _component: building-blocks/forms/textarea
-        id: ''
+        id: ""
         label: Comments
         name: CommentArea
         required: false
         placeholder: Comments
       - _component: building-blocks/forms/hidden
-        id: ''
+        id: ""
         name: _subject
         value: New Patient Request an Appointment
       - _component: building-blocks/forms/hidden
-        id: ''
+        id: ""
         name: _redirect
         value: thanks.html
       - _component: building-blocks/forms/submit
-        id: ''
+        id: ""
         text: Send
         variant: primary
         size: md
@@ -162,7 +162,7 @@ landingPageSections:
         hideText: false
         disabled: false
     backgroundColor: base
-    backgroundGradient: ''
+    backgroundGradient: ""
     backgroundImage:
       source:
       alt:

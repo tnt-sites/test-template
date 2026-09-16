@@ -3,9 +3,9 @@ icon: format_quote
 description: Dark section featuring one patient review, with a platform logo above it and a five-star row below.
 value:
   _component: page-sections/location/location-review
-  id: ''
+  id: ""
   heading: See What Other Patients Say About Our Team
-  logoSource: ''
+  logoSource: ""
   logoAlt: Google
   quote: A short, glowing review from a happy patient.
   authorName: Patient Name

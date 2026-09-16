@@ -29,7 +29,8 @@ export function loadIconSet(targetRoot, iconDir = "src/icons") {
   const walk = (dir, prefix) => {
     for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
       if (entry.isDirectory()) walk(path.join(dir, entry.name), `${prefix}${entry.name}/`);
-      else if (entry.name.endsWith(".svg")) out.push(`${prefix}${entry.name.replace(/\.svg$/, "")}`);
+      else if (entry.name.endsWith(".svg"))
+        out.push(`${prefix}${entry.name.replace(/\.svg$/, "")}`);
     }
   };
   walk(root, "");
@@ -137,7 +138,8 @@ export function resolveIcon(icon, iconSet) {
   const list = candidates(icon.name, { duotone });
   for (const [i, candidate] of list.entries()) {
     const hit = bySuffix.get(candidate);
-    if (hit) return { name: hit, confidence: i === 0 && candidate === icon.name ? "exact" : "variant" };
+    if (hit)
+      return { name: hit, confidence: i === 0 && candidate === icon.name ? "exact" : "variant" };
   }
 
   /*

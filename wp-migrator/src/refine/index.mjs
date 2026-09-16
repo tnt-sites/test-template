@@ -66,7 +66,9 @@ const cssName = (camel) => camel.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`)
  * base+diff emission fragile in the first place.
  */
 export function planCorrections(report, { baseViewport } = {}) {
-  const widths = Object.keys(report.viewports).map(Number).sort((a, b) => a - b);
+  const widths = Object.keys(report.viewports)
+    .map(Number)
+    .sort((a, b) => a - b);
   const base = baseViewport ?? widths[0];
   const plan = new Map(); // sectionId -> { base: Map<sel,decls>, media: Map<width, Map<sel,decls>> }
   const skipped = [];
@@ -75,11 +77,19 @@ export function planCorrections(report, { baseViewport } = {}) {
     for (const section of report.viewports[width] ?? []) {
       if (!plan.has(section.id)) plan.set(section.id, { base: new Map(), media: new Map() });
       const entry = plan.get(section.id);
-      const bucket = width === base ? entry.base : (entry.media.get(width) ?? entry.media.set(width, new Map()).get(width));
+      const bucket =
+        width === base
+          ? entry.base
+          : (entry.media.get(width) ?? entry.media.set(width, new Map()).get(width));
 
       for (const f of section.findings) {
         if (f.kind === "missing" || f.kind === "not-rendered") {
-          skipped.push({ ...f, section: section.id, width, reason: "structural — needs generation, not CSS" });
+          skipped.push({
+            ...f,
+            section: section.id,
+            width,
+            reason: "structural — needs generation, not CSS",
+          });
           continue;
         }
 
@@ -97,11 +107,21 @@ export function planCorrections(report, { baseViewport } = {}) {
             prop = GEOMETRY_COPY[f.prop];
             value = `${f.source}px`;
           } else {
-            skipped.push({ ...f, section: section.id, width, reason: "too narrow — cause is upstream" });
+            skipped.push({
+              ...f,
+              section: section.id,
+              width,
+              reason: "too narrow — cause is upstream",
+            });
             continue;
           }
         } else {
-          skipped.push({ ...f, section: section.id, width, reason: "derived value; correcting it would mask the cause" });
+          skipped.push({
+            ...f,
+            section: section.id,
+            width,
+            reason: "derived value; correcting it would mask the cause",
+          });
           continue;
         }
 
@@ -179,8 +199,12 @@ export function applyCorrections(targetRoot, namespace, plan) {
     }
 
     fs.writeFileSync(abs, src);
-    const count = [...entry.base.values()].reduce((a, m) => a + m.size, 0) +
-      [...entry.media.values()].reduce((a, sm) => a + [...sm.values()].reduce((b, m) => b + m.size, 0), 0);
+    const count =
+      [...entry.base.values()].reduce((a, m) => a + m.size, 0) +
+      [...entry.media.values()].reduce(
+        (a, sm) => a + [...sm.values()].reduce((b, m) => b + m.size, 0),
+        0
+      );
     applied.push({ section: sectionId, declarations: count });
   }
 
@@ -204,7 +228,9 @@ export function loadState(file) {
   const plan = new Map();
   for (const [sectionId, entry] of Object.entries(raw)) {
     plan.set(sectionId, {
-      base: new Map(Object.entries(entry.base ?? {}).map(([sel, d]) => [sel, new Map(Object.entries(d))])),
+      base: new Map(
+        Object.entries(entry.base ?? {}).map(([sel, d]) => [sel, new Map(Object.entries(d))])
+      ),
       media: new Map(
         Object.entries(entry.media ?? {}).map(([w, sels]) => [
           Number(w),
@@ -222,7 +248,10 @@ export function saveState(file, plan) {
     out[sectionId] = {
       base: Object.fromEntries([...entry.base].map(([sel, d]) => [sel, Object.fromEntries(d)])),
       media: Object.fromEntries(
-        [...entry.media].map(([w, sels]) => [w, Object.fromEntries([...sels].map(([sel, d]) => [sel, Object.fromEntries(d)]))])
+        [...entry.media].map(([w, sels]) => [
+          w,
+          Object.fromEntries([...sels].map(([sel, d]) => [sel, Object.fromEntries(d)])),
+        ])
       ),
     };
   }

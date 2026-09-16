@@ -21,7 +21,13 @@ const {
 } = Astro.props;
 const list = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
-<div class="we-offer-several-options" id={id || undefined} style={`--tx:${textColor};--c2:${textColor2}`} {...rest}>
+
+<div
+  class="we-offer-several-options"
+  id={id || undefined}
+  style={`--tx:${textColor};--c2:${textColor2}`}
+  {...rest}
+>
   <div class="woso-box">
     <div class="woso-box2">
       <div class="woso-box3">
@@ -34,27 +40,49 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
           {subheading && <h4 class="woso-heading">{subheading}</h4>}
         </div>
         <div class="woso-grid">
-          {list.map((it) => (
-            <div class="woso-box7">
-              <div class="woso-box8">
-                <div class="woso-box9">
-                  {it.image && <img class="woso-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="150" height="150" />}
-                </div>
-                <div class="woso-box10">
-                  <div class="woso-text">{it.text}</div>
-                </div>
-                <div class="woso-box11">
-                  <p class="woso-text2">{it.text2}</p>
+          {
+            list.map((it) => (
+              <div class="woso-box7">
+                <div class="woso-box8">
+                  <div class="woso-box9">
+                    {it.image && (
+                      <img
+                        class="woso-media"
+                        src={it.image}
+                        alt={it.imageAlt || ""}
+                        loading="lazy"
+                        width="150"
+                        height="150"
+                      />
+                    )}
+                  </div>
+                  <div class="woso-box10">
+                    <div class="woso-text">{it.text}</div>
+                  </div>
+                  <div class="woso-box11">
+                    <p class="woso-text2">{it.text2}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          }
         </div>
         <div class="woso-box27">
           <div class="woso-box28">
             <div class="woso-box29">
               <div class="woso-box30">
-                {image && <img class="woso-media5" src={image} alt={imageAlt || ""} loading="lazy" width="150" height="150" />}
+                {
+                  image && (
+                    <img
+                      class="woso-media5"
+                      src={image}
+                      alt={imageAlt || ""}
+                      loading="lazy"
+                      width="150"
+                      height="150"
+                    />
+                  )
+                }
               </div>
               <div class="woso-box31">
                 {text2 && <div class="woso-text9" set:html={text2} />}
@@ -558,7 +586,7 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .woso-box8 {
     align-items: normal;
     background-color: rgba(0, 0, 0, 0);
@@ -783,5 +811,5 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
       background-color: rgba(0, 0, 0, 0);
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

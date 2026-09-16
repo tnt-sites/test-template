@@ -204,7 +204,8 @@ export function asContentRun(tree, { record = null, hasRepeats = false, styles =
 
   // Where the photo floats: the source's `.elem-left` puts the figure before
   // the copy it wraps, `.elem-right` after it.
-  const side = imageIndex === -1 || (proseIndex !== -1 && imageIndex > proseIndex) ? "right" : "left";
+  const side =
+    imageIndex === -1 || (proseIndex !== -1 && imageIndex > proseIndex) ? "right" : "left";
 
   for (const block of blocks) {
     if (block.type === "image") block.side = side;
@@ -218,7 +219,8 @@ export function asContentRun(tree, { record = null, hasRepeats = false, styles =
     // centred "Educational Dental Videos" band as left-aligned — the same
     // "only the root was measured" failure as the paint test above. The root
     // still breaks a tie, since it is what an unstyled run inherits.
-    align: centredRun(nodes, styles) ?? (record?.styles?.textAlign === "center" ? "center" : "left"),
+    align:
+      centredRun(nodes, styles) ?? (record?.styles?.textAlign === "center" ? "center" : "left"),
     hasMedia: imageIndex !== -1,
   };
 

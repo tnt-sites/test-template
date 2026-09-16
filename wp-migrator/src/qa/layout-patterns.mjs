@@ -64,7 +64,7 @@ export const PATTERN_META = {
   },
   headingRule: {
     label: "Heading has a divider rule under it",
-    hint: "The heading's `::after` draws a box. Emit its `display`/`width`/`height`/`margin`, not just its colour and `content` — a bare `content: \"\"` renders nothing.",
+    hint: 'The heading\'s `::after` draws a box. Emit its `display`/`width`/`height`/`margin`, not just its colour and `content` — a bare `content: ""` renders nothing.',
   },
 };
 
@@ -163,9 +163,7 @@ export const DETECT_PATTERNS = () => {
       [...el.parentElement.children].filter((sib) => {
         const scs = getComputedStyle(sib);
 
-        return (
-          Math.abs(px(scs.height) - barHeight) < 1 && Math.abs(px(scs.width) - barWidth) < 1
-        );
+        return Math.abs(px(scs.height) - barHeight) < 1 && Math.abs(px(scs.width) - barWidth) < 1;
       }).length >= 3
     ) {
       add("barIndicators", el.parentElement);
@@ -312,11 +310,13 @@ export const DETECT_SMELLS = () => {
     // was never given the text for is the bug: `wpmig/section` shipped styled
     // as a 36px uppercase heading with no prop to put a heading in.
     const parent = el.parentElement ? getComputedStyle(el.parentElement) : null;
-    const typesetsText =
-      cs.textTransform !== "none" || (parent && cs.fontSize !== parent.fontSize);
+    const typesetsText = cs.textTransform !== "none" || (parent && cs.fontSize !== parent.fontSize);
 
     if (!paints && typesetsText && el.className) {
-      add("emptySection", `${where(el)} (styled ${cs.fontSize}/${cs.textTransform}, renders nothing)`);
+      add(
+        "emptySection",
+        `${where(el)} (styled ${cs.fontSize}/${cs.textTransform}, renders nothing)`
+      );
     }
   }
 

@@ -79,7 +79,9 @@ const brandingFontVars: Record<string, string | undefined> = {
 };
 const brandingFontsCss = Object.entries(brandingFontVars)
   .map(([variable, value]) =>
-    typeof value === "string" && value.trim() ? `${variable}: ${sanitizeCssValue(value)} !important;` : ""
+    typeof value === "string" && value.trim()
+      ? `${variable}: ${sanitizeCssValue(value)} !important;`
+      : ""
   )
   .filter(Boolean)
   .join(" ");

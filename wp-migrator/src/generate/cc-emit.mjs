@@ -37,7 +37,10 @@ function inputFor(prop) {
     };
   }
   if (prop.input === "color" && prop.forProp) {
-    return { type: "color", comment: `Optional custom hex that overrides the ${prop.forProp} selection.` };
+    return {
+      type: "color",
+      comment: `Optional custom hex that overrides the ${prop.forProp} selection.`,
+    };
   }
   return { ...(INPUT_TYPES[prop.input] || { type: "text" }) };
 }
@@ -58,7 +61,8 @@ function describe({ name, props }) {
   const array = props.find((p) => p.kind === "array");
   const bits = [];
   if (props.some((p) => p.name === "heading")) bits.push("heading");
-  if (props.some((p) => p.kind === "html" || (p.kind === "text" && p.name.startsWith("text")))) bits.push("copy");
+  if (props.some((p) => p.kind === "html" || (p.kind === "text" && p.name.startsWith("text"))))
+    bits.push("copy");
   if (array) bits.push(`editable ${array.name}`);
   else if (props.some((p) => p.kind === "image")) bits.push("imagery");
   return `${titleCase(name)} section${bits.length ? ` with ${bits.join(", ")}` : ""}. Migrated by wp-migrator.`;
@@ -118,7 +122,9 @@ export function emitStructureValue({ name, namespace, props, values, backgroundI
     value,
     preview: { text: [label], icon },
     picker_preview: { text: label, subtext: describe({ name, props }) },
-    _inputs_from_glob: [`/src/components/page-sections/${namespace}/${name}/${name}.cloudcannon.inputs.yml`],
+    _inputs_from_glob: [
+      `/src/components/page-sections/${namespace}/${name}/${name}.cloudcannon.inputs.yml`,
+    ],
   };
   return YAML.stringify(doc, yamlOpts);
 }
@@ -131,7 +137,9 @@ export function emitSnippets({ name, namespace }) {
         inline: false,
         preview: { text: titleCase(name) },
         definitions: { component_name: `page-sections/${namespace}/${name}` },
-        _inputs_from_glob: [`/src/components/page-sections/${namespace}/${name}/${name}.cloudcannon.inputs.yml`],
+        _inputs_from_glob: [
+          `/src/components/page-sections/${namespace}/${name}/${name}.cloudcannon.inputs.yml`,
+        ],
       },
     },
   };

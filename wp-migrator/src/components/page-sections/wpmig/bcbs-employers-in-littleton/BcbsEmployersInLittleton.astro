@@ -23,13 +23,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="bcbs-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="bcbs-employers-in-littleton"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="beil-box">
     <div class="beil-box2">
       <div class="beil-box3">
         <div class="beil-box4">
           <div class="beil-box5">
-            {image && <img class="beil-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="474" />}
+            {
+              image && (
+                <img
+                  class="beil-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="620"
+                  height="474"
+                />
+              )
+            }
           </div>
         </div>
         <div class="beil-box6">
@@ -323,7 +340,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .beil-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -350,5 +367,5 @@ const {
   .beil-media {
     text-align: left;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

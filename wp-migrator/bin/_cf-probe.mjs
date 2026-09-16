@@ -171,7 +171,8 @@ function toBlocks(spec, props, bgImage) {
       title: headingSpec ? String(props[headingSpec.prop]) : "",
     };
     if (logoSpec) media.logo = props[logoSpec.srcProp];
-    if (buttonSpec) media.button = { text: props[buttonSpec.textProp], link: props[buttonSpec.linkProp] ?? "#" };
+    if (buttonSpec)
+      media.button = { text: props[buttonSpec.textProp], link: props[buttonSpec.linkProp] ?? "#" };
   }
 
   for (const s of spec) {
@@ -262,7 +263,9 @@ for (const file of fs.readdirSync(PAGES).filter((f) => f.endsWith(".md") && !KEE
 
   let touched = false;
   data.pageSections = data.pageSections.map((section) => {
-    const comp = String(section?._component ?? "").split("/").pop();
+    const comp = String(section?._component ?? "")
+      .split("/")
+      .pop();
     if (!specs.has(comp)) return section;
 
     const { blocks, media } = toBlocks(specs.get(comp), section, bgImages.get(comp));

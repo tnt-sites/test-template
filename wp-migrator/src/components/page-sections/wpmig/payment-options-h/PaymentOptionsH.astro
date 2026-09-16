@@ -73,16 +73,74 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="payment-options-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`} {...rest}>
+
+<div
+  class="payment-options-h"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`}
+  {...rest}
+>
   <div class="poh-box">
     <div class="poh-box2">
       <div class="poh-box3">
         <div class="poh-box4">
           {eyebrow && <h4 class="poh-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="poh-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="poh-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="poh-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="poh-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="poh-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="poh-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="poh-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="poh-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="poh-box5">
@@ -111,20 +169,50 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
                 </div>
                 <ul class="poh-box17">
                   <li class="poh-box18">
-                    {secondaryButtonText4 && <a class="poh-link" href={secondaryButtonLink4 || "#"}>{secondaryButtonText4}</a>}
+                    {
+                      secondaryButtonText4 && (
+                        <a class="poh-link" href={secondaryButtonLink4 || "#"}>
+                          {secondaryButtonText4}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box19">
-                    {secondaryButtonText5 && <a class="poh-link2" href={secondaryButtonLink5 || "#"}>{secondaryButtonText5}</a>}
+                    {
+                      secondaryButtonText5 && (
+                        <a class="poh-link2" href={secondaryButtonLink5 || "#"}>
+                          {secondaryButtonText5}
+                        </a>
+                      )
+                    }
                   </li>
                   {text2 && <li class="poh-text2" set:html={text2} />}
                   <li class="poh-box20">
-                    {secondaryButtonText6 && <a class="poh-link3" href={secondaryButtonLink6 || "#"}>{secondaryButtonText6}</a>}
+                    {
+                      secondaryButtonText6 && (
+                        <a class="poh-link3" href={secondaryButtonLink6 || "#"}>
+                          {secondaryButtonText6}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box21">
-                    {secondaryButtonText7 && <a class="poh-link4" href={secondaryButtonLink7 || "#"}>{secondaryButtonText7}</a>}
+                    {
+                      secondaryButtonText7 && (
+                        <a class="poh-link4" href={secondaryButtonLink7 || "#"}>
+                          {secondaryButtonText7}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box22">
-                    {secondaryButtonText8 && <a class="poh-link5" href={secondaryButtonLink8 || "#"}>{secondaryButtonText8}</a>}
+                    {
+                      secondaryButtonText8 && (
+                        <a class="poh-link5" href={secondaryButtonLink8 || "#"}>
+                          {secondaryButtonText8}
+                        </a>
+                      )
+                    }
                   </li>
                 </ul>
               </div>
@@ -134,24 +222,60 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
                 </div>
                 <ul class="poh-box25">
                   <li class="poh-box26">
-                    {secondaryButtonText9 && <a class="poh-link6" href={secondaryButtonLink9 || "#"}>{secondaryButtonText9}</a>}
+                    {
+                      secondaryButtonText9 && (
+                        <a class="poh-link6" href={secondaryButtonLink9 || "#"}>
+                          {secondaryButtonText9}
+                        </a>
+                      )
+                    }
                   </li>
                   {text3 && <li class="poh-text3" set:html={text3} />}
                   <li class="poh-box27">
-                    {secondaryButtonText10 && <a class="poh-link7" href={secondaryButtonLink10 || "#"}>{secondaryButtonText10}</a>}
+                    {
+                      secondaryButtonText10 && (
+                        <a class="poh-link7" href={secondaryButtonLink10 || "#"}>
+                          {secondaryButtonText10}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box28">
-                    {secondaryButtonText11 && <a class="poh-link8" href={secondaryButtonLink11 || "#"}>{secondaryButtonText11}</a>}
+                    {
+                      secondaryButtonText11 && (
+                        <a class="poh-link8" href={secondaryButtonLink11 || "#"}>
+                          {secondaryButtonText11}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box29">
-                    {secondaryButtonText12 && <a class="poh-link9" href={secondaryButtonLink12 || "#"}>{secondaryButtonText12}</a>}
+                    {
+                      secondaryButtonText12 && (
+                        <a class="poh-link9" href={secondaryButtonLink12 || "#"}>
+                          {secondaryButtonText12}
+                        </a>
+                      )
+                    }
                   </li>
                   {text4 && <li class="poh-text4" set:html={text4} />}
                   <li class="poh-box30">
-                    {secondaryButtonText13 && <a class="poh-link10" href={secondaryButtonLink13 || "#"}>{secondaryButtonText13}</a>}
+                    {
+                      secondaryButtonText13 && (
+                        <a class="poh-link10" href={secondaryButtonLink13 || "#"}>
+                          {secondaryButtonText13}
+                        </a>
+                      )
+                    }
                   </li>
                   <li class="poh-box31">
-                    {secondaryButtonText14 && <a class="poh-link11" href={secondaryButtonLink14 || "#"}>{secondaryButtonText14}</a>}
+                    {
+                      secondaryButtonText14 && (
+                        <a class="poh-link11" href={secondaryButtonLink14 || "#"}>
+                          {secondaryButtonText14}
+                        </a>
+                      )
+                    }
                   </li>
                 </ul>
               </div>
@@ -162,11 +286,17 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
                   {heading4 && <h4 class="poh-heading6">{heading4}</h4>}
                 </div>
                 <ul class="poh-grid">
-                  {list.map((it) => (
-                    <li class="poh-box35">
-                      {it.buttonText && <a class="poh-link12" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                    </li>
-                  ))}
+                  {
+                    list.map((it) => (
+                      <li class="poh-box35">
+                        {it.buttonText && (
+                          <a class="poh-link12" href={it.buttonLink || "#"}>
+                            {it.buttonText}
+                          </a>
+                        )}
+                      </li>
+                    ))
+                  }
                 </ul>
               </div>
               <div class="poh-box37">
@@ -174,7 +304,13 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
                   {heading5 && <h4 class="poh-heading7">{heading5}</h4>}
                 </div>
                 <li class="poh-box39">
-                  {secondaryButtonText15 && <a class="poh-link14" href={secondaryButtonLink15 || "#"}>{secondaryButtonText15}</a>}
+                  {
+                    secondaryButtonText15 && (
+                      <a class="poh-link14" href={secondaryButtonLink15 || "#"}>
+                        {secondaryButtonText15}
+                      </a>
+                    )
+                  }
                 </li>
               </div>
             </div>
@@ -188,13 +324,39 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
             </div>
             <div class="poh-box43">
               <div class="poh-box44">
-                {secondaryButtonText16 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="poh-btn5" text={secondaryButtonText16} link={secondaryButtonLink16 || "#"} />}
+                {
+                  secondaryButtonText16 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="poh-btn5"
+                      text={secondaryButtonText16}
+                      link={secondaryButtonLink16 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="poh-box45">
               <div class="poh-box46">
                 <div class="poh-box47">
-                  {secondaryButtonText17 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="poh-btn6" text={secondaryButtonText17} link={secondaryButtonLink17 || "#"} />}
+                  {
+                    secondaryButtonText17 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="poh-btn6"
+                        text={secondaryButtonText17}
+                        link={secondaryButtonLink17 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -1483,7 +1645,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .poh-box13 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -2159,5 +2321,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

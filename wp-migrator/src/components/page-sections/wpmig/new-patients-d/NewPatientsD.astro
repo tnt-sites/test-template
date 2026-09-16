@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patients-d" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="new-patients-d"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="npd-box">
     <h3 class="npd-heading">{heading}</h3>
     {subheading && <h1 class="npd-heading2">{subheading}</h1>}
@@ -88,7 +94,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .npd-btn5 {
     align-items: normal;
     justify-content: normal;
@@ -204,5 +210,5 @@ const {
       font-size: 16px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

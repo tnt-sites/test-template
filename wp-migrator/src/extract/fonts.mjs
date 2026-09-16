@@ -77,12 +77,20 @@ export function copyFonts(sheets, { staticDir, writer, publicDir = "public" }) {
 
 /** The first family name in a CSS font stack, unquoted. */
 function primaryFamily(stack) {
-  const first = String(stack || "").split(",")[0].trim().replace(/^["']|["']$/g, "");
-  return first && !/^(sans-serif|serif|monospace|cursive|fantasy|system-ui|inherit)$/i.test(first) ? first : null;
+  const first = String(stack || "")
+    .split(",")[0]
+    .trim()
+    .replace(/^["']|["']$/g, "");
+  return first && !/^(sans-serif|serif|monospace|cursive|fantasy|system-ui|inherit)$/i.test(first)
+    ? first
+    : null;
 }
 
 function declaresFamily(css, family) {
-  const re = new RegExp(`@font-face[^}]*font-family:\\s*["']?${family.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']?`, "i");
+  const re = new RegExp(
+    `@font-face[^}]*font-family:\\s*["']?${family.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}["']?`,
+    "i"
+  );
   return re.test(css);
 }
 
@@ -97,7 +105,13 @@ function declaresFamily(css, family) {
  * back to the generic stack. The snapshot already holds the missing sheet, so
  * find it by the family it declares and bring it across too.
  */
-export function ensureFamilySheets({ families, staticDir, writer, have = [], publicDir = "public" }) {
+export function ensureFamilySheets({
+  families,
+  staticDir,
+  writer,
+  have = [],
+  publicDir = "public",
+}) {
   const wanted = [...new Set(families.map(primaryFamily).filter(Boolean))];
   if (!wanted.length) return { fontLinks: [], copied: [], missing: [] };
 
@@ -105,7 +119,9 @@ export function ensureFamilySheets({ families, staticDir, writer, have = [], pub
     const abs = path.join(staticDir, rel.replace(/^\//, ""));
     return fs.existsSync(abs) && fs.statSync(abs).isFile() ? fs.readFileSync(abs, "utf8") : "";
   };
-  const stillWanted = wanted.filter((family) => !have.some((link) => declaresFamily(readLocal(link), family)));
+  const stillWanted = wanted.filter(
+    (family) => !have.some((link) => declaresFamily(readLocal(link), family))
+  );
   if (!stillWanted.length) return { fontLinks: [], copied: [], missing: [] };
 
   const sheets = [];
@@ -124,7 +140,8 @@ export function ensureFamilySheets({ families, staticDir, writer, have = [], pub
   const found = [];
   for (const family of stillWanted) {
     const hit = sheets.find((file) => declaresFamily(fs.readFileSync(file, "utf8"), family));
-    if (hit) found.push({ family, url: `/${path.relative(staticDir, hit).split(path.sep).join("/")}` });
+    if (hit)
+      found.push({ family, url: `/${path.relative(staticDir, hit).split(path.sep).join("/")}` });
   }
   if (!found.length) return { fontLinks: [], copied: [], missing: stillWanted };
 
@@ -132,7 +149,11 @@ export function ensureFamilySheets({ families, staticDir, writer, have = [], pub
   // has to be site-relative the way a real stylesheet link is — a file:// URL
   // yields an absolute path and every lookup misses.
   const result = copyFonts(
-    found.map((f) => ({ url: `https://source.invalid${f.url}`, css: readLocal(f.url), role: "font-service" })),
+    found.map((f) => ({
+      url: `https://source.invalid${f.url}`,
+      css: readLocal(f.url),
+      role: "font-service",
+    })),
     { staticDir, writer, publicDir }
   );
   return { ...result, families: found.map((f) => f.family) };

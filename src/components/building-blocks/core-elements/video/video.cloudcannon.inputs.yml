@@ -35,4 +35,3 @@ thumbnail:
     paths:
       uploads: public/images
       static: public
-

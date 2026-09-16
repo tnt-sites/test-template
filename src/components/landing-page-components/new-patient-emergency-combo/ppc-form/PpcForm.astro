@@ -41,7 +41,7 @@ const htmlAttributes = Object.fromEntries(
   </Text>
   <Form action={formAction} formBlocks={formBlocks?.length > 0 ? formBlocks : []}>
     <slot />
-    <input type="hidden" name="inbox_key" value="example-inbox">
+    <input type="hidden" name="inbox_key" value="example-inbox" />
   </Form>
 </CustomSection>
 

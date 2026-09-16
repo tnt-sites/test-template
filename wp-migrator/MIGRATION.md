@@ -45,7 +45,7 @@ done.
 `dev-verify` and `dev-audit` answer different questions and both have to be
 clean. `dev-verify` pairs elements by text and reports typography; it cannot see
 a section that lost its parallax background or its hover captions, because the
-words on it are unchanged. `dev-audit` reads the *structure* of both sides and
+words on it are unchanged. `dev-audit` reads the _structure_ of both sides and
 reports only what the source has and the build does not:
 
 - header overlaying the hero (absolute + transparent, solid once scrolled)
@@ -66,7 +66,7 @@ than one component — invisible in the DOM, but enough to make `dev-refix`
 correct the wrong file. `--all` also lists the patterns the build kept, which is
 how a new detector is verified.
 
-It also answers two questions no source/built *comparison* can, because both
+It also answers two questions no source/built _comparison_ can, because both
 compare only what exists on both sides:
 
 - **Coverage** — text the source has that the build never renders (a whole
@@ -111,14 +111,14 @@ text.
 
 ## What is migrated
 
-| Area | State |
-|---|---|
-| Snapshot | 194 pages, 754 assets |
-| Brand | palette, type scale, fonts, nav, footer, office/hours/socials, SEO |
-| Pages | all 86 published pages, at their original URLs |
-| Blog | all 119 published posts, with featured images |
-| Components | 292 sections → 119 components, in four folders by page family |
-| Links | 5,423 broken internal links at first build → 6, each dead on the source site too |
+| Area       | State                                                                            |
+| ---------- | -------------------------------------------------------------------------------- |
+| Snapshot   | 194 pages, 754 assets                                                            |
+| Brand      | palette, type scale, fonts, nav, footer, office/hours/socials, SEO               |
+| Pages      | all 86 published pages, at their original URLs                                   |
+| Blog       | all 119 published posts, with featured images                                    |
+| Components | 292 sections → 119 components, in four folders by page family                    |
+| Links      | 5,423 broken internal links at first build → 6, each dead on the source site too |
 
 Migrated pages keep their **original URLs**, including nesting
 (`/dental-services/general-dentistry/`), so existing links and search rankings
@@ -130,7 +130,7 @@ The first pass emitted **226 components for 292 sections** — very nearly one p
 section, with 48 identical page banners (`aetna-dental`, `delta-dental`,
 `sitemap`, …) and 44 identical breadcrumbs among them.
 
-The cause was that component *identity* was the component *name*, and names come
+The cause was that component _identity_ was the component _name_, and names come
 from `nameFromContent` — the section's first heading. Two pages with the same
 banner and different headings never got compared, so nothing could be shared;
 two with the same heading and different markup collided and took a letter suffix,
@@ -173,7 +173,7 @@ Four checks earned their place by catching real damage during the work:
 - **Escaping.** Some insurance pages store their coverage list as raw `<ul>`
   markup and inject it with `set:html`; others store plain text. Merging a raw
   slot onto an interpolated one printed `&lt;p&gt;` on the page. The merged
-  component now injects raw wherever *any* member did, and the members that
+  component now injects raw wherever _any_ member did, and the members that
   interpolated have their stored content HTML-escaped to match — the only
   direction that loses nothing.
 - **Optional slots.** The canonical emits its own slots unguarded; a member that
@@ -205,15 +205,15 @@ launch: `aetna-dentist`, `delta-dental-dentist`, `geha-dentist`,
 
 ### Where components live
 
-| Folder | Count | What |
-|---|---|---|
-| `shared-blocks/` | 2 | `page-banner`, `breadcrumb` — 80+ pages each |
-| `homepage-blocks/wp/` | 9 | `index.md` only (kept apart from the starter's own `homepage-blocks`) |
-| `interior-pages-blocks/` | 86 | service, insurance, about, payment, new-patient |
-| `landing-pages-blocks/` | 22 | `lp/*`, `invisalign-littleton-co`, `dental-implants-littleton-co`, `littleton-emergency-dentistry` |
+| Folder                   | Count | What                                                                                               |
+| ------------------------ | ----- | -------------------------------------------------------------------------------------------------- |
+| `shared-blocks/`         | 2     | `page-banner`, `breadcrumb` — 80+ pages each                                                       |
+| `homepage-blocks/wp/`    | 9     | `index.md` only (kept apart from the starter's own `homepage-blocks`)                              |
+| `interior-pages-blocks/` | 86    | service, insurance, about, payment, new-patient                                                    |
+| `landing-pages-blocks/`  | 22    | `lp/*`, `invisalign-littleton-co`, `dental-implants-littleton-co`, `littleton-emergency-dentistry` |
 
 Placement is derived from the pages that actually use a component, not its name —
-the banner and breadcrumb appear on the homepage *and* the interior pages, which
+the banner and breadcrumb appear on the homepage _and_ the interior pages, which
 is what makes them shared.
 
 ## Known gaps
@@ -263,28 +263,28 @@ finding counts only, and **20,424 findings remain across the site**.
 
 Mean pixel mismatch on the sampled pages: **15.51%**.
 
-| Page | Pixel mismatch | Unresolved findings |
-|---|---|---|
-| `covid19-coronavirus-office-policy` | 35.0% | 45 |
-| `about-us-meet-the-doctors` | 20.9% | 106 |
-| `dental-implants-littleton-co` | 20.3% | 599 |
-| `about-us-office-tour` | 17.9% | 258 |
-| `abscess` | 17.6% | 91 |
-| `broken-fillings` | 17.0% | 148 |
-| `dental-conditions` | 16.8% | 261 |
-| `about-us-meet-the-team` | 16.1% | 88 |
-| `about-us-comfort-amenities` | 13.6% | 210 |
-| `blue-cross-blue-shield-dentist` | 13.6% | 183 |
-| `delta-dental-dentist` | 13.6% | 181 |
-| `about-us` | 13.5% | 189 |
-| `cracked-tooth` | 13.5% | 86 |
-| `about-us-patient-reviews` | 12.5% | 449 |
-| `ameritas-dentist` | 12.3% | 218 |
-| `aetna-dentist` | 12.0% | 170 |
-| `beam-dental-dentist` | 11.9% | 108 |
-| `careington-dentist` | 11.3% | 108 |
-| `dental-services` | 10.7% | 566 |
-| `contact-us` | 10.1% | 94 |
+| Page                                | Pixel mismatch | Unresolved findings |
+| ----------------------------------- | -------------- | ------------------- |
+| `covid19-coronavirus-office-policy` | 35.0%          | 45                  |
+| `about-us-meet-the-doctors`         | 20.9%          | 106                 |
+| `dental-implants-littleton-co`      | 20.3%          | 599                 |
+| `about-us-office-tour`              | 17.9%          | 258                 |
+| `abscess`                           | 17.6%          | 91                  |
+| `broken-fillings`                   | 17.0%          | 148                 |
+| `dental-conditions`                 | 16.8%          | 261                 |
+| `about-us-meet-the-team`            | 16.1%          | 88                  |
+| `about-us-comfort-amenities`        | 13.6%          | 210                 |
+| `blue-cross-blue-shield-dentist`    | 13.6%          | 183                 |
+| `delta-dental-dentist`              | 13.6%          | 181                 |
+| `about-us`                          | 13.5%          | 189                 |
+| `cracked-tooth`                     | 13.5%          | 86                  |
+| `about-us-patient-reviews`          | 12.5%          | 449                 |
+| `ameritas-dentist`                  | 12.3%          | 218                 |
+| `aetna-dentist`                     | 12.0%          | 170                 |
+| `beam-dental-dentist`               | 11.9%          | 108                 |
+| `careington-dentist`                | 11.3%          | 108                 |
+| `dental-services`                   | 10.7%          | 566                 |
+| `contact-us`                        | 10.1%          | 94                  |
 
 Most of what remains is derived geometry — a section that is short because the
 type above it wraps differently, an inset the emitter did not synthesize. The
@@ -301,7 +301,7 @@ component rendered — measured on one page, imposed on the rest. It looked like
 an improvement (total findings fell) while 37 pages got visibly worse.
 
 Corrections are now reconciled before anything is written: a declaration is
-applied unless another page using the same component measured a *different*
+applied unless another page using the same component measured a _different_
 value for it. On the sampled pages that moved mean pixel mismatch from 18.75%
 to 14.30%. Eleven declarations are currently held back as genuine
 disagreements — the honest fix for those is to stop sharing the component,

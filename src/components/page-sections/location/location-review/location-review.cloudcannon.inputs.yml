@@ -10,7 +10,7 @@ logoSource:
   options:
     paths:
       uploads: src/assets/images
-      static: ''
+      static: ""
 logoAlt:
   type: text
   comment: Alt text for the logo.

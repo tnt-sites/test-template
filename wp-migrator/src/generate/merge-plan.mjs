@@ -42,9 +42,18 @@ export function slotsOf(astroSource) {
     // list as raw `<ul>` markup and the next stores plain text. Swapping a raw
     // slot for an escaped one prints the tags on the page.
     const named = [
-      ...[...line.matchAll(/set:html=\{\s*([a-zA-Z_$][\w$]*)/g)].map((m) => ({ prop: m[1], html: true })),
-      ...[...line.matchAll(/>\{\s*([a-zA-Z_$][\w$]*)\s*(?:\}|<)/g)].map((m) => ({ prop: m[1], html: false })),
-      ...[...line.matchAll(/\bsrc=\{([a-zA-Z_$][\w$]*)\}/g)].map((m) => ({ prop: m[1], html: false })),
+      ...[...line.matchAll(/set:html=\{\s*([a-zA-Z_$][\w$]*)/g)].map((m) => ({
+        prop: m[1],
+        html: true,
+      })),
+      ...[...line.matchAll(/>\{\s*([a-zA-Z_$][\w$]*)\s*(?:\}|<)/g)].map((m) => ({
+        prop: m[1],
+        html: false,
+      })),
+      ...[...line.matchAll(/\bsrc=\{([a-zA-Z_$][\w$]*)\}/g)].map((m) => ({
+        prop: m[1],
+        html: false,
+      })),
     ];
     const guard = line.match(/\{([a-zA-Z_$][\w$]*)\s*&&/)?.[1];
     const found = named.length ? named : guard ? [{ prop: guard, html: false }] : [];
@@ -173,7 +182,9 @@ export function verifyMember(canonicalSlots, memberSlots, remap = {}) {
 
   for (const slot of memberSlots) {
     const target = remap[slot.prop] ?? slot.prop;
-    let i = canonicalSlots.findIndex((c, ix) => ix >= cursor && !taken.has(ix) && c.prop === target);
+    let i = canonicalSlots.findIndex(
+      (c, ix) => ix >= cursor && !taken.has(ix) && c.prop === target
+    );
 
     if (i === -1) i = canonicalSlots.findIndex((c, ix) => !taken.has(ix) && c.prop === target);
     if (i === -1) {
@@ -209,7 +220,12 @@ export function verifyMember(canonicalSlots, memberSlots, remap = {}) {
     escapeChanges,
     escapeContent,
     headingLevelChange,
-    kind: missing.length || reordered || escapeChanges.length ? "unsafe" : tagChanges.length ? "tag-only" : "identical",
+    kind:
+      missing.length || reordered || escapeChanges.length
+        ? "unsafe"
+        : tagChanges.length
+          ? "tag-only"
+          : "identical",
   };
 }
 
@@ -275,7 +291,9 @@ export function buildMergePlan(components, { threshold = 0.85, rules = {} } = {}
       const blocked = [];
 
       if (verdict.missing.length) {
-        blocked.push(`fills ${verdict.missing.map((x) => `"${x.prop}"`).join(", ")} with no matching canonical slot`);
+        blocked.push(
+          `fills ${verdict.missing.map((x) => `"${x.prop}"`).join(", ")} with no matching canonical slot`
+        );
       }
       if (verdict.reordered) blocked.push("maps its slots out of order");
       // The member's structure has to be *contained* in the canonical's, not
@@ -284,20 +302,29 @@ export function buildMergePlan(components, { threshold = 0.85, rules = {} } = {}
       // is not a subsequence has containers the canonical cannot supply, or has
       // them in another order — that would genuinely restructure the page.
       if (m.name !== picked.name && !isSubsequence(m.semanticSkeleton, picked.semanticSkeleton)) {
-        blocked.push(`nests incompatibly (${m.semanticSkeleton.length} semantic elements vs the canonical's ${picked.semanticSkeleton.length})`);
+        blocked.push(
+          `nests incompatibly (${m.semanticSkeleton.length} semantic elements vs the canonical's ${picked.semanticSkeleton.length})`
+        );
       }
       if (verdict.escapeChanges.length) {
-        blocked.push(`renders ${verdict.escapeChanges.map((x) => `"${x.prop}" ${x.from}->${x.to}`).join(", ")}`);
+        blocked.push(
+          `renders ${verdict.escapeChanges.map((x) => `"${x.prop}" ${x.from}->${x.to}`).join(", ")}`
+        );
       }
       if (verdict.headingLevelChange && !rule.acceptHeadingChange) {
         const c = verdict.tagChanges.filter((x) => isHeadingTag(x.from) || isHeadingTag(x.to));
 
-        blocked.push(`changes heading structure (${c.map((x) => `${x.prop} ${x.from}->${x.to}`).join(", ")})`);
+        blocked.push(
+          `changes heading structure (${c.map((x) => `${x.prop} ${x.from}->${x.to}`).join(", ")})`
+        );
       }
 
       if (blocked.length) {
         standalone.push({ name: m.name, why: blocked });
-        if (m.name === picked.name) problems.push(`${picked.name}: the canonical itself failed to verify — ${blocked.join("; ")}`);
+        if (m.name === picked.name)
+          problems.push(
+            `${picked.name}: the canonical itself failed to verify — ${blocked.join("; ")}`
+          );
       } else {
         merged.push({ name: m.name, verdict, remap, escapeContent: verdict.escapeContent });
       }
@@ -314,13 +341,15 @@ export function buildMergePlan(components, { threshold = 0.85, rules = {} } = {}
 
       for (const sl of slots) filled.add(m.remap[sl.prop] ?? sl.prop);
     }
-    const optional = canonical.slots.map((sl) => sl.prop).filter((prop) => {
-      return merged.some((m) => {
-        const slots = withSlots.find((w) => w.name === m.name).slots;
+    const optional = canonical.slots
+      .map((sl) => sl.prop)
+      .filter((prop) => {
+        return merged.some((m) => {
+          const slots = withSlots.find((w) => w.name === m.name).slots;
 
-        return !slots.some((sl) => (m.remap[sl.prop] ?? sl.prop) === prop);
+          return !slots.some((sl) => (m.remap[sl.prop] ?? sl.prop) === prop);
+        });
       });
-    });
 
     // An image prop needs per-instance dimensions as soon as two members
     // disagree about them.

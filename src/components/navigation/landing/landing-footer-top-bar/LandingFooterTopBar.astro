@@ -158,7 +158,9 @@ const resolvedOfficeHoursAlignment = officeHoursAlignment === "left" ? "left" : 
 const bgImage = await backgroundImageCss(backgroundImage);
 const bgStyle = [
   bgImage.style,
-  (backgroundColorHex || getColorValue(backgroundColor)) ? `--lftb-bg-color: ${backgroundColorHex || getColorValue(backgroundColor)}` : "",
+  backgroundColorHex || getColorValue(backgroundColor)
+    ? `--lftb-bg-color: ${backgroundColorHex || getColorValue(backgroundColor)}`
+    : "",
   accentColor ? `--lftb-accent-color: ${accentColor}` : "",
   getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",
   getColorValue(linkHoverColor)

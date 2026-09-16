@@ -8,7 +8,12 @@ import { gotoStable } from "../src/browser/load.mjs";
 import { VIEWPORTS } from "../src/capture/screenshot.mjs";
 import { autoSegment, sectionSelector, SEGMENT_MARK } from "../src/detect/segment.mjs";
 import { captureSection } from "../src/capture/section.mjs";
-import { MEASURE_BY_CLASS, diffMeasurements, comparePngs, formatReport } from "../src/qa/compare.mjs";
+import {
+  MEASURE_BY_CLASS,
+  diffMeasurements,
+  comparePngs,
+  formatReport,
+} from "../src/qa/compare.mjs";
 
 const HERE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
@@ -35,16 +40,29 @@ function MEASURE_BY_MARK({ mark, ns }) {
   const out = {};
   for (const { n, cls } of ns) {
     const el = document.querySelector(`[${mark}="${n}"]`);
-    if (!el) { out[cls] = null; continue; }
+    if (!el) {
+      out[cls] = null;
+      continue;
+    }
     const r = el.getBoundingClientRect();
     const cs = getComputedStyle(el);
     out[cls] = {
-      x: Math.round(r.x), y: Math.round(r.y + window.scrollY),
-      width: Math.round(r.width), height: Math.round(r.height),
-      fontSize: cs.fontSize, fontWeight: cs.fontWeight, lineHeight: cs.lineHeight,
-      letterSpacing: cs.letterSpacing, fontFamily: cs.fontFamily, textAlign: cs.textAlign,
-      color: cs.color, backgroundColor: cs.backgroundColor, display: cs.display,
-      flexDirection: cs.flexDirection, justifyContent: cs.justifyContent, alignItems: cs.alignItems,
+      x: Math.round(r.x),
+      y: Math.round(r.y + window.scrollY),
+      width: Math.round(r.width),
+      height: Math.round(r.height),
+      fontSize: cs.fontSize,
+      fontWeight: cs.fontWeight,
+      lineHeight: cs.lineHeight,
+      letterSpacing: cs.letterSpacing,
+      fontFamily: cs.fontFamily,
+      textAlign: cs.textAlign,
+      color: cs.color,
+      backgroundColor: cs.backgroundColor,
+      display: cs.display,
+      flexDirection: cs.flexDirection,
+      justifyContent: cs.justifyContent,
+      alignItems: cs.alignItems,
       visible: cs.display !== "none" && cs.visibility !== "hidden" && r.width > 0,
     };
   }
@@ -53,10 +71,15 @@ function MEASURE_BY_MARK({ mark, ns }) {
 
 async function measure(page, url, width, classes) {
   await page.setViewportSize({ width, height: 900 });
-  const state = await gotoStable(page, url, { primeLazyLoad: true, reveal: true, freezeMotion: true });
+  const state = await gotoStable(page, url, {
+    primeLazyLoad: true,
+    reveal: true,
+    freezeMotion: true,
+  });
   if (!state.ok) return null;
   await page.evaluate(() => {
-    const vw = window.innerWidth, vh = window.innerHeight;
+    const vw = window.innerWidth,
+      vh = window.innerHeight;
     for (const el of document.querySelectorAll("body *")) {
       const cs = getComputedStyle(el);
       if (cs.position !== "fixed" && cs.position !== "sticky") continue;
@@ -74,8 +97,13 @@ async function measure(page, url, width, classes) {
  */
 export async function runCompare(opts) {
   const {
-    page: pageFile, route: routeArg, static: staticArg, dist: distArg,
-    viewports: viewportsArg, shots = true, quiet = false,
+    page: pageFile,
+    route: routeArg,
+    static: staticArg,
+    dist: distArg,
+    viewports: viewportsArg,
+    shots = true,
+    quiet = false,
   } = opts;
   const slug = pageFile.replace(/\.html?$/, "");
   const staticDir = path.resolve(staticArg);
@@ -122,7 +150,17 @@ export async function runCompare(opts) {
         const findings = diffMeasurements(pick(srcM), pick(bltM), { rootClass: section.rootClass });
         let pixel = null;
         if (shots) {
-          pixel = await shootAndDiff(sp, bp, srcUrl, bltUrl, sectionSelector(section.sectionIndex), `.${section.rootClass}`, section.rootClass, width, outDir);
+          pixel = await shootAndDiff(
+            sp,
+            bp,
+            srcUrl,
+            bltUrl,
+            sectionSelector(section.sectionIndex),
+            `.${section.rootClass}`,
+            section.rootClass,
+            width,
+            outDir
+          );
         }
         perSection.push({ id: section.id, findings, pixel });
       }
@@ -146,8 +184,11 @@ export async function runCompare(opts) {
     for (const [width, secs] of Object.entries(report.viewports)) {
       for (const s of secs) {
         worst.push({
-          width: Number(width), id: s.id, findings: s.findings.length,
-          missing: s.findings.filter((f) => f.kind === "missing" || f.kind === "not-rendered").length,
+          width: Number(width),
+          id: s.id,
+          findings: s.findings.length,
+          missing: s.findings.filter((f) => f.kind === "missing" || f.kind === "not-rendered")
+            .length,
           pixel: s.pixel ? Number((s.pixel.ratio * 100).toFixed(2)) : null,
         });
       }
@@ -177,20 +218,41 @@ export const devCompare = defineCommand({
     description: "Visually validate the built Astro page against the rendered WordPress page.",
   },
   args: {
-    page: { type: "positional", description: "Source page file (e.g. full-partial-mouth-rehabilitation.html)", required: true },
+    page: {
+      type: "positional",
+      description: "Source page file (e.g. full-partial-mouth-rehabilitation.html)",
+      required: true,
+    },
     route: { type: "string", description: "Built route (defaults to the page slug)" },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
-    dist: { type: "string", description: "Built Astro output", default: path.join(HERE, "../dist") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
+    dist: {
+      type: "string",
+      description: "Built Astro output",
+      default: path.join(HERE, "../dist"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Generated component namespace", default: "wpmig" },
-    viewports: { type: "string", description: "Comma-separated widths", default: VIEWPORTS.join(",") },
-    shots: { type: "boolean", description: "Also write section screenshots + diff images", default: true },
+    viewports: {
+      type: "string",
+      description: "Comma-separated widths",
+      default: VIEWPORTS.join(","),
+    },
+    shots: {
+      type: "boolean",
+      description: "Also write section screenshots + diff images",
+      default: true,
+    },
   },
   async run({ args }) {
     const slug = args.page.replace(/\.html?$/, "");
     const staticDir = path.resolve(args.static);
     const distDir = path.resolve(args.dist);
-    if (!fs.existsSync(distDir)) throw new Error(`no build at \`${distDir}\` — run \`npm run build\` first`);
+    if (!fs.existsSync(distDir))
+      throw new Error(`no build at \`${distDir}\` — run \`npm run build\` first`);
 
     const viewports = args.viewports.split(",").map(Number);
     const ir = loadIr(slug);
@@ -206,7 +268,12 @@ export const devCompare = defineCommand({
     const bltSrv = await serve(distDir, 0);
     const browser = await chromium.launch();
 
-    const report = { page: slug, generatedAt: new Date().toISOString(), viewports: {}, summary: {} };
+    const report = {
+      page: slug,
+      generatedAt: new Date().toISOString(),
+      viewports: {},
+      summary: {},
+    };
 
     try {
       const sp = await browser.newPage();
@@ -232,11 +299,23 @@ export const devCompare = defineCommand({
         for (const section of sections) {
           const classes = section.nodeMap.map((nm) => nm.cls);
           const pick = (m) => Object.fromEntries(classes.map((c) => [c, m[c] ?? null]));
-          const findings = diffMeasurements(pick(srcM), pick(bltM), { rootClass: section.rootClass });
+          const findings = diffMeasurements(pick(srcM), pick(bltM), {
+            rootClass: section.rootClass,
+          });
 
           let pixel = null;
           if (args.shots) {
-            pixel = await shootAndDiff(sp, bp, srcUrl, bltUrl, sectionSelector(section.sectionIndex), `.${section.rootClass}`, section.rootClass, width, outDir);
+            pixel = await shootAndDiff(
+              sp,
+              bp,
+              srcUrl,
+              bltUrl,
+              sectionSelector(section.sectionIndex),
+              `.${section.rootClass}`,
+              section.rootClass,
+              width,
+              outDir
+            );
           }
           perSection.push({ id: section.id, findings, pixel });
         }
@@ -257,7 +336,8 @@ export const devCompare = defineCommand({
             width: Number(width),
             id: s.id,
             findings: s.findings.length,
-            missing: s.findings.filter((f) => f.kind === "missing" || f.kind === "not-rendered").length,
+            missing: s.findings.filter((f) => f.kind === "missing" || f.kind === "not-rendered")
+              .length,
             pixel: s.pixel ? Number((s.pixel.ratio * 100).toFixed(2)) : null,
           });
         }
@@ -293,10 +373,15 @@ export const devCompare = defineCommand({
  */
 async function measureSource(page, url, width, sections) {
   await page.setViewportSize({ width, height: 900 });
-  const state = await gotoStable(page, url, { primeLazyLoad: true, reveal: true, freezeMotion: true });
+  const state = await gotoStable(page, url, {
+    primeLazyLoad: true,
+    reveal: true,
+    freezeMotion: true,
+  });
   if (!state.ok) return null;
   await page.evaluate(() => {
-    const vw = window.innerWidth, vh = window.innerHeight;
+    const vw = window.innerWidth,
+      vh = window.innerHeight;
     for (const el of document.querySelectorAll("body *")) {
       const cs = getComputedStyle(el);
       if (cs.position !== "fixed" && cs.position !== "sticky") continue;
@@ -310,22 +395,37 @@ async function measureSource(page, url, width, sections) {
   for (const section of sections) {
     let captured;
     try {
-      captured = await captureSection(page, sectionSelector(section.sectionIndex), { breakpoints: [width] });
+      captured = await captureSection(page, sectionSelector(section.sectionIndex), {
+        breakpoints: [width],
+      });
     } catch {
       continue;
     }
     const byNode = captured.styles[width] || {};
     for (const { n, cls } of section.nodeMap) {
       const rec = byNode[n];
-      if (!rec) { out[cls] = null; continue; }
+      if (!rec) {
+        out[cls] = null;
+        continue;
+      }
       const st = rec.styles;
       out[cls] = {
-        x: Math.round(rec.box.x), y: Math.round(rec.box.y),
-        width: Math.round(rec.box.w), height: Math.round(rec.box.h),
-        fontSize: st.fontSize, fontWeight: st.fontWeight, lineHeight: st.lineHeight,
-        letterSpacing: st.letterSpacing, fontFamily: st.fontFamily, textAlign: st.textAlign,
-        color: st.color, backgroundColor: st.backgroundColor, display: st.display,
-        flexDirection: st.flexDirection, justifyContent: st.justifyContent, alignItems: st.alignItems,
+        x: Math.round(rec.box.x),
+        y: Math.round(rec.box.y),
+        width: Math.round(rec.box.w),
+        height: Math.round(rec.box.h),
+        fontSize: st.fontSize,
+        fontWeight: st.fontWeight,
+        lineHeight: st.lineHeight,
+        letterSpacing: st.letterSpacing,
+        fontFamily: st.fontFamily,
+        textAlign: st.textAlign,
+        color: st.color,
+        backgroundColor: st.backgroundColor,
+        display: st.display,
+        flexDirection: st.flexDirection,
+        justifyContent: st.justifyContent,
+        alignItems: st.alignItems,
         visible: rec.visible,
       };
     }

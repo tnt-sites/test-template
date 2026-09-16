@@ -44,14 +44,34 @@ export const devVisualCheck = defineCommand({
       "Advisory: Claude compares the original vs the built page side-by-side and reports design differences. Needs ANTHROPIC_API_KEY (or an `ant auth` profile).",
   },
   args: {
-    page: { type: "positional", description: "A page slug to check (or use --pages)", required: false },
+    page: {
+      type: "positional",
+      description: "A page slug to check (or use --pages)",
+      required: false,
+    },
     pages: { type: "string", description: "Comma-separated page slugs to check", default: "" },
-    static: { type: "string", description: "Snapshot mirror directory", default: path.join(HERE, ".wpmig/static") },
-    dist: { type: "string", description: "Built site directory", default: path.join(HERE, "../dist") },
+    static: {
+      type: "string",
+      description: "Snapshot mirror directory",
+      default: path.join(HERE, ".wpmig/static"),
+    },
+    dist: {
+      type: "string",
+      description: "Built site directory",
+      default: path.join(HERE, "../dist"),
+    },
     viewports: { type: "string", description: "Comma-separated widths", default: "1440" },
-    live: { type: "boolean", description: "Screenshot the live origin instead of the mirror", default: false },
+    live: {
+      type: "boolean",
+      description: "Screenshot the live origin instead of the mirror",
+      default: false,
+    },
     model: { type: "string", description: "Claude model", default: DEFAULT_MODEL },
-    out: { type: "string", description: "Output directory for screenshots + reports", default: path.join(HERE, ".wpmig/visual-check") },
+    out: {
+      type: "string",
+      description: "Output directory for screenshots + reports",
+      default: path.join(HERE, ".wpmig/visual-check"),
+    },
     json: { type: "boolean", description: "Write a JSON report per page", default: false },
     "find-missing": {
       type: "boolean",
@@ -60,12 +80,15 @@ export const devVisualCheck = defineCommand({
     },
     "build-from-screenshot": {
       type: "boolean",
-      description: "For each gap, propose a section from unreferenced media (proposal only — nothing is written)",
+      description:
+        "For each gap, propose a section from unreferenced media (proposal only — nothing is written)",
       default: false,
     },
   },
   async run({ args }) {
-    const slugs = [args.page, ...args.pages.split(",")].map((s) => (s || "").trim()).filter(Boolean);
+    const slugs = [args.page, ...args.pages.split(",")]
+      .map((s) => (s || "").trim())
+      .filter(Boolean);
     if (slugs.length === 0) {
       console.error("Name at least one page: dev-visual-check <slug> or --pages a,b,c");
       process.exitCode = 1;
@@ -76,7 +99,10 @@ export const devVisualCheck = defineCommand({
     // Preflight the credential before doing any (slow) screenshotting, so a
     // missing key fails fast instead of after a full-page capture.
     try {
-      await client.messages.countTokens({ model: args.model, messages: [{ role: "user", content: "ping" }] });
+      await client.messages.countTokens({
+        model: args.model,
+        messages: [{ role: "user", content: "ping" }],
+      });
     } catch (err) {
       if (isAuthError(err)) {
         console.error("No Claude credential. Set ANTHROPIC_API_KEY or run `ant auth login`.");
@@ -89,7 +115,10 @@ export const devVisualCheck = defineCommand({
     const staticDir = path.resolve(args.static);
     const distDir = path.resolve(args.dist);
     const outDir = path.resolve(args.out);
-    const viewports = args.viewports.split(",").map((s) => Number(s.trim())).filter(Boolean);
+    const viewports = args.viewports
+      .split(",")
+      .map((s) => Number(s.trim()))
+      .filter(Boolean);
     const routes = loadRouteMap(staticDir);
     const origin = args.live ? originOf(staticDir) : null;
     if (args.live && !origin) {
@@ -113,8 +142,14 @@ export const devVisualCheck = defineCommand({
 
         let originalShots, builtShots;
         try {
-          originalShots = await capturePageShots(page, originalUrl, slugOut, { prefix: "original", viewports });
-          builtShots = await capturePageShots(page, builtUrl, slugOut, { prefix: "built", viewports });
+          originalShots = await capturePageShots(page, originalUrl, slugOut, {
+            prefix: "original",
+            viewports,
+          });
+          builtShots = await capturePageShots(page, builtUrl, slugOut, {
+            prefix: "built",
+            viewports,
+          });
         } catch (err) {
           console.error(`${slug}: capture failed — ${err.message}`);
           continue;
@@ -157,10 +192,14 @@ export const devVisualCheck = defineCommand({
           const built = fs.existsSync(path.join(distDir, route.replace(/^\//, ""), "index.html"))
             ? fs.readFileSync(path.join(distDir, route.replace(/^\//, ""), "index.html"), "utf8")
             : "";
-          const referenced = [...built.matchAll(/\/wp-content\/uploads\/[^"'\s>)]+/g)].map((m) => m[0]);
+          const referenced = [...built.matchAll(/\/wp-content\/uploads\/[^"'\s>)]+/g)].map(
+            (m) => m[0]
+          );
           const extracted = {
             images: [...new Set(referenced.map((r) => r.split("/").pop()))],
-            sections: [...new Set([...built.matchAll(/class="([a-z0-9-]+)"/g)].map((m) => m[1]))].slice(0, 20),
+            sections: [
+              ...new Set([...built.matchAll(/class="([a-z0-9-]+)"/g)].map((m) => m[1])),
+            ].slice(0, 20),
           };
 
           let gaps = [];
@@ -172,28 +211,38 @@ export const devVisualCheck = defineCommand({
 
           report.missing = gaps;
           if (gaps.length) {
-            console.log(`\n${slug} — ${gaps.length} thing(s) visible in the screenshot the extractor never found:`);
+            console.log(
+              `\n${slug} — ${gaps.length} thing(s) visible in the screenshot the extractor never found:`
+            );
             for (const g of gaps) {
-              console.log(`  - ${g.where}: ${g.kind}${g.count ? ` (${g.count} items)` : ""} — ${g.describes} [${g.confidence}]`);
+              console.log(
+                `  - ${g.where}: ${g.kind}${g.count ? ` (${g.count} items)` : ""} — ${g.describes} [${g.confidence}]`
+              );
             }
 
             if (args["build-from-screenshot"]) {
               const candidates = unreferencedMedia(staticDir, referenced);
               let proposal = null;
               try {
-                proposal = await proposeSection(client, shot.file, candidates, { model: args.model });
+                proposal = await proposeSection(client, shot.file, candidates, {
+                  model: args.model,
+                });
               } catch (err) {
                 console.error(`  proposal failed — ${err.message}`);
               }
               report.proposal = proposal;
 
               if (proposal) {
-                console.log(`\n  Proposed section (${proposal.confidence} confidence) — NOT written:`);
+                console.log(
+                  `\n  Proposed section (${proposal.confidence} confidence) — NOT written:`
+                );
                 console.log(`    heading: ${proposal.heading || "(none)"}`);
                 for (const im of proposal.images) console.log(`    - ${im.file}  "${im.alt}"`);
                 if (proposal.note) console.log(`    note: ${proposal.note}`);
               } else {
-                console.log(`  No confident match among ${candidates.length} unreferenced file(s).`);
+                console.log(
+                  `  No confident match among ${candidates.length} unreferenced file(s).`
+                );
               }
             } else {
               console.log("  (re-run with --build-from-screenshot to see a proposed section)");
@@ -208,7 +257,11 @@ export const devVisualCheck = defineCommand({
 
         if (args.json) {
           fs.mkdirSync(slugOut, { recursive: true });
-          fs.writeFileSync(path.join(slugOut, "report.json"), JSON.stringify(report, null, 2), "utf8");
+          fs.writeFileSync(
+            path.join(slugOut, "report.json"),
+            JSON.stringify(report, null, 2),
+            "utf8"
+          );
         }
       }
     } finally {
@@ -217,6 +270,8 @@ export const devVisualCheck = defineCommand({
       bltSrv.server.close();
     }
 
-    console.log(`\n${total} difference(s) across ${slugs.length} page(s). Advisory only — review before applying.`);
+    console.log(
+      `\n${total} difference(s) across ${slugs.length} page(s). Advisory only — review before applying.`
+    );
   },
 });

@@ -2,7 +2,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { defineCommand } from "citty";
-import { runExtract, emitTokens, emitSemanticOverrides, brandingPatch, emitRamp } from "../src/extract/index.mjs";
+import {
+  runExtract,
+  emitTokens,
+  emitSemanticOverrides,
+  brandingPatch,
+  emitRamp,
+} from "../src/extract/index.mjs";
 import { Writer } from "../src/fs/write.mjs";
 import { patchRegion } from "../src/fs/regions.mjs";
 import { patchJson } from "../src/css/tokens/wire.mjs";
@@ -20,12 +26,21 @@ function readJson(file) {
 export const devExtract = defineCommand({
   meta: {
     name: "dev-extract",
-    description: "Extract colors, fonts, chrome/site-info, SEO, and images from a snapshot into a target repo.",
+    description:
+      "Extract colors, fonts, chrome/site-info, SEO, and images from a snapshot into a target repo.",
   },
   args: {
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
-    "sample-pages": { type: "string", description: "Pages to sample for color/type measurement", default: "6" },
+    "sample-pages": {
+      type: "string",
+      description: "Pages to sample for color/type measurement",
+      default: "6",
+    },
     "dry-run": { type: "boolean", description: "Report without writing", default: true },
     write: { type: "boolean", description: "Actually write (overrides --dry-run)", default: false },
   },
@@ -59,9 +74,13 @@ export const devExtract = defineCommand({
 
     // ---- colors / tokens --------------------------------------------------
     const stylesDir = path.relative(targetRoot, path.join(targetRoot, "src/styles"));
-    writer.write(path.join(stylesDir, "source/_tokens.pcss"), emitTokens(result.artifact), { gen: "wpmig-extract" });
+    writer.write(path.join(stylesDir, "source/_tokens.pcss"), emitTokens(result.artifact), {
+      gen: "wpmig-extract",
+    });
     if (result.artifact.ramp) {
-      writer.write(path.join(stylesDir, "source/_ramp.pcss"), emitRamp(result.artifact.ramp), { gen: "wpmig-extract" });
+      writer.write(path.join(stylesDir, "source/_ramp.pcss"), emitRamp(result.artifact.ramp), {
+        gen: "wpmig-extract",
+      });
     }
     patchRegion(
       writer,
@@ -77,22 +96,30 @@ export const devExtract = defineCommand({
     if (result.fontResult.fontLinks.length) brandPatch.fontLinks = result.fontResult.fontLinks;
     // The sampled page's links are not necessarily every font the site uses.
     const extraFonts = ensureFamilySheets({
-      families: [brandPatch.bodyFont?.fontFamily, brandPatch.headingsFont?.fontFamily].filter(Boolean),
+      families: [brandPatch.bodyFont?.fontFamily, brandPatch.headingsFont?.fontFamily].filter(
+        Boolean
+      ),
       staticDir,
       writer,
       have: brandPatch.fontLinks ?? [],
     });
     if (extraFonts.fontLinks?.length) {
       brandPatch.fontLinks = [...extraFonts.fontLinks, ...(brandPatch.fontLinks ?? [])];
-      console.log(`fonts: recovered ${extraFonts.families.join(", ")} from the snapshot (not linked by the sampled page)`);
+      console.log(
+        `fonts: recovered ${extraFonts.families.join(", ")} from the snapshot (not linked by the sampled page)`
+      );
     }
     patchJson(writer, targetRoot, path.join(dataDir, "branding.json"), brandPatch, {
       replaceKeys: Object.keys(brandPatch),
     });
 
     console.log(`\ncolor roles: ${JSON.stringify(result.artifact.roles, null, 2)}`);
-    console.log(`fonts: body=${brandPatch.bodyFont?.fontFamily ?? "—"}  headings=${brandPatch.headingsFont?.fontFamily ?? "—"}`);
-    console.log(`font files: ${result.fontResult.copied.length} copied, ${result.fontResult.missing.length} missing`);
+    console.log(
+      `fonts: body=${brandPatch.bodyFont?.fontFamily ?? "—"}  headings=${brandPatch.headingsFont?.fontFamily ?? "—"}`
+    );
+    console.log(
+      `font files: ${result.fontResult.copied.length} copied, ${result.fontResult.missing.length} missing`
+    );
 
     // ---- chrome / site info -------------------------------------------------
     if (result.extracted) {
@@ -106,9 +133,13 @@ export const devExtract = defineCommand({
         readJson(path.join(targetRoot, dataDir, "footer.json")),
         { iconSet: loadIconSet(targetRoot) }
       );
-      const site = result.buildSiteInfo(result.extracted, readJson(path.join(targetRoot, dataDir, "siteInfo.json")), {
-        iconSet: loadIconSet(targetRoot),
-      });
+      const site = result.buildSiteInfo(
+        result.extracted,
+        readJson(path.join(targetRoot, dataDir, "siteInfo.json")),
+        {
+          iconSet: loadIconSet(targetRoot),
+        }
+      );
 
       const assets = result.collectChromeAssets(result.extracted, {
         mirrorDir: staticDir,
@@ -116,19 +147,29 @@ export const devExtract = defineCommand({
         publicDir: "public",
       });
 
-      patchJson(writer, targetRoot, path.join(dataDir, "mainNav.json"), nav, { replaceKeys: Object.keys(nav) });
-      patchJson(writer, targetRoot, path.join(dataDir, "footer.json"), footer, { replaceKeys: Object.keys(footer) });
-      patchJson(writer, targetRoot, path.join(dataDir, "siteInfo.json"), site, { replaceKeys: Object.keys(site) });
+      patchJson(writer, targetRoot, path.join(dataDir, "mainNav.json"), nav, {
+        replaceKeys: Object.keys(nav),
+      });
+      patchJson(writer, targetRoot, path.join(dataDir, "footer.json"), footer, {
+        replaceKeys: Object.keys(footer),
+      });
+      patchJson(writer, targetRoot, path.join(dataDir, "siteInfo.json"), site, {
+        replaceKeys: Object.keys(site),
+      });
 
       console.log(`\nsite name: ${result.extracted.siteName || "—"}`);
       console.log(`nav items: ${result.countNav(nav.navData)}`);
       console.log(`office: ${JSON.stringify(site.offices?.[0] ?? {}, null, 2)}`);
       console.log(`socials: ${(site.socials ?? []).map((s) => s.label).join(", ") || "—"}`);
-      console.log(`chrome assets: ${assets.copied.length} copied, ${assets.missing.length} missing`);
+      console.log(
+        `chrome assets: ${assets.copied.length} copied, ${assets.missing.length} missing`
+      );
       console.log(
         `footer columns: ${(footer.linkColumns ?? []).map((c) => `${c.title || "(brand)"}[${c.links.length}]`).join(" ") || "—"}`
       );
-      console.log(`header top bar: ${nav.topBar ? `${nav.topBar.label} ${nav.topBar.phone.display}` : "—"}`);
+      console.log(
+        `header top bar: ${nav.topBar ? `${nav.topBar.label} ${nav.topBar.phone.display}` : "—"}`
+      );
     } else {
       console.log("\nno header/footer found — skipping chrome/site-info");
     }
@@ -140,8 +181,12 @@ export const devExtract = defineCommand({
       logoSource: result.extracted?.header?.logo?.source || "",
       titleFormat: result.titleSuffix ? `{title} | ${result.titleSuffix}` : "{title}",
     };
-    patchJson(writer, targetRoot, path.join(dataDir, "seo.json"), seoPatch, { replaceKeys: Object.keys(seoPatch) });
-    console.log(`\nseo: title suffix = ${result.titleSuffix ? `"${result.titleSuffix}"` : "(none detected)"}`);
+    patchJson(writer, targetRoot, path.join(dataDir, "seo.json"), seoPatch, {
+      replaceKeys: Object.keys(seoPatch),
+    });
+    console.log(
+      `\nseo: title suffix = ${result.titleSuffix ? `"${result.titleSuffix}"` : "(none detected)"}`
+    );
 
     // ---- images ---------------------------------------------------------------
     let imgCopied = 0;
@@ -162,13 +207,16 @@ export const devExtract = defineCommand({
       writer.writeBinary(path.join("public", rel), fs.readFileSync(from));
       imgCopied++;
     }
-    console.log(`\nimages: ${result.imageUrls.length} referenced, ${imgCopied} copied/verified, ${imgMissing} missing`);
+    console.log(
+      `\nimages: ${result.imageUrls.length} referenced, ${imgCopied} copied/verified, ${imgMissing} missing`
+    );
 
     // ---- summary --------------------------------------------------------------
     console.log(`\n${dryRun ? "[dry run] " : ""}writer summary: ${JSON.stringify(writer.summary)}`);
     if (writer.needsAttention.length) {
       console.log("needs attention:");
-      for (const r of writer.needsAttention) console.log(`  ${r.outcome}  ${r.path}${r.detail ? `  (${r.detail})` : ""}`);
+      for (const r of writer.needsAttention)
+        console.log(`  ${r.outcome}  ${r.path}${r.detail ? `  (${r.detail})` : ""}`);
     }
   },
 });

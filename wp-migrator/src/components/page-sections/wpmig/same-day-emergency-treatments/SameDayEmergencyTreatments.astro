@@ -31,7 +31,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="same-day-emergency-treatments" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<section
+  class="same-day-emergency-treatments"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="sdet-box">
     <div class="sdet-box2">
       <div class="sdet-box3">
@@ -42,20 +48,52 @@ const {
       </div>
       <div class="sdet-box5">
         <div class="sdet-box6">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdet-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdet-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="sdet-box7">
         <div class="sdet-box8">
           <div class="sdet-box9">
-            {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdet-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            {
+              secondaryButtonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="xs"
+                  class="sdet-btn2"
+                  text={secondaryButtonText}
+                  link={secondaryButtonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
       </div>
       <div class="sdet-box10">
         <div class="sdet-box11">
           <p class="sdet-box12">
-            {secondaryButtonText2 && <a class="sdet-link" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+            {
+              secondaryButtonText2 && (
+                <a class="sdet-link" href={secondaryButtonLink2 || "#"}>
+                  {secondaryButtonText2}
+                </a>
+              )
+            }
           </p>
         </div>
       </div>
@@ -63,7 +101,18 @@ const {
     <div class="sdet-box13">
       <div class="sdet-box14">
         <div class="sdet-box15">
-          {image && <img class="sdet-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="787" />}
+          {
+            image && (
+              <img
+                class="sdet-media"
+                src={image}
+                alt={imageAlt || ""}
+                loading="lazy"
+                width="1024"
+                height="787"
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -489,7 +538,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sdet-text {
     color: rgb(27, 46, 56);
     font-size: 16px;
@@ -571,5 +620,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

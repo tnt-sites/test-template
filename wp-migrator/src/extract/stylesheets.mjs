@@ -6,7 +6,9 @@
  */
 
 function DISCOVER() {
-  return [...document.querySelectorAll('link[rel="stylesheet"][href]')].map((el) => el.getAttribute("href"));
+  return [...document.querySelectorAll('link[rel="stylesheet"][href]')].map((el) =>
+    el.getAttribute("href")
+  );
 }
 
 /**

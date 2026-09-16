@@ -86,7 +86,9 @@ export async function renderPage(browser, url, opts = {}) {
     // Best-effort per-widget waits; each tolerated so a missing widget can't
     // stall the whole render.
     for (const sel of waitSelectors) {
-      await page.waitForSelector(sel, { timeout: selectorTimeout, state: "attached" }).catch(() => {});
+      await page
+        .waitForSelector(sel, { timeout: selectorTimeout, state: "attached" })
+        .catch(() => {});
     }
 
     // A second light pass catches images a carousel/review widget injected late.

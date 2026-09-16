@@ -100,7 +100,6 @@ function stripOwned(region, selectors) {
   return out.replace(/\n{3,}/g, "\n\n");
 }
 
-
 /**
  * The `min-width` breakpoints at which a component already sets one of the
  * properties we are about to correct for a class.
@@ -135,7 +134,11 @@ export const devRefix = defineCommand({
     static: { type: "string", description: "Snapshot directory", default: "" },
     dist: { type: "string", description: "Built site directory", default: "" },
     components: { type: "string", description: "Components root", default: "" },
-    pages: { type: "string", description: "Comma-separated page slugs (default: all)", default: "" },
+    pages: {
+      type: "string",
+      description: "Comma-separated page slugs (default: all)",
+      default: "",
+    },
     "dry-run": { type: "boolean", description: "Report without writing", default: false },
   },
   async run({ args }) {
@@ -144,7 +147,11 @@ export const devRefix = defineCommand({
     const distDir = path.resolve(args.dist || path.join(here, "../../dist"));
     const compRoot = path.resolve(args.components || path.join(here, "../../src/components"));
 
-    for (const [label, dir] of [["snapshot", staticDir], ["dist", distDir], ["components", compRoot]]) {
+    for (const [label, dir] of [
+      ["snapshot", staticDir],
+      ["dist", distDir],
+      ["components", compRoot],
+    ]) {
       if (!fs.existsSync(dir)) throw new Error(`${label} dir not found: ${dir}`);
     }
 
@@ -201,7 +208,8 @@ export const devRefix = defineCommand({
 
           for (const [jsProp, cssProp] of Object.entries(FIXABLE)) {
             if (!s.style[jsProp]) continue;
-            const value = jsProp === "fontFamily" ? `${s.style[jsProp]}, sans-serif` : s.style[jsProp];
+            const value =
+              jsProp === "fontFamily" ? `${s.style[jsProp]}, sans-serif` : s.style[jsProp];
 
             // Record what the source says on EVERY page carrying this class,
             // not only the pages where the build currently disagrees.
@@ -259,14 +267,20 @@ export const devRefix = defineCommand({
 
     const disagreeing = new Set([...needed].map((k) => k.split("\u0000")[0]));
 
-    console.log(`${pagesRead} page(s) measured — ${disagreeing.size} class(es) disagree with source.`);
+    console.log(
+      `${pagesRead} page(s) measured — ${disagreeing.size} class(es) disagree with source.`
+    );
     if (process.env.REFIX_DEBUG) {
-      for (const [cls, props] of observed) console.log(`   DEBUG ${cls} owner=${owner.get(cls)} props=${[...props.keys()].join(",")}`);
+      for (const [cls, props] of observed)
+        console.log(`   DEBUG ${cls} owner=${owner.get(cls)} props=${[...props.keys()].join(",")}`);
       console.log(`   DEBUG byFile.size=${byFile.size}`);
     }
     if (conflicts.length) {
-      console.log(`${conflicts.length} class/property pair(s) measured differently on different pages, left alone:`);
-      for (const c of conflicts.slice(0, 10)) console.log(`    .${c.cls} ${c.prop}: ${c.values.join(" | ")}`);
+      console.log(
+        `${conflicts.length} class/property pair(s) measured differently on different pages, left alone:`
+      );
+      for (const c of conflicts.slice(0, 10))
+        console.log(`    .${c.cls} ${c.prop}: ${c.values.join(" | ")}`);
     }
 
     let written = 0;
@@ -295,7 +309,9 @@ export const devRefix = defineCommand({
         ...baseParts,
         ...[...perWidth.entries()]
           .sort((a, b) => a[0] - b[0])
-          .map(([width, parts]) => `  @media (min-width: ${width}px) {\n${parts.join("\n\n")}\n  }`),
+          .map(
+            ([width, parts]) => `  @media (min-width: ${width}px) {\n${parts.join("\n\n")}\n  }`
+          ),
       ].join("\n");
 
       let next;

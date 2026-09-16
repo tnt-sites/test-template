@@ -22,7 +22,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="call-us-now-to" id={id || undefined} style={`--bg:${backgroundColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+
+<section
+  class="call-us-now-to"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`}
+  {...rest}
+>
   <div class="cunt-box">
     <div class="cunt-box2">
       <div class="cunt-box3">
@@ -30,17 +36,48 @@ const {
       </div>
       <div class="cunt-box4">
         <li class="cunt-box5">
-          {buttonText && <a class="cunt-link" href={buttonLink || "#"}>{buttonText}</a>}
+          {
+            buttonText && (
+              <a class="cunt-link" href={buttonLink || "#"}>
+                {buttonText}
+              </a>
+            )
+          }
         </li>
       </div>
     </div>
     <div class="cunt-box6">
-      {image && <img class="cunt-media" src={image} alt={imageAlt || ""} loading="lazy" width="163" height="74" />}
+      {
+        image && (
+          <img
+            class="cunt-media"
+            src={image}
+            alt={imageAlt || ""}
+            loading="lazy"
+            width="163"
+            height="74"
+          />
+        )
+      }
     </div>
     <div class="cunt-box7">
       <div class="cunt-box8">
         <div class="cunt-box9">
-          {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="cunt-btn" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {
+            secondaryButtonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="none"
+                uppercase
+                class="cunt-btn"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -249,7 +286,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cunt-box5 {
     align-items: center;
     font-family: "Open Sans Condensed", sans-serif;
@@ -307,5 +344,5 @@ const {
   .cunt-box7 {
     text-align: center;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

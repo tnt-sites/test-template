@@ -67,18 +67,51 @@ const BANNER = `/*
 export const devChrome = defineCommand({
   meta: {
     name: "dev-chrome",
-    description: "Rebuild the header and footer from the source: nav/footer data plus measured chrome styling.",
+    description:
+      "Rebuild the header and footer from the source: nav/footer data plus measured chrome styling.",
   },
   args: {
-    page: { type: "string", description: "Snapshot page to read the chrome from", default: "index.html" },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, ".wpmig/static") },
+    page: {
+      type: "string",
+      description: "Snapshot page to read the chrome from",
+      default: "index.html",
+    },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, ".wpmig/static"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
-    breakpoints: { type: "string", description: "Comma-separated capture widths", default: "390,768,992,1440" },
-    styles: { type: "string", description: "Where to write the chrome token layer", default: "src/styles/_chrome.pcss" },
-    compare: { type: "boolean", description: "Also measure the built site and report the chrome deltas", default: false },
-    dist: { type: "string", description: "Built site directory, for --compare", default: path.join(HERE, "../dist") },
-    "skip-data": { type: "boolean", description: "Measure styling only; leave the data files alone", default: false },
-    write: { type: "boolean", description: "Actually write (default is a dry run)", default: false },
+    breakpoints: {
+      type: "string",
+      description: "Comma-separated capture widths",
+      default: "390,768,992,1440",
+    },
+    styles: {
+      type: "string",
+      description: "Where to write the chrome token layer",
+      default: "src/styles/_chrome.pcss",
+    },
+    compare: {
+      type: "boolean",
+      description: "Also measure the built site and report the chrome deltas",
+      default: false,
+    },
+    dist: {
+      type: "string",
+      description: "Built site directory, for --compare",
+      default: path.join(HERE, "../dist"),
+    },
+    "skip-data": {
+      type: "boolean",
+      description: "Measure styling only; leave the data files alone",
+      default: false,
+    },
+    write: {
+      type: "boolean",
+      description: "Actually write (default is a dry run)",
+      default: false,
+    },
   },
 
   async run({ args }) {
@@ -86,7 +119,11 @@ export const devChrome = defineCommand({
     const targetRoot = path.resolve(args.target);
     if (!fs.existsSync(staticDir)) throw new Error(`snapshot dir not found: ${staticDir}`);
 
-    const breakpoints = args.breakpoints.split(",").map(Number).filter(Boolean).sort((a, b) => a - b);
+    const breakpoints = args.breakpoints
+      .split(",")
+      .map(Number)
+      .filter(Boolean)
+      .sort((a, b) => a - b);
     const dryRun = !args.write;
     useRouteMap(loadRouteMap(staticDir));
 
@@ -105,7 +142,11 @@ export const devChrome = defineCommand({
       const pageUrl = `${url}/${args.page}`;
 
       const goto = async (target) => {
-        const state = await gotoStable(target, pageUrl, { primeLazyLoad: true, reveal: true, freezeMotion: true });
+        const state = await gotoStable(target, pageUrl, {
+          primeLazyLoad: true,
+          reveal: true,
+          freezeMotion: true,
+        });
         if (!state.ok) throw new Error(`could not load ${pageUrl}: ${state.reason}`);
       };
       await goto(page);
@@ -115,7 +156,8 @@ export const devChrome = defineCommand({
         chrome: CHROME_SELECTORS,
         buttonClassPattern: BUTTON_CLASS_PATTERN,
       });
-      if (!extracted.header && !extracted.footer) throw new Error(`no header or footer found on ${args.page}`);
+      if (!extracted.header && !extracted.footer)
+        throw new Error(`no header or footer found on ${args.page}`);
 
       /*
        * Undo any call-tracking substitution before anything downstream sees
@@ -151,32 +193,63 @@ export const devChrome = defineCommand({
         const dataDir = "src/data";
         const iconSet = loadIconSet(targetRoot);
 
-        const nav = buildNavData(extracted, readJson(path.join(targetRoot, dataDir, "mainNav.json")), { iconSet });
-        const footer = buildFooterData(extracted, readJson(path.join(targetRoot, dataDir, "footer.json")), { iconSet });
-        const site = buildSiteInfo(extracted, readJson(path.join(targetRoot, dataDir, "siteInfo.json")), { iconSet });
+        const nav = buildNavData(
+          extracted,
+          readJson(path.join(targetRoot, dataDir, "mainNav.json")),
+          { iconSet }
+        );
+        const footer = buildFooterData(
+          extracted,
+          readJson(path.join(targetRoot, dataDir, "footer.json")),
+          { iconSet }
+        );
+        const site = buildSiteInfo(
+          extracted,
+          readJson(path.join(targetRoot, dataDir, "siteInfo.json")),
+          { iconSet }
+        );
 
-        const assets = collectChromeAssets(extracted, { mirrorDir: staticDir, writer, publicDir: "public" });
+        const assets = collectChromeAssets(extracted, {
+          mirrorDir: staticDir,
+          writer,
+          publicDir: "public",
+        });
 
-        patchJson(writer, targetRoot, path.join(dataDir, "mainNav.json"), nav, { replaceKeys: Object.keys(nav) });
-        patchJson(writer, targetRoot, path.join(dataDir, "footer.json"), footer, { replaceKeys: Object.keys(footer) });
-        patchJson(writer, targetRoot, path.join(dataDir, "siteInfo.json"), site, { replaceKeys: Object.keys(site) });
+        patchJson(writer, targetRoot, path.join(dataDir, "mainNav.json"), nav, {
+          replaceKeys: Object.keys(nav),
+        });
+        patchJson(writer, targetRoot, path.join(dataDir, "footer.json"), footer, {
+          replaceKeys: Object.keys(footer),
+        });
+        patchJson(writer, targetRoot, path.join(dataDir, "siteInfo.json"), site, {
+          replaceKeys: Object.keys(site),
+        });
 
         console.log(`\nnav items: ${countNav(nav.navData)}`);
-        console.log(`header top bar: ${nav.topBar ? `"${nav.topBar.label}" ${nav.topBar.phone.display}` : "—"}`);
         console.log(
-          `footer columns: ${(footer.linkColumns ?? [])
-            .map((c) => `${c.title || "(brand)"}[${c.links.length}]`)
-            .join("  ") || "—"}`
+          `header top bar: ${nav.topBar ? `"${nav.topBar.label}" ${nav.topBar.phone.display}` : "—"}`
+        );
+        console.log(
+          `footer columns: ${
+            (footer.linkColumns ?? [])
+              .map((c) => `${c.title || "(brand)"}[${c.links.length}]`)
+              .join("  ") || "—"
+          }`
         );
         console.log(`footer social images: ${(footer.socialImages ?? []).length}`);
-        console.log(`copyright: ${footer.copyright ? `${footer.copyright.text} (${footer.copyright.links.length} links)` : "—"}`);
-        console.log(`chrome assets: ${assets.copied.length} copied, ${assets.missing.length} missing`);
+        console.log(
+          `copyright: ${footer.copyright ? `${footer.copyright.text} (${footer.copyright.links.length} links)` : "—"}`
+        );
+        console.log(
+          `chrome assets: ${assets.copied.length} copied, ${assets.missing.length} missing`
+        );
         if (assets.missing.length) console.log(`  missing: ${assets.missing.join(", ")}`);
 
         const findings = auditChromeData({ mainNav: nav, footer, siteInfo: site }, rawHtml);
         if (findings.length) {
           console.log(`\n! ${findings.length} chrome value(s) the source does not contain:`);
-          for (const f of findings) console.log(`    ${f.file}.${f.path} = ${JSON.stringify(f.value)}\n      ${f.note}`);
+          for (const f of findings)
+            console.log(`    ${f.file}.${f.path} = ${JSON.stringify(f.value)}\n      ${f.note}`);
         }
       }
 
@@ -197,10 +270,14 @@ export const devChrome = defineCommand({
             for (const width of breakpoints) {
               await builtPage.setViewportSize({ width, height: 1000 });
               const state = await gotoStable(builtPage, `${built.url}/`, {
-                primeLazyLoad: true, reveal: true, freezeMotion: true,
+                primeLazyLoad: true,
+                reveal: true,
+                freezeMotion: true,
               });
               if (!state.ok) {
-                console.log(`\n! --compare: could not load the built page at ${width}px: ${state.reason}`);
+                console.log(
+                  `\n! --compare: could not load the built page at ${width}px: ${state.reason}`
+                );
                 continue;
               }
               const measuredBuilt = await measureChrome(builtPage, { roles: TARGET_ROLES });
@@ -210,7 +287,10 @@ export const devChrome = defineCommand({
 
             const reportPath = path.join(HERE, ".wpmig/compare/chrome.json");
             fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-            fs.writeFileSync(reportPath, JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));
+            fs.writeFileSync(
+              reportPath,
+              JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2)
+            );
             console.log(`\nreport: ${path.relative(process.cwd(), reportPath)}`);
           } finally {
             await builtPage.close();

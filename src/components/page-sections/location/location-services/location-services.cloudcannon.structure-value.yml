@@ -3,7 +3,7 @@ icon: grid_view
 description: Intro copy over a grid of service photo cards, each opening a pop-up with more detail.
 value:
   _component: page-sections/location/location-services
-  id: ''
+  id: ""
   heading: Why Are You Looking for Dental Care?
   intro: A short introduction to the range of treatments on offer.
   services:
@@ -12,7 +12,7 @@ value:
       heading: Checkup & Cleaning
       imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
       imageAlt: Dentist polishing a patient's teeth
-      modalHeading: ''
+      modalHeading: ""
       modalContent: Description of this service.
   backgroundColor: "#ffffff"
   textColor: "#000000"
@@ -39,7 +39,7 @@ _structures:
           heading: Checkup & Cleaning
           imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
           imageAlt: Dentist polishing a patient's teeth
-          modalHeading: ''
+          modalHeading: ""
           modalContent: Description of this service.
         preview:
           text:
@@ -62,7 +62,7 @@ _structures:
             options:
               paths:
                 uploads: src/assets/images
-                static: ''
+                static: ""
           imageAlt:
             type: text
             comment: Alt text describing the photo.

@@ -35,7 +35,13 @@ const htmlAttributes = Object.fromEntries(
   {...htmlAttributes}
 >
   <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />
-  {subtext && <Text alignX="center" data-prop="subtext">{subtext}</Text>}
+  {
+    subtext && (
+      <Text alignX="center" data-prop="subtext">
+        {subtext}
+      </Text>
+    )
+  }
   <Form action={formAction} formBlocks={formBlocks?.length > 0 ? formBlocks : []}>
     <slot />
   </Form>

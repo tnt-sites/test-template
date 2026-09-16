@@ -17,19 +17,25 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<section class="columbine-creek-dentistry-provides" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="columbine-creek-dentistry-provides"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="ccdp-box">
     <div class="ccdp-box2">
       <h3 class="ccdp-heading">{heading}</h3>
     </div>
     <div class="ccdp-grid">
-      {list.map((it) => (
-        <div class="ccdp-box3">
-          <div class="ccdp-box4">
-            {it.text && <div class="ccdp-body" set:html={it.text} />}
+      {
+        list.map((it) => (
+          <div class="ccdp-box3">
+            <div class="ccdp-box4">{it.text && <div class="ccdp-body" set:html={it.text} />}</div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
     <div class="ccdp-box7">
       <div class="ccdp-box8">
@@ -269,7 +275,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ccdp-heading {
     font-weight: 400;
   }
@@ -295,5 +301,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

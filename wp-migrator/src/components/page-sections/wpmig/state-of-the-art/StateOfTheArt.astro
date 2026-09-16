@@ -20,25 +20,44 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<section class="state-of-the-art" id={id || undefined} style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`} {...rest}>
+
+<section
+  class="state-of-the-art"
+  id={id || undefined}
+  style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="sota-box">
     <div class="sota-box2">
       <div class="sota-grid">
-        {list.map((it) => (
-          <div class="sota-box3">
-            <div class="sota-box4">
-              <h3 class="sota-heading">{it.title}</h3>
+        {
+          list.map((it) => (
+            <div class="sota-box3">
+              <div class="sota-box4">
+                <h3 class="sota-heading">{it.title}</h3>
+              </div>
+              <div class="sota-box5">{it.text && <p class="sota-text">{it.text}</p>}</div>
             </div>
-            <div class="sota-box5">
-              {it.text && <p class="sota-text">{it.text}</p>}
-            </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
       <section class="sota-box13">
         <div class="sota-box14">
           <div class="sota-box15">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sota-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="xs"
+                  class="sota-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
       </section>
@@ -312,7 +331,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sota-heading {
     font-weight: 400;
   }
@@ -418,5 +437,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

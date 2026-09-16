@@ -24,11 +24,7 @@
 
 /** Text as an identity: whitespace collapsed, nbsp folded, case-insensitive. */
 export const textKey = (s) =>
-  (s || "")
-    .replace(/ /g, " ")
-    .replace(/\s+/g, " ")
-    .trim()
-    .toLowerCase();
+  (s || "").replace(/ /g, " ").replace(/\s+/g, " ").trim().toLowerCase();
 
 /** The properties a mismatch is worth reporting on. */
 export const COMPARED = [
@@ -50,8 +46,7 @@ export const COMPARED = [
  * dropped rather than guessed at: an ambiguous pair is worse than no pair.
  */
 export const READ_TEXT_NODES = () => {
-  const norm = (s) =>
-    (s || "").replace(/ /g, " ").replace(/\s+/g, " ").trim().toLowerCase();
+  const norm = (s) => (s || "").replace(/ /g, " ").replace(/\s+/g, " ").trim().toLowerCase();
   const props = [
     "fontFamily",
     "fontSize",
@@ -63,7 +58,9 @@ export const READ_TEXT_NODES = () => {
   ];
   const seen = new Map();
 
-  for (const el of document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,a,li,span,div,td,th,figcaption,button")) {
+  for (const el of document.querySelectorAll(
+    "h1,h2,h3,h4,h5,h6,p,a,li,span,div,td,th,figcaption,button"
+  )) {
     const key = norm(el.textContent);
 
     if (!key || key.length < 4 || key.length > 300) continue;
@@ -118,7 +115,8 @@ export function diffTextNodes(sourceEntries, builtEntries, { ignore = [] } = {})
 
     for (const prop of COMPARED) {
       if (skip.has(prop)) continue;
-      if (s.style[prop] !== b.style[prop]) diffs.push({ prop, source: s.style[prop], built: b.style[prop] });
+      if (s.style[prop] !== b.style[prop])
+        diffs.push({ prop, source: s.style[prop], built: b.style[prop] });
     }
     if (diffs.length) findings.push({ key, sourceTag: s.tag, builtTag: b.tag, diffs });
   }

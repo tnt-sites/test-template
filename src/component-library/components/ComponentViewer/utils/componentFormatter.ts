@@ -157,7 +157,7 @@ ${indent}</${componentName}>`;
     const formAction = block.formAction || "./";
     const formBlocksArray = Array.isArray(block.formBlocks) ? block.formBlocks : [block.formBlocks];
     const FormComponentName = getComponentDisplayName("building-blocks/forms/form");
-    
+
     const formChildren = formBlocksArray
       .map((formBlock) =>
         formatComponentWithSlots(
@@ -461,7 +461,11 @@ ${indent}</${componentName}>`;
       componentPath.includes("submit")
     ) {
       // For text component, use full markdown render
-      if (componentPath.includes("text") && !componentPath.includes("heading") && !componentPath.includes("simple-text")) {
+      if (
+        componentPath.includes("text") &&
+        !componentPath.includes("heading") &&
+        !componentPath.includes("simple-text")
+      ) {
         htmlContent = new MarkdownIt().render(textContent).trim();
       } else {
         // For simple-text and other text components, use inline markdown
@@ -469,7 +473,11 @@ ${indent}</${componentName}>`;
       }
     }
 
-    if (componentPath.includes("text") && !componentPath.includes("simple-text") && htmlContent.includes("<")) {
+    if (
+      componentPath.includes("text") &&
+      !componentPath.includes("simple-text") &&
+      htmlContent.includes("<")
+    ) {
       const formattedHtml = html(htmlContent, {
         indent_size: 2,
         indent_char: " ",

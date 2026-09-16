@@ -21,7 +21,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="we-can-provide-you" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2}`} {...rest}>
+
+<section
+  class="we-can-provide-you"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2}`}
+  {...rest}
+>
   <div class="wcpy-box">
     <div class="wcpy-box2">
       <div class="wcpy-box3">
@@ -424,7 +430,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wcpy-heading {
     font-size: 24px;
     line-height: 24px;
@@ -467,5 +473,5 @@ const {
       line-height: 27.2px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

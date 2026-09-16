@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="sun-life-dental-employers" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="sun-life-dental-employers"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="slde-box">
     <div class="slde-box2">
       <div class="slde-box3">
         <div class="slde-box4">
           <div class="slde-box5">
-            {image && <img class="slde-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+            {
+              image && (
+                <img
+                  class="slde-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="635"
+                  height="457"
+                />
+              )
+            }
           </div>
         </div>
         <div class="slde-box6">
@@ -332,7 +349,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .slde-box14 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -403,5 +420,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

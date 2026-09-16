@@ -30,11 +30,7 @@ const editableAttributes = (prop: string, type = "text") =>
   editable ? { "data-editable": type, "data-prop": prop } : {};
 ---
 
-<LocationSection
-  id={id}
-  class:list={["location-review", className]}
-  {...htmlAttributes}
->
+<LocationSection id={id} class:list={["location-review", className]} {...htmlAttributes}>
   {heading && <h2 {...editableAttributes("heading")}>{heading}</h2>}
   {
     logoSource && (

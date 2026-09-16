@@ -38,7 +38,9 @@ const PAGES = path.join(TARGET, "src/content/pages");
 
 const apply = process.argv.includes("--apply");
 const verbose = process.argv.includes("--verbose");
-const threshold = Number(process.argv.find((a) => a.startsWith("--threshold="))?.split("=")[1] ?? 0.85);
+const threshold = Number(
+  process.argv.find((a) => a.startsWith("--threshold="))?.split("=")[1] ?? 0.85
+);
 
 function loadComponents(dir) {
   return fs
@@ -56,7 +58,11 @@ function loadComponents(dir) {
         name,
         file,
         source: fs.readFileSync(path.join(dir, name, file), "utf8"),
-        sidecars: { inputs: read("inputs"), structureValue: read("structure-value"), snippets: read("snippets") },
+        sidecars: {
+          inputs: read("inputs"),
+          structureValue: read("structure-value"),
+          snippets: read("snippets"),
+        },
       };
     });
 }
@@ -130,7 +136,9 @@ const seen = new Map();
 for (const f of finals) {
   assertRoundTrips(f.name);
   if (seen.has(f.name)) {
-    console.error(`name collision: "${f.name}" claimed by both ${seen.get(f.name)} and ${f.from[0].name}`);
+    console.error(
+      `name collision: "${f.name}" claimed by both ${seen.get(f.name)} and ${f.from[0].name}`
+    );
     process.exit(1);
   }
   seen.set(f.name, f.from[0].name);
@@ -176,9 +184,12 @@ console.log();
 for (const c of plan.filter((x) => x.merged.length > 1)) {
   const named = c.name === c.canonical ? c.name : `${c.canonical} -> ${c.name}`;
 
-  console.log(`[${String(c.size).padStart(2)}] ${named.padEnd(34)} merge ${c.merged.length}` +
-    `${c.standalone.length ? `, keep ${c.standalone.length} separate` : ""}`);
-  if (verbose) for (const s of c.standalone) console.log(`        ! ${s.name}: ${s.why.join("; ")}`);
+  console.log(
+    `[${String(c.size).padStart(2)}] ${named.padEnd(34)} merge ${c.merged.length}` +
+      `${c.standalone.length ? `, keep ${c.standalone.length} separate` : ""}`
+  );
+  if (verbose)
+    for (const s of c.standalone) console.log(`        ! ${s.name}: ${s.why.join("; ")}`);
 }
 
 if (!apply) {
@@ -258,7 +269,12 @@ const walk = (dir) => {
       // raw needs its value escaped, and a page whose image differs from the
       // merged component's default needs dimensions written in.
       if (!active) continue;
-      if (!Object.keys(active.remap).length && !active.escape.size && !Object.keys(active.dims).length) continue;
+      if (
+        !Object.keys(active.remap).length &&
+        !active.escape.size &&
+        !Object.keys(active.dims).length
+      )
+        continue;
       const k = lines[i].match(/^(\s+)([a-zA-Z_$][\w$]*)(:)(.*)$/);
 
       if (!k) continue;
@@ -274,7 +290,10 @@ const walk = (dir) => {
 
           for (let j = i + 1; j < lines.length; j++) {
             if (lines[j].trim() && lines[j].search(/\S/) <= indent) break;
-            lines[j] = lines[j].replace(/^(\s*)([\s\S]*)$/, (_m, pad, body) => pad + escapeForRaw(body));
+            lines[j] = lines[j].replace(
+              /^(\s*)([\s\S]*)$/,
+              (_m, pad, body) => pad + escapeForRaw(body)
+            );
           }
         } else {
           const quoted = rest.match(/^(\s*)"((?:[^"\\]|\\.)*)"(\s*)$/);
@@ -291,7 +310,12 @@ const walk = (dir) => {
       const dim = active.dims[finalName];
 
       if (dim) {
-        lines.splice(i + 1, 0, `${k[1]}${finalName}Width: ${dim.w}`, `${k[1]}${finalName}Height: ${dim.h}`);
+        lines.splice(
+          i + 1,
+          0,
+          `${k[1]}${finalName}Width: ${dim.w}`,
+          `${k[1]}${finalName}Height: ${dim.h}`
+        );
         i += 2;
       }
     }

@@ -14,7 +14,7 @@ pageSections:
     backgroundColor: base
     paddingVertical: 4xl
   - _component: page-sections/builders/custom-section
-    label: ''
+    label: ""
     contentSections:
       - _component: building-blocks/core-elements/embed
         html: |

@@ -110,7 +110,12 @@ export function detectRepeats(tree, opts = {}) {
     };
     mark(template, items.slice(1));
 
-    node.repeat = { confidence, maxDist: Number(maxDist.toFixed(3)), itemCount: items.length, optionalNs: [...optionalNs] };
+    node.repeat = {
+      confidence,
+      maxDist: Number(maxDist.toFixed(3)),
+      itemCount: items.length,
+      optionalNs: [...optionalNs],
+    };
     found.push(node);
   };
 
@@ -147,7 +152,9 @@ export function detectRepeats(tree, opts = {}) {
       let ok = template != null;
 
       const matchesTemplate = (n) =>
-        n.tag === template.tag && shapeDistance(n, template) <= (opts.maxDistance ?? 0.2) && sizesAgree(n, template);
+        n.tag === template.tag &&
+        shapeDistance(n, template) <= (opts.maxDistance ?? 0.2) &&
+        sizesAgree(n, template);
 
       for (const other of others) {
         if (!hasRealContent(other)) continue; // filler (a spacer, however deeply wrapped) — silently excluded
@@ -194,11 +201,18 @@ export function detectRepeats(tree, opts = {}) {
         const itemW = merged.find((m) => (m.box?.w ?? 0) > 0)?.box?.w ?? 0;
         if (outerW > 0 && itemW > 0) {
           const raw = (itemW / outerW) * 100;
-          const snapped = [20, 25, 33.33, 50, 100].find((s) => Math.abs(raw - s) <= 4) ?? Math.round(raw * 100) / 100;
+          const snapped =
+            [20, 25, 33.33, 50, 100].find((s) => Math.abs(raw - s) <= 4) ??
+            Math.round(raw * 100) / 100;
           host.flattenLayout = { basisPct: snapped };
         }
 
-        markRepeat(host, merged, confidences.every((c) => c === "high") && !absorbed.length ? "high" : "low", maxDist);
+        markRepeat(
+          host,
+          merged,
+          confidences.every((c) => c === "high") && !absorbed.length ? "high" : "low",
+          maxDist
+        );
         return;
       }
     }
@@ -211,4 +225,3 @@ export function detectRepeats(tree, opts = {}) {
   walk(tree);
   return found;
 }
-

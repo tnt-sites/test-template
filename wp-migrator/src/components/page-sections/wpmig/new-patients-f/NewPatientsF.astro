@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patients-f" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="new-patients-f"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="npf-box">
     <h3 class="npf-heading">{heading}</h3>
     {subheading && <h1 class="npf-heading2">{subheading}</h1>}
@@ -88,7 +94,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .npf-heading3 {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -345,5 +351,5 @@ const {
       font-size: 16px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

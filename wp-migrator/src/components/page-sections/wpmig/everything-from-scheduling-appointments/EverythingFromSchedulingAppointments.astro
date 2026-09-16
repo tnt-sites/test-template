@@ -4,15 +4,15 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  text = "",
-  textColor = "#1b2e38",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { text = "", textColor = "#1b2e38", id, _component, ...rest } = Astro.props;
 ---
-<section class="everything-from-scheduling-appointments" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+
+<section
+  class="everything-from-scheduling-appointments"
+  id={id || undefined}
+  style={`--tx:${textColor}`}
+  {...rest}
+>
   <div class="efsa-box">
     <div class="efsa-box2">
       <div class="efsa-box3">
@@ -72,7 +72,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .efsa-text {
     font-size: 16px;
     line-height: 24px;
@@ -87,5 +87,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

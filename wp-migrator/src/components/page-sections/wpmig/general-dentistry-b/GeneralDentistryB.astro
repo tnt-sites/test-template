@@ -49,21 +49,144 @@ const {
 } = Astro.props;
 const list = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
-<div class="general-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`} {...rest}>
+
+<div
+  class="general-dentistry-b"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`}
+  {...rest}
+>
   <div class="gdb-box">
     <div class="gdb-box2">
       <div class="gdb-box3">
         <div class="gdb-box4">
           {eyebrow && <h4 class="gdb-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
-          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
-          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
-          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdb-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText6 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn7"
+                text={secondaryButtonText6}
+                link={secondaryButtonLink6 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText7 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn8"
+                text={secondaryButtonText7}
+                link={secondaryButtonLink7 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText8 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdb-btn9"
+                text={secondaryButtonText8}
+                link={secondaryButtonLink8 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="gdb-box5">
@@ -79,21 +202,32 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
               {subheading && <h4 class="gdb-heading3">{subheading}</h4>}
             </div>
             <div class="gdb-grid">
-              {list.map((it) => (
-                <div class="gdb-box11">
-                  <div class="gdb-box12">
-                    <div class="gdb-box13">
-                      {it.image && <img class="gdb-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="150" height="150" />}
-                    </div>
-                    <div class="gdb-box14">
-                      <div class="gdb-text2">{it.text}</div>
-                    </div>
-                    <div class="gdb-box15">
-                      <p class="gdb-text3">{it.text2}</p>
+              {
+                list.map((it) => (
+                  <div class="gdb-box11">
+                    <div class="gdb-box12">
+                      <div class="gdb-box13">
+                        {it.image && (
+                          <img
+                            class="gdb-media"
+                            src={it.image}
+                            alt={it.imageAlt || ""}
+                            loading="lazy"
+                            width="150"
+                            height="150"
+                          />
+                        )}
+                      </div>
+                      <div class="gdb-box14">
+                        <div class="gdb-text2">{it.text}</div>
+                      </div>
+                      <div class="gdb-box15">
+                        <p class="gdb-text3">{it.text2}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              }
             </div>
           </div>
           <section class="gdb-box56">
@@ -818,7 +952,7 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .gdb-heading4 {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -1124,5 +1258,5 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
       background-color: rgba(0, 0, 0, 0);
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

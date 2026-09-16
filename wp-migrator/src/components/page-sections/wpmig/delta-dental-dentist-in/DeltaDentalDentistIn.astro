@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="delta-dental-dentist-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="delta-dental-dentist-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="dddi-box">
     <div class="dddi-box2">
       <div class="dddi-box3">
         <div class="dddi-box4">
           <div class="dddi-box5">
-            {image && <img class="dddi-media" src={image} alt={imageAlt || ""} loading="lazy" width="820" height="549" />}
+            {
+              image && (
+                <img
+                  class="dddi-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="820"
+                  height="549"
+                />
+              )
+            }
           </div>
         </div>
         <div class="dddi-box6">
@@ -334,7 +351,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .dddi-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -361,5 +378,5 @@ const {
   .dddi-media {
     text-align: left;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

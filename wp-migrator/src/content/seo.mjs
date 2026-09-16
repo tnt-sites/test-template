@@ -44,7 +44,10 @@ export async function extractSeo(page) {
  */
 export function stripTitleSuffix(title, suffix) {
   if (!title || !suffix) return title;
-  const trimmed = title.replace(new RegExp(`\\s*[|\\-–—]\\s*${escapeRegExp(suffix)}\\s*$`, "i"), "");
+  const trimmed = title.replace(
+    new RegExp(`\\s*[|\\-–—]\\s*${escapeRegExp(suffix)}\\s*$`, "i"),
+    ""
+  );
   return trimmed.trim() || title;
 }
 

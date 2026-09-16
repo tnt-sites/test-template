@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="lincoln-financial-group-employers" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="lincoln-financial-group-employers"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="lfge-box">
     <div class="lfge-box2">
       <div class="lfge-box3">
         <div class="lfge-box4">
           <div class="lfge-box5">
-            {image && <img class="lfge-media" src={image} alt={imageAlt || ""} loading="lazy" width="575" height="410" />}
+            {
+              image && (
+                <img
+                  class="lfge-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="575"
+                  height="410"
+                />
+              )
+            }
           </div>
         </div>
         <div class="lfge-box6">
@@ -350,7 +367,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .lfge-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -411,5 +428,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

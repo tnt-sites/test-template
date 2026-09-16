@@ -44,7 +44,9 @@ export function phonesInMarkup(html) {
     if (digits.length < 7) continue;
     counts.set(digits, (counts.get(digits) ?? 0) + 1);
   }
-  return [...counts.entries()].sort((a, b) => b[1] - a[1]).map(([digits, count]) => ({ digits, count }));
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .map(([digits, count]) => ({ digits, count }));
 }
 
 /**

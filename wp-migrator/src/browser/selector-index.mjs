@@ -219,7 +219,7 @@ export async function measureRoles(page, scope = {}) {
      * sites routinely alternate several near-identical light surfaces, and
      * demanding an exact match would discard almost all real body content.
      */
-    const onDefaultSurface = (el) => (luminance(effectiveBackground(el)) > 0.5) === pageIsLight;
+    const onDefaultSurface = (el) => luminance(effectiveBackground(el)) > 0.5 === pageIsLight;
 
     /** Area-weighted mode of each property across every matching element. */
     const dominant = (selector, props) => {

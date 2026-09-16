@@ -21,12 +21,29 @@ import { autoSegment, sectionSelector } from "../src/detect/segment.mjs";
 import { extractProps, rewriteHtmlLinks, useRouteMap } from "../src/generate/props.mjs";
 import { emitCss } from "../src/generate/css-emit.mjs";
 import { emitAstro } from "../src/generate/astro-emit.mjs";
-import { emitInputs, emitStructureValue, emitSnippets, emitBlock, blockValue, emitPage } from "../src/generate/cc-emit.mjs";
-import { assertRoundTrips, isValidName, nameFromContent, nameFromShape } from "../src/generate/names.mjs";
+import {
+  emitInputs,
+  emitStructureValue,
+  emitSnippets,
+  emitBlock,
+  blockValue,
+  emitPage,
+} from "../src/generate/cc-emit.mjs";
+import {
+  assertRoundTrips,
+  isValidName,
+  nameFromContent,
+  nameFromShape,
+} from "../src/generate/names.mjs";
 import { structureHash, structureTokens, similarity } from "../src/generate/structure-hash.mjs";
 import { findSharedPartials, ownedClasses } from "../src/generate/partials.mjs";
 import { asContentRun } from "../src/generate/content-run.mjs";
-import { accordionBlock, pullUpHeading, splitByAccordions, splitByAnchors } from "../src/generate/accordion.mjs";
+import {
+  accordionBlock,
+  pullUpHeading,
+  splitByAccordions,
+  splitByAnchors,
+} from "../src/generate/accordion.mjs";
 import { expandDisclosures } from "../src/browser/disclose.mjs";
 import { patchStarterComponents } from "../src/generate/starter-patch.mjs";
 import { loadIconSet, resolveTreeIcons } from "../src/generate/icon-map.mjs";
@@ -98,7 +115,9 @@ function loadRegistry() {
   if (!fs.existsSync(file)) return empty;
   const raw = JSON.parse(fs.readFileSync(file, "utf8"));
   if (raw.version !== REGISTRY_VERSION) {
-    console.log("registry: discarding v1 (name-keyed) state — components will be re-registered by structure");
+    console.log(
+      "registry: discarding v1 (name-keyed) state — components will be re-registered by structure"
+    );
     return empty;
   }
   return { file, ...raw };
@@ -129,10 +148,12 @@ function findReusable(registry, { hash, signature, tokens, threshold }) {
   let best = null;
   for (const entry of Object.values(registry.components)) {
     if (entry.signature !== signature || !entry.tokens) continue;
-    const ceiling = (2 * Math.min(entry.tokens.length, tokens.length)) / (entry.tokens.length + tokens.length);
+    const ceiling =
+      (2 * Math.min(entry.tokens.length, tokens.length)) / (entry.tokens.length + tokens.length);
     if (ceiling < threshold) continue;
     const score = similarity(entry.tokens, tokens);
-    if (score >= threshold && (!best || score > best.score)) best = { entry, score, why: `~${score.toFixed(2)}` };
+    if (score >= threshold && (!best || score > best.score))
+      best = { entry, score, why: `~${score.toFixed(2)}` };
   }
   return best;
 }
@@ -191,18 +212,33 @@ const devGenerate = defineCommand({
     description: "Capture one section from a snapshot page and generate a component from it.",
   },
   args: {
-    page: { type: "positional", description: "Page file in the snapshot dir (e.g. index.html)", required: true },
+    page: {
+      type: "positional",
+      description: "Page file in the snapshot dir (e.g. index.html)",
+      required: true,
+    },
     pick: { type: "string", description: "CSS selector for the section root", required: true },
     name: { type: "string", description: "Component name (kebab-case)", required: true },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Namespace under page-sections/", default: "wpmig" },
-    breakpoints: { type: "string", description: "Comma-separated capture widths", default: "390,768,1440" },
+    breakpoints: {
+      type: "string",
+      description: "Comma-separated capture widths",
+      default: "390,768,1440",
+    },
     "dry-run": { type: "boolean", description: "Print instead of writing", default: false },
   },
   async run({ args }) {
     const { kebab } = assertRoundTrips(args.name);
-    const breakpoints = args.breakpoints.split(",").map(Number).sort((a, b) => b - a);
+    const breakpoints = args.breakpoints
+      .split(",")
+      .map(Number)
+      .sort((a, b) => b - a);
     const staticDir = path.resolve(args.static);
     useRouteMap(loadRouteMap(staticDir));
     const targetRoot = path.resolve(args.target);
@@ -224,10 +260,17 @@ const devGenerate = defineCommand({
       const captured = await captureSection(page, args.pick, { breakpoints });
       const repeats = detectRepeats(captured.tree);
       if (repeats.length) {
-        console.log(`repeats: ${repeats.map((r) => `${r.tag}×${r.repeat.itemCount} (${r.repeat.confidence})`).join(", ")}`);
+        console.log(
+          `repeats: ${repeats.map((r) => `${r.tag}×${r.repeat.itemCount} (${r.repeat.confidence})`).join(", ")}`
+        );
       }
 
-      const extraction = extractProps({ ...captured, name: kebab, branding: loadBranding(targetRoot), takenPrefixes: TAKEN_PREFIXES });
+      const extraction = extractProps({
+        ...captured,
+        name: kebab,
+        branding: loadBranding(targetRoot),
+        takenPrefixes: TAKEN_PREFIXES,
+      });
       const css = emitCss({ ...captured, ...extraction, origin: url });
       const astro = emitAstro({
         name: kebab,
@@ -240,7 +283,14 @@ const devGenerate = defineCommand({
         source: `${args.page.replace(/\.html?$/, "")} (${args.pick})`,
       });
 
-      const ccArgs = { name: kebab, namespace: args.namespace, props: extraction.props, values: extraction.values, backgroundImageProp: extraction.backgroundImageProp, flags: [] };
+      const ccArgs = {
+        name: kebab,
+        namespace: args.namespace,
+        props: extraction.props,
+        values: extraction.values,
+        backgroundImageProp: extraction.backgroundImageProp,
+        flags: [],
+      };
       const files = {
         [`${pascalFile(kebab)}.astro`]: astro,
         [`${kebab}.cloudcannon.inputs.yml`]: emitInputs(ccArgs),
@@ -264,11 +314,17 @@ const devGenerate = defineCommand({
         }
         fs.mkdirSync(path.dirname(blockPath), { recursive: true });
         fs.writeFileSync(blockPath, blockYaml);
-        console.log(`\nwrote ${Object.keys(files).length} files to ${path.relative(process.cwd(), outDir)}`);
+        console.log(
+          `\nwrote ${Object.keys(files).length} files to ${path.relative(process.cwd(), outDir)}`
+        );
         console.log(`occurrence block: ${path.relative(process.cwd(), blockPath)}`);
       }
 
-      const propSummary = extraction.props.map((p) => (p.kind === "array" ? `${p.name}[${p.itemProps.map((i) => i.name).join(",")}]` : `${p.name}:${p.kind}`));
+      const propSummary = extraction.props.map((p) =>
+        p.kind === "array"
+          ? `${p.name}[${p.itemProps.map((i) => i.name).join(",")}]`
+          : `${p.name}:${p.kind}`
+      );
       console.log(`props: ${propSummary.join("  ")}`);
     } finally {
       await browser.close();
@@ -295,7 +351,12 @@ function pascalFile(kebab) {
 /** Turn one captured section into a component's 4 files + its page block. */
 function generateComponent({ captured, kebab, namespace, source, iconSet = [], branding = {} }) {
   const iconReport = resolveTreeIcons(captured.tree, iconSet);
-  const extraction = extractProps({ ...captured, name: kebab, branding, takenPrefixes: TAKEN_PREFIXES });
+  const extraction = extractProps({
+    ...captured,
+    name: kebab,
+    branding,
+    takenPrefixes: TAKEN_PREFIXES,
+  });
   const css = emitCss({ ...captured, ...extraction, origin: source.origin });
   const astro = emitAstro({
     name: kebab,
@@ -339,7 +400,9 @@ function generateComponent({ captured, kebab, namespace, source, iconSet = [], b
     for (const c of node.children || []) walk(c);
   })(captured.tree);
   const propSummary = extraction.props.map((p) =>
-    p.kind === "array" ? `${p.name}[${p.itemProps.map((i) => i.name).join(",")}]` : `${p.name}:${p.kind}`
+    p.kind === "array"
+      ? `${p.name}[${p.itemProps.map((i) => i.name).join(",")}]`
+      : `${p.name}:${p.kind}`
   );
   return { files, block, propSummary, nodeMap, iconReport, repeats: captured.tree.array ? 1 : 0 };
 }
@@ -350,12 +413,25 @@ const devScan = defineCommand({
     description: "Auto-detect a page's content sections from rendered geometry (builder-agnostic).",
   },
   args: {
-    page: { type: "positional", description: "Page file in the snapshot dir (e.g. index.html)", required: true },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
-    "fold-below": { type: "string", description: "Fold candidates shorter than this (px) into the previous section", default: "40" },
+    page: {
+      type: "positional",
+      description: "Page file in the snapshot dir (e.g. index.html)",
+      required: true,
+    },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
+    "fold-below": {
+      type: "string",
+      description: "Fold candidates shorter than this (px) into the previous section",
+      default: "40",
+    },
     "no-split-sidebars": {
       type: "boolean",
-      description: "Keep a [sidebar, content] row as one section instead of splitting the rail off.",
+      description:
+        "Keep a [sidebar, content] row as one section instead of splitting the rail off.",
       default: false,
     },
   },
@@ -403,21 +479,39 @@ const devPage = defineCommand({
     description: "Auto-segment a page and generate a component for every detected section.",
   },
   args: {
-    page: { type: "positional", description: "Page file in the snapshot dir (e.g. index.html)", required: true },
+    page: {
+      type: "positional",
+      description: "Page file in the snapshot dir (e.g. index.html)",
+      required: true,
+    },
     slug: { type: "string", description: "Output page slug (defaults to the source filename)" },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Namespace under page-sections/", default: "wpmig" },
     "reuse-threshold": {
       type: "string",
-      description: "Structural similarity (0-1) at which a section reuses an existing component. 1 = identical only.",
+      description:
+        "Structural similarity (0-1) at which a section reuses an existing component. 1 = identical only.",
       default: "0.85",
     },
-    breakpoints: { type: "string", description: "Comma-separated capture widths", default: "390,768,1440" },
-    "fold-below": { type: "string", description: "Fold candidates shorter than this (px) into the previous section", default: "40" },
+    breakpoints: {
+      type: "string",
+      description: "Comma-separated capture widths",
+      default: "390,768,1440",
+    },
+    "fold-below": {
+      type: "string",
+      description: "Fold candidates shorter than this (px) into the previous section",
+      default: "40",
+    },
     "no-split-sidebars": {
       type: "boolean",
-      description: "Keep a [sidebar, content] row as one section instead of splitting the rail off.",
+      description:
+        "Keep a [sidebar, content] row as one section instead of splitting the rail off.",
       default: false,
     },
     "content-section": {
@@ -432,10 +526,17 @@ const devPage = defineCommand({
         "Component ref that renders an accordion from an `items` array. Accordion widgets are routed to it with their panels and measured design instead of being flattened into a static stack. Empty to disable.",
       default: "page-sections/info-blocks/faq-section",
     },
-    "dry-run": { type: "boolean", description: "Print a summary instead of writing", default: false },
+    "dry-run": {
+      type: "boolean",
+      description: "Print a summary instead of writing",
+      default: false,
+    },
   },
   async run({ args }) {
-    const breakpoints = args.breakpoints.split(",").map(Number).sort((a, b) => b - a);
+    const breakpoints = args.breakpoints
+      .split(",")
+      .map(Number)
+      .sort((a, b) => b - a);
     const staticDir = path.resolve(args.static);
     const routes = loadRouteMap(staticDir);
     useRouteMap(routes);
@@ -468,7 +569,9 @@ const devPage = defineCommand({
       // way past, since afterwards the closed state is gone.
       const disclosed = await expandDisclosures(page);
       if (disclosed.accordions) {
-        console.log(`opened ${disclosed.opened} disclosure(s); ${disclosed.accordions} accordion(s), ${disclosed.panels} panels`);
+        console.log(
+          `opened ${disclosed.opened} disclosure(s); ${disclosed.accordions} accordion(s), ${disclosed.panels} panels`
+        );
       }
 
       const sections = await autoSegment(page, {
@@ -495,7 +598,9 @@ const devPage = defineCommand({
           // one part per panel, and each part re-emits the *whole* widget — the
           // FAQ page came out with its accordion twice over.
           if (
-            a.closest('.panel-title, .panel-heading, [data-toggle="collapse"], [data-bs-toggle="collapse"]') ||
+            a.closest(
+              '.panel-title, .panel-heading, [data-toggle="collapse"], [data-bs-toggle="collapse"]'
+            ) ||
             a.getAttribute("data-toggle") === "collapse" ||
             a.getAttribute("data-bs-toggle") === "collapse" ||
             target.classList.contains("panel-collapse")
@@ -517,7 +622,9 @@ const devPage = defineCommand({
           : "";
 
       if (args["content-section"] && !contentSectionRef) {
-        console.log(`  note: ${args["content-section"]} not found in target — content runs will fork components as before`);
+        console.log(
+          `  note: ${args["content-section"]} not found in target — content runs will fork components as before`
+        );
       }
       const accordionRef =
         args["accordion-section"] &&
@@ -526,7 +633,9 @@ const devPage = defineCommand({
           : "";
 
       if (args["accordion-section"] && !accordionRef) {
-        console.log(`  note: ${args["accordion-section"]} not found in target — accordions will fork components as before`);
+        console.log(
+          `  note: ${args["accordion-section"]} not found in target — accordions will fork components as before`
+        );
       }
       const iconSet = loadIconSet(targetRoot);
       const branding = loadBranding(targetRoot);
@@ -630,7 +739,9 @@ const devPage = defineCommand({
             let gapPx = null;
             for (let i = 1; i < slideBoxes.length; i++) {
               const g = slideBoxes[i].x - (slideBoxes[i - 1].x + slideBoxes[i - 1].w);
-              if (g >= 0 && g < 200) { gapPx = gapPx == null ? g : Math.min(gapPx, g); }
+              if (g >= 0 && g < 200) {
+                gapPx = gapPx == null ? g : Math.min(gapPx, g);
+              }
             }
             const fullBleed = (rootRec?.box?.w ?? 0) >= bp0 * 0.98;
             const slideH = slideBoxes.length ? Math.round(slideBoxes[0].h) : null;
@@ -644,9 +755,8 @@ const devPage = defineCommand({
             // authored: a flush gallery yields ~0, a logo band yields its real
             // padding.
             const sectionH = rootRec?.box?.h ?? 0;
-            const derivedPad = slideH && sectionH > slideH
-              ? Math.min(120, Math.round((sectionH - slideH) / 2))
-              : 0;
+            const derivedPad =
+              slideH && sectionH > slideH ? Math.min(120, Math.round((sectionH - slideH) / 2)) : 0;
             const bgImage = (rootStyles.backgroundImage || "").match(/url\(["']?([^"')]+)["']?\)/);
             const perView = Math.max(2, Math.min(6, Math.round((tree.box?.w || 1100) / 240)));
             blocks.push({
@@ -657,8 +767,10 @@ const devPage = defineCommand({
               logos,
               perView,
               autoplaySeconds: 5,
-              backgroundColor: rootStyles.backgroundColor && !/rgba\(0, 0, 0, 0\)/.test(rootStyles.backgroundColor)
-                ? rootStyles.backgroundColor : "transparent",
+              backgroundColor:
+                rootStyles.backgroundColor && !/rgba\(0, 0, 0, 0\)/.test(rootStyles.backgroundColor)
+                  ? rootStyles.backgroundColor
+                  : "transparent",
               backgroundImage: bgImage ? bgImage[1].replace(/^https?:\/\/[^/]+/, "") : "",
               overlayOpacity: 0.15,
               eyebrowColor: "#ffffff",
@@ -669,7 +781,9 @@ const devPage = defineCommand({
               itemFit: fullBleed ? "cover" : "contain",
               itemHeight: slideH ? `${slideH}px` : "120px",
             });
-            console.log(`  [${sectionIndex}] -> artisan/logo-strip (rotating, ${logos.length} slides, perView ${perView})`);
+            console.log(
+              `  [${sectionIndex}] -> artisan/logo-strip (rotating, ${logos.length} slides, perView ${perView})`
+            );
             return;
           }
         }
@@ -737,11 +851,15 @@ const devPage = defineCommand({
           nameFromShape(tree, {
             // propSummary entries are "name:kind", not bare names.
             hasBackgroundImage: probe.propSummary.some((p) => p.startsWith("backgroundImage:")),
-          }) ??
-          nameFromContent(tree, "section");
+          }) ?? nameFromContent(tree, "section");
         assertRoundTrips(probeName);
 
-        const match = findReusable(registry, { hash, signature, tokens, threshold: reuseThreshold });
+        const match = findReusable(registry, {
+          hash,
+          signature,
+          tokens,
+          threshold: reuseThreshold,
+        });
         let kebab;
         let result;
         let reused = false;
@@ -750,7 +868,8 @@ const devPage = defineCommand({
         // introduced — otherwise the second run of `dev-page` matches its own
         // output, takes the reuse path, and the component on disk can never be
         // regenerated. Only *another* page's component is shared.
-        const shareable = match && match.entry.introducedBy !== fileSlug && !used.has(match.entry.kebab);
+        const shareable =
+          match && match.entry.introducedBy !== fileSlug && !used.has(match.entry.kebab);
 
         if (shareable) {
           // Re-emit under the registered name so this page's block, class names
@@ -804,8 +923,12 @@ const devPage = defineCommand({
         used.add(kebab);
         iconTally.resolved += result.iconReport.resolved.length;
         for (const u of result.iconReport.unresolved) iconTally.unresolved.add(u);
-        const iconNote = result.iconReport.resolved.length ? `  icons=${result.iconReport.resolved.length}` : "";
-        console.log(`  [${sectionIndex}] -> ${kebab}${reused ? ` (shared, ${match.why})` : ""}  props=${result.propSummary.length}${repeatNote}${iconNote}`);
+        const iconNote = result.iconReport.resolved.length
+          ? `  icons=${result.iconReport.resolved.length}`
+          : "";
+        console.log(
+          `  [${sectionIndex}] -> ${kebab}${reused ? ` (shared, ${match.why})` : ""}  props=${result.propSummary.length}${repeatNote}${iconNote}`
+        );
         if (review) console.log(`      ⚠ ${review}`);
 
         ir.sections.push({ id: kebab, sectionIndex, rootClass: kebab, nodeMap: result.nodeMap });
@@ -819,13 +942,17 @@ const devPage = defineCommand({
           // and saying nothing — the shape of a dropped heading.
           emptyish: result.nodeMap.length >= 6 && result.propSummary.length === 0,
           ...(repeats.length
-            ? { repeat: {
-                confidence: repeats[repeats.length - 1].repeat.confidence,
-                itemCount: repeats[repeats.length - 1].repeat.itemCount,
-              } }
+            ? {
+                repeat: {
+                  confidence: repeats[repeats.length - 1].repeat.confidence,
+                  itemCount: repeats[repeats.length - 1].repeat.itemCount,
+                },
+              }
             : {}),
           icons: {
-            fuzzy: result.iconReport.resolved.filter((r) => r.confidence !== "exact").map((r) => r.to),
+            fuzzy: result.iconReport.resolved
+              .filter((r) => r.confidence !== "exact")
+              .map((r) => r.to),
             unresolved: [...result.iconReport.unresolved],
           },
           ...(review ? { review } : {}),
@@ -836,7 +963,10 @@ const devPage = defineCommand({
         // here would make the last page to run the authority for every page
         // using it.
         if (!reused) {
-          Object.assign(allFiles, Object.fromEntries(Object.entries(result.files).map(([f, c]) => [`${kebab}/${f}`, c])));
+          Object.assign(
+            allFiles,
+            Object.fromEntries(Object.entries(result.files).map(([f, c]) => [`${kebab}/${f}`, c]))
+          );
         }
       };
 
@@ -853,15 +983,22 @@ const devPage = defineCommand({
         // paywall notice is not content to migrate — it is the absence of
         // content. Reproducing it faithfully would carry a dead vendor message
         // onto the new site.
-        const PLACEHOLDER = /subscription is required|license for .* is not active|order dental videos|please enter a valid|content unavailable/i;
+        const PLACEHOLDER =
+          /subscription is required|license for .* is not active|order dental videos|please enter a valid|content unavailable/i;
         const sectionText = (function collect(node, acc) {
           if (node.text) acc.push(node.text);
           for (const c of node.children || []) collect(c, acc);
           return acc;
         })(captured.tree, []).join(" ");
         if (PLACEHOLDER.test(sectionText)) {
-          console.log(`  [${s.n}] skipped — third-party placeholder ("${sectionText.replace(/\s+/g, " ").trim().slice(0, 52)}…")`);
-          skippedSections.push({ index: s.n, reason: "third-party placeholder", text: sectionText.slice(0, 160) });
+          console.log(
+            `  [${s.n}] skipped — third-party placeholder ("${sectionText.replace(/\s+/g, " ").trim().slice(0, 52)}…")`
+          );
+          skippedSections.push({
+            index: s.n,
+            reason: "third-party placeholder",
+            text: sectionText.slice(0, 160),
+          });
           continue;
         }
 
@@ -892,7 +1029,9 @@ const devPage = defineCommand({
           // A section is rarely only an accordion, so it splits into the ordinary
           // runs around each widget and those go through `routeTree` unchanged.
           const ns = nodeSetOf(tree);
-          const accordions = accordionRef ? (captured.accordions ?? []).filter((a) => ns.has(a.minN)) : [];
+          const accordions = accordionRef
+            ? (captured.accordions ?? []).filter((a) => ns.has(a.minN))
+            : [];
           const parts = accordions.length ? splitByAccordions(tree, accordions) : null;
 
           if (parts && parts.some((part) => part.kind === "accordion")) {
@@ -925,7 +1064,10 @@ const devPage = defineCommand({
                 if (parts[i + 1]?.kind !== "accordion") route(part.tree);
                 continue;
               }
-              const lead = parts[i - 1]?.kind === "run" ? pullUpHeading(parts[i - 1].tree) : { heading: "", tree: null };
+              const lead =
+                parts[i - 1]?.kind === "run"
+                  ? pullUpHeading(parts[i - 1].tree)
+                  : { heading: "", tree: null };
               if (lead.tree) route(lead.tree);
 
               blocks.push(
@@ -943,7 +1085,9 @@ const devPage = defineCommand({
                 })
               );
               const panels = part.accordion.items.length;
-              console.log(`  [${s.n}] -> ${accordionRef} (accordion, ${panels} panel${panels === 1 ? "" : "s"})`);
+              console.log(
+                `  [${s.n}] -> ${accordionRef} (accordion, ${panels} panel${panels === 1 ? "" : "s"})`
+              );
             }
             continue;
           }
@@ -966,7 +1110,9 @@ const devPage = defineCommand({
         // more than one design. Silently baking these into one component per
         // page is what produced 4,897-line page components on the first site
         // through this tool, so they are surfaced as a question instead.
-        console.log(`\n⚠ ${flagged.length} section(s) may be more than one component — decide before accepting:`);
+        console.log(
+          `\n⚠ ${flagged.length} section(s) may be more than one component — decide before accepting:`
+        );
         for (const s of flagged) {
           console.log(`  [${s.n}] h=${s.box.h}px  "${s.textPreview.slice(0, 60)}"`);
           console.log(`      ${s.review}`);
@@ -979,13 +1125,19 @@ const devPage = defineCommand({
       }
 
       if (skippedSections.length) {
-        console.log(`\nskipped ${skippedSections.length} placeholder section(s) — recorded in the IR`);
+        console.log(
+          `\nskipped ${skippedSections.length} placeholder section(s) — recorded in the IR`
+        );
         ir.skipped = skippedSections;
       }
 
       if (iconTally.resolved || iconTally.unresolved.size) {
-        console.log(`\nicons: ${iconTally.resolved} substituted from the project set` +
-          (iconTally.unresolved.size ? `, ${iconTally.unresolved.size} unresolved (${[...iconTally.unresolved].join(", ")})` : ""));
+        console.log(
+          `\nicons: ${iconTally.resolved} substituted from the project set` +
+            (iconTally.unresolved.size
+              ? `, ${iconTally.unresolved.size} unresolved (${[...iconTally.unresolved].join(", ")})`
+              : "")
+        );
       }
 
       const pageYaml = emitPage({
@@ -1002,7 +1154,11 @@ const devPage = defineCommand({
         // cannot read it. The starter's accordion predates these measurements,
         // so teach it — idempotently, and only when this page actually routed
         // something onto it.
-        if (blocks.some((b) => String(b?._component || "").includes(args["accordion-section"] || "faq-section"))) {
+        if (
+          blocks.some((b) =>
+            String(b?._component || "").includes(args["accordion-section"] || "faq-section")
+          )
+        ) {
           const { patched, skipped } = patchStarterComponents(targetRoot);
           for (const rel of patched) console.log(`patched target component: ${rel}`);
           for (const s of skipped.filter((x) => x.reason.includes("hand"))) {
@@ -1026,7 +1182,10 @@ const devPage = defineCommand({
         if (corrections.size) {
           const reapplied = applyCorrections(targetRoot, args.namespace, corrections);
           const n = reapplied.reduce((a, x) => a + x.declarations, 0);
-          if (n) console.log(`re-applied ${n} persisted correction(s) across ${reapplied.length} component(s)`);
+          if (n)
+            console.log(
+              `re-applied ${n} persisted correction(s) across ${reapplied.length} component(s)`
+            );
         }
 
         // Everything the generated output points at has to exist in the target
@@ -1039,8 +1198,10 @@ const devPage = defineCommand({
         });
         uncertainty.pageLevel.missingAssets = assets.missing;
         if (assets.copied.length || assets.missing.length) {
-          console.log(`assets: ${assets.copied.length} copied` +
-            (assets.missing.length ? `, ${assets.missing.length} missing from the snapshot` : ""));
+          console.log(
+            `assets: ${assets.copied.length} copied` +
+              (assets.missing.length ? `, ${assets.missing.length} missing from the snapshot` : "")
+          );
           for (const ref of assets.missing.slice(0, 5)) console.log(`  ! ${ref}`);
         }
 
@@ -1054,15 +1215,22 @@ const devPage = defineCommand({
         fs.mkdirSync(uncDir, { recursive: true });
         uncertainty.generatedAt = new Date().toISOString();
         uncertainty.pageLevel.skippedSections = skippedSections;
-        fs.writeFileSync(path.join(uncDir, `${fileSlug}.json`), JSON.stringify(uncertainty, null, 2));
+        fs.writeFileSync(
+          path.join(uncDir, `${fileSlug}.json`),
+          JSON.stringify(uncertainty, null, 2)
+        );
 
         const pagesDir = path.join(HERE, ".wpmig/out/pages");
         fs.mkdirSync(pagesDir, { recursive: true });
         const pagePath = path.join(pagesDir, `${slug || "index"}.md`);
         fs.mkdirSync(path.dirname(pagePath), { recursive: true });
         fs.writeFileSync(pagePath, `---\n${pageYaml}---\n`);
-        console.log(`\nwrote ${blocks.length} component(s) to ${path.relative(process.cwd(), compDir)}`);
-        console.log(`wrote page to ${path.relative(process.cwd(), pagePath)} (copy into src/content/pages/ manually for now)`);
+        console.log(
+          `\nwrote ${blocks.length} component(s) to ${path.relative(process.cwd(), compDir)}`
+        );
+        console.log(
+          `wrote page to ${path.relative(process.cwd(), pagePath)} (copy into src/content/pages/ manually for now)`
+        );
       }
     } finally {
       await browser.close();
@@ -1074,12 +1242,21 @@ const devPage = defineCommand({
 const devPartials = defineCommand({
   meta: {
     name: "dev-partials",
-    description: "Report card grids and other repeat blocks duplicated across generated components.",
+    description:
+      "Report card grids and other repeat blocks duplicated across generated components.",
   },
   args: {
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
-    namespace: { type: "string", description: "Namespace under page-sections/ to scan", default: "" },
-    check: { type: "boolean", description: "Exit non-zero when duplicates are found", default: false },
+    namespace: {
+      type: "string",
+      description: "Namespace under page-sections/ to scan",
+      default: "",
+    },
+    check: {
+      type: "boolean",
+      description: "Exit non-zero when duplicates are found",
+      default: false,
+    },
   },
   async run({ args }) {
     const root = path.join(path.resolve(args.target), "src/components/page-sections");
@@ -1094,7 +1271,11 @@ const devPartials = defineCommand({
 
         if (entry.isDirectory()) walk(full);
         else if (entry.name.endsWith(".astro")) {
-          components.push({ name: path.relative(root, dir), source: fs.readFileSync(full, "utf8"), file: full });
+          components.push({
+            name: path.relative(root, dir),
+            source: fs.readFileSync(full, "utf8"),
+            file: full,
+          });
         }
       }
     };

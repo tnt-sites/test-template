@@ -18,7 +18,17 @@ import * as parse5 from "parse5";
 export const UID_ATTR = "data-mig-uid";
 
 /** Elements that must not be touched — stamping them changes rendering. */
-const SKIP_TAGS = new Set(["html", "head", "meta", "title", "base", "script", "style", "br", "wbr"]);
+const SKIP_TAGS = new Set([
+  "html",
+  "head",
+  "meta",
+  "title",
+  "base",
+  "script",
+  "style",
+  "br",
+  "wbr",
+]);
 
 function* walkElements(node) {
   const children = node.childNodes ?? [];

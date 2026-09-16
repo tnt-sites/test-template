@@ -13,7 +13,9 @@ const CARD = (n, children) => node("container", { n, children });
 const HR = () => node("divider", { tag: "hr" });
 
 test("a run of headings and prose becomes blocks, not a component", () => {
-  const run = asContentRun(section([H("What are implants?"), P("Titanium roots."), P("They fuse.")]));
+  const run = asContentRun(
+    section([H("What are implants?"), P("Titanium roots."), P("They fuse.")])
+  );
 
   assert.deepEqual(
     run.blocks.map((b) => b.type),
@@ -68,7 +70,10 @@ test("a photo before the copy floats left; after it, right", () => {
 test("a logo is chrome and never becomes a content image", () => {
   const run = asContentRun(section([H("A"), IMG("/wp-content/logo-white.png"), P("copy")]));
 
-  assert.equal(run.blocks.some((b) => b.type === "image"), false);
+  assert.equal(
+    run.blocks.some((b) => b.type === "image"),
+    false
+  );
 });
 
 test("a section that paints its own band keeps its component", () => {
@@ -116,13 +121,19 @@ test("a plain run still flattens when the styles map shows no painted child", ()
   const run = asContentRun(section([H("A"), P("copy")]), { styles });
 
   assert.ok(run);
-  assert.deepEqual(run.blocks.map((b) => b.type), ["heading", "prose"]);
+  assert.deepEqual(
+    run.blocks.map((b) => b.type),
+    ["heading", "prose"]
+  );
 });
 
 test("an <hr> survives as a divider block", () => {
   const run = asContentRun(section([H("A"), HR(), P("copy")]));
 
-  assert.deepEqual(run.blocks.map((b) => b.type), ["heading", "divider", "prose"]);
+  assert.deepEqual(
+    run.blocks.map((b) => b.type),
+    ["heading", "divider", "prose"]
+  );
 });
 
 test("a centred section is recorded as centred", () => {
@@ -141,9 +152,32 @@ test("a run carries its own measured design so the shared band paints as this si
   const hr = node("divider", { n: 3, tag: "span" });
   const styles = {
     0: { styles: { backgroundColor: "rgba(0, 0, 0, 0)" } },
-    1: { styles: { fontFamily: '"Playfair Display", sans-serif', fontSize: "45px", fontWeight: "700", color: "rgb(61, 181, 251)", textAlign: "center", textTransform: "none" } },
-    2: { styles: { backgroundColor: "rgb(88, 194, 255)", color: "rgb(255, 255, 255)", borderTopLeftRadius: "3px", textTransform: "uppercase" } },
-    3: { styles: { borderTopColor: "rgb(61, 181, 251)", borderTopWidth: "1px", borderTopStyle: "solid", maxWidth: "700px" } },
+    1: {
+      styles: {
+        fontFamily: '"Playfair Display", sans-serif',
+        fontSize: "45px",
+        fontWeight: "700",
+        color: "rgb(61, 181, 251)",
+        textAlign: "center",
+        textTransform: "none",
+      },
+    },
+    2: {
+      styles: {
+        backgroundColor: "rgb(88, 194, 255)",
+        color: "rgb(255, 255, 255)",
+        borderTopLeftRadius: "3px",
+        textTransform: "uppercase",
+      },
+    },
+    3: {
+      styles: {
+        borderTopColor: "rgb(61, 181, 251)",
+        borderTopWidth: "1px",
+        borderTopStyle: "solid",
+        maxWidth: "700px",
+      },
+    },
   };
   const run = asContentRun(section([h, b, hr]), { styles });
 
@@ -209,7 +243,11 @@ test("a run is centred when its own text is, not only when the container says so
   assert.equal(asContentRun(tree, { record: styles[0], styles }).align, "center");
   // Left-aligned text still reads left, and a run with no measurement falls
   // back to the container exactly as before.
-  const left = { ...styles, 1: { styles: { textAlign: "start" } }, 2: { styles: { textAlign: "start" } } };
+  const left = {
+    ...styles,
+    1: { styles: { textAlign: "start" } },
+    2: { styles: { textAlign: "start" } },
+  };
   assert.equal(asContentRun(tree, { record: styles[0], styles: left }).align, "left");
   assert.equal(asContentRun(tree, { record: { styles: { textAlign: "center" } } }).align, "center");
 });

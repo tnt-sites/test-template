@@ -31,7 +31,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="we-can-provide-you-c" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="we-can-provide-you-c"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="wcpy-box">
     <div class="wcpy-box2">
       <div class="wcpy-box3">
@@ -42,7 +48,18 @@ const {
       <div class="wcpy-box5">
         <div class="wcpy-box6">
           <figure class="wcpy-box7">
-            {image && <img class="wcpy-media" src={image} alt={imageAlt || ""} loading="lazy" width="75" height="75" />}
+            {
+              image && (
+                <img
+                  class="wcpy-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="75"
+                  height="75"
+                />
+              )
+            }
           </figure>
           <div class="wcpy-box8">
             {subheading && <h3 class="wcpy-heading2">{subheading}</h3>}
@@ -52,7 +69,18 @@ const {
       <div class="wcpy-box9">
         <div class="wcpy-box10">
           <figure class="wcpy-box11">
-            {image2 && <img class="wcpy-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="75" height="75" />}
+            {
+              image2 && (
+                <img
+                  class="wcpy-media2"
+                  src={image2}
+                  alt={image2Alt || ""}
+                  loading="lazy"
+                  width="75"
+                  height="75"
+                />
+              )
+            }
           </figure>
           <div class="wcpy-box12">
             {heading2 && <h3 class="wcpy-heading3">{heading2}</h3>}
@@ -62,7 +90,18 @@ const {
       <div class="wcpy-box13">
         <div class="wcpy-box14">
           <figure class="wcpy-box15">
-            {image3 && <img class="wcpy-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="75" height="75" />}
+            {
+              image3 && (
+                <img
+                  class="wcpy-media3"
+                  src={image3}
+                  alt={image3Alt || ""}
+                  loading="lazy"
+                  width="75"
+                  height="75"
+                />
+              )
+            }
           </figure>
           <div class="wcpy-box16">
             {heading3 && <h3 class="wcpy-heading4">{heading3}</h3>}
@@ -72,7 +111,18 @@ const {
       <div class="wcpy-box17">
         <div class="wcpy-box18">
           <figure class="wcpy-box19">
-            {image4 && <img class="wcpy-media4" src={image4} alt={image4Alt || ""} loading="lazy" width="75" height="75" />}
+            {
+              image4 && (
+                <img
+                  class="wcpy-media4"
+                  src={image4}
+                  alt={image4Alt || ""}
+                  loading="lazy"
+                  width="75"
+                  height="75"
+                />
+              )
+            }
           </figure>
           <div class="wcpy-box20">
             {heading4 && <h3 class="wcpy-heading5">{heading4}</h3>}
@@ -98,7 +148,13 @@ const {
             </div>
           </div>
           <div class="wcpy-box29">
-            <iframe class="wcpy-embed" src={embedUrl} title="Candidate for Implants - South Airdrie Smiles" allow="geolocation; microphone; camera; fullscreen" frameborder="0" loading="lazy"></iframe>
+            <iframe
+              class="wcpy-embed"
+              src={embedUrl}
+              title="Candidate for Implants - South Airdrie Smiles"
+              allow="geolocation; microphone; camera; fullscreen"
+              frameborder="0"
+              loading="lazy"></iframe>
           </div>
           <div class="wcpy-box30">
             <div class="wcpy-decor2" aria-hidden="true"></div>
@@ -747,7 +803,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wcpy-heading {
     font-size: 24px;
     line-height: 24px;
@@ -772,5 +828,5 @@ const {
       line-height: 21.6px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

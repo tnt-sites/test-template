@@ -92,7 +92,7 @@ const footerBackgroundStyle = [
   `--lp-footer-form-button-bg: ${formButtonBackgroundColorValue}`,
   `--lp-footer-form-button-hover-bg: ${formButtonHoverBackgroundColorValue}`,
   `--lp-footer-form-button-hover-color: ${formButtonHoverTextColorValue}`,
-  (backgroundColorHex || getColorValue(backgroundColor))
+  backgroundColorHex || getColorValue(backgroundColor)
     ? `--lp-footer-tmj-bg-color: ${backgroundColorHex || getColorValue(backgroundColor)}`
     : "",
   getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",

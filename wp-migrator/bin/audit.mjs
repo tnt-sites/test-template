@@ -56,7 +56,8 @@ function reportHygiene(compRoot, { quiet = false } = {}) {
 
   if (collisions.length) {
     console.log(`\n  ${collisions.length} class prefix(es) claimed by more than one component:`);
-    for (const { prefix, files } of collisions) console.log(`    .${prefix}-* — ${files.join(", ")}`);
+    for (const { prefix, files } of collisions)
+      console.log(`    .${prefix}-* — ${files.join(", ")}`);
     console.log(
       "    -> Astro scoping hides this at render time, but dev-refix maps a class to one owner and will correct the wrong component."
     );
@@ -92,10 +93,18 @@ export const devAudit = defineCommand({
     static: { type: "string", description: "Snapshot directory", default: "" },
     dist: { type: "string", description: "Built site directory", default: "" },
     components: { type: "string", description: "Components root", default: "" },
-    pages: { type: "string", description: "Comma-separated page slugs (default: all)", default: "" },
+    pages: {
+      type: "string",
+      description: "Comma-separated page slugs (default: all)",
+      default: "",
+    },
     width: { type: "string", description: "Viewport width to audit at", default: "1440" },
     all: { type: "boolean", description: "Include patterns the build kept", default: false },
-    "components-only": { type: "boolean", description: "Skip the per-page render checks", default: false },
+    "components-only": {
+      type: "boolean",
+      description: "Skip the per-page render checks",
+      default: false,
+    },
     json: { type: "string", description: "Write full findings to this file", default: "" },
   },
   async run({ args }) {
@@ -150,7 +159,11 @@ export const devAudit = defineCommand({
         };
 
         const source = await read(`${src.url}/${slug}.html`, [DETECT_PATTERNS, READ_CONTENT]);
-        const built = await read(`${blt.url}${route}`, [DETECT_PATTERNS, DETECT_SMELLS, READ_CONTENT]);
+        const built = await read(`${blt.url}${route}`, [
+          DETECT_PATTERNS,
+          DETECT_SMELLS,
+          READ_CONTENT,
+        ]);
 
         if (!source || !built) {
           console.log(`  ${slug}: could not load, skipped`);

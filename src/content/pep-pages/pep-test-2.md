@@ -7,12 +7,12 @@ landingMainNav:
     logoAlt: Logo
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -31,12 +31,12 @@ landingFooter:
     contactTitle: Contact Us
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -58,17 +58,17 @@ landingFooter:
         path: sitemap.html
       - name: Privacy Policy
         path: privacy-policy.html
-    mapEmbedUrl: ''
+    mapEmbedUrl: ""
     backgroundImage:
       positionVertical: top
       positionHorizontal: center
-    backgroundGradient: ''
-    backgroundColor: ''
-    linkColor: ''
-    linkHoverColor: ''
-    legalBlurb: ''
+    backgroundGradient: ""
+    backgroundColor: ""
+    linkColor: ""
+    linkHoverColor: ""
+    legalBlurb: ""
     offices:
-      - name: ''
+      - name: ""
         phones:
           - display: (123) 456-7890
             href: tel:+11234567890
@@ -78,28 +78,28 @@ landingFooter:
               - Suite 200
             city: Dunedin
             state: FL
-            postalCode: '34698'
+            postalCode: "34698"
             country: USA
             mapUrl: https://maps.google.com
         officeHours: []
-        officeHoursNote: ''
+        officeHoursNote: ""
 pepSections:
   - _component: pep-components/pep-banner-centered
-    id: ''
+    id: ""
     backgroundColor: base
-    backgroundColorHex: ''
-    backgroundImage: ''
+    backgroundColorHex: ""
+    backgroundImage: ""
     backgroundPositionX: center
     backgroundPositionY: center
     boxShadow: false
     topBorder: false
     borderColor: var(--color-brand-secondary)
     headingColor: var(--color-brand-secondary)
-    dividerColor: ''
+    dividerColor: ""
     textColor: var(--color-text)
     paddingVertical: md
     heading: Resolve to Smile More in 2025
-    headingFontFamily: ''
+    headingFontFamily: ""
     contentStyle: paragraph
     showDivider: true
     text: >
@@ -125,9 +125,9 @@ pepSections:
       - Daily brushing and flossing is the number one habit for healthy smiles
       - Your natural teeth should last a lifetime
     checkIconName: check-circle
-    checkColor: ''
-    checkmarkShadowColor: ''
-    checkmarkShadowColorHex: ''
+    checkColor: ""
+    checkmarkShadowColor: ""
+    checkmarkShadowColorHex: ""
 head_scripts: []
 footer_scripts: []
 extraFonts: []

@@ -30,10 +30,9 @@ export const MERGE_RULES = {
     // template, so they carry the same backwards naming and need the same
     // correction applied to their content.
     remap: Object.fromEntries(
-      ["general-dentistry", "restorative-dentistry", "sedation-dentistry", "payment-options-f"].map((n) => [
-        n,
-        { heading: "eyebrow", subheading: "heading" },
-      ])
+      ["general-dentistry", "restorative-dentistry", "sedation-dentistry", "payment-options-f"].map(
+        (n) => [n, { heading: "eyebrow", subheading: "heading" }]
+      )
     ),
   },
 
@@ -55,7 +54,7 @@ export const MERGE_RULES = {
   "look-forward-to-the": { name: "lp-hero-split" },
   "no-more-pain": { name: "lp-band" },
   "paperless-check-in": { name: "lp-media-prose" },
-  "section": { name: "media-block" },
+  section: { name: "media-block" },
   "we-are-here-if": { name: "lp-hero-stacked" },
   "we-can-provide-you": { name: "prose-sections" },
 };

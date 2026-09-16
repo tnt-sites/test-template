@@ -1,7 +1,14 @@
 ---
 import siteInfoData from "@data/siteInfo.json";
 
-const { siteKey, theme = "light", size = "normal", class: className, _component, ...htmlAttributes } = Astro.props;
+const {
+  siteKey,
+  theme = "light",
+  size = "normal",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
 
 const effectiveSiteKey = siteKey || (siteInfoData as any).recaptchaSiteKey || "";
 
@@ -20,14 +27,13 @@ const effectiveSiteKey = siteKey || (siteInfoData as any).recaptchaSiteKey || ""
         data-size={size}
         {...htmlAttributes}
       />
-      <script async defer src="https://www.google.com/recaptcha/api.js" is:inline></script>
+      <script async defer src="https://www.google.com/recaptcha/api.js" is:inline />
     </>
   ) : (
     import.meta.env.DEV && (
       <script is:inline>
-        console.warn(
-          "Recaptcha block: no site key configured (set a `siteKey` prop or `recaptchaSiteKey` in siteInfo.json).",
-        );
+        console.warn( "Recaptcha block: no site key configured (set a `siteKey` prop or
+        `recaptchaSiteKey` in siteInfo.json).", );
       </script>
     )
   )

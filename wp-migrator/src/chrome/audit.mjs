@@ -71,7 +71,11 @@ function presentInSource(value, haystack) {
 
   const digits = digitsOf(text);
   // A value that is essentially a phone number is compared as one.
-  if (digits.length >= 7 && digits.length <= 11 && text.replace(/[\s()+.\-]/g, "").length === digits.length) {
+  if (
+    digits.length >= 7 &&
+    digits.length <= 11 &&
+    text.replace(/[\s()+.\-]/g, "").length === digits.length
+  ) {
     return haystack.digits.has(digits);
   }
 
@@ -129,7 +133,10 @@ export function auditChromeData(data, sourceHtml) {
    * aloud to anyone using a screen reader.
    */
   const siteName = data.siteInfo?.siteName || "";
-  for (const [file, key] of [["mainNav", "logoAlt"], ["footer", "logoAlt"]]) {
+  for (const [file, key] of [
+    ["mainNav", "logoAlt"],
+    ["footer", "logoAlt"],
+  ]) {
     const alt = data[file]?.[key];
     if (!alt || !siteName) continue;
     const first = siteName.toLowerCase().split(/[\s|–—-]+/)[0];

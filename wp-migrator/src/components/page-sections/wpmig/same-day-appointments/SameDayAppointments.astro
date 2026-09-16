@@ -21,7 +21,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="same-day-appointments" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+
+<section
+  class="same-day-appointments"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`}
+  {...rest}
+>
   <section class="sda-box">
     <div class="sda-box2">
       <div class="sda-box3">
@@ -30,7 +36,18 @@ const {
       <div class="sda-box4">
         <div class="sda-box5">
           <div class="sda-box6">
-            {image && <img class="sda-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+            {
+              image && (
+                <img
+                  class="sda-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="650"
+                  height="575"
+                />
+              )
+            }
           </div>
         </div>
         <div class="sda-box7">
@@ -44,7 +61,20 @@ const {
           </div>
         </div>
         <div class="sda-box11">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sda-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sda-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -367,7 +397,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sda-box8 {
     color: rgb(59, 98, 120);
     font-size: 22px;
@@ -481,5 +511,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

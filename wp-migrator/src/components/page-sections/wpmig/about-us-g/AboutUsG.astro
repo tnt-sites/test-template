@@ -51,25 +51,120 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="about-us-g" id={id || undefined} style={`--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3};--c8:${hoverBackgroundColor4};--c9:${buttonBackgroundHoverColor}`} {...rest}>
+
+<div
+  class="about-us-g"
+  id={id || undefined}
+  style={`--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3};--c8:${hoverBackgroundColor4};--c9:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="aug-box">
     <div class="aug-box2">
       <div class="aug-box3">
         <div class="aug-box4">
           {subheading && <h4 class="aug-heading">{subheading}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aug-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aug-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="aug-box5">
         <div class="aug-box6">
           <div class="aug-box7">
             <div class="aug-box8">
-              {image && <img class="aug-media" src={image} alt={imageAlt || ""} loading="lazy" width="413" height="77" />}
+              {
+                image && (
+                  <img
+                    class="aug-media"
+                    src={image}
+                    alt={imageAlt || ""}
+                    loading="lazy"
+                    width="413"
+                    height="77"
+                  />
+                )
+              }
             </div>
             <div class="aug-box9">
               <h4 class="aug-heading2">{heading}</h4>
@@ -87,7 +182,18 @@ const {
           </div>
           <div class="aug-box14">
             <div class="aug-box15">
-              {image2 && <img class="aug-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="413" height="77" />}
+              {
+                image2 && (
+                  <img
+                    class="aug-media2"
+                    src={image2}
+                    alt={image2Alt || ""}
+                    loading="lazy"
+                    width="413"
+                    height="77"
+                  />
+                )
+              }
             </div>
             <div class="aug-box16">
               {heading2 && <h4 class="aug-heading3">{heading2}</h4>}
@@ -105,7 +211,18 @@ const {
           </div>
           <div class="aug-box21">
             <div class="aug-box22">
-              {image3 && <img class="aug-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="413" height="77" />}
+              {
+                image3 && (
+                  <img
+                    class="aug-media3"
+                    src={image3}
+                    alt={image3Alt || ""}
+                    loading="lazy"
+                    width="413"
+                    height="77"
+                  />
+                )
+              }
             </div>
             <div class="aug-box23">
               {heading3 && <h4 class="aug-heading4">{heading3}</h4>}
@@ -123,7 +240,18 @@ const {
           </div>
           <div class="aug-box28">
             <div class="aug-box29">
-              {image4 && <img class="aug-media4" src={image4} alt={image4Alt || ""} loading="lazy" width="413" height="77" />}
+              {
+                image4 && (
+                  <img
+                    class="aug-media4"
+                    src={image4}
+                    alt={image4Alt || ""}
+                    loading="lazy"
+                    width="413"
+                    height="77"
+                  />
+                )
+              }
             </div>
             <div class="aug-box30">
               {heading4 && <h4 class="aug-heading5">{heading4}</h4>}
@@ -136,7 +264,20 @@ const {
           </div>
           <div class="aug-box33">
             <div class="aug-box34">
-              {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aug-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+              {
+                secondaryButtonText6 && (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    width="none"
+                    borderRadius="default"
+                    borderWidth="none"
+                    class="aug-btn7"
+                    text={secondaryButtonText6}
+                    link={secondaryButtonLink6 || "#"}
+                  />
+                )
+              }
             </div>
           </div>
         </div>
@@ -755,7 +896,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .aug-heading2 {
     font-weight: 700;
     line-height: 24px;
@@ -1295,5 +1436,5 @@ const {
       text-align: left;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

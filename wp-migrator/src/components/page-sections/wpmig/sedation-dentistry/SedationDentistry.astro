@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="sedation-dentistry" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="sedation-dentistry"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="sd-box">
     <h3 class="sd-heading">{heading}</h3>
     {subheading && <h1 class="sd-heading2">{subheading}</h1>}
@@ -79,7 +85,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sd-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -102,5 +108,5 @@ const {
       line-height: 19.2px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

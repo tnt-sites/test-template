@@ -12,4 +12,3 @@ openFirst:
 singleOpen:
   comment: Whether only one item can be open at a time within this accordion.
   type: switch
-

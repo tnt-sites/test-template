@@ -148,7 +148,11 @@ test("edit targets still resolve when no IR exists for the page", () => {
 
 test("one-off detection counts only components no other page uses", () => {
   const facts = registryFactsFor(
-    ["page-sections/wpmig/page-hero-digital", "page-sections/wpmig/media-prose-bone", "page-sections/shared-blocks/content-section"],
+    [
+      "page-sections/wpmig/page-hero-digital",
+      "page-sections/wpmig/media-prose-bone",
+      "page-sections/shared-blocks/content-section",
+    ],
     indexRegistry(registry),
     [["media-prose", "media-prose-bone"]]
   );
@@ -160,7 +164,11 @@ test("one-off detection counts only components no other page uses", () => {
 // --- nav sampling -----------------------------------------------------------
 
 const NAV = [
-  { name: "About Us", path: "/our-practice/", children: [{ name: "Meet the Dentists", path: "/meet-the-dentists/", children: [] }] },
+  {
+    name: "About Us",
+    path: "/our-practice/",
+    children: [{ name: "Meet the Dentists", path: "/meet-the-dentists/", children: [] }],
+  },
   {
     name: "New Patients",
     path: "/new-patients/",
@@ -175,8 +183,16 @@ const NAV = [
     name: "Services",
     path: "",
     children: [
-      { name: "Cleanings & Prevention", path: "", children: [{ name: "Checkups", path: "/dental-exams-cleanings/", children: [] }] },
-      { name: "Endodontics", path: "", children: [{ name: "Root Canals", path: "/root-canal-therapy/", children: [] }] },
+      {
+        name: "Cleanings & Prevention",
+        path: "",
+        children: [{ name: "Checkups", path: "/dental-exams-cleanings/", children: [] }],
+      },
+      {
+        name: "Endodontics",
+        path: "",
+        children: [{ name: "Root Canals", path: "/root-canal-therapy/", children: [] }],
+      },
     ],
   },
   { name: "Contact", path: "/contact/", children: [] },
@@ -193,7 +209,8 @@ const ROUTES = new Map([
   ["contact", "/contact/"],
 ]);
 
-const scoredFrom = (scores) => [...ROUTES.keys()].map((slug) => ({ slug, score: scores[slug] ?? 0 }));
+const scoredFrom = (scores) =>
+  [...ROUTES.keys()].map((slug) => ({ slug, score: scores[slug] ?? 0 }));
 
 test("every top-level nav item and every Services family is represented", () => {
   const picked = selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) });
@@ -212,7 +229,10 @@ test("every top-level nav item and every Services family is represented", () => 
 test("a label-only parent delegates to its children instead of becoming a group", () => {
   const picked = selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) });
 
-  assert.equal([...picked.values()].some((v) => v.group === "Services"), false);
+  assert.equal(
+    [...picked.values()].some((v) => v.group === "Services"),
+    false
+  );
 });
 
 test("anchor children collapse to their host page rather than sampling it repeatedly", () => {
@@ -252,8 +272,12 @@ test("within a group the worst-scoring page is the representative", () => {
 });
 
 test("sampling is stable when scores tie", () => {
-  const once = [...selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) }).keys()];
-  const twice = [...selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) }).keys()];
+  const once = [
+    ...selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) }).keys(),
+  ];
+  const twice = [
+    ...selectNavSample({ navData: NAV, routes: ROUTES, scored: scoredFrom({}) }).keys(),
+  ];
 
   assert.deepEqual(once, twice);
 });
@@ -269,7 +293,10 @@ test("a page the nav points at that was never migrated is skipped, not sampled",
     scored: scoredFrom({}),
   });
 
-  assert.equal([...picked.values()].some((v) => v.group === "Ghost"), false);
+  assert.equal(
+    [...picked.values()].some((v) => v.group === "Ghost"),
+    false
+  );
 });
 
 test("an absent or empty nav yields an empty sample rather than an error", () => {
@@ -287,11 +314,24 @@ test("the markdown index reports the counts and links to the JSON", () => {
     counts: { scored: 48, flagged: 2, captured: 2 },
     pages: [
       {
-        rank: 1, slug: "a", score: 71, band: "high",
-        reasons: [{ label: "Images the source shows that the build never renders", detail: "4 images" }],
+        rank: 1,
+        slug: "a",
+        score: 71,
+        band: "high",
+        reasons: [
+          { label: "Images the source shows that the build never renders", detail: "4 images" },
+        ],
         shots: { 1440: { original: "/tmp/triage/a/original@1440.png" } },
       },
-      { rank: 2, slug: "b", score: 30, band: "medium", reasons: [], shots: null, captureError: "boom" },
+      {
+        rank: 2,
+        slug: "b",
+        score: 30,
+        band: "medium",
+        reasons: [],
+        shots: null,
+        captureError: "boom",
+      },
     ],
   });
 

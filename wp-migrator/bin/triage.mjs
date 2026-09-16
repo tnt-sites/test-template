@@ -40,7 +40,12 @@ import { DETECT_PATTERNS, DETECT_SMELLS, comparePatterns } from "../src/qa/layou
 import { READ_CONTENT, diffCoverage, coverageFindings } from "../src/qa/content-coverage.mjs";
 import { duplicateFamilies, migratedComponents } from "../src/qa/component-hygiene.mjs";
 import { severeFindings } from "../src/qa/pair-by-text.mjs";
-import { DEFAULT_THRESHOLD, rankPages, scorePage, ubiquitousMissingImages } from "../src/qa/triage.mjs";
+import {
+  DEFAULT_THRESHOLD,
+  rankPages,
+  scorePage,
+  ubiquitousMissingImages,
+} from "../src/qa/triage.mjs";
 import { mediaGap } from "../src/qa/missing-media.mjs";
 import {
   indexRegistry,
@@ -85,23 +90,91 @@ export const devTriage = defineCommand({
       "Score every migrated page, screenshot the worst against the original, and write a work queue.",
   },
   args: {
-    static: { type: "string", description: "Snapshot mirror directory", default: path.join(HERE, ".wpmig/static") },
-    dist: { type: "string", description: "Built site directory", default: path.join(HERE, "../dist") },
-    "built-origin": { type: "string", description: "Screenshot this origin instead of dist (e.g. http://localhost:4321)", default: "" },
-    components: { type: "string", description: "Components root", default: path.join(HERE, "../src/components") },
-    content: { type: "string", description: "Content pages directory", default: path.join(HERE, "../src/content/pages") },
-    nav: { type: "string", description: "Main navigation JSON", default: path.join(HERE, "../src/data/mainNav.json") },
-    pages: { type: "string", description: "Comma-separated page slugs (default: all)", default: "" },
-    viewports: { type: "string", description: "Comma-separated widths to capture", default: "1440,768,390" },
-    threshold: { type: "string", description: "Score at or above which a page is flagged", default: String(DEFAULT_THRESHOLD) },
-    limit: { type: "string", description: "Cap how many pages get screenshots (0 = uncapped)", default: "10" },
-    all: { type: "boolean", description: "Put every scored page in the report, not just the queue", default: false },
-    "nav-sample": { type: "boolean", description: "Always include one page per nav group", default: true },
-    "verify-json": { type: "string", description: "A `dev-verify --json` artifact to fold in", default: "" },
-    out: { type: "string", description: "Output directory for the queue and its screenshots", default: path.join(HERE, ".wpmig/triage") },
-    json: { type: "string", description: "Write an extra copy of the queue JSON here", default: "" },
-    md: { type: "boolean", description: "Also write a human-readable queue.md index", default: false },
-    shots: { type: "boolean", description: "Capture screenshots (--no-shots scores only)", default: true },
+    static: {
+      type: "string",
+      description: "Snapshot mirror directory",
+      default: path.join(HERE, ".wpmig/static"),
+    },
+    dist: {
+      type: "string",
+      description: "Built site directory",
+      default: path.join(HERE, "../dist"),
+    },
+    "built-origin": {
+      type: "string",
+      description: "Screenshot this origin instead of dist (e.g. http://localhost:4321)",
+      default: "",
+    },
+    components: {
+      type: "string",
+      description: "Components root",
+      default: path.join(HERE, "../src/components"),
+    },
+    content: {
+      type: "string",
+      description: "Content pages directory",
+      default: path.join(HERE, "../src/content/pages"),
+    },
+    nav: {
+      type: "string",
+      description: "Main navigation JSON",
+      default: path.join(HERE, "../src/data/mainNav.json"),
+    },
+    pages: {
+      type: "string",
+      description: "Comma-separated page slugs (default: all)",
+      default: "",
+    },
+    viewports: {
+      type: "string",
+      description: "Comma-separated widths to capture",
+      default: "1440,768,390",
+    },
+    threshold: {
+      type: "string",
+      description: "Score at or above which a page is flagged",
+      default: String(DEFAULT_THRESHOLD),
+    },
+    limit: {
+      type: "string",
+      description: "Cap how many pages get screenshots (0 = uncapped)",
+      default: "10",
+    },
+    all: {
+      type: "boolean",
+      description: "Put every scored page in the report, not just the queue",
+      default: false,
+    },
+    "nav-sample": {
+      type: "boolean",
+      description: "Always include one page per nav group",
+      default: true,
+    },
+    "verify-json": {
+      type: "string",
+      description: "A `dev-verify --json` artifact to fold in",
+      default: "",
+    },
+    out: {
+      type: "string",
+      description: "Output directory for the queue and its screenshots",
+      default: path.join(HERE, ".wpmig/triage"),
+    },
+    json: {
+      type: "string",
+      description: "Write an extra copy of the queue JSON here",
+      default: "",
+    },
+    md: {
+      type: "boolean",
+      description: "Also write a human-readable queue.md index",
+      default: false,
+    },
+    shots: {
+      type: "boolean",
+      description: "Capture screenshots (--no-shots scores only)",
+      default: true,
+    },
   },
   async run({ args }) {
     const staticDir = path.resolve(args.static);
@@ -110,16 +183,28 @@ export const devTriage = defineCommand({
     const origin = args["built-origin"].replace(/\/$/, "");
     const threshold = parseInt(args.threshold, 10) || DEFAULT_THRESHOLD;
     const limit = parseInt(args.limit, 10) || 0;
-    const viewports = args.viewports.split(",").map((s) => parseInt(s.trim(), 10)).filter(Boolean);
+    const viewports = args.viewports
+      .split(",")
+      .map((s) => parseInt(s.trim(), 10))
+      .filter(Boolean);
 
     if (!fs.existsSync(staticDir)) throw new Error(`snapshot dir not found: ${staticDir}`);
     if (!origin && !fs.existsSync(distDir)) {
-      throw new Error(`dist not found: ${distDir} — run a build first, or pass --built-origin http://localhost:4321`);
+      throw new Error(
+        `dist not found: ${distDir} — run a build first, or pass --built-origin http://localhost:4321`
+      );
     }
     if (origin) await preflightOrigin(origin, distDir);
 
     const routes = loadRouteMap(staticDir);
-    const wanted = args.pages ? new Set(args.pages.split(",").map((s) => s.trim()).filter(Boolean)) : null;
+    const wanted = args.pages
+      ? new Set(
+          args.pages
+            .split(",")
+            .map((s) => s.trim())
+            .filter(Boolean)
+        )
+      : null;
     const slugs = fs
       .readdirSync(staticDir)
       .filter((f) => f.endsWith(".html"))
@@ -134,7 +219,10 @@ export const devTriage = defineCommand({
     const irDir = path.join(HERE, ".wpmig/ir");
     const verifyReport = args["verify-json"] ? readJson(path.resolve(args["verify-json"])) : null;
     const verifyBySlug = new Map(
-      (Array.isArray(verifyReport) ? verifyReport : verifyReport?.pages || []).map((p) => [p.slug, p.findings || []])
+      (Array.isArray(verifyReport) ? verifyReport : verifyReport?.pages || []).map((p) => [
+        p.slug,
+        p.findings || [],
+      ])
     );
 
     const nav = readJson(path.resolve(args.nav));
@@ -149,7 +237,9 @@ export const devTriage = defineCommand({
 
     let report;
     try {
-      const page = await browser.newPage({ viewport: { width: viewports[0] || 1440, height: 1200 } });
+      const page = await browser.newPage({
+        viewport: { width: viewports[0] || 1440, height: 1200 },
+      });
 
       // Pass one: score every page from the DOM checks. No screenshots yet —
       // capturing ninety pages to rank them would cost more than the ranking
@@ -169,7 +259,11 @@ export const devTriage = defineCommand({
       for (const slug of slugs) {
         const route = routes.get(slug);
         const source = await read(`${srcSrv.url}/${slug}.html`, [DETECT_PATTERNS, READ_CONTENT]);
-        const built = await read(`${builtBase}${route}`, [DETECT_PATTERNS, DETECT_SMELLS, READ_CONTENT]);
+        const built = await read(`${builtBase}${route}`, [
+          DETECT_PATTERNS,
+          DETECT_SMELLS,
+          READ_CONTENT,
+        ]);
 
         if (!source || !built) {
           console.log(`  ${slug}: could not load, skipped`);
@@ -205,8 +299,16 @@ export const devTriage = defineCommand({
         // check on exactly the runs a person iterates with.
         const pageRefs = await page.evaluate(() =>
           [...document.querySelectorAll("[src], [href], [style]")].flatMap((el) => {
-            const bits = [el.getAttribute("src"), el.getAttribute("href"), el.getAttribute("style")];
-            return bits.filter(Boolean).flatMap((v) => [...String(v).matchAll(/\/wp-content\/uploads\/[^"'\s>)]+/g)].map((m) => m[0]));
+            const bits = [
+              el.getAttribute("src"),
+              el.getAttribute("href"),
+              el.getAttribute("style"),
+            ];
+            return bits
+              .filter(Boolean)
+              .flatMap((v) =>
+                [...String(v).matchAll(/\/wp-content\/uploads\/[^"'\s>)]+/g)].map((m) => m[0])
+              );
           })
         );
         const gap = mediaGap({ staticDir, referenced: pageRefs, pageSlug: slug });
@@ -215,7 +317,14 @@ export const devTriage = defineCommand({
           // Held for pass two: re-scoring with the pixel evidence has to see
           // the same inputs, or the score changes for reasons nobody asked
           // about.
-          inputs: { slug, route, findings, verifyFindings, uncertainty, registryFacts: edit.registryFacts },
+          inputs: {
+            slug,
+            route,
+            findings,
+            verifyFindings,
+            uncertainty,
+            registryFacts: edit.registryFacts,
+          },
           coverage,
           mediaGap: gap,
           patterns: { source: source[0], built: built[0], smells: built[1] },
@@ -258,7 +367,11 @@ export const devTriage = defineCommand({
           ];
 
           p.inputs = { ...p.inputs, findings };
-          Object.assign(p, scorePage(p.inputs, { threshold }), { inputs: p.inputs, edit: p.edit, coverage });
+          Object.assign(p, scorePage(p.inputs, { threshold }), {
+            inputs: p.inputs,
+            edit: p.edit,
+            coverage,
+          });
         }
       }
 
@@ -298,10 +411,15 @@ export const devTriage = defineCommand({
           const slugOut = path.join(outRoot, p.slug);
 
           try {
-            const originalShots = await capturePageShots(page, `${srcSrv.url}/${p.slug}.html`, slugOut, {
-              prefix: "original",
-              viewports,
-            });
+            const originalShots = await capturePageShots(
+              page,
+              `${srcSrv.url}/${p.slug}.html`,
+              slugOut,
+              {
+                prefix: "original",
+                viewports,
+              }
+            );
             const builtShots = await capturePageShots(page, `${builtBase}${p.route}`, slugOut, {
               prefix: "built",
               viewports,
@@ -406,12 +524,12 @@ export const devTriage = defineCommand({
       const finalOrder = withPixels
         .filter((p) => args.all || p.flagged || p.navSample)
         .map((p) => ({
-        ...forReport(p),
-        urls: {
-          original: `${srcSrv.url}/${p.slug}.html`,
-          built: `${builtBase}${p.route}`,
-        },
-      }));
+          ...forReport(p),
+          urls: {
+            original: `${srcSrv.url}/${p.slug}.html`,
+            built: `${builtBase}${p.route}`,
+          },
+        }));
 
       const jsonPath = path.join(outRoot, "queue.json");
 
@@ -467,7 +585,8 @@ export const devTriage = defineCommand({
     console.log(
       `\n${scored} page(s) scored, ${flagged} flagged, ${navSampled} nav representative(s), ${captured} captured.`
     );
-    if (report.scoredWithout.length) console.log(`Scored without: ${report.scoredWithout.join(", ")}.`);
+    if (report.scoredWithout.length)
+      console.log(`Scored without: ${report.scoredWithout.join(", ")}.`);
     console.log(`\nqueue -> ${report.jsonPath}`);
   },
 });

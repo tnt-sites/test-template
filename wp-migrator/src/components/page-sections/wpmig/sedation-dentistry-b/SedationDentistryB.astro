@@ -41,15 +41,60 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="sedation-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`} {...rest}>
+
+<div
+  class="sedation-dentistry-b"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`}
+  {...rest}
+>
   <div class="sdb-box">
     <div class="sdb-box2">
       <div class="sdb-box3">
         <div class="sdb-box4">
           {eyebrow && <h4 class="sdb-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdb-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdb-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdb-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="sdb-box5">
@@ -69,7 +114,18 @@ const {
             <div class="sdb-box12">
               <div class="sdb-box13">
                 <div class="sdb-box14">
-                  {image && <img class="sdb-media" src={image} alt={imageAlt || ""} loading="lazy" width="150" height="150" />}
+                  {
+                    image && (
+                      <img
+                        class="sdb-media"
+                        src={image}
+                        alt={imageAlt || ""}
+                        loading="lazy"
+                        width="150"
+                        height="150"
+                      />
+                    )
+                  }
                 </div>
                 <div class="sdb-box15">
                   {text2 && <div class="sdb-text2" set:html={text2} />}
@@ -82,7 +138,18 @@ const {
             <div class="sdb-box17">
               <div class="sdb-box18">
                 <div class="sdb-box19">
-                  {image2 && <img class="sdb-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="150" height="150" />}
+                  {
+                    image2 && (
+                      <img
+                        class="sdb-media2"
+                        src={image2}
+                        alt={image2Alt || ""}
+                        loading="lazy"
+                        width="150"
+                        height="150"
+                      />
+                    )
+                  }
                 </div>
                 <div class="sdb-box20">
                   {text4 && <div class="sdb-text4" set:html={text4} />}
@@ -95,7 +162,18 @@ const {
             <div class="sdb-box22">
               <div class="sdb-box23">
                 <div class="sdb-box24">
-                  {image3 && <img class="sdb-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="150" height="150" />}
+                  {
+                    image3 && (
+                      <img
+                        class="sdb-media3"
+                        src={image3}
+                        alt={image3Alt || ""}
+                        loading="lazy"
+                        width="150"
+                        height="150"
+                      />
+                    )
+                  }
                 </div>
                 <div class="sdb-box25">
                   {text6 && <div class="sdb-text6" set:html={text6} />}
@@ -797,7 +875,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sdb-box19 {
     align-items: center;
     background-color: rgb(245, 245, 245);
@@ -865,5 +943,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -42,16 +42,74 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="restorative-dentistry-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="restorative-dentistry-d"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="rdd-box">
     <div class="rdd-box2">
       <div class="rdd-box3">
         <div class="rdd-box4">
           {eyebrow && <h4 class="rdd-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdd-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdd-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdd-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdd-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdd-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="rdd-box5">
@@ -88,13 +146,39 @@ const {
             </div>
             <div class="rdd-box19">
               <div class="rdd-box20">
-                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdd-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                {
+                  secondaryButtonText4 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="rdd-btn5"
+                      text={secondaryButtonText4}
+                      link={secondaryButtonLink4 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="rdd-box21">
               <div class="rdd-box22">
                 <div class="rdd-box23">
-                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdd-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                  {
+                    secondaryButtonText5 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="rdd-btn6"
+                        text={secondaryButtonText5}
+                        link={secondaryButtonLink5 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -582,7 +666,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .rdd-heading3 {
     font-weight: 400;
   }
@@ -736,5 +820,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

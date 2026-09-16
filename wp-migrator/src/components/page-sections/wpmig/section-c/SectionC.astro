@@ -4,18 +4,24 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  image = "",
-  imageAlt = "",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { image = "", imageAlt = "", id, _component, ...rest } = Astro.props;
 ---
+
 <section class="section-c" id={id || undefined} {...rest}>
   <div class="sc-box">
     <div class="sc-box2">
-      {image && <img class="sc-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="443" />}
+      {
+        image && (
+          <img
+            class="sc-media"
+            src={image}
+            alt={imageAlt || ""}
+            loading="lazy"
+            width="1024"
+            height="443"
+          />
+        )
+      }
     </div>
   </div>
 </section>

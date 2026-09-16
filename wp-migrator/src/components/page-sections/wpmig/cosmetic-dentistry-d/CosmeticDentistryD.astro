@@ -48,17 +48,88 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="cosmetic-dentistry-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="cosmetic-dentistry-d"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="cdd-box">
     <div class="cdd-box2">
       <div class="cdd-box3">
         <div class="cdd-box4">
           {eyebrow && <h4 class="cdd-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdd-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdd-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdd-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdd-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cdd-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cdd-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cdd-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cdd-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cdd-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="cdd-box5">
@@ -115,13 +186,39 @@ const {
             </div>
             <div class="cdd-box27">
               <div class="cdd-box28">
-                {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdd-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                {
+                  secondaryButtonText5 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="cdd-btn6"
+                      text={secondaryButtonText5}
+                      link={secondaryButtonLink5 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="cdd-box29">
               <div class="cdd-box30">
                 <div class="cdd-box31">
-                  {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdd-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                  {
+                    secondaryButtonText6 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="cdd-btn7"
+                        text={secondaryButtonText6}
+                        link={secondaryButtonLink6 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -731,7 +828,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cdd-heading2 {
     font-weight: 400;
   }
@@ -954,5 +1051,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

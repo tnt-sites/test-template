@@ -13,6 +13,7 @@ const {
   ...rest
 } = Astro.props;
 ---
+
 <section class="in-the-office" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
   <div class="ito-box">
     <div class="ito-box2">
@@ -154,7 +155,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ito-heading {
     font-weight: 400;
   }
@@ -179,5 +180,5 @@ const {
       font-family: Roboto, sans-serif;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

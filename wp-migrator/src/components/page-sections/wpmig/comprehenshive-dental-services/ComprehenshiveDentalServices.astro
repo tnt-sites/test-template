@@ -23,27 +23,51 @@ const {
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 ---
-<section class="comprehenshive-dental-services" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--tt:${titleColor};--c4:${textColor2};--c5:${textColor2HoverColor};--c6:${hoverColor};--c7:${hoverColor2}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<section
+  class="comprehenshive-dental-services"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--tt:${titleColor};--c4:${textColor2};--c5:${textColor2HoverColor};--c6:${hoverColor};--c7:${hoverColor2}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="cds-box">
     <div class="cds-box2">
       <h2 class="cds-heading">{heading}</h2>
       {text && <p class="cds-text">{text}</p>}
     </div>
     <div class="cds-grid">
-      {list.map((c) => (
-        <div class="cds-box3">
-          <div class="cds-box4" style={c.backgroundImage ? `--cardbg:url('${c.backgroundImage}')` : undefined}>
-            <div class="cds-box5">
-              {c.image && <img class="cds-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />}
+      {
+        list.map((c) => (
+          <div class="cds-box3">
+            <div
+              class="cds-box4"
+              style={c.backgroundImage ? `--cardbg:url('${c.backgroundImage}')` : undefined}
+            >
+              <div class="cds-box5">
+                {c.image && (
+                  <img class="cds-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />
+                )}
+              </div>
+              <div class="cds-box6">
+                <h3 class="cds-heading2">{c.title}</h3>
+                <p class="cds-text2">{c.text}</p>
+              </div>
+              {c.buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="default"
+                  borderWidth="none"
+                  class="cds-btn"
+                  text={c.buttonText}
+                  link={c.buttonLink || "#"}
+                />
+              )}
             </div>
-            <div class="cds-box6">
-              <h3 class="cds-heading2">{c.title}</h3>
-              <p class="cds-text2">{c.text}</p>
-            </div>
-            {c.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cds-btn" text={c.buttonText} link={c.buttonLink || "#"} />}
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 </section>
@@ -223,7 +247,7 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   :global(.cds-btn) {
     align-items: normal;
     justify-content: normal;
@@ -264,5 +288,5 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

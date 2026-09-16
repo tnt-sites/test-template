@@ -21,18 +21,38 @@ const {
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 ---
-<div class="online-scheduling" id={id || undefined} style={`--tt:${titleColor};--tx:${textColor};--c3:${hoverColor};--c4:${textHoverColor};--c5:${hoverBackgroundColor};--c6:${hoverColor2};--c7:${hoverColor3};--c8:${hoverColor4}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="online-scheduling"
+  id={id || undefined}
+  style={`--tt:${titleColor};--tx:${textColor};--c3:${hoverColor};--c4:${textHoverColor};--c5:${hoverBackgroundColor};--c6:${hoverColor2};--c7:${hoverColor3};--c8:${hoverColor4}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="os-box">
     <div class="os-grid">
-      {list.map((c) => (
-        <div class="os-box2">
-          <a class="os-box3" href={c.link || "#"} target="_blank">
-            {c.image && <img class="os-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" title="Make an Appointment" />}
-          </a>
-          <h3 class="os-heading">{c.title}</h3>
-          {c.buttonText && <a class="os-link" href={c.buttonLink || "#"}>{c.buttonText}</a>}
-        </div>
-      ))}
+      {
+        list.map((c) => (
+          <div class="os-box2">
+            <a class="os-box3" href={c.link || "#"} target="_blank">
+              {c.image && (
+                <img
+                  class="os-media"
+                  src={c.image}
+                  alt={c.imageAlt || ""}
+                  loading="lazy"
+                  title="Make an Appointment"
+                />
+              )}
+            </a>
+            <h3 class="os-heading">{c.title}</h3>
+            {c.buttonText && (
+              <a class="os-link" href={c.buttonLink || "#"}>
+                {c.buttonText}
+              </a>
+            )}
+          </div>
+        ))
+      }
     </div>
   </div>
 </div>

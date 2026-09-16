@@ -34,7 +34,16 @@ const TYPOGRAPHY = {
   lineHeight: 1.5,
   letterSpacing: 0.3,
 };
-const EXACT = ["fontFamily", "textAlign", "color", "backgroundColor", "flexDirection", "display", "justifyContent", "alignItems"];
+const EXACT = [
+  "fontFamily",
+  "textAlign",
+  "color",
+  "backgroundColor",
+  "flexDirection",
+  "display",
+  "justifyContent",
+  "alignItems",
+];
 
 const px = (v) => {
   const n = parseFloat(v);
@@ -97,11 +106,21 @@ export function diffMeasurements(source, built, { rootClass } = {}) {
     const b = built[cls];
 
     if (!b) {
-      findings.push({ element: cls, kind: "missing", severity: 100, detail: "element not present in the built page" });
+      findings.push({
+        element: cls,
+        kind: "missing",
+        severity: 100,
+        detail: "element not present in the built page",
+      });
       continue;
     }
     if (s.visible && !b.visible) {
-      findings.push({ element: cls, kind: "not-rendered", severity: 90, detail: "visible in source, hidden in build" });
+      findings.push({
+        element: cls,
+        kind: "not-rendered",
+        severity: 90,
+        detail: "visible in source, hidden in build",
+      });
       continue;
     }
     if (!s.visible) continue;
@@ -221,7 +240,9 @@ export function comparePngs(fileA, fileB, outFile) {
 export function formatReport(sectionId, viewport, findings, pixel) {
   const lines = [`${sectionId} @ ${viewport}px`];
   if (pixel) {
-    lines.push(`  pixel mismatch: ${(pixel.ratio * 100).toFixed(2)}%  (height delta ${pixel.heightDelta}px)`);
+    lines.push(
+      `  pixel mismatch: ${(pixel.ratio * 100).toFixed(2)}%  (height delta ${pixel.heightDelta}px)`
+    );
   }
   const shown = findings.slice(0, 12);
   for (const f of shown) {

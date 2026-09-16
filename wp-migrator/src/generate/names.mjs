@@ -135,7 +135,13 @@ export function nameFromContent(tree, fallback) {
  */
 export function initialsOf(kebab, taken) {
   const parts = kebab.split("-").filter(Boolean);
-  const base = parts.length === 1 ? parts[0].slice(0, 2) : parts.map((p) => p[0]).join("").slice(0, 4);
+  const base =
+    parts.length === 1
+      ? parts[0].slice(0, 2)
+      : parts
+          .map((p) => p[0])
+          .join("")
+          .slice(0, 4);
 
   if (!taken || !taken.has(base)) return base;
 
@@ -190,7 +196,8 @@ export function nameFromShape(tree, { hasBackgroundImage = false } = {}) {
   }
   // A bare run of text with no heading: the breadcrumb trail, or a lead
   // paragraph. Both are prose as far as the template is concerned.
-  if (counts.heading === 0 && prose >= 1 && media === 0 && counts.button === 0) return "prose-block";
+  if (counts.heading === 0 && prose >= 1 && media === 0 && counts.button === 0)
+    return "prose-block";
   // Heading plus a call to action, no supporting body or imagery.
   if (counts.heading >= 1 && counts.button >= 1 && prose <= 1 && media === 0) return "cta-band";
   if (counts.list >= 1 && counts.heading >= 1) return "card-grid";

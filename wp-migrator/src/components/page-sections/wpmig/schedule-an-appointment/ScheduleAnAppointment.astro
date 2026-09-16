@@ -21,7 +21,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="schedule-an-appointment" id={id || undefined} style={`--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c4:${buttonBackgroundColor2};--c5:${buttonTextHoverColor}`} {...rest}>
+
+<section
+  class="schedule-an-appointment"
+  id={id || undefined}
+  style={`--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c4:${buttonBackgroundColor2};--c5:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="saa-box">
     <div class="saa-box2">
       <div class="saa-decor" aria-hidden="true"></div>
@@ -31,13 +37,39 @@ const {
     </div>
     <div class="saa-box4">
       <div class="saa-box5">
-        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="saa-btn" text={buttonText} link={buttonLink || "#"} />}
+        {
+          buttonText && (
+            <Button
+              variant="primary"
+              size="md"
+              width="none"
+              borderRadius="default"
+              borderWidth="none"
+              class="saa-btn"
+              text={buttonText}
+              link={buttonLink || "#"}
+            />
+          )
+        }
       </div>
     </div>
     <div class="saa-box6">
       <div class="saa-box7">
         <div class="saa-box8">
-          {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="saa-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {
+            secondaryButtonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="default"
+                borderWidth="none"
+                class="saa-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -219,7 +251,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .saa-box7 {
     background-color: rgb(59, 98, 120);
     color: rgb(255, 255, 255);
@@ -244,5 +276,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

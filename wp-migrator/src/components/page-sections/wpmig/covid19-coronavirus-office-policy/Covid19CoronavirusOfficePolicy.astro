@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="covid19-coronavirus-office-policy" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="covid19-coronavirus-office-policy"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="ccop-box">
     <div class="ccop-box2">
       <div class="ccop-box3">
@@ -113,7 +119,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ccop-box2 {
     font-family: Montserrat, sans-serif;
     font-size: 25.6px;
@@ -153,5 +159,5 @@ const {
       text-align: start;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

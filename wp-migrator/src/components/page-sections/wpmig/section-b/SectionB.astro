@@ -4,19 +4,24 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { id, _component, ...rest } = Astro.props;
 ---
+
 <section class="section-b" id={id || undefined} {...rest}>
   <div class="sb-box">
     <div class="sb-box2">
       <div class="sb-spacer" aria-hidden="true"></div>
     </div>
     <div class="sb-box3">
-      <iframe class="sb-embed" src="https://www.youtube.com/embed/cmzlzKGBpLk" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      <iframe
+        class="sb-embed"
+        src="https://www.youtube.com/embed/cmzlzKGBpLk"
+        title="YouTube video"
+        loading="lazy"
+        frameborder="0"
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      ></iframe>
     </div>
     <div class="sb-box4">
       <div class="sb-spacer2" aria-hidden="true"></div>

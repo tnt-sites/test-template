@@ -28,9 +28,5 @@
     "postcss-value-parser": "^4.2.0",
     "yaml": "^2.6.1"
   },
-  "files": [
-    "bin",
-    "src",
-    "README.md"
-  ]
+  "files": ["bin", "src", "README.md"]
 }

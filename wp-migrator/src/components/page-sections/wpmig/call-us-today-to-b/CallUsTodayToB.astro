@@ -21,6 +21,7 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
+
 <div class="call-us-today-to-b" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
   <div class="cutt-box">
     <div class="cutt-box2">
@@ -39,7 +40,18 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
             </div>
             <div class="cutt-box10">
               <div class="cutt-box11">
-                {image && <img class="cutt-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="534" />}
+                {
+                  image && (
+                    <img
+                      class="cutt-media"
+                      src={image}
+                      alt={imageAlt || ""}
+                      loading="lazy"
+                      width="1024"
+                      height="534"
+                    />
+                  )
+                }
               </div>
             </div>
           </div>
@@ -54,13 +66,15 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
             </div>
           </div>
           <div class="cutt-grid">
-            {list.map((it) => (
-              <div class="cutt-box16">
-                <div class="cutt-box17">
-                  {it.text && <div class="cutt-body2" set:html={it.text} />}
+            {
+              list.map((it) => (
+                <div class="cutt-box16">
+                  <div class="cutt-box17">
+                    {it.text && <div class="cutt-body2" set:html={it.text} />}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
           <div class="cutt-box20">
             <div class="cutt-box21">
@@ -379,7 +393,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cutt-heading {
     line-height: 24px;
   }
@@ -417,5 +431,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

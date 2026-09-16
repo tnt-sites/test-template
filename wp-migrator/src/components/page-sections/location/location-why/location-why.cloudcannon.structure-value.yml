@@ -3,24 +3,24 @@ icon: verified
 description: Dark section with a heading over a grid of icon callouts, for the reasons patients choose this practice.
 value:
   _component: page-sections/location/location-why
-  id: ''
+  id: ""
   heading: Why Patients Near Anytown Choose Us
   icons:
-      - _component: page-sections/location/location-icon
-        icon: office-v1
-        heading: All Your Smile Needs Under One Roof
-        modalHeading: ''
-        modalContent: ''
-      - _component: page-sections/location/location-icon
-        icon: tooth-v4
-        heading: Focused on Proactive Treatment
-        modalHeading: ''
-        modalContent: ''
-      - _component: page-sections/location/location-icon
-        icon: care-v2
-        heading: Warm and Inviting Dental Office
-        modalHeading: ''
-        modalContent: ''
+    - _component: page-sections/location/location-icon
+      icon: office-v1
+      heading: All Your Smile Needs Under One Roof
+      modalHeading: ""
+      modalContent: ""
+    - _component: page-sections/location/location-icon
+      icon: tooth-v4
+      heading: Focused on Proactive Treatment
+      modalHeading: ""
+      modalContent: ""
+    - _component: page-sections/location/location-icon
+      icon: care-v2
+      heading: Warm and Inviting Dental Office
+      modalHeading: ""
+      modalContent: ""
   backgroundColor: "#000000"
   textColor: "#ffffff"
   accentColor: var(--color-brand-secondary)
@@ -44,8 +44,8 @@ _structures:
           _component: page-sections/location/location-icon
           icon: office-v1
           heading: Icon heading
-          modalHeading: ''
-          modalContent: ''
+          modalHeading: ""
+          modalContent: ""
         preview:
           text:
             - key: heading

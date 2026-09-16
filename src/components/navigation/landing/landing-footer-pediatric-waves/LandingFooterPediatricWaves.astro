@@ -251,7 +251,9 @@ const resolvedFormBlocks =
   Array.isArray(formBlocks) && formBlocks.length > 0 ? formBlocks : buildDefaultFormBlocks();
 
 const cssVars = [
-  (backgroundColorHex || getColorValue(backgroundColor)) ? `--pw-footer-bg: ${backgroundColorHex || getColorValue(backgroundColor)}` : "",
+  backgroundColorHex || getColorValue(backgroundColor)
+    ? `--pw-footer-bg: ${backgroundColorHex || getColorValue(backgroundColor)}`
+    : "",
   getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",
   getColorValue(linkHoverColor)
     ? `--footer-link-hover-color: ${getColorValue(linkHoverColor)}`

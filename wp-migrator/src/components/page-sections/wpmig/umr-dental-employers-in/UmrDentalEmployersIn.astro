@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="umr-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="umr-dental-employers-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="udei-box">
     <div class="udei-box2">
       <div class="udei-box3">
         <div class="udei-box4">
           <div class="udei-box5">
-            {image && <img class="udei-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+            {
+              image && (
+                <img
+                  class="udei-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="635"
+                  height="457"
+                />
+              )
+            }
           </div>
         </div>
         <div class="udei-box6">
@@ -341,7 +358,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .udei-box11 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -450,5 +467,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

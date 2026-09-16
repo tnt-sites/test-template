@@ -21,7 +21,8 @@ import crypto from "node:crypto";
  * content lengths, and `top` follows `min-height` because the emitter positions
  * absolute overlays relative to the box it just measured.
  */
-const QUANTIZED = /\b(min-height|min-width|max-height|max-width|height|width|top|bottom|left|right)\s*:\s*(-?\d+(?:\.\d+)?)px/g;
+const QUANTIZED =
+  /\b(min-height|min-width|max-height|max-width|height|width|top|bottom|left|right)\s*:\s*(-?\d+(?:\.\d+)?)px/g;
 
 /**
  * Round to a 64px step.
@@ -77,7 +78,10 @@ function canonicalizeClasses(src) {
   let out = src;
 
   for (const n of [...names].sort((a, b) => b.length - a.length)) {
-    out = out.replace(new RegExp(`(?<![\\w-])${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\w-])`, "g"), "C");
+    out = out.replace(
+      new RegExp(`(?<![\\w-])${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\w-])`, "g"),
+      "C"
+    );
   }
   return out;
 }
@@ -117,7 +121,10 @@ function blankDefaults(src) {
 
 function quantize(src) {
   return quantizeMatrices(
-    src.replace(QUANTIZED, (_, prop, px) => `${prop}:${Math.round(Number(px) / QUANTUM) * QUANTUM}px`)
+    src.replace(
+      QUANTIZED,
+      (_, prop, px) => `${prop}:${Math.round(Number(px) / QUANTUM) * QUANTUM}px`
+    )
   );
 }
 
@@ -165,7 +172,11 @@ export function markupTokens(astroSource) {
 
 /** Stable short hash of a component's structure. Equal hash -> safe to share. */
 export function structureHash(astroSource) {
-  return crypto.createHash("sha1").update(structureTokens(astroSource).join("\n")).digest("hex").slice(0, 12);
+  return crypto
+    .createHash("sha1")
+    .update(structureTokens(astroSource).join("\n"))
+    .digest("hex")
+    .slice(0, 12);
 }
 
 /**

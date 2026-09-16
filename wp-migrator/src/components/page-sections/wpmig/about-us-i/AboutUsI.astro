@@ -55,18 +55,102 @@ const {
 const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
 const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
-<div class="about-us-i" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="about-us-i"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="aui-box">
     <div class="aui-box2">
       <div class="aui-box3">
         <div class="aui-box4">
           {eyebrow && <h4 class="aui-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aui-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aui-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="aui-box5">
@@ -83,7 +167,18 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
           </div>
           <div class="aui-box11">
             <div class="aui-box12">
-              {image && <img class="aui-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="683" />}
+              {
+                image && (
+                  <img
+                    class="aui-media"
+                    src={image}
+                    alt={imageAlt || ""}
+                    loading="lazy"
+                    width="1024"
+                    height="683"
+                  />
+                )
+              }
             </div>
           </div>
           <div class="aui-box13">
@@ -98,13 +193,15 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
               {subheading && <h3 class="aui-heading3">{subheading}</h3>}
             </div>
             <div class="aui-grid">
-              {itemsList.map((it) => (
-                <div class="aui-box18">
-                  <div class="aui-box19">
-                    {it.text && <div class="aui-body2" set:html={it.text} />}
+              {
+                itemsList.map((it) => (
+                  <div class="aui-box18">
+                    <div class="aui-box19">
+                      {it.text && <div class="aui-body2" set:html={it.text} />}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              }
             </div>
             <section class="aui-box22">
               <div class="aui-box23">
@@ -121,13 +218,24 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
             </section>
           </div>
           <div class="aui-grid2">
-            {imagesList.map((it) => (
-              <div class="aui-box28">
-                <div class="aui-box29">
-                  {it.image && <img class="aui-media2" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="650" height="454" />}
+            {
+              imagesList.map((it) => (
+                <div class="aui-box28">
+                  <div class="aui-box29">
+                    {it.image && (
+                      <img
+                        class="aui-media2"
+                        src={it.image}
+                        alt={it.imageAlt || ""}
+                        loading="lazy"
+                        width="650"
+                        height="454"
+                      />
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))
+            }
           </div>
           <div class="aui-box32">
             <div class="aui-box33">
@@ -153,13 +261,39 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
             </div>
             <div class="aui-box41">
               <div class="aui-box42">
-                {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aui-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                {
+                  secondaryButtonText6 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="aui-btn7"
+                      text={secondaryButtonText6}
+                      link={secondaryButtonLink6 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="aui-box43">
               <div class="aui-box44">
                 <div class="aui-box45">
-                  {secondaryButtonText7 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="aui-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+                  {
+                    secondaryButtonText7 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="aui-btn8"
+                        text={secondaryButtonText7}
+                        link={secondaryButtonLink7 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -1054,7 +1188,7 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   @media (min-width: 768px) {
     .aui-box17 {
       font-family: Montserrat, sans-serif;
@@ -1220,5 +1354,5 @@ const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

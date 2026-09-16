@@ -43,7 +43,9 @@ test("paragraph wins over body, which is only the fallback", () => {
 });
 
 test("a relative measurement is ignored rather than used to define its own base", () => {
-  const css = emitSemanticOverrides(artifact({ measured: { paragraph: { "font-size": "1.2em" } } }));
+  const css = emitSemanticOverrides(
+    artifact({ measured: { paragraph: { "font-size": "1.2em" } } })
+  );
 
   assert.equal(/--font-size-md/.test(css), false);
 });

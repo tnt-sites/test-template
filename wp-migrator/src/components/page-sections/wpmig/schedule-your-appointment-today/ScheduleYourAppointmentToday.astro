@@ -22,15 +22,44 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="schedule-your-appointment-today" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${buttonBackgroundHoverColor}`} {...rest}>
+
+<div
+  class="schedule-your-appointment-today"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="syat-box">
     <div class="syat-box2">
       <div class="syat-box3">
-        {image && <img class="syat-media" src={image} alt={imageAlt || ""} loading="lazy" title="Emergency Dental" />}
+        {
+          image && (
+            <img
+              class="syat-media"
+              src={image}
+              alt={imageAlt || ""}
+              loading="lazy"
+              title="Emergency Dental"
+            />
+          )
+        }
         <h3 class="syat-heading">{heading}</h3>
       </div>
       <div class="syat-box4">
-        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="syat-btn" text={buttonText} link={buttonLink || "#"} />}
+        {
+          buttonText && (
+            <Button
+              variant="primary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              borderWidth="xs"
+              class="syat-btn"
+              text={buttonText}
+              link={buttonLink || "#"}
+            />
+          )
+        }
       </div>
     </div>
   </div>
@@ -180,7 +209,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .syat-heading {
     color: rgb(255, 255, 255);
   }
@@ -212,5 +241,5 @@ const {
       color: rgb(255, 255, 255);
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

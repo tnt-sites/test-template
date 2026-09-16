@@ -8,27 +8,27 @@ landingMainNav:
     logoAlt: Logo
     mobileCallSmallText: Call Now
     mobileRequestLabel: Request an Appointment
-    mobileRequestHref: ''
-    mobileCallBackgroundColor: ''
-    mobileCallBackgroundColorHex: ''
-    mobileRequestBackgroundColor: ''
-    mobileRequestBackgroundColorHex: ''
-    mobileCallTextColor: ''
-    mobileCallSmallTextColor: ''
-    mobileRequestTextColor: ''
-    mobileRequestSmallTextColor: ''
-    addressLinkColor: ''
-    addressLinkHoverColor: ''
-    phoneLinkColor: ''
-    phoneLinkHoverColor: ''
+    mobileRequestHref: ""
+    mobileCallBackgroundColor: ""
+    mobileCallBackgroundColorHex: ""
+    mobileRequestBackgroundColor: ""
+    mobileRequestBackgroundColorHex: ""
+    mobileCallTextColor: ""
+    mobileCallSmallTextColor: ""
+    mobileRequestTextColor: ""
+    mobileRequestSmallTextColor: ""
+    addressLinkColor: ""
+    addressLinkHoverColor: ""
+    phoneLinkColor: ""
+    phoneLinkHoverColor: ""
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /np-em-special-form/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -45,15 +45,15 @@ landingFooter:
     logoAlt: Logo
     siteName: Dental Studio
     contactTitle: Schedule Your Visit Today!
-    cardBackgroundColor: '#343434'
+    cardBackgroundColor: "#343434"
     pageButtons:
       - _component: building-blocks/core-elements/button
-        id: ''
+        id: ""
         text: Request an Appointment
         hideText: false
         link: /contact-us/
-        modalTarget: ''
-        iconName: ''
+        modalTarget: ""
+        iconName: ""
         iconPosition: before
         variant: primary
         size: md
@@ -82,49 +82,49 @@ landingFooter:
     backgroundGradient:
     backgroundColor: dark
     officeHoursAlignment: right
-    linkColor: ''
-    linkHoverColor: ''
-    addressLinkColor: ''
-    addressLinkHoverColor: ''
-    phoneLinkColor: ''
-    phoneLinkHoverColor: ''
-    legalBlurb: ''
+    linkColor: ""
+    linkHoverColor: ""
+    addressLinkColor: ""
+    addressLinkHoverColor: ""
+    phoneLinkColor: ""
+    phoneLinkHoverColor: ""
+    legalBlurb: ""
     offices: []
 landingPageSections:
   - _component: landing-page-components/shared/top-bar
-    id: ''
+    id: ""
     backgroundColor: brand
     textColor: var(--color-text-inverse)
     items:
       - New Patients Welcome
       - Same-Day Appointments Available
   - _component: landing-page-components/new-patient-emergency-combo/banner
-    id: ''
+    id: ""
     image:
       source: https://placehold.co/1440x700
       alt: Smiling family at the dentist
     heading: >-
       At Our Practice, you can count on award-winning care in a warm,
       comfortable environment at each visit.
-    subtext: ''
+    subtext: ""
     buttonSections: []
     badgeImage:
-      source: ''
-      alt: ''
+      source: ""
+      alt: ""
     specialBadge:
       source: https://placehold.co/200x200
-      alt: ''
-    figcaption: ''
+      alt: ""
+    figcaption: ""
     backgroundColor: none
     borderColor: var(--color-brand)
-    fontHeadings: ''
-    fontBody: ''
+    fontHeadings: ""
+    fontBody: ""
   - _component: landing-page-components/new-patient-emergency-combo/list-section
-    id: ''
+    id: ""
     heading:
     backgroundColor: dark
-    headingColor: '#ffffff'
-    listTextColor: '#ffffff'
+    headingColor: "#ffffff"
+    listTextColor: "#ffffff"
     checkmarkColor: var(--color-brand)
     items:
       - headingPrefix: Looking for
@@ -152,7 +152,7 @@ landingPageSections:
             <li>Bleeding or Swollen Gums</li>
           </ul>
   - _component: landing-page-components/new-patient-emergency-combo/blurb
-    id: ''
+    id: ""
     text: >-
       <p><span class="big-text">We understand.</span> Taking care of your teeth
       and gums is not always your highest priority. In fact, many people do not
@@ -167,16 +167,16 @@ landingPageSections:
     textColor: black
     blurbBackgroundColor: white
   - _component: landing-page-components/new-patient-emergency-combo/split-section
-    id: ''
+    id: ""
     backgroundColor: base
     desktopImage:
       _component: building-blocks/core-elements/image
       source: /src/assets/images/component-library/profile2.jpg
-      alt: ''
+      alt: ""
     mobileImage:
       _component: building-blocks/core-elements/image
       source: /src/assets/images/component-library/profile2.jpg
-      alt: ''
+      alt: ""
     figcaption: Name - Title
     headingPrefix: Personalized Dentistry
     headingMain: It All Starts with You
@@ -189,7 +189,7 @@ landingPageSections:
       <p>If a dental emergency is the reason for your visit, our first priority
       is to get you out of pain.</p>
   - _component: landing-page-components/new-patient-emergency-combo/reviews
-    id: ''
+    id: ""
     backgroundColor: base
     image:
       _component: building-blocks/core-elements/image
@@ -202,15 +202,15 @@ landingPageSections:
     backgroundImage:
       _component: building-blocks/core-elements/image
       source: https://placehold.co/1200x1200
-      alt: ''
+      alt: ""
     reviewText: lorem ipsum
     author: First Last
-    textColor: '#fff'
-    mobileTextColor: '#000000'
+    textColor: "#fff"
+    mobileTextColor: "#000000"
     authorAlignX: left
-    starColor: '#febb21'
+    starColor: "#febb21"
   - _component: landing-page-components/new-patient-emergency-combo/insurance-text
-    id: ''
+    id: ""
     heading: Insurance Text Heading
     text: Insurance Text
     backgroundColor: base

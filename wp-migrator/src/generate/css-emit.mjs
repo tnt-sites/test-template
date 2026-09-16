@@ -130,7 +130,11 @@ function declsFor(node, bp, ctx) {
         const inFlex = parentRec?.styles?.display?.includes("flex");
         if (!inFlex) continue;
         if (prop === "flexBasis") continue; // handled by basis recovery below
-        if (value === (dflt[prop] ?? { flexGrow: "0", flexShrink: "1", alignSelf: "auto", order: "0" }[prop])) continue;
+        if (
+          value ===
+          (dflt[prop] ?? { flexGrow: "0", flexShrink: "1", alignSelf: "auto", order: "0" }[prop])
+        )
+          continue;
         break;
       }
       case "flexDirection":
@@ -175,7 +179,12 @@ function declsFor(node, bp, ctx) {
         // A border's color/style is invisible — and not worth authoring —
         // unless some side actually has width. Builders commonly set a
         // border-color as a reset on every wrapper regardless of width.
-        if (!["Top", "Right", "Bottom", "Left"].some((side) => parseFloat(s[`border${side}Width`]) > 0)) continue;
+        if (
+          !["Top", "Right", "Bottom", "Left"].some(
+            (side) => parseFloat(s[`border${side}Width`]) > 0
+          )
+        )
+          continue;
         break;
       case "maxWidth":
         if (value === "none") continue;
@@ -206,7 +215,8 @@ function declsFor(node, bp, ctx) {
           // case that produced a five-figure floor on an empty box — so fall
           // back to the node's own rendered height, then to a flat ceiling.
           const contentH = kids.length
-            ? Math.max(...kids.map((r) => r.box.y + r.box.h)) - Math.min(...kids.map((r) => r.box.y))
+            ? Math.max(...kids.map((r) => r.box.y + r.box.h)) -
+              Math.min(...kids.map((r) => r.box.y))
             : (ctx.styles[bp]?.[node.n]?.box?.h ?? 0);
           if (px > Math.max(600, contentH * 2)) continue;
         }
@@ -227,9 +237,20 @@ function declsFor(node, bp, ctx) {
     // came out with the template's text size and no spacing.
     const sharedComponent = node.kind === "button";
     const FORCE_ON_SHARED = new Set([
-      "fontSize", "fontWeight", "lineHeight", "letterSpacing", "fontFamily", "textTransform",
-      "marginTop", "marginRight", "marginBottom", "marginLeft",
-      "paddingTop", "paddingRight", "paddingBottom", "paddingLeft",
+      "fontSize",
+      "fontWeight",
+      "lineHeight",
+      "letterSpacing",
+      "fontFamily",
+      "textTransform",
+      "marginTop",
+      "marginRight",
+      "marginBottom",
+      "marginLeft",
+      "paddingTop",
+      "paddingRight",
+      "paddingBottom",
+      "paddingLeft",
     ]);
 
     // Headings are the same problem without a shared component to blame. The
@@ -243,7 +264,12 @@ function declsFor(node, bp, ctx) {
     // headings across this site rendered at the starter's 46px bold instead.
     // The properties the target theme opinionates have to be stated outright.
     const FORCE_ON_HEADING = new Set([
-      "fontSize", "fontWeight", "lineHeight", "fontFamily", "letterSpacing", "textTransform",
+      "fontSize",
+      "fontWeight",
+      "lineHeight",
+      "fontFamily",
+      "letterSpacing",
+      "textTransform",
     ]);
     // Body copy is the third instance of the same trap, and the one that
     // reaches a visitor as unreadable text rather than merely wrong text. The
@@ -267,7 +293,21 @@ function declsFor(node, bp, ctx) {
       const parentValue = normalizeValue(prop, parentRec.styles[prop], ctx.origin);
       if (value === parentValue) continue;
     }
-    if (["boxShadow", "textShadow", "filter", "transform", "textDecorationLine", "letterSpacing", "textTransform", "listStyleType", "mixBlendMode"].includes(prop) && isNone(value)) continue;
+    if (
+      [
+        "boxShadow",
+        "textShadow",
+        "filter",
+        "transform",
+        "textDecorationLine",
+        "letterSpacing",
+        "textTransform",
+        "listStyleType",
+        "mixBlendMode",
+      ].includes(prop) &&
+      isNone(value)
+    )
+      continue;
     if (prop === "opacity" && value === "1") continue;
     if (prop === "visibility" && value === "visible") continue;
 
@@ -326,8 +366,15 @@ function declsFor(node, bp, ctx) {
   // from width/margins — so without synthesizing one here the layout goes
   // full-bleed and inner "boxed" designs (a white card, a constrained prose
   // column) stretch edge to edge.
-  if (["container", "richtext", "raw"].includes(node.kind) && parentRec && !out.maxWidth && !out.flex) {
-    const parentFlex = parentRec.styles.display?.includes("flex") && !parentRec.styles.flexDirection?.startsWith("column");
+  if (
+    ["container", "richtext", "raw"].includes(node.kind) &&
+    parentRec &&
+    !out.maxWidth &&
+    !out.flex
+  ) {
+    const parentFlex =
+      parentRec.styles.display?.includes("flex") &&
+      !parentRec.styles.flexDirection?.startsWith("column");
     const pw = contentWidth(parentRec);
     if (!parentFlex && pw > 0 && rec.box.w > 0 && rec.box.w < pw - 60) {
       const padL = parseFloat(parentRec.styles.paddingLeft) || 0;
@@ -369,8 +416,19 @@ function declsFor(node, bp, ctx) {
     const kidRecs = (node.children || [])
       .filter((c) => !c.skip)
       .map((c) => ctx.styles[bp]?.[c.n])
-      .filter((r) => r?.visible && r.box?.h > 0 && r.styles?.position !== "absolute" && r.styles?.position !== "fixed");
-    if (!kidRecs.length && !node.iconName && rec.box.h > 0 && ["decor", "spacer"].includes(node.kind)) {
+      .filter(
+        (r) =>
+          r?.visible &&
+          r.box?.h > 0 &&
+          r.styles?.position !== "absolute" &&
+          r.styles?.position !== "fixed"
+      );
+    if (
+      !kidRecs.length &&
+      !node.iconName &&
+      rec.box.h > 0 &&
+      ["decor", "spacer"].includes(node.kind)
+    ) {
       // A painted block with no content at all — the photo column of a split
       // section, a divider band. Its height is *only* authored, so without it
       // the block collapses to nothing and the image it carries never appears.
@@ -383,7 +441,8 @@ function declsFor(node, bp, ctx) {
       if (rec.box.h <= MAX_AUTHORED_BAND_PX) out.minHeight = `${Math.round(rec.box.h)}px`;
     } else if (kidRecs.length && rec.box.h > 0) {
       const contentH =
-        Math.max(...kidRecs.map((r) => r.box.y + r.box.h)) - Math.min(...kidRecs.map((r) => r.box.y));
+        Math.max(...kidRecs.map((r) => r.box.y + r.box.h)) -
+        Math.min(...kidRecs.map((r) => r.box.y));
       const padY = (parseFloat(s.paddingTop) || 0) + (parseFloat(s.paddingBottom) || 0);
       const slack = rec.box.h - (contentH + padY);
       // An authored band is a *little* taller than its content — a hero asking
@@ -419,10 +478,16 @@ function declsFor(node, bp, ctx) {
   // for layout children) makes it a few pixels narrower than its own text
   // needs, which is enough to wrap a label onto a second line. Buttons size
   // themselves; only layout children get a basis.
-  if (node.kind !== "button" && parentRec?.styles?.display?.includes("flex") && !parentRec.styles.flexDirection?.startsWith("column")) {
+  if (
+    node.kind !== "button" &&
+    parentRec?.styles?.display?.includes("flex") &&
+    !parentRec.styles.flexDirection?.startsWith("column")
+  ) {
     const pw = contentWidth(parentRec);
     if (pw > 0 && rec.box.w > 0) {
-      const siblings = Object.values(ctx.styles[bp] || {}).filter((r) => r.parent === String(rec.parent) && r.visible).length;
+      const siblings = Object.values(ctx.styles[bp] || {}).filter(
+        (r) => r.parent === String(rec.parent) && r.visible
+      ).length;
       const gap = parseFloat(parentRec.styles.columnGap) || 0;
       const available = pw - gap * Math.max(0, siblings - 1);
       if (available > 0) {
@@ -503,8 +568,10 @@ function declsFor(node, bp, ctx) {
     const ml = parseFloat(out.marginLeft);
     const mr = parseFloat(out.marginRight);
     if (
-      ml > 4 && mr > 4 &&
-      /px$/.test(out.marginLeft) && /px$/.test(out.marginRight) &&
+      ml > 4 &&
+      mr > 4 &&
+      /px$/.test(out.marginLeft) &&
+      /px$/.test(out.marginRight) &&
       Math.abs(ml - mr) <= Math.max(4, Math.min(ml, mr) * 0.15)
     ) {
       out.marginLeft = "auto";
@@ -541,7 +608,10 @@ function snapRatio(ratio) {
 }
 
 function gridTracks(value) {
-  const tracks = value.split(" ").map(parseFloat).filter((n) => !Number.isNaN(n));
+  const tracks = value
+    .split(" ")
+    .map(parseFloat)
+    .filter((n) => !Number.isNaN(n));
   if (tracks.length === 0) return value;
   if (tracks.length === 1) return "1fr";
   const max = Math.max(...tracks);
@@ -569,12 +639,22 @@ function shorthand(decls) {
   merge(["paddingTop", "paddingRight", "paddingBottom", "paddingLeft"], "padding", box);
   merge(["marginTop", "marginRight", "marginBottom", "marginLeft"], "margin", box);
   merge(
-    ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
+    [
+      "borderTopLeftRadius",
+      "borderTopRightRadius",
+      "borderBottomRightRadius",
+      "borderBottomLeftRadius",
+    ],
     "borderRadius",
     ([tl, tr, br, bl]) => (tl === tr && tr === br && br === bl ? tl : `${tl} ${tr} ${br} ${bl}`)
   );
   merge(["borderTopWidth", "borderTopStyle", "borderTopColor"], "borderTop", (v) => v.join(" "));
-  if (out.borderTop && ["borderRightWidth", "borderBottomWidth", "borderLeftWidth"].every((n) => decls[n] === decls.borderTopWidth)) {
+  if (
+    out.borderTop &&
+    ["borderRightWidth", "borderBottomWidth", "borderLeftWidth"].every(
+      (n) => decls[n] === decls.borderTopWidth
+    )
+  ) {
     out.border = out.borderTop;
     delete out.borderTop;
     for (const n of ["borderRightWidth", "borderBottomWidth", "borderLeftWidth"]) delete out[n];
@@ -668,7 +748,8 @@ function pseudoDecls(node, key, bp, ctx) {
     for (const side of ["Top", "Right", "Bottom", "Left"]) {
       const v = p[`margin${side}`];
 
-      if (v && v !== "0px" && v !== "auto") out[`margin${side}`] = normalizeValue(`margin${side}`, v, ctx.origin);
+      if (v && v !== "0px" && v !== "auto")
+        out[`margin${side}`] = normalizeValue(`margin${side}`, v, ctx.origin);
       else if (v === "auto") out[`margin${side}`] = "auto";
     }
   }
@@ -679,7 +760,21 @@ function pseudoDecls(node, key, bp, ctx) {
       if (p[side] !== "auto") out[side] = normalizeValue(side, p[side], ctx.origin);
     }
   }
-  for (const prop of ["backgroundColor", "backgroundImage", "backgroundSize", "backgroundPosition", "backgroundRepeat", "opacity", "mixBlendMode", "transform", "boxShadow", "borderTopLeftRadius", "zIndex", "filter", "pointerEvents"]) {
+  for (const prop of [
+    "backgroundColor",
+    "backgroundImage",
+    "backgroundSize",
+    "backgroundPosition",
+    "backgroundRepeat",
+    "opacity",
+    "mixBlendMode",
+    "transform",
+    "boxShadow",
+    "borderTopLeftRadius",
+    "zIndex",
+    "filter",
+    "pointerEvents",
+  ]) {
     let v = p[prop];
     if (v == null || isNone(v)) continue;
     if (prop === "opacity" && v === "1") continue;
@@ -691,8 +786,16 @@ function pseudoDecls(node, key, bp, ctx) {
     if (prop === "backgroundSize" && v === "auto") continue;
     if (prop === "zIndex" && v === "auto") continue;
     if (prop === "pointerEvents" && v !== "none") continue;
-    if (prop === "backgroundColor" && (normColor(v) === "rgba(0, 0, 0, 0)" || v === "rgba(0, 0, 0, 0)")) continue;
-    out[prop === "borderTopLeftRadius" ? "borderRadius" : prop] = normalizeValue(prop, v, ctx.origin);
+    if (
+      prop === "backgroundColor" &&
+      (normColor(v) === "rgba(0, 0, 0, 0)" || v === "rgba(0, 0, 0, 0)")
+    )
+      continue;
+    out[prop === "borderTopLeftRadius" ? "borderRadius" : prop] = normalizeValue(
+      prop,
+      v,
+      ctx.origin
+    );
   }
   const bgi = ctx.backgroundImageProp;
   if (bgi && bgi.nodeN === node.n && bgi.where === (key === "before" ? "before" : "after")) {
@@ -708,7 +811,17 @@ function pseudoDecls(node, key, bp, ctx) {
   return out;
 }
 
-export function emitCss({ tree, styles, hover, defaults, breakpoints, colorSlots, hoverSlots, backgroundImageProp, origin }) {
+export function emitCss({
+  tree,
+  styles,
+  hover,
+  defaults,
+  breakpoints,
+  colorSlots,
+  hoverSlots,
+  backgroundImageProp,
+  origin,
+}) {
   const bps = [...breakpoints].sort((a, b) => a - b);
   const [baseBp, ...widerBps] = bps;
   const desktop = bps[bps.length - 1];
@@ -744,7 +857,8 @@ export function emitCss({ tree, styles, hover, defaults, breakpoints, colorSlots
           if (!decls) continue;
           delete decls.display;
           const diff = diffDecls(decls, prev, ctx.styles[bp]?.[sampleN], ctx);
-          if (Object.keys(diff).length) media.get(bp).push(ruleText(`${clsOf(node)} :global(${tag})`, shorthand(diff), "    "));
+          if (Object.keys(diff).length)
+            media.get(bp).push(ruleText(`${clsOf(node)} :global(${tag})`, shorthand(diff), "    "));
           prev = decls;
         }
       }
@@ -770,13 +884,16 @@ export function emitCss({ tree, styles, hover, defaults, breakpoints, colorSlots
       if (!decls) continue;
       const diff = diffDecls(decls, prev, ctx.styles[bp]?.[node.n], ctx);
       delete diff.transition;
-      if (Object.keys(diff).length) media.get(bp).push(ruleText(clsOf(node), shorthand(diff), "    "));
+      if (Object.keys(diff).length)
+        media.get(bp).push(ruleText(clsOf(node), shorthand(diff), "    "));
       // Mirror a per-breakpoint nowrap onto Button's label span too. A long
       // label legitimately wraps at 390px and not at 1440px, so the nowrap
       // lives in the media query — and the label needs it in the same place,
       // or `white-space: pre-line` on the span keeps wrapping the text.
       if (node.kind === "button" && diff.whiteSpace === "nowrap") {
-        media.get(bp).push(ruleText(`${clsOf(node)} :global(.label-text)`, { whiteSpace: "nowrap" }, "    "));
+        media
+          .get(bp)
+          .push(ruleText(`${clsOf(node)} :global(.label-text)`, { whiteSpace: "nowrap" }, "    "));
       }
       prev = decls;
     }
@@ -832,7 +949,17 @@ export function emitCss({ tree, styles, hover, defaults, breakpoints, colorSlots
     const baseStyles = styles[desktop]?.[n]?.styles;
     if (!baseStyles) continue;
     const decls = {};
-    for (const prop of ["color", "backgroundColor", "borderTopColor", "boxShadow", "opacity", "transform", "textDecorationLine", "letterSpacing", "filter"]) {
+    for (const prop of [
+      "color",
+      "backgroundColor",
+      "borderTopColor",
+      "boxShadow",
+      "opacity",
+      "transform",
+      "textDecorationLine",
+      "letterSpacing",
+      "filter",
+    ]) {
       const before = normalizeValue(prop, baseStyles[prop], origin);
       const after = normalizeValue(prop, hstyles[prop], origin);
       if (before !== after && after != null) decls[prop] = after;
@@ -843,7 +970,8 @@ export function emitCss({ tree, styles, hover, defaults, breakpoints, colorSlots
       }
     }
     if (!Object.keys(decls).length) continue;
-    const selector = host === target ? `${clsOf(host)}:hover` : `${clsOf(host)}:hover ${clsOf(target)}`;
+    const selector =
+      host === target ? `${clsOf(host)}:hover` : `${clsOf(host)}:hover ${clsOf(target)}`;
     hoverRules.set(selector, decls);
   }
   for (const [selector, decls] of hoverRules) base.push(ruleText(selector, shorthand(decls)));

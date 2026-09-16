@@ -83,14 +83,19 @@ function relinkText(text, postRoutes = new Map()) {
   // Markdown links in imported post prose: [text](/meet-the-team/)
   out = out.replace(/\]\((\/[^)\s]*)\)/g, (m, href) => `](${fix(href)})`);
   // YAML scalars: `buttonLink: /meet-the-team/`, quoted or bare.
-  out = out.replace(/^(\s*(?:- )?)([\w]+):\s*(["']?)(\/[^\s"'#][^\s"']*|https?:\/\/[^\s"']+)\3\s*$/gm,
-    (m, indent, key, quote, value) => (LINK_KEY.test(key) ? `${indent}${key}: ${quote}${fix(value)}${quote}` : m));
+  out = out.replace(
+    /^(\s*(?:- )?)([\w]+):\s*(["']?)(\/[^\s"'#][^\s"']*|https?:\/\/[^\s"']+)\3\s*$/gm,
+    (m, indent, key, quote, value) =>
+      LINK_KEY.test(key) ? `${indent}${key}: ${quote}${fix(value)}${quote}` : m
+  );
   // JS/Astro prop defaults: `buttonLink = "/meet-the-team/"`.
-  out = out.replace(/(\b[\w]+)(\s*=\s*)"([^"]*)"/g,
-    (m, key, eq, value) => (LINK_KEY.test(key) ? `${key}${eq}"${fix(value)}"` : m));
+  out = out.replace(/(\b[\w]+)(\s*=\s*)"([^"]*)"/g, (m, key, eq, value) =>
+    LINK_KEY.test(key) ? `${key}${eq}"${fix(value)}"` : m
+  );
   // JSON: `"link": "/meet-the-team/"`.
-  out = out.replace(/"([\w]+)":\s*"([^"]*)"/g,
-    (m, key, value) => (LINK_KEY.test(key) ? `"${key}": "${fix(value)}"` : m));
+  out = out.replace(/"([\w]+)":\s*"([^"]*)"/g, (m, key, value) =>
+    LINK_KEY.test(key) ? `"${key}": "${fix(value)}"` : m
+  );
   return { out, changed };
 }
 
@@ -100,10 +105,18 @@ export const devRelink = defineCommand({
     description: "Re-apply link rewriting to already-generated pages, components and chrome data.",
   },
   args: {
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, ".wpmig/static") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, ".wpmig/static"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Generated component namespace", default: "wpmig" },
-    write: { type: "boolean", description: "Actually write (default is a dry run)", default: false },
+    write: {
+      type: "boolean",
+      description: "Actually write (default is a dry run)",
+      default: false,
+    },
   },
   async run({ args }) {
     const targetRoot = path.resolve(args.target);
@@ -113,7 +126,10 @@ export const devRelink = defineCommand({
 
     const files = [
       ...walkFiles(path.join(targetRoot, "src/content/pages"), [".md"]),
-      ...walkFiles(path.join(targetRoot, "src/components/page-sections", args.namespace), [".astro", ".yml"]),
+      ...walkFiles(path.join(targetRoot, "src/components/page-sections", args.namespace), [
+        ".astro",
+        ".yml",
+      ]),
       ...walkFiles(path.join(HERE, ".wpmig/out/pages"), [".md"]),
       // Imported posts carry the same legacy links in their prose.
       ...walkFiles(path.join(targetRoot, "src/content/blog"), [".mdx", ".md"]),

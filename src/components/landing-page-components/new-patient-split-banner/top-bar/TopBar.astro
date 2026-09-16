@@ -10,12 +10,13 @@ const {
   ...rest
 } = Astro.props;
 
-const inlineStyle = [
-  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
-  textColor ? `--np-text-color: ${textColor}` : "",
-]
-  .filter(Boolean)
-  .join("; ") || undefined;
+const inlineStyle =
+  [
+    backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+    textColor ? `--np-text-color: ${textColor}` : "",
+  ]
+    .filter(Boolean)
+    .join("; ") || undefined;
 
 const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
 const htmlAttributes = Object.fromEntries(

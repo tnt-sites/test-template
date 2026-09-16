@@ -40,18 +40,102 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="about-us-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3};--c9:${hoverBackgroundColor4}`} {...rest}>
+
+<div
+  class="about-us-e"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3};--c9:${hoverBackgroundColor4}`}
+  {...rest}
+>
   <div class="aue-box">
     <div class="aue-box2">
       <div class="aue-box3">
         <div class="aue-box4">
           {eyebrow && <h4 class="aue-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="aue-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="aue-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="aue-box5">
@@ -65,7 +149,18 @@ const {
           <div class="aue-box9">
             <div class="aue-box10">
               <div class="aue-box11">
-                {image && <img class="aue-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+                {
+                  image && (
+                    <img
+                      class="aue-media"
+                      src={image}
+                      alt={imageAlt || ""}
+                      loading="lazy"
+                      width="600"
+                      height="600"
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="aue-box12">
@@ -525,7 +620,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .aue-box11 {
     text-align: start;
   }
@@ -633,5 +728,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

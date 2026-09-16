@@ -23,9 +23,21 @@ export const devVerify = defineCommand({
   args: {
     static: { type: "string", description: "Snapshot directory", default: "" },
     dist: { type: "string", description: "Built site directory", default: "" },
-    pages: { type: "string", description: "Comma-separated page slugs (default: all)", default: "" },
-    ignore: { type: "string", description: "Style properties to skip", default: "color,backgroundColor" },
-    "severe-only": { type: "boolean", description: "Only headings/body swapped by 6px or more", default: false },
+    pages: {
+      type: "string",
+      description: "Comma-separated page slugs (default: all)",
+      default: "",
+    },
+    ignore: {
+      type: "string",
+      description: "Style properties to skip",
+      default: "color,backgroundColor",
+    },
+    "severe-only": {
+      type: "boolean",
+      description: "Only headings/body swapped by 6px or more",
+      default: false,
+    },
     json: { type: "string", description: "Write full findings to this file", default: "" },
   },
   async run({ args }) {
@@ -38,7 +50,10 @@ export const devVerify = defineCommand({
 
     const routes = loadRouteMap(staticDir);
     const wanted = args.pages ? new Set(args.pages.split(",").map((s) => s.trim())) : null;
-    const ignore = args.ignore.split(",").map((s) => s.trim()).filter(Boolean);
+    const ignore = args.ignore
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean);
 
     const slugs = fs
       .readdirSync(staticDir)
@@ -84,7 +99,9 @@ export const devVerify = defineCommand({
 
         if (findings.length) {
           report.push({ slug, route, findings });
-          console.log(`${slug}  ${findings.length} mismatch(es)${severe.length ? `, ${severe.length} severe` : ""}`);
+          console.log(
+            `${slug}  ${findings.length} mismatch(es)${severe.length ? `, ${severe.length} severe` : ""}`
+          );
           for (const f of severe.slice(0, 6)) {
             const parts = f.diffs.map((d) => `${d.prop} ${d.source} -> ${d.built}`).join(", ");
 

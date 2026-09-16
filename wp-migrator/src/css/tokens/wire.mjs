@@ -49,7 +49,12 @@ export function wireStyleImports(writer, targetRoot, stylesDir, { available } = 
   if (next !== current && !writer.dryRun) fs.writeFileSync(abs, next, "utf8");
   writer.results.push({
     path: entry,
-    outcome: next === current ? "unchanged" : hasRegion(current, abs, "source-theme-imports") ? "updated" : "created",
+    outcome:
+      next === current
+        ? "unchanged"
+        : hasRegion(current, abs, "source-theme-imports")
+          ? "updated"
+          : "created",
     detail: "region source-theme-imports",
   });
 

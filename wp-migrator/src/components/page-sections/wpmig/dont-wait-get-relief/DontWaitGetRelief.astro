@@ -19,13 +19,33 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="dont-wait-get-relief" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`} {...rest}>
+
+<section
+  class="dont-wait-get-relief"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="dwgr-box">
     <div class="dwgr-box2">
       <div class="dwgr-box3">
         <div class="dwgr-box4">
           <div class="dwgr-box5">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="dwgr-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="none"
+                  uppercase
+                  class="dwgr-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="dwgr-box6">
@@ -227,7 +247,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .dwgr-box5 {
     background-color: rgb(91, 183, 129);
     color: rgb(255, 255, 255);
@@ -279,5 +299,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

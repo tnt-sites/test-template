@@ -111,7 +111,10 @@ test("running twice changes nothing the second time", () => {
   const second = patchStarterComponents(t.root);
 
   assert.deepEqual(second.patched, []);
-  assert.equal(second.skipped.every((s) => s.reason === "already patched"), true);
+  assert.equal(
+    second.skipped.every((s) => s.reason === "already patched"),
+    true
+  );
   assert.equal(fs.readFileSync(t.accordion, "utf8"), afterFirst);
 });
 

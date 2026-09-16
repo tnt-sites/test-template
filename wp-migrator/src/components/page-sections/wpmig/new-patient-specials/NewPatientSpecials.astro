@@ -28,7 +28,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patient-specials" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2};--c5:${textColor3};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c8:${hoverColor};--c9:${buttonTextHoverColor}`} {...rest}>
+
+<div
+  class="new-patient-specials"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--c4:${textColor2};--c5:${textColor3};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c8:${hoverColor};--c9:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="nps-box">
     <h2 class="nps-heading">{heading}</h2>
     {subheading && <h3 class="nps-heading2">{subheading}</h3>}
@@ -45,7 +51,20 @@ const {
         </div>
       </a>
     </div>
-    {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="nps-btn" text={buttonText} link={buttonLink || "#"} />}
+    {
+      buttonText && (
+        <Button
+          variant="primary"
+          size="md"
+          width="none"
+          borderRadius="none"
+          borderWidth="none"
+          class="nps-btn"
+          text={buttonText}
+          link={buttonLink || "#"}
+        />
+      )
+    }
   </div>
 </div>
 <style>
@@ -247,7 +266,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .nps-box3 {
     color: rgb(27, 46, 56);
   }
@@ -319,5 +338,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

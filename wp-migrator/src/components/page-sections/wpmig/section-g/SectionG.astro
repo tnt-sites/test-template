@@ -16,11 +16,28 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="section-g" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="section-g"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="sg-box">
     <div class="sg-box2">
       <div class="sg-box3">
-        {image && <img class="sg-media" src={image} alt={imageAlt || ""} loading="lazy" width="253" height="116" />}
+        {
+          image && (
+            <img
+              class="sg-media"
+              src={image}
+              alt={imageAlt || ""}
+              loading="lazy"
+              width="253"
+              height="116"
+            />
+          )
+        }
       </div>
       <div class="sg-box4">
         <div class="sg-box5">
@@ -137,7 +154,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sg-box5 {
     color: rgb(4, 4, 4);
     font-family: "Open Sans Condensed", sans-serif;
@@ -192,5 +209,5 @@ const {
       line-height: 28.8px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

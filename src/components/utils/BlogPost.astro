@@ -12,8 +12,10 @@ const pageSectionsImports = import.meta.glob("../page-sections/**/*.astro", { ea
 const componentImports = { ...buildingBlocksImports, ...pageSectionsImports };
 
 const mdxComponents: Record<string, any> = {};
+
 Object.entries(componentImports).forEach(([path, module]) => {
   const fileName = path.split("/").pop()!.replace(".astro", "");
+
   mdxComponents[fileName] = (module as any).default;
 });
 

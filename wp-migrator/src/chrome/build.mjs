@@ -54,7 +54,10 @@ function resolveLogoAlt(sourceAlt, siteName, fallback = "") {
   if (!name) return alt;
 
   // "Columbine Creek Dentistry - Dentist Littleton" -> "columbine"
-  const distinctive = name.toLowerCase().split(/[\s|–—-]+/).filter(Boolean)[0];
+  const distinctive = name
+    .toLowerCase()
+    .split(/[\s|–—-]+/)
+    .filter(Boolean)[0];
   if (!distinctive || distinctive.length < 3) return alt;
   return alt.toLowerCase().includes(distinctive) ? alt : name;
 }
@@ -81,9 +84,8 @@ export function buildNavData(extracted, current = {}, { iconSet = [] } = {}) {
   if (aside?.phone?.display) {
     // The handset beside the number is part of the pattern, not decoration —
     // it is what makes a bare string of digits read as something to call.
-    const phoneIcon = aside.phone.icon && iconSet.length
-      ? resolveIcon({ name: aside.phone.icon }, iconSet)
-      : null;
+    const phoneIcon =
+      aside.phone.icon && iconSet.length ? resolveIcon({ name: aside.phone.icon }, iconSet) : null;
     next.topBar = {
       label: aside.label || "",
       phone: {
@@ -126,7 +128,10 @@ export function buildFooterData(extracted, current = {}, { iconSet = [] } = {}) 
       const key = `${link.name}|${link.path}`;
       if (seen.has(key) || !link.name) continue;
       seen.add(key);
-      (legalPattern.test(link.name) ? legal : links).push({ ...link, path: rewriteHref(link.path) });
+      (legalPattern.test(link.name) ? legal : links).push({
+        ...link,
+        path: rewriteHref(link.path),
+      });
     }
 
     if (links.length) next.links = links;

@@ -4,14 +4,9 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  text = "",
-  textColor = "#1b2e38",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { text = "", textColor = "#1b2e38", id, _component, ...rest } = Astro.props;
 ---
+
 <div class="home-guardian-dental" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
   {text && <div class="hgd-text" set:html={text} />}
 </div>

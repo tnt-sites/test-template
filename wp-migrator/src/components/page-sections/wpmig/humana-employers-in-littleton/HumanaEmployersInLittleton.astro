@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="humana-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="humana-employers-in-littleton"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="heil-box">
     <div class="heil-box2">
       <div class="heil-box3">
         <div class="heil-box4">
           <div class="heil-box5">
-            {image && <img class="heil-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="514" />}
+            {
+              image && (
+                <img
+                  class="heil-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="620"
+                  height="514"
+                />
+              )
+            }
           </div>
         </div>
         <div class="heil-box6">
@@ -327,7 +344,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .heil-box14 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -381,5 +398,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

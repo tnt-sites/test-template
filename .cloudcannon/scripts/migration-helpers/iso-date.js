@@ -39,16 +39,13 @@ function processFile(filePath) {
   let updated = false;
 
   // Replace date: field with full ISO
-  frontmatter = frontmatter.replace(
-    /^date:\s*(.+)$/gm,
-    (match, rawDate) => {
-      const iso = toFullISO(rawDate.trim());
+  frontmatter = frontmatter.replace(/^date:\s*(.+)$/gm, (match, rawDate) => {
+    const iso = toFullISO(rawDate.trim());
 
-      if (!iso) return match; // leave as-is if invalid
-      updated = true;
-      return `date: ${iso}`;
-    }
-  );
+    if (!iso) return match; // leave as-is if invalid
+    updated = true;
+    return `date: ${iso}`;
+  });
 
   if (updated) {
     const newContent = content.replace(/^---\n([\s\S]*?)\n---/, `---\n${frontmatter}\n---`);

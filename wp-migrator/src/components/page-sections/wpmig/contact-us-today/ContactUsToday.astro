@@ -25,7 +25,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="contact-us-today" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`} {...rest}>
+
+<div
+  class="contact-us-today"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`}
+  {...rest}
+>
   <div class="cut-box">
     <div class="cut-box2">
       <div class="cut-box3">
@@ -40,20 +46,49 @@ const {
           </div>
           <div class="cut-box8">
             <div class="cut-box9">
-              <iframe class="cut-embed" src={embedUrl} title="Columbine Creek Dentistry  - Contact Form" allow="geolocation; microphone; camera; fullscreen; payment" frameborder="0" loading="lazy"></iframe>
+              <iframe
+                class="cut-embed"
+                src={embedUrl}
+                title="Columbine Creek Dentistry  - Contact Form"
+                allow="geolocation; microphone; camera; fullscreen; payment"
+                frameborder="0"
+                loading="lazy"></iframe>
             </div>
           </div>
         </div>
         <div class="cut-box10">
           <div class="cut-box11">
-            {image && <img class="cut-media" src={image} alt={imageAlt || ""} loading="lazy" width="900" height="577" />}
+            {
+              image && (
+                <img
+                  class="cut-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="900"
+                  height="577"
+                />
+              )
+            }
           </div>
           <ul class="cut-box12">
             <li class="cut-box13">
-              {buttonText && <a class="cut-link" href={buttonLink || "#"}>{buttonText}</a>}
+              {
+                buttonText && (
+                  <a class="cut-link" href={buttonLink || "#"}>
+                    {buttonText}
+                  </a>
+                )
+              }
             </li>
             <li class="cut-box14">
-              {secondaryButtonText && <a class="cut-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+              {
+                secondaryButtonText && (
+                  <a class="cut-link2" href={secondaryButtonLink || "#"}>
+                    {secondaryButtonText}
+                  </a>
+                )
+              }
             </li>
             {text2 && <div class="cut-body" set:html={text2} />}
           </ul>
@@ -61,7 +96,12 @@ const {
       </div>
       <div class="cut-box15">
         <div class="cut-box16">
-          <iframe class="cut-embed2" src={embedUrl2} title="columbine creek dentistry" aria-label="columbine creek dentistry" loading="lazy"></iframe>
+          <iframe
+            class="cut-embed2"
+            src={embedUrl2}
+            title="columbine creek dentistry"
+            aria-label="columbine creek dentistry"
+            loading="lazy"></iframe>
         </div>
       </div>
     </div>
@@ -431,7 +471,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cut-link {
     color: rgb(27, 46, 56);
     font-size: 16px;
@@ -527,5 +567,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

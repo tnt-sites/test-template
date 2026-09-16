@@ -18,7 +18,12 @@ import { gotoStable, forEachPage } from "../browser/load.mjs";
 import { buildMeasurementMirror } from "./mirror.mjs";
 import { discoverStylesheets } from "./stylesheets.mjs";
 import { loadStylesheets } from "../css/parse.mjs";
-import { buildSelectorIndex, mergeIndexes, measureRoles, mergeMeasurements } from "../browser/selector-index.mjs";
+import {
+  buildSelectorIndex,
+  mergeIndexes,
+  measureRoles,
+  mergeMeasurements,
+} from "../browser/selector-index.mjs";
 import {
   weighColors,
   clusterColors,
@@ -31,7 +36,13 @@ import { retintRamp, parseRamp, emitRamp } from "../css/tokens/ramp.mjs";
 import { extractIconGlyphs, iconFontFamily } from "../css/fonts.mjs";
 import { copyFonts } from "./fonts.mjs";
 import { extractChrome } from "../chrome/extract.mjs";
-import { buildNavData, buildFooterData, buildSiteInfo, collectChromeAssets, countNav } from "../chrome/build.mjs";
+import {
+  buildNavData,
+  buildFooterData,
+  buildSiteInfo,
+  collectChromeAssets,
+  countNav,
+} from "../chrome/build.mjs";
 import { extractSeo, detectTitleSuffix, stripTitleSuffix } from "../content/seo.mjs";
 
 /** Home + evenly spaced rest, matching site-migrator's tokens sampler. */
@@ -59,7 +70,9 @@ function COLLECT_IMAGES() {
     }
   }
   for (const el of document.querySelectorAll("[style*=background]")) {
-    const m = (el.getAttribute("style") || "").match(/background(?:-image)?\s*:[^;]*url\(["']?([^"')]+)["']?\)/i);
+    const m = (el.getAttribute("style") || "").match(
+      /background(?:-image)?\s*:[^;]*url\(["']?([^"')]+)["']?\)/i
+    );
     if (m) urls.add(m[1]);
   }
   return [...urls];
@@ -96,7 +109,10 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
     const selectorPage = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
 
     for (const p of sampled) {
-      const state = await gotoStable(selectorPage, `${baseUrl}/${p.id}.html`, { primeLazyLoad: true, reveal: true });
+      const state = await gotoStable(selectorPage, `${baseUrl}/${p.id}.html`, {
+        primeLazyLoad: true,
+        reveal: true,
+      });
       if (!state.ok) {
         report.warnings.push(`sample page ${p.id}: ${state.reason}`);
         continue;
@@ -118,7 +134,10 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
       async (page) => {
         const idx = await buildSelectorIndex(page, selectors);
         measurements.push(
-          await measureRoles(page, { contentRoots: ["body"], chromeSelectors: Object.values(GENERIC_CHROME) })
+          await measureRoles(page, {
+            contentRoots: ["body"],
+            chromeSelectors: Object.values(GENERIC_CHROME),
+          })
         );
         return idx;
       },
@@ -127,7 +146,9 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
     indexes.push(...run.results.map((r) => r.value));
     for (const f of run.failures) report.warnings.push(`measure ${f.page.id}: ${f.reason}`);
 
-    const index = indexes.length ? mergeIndexes(indexes) : { selectorUids: new Map(), areaByUid: new Map(), totalArea: 0, elementCount: 0 };
+    const index = indexes.length
+      ? mergeIndexes(indexes)
+      : { selectorUids: new Map(), areaByUid: new Map(), totalArea: 0, elementCount: 0 };
     const measured = mergeMeasurements(measurements);
 
     // ---- palette -----------------------------------------------------------
@@ -136,7 +157,10 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
     const significant = filterByArea(clustered, index.totalArea, 0.002);
     const hover = extractHoverColors(css.rules);
     const baseColors = baseElementColors(css.rules);
-    const { roles, extras } = assignRoles(significant, measured, { hoverColors: hover, baseColors });
+    const { roles, extras } = assignRoles(significant, measured, {
+      hoverColors: hover,
+      baseColors,
+    });
 
     let ramp = null;
     const rampFile = path.join(targetRoot, "src/styles/variables/_colors.pcss");
@@ -175,16 +199,24 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
     // ---- fonts: copy binaries alongside the sheets that reference them ----
     const fontResult = copyFonts(css.sheets, { staticDir, writer, publicDir: "public" });
     if (fontResult.missing.length) {
-      report.warnings.push(`${fontResult.missing.length} font file(s) referenced but not found in the snapshot`);
+      report.warnings.push(
+        `${fontResult.missing.length} font file(s) referenced but not found in the snapshot`
+      );
     }
 
     // ---- chrome / site info -------------------------------------------------
     const chromePage = await browser.newPage({ viewport: { width: 1280, height: 1000 } });
     const homeId = sampled.find((p) => p.id === "index")?.id ?? sampled[0].id;
-    const chromeState = await gotoStable(chromePage, `${baseUrl}/${homeId}.html`, { primeLazyLoad: true, reveal: true });
+    const chromeState = await gotoStable(chromePage, `${baseUrl}/${homeId}.html`, {
+      primeLazyLoad: true,
+      reveal: true,
+    });
     let extracted = null;
     if (chromeState.ok) {
-      extracted = await extractChrome(chromePage, { chrome: GENERIC_CHROME, buttonClassPattern: BUTTON_CLASS_PATTERN });
+      extracted = await extractChrome(chromePage, {
+        chrome: GENERIC_CHROME,
+        buttonClassPattern: BUTTON_CLASS_PATTERN,
+      });
     } else {
       report.warnings.push(`chrome page ${homeId}: ${chromeState.reason}`);
     }
@@ -224,7 +256,9 @@ export async function runExtract({ staticDir, targetRoot, writer, sampleLimit = 
       extracted,
       chromeHomeId: homeId,
       fontResult,
-      seoResults: suffix ? seoResults.map((r) => ({ ...r, title: stripTitleSuffix(r.title, suffix) })) : seoResults,
+      seoResults: suffix
+        ? seoResults.map((r) => ({ ...r, title: stripTitleSuffix(r.title, suffix) }))
+        : seoResults,
       titleSuffix: suffix,
       homeSeo,
       imageUrls: [...imageUrls],

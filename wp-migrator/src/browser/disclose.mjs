@@ -41,8 +41,23 @@ function DISCLOSE({ accMark, itemMark }) {
   // Attributes worth keeping in a panel's rich text. Deliberately narrower than
   // the tree capture's list — this is prose, not a measured component.
   const KEEP_ATTRS = [
-    "href", "src", "alt", "title", "colspan", "rowspan", "target", "rel", "width", "height",
-    "type", "controls", "poster", "preload", "datetime", "start", "reversed",
+    "href",
+    "src",
+    "alt",
+    "title",
+    "colspan",
+    "rowspan",
+    "target",
+    "rel",
+    "width",
+    "height",
+    "type",
+    "controls",
+    "poster",
+    "preload",
+    "datetime",
+    "start",
+    "reversed",
   ];
 
   const cs = (el) => getComputedStyle(el);
@@ -84,8 +99,7 @@ function DISCLOSE({ accMark, itemMark }) {
       const title = panel.querySelector(".panel-title");
       const body = panel.querySelector(".panel-collapse, .toggle-content");
       if (!title || !body) continue;
-      const open =
-        /\bin\b/.test(body.getAttribute("class") || "") || cs(body).display !== "none";
+      const open = /\bin\b/.test(body.getAttribute("class") || "") || cs(body).display !== "none";
       out.push({ titleEl: title, panelEls: [body], isOpen: open, hostEls: [panel] });
     }
     if (out.length) return out;
@@ -93,8 +107,10 @@ function DISCLOSE({ accMark, itemMark }) {
     const titles = root.querySelectorAll(".elementor-tab-title, .elementor-toggle-title");
     for (const t of titles) {
       const panel = t.nextElementSibling;
-      if (!panel || !/elementor-(tab|toggle)-content/.test(panel.getAttribute("class") || "")) continue;
-      const open = /elementor-active/.test(t.getAttribute("class") || "") || cs(panel).display !== "none";
+      if (!panel || !/elementor-(tab|toggle)-content/.test(panel.getAttribute("class") || ""))
+        continue;
+      const open =
+        /elementor-active/.test(t.getAttribute("class") || "") || cs(panel).display !== "none";
       out.push({ titleEl: t, panelEls: [panel], isOpen: open, hostEls: [t, panel] });
     }
     return out;
@@ -155,7 +171,8 @@ function DISCLOSE({ accMark, itemMark }) {
         if (!KEEP_ATTRS.includes(a.name)) n.removeAttribute(a.name);
       }
       for (const c of [...n.children]) {
-        if (["script", "style", "link", "template", "noscript"].includes(c.tagName.toLowerCase())) c.remove();
+        if (["script", "style", "link", "template", "noscript"].includes(c.tagName.toLowerCase()))
+          c.remove();
         else strip(c);
       }
     };
@@ -190,9 +207,12 @@ function DISCLOSE({ accMark, itemMark }) {
    */
   const rowColumns = (el) => {
     const style = cs(el);
-    if (style.display !== "flex" && style.display !== "grid" && style.display !== "inline-flex") return null;
+    if (style.display !== "flex" && style.display !== "grid" && style.display !== "inline-flex")
+      return null;
     if (style.display !== "grid" && !style.flexDirection.startsWith("row")) return null;
-    const kids = [...el.children].filter((k) => !["script", "style", "link", "template", "noscript"].includes(k.tagName.toLowerCase()));
+    const kids = [...el.children].filter(
+      (k) => !["script", "style", "link", "template", "noscript"].includes(k.tagName.toLowerCase())
+    );
     if (kids.length < 2) return null;
     const boxes = kids.map((k) => k.getBoundingClientRect());
     const sideBySide = boxes.some((a, i) =>
@@ -220,13 +240,18 @@ function DISCLOSE({ accMark, itemMark }) {
       if (MEDIA.has(tag)) {
         flush();
         if (tag === "video" || tag === "audio") {
-          const src = el.getAttribute("src") || el.querySelector("source")?.getAttribute("src") || "";
+          const src =
+            el.getAttribute("src") || el.querySelector("source")?.getAttribute("src") || "";
           segments.push({ type: "video", src, poster: el.getAttribute("poster") || "", title: "" });
         } else if (tag === "iframe" || tag === "embed" || tag === "object") {
           segments.push({ type: "embed", html: sanitized(el) });
         } else {
           const img = tag === "img" ? el : el.querySelector("img");
-          segments.push({ type: "image", src: img?.getAttribute("src") || "", alt: img?.getAttribute("alt") || "" });
+          segments.push({
+            type: "image",
+            src: img?.getAttribute("src") || "",
+            alt: img?.getAttribute("alt") || "",
+          });
         }
         return;
       }
@@ -338,7 +363,10 @@ function DISCLOSE({ accMark, itemMark }) {
     openFirst: accordion.openFirst,
     closedHeight: accordion.closedHeight,
     openHeight: Math.round(accordion.root.getBoundingClientRect().height),
-    items: accordion.items.map((it) => ({ title: titleOf(it.titleEl), segments: segmentsOf(it.panelEls) })),
+    items: accordion.items.map((it) => ({
+      title: titleOf(it.titleEl),
+      segments: segmentsOf(it.panelEls),
+    })),
   }));
   window.__wpmigAccordions = accordions;
 
@@ -348,7 +376,10 @@ function DISCLOSE({ accMark, itemMark }) {
     panels: accordions.reduce((n, a) => n + a.items.length, 0),
     // Sizes travel back to Node separately from `window.__wpmigAccordions`,
     // which the capture pass reads in-page for content.
-    accordionSizes: accordions.map((a) => ({ closedHeight: a.closedHeight, openHeight: a.openHeight })),
+    accordionSizes: accordions.map((a) => ({
+      closedHeight: a.closedHeight,
+      openHeight: a.openHeight,
+    })),
   };
 }
 

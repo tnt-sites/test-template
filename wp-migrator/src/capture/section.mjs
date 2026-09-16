@@ -28,14 +28,62 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
   const SKIP = new Set(["script", "style", "link", "template", "noscript", "meta"]);
   // Inline formatting allowed inside a text leaf. An <a> here is a text link;
   // an <a> wrapping block content is handled as a container instead.
-  const INLINE_TEXT = new Set(["b", "strong", "i", "em", "u", "s", "sub", "sup", "br", "span", "small", "mark", "abbr", "a"]);
-  const KEEP_ATTRS = ["href", "src", "alt", "title", "colspan", "rowspan", "target", "rel", "width", "height", "type", "name", "value", "placeholder", "action", "method", "for", "controls", "autoplay", "loop", "muted", "playsinline", "poster", "allow", "allowfullscreen", "frameborder", "datetime"];
+  const INLINE_TEXT = new Set([
+    "b",
+    "strong",
+    "i",
+    "em",
+    "u",
+    "s",
+    "sub",
+    "sup",
+    "br",
+    "span",
+    "small",
+    "mark",
+    "abbr",
+    "a",
+  ]);
+  const KEEP_ATTRS = [
+    "href",
+    "src",
+    "alt",
+    "title",
+    "colspan",
+    "rowspan",
+    "target",
+    "rel",
+    "width",
+    "height",
+    "type",
+    "name",
+    "value",
+    "placeholder",
+    "action",
+    "method",
+    "for",
+    "controls",
+    "autoplay",
+    "loop",
+    "muted",
+    "playsinline",
+    "poster",
+    "allow",
+    "allowfullscreen",
+    "frameborder",
+    "datetime",
+  ];
 
   let counter = 0;
 
   const rect = (el) => {
     const r = el.getBoundingClientRect();
-    return { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) };
+    return {
+      x: Math.round(r.x),
+      y: Math.round(r.y),
+      w: Math.round(r.width),
+      h: Math.round(r.height),
+    };
   };
 
   const alphaOf = (color) => {
@@ -50,7 +98,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     const cs = getComputedStyle(el);
     if (cs.backgroundImage !== "none") return true;
     if (alphaOf(cs.backgroundColor) > 0.02) return true;
-    if (["Top", "Right", "Bottom", "Left"].some((s) => parseFloat(cs[`border${s}Width`]) > 0)) return true;
+    if (["Top", "Right", "Bottom", "Left"].some((s) => parseFloat(cs[`border${s}Width`]) > 0))
+      return true;
     if (cs.boxShadow !== "none") return true;
     for (const ps of ["::before", "::after"]) {
       const pcs = getComputedStyle(el, ps);
@@ -68,9 +117,11 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     return !filled && hasLine && rect(el).h < 8;
   };
 
-  const elementChildren = (el) => [...el.children].filter((c) => !SKIP.has(c.tagName.toLowerCase()));
+  const elementChildren = (el) =>
+    [...el.children].filter((c) => !SKIP.has(c.tagName.toLowerCase()));
 
-  const hasOwnText = (el) => [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
+  const hasOwnText = (el) =>
+    [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
 
   /**
    * A wrapper that exists only to hold one child, paints nothing, and lets the
@@ -86,7 +137,9 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     const cs = getComputedStyle(el);
     if (cs.display === "none") return false;
     if (cs.position !== "static" && cs.position !== "relative") return false;
-    const pads = ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"].map((p) => parseFloat(cs[p]) || 0);
+    const pads = ["paddingTop", "paddingBottom", "paddingLeft", "paddingRight"].map(
+      (p) => parseFloat(cs[p]) || 0
+    );
     if (Math.max(...pads) > 8) return false;
     // Margin is spacing this wrapper contributes, and collapsing it deletes
     // that spacing — which is how two buttons that sit apart in the source
@@ -98,9 +151,14 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     // 7-card grid re-split into 3+3), because shape matching compares subtree
     // structure and the retained wrappers changed it. Controls are where the
     // lost spacing actually showed, so that is where the exception applies.
-    const margins = ["marginTop", "marginBottom", "marginLeft", "marginRight"].map((p) => Math.abs(parseFloat(cs[p]) || 0));
+    const margins = ["marginTop", "marginBottom", "marginLeft", "marginRight"].map((p) =>
+      Math.abs(parseFloat(cs[p]) || 0)
+    );
     if (Math.max(...margins) > 4) {
-      const holdsControl = kids[0] && (["a", "button"].includes(kids[0].tagName.toLowerCase()) || kids[0].querySelector("a,button"));
+      const holdsControl =
+        kids[0] &&
+        (["a", "button"].includes(kids[0].tagName.toLowerCase()) ||
+          kids[0].querySelector("a,button"));
       if (holdsControl) return false;
     }
     const er = rect(el);
@@ -123,12 +181,17 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     // descend to the control.
     const ownsText = [...el.childNodes].some((n) => n.nodeType === 3 && n.textContent.trim());
     if (!ownsText) {
-      const controls = [...el.children].filter((c) => ["a", "button"].includes(c.tagName.toLowerCase()));
+      const controls = [...el.children].filter((c) =>
+        ["a", "button"].includes(c.tagName.toLowerCase())
+      );
       // A button *row* is the same shape with more than one control, and the
       // first one is not necessarily the styled one — test them all, and treat
       // a wrapper whose children are nothing but controls as a holder either
       // way.
-      if (controls.length && (controls.length === el.children.length || controls.some(isButtonish))) {
+      if (
+        controls.length &&
+        (controls.length === el.children.length || controls.some(isButtonish))
+      ) {
         return false;
       }
     }
@@ -136,14 +199,21 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     for (const c of el.children) {
       const t = c.tagName.toLowerCase();
       if (!INLINE_TEXT.has(t)) return false;
-      if (c.querySelector("img,svg,iframe,video,picture,ul,ol,p,div,section,article,h1,h2,h3,h4,h5,h6,figure,table")) return false;
+      if (
+        c.querySelector(
+          "img,svg,iframe,video,picture,ul,ol,p,div,section,article,h1,h2,h3,h4,h5,h6,figure,table"
+        )
+      )
+        return false;
     }
     return true;
   };
 
   const isProseList = (el) => {
     const items = elementChildren(el);
-    return items.length > 0 && items.every((li) => li.tagName.toLowerCase() === "li" && isTextLeaf(li));
+    return (
+      items.length > 0 && items.every((li) => li.tagName.toLowerCase() === "li" && isTextLeaf(li))
+    );
   };
 
   const isButtonish = (el) => {
@@ -229,7 +299,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
   const keptAttrs = (el) => {
     const out = {};
     for (const a of el.attributes) {
-      if (KEEP_ATTRS.includes(a.name) || a.name.startsWith("aria-") || a.name === "role") out[a.name] = a.value;
+      if (KEEP_ATTRS.includes(a.name) || a.name.startsWith("aria-") || a.name === "role")
+        out[a.name] = a.value;
     }
     return out;
   };
@@ -239,7 +310,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     const clone = el.cloneNode(true);
     const strip = (n) => {
       for (const a of [...n.attributes]) {
-        if (!KEEP_ATTRS.includes(a.name) && !a.name.startsWith("aria-") && a.name !== "role") n.removeAttribute(a.name);
+        if (!KEEP_ATTRS.includes(a.name) && !a.name.startsWith("aria-") && a.name !== "role")
+          n.removeAttribute(a.name);
       }
       for (const c of [...n.children]) {
         if (SKIP.has(c.tagName.toLowerCase())) c.remove();
@@ -261,7 +333,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     if (tag === "table") return "raw";
     if (/^h[1-6]$/.test(tag)) return "heading";
     if ((tag === "ul" || tag === "ol") && isProseList(el)) return "list";
-    if ((tag === "a" || tag === "button") && isTextLeaf(el)) return isButtonish(el) ? "button" : "textlink";
+    if ((tag === "a" || tag === "button") && isTextLeaf(el))
+      return isButtonish(el) ? "button" : "textlink";
     if (!isRoot && isTextLeaf(el)) return "text";
     const kids = elementChildren(el);
     if (kids.length === 0 && !(el.innerText || "").trim()) {
@@ -284,7 +357,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     const hidden = cs.display === "none" || cs.visibility === "hidden";
     // Hidden nodes are kept only if they hold content — they may be a
     // responsive alternate that appears at another breakpoint.
-    if (hidden && !(el.innerText || "").trim() && !el.querySelector("img,iframe,svg,video")) return null;
+    if (hidden && !(el.innerText || "").trim() && !el.querySelector("img,iframe,svg,video"))
+      return null;
 
     // Collapse builder scaffolding (never the section root itself).
     let node = el;
@@ -374,9 +448,13 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
   // "slider" or "carousel" somewhere in its class list. The loose version
   // matched an incidental nested class inside a bespoke content section and
   // rerouted a whole prose-and-photo section to a logo strip.
-  const CAROUSEL_ROOT = /\b(swiper|swiper-container|slick-slider|owl-carousel|flickity-enabled|splide__track|glide__track|elementor-image-carousel|elementor-slides)\b/i;
-  const carousel = CAROUSEL_ROOT.test(root.className || "") ||
-    [...root.querySelectorAll("*")].some((el) => CAROUSEL_ROOT.test(el.getAttribute("class") || ""));
+  const CAROUSEL_ROOT =
+    /\b(swiper|swiper-container|slick-slider|owl-carousel|flickity-enabled|splide__track|glide__track|elementor-image-carousel|elementor-slides)\b/i;
+  const carousel =
+    CAROUSEL_ROOT.test(root.className || "") ||
+    [...root.querySelectorAll("*")].some((el) =>
+      CAROUSEL_ROOT.test(el.getAttribute("class") || "")
+    );
 
   const tree = build(root, true);
   if (tree) {
@@ -407,7 +485,8 @@ function BUILD_TREE({ selector, mark, accMark, itemMark }) {
     for (const host of el.querySelectorAll(`[${itemMark}]`)) {
       const own = host.getAttribute(mark);
       if (own !== null) nodes.add(Number(own));
-      for (const inner of host.querySelectorAll(`[${mark}]`)) nodes.add(Number(inner.getAttribute(mark)));
+      for (const inner of host.querySelectorAll(`[${mark}]`))
+        nodes.add(Number(inner.getAttribute(mark)));
     }
     if (!nodes.size) continue;
     const list = [...nodes].sort((a, b) => a - b);
@@ -431,7 +510,12 @@ function READ_STYLES({ props, mark, accMark }) {
     const r = el.getBoundingClientRect();
     const rec = {
       styles,
-      box: { x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height) },
+      box: {
+        x: Math.round(r.x),
+        y: Math.round(r.y),
+        w: Math.round(r.width),
+        h: Math.round(r.height),
+      },
       visible: cs.display !== "none" && cs.visibility !== "hidden" && r.width > 0,
     };
     // Every measurement here is taken with the disclosures forced open, which
@@ -444,10 +528,17 @@ function READ_STYLES({ props, mark, accMark }) {
     if (accMark && (el.hasAttribute(accMark) || el.querySelector(`[${accMark}]`))) {
       rec.heightInflated = true;
     }
-    for (const [ps, key] of [["::before", "before"], ["::after", "after"]]) {
+    for (const [ps, key] of [
+      ["::before", "before"],
+      ["::after", "after"],
+    ]) {
       const pcs = getComputedStyle(el, ps);
       if (pcs.content !== "none" && pcs.content !== "normal" && pcs.content !== "") {
-        const pstyles = { content: pcs.content, inset: pcs.inset, pointerEvents: pcs.pointerEvents };
+        const pstyles = {
+          content: pcs.content,
+          inset: pcs.inset,
+          pointerEvents: pcs.pointerEvents,
+        };
         for (const p of props) pstyles[p] = pcs[p];
 
         // A pseudo-element whose content is empty is pure paint, so its box IS
@@ -457,11 +548,13 @@ function READ_STYLES({ props, mark, accMark }) {
         // authored one), but a pseudo has no content to be sized by, so here
         // they are the authored value. A width that fills the host is recorded
         // as `100%` rather than the pixel it happened to measure.
-        const host = parseFloat(cs.width) - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+        const host =
+          parseFloat(cs.width) - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
         const w = parseFloat(pcs.width);
-        pstyles.width = Number.isFinite(w) && Number.isFinite(host) && Math.abs(w - host) <= 1
-          ? "100%"
-          : pcs.width;
+        pstyles.width =
+          Number.isFinite(w) && Number.isFinite(host) && Math.abs(w - host) <= 1
+            ? "100%"
+            : pcs.width;
         pstyles.height = pcs.height;
         rec[key] = pstyles;
       }
@@ -567,7 +660,12 @@ export async function captureSection(page, selector, opts = {}) {
   const breakpoints = [...(opts.breakpoints || [1280, 768, 390])].sort((a, b) => b - a);
   const props = STYLE_PROPS;
 
-  const built = await page.evaluate(BUILD_TREE, { selector, mark: MARK, accMark: ACC_MARK, itemMark: ACC_ITEM_MARK });
+  const built = await page.evaluate(BUILD_TREE, {
+    selector,
+    mark: MARK,
+    accMark: ACC_MARK,
+    itemMark: ACC_ITEM_MARK,
+  });
   if (built.error) throw new Error(built.error);
   const { tree, carousel, accordions } = built;
   if (!tree) throw new Error(`section at ${selector} produced an empty tree`);

@@ -47,7 +47,11 @@ test("a build that kept some of a repeated pattern is partial, not silent", () =
 });
 
 test("a built-only smell needs no source counterpart to be reported", () => {
-  const findings = comparePatterns({}, {}, { iconClassCollision: ['h2.fa-heading — class "fa-heading"'] });
+  const findings = comparePatterns(
+    {},
+    {},
+    { iconClassCollision: ['h2.fa-heading — class "fa-heading"'] }
+  );
   const finding = byId(findings, "iconClassCollision");
 
   assert.equal(finding.kind, "smell");
@@ -64,7 +68,7 @@ test("every detected id carries a label and a fix", () => {
 });
 
 test("the divider under a heading is a pattern, not a smell", () => {
-  const findings = comparePatterns({ headingRule: ["h2 \"Our Services\""] }, {}, {});
+  const findings = comparePatterns({ headingRule: ['h2 "Our Services"'] }, {}, {});
   const finding = byId(findings, "headingRule");
 
   assert.equal(finding.kind, "pattern");
@@ -72,7 +76,11 @@ test("the divider under a heading is a pattern, not a smell", () => {
 });
 
 test("a section that renders nothing is reported off the build alone", () => {
-  const findings = comparePatterns({}, {}, { emptySection: ["section.section (styled 36px/uppercase)"] });
+  const findings = comparePatterns(
+    {},
+    {},
+    { emptySection: ["section.section (styled 36px/uppercase)"] }
+  );
 
   assert.equal(byId(findings, "emptySection").status, "present");
   assert.equal(actionableFindings(findings).length, 1);

@@ -18,9 +18,7 @@ if (!fs.existsSync(folderPath)) {
 }
 
 // Get all .md files (non-recursive)
-const files = fs.readdirSync(folderPath).filter(file =>
-  file.toLowerCase().endsWith(".md")
-);
+const files = fs.readdirSync(folderPath).filter((file) => file.toLowerCase().endsWith(".md"));
 
 if (files.length === 0) {
   console.log("ℹ️ No .md files found.");

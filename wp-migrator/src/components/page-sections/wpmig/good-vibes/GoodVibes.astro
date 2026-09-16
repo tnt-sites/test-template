@@ -24,7 +24,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="good-vibes" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor};--c7:${hoverBackgroundColor}`} {...rest}>
+
+<section
+  class="good-vibes"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor};--c7:${hoverBackgroundColor}`}
+  {...rest}
+>
   <section class="gv-box">
     <div class="gv-box2">
       <div class="gv-box3">
@@ -39,13 +45,37 @@ const {
           </div>
         </div>
         <div class="gv-box8">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gv-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gv-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="gv-box9">
         <div class="gv-box10">
           <div class="gv-box11">
-            {image && <img class="gv-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+            {
+              image && (
+                <img
+                  class="gv-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="650"
+                  height="575"
+                />
+              )
+            }
           </div>
         </div>
       </div>
@@ -372,7 +402,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .gv-heading {
     font-weight: 400;
   }
@@ -471,5 +501,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

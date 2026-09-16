@@ -56,7 +56,10 @@ const ACCORDION = {
 test("a section splits into the content around its accordion, in order", () => {
   const parts = splitByAccordions(SECTION, [ACCORDION]);
 
-  assert.deepEqual(parts.map((p) => p.kind), ["run", "accordion"]);
+  assert.deepEqual(
+    parts.map((p) => p.kind),
+    ["run", "accordion"]
+  );
   const kept = [];
   (function walk(t) {
     kept.push(t.n);
@@ -71,7 +74,10 @@ test("a section that is only an accordion produces no empty lead run", () => {
   const bare = { n: 0, tag: "section", kind: "container", children: [SECTION.children[2]] };
   const parts = splitByAccordions(bare, [ACCORDION]);
 
-  assert.deepEqual(parts.map((p) => p.kind), ["accordion"]);
+  assert.deepEqual(
+    parts.map((p) => p.kind),
+    ["accordion"]
+  );
 });
 
 test("with no accordion the tree passes through untouched", () => {
@@ -98,7 +104,10 @@ test("a heading is pulled onto the accordion only when it sits directly against 
 });
 
 test("a media URL gets a scheme however the mirror mangled it", () => {
-  assert.equal(normalizeMediaUrl("https://video.prosites.com/a.mp4"), "https://video.prosites.com/a.mp4");
+  assert.equal(
+    normalizeMediaUrl("https://video.prosites.com/a.mp4"),
+    "https://video.prosites.com/a.mp4"
+  );
   assert.equal(normalizeMediaUrl("//video.prosites.com/a.mp4"), "https://video.prosites.com/a.mp4");
   // The one that fails silently: relative to the page, so it 404s behind the
   // poster rather than not rendering.
@@ -110,14 +119,19 @@ test("a media URL gets a scheme however the mirror mangled it", () => {
 test("panel segments become the target's own blocks, and a video keeps its poster", () => {
   const sections = segmentsToSections([
     { type: "html", html: "<div>  New Patient Exam  </div>", align: "center" },
-    { type: "video", src: "//video.prosites.com/AFV.mp4", poster: "/wp-content/uploads/AFV.png", title: "" },
+    {
+      type: "video",
+      src: "//video.prosites.com/AFV.mp4",
+      poster: "/wp-content/uploads/AFV.png",
+      title: "",
+    },
     { type: "html", html: "   " },
   ]);
 
-  assert.deepEqual(sections.map((s) => s._component), [
-    "building-blocks/core-elements/text",
-    "building-blocks/core-elements/video",
-  ]);
+  assert.deepEqual(
+    sections.map((s) => s._component),
+    ["building-blocks/core-elements/text", "building-blocks/core-elements/video"]
+  );
   const video = sections[1];
   // `hosted` is what renders a plain <video>; youtube/vimeo render a lite embed.
   assert.equal(video.type, "hosted");
@@ -193,7 +207,11 @@ test("an unpainted accordion emits no theme, so the target's own design stands",
 test("the block carries the section's band, and drops its own padding under a lead run", () => {
   const opts = { ref: "page-sections/info-blocks/faq-section", branding: BRANDING };
   const alone = accordionBlock(ACCORDION, { ...opts, bandColor: "rgb(244, 248, 247)" });
-  const trailing = accordionBlock(ACCORDION, { ...opts, bandColor: "rgb(26, 26, 26)", hasLeadRun: true });
+  const trailing = accordionBlock(ACCORDION, {
+    ...opts,
+    bandColor: "rgb(26, 26, 26)",
+    hasLeadRun: true,
+  });
 
   assert.equal(alone.paddingVertical, "4xl");
   assert.equal(alone.backgroundColorHex, "#f4f8f7");
@@ -296,7 +314,10 @@ test("a closed panel's content survives the capture", async () => {
   const [accordion] = captured.accordions;
 
   assert.equal(accordion.items.length, 2);
-  assert.deepEqual(accordion.items.map((i) => i.title), ["Open topic", "Closed topic"]);
+  assert.deepEqual(
+    accordion.items.map((i) => i.title),
+    ["Open topic", "Closed topic"]
+  );
   assert.match(panelText(accordion, 1), /nobody can see/);
   // The list is the reason panel markup is read directly rather than rebuilt
   // from the template tree, where an Elementor <li><div> is just a container.
@@ -349,7 +370,10 @@ test("a legacy Elementor toggle is recognised the same way", async () => {
   const [accordion] = captured.accordions;
 
   assert.ok(accordion, "no accordion recognised in legacy toggle markup");
-  assert.deepEqual(accordion.items.map((i) => i.title), ["Shown", "Hidden"]);
+  assert.deepEqual(
+    accordion.items.map((i) => i.title),
+    ["Shown", "Hidden"]
+  );
   assert.match(panelText(accordion, 1), /behind a display:none/);
 });
 
@@ -365,16 +389,31 @@ test("splitByAnchors cuts a section at an interior anchor target", () => {
       node(2, "text", { text: "Save time." }),
       node(3, "button", { tag: "a", text: "Download", attrs: { href: "/f" } }),
       node(4, "divider", { tag: "span" }),
-      node(6, "heading", { tag: "h2", text: "Educational Dental Videos", html: "Educational Dental Videos" }),
+      node(6, "heading", {
+        tag: "h2",
+        text: "Educational Dental Videos",
+        html: "Educational Dental Videos",
+      }),
       node(7, "text", { text: "We believe." }),
       node(8, "text", { text: "A video panel." }),
     ],
   };
   const parts = splitByAnchors(combined, [6]);
   assert.equal(parts.length, 2);
-  const textsOf = (t) => { const out = []; (function w(x){ if(x.text) out.push(x.text); (x.children||[]).forEach(w); })(t); return out; };
+  const textsOf = (t) => {
+    const out = [];
+    (function w(x) {
+      if (x.text) out.push(x.text);
+      (x.children || []).forEach(w);
+    })(t);
+    return out;
+  };
   assert.deepEqual(textsOf(parts[0]), ["Patient Forms", "Save time.", "Download"]);
-  assert.deepEqual(textsOf(parts[1]), ["Educational Dental Videos", "We believe.", "A video panel."]);
+  assert.deepEqual(textsOf(parts[1]), [
+    "Educational Dental Videos",
+    "We believe.",
+    "A video panel.",
+  ]);
 });
 
 test("splitByAnchors leaves a section with no interior anchor whole", () => {

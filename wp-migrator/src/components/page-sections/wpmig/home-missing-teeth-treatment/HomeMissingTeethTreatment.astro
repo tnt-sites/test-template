@@ -4,15 +4,15 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  text = "",
-  textColor = "#1b2e38",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { text = "", textColor = "#1b2e38", id, _component, ...rest } = Astro.props;
 ---
-<div class="home-missing-teeth-treatment" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+
+<div
+  class="home-missing-teeth-treatment"
+  id={id || undefined}
+  style={`--tx:${textColor}`}
+  {...rest}
+>
   {text && <div class="hmtt-text" set:html={text} />}
 </div>
 <style>

@@ -59,21 +59,144 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="general-dentistry-g" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${hoverBackgroundColor4};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+
+<div
+  class="general-dentistry-g"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${hoverBackgroundColor4};--c12:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="gdg-box">
     <div class="gdg-box2">
       <div class="gdg-box3">
         <div class="gdg-box4">
           {eyebrow && <h4 class="gdg-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
-          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
-          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
-          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdg-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText6 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn7"
+                text={secondaryButtonText6}
+                link={secondaryButtonLink6 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText7 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn8"
+                text={secondaryButtonText7}
+                link={secondaryButtonLink7 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText8 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdg-btn9"
+                text={secondaryButtonText8}
+                link={secondaryButtonLink8 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="gdg-box5">
@@ -103,13 +226,15 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
               {heading2 && <h3 class="gdg-heading4">{heading2}</h3>}
             </div>
             <div class="gdg-grid">
-              {list.map((it) => (
-                <div class="gdg-box17">
-                  <div class="gdg-box18">
-                    {it.text && <div class="gdg-body" set:html={it.text} />}
+              {
+                list.map((it) => (
+                  <div class="gdg-box17">
+                    <div class="gdg-box18">
+                      {it.text && <div class="gdg-body" set:html={it.text} />}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))
+              }
             </div>
             <section class="gdg-box21">
               <div class="gdg-box22">
@@ -154,13 +279,39 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
             </div>
             <div class="gdg-box38">
               <div class="gdg-box39">
-                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdg-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+                {
+                  secondaryButtonText9 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="gdg-btn10"
+                      text={secondaryButtonText9}
+                      link={secondaryButtonLink9 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="gdg-box40">
               <div class="gdg-box41">
                 <div class="gdg-box42">
-                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdg-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                  {
+                    secondaryButtonText10 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="gdg-btn11"
+                        text={secondaryButtonText10}
+                        link={secondaryButtonLink10 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -1090,7 +1241,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   @media (min-width: 768px) {
     .gdg-heading3 {
       font-weight: 400;
@@ -1288,5 +1439,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

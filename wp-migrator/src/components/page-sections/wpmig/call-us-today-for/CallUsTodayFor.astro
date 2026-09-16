@@ -21,6 +21,7 @@ const {
   ...rest
 } = Astro.props;
 ---
+
 <div class="call-us-today-for" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
   <div class="cutf-box">
     <div class="cutf-box2">
@@ -42,7 +43,18 @@ const {
             </div>
             <div class="cutf-box11">
               <div class="cutf-box12">
-                {image && <img class="cutf-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="678" />}
+                {
+                  image && (
+                    <img
+                      class="cutf-media"
+                      src={image}
+                      alt={imageAlt || ""}
+                      loading="lazy"
+                      width="1024"
+                      height="678"
+                    />
+                  )
+                }
               </div>
             </div>
           </div>
@@ -362,7 +374,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cutf-box18 {
     font-family: Montserrat, sans-serif;
     font-size: 24px;
@@ -448,5 +460,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

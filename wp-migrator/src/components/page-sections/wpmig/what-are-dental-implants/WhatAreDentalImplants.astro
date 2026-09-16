@@ -31,7 +31,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="what-are-dental-implants" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="what-are-dental-implants"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="wadi-box">
     <div class="wadi-box2">
       <div class="wadi-box3">
@@ -83,13 +89,39 @@ const {
         </div>
         <div class="wadi-box22">
           <div class="wadi-box23">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="wadi-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="default"
+                  borderWidth="none"
+                  class="wadi-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="wadi-box24">
           <div class="wadi-box25">
             <div class="wadi-box26">
-              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="wadi-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+              {
+                secondaryButtonText && (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    width="none"
+                    borderRadius="default"
+                    borderWidth="none"
+                    class="wadi-btn2"
+                    text={secondaryButtonText}
+                    link={secondaryButtonLink || "#"}
+                  />
+                )
+              }
             </div>
           </div>
         </div>
@@ -465,7 +497,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wadi-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -718,5 +750,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

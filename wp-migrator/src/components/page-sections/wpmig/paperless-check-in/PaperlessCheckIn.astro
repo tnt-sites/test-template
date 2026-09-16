@@ -21,7 +21,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="paperless-check-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+
+<section
+  class="paperless-check-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`}
+  {...rest}
+>
   <section class="pci-box">
     <div class="pci-box2">
       <div class="pci-box3">
@@ -30,7 +36,18 @@ const {
       <div class="pci-box4">
         <div class="pci-box5">
           <div class="pci-box6">
-            {image && <img class="pci-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+            {
+              image && (
+                <img
+                  class="pci-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="650"
+                  height="575"
+                />
+              )
+            }
           </div>
         </div>
         <div class="pci-box7">
@@ -44,7 +61,20 @@ const {
           </div>
         </div>
         <div class="pci-box11">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pci-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pci-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -367,7 +397,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .pci-box8 {
     color: rgb(59, 98, 120);
     font-size: 22px;
@@ -481,5 +511,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

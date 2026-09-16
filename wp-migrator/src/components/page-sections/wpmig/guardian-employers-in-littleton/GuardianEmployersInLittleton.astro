@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="guardian-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="guardian-employers-in-littleton"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="geil-box">
     <div class="geil-box2">
       <div class="geil-box3">
         <div class="geil-box4">
           <div class="geil-box5">
-            {image && <img class="geil-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+            {
+              image && (
+                <img
+                  class="geil-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="1344"
+                  height="960"
+                />
+              )
+            }
           </div>
         </div>
         <div class="geil-box6">
@@ -337,7 +354,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .geil-box11 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -417,5 +434,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

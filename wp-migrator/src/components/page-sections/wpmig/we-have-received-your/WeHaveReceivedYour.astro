@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="we-have-received-your" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="we-have-received-your"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="whry-box">
     <div class="whry-box2">
       <div class="whry-box3">
@@ -94,7 +100,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .whry-heading {
     font-weight: 400;
   }
@@ -108,5 +114,5 @@ const {
       font-weight: 400;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

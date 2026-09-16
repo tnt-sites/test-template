@@ -17,7 +17,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="we-are-here-for" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<section
+  class="we-are-here-for"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="wahf-box">
     <div class="wahf-box2">
       <div class="wahf-box3">
@@ -28,7 +34,18 @@ const {
       </div>
     </div>
     <div class="wahf-box5">
-      {image && <img class="wahf-media" src={image} alt={imageAlt || ""} loading="lazy" width="2048" height="1476" />}
+      {
+        image && (
+          <img
+            class="wahf-media"
+            src={image}
+            alt={imageAlt || ""}
+            loading="lazy"
+            width="2048"
+            height="1476"
+          />
+        )
+      }
     </div>
   </div>
 </section>
@@ -170,7 +187,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wahf-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -276,5 +293,5 @@ const {
       text-align: end;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

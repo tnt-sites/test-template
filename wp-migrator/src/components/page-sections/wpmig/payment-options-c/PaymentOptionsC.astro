@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="payment-options-c" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="payment-options-c"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="poc-box">
     <h3 class="poc-heading">{heading}</h3>
     {subheading && <h1 class="poc-heading2">{subheading}</h1>}
@@ -88,7 +94,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .poc-box13 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -775,5 +781,5 @@ const {
       font-size: 16px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

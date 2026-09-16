@@ -46,16 +46,74 @@ const {
 } = Astro.props;
 const list = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
-<div class="restorative-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${textColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+
+<div
+  class="restorative-dentistry-b"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${textColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="rdb-box">
     <div class="rdb-box2">
       <div class="rdb-box3">
         <div class="rdb-box4">
           {eyebrow && <h4 class="rdb-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdb-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdb-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdb-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="rdb-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="rdb-box5">
@@ -73,21 +131,32 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
               {subheading && <h4 class="rdb-heading3">{subheading}</h4>}
             </div>
             <div class="rdb-grid">
-              {list.map((it) => (
-                <div class="rdb-box12">
-                  <div class="rdb-box13">
-                    <div class="rdb-box14">
-                      {it.image && <img class="rdb-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="150" height="150" />}
-                    </div>
-                    <div class="rdb-box15">
-                      <div class="rdb-text2">{it.text}</div>
-                    </div>
-                    <div class="rdb-box16">
-                      <p class="rdb-text3">{it.text2}</p>
+              {
+                list.map((it) => (
+                  <div class="rdb-box12">
+                    <div class="rdb-box13">
+                      <div class="rdb-box14">
+                        {it.image && (
+                          <img
+                            class="rdb-media"
+                            src={it.image}
+                            alt={it.imageAlt || ""}
+                            loading="lazy"
+                            width="150"
+                            height="150"
+                          />
+                        )}
+                      </div>
+                      <div class="rdb-box15">
+                        <div class="rdb-text2">{it.text}</div>
+                      </div>
+                      <div class="rdb-box16">
+                        <p class="rdb-text3">{it.text2}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))
+              }
             </div>
           </div>
           <div class="rdb-box32">
@@ -119,13 +188,39 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
             </div>
             <div class="rdb-box43">
               <div class="rdb-box44">
-                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdb-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                {
+                  secondaryButtonText4 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="rdb-btn5"
+                      text={secondaryButtonText4}
+                      link={secondaryButtonLink4 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="rdb-box45">
               <div class="rdb-box46">
                 <div class="rdb-box47">
-                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdb-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                  {
+                    secondaryButtonText5 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="rdb-btn6"
+                        text={secondaryButtonText5}
+                        link={secondaryButtonLink5 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -796,7 +891,7 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .rdb-heading4 {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -949,5 +1044,5 @@ const list = Array.isArray(images) ? images.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

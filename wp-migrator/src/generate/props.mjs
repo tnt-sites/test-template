@@ -282,7 +282,16 @@ const COLOR_VARS = {
  * place (cls, prop, itemProp, array) and returns the prop schema plus this
  * occurrence's values.
  */
-export function extractProps({ tree, styles, hover, breakpoints, name, maxColorProps = 12, branding = {}, takenPrefixes }) {
+export function extractProps({
+  tree,
+  styles,
+  hover,
+  breakpoints,
+  name,
+  maxColorProps = 12,
+  branding = {},
+  takenPrefixes,
+}) {
   const desktop = Math.max(...breakpoints);
   const styleOf = (n) => styles[desktop]?.[n];
   // Class prefixes have to be unique across the whole run, not just within
@@ -355,7 +364,11 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
       arrays.push({ node, path });
       return; // item internals handled per-array
     }
-    if (["heading", "text", "richtext", "list", "button", "textlink", "img", "embed", "raw"].includes(node.kind)) {
+    if (
+      ["heading", "text", "richtext", "list", "button", "textlink", "img", "embed", "raw"].includes(
+        node.kind
+      )
+    ) {
       outsideLeaves.push(node);
     }
     for (const c of node.children || []) walk(c, [...path, node]);
@@ -379,21 +392,29 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
   const assignText = (node, baseName, kind) => {
     const rich = kind === "html";
     const value = rich ? rewriteHtmlLinks(node.html) : node.text;
-    const prop = props.add(baseName, { kind: rich ? "html" : "text", input: rich ? "html" : value.length > 90 ? "textarea" : "text" });
+    const prop = props.add(baseName, {
+      kind: rich ? "html" : "text",
+      input: rich ? "html" : value.length > 90 ? "textarea" : "text",
+    });
     node.prop = { name: prop.name, kind: prop.kind };
     values[prop.name] = value;
     return prop;
   };
 
   if (eyebrow) assignText(eyebrow, "eyebrow", "text");
-  if (mainHeading) assignText(mainHeading, "heading", mainHeading.html !== mainHeading.text ? "html" : "text");
+  if (mainHeading)
+    assignText(mainHeading, "heading", mainHeading.html !== mainHeading.text ? "html" : "text");
 
   let sawSubheading = false;
   for (const node of outsideLeaves) {
     if (node === eyebrow || node === mainHeading || node.prop) continue;
     switch (node.kind) {
       case "heading": {
-        assignText(node, sawSubheading ? "heading" : "subheading", node.html !== node.text ? "html" : "text");
+        assignText(
+          node,
+          sawSubheading ? "heading" : "subheading",
+          node.html !== node.text ? "html" : "text"
+        );
         sawSubheading = true;
         break;
       }
@@ -468,7 +489,9 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
     const templateNodes = collect(template);
     const hasImg = templateNodes.some((n) => n.kind === "img");
     const hasHeadingish = templateNodes.some(
-      (n) => ["heading", "text"].includes(n.kind) && (HEADING_TAGS.has(n.tag) || weightOf(styleOf(n.n)) >= 600 || fontSizeOf(styleOf(n.n)) >= 20)
+      (n) =>
+        ["heading", "text"].includes(n.kind) &&
+        (HEADING_TAGS.has(n.tag) || weightOf(styleOf(n.n)) >= 600 || fontSizeOf(styleOf(n.n)) >= 20)
     );
     const arrayName = hasImg && hasHeadingish ? "cards" : hasImg ? "images" : "items";
     const arrayProp = props.add(arrayName, { kind: "array", itemProps: [] });
@@ -505,15 +528,22 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
           const p = itemProps.add("image", { kind: "image", input: "image" });
           const alt = itemProps.add(`${p.name}Alt`, { kind: "text", input: "text" });
           tn.itemProp = { name: p.name, kind: "image", altName: alt.name, optional: optionalHere };
-          paths.push({ path: pathTo(tn), prop: p, source: "src" }, { path: pathTo(tn), prop: alt, source: "alt" });
+          paths.push(
+            { path: pathTo(tn), prop: p, source: "src" },
+            { path: pathTo(tn), prop: alt, source: "alt" }
+          );
           break;
         }
         case "heading":
         case "text": {
-          const titleLike = HEADING_TAGS.has(tn.tag) || weightOf(rec) >= 600 || fontSizeOf(rec) >= 20;
+          const titleLike =
+            HEADING_TAGS.has(tn.tag) || weightOf(rec) >= 600 || fontSizeOf(rec) >= 20;
           const base = titleLike && !titled ? "title" : "text";
           if (titleLike && !titled) titled = true;
-          const p = itemProps.add(base, { kind: "text", input: base === "text" ? "textarea" : "text" });
+          const p = itemProps.add(base, {
+            kind: "text",
+            input: base === "text" ? "textarea" : "text",
+          });
           tn.itemProp = { name: p.name, kind: "text", optional: optionalHere };
           paths.push({ path: pathTo(tn), prop: p, source: "text" });
           break;
@@ -530,7 +560,10 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
           const pt = itemProps.add("buttonText", { kind: "text", input: "text" });
           const pl = itemProps.add("buttonLink", { kind: "url", input: "url" });
           tn.itemProp = { name: pt.name, kind: "text", linkName: pl.name, optional: optionalHere };
-          paths.push({ path: pathTo(tn), prop: pt, source: "text" }, { path: pathTo(tn), prop: pl, source: "href" });
+          paths.push(
+            { path: pathTo(tn), prop: pt, source: "text" },
+            { path: pathTo(tn), prop: pl, source: "href" }
+          );
           break;
         }
         case "container":
@@ -594,7 +627,12 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
 
     arrayProp.itemProps = itemProps.list;
     values[arrayProp.name] = dedupedValues;
-    node.array = { name: arrayProp.name, itemProps: itemProps.list, template, itemVar: arrayName === "cards" ? "c" : "it" };
+    node.array = {
+      name: arrayProp.name,
+      itemProps: itemProps.list,
+      template,
+      itemVar: arrayName === "cards" ? "c" : "it",
+    };
   }
 
   // ---- color props ------------------------------------------------------
@@ -606,13 +644,17 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
     const value = normalizeValue("color", rawValue);
     let finalName = slotName;
     let i = 2;
-    while (colorSlots.some((s) => s.name === finalName && s.value !== value)) finalName = `${slotName}${i++}`;
+    while (colorSlots.some((s) => s.name === finalName && s.value !== value))
+      finalName = `${slotName}${i++}`;
     const existing = colorSlots.find((s) => s.name === finalName);
     if (existing) {
       existing.uses.push({ nodeN, where, cssProp });
       return existing;
     }
-    const varName = COLOR_VARS[slotName] && finalName === slotName ? COLOR_VARS[slotName] : `--c${colorSlots.length + 1}`;
+    const varName =
+      COLOR_VARS[slotName] && finalName === slotName
+        ? COLOR_VARS[slotName]
+        : `--c${colorSlots.length + 1}`;
     const slot = { name: finalName, varName, value, uses: [{ nodeN, where, cssProp }] };
     colorSlots.push(slot);
     return slot;
@@ -627,7 +669,13 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
     return rec?.before && alphaOf(rec.before.backgroundColor) > 0;
   });
   if (overlayHost) {
-    addColor("overlayColor", overlayHost.n, "before", "backgroundColor", styleOf(overlayHost.n).before.backgroundColor);
+    addColor(
+      "overlayColor",
+      overlayHost.n,
+      "before",
+      "backgroundColor",
+      styleOf(overlayHost.n).before.backgroundColor
+    );
   }
 
   const colorFor = (node, slot, cssProp = "color") => {
@@ -637,7 +685,12 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
   if (eyebrow) colorFor(eyebrow, "eyebrowColor");
   if (mainHeading) colorFor(mainHeading, "headingColor");
   for (const node of outsideLeaves) {
-    if (["richtext", "text", "list"].includes(node.kind) && node.prop && node !== eyebrow && node !== mainHeading) {
+    if (
+      ["richtext", "text", "list"].includes(node.kind) &&
+      node.prop &&
+      node !== eyebrow &&
+      node !== mainHeading
+    ) {
       colorFor(node, "textColor");
     }
     if (node.kind === "button" && node.prop) {
@@ -649,12 +702,19 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
     const template = node.children[0];
     const rec = styleOf(template.n);
     if (rec && alphaOf(rec.styles.backgroundColor) > 0) {
-      addColor("cardBackgroundColor", template.n, "base", "backgroundColor", rec.styles.backgroundColor);
+      addColor(
+        "cardBackgroundColor",
+        template.n,
+        "base",
+        "backgroundColor",
+        rec.styles.backgroundColor
+      );
     }
     for (const tn of collect(template)) {
       if (!tn.itemProp) continue;
       if (tn.itemProp.name === "title") colorFor(tn, "titleColor");
-      else if (tn.itemProp.kind === "text" || tn.itemProp.kind === "html") colorFor(tn, "textColor");
+      else if (tn.itemProp.kind === "text" || tn.itemProp.kind === "html")
+        colorFor(tn, "textColor");
     }
   }
 
@@ -662,7 +722,9 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
   // slotted node becomes a <slot>HoverColor prop (the CardGrid caption pattern).
   const hoverSlots = [];
   const baseSlotOfNode = (n, cssProp) =>
-    colorSlots.find((s) => s.uses.some((u) => u.nodeN === n && u.cssProp === cssProp && u.where === "base"));
+    colorSlots.find((s) =>
+      s.uses.some((u) => u.nodeN === n && u.cssProp === cssProp && u.where === "base")
+    );
   for (const [hostN, states] of Object.entries(hover || {})) {
     for (const [n, hstyles] of Object.entries(states)) {
       for (const cssProp of ["color", "backgroundColor"]) {
@@ -684,9 +746,13 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
   // Root background-image becomes an editable image (the wood-texture pattern).
   let backgroundImageProp = null;
   const bgImage = rootRec?.styles?.backgroundImage;
-  const bgUrl = bgImage && bgImage !== "none" ? (bgImage.match(/url\(["']?([^"')]+)["']?\)/) || [])[1] : null;
+  const bgUrl =
+    bgImage && bgImage !== "none" ? (bgImage.match(/url\(["']?([^"')]+)["']?\)/) || [])[1] : null;
   const beforeBg = rootRec?.before?.backgroundImage;
-  const beforeUrl = beforeBg && beforeBg !== "none" ? (beforeBg.match(/url\(["']?([^"')]+)["']?\)/) || [])[1] : null;
+  const beforeUrl =
+    beforeBg && beforeBg !== "none"
+      ? (beforeBg.match(/url\(["']?([^"')]+)["']?\)/) || [])[1]
+      : null;
   if (bgUrl || beforeUrl) {
     const prop = props.add("backgroundImage", { kind: "image", input: "image" });
     // The measured URL travels with the prop so emission can tell "this
@@ -712,12 +778,23 @@ export function extractProps({ tree, styles, hover, breakpoints, name, maxColorP
     slot.name = prop.name;
     const option = nearestOption(slot.value, branding);
     values[prop.name] = option ?? "";
-    const hexProp = props.add(`${prop.name}Hex`, { kind: "colorHex", input: "color", forProp: prop.name });
+    const hexProp = props.add(`${prop.name}Hex`, {
+      kind: "colorHex",
+      input: "color",
+      forProp: prop.name,
+    });
     slot.hexName = hexProp.name;
     values[hexProp.name] = option ? "" : slot.value;
   }
 
-  return { props: props.list, values, colorSlots, hoverSlots, backgroundImageProp, arrays: arrays.map((a) => a.node) };
+  return {
+    props: props.list,
+    values,
+    colorSlots,
+    hoverSlots,
+    backgroundImageProp,
+    arrays: arrays.map((a) => a.node),
+  };
 }
 
 export { collect };

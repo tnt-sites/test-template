@@ -48,18 +48,102 @@ const {
 const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
 const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
 ---
-<div class="about-us-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3}`} {...rest}>
+
+<div
+  class="about-us-h"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${hoverBackgroundColor};--c6:${hoverBackgroundColor2};--c7:${hoverBackgroundColor3}`}
+  {...rest}
+>
   <div class="auh-box">
     <div class="auh-box2">
       <div class="auh-box3">
         <div class="auh-box4">
           {eyebrow && <h4 class="auh-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auh-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auh-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="auh-box5">
@@ -70,7 +154,18 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
                 <div class="auh-box10">
                   <div class="auh-box11">
                     <div class="auh-box12">
-                      {image && <img class="auh-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+                      {
+                        image && (
+                          <img
+                            class="auh-media"
+                            src={image}
+                            alt={imageAlt || ""}
+                            loading="lazy"
+                            width="600"
+                            height="600"
+                          />
+                        )
+                      }
                     </div>
                   </div>
                 </div>
@@ -120,17 +215,19 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
                   </div>
                   <section class="auh-box33">
                     <div class="auh-grid">
-                      {itemsList.map((it) => (
-                        <div class="auh-box34">
-                          <div class="auh-box35">
-                            <div class="auh-box36">
-                              <div class="auh-box37">
-                                {it.text && <div class="auh-body2" set:html={it.text} />}
+                      {
+                        itemsList.map((it) => (
+                          <div class="auh-box34">
+                            <div class="auh-box35">
+                              <div class="auh-box36">
+                                <div class="auh-box37">
+                                  {it.text && <div class="auh-body2" set:html={it.text} />}
+                                </div>
                               </div>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        ))
+                      }
                     </div>
                   </section>
                 </div>
@@ -140,7 +237,18 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
           <div class="auh-box42">
             <div class="auh-box43">
               <div class="auh-box44">
-                {image2 && <img class="auh-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="600" height="600" />}
+                {
+                  image2 && (
+                    <img
+                      class="auh-media2"
+                      src={image2}
+                      alt={image2Alt || ""}
+                      loading="lazy"
+                      width="600"
+                      height="600"
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="auh-box45">
@@ -160,13 +268,15 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
                 {heading4 && <h4 class="auh-heading6">{heading4}</h4>}
               </div>
               <div class="auh-grid2">
-                {items2List.map((it) => (
-                  <div class="auh-box51">
-                    <div class="auh-box52">
-                      {it.text && <div class="auh-body4" set:html={it.text} />}
+                {
+                  items2List.map((it) => (
+                    <div class="auh-box51">
+                      <div class="auh-box52">
+                        {it.text && <div class="auh-body4" set:html={it.text} />}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))
+                }
               </div>
             </div>
           </section>
@@ -762,7 +872,7 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .auh-heading6 {
     line-height: 24px;
   }
@@ -848,5 +958,5 @@ const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

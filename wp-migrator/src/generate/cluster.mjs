@@ -55,7 +55,8 @@ export function clusterComponents(components, { threshold = 0.85 } = {}) {
       // An LCS can be no longer than the shorter stream, so this ratio is a
       // hard ceiling on the similarity — skipping here is exact, not heuristic,
       // and it takes the 4,898-line outliers out of the O(n*m) path entirely.
-      const ceiling = (2 * Math.min(a.tokens.length, b.tokens.length)) / (a.tokens.length + b.tokens.length);
+      const ceiling =
+        (2 * Math.min(a.tokens.length, b.tokens.length)) / (a.tokens.length + b.tokens.length);
 
       if (ceiling < threshold) continue;
       if (similarity(a.tokens, b.tokens) >= threshold) ds.union(a.name, b.name);

@@ -24,7 +24,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="toothache-cracked-tooth-filling" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor};--c7:${hoverBackgroundColor}`} {...rest}>
+
+<section
+  class="toothache-cracked-tooth-filling"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor};--c7:${hoverBackgroundColor}`}
+  {...rest}
+>
   <section class="tctf-box">
     <div class="tctf-box2">
       <div class="tctf-box3">
@@ -37,13 +43,37 @@ const {
           {text && <p class="tctf-text">{text}</p>}
         </div>
         <div class="tctf-box7">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="tctf-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="tctf-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="tctf-box8">
         <div class="tctf-box9">
           <div class="tctf-box10">
-            {image && <img class="tctf-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+            {
+              image && (
+                <img
+                  class="tctf-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="650"
+                  height="575"
+                />
+              )
+            }
           </div>
         </div>
       </div>
@@ -365,7 +395,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .tctf-heading {
     font-weight: 400;
   }
@@ -451,5 +481,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

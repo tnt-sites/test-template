@@ -128,16 +128,74 @@ const raw1 = `<table>
   </tbody>
 </table>`;
 ---
-<div class="payment-options-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--btnbg:${buttonBackgroundColor};--c7:${buttonTextColor2};--c8:${buttonBackgroundColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+
+<div
+  class="payment-options-b"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--btnbg:${buttonBackgroundColor};--c7:${buttonTextColor2};--c8:${buttonBackgroundColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="pob-box">
     <div class="pob-box2">
       <div class="pob-box3">
         <div class="pob-box4">
           {eyebrow && <h4 class="pob-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pob-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pob-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pob-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pob-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pob-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="pob-box5">
@@ -230,13 +288,39 @@ const raw1 = `<table>
             </div>
             <div class="pob-box41">
               <div class="pob-box42">
-                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pob-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                {
+                  secondaryButtonText4 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="pob-btn5"
+                      text={secondaryButtonText4}
+                      link={secondaryButtonLink4 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="pob-box43">
               <div class="pob-box44">
                 <div class="pob-box45">
-                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pob-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                  {
+                    secondaryButtonText5 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="pob-btn6"
+                        text={secondaryButtonText5}
+                        link={secondaryButtonLink5 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -1023,7 +1107,7 @@ const raw1 = `<table>
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   @media (min-width: 768px) {
     .pob-heading3 {
       font-weight: 400;
@@ -1235,5 +1319,5 @@ const raw1 = `<table>
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -38,7 +38,7 @@ const src = `https://forms.liine.com/${formId}`;
   colorScheme="inherit"
   backgroundColor={backgroundColor}
   backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  style={backgroundGradient ? `--section-bg-gradient: ${backgroundGradient}` : undefined}
   {...htmlAttributes}
 >
   {heading && <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />}

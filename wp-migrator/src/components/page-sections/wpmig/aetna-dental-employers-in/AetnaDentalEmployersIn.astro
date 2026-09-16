@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="aetna-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="aetna-dental-employers-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="adei-box">
     <div class="adei-box2">
       <div class="adei-box3">
         <div class="adei-box4">
           <div class="adei-box5">
-            {image && <img class="adei-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+            {
+              image && (
+                <img
+                  class="adei-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="1344"
+                  height="960"
+                />
+              )
+            }
           </div>
         </div>
         <div class="adei-box6">
@@ -345,7 +362,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .adei-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -382,5 +399,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

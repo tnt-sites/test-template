@@ -30,85 +30,358 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="about-us-f" id={id || undefined} style={`--btntx:${buttonTextColor};--c2:${hoverBackgroundColor};--c3:${hoverBackgroundColor2};--c4:${hoverColor};--c5:${hoverColor2}`} {...rest}>
+
+<div
+  class="about-us-f"
+  id={id || undefined}
+  style={`--btntx:${buttonTextColor};--c2:${hoverBackgroundColor};--c3:${hoverBackgroundColor2};--c4:${hoverColor};--c5:${hoverColor2}`}
+  {...rest}
+>
   <div class="auf-box">
     <div class="auf-box2">
       <div class="auf-box3">
         <div class="auf-box4">
           {subheading && <h4 class="auf-heading">{subheading}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auf-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auf-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="auf-box5">
         <div class="auf-box6">
           <div class="auf-box7" data-lightbox>
-            <a class="auf-box8" href="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg" data-caption="Office tour photo 1 of 21">
-              <img src="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg" alt="Office tour photo 1 of 21" loading="eager" decoding="async" />
+            <a
+              class="auf-box8"
+              href="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg"
+              data-caption="Office tour photo 1 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2024/01/img-dental-emergency-banner.jpg"
+                alt="Office tour photo 1 of 21"
+                loading="eager"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box9" href="/wp-content/uploads/2024/01/img-Appointments.jpg" data-caption="Office tour photo 2 of 21">
-              <img src="/wp-content/uploads/2024/01/img-Appointments.jpg" alt="Office tour photo 2 of 21" loading="eager" decoding="async" />
+            <a
+              class="auf-box9"
+              href="/wp-content/uploads/2024/01/img-Appointments.jpg"
+              data-caption="Office tour photo 2 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2024/01/img-Appointments.jpg"
+                alt="Office tour photo 2 of 21"
+                loading="eager"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box10" href="/wp-content/uploads/2019/10/3d.jpg" data-caption="Office tour photo 3 of 21">
-              <img src="/wp-content/uploads/2019/10/3d.jpg" alt="Office tour photo 3 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box10"
+              href="/wp-content/uploads/2019/10/3d.jpg"
+              data-caption="Office tour photo 3 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/3d.jpg"
+                alt="Office tour photo 3 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box11" href="/wp-content/uploads/2019/10/4d.jpg" data-caption="Office tour photo 4 of 21">
-              <img src="/wp-content/uploads/2019/10/4d.jpg" alt="Office tour photo 4 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box11"
+              href="/wp-content/uploads/2019/10/4d.jpg"
+              data-caption="Office tour photo 4 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/4d.jpg"
+                alt="Office tour photo 4 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box12" href="/wp-content/uploads/2019/10/5d.jpg" data-caption="Office tour photo 5 of 21">
-              <img src="/wp-content/uploads/2019/10/5d.jpg" alt="Office tour photo 5 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box12"
+              href="/wp-content/uploads/2019/10/5d.jpg"
+              data-caption="Office tour photo 5 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/5d.jpg"
+                alt="Office tour photo 5 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box13" href="/wp-content/uploads/2019/10/6d.jpg" data-caption="Office tour photo 6 of 21">
-              <img src="/wp-content/uploads/2019/10/6d.jpg" alt="Office tour photo 6 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box13"
+              href="/wp-content/uploads/2019/10/6d.jpg"
+              data-caption="Office tour photo 6 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/6d.jpg"
+                alt="Office tour photo 6 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box14" href="/wp-content/uploads/2019/10/7d.jpg" data-caption="Office tour photo 7 of 21">
-              <img src="/wp-content/uploads/2019/10/7d.jpg" alt="Office tour photo 7 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box14"
+              href="/wp-content/uploads/2019/10/7d.jpg"
+              data-caption="Office tour photo 7 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/7d.jpg"
+                alt="Office tour photo 7 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box15" href="/wp-content/uploads/2019/10/8d.jpg" data-caption="Office tour photo 8 of 21">
-              <img src="/wp-content/uploads/2019/10/8d.jpg" alt="Office tour photo 8 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box15"
+              href="/wp-content/uploads/2019/10/8d.jpg"
+              data-caption="Office tour photo 8 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/8d.jpg"
+                alt="Office tour photo 8 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box16" href="/wp-content/uploads/2019/10/9d.jpg" data-caption="Office tour photo 9 of 21">
-              <img src="/wp-content/uploads/2019/10/9d.jpg" alt="Office tour photo 9 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box16"
+              href="/wp-content/uploads/2019/10/9d.jpg"
+              data-caption="Office tour photo 9 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/9d.jpg"
+                alt="Office tour photo 9 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box17" href="/wp-content/uploads/2019/10/10d.jpg" data-caption="Office tour photo 10 of 21">
-              <img src="/wp-content/uploads/2019/10/10d.jpg" alt="Office tour photo 10 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box17"
+              href="/wp-content/uploads/2019/10/10d.jpg"
+              data-caption="Office tour photo 10 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/10d.jpg"
+                alt="Office tour photo 10 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box18" href="/wp-content/uploads/2019/10/11d.jpg" data-caption="Office tour photo 11 of 21">
-              <img src="/wp-content/uploads/2019/10/11d.jpg" alt="Office tour photo 11 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box18"
+              href="/wp-content/uploads/2019/10/11d.jpg"
+              data-caption="Office tour photo 11 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/11d.jpg"
+                alt="Office tour photo 11 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box19" href="/wp-content/uploads/2019/10/13d.jpg" data-caption="Office tour photo 12 of 21">
-              <img src="/wp-content/uploads/2019/10/13d.jpg" alt="Office tour photo 12 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box19"
+              href="/wp-content/uploads/2019/10/13d.jpg"
+              data-caption="Office tour photo 12 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/13d.jpg"
+                alt="Office tour photo 12 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box20" href="/wp-content/uploads/2019/10/columbinecreek-office1.jpg" data-caption="Office tour photo 13 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office1.jpg" alt="Office tour photo 13 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box20"
+              href="/wp-content/uploads/2019/10/columbinecreek-office1.jpg"
+              data-caption="Office tour photo 13 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office1.jpg"
+                alt="Office tour photo 13 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box21" href="/wp-content/uploads/2019/10/columbinefrontoffice.jpg" data-caption="Office tour photo 14 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinefrontoffice.jpg" alt="Office tour photo 14 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box21"
+              href="/wp-content/uploads/2019/10/columbinefrontoffice.jpg"
+              data-caption="Office tour photo 14 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinefrontoffice.jpg"
+                alt="Office tour photo 14 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box22" href="/wp-content/uploads/2019/10/columbinecreek-office8.jpg" data-caption="Office tour photo 15 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office8.jpg" alt="Office tour photo 15 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box22"
+              href="/wp-content/uploads/2019/10/columbinecreek-office8.jpg"
+              data-caption="Office tour photo 15 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office8.jpg"
+                alt="Office tour photo 15 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box23" href="/wp-content/uploads/2019/10/columbinecreek-office7.jpg" data-caption="Office tour photo 16 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office7.jpg" alt="Office tour photo 16 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box23"
+              href="/wp-content/uploads/2019/10/columbinecreek-office7.jpg"
+              data-caption="Office tour photo 16 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office7.jpg"
+                alt="Office tour photo 16 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box24" href="/wp-content/uploads/2019/10/columbinecreek-office6.jpg" data-caption="Office tour photo 17 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office6.jpg" alt="Office tour photo 17 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box24"
+              href="/wp-content/uploads/2019/10/columbinecreek-office6.jpg"
+              data-caption="Office tour photo 17 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office6.jpg"
+                alt="Office tour photo 17 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box25" href="/wp-content/uploads/2019/10/columbinecreek-office5.jpg" data-caption="Office tour photo 18 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office5.jpg" alt="Office tour photo 18 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box25"
+              href="/wp-content/uploads/2019/10/columbinecreek-office5.jpg"
+              data-caption="Office tour photo 18 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office5.jpg"
+                alt="Office tour photo 18 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box26" href="/wp-content/uploads/2019/10/Img-Edit.jpg" data-caption="Office tour photo 19 of 21">
-              <img src="/wp-content/uploads/2019/10/Img-Edit.jpg" alt="Office tour photo 19 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box26"
+              href="/wp-content/uploads/2019/10/Img-Edit.jpg"
+              data-caption="Office tour photo 19 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/Img-Edit.jpg"
+                alt="Office tour photo 19 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box27" href="/wp-content/uploads/2019/10/columbinecreek-office2.jpg" data-caption="Office tour photo 20 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office2.jpg" alt="Office tour photo 20 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box27"
+              href="/wp-content/uploads/2019/10/columbinecreek-office2.jpg"
+              data-caption="Office tour photo 20 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office2.jpg"
+                alt="Office tour photo 20 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
-            <a class="auf-box28" href="/wp-content/uploads/2019/10/columbinecreek-office4.jpg" data-caption="Office tour photo 21 of 21">
-              <img src="/wp-content/uploads/2019/10/columbinecreek-office4.jpg" alt="Office tour photo 21 of 21" loading="lazy" decoding="async" />
+            <a
+              class="auf-box28"
+              href="/wp-content/uploads/2019/10/columbinecreek-office4.jpg"
+              data-caption="Office tour photo 21 of 21"
+            >
+              <img
+                src="/wp-content/uploads/2019/10/columbinecreek-office4.jpg"
+                alt="Office tour photo 21 of 21"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
           </div>
         </div>
@@ -1809,7 +2082,6 @@ const {
     }
   }
 
-
   /*
    * Gallery layout — a deliberate change from the source.
    *
@@ -1894,7 +2166,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .auf-box8 {
     color: rgb(27, 46, 56);
   }
@@ -2431,5 +2703,5 @@ const {
       color: rgb(27, 46, 56);
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

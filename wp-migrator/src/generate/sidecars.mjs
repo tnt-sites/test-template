@@ -61,7 +61,14 @@ function retargetStructures(doc, oldName, newName) {
  * `extraProps`: [{ name, input, value }] appended to the inputs and the default
  * value — the per-instance image dimensions lifted out of the merged markup.
  */
-export function rewriteSidecars({ sources, oldName, newName, folder, rename = {}, extraProps = [] }) {
+export function rewriteSidecars({
+  sources,
+  oldName,
+  newName,
+  folder,
+  rename = {},
+  extraProps = [],
+}) {
   const componentPath = `page-sections/${folder}/${newName}`;
   const inputsPath = `/src/components/${componentPath}/${newName}.cloudcannon.inputs.yml`;
 

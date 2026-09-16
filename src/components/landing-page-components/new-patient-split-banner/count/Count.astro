@@ -2,7 +2,13 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Image from "@core-elements/image/Image.astro";
 
-const { items = [], backgroundColor = "base", backgroundColorHex = "", class: className, ...rest } = Astro.props;
+const {
+  items = [],
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
 
 const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
 const htmlAttributes = Object.fromEntries(

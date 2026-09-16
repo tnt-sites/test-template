@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patients-e" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="new-patients-e"
+  id={id || undefined}
+  style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="npe-box">
     <h3 class="npe-heading">{heading}</h3>
     {subheading && <h1 class="npe-heading2">{subheading}</h1>}
@@ -88,7 +94,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .npe-text {
     background-color: rgb(235, 242, 246);
     color: rgb(27, 46, 56);
@@ -207,5 +213,5 @@ const {
       font-size: 16px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

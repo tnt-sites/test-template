@@ -54,13 +54,16 @@ test("all five toothbar banner readings collapse to one component", () => {
 });
 
 test("a genuinely different layout still gets its own hash", () => {
-  const twoColumn = A.replace("<div class=\"pb-box\">", "<div class=\"pb-box\"><aside/>");
+  const twoColumn = A.replace('<div class="pb-box">', '<div class="pb-box"><aside/>');
   assert.notEqual(structureHash(A), structureHash(twoColumn));
 });
 
 test("a real design difference in min-height is still a difference", () => {
   // 426 -> 470 is noise; 426 -> 900 is a different design.
-  assert.notEqual(structureHash(A), structureHash(banner({ minHeight: 900, top: 362.4, scale: "1.06664", image: "/a.jpg" })));
+  assert.notEqual(
+    structureHash(A),
+    structureHash(banner({ minHeight: 900, top: 362.4, scale: "1.06664", image: "/a.jpg" }))
+  );
 });
 
 test("near-identical banners score far above any sane reuse threshold", () => {

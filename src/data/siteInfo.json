@@ -17,9 +17,7 @@
       "name": "North County Cosmetic and Implant Dentistry",
       "addresses": [
         {
-          "lines": [
-            "1934 Via Centre Ste A"
-          ],
+          "lines": ["1934 Via Centre Ste A"],
           "city": "Vista",
           "state": "CA",
           "postalCode": "92081",
@@ -76,12 +74,8 @@
     }
   ],
   "modals": [],
-  "head_scripts": [
-    "/* test header script */"
-  ],
-  "footer_scripts": [
-    "/* Test Footer Script */"
-  ],
+  "head_scripts": ["/* test header script */"],
+  "footer_scripts": ["/* Test Footer Script */"],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

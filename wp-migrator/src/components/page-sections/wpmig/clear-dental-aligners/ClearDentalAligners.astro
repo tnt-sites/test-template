@@ -35,12 +35,29 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="clear-dental-aligners" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="clear-dental-aligners"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="cda-box">
     <div class="cda-box2">
       <div class="cda-box3">
         <div class="cda-box4">
-          {image && <img class="cda-media" src={image} alt={imageAlt || ""} loading="lazy" width="498" height="116" />}
+          {
+            image && (
+              <img
+                class="cda-media"
+                src={image}
+                alt={imageAlt || ""}
+                loading="lazy"
+                width="498"
+                height="116"
+              />
+            )
+          }
         </div>
       </div>
       <div class="cda-box5">
@@ -52,7 +69,18 @@ const {
       </div>
       <div class="cda-box8">
         <div class="cda-box9">
-          {image2 && <img class="cda-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="1024" height="380" />}
+          {
+            image2 && (
+              <img
+                class="cda-media2"
+                src={image2}
+                alt={image2Alt || ""}
+                loading="lazy"
+                width="1024"
+                height="380"
+              />
+            )
+          }
         </div>
       </div>
       <div class="cda-box10">
@@ -68,7 +96,18 @@ const {
           {subheading && <h3 class="cda-heading2">{subheading}</h3>}
         </div>
         <div class="cda-box15">
-          {image3 && <img class="cda-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="498" height="116" />}
+          {
+            image3 && (
+              <img
+                class="cda-media3"
+                src={image3}
+                alt={image3Alt || ""}
+                loading="lazy"
+                width="498"
+                height="116"
+              />
+            )
+          }
         </div>
         <div class="cda-box16">
           <div class="cda-box17">
@@ -90,13 +129,39 @@ const {
         </div>
         <div class="cda-box23">
           <div class="cda-box24">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cda-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="default"
+                  borderWidth="none"
+                  class="cda-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="cda-box25">
           <div class="cda-box26">
             <div class="cda-box27">
-              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cda-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+              {
+                secondaryButtonText && (
+                  <Button
+                    variant="primary"
+                    size="md"
+                    width="none"
+                    borderRadius="default"
+                    borderWidth="none"
+                    class="cda-btn2"
+                    text={secondaryButtonText}
+                    link={secondaryButtonLink || "#"}
+                  />
+                )
+              }
             </div>
           </div>
         </div>
@@ -483,7 +548,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cda-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -638,5 +703,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

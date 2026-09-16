@@ -17,7 +17,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="meet-our-provider" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="meet-our-provider"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="mop-box">
     <div class="mop-box2">
       <h2 class="mop-heading">{heading}</h2>
@@ -25,7 +31,18 @@ const {
     <div class="mop-box3">
       <div class="mop-box4">
         <div class="mop-box5">
-          {image && <img class="mop-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+          {
+            image && (
+              <img
+                class="mop-media"
+                src={image}
+                alt={imageAlt || ""}
+                loading="lazy"
+                width="600"
+                height="600"
+              />
+            )
+          }
         </div>
       </div>
       <div class="mop-box6">

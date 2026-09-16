@@ -36,15 +36,60 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="sedation-dentistry-c" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${buttonBackgroundHoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="sedation-dentistry-c"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${buttonBackgroundHoverColor};--c10:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="sdc-box">
     <div class="sdc-box2">
       <div class="sdc-box3">
         <div class="sdc-box4">
           {eyebrow && <h4 class="sdc-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdc-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdc-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="sdc-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="sdc-box5">
@@ -73,13 +118,39 @@ const {
             </div>
             <div class="sdc-box16">
               <div class="sdc-box17">
-                {secondaryButtonText3 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sdc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+                {
+                  secondaryButtonText3 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="sdc-btn4"
+                      text={secondaryButtonText3}
+                      link={secondaryButtonLink3 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="sdc-box18">
               <div class="sdc-box19">
                 <div class="sdc-box20">
-                  {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sdc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                  {
+                    secondaryButtonText4 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="sdc-btn5"
+                        text={secondaryButtonText4}
+                        link={secondaryButtonLink4 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -509,7 +580,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .sdc-box13 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -628,5 +699,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

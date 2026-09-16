@@ -30,7 +30,13 @@ test("unreferenced media lists only files no page points at", () => {
 test("WordPress size variants and chrome assets are not candidates", () => {
   // A variant is the same picture, and listing every one buries the distinct
   // images; a logo is never the missing gallery.
-  const root = mirror(["photo.jpg", "photo-300x200.jpg", "photo-1024x768.jpg", "site-logo.png", "favicon.png"]);
+  const root = mirror([
+    "photo.jpg",
+    "photo-300x200.jpg",
+    "photo-1024x768.jpg",
+    "site-logo.png",
+    "favicon.png",
+  ]);
 
   assert.deepEqual(unreferencedMedia(root, []), ["photo.jpg"]);
 });
@@ -46,10 +52,17 @@ test("a proposal keeps only filenames that were actually offered", async () => {
   // enforced rather than trusted.
   const png = path.join(mirror([]), "shot.png");
   fs.writeFileSync(png, "x");
-  const c = client(JSON.stringify({
-    images: [{ file: "real.jpg", alt: "a" }, { file: "invented.jpg", alt: "b" }],
-    heading: "In the News", confidence: "high", note: "",
-  }));
+  const c = client(
+    JSON.stringify({
+      images: [
+        { file: "real.jpg", alt: "a" },
+        { file: "invented.jpg", alt: "b" },
+      ],
+      heading: "In the News",
+      confidence: "high",
+      note: "",
+    })
+  );
 
   const out = await proposeSection(c, png, ["real.jpg"]);
 
@@ -67,7 +80,14 @@ test("a proposal matching nothing offered is no proposal at all", async () => {
 
 test("no candidate files means no model call and no proposal", async () => {
   let called = false;
-  const c = { messages: { create: async () => { called = true; return { content: [] }; } } };
+  const c = {
+    messages: {
+      create: async () => {
+        called = true;
+        return { content: [] };
+      },
+    },
+  };
 
   assert.equal(await proposeSection(c, "/nonexistent.png", []), null);
   assert.equal(called, false);
@@ -94,7 +114,14 @@ test("a page-named file the build never references is the actionable gap", () =>
 test("a page whose media is all referenced has no gap at all", () => {
   const root = mirror(["shown.jpg"]);
 
-  assert.equal(mediaGap({ staticDir: root, referenced: ["/wp-content/uploads/2024/11/shown.jpg"], pageSlug: "x" }), null);
+  assert.equal(
+    mediaGap({
+      staticDir: root,
+      referenced: ["/wp-content/uploads/2024/11/shown.jpg"],
+      pageSlug: "x",
+    }),
+    null
+  );
 });
 
 test("unreferenced media with no name match still reports a count, not a false lead", () => {

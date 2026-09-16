@@ -38,16 +38,74 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="new-patients-h" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${textColor3};--btnbg:${buttonBackgroundColor};--c8:${buttonTextColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${hoverBackgroundColor4}`} {...rest}>
+
+<div
+  class="new-patients-h"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${textColor3};--btnbg:${buttonBackgroundColor};--c8:${buttonTextColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${hoverBackgroundColor4}`}
+  {...rest}
+>
   <div class="nph-box">
     <div class="nph-box2">
       <div class="nph-box3">
         <div class="nph-box4">
           {eyebrow && <h4 class="nph-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nph-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="nph-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="nph-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="nph-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="nph-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="nph-box5">
@@ -70,7 +128,20 @@ const {
                     </div>
                   </div>
                 </div>
-                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="nph-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                {
+                  secondaryButtonText4 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="none"
+                      borderWidth="none"
+                      class="nph-btn5"
+                      text={secondaryButtonText4}
+                      link={secondaryButtonLink4 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
           </div>
@@ -483,7 +554,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .nph-text {
     background-color: rgb(235, 242, 246);
     color: rgb(27, 46, 56);
@@ -591,5 +662,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

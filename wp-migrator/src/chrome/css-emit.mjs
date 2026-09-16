@@ -24,7 +24,16 @@ const NONE = new Set(["", "none", "normal", "auto", "0px", "rgba(0, 0, 0, 0)", "
  * one site that gets the template's pill button. Zero is an answer; only
  * absence is not.
  */
-const UNSET = new Set(["", "none", "normal", "auto", "rgba(0, 0, 0, 0)", "transparent", "null", "undefined"]);
+const UNSET = new Set([
+  "",
+  "none",
+  "normal",
+  "auto",
+  "rgba(0, 0, 0, 0)",
+  "transparent",
+  "null",
+  "undefined",
+]);
 
 /**
  * Round a pixel length, and leave every other unit exactly as measured.
@@ -36,7 +45,9 @@ const UNSET = new Set(["", "none", "normal", "auto", "rgba(0, 0, 0, 0)", "transp
  * the unit has to come from the string rather than be assumed.
  */
 const px = (v) => {
-  const m = String(v ?? "").trim().match(/^(-?[\d.]+)([a-z%]*)$/i);
+  const m = String(v ?? "")
+    .trim()
+    .match(/^(-?[\d.]+)([a-z%]*)$/i);
   if (!m) return null;
   const n = parseFloat(m[1]);
   if (!Number.isFinite(n)) return null;
@@ -75,9 +86,23 @@ const border = (styles, side) => {
  * stay unquoted.
  */
 const GENERIC_FAMILIES = new Set([
-  "serif", "sans-serif", "monospace", "cursive", "fantasy",
-  "system-ui", "ui-serif", "ui-sans-serif", "ui-monospace", "ui-rounded",
-  "math", "emoji", "fangsong", "inherit", "initial", "revert", "unset",
+  "serif",
+  "sans-serif",
+  "monospace",
+  "cursive",
+  "fantasy",
+  "system-ui",
+  "ui-serif",
+  "ui-sans-serif",
+  "ui-monospace",
+  "ui-rounded",
+  "math",
+  "emoji",
+  "fangsong",
+  "inherit",
+  "initial",
+  "revert",
+  "unset",
 ]);
 
 /**
@@ -169,14 +194,21 @@ const TOKENS = {
     ["nav-border-top", (r) => border(r.styles, "Top")],
     ["nav-border-bottom", (r) => border(r.styles, "Bottom")],
     ["nav-height", (r) => (r.box.h > 0 ? `${r.box.h}px` : null)],
-    ["nav-position", (r) => (r.styles.position === "sticky" || r.styles.position === "fixed" ? r.styles.position : null)],
+    [
+      "nav-position",
+      (r) =>
+        r.styles.position === "sticky" || r.styles.position === "fixed" ? r.styles.position : null,
+    ],
   ],
   navLink: [
     ["nav-link-color", (r) => color(r.styles.color)],
     ["nav-link-size", (r) => len(r.styles.fontSize)],
     ["nav-link-weight", (r) => r.styles.fontWeight || null],
     ["nav-link-font", (r) => font(r.styles.fontFamily)],
-    ["nav-link-transform", (r) => (r.styles.textTransform === "none" ? null : r.styles.textTransform)],
+    [
+      "nav-link-transform",
+      (r) => (r.styles.textTransform === "none" ? null : r.styles.textTransform),
+    ],
     ["nav-link-pad-x", (r) => len(r.styles.paddingLeft)],
     ["nav-link-pad-y", (r) => len(r.styles.paddingTop)],
   ],
@@ -236,7 +268,10 @@ const TOKENS = {
     ["footer-heading-size", (r) => len(r.styles.fontSize)],
     ["footer-heading-weight", (r) => r.styles.fontWeight || null],
     ["footer-heading-font", (r) => font(r.styles.fontFamily)],
-    ["footer-heading-transform", (r) => (r.styles.textTransform === "none" ? null : r.styles.textTransform)],
+    [
+      "footer-heading-transform",
+      (r) => (r.styles.textTransform === "none" ? null : r.styles.textTransform),
+    ],
   ],
   footerRule: [
     ["footer-rule", (r) => border(r.styles, "Top")],
@@ -279,7 +314,11 @@ export function tokensFor(measured) {
     if (!record) continue;
     for (const [name, read] of entries) {
       let value = null;
-      try { value = read(record); } catch { value = null; }
+      try {
+        value = read(record);
+      } catch {
+        value = null;
+      }
       if (value != null && !UNSET.has(String(value))) out[`--chrome-${name}`] = String(value);
     }
   }
@@ -297,7 +336,9 @@ export function tokensFor(measured) {
  * how a mobile value leaks into the desktop bar.
  */
 export function emitChromeCss(byWidth, { banner = "" } = {}) {
-  const widths = Object.keys(byWidth).map(Number).sort((a, b) => a - b);
+  const widths = Object.keys(byWidth)
+    .map(Number)
+    .sort((a, b) => a - b);
   if (!widths.length) return "";
 
   const perWidth = new Map(widths.map((w) => [w, tokensFor(byWidth[w])]));
@@ -330,7 +371,14 @@ export function emitChromeCss(byWidth, { banner = "" } = {}) {
       if (!(k in here)) changed[k] = "initial";
     }
     if (Object.keys(changed).length) {
-      parts.push("", `@media (min-width: ${width}px) {`, "  :root {", block(changed, "  "), "  }", "}");
+      parts.push(
+        "",
+        `@media (min-width: ${width}px) {`,
+        "  :root {",
+        block(changed, "  "),
+        "  }",
+        "}"
+      );
     }
     previous = { ...previous, ...here };
   }

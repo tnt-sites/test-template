@@ -46,17 +46,88 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="cosmetic-dentistry-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${buttonBackgroundHoverColor};--c11:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="cosmetic-dentistry-e"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${buttonBackgroundHoverColor};--c11:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="cde-box">
     <div class="cde-box2">
       <div class="cde-box3">
         <div class="cde-box4">
           {eyebrow && <h4 class="cde-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cde-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cde-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cde-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cde-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cde-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="cde-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="cde-box5">
@@ -108,13 +179,39 @@ const {
             </div>
             <div class="cde-box25">
               <div class="cde-box26">
-                {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cde-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                {
+                  secondaryButtonText5 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="cde-btn6"
+                      text={secondaryButtonText5}
+                      link={secondaryButtonLink5 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="cde-box27">
               <div class="cde-box28">
                 <div class="cde-box29">
-                  {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cde-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                  {
+                    secondaryButtonText6 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="cde-btn7"
+                        text={secondaryButtonText6}
+                        link={secondaryButtonLink6 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -719,7 +816,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cde-heading2 {
     font-weight: 400;
   }
@@ -931,5 +1028,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

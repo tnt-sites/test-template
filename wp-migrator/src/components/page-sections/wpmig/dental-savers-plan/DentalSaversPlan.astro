@@ -21,11 +21,31 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="dental-savers-plan" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonTextHoverColor}`} {...rest}>
+
+<div
+  class="dental-savers-plan"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="dsp-box">
     <h2 class="dsp-heading">{heading}</h2>
     {text && <div class="dsp-body" set:html={text} />}
-    {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" uppercase class="dsp-btn" text={buttonText} link={buttonLink || "#"} />}
+    {
+      buttonText && (
+        <Button
+          variant="primary"
+          size="md"
+          width="none"
+          borderRadius="none"
+          borderWidth="xs"
+          uppercase
+          class="dsp-btn"
+          text={buttonText}
+          link={buttonLink || "#"}
+        />
+      )
+    }
   </div>
 </div>
 <style>
@@ -96,7 +116,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   :global(.dsp-btn) {
     align-items: normal;
     justify-content: normal;
@@ -113,5 +133,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

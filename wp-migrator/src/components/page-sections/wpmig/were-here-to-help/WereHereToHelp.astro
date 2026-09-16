@@ -19,7 +19,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="were-here-to-help" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`} {...rest}>
+
+<section
+  class="were-here-to-help"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="whth-box">
     <div class="whth-box2">
       <div class="whth-box3">
@@ -28,7 +34,21 @@ const {
         </div>
         <div class="whth-box5">
           <div class="whth-box6">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="whth-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="none"
+                  uppercase
+                  class="whth-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
       </div>
@@ -236,7 +256,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .whth-box4 {
     color: rgb(255, 255, 255);
     font-family: Damion, sans-serif;
@@ -382,5 +402,5 @@ const {
       align-items: center;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

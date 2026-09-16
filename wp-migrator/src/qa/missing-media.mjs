@@ -59,7 +59,9 @@ export function mediaGap({ staticDir, referenced, pageSlug }) {
   // How many pictures the page itself renders — the caller uses this to decide
   // whether "no images here at all" is itself the signal.
   const pageImages = new Set(
-    (referenced || []).map((r) => r.split("/").pop()).filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f))
+    (referenced || [])
+      .map((r) => r.split("/").pop())
+      .filter((f) => /\.(jpe?g|png|webp|avif)$/i.test(f))
   ).size;
 
   return { candidates, named, count: candidates.length, pageImages };
@@ -80,7 +82,7 @@ const DETECT_PROMPT = [
   "For each gap, say where it sits (the nearest heading or landmark), what kind",
   "of thing it is, and how many items it appears to contain.",
   "",
-  'Output ONLY a JSON array, no prose:',
+  "Output ONLY a JSON array, no prose:",
   '[{"where":"<nearest heading or landmark>","kind":"gallery|carousel|image|video|embed|other",',
   '"count":<number of items you can see>,"describes":"<what the content is>",',
   '"confidence":"high|medium|low"}]',
@@ -133,7 +135,10 @@ export async function detectMissingMedia(client, originalPng, extracted, { model
     max_tokens: 4000,
     thinking: { type: "adaptive" },
     messages: [
-      { role: "user", content: [imageBlock(originalPng), { type: "text", text: `${DETECT_PROMPT}\n\n${found}` }] },
+      {
+        role: "user",
+        content: [imageBlock(originalPng), { type: "text", text: `${DETECT_PROMPT}\n\n${found}` }],
+      },
     ],
   });
 
@@ -151,7 +156,7 @@ const BUILD_PROMPT = [
   "If you cannot confidently match an item, leave it out — a short correct list",
   "is worth more than a long speculative one.",
   "",
-  'Output ONLY JSON, no prose:',
+  "Output ONLY JSON, no prose:",
   '{"images":[{"file":"<exact filename from the list>","alt":"<short description of the image>"}],',
   '"heading":"<section heading if one is visible, else empty>",',
   '"confidence":"high|medium|low","note":"<anything a human should check>"}',
@@ -181,7 +186,10 @@ export async function proposeSection(client, originalPng, candidateFiles, { mode
         role: "user",
         content: [
           imageBlock(originalPng),
-          { type: "text", text: `${BUILD_PROMPT}\n\nAvailable files (${candidateFiles.length}):\n${list}` },
+          {
+            type: "text",
+            text: `${BUILD_PROMPT}\n\nAvailable files (${candidateFiles.length}):\n${list}`,
+          },
         ],
       },
     ],

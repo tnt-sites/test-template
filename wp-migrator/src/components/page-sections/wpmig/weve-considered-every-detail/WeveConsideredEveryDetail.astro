@@ -4,15 +4,15 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours.
  */
-const {
-  heading = "",
-  headingColor = "#3b6278",
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { heading = "", headingColor = "#3b6278", id, _component, ...rest } = Astro.props;
 ---
-<section class="weve-considered-every-detail" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+
+<section
+  class="weve-considered-every-detail"
+  id={id || undefined}
+  style={`--hd:${headingColor}`}
+  {...rest}
+>
   <div class="wced-box">
     <div class="wced-box2">
       <div class="wced-box3">
@@ -111,7 +111,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .wced-heading {
     font-weight: 400;
   }
@@ -125,5 +125,5 @@ const {
       font-weight: 400;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

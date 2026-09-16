@@ -39,18 +39,102 @@ const {
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
 ---
-<div class="about-us-c" id={id || undefined} style={`--btntx:${buttonTextColor};--tx:${textColor};--cardbg:${cardBackgroundColor};--tt:${titleColor};--c5:${textColor2};--c6:${textColor3};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`} {...rest}>
+
+<div
+  class="about-us-c"
+  id={id || undefined}
+  style={`--btntx:${buttonTextColor};--tx:${textColor};--cardbg:${cardBackgroundColor};--tt:${titleColor};--c5:${textColor2};--c6:${textColor3};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`}
+  {...rest}
+>
   <div class="auc-box">
     <div class="auc-box2">
       <div class="auc-box3">
         <div class="auc-box4">
           {subheading && <h4 class="auc-heading">{subheading}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="auc-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="auc-box5">
@@ -58,23 +142,38 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
           <div class="auc-box7">
             <div class="auc-box8">
               <div class="auc-grid">
-                {list.map((c) => (
-                  <div class="auc-box9">
-                    <a class="auc-box10" href={c.link || "#"}>
-                      <div class="auc-box11">
-                        {c.image && <img class="auc-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" width="840" height="500" />}
+                {
+                  list.map((c) => (
+                    <div class="auc-box9">
+                      <a class="auc-box10" href={c.link || "#"}>
+                        <div class="auc-box11">
+                          {c.image && (
+                            <img
+                              class="auc-media"
+                              src={c.image}
+                              alt={c.imageAlt || ""}
+                              loading="lazy"
+                              width="840"
+                              height="500"
+                            />
+                          )}
+                        </div>
+                      </a>
+                      <div class="auc-box12">
+                        <h3 class="auc-heading2">{c.title}</h3>
+                        <div class="auc-box13">
+                          <p class="auc-text">{c.text}</p>
+                        </div>
+                        {c.buttonText && (
+                          <a class="auc-link" href={c.buttonLink || "#"}>
+                            {c.buttonText}
+                          </a>
+                        )}
                       </div>
-                    </a>
-                    <div class="auc-box12">
-                      <h3 class="auc-heading2">{c.title}</h3>
-                      <div class="auc-box13">
-                        <p class="auc-text">{c.text}</p>
-                      </div>
-                      {c.buttonText && <a class="auc-link" href={c.buttonLink || "#"}>{c.buttonText}</a>}
+                      <div class="auc-text2">{c.text2}</div>
                     </div>
-                    <div class="auc-text2">{c.text2}</div>
-                  </div>
-                ))}
+                  ))
+                }
               </div>
               {text && <nav class="auc-text21" set:html={text} />}
             </div>

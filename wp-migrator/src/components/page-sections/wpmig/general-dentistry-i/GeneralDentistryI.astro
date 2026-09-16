@@ -56,21 +56,144 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="general-dentistry-i" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<div
+  class="general-dentistry-i"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="gdi-box">
     <div class="gdi-box2">
       <div class="gdi-box3">
         <div class="gdi-box4">
           {eyebrow && <h4 class="gdi-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
-          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
-          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
-          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
-          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
-          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdi-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText4 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn5"
+                text={secondaryButtonText4}
+                link={secondaryButtonLink4 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText5 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn6"
+                text={secondaryButtonText5}
+                link={secondaryButtonLink5 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText6 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn7"
+                text={secondaryButtonText6}
+                link={secondaryButtonLink6 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText7 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn8"
+                text={secondaryButtonText7}
+                link={secondaryButtonLink7 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText8 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="gdi-btn9"
+                text={secondaryButtonText8}
+                link={secondaryButtonLink8 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="gdi-box5">
@@ -125,13 +248,39 @@ const {
             </div>
             <div class="gdi-box26">
               <div class="gdi-box27">
-                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdi-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+                {
+                  secondaryButtonText9 && (
+                    <Button
+                      variant="primary"
+                      size="md"
+                      width="none"
+                      borderRadius="default"
+                      borderWidth="none"
+                      class="gdi-btn10"
+                      text={secondaryButtonText9}
+                      link={secondaryButtonLink9 || "#"}
+                    />
+                  )
+                }
               </div>
             </div>
             <div class="gdi-box28">
               <div class="gdi-box29">
                 <div class="gdi-box30">
-                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdi-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                  {
+                    secondaryButtonText10 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="gdi-btn11"
+                        text={secondaryButtonText10}
+                        link={secondaryButtonLink10 || "#"}
+                      />
+                    )
+                  }
                 </div>
               </div>
             </div>
@@ -832,7 +981,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .gdi-heading2 {
     font-weight: 400;
   }
@@ -1128,5 +1277,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

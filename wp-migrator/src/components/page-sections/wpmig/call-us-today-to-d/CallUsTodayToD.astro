@@ -28,6 +28,7 @@ const {
   ...rest
 } = Astro.props;
 ---
+
 <div class="call-us-today-to-d" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
   <div class="cutt-box">
     <div class="cutt-box2">
@@ -53,7 +54,18 @@ const {
             </div>
             <div class="cutt-box13">
               <div class="cutt-box14">
-                {image && <img class="cutt-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="548" />}
+                {
+                  image && (
+                    <img
+                      class="cutt-media"
+                      src={image}
+                      alt={imageAlt || ""}
+                      loading="lazy"
+                      width="1024"
+                      height="548"
+                    />
+                  )
+                }
               </div>
             </div>
           </div>
@@ -524,7 +536,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cutt-box8 {
     font-family: Montserrat, sans-serif;
     font-size: 24px;
@@ -635,5 +647,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

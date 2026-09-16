@@ -58,7 +58,7 @@ const htmlAttributes = Object.fromEntries(
   {
     normalizedImages.length > 0 ? (
       <div class={`insurance-text__images ${imageType}`}>
-        {normalizedImages.map((img: {source: string; alt?: string}) => (
+        {normalizedImages.map((img: { source: string; alt?: string }) => (
           <Image
             source={img.source}
             alt={img.alt || ""}

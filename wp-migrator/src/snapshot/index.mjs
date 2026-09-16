@@ -78,7 +78,10 @@ function bareHost(originOrHost) {
 
 function hostRegex(originOrHost, flags, { anchored = false } = {}) {
   const prefix = anchored ? "^" : "";
-  return new RegExp(`${prefix}https?://(?:www\\.)?${bareHost(originOrHost).replace(/\./g, "\\.")}`, flags);
+  return new RegExp(
+    `${prefix}https?://(?:www\\.)?${bareHost(originOrHost).replace(/\./g, "\\.")}`,
+    flags
+  );
 }
 
 function flatNameFor(pathname) {
@@ -132,9 +135,12 @@ async function discoverPages(origin, { extraPaths = [] } = {}) {
     for (const type of ["pages", "posts"]) {
       let page = 1;
       for (;;) {
-        const res = await fetch(`${origin}/wp-json/wp/v2/${type}?per_page=100&page=${page}&_fields=link`, {
-          headers: { "User-Agent": UA },
-        });
+        const res = await fetch(
+          `${origin}/wp-json/wp/v2/${type}?per_page=100&page=${page}&_fields=link`,
+          {
+            headers: { "User-Agent": UA },
+          }
+        );
         if (!res.ok) break;
         const items = await res.json();
         if (!Array.isArray(items) || items.length === 0) break;
@@ -261,13 +267,17 @@ export async function runSnapshot(opts) {
 
   fs.mkdirSync(out, { recursive: true });
   const manifestPath = path.join(out, ".snapshot-manifest.json");
-  const manifest = fs.existsSync(manifestPath) ? JSON.parse(fs.readFileSync(manifestPath, "utf8")) : { pages: {}, assets: {} };
+  const manifest = fs.existsSync(manifestPath)
+    ? JSON.parse(fs.readFileSync(manifestPath, "utf8"))
+    : { pages: {}, assets: {} };
 
   log(`Discovering pages from ${origin} …`);
   const discovery = await discoverPages(origin, { extraPaths });
   log(`  strategy: ${discovery.strategy} — ${discovery.paths.length} page(s)`);
 
-  let pages = discovery.paths.sort().map((p) => ({ path: p, url: origin + p, file: flatNameFor(p) }));
+  let pages = discovery.paths
+    .sort()
+    .map((p) => ({ path: p, url: origin + p, file: flatNameFor(p) }));
   if (limit) pages = pages.slice(0, limit);
 
   const pageByPath = new Map();
@@ -277,7 +287,12 @@ export async function runSnapshot(opts) {
   }
 
   const assetRefs = new Set();
-  const report = { generatedAt: new Date().toISOString(), origin, strategy: discovery.strategy, pages: [] };
+  const report = {
+    generatedAt: new Date().toISOString(),
+    origin,
+    strategy: discovery.strategy,
+    pages: [],
+  };
   let fetched = 0;
   let skipped = 0;
   const pageFailures = [];
@@ -322,18 +337,29 @@ export async function runSnapshot(opts) {
         }
         html = rewritePage(raw, { origin, altHosts, pageByPath });
         fs.writeFileSync(dest, html, "utf8");
-        manifest.pages[page.path] = { file: page.file, sha: sha(html), fetchedAt: new Date().toISOString() };
+        manifest.pages[page.path] = {
+          file: page.file,
+          sha: sha(html),
+          fetchedAt: new Date().toISOString(),
+        };
         fetched++;
         if (fetched % 10 === 0) log(`  … ${fetched} ${render ? "rendered" : "fetched"}`);
       }
       for (const ref of assetRefsIn(html)) assetRefs.add(ref);
-      report.pages.push({ path: page.path, file: page.file, id: page.file.replace(/\.html$/, ""), bytes: Buffer.byteLength(html) });
+      report.pages.push({
+        path: page.path,
+        file: page.file,
+        id: page.file.replace(/\.html$/, ""),
+        bytes: Buffer.byteLength(html),
+      });
     });
   } finally {
     if (browser) await browser.close();
   }
 
-  log(`Pages: ${fetched} ${render ? "rendered" : "fetched"}, ${skipped} already on disk, ${pageFailures.length} failed`);
+  log(
+    `Pages: ${fetched} ${render ? "rendered" : "fetched"}, ${skipped} already on disk, ${pageFailures.length} failed`
+  );
 
   // ---- assets, recursively (CSS may reference more assets) ----------------
   const queue = [...assetRefs];
@@ -435,7 +461,11 @@ export async function runSnapshot(opts) {
   report.assetFailures = failures;
   report.assetsRepaired = repaired;
   report.pageFailures = pageFailures;
-  fs.writeFileSync(path.join(out, ".snapshot-report.json"), JSON.stringify(report, null, 2), "utf8");
+  fs.writeFileSync(
+    path.join(out, ".snapshot-report.json"),
+    JSON.stringify(report, null, 2),
+    "utf8"
+  );
 
   return report;
 }

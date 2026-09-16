@@ -5,25 +5,48 @@ import { fileURLToPath } from "node:url";
 import { defineCommand } from "citty";
 import { VIEWPORTS } from "../src/capture/screenshot.mjs";
 import { runCompare } from "./compare.mjs";
-import { planCorrections, applyCorrections, loadState, saveState, mergePlan } from "../src/refine/index.mjs";
+import {
+  planCorrections,
+  applyCorrections,
+  loadState,
+  saveState,
+  mergePlan,
+} from "../src/refine/index.mjs";
 
 const HERE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
 export const devRefine = defineCommand({
   meta: {
     name: "dev-refine",
-    description: "Iteratively correct the built page until it visually matches the WordPress original.",
+    description:
+      "Iteratively correct the built page until it visually matches the WordPress original.",
   },
   args: {
     page: { type: "positional", description: "Source page file", required: true },
     route: { type: "string", description: "Built route (defaults to the slug)" },
-    static: { type: "string", description: "Snapshot directory", default: path.join(HERE, "../site-migrator/static") },
-    dist: { type: "string", description: "Built Astro output", default: path.join(HERE, "../dist") },
+    static: {
+      type: "string",
+      description: "Snapshot directory",
+      default: path.join(HERE, "../site-migrator/static"),
+    },
+    dist: {
+      type: "string",
+      description: "Built Astro output",
+      default: path.join(HERE, "../dist"),
+    },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
     namespace: { type: "string", description: "Generated component namespace", default: "wpmig" },
-    viewports: { type: "string", description: "Comma-separated widths", default: VIEWPORTS.join(",") },
+    viewports: {
+      type: "string",
+      description: "Comma-separated widths",
+      default: VIEWPORTS.join(","),
+    },
     "max-iterations": { type: "string", description: "Correction passes", default: "3" },
-    threshold: { type: "string", description: "Stop when mean pixel mismatch is under this %", default: "2" },
+    threshold: {
+      type: "string",
+      description: "Stop when mean pixel mismatch is under this %",
+      default: "2",
+    },
   },
   async run({ args }) {
     const targetRoot = path.resolve(args.target);
@@ -53,7 +76,9 @@ export const devRefine = defineCommand({
     const stateFile = path.join(HERE, ".wpmig/corrections", `${slug}.json`);
     let cumulative = loadState(stateFile);
     const history = [];
-    console.log(`refining ${args.page} at ${viewports.join("/")}px (max ${maxIterations} passes)\n`);
+    console.log(
+      `refining ${args.page} at ${viewports.join("/")}px (max ${maxIterations} passes)\n`
+    );
 
     // Baseline: where does the generated page start?
     console.log("pass 0 — baseline");
@@ -76,10 +101,21 @@ export const devRefine = defineCommand({
       const applied = applyCorrections(targetRoot, args.namespace, cumulative);
       const decls = applied.reduce((a, x) => a + x.declarations, 0);
       const fresh = [...plan.values()].reduce(
-        (a, e) => a + [...e.base.values()].reduce((b, m) => b + m.size, 0) +
-          [...e.media.values()].reduce((b, sm) => b + [...sm.values()].reduce((c, m) => c + m.size, 0), 0), 0);
-      console.log(`    corrections: +${fresh} new, ${decls} cumulative across ${applied.length} component(s)`);
-      console.log(`    left alone:  ${skipped.length} finding(s) whose cause is structural or upstream`);
+        (a, e) =>
+          a +
+          [...e.base.values()].reduce((b, m) => b + m.size, 0) +
+          [...e.media.values()].reduce(
+            (b, sm) => b + [...sm.values()].reduce((c, m) => c + m.size, 0),
+            0
+          ),
+        0
+      );
+      console.log(
+        `    corrections: +${fresh} new, ${decls} cumulative across ${applied.length} component(s)`
+      );
+      console.log(
+        `    left alone:  ${skipped.length} finding(s) whose cause is structural or upstream`
+      );
 
       if (!fresh) {
         console.log("    nothing mechanically correctable — stopping");
@@ -100,7 +136,9 @@ export const devRefine = defineCommand({
       // Regression guard: a correction pass that makes things worse is worse
       // than no pass. Report it rather than iterating deeper on a bad premise.
       if (nextMean > mean + 0.5) {
-        console.log("    ! this pass regressed the match — review the corrections region before continuing");
+        console.log(
+          "    ! this pass regressed the match — review the corrections region before continuing"
+        );
         report = next;
         mean = nextMean;
         findings = nextFindings;
@@ -124,11 +162,15 @@ export const devRefine = defineCommand({
 
     console.log("\n════════ refine summary ════════");
     for (const h of history) {
-      console.log(`  pass ${h.pass}:  ${String(h.mean).padStart(6)}%   ${String(h.findings).padStart(4)} findings`);
+      console.log(
+        `  pass ${h.pass}:  ${String(h.mean).padStart(6)}%   ${String(h.findings).padStart(4)} findings`
+      );
     }
     console.log("\nworst remaining:");
     for (const w of report.summary.worst.slice(0, 8)) {
-      console.log(`  ${String(w.pixel ?? "—").padStart(6)}%  ${String(w.findings).padStart(3)} findings   ${w.id} @${w.width}`);
+      console.log(
+        `  ${String(w.pixel ?? "—").padStart(6)}%  ${String(w.findings).padStart(3)} findings   ${w.id} @${w.width}`
+      );
     }
     console.log(`\nreport: ${path.relative(process.cwd(), path.join(outDir, "report.json"))}`);
   },

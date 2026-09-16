@@ -1,16 +1,34 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { initialsOf, isValidName, nameFromContent, nameFromShape, assertRoundTrips } from "../src/generate/names.mjs";
+import {
+  initialsOf,
+  isValidName,
+  nameFromContent,
+  nameFromShape,
+  assertRoundTrips,
+} from "../src/generate/names.mjs";
 import { rewriteHref, useRouteMap } from "../src/generate/props.mjs";
 import { collectAssetRefs } from "../src/generate/assets.mjs";
 import { htmlToMarkdown, parseWxr } from "../src/content/posts.mjs";
-import { repeatBlocks, partialKey, blockClasses, findSharedPartials, ownedClasses } from "../src/generate/partials.mjs";
+import {
+  repeatBlocks,
+  partialKey,
+  blockClasses,
+  findSharedPartials,
+  ownedClasses,
+} from "../src/generate/partials.mjs";
 import { textKey, diffTextNodes, severeFindings } from "../src/qa/pair-by-text.mjs";
 
 const heading = (text) => ({ kind: "heading", text });
 
 test("nameFromContent always returns a name the loader can register", () => {
-  for (const text of ["24/7 Emergency Care", "2024 Awards", "1st Visit", "IV Sedation", "Call Us Today"]) {
+  for (const text of [
+    "24/7 Emergency Care",
+    "2024 Awards",
+    "1st Visit",
+    "IV Sedation",
+    "Call Us Today",
+  ]) {
     const name = nameFromContent(heading(text), "section");
     assert.ok(isValidName(name), `${text} -> ${name}`);
     assert.doesNotThrow(() => assertRoundTrips(name));
@@ -26,9 +44,17 @@ test("nameFromContent falls back when nothing usable survives", () => {
 });
 
 test("rewriteHref restores the source URL of a flattened page", () => {
-  useRouteMap(new Map([["payment-options-dental-savers-plan", "/payment-options/dental-savers-plan/"]]));
-  assert.equal(rewriteHref("payment-options-dental-savers-plan.html"), "/payment-options/dental-savers-plan/");
-  assert.equal(rewriteHref("payment-options-dental-savers-plan.html#fees"), "/payment-options/dental-savers-plan/#fees");
+  useRouteMap(
+    new Map([["payment-options-dental-savers-plan", "/payment-options/dental-savers-plan/"]])
+  );
+  assert.equal(
+    rewriteHref("payment-options-dental-savers-plan.html"),
+    "/payment-options/dental-savers-plan/"
+  );
+  assert.equal(
+    rewriteHref("payment-options-dental-savers-plan.html#fees"),
+    "/payment-options/dental-savers-plan/#fees"
+  );
   assert.equal(rewriteHref("index.html"), "/");
   assert.equal(rewriteHref("unknown-page.html"), "/unknown-page/");
   assert.equal(rewriteHref("https://example.com/x"), "https://example.com/x");
@@ -42,11 +68,16 @@ test("collectAssetRefs finds WordPress paths anywhere in the emitted output", ()
     [{ image: "/wp-content/uploads/2020/03/logo.png?ver=2" }],
     "no assets here",
   ]);
-  assert.deepEqual(refs.sort(), ["/wp-content/uploads/2020/03/logo.png", "/wp-content/uploads/2023/11/hero.jpg"]);
+  assert.deepEqual(refs.sort(), [
+    "/wp-content/uploads/2020/03/logo.png",
+    "/wp-content/uploads/2023/11/hero.jpg",
+  ]);
 });
 
 test("htmlToMarkdown applies wpautop's paragraph rules to classic-editor content", () => {
-  const md = htmlToMarkdown("<span>First line.</span>\n\n<span>Second line.</span>\n<h2>Heading</h2>\nTrailing prose.");
+  const md = htmlToMarkdown(
+    "<span>First line.</span>\n\n<span>Second line.</span>\n<h2>Heading</h2>\nTrailing prose."
+  );
   assert.equal(md, "First line.\n\nSecond line.\n\n## Heading\n\nTrailing prose.");
 });
 
@@ -160,7 +191,10 @@ test("repeatBlocks finds the emitted list.map blocks and their bounds", () => {
 test("partialKey ignores the class prefix and item variable the migrator varies", () => {
   const [general] = repeatBlocks(generalDentistry);
   const [restorative] = repeatBlocks(restorativeDentistry);
-  assert.equal(partialKey(general.source, general.itemVar), partialKey(restorative.source, restorative.itemVar));
+  assert.equal(
+    partialKey(general.source, general.itemVar),
+    partialKey(restorative.source, restorative.itemVar)
+  );
 });
 
 test("findSharedPartials groups the same widget across components", () => {
@@ -169,14 +203,17 @@ test("findSharedPartials groups the same widget across components", () => {
     { name: "restorative-dentistry-b", source: restorativeDentistry },
   ]);
   assert.equal(groups.length, 1);
-  assert.deepEqual(
-    groups[0].members.map((m) => m.component).sort(),
-    ["general-dentistry-b", "restorative-dentistry-b"]
-  );
+  assert.deepEqual(groups[0].members.map((m) => m.component).sort(), [
+    "general-dentistry-b",
+    "restorative-dentistry-b",
+  ]);
 });
 
 test("findSharedPartials ignores a shape only one component uses", () => {
-  assert.deepEqual(findSharedPartials([{ name: "general-dentistry-b", source: generalDentistry }]), []);
+  assert.deepEqual(
+    findSharedPartials([{ name: "general-dentistry-b", source: generalDentistry }]),
+    []
+  );
 });
 
 test("ownedClasses keeps classes the section styles only through the block", () => {
@@ -210,20 +247,32 @@ test("diffTextNodes pairs on text, not on document order", () => {
   // The built page wraps its heading one level deeper than the source, which is
   // exactly what breaks positional pairing.
   const source = [
-    ["complete dental restorations", { tag: "H3", style: { fontSize: "28px", fontFamily: "Montserrat" }, classes: [] }],
-    ["if you want to explore", { tag: "P", style: { fontSize: "16px", fontFamily: "Roboto" }, classes: [] }],
+    [
+      "complete dental restorations",
+      { tag: "H3", style: { fontSize: "28px", fontFamily: "Montserrat" }, classes: [] },
+    ],
+    [
+      "if you want to explore",
+      { tag: "P", style: { fontSize: "16px", fontFamily: "Roboto" }, classes: [] },
+    ],
   ];
   const built = [
-    ["if you want to explore", { tag: "P", style: { fontSize: "32px", fontFamily: "Montserrat" }, classes: ["rdb-text11"] }],
-    ["complete dental restorations", { tag: "H3", style: { fontSize: "16px", fontFamily: "Roboto" }, classes: ["rdb-heading4"] }],
+    [
+      "if you want to explore",
+      { tag: "P", style: { fontSize: "32px", fontFamily: "Montserrat" }, classes: ["rdb-text11"] },
+    ],
+    [
+      "complete dental restorations",
+      { tag: "H3", style: { fontSize: "16px", fontFamily: "Roboto" }, classes: ["rdb-heading4"] },
+    ],
   ];
   const findings = diffTextNodes(source, built);
   assert.equal(findings.length, 2);
   const heading = findings.find((f) => f.key.startsWith("complete"));
-  assert.deepEqual(
-    heading.diffs.map((d) => [d.prop, d.source, d.built]).sort(),
-    [["fontFamily", "Montserrat", "Roboto"], ["fontSize", "28px", "16px"]]
-  );
+  assert.deepEqual(heading.diffs.map((d) => [d.prop, d.source, d.built]).sort(), [
+    ["fontFamily", "Montserrat", "Roboto"],
+    ["fontSize", "28px", "16px"],
+  ]);
 });
 
 test("diffTextNodes reports nothing for text the source does not have", () => {
@@ -248,7 +297,10 @@ test("nameFromShape recognises a hero whether or not it carries a button", () =>
   // button === 0 sent every one of them to nameFromContent, which named them
   // after their page heading and forked the family.
   assert.equal(nameFromShape(hero(), opts), "page-hero");
-  assert.equal(nameFromShape(hero([{ kind: "button", text: "BECOME A PATIENT" }]), opts), "page-hero");
+  assert.equal(
+    nameFromShape(hero([{ kind: "button", text: "BECOME A PATIENT" }]), opts),
+    "page-hero"
+  );
 });
 
 test("nameFromShape does not call a section a hero without a background image", () => {

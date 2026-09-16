@@ -3,9 +3,9 @@ icon: quiz
 description: Dark section with a single-open accordion of frequently asked questions.
 value:
   _component: page-sections/location/location-faqs
-  id: ''
+  id: ""
   heading: Frequently Asked Questions
-  intro: ''
+  intro: ""
   faqs:
     - _component: page-sections/location/location-faqs/location-faq-item
       question: A frequently asked question?

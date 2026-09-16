@@ -52,7 +52,8 @@ export const GALLERY_THUMB_ATTRS = ["data-thumbnail", "data-large", "data-image"
  * a real image and must win over the data attribute, since a plugin can leave
  * a stale `data-src` behind after the swap has already happened.
  */
-export const PLACEHOLDER_SRC = /^data:|(?:^|\/)(?:blank|spacer|placeholder|transparent|lazy|loader|dummy)[-\w]*\.(?:gif|png|svg|webp)(?:[?#]|$)/i;
+export const PLACEHOLDER_SRC =
+  /^data:|(?:^|\/)(?:blank|spacer|placeholder|transparent|lazy|loader|dummy)[-\w]*\.(?:gif|png|svg|webp)(?:[?#]|$)/i;
 
 /**
  * Resolve the real image URL from an attribute lookup.

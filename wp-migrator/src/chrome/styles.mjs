@@ -27,8 +27,8 @@
  */
 export const ROLES = {
   // ---- header ----------------------------------------------------------
-  headerBand: ['.header', 'header .header-top', 'header > .top-bar', '#masthead .top', 'header'],
-  headerInner: ['.header .container', 'header .container', '.header > div'],
+  headerBand: [".header", "header .header-top", "header > .top-bar", "#masthead .top", "header"],
+  headerInner: [".header .container", "header .container", ".header > div"],
   /*
    * The row inside the header that holds the logo, separately from the band
    * around it. Themes put breathing room on both — the band's padding sets the
@@ -36,21 +36,29 @@ export const ROLES = {
    * the band's makes the logo, and any rule drawn beside it, run the full
    * height of the header and butt against the menu bar below.
    */
-  headerRow: ['.header .header-block', '.header-block', '.header .row', 'header .row'],
-  headerLogo: ['.header-block__logo img', 'header .logo img', '.site-logo img', 'header img'],
+  headerRow: [".header .header-block", ".header-block", ".header .row", "header .row"],
+  headerLogo: [".header-block__logo img", "header .logo img", ".site-logo img", "header img"],
   // The logo's own box, separately from the image: themes rule the brand off
   // from whatever sits beside it with a border on this element, and a border
   // read from the `<img>` finds nothing.
-  headerLogoBox: ['.header-block__logo', 'header .logo', '.site-logo', '.custom-logo-link'],
-  headerAside: ['.header-block__right', 'header .header-right', 'header .contact'],
-  headerAsideLabel: ['.header-block__right span', 'header .header-right span'],
-  headerAsidePhone: ['.header-block__right p a', 'header .header-right a[href^="tel:"]', 'header a[href^="tel:"]'],
+  headerLogoBox: [".header-block__logo", "header .logo", ".site-logo", ".custom-logo-link"],
+  headerAside: [".header-block__right", "header .header-right", "header .contact"],
+  headerAsideLabel: [".header-block__right span", "header .header-right span"],
+  headerAsidePhone: [
+    ".header-block__right p a",
+    'header .header-right a[href^="tel:"]',
+    'header a[href^="tel:"]',
+  ],
 
   // ---- nav bar ---------------------------------------------------------
-  navBar: ['nav.navbar', 'header nav', '.main-navigation', '#site-navigation'],
-  navInner: ['nav.navbar .container', 'header nav .container'],
-  navList: ['nav.navbar ul.navbar-nav', 'nav ul.menu', 'nav > ul', 'header nav ul'],
-  navLink: ['nav.navbar ul.navbar-nav > li > a', 'nav ul.menu > li > a', 'header nav > ul > li > a'],
+  navBar: ["nav.navbar", "header nav", ".main-navigation", "#site-navigation"],
+  navInner: ["nav.navbar .container", "header nav .container"],
+  navList: ["nav.navbar ul.navbar-nav", "nav ul.menu", "nav > ul", "header nav ul"],
+  navLink: [
+    "nav.navbar ul.navbar-nav > li > a",
+    "nav ul.menu > li > a",
+    "header nav > ul > li > a",
+  ],
   /*
    * The call-to-action, which is routinely two elements rather than one: a
    * wide desktop version and a compact one for the collapsed bar, each hidden
@@ -62,37 +70,49 @@ export const ROLES = {
    * that class is normally the logo link, and a logo has no background.
    */
   navCta: [
-    'nav.navbar a.navbar-text',
-    { selector: 'nav.navbar a.navbar-brand', painted: true },
-    'nav .btn',
-    'header nav a.button',
+    "nav.navbar a.navbar-text",
+    { selector: "nav.navbar a.navbar-brand", painted: true },
+    "nav .btn",
+    "header nav a.button",
   ],
-  navToggle: ['.navbar-toggler', '.menu-toggle', 'button.hamburger'],
+  navToggle: [".navbar-toggler", ".menu-toggle", "button.hamburger"],
   // The number restated in the menu bar for narrow screens. Sized quite
   // differently from the brand tier's — that one is the page's loudest
   // element, this one has to share a row with a button and a toggle.
-  navPhone: ['nav.navbar a.mobile-phone-number', 'nav .mobile-phone', 'nav a[href^="tel:"]'],
+  navPhone: ["nav.navbar a.mobile-phone-number", "nav .mobile-phone", 'nav a[href^="tel:"]'],
 
   // ---- dropdown --------------------------------------------------------
-  dropdownPanel: ['.dropdown-menu', 'nav ul.menu ul.sub-menu', 'nav li > ul'],
-  dropdownItem: ['.dropdown-menu .dropdown-item', 'nav ul.sub-menu > li > a', 'nav li > ul > li > a'],
-  dropdownItemIcon: ['.dropdown-menu .dropdown-item i', '.dropdown-menu .dropdown-item svg', 'nav ul.sub-menu > li > a i'],
+  dropdownPanel: [".dropdown-menu", "nav ul.menu ul.sub-menu", "nav li > ul"],
+  dropdownItem: [
+    ".dropdown-menu .dropdown-item",
+    "nav ul.sub-menu > li > a",
+    "nav li > ul > li > a",
+  ],
+  dropdownItemIcon: [
+    ".dropdown-menu .dropdown-item i",
+    ".dropdown-menu .dropdown-item svg",
+    "nav ul.sub-menu > li > a i",
+  ],
 
   // ---- footer ----------------------------------------------------------
-  footerBand: ['footer .footer', 'footer', '#colophon'],
-  footerInner: ['footer .footer .container', 'footer .container'],
-  footerRow: ['footer .footer .row', 'footer .row'],
-  footerColumn: ['footer .footer-block', 'footer .widget', 'footer .col'],
-  footerLogo: ['footer .footer-block--logo img', 'footer .footer-logo img', 'footer img'],
-  footerHeading: ['footer .footer-block h3', 'footer .widget-title', 'footer h3', 'footer h4'],
-  footerRule: ['footer .footer-block hr', 'footer hr'],
-  footerLink: ['footer .footer-block a', 'footer .widget a', 'footer a'],
-  footerLinkIcon: ['footer .footer-block a .fas', 'footer .footer-block a .fab', 'footer .widget a i'],
-  footerSocialImage: ['footer .footer-block--logo img[src*="icon"]', 'footer .social img'],
+  footerBand: ["footer .footer", "footer", "#colophon"],
+  footerInner: ["footer .footer .container", "footer .container"],
+  footerRow: ["footer .footer .row", "footer .row"],
+  footerColumn: ["footer .footer-block", "footer .widget", "footer .col"],
+  footerLogo: ["footer .footer-block--logo img", "footer .footer-logo img", "footer img"],
+  footerHeading: ["footer .footer-block h3", "footer .widget-title", "footer h3", "footer h4"],
+  footerRule: ["footer .footer-block hr", "footer hr"],
+  footerLink: ["footer .footer-block a", "footer .widget a", "footer a"],
+  footerLinkIcon: [
+    "footer .footer-block a .fas",
+    "footer .footer-block a .fab",
+    "footer .widget a i",
+  ],
+  footerSocialImage: ['footer .footer-block--logo img[src*="icon"]', "footer .social img"],
 
   // ---- copyright strip -------------------------------------------------
-  copyrightBand: ['.copyright', 'footer .site-info', '.site-footer-bottom'],
-  copyrightInner: ['.copyright .container', 'footer .site-info .container'],
+  copyrightBand: [".copyright", "footer .site-info", ".site-footer-bottom"],
+  copyrightInner: [".copyright .container", "footer .site-info .container"],
 };
 
 /**
@@ -103,18 +123,49 @@ export const ROLES = {
  * rules — plus enough box geometry for the comparison stage to score it.
  */
 const PROPS = [
-  "display", "flexDirection", "justifyContent", "alignItems", "gap",
-  "backgroundColor", "color",
-  "fontFamily", "fontSize", "fontWeight", "lineHeight", "letterSpacing",
-  "textAlign", "textTransform", "textDecorationLine",
-  "paddingTop", "paddingRight", "paddingBottom", "paddingLeft",
-  "marginTop", "marginRight", "marginBottom", "marginLeft",
-  "borderTopWidth", "borderTopStyle", "borderTopColor",
-  "borderRightWidth", "borderRightStyle", "borderRightColor",
-  "borderBottomWidth", "borderBottomStyle", "borderBottomColor",
-  "borderLeftWidth", "borderLeftStyle", "borderLeftColor",
-  "borderTopLeftRadius", "boxShadow", "opacity",
-  "maxWidth", "minWidth", "width", "height", "position",
+  "display",
+  "flexDirection",
+  "justifyContent",
+  "alignItems",
+  "gap",
+  "backgroundColor",
+  "color",
+  "fontFamily",
+  "fontSize",
+  "fontWeight",
+  "lineHeight",
+  "letterSpacing",
+  "textAlign",
+  "textTransform",
+  "textDecorationLine",
+  "paddingTop",
+  "paddingRight",
+  "paddingBottom",
+  "paddingLeft",
+  "marginTop",
+  "marginRight",
+  "marginBottom",
+  "marginLeft",
+  "borderTopWidth",
+  "borderTopStyle",
+  "borderTopColor",
+  "borderRightWidth",
+  "borderRightStyle",
+  "borderRightColor",
+  "borderBottomWidth",
+  "borderBottomStyle",
+  "borderBottomColor",
+  "borderLeftWidth",
+  "borderLeftStyle",
+  "borderLeftColor",
+  "borderTopLeftRadius",
+  "boxShadow",
+  "opacity",
+  "maxWidth",
+  "minWidth",
+  "width",
+  "height",
+  "position",
 ];
 
 /**
@@ -159,8 +210,10 @@ function READ_ROLES({ roles, props }) {
     const after = getComputedStyle(el, "::after");
     return {
       box: {
-        x: Math.round(r.x), y: Math.round(r.y + window.scrollY),
-        w: Math.round(r.width), h: Math.round(r.height),
+        x: Math.round(r.x),
+        y: Math.round(r.y + window.scrollY),
+        w: Math.round(r.width),
+        h: Math.round(r.height),
       },
       styles,
       /*
@@ -176,12 +229,24 @@ function READ_ROLES({ roles, props }) {
       // A caret, a chevron, a divider rule — chrome leans on generated content
       // more than page sections do, and a menu that loses its caret reads as a
       // plain link rather than as something that opens.
-      before: before.content !== "none" && before.content !== "normal"
-        ? { content: before.content, color: before.color, fontSize: before.fontSize, fontFamily: before.fontFamily }
-        : null,
-      after: after.content !== "none" && after.content !== "normal"
-        ? { content: after.content, color: after.color, fontSize: after.fontSize, fontFamily: after.fontFamily }
-        : null,
+      before:
+        before.content !== "none" && before.content !== "normal"
+          ? {
+              content: before.content,
+              color: before.color,
+              fontSize: before.fontSize,
+              fontFamily: before.fontFamily,
+            }
+          : null,
+      after:
+        after.content !== "none" && after.content !== "normal"
+          ? {
+              content: after.content,
+              color: after.color,
+              fontSize: after.fontSize,
+              fontFamily: after.fontFamily,
+            }
+          : null,
     };
   };
 
@@ -204,15 +269,29 @@ function READ_ROLES({ roles, props }) {
       const sel = typeof entry === "string" ? entry : entry.selector;
       const needsPaint = typeof entry === "object" && entry.painted;
       let el;
-      try { el = document.querySelector(sel); } catch { continue; }
+      try {
+        el = document.querySelector(sel);
+      } catch {
+        continue;
+      }
       if (!el) continue;
       if (needsPaint && !painted(el)) continue;
-      if (visible(el)) { chosen = el; hidden = false; break; }
+      if (visible(el)) {
+        chosen = el;
+        hidden = false;
+        break;
+      }
       // Keep the first hidden match as a fallback: a dropdown panel is always
       // hidden, and so is every element behind a collapsed mobile menu.
-      if (!chosen) { chosen = el; hidden = true; }
+      if (!chosen) {
+        chosen = el;
+        hidden = true;
+      }
     }
-    if (!chosen) { out[role] = null; continue; }
+    if (!chosen) {
+      out[role] = null;
+      continue;
+    }
     if (hidden) force(chosen);
     out[role] = { ...read(chosen), forced: hidden };
   }

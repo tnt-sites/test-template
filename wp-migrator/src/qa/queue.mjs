@@ -158,11 +158,11 @@ export function resolveEditTargets({
     components,
     note:
       "Copy and content live in the .md; layout, spacing and colour live in the .astro. " +
-      "origin: \"generated\" means the migrator emitted it and usedByPages says how many pages it " +
+      'origin: "generated" means the migrator emitted it and usedByPages says how many pages it ' +
       "renders — 1 is safe to edit for this page alone, more means the edit lands on every one of " +
-      "them. origin: \"hand-built\" means it is in the migrator's namespace but was written by hand, " +
+      'them. origin: "hand-built" means it is in the migrator\'s namespace but was written by hand, ' +
       "so it usually belongs to this page only and regenerating the page would replace it. " +
-      "origin: \"starter\" means a shared site-wide component: editing it affects the whole site.",
+      'origin: "starter" means a shared site-wide component: editing it affects the whole site.',
     registryFacts: registryFactsFor(refs, byKebab, families),
   };
 }
@@ -201,7 +201,10 @@ export function selectNavSample({ navData, routes, scored, alwaysInclude = ["ind
 
     if (isHeading) {
       for (const child of children) {
-        groups.push({ name: `${item.name} › ${child.name}`, candidates: collectSlugs(child, slugOf) });
+        groups.push({
+          name: `${item.name} › ${child.name}`,
+          candidates: collectSlugs(child, slugOf),
+        });
       }
       continue;
     }
@@ -215,9 +218,10 @@ export function selectNavSample({ navData, routes, scored, alwaysInclude = ["ind
     // running — a queue whose rows shuffle between runs cannot be diffed.
     const best = group.candidates
       .filter((slug) => bySlug.has(slug))
-      .sort((a, b) => (bySlug.get(b).score - bySlug.get(a).score) || a.localeCompare(b))[0];
+      .sort((a, b) => bySlug.get(b).score - bySlug.get(a).score || a.localeCompare(b))[0];
 
-    if (best && !picked.has(best)) picked.set(best, { group: group.name, reason: "representative for this nav group" });
+    if (best && !picked.has(best))
+      picked.set(best, { group: group.name, reason: "representative for this nav group" });
   }
 
   for (const slug of alwaysInclude) {
@@ -248,7 +252,10 @@ function collectSlugs(item, slugOf, out = []) {
 
 /** `/new-patients/#faq` -> `/new-patients/`; `""` stays `""`. */
 function normalisePath(p) {
-  const base = String(p || "").split("#")[0].split("?")[0].trim();
+  const base = String(p || "")
+    .split("#")[0]
+    .split("?")[0]
+    .trim();
 
   if (!base || base === "#") return "";
   if (/^[a-z]+:\/\//i.test(base)) return "";
@@ -287,7 +294,11 @@ export function renderQueueMarkdown(report) {
 
   for (const page of report.pages) {
     const top = page.reasons[0];
-    const shots = page.shots ? path.dirname(Object.values(page.shots)[0].original) : page.captureError ? "capture failed" : "—";
+    const shots = page.shots
+      ? path.dirname(Object.values(page.shots)[0].original)
+      : page.captureError
+        ? "capture failed"
+        : "—";
 
     lines.push(
       `| ${page.rank} | ${page.score} | ${page.band} | ${page.slug} | ${page.navSample?.group || ""} | ` +

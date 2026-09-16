@@ -11,7 +11,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="section-f" id={id || undefined} style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<section
+  class="section-f"
+  id={id || undefined}
+  style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
 </section>
 <style>
   .section-f {

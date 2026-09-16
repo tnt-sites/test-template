@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="united-healthcare-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="united-healthcare-employers-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="uhei-box">
     <div class="uhei-box2">
       <div class="uhei-box3">
         <div class="uhei-box4">
           <div class="uhei-box5">
-            {image && <img class="uhei-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+            {
+              image && (
+                <img
+                  class="uhei-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="1344"
+                  height="960"
+                />
+              )
+            }
           </div>
         </div>
         <div class="uhei-box6">
@@ -327,7 +344,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .uhei-box6 {
     align-items: normal;
     font-family: Montserrat, sans-serif;
@@ -354,5 +371,5 @@ const {
   .uhei-media {
     text-align: left;
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

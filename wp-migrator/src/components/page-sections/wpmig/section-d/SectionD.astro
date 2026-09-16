@@ -4,23 +4,30 @@
  *
  * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
  */
-const {
-  images = [],
-  id,
-  _component,
-  ...rest
-} = Astro.props;
+const { images = [], id, _component, ...rest } = Astro.props;
 const list = Array.isArray(images) ? images.filter(Boolean) : [];
 ---
+
 <section class="section-d" id={id || undefined} {...rest}>
   <div class="sd-grid">
-    {list.map((it) => (
-      <div class="sd-box">
-        <div class="sd-box2">
-          {it.image && <img class="sd-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="650" height="753" />}
+    {
+      list.map((it) => (
+        <div class="sd-box">
+          <div class="sd-box2">
+            {it.image && (
+              <img
+                class="sd-media"
+                src={it.image}
+                alt={it.imageAlt || ""}
+                loading="lazy"
+                width="650"
+                height="753"
+              />
+            )}
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
 </section>
 <style>

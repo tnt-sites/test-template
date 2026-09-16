@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="providing-the-littleton-area" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+
+<section
+  class="providing-the-littleton-area"
+  id={id || undefined}
+  style={`--hd:${headingColor}`}
+  {...rest}
+>
   <div class="ptla-box">
     <div class="ptla-box2">
       <div class="ptla-box3">
@@ -29,7 +35,12 @@ const {
         </div>
       </div>
       <div class="ptla-box7">
-        <iframe class="ptla-embed" src={embedUrl} title="760 W Mineral Ave Suite 60, Littleton, CO" aria-label="760 W Mineral Ave Suite 60, Littleton, CO" loading="lazy"></iframe>
+        <iframe
+          class="ptla-embed"
+          src={embedUrl}
+          title="760 W Mineral Ave Suite 60, Littleton, CO"
+          aria-label="760 W Mineral Ave Suite 60, Littleton, CO"
+          loading="lazy"></iframe>
       </div>
     </div>
   </div>
@@ -174,7 +185,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ptla-box3 {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 20px;
@@ -328,5 +339,5 @@ const {
       text-align: left;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

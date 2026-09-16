@@ -22,13 +22,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="united-concordia-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<div
+  class="united-concordia-employers-in"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="ucei-box">
     <div class="ucei-box2">
       <div class="ucei-box3">
         <div class="ucei-box4">
           <div class="ucei-box5">
-            {image && <img class="ucei-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="474" />}
+            {
+              image && (
+                <img
+                  class="ucei-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="620"
+                  height="474"
+                />
+              )
+            }
           </div>
         </div>
         <div class="ucei-box6">
@@ -318,7 +335,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .ucei-box17 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -359,5 +376,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

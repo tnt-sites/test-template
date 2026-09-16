@@ -42,7 +42,10 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
         const srOnly = [...(el.querySelectorAll?.("*") ?? [])].filter((n) => {
           const cs = getComputedStyle(n);
           if (cs.display === "none" || cs.visibility === "hidden") return true;
-          if (/\b(sr-only|screen-reader-text|visually-hidden)\b/.test(n.getAttribute("class") || "")) return true;
+          if (
+            /\b(sr-only|screen-reader-text|visually-hidden)\b/.test(n.getAttribute("class") || "")
+          )
+            return true;
           const r = n.getBoundingClientRect();
           return r.width <= 1 || r.height <= 1;
         });
@@ -79,7 +82,10 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
             // wrap them again for their mobile layout — so look for the panel
             // by what it holds rather than by its immediate shape.
             [...li.children].find(
-              (c) => c.tagName === "DIV" && !c.querySelector("ul, li") && c.querySelectorAll("a").length >= 2
+              (c) =>
+                c.tagName === "DIV" &&
+                !c.querySelector("ul, li") &&
+                c.querySelectorAll("a").length >= 2
             );
 
           /*
@@ -183,7 +189,12 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
           if (kid.tagName === "DIV" && kid.querySelectorAll("a").length) {
             const nested = readPanel(kid, depth + 1, seen);
             const previous = items[items.length - 1];
-            if (previous && !previous.children.length && nested.length && kids[i - 1]?.tagName === "A") {
+            if (
+              previous &&
+              !previous.children.length &&
+              nested.length &&
+              kids[i - 1]?.tagName === "A"
+            ) {
               previous.children = nested;
             } else {
               items.push(...nested);
@@ -224,11 +235,15 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
             // styled — this theme gives every dropdown item a border, which
             // otherwise makes the whole menu look like a row of buttons.
             if (primaryMenu?.contains(a) || a.closest("li")) continue;
-            const classed = (a.getAttribute("class") || "").split(/\s+/).some((c) => buttonRe.test(c));
+            const classed = (a.getAttribute("class") || "")
+              .split(/\s+/)
+              .some((c) => buttonRe.test(c));
             const cs = getComputedStyle(a);
             const painted =
               opaque(cs.backgroundColor) ||
-              ["Top", "Right", "Bottom", "Left"].some((side) => parseFloat(cs[`border${side}Width`]) > 0);
+              ["Top", "Right", "Bottom", "Left"].some(
+                (side) => parseFloat(cs[`border${side}Width`]) > 0
+              );
             const padX = (parseFloat(cs.paddingLeft) || 0) + (parseFloat(cs.paddingRight) || 0);
             if (classed || (painted && padX >= 8)) found.set(link, { text, link });
           }
@@ -316,7 +331,6 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
             return cleanText(a).length > 0;
           })
           .map((a) => ({ name: cleanText(a), path: a.getAttribute("href") || "" }));
-
 
       /**
        * The icon a chrome link carries, as a bare name.
@@ -498,7 +512,8 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
           } catch {
             continue;
           }
-          const social = Object.keys(SOCIAL_HOSTS).some((h) => host.endsWith(h)) || /google\./.test(host);
+          const social =
+            Object.keys(SOCIAL_HOSTS).some((h) => host.endsWith(h)) || /google\./.test(host);
           if (!social || seen.has(href)) continue;
           seen.add(href);
           found.push({
@@ -525,11 +540,13 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
           pick(".site-footer-bottom") ||
           pick("#colophon .site-info");
         if (!bar || !isVisible(bar)) return null;
-        const links = [...bar.querySelectorAll("a[href]")].map((a) => ({
-          name: cleanText(a),
-          path: a.getAttribute("href") || "",
-          external: a.getAttribute("target") === "_blank" || undefined,
-        })).filter((l) => l.name && l.path);
+        const links = [...bar.querySelectorAll("a[href]")]
+          .map((a) => ({
+            name: cleanText(a),
+            path: a.getAttribute("href") || "",
+            external: a.getAttribute("target") === "_blank" || undefined,
+          }))
+          .filter((l) => l.name && l.path);
         /*
          * The strip's own words, with the link labels taken out — the links
          * are returned separately and rendering both would print each one
@@ -634,7 +651,8 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
               emails: footerContacts.emails,
               text: cleanText(footer).slice(0, 2000),
               mapUrl:
-                footer.querySelector('a[href*="maps."], a[href*="goo.gl"], a[href*="/maps"]')
+                footer
+                  .querySelector('a[href*="maps."], a[href*="goo.gl"], a[href*="/maps"]')
                   ?.getAttribute("href") ?? null,
             }
           : null,
@@ -643,8 +661,8 @@ export async function extractChrome(page, { chrome, buttonClassPattern }) {
 
         // Address and hours are prose, not markup, so they are returned raw for
         // parsing outside the page rather than guessed at here.
-        addressBlocks: [...(document.querySelectorAll("address, .address, .adr") ?? [])].map(
-          (el) => cleanText(el)
+        addressBlocks: [...(document.querySelectorAll("address, .address, .adr") ?? [])].map((el) =>
+          cleanText(el)
         ),
         siteName:
           document.querySelector('meta[property="og:site_name"]')?.getAttribute("content") ||

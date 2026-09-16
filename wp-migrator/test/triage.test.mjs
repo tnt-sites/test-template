@@ -1,6 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { WEIGHTS, bandFor, rankPages, scorePage, ubiquitousMissingImages } from "../src/qa/triage.mjs";
+import {
+  WEIGHTS,
+  bandFor,
+  rankPages,
+  scorePage,
+  ubiquitousMissingImages,
+} from "../src/qa/triage.mjs";
 
 const coverage = (id, builtCount, extra = {}) => ({
   kind: "coverage",
@@ -41,11 +47,22 @@ test("an absent uncertainty record scores exactly the same as an all-clear one",
   const input = { slug: "legacy", findings: [coverage("droppedImages", 3)] };
   const allClear = {
     page: "legacy",
-    sections: [{ sectionIndex: 0, component: "hero", repeat: { confidence: "high", itemCount: 3 }, icons: { fuzzy: [], unresolved: [] }, emptyish: false }],
+    sections: [
+      {
+        sectionIndex: 0,
+        component: "hero",
+        repeat: { confidence: "high", itemCount: 3 },
+        icons: { fuzzy: [], unresolved: [] },
+        emptyish: false,
+      },
+    ],
     pageLevel: { missingAssets: [], skippedSections: [] },
   };
 
-  assert.equal(scorePage({ ...input, uncertainty: null }).score, scorePage({ ...input, uncertainty: allClear }).score);
+  assert.equal(
+    scorePage({ ...input, uncertainty: null }).score,
+    scorePage({ ...input, uncertainty: allClear }).score
+  );
   assert.equal(scorePage({ ...input, uncertainty: null }).uncertaintyAvailable, false);
   assert.equal(scorePage({ ...input, uncertainty: allClear }).uncertaintyAvailable, true);
 });
@@ -77,7 +94,8 @@ test("every channel respects its cap", () => {
     findings: [coverage("droppedImages", 500), coverage("droppedContent", 500), ...many],
   });
 
-  const sum = (source) => page.reasons.filter((r) => r.source === source).reduce((n, r) => n + r.points, 0);
+  const sum = (source) =>
+    page.reasons.filter((r) => r.source === source).reduce((n, r) => n + r.points, 0);
 
   assert.ok(byId(page, "pixel").points <= WEIGHTS.pixel.cap);
   assert.ok(byId(page, "droppedImages").points <= WEIGHTS.droppedImages.cap);
@@ -95,13 +113,27 @@ test("adding a finding never lowers a page's score", () => {
     coverage("duplicatedContent", 2),
     coverage("headingCount", 0),
     pattern("fixedBackground", "missing"),
-    { kind: "smell", id: "stackedCards", label: "l", hint: "h", status: "present", builtCount: 3, examples: [] },
+    {
+      kind: "smell",
+      id: "stackedCards",
+      label: "l",
+      hint: "h",
+      status: "present",
+      builtCount: 3,
+      examples: [],
+    },
   ];
 
   for (let i = 0; i < additions.length; i += 1) {
-    const score = scorePage({ ...base, findings: [...base.findings, ...additions.slice(0, i + 1)] }).score;
+    const score = scorePage({
+      ...base,
+      findings: [...base.findings, ...additions.slice(0, i + 1)],
+    }).score;
 
-    assert.ok(score >= previous, `adding ${additions[i].id} lowered the score (${previous} -> ${score})`);
+    assert.ok(
+      score >= previous,
+      `adding ${additions[i].id} lowered the score (${previous} -> ${score})`
+    );
     previous = score;
   }
 });
@@ -138,7 +170,12 @@ test("uncertainty channels score only what the record actually reports", () => {
     slug: "p",
     uncertainty: {
       sections: [
-        { sectionIndex: 1, component: "cards", repeat: { confidence: "low", itemCount: 4 }, icons: { fuzzy: ["tooth"], unresolved: ["x"] } },
+        {
+          sectionIndex: 1,
+          component: "cards",
+          repeat: { confidence: "low", itemCount: 4 },
+          icons: { fuzzy: ["tooth"], unresolved: ["x"] },
+        },
         { sectionIndex: 2, component: "band", emptyish: true },
       ],
       pageLevel: { missingAssets: ["/wp-content/uploads/a.jpg"] },
@@ -153,7 +190,10 @@ test("uncertainty channels score only what the record actually reports", () => {
 });
 
 test("a one-off in a near-identical family scores above a plain one-off", () => {
-  const plain = scorePage({ slug: "p", registryFacts: { oneOffComponents: ["media-prose-bone"], familyMembers: [] } });
+  const plain = scorePage({
+    slug: "p",
+    registryFacts: { oneOffComponents: ["media-prose-bone"], familyMembers: [] },
+  });
   const forked = scorePage({
     slug: "p",
     registryFacts: { oneOffComponents: ["media-prose-bone"], familyMembers: ["media-prose-bone"] },
@@ -166,7 +206,12 @@ test("a one-off in a near-identical family scores above a plain one-off", () => 
 test("severe verify findings are summarised with the size that changed", () => {
   const page = scorePage({
     slug: "p",
-    verifyFindings: [{ key: "welcome to the practice", diffs: [{ prop: "fontSize", source: "45px", built: "16px" }] }],
+    verifyFindings: [
+      {
+        key: "welcome to the practice",
+        diffs: [{ prop: "fontSize", source: "45px", built: "16px" }],
+      },
+    ],
   });
 
   assert.equal(byId(page, "verify").examples[0], '"welcome to the practice" 45px -> 16px');
@@ -180,7 +225,10 @@ test("reasons come back worst-first", () => {
 
   const points = page.reasons.map((r) => r.points);
 
-  assert.deepEqual(points, [...points].sort((a, b) => b - a));
+  assert.deepEqual(
+    points,
+    [...points].sort((a, b) => b - a)
+  );
   assert.equal(page.reasons[0].id, "droppedImages");
 });
 
@@ -203,9 +251,18 @@ test("ranking is worst-first, stable on ties, and re-applies the threshold", () 
 
   const ranked = rankPages(scored, { threshold: 25 });
 
-  assert.deepEqual(ranked.map((p) => p.slug), ["c", "a", "b", "d"]);
-  assert.deepEqual(ranked.map((p) => p.rank), [1, 2, 3, 4]);
-  assert.deepEqual(ranked.map((p) => p.flagged), [true, true, true, false]);
+  assert.deepEqual(
+    ranked.map((p) => p.slug),
+    ["c", "a", "b", "d"]
+  );
+  assert.deepEqual(
+    ranked.map((p) => p.rank),
+    [1, 2, 3, 4]
+  );
+  assert.deepEqual(
+    ranked.map((p) => p.flagged),
+    [true, true, true, false]
+  );
   assert.equal(ranked[0].band, "high");
 });
 

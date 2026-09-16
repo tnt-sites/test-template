@@ -7,7 +7,8 @@
  * by more than one page family is shared by definition.
  */
 
-const LANDING = /^(lp\/|lp\.md$|invisalign-littleton-co|dental-implants-littleton-co|littleton-emergency-dentistry)/;
+const LANDING =
+  /^(lp\/|lp\.md$|invisalign-littleton-co|dental-implants-littleton-co|littleton-emergency-dentistry)/;
 
 export const FOLDERS = {
   homepage: "homepage-blocks/wp",

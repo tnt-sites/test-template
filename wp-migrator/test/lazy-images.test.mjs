@@ -7,18 +7,26 @@ const at = (attrs) => (name) => attrs[name] ?? "";
 
 test("a lazyload img with no src at all resolves from data-src", () => {
   // The exact shape that cost the veneers page four of its five photos.
-  assert.equal(srcFromAttrs(at({ "data-src": "/wp-content/uploads/2021/08/veneer.jpg" })), "/wp-content/uploads/2021/08/veneer.jpg");
+  assert.equal(
+    srcFromAttrs(at({ "data-src": "/wp-content/uploads/2021/08/veneer.jpg" })),
+    "/wp-content/uploads/2021/08/veneer.jpg"
+  );
 });
 
 test("an inline data-URI placeholder loses to the real data-src", () => {
   assert.equal(
-    srcFromAttrs(at({ src: "data:image/gif;base64,R0lGODlhAQABAAAAACw=", "data-src": "/real.jpg" })),
+    srcFromAttrs(
+      at({ src: "data:image/gif;base64,R0lGODlhAQABAAAAACw=", "data-src": "/real.jpg" })
+    ),
     "/real.jpg"
   );
 });
 
 test("a named spacer file loses to the real data-src", () => {
-  assert.equal(srcFromAttrs(at({ src: "/assets/img/blank.gif", "data-src": "/real.jpg" })), "/real.jpg");
+  assert.equal(
+    srcFromAttrs(at({ src: "/assets/img/blank.gif", "data-src": "/real.jpg" })),
+    "/real.jpg"
+  );
 });
 
 test("a real src wins over a stale data-src left behind after the swap", () => {
@@ -33,7 +41,10 @@ test("every known loader attribute is honoured", () => {
 
 test("an img with nothing usable stays empty rather than inventing a source", () => {
   assert.equal(srcFromAttrs(at({})), "");
-  assert.equal(srcFromAttrs(at({ src: "data:image/gif;base64,R0lGOD" })), "data:image/gif;base64,R0lGOD");
+  assert.equal(
+    srcFromAttrs(at({ src: "data:image/gif;base64,R0lGOD" })),
+    "data:image/gif;base64,R0lGOD"
+  );
 });
 
 test("the placeholder rule does not swallow real filenames that merely contain a keyword", () => {
@@ -50,7 +61,10 @@ const reading = (images, blocks = []) => ({ blocks, headings: { h1: 1, h2: 0, h3
 
 test("coverage reports images the source shows and the build does not", () => {
   const c = diffCoverage(
-    reading([["veneer.jpg", 1], ["laminate.jpg", 1]]),
+    reading([
+      ["veneer.jpg", 1],
+      ["laminate.jpg", 1],
+    ]),
     reading([["veneer.jpg", 1]])
   );
 
@@ -65,7 +79,10 @@ test("coverage stays quiet when the build carries every source image", () => {
   const c = diffCoverage(reading([["veneer.jpg", 1]]), reading([["veneer.jpg", 1]]));
 
   assert.deepEqual(c.missingImages, []);
-  assert.equal(coverageFindings(c).find((f) => f.id === "droppedImages"), undefined);
+  assert.equal(
+    coverageFindings(c).find((f) => f.id === "droppedImages"),
+    undefined
+  );
 });
 
 test("an image the build adds of its own is not a finding", () => {

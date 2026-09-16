@@ -26,15 +26,47 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="dentist-littleton-co" id={id || undefined} style={`--hd:${headingColor};--btntx:${buttonTextColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${buttonTextHoverColor};--c6:${hoverBackgroundColor};--c7:${buttonBackgroundHoverColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<div
+  class="dentist-littleton-co"
+  id={id || undefined}
+  style={`--hd:${headingColor};--btntx:${buttonTextColor};--btnbg:${buttonBackgroundColor};--c4:${buttonTextColor2};--c5:${buttonTextHoverColor};--c6:${hoverBackgroundColor};--c7:${buttonBackgroundHoverColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
   <div class="dlc-box">
     <div class="dlc-box2">
       <h1 class="dlc-heading">{heading}</h1>
       {subheading && <h2 class="dlc-heading2" set:html={subheading} />}
       {heading2 && <h3 class="dlc-heading3" set:html={heading2} />}
       <div class="dlc-box3">
-        {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="dlc-btn" text={buttonText} link={buttonLink || "#"} />}
-        {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" class="dlc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+        {
+          buttonText && (
+            <Button
+              variant="tertiary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              borderWidth="xs"
+              class="dlc-btn"
+              text={buttonText}
+              link={buttonLink || "#"}
+            />
+          )
+        }
+        {
+          secondaryButtonText && (
+            <Button
+              variant="primary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              borderWidth="none"
+              class="dlc-btn2"
+              text={secondaryButtonText}
+              link={secondaryButtonLink || "#"}
+            />
+          )
+        }
       </div>
     </div>
   </div>
@@ -213,7 +245,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .dlc-heading {
     color: rgb(59, 98, 120);
     font-weight: 400;
@@ -282,5 +314,5 @@ const {
       text-align: left;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

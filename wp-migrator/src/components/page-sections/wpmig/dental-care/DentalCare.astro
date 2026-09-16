@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="dental-care" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="dental-care"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="dc-box">
     <div class="dc-box2">
       <h3 class="dc-heading">{heading}</h3>
@@ -105,7 +111,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .dc-heading {
     font-weight: 400;
   }
@@ -119,5 +125,5 @@ const {
       font-weight: 400;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

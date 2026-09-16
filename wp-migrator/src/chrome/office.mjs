@@ -7,20 +7,13 @@
  * by selector, and anything ambiguous is left out rather than guessed at.
  */
 
-const DAYS = [
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
+const DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
 const DAY_PATTERN = DAYS.map((d) => `${d}|${d.slice(0, 3)}`).join("|");
 
 /** US state abbreviations, to anchor the end of an address. */
-const STATE = "A[LKZR]|C[AOT]|D[EC]|FL|GA|HI|I[DLNA]|K[SY]|LA|M[EDAINSOT]|N[EVHJMYCD]|OH|OK|OR|PA|RI|S[CD]|T[NX]|UT|V[TA]|W[AVIY]";
+const STATE =
+  "A[LKZR]|C[AOT]|D[EC]|FL|GA|HI|I[DLNA]|K[SY]|LA|M[EDAINSOT]|N[EVHJMYCD]|OH|OK|OR|PA|RI|S[CD]|T[NX]|UT|V[TA]|W[AVIY]";
 
 /**
  * Opening hours, as `day` / `hours` pairs.
@@ -51,7 +44,9 @@ export function parseOfficeHours(text) {
 
 function normalizeDay(raw) {
   const lower = raw.toLowerCase();
-  return DAYS.find((d) => d.toLowerCase() === lower || d.slice(0, 3).toLowerCase() === lower) ?? null;
+  return (
+    DAYS.find((d) => d.toLowerCase() === lower || d.slice(0, 3).toLowerCase() === lower) ?? null
+  );
 }
 
 function tidy(text) {
@@ -174,7 +169,9 @@ export function buildOffice(extracted, current = {}) {
 
   const office = { ...(current ?? {}) };
   if (address) {
-    office.addresses = [{ ...address, mapUrl: extracted.footer?.mapUrl ?? current?.addresses?.[0]?.mapUrl ?? null }];
+    office.addresses = [
+      { ...address, mapUrl: extracted.footer?.mapUrl ?? current?.addresses?.[0]?.mapUrl ?? null },
+    ];
   }
   if (phones.length) office.phones = phones;
   if (emails.length) office.emails = emails;

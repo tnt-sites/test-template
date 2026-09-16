@@ -143,7 +143,11 @@ function isBlank(value, source) {
   const fallback = source.match(new RegExp(`const\\s+${bound}\\s*=([^;]*);`))?.[1];
   if (!fallback) return false;
 
-  const last = fallback.split("||").pop().trim().replace(/^["'`]|["'`]$/g, "");
+  const last = fallback
+    .split("||")
+    .pop()
+    .trim()
+    .replace(/^["'`]|["'`]$/g, "");
   return blank(last);
 }
 
@@ -170,7 +174,9 @@ function refuseReason(name, source) {
   // refused almost the whole family. The root class is the component's own
   // kebab name; its children all carry the short class prefix instead.
   const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const rootRules = [...style.matchAll(new RegExp(`\\.${escaped}(?:::(?:before|after))?\\s*\\{([^}]*)\\}`, "g"))];
+  const rootRules = [
+    ...style.matchAll(new RegExp(`\\.${escaped}(?:::(?:before|after))?\\s*\\{([^}]*)\\}`, "g")),
+  ];
   const paints = rootRules.some(([, body]) => {
     const decl = body.match(/\b(?:background|background-color|background-image)\s*:\s*([^;]+)/);
     if (!decl) return false;
@@ -365,9 +371,15 @@ function toBlocks(spec, props, { bgImage, side }) {
 
 // ---------------------------------------------------------------------------
 
-if (!fs.existsSync(path.join(TARGET, "src/components", NEW_REF.replace(/^page-sections/, "page-sections")))) {
+if (
+  !fs.existsSync(
+    path.join(TARGET, "src/components", NEW_REF.replace(/^page-sections/, "page-sections"))
+  )
+) {
   console.error(`target component missing: ${NEW_REF}`);
-  console.error("Write it before collapsing — rewriting pages onto a component that does not exist builds a blank site.");
+  console.error(
+    "Write it before collapsing — rewriting pages onto a component that does not exist builds a blank site."
+  );
   process.exit(1);
 }
 
@@ -420,7 +432,9 @@ for (const file of listPages(PAGES)) {
   let touched = false;
 
   data.pageSections = data.pageSections.map((section) => {
-    const comp = String(section?._component ?? "").split("/").pop();
+    const comp = String(section?._component ?? "")
+      .split("/")
+      .pop();
 
     if (!convertible.has(comp) || bespoke) {
       if (comp) stillUsed.add(comp);

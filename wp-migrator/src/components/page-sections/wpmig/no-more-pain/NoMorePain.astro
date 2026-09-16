@@ -20,27 +20,48 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<section class="no-more-pain" id={id || undefined} style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`} {...rest}>
+
+<section
+  class="no-more-pain"
+  id={id || undefined}
+  style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`}
+  {...rest}
+>
   <div class="nmp-box">
     <div class="nmp-box2">
       <div class="nmp-grid">
-        {list.map((it) => (
-          <div class="nmp-box3">
-            <div class="nmp-box4">
-              <h3 class="nmp-heading">{it.title}</h3>
-            </div>
-            <div class="nmp-box5">
-              <div class="nmp-box6">
-                <p class="nmp-text">{it.text}</p>
+        {
+          list.map((it) => (
+            <div class="nmp-box3">
+              <div class="nmp-box4">
+                <h3 class="nmp-heading">{it.title}</h3>
+              </div>
+              <div class="nmp-box5">
+                <div class="nmp-box6">
+                  <p class="nmp-text">{it.text}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
       <section class="nmp-box15">
         <div class="nmp-box16">
           <div class="nmp-box17">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="nmp-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="xs"
+                  class="nmp-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
       </section>
@@ -322,7 +343,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .nmp-heading {
     font-weight: 400;
   }
@@ -430,5 +451,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -31,7 +31,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="look-forward-to-the" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`} {...rest}>
+
+<section
+  class="look-forward-to-the"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonTextColor2};--c8:${buttonBackgroundHoverColor};--c9:${buttonTextColor2HoverColor};--c10:${buttonBackgroundColor2HoverColor}`}
+  {...rest}
+>
   <div class="lftt-box">
     <div class="lftt-box2">
       <div class="lftt-box3">
@@ -42,20 +48,52 @@ const {
       </div>
       <div class="lftt-box5">
         <div class="lftt-box6">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lftt-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="lftt-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="lftt-box7">
         <div class="lftt-box8">
           <div class="lftt-box9">
-            {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="lftt-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            {
+              secondaryButtonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="xs"
+                  class="lftt-btn2"
+                  text={secondaryButtonText}
+                  link={secondaryButtonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
       </div>
       <div class="lftt-box10">
         <div class="lftt-box11">
           <p class="lftt-box12">
-            {secondaryButtonText2 && <a class="lftt-link" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+            {
+              secondaryButtonText2 && (
+                <a class="lftt-link" href={secondaryButtonLink2 || "#"}>
+                  {secondaryButtonText2}
+                </a>
+              )
+            }
           </p>
         </div>
       </div>
@@ -63,7 +101,18 @@ const {
     <div class="lftt-box13">
       <div class="lftt-box14">
         <div class="lftt-box15">
-          {image && <img class="lftt-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="787" />}
+          {
+            image && (
+              <img
+                class="lftt-media"
+                src={image}
+                alt={imageAlt || ""}
+                loading="lazy"
+                width="1024"
+                height="787"
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -483,7 +532,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .lftt-text {
     color: rgb(27, 46, 56);
     font-size: 16px;
@@ -568,5 +617,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -17,6 +17,7 @@ export async function getStaticPaths() {
   const pageRoutes = pages
     .filter((page) => {
       const slug = page.id.replace(/index$/, "");
+
       return slug !== "blog";
     })
     .map((page) => {

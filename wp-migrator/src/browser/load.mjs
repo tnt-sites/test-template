@@ -10,7 +10,12 @@
  * reported and skipped rather than taking the run down with it.
  */
 
-import { GALLERY_THUMB_ATTRS, LAZY_SRC_ATTRS, LAZY_SRCSET_ATTRS, PLACEHOLDER_SRC } from "./lazy.mjs";
+import {
+  GALLERY_THUMB_ATTRS,
+  LAZY_SRC_ATTRS,
+  LAZY_SRCSET_ATTRS,
+  PLACEHOLDER_SRC,
+} from "./lazy.mjs";
 
 const DEFAULT_TIMEOUT = 20000;
 
@@ -168,7 +173,9 @@ export async function resolveLazyImages(page) {
       // and teaching each of them about `role="img"` divs would be the same
       // rule spelled four times. The element keeps its box and classes, so the
       // gallery's own layout still applies.
-      for (const host of document.querySelectorAll("[data-thumbnail], [data-large], [data-image]")) {
+      for (const host of document.querySelectorAll(
+        "[data-thumbnail], [data-large], [data-image]"
+      )) {
         if (host.querySelector("img")) continue;
         const url = pick(host, galleryAttrs);
         if (!url) continue;

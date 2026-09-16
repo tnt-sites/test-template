@@ -115,7 +115,9 @@ export function segmentsToSections(segments = [], { rewriteHtml = (h) => h } = {
       // hosted` renders a bare <video>, which shows no title, so the label is
       // kept as its own block AND copied onto the video — the first is what the
       // reader sees, the second is what names it in the CloudCannon editor.
-      const label = isShortLabel(segments[i - 1]) ? textOf(segments[i - 1].html) : segment.title || "";
+      const label = isShortLabel(segments[i - 1])
+        ? textOf(segments[i - 1].html)
+        : segment.title || "";
       out.push({
         _component: VIDEO,
         id: "",
@@ -132,7 +134,12 @@ export function segmentsToSections(segments = [], { rewriteHtml = (h) => h } = {
       return;
     }
     if (segment.type === "embed") {
-      out.push({ _component: EMBED, id: "", html: rewriteHtml(collapse(segment.html)), aspectRatio: "landscape" });
+      out.push({
+        _component: EMBED,
+        id: "",
+        html: rewriteHtml(collapse(segment.html)),
+        aspectRatio: "landscape",
+      });
       return;
     }
     const html = rewriteHtml(collapse(segment.html));
@@ -210,15 +217,28 @@ export function accordionTheme(measured, branding = {}) {
     theme.titleBackground ||
     theme.titleBackgroundOpen ||
     theme.itemGap ||
-    [theme.detailBorderTop, theme.detailBorderRight, theme.detailBorderBottom, theme.detailBorderLeft]
-      .some((v) => v && v !== "0");
+    [
+      theme.detailBorderTop,
+      theme.detailBorderRight,
+      theme.detailBorderBottom,
+      theme.detailBorderLeft,
+    ].some((v) => v && v !== "0");
   return painted ? theme : null;
 }
 
 /** The page block for one captured accordion. */
 export function accordionBlock(
   accordion,
-  { ref, heading = "", id = "", label = "", bandColor = "", hasLeadRun = false, branding = {}, rewriteHtml } = {}
+  {
+    ref,
+    heading = "",
+    id = "",
+    label = "",
+    bandColor = "",
+    hasLeadRun = false,
+    branding = {},
+    rewriteHtml,
+  } = {}
 ) {
   const band = colorValue(bandColor, branding);
   return {

@@ -19,13 +19,33 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="dont-wait-get-the" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`} {...rest}>
+
+<section
+  class="dont-wait-get-the"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`}
+  {...rest}
+>
   <div class="dwgt-box">
     <div class="dwgt-box2">
       <div class="dwgt-box3">
         <div class="dwgt-box4">
           <div class="dwgt-box5">
-            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="none" uppercase class="dwgt-btn" text={buttonText} link={buttonLink || "#"} />}
+            {
+              buttonText && (
+                <Button
+                  variant="primary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  borderWidth="none"
+                  uppercase
+                  class="dwgt-btn"
+                  text={buttonText}
+                  link={buttonLink || "#"}
+                />
+              )
+            }
           </div>
         </div>
         <div class="dwgt-box6">
@@ -227,7 +247,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .dwgt-box5 {
     background-color: rgb(91, 183, 129);
     color: rgb(255, 255, 255);
@@ -323,5 +343,5 @@ const {
       align-items: center;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

@@ -171,9 +171,15 @@ function pixelReason(pixel) {
     ? `; the build is ${Math.abs(delta)}px ${delta < 0 ? "shorter" : "taller"} than the source`
     : "";
 
-  return reason("pixel", "pixel", points, `${pct.toFixed(1)}% of pixels differ at ${worstWidth}px${height}`, {
-    where: { viewport: worstWidth },
-  });
+  return reason(
+    "pixel",
+    "pixel",
+    points,
+    `${pct.toFixed(1)}% of pixels differ at ${worstWidth}px${height}`,
+    {
+      where: { viewport: worstWidth },
+    }
+  );
 }
 
 /** Coverage and layout-pattern findings, which already carry their own prose. */
@@ -189,26 +195,46 @@ function findingReasons(findings) {
       if (f.id === "droppedImages") {
         const w = WEIGHTS.droppedImages;
         out.push(
-          reason("droppedImages", "coverage", clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
-            `${plural(n, "image")} in the source and absent from the build`, carry)
+          reason(
+            "droppedImages",
+            "coverage",
+            clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
+            `${plural(n, "image")} in the source and absent from the build`,
+            carry
+          )
         );
       } else if (f.id === "droppedContent") {
         const w = WEIGHTS.droppedContent;
         out.push(
-          reason("droppedContent", "coverage", clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
-            `${plural(n, "block")} of text the build never renders`, carry)
+          reason(
+            "droppedContent",
+            "coverage",
+            clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
+            `${plural(n, "block")} of text the build never renders`,
+            carry
+          )
         );
       } else if (f.id === "duplicatedContent") {
         const w = WEIGHTS.duplicatedContent;
         out.push(
-          reason("duplicatedContent", "coverage", clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
-            `${plural(n, "block")} of text rendered more than once`, carry)
+          reason(
+            "duplicatedContent",
+            "coverage",
+            clamp(w.base + w.each * Math.min(n, w.max), 0, w.cap),
+            `${plural(n, "block")} of text rendered more than once`,
+            carry
+          )
         );
       } else if (f.id === "headingCount") {
         const w = WEIGHTS.headingCount;
         out.push(
-          reason("headingCount", "coverage", n === 0 ? w.none : w.extra,
-            n === 0 ? "the build renders no <h1>" : `the build renders ${n} <h1> elements`, carry)
+          reason(
+            "headingCount",
+            "coverage",
+            n === 0 ? w.none : w.extra,
+            n === 0 ? "the build renders no <h1>" : `the build renders ${n} <h1> elements`,
+            carry
+          )
         );
       }
       continue;
@@ -223,14 +249,15 @@ function findingReasons(findings) {
       if (points === 0) continue;
 
       out.push(
-        reason(f.id, "pattern", points,
-          `source ${f.sourceCount}, built ${f.builtCount}`, carry)
+        reason(f.id, "pattern", points, `source ${f.sourceCount}, built ${f.builtCount}`, carry)
       );
       continue;
     }
 
     if (f.kind === "smell") {
-      out.push(reason(f.id, "smell", WEIGHTS.smell.each, `${plural(f.builtCount || 0, "hit")}`, carry));
+      out.push(
+        reason(f.id, "smell", WEIGHTS.smell.each, `${plural(f.builtCount || 0, "hit")}`, carry)
+      );
     }
   }
 
@@ -287,11 +314,16 @@ function uncertaintyReasons(uncertainty) {
   if (lowRepeats.length) {
     const w = WEIGHTS.repeat;
     out.push(
-      reason("repeat", "uncertainty", clamp(w.each * lowRepeats.length, 0, w.cap),
-        `${plural(lowRepeats.length, "section")} whose repeat boundaries were guessed`, {
+      reason(
+        "repeat",
+        "uncertainty",
+        clamp(w.each * lowRepeats.length, 0, w.cap),
+        `${plural(lowRepeats.length, "section")} whose repeat boundaries were guessed`,
+        {
           examples: lowRepeats.map((s) => `${s.component} (${s.repeat.itemCount}x)`),
           where: lowRepeats.length === 1 ? sectionWhere(lowRepeats[0]) : undefined,
-        })
+        }
+      )
     );
   }
 
@@ -300,12 +332,18 @@ function uncertaintyReasons(uncertainty) {
   if (fuzzy.length || unresolved.length) {
     const w = WEIGHTS.icons;
     out.push(
-      reason("icons", "uncertainty",
+      reason(
+        "icons",
+        "uncertainty",
         clamp(w.fuzzy * fuzzy.length + w.unresolved * unresolved.length, 0, w.cap),
-        [fuzzy.length && `${plural(fuzzy.length, "icon")} matched approximately`,
-         unresolved.length && `${plural(unresolved.length, "icon")} unresolved`]
-          .filter(Boolean).join(", "),
-        { examples: [...unresolved, ...fuzzy].map((x) => `${x.n} in ${x.s.component}`) })
+        [
+          fuzzy.length && `${plural(fuzzy.length, "icon")} matched approximately`,
+          unresolved.length && `${plural(unresolved.length, "icon")} unresolved`,
+        ]
+          .filter(Boolean)
+          .join(", "),
+        { examples: [...unresolved, ...fuzzy].map((x) => `${x.n} in ${x.s.component}`) }
+      )
     );
   }
 
@@ -313,11 +351,16 @@ function uncertaintyReasons(uncertainty) {
   if (empty.length) {
     const w = WEIGHTS.emptyish;
     out.push(
-      reason("emptyish", "uncertainty", clamp(w.each * empty.length, 0, w.cap),
-        `${plural(empty.length, "section")} with markup and no content props`, {
+      reason(
+        "emptyish",
+        "uncertainty",
+        clamp(w.each * empty.length, 0, w.cap),
+        `${plural(empty.length, "section")} with markup and no content props`,
+        {
           examples: empty.map((s) => s.component),
           where: empty.length === 1 ? sectionWhere(empty[0]) : undefined,
-        })
+        }
+      )
     );
   }
 
@@ -325,10 +368,13 @@ function uncertaintyReasons(uncertainty) {
   if (missing.length) {
     const w = WEIGHTS.missingAssets;
     out.push(
-      reason("missingAssets", "uncertainty",
+      reason(
+        "missingAssets",
+        "uncertainty",
         clamp(w.base + w.each * Math.min(missing.length, w.max), 0, w.cap),
         `${plural(missing.length, "asset")} referenced but absent from the snapshot`,
-        { examples: missing })
+        { examples: missing }
+      )
     );
   }
 
@@ -457,13 +503,20 @@ export function scorePage(input, opts = {}) {
   if (verifyFindings.length) {
     const w = WEIGHTS.verify;
     reasons.push(
-      reason("verify", "verify", clamp(w.each * Math.min(verifyFindings.length, w.max), 0, w.cap),
-        `${plural(verifyFindings.length, "element")} rendered at a size or in a family that changes the reading order`, {
+      reason(
+        "verify",
+        "verify",
+        clamp(w.each * Math.min(verifyFindings.length, w.max), 0, w.cap),
+        `${plural(verifyFindings.length, "element")} rendered at a size or in a family that changes the reading order`,
+        {
           examples: verifyFindings.slice(0, 5).map((f) => {
             const size = f.diffs?.find((d) => d.prop === "fontSize");
-            return size ? `"${excerpt(f.key)}" ${size.source} -> ${size.built}` : `"${excerpt(f.key)}"`;
+            return size
+              ? `"${excerpt(f.key)}" ${size.source} -> ${size.built}`
+              : `"${excerpt(f.key)}"`;
           }),
-        })
+        }
+      )
     );
   }
 

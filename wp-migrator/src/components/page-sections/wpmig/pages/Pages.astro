@@ -126,6 +126,7 @@ const items6List = Array.isArray(items6) ? items6.filter(Boolean) : [];
 const items7List = Array.isArray(items7) ? items7.filter(Boolean) : [];
 const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
 ---
+
 <div class="pages" id={id || undefined} style={`--tx:${textColor};--c2:${textColor2}`} {...rest}>
   <div class="pa-box">
     <div class="pa-box2">
@@ -134,210 +135,546 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
           {text && <div class="pa-text">{text}</div>}
           <ul class="pa-box5">
             <li class="pa-box6">
-              {buttonText && <a class="pa-link" href={buttonLink || "#"}>{buttonText}</a>}
+              {
+                buttonText && (
+                  <a class="pa-link" href={buttonLink || "#"}>
+                    {buttonText}
+                  </a>
+                )
+              }
               <ul class="pa-grid">
-                {itemsList.map((it) => (
-                  <li class="pa-box7">
-                    {it.buttonText && <a class="pa-link2" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                  </li>
-                ))}
+                {
+                  itemsList.map((it) => (
+                    <li class="pa-box7">
+                      {it.buttonText && (
+                        <a class="pa-link2" href={it.buttonLink || "#"}>
+                          {it.buttonText}
+                        </a>
+                      )}
+                    </li>
+                  ))
+                }
               </ul>
             </li>
             <li class="pa-box13">
-              {secondaryButtonText && <a class="pa-link8" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+              {
+                secondaryButtonText && (
+                  <a class="pa-link8" href={secondaryButtonLink || "#"}>
+                    {secondaryButtonText}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box14">
-              {secondaryButtonText2 && <a class="pa-link9" href={secondaryButtonLink2 || "#"}>{secondaryButtonText2}</a>}
+              {
+                secondaryButtonText2 && (
+                  <a class="pa-link9" href={secondaryButtonLink2 || "#"}>
+                    {secondaryButtonText2}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box15">
-              {secondaryButtonText3 && <a class="pa-link10" href={secondaryButtonLink3 || "#"}>{secondaryButtonText3}</a>}
+              {
+                secondaryButtonText3 && (
+                  <a class="pa-link10" href={secondaryButtonLink3 || "#"}>
+                    {secondaryButtonText3}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box16">
-              {secondaryButtonText4 && <a class="pa-link11" href={secondaryButtonLink4 || "#"}>{secondaryButtonText4}</a>}
+              {
+                secondaryButtonText4 && (
+                  <a class="pa-link11" href={secondaryButtonLink4 || "#"}>
+                    {secondaryButtonText4}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box17">
-              {secondaryButtonText5 && <a class="pa-link12" href={secondaryButtonLink5 || "#"}>{secondaryButtonText5}</a>}
+              {
+                secondaryButtonText5 && (
+                  <a class="pa-link12" href={secondaryButtonLink5 || "#"}>
+                    {secondaryButtonText5}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box18">
-              {secondaryButtonText6 && <a class="pa-link13" href={secondaryButtonLink6 || "#"}>{secondaryButtonText6}</a>}
+              {
+                secondaryButtonText6 && (
+                  <a class="pa-link13" href={secondaryButtonLink6 || "#"}>
+                    {secondaryButtonText6}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box19">
-              {secondaryButtonText7 && <a class="pa-link14" href={secondaryButtonLink7 || "#"}>{secondaryButtonText7}</a>}
+              {
+                secondaryButtonText7 && (
+                  <a class="pa-link14" href={secondaryButtonLink7 || "#"}>
+                    {secondaryButtonText7}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box20">
-              {secondaryButtonText8 && <a class="pa-link15" href={secondaryButtonLink8 || "#"}>{secondaryButtonText8}</a>}
+              {
+                secondaryButtonText8 && (
+                  <a class="pa-link15" href={secondaryButtonLink8 || "#"}>
+                    {secondaryButtonText8}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box21">
-              {secondaryButtonText9 && <a class="pa-link16" href={secondaryButtonLink9 || "#"}>{secondaryButtonText9}</a>}
+              {
+                secondaryButtonText9 && (
+                  <a class="pa-link16" href={secondaryButtonLink9 || "#"}>
+                    {secondaryButtonText9}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box22">
-              {secondaryButtonText10 && <a class="pa-link17" href={secondaryButtonLink10 || "#"}>{secondaryButtonText10}</a>}
+              {
+                secondaryButtonText10 && (
+                  <a class="pa-link17" href={secondaryButtonLink10 || "#"}>
+                    {secondaryButtonText10}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box23">
-              {secondaryButtonText11 && <a class="pa-link18" href={secondaryButtonLink11 || "#"}>{secondaryButtonText11}</a>}
+              {
+                secondaryButtonText11 && (
+                  <a class="pa-link18" href={secondaryButtonLink11 || "#"}>
+                    {secondaryButtonText11}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box24">
-              {secondaryButtonText12 && <a class="pa-link19" href={secondaryButtonLink12 || "#"}>{secondaryButtonText12}</a>}
+              {
+                secondaryButtonText12 && (
+                  <a class="pa-link19" href={secondaryButtonLink12 || "#"}>
+                    {secondaryButtonText12}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box25">
-              {secondaryButtonText13 && <a class="pa-link20" href={secondaryButtonLink13 || "#"}>{secondaryButtonText13}</a>}
+              {
+                secondaryButtonText13 && (
+                  <a class="pa-link20" href={secondaryButtonLink13 || "#"}>
+                    {secondaryButtonText13}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box26">
-              {secondaryButtonText14 && <a class="pa-link21" href={secondaryButtonLink14 || "#"}>{secondaryButtonText14}</a>}
+              {
+                secondaryButtonText14 && (
+                  <a class="pa-link21" href={secondaryButtonLink14 || "#"}>
+                    {secondaryButtonText14}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box27">
-              {secondaryButtonText15 && <a class="pa-link22" href={secondaryButtonLink15 || "#"}>{secondaryButtonText15}</a>}
+              {
+                secondaryButtonText15 && (
+                  <a class="pa-link22" href={secondaryButtonLink15 || "#"}>
+                    {secondaryButtonText15}
+                  </a>
+                )
+              }
               <ul class="pa-box28">
                 <li class="pa-box29">
-                  {secondaryButtonText16 && <a class="pa-link23" href={secondaryButtonLink16 || "#"}>{secondaryButtonText16}</a>}
+                  {
+                    secondaryButtonText16 && (
+                      <a class="pa-link23" href={secondaryButtonLink16 || "#"}>
+                        {secondaryButtonText16}
+                      </a>
+                    )
+                  }
                   <ul class="pa-grid2">
-                    {items2List.map((it) => (
-                      <li class="pa-box30">
-                        {it.buttonText && <a class="pa-link24" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
+                    {
+                      items2List.map((it) => (
+                        <li class="pa-box30">
+                          {it.buttonText && (
+                            <a class="pa-link24" href={it.buttonLink || "#"}>
+                              {it.buttonText}
+                            </a>
+                          )}
+                        </li>
+                      ))
+                    }
                   </ul>
                 </li>
                 <li class="pa-box35">
-                  {secondaryButtonText17 && <a class="pa-link29" href={secondaryButtonLink17 || "#"}>{secondaryButtonText17}</a>}
+                  {
+                    secondaryButtonText17 && (
+                      <a class="pa-link29" href={secondaryButtonLink17 || "#"}>
+                        {secondaryButtonText17}
+                      </a>
+                    )
+                  }
                 </li>
                 <li class="pa-box36">
-                  {secondaryButtonText18 && <a class="pa-link30" href={secondaryButtonLink18 || "#"}>{secondaryButtonText18}</a>}
+                  {
+                    secondaryButtonText18 && (
+                      <a class="pa-link30" href={secondaryButtonLink18 || "#"}>
+                        {secondaryButtonText18}
+                      </a>
+                    )
+                  }
                   <ul class="pa-grid3">
-                    {items3List.map((it) => (
-                      <li class="pa-box37">
-                        {it.buttonText && <a class="pa-link31" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
+                    {
+                      items3List.map((it) => (
+                        <li class="pa-box37">
+                          {it.buttonText && (
+                            <a class="pa-link31" href={it.buttonLink || "#"}>
+                              {it.buttonText}
+                            </a>
+                          )}
+                        </li>
+                      ))
+                    }
                   </ul>
                 </li>
                 <li class="pa-box46">
-                  {secondaryButtonText19 && <a class="pa-link40" href={secondaryButtonLink19 || "#"}>{secondaryButtonText19}</a>}
+                  {
+                    secondaryButtonText19 && (
+                      <a class="pa-link40" href={secondaryButtonLink19 || "#"}>
+                        {secondaryButtonText19}
+                      </a>
+                    )
+                  }
                 </li>
                 <li class="pa-box47">
-                  {secondaryButtonText20 && <a class="pa-link41" href={secondaryButtonLink20 || "#"}>{secondaryButtonText20}</a>}
+                  {
+                    secondaryButtonText20 && (
+                      <a class="pa-link41" href={secondaryButtonLink20 || "#"}>
+                        {secondaryButtonText20}
+                      </a>
+                    )
+                  }
                   <ul class="pa-grid4">
-                    {items4List.map((it) => (
-                      <li class="pa-box48">
-                        {it.buttonText && <a class="pa-link42" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
+                    {
+                      items4List.map((it) => (
+                        <li class="pa-box48">
+                          {it.buttonText && (
+                            <a class="pa-link42" href={it.buttonLink || "#"}>
+                              {it.buttonText}
+                            </a>
+                          )}
+                        </li>
+                      ))
+                    }
                   </ul>
                 </li>
                 <li class="pa-box52">
-                  {secondaryButtonText21 && <a class="pa-link46" href={secondaryButtonLink21 || "#"}>{secondaryButtonText21}</a>}
+                  {
+                    secondaryButtonText21 && (
+                      <a class="pa-link46" href={secondaryButtonLink21 || "#"}>
+                        {secondaryButtonText21}
+                      </a>
+                    )
+                  }
                   <ul class="pa-grid5">
-                    {items5List.map((it) => (
-                      <li class="pa-box53">
-                        {it.buttonText && <a class="pa-link47" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                      </li>
-                    ))}
+                    {
+                      items5List.map((it) => (
+                        <li class="pa-box53">
+                          {it.buttonText && (
+                            <a class="pa-link47" href={it.buttonLink || "#"}>
+                              {it.buttonText}
+                            </a>
+                          )}
+                        </li>
+                      ))
+                    }
                   </ul>
                 </li>
               </ul>
             </li>
             <li class="pa-box56">
-              {secondaryButtonText22 && <a class="pa-link50" href={secondaryButtonLink22 || "#"}>{secondaryButtonText22}</a>}
+              {
+                secondaryButtonText22 && (
+                  <a class="pa-link50" href={secondaryButtonLink22 || "#"}>
+                    {secondaryButtonText22}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box57">
-              {secondaryButtonText23 && <a class="pa-link51" href={secondaryButtonLink23 || "#"}>{secondaryButtonText23}</a>}
+              {
+                secondaryButtonText23 && (
+                  <a class="pa-link51" href={secondaryButtonLink23 || "#"}>
+                    {secondaryButtonText23}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box58">
-              {secondaryButtonText24 && <a class="pa-link52" href={secondaryButtonLink24 || "#"}>{secondaryButtonText24}</a>}
+              {
+                secondaryButtonText24 && (
+                  <a class="pa-link52" href={secondaryButtonLink24 || "#"}>
+                    {secondaryButtonText24}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box59">
-              {secondaryButtonText25 && <a class="pa-link53" href={secondaryButtonLink25 || "#"}>{secondaryButtonText25}</a>}
+              {
+                secondaryButtonText25 && (
+                  <a class="pa-link53" href={secondaryButtonLink25 || "#"}>
+                    {secondaryButtonText25}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box60">
-              {secondaryButtonText26 && <a class="pa-link54" href={secondaryButtonLink26 || "#"}>{secondaryButtonText26}</a>}
+              {
+                secondaryButtonText26 && (
+                  <a class="pa-link54" href={secondaryButtonLink26 || "#"}>
+                    {secondaryButtonText26}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box61">
-              {secondaryButtonText27 && <a class="pa-link55" href={secondaryButtonLink27 || "#"}>{secondaryButtonText27}</a>}
+              {
+                secondaryButtonText27 && (
+                  <a class="pa-link55" href={secondaryButtonLink27 || "#"}>
+                    {secondaryButtonText27}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box62">
-              {secondaryButtonText28 && <a class="pa-link56" href={secondaryButtonLink28 || "#"}>{secondaryButtonText28}</a>}
+              {
+                secondaryButtonText28 && (
+                  <a class="pa-link56" href={secondaryButtonLink28 || "#"}>
+                    {secondaryButtonText28}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box63">
-              {secondaryButtonText29 && <a class="pa-link57" href={secondaryButtonLink29 || "#"}>{secondaryButtonText29}</a>}
+              {
+                secondaryButtonText29 && (
+                  <a class="pa-link57" href={secondaryButtonLink29 || "#"}>
+                    {secondaryButtonText29}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box64">
-              {secondaryButtonText30 && <a class="pa-link58" href={secondaryButtonLink30 || "#"}>{secondaryButtonText30}</a>}
+              {
+                secondaryButtonText30 && (
+                  <a class="pa-link58" href={secondaryButtonLink30 || "#"}>
+                    {secondaryButtonText30}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box65">
-              {secondaryButtonText31 && <a class="pa-link59" href={secondaryButtonLink31 || "#"}>{secondaryButtonText31}</a>}
+              {
+                secondaryButtonText31 && (
+                  <a class="pa-link59" href={secondaryButtonLink31 || "#"}>
+                    {secondaryButtonText31}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box66">
-              {secondaryButtonText32 && <a class="pa-link60" href={secondaryButtonLink32 || "#"}>{secondaryButtonText32}</a>}
+              {
+                secondaryButtonText32 && (
+                  <a class="pa-link60" href={secondaryButtonLink32 || "#"}>
+                    {secondaryButtonText32}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box67">
-              {secondaryButtonText33 && <a class="pa-link61" href={secondaryButtonLink33 || "#"}>{secondaryButtonText33}</a>}
+              {
+                secondaryButtonText33 && (
+                  <a class="pa-link61" href={secondaryButtonLink33 || "#"}>
+                    {secondaryButtonText33}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box68">
-              {secondaryButtonText34 && <a class="pa-link62" href={secondaryButtonLink34 || "#"}>{secondaryButtonText34}</a>}
+              {
+                secondaryButtonText34 && (
+                  <a class="pa-link62" href={secondaryButtonLink34 || "#"}>
+                    {secondaryButtonText34}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box69">
-              {secondaryButtonText35 && <a class="pa-link63" href={secondaryButtonLink35 || "#"}>{secondaryButtonText35}</a>}
+              {
+                secondaryButtonText35 && (
+                  <a class="pa-link63" href={secondaryButtonLink35 || "#"}>
+                    {secondaryButtonText35}
+                  </a>
+                )
+              }
               <ul class="pa-grid6">
-                {items6List.map((it) => (
-                  <li class="pa-box70">
-                    {it.buttonText && <a class="pa-link64" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                  </li>
-                ))}
+                {
+                  items6List.map((it) => (
+                    <li class="pa-box70">
+                      {it.buttonText && (
+                        <a class="pa-link64" href={it.buttonLink || "#"}>
+                          {it.buttonText}
+                        </a>
+                      )}
+                    </li>
+                  ))
+                }
               </ul>
             </li>
             <li class="pa-box73">
-              {secondaryButtonText36 && <a class="pa-link67" href={secondaryButtonLink36 || "#"}>{secondaryButtonText36}</a>}
+              {
+                secondaryButtonText36 && (
+                  <a class="pa-link67" href={secondaryButtonLink36 || "#"}>
+                    {secondaryButtonText36}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box74">
-              {secondaryButtonText37 && <a class="pa-link68" href={secondaryButtonLink37 || "#"}>{secondaryButtonText37}</a>}
+              {
+                secondaryButtonText37 && (
+                  <a class="pa-link68" href={secondaryButtonLink37 || "#"}>
+                    {secondaryButtonText37}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box75">
-              {secondaryButtonText38 && <a class="pa-link69" href={secondaryButtonLink38 || "#"}>{secondaryButtonText38}</a>}
+              {
+                secondaryButtonText38 && (
+                  <a class="pa-link69" href={secondaryButtonLink38 || "#"}>
+                    {secondaryButtonText38}
+                  </a>
+                )
+              }
               <ul class="pa-grid7">
-                {items7List.map((it) => (
-                  <li class="pa-box76">
-                    {it.buttonText && <a class="pa-link70" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                  </li>
-                ))}
+                {
+                  items7List.map((it) => (
+                    <li class="pa-box76">
+                      {it.buttonText && (
+                        <a class="pa-link70" href={it.buttonLink || "#"}>
+                          {it.buttonText}
+                        </a>
+                      )}
+                    </li>
+                  ))
+                }
               </ul>
             </li>
             <li class="pa-box80">
-              {secondaryButtonText39 && <a class="pa-link74" href={secondaryButtonLink39 || "#"}>{secondaryButtonText39}</a>}
+              {
+                secondaryButtonText39 && (
+                  <a class="pa-link74" href={secondaryButtonLink39 || "#"}>
+                    {secondaryButtonText39}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box81">
-              {secondaryButtonText40 && <a class="pa-link75" href={secondaryButtonLink40 || "#"}>{secondaryButtonText40}</a>}
+              {
+                secondaryButtonText40 && (
+                  <a class="pa-link75" href={secondaryButtonLink40 || "#"}>
+                    {secondaryButtonText40}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box82">
-              {secondaryButtonText41 && <a class="pa-link76" href={secondaryButtonLink41 || "#"}>{secondaryButtonText41}</a>}
+              {
+                secondaryButtonText41 && (
+                  <a class="pa-link76" href={secondaryButtonLink41 || "#"}>
+                    {secondaryButtonText41}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box83">
-              {secondaryButtonText42 && <a class="pa-link77" href={secondaryButtonLink42 || "#"}>{secondaryButtonText42}</a>}
+              {
+                secondaryButtonText42 && (
+                  <a class="pa-link77" href={secondaryButtonLink42 || "#"}>
+                    {secondaryButtonText42}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box84">
-              {secondaryButtonText43 && <a class="pa-link78" href={secondaryButtonLink43 || "#"}>{secondaryButtonText43}</a>}
+              {
+                secondaryButtonText43 && (
+                  <a class="pa-link78" href={secondaryButtonLink43 || "#"}>
+                    {secondaryButtonText43}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box85">
-              {secondaryButtonText44 && <a class="pa-link79" href={secondaryButtonLink44 || "#"}>{secondaryButtonText44}</a>}
+              {
+                secondaryButtonText44 && (
+                  <a class="pa-link79" href={secondaryButtonLink44 || "#"}>
+                    {secondaryButtonText44}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box86">
-              {secondaryButtonText45 && <a class="pa-link80" href={secondaryButtonLink45 || "#"}>{secondaryButtonText45}</a>}
+              {
+                secondaryButtonText45 && (
+                  <a class="pa-link80" href={secondaryButtonLink45 || "#"}>
+                    {secondaryButtonText45}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box87">
-              {secondaryButtonText46 && <a class="pa-link81" href={secondaryButtonLink46 || "#"}>{secondaryButtonText46}</a>}
+              {
+                secondaryButtonText46 && (
+                  <a class="pa-link81" href={secondaryButtonLink46 || "#"}>
+                    {secondaryButtonText46}
+                  </a>
+                )
+              }
             </li>
             <li class="pa-box88">
-              {secondaryButtonText47 && <a class="pa-link82" href={secondaryButtonLink47 || "#"}>{secondaryButtonText47}</a>}
+              {
+                secondaryButtonText47 && (
+                  <a class="pa-link82" href={secondaryButtonLink47 || "#"}>
+                    {secondaryButtonText47}
+                  </a>
+                )
+              }
             </li>
           </ul>
         </div>
         <div class="pa-box89">
           {text2 && <div class="pa-text2">{text2}</div>}
           <ul class="pa-grid8">
-            {items8List.map((it) => (
-              <li class="pa-box90">
-                {it.buttonText && <a class="pa-link83" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-              </li>
-            ))}
+            {
+              items8List.map((it) => (
+                <li class="pa-box90">
+                  {it.buttonText && (
+                    <a class="pa-link83" href={it.buttonLink || "#"}>
+                      {it.buttonText}
+                    </a>
+                  )}
+                </li>
+              ))
+            }
           </ul>
         </div>
       </div>
@@ -2777,7 +3114,7 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .pa-box {
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -3278,5 +3615,5 @@ const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

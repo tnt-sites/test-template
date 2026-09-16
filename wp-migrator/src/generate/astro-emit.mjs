@@ -11,7 +11,8 @@ import { titleCase } from "./names.mjs";
 const ROOT_TAGS = new Set(["section", "div", "article", "aside", "header", "footer"]);
 
 const escapeAttr = (v) => String(v).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-const escapeTemplate = (v) => String(v).replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
+const escapeTemplate = (v) =>
+  String(v).replace(/\\/g, "\\\\").replace(/`/g, "\\`").replace(/\$\{/g, "\\${");
 
 function attrText(attrs, skip = []) {
   const parts = [];
@@ -22,7 +23,16 @@ function attrText(attrs, skip = []) {
   return parts.length ? ` ${parts.join(" ")}` : "";
 }
 
-export function emitAstro({ name, tree, props, values, colorSlots, backgroundImageProp, css, source }) {
+export function emitAstro({
+  name,
+  tree,
+  props,
+  values,
+  colorSlots,
+  backgroundImageProp,
+  css,
+  source,
+}) {
   const label = titleCase(name);
   const arrays = props.filter((p) => p.kind === "array");
   const rawConsts = [];
@@ -32,8 +42,10 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
   // ---- destructured props ----------------------------------------------
   const destructured = props.map((p) => {
     if (p.kind === "array") return `${p.name} = []`;
-    if (p.kind === "color" || p.kind === "colorHex") return `${p.name} = ${JSON.stringify(values[p.name] ?? "")}`;
-    if (p.name === backgroundImageProp?.name) return `${p.name} = ${JSON.stringify(values[p.name] ?? "")}`;
+    if (p.kind === "color" || p.kind === "colorHex")
+      return `${p.name} = ${JSON.stringify(values[p.name] ?? "")}`;
+    if (p.name === backgroundImageProp?.name)
+      return `${p.name} = ${JSON.stringify(values[p.name] ?? "")}`;
     return `${p.name} = ""`;
   });
   destructured.push("id", "_component", "...rest");
@@ -89,7 +101,10 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         const inner = p.kind === "html" ? ` set:html={${expr}}` : "";
         const body = p.kind === "html" ? "" : `{${expr}}`;
         const open = `<${node.tag}${cls}${inner}>`;
-        const line = p.kind === "html" ? `${pad}<${node.tag}${cls} set:html={${expr}} />` : `${pad}${open}${body}</${node.tag}>`;
+        const line =
+          p.kind === "html"
+            ? `${pad}<${node.tag}${cls} set:html={${expr}} />`
+            : `${pad}${open}${body}</${node.tag}>`;
         const optional = itemVar ? node.itemProp?.optional : node.prop?.name !== "heading";
         emit(optional ? `${pad}{${expr} && ${line.trim()}}` : line);
         return;
@@ -106,9 +121,13 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         const alt = altName ? (itemVar ? `${itemVar}.${altName}` : altName) : null;
         const extra = attrText(node.attrs, ["src", "alt", "loading"]);
         if (src) {
-          emit(`${pad}{${src} && <img${cls} src={${src}} alt={${alt ?? '""'} || ""} loading="lazy"${extra} />}`);
+          emit(
+            `${pad}{${src} && <img${cls} src={${src}} alt={${alt ?? '""'} || ""} loading="lazy"${extra} />}`
+          );
         } else {
-          emit(`${pad}<img${cls} src="${escapeAttr(node.attrs.src || "")}" alt="${escapeAttr(node.attrs.alt || "")}" loading="lazy"${extra} />`);
+          emit(
+            `${pad}<img${cls} src="${escapeAttr(node.attrs.src || "")}" alt="${escapeAttr(node.attrs.alt || "")}" loading="lazy"${extra} />`
+          );
         }
         return;
       }
@@ -128,21 +147,29 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
           `borderWidth="${meta.borderWidth ?? "none"}"`,
           meta.uppercase ? `uppercase` : null,
           node.cls ? `class="${node.cls}"` : null,
-        ].filter(Boolean).join(" ");
+        ]
+          .filter(Boolean)
+          .join(" ");
 
         if (!p) {
-          emit(`${pad}<Button ${attrs} text="${escapeAttr(node.text ?? "")}" link="${escapeAttr(node.attrs.href || "#")}" />`);
+          emit(
+            `${pad}<Button ${attrs} text="${escapeAttr(node.text ?? "")}" link="${escapeAttr(node.attrs.href || "#")}" />`
+          );
           return;
         }
         const textExpr = p.ref(p.name);
         const linkExpr = p.linkName ? p.ref(p.linkName) : '"#"';
-        emit(`${pad}{${textExpr} && <Button ${attrs} text={${textExpr}} link={${linkExpr} || "#"} />}`);
+        emit(
+          `${pad}{${textExpr} && <Button ${attrs} text={${textExpr}} link={${linkExpr} || "#"} />}`
+        );
         return;
       }
       case "textlink": {
         // An inline text link is prose, not a control — it stays an anchor.
         if (!p) {
-          emit(`${pad}<a${cls} href="${escapeAttr(node.attrs.href || "#")}">${node.text ?? ""}</a>`);
+          emit(
+            `${pad}<a${cls} href="${escapeAttr(node.attrs.href || "#")}">${node.text ?? ""}</a>`
+          );
           return;
         }
         const textExpr = p.ref(p.name);
@@ -155,9 +182,10 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         // existed in the captured DOM (its script builds it at runtime), so the
         // canonical embed URL is reconstructed from the captured id.
         if (node.video) {
-          const embedSrc = node.video.provider === "vimeo"
-            ? `https://player.vimeo.com/video/${node.video.id}`
-            : `https://www.youtube.com/embed/${node.video.id}`;
+          const embedSrc =
+            node.video.provider === "vimeo"
+              ? `https://player.vimeo.com/video/${node.video.id}`
+              : `https://www.youtube.com/embed/${node.video.id}`;
           emit(
             `${pad}<iframe${cls} src="${escapeAttr(embedSrc)}" title="${escapeAttr(node.video.provider === "vimeo" ? "Vimeo video" : "YouTube video")}" ` +
               `loading="lazy" frameborder="0" allowfullscreen ` +
@@ -168,7 +196,11 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         const src = p?.kind === "url" ? p.ref(p.name) : null;
         const extra = attrText(node.attrs, ["src"]);
         if (node.tag === "iframe") {
-          emit(src ? `${pad}<iframe${cls} src={${src}}${extra} loading="lazy"></iframe>` : `${pad}<iframe${cls}${attrText(node.attrs)} loading="lazy"></iframe>`);
+          emit(
+            src
+              ? `${pad}<iframe${cls} src={${src}}${extra} loading="lazy"></iframe>`
+              : `${pad}<iframe${cls}${attrText(node.attrs)} loading="lazy"></iframe>`
+          );
         } else {
           emit(`${pad}<${node.tag}${cls}${attrText(node.attrs)}></${node.tag}>`);
         }
@@ -194,7 +226,9 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         // so the icon lands at the size and colour the source rendered.
         if (node.iconName) {
           usesIcon = true;
-          emit(`${pad}<span${cls} aria-hidden="true"><Icon name="${escapeAttr(node.iconName)}" /></span>`);
+          emit(
+            `${pad}<span${cls} aria-hidden="true"><Icon name="${escapeAttr(node.iconName)}" /></span>`
+          );
           return;
         }
         emit(`${pad}<div${cls} aria-hidden="true"></div>`);
@@ -216,7 +250,11 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
         const tag = isRoot && !ROOT_TAGS.has(node.tag) ? "section" : node.tag;
         let hrefAttr = "";
         if (!isRoot && tag === "a") {
-          const linkName = itemVar ? node.itemLink : node.prop?.kind === "url" ? node.prop.name : null;
+          const linkName = itemVar
+            ? node.itemLink
+            : node.prop?.kind === "url"
+              ? node.prop.name
+              : null;
           if (linkName) {
             const expr = itemVar ? `${itemVar}.${linkName}` : linkName;
             hrefAttr = ` href={${expr} || "#"}`;
@@ -255,7 +293,9 @@ export function emitAstro({ name, tree, props, values, colorSlots, backgroundIma
   render(tree, 0);
 
   // ---- assemble ---------------------------------------------------------
-  const arraysNote = arrays.length ? ` Arrays: ${arrays.map((a) => `\`${a.name}\``).join(", ")}.` : "";
+  const arraysNote = arrays.length
+    ? ` Arrays: ${arrays.map((a) => `\`${a.name}\``).join(", ")}.`
+    : "";
   const doc = [
     "/**",
     ` * ${label} — migrated from ${source} by wp-migrator.`,

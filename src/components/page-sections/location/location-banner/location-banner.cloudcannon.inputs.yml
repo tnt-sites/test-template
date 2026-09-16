@@ -7,14 +7,14 @@ imageSource:
   options:
     paths:
       uploads: src/assets/images
-      static: ''
+      static: ""
 imageSourceMobile:
   type: image
   comment: Optional narrower crop used below 790px. Leave blank to use the main image everywhere.
   options:
     paths:
       uploads: src/assets/images
-      static: ''
+      static: ""
 imageAlt:
   type: text
   comment: Alt text describing the banner image.

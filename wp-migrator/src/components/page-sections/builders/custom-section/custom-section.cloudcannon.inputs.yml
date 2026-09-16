@@ -156,4 +156,3 @@ backgroundImage.positionHorizontal:
 rounded:
   type: switch
   comment: Whether to apply rounded corners to the custom section.
-

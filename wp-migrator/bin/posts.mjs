@@ -9,15 +9,28 @@ const HERE = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const devPosts = defineCommand({
   meta: {
     name: "dev-posts",
-    description: "Import blog posts from a WordPress export (WXR) into the target's blog collection.",
+    description:
+      "Import blog posts from a WordPress export (WXR) into the target's blog collection.",
   },
   args: {
     xml: { type: "positional", description: "WordPress export .xml file", required: true },
     target: { type: "string", description: "Target repo root", default: path.join(HERE, "..") },
-    static: { type: "string", description: "Snapshot dir to source images from", default: path.join(HERE, ".wpmig/static") },
-    author: { type: "string", description: "Override the author byline on every post", default: "" },
+    static: {
+      type: "string",
+      description: "Snapshot dir to source images from",
+      default: path.join(HERE, ".wpmig/static"),
+    },
+    author: {
+      type: "string",
+      description: "Override the author byline on every post",
+      default: "",
+    },
     limit: { type: "string", description: "Cap post count (smoke test)", default: "0" },
-    write: { type: "boolean", description: "Actually write (default is a dry run)", default: false },
+    write: {
+      type: "boolean",
+      description: "Actually write (default is a dry run)",
+      default: false,
+    },
   },
   async run({ args }) {
     const xmlFile = path.resolve(args.xml);
@@ -40,7 +53,9 @@ export const devPosts = defineCommand({
     if (!args.write) {
       const sample = result.written[0];
       if (sample) {
-        console.log(`\n===== ${path.basename(sample.file)} =====\n${sample.contents.slice(0, 1200)}`);
+        console.log(
+          `\n===== ${path.basename(sample.file)} =====\n${sample.contents.slice(0, 1200)}`
+        );
       }
       console.log(`\n(dry run — pass --write to apply)`);
     }

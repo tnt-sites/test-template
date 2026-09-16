@@ -31,7 +31,7 @@ const PROMPT = [
   "The site header, top bar, navigation and footer are an intentional re-theme, not a bug —",
   "note only a MAJOR chrome regression, and otherwise focus on the content sections.",
   "",
-  'Output ONLY a JSON array, no prose, of the form:',
+  "Output ONLY a JSON array, no prose, of the form:",
   '[{"area":"<which section/element>","severity":"high|medium|low",',
   '"difference":"<what differs, original vs rebuild>","suggested_fix":"<concrete CSS/layout change>"}]',
   "Report real, visible differences only. Be specific and concise. If there are none, output [].",

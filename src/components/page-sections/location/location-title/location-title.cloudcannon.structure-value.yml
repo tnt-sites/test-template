@@ -3,7 +3,7 @@ icon: title
 description: Page H1 plus a larger supporting headline, sitting directly under the banner.
 value:
   _component: page-sections/location/location-title
-  id: ''
+  id: ""
   heading: Dentist Near Anytown, ST
   subheading: Providing Quality, Comprehensive Dental Care
   backgroundColor: "#ffffff"

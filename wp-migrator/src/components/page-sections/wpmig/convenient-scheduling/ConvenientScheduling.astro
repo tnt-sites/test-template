@@ -29,7 +29,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<div class="convenient-scheduling" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`} {...rest}>
+
+<div
+  class="convenient-scheduling"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--c3:${hoverColor};--c4:${hoverColor2}`}
+  {...rest}
+>
   <div class="cs-box">
     <div class="cs-box2">
       <div class="cs-box3">
@@ -42,7 +48,13 @@ const {
           </div>
           <div class="cs-box7">
             <div class="cs-box8">
-              <iframe class="cs-embed" src={embedUrl} title="Candidate for Implants - South Airdrie Smiles" allow="geolocation; microphone; camera; fullscreen" frameborder="0" loading="lazy"></iframe>
+              <iframe
+                class="cs-embed"
+                src={embedUrl}
+                title="Candidate for Implants - South Airdrie Smiles"
+                allow="geolocation; microphone; camera; fullscreen"
+                frameborder="0"
+                loading="lazy"></iframe>
             </div>
             <div class="cs-box9">
               {text2 && <div class="cs-text2" set:html={text2} />}
@@ -51,14 +63,37 @@ const {
         </div>
         <div class="cs-box10">
           <div class="cs-box11">
-            {image && <img class="cs-media" src={image} alt={imageAlt || ""} loading="lazy" width="900" height="577" />}
+            {
+              image && (
+                <img
+                  class="cs-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="900"
+                  height="577"
+                />
+              )
+            }
           </div>
           <ul class="cs-box12">
             <li class="cs-box13">
-              {buttonText && <a class="cs-link" href={buttonLink || "#"}>{buttonText}</a>}
+              {
+                buttonText && (
+                  <a class="cs-link" href={buttonLink || "#"}>
+                    {buttonText}
+                  </a>
+                )
+              }
             </li>
             <li class="cs-box14">
-              {secondaryButtonText && <a class="cs-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
+              {
+                secondaryButtonText && (
+                  <a class="cs-link2" href={secondaryButtonLink || "#"}>
+                    {secondaryButtonText}
+                  </a>
+                )
+              }
             </li>
             {text3 && <div class="cs-body" set:html={text3} />}
           </ul>
@@ -508,7 +543,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .cs-box4 {
     font-family: Montserrat, sans-serif;
     font-size: 32px;
@@ -635,5 +670,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

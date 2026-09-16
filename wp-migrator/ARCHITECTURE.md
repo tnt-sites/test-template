@@ -26,7 +26,7 @@ Fetching pre-JS bytes is deliberate: every later stage renders them in a real
 browser, and saving post-JS `outerHTML` would run a builder's frontend script
 twice against an already-mutated DOM.
 
-**Fidelity gap (this is causing a real defect):** only *same-origin* assets are
+**Fidelity gap (this is causing a real defect):** only _same-origin_ assets are
 mirrored. This page loads Font Awesome **Pro** from
 `kit.fontawesome.com/afa87b2d0b.js`. That is never mirrored, so a local render is
 missing glyphs the live site has — which is exactly why the "Common Issues" and
@@ -37,7 +37,7 @@ missing glyphs the live site has — which is exactly why the "Common Issues" an
 Two independent paths, and the distinction matters:
 
 - **Site-wide tokens** — `src/extract/stylesheets.mjs` reads
-  `<link rel="stylesheet">` hrefs *from the rendered DOM* (so cascade order is
+  `<link rel="stylesheet">` hrefs _from the rendered DOM_ (so cascade order is
   observed, not hand-maintained), then `src/css/parse.mjs loadStylesheets` reads
   them off the snapshot and parses with postcss, normalizing `rem`→`px`. Feeds
   the palette/ramp/font pipeline.
@@ -65,7 +65,7 @@ predecessor `site-migrator/tools/compare.mjs`. `capture/screenshot.mjs` and
 Yes, and this part is genuinely strong. `src/capture/section.mjs`:
 
 - `BUILD_TREE` — sanitizes to a semantic template tree, collapsing pass-through
-  wrapper chains by *geometry* (not class names), stamping every retained node
+  wrapper chains by _geometry_ (not class names), stamping every retained node
   with `data-wpmig-n` so it stays addressable across viewport changes.
 - `READ_STYLES` — for every retained node, an ~60-property allowlist
   (`src/capture/allowlist.mjs`) **plus bounding box** (`x/y/w/h`) **plus
@@ -91,7 +91,7 @@ flattening.
 component per detected section**, named from its own content
 (`we-can-fix-these`, `full-mouth-rehabilitation-procedures`), with its own scoped
 CSS. There is no mapping onto generic `Hero`/`CardGrid`/`CTA` abstractions —
-that was the *predecessor's* approach, and abandoning it is why this tool exists.
+that was the _predecessor's_ approach, and abandoning it is why this tool exists.
 No change needed here.
 
 ### 1.7 How it handles responsive styles
@@ -100,6 +100,7 @@ Captures at `390,768,1280` and emits **mobile-base + `min-width` overrides**
 (`src/generate/css-emit.mjs`).
 
 Two problems:
+
 - **1440 is not captured.** The brief requires it.
 - **The mobile-first diff is fragile.** A property present in the base but absent
   at a wider width was previously left alone, so mobile values leaked upward
@@ -115,7 +116,7 @@ Two problems:
 the single biggest gap: a page is declared done when it compiles and the content
 looks right — precisely the failure mode the brief calls out. The deterministic
 gates that grew since (`pixelmatch`, `dev-verify` text pairing, `dev-audit`
-structure) measure *deltas* between paired elements, and pair only
+structure) measure _deltas_ between paired elements, and pair only
 what already exists on both sides; they cannot phrase a difference a person names
 at a glance — "the paragraph runs full-width where the source constrains it,"
 "the button is an outline where the source is filled," "the rule is full-width
@@ -134,19 +135,19 @@ the default pipeline stays offline and reproducible. Findings follow the same
 future refinement, noted but not built, is a chrome-free per-section mode reusing
 `dev-compare`'s existing source/built section shots keyed by the IR nodeMap.
 
-### 1.10 Chrome — extracted, never compared *(closed)*
+### 1.10 Chrome — extracted, never compared _(closed)_
 
 `src/chrome/extract.mjs` read the header and footer as **data** and stopped
 there. That decision is still right (see the module's own note: filling the
 template's model is what keeps the chrome editable), but only half of it was
-built. Nothing measured how the source *presented* that chrome, so the header
+built. Nothing measured how the source _presented_ that chrome, so the header
 and footer — the one region that renders on every page of the site — were the
 one region that never had to look like the original, and had no way to be
 checked against it.
 
 Four things closed it:
 
-- **`src/chrome/styles.mjs`** measures the chrome by *role* — band, logo, menu
+- **`src/chrome/styles.mjs`** measures the chrome by _role_ — band, logo, menu
   link, dropdown panel, call-to-action, footer heading, rule, copyright strip —
   across breakpoints. Roles rather than a discovered tree, because chrome is
   the one region of a site whose parts are known in advance; that is what lets
@@ -178,15 +179,15 @@ edit is waste.
 
 ### 1.9 Where the missing capabilities belong
 
-| Capability | Where |
-|---|---|
-| Multi-viewport screenshots | new `src/capture/screenshot.mjs` |
-| Persisted IR | new `src/ir/` + write from the capture stage |
-| Built-page measurement | reuse `READ_STYLES` against the Astro render |
-| Diffing | new `src/qa/compare.mjs` |
-| Correction loop | new `src/refine/` + a CSS override layer |
-| Live/external-asset capture | `src/snapshot/index.mjs` + `src/mirror/serve.mjs` |
-| Orchestration | new `bin/migrate.mjs` (`wpmig migrate <page>`) |
+| Capability                  | Where                                                                          |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| Multi-viewport screenshots  | new `src/capture/screenshot.mjs`                                               |
+| Persisted IR                | new `src/ir/` + write from the capture stage                                   |
+| Built-page measurement      | reuse `READ_STYLES` against the Astro render                                   |
+| Diffing                     | new `src/qa/compare.mjs`                                                       |
+| Correction loop             | new `src/refine/` + a CSS override layer                                       |
+| Live/external-asset capture | `src/snapshot/index.mjs` + `src/mirror/serve.mjs`                              |
+| Orchestration               | new `bin/migrate.mjs` (`wpmig migrate <page>`)                                 |
 | Chrome styling + comparison | `src/chrome/{styles,css-emit,compare,audit,phones}.mjs` — **built**, see §1.10 |
 
 ---
@@ -245,7 +246,7 @@ each breakpoint, and produce:
 - `.wpmig/compare/<page>/report.json` — the machine-readable feedback
 
 Pairing is by generated class name on the built side and marker on the source
-side. Where a source node has no counterpart it is reported as *missing*, which
+side. Where a source node has no counterpart it is reported as _missing_, which
 is what would have caught the dropped `step-7`/`section-15` components
 immediately rather than three turns later.
 
@@ -309,7 +310,7 @@ snapshot ─▶ capture ──▶ IR + source shots
                               accept + report
 ```
 
-### What does *not* change
+### What does _not_ change
 
 `capture/section.mjs`, `detect/*`, `generate/*`, `css/*`, `chrome/*`, `fs/*`
 keep their current responsibilities. `css-emit` gains explicit per-breakpoint
@@ -323,7 +324,7 @@ demonstrated by `report.json` and the diff images, not by "it compiles".
 
 ---
 
-## Part 3 — Reuse is decided at the wrong granularity *(open)*
+## Part 3 — Reuse is decided at the wrong granularity _(open)_
 
 §1.6 records that the tool emits one bespoke component per detected section and
 calls it settled. That is right for whole sections, and it is blind to the case
@@ -331,7 +332,7 @@ below.
 
 The dental service pages each segment into a single section spanning the whole
 main column: a sidebar menu, a grid of service cards, then several paragraphs
-of page-specific prose. `dev-page`'s reuse registry hashes the *entire* emitted
+of page-specific prose. `dev-page`'s reuse registry hashes the _entire_ emitted
 component, so `general-dentistry-b`, `restorative-dentistry-b` and
 `we-offer-several-options` never matched — the prose below the cards differs on
 every page. Each got its own copy of the card grid under its own class prefix
@@ -368,7 +369,7 @@ than the segmentation churn.
 
 ---
 
-## Part 4 — The comparison pairs the wrong nodes *(fixed; segmentation still open)*
+## Part 4 — The comparison pairs the wrong nodes _(fixed; segmentation still open)_
 
 §1.8 called the absence of visual validation the biggest gap. A comparison was
 built since, and it had a defect worse than having none: it reported confident,
@@ -376,7 +377,7 @@ precise findings about the wrong elements.
 
 `bin/compare.mjs` pairs a built element with its source counterpart through
 `data-wpmig-n`, the index `BUILD_TREE` stamps while walking the DOM. That index
-is *positional*, and it has to bridge two DOMs that are not the same shape —
+is _positional_, and it has to bridge two DOMs that are not the same shape —
 `BUILD_TREE` collapses pass-through wrappers by geometry, and the Astro rebuild
 has a different set of wrappers than WordPress emitted. Wherever the two sides
 collapsed a different number of them, every index past that point shifted, and
@@ -416,7 +417,7 @@ Severe findings went from 189 to 41 across 205 pages.
   siblings all emit `cutt-`. Astro's scoping keeps them apart at render time,
   but every tool that reasons about classes — the corrections state, `dev-refix`,
   `dev-partials` — sees one class with conflicting measurements and backs off.
-  `nameFromShape`/`nameFromContent` disambiguate the *component* name and then
+  `nameFromShape`/`nameFromContent` disambiguate the _component_ name and then
   derive the prefix from initials, which re-collides. The prefix should be
   derived from the final name, not the words.
 - **Measurement is 1440-only.** `dev-verify` and `dev-refix` load one viewport.
@@ -424,13 +425,13 @@ Severe findings went from 189 to 41 across 205 pages.
 
 ---
 
-## Part 5 — Two gaps surfaced while fixing the payment pages *(open)*
+## Part 5 — Two gaps surfaced while fixing the payment pages _(open)_
 
 ### 5.1 Different-role sections collapse into one component
 
 `payment-options-e` renders two headings and a background image. On
 `flexible-payment-options` that is correct — it is the page's blue banner. On
-`alphaeon-credit` the *same* component was placed as the main content section,
+`alphaeon-credit` the _same_ component was placed as the main content section,
 and every content prop the page carried (the sidebar links, two body
 paragraphs, the contact CTA) was dropped on the floor: the component has no
 slots for them. The page rendered two headings floating over the banner
@@ -445,7 +446,7 @@ that merely opens with headings.
 Fixed for this page by repointing it at `payment-options-g`, whose slots match
 its content exactly (it is the content component the sibling flexible page
 already uses). The general fix is the same as Part 3's: the reuse key needs to
-consider a section's *role*, not only its element skeleton — a section that owns
+consider a section's _role_, not only its element skeleton — a section that owns
 the page's body prose is not interchangeable with one that owns a banner, even
 when both start with an `<h1>`.
 
@@ -472,10 +473,10 @@ table styling as a recognised sub-shape the way it does repeat grids.
 
 ---
 
-## Part 6 — Generalizing the page-as-component families *(largely done)*
+## Part 6 — Generalizing the page-as-component families _(largely done)_
 
 §1.6 emitted one component per detected section; Parts 3 and 5.1 showed the cost
-when the *same* page shape recurs. The interior pages were the worst case: 35
+when the _same_ page shape recurs. The interior pages were the worst case: 35
 components across general-dentistry (b–l), cosmetic, restorative, sedation,
 new-patients, about-us and payment-options, each a whole page baked into one
 file, all the same skeleton — side menu, main heading, a run of
@@ -512,7 +513,7 @@ is right only where the shape actually repeats.
 
 ---
 
-## Part 7 — Typography-only verification passes broken layouts *(closed)*
+## Part 7 — Typography-only verification passes broken layouts _(closed)_
 
 `dev-verify` (§1.8's answer) pairs source and built elements by their text and
 diffs typography. That is the right key and it catches real regressions, but it
@@ -523,15 +524,15 @@ column or its hover captions.
 The Taylor Dental Care homepage passed `dev-verify` and still needed a full
 hand rebuild. Seven things were wrong, and none of them were accidents:
 
-| What was lost | Why the pipeline loses it |
-|---|---|
-| Header overlaying the hero | `position: absolute` + transparent background is a relationship *between* the header and the next section; computed styles are read one node at a time |
-| Staggered card row | same — the alternating negative `margin-top` only means something relative to its siblings |
-| `background-attachment: fixed` section photo | a background on a container the emitter classifies as a pass-through wrapper and collapses |
-| `::before` gradient scrim over a photo | same |
-| Half-screen background-image column | the column has no content of its own, so it collapses to nothing |
-| Hover-revealed image captions | a hover reveal is two states of one element; at rest it is an invisible paragraph, and captured as pixels it becomes `top: 154.4px` |
-| `fa-heading` rendering a Font Awesome glyph | emitted class names are not namespaced against the theme CSS the mirror still ships |
+| What was lost                                | Why the pipeline loses it                                                                                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Header overlaying the hero                   | `position: absolute` + transparent background is a relationship _between_ the header and the next section; computed styles are read one node at a time |
+| Staggered card row                           | same — the alternating negative `margin-top` only means something relative to its siblings                                                             |
+| `background-attachment: fixed` section photo | a background on a container the emitter classifies as a pass-through wrapper and collapses                                                             |
+| `::before` gradient scrim over a photo       | same                                                                                                                                                   |
+| Half-screen background-image column          | the column has no content of its own, so it collapses to nothing                                                                                       |
+| Hover-revealed image captions                | a hover reveal is two states of one element; at rest it is an invisible paragraph, and captured as pixels it becomes `top: 154.4px`                    |
+| `fa-heading` rendering a Font Awesome glyph  | emitted class names are not namespaced against the theme CSS the mirror still ships                                                                    |
 
 Two acquisition bugs sat underneath them. Lazy-loaded **background** images
 (`data-bg`) were never primed — `scrollThrough` wakes `<img>` lazyloaders
@@ -548,7 +549,7 @@ downstream measured those sections as `background-image: none`.
 - `src/qa/layout-patterns.mjs` — `DETECT_PATTERNS` (the seven signatures above,
   run identically on source and build) and `DETECT_SMELLS` (built-only
   artefacts: horizontal overflow, the `left: 180px; margin-left: -195px`
-  full-bleed hack, fractional absolute offsets read off the *authored* CSSOM
+  full-bleed hack, fractional absolute offsets read off the _authored_ CSSOM
   rules rather than computed values, and class names that match a vendor icon
   rule and render its private-use glyph).
 - `bin/audit.mjs` — `wpmig dev-audit`. A pattern is reported only when the
@@ -561,7 +562,7 @@ fires on neither side is indistinguishable from a passing page.
 
 ---
 
-## Part 8 — What the interior pages added to Part 7 *(closed)*
+## Part 8 — What the interior pages added to Part 7 _(closed)_
 
 Part 7 came out of one homepage. Auditing the 79 interior pages surfaced four
 more failures, all of them again properties of the pipeline:
@@ -571,7 +572,7 @@ more failures, all of them again properties of the pipeline:
 inherited one equal to the parent's. Both mean "the target will arrive here on
 its own", and both are false the moment the target theme restyles the tag. The
 source set its interior `h2` at 24px — exactly the UA default — with
-`font-weight: 400` inherited from the section around it, so *both* were dropped
+`font-weight: 400` inherited from the section around it, so _both_ were dropped
 and 96 headings rendered at the starter's `:where(:root) h2` size of 46px bold.
 The emitter already had the concept (`FORCE_ON_SHARED`, for text inside the
 shared `Button`); headings now carry the same force list. Existing output was
@@ -583,7 +584,7 @@ repaired with `dev-refix`.
 with `h2::after { display: block; width: 100%; height: 1px; margin: 15px auto }`
 — which arrived as `content: ""` on a zero-sized inline box, 89 times. `width`
 and `height` are deliberately absent from `STYLE_PROPS` because a computed width
-on a real node is a *used* value; a pseudo with empty content has no content to
+on a real node is a _used_ value; a pseudo with empty content has no content to
 be sized by, so there they are the authored value and are now captured (a width
 matching the host's content box is recorded as `100%`, not as the pixel it
 measured). Emitted only for pseudos in normal flow: a glyph takes its size from
@@ -596,16 +597,16 @@ inset.
 `media-prose-who` were both `mpw` — 74 colliding class names across 19
 components. Astro's scoping hides it at render time, which is why it survived so
 long; what breaks is every tool that maps a class back to its owning file.
-`dev-refix` corrected one component of each pair using the *other's*
+`dev-refix` corrected one component of each pair using the _other's_
 measurements. `initialsOf` now takes the set of prefixes already claimed and
 lengthens until unique, and `dev-audit` reports collisions in existing output.
 
 **8.4 `dev-refix` reconciled only the pages that disagreed.**
-It recorded the source value for a class *only where the build already differed*,
+It recorded the source value for a class _only where the build already differed_,
 then treated a single recorded value as agreement. `.cgt-heading` is
 right-aligned on one page and left on another; whichever page happened to differ
 was the only one observed, so no conflict was reported and its alignment was
-written into the shared component — after which the *other* page differed, and
+written into the shared component — after which the _other_ page differed, and
 the next run wrote the opposite value. A correction that flipped every pass and
 was wrong on one page either way. It now records the source value on every page
 carrying the class and writes only properties some page actually renders wrongly,
@@ -637,17 +638,17 @@ three with no `<h1>`, and every check the tool had ran clean on them.
 
 `READ_CONTENT` reads the page's content text with counts and reports what the
 source says and the build does not, plus what the source says once and the build
-says twice (the interior pages carry the migrated breadcrumb *and* the
+says twice (the interior pages carry the migrated breadcrumb _and_ the
 template's). Three filters keep the signal usable:
 
 - Chrome is excluded on both sides, for `dev-refix`'s reason: the header and
   footer are deliberately not a copy of WordPress's.
-- Visibility is *not* a filter. A carousel shows one slide at a time, so four of
+- Visibility is _not_ a filter. A carousel shows one slide at a time, so four of
   the homepage's five banner captions are hidden on one side and in flow on the
   other; coverage asks whether the build still contains the content.
 - Only leaf-ish blocks count. A `<p>` whose text runs through `<a>`/`<strong>`
   is one string on both sides; a `<figcaption>` wrapping a heading and a
-  paragraph is a different *shape*, and its concatenated text exists on neither
+  paragraph is a different _shape_, and its concatenated text exists on neither
   side once the build splits the two.
 
 An `<h1>` count is reported only when the build has none or several — the source
@@ -656,7 +657,7 @@ put the `<h1>` in the content, others put it in the banner), so "source 0,
 built 1" is the build being more correct.
 
 **9.2 The component set — `src/qa/component-hygiene.mjs`.**
-Every page can render exactly what its own component says while the *set* of
+Every page can render exactly what its own component says while the _set_ of
 components is wrong, which no render comparison can see. Three checks read the
 emitted files instead:
 
@@ -679,13 +680,13 @@ emitted files instead:
 
 ---
 
-## Part 10 — One design, forty components *(closed)*
+## Part 10 — One design, forty components _(closed)_
 
 Fifty-four of this site's components were the `card-grid` / `media-prose` /
 `prose-block` families, and they were all the same three layouts. The obvious
 theory for why they forked is paint and measurement — the same band at two
 background colours, one section measured 44px taller than another. That theory
-is wrong, and it is worth recording that it was tested: blanking *every*
+is wrong, and it is worth recording that it was tested: blanking _every_
 content-sized box metric from the structural identity merged **zero** of the
 fifty-four. Normalising colour, direction and slot form on top of that merged
 four.
@@ -701,7 +702,7 @@ them. Hence `media-prose-b` through `-i`, `card-grid-home-botox` through
 ### The fix: stop treating length as structure
 
 `src/generate/content-run.mjs` classifies a captured section. A section that is
-*only* a run of headings, prose, photos and buttons carries no design of its own
+_only_ a run of headings, prose, photos and buttons carries no design of its own
 worth a component, so `dev-page` emits it as an ordered `blocks` array on one
 shared parametric component (`--content-section`, default
 `page-sections/shared-blocks/content-section`) and never generates a file. What
@@ -711,12 +712,12 @@ copy is centred — are inputs on that component.
 Four things keep their own component, each a property of the capture rather than
 a maintained list:
 
-| Keeps a component | Why |
-|---|---|
+| Keeps a component                                           | Why                                                                                                                                                                     |
+| ----------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Root paints a background **or a `::before`/`::after` does** | A band is a design. The interior banner paints nothing on its root and lays a 50% lime wash over its photo with a pseudo-element; checking the root alone flattened it. |
-| Contains a repeat | A `.map()` is a gallery, a team grid, an hours table, a sitemap — four different widgets a generic card list would flatten into one. |
-| Contains an embed or raw markup | A form, a map, a table. |
-| No prose at all | A lone photo or button is a widget, not a content band. |
+| Contains a repeat                                           | A `.map()` is a gallery, a team grid, an hours table, a sitemap — four different widgets a generic card list would flatten into one.                                    |
+| Contains an embed or raw markup                             | A form, a map, a table.                                                                                                                                                 |
+| No prose at all                                             | A lone photo or button is a widget, not a content band.                                                                                                                 |
 
 The target component is checked for existence first; routing pages at a
 component that was never written builds a site that renders nothing.
@@ -737,14 +738,14 @@ rules, plus two more:
 On this site it converted 37 components across 30 pages into 47 sections, and
 `dev-audit`'s coverage check confirmed no text was lost and `dev-verify` no
 typography changed. Two mistakes it caught on the way are recorded in the code:
-carrying the captured `headingColor` across painted every heading *and its
-divider* the page title's navy, and deriving "is this section centred" from any
+carrying the captured `headingColor` across painted every heading _and its
+divider_ the page title's navy, and deriving "is this section centred" from any
 `text-align: center` in the file read the `<h1>`'s alignment and centred whole
 pages of left-aligned body copy.
 
 ---
 
-## Part 11 — The collapse filtered on the wrong thing *(closed)*
+## Part 11 — The collapse filtered on the wrong thing _(closed)_
 
 Part 10's pass matched candidates on the `card-grid` / `media-prose` /
 `prose-block` name prefixes. Those are the names `nameFromShape` gives a section
@@ -755,13 +756,13 @@ identical shape on the page next to it was called `media-prose-e` and collapsed.
 
 Candidacy is now every migrator-written component — the `by wp-migrator` marker
 is the only name-adjacent test left, and it is a provenance check rather than a
-classification. The refusal rules read the file, so what a component *is*
+classification. The refusal rules read the file, so what a component _is_
 decides, and one more was added: a section with no prose and no heading is a
 banner or a widget, never a content run. That is what keeps a bare
 `<img>`-plus-overlay section (the blog banner) from being flattened into a
 paragraph.
 
-The same pass also has to be run *repeatedly*. Collapsing sections leaves
+The same pass also has to be run _repeatedly_. Collapsing sections leaves
 components that nothing points at any more — this site had six that no page had
 ever referenced, left over from earlier runs, and three of them had been
 carefully preserved by hand as "real widgets" before anyone checked whether they
@@ -773,14 +774,14 @@ Sixty-nine components became eleven. The reductions that were not Part 10's
 block-array conversion were all the same shape of mistake — one section, several
 files:
 
-| Was | Now | Why it forked |
-|---|---|---|
-| 4 interior banners | `shared-blocks/page-banner` | Each page family segmented its banner separately |
-| 7 closing CTAs | one `media-prose-schedule` | Same, on 40 pages |
-| 2 "why choose us" bands | one | Differed by one line: `set:html={heading}` vs a text child |
-| 1 blog banner | `shared-blocks/page-banner` | A banner named `photo-mosaic` because it has no words to name it from |
-| 2 breadcrumbs | deleted | The template renders one; the migrated copy was a second |
-| 6 unreferenced | deleted | Never used by any page |
+| Was                     | Now                         | Why it forked                                                         |
+| ----------------------- | --------------------------- | --------------------------------------------------------------------- |
+| 4 interior banners      | `shared-blocks/page-banner` | Each page family segmented its banner separately                      |
+| 7 closing CTAs          | one `media-prose-schedule`  | Same, on 40 pages                                                     |
+| 2 "why choose us" bands | one                         | Differed by one line: `set:html={heading}` vs a text child            |
+| 1 blog banner           | `shared-blocks/page-banner` | A banner named `photo-mosaic` because it has no words to name it from |
+| 2 breadcrumbs           | deleted                     | The template renders one; the migrated copy was a second              |
+| 6 unreferenced          | deleted                     | Never used by any page                                                |
 
 The eleven that remain are genuinely distinct: the homepage's four bespoke
 sections, the site-wide CTA, the page heading, and four widgets whose repeat
@@ -789,7 +790,7 @@ homepage callouts).
 
 ---
 
-## Part 12 — Nothing decided *which page to open next* *(closed)*
+## Part 12 — Nothing decided _which page to open next_ _(closed)_
 
 Every check described above reports on a page you have already chosen to look
 at. With ninety mirrored pages, choosing is the part that does not scale, and it
@@ -814,11 +815,11 @@ pages deserved them.
 2. **Ranks worst-first**, then adds one representative page per navigation
    group.
 3. **Screenshots original vs rebuild** for the pages that survive, and writes
-   one `queue.json` carrying the score, the reasons *with the hint prose of the
-   check that raised each one*, absolute PNG paths, and the exact `.md` and
+   one `queue.json` carrying the score, the reasons _with the hint prose of the
+   check that raised each one_, absolute PNG paths, and the exact `.md` and
    `.astro` files to edit.
 
-It never edits anything and never calls a model. Emitting a queue *is* the
+It never edits anything and never calls a model. Emitting a queue _is_ the
 feature: the judgement stays with whoever reads it. This is the deliberate
 counterpart to `dev-visual-check` (§1.8), which asks a model and is therefore
 online and advisory; triage is offline, deterministic and reproducible, and the
@@ -855,7 +856,7 @@ discriminates rather than firing everywhere.
 **Nav sampling stops the queue reviewing one page type nine times.** The worst
 nine pages of a dental site are frequently nine variants of the same service
 template. `selectNavSample` walks `src/data/mainNav.json` so the queue spans the
-site's *kinds* of page. Three shapes in real nav data drive its rules: a
+site's _kinds_ of page. Three shapes in real nav data drive its rules: a
 label-only parent (`path: ""`) is a menu heading and delegates to its children,
 so each family under Services becomes its own group rather than Services
 sampling one page in thirty; `#fragment` children collapse to their host page,
@@ -869,7 +870,7 @@ example.
 The built side can be screenshotted from a running Astro dev server rather than
 `dist/`, which is how iteration actually happens — no rebuild between fixes.
 `loadRouteMap` already yields routed paths, so this is a base-URL swap and no
-new path logic; only the *source* side is flat (`/<slug>.html`). Two details
+new path logic; only the _source_ side is flat (`/<slug>.html`). Two details
 were not free: the run **preflights the origin before launching Chromium**,
 because `gotoStable` returns `{ok:false}` on a refused connection rather than
 throwing, which without the check turns a stopped dev server into ninety
@@ -877,5 +878,5 @@ identical failures instead of one sentence naming both ways out; and
 `suppressOverlays` in `src/capture/screenshot.mjs` had to learn about
 `astro-dev-toolbar`, a custom element with no id and no class, small enough to
 pass the 35%-coverage test, that would otherwise be burned into every capture.
-That fix reads the `class` *attribute* and the tag name — `el.className` is not
+That fix reads the `class` _attribute_ and the tag name — `el.className` is not
 a string on custom or SVG elements.

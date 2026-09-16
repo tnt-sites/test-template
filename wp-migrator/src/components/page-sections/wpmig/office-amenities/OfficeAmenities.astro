@@ -14,7 +14,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="office-amenities" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+
+<section
+  class="office-amenities"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor}`}
+  {...rest}
+>
   <div class="oa-box">
     <div class="oa-box2">
       <h3 class="oa-heading">{heading}</h3>
@@ -96,7 +102,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .oa-heading {
     font-weight: 400;
   }
@@ -118,5 +124,5 @@ const {
       line-height: 24px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

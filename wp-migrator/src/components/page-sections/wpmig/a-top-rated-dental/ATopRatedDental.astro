@@ -23,13 +23,30 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="a-top-rated-dental" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor}`} {...rest}>
+
+<section
+  class="a-top-rated-dental"
+  id={id || undefined}
+  style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor};--c6:${hoverColor}`}
+  {...rest}
+>
   <section class="atrd-box">
     <div class="atrd-box2">
       <div class="atrd-box3">
         <div class="atrd-box4">
           <div class="atrd-box5">
-            {image && <img class="atrd-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="400" />}
+            {
+              image && (
+                <img
+                  class="atrd-media"
+                  src={image}
+                  alt={imageAlt || ""}
+                  loading="lazy"
+                  width="650"
+                  height="400"
+                />
+              )
+            }
           </div>
         </div>
       </div>
@@ -45,7 +62,20 @@ const {
           </div>
         </div>
         <div class="atrd-box11">
-          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="atrd-btn" text={buttonText} link={buttonLink || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="primary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="atrd-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
         </div>
       </div>
     </div>
@@ -316,7 +346,7 @@ const {
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .atrd-heading {
     color: rgb(27, 46, 56);
     font-family: Roboto, sans-serif;
@@ -443,5 +473,5 @@ const {
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

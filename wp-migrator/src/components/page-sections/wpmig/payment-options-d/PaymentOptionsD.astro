@@ -129,16 +129,74 @@ const raw1 = `<table>
 </tbody>
 </table>`;
 ---
-<div class="payment-options-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor}`} {...rest}>
+
+<div
+  class="payment-options-d"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor}`}
+  {...rest}
+>
   <div class="pod-box">
     <div class="pod-box2">
       <div class="pod-box3">
         <div class="pod-box4">
           {eyebrow && <h4 class="pod-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pod-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pod-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pod-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="pod-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="pod-box5">
@@ -190,13 +248,39 @@ const raw1 = `<table>
                 </div>
                 <div class="pod-box26">
                   <div class="pod-box27">
-                    {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pod-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                    {
+                      secondaryButtonText4 && (
+                        <Button
+                          variant="primary"
+                          size="md"
+                          width="none"
+                          borderRadius="default"
+                          borderWidth="none"
+                          class="pod-btn5"
+                          text={secondaryButtonText4}
+                          link={secondaryButtonLink4 || "#"}
+                        />
+                      )
+                    }
                   </div>
                 </div>
                 <div class="pod-box28">
                   <div class="pod-box29">
                     <div class="pod-box30">
-                      {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pod-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                      {
+                        secondaryButtonText5 && (
+                          <Button
+                            variant="primary"
+                            size="md"
+                            width="none"
+                            borderRadius="default"
+                            borderWidth="none"
+                            class="pod-btn6"
+                            text={secondaryButtonText5}
+                            link={secondaryButtonLink5 || "#"}
+                          />
+                        )
+                      }
                     </div>
                   </div>
                 </div>
@@ -816,7 +900,7 @@ const raw1 = `<table>
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .pod-box13 {
     font-family: Montserrat, sans-serif;
     font-size: 28px;
@@ -1102,5 +1186,5 @@ const raw1 = `<table>
       font-size: 15px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

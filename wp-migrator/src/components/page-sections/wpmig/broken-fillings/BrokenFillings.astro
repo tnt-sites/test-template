@@ -19,44 +19,74 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="broken-fillings" id={id || undefined} style={`--tt:${titleColor};--tx:${textColor};--c3:${textColor2};--c4:${hoverBackgroundColor};--c5:${hoverBackgroundColor2};--c6:${hoverBackgroundColor3}`} {...rest}>
+
+<div
+  class="broken-fillings"
+  id={id || undefined}
+  style={`--tt:${titleColor};--tx:${textColor};--c3:${textColor2};--c4:${hoverBackgroundColor};--c5:${hoverBackgroundColor2};--c6:${hoverBackgroundColor3}`}
+  {...rest}
+>
   <div class="bf-box">
     <section class="bf-box2">
       <div class="bf-grid">
-        {list.map((it) => (
-          <section class="bf-box3">
-            <div class="bf-box4">
-              <div class="bf-box5">
-                <div class="bf-box6">
-                  <h2 class="bf-heading">{it.title}</h2>
+        {
+          list.map((it) => (
+            <section class="bf-box3">
+              <div class="bf-box4">
+                <div class="bf-box5">
+                  <div class="bf-box6">
+                    <h2 class="bf-heading">{it.title}</h2>
+                  </div>
+                  <div class="bf-box7">
+                    <div class="bf-decor" aria-hidden="true" />
+                  </div>
+                  <div class="bf-box8">
+                    <div class="bf-text">{it.text}</div>
+                  </div>
+                  <div class="bf-box9">
+                    {it.buttonText && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="bf-btn"
+                        text={it.buttonText}
+                        link={it.buttonLink || "#"}
+                      />
+                    )}
+                  </div>
                 </div>
-                <div class="bf-box7">
-                  <div class="bf-decor" aria-hidden="true"></div>
-                </div>
-                <div class="bf-box8">
-                  <div class="bf-text">{it.text}</div>
-                </div>
-                <div class="bf-box9">
-                  {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+                <div class="bf-box10">
+                  <div class="bf-box11">
+                    <h2 class="bf-heading2">{it.text2}</h2>
+                  </div>
+                  <div class="bf-box12">
+                    <div class="bf-decor2" aria-hidden="true" />
+                  </div>
+                  <div class="bf-box13">
+                    <div class="bf-text2">{it.text3}</div>
+                  </div>
+                  <div class="bf-box14">
+                    {it.buttonText2 && (
+                      <Button
+                        variant="primary"
+                        size="md"
+                        width="none"
+                        borderRadius="default"
+                        borderWidth="none"
+                        class="bf-btn2"
+                        text={it.buttonText2}
+                        link={it.buttonLink2 || "#"}
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
-              <div class="bf-box10">
-                <div class="bf-box11">
-                  <h2 class="bf-heading2">{it.text2}</h2>
-                </div>
-                <div class="bf-box12">
-                  <div class="bf-decor2" aria-hidden="true"></div>
-                </div>
-                <div class="bf-box13">
-                  <div class="bf-text2">{it.text3}</div>
-                </div>
-                <div class="bf-box14">
-                  {it.buttonText2 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="bf-btn2" text={it.buttonText2} link={it.buttonLink2 || "#"} />}
-                </div>
-              </div>
-            </div>
-          </section>
-        ))}
+            </section>
+          ))
+        }
       </div>
     </section>
   </div>
@@ -392,7 +422,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .bf-heading {
     font-family: Roboto, sans-serif;
     font-size: 16px;
@@ -530,5 +560,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       justify-content: normal;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

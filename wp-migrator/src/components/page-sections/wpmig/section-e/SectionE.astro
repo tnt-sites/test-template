@@ -11,7 +11,13 @@ const {
   ...rest
 } = Astro.props;
 ---
-<section class="section-e" id={id || undefined} style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+
+<section
+  class="section-e"
+  id={id || undefined}
+  style={`${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`}
+  {...rest}
+>
 </section>
 <style>
   .section-e {
@@ -27,7 +33,7 @@ const {
     text-align: left;
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .se-box5 {
     color: rgb(4, 4, 4);
     font-family: "Open Sans Condensed", sans-serif;
@@ -82,5 +88,5 @@ const {
       line-height: 28.8px;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

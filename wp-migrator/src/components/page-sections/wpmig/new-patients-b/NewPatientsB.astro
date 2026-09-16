@@ -48,16 +48,74 @@ const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
 const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
 const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
 ---
-<div class="new-patients-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${textColor3};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${textHoverColor};--c10:${hoverColor};--c11:${hoverColor2}`} {...rest}>
+
+<div
+  class="new-patients-b"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${textColor3};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${textHoverColor};--c10:${hoverColor};--c11:${hoverColor2}`}
+  {...rest}
+>
   <div class="npb-box">
     <div class="npb-box2">
       <div class="npb-box3">
         <div class="npb-box4">
           {eyebrow && <h4 class="npb-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npb-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npb-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npb-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npb-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npb-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="npb-box5">
@@ -89,11 +147,17 @@ const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
               </div>
             </div>
             <ul class="npb-grid">
-              {itemsList.map((it) => (
-                <li class="npb-box18">
-                  {it.buttonText && <a class="npb-link" href={it.buttonLink || "#"}>{it.buttonText}</a>}
-                </li>
-              ))}
+              {
+                itemsList.map((it) => (
+                  <li class="npb-box18">
+                    {it.buttonText && (
+                      <a class="npb-link" href={it.buttonLink || "#"}>
+                        {it.buttonText}
+                      </a>
+                    )}
+                  </li>
+                ))
+              }
             </ul>
           </div>
           <div class="npb-box21">
@@ -110,11 +174,13 @@ const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
                     </div>
                     {text4 && <div class="npb-text4" set:html={text4} />}
                     <ul class="npb-grid2">
-                      {items2List.map((it) => (
-                        <li class="npb-box28">
-                          <div class="npb-text5">{it.text}</div>
-                        </li>
-                      ))}
+                      {
+                        items2List.map((it) => (
+                          <li class="npb-box28">
+                            <div class="npb-text5">{it.text}</div>
+                          </li>
+                        ))
+                      }
                     </ul>
                   </div>
                 </div>
@@ -127,11 +193,13 @@ const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
                     </div>
                     {text5 && <div class="npb-text8" set:html={text5} />}
                     <ul class="npb-grid3">
-                      {items3List.map((it) => (
-                        <li class="npb-box35">
-                          <div class="npb-text9">{it.text}</div>
-                        </li>
-                      ))}
+                      {
+                        items3List.map((it) => (
+                          <li class="npb-box35">
+                            <div class="npb-text9">{it.text}</div>
+                          </li>
+                        ))
+                      }
                     </ul>
                   </div>
                 </div>
@@ -840,7 +908,7 @@ const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   .npb-heading3 {
     font-weight: 400;
   }
@@ -1371,5 +1439,5 @@ const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
       background-color: rgba(0, 0, 0, 0);
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>

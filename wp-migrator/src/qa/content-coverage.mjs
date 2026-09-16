@@ -47,7 +47,8 @@ export const READ_CONTENT = () => {
       .trim()
       .toLowerCase();
 
-  const CHROME = "header, footer, nav, [role=banner], [role=contentinfo], .main-nav, .footer, .mobile-nav, .fixed-tabs, .breadcrumb";
+  const CHROME =
+    "header, footer, nav, [role=banner], [role=contentinfo], .main-nav, .footer, .mobile-nav, .fixed-tabs, .breadcrumb";
   const blocks = new Map();
   const headings = { h1: 0, h2: 0, h3: 0 };
   let order = 0;

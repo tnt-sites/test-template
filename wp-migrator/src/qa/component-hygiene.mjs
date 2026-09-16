@@ -90,7 +90,9 @@ export function prefixCollisions(components) {
  * element structure that decides whether two files are the same widget.
  */
 export function duplicateFamilies(components, { threshold = 0.9, maxCompare = 400 } = {}) {
-  const items = components.slice(0, maxCompare).map((c) => ({ ...c, tokens: markupTokens(c.source) }));
+  const items = components
+    .slice(0, maxCompare)
+    .map((c) => ({ ...c, tokens: markupTokens(c.source) }));
   const groupOf = new Map();
   const groups = [];
 
@@ -133,7 +135,9 @@ export function hoverFillOnInvisibleOverlay(components) {
   for (const { name, source } of components) {
     const rules = new Map();
 
-    for (const m of source.matchAll(/(?:^|\n)\s*(:?global\()?\s*\.([a-z0-9-]+)\)?\s*(:hover)?\s*\{([^}]*)\}/g)) {
+    for (const m of source.matchAll(
+      /(?:^|\n)\s*(:?global\()?\s*\.([a-z0-9-]+)\)?\s*(:hover)?\s*\{([^}]*)\}/g
+    )) {
       const cls = m[2];
       const hover = Boolean(m[3]);
       const decls = Object.fromEntries(
@@ -152,7 +156,8 @@ export function hoverFillOnInvisibleOverlay(components) {
 
       // A hover that only restores opacity is the reveal the source intended;
       // one that fills the box is the artefact.
-      if (invisible && paints) found.push({ name, cls, fill: hover["background-color"] || hover.background });
+      if (invisible && paints)
+        found.push({ name, cls, fill: hover["background-color"] || hover.background });
     }
   }
 

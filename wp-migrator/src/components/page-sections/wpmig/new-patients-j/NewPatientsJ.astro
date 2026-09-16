@@ -63,16 +63,74 @@ const {
 } = Astro.props;
 const list = Array.isArray(items) ? items.filter(Boolean) : [];
 ---
-<div class="new-patients-j" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--tt:${titleColor};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3}`} {...rest}>
+
+<div
+  class="new-patients-j"
+  id={id || undefined}
+  style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--tt:${titleColor};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3}`}
+  {...rest}
+>
   <div class="npj-box">
     <div class="npj-box2">
       <div class="npj-box3">
         <div class="npj-box4">
           {eyebrow && <h4 class="npj-heading">{eyebrow}</h4>}
-          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn" text={buttonText} link={buttonLink || "#"} />}
-          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
-          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
-          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="npj-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {
+            buttonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npj-btn"
+                text={buttonText}
+                link={buttonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npj-btn2"
+                text={secondaryButtonText}
+                link={secondaryButtonLink || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText2 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npj-btn3"
+                text={secondaryButtonText2}
+                link={secondaryButtonLink2 || "#"}
+              />
+            )
+          }
+          {
+            secondaryButtonText3 && (
+              <Button
+                variant="tertiary"
+                size="md"
+                width="none"
+                borderRadius="none"
+                borderWidth="xs"
+                class="npj-btn4"
+                text={secondaryButtonText3}
+                link={secondaryButtonLink3 || "#"}
+              />
+            )
+          }
         </div>
       </div>
       <div class="npj-box5">
@@ -158,7 +216,10 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
                   </div>
                   <div class="npj-box35">
                     {text25 && <div class="npj-text25" set:html={text25} />}
-                    <div class="npj-box36" aria-labelledby="what-type-of-toothbrush-and-toothpaste-should-i-use">
+                    <div
+                      class="npj-box36"
+                      aria-labelledby="what-type-of-toothbrush-and-toothpaste-should-i-use"
+                    >
                       {text26 && <div class="npj-body" set:html={text26} />}
                     </div>
                   </div>
@@ -177,12 +238,14 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
               </div>
               <div class="npj-box41">
                 <div class="npj-grid">
-                  {list.map((it) => (
-                    <div class="npj-box42">
-                      <div class="npj-text28">{it.title}</div>
-                      <div class="npj-text29">{it.text}</div>
-                    </div>
-                  ))}
+                  {
+                    list.map((it) => (
+                      <div class="npj-box42">
+                        <div class="npj-text28">{it.title}</div>
+                        <div class="npj-text29">{it.text}</div>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>
@@ -972,7 +1035,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     }
   }
 
-/* wpmig:corrections:begin */
+  /* wpmig:corrections:begin */
   @media (min-width: 768px) {
     :global(.npj-btn) {
       align-items: normal;
@@ -1023,5 +1086,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       text-align: left;
     }
   }
-/* wpmig:corrections:end */
+  /* wpmig:corrections:end */
 </style>
