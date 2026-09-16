@@ -142,17 +142,25 @@ const htmlAttributes = Object.fromEntries(
   }
 
   .pb-form-card {
-    background-color: #f5f5f5;
+    /* source: a 535px card — a 66px title bar over a 469px inner wrapper that
+       pads the 420px iframe by 22px above and 27px below. */
+    background-color: #f7f7f7;
     box-shadow: 0 1px 5px rgb(0 0 0 / 12%);
+    padding-bottom: 27px;
+  }
+
+  .pb-form-card :global(iframe) {
+    margin-top: 22px;
   }
 
   .pb-form-title {
     background-color: #dcdcdc;
-    white-space: nowrap;
     font-family: var(--font-headings);
     font-size: 1.5rem;
     font-weight: 500;
+    line-height: 1.5;
     padding: 15px;
     text-align: center;
+    white-space: nowrap;
   }
 </style>
