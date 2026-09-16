@@ -1,0 +1,82 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+
+// Liine is JotForm-backed: the form is an iframe plus a handler script that
+// resizes it to its content. `parentURL`/`isIframeEmbed` are deliberately NOT
+// passed — on WordPress they carried the host page URL into the embed, which
+// would otherwise tell the form it is hosted wherever the site is previewed.
+const {
+  formId = "",
+  heading = "",
+  subtext = "",
+  title = "Request an Appointment",
+  height = 539,
+  backgroundColor = "base",
+  id = "",
+  backgroundImage,
+  backgroundGradient = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const frameId = `JotFormIFrame-${formId}`;
+const src = `https://forms.liine.com/${formId}`;
+---
+
+<CustomSection
+  class:list={["liine-form", className]}
+  maxContentWidth="xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="inherit"
+  backgroundColor={backgroundColor}
+  backgroundImage={backgroundImage}
+  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  {...htmlAttributes}
+>
+  {heading && <Heading level="h2" size="xl" alignX="center" data-prop="heading" text={heading} />}
+  {
+    subtext && (
+      <Text alignX="center" data-prop="subtext">
+        {subtext}
+      </Text>
+    )
+  }
+
+  {
+    formId ? (
+      <iframe
+        id={frameId}
+        title={title}
+        src={src}
+        allow="geolocation; microphone; camera; fullscreen"
+        allowtransparency="true"
+        frameborder="0"
+        scrolling="no"
+        loading="lazy"
+        style={`min-width:100%;max-width:100%;height:${height}px;border:none;`}
+      />
+    ) : (
+      <Text alignX="center">Set a Liine form ID to display this form.</Text>
+    )
+  }
+</CustomSection>
+
+{
+  formId && (
+    <script is:inline src="https://forms.liine.com/s/umd/latest/for-form-embed-handler.js" />
+    <script is:inline define:vars={{ frameId }}>
+      // The handler resizes the iframe to its content height as the form advances.
+      if (window.jotformEmbedHandler) {
+        window.jotformEmbedHandler(`iframe[id='${frameId}']`, "https://forms.liine.com/");
+      }
+    </script>
+  )
+}

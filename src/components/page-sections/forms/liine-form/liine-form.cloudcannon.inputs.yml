@@ -1,0 +1,35 @@
+formId:
+  type: text
+  label: Liine Form ID
+  comment: The numeric ID from the Liine form URL (forms.liine.com/<id>).
+heading:
+  type: text
+  comment: Optional heading shown above the form.
+subtext:
+  type: markdown
+  comment: Optional text shown between the heading and the form.
+title:
+  type: text
+  comment: Accessible title for the embedded form (read by screen readers).
+height:
+  type: number
+  comment: Initial height in pixels. The embed script resizes this to fit the form.
+backgroundColor:
+  type: select
+  comment: Background color for the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black

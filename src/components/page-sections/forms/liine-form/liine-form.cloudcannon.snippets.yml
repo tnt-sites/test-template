@@ -1,0 +1,8 @@
+liine_form:
+  template: astro_component
+  inline: false
+  preview:
+    text: Liine Form
+    icon: edit_note
+  definitions:
+    component_name: page-sections/forms/liine-form

@@ -1,0 +1,24 @@
+label: Liine Form
+icon: edit_note
+description: Embeds a Liine (JotForm) form such as the appointment or contact form.
+value:
+  _component: page-sections/forms/liine-form
+  id: ""
+  formId: "251056297507965"
+  heading: Request an Appointment
+  subtext: ""
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: base
+preview:
+  text:
+    - key: heading
+    - Liine Form
+  subtext:
+    - key: formId
+  icon: edit_note
+picker_preview:
+  text: Liine Form
+  subtext: Embedded Liine appointment or contact form.
+_inputs_from_glob:
+  - /src/components/page-sections/forms/liine-form/liine-form.cloudcannon.inputs.yml
