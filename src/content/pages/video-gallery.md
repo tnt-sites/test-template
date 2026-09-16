@@ -7,12 +7,16 @@ seo:
     and Implant Dentistry in Vista, CA.
 pageSections:
 - _component: page-sections/builders/custom-section
-  label: The Latest in Dental Implants with San Diego Dentist Christopher Henninger, DMD
+  label: Video Gallery
   contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Video Gallery
+    level: h1
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: The Latest in Dental Implants with San Diego Dentist Christopher Henninger, DMD
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/embed
     html: <iframe src="https://www.youtube.com/embed/dWZfoROXKUY" title="YouTube video player" frameborder="0"
       loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -23,4 +27,11 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
+- _component: page-sections/forms/liine-form
+  formId: '251056297507965'
+  heading: Request an Appointment
+  subtext: ''
+  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  height: 539
+  backgroundColor: surface
 ---

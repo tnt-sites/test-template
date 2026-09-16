@@ -11,7 +11,7 @@ PAGES="/Users/tharvey/Work/CloudCannon/northcounty/src/content/pages/vista-ca"
 def norm(s): return re.sub(r'\s+',' ',(s or '')).strip().lower()
 
 n=0
-for md in sorted(glob.glob(f"{PAGES}/*.md")):
+for md in sorted(glob.glob(f"{PAGES}/*.md")+glob.glob(f"{PAGES}/../*.md")):
     raw=open(md,encoding='utf8').read(); parts=raw.split('---\n')
     if len(parts)<3: continue
     d=yaml.safe_load(parts[1]); secs=d.get('pageSections') or []
@@ -29,13 +29,16 @@ for md in sorted(glob.glob(f"{PAGES}/*.md")):
     lbl=norm(first.get('label'))
     if lbl not in (full,head): continue
     cs=first.get('contentSections') or []
-    intro=norm(banner.get('intro'))
+    _i=banner.get('intro')
+    intro_list=[norm(x) for x in (_i if isinstance(_i,list) else ([_i] if _i else []))]
+    intro=' '.join(intro_list)
     keep=[]
     for c in cs:
         comp=c.get('_component','')
         t=norm(c.get('text'))
         if 'core-elements/heading' in comp and t in (full,head): continue   # repeats the banner H1
-        if 'core-elements/text' in comp and intro and t and (t in intro or intro.startswith(t[:80])): continue
+        if ('core-elements/text' in comp and t and
+            (t in intro_list or (intro and (t in intro or intro.startswith(t[:80]))))): continue
         keep.append(c)
     if len(keep)==len(cs): continue
     if keep:

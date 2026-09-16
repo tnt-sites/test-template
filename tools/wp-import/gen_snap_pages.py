@@ -16,6 +16,16 @@ def imgmap(src):
         if c in AV: return f"/src/assets/images/wp/{c}"
     return None
 
+SIZE_FOR_LEVEL={'h1':'2xl','h2':'xl','h3':'md','h4':'sm','h5':'sm','h6':'xs'}
+LINK_FIX={
+ 'about.html':'/about/','first-visit.html':'/first-visit/','contact-us.html':'/contact-us/',
+ 'services.html':'/services/','index.html':'/','blog.html':'/blog/',
+ '/vista-ca/implants/':'/vista-ca/implants-vs-mini-implants/',
+}
+def fix_link(u):
+    u=(u or '').replace('https://www.ultimatesmiles.com','').replace('http://www.ultimatesmiles.com','')
+    return LINK_FIX.get(u,u)
+
 BG={'bg-primary':'accent','bg-secondary':'surface','bg-body-complement':'base',
     'bg-body':'base','bg-mute':'surface','bg-tertiary':'highlight'}
 def bg_of(cls):
@@ -27,15 +37,16 @@ def cards_section(b,heading=''):
     return {'_component':'page-sections/ctas/services-grid','heading':heading,
       'services':[{'_component':'page-sections/ctas/services-grid/services-grid-item',
                    'imageSource':c['image'],'imageAlt':c['title'],'title':c['title'],
-                   'href':c['url'],'wide':False,'links':[]} for c in b['items']]}
+                   'href':fix_link(c['url']),'wide':False,'links':[]} for c in b['items']]}
 
 def blocks_to_content(blocks):
     out=[]
     for b in blocks:
         if b['type']=='cards': continue
         if b['type']=='heading':
+            lvl=b.get('level','h2')
             out.append({'_component':'building-blocks/core-elements/heading',
-                        'text':b['text'],'level':b.get('level','h2'),'size':'md'})
+                        'text':b['text'],'level':lvl,'size':SIZE_FOR_LEVEL.get(lvl,'md')})
         elif b['type']=='paragraph':
             out.append({'_component':'building-blocks/core-elements/text','text':b['text']})
         elif b['type']=='list':
@@ -43,6 +54,17 @@ def blocks_to_content(blocks):
                         'listType':'numbered' if b.get('ordered') else 'bullet',
                         'items':[{'_component':'building-blocks/core-elements/list/list-item','text':i}
                                  for i in b['items']]})
+        elif b['type']=='embed':
+            src=b.get('src','')
+            if src.startswith('//'): src='https:'+src
+            if src:
+                title=(b.get('title') or 'Video').replace('"','&quot;')
+                out.append({'_component':'building-blocks/core-elements/embed',
+                            'html':('<iframe src="%s" title="%s" frameborder="0" loading="lazy" '
+                                    'allow="accelerometer; autoplay; clipboard-write; encrypted-media; '
+                                    'gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                                    % (src,title)),
+                            'aspectRatio':'widescreen'})
         elif b['type']=='image':
             out.append({'_component':'building-blocks/core-elements/image',
                         'source':b['src'],'alt':b.get('alt','')})
@@ -93,14 +115,15 @@ def main():
             if content:
                 sections.append({'_component':'page-sections/builders/custom-section',
                     'label':head[0][:60] if head else '','contentSections':content,
-                    'maxContentWidth':'xl','paddingHorizontal':'lg','paddingVertical':'4xl',
+                    'maxContentWidth':'xl','paddingHorizontal':'lg','paddingVertical':'xl',
                     'colorScheme':'default','backgroundColor':bg_of(s['cls'])})
             for b in s['blocks']:
                 if b['type']=='cards':
                     sections.append(cards_section(b,head[0] if head else ''))
         if icards:
             sections.append({'_component':'page-sections/features/info-card-grid','heading':'',
-                'cards':[{'_component':'page-sections/features/info-card-grid/card',**c} for c in icards],
+                'cards':[{'_component':'page-sections/features/info-card-grid/card',
+                          **{**c,'linkUrl':fix_link(c.get('linkUrl',''))}} for c in icards],
                 'minItemWidth':280,'backgroundColor':'base'})
         if prs:
             sections.append({'_component':'page-sections/features/before-after-gallery',
@@ -113,6 +136,30 @@ def main():
             'heading':'Request an Appointment','subtext':'',
             'title':'North County Cosmetic and Implant Dentistry - Request an Appointment Form',
             'height':539,'backgroundColor':'surface'})
+        if slug=='home':
+            # The source homepage opens with a slider hero (title, subtitle, two
+            # CTAs) over UltimateSmiles.jpg, with the appointment form beside it.
+            def _btn(text,link,variant="primary"):
+                return {"_component":"building-blocks/core-elements/button","text":text,
+                        "hideText":False,"link":link,"iconName":"","iconPosition":"before",
+                        "variant":variant,"size":"md","borderRadius":"2xl"}
+            hero={"_component":"page-sections/heroes/hero-split","eyebrow":"","eyebrowColor":"",
+                  "heading":"Exceptional Dentistry & Personalized Care",
+                  "subtext":"Personalized care for all your dental needs.",
+                  "imageSource":"/src/assets/images/wp/UltimateSmiles.jpg",
+                  "imageAlt":"Dentist reviewing X-rays with a patient at North County Cosmetic and Implant Dentistry",
+                  "imageAspectRatio":"none",
+                  "buttonSections":[_btn("Call Now","tel:+1-760-940-2273"),
+                                    _btn("Book Now","/contact-us/","secondary")],
+                  "reverse":False,"colorScheme":"default","backgroundColor":"base",
+                  "backgroundGradient":"","paddingVertical":"2xl"}
+            form={"_component":"page-sections/forms/liine-form","formId":"251056297507965",
+                  "heading":"Request an Appointment","subtext":"",
+                  "title":"North County Cosmetic and Implant Dentistry - Request an Appointment Form",
+                  "height":420,"backgroundColor":"surface"}
+            sections=[hero,form]+[x for x in sections
+                                  if x.get('_component')!='page-sections/forms/liine-form']
+
         p=pages.get(slug,{})
         y=yo.get(str(p.get('id')),{}) if p else {}
         fm={'_schema':'default','title':p.get('title') or slug.replace('-',' ').title(),

@@ -331,7 +331,7 @@ pageSections:
     - name: Helpful Dental Info
       url: /vista-ca/helpful-dental-information/
     - name: Gentle Dentistry
-      url: /about/find-best-dentist/
+      url: /about-find-best-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics

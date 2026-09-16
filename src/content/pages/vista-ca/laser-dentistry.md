@@ -181,7 +181,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](/vista-ca/cosmetic-dentist/#improve-the-functionality-of-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Is it dangerous to bleach teeth at home without professional supervision?](/vista-ca/tooth-whitening/#is-it-dangerous-to-bleach-teeth-at-home)
+        text: Q. [Is it dangerous to bleach teeth at home without professional supervision?](/vista-ca/professional-teeth-whitening/#is-it-dangerous-to-bleach-teeth-at-home)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -184,7 +184,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are at-home teeth whitening kits better than dentist procedure?](/vista-ca/tooth-whitening/#at-home-teeth-whitening-kits)
+        text: Q. [Are at-home teeth whitening kits better than dentist procedure?](/vista-ca/professional-teeth-whitening/#at-home-teeth-whitening-kits)
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What can cosmetic dentistry do for me?](/vista-ca/dental-cosmetics/#what-can-cosmetic-dentistry-do-for-me)
     maxContentWidth: xl

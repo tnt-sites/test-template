@@ -9,7 +9,8 @@ pageSections:
 - _component: page-sections/heroes/page-banner
   heading: Transform Your Smile. Transform Your Life.
   location: ''
-  intro: []
+  intro:
+  - Dental implants in San Diego, CA.
   imageSource: /src/assets/images/wp/Couple-on-beach.jpg
   imageAlt: Transform Your Smile. Transform Your Life.
   formId: '251056297507965'

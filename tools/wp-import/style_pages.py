@@ -16,8 +16,17 @@ def style(seclist):
         has_list=any('core-elements/list' in (c.get('_component') or '') for c in cs)
         texts=[c for c in cs if 'core-elements/text' in (c.get('_component') or '')]
         headings=[c for c in cs if 'core-elements/heading' in (c.get('_component') or '')]
+        lbl=(sec.get('label') or '').lower()
+        is_faq=lbl.startswith('questions answered') or lbl.startswith('people also ask')
         # a call-out: one short paragraph, optionally with a heading, no list
-        is_callout=(not has_list and not has_def and len(texts)==1
+        has_media=any(('core-elements/image' in (c.get('_component') or '')
+                       or 'image-row' in (c.get('_component') or '')
+                       or 'core-elements/embed' in (c.get('_component') or ''))
+                      for c in cs)
+        # A call-out is a short standalone line. A section that also carries an
+        # image row or a video is ordinary content, however little prose it has.
+        is_callout=(not has_list and not has_def and not has_media
+                    and len(texts)==1
                     and len(cs)<=2
                     and len((texts[0].get('text') or ''))<320)
         before=(sec.get('backgroundColor'),sec.get('class'))
@@ -27,13 +36,20 @@ def style(seclist):
             sec['class']='callout-bubble'; sec['backgroundColor']='none'
             sec['paddingVertical']='none'; sec['maxContentWidth']='none'
             sec['paddingHorizontal']='none'
+        elif is_faq:
+            sec['backgroundColor']='highlight'; sec['class']='faq-card'
         else:
-            sec['backgroundColor']='surface'; sec.pop('class',None)
+            # leave the generator's measured background alone, but a section
+            # that lost it (image rows arrive with none) falls back to the grey
+            # content card the source uses
+            if has_media and sec.get('backgroundColor') in (None,'none'):
+                sec['backgroundColor']='surface'
+            sec.pop('class',None)
         if (sec.get('backgroundColor'),sec.get('class'))!=before: ch=True
     return ch
 
 n=0
-for f in glob.glob('src/content/pages/vista-ca/*.md'):
+for f in glob.glob('src/content/pages/vista-ca/*.md')+glob.glob('src/content/pages/*.md'):
     raw=open(f,encoding='utf8').read(); parts=raw.split('---\n')
     if len(parts)<3: continue
     d=yaml.safe_load(parts[1])

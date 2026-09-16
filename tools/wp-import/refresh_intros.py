@@ -24,12 +24,13 @@ def banner_paras(snapfile):
     after=seg[h1.end():]
     col=re.search(r'(.*?)<!--\s*Contact Form',after,re.S)
     body=col.group(1) if col else after[:4000]
-    return [x for x in (t(p) for p in re.findall(r'<p[^>]*>(.*?)</p>',body,re.S)) if len(x)>40]
+    return [x for x in (t(p) for p in re.findall(r'<p[^>]*>(.*?)</p>',body,re.S)) if len(x)>12]
 
 n=0
-for md in sorted(glob.glob(f"{PAGES}/*.md")):
+for md in sorted(glob.glob(f"{PAGES}/*.md")+glob.glob(f"{PAGES}/../*.md")):
     slug=os.path.basename(md)[:-3]
-    snap=f"{SNAP}/vista-ca-{slug}.html"
+    snap=f"{SNAP}/vista-ca-{slug}.html" if "/vista-ca/" in os.path.normpath(md) else f"{SNAP}/{slug}.html"
+    if not os.path.isfile(snap): snap=f"{SNAP}/{slug}.html"
     if not os.path.isfile(snap): continue
     paras=banner_paras(snap)
     if not paras: continue

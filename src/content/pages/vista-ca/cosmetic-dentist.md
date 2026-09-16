@@ -440,7 +440,7 @@ pageSections:
     - name: Dental Implants
       url: /vista-ca/dental-implants/
     - name: Professional Whitening
-      url: /vista-ca/tooth-whitening/
+      url: /vista-ca/professional-teeth-whitening/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics

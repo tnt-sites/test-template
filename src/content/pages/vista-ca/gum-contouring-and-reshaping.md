@@ -299,7 +299,7 @@ pageSections:
     - name: Dental Cosmetics
       url: /vista-ca/dental-cosmetics/
     - name: Professional Whitening
-      url: /vista-ca/tooth-whitening/
+      url: /vista-ca/professional-teeth-whitening/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics

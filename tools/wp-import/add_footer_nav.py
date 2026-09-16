@@ -4,6 +4,10 @@ ROOT="/Users/tharvey/Work/CloudCannon/northcounty"
 SNAP=f"{ROOT}/wp-migrator/.wpmig/static"
 PAGES=f"{ROOT}/src/content/pages/vista-ca"
 WRITE='--write' in sys.argv
+# full-width pages: the homepage and the galleries are not the interior layout
+SKIP_SLUGS={'index','blog','search','sitemap','smile-gallery','video-gallery',
+            'patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
+            'opt-out-preferences','yelp','google','facebook'}
 
 def t(s): return html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()
 
@@ -33,17 +37,30 @@ def extract(snapfile):
 
 def main():
     n=skipped=0
-    for md in sorted(glob.glob(f"{PAGES}/*.md")):
+    for md in sorted(glob.glob(f"{PAGES}/*.md")+glob.glob(f"{PAGES}/../*.md")):
         slug=os.path.basename(md)[:-3]
-        snap=f"{SNAP}/vista-ca-{slug}.html"
+        if '/vista-ca/' not in os.path.normpath(md) and slug in SKIP_SLUGS: continue
+        snap=f"{SNAP}/vista-ca-{slug}.html" if "/vista-ca/" in os.path.normpath(md) else f"{SNAP}/{slug}.html"
+        if not os.path.isfile(snap): snap=f"{SNAP}/{slug}.html"
         if not os.path.isfile(snap): skipped+=1; continue
         data=extract(snap)
         if not data: skipped+=1; continue
         raw=open(md,encoding='utf8').read(); parts=raw.split('---\n')
         d=yaml.safe_load(parts[1]); secs=d.get('pageSections') or []
-        if any(s.get('_component')=='page-sections/info-blocks/page-footer-nav' for s in secs):
-            continue
-        secs.append({'_component':'page-sections/info-blocks/page-footer-nav',**data})
+        def has_nav(lst):
+            for x in lst:
+                if x.get('_component')=='page-sections/info-blocks/page-footer-nav': return True
+                if x.get('_component')=='page-sections/builders/content-with-sidebar':
+                    if has_nav(x.get('main') or []): return True
+            return False
+        if has_nav(secs): continue
+        nav={'_component':'page-sections/info-blocks/page-footer-nav',**data}
+        # it belongs under the content column, not spanning content + sidebar
+        placed=False
+        for sec in secs:
+            if sec.get('_component')=='page-sections/builders/content-with-sidebar':
+                sec.setdefault('main',[]).append(nav); placed=True; break
+        if not placed: secs.append(nav)
         d['pageSections']=secs
         if WRITE:
             open(md,'w',encoding='utf8').write('---\n'+yaml.safe_dump(d,sort_keys=False,allow_unicode=True,width=100)+'---\n')

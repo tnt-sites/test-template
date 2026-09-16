@@ -162,9 +162,9 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Does whitening toothpaste really work?](/vista-ca/tooth-whitening/#does-whitening-toothpaste-really-work)
+        text: Q. [Does whitening toothpaste really work?](/vista-ca/teeth-whitening-at-dentist/#does-whitening-toothpaste-really-work)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will teeth whitening cause any sensitivity?](/vista-ca/tooth-whitening/#will-teeth-whitening-cause-any-sensitivity)
+        text: Q. [Will teeth whitening cause any sensitivity?](/vista-ca/teeth-whitening/#will-teeth-whitening-cause-any-sensitivity)
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [Can teeth whitening truly remove stains off of my teeth?](/vista-ca/what-can-i-do-to-improve-my-smile/#truly-remove-stains)
     maxContentWidth: xl

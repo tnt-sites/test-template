@@ -3,6 +3,9 @@ import json,re,sys,html
 SC=sys.argv[1]
 
 def strip_tags(s):
+    # a leading Font Awesome icon marks the Yelp call-out; keep it as a token so
+    # the generator can attach a real icon rather than losing it
+    s=re.sub(r'<i[^>]*class="[^"]*fa-yelp[^"]*"[^>]*>\s*</i>','\u2063YELP\u2063 ',s)
     # tag boundaries are word boundaries: "<span>About</span>North" -> "About North"
     s=re.sub(r'<(/?)(span|br|b|strong|em|i|div|p|li|dt|dd)\b[^>]*>',' ',s)
     s=re.sub(r'<[^>]+>','',s)
@@ -24,14 +27,22 @@ def inner(src,start):
 def content_blocks(body):
     """Split a section body into ordered heading/prose/list/image blocks."""
     toks=[]
-    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<dl[^>]*>(.*?)</dl>|<img[^>]*>',re.S|re.I)
+    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<dl[^>]*>(.*?)</dl>|<img[^>]*>|<iframe[^>]*>|<div class="[^"]*\bdivider\b[^"]*"[^>]*>\s*</div>',re.S|re.I)
     for m in pat.finditer(body):
         raw=m.group(0)
         if m.group(1):
             t=strip_tags(m.group(2))
             if t: toks.append({'type':'heading','level':m.group(1),'text':t})
         elif m.group(3) is not None:
-            t=strip_tags(m.group(3))
+            inner=m.group(3)
+            fr=re.search(r'<iframe[^>]*>',inner,re.I)
+            if fr:
+                src=re.search(r'src="([^"]*)"',fr.group(0))
+                if src:
+                    toks.append({'type':'embed','src':src.group(1),
+                                 'title':(re.search(r'title="([^"]*)"',fr.group(0)) or [None,''])[1]})
+                    continue
+            t=md_inline(inner)
             if t:
                 cls=re.search(r'class="([^"]*)"',raw)
                 toks.append({'type':'question' if cls and 'questions' in cls.group(1) else 'paragraph','text':t})
@@ -43,6 +54,12 @@ def content_blocks(body):
             pairs=[{'term':strip_tags(a),'definition':strip_tags(b)}
                    for a,b in re.findall(r'<dt[^>]*>(.*?)</dt>\s*<dd[^>]*>(.*?)</dd>',m.group(6),re.S)]
             if pairs: toks.append({'type':'definitionList','items':pairs})
+        elif 'divider' in raw and raw.lower().startswith('<div'):
+            toks.append({'type':'divider'})
+        elif raw.lower().startswith('<iframe'):
+            src=re.search(r'src="([^"]*)"',raw)
+            if src: toks.append({'type':'embed','src':src.group(1),
+                                 'title':(re.search(r'title="([^"]*)"',raw) or [None,''])[1]})
         else:
             src=re.search(r'src="([^"]*)"',raw); alt=re.search(r'alt="([^"]*)"',raw)
             if src: toks.append({'type':'image','src':src.group(1),'alt':alt.group(1) if alt else ''})
@@ -53,6 +70,30 @@ def kind_of(classes):
     k=[w for w in ws if w not in ('section-block','z-depth-1','col') and not w.startswith('bg-') and not re.match(r'^[sml]\d+$',w)]
     bgs=[w for w in ws if w.startswith('bg-')]
     return (k[0] if k else 'plain'), (bgs[0] if bgs else '')
+
+def md_inline(frag):
+    """Inline HTML -> markdown, keeping <a> links in place."""
+    def repl(m):
+        href=m.group(1); label=strip_tags(m.group(2)).strip()
+        return f"[{label}]({href})" if label else ''
+    out=re.sub(r'<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>',repl,frag,flags=re.S)
+    out=strip_tags(out)
+    out=re.sub(r'\s+([.,;:])',r'\1',out)
+    return re.sub(r'\s{2,}',' ',out).strip()
+
+def rich_items(frag):
+    """List items as markdown, keeping the prose around each inline link."""
+    out=[]
+    for li in re.findall(r'<li[^>]*>(.*?)</li>',frag,re.S):
+        def repl(m):
+            href=m.group(1); label=strip_tags(m.group(2)).strip()
+            return f"[{label}]({href})" if label else ''
+        md=re.sub(r'<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>',repl,li,flags=re.S)
+        md=strip_tags(md)
+        md=re.sub(r'\s+([.,;:])',r'\1',md)
+        md=re.sub(r'\s{2,}',' ',md).strip()
+        if md: out.append(md)
+    return out
 
 def links(frag):
     out=[]
@@ -73,6 +114,7 @@ def parse(content):
             hero['heading']=strip_tags(h1.group(1))
             sub=re.search(r'<h1[^>]*>.*?</h1>(.*)',hb,re.S)
             hero['blocks']=content_blocks(sub.group(1)) if sub else []
+            hero['_pos']=-1  # the hero always leads
             img=re.search(r'<img[^>]*src="([^"]*)"[^>]*>',content[:hm.start()+4000])
             if img: hero['image']=img.group(1)
             secs.append(hero)
@@ -82,11 +124,12 @@ def parse(content):
         blocks=content_blocks(cb)
         if blocks:
             bgs=[w for w in cm.group(1).split() if w.startswith('bg-')]
-            secs.append({'kind':'call-out','bg':bgs[0] if bgs else '','blocks':blocks,'links':links(cb)})
+            secs.append({'kind':'call-out','bg':bgs[0] if bgs else '','blocks':blocks,
+                         'links':links(cb),'_pos':cm.start()})
     for m in re.finditer(r'<div class="([^"]*\bsection-block\b[^"]*)"',content):
         cls=m.group(1); kind,bg=kind_of(cls)
         body=inner(content,m.start())
-        s={'kind':kind,'bg':bg}
+        s={'kind':kind,'bg':bg,'_pos':m.start()}
         h=re.search(r'<(h[1-6])[^>]*>(.*?)</\1>',body,re.S)
         if h: s['heading']=strip_tags(h.group(2)); s['headingLevel']=h.group(1)
         # a content section holds a RUN of heading+prose blocks (h2 and h3), not one heading.
@@ -109,6 +152,21 @@ def parse(content):
             if lis and not s['body']: s['listItems']=lis
         elif kind=='faq-section':
             s['blocks']=content_blocks(body)
+            # the source splits these into two groups under separate headings
+            qlinks={}
+            for qm in re.finditer(r'<p[^>]*class="[^"]*questions[^"]*"[^>]*>.*?<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>',body,re.S):
+                qlinks[strip_tags(qm.group(2))]=qm.group(1)
+            groups=[]; cur=None
+            for b in s['blocks']:
+                if b['type']=='heading':
+                    if cur: groups.append(cur)
+                    cur={'heading':b['text'],'questions':[]}
+                elif b['type'] in ('question','paragraph') and cur is not None:
+                    txt=b['text']
+                    if txt.startswith('Q.'): txt=txt[2:].strip()
+                    if txt: cur['questions'].append({'text':txt,'url':qlinks.get(txt,'')})
+            if cur: groups.append(cur)
+            if groups: s['groups']=[g for g in groups if g['questions']]
             qs=[]
             for q in re.finditer(r'<p class="questions[^"]*">.*?<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>',body,re.S):
                 qs.append({'anchor':q.group(1),'question':strip_tags(q.group(2))})
@@ -125,6 +183,20 @@ def parse(content):
             s['definitions']=ds
         elif kind in ('related-links','related-topics','additional-topics'):
             s['links']=links(body)
+            s['richItems']=rich_items(body)
+            # .related-links also carries the "About our business, license, and
+            # website security" list under its own heading
+            hs=re.findall(r'<h[1-6][^>]*>(.*?)</h[1-6]>',body,re.S)
+            if len(hs)>1:
+                idx=body.find(hs[1])
+                tail=body[idx:]
+                trust=rich_items(tail)
+                if trust:
+                    s['trustHeading']=strip_tags(hs[1])
+                    s['trustItems']=trust
+                    head=body[:idx]
+                    s['links']=links(head)
+                    s['richItems']=rich_items(head)
         elif kind=='recent-posts':
             sc=re.search(r'\[recent-blogs([^\]]*)\]',body)
             if sc:
@@ -164,6 +236,11 @@ def parse(content):
                     cur['blocks'].append(b)
             if cur and cur['blocks']: group.append(cur)
             secs+=group
+    # Call-outs and section-blocks are collected in separate passes, so document
+    # order is only restored here. Without this a mid-page call-out ("Schedule a
+    # Consultation") is hoisted above the content it follows on the source.
+    secs.sort(key=lambda x: x.get('_pos', 0))
+    for x in secs: x.pop('_pos', None)
     return secs
 
 if __name__=='__main__':

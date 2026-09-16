@@ -3,11 +3,16 @@ import re,html,json,sys,os
 SC=sys.argv[1] if len(sys.argv)>1 else ''
 STATIC=sys.argv[2] if len(sys.argv)>2 else ''
 
+CALL_TRACKING=re.compile(r'\(?760\)?[\s.-]?206[\s.-]?6\d{3}')
+REAL_PHONE='(760) 940-2273'
+
 def t(s):
     # insert a space at tag boundaries first: "<span>About</span>North County" must
     # not collapse to "AboutNorth County"
     s=re.sub(r'<(/?)(span|br|b|strong|em|i|div|p|li)\b[^>]*>',' ',s)
-    return html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()
+    out=html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()
+    # 760-206-6xxx numbers are call-tracking, rotating per visitor
+    return CALL_TRACKING.sub(REAL_PHONE,out)
 
 # chrome that appears on every page and must not become page content
 CHROME_RE=re.compile(r'(menu-item|main-nav|side-nav|top-nav|footer|copyright|breadcrumb|'
@@ -57,7 +62,7 @@ def pairs_from(html_src,imgmap):
 def infocards_from(html_src,imgmap):
     """Image + title + prose cards (.policy-wrapper, .service-wrapper, .grid-item)."""
     out=[]
-    pat=re.compile(r'<div class="[^"]*(?:policy-wrapper|service-wrapper)[^"]*"(.*?)(?=<div class="[^"]*(?:policy-wrapper|service-wrapper)|</section>|$)',re.S)
+    pat=re.compile(r'<div class="[^"]*(?:policy-wrapper|service-wrapper|profile-wrap)[^"]*"(.*?)(?=<div class="[^"]*(?:policy-wrapper|service-wrapper|profile-wrap)|</section>|$)',re.S)
     for m in pat.finditer(html_src):
         blk=m.group(1)
         img=re.search(r'<img[^>]*?(?:data-src|src)="([^"?]+)"',blk)
@@ -68,8 +73,13 @@ def infocards_from(html_src,imgmap):
         title=t(ttl.group(1)) if ttl else ''
         src=imgmap(img.group(1)) if img else None
         if title and (src or ps):
-            out.append({'image':src or '','imageAlt':(alt.group(1) if alt else ''),
-                        'title':title,'description':' '.join(ps)[:600]})
+            a=re.search(r'<a[^>]*href="([^"#][^"]*)"[^>]*class="[^"]*b(?:tn|utton)[^"]*"[^>]*>(.*?)</a>',blk,re.S|re.I) \
+              or re.search(r'<a[^>]*class="[^"]*b(?:tn|utton)[^"]*"[^>]*href="([^"#][^"]*)"[^>]*>(.*?)</a>',blk,re.S|re.I)
+            card={'image':src or '','imageAlt':(alt.group(1) if alt else ''),
+                  'title':title,'description':' '.join(ps)[:600]}
+            if a:
+                card['linkUrl']=a.group(1); card['linkText']=t(a.group(2))[:40]
+            out.append(card)
     seen=set(); uniq=[]
     for c in out:
         if c['title'] in seen: continue
@@ -91,7 +101,7 @@ def cards_from(frag,imgmap):
 
 def blocks_from(frag,imgmap):
     out=[]
-    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<img[^>]*>',re.S|re.I)
+    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<img[^>]*>|<iframe[^>]*>',re.S|re.I)
     for m in pat.finditer(frag):
         raw=m.group(0)
         if m.group(1):
@@ -104,6 +114,12 @@ def blocks_from(frag,imgmap):
             items=[t(i) for i in re.findall(r'<li[^>]*>(.*?)</li>',m.group(5),re.S)]
             items=[i for i in items if i]
             if items: out.append({'type':'list','ordered':m.group(4).lower()=='ol','items':items})
+        elif raw.lower().startswith('<iframe'):
+            # videos: snap_pages never matched <iframe>, so the reviews page lost
+            # all 15 of its patient videos
+            src=re.search(r'src="([^"]*)"',raw)
+            if src: out.append({'type':'embed','src':src.group(1),
+                                'title':(re.search(r'title="([^"]*)"',raw) or [None,''])[1]})
         else:
             src=re.search(r'(?:data-src|src)="([^"]*)"',raw); alt=re.search(r'alt="([^"]*)"',raw)
             if src:

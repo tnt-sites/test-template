@@ -144,7 +144,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What can I do to repair damaged teeth?](/vista-ca/dental-center/#repair-damaged-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can dental veneers do for my teeth?](/vista-ca/dental-center/#dental-veneers-for-my-teeth)
+        text: Q. [What can dental veneers do for my teeth?](/vista-ca/dental-center/#dental veneers-for-my-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

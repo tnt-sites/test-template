@@ -298,7 +298,7 @@ pageSections:
     - name: Preventative Care
       url: /vista-ca/preventative-dental-care/
     - name: Teeth Whitening Dentist
-      url: /vista-ca/tooth-whitening/
+      url: /vista-ca/teeth-whitening-at-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics

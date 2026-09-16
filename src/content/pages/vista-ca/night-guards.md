@@ -176,7 +176,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [Why would I need to wear a night guard?](/vista-ca/night-guards/#why-would-i-need-a-night-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How long will the night guard last?](/vista-ca/night-guards/#how-long-will-the-night-guard-last)
+        text: Q. [How long will the night guard last?](/vista-ca/night-guards/#how-long-will the-night-guard-last)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

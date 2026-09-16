@@ -164,7 +164,8 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What can I do if I damage my tooth?](/vista-ca/dental-practice/#damage-my-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What do I need to do to ensure that my restoration is in great shape?](/vista-ca/dental-practice/#dental-restorations-inspected)
+        text: Q. [What do I need to do to ensure that my restoration is in great shape?](/vista-ca/dental-practice/#dental-restorations
+          inspected)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5

@@ -2,17 +2,18 @@
 _schema: default
 title: Blog
 pageSections:
+- _component: page-sections/builders/content-with-sidebar
+  main:
   - _component: page-sections/heroes/hero-center
-    eyebrow: ""
+    eyebrow: ''
     heading: All posts
-    subtext: >-
-      This paginated blog index displays a grid of article cards, each waiting
-      to be populated with genuine posts once your content strategy moves beyond
-      placeholder text.
+    subtext: This paginated blog index displays a grid of article cards, each waiting to be populated
+      with genuine posts once your content strategy moves beyond placeholder text.
     buttonSections: []
     colorScheme: default
-    backgroundColor: "var(--color-bg)"
-description: >-
-  Read our latest articles and insights on web development, design, and
-  technology.
+    backgroundColor: var(--color-bg)
+  sidebar: []
+  maxContentWidth: 2xl
+  paddingVertical: xl
+description: Read our latest articles and insights on web development, design, and technology.
 ---

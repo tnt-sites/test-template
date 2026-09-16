@@ -44,6 +44,11 @@ pageSections:
       text: CEREC DIGITAL TECHNOLOGY ALLOWS RESTORATIONS
       level: h2
       size: md
+    - _component: building-blocks/core-elements/embed
+      html: <iframe src="https://www.youtube.com/embed/RqQ3zmwny1s" title="Video" frameborder="0" loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      aspectRatio: widescreen
     - _component: building-blocks/core-elements/heading
       text: THE CEREC® PROCESS
       level: h2
