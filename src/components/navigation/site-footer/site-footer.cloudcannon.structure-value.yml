@@ -1,0 +1,48 @@
+label: Site Footer
+icon: call_to_action
+description: Footer with brand, about, office and contact columns over a subfooter.
+value:
+  _component: navigation/site-footer
+  logoSource: ""
+  logoAlt: ""
+  websiteText: ""
+  websiteHref: ""
+  aboutTitle: About
+  aboutText: ""
+  officeTitle: Office
+  contactTitle: Contact
+  phoneLabel: "Phone:"
+  copyright: ""
+  legalLinks: []
+  socials: []
+  offices: []
+preview:
+  text:
+    - Site Footer
+  icon: call_to_action
+picker_preview:
+  text: Site Footer
+  subtext: Footer with brand, about, office and contact columns.
+_inputs_from_glob:
+  - /src/components/navigation/site-footer/site-footer.cloudcannon.inputs.yml
+_structures:
+  footerLegalLinks:
+    values:
+      - label: Legal Link
+        icon: link
+        value:
+          name: Link name
+          path: /
+        preview:
+          text:
+            - key: name
+            - Legal Link
+          subtext:
+            - key: path
+        _inputs:
+          name:
+            type: text
+            comment: Link label.
+          path:
+            type: url
+            comment: Link destination.

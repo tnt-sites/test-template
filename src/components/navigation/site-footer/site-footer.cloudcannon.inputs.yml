@@ -1,0 +1,45 @@
+logoSource:
+  type: image
+  comment: Footer logo image.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+logoAlt:
+  type: text
+  comment: Alt text for the footer logo.
+websiteText:
+  type: text
+  comment: Site URL shown beneath the logo.
+websiteHref:
+  type: url
+  comment: Destination for the site URL beneath the logo.
+aboutTitle:
+  type: text
+  comment: Heading for the About column.
+aboutText:
+  type: markdown
+  comment: About copy shown across the top of the info column.
+officeTitle:
+  type: text
+  comment: Heading for the Office column.
+contactTitle:
+  type: text
+  comment: Heading for the Contact column.
+phoneLabel:
+  type: text
+  comment: Label shown before the phone number (e.g. "Phone:").
+copyright:
+  type: text
+  comment: Copyright line in the subfooter.
+legalLinks:
+  type: array
+  comment: Legal links listed under the copyright.
+  options:
+    structures: _structures.footerLegalLinks
+socials:
+  type: array
+  comment: Social links shown at the right of the subfooter. Leave empty to use siteInfo socials.
+offices:
+  type: array
+  comment: Office override. Leave empty to use the siteInfo offices.

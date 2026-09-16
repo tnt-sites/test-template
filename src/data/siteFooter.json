@@ -1,0 +1,17 @@
+{
+  "logoSource": "/images/logo-ncid.png",
+  "logoAlt": "Visit North County Cosmetic and Implant Dentistry",
+  "websiteText": "https://www.ultimatesmiles.com",
+  "websiteHref": "/",
+  "aboutTitle": "About",
+  "aboutText": "We are committed to providing quality healthcare to families located in the Vista area and treat patients of all ages.",
+  "officeTitle": "Office",
+  "contactTitle": "Contact",
+  "phoneLabel": "Phone:",
+  "copyright": "Copyright © 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
+  "legalLinks": [
+    { "name": "Opt-out preferences", "path": "/opt-out-preferences/" },
+    { "name": "Privacy Policy", "path": "/privacy-policy/" },
+    { "name": "Sitemap", "path": "/sitemap/" }
+  ]
+}
