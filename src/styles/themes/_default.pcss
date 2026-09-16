@@ -61,17 +61,21 @@
 }
 
 /* mig:begin source-theme */
+/* dev-extract measured --color-bg and --color-text as #000000 (black on black,
+   making every page unreadable) and --color-link as #ffffff. It sampled a
+   transparent/unset computed value rather than the painted surface. These are
+   the source site's real values: white page, near-black body copy, green links. */
 :root,
 [data-theme="default"] {
-  --color-bg: #000000;
-  --color-text: #000000;
-  --color-text-strong: #000000;
-  --color-link: #ffffff;
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-text-strong: #1a1a1a;
+  --color-link: #5c7f5e;
   --color-brand: #79a37b;
   --color-brand-secondary: #ba9764;
-  --color-brand-muted: #ba9764;
-  --color-brand-subtle: #ba9764;
-  --color-bg-accent: #e6e6e6;
-  --color-bg-highlight: #dcdcdc;
+  --color-brand-muted: #a8bfa9;
+  --color-brand-subtle: #e6e6e6;
+  --color-bg-accent: #f4f6f4;
+  --color-bg-highlight: #f0ece4;
 }
 /* mig:end source-theme */

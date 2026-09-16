@@ -1,22 +1,20 @@
 {
   "colorBrand": "#79a37b",
   "colorBrandSecondary": "#ba9764",
-  "colorBrandTertiary": "#ba9764",
+  "colorBrandTertiary": "#4a7a4c",
   "colorBrandSubtle": "#e6e6e6",
-  "colorBrandOn": "",
-  "colorTextOnBrand": "#000000",
-  "colorLink": "#ffffff",
-  "colorLinkHover": "darkblue",
+  "colorBrandOn": "#ffffff",
+  "colorTextOnBrand": "#ffffff",
+  "colorLink": "#5c7f5e",
+  "colorLinkHover": "#ba9764",
   "extraColors": [],
   "bodyFont": {
-    "fontFamily": "\"Source Sans Pro\", sans-serif"
+    "fontFamily": "\"Source Sans 3\", \"Source Sans Pro\", sans-serif"
   },
   "headingsFont": {
     "fontFamily": "Raleway, sans-serif"
   },
   "fontLinks": [
-    "/wp-content/themes/doctorgenius-framework/fonts/source-sans-pro.css",
-    "/wp-content/themes/doctorgenius-framework/fonts/raleway.css",
-    "/wp-content/themes/doctorgenius-framework/fonts/montserrat.css"
+    "https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
   ]
 }
