@@ -166,7 +166,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What types of teeth whitening do you offer?](/vista-ca/teeth-whitening/#types-of-teeth-whitening)
+        text: Q. [What types of teeth whitening do you offer?](/vista-ca/tooth-whitening/#types-of-teeth-whitening)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

@@ -367,7 +367,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Partial Dentures for Back Teeth](/vista-ca/partial-dentures-for-back-teeth/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TeethXpress](/vista-ca/teethxpress/)'
+        text: '[TeethXpress](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[The Process for Getting Dentures](/vista-ca/the-process-for-getting-dentures/)'
       - _component: building-blocks/core-elements/list/list-item

@@ -310,7 +310,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Solutions for Common Denture Problems](/vista-ca/solutions-for-common-denture-problems/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TeethXpress](/vista-ca/teethxpress/)'
+        text: '[TeethXpress](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[What Do I Do If I Damage My Dentures](/vista-ca/damage-my-dentures/)'
       - _component: building-blocks/core-elements/list/list-item

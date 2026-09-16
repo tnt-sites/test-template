@@ -396,7 +396,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Multiple Teeth Replacement Options](/vista-ca/multiple-teeth-replacement-options/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TeethXpress](/vista-ca/teethxpress/)'
+        text: '[TeethXpress](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[The Difference Between Dental Implants and Mini Dental Implants](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item

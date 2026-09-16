@@ -354,7 +354,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[All-on-4 Implants](/vista-ca/all-on-4/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TeethXpress](/vista-ca/teethxpress/)'
+        text: '[TeethXpress](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[The Difference Between Dental Implants and Mini Dental Implants](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item

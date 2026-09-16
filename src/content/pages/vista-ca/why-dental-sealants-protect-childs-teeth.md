@@ -238,17 +238,17 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Emergency Dentist vs. Emergency Room](/vista-ca/emergency-dentist-vs-emergency-room/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Improve Your Smile for Senior Pictures](/vista-ca/improve-your-smile-for-senior-pictures/)'
+        text: '[Improve Your Smile for Senior Pictures](/vista-ca/what-can-i-do-to-improve-my-smile/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Kid Friendly Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Oral Hygiene Basics](/vista-ca/oral-hygiene-basics/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Pediatric Dentist](/vista-ca/pediatric-dentist/)'
+        text: '[Pediatric Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Reduce Sports Injuries With Mouth Guards](/vista-ca/reduce-sports-injuries-with-mouth-guards/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/pediatric-dentist-vs-general-dentist/)'
+        text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
     maxContentWidth: none
@@ -271,7 +271,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Family Dentist](/vista-ca/family-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Is Invisalign Teen Right for My Child](/vista-ca/is-invisalign-teen-right-for-my-child/)'
+        text: '[Is Invisalign Teen Right for My Child](/vista-ca/is-clear-aligner-therapy-teen-right-for-my-child/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Tooth Extraction](/vista-ca/tooth-extraction/)'
       - _component: building-blocks/core-elements/list/list-item

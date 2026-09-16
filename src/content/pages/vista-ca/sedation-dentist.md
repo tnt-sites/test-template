@@ -336,17 +336,17 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Implant Dentist](/vista-ca/implant-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Invisalign® Dentist](/vista-ca/invisalign-dentist/)'
+        text: '[Invisalign® Dentist](/vista-ca/clear-aligner-therapy-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Kid Friendly Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Pediatric Dentist](/vista-ca/pediatric-dentist/)'
+        text: '[Pediatric Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Prosthodontist](/vista-ca/prosthodontist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Routine Dental Care](/vista-ca/routine-dental-care/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TMJ Dentist](/vista-ca/tmj-dentist/)'
+        text: '[TMJ Dentist](/vista-ca/night-guards/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[What is an Endodontist](/vista-ca/what-is-an-endodontist/)'
       - _component: building-blocks/core-elements/list/list-item

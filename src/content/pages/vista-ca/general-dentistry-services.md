@@ -336,7 +336,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[I Think My Gums Are Receding](/vista-ca/i-think-my-gums-are-receding/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Improve Your Smile for Senior Pictures](/vista-ca/improve-your-smile-for-senior-pictures/)'
+        text: '[Improve Your Smile for Senior Pictures](/vista-ca/what-can-i-do-to-improve-my-smile/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Reduce Sports Injuries With Mouth Guards](/vista-ca/reduce-sports-injuries-with-mouth-guards/)'
       - _component: building-blocks/core-elements/list/list-item
@@ -344,7 +344,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[When Is a Tooth Extraction Necessary](/vista-ca/when-is-tooth-extraction-necessary/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/pediatric-dentist-vs-general-dentist/)'
+        text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/kid-friendly-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
     maxContentWidth: none

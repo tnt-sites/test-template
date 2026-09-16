@@ -343,7 +343,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Smile Makeover](/vista-ca/smile-makeover/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Teeth Whitening](/vista-ca/teeth-whitening/)'
+        text: '[Teeth Whitening](/vista-ca/tooth-whitening/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Cosmetic Dentist](/vista-ca/cosmetic-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
@@ -364,33 +364,33 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Botox](/vista-ca/botox/)'
+        text: '[Botox](/vista-ca/dental-cosmetics/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[CEREC® Dentist](/vista-ca/cerec-dentist/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[ClearCorrect Braces](/vista-ca/clearcorrect-braces/)'
+        text: '[ClearCorrect Braces](/vista-ca/clear-braces/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Cosmetic Dental Care](/vista-ca/cosmetic-dental-care/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[EZ-Align](/vista-ca/ez-align/)'
+        text: '[EZ-Align](/vista-ca/clear-aligner-therapy/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Fastbraces](/vista-ca/fastbraces/)'
+        text: '[Fastbraces](/vista-ca/clear-braces/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Juvéderm](/vista-ca/juvederm/)'
+        text: '[Juvéderm](/vista-ca/dental-cosmetics/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Lumineers](/vista-ca/lumineers/)'
+        text: '[Lumineers](/vista-ca/dental-veneers-and-dental-laminates/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Professional Teeth Whitening](/vista-ca/professional-teeth-whitening/)'
+        text: '[Professional Teeth Whitening](/vista-ca/tooth-whitening/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Snap-On Smile](/vista-ca/snap-on-smile/)'
+        text: '[Snap-On Smile](/vista-ca/smile-makeover/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Teeth Whitening at Dentist](/vista-ca/teeth-whitening-at-dentist/)'
+        text: '[Teeth Whitening at Dentist](/vista-ca/tooth-whitening/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[TeethXpress](/vista-ca/teethxpress/)'
+        text: '[TeethXpress](/vista-ca/implants-vs-mini-implants/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[What Is Gum Contouring & Reshaping](/vista-ca/gum-contouring-and-reshaping/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Zoom Teeth Whitening](/vista-ca/zoom-teeth-whitening/)'
+        text: '[Zoom Teeth Whitening](/vista-ca/tooth-whitening/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Cosmetic Dental Services](/vista-ca/cosmetic-dental-services/)'
       - _component: building-blocks/core-elements/list/list-item

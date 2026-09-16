@@ -331,7 +331,7 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Dental Bonding](/vista-ca/dental-bonding/)'
+        text: '[Dental Bonding](/vista-ca/composite-fillings/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Dental Checkup](/vista-ca/dental-checkup/)'
       - _component: building-blocks/core-elements/list/list-item

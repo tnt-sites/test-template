@@ -306,7 +306,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: '[Laser Dentistry](/vista-ca/laser-dentistry/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[WaterLase iPlus](/vista-ca/waterlase-iplus/)'
+        text: '[WaterLase iPlus](/vista-ca/laser-dentistry/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Find a Dentist in Vista, CA](/about/find-a-dentist/)'
     maxContentWidth: none

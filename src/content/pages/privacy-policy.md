@@ -201,7 +201,7 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: We make every effort to ensure the accuracy, quality, ease of use, and technology of our website.
       Please do not hesitate to contact us with any creative suggestions or technical issues you might
-      encounter. A list of pages included in this site is available [here](/sitemap.xml) on our sitemap.
+      encounter. A list of pages included in this site is available [here](/sitemap-index.xml) on our sitemap.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

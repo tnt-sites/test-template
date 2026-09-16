@@ -314,7 +314,7 @@ pageSections:
     - _component: building-blocks/core-elements/list/list-item
       text: '[When Is a Tooth Extraction Necessary](/vista-ca/when-is-tooth-extraction-necessary/)'
     - _component: building-blocks/core-elements/list/list-item
-      text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/pediatric-dentist-vs-general-dentist/)'
+      text: '[Why go to a Pediatric Dentist Instead of a General Dentist](/vista-ca/kid-friendly-dentist/)'
     - _component: building-blocks/core-elements/list/list-item
       text: '[General Dentistry Services](/vista-ca/general-dentistry-services/)'
   maxContentWidth: xl

@@ -331,7 +331,7 @@ pageSections:
     - name: Helpful Dental Info
       url: /vista-ca/helpful-dental-information/
     - name: Gentle Dentistry
-      url: /about-find-best-dentist/
+      url: /about/find-best-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -369,9 +369,9 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Does Invisalign® Really Work](/vista-ca/does-invisalign-really-work/)'
+        text: '[Does Invisalign® Really Work](/vista-ca/does-clear-aligner-therapy-really-work/)'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[Improve Your Smile for Senior Pictures](/vista-ca/improve-your-smile-for-senior-pictures/)'
+        text: '[Improve Your Smile for Senior Pictures](/vista-ca/what-can-i-do-to-improve-my-smile/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[Preventative Dental Care](/vista-ca/preventative-dental-care/)'
       - _component: building-blocks/core-elements/list/list-item
