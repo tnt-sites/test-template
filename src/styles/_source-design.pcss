@@ -27,7 +27,7 @@
   --content-width-lg: 906px;
 
   /* The source sets headings in Raleway and body copy in Source Sans. */
-  --font-body: "Source Sans 3", "Source Sans Pro", sans-serif;
+  --font-body: "Source Sans Pro", "Source Sans 3", sans-serif;
   --font-headings: Raleway, sans-serif;
   --font-accent: Montserrat, sans-serif;
 
@@ -661,5 +661,19 @@
   main .page-footer-nav .pfn-inner {
     margin-inline: 0;
     max-width: none;
+  }
+}
+
+@layer overrides {
+  /*
+   * The starter's reset sets -webkit-font-smoothing: antialiased, which renders
+   * noticeably thinner than the source. The source leaves smoothing at `auto`
+   * (subpixel on macOS), which is why the migrated text read as too light even
+   * though every computed font-weight matched.
+   */
+  html,
+  body {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: auto;
   }
 }
