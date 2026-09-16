@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Wisdom Teeth Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Wisdom teeth are the last teeth to fill in the mouth. When they align properly and gum tissue
       is healthy, wisdom teeth do not have to be removed. Generally, this does not happen.
@@ -27,7 +27,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Are your wisdom teeth causing you discomfort?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: For most people, wisdom teeth just do not fit properly in the mouth. As the last teeth that
       grow in, wisdom teeth may become impacted or only partially break through the gumline. This can
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dr. Henninger explains the removal of Wisdom Teeth
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -76,7 +76,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Examination
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Using an oral examination and x-rays of the mouth, we will evaluate the position of the wisdom
       teeth and predict if there are present or may be future problems. Studies have shown that early
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Removal
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In most cases, the removal of wisdom teeth is performed under IV Sedation. These options, as
       well as the surgical risks, will be discussed with you before the procedure is performed. Once the
@@ -128,7 +128,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Standing behind the child with a stern expression, parents will do just about anything to ensure
       their children brush and floss on a regular basis. Much to the parents' efforts, children still
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Extra Protection with Dental Sealants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The food particles a child misses with a toothbrush will feed the plaque on the teeth, which
       will help to promote tooth decay. We understand that balancing a family schedule with work, school,
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The type of issues an endodontist treats
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Most parents, upon hearing about a dental sealant procedure for their children, think, "There's
       no way my child will remain calm or even want to set foot in the dentist." With the care that we

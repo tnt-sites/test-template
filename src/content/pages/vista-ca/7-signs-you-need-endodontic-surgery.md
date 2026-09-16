@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Tooth Replacement Options Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: To understand the signs and reasons for why you need endodontic surgery, it is important to
       understand the inner layers of a tooth. The outermost layer of the tooth is the enamel, which protects
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Signs That You Need Endodontic Surgery
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If the root of the tooth has an infection, it is most likely due to an abscess or other condition
       that is below the root spreading up through the tooth. This is why it is crucial to seek professional

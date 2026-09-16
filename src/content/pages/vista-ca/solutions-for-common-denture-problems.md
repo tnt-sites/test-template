@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Solutions for Common Denture Problems Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
       appearance. We can measure the patient's mouth and develop dentures for the patient's teeth, but

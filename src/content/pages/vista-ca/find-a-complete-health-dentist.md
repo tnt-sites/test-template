@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Find a Complete Health Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Complete health dentistry emphasizes the connection between oral health and overall health.
       Taking good care of your mouth helps ensure the health of the rest of your body. A complete health
@@ -37,7 +37,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Health Reflecting Overall Health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In some cases, oral health can be an early warning sign for other health issues. Sudden changes
       in gum or dental health may reflect conditions such as diabetes. According to WebMD, oral health
@@ -49,7 +49,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Conditions Treated by Complete Health Dentists
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'A complete health dentist is, first and foremost, a dentist. Patients can receive treatment
       for all the conditions that a general dentist treats such as tooth decay and gum disease. However,
@@ -85,7 +85,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Lifestyle Habits To Support Complete Health Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The mouth is directly connected to both the digestive tract and the respiratory system. Through
       these, it is indirectly connected to every major system in the body. Therefore, proper oral care
@@ -114,7 +114,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Ways a Complete Health Dentist Helps With Infections and Bacteria
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The mouth is home to more bacteria than there are people on Earth. Despite this, there is typically
       little risk because these bacteria are mostly harmless. However, according to the Mayo Clinic, bacteria
@@ -127,7 +127,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preventative Measures To Discuss in a Consultation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: During an examination and consultation, complete health dentists may offer preventative treatment
       to ensure lasting good health. The most significant treatment is cleaning and polishing the teeth.
@@ -141,7 +141,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Get on the Path to Wellness With Complete Health Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There is a connection between your mouth and general well-being. Choose a complete health dentist
       who will work to help both your dental and overall health. Call 760-940-2273 today to schedule an
@@ -157,7 +157,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions About Complete Health Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: How are gum disease and heart disease connected?
   - _component: building-blocks/core-elements/text

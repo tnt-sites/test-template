@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Nightlase® Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Do you suffer from the effects of sleep apnea, such as waking up groggy with little to no energy,
       snoring that disrupts you and your partner’s sleep, and frustration from not getting a good night’s
@@ -41,7 +41,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: No Surgery, No CPAP, No More Snoring
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/diagram.jpg
     alt: ''
@@ -74,7 +74,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Fast Results with NightLase
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Patients who choose NightLase treatment report immediate results after just the first treatment.
       Full treatment consists of three separate laser sessions over a six week period and final results
@@ -85,7 +85,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Better Sleep, Better Life
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Dr. Henninger is dedicated to helping you enjoy all life has to offer: passion, excitement,
       energy and success, starting with a good night’s sleep. Call (760)-940-2273 and schedule a consultation
@@ -101,7 +101,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: What is NightLase?
   - _component: building-blocks/core-elements/text

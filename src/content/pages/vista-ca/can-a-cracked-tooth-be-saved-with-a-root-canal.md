@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Can a Cracked Tooth be Saved with a Root Canal and Crown Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: 'When you crack a tooth, there are multiple tools and techniques to repair the damage. However,
       there is one option that stands above the rest: the dental crown. A crown is a cap, typically consisting
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Symptoms of a cracked tooth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'To understand the symptoms of a cracked tooth, it is crucial to understand that the teeth have
       layers. The outer layer is known as the enamel, followed by the dentin and then the pulp. The dental
@@ -89,7 +89,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The dental crown process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: By customizing the crown, the endodontist can ensure that the crown fits properly on the tooth
       and the surrounding teeth. Not only will the crown protect the tooth, it will also have the appearance
@@ -118,7 +118,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Taking care of a dental crown
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Since a dental crown is artificial, you will not need to worry about the crown becoming infected.
       However, you will need to continue cleaning the teeth and gums, being sure to keep any food from

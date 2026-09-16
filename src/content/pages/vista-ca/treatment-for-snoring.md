@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treatment For Snoring Vista, CA
     level: h1
-    size: md
+    size: 2xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -35,7 +35,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Snoring Affects The People Around You
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Heavy snoring is a common symptom of sleep apnea, a serious medical condition that can damage
       your health. But even if your snoring isn’t related to sleep apnea, it can still impact your life.
@@ -66,7 +66,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Snoring Treatments That Really Work
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our dentist have the necessary training and experience to treat your snoring, and they’ll use
       this to find the remedy that works best for you. Many of our patients get relief with oral appliance
@@ -84,7 +84,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your Sleep Dentists in Vista
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our dentist know how to treat snoring to make sure you and the people in your life can sleep
       comfortably every night. Call (760) 940-2273 today to learn more.
@@ -99,7 +99,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Are snoring and sleep apnea related?
   - _component: building-blocks/core-elements/text

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Implant Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
       your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why are implants better than dentures or dental bridges?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As an implant dentist, we can replace both the root and tooth. When you use dentures or a dental
       bridge to replace teeth, they only replace the visible portion of the tooth. While an effective
@@ -80,7 +80,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Implant Dentist
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Our qualifications as an implant dentist
     level: h3

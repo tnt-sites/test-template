@@ -12,11 +12,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Video Gallery
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: The Latest in Dental Implants with San Diego Dentist Christopher Henninger, DMD
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl

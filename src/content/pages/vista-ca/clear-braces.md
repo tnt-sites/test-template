@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Braces Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
       area. Straight teeth are important for your overall oral health. When teeth are crooked, they can
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Call our office today
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are interested in clear aligners or need us to replace some lost aligners, give us a
       call to schedule an appointment. We will go over options and determine if clear aligners are the
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: A Clear Option for Straightening Teeth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We understand that while many people want to have straighter teeth, many teens and adults are
       uncomfortable with the traditional metal braces on their teeth for more than one year. While they
@@ -87,7 +87,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Braces vs. Metal Braces
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we offer clear alternatives for adults and teens
       the greater Vista area. We can straighten teeth and move them into the perfect position so the patient
@@ -129,7 +129,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Teen Braces and Adult Braces
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We treat both teens and adults and understand that both can benefit from similar treatment options.
       While children may not be able to wear clear braces, teens can wear clear braces if they take proper

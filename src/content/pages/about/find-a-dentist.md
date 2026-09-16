@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Find a Dentist in Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: When looking for a Vista dentist, we hope that you will consider scheduling an appointment with
       us. Our team at North County Cosmetic and Implant Dentistry are dedicated to patients, creating
@@ -46,7 +46,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How do I find a dentist and schedule an appointment?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are looking to find a dentist in the Vista CA area, call 760-940-2273 and schedule an
       appointment. We are looking forward to meeting you and your family.
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Read our Reviews
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our patients say it best. We aim to provide the highest quality patient care. Many of our patients
       have reviewed our dental practice online, and you can read their testimonials on Google, Yelp and
@@ -129,7 +129,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your Health is Our Top Priority
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our goal is to keep you and your family in excellent oral health. We focus on preventative care
       so that your teeth and gums will stay healthy and pain-free. By completing regular teeth cleanings,

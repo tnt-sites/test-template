@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Family Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
       patients of all ages and do so in a warm and welcoming environment. Our office is located in Vista,
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: At-Home Tips to Surprise Us During Your Routine Visit
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -121,7 +121,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Philosophy of Care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The team at North County Cosmetic and Implant Dentistry believe in the importance of preventative
       care. We focus on keeping patients in good oral health so that they can live a full, healthy, and
@@ -173,7 +173,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Age Groups
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: We treat adults, children, and seniors at North County Cosmetic and Implant Dentistry. Each
       age group requires a different approach due to dental needs and oral health changing with time.

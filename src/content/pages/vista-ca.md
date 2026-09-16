@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Local Events, News, Weather & Maps for Vista
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: Vista California
     level: h3

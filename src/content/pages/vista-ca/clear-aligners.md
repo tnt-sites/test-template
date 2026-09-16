@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Aligners Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
       By straightening teeth, patients also gain health benefits from teeth that do not have as many places
@@ -45,7 +45,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Call our office today
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are interested in clear aligners or need us to replace some lost aligners, give us a
       call to schedule an appointment. We will go over options and determine if clear aligners are the
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Removable and nearly invisible
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Clear aligners are the preferable choice for many patients since they are removable and are
       not obvious to other people. The clear aligners come in a set, with each aligner being at a different
@@ -94,7 +94,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Not for kids
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Clear aligners are not always the best treatment for children or children in their early teens.
       Since clear aligners require more responsibility to care for, children are not always responsible
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear says it all
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While clear aligners are great for being a discreet straightening option, patients need to clean
       their teeth after each meal before placing the aligners back in. Patients remove the clear aligners
@@ -119,7 +119,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Don't take them out for too long
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While clear aligners are removable and the patient needs to take them out for certain situations,
       the patient needs to put them back in fairly quickly. With braces, the patient does not have the

@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Aligner Therapy Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
       teeth can also benefit one's oral health. In fact crooked teeth can trap food between them and lead
@@ -46,7 +46,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How do I get started with Clear Aligner Therapy?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Call (760) 940-2273 and schedule a consultation with Dr. Henninger.
   maxContentWidth: xl
@@ -60,7 +60,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: To begin, we will need to conduct a consultation and examination. This examination will involve
       reviewing the patient's medical history, current state of health, any pre-existing conditions or
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Keep up regular oral hygiene
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While wearing Clear Aligners, patients will not have to brush and floss between brackets with
       difficulty. In fact, the patient will be able to brush and floss as normal by just removing the

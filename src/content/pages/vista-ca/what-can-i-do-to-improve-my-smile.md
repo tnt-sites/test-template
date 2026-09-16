@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What Can I Do to Improve My Smile Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: My Formal is Soon, What Can I Do to Improve My Smile? Your formal is coming up, and you are
       embarrassed by your smile. What do you do? Call the dentist. Whether you are getting ready for the
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Have Your Teeth Cleaned
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Call (760) 940-2273 and schedule a teeth cleaning with our dental office. We can get you scheduled
       right away, and you will be amazed by how much better your teeth look when they are clean and the
@@ -101,7 +101,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Moisturize
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The texture of your skin and lips will also impact your smile. Use an all-natural moisturizer
       to make your skin look luminescent and healthy. Using a natural lip balm will also keep your lips

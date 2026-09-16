@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Gum Disease Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we work diligently to prevent gum disease in
       our patients. Gum disease is a common condition and most adults will suffer from some form of gum
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Causes of Gum Disease
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are several reasons that gum disease develops. The primary causes are plaque and tartar.
       Anything that becomes stuck between your teeth, gums or under the gum tissue, can cause irritation
@@ -81,7 +81,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Common Signs of Gum Disease
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Some of the most common signs of gum disease are:'
   - _component: building-blocks/core-elements/list
@@ -140,7 +140,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why You Could Need a Bone Graft Following Severe Gum Disease
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Severe gum disease can drastically and negatively impact your oral health. As gum disease progresses,
       your gums will swell and then begin to recede or pull away from your tooth structure. This is problematic

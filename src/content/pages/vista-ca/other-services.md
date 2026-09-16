@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other Services Vista, CA
     level: h1
-    size: md
+    size: 2xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -25,7 +25,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: General Information
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Still Can't Find?
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:

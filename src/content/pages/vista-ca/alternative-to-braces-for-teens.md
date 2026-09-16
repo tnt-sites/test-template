@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Alternative to Braces for Teens Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If your teen is tired of living with crooked teeth, now is an excellent time to consider orthodontics.
       At North County Cosmetic and Implant Dentistry, we regularly answer questions about Clean Aligner
@@ -43,7 +43,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How do I get started with Clean Aligner Therapy?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you live in the Vista area, call 760-940-2273 to schedule a consultation with North County
       Cosmetic and Implant Dentistry. We are located at 1934 Via Centre Ste A Vista, CA 92081.
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is Clean Aligner Therapy Teen®?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Clean Aligner Therapy straightens teeth using a series of clear, plastic aligners. For teeth
       to move from their current crooked position to where they are supposed to be, pressure must be applied.
@@ -69,7 +69,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Here are six things you should know about Clean Aligner Therapy prior to visiting our office.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: numbered
     items:

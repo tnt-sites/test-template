@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Aligner Therapy for Teens Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so
       that you can straighten your teeth without anyone noticing. If you want to improve your appearance,
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Aligner Therapy Vs. Clear Braces
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Clear Aligner Therapy is different. This is an orthodontics treatment for teens that want to
       straighten their teeth without standing out. Most people cannot tell that you are wearing anything
@@ -95,7 +95,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Clear Aligner Therapy for Teens
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/sure-smile.jpeg
     alt: Clear Aligner Therapy for Teens

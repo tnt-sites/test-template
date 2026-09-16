@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: When a Situation Calls for an Emergency Dental Surgery Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: No matter how many precautions you take to protect your teeth, there is always a chance for
       a dental accident or injury to occur. When this happens, there is a chance that you will need emergency
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Types of Dental Damage
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'When a dental emergency occurs, a general dentist may not have the experience and technology
       to repair the damage. In these cases, emergency surgery from an endodontic specialist will be the
@@ -116,7 +116,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Misconceptions about emergency surgery
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While any form of emergency surgery can be an uncomfortable and negative topic for people, there
       are many misconceptions about surgery that people believe. When it comes to emergency endodontic

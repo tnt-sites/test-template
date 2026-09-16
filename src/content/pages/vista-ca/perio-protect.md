@@ -14,7 +14,7 @@ pageSections:
     text: Fight Gum Disease with Perio Protect Prevent and treat periodontitis the simple, non-invasive
       way.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: There’s more to gum disease than just bleeding gums or bad breath. Harmful bacteria can enter
       your bloodstream through your gums, putting your entire body at risk for systemic and chronic disease.
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Perio Protect helps heal your gums in minutes a day.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'There’s only so much you can do at home to keep your teeth and gums clean. Brushing and flossing
       are important, but they don’t clean an essential area: below your gums. Perio Protect works in harmony
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Safeguard your health with simple tray therapy
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -70,7 +70,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treating gum disease doesn’t have to be difficult
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In just a few 10-15 minute sessions a day, you’ll give your gums the medicine they need to begin
       healing--sealing up the entryway that bacteria uses to infiltrate your body. You’ll notice that
@@ -83,7 +83,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Other gum disease treatments include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -110,7 +110,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

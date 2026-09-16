@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Routine Dental Care Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we practice routine dental care in addition
       to performing restorations and addressing any other complex dental issues that you may have. In
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How often should I visit the dentist?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Many of our patients ask how frequently they need to visit our office for routine dental care.
       This is an understandable question because most people associate going to the doctor or dentist
@@ -119,7 +119,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What steps should I take at home?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Routine dental care must also include good oral hygiene at home. At North County Cosmetic and
       Implant Dentistry, we recommend that you brush your teeth with a soft toothbrush for two minutes

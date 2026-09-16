@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: All-on-4 Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we offer the All-on-4® procedure for patients
       that are looking for a convenient way to replace missing teeth. If you live in the Vista area and
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Schedule a Consultation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can replace your teeth with this convenient
       and innovative procedure. To discuss the many benefits or to get started, call (760) 940-2273 and
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: You Don't Have to Live With Tooth Loss
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are distinct advantages to living in the modern world. One of these, from the dental perspective,
       is the ability to live without the stigma and challenges of tooth loss. According to the Periodontic
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Who Should Get All-on-4®?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The simple answer is that anyone who has lost teeth and wants to have a permanent good-looking
       set of replacement teeth will benefit from dental implants. The All-on-4® systems offer people a
@@ -131,7 +131,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Success of the All-on-4® Procedure in Our Vista Dental Office
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The Oral and Maxillofacial Associates state that All-on-4® implants have a success rate of 98
       percent. With All-on-4® implants, patients have a 98 percent probability of leaving our Vista offices

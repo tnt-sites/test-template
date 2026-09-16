@@ -1,6 +1,6 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/images/logo-ncid.png",
+  "logoAlt": "North County Cosmetic and Implant Dentistry",
   "navData": [
     {
       "name": "First Visit",
@@ -285,40 +285,39 @@
       "children": []
     }
   ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "Call Us! (760) 940-2273",
       "hideText": false,
-      "link": "/contact-us/",
+      "link": "tel:+1-760-940-2273",
       "modalTarget": "",
-      "iconName": "",
+      "iconName": "phone",
       "iconPosition": "before",
       "variant": "primary",
       "size": "md",
-      "width": "md",
-      "borderRadius": "default",
+      "width": "none",
+      "borderRadius": "2xl",
+      "borderWidth": "default",
+      "borderColor": "default",
+      "textColor": "default",
+      "uppercase": false
+    },
+    {
+      "_component": "building-blocks/core-elements/button",
+      "id": "",
+      "text": "Book Online",
+      "hideText": false,
+      "link": "/contact-us/",
+      "modalTarget": "",
+      "iconName": "calendar-days",
+      "iconPosition": "before",
+      "variant": "primary",
+      "size": "md",
+      "width": "none",
+      "borderRadius": "2xl",
       "borderWidth": "default",
       "borderColor": "default",
       "textColor": "default",

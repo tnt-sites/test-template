@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Cost of Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: There are many factors that influence the cost of dental implants in the San Diego Area.
   - _component: building-blocks/core-elements/text
@@ -69,7 +69,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Factors that influence dental implant costs:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -108,7 +108,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Implants Mean Long-Term Savings
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Before dental implants, dental bridges were the traditional method used to replace teeth. Dental
       bridges last an average of 10 years and require a dental procedure on teeth that may otherwise be
@@ -126,7 +126,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are ready to see if dental implants are the right choice for you, give us a call today
       760-940-2273 for a free consultation!

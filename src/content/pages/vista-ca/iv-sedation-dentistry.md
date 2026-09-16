@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: IV Sedation Dentistry Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Dr. Christopher Henninger and our team at North County Cosmetic and Implant Dentistry understand
       the challenges of finding a dentist for a patient who has a medical condition that can make receiving
@@ -37,7 +37,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Understanding IV Sedation Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While there are several types of sedation dentistry, IV sedation works quickly so the patient
       will not be alert during the procedure. This way, they will not feel any sensations nor even remember
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Benefits of IV Sedation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'IV sedation helps to quickly deliver anesthesia to the patient''s system so they can easily
       relax during treatment. The American Dental Association, ADA, explains that local anesthesia is
@@ -97,7 +97,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Multiple Types of Sedation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'We provide various forms of dental sedation to help patients receive the care they need. From
       dental anxiety to Alzheimer''s, autism, and other conditions, there is no reason to let them prevent
@@ -128,7 +128,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The IV Sedation Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We also provide IV sedation as part of our special needs dentistry for both children and adults.
       We will first need to evaluate the patient's medical history, current condition, allergies, insurance,
@@ -155,7 +155,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: How long will the appointment take?
   - _component: building-blocks/core-elements/text
@@ -200,7 +200,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

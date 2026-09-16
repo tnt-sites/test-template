@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you’ve been diagnosed with periodontal disease, there’s good news and bad news. The bad news?
       Gum disease isn’t curable. The good news? With the right maintenance, you can prevent the progression
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Stay ahead of your gum disease.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If not properly maintained, gum disease can wreak havoc in your mouth. Dangerous bacteria will
       build up, eat away at your gum, teeth, and bone, and even hop a ride into your bloodstream and travel
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Stay proactive. Stay healthy.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you’ve completed a laser deep clearing, you shouldn’t stop there! Once that bad bacteria
       has taken hold in your mouth, you’re much more susceptible to a relapse, even if you’ve done a number
@@ -70,7 +70,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Most maintenance plans include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

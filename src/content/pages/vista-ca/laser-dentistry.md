@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Laser Dentistry Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are interested in a new, fresh approach to dental care, consider laser dentistry . At
       North County Cosmetic and Implant Dentistry, we can use laser dentistry to treat our patients' oral
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Laser Dentistry for Those with a Dental Phobia
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you suffer from dental anxiety or avoid visiting the dentist for fear of discomfort, you
       are not alone. This is a common condition that you do not have to live with. Laser dentistry has
@@ -83,7 +83,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Laser Gum Surgery
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Perhaps one of the most significant advances that gentle dentistry has made is associated with
       treating gum disease. This condition is so common that most adults will suffer from some form of

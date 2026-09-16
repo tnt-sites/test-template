@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Options for Replacing Missing Teeth Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
       teeth. If you have a tooth that has been knocked out in an accident or was removed due to decay,
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How can I tell which missing tooth replacement options are right for me?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In our Vista dental office, we understand the importance of choice. We know that when we see
       10 people with tooth loss, each of them will have a slightly different goal and their lifestyles
@@ -100,7 +100,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Options for Replacing Missing Teeth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Will my missing tooth replacement options be influenced by my age?
     level: h3

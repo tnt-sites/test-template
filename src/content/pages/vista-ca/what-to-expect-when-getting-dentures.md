@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What to Expect When Getting Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: While we can customize dentures to fit a patient's teeth perfectly at North County Cosmetic
       and Implant Dentistry, there are still a few key factors that patients need to understand before
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Dentures Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are different types of dentures, two of which are removable dentures and implant dentures.
       Removable dentures are a more traditional option that requires the patient to remove them at night
@@ -108,7 +108,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other factors to expect with getting dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The dentures that one gets from our office will be a custom fit to the individual's mouth, but
       may take some time before the individual has complete mastery of the dentures. Dentures also require

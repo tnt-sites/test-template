@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preventative Dental Care Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
       throughout the Vista area and invite you to schedule a dental exam today. We know that if you have
@@ -45,7 +45,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Facts
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We practice preventative dental care and are regularly asked why it is so important. Virtually
       everyone is at risk for tooth decay. Tooth decay is so common that it is the number one infectious
@@ -105,7 +105,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Deep Cleaning Can Prevent Tooth Loss
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Another way that preventative dental care can save you money is in the realm of tooth loss.
       A leading causes of tooth loss among adults is gum disease. If plaque and bacteria are left on your

@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Save Your Implants With Debridement Surgery Treat peri-implantitis and preserve your implants.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: With the right care, your dental implants can last a lifetime. But what happens if your implant
       gets infected and starts to fail? Using debridement and other surgical techniques, North County
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What causes implants to fail?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Just like your natural teeth and gums, implants require daily maintenance. Without regular brushing
       and flossing, plaque will surround the implant and harden into a thick material that your toothbrush
@@ -50,7 +50,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is Implant Debridement Surgery?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Also called “implant rescue surgery,” implant debridement surgery uses special tools to clean
       the plaque around your implant, both from above and below your gumline, as well as the screw that
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Keep Your Smile Healthy and Strong
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: For most dental implant patients, peri-implantitis will not be an issue. But if you experience
       any symptoms of infection, it’s important that you make an appointment right away. The sooner your
@@ -80,7 +80,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Infection symptoms include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

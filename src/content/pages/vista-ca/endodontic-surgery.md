@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Endodontic Surgery Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: While some people may believe that most dental procedures require the same level of experience,
       there are actually many separate areas of dentistry that require a specialist. There are multiple
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The type of issues an endodontist treats
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: An endodontist will mainly use endodontic surgery when non-surgical procedure are not enough
       or when the fracture is small enough that they are not visible on X-rays. In other cases, endodontic
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: What you need to know
     level: h3

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Helpful Dental Information Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
       that our patients have the tools and resources they need to maintain healthy teeth for a lifetime.
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Q & A: Common Dental Questions'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/definition-list
     items:
     - _component: building-blocks/core-elements/definition-list/definition-list-item

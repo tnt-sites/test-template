@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Dental Implant Procedure Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
       to restore full dental functions and the appearance of your smile. They offer a more natural tooth
@@ -46,7 +46,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Implant Procedure
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The process of placing dental implants depends on the condition of the patient. The procedure
       takes multiple stages spread over several months to ensure the success of the implant procedure
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preparing for Dental Implant Procedure
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Ahead of the implant placement, patients can do the following to make the process as seamless
       as possible:'
@@ -116,7 +116,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Placing the Dental Implant
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: During the procedure, the dentist will make an incision over the gums to reveal the bone. They
       will put the implant post at the site of the lost tooth. Although every patient is different, most

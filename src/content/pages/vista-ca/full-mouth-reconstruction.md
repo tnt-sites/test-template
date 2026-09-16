@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Full Mouth Reconstruction Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Full mouth reconstruction involves one or several restorative dental procedures to restore and
       replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered
@@ -136,7 +136,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Long-term wear
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: For some people, proper dental care is not a common part of daily life. When one chooses to
       not practice proper dental care, the teeth wear down more quickly as a result. Acid from certain

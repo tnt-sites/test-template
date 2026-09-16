@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Will I Need a Bone Graft for Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are considering getting dental implants, you are already on the road to restoring your
       smile. Since dental implants are surgically placed and inserted into the jawbone, one of the questions
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is bone augmentation?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Bone augmentation can be performed multiple ways but the purpose of the procedure is to augment
       or build bone so that your jawbone becomes denser and stronger.
@@ -132,7 +132,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is the recovery time and how will I feel afterwards?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Immediately following your bone grafting procedure you will be very sore. To combat this, you
       will want to take ibuprofen and use ice packs for fifteen minutes at a time. You will also be given

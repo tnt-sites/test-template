@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Remove hard-to-reach buildup below the gumline to help slow down your gum disease and get rid
       of dangerous bacteria that threaten your oral and overall health.
@@ -38,7 +38,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Laser deep cleaning for places your toothbrush and floss can’t reach.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If left untreated, plaque on your teeth can harden into a substance called tartar that is very
       difficult to remove. Not only can tartar accumulate on your teeth, but it also forms underneath
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cleaner Teeth. Healthier Life.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Letting gum disease take control is dangerous for your mouth and your entire body. Not only
       can you lose teeth and bone in your mouth, but you also increase your risk for systemic diseases
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'The Perio Program includes:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

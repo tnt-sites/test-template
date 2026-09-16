@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Which is Better Clear Aligner Therapy or Braces Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we understand the important role that orthodontics
       can play in creating a healthy and beautiful smile. If you or your teen has crooked teeth, overly
@@ -46,7 +46,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Can Clear Aligner Therapy work as well as braces?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes, it can. The process is designed for mild to severe cases which includes crooked teeth,
       overly crowded teeth, etc. Most people associate wearing aligners for quick or small fixes and braces
@@ -92,7 +92,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are attachments and how are they used?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Attachments are the small bumps that you may see on the teeth of someone wearing Clear Aligner
       Therapy. They are round, small and made of tooth-colored resin so that they are barely noticeable.

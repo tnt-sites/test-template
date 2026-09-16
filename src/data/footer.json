@@ -1,6 +1,6 @@
 {
-  "logoSource": "/wp-content/uploads/logo-header.png",
-  "logoAlt": "Visit North County Cosmetic and Implant Dentistry",
+  "logoSource": "/images/logo-ncid.png",
+  "logoAlt": "North County Cosmetic and Implant Dentistry",
   "links": [
     {
       "name": "Home",
@@ -39,7 +39,7 @@
     }
   ],
   "copyright": {
-    "text": "Copyright © 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
+    "text": "Copyright \u00a9 2026 All Rights Reserved North County Cosmetic and Implant Dentistry.",
     "links": []
   }
 }

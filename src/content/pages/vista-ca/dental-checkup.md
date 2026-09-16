@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Checkup Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: A regular dental checkup offers patients professional dental cleaning services to detect and
       prevent tooth infections while helping maintain healthy teeth. Regular dental checkups are a standard
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why You Need a Dental Checkup
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There is a direct link between visiting the dentist and keeping your natural teeth. If you want
       to ensure that you have a full mouth of healthy teeth, then visit the dentist. Gallup Poll released
@@ -104,7 +104,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Call Us to Schedule a Checkup Today
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We invite you to call 760-940-2273 and schedule your dental checkup right away. When you come
       in, our friendly team will make sure everything is ready to go. Next, we will take images of your

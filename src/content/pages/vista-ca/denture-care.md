@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Denture Care Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Proper denture care depends on the type of dentures and the patient's overall oral health. Without
       proper care, the dentures will not last nearly as long as they can. With the proper care, patients
@@ -57,7 +57,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Taking care of dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: For a patient with removable dentures, it is crucial to remove them at night and thoroughly
       clean them. At least once a day, preferably at night, the individual needs to remove the dentures
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Keeping up oral health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If a patient, who wears dentures, does not take care of his or her mouth, then there is a greater
       chance for infection to form; even when one cares for the dentures. For patients who can remove

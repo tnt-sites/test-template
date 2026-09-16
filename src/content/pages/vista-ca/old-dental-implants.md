@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
       not only the functionality of teeth but can provide a great new look as well. Dental implants are
@@ -85,7 +85,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Facts from the American Academy of Implant Dentistry (aaid.com)
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -108,7 +108,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Questions to Ask When Selecting an Implant Dentist
     level: h5
-    size: md
+    size: sm
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -120,7 +120,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Process of Installing Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If one or more of your teeth fall out, you may qualify for dental implants as a way to permanently
       replace the missing teeth. In order to find out, schedule an appointment with our Vista dentist
@@ -171,7 +171,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Caring for Dental Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Once implants have been installed, they are extremely easy to care for. We hear patients throughout
       Vista ask questions that range from "Do implants come out" to "How do I brush my teeth". Fortunately,

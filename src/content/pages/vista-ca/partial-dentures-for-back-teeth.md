@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Partial Dentures for Back Teeth Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Partial dentures are a fantastic solution for patients who are missing multiple back teeth.
       There are all sorts of benefits to partial dentures for back teeth, ranging from the comparably

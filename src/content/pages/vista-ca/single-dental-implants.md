@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Single Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: 'Many people ask us: What is a dental implant?'
   maxContentWidth: xl
@@ -37,7 +37,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The best way to describe a single dental implant is to compare it to a real tooth.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A natural tooth consists of a root and a crown. The part of the tooth that you see and eat with
       is called the crown. Beneath the crown is the root, which anchors the tooth through the gum tissue
@@ -57,7 +57,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental implants offer permanent solution for patients with missing teeth
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -69,7 +69,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: When this initial phase of healing is completed
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A support post called an abutment will be placed into the implant itself and then a new crown
       will be placed on top
@@ -90,7 +90,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Other Tooth Replacement Options Include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -120,7 +120,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

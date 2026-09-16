@@ -15,7 +15,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: About North County Cosmetic and Implant Dentistry
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: Our Philosophy
     level: h3

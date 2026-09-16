@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Services Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: We offer comprehensive dental services for families and patients. We understand that you have
       many options in dental care and aim to provide you with the highest quality of care possible. By
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Our Dental Services
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for a Vista dentist that can prevent infections, treat them, and beautifully
       restore or transform your smile; we offer all of those solutions as part of our dental work. If

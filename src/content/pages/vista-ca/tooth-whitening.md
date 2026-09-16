@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Brighten Your Smile with Tooth Whitening The easy way to a dazzling smile.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Fed up with ineffective over the counter whitening products? While toothpastes, gels, and strips
       make bold claims, the truth is that OTC products can only whiten your teeth by a shade or two.
@@ -37,7 +37,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dramatically whiten your teeth in just a single visit.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our in-office treatments are much more powerful and safe than any over the counter product.
       With significantly higher concentrations of whitening agents, our in-office treatments combine a
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: In-Office Tooth Whitening
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -68,7 +68,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Don’t wait for a whiter smile.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you’re ready to brighten your smile, make an appointment to meet with the doctors at North
       County Cosmetic and Implant Dentistry today. We’ll examine your teeth to determine what type of
@@ -79,7 +79,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Whitening treatments include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

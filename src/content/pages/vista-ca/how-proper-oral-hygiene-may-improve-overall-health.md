@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How Proper Oral Hygiene May Improve Overall Health Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Oral hygiene is an essential aspect of overall health and may have a larger impact on one's
       total health than many realize. Complete health dentists are practitioners who use patients' oral
@@ -38,7 +38,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Hygiene Impacts the Heart
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Many studies have linked oral care to heart disease. Proper oral care does not prevent or treat
       heart disease, but it does reduce the risk of developing it. Oral hygiene is particularly important
@@ -79,7 +79,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Healthy Habits Mean Better Oral and General Health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Healthy eating habits are important for both oral and overall health. Patients should strive
       to consume a healthy, balanced diet with limited added sugar. Too much sugar may lead to obesity
@@ -87,7 +87,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: These Common Conditions Relate to Dental Health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Complete oral health involves a patient's teeth, gums, bones, muscles, and ligaments in the
       mouth. Gum disease is one of the most prevalent oral health problems. It has been linked to numerous
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Improve Mouth Health With These Good Habits
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Maintaining oral health is a good way to prevent oral disease. A proper oral care regimen also
       helps patients identify potential problems before they become serious. These practices help improve
@@ -125,7 +125,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Learn More About How Proper Oral Hygiene May Improve Overall Health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A complete health dentist can help you improve your overall wellbeing by identifying problems
       that begin in your mouth. At North County Cosmetic and Implant Dentistry, we enhance the quality
@@ -142,7 +142,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions About Oral Hygiene and Overall Health
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: How do patients find a complete health dentist?
   - _component: building-blocks/core-elements/text

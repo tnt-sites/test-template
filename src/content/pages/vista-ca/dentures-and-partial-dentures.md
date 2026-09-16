@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dentures and Partial Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: You have probably heard about partial and full dentures as treatments for tooth loss. If you
       are now facing this problem and want to do something about your smile, these are great solutions.
@@ -49,7 +49,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dentures Can Help Prevent Further Oral Health Issues
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The purpose of dental care and oral hygiene is to prevent tooth loss as much as possible. However,
       there are cases in which tooth loss is unavoidable. When an infection advances to later stages or
@@ -78,7 +78,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other Benefits
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While dentures and partial dentures may not be for everyone, they can help people experience
       the satisfaction of a full smile and eating favorite foods again. Dentures closely resemble natural
@@ -95,7 +95,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Choosing Dentures for Tooth Replacement
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dentures and partial dentures only represent one of the many options patients can choose from.
   - _component: building-blocks/core-elements/heading
@@ -157,7 +157,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 1. Full Dentures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Most commonly used by seniors, these dentures replace a complete set of teeth. They sit directly
       on top of the gums. Some patients are good candidates for immediate placement. In this instance,
@@ -166,7 +166,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 2. Partial Dentures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: When a patient still has teeth to blend in and anchor with the newly created teeth, the dentist
       may recommend partial dentures. This may require the use of a metal piece to which a pink-colored
@@ -178,7 +178,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 3. Implant-Supported Dentures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: This method blends dental implants with dentures. Instead of anchoring all the teeth in place
       individually, the dentist may add several dental implants that hold the full upper and/or lower
@@ -187,7 +187,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 4. Overdentures or Snap-In Dentures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: When patients prefer to retain the ability to remove dentures, but like the stability of implants,
       they may opt for overdentures. These are handy in instances where a person has no teeth, as the
@@ -205,7 +205,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other Tooth Replacement Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In addition to dentures and partial dentures, patients may want to consider other ways to replace
       missing teeth. When deciding which option to choose, there are a few factors to consider, such as
@@ -235,7 +235,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Helping Dentures Last With Proper Care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dentures can work effectively for up to 10 years. This time frame will depend mainly on the
       person’s commitment and diligence to maintaining the appliance. Just as patients should brush and
@@ -267,7 +267,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Common Misconceptions About Dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we hear a lot of myths about dentures. In some
       cases, people have inaccurate information about this treatment. We make sure every step of the procedure

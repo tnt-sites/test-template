@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Anxiety Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can perform dental work on patients that
       are struggling with dental anxiety . If you avoid the dentist due to fear of what a procedure may
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How can I ease my fears about dental care without medication?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When you visit our dental office, we can discuss ways that you can prevent experiencing anxiety
       while receiving dental care. Give us a call to go over any and all methods for dealing with dental
@@ -88,7 +88,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Dental Anxiety
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Sedation Dentistry Can Reduce Your Dental Anxiety
     level: h3

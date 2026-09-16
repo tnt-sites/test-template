@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: General Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
       health. Your teeth and gums impact the health of the entire body. If you don't take care of them,
@@ -48,7 +48,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Who Benefits From Our General Dentist Services
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We work with patients throughout the Vista area to provide ongoing and preventative oral health
       care. We can treat patients of all ages and focus on ensuring that they are comfortable during every
@@ -73,7 +73,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista, California General Dentist
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: What is General Dentist?
     level: h3

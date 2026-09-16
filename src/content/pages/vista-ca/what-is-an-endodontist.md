@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is an Endodontist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: People may not realize that there are multiple forms of care within the field of dentistry.
       The teeth are more complex than some people realize, with layers of protection, nerves and blood
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The type of issues an endodontist treats
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A professional endodontist is a dentist who completes the extra training to specialize in maintaining
       teeth through procedures that involve the soft tissue of the teeth. The soft tissue of the teeth
@@ -115,7 +115,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While some general dentists offer basic root canal services, they will not have the necessary
       experience or technology to deal with serious cases. Thus, visiting an endodontist is crucial for

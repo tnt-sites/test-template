@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Truth Behind Root Canals Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
       believe that professional dental care will be painful. In reality, most dental visits are not nearly
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Need for a Root Canal Procedure
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The root canal is a crucial procedure for removing infected dental pulp from within a tooth.
       Beneath the outer shell of the tooth, known as the enamel, is the dentin and then the dental pulp.

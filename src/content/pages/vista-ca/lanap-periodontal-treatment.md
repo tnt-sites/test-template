@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: LANAP® Periodontal Treatment Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Periodontal disease, commonly referred to as gum disease, affects nearly 80 percent of the U.S.
       population, yet many fail to see a dentist because of fear related to receiving treatment.
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Patients who choose LANAP® can expect
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

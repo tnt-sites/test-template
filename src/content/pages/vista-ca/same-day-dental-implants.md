@@ -11,7 +11,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Teeth In A Day Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: With our new procedures, you can be eligible for same day dental implants and enjoy a new set
       of permanent teeth in as little as one day.
@@ -37,7 +37,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Are You Frustrated with Traditional Dentures?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: You don’t have to settle for dentures! The revolutionary Teeth in a Day dental implant procedure
       is different than traditional dentures. Dentures are removable and held in place by adhesives and
@@ -48,7 +48,7 @@ pageSections:
     text: 'A fixed bridge, delivered by the Teeth in a Day procedure, is more stable than dentures and
       provides the following benefits:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -81,7 +81,7 @@ pageSections:
     text: Dentist in San Diego, CA offers teeth in a day option for patients seeking immediate dental
       implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we utilize advanced to create a natural-looking
       smile that is custom fit for you. With Teeth in a Day, we use four or more dental implants that
@@ -100,14 +100,14 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Not a Candidate for Traditional Dental Implants?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/infographic.png
     alt: ''
   - _component: building-blocks/core-elements/heading
     text: Do You Have Loose, Broken Down, or Missing Teeth?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Have you been avoiding removing loose or infected teeth because you have been told dentures
       are your only option? The Teeth in a Day dental implant procedure is a viable option for many patients
@@ -143,7 +143,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

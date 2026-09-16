@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Snap In Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Depending upon each patient's needs, we have several tooth replacement options available to
       treat missing teeth. Whether, it is a partial bridge or snap in dentures we will take great care
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Are you tired of loose or ill fitting dentures?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Tooth loss is a very common issue that many people experience. More than 35 million Americans
       do not have any teeth. Of that group, about 15 percent have dentures fabricated each year. While
@@ -97,7 +97,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Kay is thrilled with the result of her implant supported dentures from North Country Dentistry
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -121,7 +121,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

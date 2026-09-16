@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Process for Getting Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: People may find it difficult to hear that they need dentures. After all, losing a few teeth
       can cause enough difficulty. The very notion that one is going to need artificial teeth instead
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The type of issues an endodontist treats
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Resorption and tooth loss
     level: h3
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Dentures Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: To begin the dentures process, we will need to examine the patient and determine the best choice
       from full dentures, partial dentures, or another option. In some cases, if the remaining teeth are

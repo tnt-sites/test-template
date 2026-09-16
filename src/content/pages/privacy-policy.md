@@ -11,7 +11,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: North County Cosmetic and Implant Dentistry Privacy Policy
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Our Privacy Policy was last updated on March 9, 2020. Our Privacy Policy covers any information
       that is collected about you and your activities while visiting our website, how that information
@@ -28,7 +28,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What type of information do we collect?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When you visit our website, we collect any information that you give us. For example, if you
       fill out the contact form, that information will be stored on our website and sent to the appropriate
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Partners that collect information
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: By visiting our website, your information may also be gathered by Google since we use Google
       Analytics to provide us with information about our website and the visitors to it. If you reached
@@ -74,7 +74,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How the information is used
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: By understanding how a viewer came to visit our website and what they did there, we can improve
       the overall user experience of our visitors. By collecting data, we can conduct research and identify
@@ -99,7 +99,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: With whom we share the information
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When we collect information about you, it is generally used for our purposes internally. Consumer
       information is not shared with third parties for marketing purposes. We may share information with
@@ -122,7 +122,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Protecting your information
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We have taken steps to protect your information by restricting the access to your information
       to only select employees that would need it in order to perform their job duties. We also review
@@ -138,7 +138,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you do not want us to contact you or if you do not want to receive our newsletters anymore,
       you can unsubscribe using the link at the bottom of our emails. If you do not want information collected
@@ -182,7 +182,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Changes
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If we update our Privacy Policy, it will be reflected here, on our website with a new effective
       date at the top of the page.
@@ -197,7 +197,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Website
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We make every effort to ensure the accuracy, quality, ease of use, and technology of our website.
       Please do not hesitate to contact us with any creative suggestions or technical issues you might
@@ -213,7 +213,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Messaging Terms & Conditions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: You agree to receive informational messages (appointment reminders, account notifications, etc.)
       from North Country Cosmetic and Implant Dentistry. Message frequency varies. Message and data rates
@@ -230,7 +230,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Consent & Opt-out Instructions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Mobile information will not be shared or sold to third parties/affiliates for marketing/promotional
       purposes. All the above categories exclude text messaging originator opt-in data and consent; this
@@ -248,7 +248,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How to reach us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you have questions about our Privacy Policy or how we collect, store, and share data, you
       can email us using the form on our https://www.ultimatesmiles.com/contact-us/ or call (760) 940-2273.

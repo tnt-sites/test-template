@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Welcome to North County Cosmetic and Implant Dentistry
     level: h4
-    size: md
+    size: sm
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -24,7 +24,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your first visit will be about one hour long.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We will review your health history, take the necessary radiographs to help evaluate your current
       dental health, and perform a comprehensive exam. At the end of this appointment we hope that you
@@ -65,11 +65,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Payment Methods – Check or Cash Accepted
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: 'Downloadable Forms:'
     level: h4
-    size: md
+    size: sm
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -84,7 +84,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: First Visit
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: The team at North County Cosmetic and Implant Dentistry is committed to providing excellent
       dental care in a comfortable environment where patients can relax and feel at ease. Here you will
@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: We are happy to hear from you, answer your questions, and schedule an appointment. Call North
       County Cosmetic and Implant Dentistry at (760) 206-6450 or stop by our office. 1934 Via Centre Ste

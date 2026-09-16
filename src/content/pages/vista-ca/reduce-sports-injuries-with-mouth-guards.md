@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Reduce Sports Injuries With Mouth Guards Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Playing on a sports team is a staple of any childhood from playing little league baseball to
       playing college football. Regardless of the sport, players will benefit from wearing the proper
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Risks of Store-Bought Mouth Guards
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While many parents will invest in a store-bought mouth guard, they may not realize the risk.
       With store-bought mouth guards, the mouth guard will not be a perfect fit for the child's teeth.
@@ -85,7 +85,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Mouth Guard Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The process for a mouth guard is harmless and does not normally take more than two appointments.
       During the first appointment, we will take a mold of the child's mouth and images as well. Next,

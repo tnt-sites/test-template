@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Crowns Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Dental crowns are caps that restore the shape and size of teeth after they have been damaged,
       and offer protection from further damage. Dental crowns are a great option for restoring damaged
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are dental crowns?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A dental crown is a cap that surrounds the tooth. We typically use a crown to restore a damaged
       tooth, but they can also use it to improve the appearance of a smile. A crown can consist of three
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Process
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: When getting dental crowns and dental bridges installed, it is advisable that you work with
       a cosmetic dentist that knows how to complete the procedure in a way that looks natural. At North
@@ -138,7 +138,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: After the Procedure
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When getting dental Restoratives, your teeth will be somewhat sensitive after they have been
       prepared. This is why you need to wear a temporary crown while waiting for a permanent one to be

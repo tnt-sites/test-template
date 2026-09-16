@@ -14,7 +14,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Difference Between Dental Implants and Mini Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Our goal is to provide you with a replacement tooth that is long-lasting, durable, and looks
       natural. Since every patient is unique, the only way to determine which type of implant is right
@@ -60,7 +60,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: It all comes down to size.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A traditional dental implant generally has a diameter of 3 to 6mm. A mini dental implant is
       typically half of the size of a traditional one. There are several reasons why a mini dental implant
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What they are made of.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we place dental implants that are made of titanium.
       In our dental office, we understand how unique and valuable titanium is since it is the only metal

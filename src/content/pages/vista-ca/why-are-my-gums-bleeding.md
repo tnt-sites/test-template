@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why Are My Gums Bleeding Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North
       County Cosmetic and Implant Dentistry we can examine you and determine whether they are bleeding
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Symptoms of Gum Disease that You Should Watch For
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we encourage you to keep an eye on your gum
       health and call us if any of these signs persist for longer than a week –
@@ -137,7 +137,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Q&A
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Why do my gums bleed when I brush my teeth?
     level: h3

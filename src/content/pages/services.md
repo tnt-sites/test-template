@@ -12,16 +12,16 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Something to Smile About
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: North County Cosmetic and Implant Dentisty’s services will help keep your smile bright and your
       entire body healthy.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/heading
     text: Your mouth is the gateway to your body.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preventative and restorative care for your entire family.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Get the smile you’ve always dreamed of.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -74,7 +74,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Enjoy life again with a full mouth of strong, durable teeth.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Take advantage of the latest dental innovations.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -108,7 +108,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: We’ll help you stay relaxed and comfortable.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -125,7 +125,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Accidents happen! We’re always ready to help.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -142,7 +142,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Keep your smile bright and your body healthy.
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -174,7 +174,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dental Care
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Cosmetic dental care involves enhancing the appearance of one’s teeth, which will also benefit
       one’s oral health in the process. We can enhance the brightness, shape, and size of one’s teeth.
@@ -186,7 +186,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Procedures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Our dental procedures involve treating the patient’s oral health in a professional and efficient
       manner. Our dental procedures range from simple cleanings to more serious oral health treatments.
@@ -197,7 +197,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Services
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Our dental services range from the simple checkup to a deep cleaning of the gums. When a patient
       arrives for a checkup, we will examine the teeth and determine if there are any oral health risks.
@@ -208,7 +208,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Helpful Dental Information
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: We offer helpful dental information such as the fact that you need to floss before brushing
       for any real effect. While we use regular dental checkups to clean teeth, we also use them to educate

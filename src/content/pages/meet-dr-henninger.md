@@ -49,7 +49,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Dr. Henninger is a member of:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:

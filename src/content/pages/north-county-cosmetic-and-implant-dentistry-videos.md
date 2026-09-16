@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: North County Cosmetic and Implant Dentistry Videos
     level: h1
-    size: md
+    size: 2xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl

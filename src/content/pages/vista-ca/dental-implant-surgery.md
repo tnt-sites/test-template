@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Implant Surgery Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
       to replace your missing tooth. Even with the improvements of oral health care, the majority of adults
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Dental Implant Surgery: What to Expect From the Actual Procedure'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: On the day you visit our California dental office for surgery, you will be given anesthesia
       so you will not feel anything while we place the implant. The procedure itself can take anywhere

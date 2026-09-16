@@ -11,7 +11,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Clear Aligner Therapy Vista, CA
     level: h1
-    size: md
+    size: 2xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -25,7 +25,7 @@ pageSections:
     text: Clear Aligner Therapy takes a modern approach to straightening teeth, using a custom-made series
       of aligners created for you and only you.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Traditional metal braces have been a reliable way to straighten teeth for many years. Though
       they remain effective, many patients are reluctant to wear them due to the social embarrassment
@@ -49,7 +49,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: A Convenient Alternative to Braces
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why our San Diego Dentists Recommend Clear Aligner Therapy
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Clear Aligner Therapy offers a variety of advantages over metal braces, such as:'
   - _component: building-blocks/core-elements/list
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Clear Aligner Therapy Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: During your complimentary consultation, Dr. Henninger will use our iTero scanner to create a
       highly accurate 3D model of your smile. This data is sent to a laboratory where your aligners will
@@ -112,7 +112,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Does Clear Aligner Therapy hurt?
     level: h3
@@ -159,7 +159,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

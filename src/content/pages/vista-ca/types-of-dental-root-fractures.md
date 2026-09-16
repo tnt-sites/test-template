@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Types of Dental Root Fractures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Contrary to what some people may assume, there are multiple types of fractures for the roots
       of teeth. The part of the teeth that people brush and use to chew food or speak is known as the
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Understanding the Layers of Teeth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Within the tooth, there are layers that people may not be aware of. Underneath the enamel is
       the dentin. The dentin is the second layer of the tooth and contains the dental pulp. The dental
@@ -103,7 +103,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Types of fractures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Oblique supragingival fracture
     level: h3

@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Eliminate Dental Fears with Dental Anesthesia Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we realize that dental fear and anxiety keeps
       thousands of people from getting the dental treatment they need. With dental anesthesia, we can
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Do Not Let Dental Anxiety Get in the Way
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: 'Among the sedation dentistry protocols we use are:'
     level: h3
@@ -50,7 +50,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Local Anesthetic
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: A local anesthetic is a numbing agent that is applied to the soft tissues of your mouth to desensitize
       the area. Local anesthetic is amazingly effective for people without dental anxiety needing routine
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Nitrous Oxide
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: This gas is inhaled through a mask. It leaves you feeling very relaxed, but completely conscious.
       After the procedure has been completed, the gas is stopped. Recovery takes a few minutes and you
@@ -66,7 +66,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Sedation
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: During oral sedation, you will be given a sedative pill upon entering our dental office. When
       the medicine begins to take effect, you will become very calm. You will need someone to drive you
@@ -74,7 +74,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: IV Sedation
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Our team will deliver sedative medication intravenously to relax you almost immediately. With
       IV sedation in San Diego, CA, our team will monitor your vital signs and can adjust the level of
@@ -84,7 +84,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: General Anesthesia
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: On team are several team members who are trained and certified in general anesthesia. General
       anesthesia is typically used for patients with complex medical histories. In this case, a board-certified
@@ -110,7 +110,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Patient Recommendation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Many dental surgeons are qualified to provide dental anesthesia, but dental surgeons don’t provide
       routine restorative dentistry. This leaves many people with extreme dental fears and anxiety without
@@ -128,7 +128,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Best Candidates for Sedation Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Sedation dentistry is safe for most patients, including pediatric and special needs patients.
       Depending on the nature of the procedure or the patient’s comfort level, we may suggest one of the
@@ -171,7 +171,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Choose a Dentist Who Believes in Safety and Certification
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When you need any kind of sedation dentistry, it’s crucial that you trust your dental provider.
       At North County Cosmetic and Implant Dentistry, our team members have been certified in numerous
@@ -196,7 +196,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How Dental Anesthesia Works
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Before your dental treatment, we will review your medical history and evaluate your dental needs.
       We will customize a treatment plan and outline an anesthesia plan so that you’re comfortable for
@@ -215,7 +215,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Askes Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Can I drive myself home after the procedure?
     level: h3
@@ -250,7 +250,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

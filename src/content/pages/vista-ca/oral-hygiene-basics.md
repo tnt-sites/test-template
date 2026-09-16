@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Hygiene Basics Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
       excellent oral health. With a focus on preventative care, we take the time to get to know each of
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How to brush your teeth properly
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As a Vista dentist, we know that how you brush your teeth is just as important as how often
       you brush them. It is important that you use a soft toothbrush that will not irritate your gums
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How to prevent tooth decay
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our team prevents tooth decay every day by helping our patients to have clean and healthy teeth.
       Tooth decay starts when plaque is left on the teeth, and the acid inside of it starts to eat away

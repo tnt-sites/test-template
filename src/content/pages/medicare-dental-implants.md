@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Medicare – Dental implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Financing Your Dental Implants
   maxContentWidth: xl
@@ -26,7 +26,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 1 Doctor. 1 Office. 1 Fee.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our foremost priority at North County Cosmetic and Implant Dentistry is your oral health. This
       philosophy is reflected in our office, our process, and the results our patients achieve. And to
@@ -41,11 +41,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Our Dental Implant Payment and Financing Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Medicare-Certified Provider
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/MEDICARE-CARD-LOGO.jpg
     alt: ''
@@ -65,7 +65,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Medically Necessary Conditions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The only way you can be certain if you qualify for Medicare coverage for dental implants is
       to have a consultation with Dr. Henninger. But generally, if you have a condition that requires
@@ -81,7 +81,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: CareCredit and LendingClub
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We work with CareCredit and Lending Club. These programs allow you to make flexible monthly
       payments towards the dental treatment you need. Patients who qualify may also be eligible for interest-free
@@ -91,14 +91,14 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Bank Financing
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our office also works with BBVA Compass, which offers healthcare financing. We can put you in
       touch with a BBVA representative who can walk you through your application.
   - _component: building-blocks/core-elements/heading
     text: Dental Insurance
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We accept any dental insurance that allows you to choose your own provider (PPO). We also will
       file claims for you at no additional charge. If you bring your insurance with you at the time of
@@ -115,7 +115,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions About Paying for Dental Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: How Much do dental implants cost?
   - _component: building-blocks/core-elements/text
@@ -165,7 +165,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

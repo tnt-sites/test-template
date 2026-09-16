@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Transform Your Smile. Transform Your Life.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Dental implants in San Diego, CA.
   - _component: building-blocks/core-elements/heading
@@ -30,7 +30,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: A New YOU is Waiting
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: No matter your dental challenges, you deserve to be the best version of yourself. We’ll help
       you restore your smile with beautiful dental implants, regain your health, and empower you to live
@@ -46,14 +46,14 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Real Relationships. Real Results.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/YourNeeds.png
     alt: ''
   - _component: building-blocks/core-elements/heading
     text: Your Needs First
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Don’t let anyone tell you that your needs are impossible or too complex. We’re committed to
       our relationship with you and won’t stop until you achieve your goals.
@@ -63,7 +63,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Advanced Care
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Using cutting edge technology, we’ll help you regain the smile that you’ve missed. From IV Sedation
       to 3D imagery, you’ll enjoy safe, comfortable, lasting results.
@@ -73,7 +73,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Accessible Financing
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Your health is too important to forgo. We work with you to create a financial plan that works
       for you. We even bill Medicare for medically necessary care.
@@ -88,7 +88,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Eat. Smile. Laugh. Work. Participate. Live.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: It’s all possible with dental implants in San Diego from North County Cosmetic and Implant Dentistry.
   - _component: building-blocks/core-elements/image
@@ -97,25 +97,25 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Here''s how we do it:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: 1.) Tell us your story.
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: No one is a lost cause. Tell us about your past experiences, your medical challenges, and your
       hopes for the future. We’re here to listen and help.
   - _component: building-blocks/core-elements/heading
     text: 2.) Make a plan.
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Our expert doctors will work with you to create a treatment plan that will address your unique
       implant needs, no matter how complex, all under one roof.
   - _component: building-blocks/core-elements/heading
     text: 3.) Love your life.
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: We’ll walk with you through every step of your care so you can not just feel better physically,
       but regain the confidence and health you need to enjoy life again.
@@ -144,7 +144,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Committed to Your Better, Healthier Life
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we know that you’ve had to give up a lot because
       of challenges with your teeth. Maybe you’ve dreamt of a life where you don’t have to hide your smile,
@@ -154,7 +154,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: We see you.
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: You deserve to be treated compassionately by a dental team that sees you as a person and will
       support you every step of the way in your journey to health. Here at NCCID, you’re a person first
@@ -186,7 +186,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: No More Dentures! with San Diego dentist, Christopher Henninger, DMD.
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -198,14 +198,14 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why Choose Dental Implants?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Learn what implants could do for your smile and your health with our free ebook: The Art, Science,
       and Beauty of Dental Implants'
   - _component: building-blocks/core-elements/heading
     text: 'Inside you’ll learn:'
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:

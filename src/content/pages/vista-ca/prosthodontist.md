@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Prosthodontist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
       a prosthodontist and why patients should visit one. There are specialties in dentistry just like
@@ -61,7 +61,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is a Prosthodontist?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A Prosthodontist is a licensed dentist who has received additional training to specialize in
       the branch of dentistry that focuses on restoring and maintaining the functionality of the mouth,
@@ -95,7 +95,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Oral Prosthetics Doctor
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: What types of procedures does a Prosthodontist perform?
     level: h3

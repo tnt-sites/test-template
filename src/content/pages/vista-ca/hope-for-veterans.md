@@ -14,7 +14,7 @@ pageSections:
     text: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
       Veterans Stand Down.
     level: h1
-    size: md
+    size: 2xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -36,7 +36,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Committed to Changing Lives
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As veterans and families of veterans ourselves at North County Cosmetic and Implant Dentistry,
       we are so grateful for the sacrifices that veterans have made in the service of our country. So
@@ -67,7 +67,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Free Dental Care For Veterans In Need
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As part of the North County Stand Down, the team at NCCID donates an entire day of work to participating
       veterans. Participants in the Stand Down simply sign up for an appointment while at Green Oak Ranch,
@@ -79,7 +79,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: We’re Vets Ourselves
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: After graduating from dental school, Dr. Henninger completed a one-year residency at Naval Hospital
       Camp Pendleton, and then served as the only dentist on the USS Boxer in the U.S. Navy, where he
@@ -95,7 +95,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Who qualifies for the North County Veterans Stand Down?
   - _component: building-blocks/core-elements/text

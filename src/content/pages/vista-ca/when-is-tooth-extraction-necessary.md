@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: When Is a Tooth Extraction Necessary Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
       This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: You were in an accident.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We can treat patients who have gotten into an accident and need to have immediate dental work
       completed. In some cases, dental damage is only part of the problem and immediate solutions are
@@ -90,7 +90,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The cost to restore the tooth is too great.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We accept most insurance plans and can also discuss various payment options with you. However,
       we also realize that sometimes restorative dental work can be cost prohibitive. This is not an inexpensive
@@ -124,7 +124,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Extraction Process
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While the first question we hear is, "When is a tooth extraction necessary?", the second is
       always about the process. We understand that our patients are often intimidated by the prospect
@@ -163,7 +163,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Recovery Process After a Tooth Extraction
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we warn patients that they will be sore for
       several days and that they will experience some swelling. This is perfectly natural and can be controlled

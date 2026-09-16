@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Reviews
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: On this page, you can read some of the reviews our patients have left in the past. We thrive
       on feedback from our patients, and encourage you to share your experience with us, at any stage
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: If you had a great experience, please leave us a review.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/Stars.png
     alt: stars

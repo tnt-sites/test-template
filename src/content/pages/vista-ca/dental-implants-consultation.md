@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Questions to Ask at Your Dental Implants Consultation Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
       to tooth loss that can restore both the appearance and function of our patients' smiles. If you
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What type of experience do you have to make the process go smoothly?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Whenever you visit a dentist for a major restorative procedure, you should ask about their experience
       both educationally and clinically. It is important to work with a dentist that performs the implant
@@ -78,7 +78,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are the requirements to qualify for a dental implants procedure?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we place dental implants in patients for a variety
       of reasons. One of the key, qualifying factors is health. If you have any other oral health problems,

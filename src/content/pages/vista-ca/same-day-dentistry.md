@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Same Day Dentistry Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for solutions to any esthetic challenges with your smile or any oral health
       problems, call our office for same day dentistry . We are conveniently located in Vista, and you
@@ -57,7 +57,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Same Day Dentistry and Teeth Whitening
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are looking to see a rapid improvement to the appearance of your teeth, we recommend
       that you schedule a teeth whitening procedure. This same day dentistry solution can whiten your
@@ -90,7 +90,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Same Day Dentistry and Dental Crowns
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you have significantly damaged your tooth, you may likely need a dental crown to restore
       its appearance and to strengthen it. It is critical that you visit our dental office as soon as

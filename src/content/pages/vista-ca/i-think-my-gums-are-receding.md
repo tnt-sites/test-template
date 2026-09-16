@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: I Think My Gums Are Receding Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
       just as much as we do on their teeth. We understand the critical nature of the gums and the role
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why are gums receding from my teeth?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There can be several reasons for this, and some of them may have to do with lifestyle. For example,
       it is important to brush your teeth at least twice a day and floss once a day. However, if you use
@@ -123,7 +123,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How do you prevent gum recession?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The best way to prevent gum recession is to visit our dental office for a teeth cleaning twice
       per year. We can remove the plaque and tartar that has built up over time in order to give your

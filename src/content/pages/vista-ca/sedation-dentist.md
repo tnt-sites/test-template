@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Sedation Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you need to have dental work completed, we recommend visiting a sedation dentist. At North
       County Cosmetic and Implant Dentistry, we offer sedation dentistry for patients living in and around
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What You Need to Know About Sedation Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When you schedule an appointment with us, let us know if you have dental anxiety so that we
       can prepare for your visit accordingly. For many people, the actual procedure is not uncomfortable
@@ -66,7 +66,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Types of Sedation Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are various levels and types of sedation. During your consultation, we will discuss the
       recommended procedure with you along with any anxieties you may have. At that time, a recommendation
@@ -117,7 +117,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Getting Started
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you live in the Vista area and are interested in visiting a sedation dentist, call (760)
       940-2273 to schedule your appointment. At North County Cosmetic and Implant Dentistry, we will take

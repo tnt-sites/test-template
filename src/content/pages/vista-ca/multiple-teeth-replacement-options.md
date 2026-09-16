@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Multiple Teeth Replacement Options Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: I Need Multiple Teeth Replaced, What Are My Options? At North County Cosmetic and Implant Dentistry,
       we can replace your missing teeth in our Vista, CA dental office. As a general dentist, our goal
@@ -45,7 +45,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Schedule a Consultation
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'The sooner you call (760) 940-2273 and schedule a consultation, the better. We can examine
       you, take X-rays, and make recommendations regarding which procedure is likely to work the best
@@ -124,7 +124,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Consider Your Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Knowing that there are several ways to replace missing teeth, you can select the procedure you
       feel will best serve your immediate and long-term needs. Our goal is to inform and educate you so

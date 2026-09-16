@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Get Back to Your Life with Dental Implants
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: From single tooth replacements to an entire arch of teeth, North County Cosmetic and Implant
       Dentistry is here to help with cutting edge technology and customized treatment plans so you can
@@ -28,7 +28,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Become the better, healthier version of yourself
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When you’re dealing with missing or broken teeth, it’s easy to get frustrated. Maybe other doctors
       have told you your case is too complicated. Maybe you’ve been embarrassed about your smile. Maybe
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Complex Case? We got you!
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Armed with extensive experience gained in hospitals, the military, and specialized training--even
       for complex cases--we have the tools and training to help you restore your smile. So even if other
@@ -57,7 +57,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: No More Dentures! with San Diego dentist Christopher Henninger, DMD
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -69,7 +69,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are Dental Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dental implants are a permanent replacement option for lost, extracted, or broken teeth. They
       are custom-fit to blend with the rest of your natural teeth, restoring functionality and esthetics
@@ -87,7 +87,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Types of Dental Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are a variety of implant solutions. We’ll help you navigate your choices and choose the
       right implant for your unique needs.
@@ -97,7 +97,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Single Tooth Replacement
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Using a titanium “root” and a porcelain crown, we can help you fill in the gap created by a
       single missing tooth, and love your smile again.
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Teeth in a Day
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Enjoy a full set of teeth in as little as one day! Different from traditional dentures, this
       fixed bridge is a great solution if you want to avoid dentures.
@@ -117,7 +117,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Snap in Dentures
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Among the other options available, Snap on Dentures operate in a similar way as a bonded denture
       with the added stability of snapping on to a pair of dental implants.
@@ -127,7 +127,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: All-on-4
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Get a full set of teeth without having to undergo multiple surgeries. Even better, we can typically
       complete it in our office in one appointment!
@@ -142,7 +142,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The benefits of Dental Implants
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'We’ve already talked about how dental implants can renew the aesthetics of your smile, but
       they offer an array of other benefits as well. The advantages of dental implants include:'
@@ -174,11 +174,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: What is the lifespan of a Dental Implant?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: While the lifespan of a dental implant is greater than any other tooth-replacement option, its
       longevity mostly depends on how you care for it. Dental implants are immune to disease and infection,
@@ -188,7 +188,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is the cost of a Dental Implant?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: No two dental implant treatments are exactly alike, so the number of appointments, procedures,
       and costs of dental implants will vary from patient to patient. With that said, the cost of dental
@@ -197,7 +197,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is the best way to care for a Dental Implant after surgery?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: The easiest way to avoid infection and dental implant failure is to keep your mouth clean. This
       means cleaning your smile thoroughly after each meal, beginning the day after your procedure. At
@@ -215,7 +215,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Get the Smile that you Deserve
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dental implants are the gold standard treatment for restoring missing or broken teeth. For more
       information about the process, please give us a call at 760-940-2273. Alternatively, you can fill
@@ -231,7 +231,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

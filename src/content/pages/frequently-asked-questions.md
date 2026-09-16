@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: HOW OFTEN SHOULD I HAVE A PROFESSIONAL CLEANING?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: We recommend scheduling a professional teeth cleaning every six months, or twice a year. This
       will help prevent any plaque or bacteria from building up and keep your teeth healthy and happy.
@@ -30,7 +30,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: HOW OFTEN SHOULD I UPDATE MY DENTAL X-RAYS?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: It’s important for patients to update their X-rays at least once a year, depending on individual
       circumstances. This will allow us to review your oral health and determine if signs of gum or bone
@@ -47,7 +47,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: MY TEETH ARE CROOKED AND CROWDED. IS THERE A FASTER WAY THAN BRACES TO MAKE THEM MORE ATTRACTIVE?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: If you have crooked or crowded teeth, Dr. Henninger can transform your smile with several cosmetic
       services, such as dental crowns, bridges, porcelain veneers, tooth bonding, and more. These solutions
@@ -66,7 +66,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: IF I’M MISSING A TOOTH, DO I REALLY NEED TO REPLACE IT?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: It’s crucial to replace a missing tooth to restore its function and prevent oral health complications.
       The affected area can cause adjacent or parallel teeth to slant, shift or over-erupt. If untreated,
@@ -86,7 +86,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: ARE DENTAL IMPLANTS SAFE?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Yes, the entire dental implant process is completely safe. In fact, dental implants have a 98
       percent success rate and are the only restorative treatment that stimulates healthy jaw bone growth.
@@ -101,7 +101,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: CAN DENTAL IMPLANTS BE REMOVED?
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: Typically, dental implants can be safely removed in cases of implant failure, and if the implant
       hasn’t been fully integrated with the bone. If this occurs, implant removal may cause severe bone

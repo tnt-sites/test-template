@@ -67,7 +67,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cultural Videos
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: WELCOME TO NORTH COUNTY COSMETIC AND IMPLANT DENTISTRY IN VISTA, CA
   - _component: building-blocks/core-elements/text
@@ -112,7 +112,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other Videos
     level: h4
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: DR. HENNINGER SHARES CEREC SAME-DAY CROWNS IN OCEANSIDE, CA
   - _component: building-blocks/core-elements/text

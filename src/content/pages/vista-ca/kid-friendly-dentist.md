@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Kid Friendly Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: A kid friendly dentist creates a healthy and comfortable professional environment, providing
       the age-appropriate dental treatment a child needs for healthy teeth. North County Cosmetic and
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What You Should Know
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As a parent, you naturally want what is best for your child. Many parents are unaware of how
       oral health and dental care plays into that. According to the Center for Disease Control, tooth
@@ -112,7 +112,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Prevention
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As a kid friendly dentist office in Vista, we are focused on preventative care. It is far better
       for your child to visit us for a regular teeth cleaning than to only see us with a toothache. Fortunately,

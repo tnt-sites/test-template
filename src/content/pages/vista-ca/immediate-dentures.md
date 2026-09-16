@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Immediate Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: During the transition process for adjusting to dentures, there are a few functions that dentures
       will impact. The first is chewing. Immediately following the denture process, patients will have
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dentures without the wait
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While some teeth may fall out naturally with age, there are cases in which we need to remove
       the rest of the teeth before placing full dentures. In fact, many people find it easier to replace
@@ -97,7 +97,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Q&A
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: How long will the procedure take?
     level: h3

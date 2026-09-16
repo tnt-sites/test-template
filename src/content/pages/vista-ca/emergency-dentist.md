@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Emergency Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: An emergency dentist can provide urgent professional dental care for issues such as infection,
       damaged teeth, knocked out teeth and more. Emergency dental care is a standard service offered at
@@ -96,7 +96,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Do I need emergency dentistry? Call us if…
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -131,7 +131,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Reasons for Needing an Emergency Dental Visit
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The American Dental Association reported that the number one cause of adult tooth damage every
       year is playing sports. This spans all types of athletics and creates the need for emergency appointments
@@ -188,7 +188,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When a tooth has fallen out… If your tooth has been knocked out, try to find it. Once located,
       rinse the tooth under warm water without scrubbing it. Next, place it in a cup of milk and bring

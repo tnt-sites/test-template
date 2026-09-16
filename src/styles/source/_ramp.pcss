@@ -1,18 +1,22 @@
-/* mig:generated v=0.1.0 gen=wpmig-extract hash=077fc299b2adf138 */
-/* Neutral ramp retinted to the source site's own hue. Overrides
-   variables/_colors.pcss by source order, without editing it. */
+/*
+ * Neutral ramp, very slightly warmed toward the site's gold accent.
+ *
+ * `wpmig dev-extract` wrote every step of this ramp as #000000 — it collapsed
+ * the whole scale to black, which flattens borders, muted text and surfaces
+ * across the site. These values restore a real ramp.
+ */
 :where(:root) {
-  --gray-0: #000000;
-  --gray-1: #000000;
-  --gray-2: #000000;
-  --gray-3: #000000;
-  --gray-4: #000000;
-  --gray-5: #000000;
-  --gray-6: #000000;
-  --gray-7: #000000;
-  --gray-8: #000000;
-  --gray-9: #000000;
-  --gray-10: #000000;
-  --gray-11: #000000;
+  --gray-0: #ffffff;
+  --gray-1: #f4f2ef;
+  --gray-2: #e6e3de;
+  --gray-3: #d2cec7;
+  --gray-4: #b8b3ab;
+  --gray-5: #9c968d;
+  --gray-6: #837d74;
+  --gray-7: #6b655d;
+  --gray-8: #555049;
+  --gray-9: #403c36;
+  --gray-10: #2b2824;
+  --gray-11: #171512;
   --gray-12: #000000;
 }

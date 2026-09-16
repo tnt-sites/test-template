@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Periodontics Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Millions of Americans suffer from periodontal disease. At North County Cosmetic and Implant
       Dentistry, we treat patients throughout the Vista area that are struggling with this condition and
@@ -51,7 +51,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are the signs of gum disease?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: You may have gum disease if your gums are red, swollen or bleeding. It is natural for this to
       happen from time to time after eating something that irritates your gums or brushing too aggressively.
@@ -138,7 +138,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How to Keep Your Gums Healthy
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: You can prevent periodontitis by taking simple steps that include brushing your teeth after
       meals, flossing on a daily basis and rinsing your mouth with an antiseptic mouthwash once a day.

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Cosmetics Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Visit North County Cosmetic and Implant Dentistry for dental cosmetics. We provide comprehensive
       dental care for patients throughout the Vista area and we can help you to remain in excellent oral
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why You Should Consider Dental Cosmetics
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you do not like the appearance of your smile, you do not have to live with it. While many
       people long for a beautiful, white and symmetrical smile, few realize just how easy it is to get
@@ -94,7 +94,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Cosmetics for Teeth Replacement
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry offers several solutions for replacing missing teeth
       – all of them natural looking. Whether you have lost one or several teeth due to decay, age, infection

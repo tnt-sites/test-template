@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What Do I Do If I Damage My Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you have dentures, it is important to handle them with care so they can remain in as good
       a condition as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Where do I start?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If your dentures are damaged, visit our dental office so we can examine them and determine the
       best way to fix them. One thing you should keep in mind is that your dentures will need to be adjusted
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Home Care Tips
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'You should never try to fix your dentures on your own since this can cause the damage to spread.
       However, there are certain things you can do at home before heading to the dentist, including:'
@@ -83,7 +83,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Warning: Do Not Do This If You Damage Your Dentures'
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry warns patients to avoid doing the following, since
       this can permanently damage dentures and reduce the likelihood that they can be repaired.
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Alternatives to Dentures From a Cosmetic Dentist in Vista, CA
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'As a cosmetic dentistry office, we can provide you with alternatives to dentures if you are
       interested in a more permanent and convenient solution. This includes:'

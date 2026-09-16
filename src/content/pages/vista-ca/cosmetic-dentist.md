@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dentist Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
       the Vista area. We make it possible for our patients to have the beautiful smile they desire using
@@ -100,7 +100,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Understanding Your Desire to Change Your Smile
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We take the time to get to know each patient and the goals that the patient has for his or her
       smile. This process often involves correcting a problem with how a particular tooth, or teeth, appear.
@@ -129,7 +129,7 @@ pageSections:
     text: 'According to the American Association of Cosmetic Dentistry, the top cosmetic dental treatments
       are:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -156,7 +156,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Truth About Cosmetic Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Some people hear the word cosmetic and assume that we only treat people that are looking to
       create a Hollywood smile. The cosmetic field of dentistry involves much more than creating a stunning
@@ -181,7 +181,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista, California Cosmetic Dentist
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We can make restorations that appear so natural, no one can tell that there are artificial teeth
       in the patient's smile. This can be a lifesaver for people that want to live an active lifestyle

@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Smile Makeover Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: A smile makeover involves multiple reconstructive and professional dental procedures to restore
       and enhance various aspects of the patient's teeth and mouth. Smile makeovers are a commonly offered
@@ -68,7 +68,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What procedures are used in a typical smile makeover?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are many cosmetic dentistry procedures that we can use including teeth whitening, dental
       veneers, dental crowns, and dental implants, among others.
@@ -123,7 +123,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Crowns
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When teeth are more severely damaged or broken, a dental crown is often a better solution for
       transforming its appearance and functionality. A crown can be made in an all-ceramic or all-porcelain

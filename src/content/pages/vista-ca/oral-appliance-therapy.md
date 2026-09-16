@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Appliance Therapy Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: For patients who want a comfortable and convenient form of treatment for sleep apnea, oral appliances
       offer many benefits. While CPAP therapy tends to be more common, it’s bulky and noisy and isn’t
@@ -41,7 +41,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your Path to a Quality Sleep Begins with Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/narval.png
     alt: ''
@@ -73,7 +73,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Our Approach to Oral Appliances
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: With oral appliances, patients will experience a whole new level of comfort. They’re an ideal
       and affordable treatment for patients with Obstructive Sleep Apnea (OSA). At our practice, we completely
@@ -90,7 +90,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why Choose an Oral Appliance?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Oral appliances are a discreet, quiet , and comfortable way to keep your airway open and treat
       sleep apnea. Resembling a dental retainer, an oral appliance can easily be used without causing
@@ -111,7 +111,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Does oral appliance therapy work?
   - _component: building-blocks/core-elements/text

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Root Scaling and Planing Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you have gum disease, you may need a root scaling and planing procedure to help get rid of
       it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
@@ -60,7 +60,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is periodontal scaling and root planing?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In this procedure, the plaque and tartar underneath the gum tissue is removed. This can be done
       using a metal dental tool, ultrasound energy, and lasers. A dentist will break up the plaque and
@@ -155,7 +155,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Will I need follow-up procedures?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Typically, you will need to return to your Vista dentist within six months for a follow-up visit.
       This is to ensure that your gum health has improved. However, the only real follow-up procedure

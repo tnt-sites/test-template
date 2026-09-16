@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Root Canal Treatment Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Root canal treatment involves removing the infected dental pulp of a tooth, cleaning the tooth
       and placing a filling to prevent further infection. Root canals are a service offered at North County
@@ -62,7 +62,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why do most people need a root canal?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When a tooth becomes infected, that infection can spread into the center of the tooth. This
       area is called the dental pulp. Inside of the dental pulp is the nerves, connective tissue, and
@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista, California Root Canal Treatment
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Why should I have a root canal endodontics treatment?
     level: h3
@@ -117,7 +117,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What about discomfort?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We work to help patients to feel comfortable during their root canal endodontics procedure by
       using sedation dentistry. We have a variety of ways that we can eliminate both discomfort and anxiety

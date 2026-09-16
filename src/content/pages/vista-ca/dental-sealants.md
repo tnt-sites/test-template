@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Sealants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect teeth
       and prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are dental sealants?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dental sealants are an incredibly thin plastic coating that we brush onto the chewing surfaces
       of your molars or back teeth. We do so to prevent tooth decay.

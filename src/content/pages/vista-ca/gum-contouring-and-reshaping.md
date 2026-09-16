@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What Is Gum Contouring & Reshaping Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with
       the appearance or shape of their gums. While most people think of things like teeth whitening when
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is gum contouring?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Gum contouring is a cosmetic procedure that can change the shape of your gums. A dentist can
       use this procedure to cut away excessive gum tissue that is giving you a "gummy" smile or to restore
@@ -127,7 +127,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Will insurance pay for it?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: That really depends on your insurance company and whether you are getting the procedure to restore
       gums ravaged by gum disease or if you are having it done to simply remove a gummy smile and improve

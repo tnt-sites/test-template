@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Composite Fillings Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method
       for tooth decay. If you live in Vista, CA or surrounding area and are looking for a natural-looking
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Benefits of Getting a Tooth-Colored Filling
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We can place a composite resin filling fairly quickly. This is an affordable and durable restoration
       that will look similar to a regular tooth. We make sure to complete the procedure in a way that
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Silver vs. Tooth-Colored Filling: What You Should Know'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Tooth-colored fillings are safer for your health since they consist of resin or a plastic material.
       Silver fillings are typically not silver, but a metal alloy that includes several materials with

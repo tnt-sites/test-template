@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Gum Grafting Treat receding gums and improve your oral health.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you have gum recession due to periodontitis, brushing habits, or even genetics, the dentists
       at North County Cosmetic and Implant Dentistry can help.
@@ -37,11 +37,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Protect your teeth, gums, and bone.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: 'Gum recession is very common and can happen for many reasons:'
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/text
     text: 'Gum disease:'
   - _component: building-blocks/core-elements/text
@@ -74,7 +74,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is gum grafting?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Gum grafting replaces the lost tissue near your teeth with other healthy tissue--either from
       your own mouth or from a licensed bone and tissue bank.
@@ -87,7 +87,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Your gum grafting experts in Vista, CA
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Dr. Christopher Henninger and Dr. Craig Huenergardt have extensive experience with gum grafting
       surgeries and can help return your mouth to optimal health. Call (760) 940-2273 today to learn more.
@@ -102,7 +102,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Frequently Asked Questions
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Why should I consider gum grafting?
   - _component: building-blocks/core-elements/text
@@ -145,7 +145,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

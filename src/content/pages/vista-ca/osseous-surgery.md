@@ -14,7 +14,7 @@ pageSections:
     text: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
       to severe gum disease.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you’ve been diagnosed with moderate to severe peridontitis (gum disease), it’s likely that
       you have hard deposits of bacteria underneath your gums, where brushing and flossing can’t reach.
@@ -41,7 +41,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are dental pockets and why do they need to be reduced?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: When bacteria sits on your teeth and doesn’t get removed by brushing, flossing, or regular dental
       cleanings, it can harden into plaque and tartar not just on the surface of your teeth, but underneath
@@ -62,7 +62,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is osseous surgery?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Also called pocket reduction surgery, osseous surgery helps your dentist to remove hardened
       bacteria from below your gums. Your gums are folded back to expose the roots, and your dentist will
@@ -82,7 +82,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How effective is osseous surgery?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Osseous surgery is very effective at removing bacteria and plaque and reducing dental pockets.
       With the right oral hygiene after the surgery, you can get back on track with your oral health.
@@ -91,7 +91,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Gum disease maintenance includes:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -114,7 +114,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Get Started
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

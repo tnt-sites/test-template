@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Oral Surgery Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are in need of oral surgery, call (760) 940-2273 to schedule an appointment with our
       Vista, CA dental office. At North County Cosmetic and Implant Dentistry, we can provide you with
@@ -58,7 +58,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why do people get oral surgery?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are three main reasons that a surgical procedure could be necessary. The first is your
       health. Tooth decay is incredibly common, and if you receive regular dental care, it is easy to
@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Is oral surgery used with orthodontics?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes, when an orthodontist straightens teeth, one of the issues they address is overcrowding.
       There are certain procedures that can create space in the mouth, and one of them is to extract teeth.

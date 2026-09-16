@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Welcome to North County Cosmetic and Implant Dentistry
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Whether you’re struggling with complex dental issues or are looking for a warm and friendly
       place for you and your family, we know that finding a dentist that actually gets to know you feels

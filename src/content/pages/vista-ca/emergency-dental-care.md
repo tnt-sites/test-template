@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Emergency Dental Care Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps
       to restore a tooth that sustains damage from an accident or infection. If you live in Vista or the
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Call North County Cosmetic and Implant Dentistry for Emergency Dental Care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you live in Vista, CA or the surrounding area, call 760-940-2273 if you have any type of
       dental emergency. We will work to get you treated right away so that your discomfort can be relieved,
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why we provide emergency dental care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We provide emergency dental care to ensure that patients can get the help they need right away.
       If you leave a damaged or infected tooth alone, you will risk the infection spreading.
@@ -119,7 +119,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Toothaches.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: With emergency dental care, we see a lot of California patients that are suffering from a major
       toothache. This is a top reason that people seek out care right away instead of waiting for Monday

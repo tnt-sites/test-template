@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Partial Denture for One Missing Tooth Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are missing a tooth, don't resign yourself to the situation. There is a solution available
       in the form of a partial denture. Partial dentures will likely become the standard tooth replacement
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How many visits does it require?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Replacing a single tooth with a partial denture will likely require a minimum of two visits
       with one or two weeks between each visit. The initial visit is to create the impression. The next
@@ -117,7 +117,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Is any preparatory work necessary?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes. The dentist must prepare the remaining teeth with grooves and dimples before the patient
       receives the partial denture. These grooves and dimples, also known as rest seats, allow the metal

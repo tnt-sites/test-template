@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Center Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you live in Vista or the surrounding area, we invite you to schedule an appointment with
       our dental center . We can treat everyone in your family and ensure that you are in excellent oral
@@ -44,7 +44,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Selecting a New Dental Center
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We invite you to call (760) 940-2273 and schedule an appointment with our dental center. If
       you are currently in search of a dentist, you can be confident that visiting our office will give
@@ -82,7 +82,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Some examples of the procedures we perform:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Dental restorations
     level: h3

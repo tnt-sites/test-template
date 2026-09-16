@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Denture Relining Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Even though we customize dentures to each individual patient, there is a high probability that
       the dentures will not fit as well a few months into wearing them as they do on the first day since
@@ -50,7 +50,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Always Make Sure the Dentures Fit Your Teeth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: During the process known as resorption, the body leaches calcium from the jawbone that no longer
       has teeth stimulating it. The body then distributes the calcium to other areas of the body. While
@@ -76,7 +76,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Soft reline
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A soft reline involves the use of a liquid polymer that we layer into the denture to create
       depth and a cushion. This "cushion" will tend to be more comfortable than a hard reline and is a

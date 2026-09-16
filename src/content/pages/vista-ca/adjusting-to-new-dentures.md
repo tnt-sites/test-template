@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Adjusting to New Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Adjusting to new dentures can be difficult, no matter if the patient is getting partial or full
       dentures. There are several reasons why adjusting to dentures can take time, but it will be worth
@@ -41,7 +41,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Necessary Changes to a Dental Hygiene Routine
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Losing permanent adult teeth can be a problem that occurs with age and poor dental hygiene.
       Poor dental hygiene seems to accelerate the process of infection spreading and teeth falling out.
@@ -60,7 +60,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Different types of dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: There are multiple types of dentures for a patient to choose. Depending on the current state
       of the patient's oral health, we may recommend a specific type of dentures for the patient. We will
@@ -88,7 +88,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Benefits of Dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Full functionality with a natural appearance
     level: h3

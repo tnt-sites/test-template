@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Sleep Apnea Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Sleep apnea is a common disorder affecting millions of people that impacts their quality of
       sleep and life. During sleep, the muscles in the throat relax, which narrows the airway and impedes
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Signs & Symptoms of Sleep Apnea
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Understanding the symptoms of sleep apnea can help get you the right treatment so you can live
       a better life. The most common way to diagnose sleep apnea is to undergo a sleep study, including
@@ -81,7 +81,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Health Risks of Sleep Apnea
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Sleep apnea is typically more prevalent in older adults and men, however, there are kids, young
       adults, and women who suffer from it as well. Without treatment, this sleep disorder can be detrimental
@@ -115,7 +115,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Treating Sleep Apnea with Dr. Henninger
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The most common treatment option for obstructive sleep apnea is a CPAP mask. The CPAP mask is
       attached to a machine that pumps pressurized air through your throat to keep your airway open. Many
@@ -132,7 +132,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Sleep Apnea Treatments
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you have diagnosed patients with mild to moderate Obstructive Sleep Apnea, but they are struggling
       with CPAP compliance, we offer a variety of oral treatments that are safe and effective.
@@ -149,7 +149,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: FAQs About Sleep Apnea
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: What is Sleep Apnea?
   - _component: building-blocks/core-elements/text
@@ -213,7 +213,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

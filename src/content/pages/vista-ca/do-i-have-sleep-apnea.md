@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Do I Have Sleep Apnea Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you feel as though you have no energy and are too tired to keep up with your friends and
       family, you should visit our dental office to talk about sleep apnea. This may be what is causing
@@ -124,7 +124,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are the two main types of sleep apnea?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:

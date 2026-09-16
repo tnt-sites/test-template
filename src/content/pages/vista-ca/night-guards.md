@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Night Guards Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Do you wake up with headaches, or teeth or jaw pain? If so, you should visit our Vista, CA dental
       office for an examination. You may be in need of night guard. We can provide you with one designed
@@ -53,7 +53,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What are night guards?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: These small pieces of plastic are designed to fit securely around your teeth. They are actually
       quite small and can fit in the palm of your hand. Typically, they are made of clear plastic, so
@@ -83,7 +83,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why do most people wear a night guard?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'The exact reason you need one will be determined during your dental exam. Typically, they are
       worn to:'

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Post-Op Care for Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
       post-op care for dental implants. This is the most durable and natural-looking way to replace your
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What happens before the implant procedure?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Prior to getting started, we will conduct an examination to determine if you have cavities or
       infections in any of your other teeth or if you have gum disease. If so, these things will need
@@ -107,7 +107,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Do I need to do anything to treat the site of the surgery or my gums in general?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We will provide you with gauze before you leave our Vista, CA dental office. It is natural to
       experience some bleeding. Before you leave, we will ensure that any bleeding is at a manageable

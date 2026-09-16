@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dental Services Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we offer cosmetic dental services in Vista.
       Patients can benefit from having a single procedure or having a full smile makeover. We understand
@@ -41,7 +41,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Schedule a Cosmetic Dental Procedure Today
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you live in Vista, CA, we invite you to call (760) 940-2273 and schedule a consultation to
       speak with Dr. Henninger. During your appointment, we will examine your teeth and discuss the goals
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Enhance Your Smile the Way You Want
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Once you are ready for a cosmetic procedure, we will have you come in for your scheduled appointment
       time. We typically recommend starting with a teeth whitening procedure. This can be important because

@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Find the Best Dentist in Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for the best dentist in Vista to treat you and your family, we invite you
       to schedule an exam with our dental office by calling (760) 940-2273. At North County Cosmetic and
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Read Reviews
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: We recommend conducting a search for the best dentist in Vista. If you are interested in a particular
       service or need them to treat a specific age group, add those keywords to your search; keywords
@@ -124,7 +124,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Research
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Another way to find the best dentist in Vista is to conduct research. Similar to when you were
       looking for reviews, conduct a search for the "best dentist in Vista" for the service that you are

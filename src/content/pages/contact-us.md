@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: North County Cosmetic and Implant Dentistry Location & Contact Information
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Our office offers a full array of dental services to help you create a satisfying smile. For
       any business or financial matters, you can reach North County Cosmetic and Implant Dentistry at

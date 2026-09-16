@@ -14,7 +14,7 @@ pageSections:
     text: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
       complex patients receive essential oral care.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Partner with North County Cosmetic and Implant Dentistry referral program to refer your patients
       to a dentist with the experience, certifications, and technology to treat the effects that disease
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The care your patients need to move forward.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Your patients may be struggling with their oral health for a variety of reasons. Whether it’s
       special needs patients who have aged out of children’s hospitals and need sedation for routine dental
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dr. Henninger is one of only 5% of dentists in the country with IV sedation credentials.
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Here to help serve your patients.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'Our practice is uniquely equipped to help people with complex cases, particularly stemming
       from medical conditions. A few of the services we offer include:'
@@ -121,7 +121,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss How to Refer Your Patients
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

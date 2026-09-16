@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Implant Supported Dentures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
       dentures to give them a dependable and durable alternative to dentures, dental bridges, and traditional
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The Benefits of Implant Supported Dentures
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for a durable and comfortable way to replace missing teeth, you should consider
       this solution. Implant supported dentures make it easier to eat your favorite meals and engage in
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'The Process of Getting Implant Supported Dentures: The Procedure'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Before we can begin the actual procedure, we will need to examine your gums to ensure you do
       not have any gum disease that needs to be addressed. If you do, we will treat it first. Next, we

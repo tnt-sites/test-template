@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Practice Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: When you visit our dental practice in Vista, we will spend time getting to know you and learning
       about any health concerns you have. By conducting an examination and taking X-rays, we can determine
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Visit a dental practice in Vista to reduce your risk of getting gum disease
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While most people think professional teeth cleanings are only to prevent cavities, they also
       serve another important purpose in preventing gum disease. Adult tooth loss is incredibly common,
@@ -113,7 +113,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Visit a dental practice in Vista to have your restorations inspected
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In our Vista, CA dental office, we can inspect your restorations to ensure they are holding
       up. Dental fillings, for example, are not designed to last forever. They can become worn down over

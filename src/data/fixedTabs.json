@@ -11,32 +11,24 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+1-760-940-2273",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call",
+      "textStrong": " (760) 940-2273"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
       "textAfter": "Map"
     },
     {
-      "itemClass": "fr",
-      "enabled": true,
-      "href": "for-patients.html#forms",
-      "icon": "document-arrow-down",
-      "textMobile": "Download ",
-      "textStrong": "Forms "
-    },
-    {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/ultimatesmiles4161",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +37,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/North+County+Cosmetic+and+Implant+Dentistry/@33.183882,-117.282445,15z",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",
@@ -53,57 +45,21 @@
     },
     {
       "itemClass": "ig",
-      "enabled": false,
-      "href": "https://www.instagram.com/",
+      "enabled": true,
+      "href": "https://www.instagram.com/northcountydentistry",
       "target": "_blank",
       "icon": "social/instagram",
       "textMobile": "Follow ",
       "textStrong": "Instagram"
     },
     {
-      "itemClass": "tw",
-      "enabled": false,
-      "href": "https://x.com/",
-      "target": "_blank",
-      "icon": "social/x",
-      "textMobile": "Follow ",
-      "textStrong": "Twitter"
-    },
-    {
-      "itemClass": "tt",
-      "enabled": false,
-      "href": "https://www.tiktok.com/",
-      "target": "_blank",
-      "icon": "social/tiktok",
-      "textMobile": "Follow ",
-      "textStrong": "TikTok"
-    },
-    {
       "itemClass": "yp",
-      "enabled": false,
-      "href": "https://www.yelp.com/",
+      "enabled": true,
+      "href": "https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2",
       "target": "_blank",
       "icon": "social/yelp",
       "textMobile": "Read ",
       "textStrong": "Yelp Reviews"
-    },
-    {
-      "itemClass": "bs",
-      "enabled": false,
-      "href": "https://bsky.app/",
-      "target": "_blank",
-      "icon": "social/bluesky",
-      "textMobile": "Follow ",
-      "textStrong": "Bluesky"
-    },
-    {
-      "itemClass": "yt",
-      "enabled": false,
-      "href": "https://www.youtube.com/",
-      "target": "_blank",
-      "icon": "social/youtube",
-      "textMobile": "Watch ",
-      "textStrong": "YouTube"
     }
   ]
 }

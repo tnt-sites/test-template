@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Veneers and Dental Laminates Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: A dental veneer is a porcelain shell that dental professionals can customize to enhance the
       size, shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at North
@@ -52,7 +52,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is a Dental Veneer?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: A veneer is a thin shell that is made out of porcelain or ceramic. The shade of the veneer,
       along with its shape and size will be made to match your surrounding teeth so that it blends in
@@ -132,7 +132,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista, California Dental Laminates
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: The Downside
     level: h3

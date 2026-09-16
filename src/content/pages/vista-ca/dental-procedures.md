@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Procedures Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Our dental procedures can keep you and your family in excellent oral health, restore damaged
       teeth and transform your smile into something truly beautiful. At North County Cosmetic and Implant
@@ -43,7 +43,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Available Options for Dental Care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In the past, there were not as many options for treating or restoring teeth. Fortunately, technology
       has revolutionized dentistry, and there are now a variety of options for treating all types of oral

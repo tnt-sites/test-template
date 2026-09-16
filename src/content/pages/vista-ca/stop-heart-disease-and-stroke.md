@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Stop Heart Disease and Stroke Improving your cardiovascular health starts with your mouth.
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Your risk for cardiovascular disease isn’t just about your age or health history. Dangerous
       bacteria from your mouth can actually contribute to the buildup of blot clots in your arteries and
@@ -39,7 +39,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: We’re trained in the BaleDoneen Method
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: The BaleDoneen Method focuses on prevention--helping you screen and treat atherosclerosis (the
       thickening or hardening of arteries due to plaque) before it leads to a major health event like
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: See how prevention can protect your heart and brain
     level: h2
-    size: md
+    size: xl
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Arterial health starts in your mouth
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Though bacteria in your mouth may seem harmless, it’s anything but. Not only can it eat through
       gum and bone, it can escape through tiny holes in your gums straight into your bloodstream. There,
@@ -85,7 +85,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Other gum disease treatments we may use include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -112,7 +112,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

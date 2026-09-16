@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Am I a Candidate for Dental Implants Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call
       (760) 940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Am I a candidate for dental implants if I have crowded teeth?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes, you are. However, you may need to wear an orthodontic solution to create space for the
       implant first. It is unwise to attempt to place an implant when there is not sufficient space. Placing
@@ -104,7 +104,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Are implants the right solution for missing teeth?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Absolutely. Dental implants were designed to replace missing teeth. Whether you have lost one
       or several teeth due to age, infection, decay, or damage, we can replace them with durable dental

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 7 Things Parents Need to Know About Clear Aligner Therapy Teen Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we can understand why teen patients prefer Clear
       Aligner Therapy to other products. As a parent, we encourage you to explore this option so that
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Here are seven things you should know about Clear Aligner Therapy prior to visiting our office.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'While minor issues such as plaque buildup or even a minor chip in the tooth may only need the
       services of a general dentist, there are many other issues that require specialist services. An

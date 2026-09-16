@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Does Clear Aligner Therapy Really Work Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we are regularly asked about Clear Aligner Therapy
       and how effective it is at straightening teeth. This is an understandable question, because the
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Does Clear Aligner Therapy Require Special Care?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While removable, you must be careful to keep them in place for as long as possible in order
       to keep your treatment schedule on track. They need to come out while you eat, so they do not become
@@ -75,7 +75,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Does Clear Aligner Therapy really work for adults?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes, Clear Aligner Therapy was created for adult teeth. While braces are traditionally associated
       with children, the process of using clear aligners is better suited for adult teeth. This is because
@@ -124,7 +124,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Does Clear Aligner Therapy really work for people who want to straighten teeth discreetly?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Yes, at North County Cosmetic and Implant Dentistry, we can supply you with clear aligners that
       are nearly invisible. They are made of a clear plastic that is durable, yet translucent. Few people

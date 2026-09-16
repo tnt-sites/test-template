@@ -12,11 +12,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Sitemap for North County Cosmetic and Implant Dentistry in Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dental Services
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -55,7 +55,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Services
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -100,7 +100,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Procedures
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -141,7 +141,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Branded Dental Products
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -174,7 +174,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Focus
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -205,7 +205,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Helpful Dental Information
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -292,7 +292,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: General Information
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -325,7 +325,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Still Can't Find?
     level: h5
-    size: md
+    size: sm
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Cosmetic Dental Care Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
       throughout the Vista area. If you are looking for a local dentist that can transform your smile
@@ -56,7 +56,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Here are a few such solutions that we may discuss during your consultation.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Dental Crowns
     level: h3

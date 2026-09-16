@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Do I Need a Root Canal Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, patients ask, "my tooth hurts, do I need a root
       canal?" Toothaches can be terribly inconvenient. They make it difficult to eat, speak, or even function.
@@ -87,7 +87,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Other Factors You Need to Consider
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: However, there are many times where a root canal is the right treatment option, so to answer
       the question, "my tooth hurts, do I need a root canal?" we must also look at the surrounding circumstances.
@@ -121,7 +121,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: When to Call Our Emergency Dentist Office
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If you have any of these symptoms, you should call our emergency dentist office at 760-940-2273
       and schedule an appointment to be seen right away.

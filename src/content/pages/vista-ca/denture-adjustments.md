@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Denture Adjustments and Repairs Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: While we customize dentures to fit the patient‘s jaw and not cause irritation, the jaw may change
       shape over time. Resorption is the process in which the body leaches calcium from the bone structure
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Keep Up Proper Denture Care
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: In other cases, people will break or damage a pair of dentures due to improper care or eating
       hard foods immediately after receiving dentures. Most dentures also require patients to remove them
@@ -93,7 +93,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Call us to schedule an appointment today
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Thanks to the proper training and experience, our team can ensure that patients continue to
       wear dentures that fit correctly and comfortably. Even though patients with full dentures will not

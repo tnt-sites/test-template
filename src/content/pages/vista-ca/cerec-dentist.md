@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Single Visit Dental Crowns Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Permanent, perfect restorations in a single-visit. Schedule an appointment, you'll only need
       one.
@@ -29,7 +29,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: WHAT IS CEREC®?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: CEREC ® is a new state-of-the-art method for fabricating dental restorations in just one visit.
       CEREC® uses computer-assisted design (CAD) and computer-aided manufacturing (CAM) to offer single-day
@@ -45,11 +45,11 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: CEREC DIGITAL TECHNOLOGY ALLOWS RESTORATIONS
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: THE CEREC® PROCESS
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: CEREC® uses CAD-CAM technology to design and mill custom restorations during one visit to the
       dentist. So how does this process work?
@@ -59,7 +59,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: EXAM AND PREPARATION
     level: h6
-    size: md
+    size: xs
   - _component: building-blocks/core-elements/text
     text: Before you get started, Dr. Henninger or Dr. Huenergardt will determine if CEREC® is right for
       you. Depending on how much healthy tooth structure you have remaining, it may be a simple filling
@@ -71,7 +71,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: DIGITAL IMPRESSION
     level: h6
-    size: md
+    size: xs
   - _component: building-blocks/core-elements/text
     text: In order to make the desired restoration, a 3-dimensional image of the tooth that needs to be
       restored must be created from a digital camera scan of the tooth. This three-dimensional image will
@@ -84,7 +84,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: MILLING UNIT
     level: h6
-    size: md
+    size: xs
   - _component: building-blocks/core-elements/text
     text: This device is used to used to create the custom restoration needed for the tooth. Based on
       the original color of your tooth, the dentist is able to select the correct colored ceramic block
@@ -95,7 +95,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: PLACING THE RESTORATION
     level: h6
-    size: md
+    size: xs
   - _component: building-blocks/core-elements/text
     text: After the restoration is made, it is ready to be tried on to ensure that you get proper fit
       and bite. When it is ready, the restoration is polished and bonded into place by your dentist. Therefore,
@@ -111,7 +111,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Lorem
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: 'CEREC® has revolutionized the restorative process. It was created with the patient in mind
       in order to make a visit to the dentist as pain-free as possible. Some of the benefits to using

@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Cleaning Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
       to patients throughout Vista. We believe that preventative care is essential for staying in good
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Cleanings and Examinations for Children
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Our team works with patients of various ages and knows how to help children to feel comfortable
       while visiting the dentist. Families throughout California visit our dentist office to for their
@@ -73,7 +73,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Vista Dental Cleaning and Examinations
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Adults
     level: h3

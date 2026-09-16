@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: The North County Cosmetic and Implant Dentistry Membership Club
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: The easy way to pay for your preventative dental care.
   - _component: building-blocks/core-elements/text
@@ -40,7 +40,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Paying for your preventative care has never been easier.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Forget about yearly maximums or complicated reimbursement applications. Our in-house membership
       club cuts out the middleman so you can get the care you need without the hassle.
@@ -62,7 +62,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Choose the Plan That’s Right For You
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/image
     source: /src/assets/images/wp/Adult-Membership-Annual.png
     alt: ''
@@ -83,7 +83,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Don’t Wait to Get the Dental Care You Need
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Your health is important to us--that’s why we don’t want you to put off getting the treatment
       that you need for your mouth (and entire body) to stay healthy. That’s why we created our in-house
@@ -92,7 +92,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'All of our membership club plans include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -121,7 +121,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us to Discuss Your Treatment Options
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081.
   - _component: building-blocks/core-elements/text

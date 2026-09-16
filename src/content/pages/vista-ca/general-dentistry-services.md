@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: General Dentistry Services Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
       with our Vista dental office. We focus on providing preventative dental care, performing a variety
@@ -46,7 +46,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Our general dentistry services include:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Teeth cleanings and examinations.
     level: h3
@@ -149,7 +149,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Preventative Care Tips From Our General Dentistry Office
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As a provider of general dentistry services, we understand the power and importance of education.
       We believe that when our patients are better informed, they can make healthier decisions that will

@@ -1,0 +1,293 @@
+/*
+ * Source-site design layer — ultimatesmiles.com
+ *
+ * Everything here is measured off the source render at 1440px (see
+ * tools/wp-import and wp-migrator/measure.mjs), not invented. It maps the
+ * source's type scale, colours and component styling onto the starter's
+ * existing tokens so the starter's components keep working.
+ *
+ * Measured reference values:
+ *   body      Source Sans Pro 15px/22.5 #000
+ *   h1        Raleway 45px/49.5 weight 400
+ *   h2        Raleway 37.5px/41.25 weight 300, UPPERCASE
+ *   h3        Raleway 24px/26.4 weight 500
+ *   nav link  Source Sans Pro 13px, 15px side padding, 64px line
+ *   dropdown  bg #ba9764, white 13px/22 links, 14px/16px padding
+ *   button    #ba9764 bg, white, Montserrat 15px/500, radius 30px, 0.5px tracking
+ *   footer    72px top padding, Raleway 19.5px/500 headings, 16px/300 links
+ */
+
+:where(:root) {
+  /* The source sets headings in Raleway and body copy in Source Sans. */
+  --font-body: "Source Sans 3", "Source Sans Pro", sans-serif;
+  --font-headings: Raleway, sans-serif;
+  --font-accent: Montserrat, sans-serif;
+
+  /* Source runs a lighter heading weight than the starter's 700. */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 600;
+
+  /* Body copy is 15-16px, not the starter's 16px/1.6. */
+  --font-size-md: 1rem;
+  --line-height-normal: 1.5;
+
+  /* Heading ramp, from the measured sizes. */
+  --font-size-heading-xs: 1.125rem; /* 18px */
+  --font-size-heading-sm: 1.219rem; /* 19.5px — footer headings */
+  --font-size-heading-md: 1.5rem; /* 24px  — h3 */
+  --font-size-heading-lg: 1.75rem; /* 28px */
+  --font-size-heading-xl: 2.344rem; /* 37.5px — h2 */
+  --font-size-heading-2xl: 2.813rem; /* 45px   — h1 */
+  --font-size-heading-3xl: 3.5rem;
+
+  /* Brand palette. */
+  --color-brand: #79a37b;
+  --color-brand-secondary: #ba9764;
+  --color-accent: #ba9764;
+}
+
+@layer base {
+  body {
+    color: var(--color-text);
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+  }
+
+  /* The source's headings are noticeably lighter and looser than the
+     starter's. h2 is uppercase site-wide. */
+  :where(:root) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-headings);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      font-weight: 400;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-weight: 300;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-weight: 500;
+      line-height: 1.1;
+    }
+
+    h4,
+    h5 {
+      font-weight: 500;
+    }
+  }
+
+  a {
+    color: var(--color-link);
+  }
+}
+
+@layer components {
+  /* Buttons are gold pills with Montserrat caps. */
+  .button,
+  .btn,
+  a.button {
+    background-color: var(--color-brand-secondary);
+    border-radius: 30px;
+    color: #fff;
+    font-family: var(--font-accent);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-inline: 30px;
+    text-transform: capitalize;
+  }
+
+  .button:hover,
+  .btn:hover {
+    background-color: #a8854f;
+    color: #fff;
+  }
+}
+
+@layer overrides {
+  /*
+   * Header. The source renders the logo at 143x85 in a 114px-tall band: a
+   * 50px top strip (address + gold CTA pills) over a 64px nav row. The
+   * starter caps the logo at 1.8em, which shrinks it to a smudge.
+   */
+  .main-nav > .outer-content .hd-content > a > .image img,
+  .main-nav .main-nav-logo img {
+    height: auto !important;
+    max-height: 85px;
+    max-width: 200px;
+    width: auto !important;
+  }
+
+  .main-nav {
+    --chrome-nav-link-size: 13px;
+  }
+
+  /*
+   * The starter sizes the header's button slot for a single search icon
+   * (flex: 0 0 30px), so the source's two text CTAs overflow the viewport.
+   * Let the group size to its content and wrap onto the address row.
+   */
+  .main-nav > .outer-content .hd-content .nav-end > .desktop-button-group.button-group {
+    flex: 0 0 auto !important;
+  }
+
+  .main-nav > .outer-content .hd-content .nav-end {
+    flex-wrap: wrap;
+  }
+
+  .main-nav .button-group {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  /*
+   * The source's header is a 50px top strip (address + CTA pills, inline)
+   * over a 64px nav row. The starter stacks .hd-info, .hd-btns and .hd-nav
+   * as three separate rows, so pull the first two onto one line.
+   */
+  @media (min-width: 1025px) {
+    /*
+     * Source header: logo on the left, and to its right a 50px strip holding
+     * the address and the gold CTA pills, with the nav row beneath. The
+     * starter stacks .hd-info / .hd-btns / .hd-nav as three separate rows.
+     */
+    .main-nav .hd-content {
+      align-items: flex-start;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: var(--spacing-lg);
+    }
+
+    .main-nav .hd-content > .logo-link {
+      flex: 0 0 auto;
+    }
+
+    /* Address + CTAs share the top strip. */
+    .main-nav .hd-info {
+      align-items: center;
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: flex-end;
+      order: 1;
+    }
+
+    .main-nav .hd-btns {
+      margin-top: 0;
+      order: 2;
+    }
+
+    .main-nav .hd-nav {
+      order: 3;
+      width: 100%;
+    }
+
+    .main-nav .hd-nav .nav-end {
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    /* The starter sets .hd-right to flex-column at a higher specificity
+       (> .outer-content .hd-content .hd-right), so match it here. */
+    .main-nav > .outer-content .hd-content .hd-right {
+      display: grid;
+      flex: 1 1 auto;
+      margin-right: 0;
+      grid-template-areas:
+        "info btns"
+        "nav  nav";
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+
+    .main-nav .hd-info {
+      grid-area: info;
+    }
+
+    .main-nav .hd-btns {
+      grid-area: btns;
+    }
+
+    .main-nav .hd-nav {
+      grid-area: nav;
+    }
+
+    .main-nav .hd-info .phy {
+      display: inline;
+      font-size: 15px;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .main-nav .hd-info .pho {
+      font-size: 15px;
+    }
+  }
+
+  /* Header CTAs are compact gold pills, not full-size buttons. */
+  .main-nav .button-group .button {
+    font-size: 0.875rem;
+    padding-block: 0.5rem;
+    padding-inline: 20px;
+    white-space: nowrap;
+  }
+
+  /* Nav links are 13px with 15px of side padding on a 64px line. */
+  .main-nav .nav-link,
+  .main-nav a.nav-link {
+    font-size: 13px;
+    padding-inline: 15px;
+  }
+
+  /* The dropdown panel is a solid gold sheet with white 13px links. */
+  .main-nav .dropdown-content,
+  .main-nav [class*="dropdown"] > ul {
+    background-color: var(--chrome-dropdown-bg, #ba9764);
+  }
+
+  .main-nav .dropdown-content a {
+    color: var(--chrome-dropdown-item-color, #fff);
+    font-size: var(--chrome-dropdown-item-size, 13px);
+    font-weight: var(--chrome-dropdown-item-weight, 500);
+    padding: 14px 16px;
+  }
+
+  /* Footer: 72px top padding, Raleway headings, light 16px links. */
+  footer {
+    padding-top: var(--chrome-footer-pad-block, 72px);
+  }
+
+  footer h1,
+  footer h2,
+  footer h3,
+  footer h4,
+  footer h5 {
+    font-family: var(--chrome-footer-column-font, Raleway, sans-serif);
+    font-size: var(--font-size-heading-sm);
+    font-weight: 500;
+    text-transform: none;
+  }
+
+  footer a {
+    font-size: var(--chrome-footer-link-size, 16px);
+    font-weight: var(--chrome-footer-link-weight, 300);
+  }
+
+  footer .footer-logo img,
+  footer img[alt*="North County"] {
+    max-width: var(--chrome-footer-logo-width, 300px);
+  }
+}

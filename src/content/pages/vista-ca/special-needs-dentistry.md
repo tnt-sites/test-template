@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Special Needs Dentistry Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: Patients with complex medical histories are often referred to our office because of the state-of-the-art
       equipment and the specialized care that is required for their needs.
@@ -27,7 +27,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'Common Conditions that may require a dentist for special needs children and adults:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -68,7 +68,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Our San Diego Dentist offers Sedation Dentistry for patients with dental anxiety & special needs.
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/heading
     text: Dr. Henninger provides healthy patients and medically compromised patients with the highest
       quality dental care in order to give everyone a healthy and beautiful smile.
@@ -88,7 +88,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: 'We offer a full range of sedation options, including:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -126,7 +126,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Contact Us
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista, CA 92081
   - _component: building-blocks/core-elements/text

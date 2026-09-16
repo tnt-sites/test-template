@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Restorative Dentistry Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding
       how essential your teeth are to the overall health of your mouth, jawbone, and body, we seek to
@@ -57,7 +57,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Restorative Dentistry for Kids
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: While most adults are familiar with restorative dentistry, these solutions are also available
       for kids. If you have an elementary-age child or teenager, remember that their permanent teeth are
@@ -77,7 +77,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Restorative Dentistry for Seniors
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we treat seniors throughout the Vista area.
       We have found that many seniors assume that they will experience tooth loss and don't attempt restorations
@@ -149,7 +149,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Natural Looking Restorative Dentistry
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: At North County Cosmetic and Implant Dentistry, we practice natural looking restorative dentistry.
       Whether you have a tooth that is damaged or infected we can restore it using a variety of tooth-colored

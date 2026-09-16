@@ -13,7 +13,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Dental Implant Restoration Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an
       appointment with our Vista, CA dental office. It is critical that we examine your dental implant
@@ -42,7 +42,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How common are dental implant problems?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: They are actually very rare. At North County Cosmetic and Implant Dentistry one of the reasons
       that we recommend dental implants is due to their high success rate. Depending on the dentist you
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Why do dental implants become loose?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: If your implant has become loose, it may be due to the fact that osseointegration never took
       place. Osseointegration is the process where the titanium implant fuses with the actual jawbone.
@@ -69,7 +69,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What do I do if my dental implant has become loose?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: Call us right away. The implant will not tighten on its own, nor will the problem correct itself.
       If you attempt to self-diagnose and treat, you can end up damaging your bone.

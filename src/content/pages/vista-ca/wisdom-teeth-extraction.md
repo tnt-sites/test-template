@@ -12,7 +12,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Wisdom Teeth Extraction Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: You may need a wisdom teeth extraction at some point in your life. It is rare for a person to
       have enough room for all of their wisdom teeth, and as a result, they tend to grow in impacted.
@@ -54,7 +54,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: What is an extraction?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: This is a dental procedure where your wisdom teeth are removed. How they are removed will be
       based on their current location and whether or not they are impacted.
@@ -130,7 +130,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: How to prevent an infection after removal?
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/text
     text: As a dentist, we are always concerned about infections post-surgery. Whether you have a wisdom
       teeth extraction or need to have another tooth removed, there is always the risk that the area will

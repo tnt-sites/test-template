@@ -11,7 +11,7 @@ pageSections:
   - _component: building-blocks/core-elements/heading
     text: Our Process Vista, CA
     level: h1
-    size: md
+    size: 2xl
   - _component: building-blocks/core-elements/text
     text: In many cases, successful dental implant procedures require greater preparation. At North County
       Cosmetic and Implant Dentistry, patient comfort, patient safety, and successful outcomes are what
