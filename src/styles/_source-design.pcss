@@ -404,6 +404,10 @@
   main .cws-side ul {
     list-style: none;
     margin: 10px 0;
+    /* The starter sets overflow:hidden here (it needs it for its absolutely
+       positioned ::before glyph). With list-style-position:outside that clips
+       the real marker, so the bullets vanish entirely. */
+    overflow: visible;
     padding-left: 0;
   }
 
@@ -415,8 +419,10 @@
   main .cws-main ul li,
   main .cws-side ul li {
     display: list-item;
+    list-style-position: outside;
     list-style-type: square;
     margin: 0 0 6px 18px;
+    overflow: visible;
     padding-left: 0;
   }
 
