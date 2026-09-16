@@ -7,6 +7,26 @@
       "link": "https://www.facebook.com/ultimatesmiles4161"
     },
     {
+      "label": "Twitter",
+      "icon": "social/x",
+      "link": "https://twitter.com/NorthImplant"
+    },
+    {
+      "label": "Pinterest",
+      "icon": "social/pinterest",
+      "link": "https://www.pinterest.com/ultimatesmiles4161"
+    },
+    {
+      "label": "YouTube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UCZiD620fT3jr_UKQjk0ZExA"
+    },
+    {
+      "label": "Yelp",
+      "icon": "social/yelp",
+      "link": "https://www.yelp.com/biz/north-county-cosmetic-and-implant-dentistry-vista-2"
+    },
+    {
       "label": "Instagram",
       "icon": "social/instagram",
       "link": "https://www.instagram.com/northcountydentistry"
@@ -17,7 +37,9 @@
       "name": "North County Cosmetic and Implant Dentistry",
       "addresses": [
         {
-          "lines": ["1934 Via Centre Ste A"],
+          "lines": [
+            "1934 Via Centre Ste A"
+          ],
           "city": "Vista",
           "state": "CA",
           "postalCode": "92081",
@@ -74,8 +96,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

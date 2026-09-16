@@ -191,6 +191,14 @@ const htmlAttributes = Object.fromEntries(
 </CustomSection>
 
 <style lang="pcss" is:global>
+  /* `.custom-section p` sets font-weight:300 from @layer overrides, which
+     outranks page-sections — the source renders this lead line bold. */
+  @layer overrides {
+    .services-grid .services-grid-lead {
+      font-weight: 700;
+    }
+  }
+
   @layer page-sections {
     .services-grid {
       position: relative;
@@ -221,7 +229,6 @@ const htmlAttributes = Object.fromEntries(
     }
 
     .services-grid .services-grid-lead {
-      font-weight: 700;
       margin: 24px 0 0;
     }
 

@@ -322,7 +322,7 @@ const formatOfficeHours = (source: any) => {
                   iconName={social.icon}
                   link={social.link}
                   hideText="true"
-                  aria-label={`Visit our ${social.icon} page`}
+                  aria-label={`Visit our ${social.label || social.icon} page`}
                   target="_blank"
                   rel="noopener noreferrer"
                 />
