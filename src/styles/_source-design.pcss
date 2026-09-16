@@ -733,6 +733,21 @@
     margin-block: 30px;
   }
 
+  /*
+   * The first block sits flush with the top of the column, as on the source,
+   * where the 30px margin collapses out. Here it cannot collapse because
+   * CloudCannon wraps each section in <editable-array-item>, so the content
+   * column would start 30px below the sidebar.
+   */
+  main .cws-main > editable-array > editable-array-item:first-child > .custom-section,
+  main .cws-main > editable-array > editable-array-item:first-child > .page-banner,
+  main .cws-main > editable-array > editable-array-item:first-child > .before-after-gallery,
+  main .cws-main > editable-array > editable-array-item:first-child > .info-card-grid,
+  main .cws-main > .custom-section:first-child,
+  main .cws-side > editable-array > editable-array-item:first-child > .custom-section {
+    margin-top: 0;
+  }
+
   main .cws-main .callout-bubble {
     margin-block: 40px;
   }
