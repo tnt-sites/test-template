@@ -6,31 +6,19 @@ seo:
   description: Supporting North County Veterans Stand Down, North County Cosmetic and Implant Dentistry
     offers dental care for veterans at a special event in Vista, CA
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
-    Veterans Stand Down.
-  subtext: ''
+- _component: page-sections/heroes/page-banner
+  heading: Hope For Veterans
+  location: North County Cosmetic and Implant Dentistry is proud to sponsor North County Veterans Stand
+    Down.
+  intro: ''
   imageSource: /src/assets/images/wp/IMG_6467.jpg
-  imageAlt: Hope For Veterans North County Cosmetic and Implant Dentistry is proud to sponsor North County
-    Veterans Stand Down.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Hope For Veterans
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Committed to Changing Lives
   contentSections:
@@ -67,11 +55,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: Are you a veteran or know a veteran in need? Sign up for this year’s Stand Down at https://ncstanddown.org/
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Free Dental Care For Veterans In Need
   contentSections:
@@ -163,11 +152,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

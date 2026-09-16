@@ -7,32 +7,21 @@ seo:
   description: Using a cosmetic dentist is paramount to getting a healthy, gorgeous smile. Learn about
     cosmetic dentist procedures and how they can enhance your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Cosmetic Dentist Vista, CA
-  subtext: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
+- _component: page-sections/heroes/page-banner
+  heading: Cosmetic Dentist
+  location: Vista, CA
+  intro: North County Cosmetic and Implant Dentistry offers cosmetic dental services for patients throughout
     the Vista area. We make it possible for our patients to have the beautiful smile they desire using
     a variety of modern dental techniques. We are committed to high-quality patient care, working to ensure
     that patients are comfortable during their procedures and delighted with the results.
   imageSource: /src/assets/images/wp/cosmetic-dentist.jpg
-  imageAlt: Cosmetic Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Cosmetic Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -97,11 +86,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: A new study shows that a great smile can make you 20% more attractive and people with beautiful
         smiles make, on average, 12% more money each year.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The Truth About Cosmetic Dentistry
     contentSections:
@@ -199,63 +189,63 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our cosmetic dentistry services on Yelp: Cosmetic
         Dentist Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: The second most common disease in the United States is cavities. The first is the common cold.
         Ask us about esthetic filling options.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: Tetracycline (antibiotic) staining, excessive fluoride and old fillings are just a few reasons
         why teeth appear dark.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Vista Cosmetic Dental FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Vista Cosmetic Dental FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I don't like my teeth or my smile – what can I do?](#q-i-don-t-like-my-teeth-or-my-smile-what-can-i-do)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How much does it cost to get a great smile?](#q-how-much-does-it-cost-to-get-a-great-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I have dental insurance. Will it pay for my new smile?](#q-i-have-dental-insurance-will-it-pay-for-my-new-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What are some benefits of cosmetic dentistry?](#q-what-are-some-benefits-of-cosmetic-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How many office visits will it take to fix my teeth and improve my smile?](#q-how-many-office-visits-will-it-take-to-fix-my-teeth-and-im)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What will my new smile look like?](#q-what-will-my-new-smile-look-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Is my new smile permanent?](#q-is-my-new-smile-permanent)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Vista Cosmetic Dental FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I don't like my teeth or my smile – what can I do?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How much does it cost to get a great smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I have dental insurance. Will it pay for my new smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What are some benefits of cosmetic dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How many office visits will it take to fix my teeth and improve my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What will my new smile look like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Is my new smile permanent?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -272,33 +262,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the most common cosmetic dental treatment services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can cosmetic dentistry help improve the functionality of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can cosmetic dentistry help with my dental care?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if I need dental restorations?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I need cosmetic dental work?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I damaged my teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](#can-cosmetic-dentistry-help-improve-the-functionality-of-my-)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can cosmetic dentistry help with my dental care?](#can-cosmetic-dentistry-help-with-my-dental-care)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if I need dental restorations?](#how-do-i-know-if-i-need-dental-restorations)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I need cosmetic dental work?](#what-can-i-do-if-i-need-cosmetic-dental-work)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I damaged my teeth?](#what-can-i-do-if-i-damaged-my-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -419,6 +407,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -466,11 +459,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Cosmetic Dentist
+  backToTopHref: '#cosmetic-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants
+    url: /vista-ca/dental-implants/
+  - name: Professional Whitening
+    url: /vista-ca/professional-teeth-whitening/
 ---

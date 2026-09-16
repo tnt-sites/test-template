@@ -6,34 +6,23 @@ seo:
   description: Explore options for replacing missing teeth at North County Cosmetic and Implant Dentistry
     in Vista, CA. Learn about dental implants, dentures, and more.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Options for Replacing Missing Teeth Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
+- _component: page-sections/heroes/page-banner
+  heading: Options for Replacing Missing Teeth
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we have several options for replacing missing
     teeth. If you have a tooth that has been knocked out in an accident or was removed due to decay, we
     can perform a procedure to replace it so you can regain the full functionality and appearance of your
     smile. If you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule an appointment
     with our dental office. After examining you, we will make a recommendation as to which procedure is
     likely to provide the best results for your appearance and lifestyle goals.
   imageSource: /src/assets/images/wp/options-for-replacing-missing-teeth.jpg
-  imageAlt: Options for Replacing Missing Teeth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Options for Replacing Missing Teeth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -101,11 +90,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental restoration services on Yelp: Options for
         Replacing Missing Teeth Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Options for Replacing Missing Teeth
     contentSections:
@@ -144,33 +134,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the most durable tooth replacement?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will my age determine my options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to eat my favorite foods after receiving dental implants?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the most durable tooth replacement?](#what-is-the-most-durable-tooth-replacement)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will my age determine my options?](#will-my-age-determine-my-options)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -330,6 +318,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -359,11 +352,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Options for Replacing Missing Teeth
+  backToTopHref: '#options-for-replacing-missing-teeth'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants
+    url: /vista-ca/dental-implants/
+  - name: Dentures
+    url: /vista-ca/dentures-and-partial-dentures/
 ---

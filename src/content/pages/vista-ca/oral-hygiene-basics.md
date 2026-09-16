@@ -6,11 +6,10 @@ seo:
   description: Learn essential oral hygiene tips from North County Cosmetic and Implant Dentistry in Vista,
     CA to keep your teeth and gums healthy.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Oral Hygiene Basics Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
+- _component: page-sections/heroes/page-banner
+  heading: Oral Hygiene Basics
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we help patients throughout Vista to stay in
     excellent oral health. With a focus on preventative care, we take the time to get to know each of
     our patients, creating a plan for lifelong oral health. With only one set of permanent adult teeth,
     it is important to care for them and be proactive in taking the steps to prevent cavities, infections,
@@ -19,23 +18,13 @@ pageSections:
     appointment, call (760) 940-2273. In the meantime, here are steps that you can take at home to keep
     your mouth healthy.
   imageSource: /src/assets/images/wp/oral-hygiene-basics.jpg
-  imageAlt: Oral Hygiene Basics Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Oral Hygiene Basics
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -96,11 +85,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral hygiene support services on Yelp: Oral Hygiene
         Basics Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: How to prevent tooth decay
     contentSections:
@@ -161,33 +151,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is flossing really important for my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prevent tooth decay?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the best toothbrush for my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some methods for improving my oral health?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to improve my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What dental services can help treat an infection?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is flossing really important for my teeth?](#is-flossing-really-important-for-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the best toothbrush for my teeth?](#what-is-the-best-toothbrush-for-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some methods for improving my oral health?](#what-are-some-methods-for-improving-my-oral-health)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to improve my smile?](#what-can-i-do-to-improve-my-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What dental services can help treat an infection?](#what-dental-services-can-help-treat-an-infection)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -304,6 +292,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -327,11 +320,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Oral Hygiene Basics
+  backToTopHref: '#oral-hygiene-basics'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

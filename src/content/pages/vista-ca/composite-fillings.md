@@ -7,11 +7,10 @@ seo:
   description: Get tooth-colored composite resin fillings that mimic the color of your natural teeth from
     reputable Vista, CA dentist North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Composite Fillings Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method
+- _component: page-sections/heroes/page-banner
+  heading: Composite Fillings
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method
     for tooth decay. If you live in Vista, CA or surrounding area and are looking for a natural-looking
     restoration, we encourage you to call (760) 940-2273 and schedule an appointment. Our team has the
     necessary experience with placing these tooth-colored fillings and can work to ensure that the patient
@@ -19,23 +18,13 @@ pageSections:
     a filling is typically placed after removing tooth decay (common cavities). If you have amalgam fillings
     now, we can even replace them with composite ones. To learn more, call and schedule a dental examination.
   imageSource: /src/assets/images/wp/composite-fillings.jpg
-  imageAlt: Composite Fillings Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Composite Fillings
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -69,21 +58,23 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Composite Dental Fillings FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 760-940-2273
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: (760) 940-2273
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Composite Dental Fillings FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Composite Dental Fillings FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [760-940-2273](#760-940-2273)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [(760) 940-2273](#760-940-2273)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -93,38 +84,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our composite fillings on Yelp: Composite Fillings
         Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits of tooth-colored fillings?](#what-are-the-benefits-of-tooth-colored-fillings)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are composite fillings for?](#what-are-composite-fillings-for)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the filling change what I can eat?](#will-the-filling-change-what-i-can-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits of tooth-colored fillings?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are composite fillings for?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the filling change what I can eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prevent tooth decay?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why is preventative dental care so important?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -247,6 +237,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -272,11 +267,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Resin Fillings
+  backToTopHref: '#composite-fillings'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
+  - name: Dental Crowns
+    url: /vista-ca/dental-crowns/
 ---

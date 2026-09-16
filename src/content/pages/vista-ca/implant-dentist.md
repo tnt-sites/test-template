@@ -7,33 +7,22 @@ seo:
   description: Replace missing teeth and restore your healthy, gorgeous smile with help from an implant
     dentist. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Implant Dentist Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
+- _component: page-sections/heroes/page-banner
+  heading: Implant Dentist
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
     your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
     tooth loss, we encourage you to call (760) 940-2273 and schedule an appointment with our Vista, CA
     dental office to determine if you are a good candidate for this procedure. In the meantime, here are
     some questions that are commonly asked about dental implants.
   imageSource: /src/assets/images/wp/implant-dentist.jpg
-  imageAlt: Implant Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Implant Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -80,11 +69,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant dental services on Yelp: Implant Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Implant Dentist
     contentSections:
@@ -161,33 +151,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I qualify for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are All-On-4® Implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if dental implants are right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to eat my favorite foods after receiving dental implants?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I qualify for dental implants?](#do-i-qualify-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are All-On-4® Implants?](#what-are-all-on-4-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for dental implants?](#what-is-the-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -310,6 +298,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -357,11 +350,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Implant Dentist
+  backToTopHref: '#implant-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

@@ -7,34 +7,23 @@ seo:
   description: Cracked or broken tooth? Inconsistent or erratic pain? Learn how we can help stop the pain
     and potentially save your tooth with a root canal and crown
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Can a Cracked Tooth be Saved with a Root Canal and Crown Vista, CA
-  subtext: 'When you crack a tooth, there are multiple tools and techniques to repair the damage. However,
+- _component: page-sections/heroes/page-banner
+  heading: Can a Cracked Tooth be Saved with a Root Canal and Crown
+  location: Vista, CA
+  intro: 'When you crack a tooth, there are multiple tools and techniques to repair the damage. However,
     there is one option that stands above the rest: the dental crown. A crown is a cap, typically consisting
     of porcelain that matches the shape and size of the tooth. The crown acts as a strong cover that protects
     the tooth from infection and losing the tooth. Without the crown, the tooth will not even be able
     to handle the pressure of chewing. It is important to treat a cracked tooth as soon as possible by
     seeking treatment from a professional endodontist.'
   imageSource: /src/assets/images/wp/can-a-cracked-tooth-be-saved-with-a-root-canal.jpg
-  imageAlt: Can a Cracked Tooth be Saved with a Root Canal and Crown Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Can a Cracked Tooth be Saved with a Root Canal and Crown
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -106,11 +95,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Can a Cracked Tooth be
         Saved with a Root Canal and Crown Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Taking care of a dental crown
     contentSections:
@@ -144,38 +134,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the symptoms of a cracked tooth?](#what-are-the-symptoms-of-a-cracked-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can a dental crown treat my cracked tooth?](#how-can-a-dental-crown-treat-my-cracked-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of a dental crown?](#how-do-i-take-care-of-a-dental-crown)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does a root canal remove the entire tooth?](#does-a-root-canal-remove-the-entire-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental crowns?](#what-are-dental-crowns)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the symptoms of a cracked tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can a dental crown treat my cracked tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of a dental crown?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does a root canal remove the entire tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental crowns?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -289,6 +278,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -320,11 +314,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Can a Cracked Tooth be Saved with a Root Canal and Crown
+  backToTopHref: '#can-a-cracked-tooth-be-saved-with-a-root-canal'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

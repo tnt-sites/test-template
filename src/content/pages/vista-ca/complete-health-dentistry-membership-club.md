@@ -6,31 +6,20 @@ seo:
   description: Join North County Cosmetic and Implant Dentistry’s Membership Club in Vista, CA for affordable,
     stress-free dental care without the need for insurance.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
+- _component: page-sections/heroes/page-banner
   heading: The North County Cosmetic and Implant Dentistry Membership Club
-  subtext: The easy way to pay for your preventative dental care. Frustrated with your dental insurance
+  location: ''
+  intro: The easy way to pay for your preventative dental care. Frustrated with your dental insurance
     or putting off treatment because you have no dental insurance at all? Our membership club makes it
     easy to afford your dental care.
   imageSource: /src/assets/images/wp/single-cta-1.jpg
   imageAlt: The North County Cosmetic and Implant Dentistry Membership Club
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Paying for your preventative care has never been easier.
   contentSections:
@@ -80,11 +69,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our Single Dental Implants services on Yelp: Single
       Dental Implants Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Don’t Wait to Get the Dental Care You Need
   contentSections:
@@ -139,11 +129,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

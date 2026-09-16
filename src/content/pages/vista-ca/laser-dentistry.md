@@ -6,11 +6,10 @@ seo:
   description: Advanced laser dentistry at North County Cosmetic and Implant Dentistry in Vista, CA. Precise,
     comfortable treatments for a range of dental needs
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Laser Dentistry Vista, CA
-  subtext: If you are interested in a new, fresh approach to dental care, consider laser dentistry . At
+- _component: page-sections/heroes/page-banner
+  heading: Laser Dentistry
+  location: Vista, CA
+  intro: If you are interested in a new, fresh approach to dental care, consider laser dentistry . At
     North County Cosmetic and Implant Dentistry, we can use laser dentistry to treat our patients' oral
     health concerns in a way that is comfortable and effective. If you live in Vista or surrounding area
     and are looking for modern dental care, give us a call. Lasers are revolutionizing dentistry, but
@@ -19,23 +18,13 @@ pageSections:
     to correct damage without causing irritation. We invite you to call (760) 940-2273 and experience
     the difference that laser dentistry can make.
   imageSource: /src/assets/images/wp/laser-dentistry.jpg
-  imageAlt: Laser Dentistry Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Laser Dentistry
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -83,11 +72,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our laser dentistry services on Yelp: Laser Dentistry
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Laser Gum Surgery
     contentSections:
@@ -160,33 +150,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is laser dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the laser dentistry experience?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How does laser teeth whitening work?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do receding gums get in the way of a cosmetic procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can cosmetic dentistry help improve the functionality of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it dangerous to bleach teeth at home without professional supervision?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is laser dentistry?](#what-is-laser-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the laser dentistry experience?](#what-happens-during-the-laser-dentistry-experience)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How does laser teeth whitening work?](#how-does-laser-teeth-whitening-work)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do receding gums get in the way of a cosmetic procedure?](#do-receding-gums-get-in-the-way-of-a-cosmetic-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](#can-cosmetic-dentistry-help-improve-the-functionality-of-my-)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it dangerous to bleach teeth at home without professional supervision?](#is-it-dangerous-to-bleach-teeth-at-home-without-professional)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -295,6 +283,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -318,11 +311,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Laser Dentistry
+  backToTopHref: '#laser-dentistry'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Periodontics
+    url: /vista-ca/periodontics/
+  - name: Restorative Dentistry
+    url: /vista-ca/restorative-dentistry/
 ---

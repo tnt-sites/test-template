@@ -7,29 +7,18 @@ seo:
   description: Modern dentistry that is affordable in a fun, caring environment. Our passion is crafting
     beautiful, comfortable smiles. Learn more at North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Other Services Vista, CA
-  subtext: ''
+- _component: page-sections/heroes/page-banner
+  heading: Other Services
+  location: Vista, CA
+  intro: ''
   imageSource: /src/assets/images/wp/other-services.jpg
-  imageAlt: Other Services Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Other Services
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -98,6 +87,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -123,11 +117,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Other Services
+  backToTopHref: '#other-services'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Center
+    url: /vista-ca/dental-center/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
 ---

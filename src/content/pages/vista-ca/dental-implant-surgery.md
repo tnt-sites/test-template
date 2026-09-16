@@ -7,11 +7,10 @@ seo:
   description: Learn all about dental implant surgery from your reputable team at North County Cosmetic
     and Implant Dentistry in Vista, CA. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Implant Surgery Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
+- _component: page-sections/heroes/page-banner
+  heading: Dental Implant Surgery
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can provide you with dental implant surgery
     to replace your missing tooth. Even with the improvements of oral health care, the majority of adults
     still lose at least one tooth during their lifetime. Whether this is due to old age, an accident,
     or gum disease, we have the most durable solution for replacing your teeth. This is the only procedure
@@ -22,23 +21,13 @@ pageSections:
     to attach your new tooth (crown). If you are considering this procedure, we encourage you to call
     (760) 940-2273 to schedule a consultation with our Vista dental office.
   imageSource: /src/assets/images/wp/dental-implant-surgery.jpg
-  imageAlt: Dental Implant Surgery Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Implant Surgery
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -77,56 +66,57 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental implant surgery services on Yelp: Dental
         Implant Surgery Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Dental Implant Recovery FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Dental Implant Recovery FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [760-940-2273](#760-940-2273)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [(760) 940-2273](#760-940-2273)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Dental Implant Recovery FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 760-940-2273
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: (760) 940-2273
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
-    paddingVertical: xl
-    colorScheme: default
     backgroundColor: surface
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will the recovery process after implant surgery take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to eat my favorite foods after receiving dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long until they attach the tooth to my dental implant?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will the recovery process after implant surgery take?](#how-long-will-the-recovery-process-after-implant-surgery-tak)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long until they attach the tooth to my dental implant?](#how-long-until-they-attach-the-tooth-to-my-dental-implant)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process for dental implants?](#what-is-the-recovery-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -263,6 +253,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -292,11 +287,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Implant Surgery
+  backToTopHref: '#dental-implant-surgery'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

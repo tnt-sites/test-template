@@ -6,33 +6,22 @@ seo:
   description: Preserve your teeth and gums. Let our experience put you at ease. North County Cosmetic
     and Implant Dentistry focuses on gentle gum treatments. Periodontics
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Periodontics Vista, CA
-  subtext: Millions of Americans suffer from periodontal disease. At North County Cosmetic and Implant
-    Dentistry, we treat patients throughout the Vista area that are struggling with this condition and
-    provide a variety of treatment solutions to help combat the symptoms and heal the gums. If you are
-    concerned that your gums are unhealthy, call (760) 940-2273 to schedule an appointment with Dr. Henninger
-    and receive a dental examination.
+- _component: page-sections/heroes/page-banner
+  heading: Periodontics
+  location: Vista, CA
+  intro: Millions of Americans suffer from periodontal disease. At North County Cosmetic and Implant Dentistry,
+    we treat patients throughout the Vista area that are struggling with this condition and provide a
+    variety of treatment solutions to help combat the symptoms and heal the gums. If you are concerned
+    that your gums are unhealthy, call (760) 940-2273 to schedule an appointment with Dr. Henninger and
+    receive a dental examination.
   imageSource: /src/assets/images/wp/periodontics.jpg
-  imageAlt: Periodontics Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Periodontics
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -127,11 +116,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Periodontics Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: How to Keep Your Gums Healthy
     contentSections:
@@ -158,38 +148,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the signs of gum disease?](#what-are-the-signs-of-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the treatment options for gum disease?](#what-are-the-treatment-options-for-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I keep my gums healthy?](#how-can-i-keep-my-gums-healthy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why are my gums receding from my teeth?](#why-are-my-gums-receding-from-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried if my gums bleed when I floss?](#should-i-be-worried-if-my-gums-bleed-when-i-floss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is gum contouring?](#what-is-gum-contouring)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the signs of gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the treatment options for gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I keep my gums healthy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why are my gums receding from my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried if my gums bleed when I floss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is gum contouring?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -326,6 +315,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -349,11 +343,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Periodontics
+  backToTopHref: '#periodontics'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

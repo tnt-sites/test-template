@@ -7,36 +7,25 @@ seo:
   description: Dental bridges are an affordable way to replace missing teeth. Learn about how bridges
     can get you the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Bridges Vista, CA
-  subtext: If you are missing some of your teeth, we can replace them using a dental bridge. This is a
-    secure and permanent alternative to wearing dentures. We can work to make a dental bridge look entirely
-    natural after we place it on your teeth. We begin the procedure by taking precise measurements of
-    your teeth in our dentist office. We will also take an impression, so the dental lab has all the information
+- _component: page-sections/heroes/page-banner
+  heading: Dental Bridges
+  location: Vista, CA
+  intro: If you are missing some of your teeth, we can replace them using a dental bridge. This is a secure
+    and permanent alternative to wearing dentures. We can work to make a dental bridge look entirely natural
+    after we place it on your teeth. We begin the procedure by taking precise measurements of your teeth
+    in our dentist office. We will also take an impression, so the dental lab has all the information
     they need to create replacement teeth that look like your natural ones. To find out if you are a good
     candidate for the procedure, call (760) 940-2273 and schedule a consultation. At North County Cosmetic
     and Implant Dentistry, we offer several solutions for replacing missing teeth, so if a bridge is not
     suited to your needs, we will recommend a different solution.
   imageSource: /src/assets/images/wp/dental-bridges.jpg
-  imageAlt: Dental Bridges Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Bridges
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -86,11 +75,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental bridge services on Yelp: Dental Bridges
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Will my dental bridge look natural?
     contentSections:
@@ -159,38 +149,37 @@ pageSections:
       text: To learn more about dental bridges and how they can be used to replace your missing teeth,
         call 760-940-2273. Our Vista, CA dental office is conveniently located, and we are currently accepting
         new patients.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a dental bridge?](#what-is-a-dental-bridge)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will a dental bridge look natural?](#will-a-dental-bridge-look-natural)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will a dental bridge last?](#how-long-will-a-dental-bridge-last)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will the process for dental bridges be like?](#what-will-the-process-for-dental-bridges-be-like)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a dental bridge?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will a dental bridge look natural?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will a dental bridge last?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will the process for dental bridges be like?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -315,6 +304,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -352,11 +346,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Bridges
+  backToTopHref: '#dental-bridges'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Crowns
+    url: /vista-ca/dental-crowns/
+  - name: Replacing Missing Teeth
+    url: /vista-ca/options-for-replacing-missing-teeth/
 ---

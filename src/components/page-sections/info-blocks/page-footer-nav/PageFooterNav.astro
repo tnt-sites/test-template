@@ -1,0 +1,73 @@
+---
+/*
+ * The "Back to top of <page>" line and the breadcrumb trail that close every
+ * interior page on the source (103 of them carry both).
+ */
+const {
+  backToTopText = "",
+  backToTopHref = "#top",
+  crumbs = [],
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["page-footer-nav", className]} {...htmlAttributes}>
+  <div class="pfn-inner">
+    {
+      backToTopText && (
+        <p class="pfn-top">
+          Back to top of <a href={backToTopHref}>{backToTopText}</a>
+        </p>
+      )
+    }
+    {
+      crumbs.length > 0 && (
+        <nav class="pfn-crumbs" aria-label="Breadcrumb">
+          <ol>
+            {crumbs.map((c: any) => (
+              <li>{c.url ? <a href={c.url}>{c.name}</a> : <span>{c.name}</span>}</li>
+            ))}
+          </ol>
+        </nav>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss">
+  .pfn-inner {
+    border-top: 1px solid var(--color-border, #d2cec7);
+    margin-inline: auto;
+    max-width: var(--content-width-xl);
+    padding-block: var(--spacing-md);
+    padding-inline: var(--spacing-lg);
+  }
+
+  .pfn-top {
+    font-size: var(--font-size-sm);
+    margin: 0 0 var(--spacing-xs);
+  }
+
+  .pfn-crumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: var(--font-size-sm);
+    gap: 0.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pfn-crumbs li + li::before {
+    content: "›";
+    margin-right: 0.5rem;
+    opacity: 0.6;
+  }
+</style>

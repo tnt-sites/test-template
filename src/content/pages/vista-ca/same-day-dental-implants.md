@@ -5,30 +5,19 @@ seo:
   title: ''
   description: ''
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Teeth In A Day Vista, CA
-  subtext: With our new procedures, you can be eligible for same day dental implants and enjoy a new set
+- _component: page-sections/heroes/page-banner
+  heading: Teeth In A Day
+  location: Vista, CA
+  intro: With our new procedures, you can be eligible for same day dental implants and enjoy a new set
     of permanent teeth in as little as one day.
   imageSource: /src/assets/images/wp/teeth-day-header.jpg
-  imageAlt: Teeth In A Day Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Teeth In A Day
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Are You Frustrated with Traditional Dentures?
   contentSections:
@@ -98,11 +87,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our Same Day Dental Implants services on Yelp: Same
       Day Dental Implants Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Not a Candidate for Traditional Dental Implants?
   contentSections:
@@ -162,11 +152,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

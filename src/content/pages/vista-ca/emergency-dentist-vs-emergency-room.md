@@ -7,32 +7,21 @@ seo:
   description: Unsure what is a dental emergency? ER visits for dental problems have dramatically increased.
     Tips for determining the best way to handle your emergency
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Emergency Dentist vs. Emergency Room Vista, CA
-  subtext: Regardless of the type of dental emergency, there are a few set steps a patient needs to take
+- _component: page-sections/heroes/page-banner
+  heading: Emergency Dentist vs. Emergency Room
+  location: Vista, CA
+  intro: Regardless of the type of dental emergency, there are a few set steps a patient needs to take
     as a response. The first step is to seek immediate medical attention at an emergency room. If the
     individual has any large cuts, broken bones or other injuries, then get to the emergency room as soon
     as possible. An emergency room will be able to treat all wounds and stop any bleeding.
   imageSource: /src/assets/images/wp/emergency-dentist-vs-emergency-room.jpg
-  imageAlt: Emergency Dentist vs. Emergency Room Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Emergency Dentist vs. Emergency Room
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -73,11 +62,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our emergency dental services on Yelp: Emergency Dentist
         vs. Emergency Room'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Receive Emergency Treatment When Necessary
     contentSections:
@@ -113,38 +103,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in Vista, California call (760) 940-2273 and schedule your appointment to experience
         why patients trust North County Cosmetic and Implant Dentistry with their child's dental needs.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can the ER treat any damage to my teeth?](#can-the-er-treat-any-damage-to-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What services does an emergency dentist provide?](#what-services-does-an-emergency-dentist-provide)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [When should I visit the ER first before the dentist?](#when-should-i-visit-the-er-first-before-the-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if I have a toothache?](#what-should-i-do-if-i-have-a-toothache)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to relieve dental pain?](#what-can-i-do-to-relieve-dental-pain)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to repair damaged teeth?](#what-can-i-do-to-repair-damaged-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can the ER treat any damage to my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What services does an emergency dentist provide?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: When should I visit the ER first before the dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if I have a toothache?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to relieve dental pain?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to repair damaged teeth?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -251,6 +240,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -276,11 +270,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Emergency Dentist vs. Emergency Room
+  backToTopHref: '#emergency-dentist-vs-emergency-room'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Tooth Colored Fillings
+    url: /vista-ca/composite-fillings/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

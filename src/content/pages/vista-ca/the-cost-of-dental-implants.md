@@ -6,30 +6,19 @@ seo:
   description: Curious about the cost of dental implants? North County Cosmetic and Implant Dentistry
     offers affordable options and works with insurance to fit your budget
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: The Cost of Dental Implants Vista, CA
-  subtext: There are many factors that influence the cost of dental implants in the San Diego Area. There
+- _component: page-sections/heroes/page-banner
+  heading: The Cost of Dental Implants
+  location: Vista, CA
+  intro: There are many factors that influence the cost of dental implants in the San Diego Area. There
     are also many options to choose from based upon your dental needs and your budget.
   imageSource: /src/assets/images/wp/The-Cost-of-Dental-Implants-Header.jpg
-  imageAlt: The Cost of Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: The Cost of Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -66,11 +55,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our The Cost of Dental Implants services on Yelp: The
       Cost of Dental Implants Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: 'Factors that influence dental implant costs:'
   contentSections:
@@ -147,11 +137,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

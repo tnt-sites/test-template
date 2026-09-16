@@ -6,31 +6,20 @@ seo:
   description: North County Cosmetic and Implant Dentistry offers dental implants for complete oral restoration,
     giving you the smile you've always wanted.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
+- _component: page-sections/heroes/page-banner
   heading: Get Back to Your Life with Dental Implants
-  subtext: From single tooth replacements to an entire arch of teeth, North County Cosmetic and Implant
+  location: ''
+  intro: From single tooth replacements to an entire arch of teeth, North County Cosmetic and Implant
     Dentistry is here to help with cutting edge technology and customized treatment plans so you can enjoy
     your favorite foods, improve your health, and love life again.
   imageSource: /src/assets/images/wp/AdobeStock_236124705.jpg
   imageAlt: Get Back to Your Life with Dental Implants
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Become the better, healthier version of yourself
   contentSections:
@@ -250,11 +239,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

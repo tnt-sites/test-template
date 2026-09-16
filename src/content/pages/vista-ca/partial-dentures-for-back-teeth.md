@@ -7,86 +7,65 @@ seo:
   description: Missing one or more molars - now what? Removable partial dentures are an option to get
     a complete, gorgeous smile. Learn about how removable partial dentures (RPD) can replace back teeth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Partial Dentures for Back Teeth Vista, CA
-  subtext: Partial dentures are a fantastic solution for patients who are missing multiple back teeth.
-    There are all sorts of benefits to partial dentures for back teeth, ranging from the comparably low
-    cost to superior comfort and improved oral health. With partial dentures for your back teeth, you
-    will be able to eat, drink, talk and smile without reservation. Let's take a look at some of the most
-    frequently asked questions about this oral health solution.
+- _component: page-sections/heroes/page-banner
+  heading: Partial Dentures for Back Teeth
+  location: Vista, CA
+  intro: Partial dentures are a fantastic solution for patients who are missing multiple back teeth. There
+    are all sorts of benefits to partial dentures for back teeth, ranging from the comparably low cost
+    to superior comfort and improved oral health. With partial dentures for your back teeth, you will
+    be able to eat, drink, talk and smile without reservation. Let's take a look at some of the most frequently
+    asked questions about this oral health solution.
   imageSource: /src/assets/images/wp/partial-dentures-for-back-teeth.jpg
-  imageAlt: Partial Dentures for Back Teeth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Partial Dentures for Back Teeth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/info-blocks/faq-section
-    heading: How many partial dentures are required for each arch?
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How many partial dentures are required for each arch?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Are removable partial dentures for back teeth stable?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will I be able to smile and eat with confidence once my partial dentures are in place?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will partial dentures for multiple back teeth improve my speech?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will the addition of partial dentures for missing back teeth alter my appearance?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Are partial dentures for back teeth the same as bridges?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will other teeth move once the partial denture is placed?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will the partial denture affect the look of my gums and other teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Are crowns or caps necessary?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will the partial denture feel odd?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will I have to wear my partial dentures for back teeth 24 hours a day?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Are adjustments necessary?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Can I eat the same foods after adding partial dentures for back teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Does this oral health solution require special care?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: How many partial dentures are required for each arch?
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: How many partial dentures are required for each arch?
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How many partial dentures are required for each arch?](#q-how-many-partial-dentures-are-required-for-each-arch)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Are removable partial dentures for back teeth stable?](#q-are-removable-partial-dentures-for-back-teeth-stable)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will I be able to smile and eat with confidence once my partial dentures are in place?](#q-will-i-be-able-to-smile-and-eat-with-confidence-once-my-pa)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will partial dentures for multiple back teeth improve my speech?](#q-will-partial-dentures-for-multiple-back-teeth-improve-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will the addition of partial dentures for missing back teeth alter my appearance?](#q-will-the-addition-of-partial-dentures-for-missing-back-tee)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Are partial dentures for back teeth the same as bridges?](#q-are-partial-dentures-for-back-teeth-the-same-as-bridges)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will other teeth move once the partial denture is placed?](#q-will-other-teeth-move-once-the-partial-denture-is-placed)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will the partial denture affect the look of my gums and other teeth?](#q-will-the-partial-denture-affect-the-look-of-my-gums-and-ot)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Are crowns or caps necessary?](#q-are-crowns-or-caps-necessary)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will the partial denture feel odd?](#q-will-the-partial-denture-feel-odd)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will I have to wear my partial dentures for back teeth 24 hours a day?](#q-will-i-have-to-wear-my-partial-dentures-for-back-teeth-24-)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Are adjustments necessary?](#q-are-adjustments-necessary)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Can I eat the same foods after adding partial dentures for back teeth?](#q-can-i-eat-the-same-foods-after-adding-partial-dentures-for)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Does this oral health solution require special care?](#q-does-this-oral-health-solution-require-special-care)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -96,38 +75,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are removable partial dentures stable on the teeth?](#are-removable-partial-dentures-stable-on-the-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are partial dentures the same as dental bridges?](#are-partial-dentures-the-same-as-dental-bridges)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will partial dentures change what I can eat?](#will-partial-dentures-change-what-i-can-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are removable partial dentures stable on the teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are partial dentures the same as dental bridges?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will partial dentures change what I can eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -137,11 +115,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Partial Dentures for
         Back Teeth Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -261,6 +240,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -290,11 +274,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Partial Dentures for Back Teeth
+  backToTopHref: '#partial-dentures-for-back-teeth'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
+  - name: Denture Care
+    url: /vista-ca/denture-care/
 ---

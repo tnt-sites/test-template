@@ -7,37 +7,26 @@ seo:
   description: With recent advancements in dental technology, the process of getting dentures is easier
     than ever before. Removable partial dentures are an option to get a complete, gorgeous smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: The Process for Getting Dentures Vista, CA
-  subtext: People may find it difficult to hear that they need dentures. After all, losing a few teeth
-    can cause enough difficulty. The very notion that one is going to need artificial teeth instead can
-    be difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust to
-    dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance
-    and remain fully functional. People may find it difficult to hear that they need dentures. After all,
-    losing a few teeth can cause enough difficulty. The very notion that one is going to need artificial
-    teeth instead can be difficult to adjust to. Fortunately, we have the tools and experience to help
-    patients adjust to dentures in order to live a comfortable lifestyle. In fact, dentures can provide
-    a natural appearance and remain fully functional.
+- _component: page-sections/heroes/page-banner
+  heading: The Process for Getting Dentures
+  location: Vista, CA
+  intro: People may find it difficult to hear that they need dentures. After all, losing a few teeth can
+    cause enough difficulty. The very notion that one is going to need artificial teeth instead can be
+    difficult to adjust to. Fortunately, we have the tools and experience to help patients adjust to dentures
+    in order to live a comfortable lifestyle. In fact, dentures can provide a natural appearance and remain
+    fully functional. People may find it difficult to hear that they need dentures. After all, losing
+    a few teeth can cause enough difficulty. The very notion that one is going to need artificial teeth
+    instead can be difficult to adjust to. Fortunately, we have the tools and experience to help patients
+    adjust to dentures in order to live a comfortable lifestyle. In fact, dentures can provide a natural
+    appearance and remain fully functional.
   imageSource: /src/assets/images/wp/the-process-for-getting-dentures.jpg
-  imageAlt: The Process for Getting Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: The Process for Getting Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -89,11 +78,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: The Process for Getting
         Dentures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The Dentures Process
     contentSections:
@@ -143,38 +133,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens after losing an adult tooth?](#what-happens-after-losing-an-adult-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How does the dentures process begin?](#how-does-the-dentures-process-begin)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take me to adjust to the dentures?](#how-long-will-it-take-me-to-adjust-to-the-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take to adjust to new dentures?](#how-long-will-it-take-to-adjust-to-new-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens after losing an adult tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How does the dentures process begin?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take me to adjust to the dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take to adjust to new dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -297,6 +286,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -326,11 +320,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: The Process for Getting Dentures
+  backToTopHref: '#the-process-for-getting-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Damaged Dentures page
+    url: /vista-ca/damage-my-dentures/
+  - name: Denture Care
+    url: /vista-ca/denture-care/
 ---

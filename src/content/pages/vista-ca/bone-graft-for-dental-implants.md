@@ -6,34 +6,23 @@ seo:
   description: Wondering if you'll need a bone graft for dental implants? North County Cosmetic and Implant
     Dentistry in Vista, CA provides expert evaluations.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Will I Need a Bone Graft for Dental Implants Vista, CA
-  subtext: If you are considering getting dental implants, you are already on the road to restoring your
+- _component: page-sections/heroes/page-banner
+  heading: Will I Need a Bone Graft for Dental Implants
+  location: Vista, CA
+  intro: If you are considering getting dental implants, you are already on the road to restoring your
     smile. Since dental implants are surgically placed and inserted into the jawbone, one of the questions
     our Vista patients ask is whether or not they will need a bone graft prior to the procedure. We encourage
     you to visit our dental office for an examination and X-rays so that we can answer this question based
     on your health. You can schedule an appointment by calling (760) 940-2273. In the meantime, here are
     some answers to frequently asked questions about the bone graft procedure.
   imageSource: /src/assets/images/wp/bone-graft-for-dental-implants.jpg
-  imageAlt: Will I Need a Bone Graft for Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Will I Need a Bone Graft for Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -115,11 +104,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral health support services on Yelp: Will I Need
         a Bone Graft for Dental Implants? Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What is the recovery time and how will I feel afterwards?
     contentSections:
@@ -177,33 +167,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is bone augmentation?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I need bone grafting?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will happen after the bone grafting procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is bone augmentation?](#what-is-bone-augmentation)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I need bone grafting?](#do-i-need-bone-grafting)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will happen after the bone grafting procedure?](#what-will-happen-after-the-bone-grafting-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process for dental implants?](#what-is-the-recovery-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -340,6 +328,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -369,11 +362,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Will I Need a Bone Graft for Dental Implants?
+  backToTopHref: '#bone-graft-for-dental-implants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

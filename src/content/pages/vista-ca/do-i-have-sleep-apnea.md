@@ -6,33 +6,22 @@ seo:
   description: Wondering if you have sleep apnea? Visit North County Cosmetic and Implant Dentistry in
     Vista, CA for expert diagnosis and personalized treatment.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Do I Have Sleep Apnea Vista, CA
-  subtext: If you feel as though you have no energy and are too tired to keep up with your friends and
-    family, you should visit our dental office to talk about sleep apnea. This may be what is causing
-    your issues, and a simple non-invasive treatment may be just what you need to feel like yourself again.
-    To schedule an appointment with our dental office, call (760) 940-2273. We will be happy to discuss
-    your treatment and then make a recommendation for how you should proceed.
+- _component: page-sections/heroes/page-banner
+  heading: Do I Have Sleep Apnea
+  location: Vista, CA
+  intro: If you feel as though you have no energy and are too tired to keep up with your friends and family,
+    you should visit our dental office to talk about sleep apnea. This may be what is causing your issues,
+    and a simple non-invasive treatment may be just what you need to feel like yourself again. To schedule
+    an appointment with our dental office, call (760) 940-2273. We will be happy to discuss your treatment
+    and then make a recommendation for how you should proceed.
   imageSource: /src/assets/images/wp/do-i-have-sleep-apnea.jpg
-  imageAlt: Do I Have Sleep Apnea Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Do I Have Sleep Apnea
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -112,11 +101,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our sleep apnea support services on Yelp: Do I Have
         Sleep Apnea?'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What are the two main types of sleep apnea?
     contentSections:
@@ -183,30 +173,29 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is sleep apnea?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is sleep apnea a sleep disorder?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the treatment options for sleep apnea?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know when searching for a dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What services does a dental center provide?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is sleep apnea?](#what-is-sleep-apnea)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is sleep apnea a sleep disorder?](#is-sleep-apnea-a-sleep-disorder)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the treatment options for sleep apnea?](#what-are-the-treatment-options-for-sleep-apnea)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know when searching for a dentist?](#what-do-i-need-to-know-when-searching-for-a-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What services does a dental center provide?](#what-services-does-a-dental-center-provide)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -327,13 +316,21 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Do I Have Sleep Apnea?
+  backToTopHref: '#do-i-have-sleep-apnea'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

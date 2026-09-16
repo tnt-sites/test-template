@@ -7,37 +7,26 @@ seo:
   description: Complete information on dental problems that can be treated with the latest oral surgery
     procedures. Tooth extractions, dental implants, and more
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Oral Surgery Vista, CA
-  subtext: If you are in need of oral surgery, call (760) 940-2273 to schedule an appointment with our
-    Vista, CA dental office. At North County Cosmetic and Implant Dentistry, we can provide you with the
-    surgical procedure you need to maintain or restore your oral health. When it comes to dentistry, only
-    certain dentists perform surgical procedures. Whether you are looking for a new dentist or are currently
-    under the care of one and need more intensive procedures, we welcome your call. We can examine your
-    teeth, give you an opinion regarding whether or not you need surgery, what procedure will benefit
-    you, and what you can expect from the process. Feel free to ask as many questions as you need in order
-    to feel prepared and comfortable. In the meantime, here are a few frequently asked questions we hear
-    in our Vista dentist office.
+- _component: page-sections/heroes/page-banner
+  heading: Oral Surgery
+  location: Vista, CA
+  intro: If you are in need of oral surgery, call (760) 940-2273 to schedule an appointment with our Vista,
+    CA dental office. At North County Cosmetic and Implant Dentistry, we can provide you with the surgical
+    procedure you need to maintain or restore your oral health. When it comes to dentistry, only certain
+    dentists perform surgical procedures. Whether you are looking for a new dentist or are currently under
+    the care of one and need more intensive procedures, we welcome your call. We can examine your teeth,
+    give you an opinion regarding whether or not you need surgery, what procedure will benefit you, and
+    what you can expect from the process. Feel free to ask as many questions as you need in order to feel
+    prepared and comfortable. In the meantime, here are a few frequently asked questions we hear in our
+    Vista dentist office.
   imageSource: /src/assets/images/wp/oral-surgery.jpg
-  imageAlt: Oral Surgery Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Oral Surgery
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -80,11 +69,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral surgery services on Yelp: Oral Surgery Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Is oral surgery used with orthodontics?
     contentSections:
@@ -159,33 +149,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is oral surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I prepare for oral surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take to recover from oral surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the signs that I may need endodontic surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is bone augmentation?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will the recovery process after implant surgery take?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is oral surgery?](#what-is-oral-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I prepare for oral surgery?](#how-do-i-prepare-for-oral-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take to recover from oral surgery?](#how-long-will-it-take-to-recover-from-oral-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the signs that I may need endodontic surgery?](#what-are-the-signs-that-i-may-need-endodontic-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is bone augmentation?](#what-is-bone-augmentation)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will the recovery process after implant surgery take?](#how-long-will-the-recovery-process-after-implant-surgery-tak)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -323,6 +311,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -350,11 +343,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Oral Surgery
+  backToTopHref: '#oral-surgery'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Sedation Dentist
+    url: /vista-ca/sedation-dentist/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

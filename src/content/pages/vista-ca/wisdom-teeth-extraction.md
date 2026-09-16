@@ -6,35 +6,24 @@ seo:
   description: Need wisdom teeth extraction? North County Cosmetic and Implant Dentistry in Vista, CA
     provides safe, comfortable wisdom tooth removal.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Wisdom Teeth Extraction Vista, CA
-  subtext: You may need a wisdom teeth extraction at some point in your life. It is rare for a person
-    to have enough room for all of their wisdom teeth, and as a result, they tend to grow in impacted.
-    This can be uncomfortable, pushing your other teeth forward and creating a space for food to become
-    trapped; it can also increase your risk of infection and decay. This is why we often recommend that
-    our patients have their wisdom teeth removed. When you schedule an appointment with North County Cosmetic
-    and Implant Dentistry, we can examine you, take X-rays, and let you know if and when you should schedule
-    an extraction procedure. You can reach us by calling (760) 940-2273.
+- _component: page-sections/heroes/page-banner
+  heading: Wisdom Teeth Extraction
+  location: Vista, CA
+  intro: You may need a wisdom teeth extraction at some point in your life. It is rare for a person to
+    have enough room for all of their wisdom teeth, and as a result, they tend to grow in impacted. This
+    can be uncomfortable, pushing your other teeth forward and creating a space for food to become trapped;
+    it can also increase your risk of infection and decay. This is why we often recommend that our patients
+    have their wisdom teeth removed. When you schedule an appointment with North County Cosmetic and Implant
+    Dentistry, we can examine you, take X-rays, and let you know if and when you should schedule an extraction
+    procedure. You can reach us by calling (760) 940-2273.
   imageSource: /src/assets/images/wp/wisdom-teeth-extraction.jpg
-  imageAlt: Wisdom Teeth Extraction Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Wisdom Teeth Extraction
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -120,11 +109,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our wisdom teeth extraction services on Yelp: Wisdom
         Teeth Extraction Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: How to prevent an infection after removal?
     contentSections:
@@ -163,38 +153,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good dental health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during a wisdom tooth extraction?](#what-happens-during-a-wisdom-tooth-extraction)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to do after a wisdom tooth extraction?](#what-do-i-need-to-do-after-a-wisdom-tooth-extraction)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [When is a wisdom tooth extraction necessary?](#when-is-a-wisdom-tooth-extraction-necessary)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during a wisdom tooth extraction?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to do after a wisdom tooth extraction?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: When is a wisdom tooth extraction necessary?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -331,6 +320,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -358,11 +352,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Wisdom Teeth Extraction
+  backToTopHref: '#wisdom-teeth-extraction'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

@@ -7,33 +7,22 @@ seo:
   description: Missing a tooth - now what? Removable partial dentures are an option to get a complete,
     gorgeous smile. Learn about how removable partial dentures (RPD) can enhance your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Partial Denture for One Missing Tooth Vista, CA
-  subtext: If you are missing a tooth, don't resign yourself to the situation. There is a solution available
+- _component: page-sections/heroes/page-banner
+  heading: Partial Denture for One Missing Tooth
+  location: Vista, CA
+  intro: If you are missing a tooth, don't resign yourself to the situation. There is a solution available
     in the form of a partial denture. Partial dentures will likely become the standard tooth replacement
     option in the near future. Though the average dentist does not perform this procedure at a high frequency,
     it is effective and rapidly growing in popularity. Let's take a look at some of the most commonly
     asked questions about partial dentures for a single tooth.
   imageSource: /src/assets/images/wp/partial-denture-for-one-missing-tooth.jpg
-  imageAlt: Partial Denture for One Missing Tooth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Partial Denture for One Missing Tooth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -106,11 +95,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Partial Denture for One
         Missing Tooth Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Is any preparatory work necessary?
     contentSections:
@@ -162,38 +152,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many visits does it take to install partial dentures?](#how-many-visits-does-it-take-to-install-partial-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will my eating or speaking be different with a partial denture?](#will-my-eating-or-speaking-be-different-with-a-partial-dentu)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are removable partial dentures made of?](#what-are-removable-partial-dentures-made-of)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will toothpaste help or harm the dentures?](#will-toothpaste-help-or-harm-the-dentures)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many visits does it take to install partial dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will my eating or speaking be different with a partial denture?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are removable partial dentures made of?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will toothpaste help or harm the dentures?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -331,6 +320,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -360,11 +354,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Partial Denture for One Missing Tooth
+  backToTopHref: '#partial-denture-for-one-missing-tooth'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Damaged Dentures page
+    url: /vista-ca/damage-my-dentures/
+  - name: Denture Care
+    url: /vista-ca/denture-care/
 ---

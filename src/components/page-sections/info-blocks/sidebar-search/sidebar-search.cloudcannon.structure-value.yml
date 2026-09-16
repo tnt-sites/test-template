@@ -1,0 +1,17 @@
+label: Sidebar Search
+icon: search
+description: Search box for the interior page sidebar, backed by Pagefind.
+value:
+  _component: page-sections/info-blocks/sidebar-search
+  id: ""
+  heading: ""
+  placeholder: Search
+  buttonText: Search
+  action: /search/
+preview:
+  text:
+    - Sidebar Search
+  icon: search
+picker_preview:
+  text: Sidebar Search
+  subtext: Pagefind-backed search box.

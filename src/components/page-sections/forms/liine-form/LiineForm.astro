@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Text from "@core-elements/text/Text.astro";
+import LiineFormEmbed from "./LiineFormEmbed.astro";
 
 // Liine is JotForm-backed: the form is an iframe plus a handler script that
 // resizes it to its content. `parentURL`/`isIframeEmbed` are deliberately NOT
@@ -52,31 +53,10 @@ const src = `https://forms.liine.com/${formId}`;
 
   {
     formId ? (
-      <iframe
-        id={frameId}
-        title={title}
-        src={src}
-        allow="geolocation; microphone; camera; fullscreen"
-        allowtransparency="true"
-        frameborder="0"
-        scrolling="no"
-        loading="lazy"
-        style={`min-width:100%;max-width:100%;height:${height}px;border:none;`}
-      />
+      <LiineFormEmbed formId={formId} title={title} height={height} />
     ) : (
       <Text alignX="center">Set a Liine form ID to display this form.</Text>
     )
   }
 </CustomSection>
 
-{
-  formId && (
-    <script is:inline src="https://forms.liine.com/s/umd/latest/for-form-embed-handler.js" />
-    <script is:inline define:vars={{ frameId }}>
-      // The handler resizes the iframe to its content height as the form advances.
-      if (window.jotformEmbedHandler) {
-        window.jotformEmbedHandler(`iframe[id='${frameId}']`, "https://forms.liine.com/");
-      }
-    </script>
-  )
-}

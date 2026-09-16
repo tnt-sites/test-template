@@ -7,32 +7,21 @@ seo:
   description: Confused about what an endodontist is? Is an endodontist different from a dentist? Want
     to learn more about how endodontic surgery may help save your tooth?
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What is an Endodontist Vista, CA
-  subtext: People may not realize that there are multiple forms of care within the field of dentistry.
-    The teeth are more complex than some people realize, with layers of protection, nerves and blood vessels,
+- _component: page-sections/heroes/page-banner
+  heading: What is an Endodontist
+  location: Vista, CA
+  intro: People may not realize that there are multiple forms of care within the field of dentistry. The
+    teeth are more complex than some people realize, with layers of protection, nerves and blood vessels,
     while also connecting to the gums and jawbone. If something happens to any of the layers of the tooth,
     the body can feel repercussions from the damage.
   imageSource: /src/assets/images/wp/what-is-an-endodontist.jpg
-  imageAlt: What is an Endodontist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What is an Endodontist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -105,11 +94,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: What is an Endodontist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The process
     contentSections:
@@ -156,38 +146,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is an endodontist?](#what-is-an-endodontist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What treatments does an endodontist offer?](#what-treatments-does-an-endodontist-offer)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for endodontic services?](#what-is-the-process-for-endodontic-services)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if my teeth are sensitive to hot or cold foods?](#what-should-i-do-if-my-teeth-are-sensitive-to-hot-or-cold-fo)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many appointments will the root canal take?](#how-many-appointments-will-the-root-canal-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is an endodontist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What treatments does an endodontist offer?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for endodontic services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if my teeth are sensitive to hot or cold foods?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many appointments will the root canal take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -301,6 +290,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -332,11 +326,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What is an Endodontist
+  backToTopHref: '#what-is-an-endodontist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

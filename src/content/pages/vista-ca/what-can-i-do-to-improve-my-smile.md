@@ -6,35 +6,24 @@ seo:
   description: Explore cosmetic dental options to improve your smile at North County Cosmetic and Implant
     Dentistry in Vista, CA. Veneers, whitening, and more!
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What Can I Do to Improve My Smile Vista, CA
-  subtext: My Formal is Soon, What Can I Do to Improve My Smile? Your formal is coming up, and you are
-    embarrassed by your smile. What do you do? Call the dentist. Whether you are getting ready for the
-    homecoming dance, prom, or any formal event, you want to be confident enough to show off your smile.
-    Your formal is something that only happens in high school, and it is an event to really look forward
-    to. These pictures will last a lifetime and so will your memories, but making sure you love your pictures
-    takes work and planning. At North County Cosmetic and Implant Dentistry, we can help you love your
-    smile, even if your formal is only a week or two away. Here are a few of the steps we recommend.
+- _component: page-sections/heroes/page-banner
+  heading: What Can I Do to Improve My Smile
+  location: Vista, CA
+  intro: My Formal is Soon, What Can I Do to Improve My Smile? Your formal is coming up, and you are embarrassed
+    by your smile. What do you do? Call the dentist. Whether you are getting ready for the homecoming
+    dance, prom, or any formal event, you want to be confident enough to show off your smile. Your formal
+    is something that only happens in high school, and it is an event to really look forward to. These
+    pictures will last a lifetime and so will your memories, but making sure you love your pictures takes
+    work and planning. At North County Cosmetic and Implant Dentistry, we can help you love your smile,
+    even if your formal is only a week or two away. Here are a few of the steps we recommend.
   imageSource: /src/assets/images/wp/what-can-i-do-to-improve-my-smile.jpg
-  imageAlt: What Can I Do to Improve My Smile Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What Can I Do to Improve My Smile
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -100,11 +89,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral health support services on Yelp: What Can
         I Do to Improve My Smile? Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Moisturize
     contentSections:
@@ -147,33 +137,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can teeth whitening truly remove stains off of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to improve my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does drinking water really help clean my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does whitening toothpaste really work?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will teeth whitening cause any sensitivity?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can teeth whitening truly remove stains off of my teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can teeth whitening truly remove stains off of my teeth?](#can-teeth-whitening-truly-remove-stains-off-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to improve my smile?](#what-can-i-do-to-improve-my-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does drinking water really help clean my teeth?](#does-drinking-water-really-help-clean-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does whitening toothpaste really work?](#does-whitening-toothpaste-really-work)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will teeth whitening cause any sensitivity?](#will-teeth-whitening-cause-any-sensitivity)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can teeth whitening truly remove stains off of my teeth?](#can-teeth-whitening-truly-remove-stains-off-of-my-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -301,6 +289,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -328,11 +321,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What Can I Do to Improve My Smile?
+  backToTopHref: '#what-can-i-do-to-improve-my-smile'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

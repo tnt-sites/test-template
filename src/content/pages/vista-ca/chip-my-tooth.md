@@ -6,34 +6,23 @@ seo:
   description: Wondering what to do if you chip your tooth? North County Cosmetic and Implant Dentistry
     in Vista, CA offers expert chipped tooth repair services.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What Should I Do If I Chip My Tooth Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if
-    I chip my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage
+- _component: page-sections/heroes/page-banner
+  heading: What Should I Do If I Chip My Tooth
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if I
+    chip my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage
     you to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
     and treat you right away. As an emergency dentist, the first thing we want to do is determine how
     serious the damage is. In order to do so, we will ask you several questions when you call to schedule
     an appointment.
   imageSource: /src/assets/images/wp/chip-my-tooth.jpg
-  imageAlt: What Should I Do If I Chip My Tooth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What Should I Do If I Chip My Tooth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -79,11 +68,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our chipped tooth support services on Yelp: What Should
         I Do If I Chip My Tooth in Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Steps to Take After Chipping a Tooth
     contentSections:
@@ -203,33 +193,32 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I feel any pain from chipping my tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do after chipping my tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to restore my chipped tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can the ER treat any damage to my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I damage my tooth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I feel any pain from chipping my tooth?](#will-i-feel-any-pain-from-chipping-my-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do after chipping my tooth?](#what-should-i-do-after-chipping-my-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to restore my chipped tooth?](#what-can-i-do-to-restore-my-chipped-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](#if-i-hurt-my-tooth-in-a-car-accident-can-i-wait-a-day-or-two)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can the ER treat any damage to my teeth?](#can-the-er-treat-any-damage-to-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I damage my tooth?](#what-can-i-do-if-i-damage-my-tooth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -336,6 +325,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -361,11 +355,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What Should I Do If I Chip My Tooth?
+  backToTopHref: '#chip-my-tooth'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Same Day Dentist
+    url: /vista-ca/same-day-dentistry/
+  - name: Emergency Dentist
+    url: /vista-ca/emergency-dentist/
 ---

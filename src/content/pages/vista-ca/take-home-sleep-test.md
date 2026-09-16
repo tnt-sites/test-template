@@ -6,29 +6,18 @@ seo:
   description: Discover sleep apnea with a take-home sleep test from North County Cosmetic and Implant
     Dentistry in Vista, CA. Convenient testing in the comfort of home.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Alice Night One Vista, CA
-  subtext: ''
+- _component: page-sections/heroes/page-banner
+  heading: Alice Night One
+  location: Vista, CA
+  intro: ''
   imageSource: /src/assets/images/wp/Take-Home-Sleep-Test.jpg
-  imageAlt: Alice Night One Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Alice Night One
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:
@@ -94,11 +83,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: For more information on the Alice Night One unit, and how to utilize the take home sleep study,
       please watch below.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -111,11 +101,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

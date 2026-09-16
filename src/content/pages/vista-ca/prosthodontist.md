@@ -6,11 +6,10 @@ seo:
   description: Replace teeth and restore your healthy, gorgeous smile with help from a Prosthodontist.
     Concentrating in the restoration and replacement of teeth and other oral structures
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Prosthodontist Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
+- _component: page-sections/heroes/page-banner
+  heading: Prosthodontist
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we are regularly asked questions about being
     a prosthodontist and why patients should visit one. There are specialties in dentistry just like there
     are in the medical field. Prosthodontics is one of those specialties and centers around replacing
     teeth. If you struggle with tooth loss, visiting a prosthodontist will likely produce better results
@@ -20,23 +19,13 @@ pageSections:
     To schedule an appointment, call (760) 940-2273. In the meantime, here are the answers to a few frequently
     asked questions.
   imageSource: /src/assets/images/wp/prosthodontist.jpg
-  imageAlt: Prosthodontist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Prosthodontist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -79,11 +68,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant dental services on Yelp: Prosthodontist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Oral Prosthetics Doctor
     contentSections:
@@ -165,33 +155,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a prosthodontist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What does a prosthodontist do?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I need to see a prosthodontist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many people wear dental implants?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a prosthodontist?](#what-is-a-prosthodontist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What does a prosthodontist do?](#what-does-a-prosthodontist-do)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I need to see a prosthodontist?](#do-i-need-to-see-a-prosthodontist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many people wear dental implants?](#how-many-people-wear-dental-implants)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -339,6 +327,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -368,11 +361,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Prosthodontist
+  backToTopHref: '#prosthodontist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

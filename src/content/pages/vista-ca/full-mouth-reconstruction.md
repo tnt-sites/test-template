@@ -6,34 +6,23 @@ seo:
   description: Restore your smile with full mouth reconstruction at North County Cosmetic and Implant
     Dentistry in Vista, CA. Personalized care for complete dental health.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Full Mouth Reconstruction Vista, CA
-  subtext: Full mouth reconstruction involves one or several restorative dental procedures to restore
-    and replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered
-    at North County Cosmetic and Implant Dentistry. People with multiple oral health issues such as tooth
+- _component: page-sections/heroes/page-banner
+  heading: Full Mouth Reconstruction
+  location: Vista, CA
+  intro: Full mouth reconstruction involves one or several restorative dental procedures to restore and
+    replace the teeth in a person's mouth. Full mouth reconstruction is a specialty service offered at
+    North County Cosmetic and Implant Dentistry. People with multiple oral health issues such as tooth
     decay, missing teeth or damaged teeth may benefit from full mouth reconstruction. No matter the cause,
     people will find it incredibly challenging to live without a full set of functional teeth. Fortunately,
     we can use full mouth reconstruction to restore both the functionality and appearance of teeth.
   imageSource: /src/assets/images/wp/full-mouth-reconstruction.jpg
-  imageAlt: Full Mouth Reconstruction Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Full Mouth Reconstruction
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -123,11 +112,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our full mouth reconstruction and restoration services
         on Yelp: Full Mouth Reconstruction Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Long-term wear
     contentSections:
@@ -223,33 +213,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some full mouth reconstruction treatment options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I damaged my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a root canal?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why should I consider dental cosmetics?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is restorative dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some full mouth reconstruction treatment options?](#what-are-some-full-mouth-reconstruction-treatment-options)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I damaged my teeth?](#what-can-i-do-if-i-damaged-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a root canal?](#what-is-a-root-canal)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why should I consider dental cosmetics?](#why-should-i-consider-dental-cosmetics)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is restorative dentistry?](#what-is-restorative-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -384,6 +372,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -419,11 +412,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Full Mouth Reconstruction
+  backToTopHref: '#full-mouth-reconstruction'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Cosmetics
+    url: /vista-ca/dental-cosmetics/
+  - name: Free Consultation
+    url: /vista-ca/dental-implants-consultation/
 ---

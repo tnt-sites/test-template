@@ -7,34 +7,23 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental office with great results! Affordable dental
     services can transform your smile. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Office Vista, CA
-  subtext: We are a Vista dental office and provide patients with the dental care they need to stay in
-    excellent oral health. At North County Cosmetic and Implant Dentistry, we understand the importance
-    of offering comprehensive dental services so that regardless of whether you need a general teeth cleaning
-    or a full restoration, we have the solutions for a perfectly healthy and functioning smile. If you
-    live in or around the Vista area, we invite you to call (760) 940-2273 and schedule an appointment
-    to meet Dr. Henninger and have your teeth examined.
+- _component: page-sections/heroes/page-banner
+  heading: Dental Office
+  location: Vista, CA
+  intro: We are a Vista dental office and provide patients with the dental care they need to stay in excellent
+    oral health. At North County Cosmetic and Implant Dentistry, we understand the importance of offering
+    comprehensive dental services so that regardless of whether you need a general teeth cleaning or a
+    full restoration, we have the solutions for a perfectly healthy and functioning smile. If you live
+    in or around the Vista area, we invite you to call (760) 940-2273 and schedule an appointment to meet
+    Dr. Henninger and have your teeth examined.
   imageSource: /src/assets/images/wp/dental-office.jpg
-  imageAlt: Dental Office Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Office
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -111,11 +100,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Dental Office Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Technology
     contentSections:
@@ -147,33 +137,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some methods for improving my oral health?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to repair a cracked tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I tell if I need a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will reading patient reviews for a dentist help?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prevent tooth decay?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some methods for improving my oral health?](#what-are-some-methods-for-improving-my-oral-health)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to repair a cracked tooth?](#what-can-i-do-to-repair-a-cracked-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will reading patient reviews for a dentist help?](#will-reading-patient-reviews-for-a-dentist-help)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -288,6 +276,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -313,11 +306,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Office
+  backToTopHref: '#dental-office'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---

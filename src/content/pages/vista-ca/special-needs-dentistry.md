@@ -6,30 +6,19 @@ seo:
   description: Compassionate special needs dentistry in Vista, CA. North County Cosmetic and Implant Dentistry
     provides tailored dental care for patients of all abilities.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Special Needs Dentistry Vista, CA
-  subtext: Patients with complex medical histories are often referred to our office because of the state-of-the-art
+- _component: page-sections/heroes/page-banner
+  heading: Special Needs Dentistry
+  location: Vista, CA
+  intro: Patients with complex medical histories are often referred to our office because of the state-of-the-art
     equipment and the specialized care that is required for their needs.
   imageSource: /src/assets/images/wp/Special-Needs-Dentistry.jpg
-  imageAlt: Special Needs Dentistry Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Special Needs Dentistry
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: 'Common Conditions that may require a dentist for special needs children and adults:'
   contentSections:
@@ -145,11 +134,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

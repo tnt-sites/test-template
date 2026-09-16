@@ -7,11 +7,10 @@ seo:
   description: Learn all about the dental implant procedure from your reputable team at North County Cosmetic
     and Implant Dentistry. Be surprised at how relatively easy dental implant surgery is
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: The Dental Implant Procedure Vista, CA
-  subtext: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
+- _component: page-sections/heroes/page-banner
+  heading: The Dental Implant Procedure
+  location: Vista, CA
+  intro: Losing one or more teeth can be devastating and life-changing, but dental implants allow you
     to restore full dental functions and the appearance of your smile. They offer a more natural tooth
     replacement option than other tooth replacement options. The dental implant procedure involves the
     insertion of metal, screw-like posts into the jawbone to replace the root of the lost tooth, and provide
@@ -19,23 +18,13 @@ pageSections:
     and Implant Dentistry in Vista and the surrounding area. To get dental implants, you must be in good
     health and have healthy and adequate bone density. Contact our office at (760) 940-2273 for a consultation.
   imageSource: /src/assets/images/wp/dental-implant-procedure.jpg
-  imageAlt: The Dental Implant Procedure Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: The Dental Implant Procedure
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -180,27 +169,27 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: The Dental Implant Procedure FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Is the dental implant procedure painful?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Will dental implants function like my natural teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How long does a dental implant procedure Take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Am I eligible for dental implants?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: The Dental Implant Procedure FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: The Dental Implant Procedure FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Is the dental implant procedure painful?](#q-is-the-dental-implant-procedure-painful)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Will dental implants function like my natural teeth?](#q-will-dental-implants-function-like-my-natural-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How long does a dental implant procedure Take?](#q-how-long-does-a-dental-implant-procedure-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Am I eligible for dental implants?](#q-am-i-eligible-for-dental-implants)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -210,38 +199,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant dentistry services on Yelp: Dental Implant
         Procedure Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for the dental implant procedure?](#how-can-i-prepare-for-the-dental-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will dental implants function like my natural teeth?](#will-dental-implants-function-like-my-natural-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long does a dental implant procedure take?](#how-long-does-a-dental-implant-procedure-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for the dental implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will dental implants function like my natural teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long does a dental implant procedure take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if dental implants are right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -378,6 +366,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -407,11 +400,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: The Dental Implant Procedure
+  backToTopHref: '#dental-implant-procedure'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Candidate?
+    url: /vista-ca/dental-implant-candidate/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

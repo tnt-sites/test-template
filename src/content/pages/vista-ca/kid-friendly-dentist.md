@@ -6,11 +6,10 @@ seo:
   description: Compassionate children's dentistry at North County Cosmetic and Implant Dentistry in Vista,
     CA. Gentle care for kids of all ages.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Kid Friendly Dentist Vista, CA
-  subtext: A kid friendly dentist creates a healthy and comfortable professional environment, providing
+- _component: page-sections/heroes/page-banner
+  heading: Kid Friendly Dentist
+  location: Vista, CA
+  intro: A kid friendly dentist creates a healthy and comfortable professional environment, providing
     the age-appropriate dental treatment a child needs for healthy teeth. North County Cosmetic and Implant
     Dentistry is a kid friendly dentist office in the greater Vista area. As a kid friendly dentist, we
     strive to create a comfortable and welcoming environment to help kids have a positive experience with
@@ -18,23 +17,13 @@ pageSections:
     treatment. However, by creating a positive experience with the dentist at a young age, children will
     have a more positive view of oral hygiene as a whole.
   imageSource: /src/assets/images/wp/kid-friendly-dentist.jpg
-  imageAlt: Kid Friendly Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Kid Friendly Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -134,11 +123,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our family dental services on Yelp: Kid Friendly Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Prevention
     contentSections:
@@ -177,33 +167,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a kid friendly dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for helping my child practice good oral hygiene at home?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does my child need regular fluoride treatments?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I find a dentist for my family?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know when searching for a dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits of visiting a pediatric dentistry?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a kid friendly dentist?](#what-is-a-kid-friendly-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for helping my child practice good oral hygiene at home?](#what-are-some-tips-for-helping-my-child-practice-good-oral-h)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does my child need regular fluoride treatments?](#does-my-child-need-regular-fluoride-treatments)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I find a dentist for my family?](#how-do-i-find-a-dentist-for-my-family)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know when searching for a dentist?](#what-do-i-need-to-know-when-searching-for-a-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits of visiting a pediatric dentistry?](#what-are-the-benefits-of-visiting-a-pediatric-dentistry)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -322,6 +310,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -355,11 +348,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Kid Friendly Dentist
+  backToTopHref: '#kid-friendly-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Center
+    url: /vista-ca/dental-center/
+  - name: Family Dentistry Near Me
+    url: /vista-ca/family-dentist/
 ---

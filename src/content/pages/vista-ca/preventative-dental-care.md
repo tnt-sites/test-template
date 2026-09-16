@@ -7,11 +7,10 @@ seo:
   description: Effective preventative dental care helps you avoid dental problems and save money. Combine
     at-home procedures and pro treatment for overall dental health
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Preventative Dental Care Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
+- _component: page-sections/heroes/page-banner
+  heading: Preventative Dental Care
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide preventative dental care for patients
     throughout the Vista area and invite you to schedule a dental exam today. We know that if you have
     your teeth cleaned on a regular basis, you can decrease your risk of getting cavities or experiencing
     gum disease. Overall, taking the time to have your teeth cleaned can prevent general discomfort and
@@ -20,23 +19,13 @@ pageSections:
     We provide preventative dental care and will ensure that your appointment is a positive one and that
     you remain comfortable during your dental exam and treatments.
   imageSource: /src/assets/images/wp/preventative-dental-care.jpg
-  imageAlt: Preventative Dental Care Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Preventative Dental Care
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -106,11 +95,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Preventative Dental Care
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Deep Cleaning Can Prevent Tooth Loss
     contentSections:
@@ -140,36 +130,33 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why is preventative dental care so important?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How much will preventative dental care cost?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can you use to help prevent tooth loss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long can I wait to receive dental care?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How often should I visit the dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the best toothbrush for my teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How much will preventative dental care cost?](#how-much-will-preventative-dental-care-cost)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can you use to help prevent tooth loss?](#what-can-you-use-to-help-prevent-tooth-loss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long can I wait to receive dental care?](#how-long-can-i-wait-to-receive-dental-care)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How often should I visit the dentist?](#how-often-should-i-visit-the-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the best toothbrush for my teeth?](#what-is-the-best-toothbrush-for-my-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -310,6 +297,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -341,11 +333,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Preventative Dental Care
+  backToTopHref: '#preventative-dental-care'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---

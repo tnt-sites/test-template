@@ -6,30 +6,19 @@ seo:
   description: Safe and comfortable wisdom teeth removal at North County Cosmetic and Implant Dentistry
     in Vista, CA. Schedule your consultation today.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Wisdom Teeth Vista, CA
-  subtext: Wisdom teeth are the last teeth to fill in the mouth. When they align properly and gum tissue
+- _component: page-sections/heroes/page-banner
+  heading: Wisdom Teeth
+  location: Vista, CA
+  intro: Wisdom teeth are the last teeth to fill in the mouth. When they align properly and gum tissue
     is healthy, wisdom teeth do not have to be removed. Generally, this does not happen.
   imageSource: /src/assets/images/wp/wisdom-teeth.jpg
-  imageAlt: Wisdom Teeth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Wisdom Teeth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Are your wisdom teeth causing you discomfort?
   contentSections:
@@ -147,11 +136,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

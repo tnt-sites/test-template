@@ -7,11 +7,10 @@ seo:
   description: Avoid the embarrassment of living without teeth. An immediate denture is a complete denture
     or partial denture inserted on the same day, immediately following the removal of natural teeth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Immediate Dentures Vista, CA
-  subtext: During the transition process for adjusting to dentures, there are a few functions that dentures
+- _component: page-sections/heroes/page-banner
+  heading: Immediate Dentures
+  location: Vista, CA
+  intro: During the transition process for adjusting to dentures, there are a few functions that dentures
     will impact. The first is chewing. Immediately following the denture process, patients will have to
     eat soft foods for a few days. The second is speech. Once an individual receives dentures, he or she
     will have to adjust to speaking with dentures. There will also most likely be a period of time in
@@ -19,23 +18,13 @@ pageSections:
     on the individual, we offer patients immediate dentures. These dentures only take one day for placement
     and are more efficient than natural dentures. However, immediate dentures may not be for everyone.
   imageSource: /src/assets/images/wp/immediate-dentures.jpg
-  imageAlt: Immediate Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Immediate Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -84,11 +73,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Immediate Dentures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Q&A
     contentSections:
@@ -144,38 +134,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will the dentures process take?](#how-long-will-the-dentures-process-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I need to make follow-up appointments?](#will-i-need-to-make-follow-up-appointments)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the lack of teeth change the appearance of my face?](#will-the-lack-of-teeth-change-the-appearance-of-my-face)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How does the dentures process begin?](#how-does-the-dentures-process-begin)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know about making adjustments to my dentures?](#what-do-i-need-to-know-about-making-adjustments-to-my-dentur)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will the dentures process take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I need to make follow-up appointments?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the lack of teeth change the appearance of my face?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How does the dentures process begin?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know about making adjustments to my dentures?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -321,6 +310,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -348,11 +342,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Immediate Dentures
+  backToTopHref: '#immediate-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Damaged Dentures page
+    url: /vista-ca/damage-my-dentures/
+  - name: Denture Care
+    url: /vista-ca/denture-care/
 ---

@@ -7,11 +7,10 @@ seo:
   description: Clear aligners are the virtually invisible alternative to metal braces. Get the straight
     teeth you always wanted without braces from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Clear Aligners Vista, CA
-  subtext: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
+- _component: page-sections/heroes/page-banner
+  heading: Clear Aligners
+  location: Vista, CA
+  intro: Straightening teeth can be beneficial for more than just the overall appearance of one's teeth.
     By straightening teeth, patients also gain health benefits from teeth that do not have as many places
     to trap food in them as crooked teeth. However, many patients do not prefer the obvious and cumbersome
     metal braces that they have to wear in order to straighten their teeth. Fortunately, we offer clear
@@ -20,23 +19,13 @@ pageSections:
     are an efficient alternative to traditional braces. Here are a few key factors that people need to
     understand about clear aligners.
   imageSource: /src/assets/images/wp/clear-aligners.jpg
-  imageAlt: Clear Aligners Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Clear Aligners
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -77,11 +66,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligners on Yelp: Clear Aligners Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Not for kids
     contentSections:
@@ -144,33 +134,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I remove clear aligners when I want?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the aligners made of?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can my child use clear aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why should I consider dental cosmetics?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the most common cosmetic dental treatment services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What types of teeth whitening do you offer?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I remove clear aligners when I want?](#can-i-remove-clear-aligners-when-i-want)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the aligners made of?](#what-are-the-aligners-made-of)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can my child use clear aligners?](#can-my-child-use-clear-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why should I consider dental cosmetics?](#why-should-i-consider-dental-cosmetics)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What types of teeth whitening do you offer?](#what-types-of-teeth-whitening-do-you-offer)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -306,6 +294,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -333,11 +326,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Clear Aligners
+  backToTopHref: '#clear-aligners'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Clear vs Traditional
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
+  - name: Clear Aligner Therapy
+    url: /vista-ca/clear-aligner-therapy-dentist/
 ---

@@ -6,34 +6,23 @@ seo:
   description: Learn when a tooth extraction is necessary at North County Cosmetic and Implant Dentistry
     in Vista, CA. We offer safe, comfortable extractions.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: When Is a Tooth Extraction Necessary Vista, CA
-  subtext: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
+- _component: page-sections/heroes/page-banner
+  heading: When Is a Tooth Extraction Necessary
+  location: Vista, CA
+  intro: As a family dentist in Vista, CA, we are regularly asked, "When is a tooth extraction necessary?"
     This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
     beneficial. We are not interested in extracting teeth unless absolutely necessary. In fact, if you
     damage a tooth, our preferred method of treatment is to restore it using dental veneers or dental
     crowns. There are times, however, where we do recommend visiting our dental office located at 1934
     Via Centre Ste A Vista, CA 92081 for an extraction.
   imageSource: /src/assets/images/wp/when-is-tooth-extraction-necessary.jpg
-  imageAlt: When Is a Tooth Extraction Necessary Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: When Is a Tooth Extraction Necessary
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -73,11 +62,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our tooth extraction support services on Yelp: When
         Is a Tooth Extraction Necessary Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The cost to restore the tooth is too great.
     contentSections:
@@ -189,33 +179,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: When is a tooth extraction necessary?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the extraction process?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process after an extraction?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [When is a tooth extraction necessary?](#when-is-a-tooth-extraction-necessary)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the extraction process?](#what-happens-during-the-extraction-process)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process after an extraction?](#what-is-the-recovery-process-after-an-extraction)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -342,6 +330,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -369,11 +362,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: When Is a Tooth Extraction Necessary
+  backToTopHref: '#when-is-tooth-extraction-necessary'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

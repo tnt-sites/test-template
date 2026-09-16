@@ -6,30 +6,19 @@ seo:
   description: Brighten your smile with professional tooth whitening at North County Cosmetic and Implant
     Dentistry in Vista, CA. Safe and effective results.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Brighten Your Smile with Tooth Whitening The easy way to a dazzling smile.
-  subtext: Fed up with ineffective over the counter whitening products? While toothpastes, gels, and strips
+- _component: page-sections/heroes/page-banner
+  heading: Brighten Your Smile with Tooth Whitening
+  location: The easy way to a dazzling smile.
+  intro: Fed up with ineffective over the counter whitening products? While toothpastes, gels, and strips
     make bold claims, the truth is that OTC products can only whiten your teeth by a shade or two.
   imageSource: /src/assets/images/wp/teeth_whitening_procedure.jpg
-  imageAlt: Brighten Your Smile with Tooth Whitening The easy way to a dazzling smile.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Brighten Your Smile with Tooth Whitening
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Dramatically whiten your teeth in just a single visit.
   contentSections:
@@ -66,11 +55,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our in-office tooth whitening on Yelp: Whitening Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Don’t wait for a whiter smile.
   contentSections:
@@ -126,11 +116,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

@@ -6,36 +6,25 @@ seo:
   description: Overcome dental anxiety with sedation dentistry at North County Cosmetic and Implant Dentistry
     in Vista, CA. Relax during your dental visit.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Anxiety Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can perform dental work on patients that
-    are struggling with dental anxiety . If you avoid the dentist due to fear of what a procedure may
-    be like or simply do not enjoy dental work, give us a call. In our Vista, dental office, we can ensure
-    that you are comfortable and relaxed, regardless of the dental procedure. When you visit our office,
-    we will meet with you to discuss what treatments you need and create a plan for how to keep your mouth
+- _component: page-sections/heroes/page-banner
+  heading: Dental Anxiety
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can perform dental work on patients that are
+    struggling with dental anxiety . If you avoid the dentist due to fear of what a procedure may be like
+    or simply do not enjoy dental work, give us a call. In our Vista, dental office, we can ensure that
+    you are comfortable and relaxed, regardless of the dental procedure. When you visit our office, we
+    will meet with you to discuss what treatments you need and create a plan for how to keep your mouth
     healthy while easing any fears that you have about dentistry in general. We will keep you informed
     about the entire process so that you can make decisions regarding dental care without experiencing
     any anxiety.
   imageSource: /src/assets/images/wp/dental-anxiety.jpg
-  imageAlt: Dental Anxiety Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Anxiety
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -78,11 +67,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental anxiety support services on Yelp: Dental
         Anxiety Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Dental Anxiety
     contentSections:
@@ -183,38 +173,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about sedation dentistry, new dental technology or how to reduce your dental
         anxiety, call and schedule an appointment with our Vista dentist office today.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for my dentist appointment?](#how-can-i-prepare-for-my-dentist-appointment)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I be asleep during the treatment?](#can-i-be-asleep-during-the-treatment)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there any side effects of sedation dentistry?](#are-there-any-side-effects-of-sedation-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will reading reviews help me find a great dentist?](#will-reading-reviews-help-me-find-a-great-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to improve my smile?](#what-can-i-do-to-improve-my-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the dental treatment hurt?](#will-the-dental-treatment-hurt)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for my dentist appointment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I be asleep during the treatment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there any side effects of sedation dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will reading reviews help me find a great dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to improve my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the dental treatment hurt?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -335,6 +324,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -362,11 +356,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Anxiety
+  backToTopHref: '#dental-anxiety'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Helpful Dental Info
+    url: /vista-ca/helpful-dental-information/
+  - name: Gentle Dentistry
+    url: /about-find-best-dentist/
 ---

@@ -102,11 +102,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our dental services on Yelp: Best Dentist in Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Research
   contentSections:
@@ -134,38 +135,37 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: We invite you to visit our dental office, discuss your oral health concerns and learn how we
       can provide solutions for all of your family's dental needs.
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
+  colorScheme: default
+  backgroundColor: none
+  class: callout-bubble
+- _component: page-sections/builders/custom-section
+  label: Questions Answered on This Page
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Questions Answered on This Page
+    level: h2
+    size: sm
+    alignX: center
+  - _component: building-blocks/core-elements/list
+    listType: bullet
+    items:
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [Will reading reviews help me find a great dentist?](#will-reading-reviews-help-me-find-a-great-dentist)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [Can social media help to find the best dentist?](#can-social-media-help-to-find-the-best-dentist)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [What do I need to know when searching for a dentist?](#what-do-i-need-to-know-when-searching-for-a-dentist)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [Is flossing really important for my teeth?](#is-flossing-really-important-for-my-teeth)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [What will happen at my dental checkup?](#what-will-happen-at-my-dental-checkup)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [What dental services can help treat an infection?](#what-dental-services-can-help-treat-an-infection)
   maxContentWidth: xl
   paddingHorizontal: lg
-  paddingVertical: xl
-  colorScheme: default
-  backgroundColor: accent
-- _component: page-sections/info-blocks/faq-section
-  heading: Questions Answered on This Page
-  headingLevel: h2
-  headingSize: lg
-  singleOpen: true
-  openFirst: false
-  items:
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Will reading reviews help me find a great dentist?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Can social media help to find the best dentist?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What do I need to know when searching for a dentist?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Is flossing really important for my teeth?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What will happen at my dental checkup?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What dental services can help treat an infection?
-    contentSections: []
-  maxContentWidth: xl
-  paddingHorizontal: xl
   paddingVertical: xl
   colorScheme: default
   backgroundColor: surface

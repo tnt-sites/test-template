@@ -7,40 +7,29 @@ seo:
   description: In pain? Want it to stop? Need a tooth pulled? Learn about tooth extraction procedures
     including wisdom teeth, severe decay, infection, and to create room
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Tooth Extraction Vista, CA
-  subtext: While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we
-    perform tooth extractions on a regular basis. We are always looking for ways to avoid an extraction
-    by keeping your oral health in good shape. We will clean your teeth on a regular basis, discuss a
-    healthy diet with you, and treat gum disease, cavities, and infections to the best of our abilities;
-    in order to keep your teeth healthy and intact. As a general dentist, we will also work to restore
-    your tooth if it has been damaged – all of which can help you to maintain your natural teeth for years
-    to come. If you are experiencing discomfort or your tooth is in need of repair, we invite you to call
-    our dental office at (760) 940-2273 to schedule an appointment. During your examination, we will let
-    you know if your tooth can be saved or if a tooth extraction is the best option for preventing the
-    spread of infection and eliminating your discomfort. In our dentist office, we will take the steps
-    necessary to ensure your comfort so that regardless of which treatment option you select, you will
-    feel relaxed during the process.
+- _component: page-sections/heroes/page-banner
+  heading: Tooth Extraction
+  location: Vista, CA
+  intro: While our focus at North County Cosmetic and Implant Dentistry is on preventative care, we perform
+    tooth extractions on a regular basis. We are always looking for ways to avoid an extraction by keeping
+    your oral health in good shape. We will clean your teeth on a regular basis, discuss a healthy diet
+    with you, and treat gum disease, cavities, and infections to the best of our abilities; in order to
+    keep your teeth healthy and intact. As a general dentist, we will also work to restore your tooth
+    if it has been damaged – all of which can help you to maintain your natural teeth for years to come.
+    If you are experiencing discomfort or your tooth is in need of repair, we invite you to call our dental
+    office at (760) 940-2273 to schedule an appointment. During your examination, we will let you know
+    if your tooth can be saved or if a tooth extraction is the best option for preventing the spread of
+    infection and eliminating your discomfort. In our dentist office, we will take the steps necessary
+    to ensure your comfort so that regardless of which treatment option you select, you will feel relaxed
+    during the process.
   imageSource: /src/assets/images/wp/tooth-extraction.jpg
-  imageAlt: Tooth Extraction Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Tooth Extraction
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -100,11 +89,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our tooth extraction services on Yelp: Tooth Extraction
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Tooth Extraction
     contentSections:
@@ -144,33 +134,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for a tooth extraction?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I care for my teeth after the tooth extraction?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is there a specific procedure for removing wisdom teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental bridges replace my missing teeth and restore my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for a tooth extraction?](#what-is-the-process-for-a-tooth-extraction)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I care for my teeth after the tooth extraction?](#how-do-i-care-for-my-teeth-after-the-tooth-extraction)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is there a specific procedure for removing wisdom teeth?](#is-there-a-specific-procedure-for-removing-wisdom-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](#can-dental-bridges-replace-my-missing-teeth-and-restore-my-s)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -299,6 +287,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -326,11 +319,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Tooth Extraction
+  backToTopHref: '#tooth-extraction'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
+  - name: Extraction Necessary?
+    url: /vista-ca/when-is-tooth-extraction-necessary/
 ---

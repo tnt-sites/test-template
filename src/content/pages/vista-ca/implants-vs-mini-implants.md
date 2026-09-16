@@ -8,34 +8,23 @@ seo:
     a mini dental implant? Your reputable team at North County Cosmetic and Implant Dentistry breaks it
     all down
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: The Difference Between Dental Implants and Mini Dental Implants Vista, CA
-  subtext: Our goal is to provide you with a replacement tooth that is long-lasting, durable, and looks
+- _component: page-sections/heroes/page-banner
+  heading: The Difference Between Dental Implants and Mini Dental Implants
+  location: Vista, CA
+  intro: Our goal is to provide you with a replacement tooth that is long-lasting, durable, and looks
     natural. Since every patient is unique, the only way to determine which type of implant is right for
     you is to conduct a physical examination and to take X-rays. Once we do, we can discuss whether a
     traditional implant or mini dental implants would be the best way to replace your teeth. We will then
     answer any questions that you may have, prior to scheduling an appointment for the procedure. At North
     County Cosmetic and Implant Dentistry, we will ensure that you remain comfortable throughout the process.
   imageSource: /src/assets/images/wp/implants-vs-mini-implants.jpg
-  imageAlt: The Difference Between Dental Implants and Mini Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: The Difference Between Dental Implants and Mini Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -89,11 +78,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant support services on Yelp: The Difference
         Between Dental Implants and Mini Dental Implants Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What they are made of.
     contentSections:
@@ -164,38 +154,37 @@ pageSections:
       text: If you are interested in learning more, we encourage you to call our Vista, CA dental office
         at (760) 940-2273. At North County Cosmetic and Implant Dentistry, we can also provide you with
         specific information that is related to your situation.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the difference between dental implants and mini dental implants?](#what-is-the-difference-between-dental-implants-and-mini-dent)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental implants made out of?](#what-are-dental-implants-made-out-of)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will people know the difference between my natural teeth and the artificial ones?](#will-people-know-the-difference-between-my-natural-teeth-and)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the difference between dental implants and mini dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental implants made out of?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will people know the difference between my natural teeth and the artificial ones?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if dental implants are right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dental implants?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -334,6 +323,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -361,11 +355,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: The Difference Between Dental Implants and Mini Dental Implants
+  backToTopHref: '#implants-vs-mini-implants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Candidate?
+    url: /vista-ca/dental-implant-candidate/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

@@ -6,30 +6,19 @@ seo:
   description: Laser deep cleaning at North County Cosmetic and Implant Dentistry in Vista, CA effectively
     treats gum disease and improves oral health.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
-  subtext: Remove hard-to-reach buildup below the gumline to help slow down your gum disease and get rid
+- _component: page-sections/heroes/page-banner
+  heading: Treat Gum Disease with Laser Deep Cleaning
+  location: Take your periodontal treatment to the next level.
+  intro: Remove hard-to-reach buildup below the gumline to help slow down your gum disease and get rid
     of dangerous bacteria that threaten your oral and overall health.
   imageSource: /src/assets/images/wp/laser-dentist-2106.jpg
-  imageAlt: Treat Gum Disease with Laser Deep Cleaning Take your periodontal treatment to the next level.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Treat Gum Disease with Laser Deep Cleaning
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Laser deep cleaning for places your toothbrush and floss can’t reach.
   contentSections:
@@ -54,11 +43,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our in-office tooth whitening on Yelp: Whitening Vista
       in-office tooth whitening'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Cleaner Teeth. Healthier Life.
   contentSections:
@@ -115,11 +105,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

@@ -6,30 +6,19 @@ seo:
   description: LANAP laser periodontal treatment at North County Cosmetic and Implant Dentistry in Vista,
     CA. Treat gum disease with advanced, minimally invasive care.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: LANAP® Periodontal Treatment Vista, CA
-  subtext: Periodontal disease, commonly referred to as gum disease, affects nearly 80 percent of the
-    U.S. population, yet many fail to see a dentist because of fear related to receiving treatment.
+- _component: page-sections/heroes/page-banner
+  heading: LANAP® Periodontal Treatment
+  location: Vista, CA
+  intro: Periodontal disease, commonly referred to as gum disease, affects nearly 80 percent of the U.S.
+    population, yet many fail to see a dentist because of fear related to receiving treatment.
   imageSource: /src/assets/images/wp/LANAP-Periodontal-Treatment.jpg
-  imageAlt: LANAP® Periodontal Treatment Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: LANAP® Periodontal Treatment
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -90,11 +79,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

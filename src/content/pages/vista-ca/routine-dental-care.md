@@ -7,15 +7,14 @@ seo:
   description: Your smile depends on it. Modern, relaxing, gentle dentist outlines affordable routine
     dental care and services that can transform your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Routine Dental Care Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we practice routine dental care in addition
-    to performing restorations and addressing any other complex dental issues that you may have. In our
-    Vista dental office, we have found that by taking care of your teeth and planning for routine visits,
-    you can prevent many common oral health problems like cavities, tooth infections, and gum disease.
-    If you want to keep your adult teeth intact, it is critical that you continue to receive routine dental
+- _component: page-sections/heroes/page-banner
+  heading: Routine Dental Care
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we practice routine dental care in addition to
+    performing restorations and addressing any other complex dental issues that you may have. In our Vista
+    dental office, we have found that by taking care of your teeth and planning for routine visits, you
+    can prevent many common oral health problems like cavities, tooth infections, and gum disease. If
+    you want to keep your adult teeth intact, it is critical that you continue to receive routine dental
     care, regardless of how old you are. Many adults skip their annual dental visit because they associate
     the need with children and the elderly. As a dentist, we know that the reason many adults lose teeth
     and have oral health problems with age is because they don't have preventative care visits in their
@@ -23,23 +22,13 @@ pageSections:
     take care of them now, while you still can. If you haven't visited the dentist in a while, we invite
     you to call (760) 940-2273 and schedule an appointment for your dental exam.
   imageSource: /src/assets/images/wp/routine-dental-care.jpg
-  imageAlt: Routine Dental Care Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Routine Dental Care
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -119,11 +108,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Routine Dental Care Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What steps should I take at home?
     contentSections:
@@ -143,33 +133,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How often should I visit the dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during a routine dental visit?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do at home to better take care of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need for a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I tell if I need a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it important to treat dental issues early?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How often should I visit the dentist?](#how-often-should-i-visit-the-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during a routine dental visit?](#what-happens-during-a-routine-dental-visit)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do at home to better take care of my teeth?](#what-can-i-do-at-home-to-better-take-care-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need for a dental checkup?](#what-do-i-need-for-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it important to treat dental issues early?](#is-it-important-to-treat-dental-issues-early)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -294,6 +282,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -317,11 +310,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Routine Dental Care
+  backToTopHref: '#routine-dental-care'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---

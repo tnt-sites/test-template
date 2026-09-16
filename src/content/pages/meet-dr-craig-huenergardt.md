@@ -12,11 +12,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: It makes me proud to see the work I have done change someone’s life forever. My passion is restoring
       smiles with lasting beauty.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

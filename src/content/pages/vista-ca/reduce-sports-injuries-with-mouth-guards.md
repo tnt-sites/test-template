@@ -7,33 +7,22 @@ seo:
   description: Properly fitted custom-made mouth guards offer effective protection to reduce the severity
     and number of sports-related dental injuries. Find out more
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Reduce Sports Injuries With Mouth Guards Vista, CA
-  subtext: Playing on a sports team is a staple of any childhood from playing little league baseball to
+- _component: page-sections/heroes/page-banner
+  heading: Reduce Sports Injuries With Mouth Guards
+  location: Vista, CA
+  intro: Playing on a sports team is a staple of any childhood from playing little league baseball to
     playing college football. Regardless of the sport, players will benefit from wearing the proper protection
     such as shin guards, shoulder pads, helmets, cleats and mouth guards. While most sports go over the
     necessary gear that the child will need to wear to each game, they may not require mouth guards. With
     that in mind, mouth guards can be the deciding factor that saves a child's teeth.
   imageSource: /src/assets/images/wp/reduce-sports-injuries-with-mouth-guards.jpg
-  imageAlt: Reduce Sports Injuries With Mouth Guards Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Reduce Sports Injuries With Mouth Guards
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -74,11 +63,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our properly fitted custom-made mouth guards on Yelp:
         Reduce Sports Injuries With Mouth Guards Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The Mouth Guard Process
     contentSections:
@@ -104,38 +94,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in getting a properly fitted mouth guard for your child, then give us
         a call at (760) 940-2273 and schedule an appointment today.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are professional mouth guards better than store-bought brands?](#are-professional-mouth-guards-better-than-store-bought-brand)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why should I wear a mouth guard?](#why-should-i-wear-a-mouth-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for getting a mouth guard?](#what-is-the-process-for-getting-a-mouth-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why do people wear mouth guards?](#why-do-people-wear-mouth-guards)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why would I need to wear a night guard?](#why-would-i-need-to-wear-a-night-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do after chipping my tooth?](#what-should-i-do-after-chipping-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are professional mouth guards better than store-bought brands?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why should I wear a mouth guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for getting a mouth guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why do people wear mouth guards?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why would I need to wear a night guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do after chipping my tooth?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -256,6 +245,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -287,11 +281,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Reduce Sports Injuries With Mouth Guards
+  backToTopHref: '#reduce-sports-injuries-with-mouth-guards'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Tooth Colored Fillings
+    url: /vista-ca/composite-fillings/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

@@ -7,11 +7,10 @@ seo:
   description: Simple tips and strategies to help with post-op care for dental implants from your reputable
     team at North County Cosmetic and Implant Dentistry in Vista, CA
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Post-Op Care for Dental Implants Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
+- _component: page-sections/heroes/page-banner
+  heading: Post-Op Care for Dental Implants
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can provide you with information regarding
     post-op care for dental implants. This is the most durable and natural-looking way to replace your
     missing teeth, but it requires oral surgery, meaning there is a recovery process that must be taken
     into consideration. When you visit our Vista, CA dental office, we can conduct an examination, take
@@ -19,23 +18,13 @@ pageSections:
     during your recovery process. For more information, we encourage you to call (760) 940-2273 and schedule
     an appointment with Dr. Henninger. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/postop-care-for-dental-implants.jpg
-  imageAlt: Post-Op Care for Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Post-Op Care for Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -96,11 +85,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant support services on Yelp: Post-Op Care
         for Dental Implants Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Do I need to do anything to treat the site of the surgery or my gums in general?
     contentSections:
@@ -161,38 +151,37 @@ pageSections:
       text: To learn more about post-op care for dental implants, call 760-940-2273 and schedule an appointment
         with our Vista, CA dental office. We will be happy to answer any questions you have, so you can
         be confident in your decision to get started.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What foods can I eat after the surgery?](#what-foods-can-i-eat-after-the-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the implants be obvious?](#will-the-implants-be-obvious)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will the recovery process after implant surgery take?](#how-long-will-the-recovery-process-after-implant-surgery-tak)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many people wear dental implants?](#how-many-people-wear-dental-implants)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What foods can I eat after the surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the implants be obvious?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will the recovery process after implant surgery take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many people wear dental implants?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -369,6 +358,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -398,11 +392,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Post-Op Care for Dental Implants
+  backToTopHref: '#postop-care-for-dental-implants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Helpful Dental Info
+    url: /vista-ca/helpful-dental-information/
+  - name: The Implant Procedure
+    url: /vista-ca/dental-implant-procedure/
 ---

@@ -6,11 +6,10 @@ seo:
   description: Get a healthy, gorgeous smile with dental implants. Learn about affordable implants and
     how they can transform your smile from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Implants Vista, CA
-  subtext: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
+- _component: page-sections/heroes/page-banner
+  heading: Dental Implants
+  location: Vista, CA
+  intro: Dental implants can be an ideal solution to replacing damaged or missing teeth. They can restore
     not only the functionality of teeth but can provide a great new look as well. Dental implants are
     a standard cosmetic dental option offered at North County Cosmetic and Implant Dentistry. People tend
     to assume that the gap left behind after losing a permanent adult tooth can remain empty. The reality
@@ -19,23 +18,13 @@ pageSections:
     issues We have the tools and skills necessary to provide patients with a customized dental implant
     to meet their specific needs.
   imageSource: /src/assets/images/wp/dental-implants-header.jpg
-  imageAlt: Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -172,11 +161,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant services on Yelp: Dental Implants Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Caring for Dental Implants
     contentSections:
@@ -229,11 +219,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: There is 40 years of data behind dental implants, with success rates of about 98 percent
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -241,77 +232,74 @@ pageSections:
       text: Ancient dental implants have been traced back to around 600 AD, when tooth-like pieces of
         shell were hammered into the jaw of a Mayan woman. Thank goodness for contemporary dentistry!
         Read more
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Implant FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Implant FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I need to replace two missing teeth next to each other. Can I just have one implant
+          placed and attach it to one of my natural teeth and make a bridge?](#q-i-need-to-replace-two-missing-teeth-next-to-each-other-can)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I lost my upper back teeth on one side and have gone for years without doing anything
+          about it. My sinuses always seem to bother me more on that side than on the side that I have
+          back teeth. Could these problems be related to one another?](#q-i-lost-my-upper-back-teeth-on-one-side-and-have-gone-for-y)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I've had dentures for several years and have lost a lot of jawbone. My lower dentures
+          are floaters and I need help. Is there still hope for me?](#q-i-ve-had-dentures-for-several-years-and-have-lost-a-lot-of)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I am missing all of my teeth and am now wearing a full upper and lower denture. I
+          can no longer tolerate my lowers. Will I need an implant for every tooth I am replacing on the
+          lower jaw?](#q-i-am-missing-all-of-my-teeth-and-am-now-wearing-a-full-upp)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I consulted a dentist several years ago about using implants to replace my lower
+          denture and he told me that I did not have adequate bone available to place enough in-the-bone
+          implants without danger of fracturing my now fragile jawbone. Are there any alternatives?](#q-i-consulted-a-dentist-several-years-ago-about-using-implan)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. I had a root canal on a tooth that fractured and now it has to be removed. Can it
+          be replaced with an implant or do I have to have a bridge or a partial?](#q-i-had-a-root-canal-on-a-tooth-that-fractured-and-now-it-ha)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Implant FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I need to replace two missing teeth next to each other. Can I just have one implant placed
-        and attach it to one of my natural teeth and make a bridge?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I lost my upper back teeth on one side and have gone for years without doing anything
-        about it. My sinuses always seem to bother me more on that side than on the side that I have back
-        teeth. Could these problems be related to one another?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I've had dentures for several years and have lost a lot of jawbone. My lower dentures
-        are floaters and I need help. Is there still hope for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I am missing all of my teeth and am now wearing a full upper and lower denture. I can
-        no longer tolerate my lowers. Will I need an implant for every tooth I am replacing on the lower
-        jaw?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I consulted a dentist several years ago about using implants to replace my lower denture
-        and he told me that I did not have adequate bone available to place enough in-the-bone implants
-        without danger of fracturing my now fragile jawbone. Are there any alternatives?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. I had a root canal on a tooth that fractured and now it has to be removed. Can it be replaced
-        with an implant or do I have to have a bridge or a partial?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
-    paddingVertical: xl
-    colorScheme: default
     backgroundColor: surface
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many people wear dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to eat my favorite foods after receiving dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many people wear dental implants?](#how-many-people-wear-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for dental implants?](#what-is-the-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -446,6 +434,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -475,11 +468,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Implants
+  backToTopHref: '#dental-implants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

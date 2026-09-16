@@ -7,34 +7,23 @@ seo:
   description: Get a healthy, dream smile with affordable dental cosmetics from North County Cosmetic
     and Implant Dentistry. Learn about cosmetic dental procedures
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Cosmetics Vista, CA
-  subtext: Visit North County Cosmetic and Implant Dentistry for dental cosmetics. We provide comprehensive
+- _component: page-sections/heroes/page-banner
+  heading: Dental Cosmetics
+  location: Vista, CA
+  intro: Visit North County Cosmetic and Implant Dentistry for dental cosmetics. We provide comprehensive
     dental care for patients throughout the Vista area and we can help you to remain in excellent oral
     health while also improving your smile. We believe that patients can have teeth that are highly functional
     and look amazing. After all, your teeth are yours for a lifetime, making it important to care for
     them and enjoy the way they look. To schedule a consultation to discuss possible procedures, call
     (760) 940-2273.
   imageSource: /src/assets/images/wp/dental-cosmetics.jpg
-  imageAlt: Dental Cosmetics Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Cosmetics
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -83,11 +72,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental cosmetic services on Yelp: Dental Cosmetics
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Dental Cosmetics for Teeth Replacement
     contentSections:
@@ -177,38 +167,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why should I consider dental cosmetics?](#why-should-i-consider-dental-cosmetics)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can cosmetic dentistry do for me?](#what-can-cosmetic-dentistry-do-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental cosmetics replace my teeth?](#can-dental-cosmetics-replace-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some full mouth reconstruction treatment options?](#what-are-some-full-mouth-reconstruction-treatment-options)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for the dental implant procedure?](#how-can-i-prepare-for-the-dental-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can social media help to find the best dentist?](#can-social-media-help-to-find-the-best-dentist)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why should I consider dental cosmetics?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can cosmetic dentistry do for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental cosmetics replace my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some full mouth reconstruction treatment options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for the dental implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can social media help to find the best dentist?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -329,6 +318,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -378,11 +372,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Cosmetics
+  backToTopHref: '#dental-cosmetics'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Veneers
+    url: /vista-ca/dental-veneers-and-dental-laminates/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
 ---

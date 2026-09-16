@@ -103,11 +103,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our dental services on Yelp: Dentist in Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Your Health is Our Top Priority
   contentSections:
@@ -146,33 +147,31 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/info-blocks/faq-section
-  heading: Questions Answered on This Page
-  headingLevel: h2
-  headingSize: lg
-  singleOpen: true
-  openFirst: false
-  items:
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: How do I find a dentist for my family?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: What can I do if I need cosmetic dental work?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Will reading patient reviews for a dentist help?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: How do I tell if I need a dental checkup?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: How can I prevent tooth decay?
-    contentSections: []
-  - _component: building-blocks/wrappers/accordion/accordion-item
-    title: Why is preventative dental care so important?
-    contentSections: []
+- _component: page-sections/builders/custom-section
+  label: Questions Answered on This Page
+  contentSections:
+  - _component: building-blocks/core-elements/heading
+    text: Questions Answered on This Page
+    level: h2
+    size: sm
+    alignX: center
+  - _component: building-blocks/core-elements/list
+    listType: bullet
+    items:
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [How do I find a dentist for my family?](#how-do-i-find-a-dentist-for-my-family)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [What can I do if I need cosmetic dental work?](#what-can-i-do-if-i-need-cosmetic-dental-work)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [Will reading patient reviews for a dentist help?](#will-reading-patient-reviews-for-a-dentist-help)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+    - _component: building-blocks/core-elements/list/list-item
+      text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
   maxContentWidth: xl
-  paddingHorizontal: xl
+  paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
   backgroundColor: surface

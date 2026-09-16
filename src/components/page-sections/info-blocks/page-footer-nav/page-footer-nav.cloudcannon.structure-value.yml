@@ -1,0 +1,16 @@
+label: Back to Top / Breadcrumbs
+icon: low_priority
+description: Closing "back to top" link and breadcrumb trail for interior pages.
+value:
+  _component: page-sections/info-blocks/page-footer-nav
+  id: ""
+  backToTopText: ""
+  backToTopHref: "#top"
+  crumbs: []
+preview:
+  text:
+    - Back to Top / Breadcrumbs
+  icon: low_priority
+picker_preview:
+  text: Back to Top / Breadcrumbs
+  subtext: Closing navigation for interior pages.

@@ -6,11 +6,10 @@ seo:
   description: Think your gums are receding? Visit North County Cosmetic and Implant Dentistry in Vista,
     CA for expert gum care and treatment options.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: I Think My Gums Are Receding Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
+- _component: page-sections/heroes/page-banner
+  heading: I Think My Gums Are Receding
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we focus on the health of our patients' gums
     just as much as we do on their teeth. We understand the critical nature of the gums and the role they
     play in keeping teeth healthy, strong, and intact. Through regular dental care, we can work to prevent
     gum disease. In certain situations, regular dental care is all a patient needs. However, if you do
@@ -18,23 +17,13 @@ pageSections:
     CA dental office. Since gum recession can lead to further health challenges, it is important to address
     the issue right away.
   imageSource: /src/assets/images/wp/i-think-my-gums-are-receding.jpg
-  imageAlt: I Think My Gums Are Receding Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: I Think My Gums Are Receding
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -116,11 +105,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral health support services on Yelp: I Think
         My Gums Are Receding Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: How do you prevent gum recession?
     contentSections:
@@ -163,38 +153,37 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about gum recession and how to treat it, call our dental office at (760) 940-2273.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why are my gums receding from my teeth?](#why-are-my-gums-receding-from-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if my gums are only receding from one tooth?](#what-should-i-do-if-my-gums-are-only-receding-from-one-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I prevent gum recession?](#how-do-i-prevent-gum-recession)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will gum disease do to my teeth?](#what-will-gum-disease-do-to-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried if my gums bleed when I floss?](#should-i-be-worried-if-my-gums-bleed-when-i-floss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is there anything I can do at home to help prevent oral cancer?](#is-there-anything-i-can-do-at-home-to-help-prevent-oral-canc)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why are my gums receding from my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if my gums are only receding from one tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I prevent gum recession?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will gum disease do to my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried if my gums bleed when I floss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is there anything I can do at home to help prevent oral cancer?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -300,6 +289,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -327,11 +321,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: I Think My Gums Are Receding
+  backToTopHref: '#i-think-my-gums-are-receding'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

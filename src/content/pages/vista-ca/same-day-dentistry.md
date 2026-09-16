@@ -6,11 +6,10 @@ seo:
   description: One-visit dental restoration. We know your time is priceless. Same day dentistry procedures
     to get a healthy, gorgeous smile in one visit
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Same Day Dentistry Vista, CA
-  subtext: If you are looking for solutions to any esthetic challenges with your smile or any oral health
+- _component: page-sections/heroes/page-banner
+  heading: Same Day Dentistry
+  location: Vista, CA
+  intro: If you are looking for solutions to any esthetic challenges with your smile or any oral health
     problems, call our office for same day dentistry . We are conveniently located in Vista, and you can
     schedule an appointment by calling (760) 940-2273. In our dental office, we are passionate about oral
     health and believe in the critical nature of preventative dental care. For this reason, we recommend
@@ -21,23 +20,13 @@ pageSections:
     you can be confident that we will perform your teeth cleaning and examination promptly and comfortably.
     In most cases, your appointment will be over before your lunch break ends.
   imageSource: /src/assets/images/wp/same-day-dentistry.jpg
-  imageAlt: Same Day Dentistry Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Same Day Dentistry
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -80,11 +69,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our same day dentistry services on Yelp: Same Day
         Dentistry Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Same Day Dentistry and Dental Crowns
     contentSections:
@@ -139,38 +129,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is same day dentistry?](#what-is-same-day-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can same day dentistry offer teeth whitening?](#can-same-day-dentistry-offer-teeth-whitening)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What does same day dentistry do for dental crowns?](#what-does-same-day-dentistry-do-for-dental-crowns)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is same day dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can same day dentistry offer teeth whitening?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What does same day dentistry do for dental crowns?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I tell if I need a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prevent tooth decay?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why is preventative dental care so important?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -287,6 +276,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -310,11 +304,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Same Day Dentistry
+  backToTopHref: '#same-day-dentistry'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: CEREC® Dentist
+    url: /vista-ca/cerec-dentist/
+  - name: Dental Crowns
+    url: /vista-ca/dental-crowns/
 ---

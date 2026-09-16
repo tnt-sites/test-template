@@ -6,29 +6,18 @@ seo:
   description: North County Cosmetic and Implant Dentistry offers dental implants in San Diego. For complete
     oral restoration, contact us now.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
+- _component: page-sections/heroes/page-banner
   heading: Transform Your Smile. Transform Your Life.
-  subtext: ''
+  location: ''
+  intro: ''
   imageSource: /src/assets/images/wp/Couple-on-beach.jpg
   imageAlt: Transform Your Smile. Transform Your Life.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: A New YOU is Waiting
   contentSections:
@@ -224,12 +213,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
   backgroundColor: surface
 ---

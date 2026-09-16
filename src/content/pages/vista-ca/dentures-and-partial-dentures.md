@@ -6,11 +6,10 @@ seo:
   description: Restore your smile with dentures and partial dentures at North County Cosmetic and Implant
     Dentistry in Vista, CA. Custom, comfortable tooth replacements.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dentures and Partial Dentures Vista, CA
-  subtext: You have probably heard about partial and full dentures as treatments for tooth loss. If you
+- _component: page-sections/heroes/page-banner
+  heading: Dentures and Partial Dentures
+  location: Vista, CA
+  intro: You have probably heard about partial and full dentures as treatments for tooth loss. If you
     are now facing this problem and want to do something about your smile, these are great solutions.
     Living with missing teeth can make things difficult for eating, but it can also affect your self-esteem.
     Dentures and partial dentures are practical solutions to restore mouth function and help patients
@@ -21,23 +20,13 @@ pageSections:
     have the necessary knowledge and training, you can feel at ease knowing we can set you on the path
     to a beautiful smile.
   imageSource: /src/assets/images/wp/dentures-and-partial-dentures.jpg
-  imageAlt: Dentures and Partial Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dentures and Partial Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -120,11 +109,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our denture and partial denture services on Yelp:
         Dentures and Partial Dentures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Choosing Dentures for Tooth Replacement
     contentSections:
@@ -336,33 +326,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there dentures to replace a few of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know about making adjustments to my dentures?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there dentures to replace a few of my teeth?](#are-there-dentures-to-replace-a-few-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits of dentures?](#what-are-the-benefits-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know about making adjustments to my dentures?](#what-do-i-need-to-know-about-making-adjustments-to-my-dentur)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -485,6 +473,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -514,11 +507,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Artificial Teeth
+  backToTopHref: '#dentures-and-partial-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Dentures
+    url: /vista-ca/implant-supported-dentures/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

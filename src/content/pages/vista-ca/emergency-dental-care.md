@@ -7,33 +7,22 @@ seo:
   description: We can help stop the pain. Accidents happen and getting dental care can help save a tooth
     and relieve you from unwanted pain
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Emergency Dental Care Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps
-    to restore a tooth that sustains damage from an accident or infection. If you live in Vista or the
-    surrounding area, we encourage you to save our phone number. Since there is no way to tell if or when
-    you may have a dental emergency, putting (760) 940-2273 in your contact list can save you a trip to
-    the emergency room.
+- _component: page-sections/heroes/page-banner
+  heading: Emergency Dental Care
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps to
+    restore a tooth that sustains damage from an accident or infection. If you live in Vista or the surrounding
+    area, we encourage you to save our phone number. Since there is no way to tell if or when you may
+    have a dental emergency, putting (760) 940-2273 in your contact list can save you a trip to the emergency
+    room.
   imageSource: /src/assets/images/wp/emergency-dental-care.jpg
-  imageAlt: Emergency Dental Care Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Emergency Dental Care
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -102,11 +91,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our emergency dental services on Yelp: Emergency Dental
         Care Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Toothaches.
     contentSections:
@@ -160,33 +150,32 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a dental emergency?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I go to the ER instead of the dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if I have a toothache?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can the ER treat any damage to my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I damage my tooth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a dental emergency?](#what-is-a-dental-emergency)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I go to the ER instead of the dentist?](#should-i-go-to-the-er-instead-of-the-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if I have a toothache?](#what-should-i-do-if-i-have-a-toothache)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](#if-i-hurt-my-tooth-in-a-car-accident-can-i-wait-a-day-or-two)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can the ER treat any damage to my teeth?](#can-the-er-treat-any-damage-to-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I damage my tooth?](#what-can-i-do-if-i-damage-my-tooth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -297,6 +286,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -322,11 +316,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Emergency Dental Care
+  backToTopHref: '#emergency-dental-care'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Emergency Dentist
+    url: /vista-ca/emergency-dentist/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
 ---

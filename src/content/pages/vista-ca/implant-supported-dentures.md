@@ -7,33 +7,22 @@ seo:
   description: Implant supported dentures are an excellent alternative to traditional dentures. They fit
     over implants providing exceptional retention, stability & support
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Implant Supported Dentures Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
+- _component: page-sections/heroes/page-banner
+  heading: Implant Supported Dentures
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported
     dentures to give them a dependable and durable alternative to dentures, dental bridges, and traditional
     dental implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
     940-2273 and schedule a consultation so we can examine you and determine if you are a good candidate
     for this procedure.
   imageSource: /src/assets/images/wp/implant-supported-dentures.jpg
-  imageAlt: Implant Supported Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Implant Supported Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -81,53 +70,55 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant supported denture services on Yelp: Implant
         Supported Dentures Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Frequently Asked Questions About Implant Supported Dentures
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Frequently Asked Questions About Implant Supported Dentures
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [(760) 940-2273](#760-940-2273)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Frequently Asked Questions About Implant Supported Dentures
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: (760) 940-2273
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
-    paddingVertical: xl
-    colorScheme: default
     backgroundColor: surface
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is implant supported dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I qualify for implant supported dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will my age determine my options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for the dental implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are all-on-4® dental implants?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is implant supported dentures?](#what-is-implant-supported-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I qualify for implant supported dentures?](#do-i-qualify-for-implant-supported-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process like?](#what-is-the-recovery-process-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will my age determine my options?](#will-my-age-determine-my-options)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for the dental implant procedure?](#how-can-i-prepare-for-the-dental-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are all-on-4® dental implants?](#what-are-all-on-4-dental-implants)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -252,6 +243,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -281,11 +277,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Implant Supported Dentures
+  backToTopHref: '#implant-supported-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dentures
+    url: /vista-ca/dentures-and-partial-dentures/
+  - name: Free Implant Consultation
+    url: /vista-ca/dental-implants-consultation/
 ---

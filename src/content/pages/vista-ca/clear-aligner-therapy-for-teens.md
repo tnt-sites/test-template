@@ -7,37 +7,26 @@ seo:
   description: Clear Aligners for teens are the virtually invisible alternative to metal braces. Get your
     teen the smile they always wanted clear braces
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Clear Aligner Therapy for Teens Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so
-    that you can straighten your teeth without anyone noticing. If you want to improve your appearance,
-    this is an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there are
-    several things that you should know. Metal braces are a reliable solution for straightening your teeth
-    that have been used by people for decades. In fact, your parents may have used them when they were
-    teenagers. While they work well, the technology is similar in that you still need to have a metal
-    bracket placed on each tooth with a wire threaded between them and secured with rubber bands. Some
-    kids like how they can pick out fun rubber band colors to match their mood or a holiday. If that is
-    not your idea of fun, metal braces may not be for you.
+- _component: page-sections/heroes/page-banner
+  heading: Clear Aligner Therapy for Teens
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we offer Clear Aligner Therapy for Teens so that
+    you can straighten your teeth without anyone noticing. If you want to improve your appearance, this
+    is an excellent way to do so. When evaluating Clear Aligner Therapy vs. Metal Braces, there are several
+    things that you should know. Metal braces are a reliable solution for straightening your teeth that
+    have been used by people for decades. In fact, your parents may have used them when they were teenagers.
+    While they work well, the technology is similar in that you still need to have a metal bracket placed
+    on each tooth with a wire threaded between them and secured with rubber bands. Some kids like how
+    they can pick out fun rubber band colors to match their mood or a holiday. If that is not your idea
+    of fun, metal braces may not be for you.
   imageSource: /src/assets/images/wp/invisalign-for-teens.jpg
-  imageAlt: Clear Aligner Therapy for Teens Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Clear Aligner Therapy for Teens
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -83,11 +72,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Clear Aligner Therapy for Teens
     contentSections:
@@ -158,38 +148,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: For more information on Clear Aligner Therapy Teen or to schedule a consultation, call 760-940-2273.
         Call today so you can have a beautiful smile tomorrow.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are metal braces the only option for my teen?](#are-metal-braces-the-only-option-for-my-teen)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will Clear Aligner Therapy work for my teen?](#will-clear-aligner-therapy-work-for-my-teen)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the advantages to Clear Aligner Therapy?](#what-are-the-advantages-to-clear-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it easier to keep teeth clean with Clear Aligner Therapy?](#is-it-easier-to-keep-teeth-clean-with-clear-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will my teen need to wear clear aligners?](#how-long-will-my-teen-need-to-wear-clear-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How responsible does my teen need to be in caring for clear aligners?](#how-responsible-does-my-teen-need-to-be-in-caring-for-clear-)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are metal braces the only option for my teen?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will Clear Aligner Therapy work for my teen?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the advantages to Clear Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it easier to keep teeth clean with Clear Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will my teen need to wear clear aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How responsible does my teen need to be in caring for clear aligners?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -326,6 +315,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -353,11 +347,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Clear Aligner Therapy for Teens
+  backToTopHref: '#clear-aligner-therapy-for-teens'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Alternative to Braces
+    url: /vista-ca/alternative-to-braces-for-teens/
+  - name: Clear vs Braces
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

@@ -13,11 +13,12 @@ pageSections:
     text: Dr. Christopher Henninger joined North County Cosmetic and Implant Dentistry in 2011. Dr. Henninger
       is a well-trained general dentist who joins Dr. Huenergardt in providing the highest level of care
       to our patients.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

@@ -6,32 +6,21 @@ seo:
   description: Concerned about bleeding gums? Visit North County Cosmetic and Implant Dentistry in Vista,
     CA for expert diagnosis and treatment options.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Why Are My Gums Bleeding Vista, CA
-  subtext: If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North
+- _component: page-sections/heroes/page-banner
+  heading: Why Are My Gums Bleeding
+  location: Vista, CA
+  intro: If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North
     County Cosmetic and Implant Dentistry we can examine you and determine whether they are bleeding due
     to simple irritation or if there is a greater health concern. You can schedule an appointment with
     our office by calling (760) 940-2273. In the meantime, here is what you need to know about your gums.
   imageSource: /src/assets/images/wp/why-are-my-gums-bleeding.jpg
-  imageAlt: Why Are My Gums Bleeding Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Why Are My Gums Bleeding
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -125,11 +114,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral health support services on Yelp: Why Are
         My Gums Bleeding? Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Q&A
     contentSections:
@@ -192,38 +182,37 @@ pageSections:
       text: If you have further questions about your gums, call 760-940-2273 and schedule an appointment
         with our dental office. We will be happy to answer your questions, examine you and provide you
         with treatment recommendations.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the symptoms of gum disease?](#what-are-the-symptoms-of-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried if my gums bleed when I floss?](#should-i-be-worried-if-my-gums-bleed-when-i-floss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What does it mean if my gums are sensitive when I floss?](#what-does-it-mean-if-my-gums-are-sensitive-when-i-floss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why are my gums receding from my teeth?](#why-are-my-gums-receding-from-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the treatment options for gum disease?](#what-are-the-treatment-options-for-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is there anything I can do at home to help prevent oral cancer?](#is-there-anything-i-can-do-at-home-to-help-prevent-oral-canc)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the symptoms of gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried if my gums bleed when I floss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What does it mean if my gums are sensitive when I floss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why are my gums receding from my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the treatment options for gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is there anything I can do at home to help prevent oral cancer?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -327,6 +316,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -350,11 +344,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Why Are My Gums Bleeding?
+  backToTopHref: '#why-are-my-gums-bleeding'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Cleaning & Exams
+    url: /vista-ca/dental-cleaning-and-examinations/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

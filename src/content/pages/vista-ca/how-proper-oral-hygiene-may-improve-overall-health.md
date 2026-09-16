@@ -6,35 +6,24 @@ seo:
   description: Discover how oral hygiene can improve your overall health at North County Cosmetic and
     Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: How Proper Oral Hygiene May Improve Overall Health Vista, CA
-  subtext: Oral hygiene is an essential aspect of overall health and may have a larger impact on one's
-    total health than many realize. Complete health dentists are practitioners who use patients' oral
-    health to identify and evaluate potential and existing diseases they may have. The oral health connection
+- _component: page-sections/heroes/page-banner
+  heading: How Proper Oral Hygiene May Improve Overall Health
+  location: Vista, CA
+  intro: Oral hygiene is an essential aspect of overall health and may have a larger impact on one's total
+    health than many realize. Complete health dentists are practitioners who use patients' oral health
+    to identify and evaluate potential and existing diseases they may have. The oral health connection
     is the corollary between oral health and general wellness. A complete health dentist is available
     at North County Cosmetic and Implant Dentistry in Vista and the surrounding area. This type of dentist
     strives to improve a patient's overall wellness by examining and caring for oral health. A complete
     health dentist is an alternative to a traditional practitioner and may be beneficial for many patients.
   imageSource: /src/assets/images/wp/How-Proper-Oral-Hygiene-May-Improve-Overall-Health.jpg
-  imageAlt: How Proper Oral Hygiene May Improve Overall Health Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: How Proper Oral Hygiene May Improve Overall Health
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: How Proper Oral Hygiene May Improve Overall Health Vista, CA
   contentSections:
@@ -226,11 +215,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

@@ -5,32 +5,21 @@ seo:
   title: ''
   description: ''
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Our Process Vista, CA
-  subtext: In many cases, successful dental implant procedures require greater preparation. At North County
+- _component: page-sections/heroes/page-banner
+  heading: Our Process
+  location: Vista, CA
+  intro: In many cases, successful dental implant procedures require greater preparation. At North County
     Cosmetic and Implant Dentistry, patient comfort, patient safety, and successful outcomes are what
     makes us leaders in dental implant therapy. Our training in the latest techniques and the use of the
     latest technology is what sets our San Diego implant dentists apart from other dentists.
   imageSource: /src/assets/images/wp/OurProcess.jpg
-  imageAlt: Our Process Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Our Process
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -50,11 +39,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our Our Process services on Yelp: Our Process Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -62,11 +52,12 @@ pageSections:
     text: Contact Drs. Henninger and Huenergardt’s office today to learn how you can upgrade your smile
       with Teeth in a Day dental implants in San Diego, CA! Schedule your consultation by calling (760)
       940-2273.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -79,11 +70,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

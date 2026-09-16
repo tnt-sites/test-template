@@ -7,33 +7,22 @@ seo:
   description: You've heard the myths, and want to know what is fact and what is fiction. Learn the truth
     about 5 top root canal myths. Stop the pain and save your tooth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: The Truth Behind Root Canals Vista, CA
-  subtext: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
+- _component: page-sections/heroes/page-banner
+  heading: The Truth Behind Root Canals
+  location: Vista, CA
+  intro: 'Many people seem to have a phobia of dental care and the variety of procedures in which they
     believe that professional dental care will be painful. In reality, most dental visits are not nearly
     as painful as people fear. The truth is that the patient will feel more pain if he or she avoids seeking
     professional treatment. Regardless, there is one procedure that people seem to fear above the rest:
     the root canal.'
   imageSource: /src/assets/images/wp/the-truth-behind-root-canals.jpg
-  imageAlt: The Truth Behind Root Canals Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: The Truth Behind Root Canals
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -135,38 +124,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: The Truth Behind Root
         Canals Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are root canals painful?](#are-root-canals-painful)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does a root canal remove the entire tooth?](#does-a-root-canal-remove-the-entire-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How many appointments will the root canal take?](#how-many-appointments-will-the-root-canal-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if I need a root canal?](#how-do-i-know-if-i-need-a-root-canal)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits from getting a root canal?](#what-are-the-benefits-from-getting-a-root-canal)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are root canals painful?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does a root canal remove the entire tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How many appointments will the root canal take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if I need a root canal?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits from getting a root canal?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -280,6 +268,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -311,11 +304,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: The Truth Behind Root Canals
+  backToTopHref: '#the-truth-behind-root-canals'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

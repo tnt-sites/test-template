@@ -7,35 +7,24 @@ seo:
   description: Preserve your teeth and gums. North County Cosmetic and Implant Dentistry focuses on gentle
     gum treatments including meticulous cleaning of root surfaces to remove dental plaque
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Root Scaling and Planing Vista, CA
-  subtext: If you have gum disease, you may need a root scaling and planing procedure to help get rid
-    of it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
+- _component: page-sections/heroes/page-banner
+  heading: Root Scaling and Planing
+  location: Vista, CA
+  intro: If you have gum disease, you may need a root scaling and planing procedure to help get rid of
+    it. This is a serious condition that can lead to eventual bone and tooth loss. We will go through
     every treatment we can to prevent gum disease and other painful conditions. At North County Cosmetic
     and Implant Dentistry, we recommend that you visit our dental office twice per year so we can do just
     that. We want to remove plaque and tartar before they can cause gum disease, gum recession, and the
     need for this procedure. However, if you do need a root scaling and planing procedure, we can help
     and we can ensure that you are as comfortable as possible during it.
   imageSource: /src/assets/images/wp/root-scaling-and-planing.jpg
-  imageAlt: Root Scaling and Planing Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Root Scaling and Planing
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -141,11 +130,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our root scaling services on Yelp: Root Scaling and
         Planing Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Will I need follow-up procedures?
     contentSections:
@@ -181,33 +171,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is periodontal scaling and root planing?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there any risks with periodontal scaling and root planing?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I eat normally right after the scaling and root planing?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why are my gums receding from my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried if my gums bleed when I floss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is gum contouring?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is periodontal scaling and root planing?](#what-is-periodontal-scaling-and-root-planing)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there any risks with periodontal scaling and root planing?](#are-there-any-risks-with-periodontal-scaling-and-root-planin)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I eat normally right after the scaling and root planing?](#can-i-eat-normally-right-after-the-scaling-and-root-planing)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why are my gums receding from my teeth?](#why-are-my-gums-receding-from-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried if my gums bleed when I floss?](#should-i-be-worried-if-my-gums-bleed-when-i-floss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is gum contouring?](#what-is-gum-contouring)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -348,6 +336,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -375,11 +368,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Root Scaling and Planing
+  backToTopHref: '#root-scaling-and-planing'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

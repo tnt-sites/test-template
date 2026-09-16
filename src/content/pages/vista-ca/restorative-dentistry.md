@@ -7,11 +7,10 @@ seo:
   description: Accident? Neglect? Enhancement? Reputable cosmetic dentist in Vista offers the latest in
     restoration dentistry treatments and technologies to help restore your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Restorative Dentistry Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding
+- _component: page-sections/heroes/page-banner
+  heading: Restorative Dentistry
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding
     how essential your teeth are to the overall health of your mouth, jawbone, and body, we seek to restore
     and preserve your teeth whenever possible. If you live in Vista, CA and damage your tooth, we encourage
     you to call our office at (760) 940-2273. We will examine you and determine the best way to save your
@@ -21,23 +20,13 @@ pageSections:
     that you seek us out quickly. Our team is friendly and accommodating, and we will do whatever we can
     to get your appointment scheduled for a time that is convenient for you.
   imageSource: /src/assets/images/wp/restorative-dentistry.jpg
-  imageAlt: Restorative Dentistry Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Restorative Dentistry
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -139,11 +128,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our restorative dental services on Yelp: Restorative
         Dentistry Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Natural Looking Restorative Dentistry
     contentSections:
@@ -181,38 +171,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is restorative dentistry?](#what-is-restorative-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are children eligible for restorative dentistry?](#are-children-eligible-for-restorative-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental restorations obviously fake?](#are-dental-restorations-obviously-fake)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if I need dental restorations?](#how-do-i-know-if-i-need-dental-restorations)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental crowns?](#what-are-dental-crowns)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is restorative dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are children eligible for restorative dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental restorations obviously fake?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if I need dental restorations?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Which tooth replacement is right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental crowns?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -337,6 +326,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -374,11 +368,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Restorative Dentistry
+  backToTopHref: '#restorative-dentistry'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Candidate?
+    url: /vista-ca/dental-implant-candidate/
+  - name: Replacing Teeth
+    url: /vista-ca/options-for-replacing-missing-teeth/
 ---

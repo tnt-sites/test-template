@@ -7,33 +7,22 @@ seo:
   description: Having issues with your existing implants? Dental implant restoration is a procedure that
     can provide you a stable, secure, and confident smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Implant Restoration Vista, CA
-  subtext: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an
-    appointment with our Vista, CA dental office. It is critical that we examine your dental implant right
-    away and that you do not try to self-diagnose the problem. This can lead to further irritation and
-    dental challenges. During an examination, we can let you know if you need a dental implant restoration
-    and the best way to proceed.
+- _component: page-sections/heroes/page-banner
+  heading: Dental Implant Restoration
+  location: Vista, CA
+  intro: If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an appointment
+    with our Vista, CA dental office. It is critical that we examine your dental implant right away and
+    that you do not try to self-diagnose the problem. This can lead to further irritation and dental challenges.
+    During an examination, we can let you know if you need a dental implant restoration and the best way
+    to proceed.
   imageSource: /src/assets/images/wp/dental-implant-restoration.jpg
-  imageAlt: Dental Implant Restoration Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Implant Restoration
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -84,11 +73,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant restoration services on Yelp: Dental Implant
         Restoration Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What does dental implant repair involve?
     contentSections:
@@ -168,33 +158,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do when a dental implant becomes loose?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I repair a dental implant?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for replacing dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if dental implants are right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I need bone grafting?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do when a dental implant becomes loose?](#what-can-i-do-when-a-dental-implant-becomes-loose)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I repair a dental implant?](#how-can-i-repair-a-dental-implant)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for replacing dental implants?](#what-is-the-process-for-replacing-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I need bone grafting?](#do-i-need-bone-grafting)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -331,6 +319,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -360,11 +353,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Implant Restoration
+  backToTopHref: '#dental-implant-restoration'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

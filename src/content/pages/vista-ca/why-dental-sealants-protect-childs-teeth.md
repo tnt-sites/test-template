@@ -7,11 +7,10 @@ seo:
   description: Shown to reduce tooth decay by up to 60 percent, why the extra protection of dental sealants
     act as a barrier to prevent cavities. Find out more
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth Vista, CA
-  subtext: Standing behind the child with a stern expression, parents will do just about anything to ensure
+- _component: page-sections/heroes/page-banner
+  heading: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth
+  location: Vista, CA
+  intro: Standing behind the child with a stern expression, parents will do just about anything to ensure
     their children brush and floss on a regular basis. Much to the parents' efforts, children still seem
     to attract tooth decay or infection. The risk of tooth decay for children can even begin before they
     reach the age of 3. While a child becomes more capable of brushing his or her teeth without a parent's
@@ -19,23 +18,13 @@ pageSections:
     plaque. If most adults cannot reach the areas they need to, then a child will definitely not be able
     to reach every area with a toothbrush and allow plaque to build up over time.
   imageSource: /src/assets/images/wp/why-dental-sealants-protect-childs-teeth.jpg
-  imageAlt: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Why Dental Sealants Play an Important Part in Protecting Your Child’s Teeth
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -82,38 +71,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about the extra protection of dental sealants on Yelp: Why
         Dental Sealants Play an Important Part in Protecting Your Child''s Teeth Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental sealants protect my child’s teeth?](#can-dental-sealants-protect-my-child-s-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is brushing the teeth enough to keep my child’s teeth healthy?](#is-brushing-the-teeth-enough-to-keep-my-child-s-teeth-health)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental sealants?](#what-are-dental-sealants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do dental sealants do?](#what-do-dental-sealants-do)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for getting a mouth guard?](#what-is-the-process-for-getting-a-mouth-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does my child need regular fluoride treatments?](#does-my-child-need-regular-fluoride-treatments)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental sealants protect my child’s teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is brushing the teeth enough to keep my child’s teeth healthy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental sealants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do dental sealants do?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for getting a mouth guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does my child need regular fluoride treatments?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -232,6 +220,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -265,11 +258,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth
+  backToTopHref: '#why-dental-sealants-protect-childs-teeth'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Tooth Colored Fillings
+    url: /vista-ca/composite-fillings/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

@@ -6,11 +6,10 @@ seo:
   description: Relax with IV sedation dentistry at North County Cosmetic and Implant Dentistry in Vista,
     CA. Safe, comfortable care for anxiety-free dental treatments.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: IV Sedation Dentistry Vista, CA
-  subtext: Dr. Christopher Henninger and our team at North County Cosmetic and Implant Dentistry understand
+- _component: page-sections/heroes/page-banner
+  heading: IV Sedation Dentistry
+  location: Vista, CA
+  intro: Dr. Christopher Henninger and our team at North County Cosmetic and Implant Dentistry understand
     the challenges of finding a dentist for a patient who has a medical condition that can make receiving
     professional dental care. From patients with dental anxiety to other challenges, our team is dedicated
     to ensuring all patients can experience the benefits of the oral health care they need. We can help
@@ -20,23 +19,13 @@ pageSections:
     issues getting in the way. We will help customize the treatment experience for each patient and determine
     if IV sedation dentistry is the right form of treatment.
   imageSource: /src/assets/images/wp/IV-Sedation-Dentistry.jpg
-  imageAlt: IV Sedation Dentistry Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: IV Sedation Dentistry
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: IV Sedation Dentistry Vista, CA
   contentSections:
@@ -241,11 +230,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

@@ -7,34 +7,23 @@ seo:
   description: Don't want traditional braces? Looking for Clear Aligners vs Traditional Braces comparison?
     North County Cosmetic and Implant Dentistry breaks it all down
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Clear Aligner Therapy vs Traditional Braces Vista, CA
-  subtext: If you are looking into orthodontics options for your teen, it is important to consider Clear
+- _component: page-sections/heroes/page-banner
+  heading: Clear Aligner Therapy vs Traditional Braces
+  location: Vista, CA
+  intro: If you are looking into orthodontics options for your teen, it is important to consider Clear
     Aligner Therapy vs. traditional braces for teens. You should also know what both solutions look like
     on a daily basis. Essentially, any orthodontic solution will move teeth by applying pressure. This
     pressure has to be placed on the right teeth at the right time so that gradually, they move into position.
     Both solutions do an excellent job. At the end of the day it really comes down to lifestyle, convenience,
     and what your teen will feel confident wearing.
   imageSource: /src/assets/images/wp/invisalign-vs-traditional-braces.jpg
-  imageAlt: Clear Aligner Therapy vs Traditional Braces Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Clear Aligner Therapy vs Traditional Braces
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -114,11 +103,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy vs Traditional Braces Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Oral hygiene –
     contentSections:
@@ -191,33 +181,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will Clear Aligner Therapy treatment take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to continue eating what I want to eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do with the clear aligner when I play a sport?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is Clear Aligner Therapy discreet?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are clear braces an alternative to metal ones?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can Clear Aligner Therapy straighten my teen’s teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will Clear Aligner Therapy treatment take?](#how-long-will-clear-aligner-therapy-treatment-take)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to continue eating what I want to eat?](#will-i-be-able-to-continue-eating-what-i-want-to-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do with the clear aligner when I play a sport?](#what-do-i-do-with-the-clear-aligner-when-i-play-a-sport)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is Clear Aligner Therapy discreet?](#is-clear-aligner-therapy-discreet)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are clear braces an alternative to metal ones?](#are-clear-braces-an-alternative-to-metal-ones)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can Clear Aligner Therapy straighten my teen’s teeth?](#can-clear-aligner-therapy-straighten-my-teen-s-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -353,6 +341,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -380,11 +373,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Clear Aligner Therapy vs Traditional Braces
+  backToTopHref: '#clear-aligner-therapy-vs-traditional-braces'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Alternative to Braces
+    url: /vista-ca/alternative-to-braces-for-teens/
+  - name: Clear Braces
+    url: /vista-ca/clear-braces/
 ---

@@ -7,11 +7,10 @@ seo:
   description: Curious about dental implants? Have questions? Get them all answered. Dental implants provide
     the best long term results for replacing missing teeth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Questions to Ask at Your Dental Implants Consultation Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
+- _component: page-sections/heroes/page-banner
+  heading: Questions to Ask at Your Dental Implants Consultation
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
     to tooth loss that can restore both the appearance and function of our patients' smiles. If you have
     lost a tooth due to an accident, infection, or age, we encourage you to call (760) 940-2273 and schedule
     an appointment with our dental office. We will be happy to answer any questions that you have after
@@ -19,23 +18,13 @@ pageSections:
     become comfortable with the procedure and be confident in the dentist that you have chosen to work
     with.
   imageSource: /src/assets/images/wp/dental-implants-consultation.jpg
-  imageAlt: Questions to Ask at Your Dental Implants Consultation Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Questions to Ask at Your Dental Implants Consultation
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -79,11 +68,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our implant consultation support services on Yelp:
         Questions to Ask at Your Dental Implants Consultation Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What are the requirements to qualify for a dental implants procedure?
     contentSections:
@@ -167,33 +157,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How much of the process can you complete in the office?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I qualify for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants better than dentures or dental bridges?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How much of the process can you complete in the office?](#how-much-of-the-process-can-you-complete-in-the-office)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I qualify for dental implants?](#do-i-qualify-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process for dental implants?](#what-is-the-recovery-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -357,6 +345,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -386,11 +379,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Questions to Ask at Your Dental Implants Consultation
+  backToTopHref: '#dental-implants-consultation'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Replacing Missing Teeth
+    url: /vista-ca/options-for-replacing-missing-teeth/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

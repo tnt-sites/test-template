@@ -7,34 +7,23 @@ seo:
   description: How Fast? How Effective? North County Cosmetic and Implant Dentistry breaks down the 7
     things parents need to know about Clear Aligners Teen, the new way of straightening teeth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: 7 Things Parents Need to Know About Clear Aligner Therapy Teen Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can understand why teen patients prefer
-    Clear Aligner Therapy to other products. As a parent, we encourage you to explore this option so that
-    your teen can gain a beautiful smile that they are confident to show off. Now is an excellent time
-    to straighten their teeth before the teen heads off to college. Orthodontics, under your supervision,
-    can be an effective treatment that gives them a confidence boost for the rest of their life. To find
-    out if your teen qualifies, call (760) 940-2273 and schedule an appointment to speak with our team.
+- _component: page-sections/heroes/page-banner
+  heading: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can understand why teen patients prefer Clear
+    Aligner Therapy to other products. As a parent, we encourage you to explore this option so that your
+    teen can gain a beautiful smile that they are confident to show off. Now is an excellent time to straighten
+    their teeth before the teen heads off to college. Orthodontics, under your supervision, can be an
+    effective treatment that gives them a confidence boost for the rest of their life. To find out if
+    your teen qualifies, call (760) 940-2273 and schedule an appointment to speak with our team.
   imageSource: /src/assets/images/wp/parents-need-to-know-about-invisalign.jpg
-  imageAlt: 7 Things Parents Need to Know About Clear Aligner Therapy Teen Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -125,11 +114,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -145,33 +135,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will my teen need to wear the aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How will my teen clean his or her aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can my teen wear aligners during other activities such as sports?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is Clear Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to continue eating what I want to eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I get started with Clear Aligner Therapy?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will my teen need to wear the aligners?](#how-long-will-my-teen-need-to-wear-the-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How will my teen clean his or her aligners?](#how-will-my-teen-clean-his-or-her-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can my teen wear aligners during other activities such as sports?](#can-my-teen-wear-aligners-during-other-activities-such-as-sp)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is Clear Aligner Therapy?](#what-is-clear-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to continue eating what I want to eat?](#will-i-be-able-to-continue-eating-what-i-want-to-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I get started with Clear Aligner Therapy?](#how-do-i-get-started-with-clear-aligner-therapy)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -307,6 +295,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -334,11 +327,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
+  backToTopHref: '#parents-need-to-know-about-clear-aligner-therapy'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Alternative to Braces
+    url: /vista-ca/alternative-to-braces-for-teens/
+  - name: Clear vs Traditional Braces
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

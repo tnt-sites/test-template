@@ -7,36 +7,24 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental center with great results. Affordable dental
     services can transform your smile at North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Center Vista, CA
-  subtext: If you live in Vista or the surrounding area, we invite you to schedule an appointment with
-    our dental center . We can treat everyone in your family and ensure that you are in excellent oral
-    health. We understand how essential healthy teeth and gums are to your ability to enjoy life and live
-    without restriction. Your teeth make it possible for you to eat lunch with a friend, smile at your
-    children, and speak with a client at work. Our objective is to prevent you from experiencing this
-    inconvenience by keeping your teeth healthy and intact as you age. This starts with preventative care,
-    making it necessary to visit our dental center and have your teeth examined and cleaned once or twice
-    a year.
+- _component: page-sections/heroes/page-banner
+  heading: Dental Center
+  location: Vista, CA
+  intro: If you live in Vista or the surrounding area, we invite you to schedule an appointment with our
+    dental center . We can treat everyone in your family and ensure that you are in excellent oral health.
+    We understand how essential healthy teeth and gums are to your ability to enjoy life and live without
+    restriction. Your teeth make it possible for you to eat lunch with a friend, smile at your children,
+    and speak with a client at work. Our objective is to prevent you from experiencing this inconvenience
+    by keeping your teeth healthy and intact as you age. This starts with preventative care, making it
+    necessary to visit our dental center and have your teeth examined and cleaned once or twice a year.
   imageSource: /src/assets/images/wp/dental-center.jpg
-  imageAlt: Dental Center Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Center
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -82,11 +70,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Dental Center Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: 'Some examples of the procedures we perform:'
     contentSections:
@@ -138,33 +127,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What services does a dental center provide?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to repair damaged teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can dental veneers do for my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will happen at my dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I find a dentist for my family?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a general dentist?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What services does a dental center provide?](#what-services-does-a-dental-center-provide)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to repair damaged teeth?](#what-can-i-do-to-repair-damaged-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can dental veneers do for my teeth?](#what-can-dental-veneers-do-for-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will happen at my dental checkup?](#what-will-happen-at-my-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I find a dentist for my family?](#how-do-i-find-a-dentist-for-my-family)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a general dentist?](#what-is-a-general-dentist)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -281,6 +268,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -304,11 +296,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Center
+  backToTopHref: '#dental-center'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---

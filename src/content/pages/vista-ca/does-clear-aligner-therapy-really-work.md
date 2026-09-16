@@ -7,36 +7,25 @@ seo:
   description: Don't want traditional braces? Wondering does Clear Aligner Therapy really work as well
     as braces? Is it for you? North County Cosmetic and Implant Dentistry breaks it all down
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Does Clear Aligner Therapy Really Work Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we are regularly asked about Clear Aligner
-    Therapy and how effective it is at straightening teeth. This is an understandable question, because
-    the process of using clear aligners is relatively new in comparison to wearing metal braces. As with
-    any new technology, people often wonder, "Does Clear Aligner Therapy really work?" and the answer
-    is, yes. If you want a straight and beautiful smile without making it obvious that you are undergoing
-    dental care, this is the best solution for you. As with any procedure, you will need to follow our
-    instructions to ensure that your teeth move correctly and as quickly as possible. For example, aligners
-    need to be worn for around 22 hours a day.
+- _component: page-sections/heroes/page-banner
+  heading: Does Clear Aligner Therapy Really Work
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we are regularly asked about Clear Aligner Therapy
+    and how effective it is at straightening teeth. This is an understandable question, because the process
+    of using clear aligners is relatively new in comparison to wearing metal braces. As with any new technology,
+    people often wonder, "Does Clear Aligner Therapy really work?" and the answer is, yes. If you want
+    a straight and beautiful smile without making it obvious that you are undergoing dental care, this
+    is the best solution for you. As with any procedure, you will need to follow our instructions to ensure
+    that your teeth move correctly and as quickly as possible. For example, aligners need to be worn for
+    around 22 hours a day.
   imageSource: /src/assets/images/wp/does-clear-aligner-therapy-really-work.jpeg
-  imageAlt: Does Clear Aligner Therapy Really Work Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Does Clear Aligner Therapy Really Work
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -113,11 +102,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Does Clear Aligner Therapy really work for people who want to straighten teeth discreetly?
     contentSections:
@@ -168,33 +158,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does Clear Aligner Therapy really work for adults?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is Clear Aligner Therapy better than traditional braces?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is Clear Aligner Therapy discreet?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long do I need to wear the aligners for?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to continue eating what I want to eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can my teen wear aligners during other activities such as sports?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does Clear Aligner Therapy really work for adults?](#does-clear-aligner-therapy-really-work-for-adults)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is Clear Aligner Therapy better than traditional braces?](#is-clear-aligner-therapy-better-than-traditional-braces)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is Clear Aligner Therapy discreet?](#is-clear-aligner-therapy-discreet)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long do I need to wear the aligners for?](#how-long-do-i-need-to-wear-the-aligners-for)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to continue eating what I want to eat?](#will-i-be-able-to-continue-eating-what-i-want-to-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can my teen wear aligners during other activities such as sports?](#can-my-teen-wear-aligners-during-other-activities-such-as-sp)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -331,6 +319,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -358,11 +351,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Does Clear Aligner Therapy really work?
+  backToTopHref: '#does-clear-aligner-therapy-really-work'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Clear Braces
+    url: /vista-ca/clear-braces/
+  - name: Clear vs Traditional Braces
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

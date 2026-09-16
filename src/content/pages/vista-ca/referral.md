@@ -6,33 +6,20 @@ seo:
   description: Refer patients with special needs or complex oral health cases to North County Cosmetic
     and Implant Dentistry in Vista, CA for expert care and IV sedation
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
-    complex patients receive essential oral care.
-  subtext: Partner with North County Cosmetic and Implant Dentistry referral program to refer your patients
+- _component: page-sections/heroes/page-banner
+  heading: Expert, Specialized Help for Your Patients’ Dental Needs
+  location: Helping special needs and medically complex patients receive essential oral care.
+  intro: Partner with North County Cosmetic and Implant Dentistry referral program to refer your patients
     to a dentist with the experience, certifications, and technology to treat the effects that disease
     and treatment have caused in their mouths.
   imageSource: /src/assets/images/wp/Dr-Henniger-surgery-rm.jpg
-  imageAlt: Expert, Specialized Help for Your Patients’ Dental Needs Helping special needs and medically
-    complex patients receive essential oral care.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Expert, Specialized Help for Your Patients’ Dental Needs
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: The care your patients need to move forward.
   contentSections:
@@ -69,11 +56,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: Check out what others are saying about our services on Yelp Services Vista
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Here to help serve your patients.
   contentSections:
@@ -140,11 +128,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

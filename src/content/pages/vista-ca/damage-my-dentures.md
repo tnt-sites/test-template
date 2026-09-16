@@ -6,33 +6,22 @@ seo:
   description: Unsure what to do if you damage your dentures? North County Cosmetic and Implant Dentistry
     in Vista, CA provides denture repair and replacement options.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What Do I Do If I Damage My Dentures Vista, CA
-  subtext: If you have dentures, it is important to handle them with care so they can remain in as good
+- _component: page-sections/heroes/page-banner
+  heading: What Do I Do If I Damage My Dentures
+  location: Vista, CA
+  intro: If you have dentures, it is important to handle them with care so they can remain in as good
     a condition as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can
     offer the information and tools necessary to address a problem if you have one. At North County Cosmetic
     and Implant Dentistry can answer any questions you have regarding denture care. To schedule an appointment
     with our dental office, call (760) 940-2273. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/damage-my-dentures.jpg
-  imageAlt: What Do I Do If I Damage My Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What Do I Do If I Damage My Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -106,11 +95,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our damaged denture support services on Yelp: What
         Do I Do If I Damage My Dentures in Vista?'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Alternatives to Dentures From a Cosmetic Dentist in Vista, CA
     contentSections:
@@ -173,33 +163,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do when I only loose a few of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are dental implants right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I fix my dentures on my own?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know about making adjustments to my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do when I only loose a few of my teeth?](#what-can-i-do-when-i-only-loose-a-few-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are dental implants right for me?](#are-dental-implants-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I fix my dentures on my own?](#can-i-fix-my-dentures-on-my-own)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know about making adjustments to my dentures?](#what-do-i-need-to-know-about-making-adjustments-to-my-dentur)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -322,6 +310,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -351,11 +344,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What Do I Do If I Damage My Dentures
+  backToTopHref: '#damage-my-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dentures
+    url: /vista-ca/dentures-and-partial-dentures/
+  - name: Emergency Dentist
+    url: /vista-ca/emergency-dentist/
 ---

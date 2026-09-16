@@ -7,32 +7,21 @@ seo:
   description: Do you have the tell-tale signs that you might need endodontic surgery? Continuous pain?
     Increased sensitivity? Tenderness? Swelling? Stop the pain and save your tooth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Tooth Replacement Options Vista, CA
-  subtext: To understand the signs and reasons for why you need endodontic surgery, it is important to
-    understand the inner layers of a tooth. The outermost layer of the tooth is the enamel, which protects
-    the tooth and acts as the main surface for chewing food. The next level is the dentin that surrounds
-    the third layer, known as the pulp. The pulp contains all of the nerves and blood vessels in the tooth.
+- _component: page-sections/heroes/page-banner
+  heading: Tooth Replacement Options
+  location: Vista, CA
+  intro: To understand the signs and reasons for why you need endodontic surgery, it is important to understand
+    the inner layers of a tooth. The outermost layer of the tooth is the enamel, which protects the tooth
+    and acts as the main surface for chewing food. The next level is the dentin that surrounds the third
+    layer, known as the pulp. The pulp contains all of the nerves and blood vessels in the tooth.
   imageSource: /src/assets/images/wp/7-signs-you-need-endodontic-surgery.jpg
-  imageAlt: Tooth Replacement Options Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Tooth Replacement Options
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -126,38 +115,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the signs that I may need endodontic surgery?](#what-are-the-signs-that-i-may-need-endodontic-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if my teeth are sensitive to hot or cold foods?](#what-should-i-do-if-my-teeth-are-sensitive-to-hot-or-cold-fo)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried about a dental abscess?](#should-i-be-worried-about-a-dental-abscess)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does a root canal remove the entire tooth?](#does-a-root-canal-remove-the-entire-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if I need a root canal?](#how-do-i-know-if-i-need-a-root-canal)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the signs that I may need endodontic surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if my teeth are sensitive to hot or cold foods?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried about a dental abscess?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does a root canal remove the entire tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if I need a root canal?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -167,11 +155,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: 7 Signs You Need Endodontic
         Surgery Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -282,6 +271,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -313,11 +307,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: 7 Signs You Need Endodontic Surgery
+  backToTopHref: '#7-signs-you-need-endodontic-surgery'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

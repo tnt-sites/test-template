@@ -6,11 +6,10 @@ seo:
   description: Explore comprehensive dental services at North County Cosmetic and Implant Dentistry in
     Vista, CA. From checkups to implants, we care for your smile.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Services Vista, CA
-  subtext: We offer comprehensive dental services for families and patients. We understand that you have
+- _component: page-sections/heroes/page-banner
+  heading: Dental Services
+  location: Vista, CA
+  intro: We offer comprehensive dental services for families and patients. We understand that you have
     many options in dental care and aim to provide you with the highest quality of care possible. By leveraging
     modern dental technology and having a highly trained team, we can ensure that you and your family
     stay in excellent oral health. We practice gentle dentistry and will ensure that your experience is
@@ -21,23 +20,13 @@ pageSections:
     us know. We can try to arrange everyone's appointment for around the same time so that you only have
     to visit the dentist twice a year, instead of multiple times.
   imageSource: /src/assets/images/wp/dental-services.jpg
-  imageAlt: Dental Services Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Services
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -81,38 +70,37 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Dental Services Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What dental services can help treat an infection?](#what-dental-services-can-help-treat-an-infection)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it important to treat dental issues early?](#is-it-important-to-treat-dental-issues-early)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How often should I see a dentist?](#how-often-should-i-see-a-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some at-home tips for proper dental hygiene?](#what-are-some-at-home-tips-for-proper-dental-hygiene)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to repair damaged teeth?](#what-can-i-do-to-repair-damaged-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What dental services can help treat an infection?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it important to treat dental issues early?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How often should I see a dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some at-home tips for proper dental hygiene?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to repair damaged teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -227,6 +215,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -252,11 +245,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Services
+  backToTopHref: '#dental-services'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Routine Care
+    url: /vista-ca/routine-dental-care/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

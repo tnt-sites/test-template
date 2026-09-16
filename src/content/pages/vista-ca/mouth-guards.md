@@ -6,11 +6,10 @@ seo:
   description: Proper mouth guards can help keep your teeth safe and strong. Protect your winning smile
     with a custom mouth guard
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Mouth Guards Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth
+- _component: page-sections/heroes/page-banner
+  heading: Mouth Guards
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we can provide you or your children with mouth
     guards that can serve to protect the teeth. You only get one set of permanent teeth, making it critical
     to take the steps necessary to preserve them. We always recommends starting by keeping your teeth
     healthy. When your teeth are free of decay or infection, they will be stronger and less likely to
@@ -18,23 +17,13 @@ pageSections:
     dental office twice a year for a routine teeth cleaning. You can schedule an appointment by calling
     (760) 205-3417.
   imageSource: /src/assets/images/wp/mouth-guards.jpg
-  imageAlt: Mouth Guards Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Mouth Guards
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -106,11 +95,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our mouth guards on Yelp: Mouth Guards Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Is there a reason to have one created by a dentist?
     contentSections:
@@ -157,38 +147,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Start protecting yourself and your children today by having your custom mouth guards created.
         Call 760-940-2273 to schedule an appointment with our dental office.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why do people wear mouth guards?](#why-do-people-wear-mouth-guards)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can you customize my mouth guard to ensure it fits?](#can-you-customize-my-mouth-guard-to-ensure-it-fits)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I clean and care for my mouth guard?](#how-do-i-clean-and-care-for-my-mouth-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are professional mouth guards better than store-bought brands?](#are-professional-mouth-guards-better-than-store-bought-brand)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why would I need to wear a night guard?](#why-would-i-need-to-wear-a-night-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do after chipping my tooth?](#what-should-i-do-after-chipping-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why do people wear mouth guards?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can you customize my mouth guard to ensure it fits?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I clean and care for my mouth guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are professional mouth guards better than store-bought brands?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why would I need to wear a night guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do after chipping my tooth?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -309,6 +298,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -338,11 +332,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Mouth Guards
+  backToTopHref: '#mouth-guards'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
+  - name: Night Guards
+    url: /vista-ca/night-guards/
 ---

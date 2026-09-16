@@ -6,34 +6,23 @@ seo:
   description: Overcome dental anxiety with sedation dentistry at North County Cosmetic and Implant Dentistry
     in Vista, CA. Relax and enjoy stress-free dental care.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Sedation Dentist Vista, CA
-  subtext: If you need to have dental work completed, we recommend visiting a sedation dentist. At North
+- _component: page-sections/heroes/page-banner
+  heading: Sedation Dentist
+  location: Vista, CA
+  intro: If you need to have dental work completed, we recommend visiting a sedation dentist. At North
     County Cosmetic and Implant Dentistry, we offer sedation dentistry for patients living in and around
     the Vista area. We understand that for millions of adults, visiting the dentist can be an overwhelming
     or frightening experience due to dental anxiety. This common condition typically starts with a negative
     experience or becoming fearful of the general idea of dentistry. While common, you do not have to
     be concerned about visiting our dentist office because we work to ensure your comfort the entire time.
   imageSource: /src/assets/images/wp/sedation-dentist.jpg
-  imageAlt: Sedation Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Sedation Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -108,11 +97,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our sedation dental services on Yelp: Sedation Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Getting Started
     contentSections:
@@ -145,38 +135,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a sedation dentist?](#what-is-a-sedation-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the types of sedation dentistry?](#what-are-the-types-of-sedation-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I begin the sedation dentistry process?](#how-do-i-begin-the-sedation-dentistry-process)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for my dentist appointment?](#how-can-i-prepare-for-my-dentist-appointment)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will reading reviews help me find a great dentist?](#will-reading-reviews-help-me-find-a-great-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if I have a toothache?](#what-should-i-do-if-i-have-a-toothache)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a sedation dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the types of sedation dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I begin the sedation dentistry process?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for my dentist appointment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will reading reviews help me find a great dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if I have a toothache?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -289,6 +278,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -336,11 +330,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Sedation Dentist
+  backToTopHref: '#sedation-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Office
+    url: /vista-ca/dental-office/
+  - name: Dental Anxiety
+    url: /vista-ca/dental-anxiety/
 ---

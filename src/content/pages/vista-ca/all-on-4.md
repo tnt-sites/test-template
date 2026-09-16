@@ -6,32 +6,21 @@ seo:
   description: All-on-4 dental implants offer a full smile restoration at North County Cosmetic and Implant
     Dentistry. Learn more about this efficient and lasting solution.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: All-on-4 Implants Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we offer the All-on-4® procedure for patients
+- _component: page-sections/heroes/page-banner
+  heading: All-on-4 Implants
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we offer the All-on-4® procedure for patients
     that are looking for a convenient way to replace missing teeth. If you live in the Vista area and
     have experienced tooth loss, we encourage you to visit our office to discuss the options available
     to you.
   imageSource: /src/assets/images/wp/all-on-4-dental-implants.jpg
-  imageAlt: All-on-4 Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: All-on-4 Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -116,11 +105,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our All-on-4 Implants services on Yelp: All-on-4 Implants
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: The Success of the All-on-4® Procedure in Our Vista Dental Office
     contentSections:
@@ -183,33 +173,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are All-on-4® dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I qualify for All-on-4® dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for getting these implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens after losing an adult tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will dentures stay in my mouth with implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is implant supported dentures?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are All-on-4® dental implants?](#what-are-all-on-4-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I qualify for All-on-4® dental implants?](#do-i-qualify-for-all-on-4-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for getting these implants?](#what-is-the-process-for-getting-these-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens after losing an adult tooth?](#what-happens-after-losing-an-adult-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will dentures stay in my mouth with implants?](#will-dentures-stay-in-my-mouth-with-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is implant supported dentures?](#what-is-implant-supported-dentures)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -356,6 +344,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -383,11 +376,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: All-on-4 Implants
+  backToTopHref: '#all-on-4-dental-implants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Implants Consultation
+    url: /vista-ca/dental-implants-consultation/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
 ---

@@ -6,35 +6,24 @@ seo:
   description: Transform your smile with custom veneers and laminates at North County Cosmetic and Implant
     Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Veneers and Dental Laminates Vista, CA
-  subtext: A dental veneer is a porcelain shell that dental professionals can customize to enhance the
-    size, shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at North
-    County Cosmetic and Implant Dentistry. If you have chipped, discolored or crooked teeth and want to
-    change them, then dental veneers may be the solution you are looking for. Consisting of a thin porcelain
+- _component: page-sections/heroes/page-banner
+  heading: Dental Veneers and Dental Laminates
+  location: Vista, CA
+  intro: A dental veneer is a porcelain shell that dental professionals can customize to enhance the size,
+    shape and shade of a tooth. Dental veneers are a commonly offered dental restoration at North County
+    Cosmetic and Implant Dentistry. If you have chipped, discolored or crooked teeth and want to change
+    them, then dental veneers may be the solution you are looking for. Consisting of a thin porcelain
     shell, dental veneers can blend in with your surrounding teeth for a uniform appearance. While altering
     the size, shape and shade of your teeth, we can also prevent further damage to the surface of the
     tooth.
   imageSource: /src/assets/images/wp/dental-veneers-and-dental-laminates.jpg
-  imageAlt: Dental Veneers and Dental Laminates Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Veneers and Dental Laminates
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -152,11 +141,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental veneer and laminate services on Yelp: Veneers
         and Laminates Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista, California Dental Laminates
     contentSections:
@@ -181,33 +171,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a dental veneer?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the procedure for getting dental veneers?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits of dental veneers?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can cosmetic dentistry do for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How healthy do my teeth need to be for certain cosmetic dental services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the most common cosmetic dental treatment services?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a dental veneer?](#what-is-a-dental-veneer)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the procedure for getting dental veneers?](#what-is-the-procedure-for-getting-dental-veneers)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits of dental veneers?](#what-are-the-benefits-of-dental-veneers)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can cosmetic dentistry do for me?](#what-can-cosmetic-dentistry-do-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How healthy do my teeth need to be for certain cosmetic dental services?](#how-healthy-do-my-teeth-need-to-be-for-certain-cosmetic-dent)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -328,6 +316,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -377,11 +370,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Veneers and Laminates
+  backToTopHref: '#dental-veneers-and-dental-laminates'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Cosmetics
+    url: /vista-ca/dental-cosmetics/
+  - name: Smile Makeover
+    url: /vista-ca/smile-makeover/
 ---

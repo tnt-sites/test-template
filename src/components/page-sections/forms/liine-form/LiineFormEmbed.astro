@@ -1,0 +1,47 @@
+---
+/*
+ * The bare Liine (JotForm) iframe plus its resize handler, with no section
+ * chrome — so it can sit inside the page banner as well as in its own section.
+ *
+ * parentURL/isIframeEmbed are deliberately not passed: on WordPress they
+ * carried the host page URL into the embed, which would otherwise tell the form
+ * it is hosted wherever the site happens to be previewed.
+ */
+const {
+  formId = "",
+  title = "Request an Appointment",
+  height = 539,
+  class: className,
+} = Astro.props;
+
+const frameId = `JotFormIFrame-${formId}`;
+const src = `https://forms.liine.com/${formId}`;
+---
+
+{
+  formId && (
+    <iframe
+      id={frameId}
+      class:list={className}
+      title={title}
+      src={src}
+      allow="geolocation; microphone; camera; fullscreen"
+      allowtransparency="true"
+      frameborder="0"
+      scrolling="no"
+      loading="lazy"
+      style={`min-width:100%;max-width:100%;height:${height}px;border:none;display:block;`}
+    />
+  )
+}
+
+{
+  formId && (
+    <script is:inline src="https://forms.liine.com/s/umd/latest/for-form-embed-handler.js" />
+    <script is:inline define:vars={{ frameId }}>
+      if (window.jotformEmbedHandler) {
+        window.jotformEmbedHandler(`iframe[id='${frameId}']`, "https://forms.liine.com/");
+      }
+    </script>
+  )
+}

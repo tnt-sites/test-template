@@ -7,11 +7,10 @@ seo:
   description: Cosmetic dental care can transform your smile. Reputable source with great results in Vista,
     CA. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Cosmetic Dental Care Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
+- _component: page-sections/heroes/page-banner
+  heading: Cosmetic Dental Care
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients
     throughout the Vista area. If you are looking for a local dentist that can transform your smile and
     restore your confidence, call (760) 940-2273 to schedule an appointment. We will examine your teeth,
     take X-rays, and discuss the goals you have for your smile. These appointments are an excellent opportunity
@@ -21,23 +20,13 @@ pageSections:
     There is no one-size-fits-all answer in cosmetic dental care, but rather, customized solutions for
     your particular needs.
   imageSource: /src/assets/images/wp/cosmetic-dental-care.jpg
-  imageAlt: Cosmetic Dental Care Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Cosmetic Dental Care
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -119,11 +108,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Cosmetic Dental Care
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Clear Aligners
     contentSections:
@@ -160,38 +150,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about cosmetic dental care and which options would be best for you, call 760-940-2273
         to schedule an appointment with our dental office.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the dental crown be noticeable?](#will-the-dental-crown-be-noticeable)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants help with tooth loss?](#can-dental-implants-help-with-tooth-loss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are clear aligners?](#what-are-clear-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are at-home teeth whitening kits better than dentist procedure?](#are-at-home-teeth-whitening-kits-better-than-dentist-procedu)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can cosmetic dentistry do for me?](#what-can-cosmetic-dentistry-do-for-me)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the dental crown be noticeable?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants help with tooth loss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are clear aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the most common cosmetic dental treatment services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are at-home teeth whitening kits better than dentist procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can cosmetic dentistry do for me?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -314,6 +303,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -361,11 +355,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Cosmetic Dental Care
+  backToTopHref: '#cosmetic-dental-care'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Cosmetics
+    url: /vista-ca/dental-cosmetics/
+  - name: Smile Makeover
+    url: /vista-ca/smile-makeover/
 ---

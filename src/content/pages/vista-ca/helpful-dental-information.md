@@ -7,11 +7,10 @@ seo:
   description: North County Cosmetic and Implant Dentistry is committed to providing patients with the
     helpful dental information needed to make informed dental health choices
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Helpful Dental Information Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
+- _component: page-sections/heroes/page-banner
+  heading: Helpful Dental Information
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we are passionate about oral health and ensuring
     that our patients have the tools and resources they need to maintain healthy teeth for a lifetime.
     As a rule of thumb, this demands ongoing, preventative dental care. It also requires education so
     that you become aware of your dental solutions and what you can do to stay healthy at home. Here,
@@ -19,23 +18,13 @@ pageSections:
     are interested in and read more details on our website. If you have further questions, call our dental
     office at (760) 940-2273.
   imageSource: /src/assets/images/wp/helpful-dental-information.jpg
-  imageAlt: Helpful Dental Information Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Helpful Dental Information
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -119,11 +108,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Helpful Dental Information
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -136,33 +126,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Am I a candidate for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I take care of my dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during the dental implant procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during an oral cancer screening?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the benefits from getting a root canal?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the best toothbrush for my teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Am I a candidate for dental implants?](#am-i-a-candidate-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I take care of my dental implants?](#how-can-i-take-care-of-my-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during the dental implant procedure?](#what-happens-during-the-dental-implant-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during an oral cancer screening?](#what-happens-during-an-oral-cancer-screening)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the benefits from getting a root canal?](#what-are-the-benefits-from-getting-a-root-canal)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the best toothbrush for my teeth?](#what-is-the-best-toothbrush-for-my-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -277,6 +265,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -300,11 +293,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Helpful Dental Information
+  backToTopHref: '#helpful-dental-information'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
+  - name: Smile Makeover
+    url: /vista-ca/smile-makeover/
 ---

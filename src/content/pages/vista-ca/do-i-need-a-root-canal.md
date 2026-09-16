@@ -6,35 +6,24 @@ seo:
   description: Wondering if you need a root canal? North County Cosmetic and Implant Dentistry in Vista,
     CA, offers expert diagnosis and pain-free root canal treatments.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Do I Need a Root Canal Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, patients ask, "my tooth hurts, do I need a
-    root canal?" Toothaches can be terribly inconvenient. They make it difficult to eat, speak, or even
-    function. As a family dentist in Vista, CA, we realize that a common toothache is something most people
-    can live with until it suddenly turns a corner and becomes unbearable. The key is to visit our dental
+- _component: page-sections/heroes/page-banner
+  heading: Do I Need a Root Canal
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, patients ask, "my tooth hurts, do I need a root
+    canal?" Toothaches can be terribly inconvenient. They make it difficult to eat, speak, or even function.
+    As a family dentist in Vista, CA, we realize that a common toothache is something most people can
+    live with until it suddenly turns a corner and becomes unbearable. The key is to visit our dental
     office at that initial stage before you reach the point of severe discomfort. This will give you the
     largest amount of options for how to treat the problem. To schedule an appointment with our family
     dental office, call (760) 940-2273.
   imageSource: /src/assets/images/wp/do-i-need-a-root-canal.jpg
-  imageAlt: Do I Need a Root Canal Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Do I Need a Root Canal
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -108,11 +97,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our root canal support services on Yelp: Do I Need
         a Root Canal'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: When to Call Our Emergency Dentist Office
     contentSections:
@@ -194,33 +184,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if I need a root canal?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a root canal?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does a root canal remove the entire tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental crowns?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can a dental crown treat my cracked tooth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if I need a root canal?](#how-do-i-know-if-i-need-a-root-canal)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a root canal?](#what-is-a-root-canal)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does a root canal remove the entire tooth?](#does-a-root-canal-remove-the-entire-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental crowns?](#what-are-dental-crowns)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can a dental crown treat my cracked tooth?](#how-can-a-dental-crown-treat-my-cracked-tooth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -328,6 +316,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -355,11 +348,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Do I Need a Root Canal
+  backToTopHref: '#do-i-need-a-root-canal'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Root Canal Treatment
+    url: /vista-ca/root-canal-treatment/
+  - name: Dental Anxiety
+    url: /vista-ca/dental-anxiety/
 ---

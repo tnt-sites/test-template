@@ -7,11 +7,10 @@ seo:
   description: Healthier teeth is a happier you. Primary dental care provider serving the Vista, CA area.
     Affordable general dentistry services can transform your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: General Dentistry Services Vista, CA
-  subtext: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
+- _component: page-sections/heroes/page-banner
+  heading: General Dentistry Services
+  location: Vista, CA
+  intro: If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment
     with our Vista dental office. We focus on providing preventative dental care, performing a variety
     of dental procedures to keep patients in excellent oral health. By providing comprehensive care, we
     can ensure your teeth remain as healthy as possible and that if anything does develop, we can treat
@@ -20,23 +19,13 @@ pageSections:
     Dentistry, our team is warm and friendly. We will take the time to understand your oral health concerns
     and provide you with the information and services you need to maintain lifelong oral health.
   imageSource: /src/assets/images/wp/general-dentistry-services.jpg
-  imageAlt: General Dentistry Services Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: General Dentistry Services
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -148,11 +137,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our general dentistry services on Yelp: General Dentistry
         Services Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Preventative Care Tips From Our General Dentistry Office
     contentSections:
@@ -174,33 +164,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will a regular teeth cleaning be like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental sealants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some preventative care tips to keep my teeth healthy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I tell if I need a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How often should I visit the dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is dental bonding?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will a regular teeth cleaning be like?](#what-will-a-regular-teeth-cleaning-be-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental sealants?](#what-are-dental-sealants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some preventative care tips to keep my teeth healthy?](#what-are-some-preventative-care-tips-to-keep-my-teeth-health)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How often should I visit the dentist?](#how-often-should-i-visit-the-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is dental bonding?](#what-is-dental-bonding)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -329,6 +317,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -354,11 +347,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: General Dentistry Services
+  backToTopHref: '#general-dentistry-services'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Center
+    url: /vista-ca/dental-center/
+  - name: Routine Dental Care
+    url: /vista-ca/routine-dental-care/
 ---

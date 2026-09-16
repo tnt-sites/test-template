@@ -7,11 +7,10 @@ seo:
   description: Need a dentist? Reputable Vista, CA dental practice with great results! Affordable local
     dentist can recover your smile. Get the healthy, gorgeous smile you deserve
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Practice Vista, CA
-  subtext: When you visit our dental practice in Vista, we will spend time getting to know you and learning
+- _component: page-sections/heroes/page-banner
+  heading: Dental Practice
+  location: Vista, CA
+  intro: When you visit our dental practice in Vista, we will spend time getting to know you and learning
     about any health concerns you have. By conducting an examination and taking X-rays, we can determine
     the current health of your teeth, gums, and jawbone. We will also discuss your lifestyle with you
     and any goals you have for your smile. This will allow us to create a comprehensive treatment plan.
@@ -23,23 +22,13 @@ pageSections:
     to performing routine teeth cleanings and completing stunning smile makeovers, there are a variety
     of procedures we complete on a daily basis that are important for your oral health.
   imageSource: /src/assets/images/wp/dental-practice.jpg
-  imageAlt: Dental Practice Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Practice
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -103,11 +92,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Dental Practice Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Visit a dental practice in Vista to have your restorations inspected
     contentSections:
@@ -150,38 +140,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I reduce my risk of getting gum disease?](#how-can-i-reduce-my-risk-of-getting-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if I damage my tooth?](#what-can-i-do-if-i-damage-my-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to do to ensure that my restoration is in great shape?](#what-do-i-need-to-do-to-ensure-that-my-restoration-is-in-gre)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to improve my smile?](#what-can-i-do-to-improve-my-smile)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will my dental restoration blend in with my surrounding teeth?](#will-my-dental-restoration-blend-in-with-my-surrounding-teet)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it important to treat dental issues early?](#is-it-important-to-treat-dental-issues-early)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I reduce my risk of getting gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if I damage my tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to do to ensure that my restoration is in great shape?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to improve my smile?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will my dental restoration blend in with my surrounding teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it important to treat dental issues early?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -298,6 +287,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -321,11 +315,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Practice
+  backToTopHref: '#dental-practice'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---

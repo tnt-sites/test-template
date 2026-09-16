@@ -7,34 +7,23 @@ seo:
   description: Get rid of ugly metal braces. Clear braces are the virtually invisible alternative. Get
     the straight teeth you always wanted from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Clear Braces Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
+- _component: page-sections/heroes/page-banner
+  heading: Clear Braces
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide clear braces throughout the Vista
     area. Straight teeth are important for your overall oral health. When teeth are crooked, they can
     become stained and infected more easily. By straightening teeth, we can improve your appearance and
     decrease the risk of getting cavities at the same time. We can also address issues that you may have
     with your jaw by aligning your bite. Clear braces are truly a comprehensive way and discreet way to
     address oral health concerns.
   imageSource: /src/assets/images/wp/clear-braces.jpg
-  imageAlt: Clear Braces Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Clear Braces
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -72,11 +61,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our clear braces on Yelp: Clear Braces Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Clear Braces vs. Metal Braces
     contentSections:
@@ -154,33 +144,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are clear braces an alternative to metal ones?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What clear braces options are available?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do you treat teenagers?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why should I consider dental cosmetics?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the most common cosmetic dental treatment services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What types of teeth whitening do you offer?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are clear braces an alternative to metal ones?](#are-clear-braces-an-alternative-to-metal-ones)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What clear braces options are available?](#what-clear-braces-options-are-available)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do you treat teenagers?](#do-you-treat-teenagers)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why should I consider dental cosmetics?](#why-should-i-consider-dental-cosmetics)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What types of teeth whitening do you offer?](#what-types-of-teeth-whitening-do-you-offer)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -319,6 +307,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -344,11 +337,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Clear Braces
+  backToTopHref: '#clear-braces'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: ClearCorrect Braces Vista, CA
+    url: /vista-ca/clearcorrect-braces/
+  - name: Clear Aligner Therapy
+    url: /vista-ca/clear-aligner-therapy/
 ---

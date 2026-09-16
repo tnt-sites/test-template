@@ -6,34 +6,23 @@ seo:
   description: Curious about implants and wondering if you are a candidate for dental implants? Your reputable
     team at North County Cosmetic and Implant Dentistry in Vista, CA breaks it all down
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Am I a Candidate for Dental Implants Vista, CA
-  subtext: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call
-    (760) 940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct
-    an examination and take X-rays to determine if you qualify for implant surgery, and if not, what it
-    will take to get you there. At North County Cosmetic and Implant Dentistry, we will work with you
-    to come up with the best way to replace your missing teeth, even if that means conducting additional
-    procedures to ensure that you do qualify.
+- _component: page-sections/heroes/page-banner
+  heading: Am I a Candidate for Dental Implants
+  location: Vista, CA
+  intro: If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call (760)
+    940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct an
+    examination and take X-rays to determine if you qualify for implant surgery, and if not, what it will
+    take to get you there. At North County Cosmetic and Implant Dentistry, we will work with you to come
+    up with the best way to replace your missing teeth, even if that means conducting additional procedures
+    to ensure that you do qualify.
   imageSource: /src/assets/images/wp/dental-implant-candidate.jpg
-  imageAlt: Am I a Candidate for Dental Implants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Am I a Candidate for Dental Implants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -94,11 +83,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Dental Implants support services on Yelp: Am I
         a Candidate for Dental Implants Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Are implants the right solution for missing teeth?
     contentSections:
@@ -171,38 +161,37 @@ pageSections:
       text: To learn how this solution can work for you, call and schedule an appointment by calling (760)
         940-2273. North County Cosmetic and Implant Dentistry is located at 1934 Via Centre Ste A Vista,
         CA 92081.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will my cavities get in the way of dental implants?](#will-my-cavities-get-in-the-way-of-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the implants be obvious?](#will-the-implants-be-obvious)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the recovery process for dental implants?](#what-is-the-recovery-process-for-dental-implants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do I qualify for dental implants?](#do-i-qualify-for-dental-implants)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know if dental implants are right for me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will my cavities get in the way of dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental implants replace my missing teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the implants be obvious?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the recovery process for dental implants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do I qualify for dental implants?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -339,6 +328,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -368,11 +362,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Am I a Candidate for Dental Implants
+  backToTopHref: '#dental-implant-candidate'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Post-Op Care
+    url: /vista-ca/postop-care-for-dental-implants/
+  - name: Replacing Missing Teeth
+    url: /vista-ca/options-for-replacing-missing-teeth/
 ---

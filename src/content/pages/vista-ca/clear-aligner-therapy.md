@@ -6,11 +6,10 @@ seo:
   description: Straighten your teeth with clear aligner therapy at North County Cosmetic and Implant Dentistry
     in Vista, CA. Comfortable, discreet orthodontic care.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Clear Aligner Therapy Vista, CA
-  subtext: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
+- _component: page-sections/heroes/page-banner
+  heading: Clear Aligner Therapy
+  location: Vista, CA
+  intro: Appearance is not the only benefit of wearing Clear Aligners for straighter teeth, since straighter
     teeth can also benefit one's oral health. In fact crooked teeth can trap food between them and lead
     to infection or bite issues. At North County Cosmetic and Implant Dentistry, we offer Clear Aligner
     Therapy as a treatment for patients interested in discreetly straightening their teeth. Clear Aligner
@@ -20,23 +19,13 @@ pageSections:
     Therapy will gradually push the teeth into the right position without causing significant amounts
     of pain.
   imageSource: /src/assets/images/wp/invisalign.jpg
-  imageAlt: Clear Aligner Therapy Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Clear Aligner Therapy
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -92,11 +81,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Keep up regular oral hygiene
     contentSections:
@@ -159,33 +149,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is Clear Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long do I need to wear the aligners for?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will people notice that I am wearing Clear Aligners?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does Clear Aligner Therapy really work for adults?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will I be able to continue eating what I want to eat?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How is Clear Aligner Therapy different from traditional treatment options?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is Clear Aligner Therapy?](#what-is-clear-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long do I need to wear the aligners for?](#how-long-do-i-need-to-wear-the-aligners-for)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will people notice that I am wearing Clear Aligners?](#will-people-notice-that-i-am-wearing-clear-aligners)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does Clear Aligner Therapy really work for adults?](#does-clear-aligner-therapy-really-work-for-adults)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will I be able to continue eating what I want to eat?](#will-i-be-able-to-continue-eating-what-i-want-to-eat)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How is Clear Aligner Therapy different from traditional treatment options?](#how-is-clear-aligner-therapy-different-from-traditional-trea)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -323,6 +311,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -348,11 +341,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Clear Aligner Therapy
+  backToTopHref: '#clear-aligner-therapy'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Clear Braces
+    url: /vista-ca/clear-braces/
+  - name: Clear vs Traditional Braces
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

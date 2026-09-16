@@ -7,34 +7,23 @@ seo:
   description: Loose or wobbly dentures? Dentures will occasionally need to be repaired, relined, or adjusted
     to ensure that they fit well and work properly. We can help with denture adjustments and repairs
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Denture Adjustments and Repairs Vista, CA
-  subtext: While we customize dentures to fit the patient‘s jaw and not cause irritation, the jaw may
-    change shape over time. Resorption is the process in which the body leaches calcium from the bone
-    structure underneath the jaw once there are no teeth to stimulate the jawbone. Since there is no stimulation,
+- _component: page-sections/heroes/page-banner
+  heading: Denture Adjustments and Repairs
+  location: Vista, CA
+  intro: While we customize dentures to fit the patient‘s jaw and not cause irritation, the jaw may change
+    shape over time. Resorption is the process in which the body leaches calcium from the bone structure
+    underneath the jaw once there are no teeth to stimulate the jawbone. Since there is no stimulation,
     the body takes the calcium and distributes it to other areas of the body over time. Due to this process,
     the jawbone recedes and the dentures may not fit as well as before. With this in mind, we can provide
     continued maintenance of the dentures.
   imageSource: /src/assets/images/wp/denture-adjustments.jpg
-  imageAlt: Denture Adjustments and Repairs Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Denture Adjustments and Repairs
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -83,11 +72,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Denture Adjustments and
         Repairs Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Call us to schedule an appointment today
     contentSections:
@@ -118,38 +108,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know about making adjustments to my dentures?](#what-do-i-need-to-know-about-making-adjustments-to-my-dentur)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I fix my dentures on my own?](#can-i-fix-my-dentures-on-my-own)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can you help make my dentures last a long time?](#can-you-help-make-my-dentures-last-a-long-time)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take to adjust to new dentures?](#how-long-will-it-take-to-adjust-to-new-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know about making adjustments to my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I fix my dentures on my own?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can you help make my dentures last a long time?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take to adjust to new dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -274,6 +263,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -301,11 +295,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Denture Adjustments and Repairs
+  backToTopHref: '#denture-adjustments'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
+  - name: Denture Care
+    url: /vista-ca/denture-care/
 ---

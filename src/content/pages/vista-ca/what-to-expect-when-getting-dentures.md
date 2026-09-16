@@ -7,32 +7,21 @@ seo:
   description: Anxious about getting dentures? We break down the process and map out your first days,
     weeks, and months. Dentures are an option to get a complete, gorgeous smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What to Expect When Getting Dentures Vista, CA
-  subtext: While we can customize dentures to fit a patient's teeth perfectly at North County Cosmetic
-    and Implant Dentistry, there are still a few key factors that patients need to understand before getting
+- _component: page-sections/heroes/page-banner
+  heading: What to Expect When Getting Dentures
+  location: Vista, CA
+  intro: While we can customize dentures to fit a patient's teeth perfectly at North County Cosmetic and
+    Implant Dentistry, there are still a few key factors that patients need to understand before getting
     dentures. Fortunately, advancements in dental technology allow for this process to be easier than
     ever before.
   imageSource: /src/assets/images/wp/what-to-expect-when-getting-dentures.jpg
-  imageAlt: What to Expect When Getting Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What to Expect When Getting Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -97,11 +86,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our denture services on Yelp: What to Expect When
         Getting Dentures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Other factors to expect with getting dentures
     contentSections:
@@ -150,38 +140,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take to make the dentures?](#how-long-will-it-take-to-make-the-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take my mouth to get used to the dentures?](#how-long-will-it-take-my-mouth-to-get-used-to-the-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I keep my dentures clean?](#how-do-i-keep-my-dentures-clean)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How does the dentures process begin?](#how-does-the-dentures-process-begin)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take to make the dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take my mouth to get used to the dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I keep my dentures clean?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How does the dentures process begin?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -304,6 +293,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -333,11 +327,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What to Expect When Getting Dentures
+  backToTopHref: '#what-to-expect-when-getting-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Dentures
+    url: /vista-ca/implant-supported-dentures/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

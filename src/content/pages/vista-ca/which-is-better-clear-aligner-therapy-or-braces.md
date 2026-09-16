@@ -6,11 +6,10 @@ seo:
   description: Learn the differences between clear aligner therapy and braces at North County Cosmetic
     and Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Which is Better Clear Aligner Therapy or Braces Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we understand the important role that orthodontics
+- _component: page-sections/heroes/page-banner
+  heading: Which is Better Clear Aligner Therapy or Braces
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we understand the important role that orthodontics
     can play in creating a healthy and beautiful smile. If you or your teen has crooked teeth, overly
     crowded teeth, an underbite or an overbite, correcting these challenges can prolong the lifespan of
     natural teeth by helping them to remain in good condition. Both Clear Aligner Therapy and braces can
@@ -21,23 +20,13 @@ pageSections:
     we encourage you to schedule an examination so that we can determine the best way to proceed with
     straightening your teeth. You can do so by calling (760) 940-2273.
   imageSource: /src/assets/images/wp/which-is-better-clear-aligner-therpy-or-braces.jpg
-  imageAlt: Which is Better Clear Aligner Therapy or Braces Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Which is Better Clear Aligner Therapy or Braces
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -93,11 +82,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our Clear Aligner Therapy services on Yelp: Clear
         Aligner Therapy Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What are attachments and how are they used?
     contentSections:
@@ -150,33 +140,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is Clear Aligner Therapy better than braces?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can Clear Aligner Therapy treat an overbite?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is Clear Aligner Therapy better for me than braces?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does Clear Aligner Therapy really work for adults?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How is Clear Aligner Therapy different from traditional treatment options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I get started with Clear Aligner Therapy?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is Clear Aligner Therapy better than braces?](#is-clear-aligner-therapy-better-than-braces)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can Clear Aligner Therapy treat an overbite?](#can-clear-aligner-therapy-treat-an-overbite)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is Clear Aligner Therapy better for me than braces?](#is-clear-aligner-therapy-better-for-me-than-braces)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does Clear Aligner Therapy really work for adults?](#does-clear-aligner-therapy-really-work-for-adults)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How is Clear Aligner Therapy different from traditional treatment options?](#how-is-clear-aligner-therapy-different-from-traditional-trea)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I get started with Clear Aligner Therapy?](#how-do-i-get-started-with-clear-aligner-therapy)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -312,6 +300,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -339,11 +332,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Which is Better Clear Aligner Therapy or Braces
+  backToTopHref: '#which-is-better-clear-aligner-therapy-or-braces'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Alternative to Braces
+    url: /vista-ca/alternative-to-braces-for-teens/
+  - name: Clear Braces
+    url: /vista-ca/clear-braces/
 ---

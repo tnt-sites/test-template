@@ -7,33 +7,22 @@ seo:
   description: Can a fractured tooth root heal itself? Tenderness? Swelling? Inconsistent or erratic pain?
     Learn how we can help stop the pain and potentially save your tooth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Types of Dental Root Fractures Vista, CA
-  subtext: Contrary to what some people may assume, there are multiple types of fractures for the roots
+- _component: page-sections/heroes/page-banner
+  heading: Types of Dental Root Fractures
+  location: Vista, CA
+  intro: Contrary to what some people may assume, there are multiple types of fractures for the roots
     of teeth. The part of the teeth that people brush and use to chew food or speak is known as the crown.
     The crown consists of the outer shell known as the enamel and is what most people refer to when they
     mention anything about the teeth. However, the teeth have roots that actually go deeper into the gums
     and jawbone.
   imageSource: /src/assets/images/wp/types-of-dental-root-fractures.jpg
-  imageAlt: Types of Dental Root Fractures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Types of Dental Root Fractures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -92,11 +81,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Types of Dental Root
         Fractures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Types of fractures
     contentSections:
@@ -178,38 +168,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the different types of tooth fractures?](#what-are-the-different-types-of-tooth-fractures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can the tooth hurt without noticeable damage?](#can-the-tooth-hurt-without-noticeable-damage)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long can I go without treatment for my fractured tooth?](#how-long-can-i-go-without-treatment-for-my-fractured-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the signs that I may need endodontic surgery?](#what-are-the-signs-that-i-may-need-endodontic-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does a root canal remove the entire tooth?](#does-a-root-canal-remove-the-entire-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental crowns?](#what-are-dental-crowns)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the different types of tooth fractures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can the tooth hurt without noticeable damage?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long can I go without treatment for my fractured tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the signs that I may need endodontic surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does a root canal remove the entire tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental crowns?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -323,6 +312,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -354,11 +348,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Types of Dental Root Fractures
+  backToTopHref: '#types-of-dental-root-fractures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

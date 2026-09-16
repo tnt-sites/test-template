@@ -6,30 +6,19 @@ seo:
   description: Treat receding gums with gum grafting at North County Cosmetic and Implant Dentistry in
     Vista, CA. Restore gum health and improve your smile.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Gum Grafting Treat receding gums and improve your oral health.
-  subtext: If you have gum recession due to periodontitis, brushing habits, or even genetics, the dentists
+- _component: page-sections/heroes/page-banner
+  heading: Gum Grafting
+  location: Treat receding gums and improve your oral health.
+  intro: If you have gum recession due to periodontitis, brushing habits, or even genetics, the dentists
     at North County Cosmetic and Implant Dentistry can help.
   imageSource: /src/assets/images/wp/Gum-Grafting.jpg
-  imageAlt: Gum Grafting Treat receding gums and improve your oral health.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Gum Grafting
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Protect your teeth, gums, and bone.
   contentSections:
@@ -72,11 +61,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our Gum Grafting on Yelp: Perio Protect Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: What is gum grafting?
   contentSections:
@@ -164,11 +154,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

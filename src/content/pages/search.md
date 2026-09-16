@@ -16,9 +16,10 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/embed
     html: "<link href=\"/pagefind/pagefind-ui.css\" rel=\"stylesheet\">\n<script src=\"/pagefind/pagefind-ui.js\"\
-      ></script>\n<div id=\"search\"></div>\n<script>\n    window.addEventListener('DOMContentLoaded',\
-      \ (event) => {\n        new PagefindUI({ element: \"#search\", showSubResults: true });\n    });\n\
-      </script>\n"
+      ></script>\n<div id=\"search\"></div>\n<script>\n  window.addEventListener(\"DOMContentLoaded\"\
+      , () => {\n    const ui = new PagefindUI({ element: \"#search\", showSubResults: true });\n    //\
+      \ the sidebar search box submits ?q=, so run that query on load\n    const q = new URLSearchParams(location.search).get(\"\
+      q\");\n    if (q) ui.triggerSearch(q);\n  });\n</script>\n"
     aspectRatio: landscape
   maxContentWidth: xl
   paddingHorizontal: xl

@@ -6,34 +6,23 @@ seo:
   description: Need urgent dental care? North County Cosmetic and Implant Dentistry in Vista, CA offers
     prompt emergency dentistry for fast relief.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Emergency Dentist Vista, CA
-  subtext: An emergency dentist can provide urgent professional dental care for issues such as infection,
+- _component: page-sections/heroes/page-banner
+  heading: Emergency Dentist
+  location: Vista, CA
+  intro: An emergency dentist can provide urgent professional dental care for issues such as infection,
     damaged teeth, knocked out teeth and more. Emergency dental care is a standard service offered at
     North County Cosmetic and Implant Dentistry. No matter how much someone attempts to prepare ahead
     of time, accidents happen. Dental accidents and emergencies are no exception. Dental emergencies can
     include infections, tooth decay, damaged teeth, trauma to the mouth and more. By visiting an emergency
     dentist, you are seeking the immediate care your teeth need.
   imageSource: /src/assets/images/wp/emergency-dentist-header.jpg
-  imageAlt: Emergency Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Emergency Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -164,22 +153,24 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 99% of dental related emergency room trips could have been handled by an emergency dental
         office for a fraction of the cost. AHRQ, November 2012
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our emergency dental services on Yelp: Emergency Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Treatment Options
     contentSections:
@@ -237,11 +228,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 72% of Americans have some type of restorative dental work. 23% of all dental emergencies
         are related to the restorations.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -249,35 +241,35 @@ pageSections:
       text: There is a much higher rate of emergency dental visits in families with annual incomes less
         than $35k. Don't let the cost of care get in the way of your oral health, call us for financing
         options.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Emergency Dentist FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Emergency Dentist FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What should I do if my child's permanent tooth is knocked out?](#q-what-should-i-do-if-my-child-s-permanent-tooth-is-knocked-)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What should I do if my child's baby tooth is knocked out?](#q-what-should-i-do-if-my-child-s-baby-tooth-is-knocked-out)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What if a tooth is chipped or fractured?](#q-what-if-a-tooth-is-chipped-or-fractured)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What about a severe blow to the head or jaw fracture?](#q-what-about-a-severe-blow-to-the-head-or-jaw-fracture)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What if my child has a toothache?](#q-what-if-my-child-has-a-toothache)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Emergency Dentist FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What should I do if my child's permanent tooth is knocked out?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What should I do if my child's baby tooth is knocked out?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What if a tooth is chipped or fractured?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What about a severe blow to the head or jaw fracture?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What if my child has a toothache?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -286,38 +278,38 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 88% of all emergency dental visits could have been prevented by routine care. Read more
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I know I need an emergency dentist?](#how-do-i-know-i-need-an-emergency-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](#if-i-hurt-my-tooth-in-a-car-accident-can-i-wait-a-day-or-two)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to relieve dental pain?](#what-can-i-do-to-relieve-dental-pain)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What dental services can help treat an infection?](#what-dental-services-can-help-treat-an-infection)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if I have a toothache?](#what-should-i-do-if-i-have-a-toothache)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the most durable tooth replacement?](#what-is-the-most-durable-tooth-replacement)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I know I need an emergency dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to relieve dental pain?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What dental services can help treat an infection?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if I have a toothache?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the most durable tooth replacement?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -428,6 +420,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -475,11 +472,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Emergency Dentist
+  backToTopHref: '#emergency-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Chipped Tooth?
+    url: /vista-ca/chip-my-tooth/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

@@ -7,35 +7,24 @@ seo:
   description: What can gum sculpting do for your smile? Sometimes, your teeth aren't the problem with
     your smile. See how a gum contouring treatment can help you
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: What Is Gum Contouring & Reshaping Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied
-    with the appearance or shape of their gums. While most people think of things like teeth whitening
-    when considering how to improve their smile, the appearance of the gums also makes a significant impact.
+- _component: page-sections/heroes/page-banner
+  heading: What Is Gum Contouring & Reshaping
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with
+    the appearance or shape of their gums. While most people think of things like teeth whitening when
+    considering how to improve their smile, the appearance of the gums also makes a significant impact.
     If you feel that yours are too large or have receded and are too small, call (760) 940-2273 and schedule
     an appointment with our dental office. We can examine you, make recommendations, and let you know
     whether we can assist you or if you should see a specialist. In the meantime, here are a few frequently
     asked questions about gum contouring and our answers to them.
   imageSource: /src/assets/images/wp/gum-contouring-and-reshaping.jpg
-  imageAlt: What Is Gum Contouring & Reshaping Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: What Is Gum Contouring & Reshaping
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -128,11 +117,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our gum contouring services on Yelp: What Is Gum Contouring
         and Reshaping Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Will insurance pay for it?
     contentSections:
@@ -170,33 +160,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is gum contouring?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is the gum contouring procedure painful?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need to know about the recovery process?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why are my gums receding from my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the treatment options for gum disease?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will gum disease do to my teeth?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is gum contouring?](#what-is-gum-contouring)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is the gum contouring procedure painful?](#is-the-gum-contouring-procedure-painful)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need to know about the recovery process?](#what-do-i-need-to-know-about-the-recovery-process)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why are my gums receding from my teeth?](#why-are-my-gums-receding-from-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the treatment options for gum disease?](#what-are-the-treatment-options-for-gum-disease)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will gum disease do to my teeth?](#what-will-gum-disease-do-to-my-teeth)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -312,6 +300,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -359,11 +352,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: What Is Gum Contouring and Reshaping
+  backToTopHref: '#gum-contouring-and-reshaping'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Cosmetics
+    url: /vista-ca/dental-cosmetics/
+  - name: Professional Whitening
+    url: /vista-ca/professional-teeth-whitening/
 ---

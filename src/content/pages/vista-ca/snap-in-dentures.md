@@ -6,31 +6,20 @@ seo:
   description: Looking for snap-in dentures in Vista, CA? North County Cosmetic and Implant Dentistry
     offers secure, affordable implant-supported dentures to restore your smile.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Snap In Dentures Vista, CA
-  subtext: Depending upon each patient's needs, we have several tooth replacement options available to
-    treat missing teeth. Whether, it is a partial bridge or snap in dentures we will take great care in
-    ensuring the best possible solution, including fit and comfort for each of our patients.
+- _component: page-sections/heroes/page-banner
+  heading: Snap In Dentures
+  location: Vista, CA
+  intro: Depending upon each patient's needs, we have several tooth replacement options available to treat
+    missing teeth. Whether, it is a partial bridge or snap in dentures we will take great care in ensuring
+    the best possible solution, including fit and comfort for each of our patients.
   imageSource: /src/assets/images/wp/snap-header-image.jpg
-  imageAlt: Snap In Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Snap In Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Are you tired of loose or ill fitting dentures?
   contentSections:
@@ -107,11 +96,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our Snap In Dentures services on Yelp: Snap In Dentures
       Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -119,11 +109,12 @@ pageSections:
     text: If you are currently wearing ill-fitting dentures and are frustrated with them, or would like
       to talk to one of our doctors to find out if snap in dentures are an option for you, call our office
       to schedule your complimentary consultation today!
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss Your Treatment Options
   contentSections:
@@ -140,11 +131,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

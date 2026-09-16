@@ -7,11 +7,10 @@ seo:
   description: Affordable dental care for the entire family. Parents, kids and seniors, get fantastic,
     healthy smiles in a caring environment. Family Dentist Office
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Family Dentist Vista, CA
-  subtext: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
+- _component: page-sections/heroes/page-banner
+  heading: Family Dentist
+  location: Vista, CA
+  intro: North County Cosmetic and Implant Dentistry is a local Vista family dentist office. We treat
     patients of all ages and do so in a warm and welcoming environment. Our office is located in Vista,
     and we welcome patients to schedule an appointment and experience how we can keep everyone in the
     family in optimal oral health. Our team focuses on improving the overall experience of our patients
@@ -21,23 +20,13 @@ pageSections:
     patients enjoy their visit – every time. To schedule your appointment, call (760) 733-6254. If you
     reach us after hours or on the weekend, we will do our best to return calls as quickly as possible.
   imageSource: /src/assets/images/wp/family-dentist.jpg
-  imageAlt: Family Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Family Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -105,11 +94,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our family dental services on Yelp: Family Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Visits to Our Family Dental Office
     contentSections:
@@ -184,49 +174,49 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 40% of people over the age of 65 do not have all of their teeth. Don't be a statistic, come
         see us! Read more
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 3 out of 4 people suffer from some form of gum disease. See your Family Dentist at least twice
         a year to keep your mouth as healthy as possible. Read more
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Vista Family Dentist FAQ
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Vista Family Dentist FAQ
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. Are baby teeth really that important to my child?](#q-are-baby-teeth-really-that-important-to-my-child)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What should I do if my child has a toothache?](#q-what-should-i-do-if-my-child-has-a-toothache)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How do dental sealants work?](#q-how-do-dental-sealants-work)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How do I know if my child is getting enough fluoride?](#q-how-do-i-know-if-my-child-is-getting-enough-fluoride)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. What can I do to protect my teeth during sporting events?](#q-what-can-i-do-to-protect-my-teeth-during-sporting-events)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Q. How safe are dental X-rays?](#q-how-safe-are-dental-x-rays)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Vista Family Dentist FAQ
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. Are baby teeth really that important to my child?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What should I do if my child has a toothache?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How do dental sealants work?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How do I know if my child is getting enough fluoride?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. What can I do to protect my teeth during sporting events?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Q. How safe are dental X-rays?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -236,38 +226,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some at-home tips for proper dental hygiene?](#what-are-some-at-home-tips-for-proper-dental-hygiene)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do you provide dental treatment for all ages?](#do-you-provide-dental-treatment-for-all-ages)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can protect my child’s teeth during sports?](#what-can-protect-my-child-s-teeth-during-sports)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a kid friendly dentist?](#what-is-a-kid-friendly-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will a regular teeth cleaning be like?](#what-will-a-regular-teeth-cleaning-be-like)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some methods for improving my oral health?](#what-are-some-methods-for-improving-my-oral-health)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some at-home tips for proper dental hygiene?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do you provide dental treatment for all ages?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can protect my child’s teeth during sports?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a kid friendly dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will a regular teeth cleaning be like?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some methods for improving my oral health?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -277,11 +266,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 50% of people say that your smile is the first thing they notice. Make a great first impression,
         keep your teeth healthy. Read more
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Definition of Family Dental Terminology
     contentSections:
@@ -386,6 +376,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -417,11 +412,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Family Dentist
+  backToTopHref: '#family-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Center
+    url: /vista-ca/dental-center/
+  - name: Kid Friendly Dentist
+    url: /vista-ca/kid-friendly-dentist/
 ---

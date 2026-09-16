@@ -7,32 +7,21 @@ seo:
   description: 'New Denture Tips: Info for new denture wearers. Tips to help you adjust faster to new
     dentures. Removable dentures are an option to get a complete, gorgeous smile'
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Adjusting to New Dentures Vista, CA
-  subtext: Adjusting to new dentures can be difficult, no matter if the patient is getting partial or
-    full dentures. There are several reasons why adjusting to dentures can take time, but it will be worth
+- _component: page-sections/heroes/page-banner
+  heading: Adjusting to New Dentures
+  location: Vista, CA
+  intro: Adjusting to new dentures can be difficult, no matter if the patient is getting partial or full
+    dentures. There are several reasons why adjusting to dentures can take time, but it will be worth
     it when an individual is able to smile using a full set of teeth. With dentures, a patient will gain
     both the natural appearance and functionality of teeth again.
   imageSource: /src/assets/images/wp/adjusting-to-new-dentures.jpg
-  imageAlt: Adjusting to New Dentures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Adjusting to New Dentures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -88,11 +77,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our denture and partial denture services on Yelp:
         Adjusting to New Dentures Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Benefits of Dentures
     contentSections:
@@ -146,33 +136,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will it take to adjust to new dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there any dangers to not having a full set of teeth in my mouth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What should I do if I am experiencing tooth pain?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there dentures to replace a few of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will toothpaste help or harm the dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How does the dentures process begin?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will it take to adjust to new dentures?](#how-long-will-it-take-to-adjust-to-new-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there any dangers to not having a full set of teeth in my mouth?](#are-there-any-dangers-to-not-having-a-full-set-of-teeth-in-m)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What should I do if I am experiencing tooth pain?](#what-should-i-do-if-i-am-experiencing-tooth-pain)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there dentures to replace a few of my teeth?](#are-there-dentures-to-replace-a-few-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will toothpaste help or harm the dentures?](#will-toothpaste-help-or-harm-the-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How does the dentures process begin?](#how-does-the-dentures-process-begin)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -295,6 +283,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -324,11 +317,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Adjusting to New Dentures
+  backToTopHref: '#adjusting-to-new-dentures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Dentures
+    url: /vista-ca/implant-supported-dentures/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

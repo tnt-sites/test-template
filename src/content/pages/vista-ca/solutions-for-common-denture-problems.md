@@ -7,11 +7,10 @@ seo:
   description: Don't live with denture problems. Find explanations, causes, and solutions to your common
     denture problems. Regain that complete, gorgeous smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Solutions for Common Denture Problems Vista, CA
-  subtext: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
+- _component: page-sections/heroes/page-banner
+  heading: Solutions for Common Denture Problems
+  location: Vista, CA
+  intro: Dentures can replace missing teeth and give a patient a fully-functional smile with a natural
     appearance. We can measure the patient's mouth and develop dentures for the patient's teeth, but we
     cannot be at the patient's home 24/7. There may be times in which the patient damages the dentures
     and needs to seek treatment at our office. While damage or natural wear and tear to dentures is inevitable,
@@ -19,40 +18,32 @@ pageSections:
     denture use prior to receiving dentures. Here are a few problems that patients with dentures struggle
     with and the solution to each.
   imageSource: /src/assets/images/wp/solutions-for-common-denture-problems.jpg
-  imageAlt: Solutions for Common Denture Problems Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Solutions for Common Denture Problems
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/info-blocks/faq-section
-    heading: Speaking and eating
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 'Problem: Dentures can make it difficult when eating or speaking'
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 'Problem: Unsure of the best way to keep dentures clean'
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Speaking and eating
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Speaking and eating
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. [Problem: Dentures can make it difficult when eating or speaking](#problem-dentures-can-make-it-difficult-when-eating-or-speaki)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. [Problem: Unsure of the best way to keep dentures clean](#problem-unsure-of-the-best-way-to-keep-dentures-clean)'
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -62,29 +53,31 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our denture services on Yelp: Solutions for Common
         Denture Problems Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Loose Dentures
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Loose Dentures
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. [Problem: Dentures become loose over time](#problem-dentures-become-loose-over-time)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. [Problem: Irritation in the gums or mouth](#problem-irritation-in-the-gums-or-mouth)'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. [Problem: What to do when traveling with dentures](#problem-what-to-do-when-traveling-with-dentures)'
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Loose Dentures
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 'Problem: Dentures become loose over time'
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 'Problem: Irritation in the gums or mouth'
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: 'Problem: What to do when traveling with dentures'
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -104,33 +97,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do if my dentures fall out when speaking and eating?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do to deal with loose dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How should I take care of my dentures when I am traveling?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I fix my dentures on my own?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do if my dentures fall out when speaking and eating?](#what-can-i-do-if-my-dentures-fall-out-when-speaking-and-eati)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do to deal with loose dentures?](#what-can-i-do-to-deal-with-loose-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How should I take care of my dentures when I am traveling?](#how-should-i-take-care-of-my-dentures-when-i-am-traveling)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I fix my dentures on my own?](#can-i-fix-my-dentures-on-my-own)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -277,6 +268,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -306,11 +302,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Solutions for Common Denture Problems
+  backToTopHref: '#solutions-for-common-denture-problems'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Dentures
+    url: /vista-ca/implant-supported-dentures/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

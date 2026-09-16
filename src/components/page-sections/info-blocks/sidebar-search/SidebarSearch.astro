@@ -1,0 +1,86 @@
+---
+/*
+ * The source sidebar carries a search box (a WordPress ?s= form, which cannot
+ * work on a static build). This uses Pagefind, which indexes dist/ after the
+ * Astro build, so the same affordance works without a server.
+ */
+const {
+  heading = "",
+  placeholder = "Search",
+  buttonText = "Search",
+  action = "/search/",
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["sidebar-search", className]} {...htmlAttributes}>
+  {heading && <h5 class="ss-title">{heading}</h5>}
+  <form class="ss-form" role="search" method="get" action={action}>
+    <label class="sr-only" for="sidebar-search-input">Type your search query here</label>
+    <input
+      id="sidebar-search-input"
+      class="ss-input"
+      type="search"
+      name="q"
+      placeholder={placeholder}
+      required
+    />
+    <button class="ss-submit" type="submit">{buttonText}</button>
+  </form>
+</section>
+
+<style lang="pcss">
+  .ss-title {
+    border-bottom: 1px solid #c9c5be;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+
+  .ss-form {
+    display: grid;
+    gap: var(--spacing-xs);
+  }
+
+  .ss-input {
+    border: 1px solid #c9c5be;
+    border-radius: 2px;
+    font: inherit;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+  }
+
+  .ss-submit {
+    background-color: var(--color-brand-secondary, #ba9764);
+    border: 0;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-family: var(--font-accent, Montserrat, sans-serif);
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5rem 1.25rem;
+    text-transform: capitalize;
+  }
+
+  .ss-submit:hover {
+    background-color: #a8854f;
+  }
+
+  .sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+</style>

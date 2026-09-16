@@ -7,34 +7,23 @@ seo:
   description: Dental cleaning and examinations are procedures to get a healthy, gorgeous smile. Learn
     about teeth cleaning and how it can enhance your smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Cleaning Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
+- _component: page-sections/heroes/page-banner
+  heading: Dental Cleaning
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we provide dental cleanings and examinations
     to patients throughout Vista. We believe that preventative care is essential for staying in good oral
     health. Our goal is to keep our patients as healthy as possible. The best way to do so is through
     ongoing dental care and teaching our patients how to practice good oral hygiene at home. If you live
     in the Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay healthy
     year-round.
   imageSource: /src/assets/images/wp/dental-cleaning-and-examinations.jpg
-  imageAlt: Dental Cleaning Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Cleaning
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -73,11 +62,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Dental Cleaning Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Vista Dental Cleaning and Examinations
     contentSections:
@@ -155,33 +145,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How early should my child receive professional dental care?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can a dentist treat my sensitive teeth without hurting me?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do teeth cleanings at your office include?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do at home to better take care of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is restorative dentistry?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How early should my child receive professional dental care?](#how-early-should-my-child-receive-professional-dental-care)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can a dentist treat my sensitive teeth without hurting me?](#can-a-dentist-treat-my-sensitive-teeth-without-hurting-me)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do teeth cleanings at your office include?](#what-do-teeth-cleanings-at-your-office-include)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do at home to better take care of my teeth?](#what-can-i-do-at-home-to-better-take-care-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is restorative dentistry?](#what-is-restorative-dentistry)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -304,6 +292,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -329,11 +322,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Cleaning and Examinations
+  backToTopHref: '#dental-cleaning-and-examinations'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
+  - name: Teeth Whitening Dentist
+    url: /vista-ca/teeth-whitening-at-dentist/
 ---

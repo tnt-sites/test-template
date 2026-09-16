@@ -6,34 +6,21 @@ seo:
   description: Osseous surgery for advanced periodontal disease at North County Cosmetic and Implant Dentistry
     in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
-    to severe gum disease.
-  subtext: If you’ve been diagnosed with moderate to severe peridontitis (gum disease), it’s likely that
+- _component: page-sections/heroes/page-banner
+  heading: Return to Health with Osseous (Pocket Reduction) Surgery
+  location: The gold standard for treating moderate to severe gum disease.
+  intro: If you’ve been diagnosed with moderate to severe peridontitis (gum disease), it’s likely that
     you have hard deposits of bacteria underneath your gums, where brushing and flossing can’t reach.
     Osseous surgery, also known as pocket reduction surgery, can help remove those deposits so your mouth
     can start to heal.
   imageSource: /src/assets/images/wp/AdobeStock_376411039.jpg
-  imageAlt: Return to Health with Osseous (Pocket Reduction) Surgery The gold standard for treating moderate
-    to severe gum disease.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Return to Health with Osseous (Pocket Reduction) Surgery
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: What are dental pockets and why do they need to be reduced?
   contentSections:
@@ -80,11 +67,12 @@ pageSections:
   contentSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about about our osseous surgery on Yelp: Debridement Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: How effective is osseous surgery?
   contentSections:
@@ -133,11 +121,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

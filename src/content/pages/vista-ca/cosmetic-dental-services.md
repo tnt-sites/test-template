@@ -6,33 +6,22 @@ seo:
   description: Cosmetic dental services can transform your smile. Get the healthy, gorgeous smile you
     deserve. Reputable Vista, CA source with great results
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Cosmetic Dental Services Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we offer cosmetic dental services in Vista.
-    Patients can benefit from having a single procedure or having a full smile makeover. We understand
-    that a persons' smile can transform their entire appearance, restore self-confidence, and make it
-    easier to speak clearly. Whether your goal is to improve your appearance or to improve the functionality
-    of your teeth – we can help.
+- _component: page-sections/heroes/page-banner
+  heading: Cosmetic Dental Services
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we offer cosmetic dental services in Vista. Patients
+    can benefit from having a single procedure or having a full smile makeover. We understand that a persons'
+    smile can transform their entire appearance, restore self-confidence, and make it easier to speak
+    clearly. Whether your goal is to improve your appearance or to improve the functionality of your teeth
+    – we can help.
   imageSource: /src/assets/images/wp/cosmetic-dental-services.jpg
-  imageAlt: Cosmetic Dental Services Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Cosmetic Dental Services
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -71,11 +60,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Cosmetic Dental Services
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Enhance Your Smile the Way You Want
     contentSections:
@@ -106,33 +96,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How healthy do my teeth need to be for certain cosmetic dental services?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do receding gums get in the way of a cosmetic procedure?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are cosmetic dental products immune to stains?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can a smile makeover include teeth whitening?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can dental cosmetics replace my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I tell if I need a dental checkup?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How healthy do my teeth need to be for certain cosmetic dental services?](#how-healthy-do-my-teeth-need-to-be-for-certain-cosmetic-dent)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do receding gums get in the way of a cosmetic procedure?](#do-receding-gums-get-in-the-way-of-a-cosmetic-procedure)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are cosmetic dental products immune to stains?](#are-cosmetic-dental-products-immune-to-stains)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can a smile makeover include teeth whitening?](#can-a-smile-makeover-include-teeth-whitening)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can dental cosmetics replace my teeth?](#can-dental-cosmetics-replace-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I tell if I need a dental checkup?](#how-do-i-tell-if-i-need-a-dental-checkup)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -255,6 +243,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -304,11 +297,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Cosmetic Dental Services
+  backToTopHref: '#cosmetic-dental-services'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Cosmetics
+    url: /vista-ca/dental-cosmetics/
+  - name: Smile Makeover
+    url: /vista-ca/smile-makeover/
 ---

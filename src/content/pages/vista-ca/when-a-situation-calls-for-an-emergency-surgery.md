@@ -7,32 +7,21 @@ seo:
   description: When you're experiencing dental pain, it can be difficult to determine if it's a dental
     emergency. We can help determine what is and isn't a serious threat to teeth
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: When a Situation Calls for an Emergency Dental Surgery Vista, CA
-  subtext: No matter how many precautions you take to protect your teeth, there is always a chance for
-    a dental accident or injury to occur. When this happens, there is a chance that you will need emergency
+- _component: page-sections/heroes/page-banner
+  heading: When a Situation Calls for an Emergency Dental Surgery
+  location: Vista, CA
+  intro: No matter how many precautions you take to protect your teeth, there is always a chance for a
+    dental accident or injury to occur. When this happens, there is a chance that you will need emergency
     surgery from a professional endodontist. By seeking services from an endodontic specialist, you will
     be able to ensure that you receive the proper treatment for your teeth.
   imageSource: /src/assets/images/wp/when-a-situation-calls-for-an-emergency-surgery.jpg
-  imageAlt: When a Situation Calls for an Emergency Dental Surgery Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: When a Situation Calls for an Emergency Dental Surgery
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -105,11 +94,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: When a Situation Calls
         for an Emergency Surgery Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Misconceptions about emergency surgery
     contentSections:
@@ -151,38 +141,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you live in the Vista area, call (760) 940-2273 to schedule your dental exam so that you
         can remain in good health or receive treatment for a current condition.
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What kind of damage involves a dental emergency?](#what-kind-of-damage-involves-a-dental-emergency)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do you do to treat a cracked tooth?](#what-do-you-do-to-treat-a-cracked-tooth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is there any way to prevent an oral injury?](#is-there-any-way-to-prevent-an-oral-injury)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will there be any pain during surgery?](#will-there-be-any-pain-during-surgery)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Should I be worried about a dental abscess?](#should-i-be-worried-about-a-dental-abscess)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the root canal process like?](#what-is-the-root-canal-process-like)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What kind of damage involves a dental emergency?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do you do to treat a cracked tooth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is there any way to prevent an oral injury?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will there be any pain during surgery?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Should I be worried about a dental abscess?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the root canal process like?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -298,6 +287,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -329,11 +323,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: When a Situation Calls for an Emergency Surgery
+  backToTopHref: '#when-a-situation-calls-for-an-emergency-surgery'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Need a Root Canal?
+    url: /vista-ca/do-i-need-a-root-canal/
+  - name: Tooth Extraction?
+    url: /vista-ca/tooth-extraction/
 ---

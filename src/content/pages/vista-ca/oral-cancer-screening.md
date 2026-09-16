@@ -6,36 +6,25 @@ seo:
   description: Early detection saves lives. Get an oral cancer screening at North County Cosmetic and
     Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Oral Cancer Screening Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we encourage you to schedule an oral cancer
-    screening today. If you have not yet taken this life-saving measure, you should. Oral cancer is a
-    disease not frequently discussed. There are few, if any, advertising campaigns, walks, or fundraisers
-    supporting its treatment. Still, oral cancer claims one life every day in the United States. The reason
-    for the high mortality rate is that most people do not seek medical help until the cancer has advanced.
-    As with all forms of cancer, early detection and treatment are critical to the ability to be cured.
-    Therefore, the sooner you know that you are at risk for cancer or are developing signs of it, the
-    better your chances are of beating it.
+- _component: page-sections/heroes/page-banner
+  heading: Oral Cancer Screening
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we encourage you to schedule an oral cancer screening
+    today. If you have not yet taken this life-saving measure, you should. Oral cancer is a disease not
+    frequently discussed. There are few, if any, advertising campaigns, walks, or fundraisers supporting
+    its treatment. Still, oral cancer claims one life every day in the United States. The reason for the
+    high mortality rate is that most people do not seek medical help until the cancer has advanced. As
+    with all forms of cancer, early detection and treatment are critical to the ability to be cured. Therefore,
+    the sooner you know that you are at risk for cancer or are developing signs of it, the better your
+    chances are of beating it.
   imageSource: /src/assets/images/wp/oral-cancer-screening.jpg
-  imageAlt: Oral Cancer Screening Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Oral Cancer Screening
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -84,11 +73,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our oral cancer screening services on Yelp: Oral Cancer
         Screening Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Who is susceptible to getting oral cancer?
     contentSections:
@@ -165,33 +155,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What happens during an oral cancer screening?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Do you provide treatment for oral cancer?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is there anything I can do at home to help prevent oral cancer?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I need for a dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are some tips for proper dental care at home?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why is preventative dental care so important?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What happens during an oral cancer screening?](#what-happens-during-an-oral-cancer-screening)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Do you provide treatment for oral cancer?](#do-you-provide-treatment-for-oral-cancer)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is there anything I can do at home to help prevent oral cancer?](#is-there-anything-i-can-do-at-home-to-help-prevent-oral-canc)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I need for a dental checkup?](#what-do-i-need-for-a-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -324,6 +312,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -355,11 +348,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Oral Cancer Screening
+  backToTopHref: '#oral-cancer-screening'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

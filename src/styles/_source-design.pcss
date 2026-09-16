@@ -62,8 +62,17 @@
     line-height: 1.5;
   }
 
-  /* The source's headings are noticeably lighter and looser than the
-     starter's. h2 is uppercase site-wide. */
+  /*
+   * Two distinct scales on the source, and they must not be conflated:
+   *
+   *   homepage / landing   h1 45px/400, h2 37.5px/300 UPPERCASE, h3 24px/500
+   *   interior content     h1 60px/200 (banner), h2 and h3 22.5px/400,
+   *                        h4 26.25px/400, body 16.5px/300, links 15px
+   *
+   * The display sizes were measured on the homepage and previously applied
+   * everywhere, which made every interior heading far too large and wrongly
+   * uppercased.
+   */
   :where(:root) {
     h1,
     h2,
@@ -77,24 +86,27 @@
     }
 
     h1 {
+      font-size: 2.813rem; /* 45px */
       font-weight: 400;
       line-height: 1.1;
     }
 
     h2 {
+      font-size: 2.344rem; /* 37.5px */
       font-weight: 300;
       line-height: 1.1;
       text-transform: uppercase;
     }
 
     h3 {
+      font-size: 1.5rem; /* 24px */
       font-weight: 500;
       line-height: 1.1;
     }
 
     h4,
     h5 {
-      font-weight: 500;
+      font-weight: 400;
     }
   }
 
@@ -131,13 +143,32 @@
      929px row); ours stacked them into one narrow column. */
   .definition-list {
     display: grid;
-    gap: var(--spacing-xs) var(--spacing-lg);
+    gap: var(--spacing-sm) var(--spacing-xl);
   }
 
   @media (min-width: 900px) {
     .definition-list {
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  /* Each term/definition pair is one grid cell. CloudCannon wraps them in
+     <editable-array-item>, which is inline by default and collapses the grid. */
+  .definition-list > editable-array-item,
+  .definition-list > div {
+    break-inside: avoid;
+    /* DefinitionList.astro spans each item across the whole grid
+       (grid-column: 1 / -1), which defeats the source's two columns. */
+    grid-column: auto;
+    grid-template-columns: auto 1fr;
+  }
+
+  .definition-list dt {
+    font-weight: 600;
+  }
+
+  .definition-list dd {
+    margin-left: 0;
   }
 
   .definition-list > div,
@@ -335,5 +366,176 @@
   footer .footer-logo img,
   footer img[alt*="North County"] {
     max-width: var(--chrome-footer-logo-width, 300px);
+  }
+}
+
+@layer overrides {
+  /*
+   * Source decoration, all measured off the render:
+   *   h2/h3 rule   906px x 1px, 12px margins, under every content heading
+   *   bullets      square markers, no disc dots
+   *   sidebar      #e6e6e6 panels, 30px padding
+   *   call-out     850px (88% max), 10px radius, 20px ::after tail
+   *   sections     30px vertical margins between content blocks
+   */
+
+  /* Decorative rule under content headings. */
+  .cws-main .section h2,
+  .cws-main .section h3,
+  .content-with-sidebar h2,
+  .content-with-sidebar h3 {
+    border-bottom: 1px solid var(--color-border, #d2cec7);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+
+  /* Square markers, not disc dots. */
+  .cws-main ul,
+  .cws-side ul,
+  .section .list ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .cws-main ul > li,
+  .section .list ul > li {
+    list-style-type: square;
+    margin-left: 1.15em;
+    padding-left: 0.35em;
+  }
+
+  .cws-main ul > li::marker,
+  .section .list ul > li::marker {
+    color: var(--color-brand-secondary, #ba9764);
+    content: "▪";
+  }
+
+  /* Vertical rhythm between content blocks. */
+  .cws-main > * > .section + .section,
+  .cws-main .section + .section {
+    margin-top: 30px;
+  }
+
+  /* Sidebar panels sit on grey with generous padding. */
+  .cws-side .section {
+    background-color: #e6e6e6;
+    margin-bottom: 30px;
+    padding: 30px;
+  }
+
+  .cws-side h2,
+  .cws-side h3,
+  .cws-side h4,
+  .cws-side h5 {
+    border-bottom: 1px solid #c9c5be;
+    font-size: 1.219rem;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    text-transform: none;
+  }
+
+  .cws-side ul > li {
+    list-style-type: square;
+    margin-left: 1.1em;
+  }
+
+  /* Call-outs: a narrow green bubble with a tail, not a full-bleed band. */
+  .callout-bubble {
+    background-color: var(--color-brand, #79a37b);
+    border-radius: 10px;
+    margin: 30px auto;
+    max-width: min(850px, 88%);
+    padding: 25px;
+    position: relative;
+  }
+
+  .callout-bubble::after {
+    border: 20px solid transparent;
+    border-top-color: var(--color-brand, #79a37b);
+    content: "";
+    height: 0;
+    left: 48px;
+    position: absolute;
+    top: 100%;
+    width: 0;
+  }
+
+  .callout-bubble p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@layer overrides {
+  /*
+   * Interior page content scale, measured on /vista-ca/ pages. Body copy is
+   * 16.5px/300 at 1.5 line-height; content headings are 22.5px/400 and are NOT
+   * uppercase - only the homepage's display h2 is.
+   */
+  .cws-main,
+  .content-with-sidebar {
+    font-size: 1.031rem; /* 16.5px */
+  }
+
+  .cws-main p,
+  .content-with-sidebar p,
+  .pb-intro p,
+  .section p {
+    font-size: 1.031rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  .cws-main li,
+  .cws-side li {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  .cws-main h2,
+  .content-with-sidebar h2 {
+    font-size: 1.406rem; /* 22.5px */
+    font-weight: 400;
+    line-height: 1.1;
+    text-transform: none;
+  }
+
+  .cws-main h3,
+  .content-with-sidebar h3 {
+    font-size: 1.406rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .cws-main h4,
+  .content-with-sidebar h4 {
+    font-size: 1.641rem; /* 26.25px */
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .cws-main h5,
+  .cws-side h5,
+  .content-with-sidebar h5 {
+    font-size: 1.406rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+
+  .cws-main a,
+  .cws-side a {
+    font-size: inherit;
+  }
+
+  /* Definition lists: 18px/400 terms over 16px/300 text. */
+  .definition-list dt {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+
+  .definition-list dd {
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
   }
 }

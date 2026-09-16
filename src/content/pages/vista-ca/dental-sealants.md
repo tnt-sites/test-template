@@ -7,33 +7,21 @@ seo:
   description: Shown to reduce tooth decay by up to 60 percent, dental sealants act as a barrier to prevent
     cavities. Learn the pros and cons from North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Dental Sealants Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect
-    teeth and prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to
-    call (760) 940-2273 and schedule an appointment with our dental office. We can examine you and your
-    family before letting you know if dental sealants are the right preventative care solution for your
-    teeth.
+- _component: page-sections/heroes/page-banner
+  heading: Dental Sealants
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect teeth
+    and prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
+    940-2273 and schedule an appointment with our dental office. We can examine you and your family before
+    letting you know if dental sealants are the right preventative care solution for your teeth.
   imageSource: /src/assets/images/wp/dental-sealants.jpg
-  imageAlt: Dental Sealants Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Dental Sealants
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -93,11 +81,12 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental sealants on Yelp: Dental Sealants Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: What does it feel like after they are placed?
     contentSections:
@@ -143,33 +132,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are dental sealants?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do dental sealants do?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is it like to have dental sealants on the teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can you use to help prevent tooth loss?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is the process for getting a mouth guard?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Does my child need regular fluoride treatments?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are dental sealants?](#what-are-dental-sealants)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do dental sealants do?](#what-do-dental-sealants-do)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is it like to have dental sealants on the teeth?](#what-is-it-like-to-have-dental-sealants-on-the-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can you use to help prevent tooth loss?](#what-can-you-use-to-help-prevent-tooth-loss)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is the process for getting a mouth guard?](#what-is-the-process-for-getting-a-mouth-guard)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Does my child need regular fluoride treatments?](#does-my-child-need-regular-fluoride-treatments)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -294,6 +281,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -325,11 +317,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Dental Sealants
+  backToTopHref: '#dental-sealants'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Tooth Colored Fillings
+    url: /vista-ca/composite-fillings/
+  - name: Preventative Care
+    url: /vista-ca/preventative-dental-care/
 ---

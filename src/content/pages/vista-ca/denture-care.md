@@ -7,34 +7,22 @@ seo:
   description: Questions about daily cleaning, brushing, soaking, rising, and general handling of dentures
     and partials? Learn a few tips on how to maintain your dentures and keep that complete, gorgeous smile
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Denture Care Vista, CA
-  subtext: Proper denture care depends on the type of dentures and the patient's overall oral health.
-    Without proper care, the dentures will not last nearly as long as they can. With the proper care,
-    patients will not need to worry about their dentures so much. However, dentures need specific care
-    that differs from typical brushing and flossing. On this page, we break down the various form of denture
-    care and the steps one will have to take. To begin, dentures need daily cleaning and care, just like
-    teeth.
+- _component: page-sections/heroes/page-banner
+  heading: Denture Care
+  location: Vista, CA
+  intro: Proper denture care depends on the type of dentures and the patient's overall oral health. Without
+    proper care, the dentures will not last nearly as long as they can. With the proper care, patients
+    will not need to worry about their dentures so much. However, dentures need specific care that differs
+    from typical brushing and flossing. On this page, we break down the various form of denture care and
+    the steps one will have to take. To begin, dentures need daily cleaning and care, just like teeth.
   imageSource: /src/assets/images/wp/denture-care.jpg
-  imageAlt: Denture Care Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Denture Care
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -82,11 +70,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our denture and partial denture services on Yelp:
         Denture Care Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Keeping up oral health
     contentSections:
@@ -134,33 +123,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I take care of my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will toothpaste help or harm the dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it possible to adjust the dentures over time?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Are there different types of dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do I do if I damage my dentures?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can I fix my dentures on my own?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will toothpaste help or harm the dentures?](#will-toothpaste-help-or-harm-the-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it possible to adjust the dentures over time?](#is-it-possible-to-adjust-the-dentures-over-time)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can I fix my dentures on my own?](#can-i-fix-my-dentures-on-my-own)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -283,6 +270,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -312,11 +304,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Denture Care
+  backToTopHref: '#denture-care'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Implant Dentures
+    url: /vista-ca/implant-supported-dentures/
+  - name: Damaged Dentures?
+    url: /vista-ca/damage-my-dentures/
 ---

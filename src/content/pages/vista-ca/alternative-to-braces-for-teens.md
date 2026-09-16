@@ -6,11 +6,10 @@ seo:
   description: Learn about Clear Aligner Therapy for teens as an alternative to braces at North County
     Cosmetic and Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Alternative to Braces for Teens Vista, CA
-  subtext: If your teen is tired of living with crooked teeth, now is an excellent time to consider orthodontics.
+- _component: page-sections/heroes/page-banner
+  heading: Alternative to Braces for Teens
+  location: Vista, CA
+  intro: If your teen is tired of living with crooked teeth, now is an excellent time to consider orthodontics.
     At North County Cosmetic and Implant Dentistry, we regularly answer questions about Clean Aligner
     Therapy Teen® as an alternative to braces for teens. This product is growing in popularity as more
     and more teens are transforming their smile without the use of bulky and noticeable braces. If you
@@ -18,23 +17,13 @@ pageSections:
     We can let you know whether or not Clean Aligner Therapy is the right solution for your child and
     how to get started.
   imageSource: /src/assets/images/wp/alternative-to-braces-for-teens.jpg
-  imageAlt: Alternative to Braces for Teens Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Alternative to Braces for Teens
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -133,11 +122,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our alternative to braces on Yelp: Alternative to
         Braces for Teens Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -153,33 +143,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How long will the Clean Aligner Therapy treatment process take?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How is Clean Aligner Therapy different from traditional treatment options?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Is it easier to keep teeth clean with Clean Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Can my teen wear aligners during other activities such as sports?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What are the advantages to Clean Aligner Therapy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I get started with Clean Aligner Therapy?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How long will the Clean Aligner Therapy treatment process take?](#how-long-will-the-clean-aligner-therapy-treatment-process-ta)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How is Clean Aligner Therapy different from traditional treatment options?](#how-is-clean-aligner-therapy-different-from-traditional-trea)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Is it easier to keep teeth clean with Clean Aligner Therapy?](#is-it-easier-to-keep-teeth-clean-with-clean-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Can my teen wear aligners during other activities such as sports?](#can-my-teen-wear-aligners-during-other-activities-such-as-sp)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What are the advantages to Clean Aligner Therapy?](#what-are-the-advantages-to-clean-aligner-therapy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I get started with Clean Aligner Therapy?](#how-do-i-get-started-with-clean-aligner-therapy)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -316,6 +304,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -343,11 +336,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Alternative to Braces for Teens
+  backToTopHref: '#alternative-to-braces-for-teens'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Clear Braces
+    url: /vista-ca/clear-braces/
+  - name: Clear vs Traditional
+    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

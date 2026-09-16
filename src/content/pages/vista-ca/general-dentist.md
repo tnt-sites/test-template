@@ -6,11 +6,10 @@ seo:
   description: Primary dental care provider for the whole family. Modern dentistry in a fun, caring environment.
     General Dentist North County Cosmetic and Implant Dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: General Dentist Vista, CA
-  subtext: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
+- _component: page-sections/heroes/page-banner
+  heading: General Dentist
+  location: Vista, CA
+  intro: Practicing good oral hygiene, along with regular checkups, is essential for maintaining good
     health. Your teeth and gums impact the health of the entire body. If you don't take care of them,
     you can get sick more often and increase your risk for diseases. Things like cavities, gum disease,
     and tooth decay can cause incredible pain that makes it difficult to enjoy life, let alone your favorite
@@ -23,23 +22,13 @@ pageSections:
     dental procedure, the highly trained team at North County Cosmetic and Implant Dentistry will provide
     excellent dental care.
   imageSource: /src/assets/images/wp/general-dentist.jpg
-  imageAlt: General Dentist Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: General Dentist
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -116,11 +105,12 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our general dental services on Yelp: General Dentist
         Vista'
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: accent
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Collaboration
     contentSections:
@@ -151,33 +141,31 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: base
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Will the dental treatment hurt?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is a general dentist?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is restorative dentistry?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How can I prepare for my dentist appointment?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What will happen at my dental checkup?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: How do I find a dentist for my family?
-      contentSections: []
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Will the dental treatment hurt?](#will-the-dental-treatment-hurt)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is a general dentist?](#what-is-a-general-dentist)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is restorative dentistry?](#what-is-restorative-dentistry)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How can I prepare for my dentist appointment?](#how-can-i-prepare-for-my-dentist-appointment)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What will happen at my dental checkup?](#what-will-happen-at-my-dental-checkup)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [How do I find a dentist for my family?](#how-do-i-find-a-dentist-for-my-family)
     maxContentWidth: xl
-    paddingHorizontal: xl
+    paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -290,6 +278,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -337,11 +330,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: General Dentist
+  backToTopHref: '#general-dentist'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Center
+    url: /vista-ca/dental-center/
+  - name: Routine Dental Care
+    url: /vista-ca/routine-dental-care/
 ---

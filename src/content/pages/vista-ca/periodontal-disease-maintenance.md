@@ -6,31 +6,20 @@ seo:
   description: Maintain healthy gums with periodontal disease maintenance at North County Cosmetic and
     Implant Dentistry in Vista, CA.
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
-  subtext: If you’ve been diagnosed with periodontal disease, there’s good news and bad news. The bad
-    news? Gum disease isn’t curable. The good news? With the right maintenance, you can prevent the progression
+- _component: page-sections/heroes/page-banner
+  heading: Fight Periodontal Disease with Regular Maintenance
+  location: Keep your smile bright and your body healthy.
+  intro: If you’ve been diagnosed with periodontal disease, there’s good news and bad news. The bad news?
+    Gum disease isn’t curable. The good news? With the right maintenance, you can prevent the progression
     of the disease and even build back some bone and tissue. The key is to stay proactive.
   imageSource: /src/assets/images/wp/AdobeStock_241876034.jpg
-  imageAlt: Fight Periodontal Disease with Regular Maintenance Keep your smile bright and your body healthy.
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Fight Periodontal Disease with Regular Maintenance
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/custom-section
   label: Stay ahead of your gum disease.
   contentSections:
@@ -56,11 +45,12 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: 'Check out what others are saying about our gum disease maintenance on Yelp: Periodontal Maintenance
       Vista'
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: accent
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Stay proactive. Stay healthy.
   contentSections:
@@ -110,11 +100,4 @@ pageSections:
   paddingVertical: xl
   colorScheme: default
   backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
 ---

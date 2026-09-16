@@ -7,34 +7,23 @@ seo:
   description: Reputable Vista, CA dentist outlines affordable routine dental procedures and services
     that can transform your smile. Friendly, gentle dentistry
 pageSections:
-- _component: page-sections/heroes/hero-split
-  eyebrow: ''
-  eyebrowColor: ''
-  heading: Routine Dental Procedures Vista, CA
-  subtext: At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
+- _component: page-sections/heroes/page-banner
+  heading: Routine Dental Procedures
+  location: Vista, CA
+  intro: At North County Cosmetic and Implant Dentistry, we perform a variety of routine dental procedures
     that can help your teeth and gums to remain healthy for a lifetime. We prefer to see patients twice
     a year for a routine teeth cleaning and dental exam because this is the best way to prevent cavities
     and gum disease. If you have not been to the dentist in a while and are concerned that going may be
     uncomfortable, do not be. We are a Vista, CA gentle dentistry office and can help to keep you comfortable
     during your appointment.
   imageSource: /src/assets/images/wp/routine-dental-procedures.jpg
-  imageAlt: Routine Dental Procedures Vista, CA
-  imageAspectRatio: none
-  buttonSections:
-  - _component: building-blocks/core-elements/button
-    text: Request an Appointment
-    hideText: false
-    link: /contact-us/
-    iconName: ''
-    iconPosition: before
-    variant: primary
-    size: md
-    borderRadius: 2xl
-  reverse: false
-  colorScheme: default
-  backgroundColor: base
-  backgroundGradient: ''
-  paddingVertical: 2xl
+  imageAlt: Routine Dental Procedures
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
@@ -120,38 +109,37 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: 'Check out what others are saying about our dental services on Yelp: Routine Dental Procedures
         Vista'
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
+    colorScheme: default
+    backgroundColor: none
+    class: callout-bubble
+  - _component: page-sections/builders/custom-section
+    label: Questions Answered on This Page
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Questions Answered on This Page
+      level: h2
+      size: sm
+      alignX: center
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can you offer to keep my teeth healthy?](#what-can-you-offer-to-keep-my-teeth-healthy)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What do teeth cleanings at your office include?](#what-do-teeth-cleanings-at-your-office-include)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is dental bonding?](#what-is-dental-bonding)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What can I do at home to better take care of my teeth?](#what-can-i-do-at-home-to-better-take-care-of-my-teeth)
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. [What is restorative dentistry?](#what-is-restorative-dentistry)
     maxContentWidth: xl
     paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: accent
-  - _component: page-sections/info-blocks/faq-section
-    heading: Questions Answered on This Page
-    headingLevel: h2
-    headingSize: lg
-    singleOpen: true
-    openFirst: false
-    items:
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can you offer to keep my teeth healthy?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What do teeth cleanings at your office include?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is dental bonding?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: Why is preventative dental care so important?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What can I do at home to better take care of my teeth?
-      contentSections: []
-    - _component: building-blocks/wrappers/accordion/accordion-item
-      title: What is restorative dentistry?
-      contentSections: []
-    maxContentWidth: xl
-    paddingHorizontal: xl
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
@@ -282,6 +270,11 @@ pageSections:
     paddingVertical: md
     colorScheme: default
     backgroundColor: base
+  - _component: page-sections/info-blocks/sidebar-search
+    heading: ''
+    placeholder: Search
+    buttonText: Search
+    action: /search/
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -307,11 +300,14 @@ pageSections:
     backgroundColor: base
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
-  backgroundColor: surface
+- _component: page-sections/info-blocks/page-footer-nav
+  backToTopText: Routine Dental Procedures
+  backToTopHref: '#routine-dental-procedures'
+  crumbs:
+  - name: Vista, CA
+    url: /vista-ca/
+  - name: Dental Checkup
+    url: /vista-ca/dental-checkup/
+  - name: Cleaning & Exam
+    url: /vista-ca/dental-cleaning-and-examinations/
 ---
