@@ -59,7 +59,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Our San Diego Dentist offers Sedation Dentistry for patients with dental anxiety & special needs.
   contentSections:
@@ -79,7 +79,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: 'We offer a full range of sedation options, including:'
   contentSections:
@@ -117,7 +117,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Contact Us
   contentSections:
@@ -133,5 +133,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 ---

@@ -41,7 +41,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: What is osseous surgery?
   contentSections:
@@ -104,7 +104,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Contact Us to Get Started
   contentSections:
@@ -120,5 +120,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 ---

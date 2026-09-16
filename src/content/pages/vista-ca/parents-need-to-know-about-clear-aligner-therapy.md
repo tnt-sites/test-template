@@ -169,7 +169,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clear Aligner Therapy Terminology
@@ -284,7 +284,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
     backToTopHref: '#parents-need-to-know-about-clear-aligner-therapy'

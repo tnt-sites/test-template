@@ -17,5 +17,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 ---

@@ -37,7 +37,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: Dental implants offer permanent solution for patients with missing teeth
   contentSections:
@@ -112,7 +112,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: accent
 - _component: page-sections/builders/custom-section
   label: Contact Us to Discuss Your Treatment Options
   contentSections:
@@ -128,5 +128,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 ---

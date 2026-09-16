@@ -677,3 +677,53 @@
     -webkit-font-smoothing: auto;
   }
 }
+
+@layer overrides {
+  /*
+   * Definition list — final word, measured on the source.
+   *
+   * The term is wrapped in <dfn> on the source, which renders ITALIC by UA
+   * default. My earlier pass measured the <dt> (normal) and concluded there
+   * was no italic, then removed it; the italic lives one level in.
+   *
+   *   dl   16px vertical margins
+   *   dt   18px/400 italic
+   *   dd   16px/300, 20px bottom margin
+   *   each pair below the first row carries a 1px rule above it
+   */
+  main .definition-list {
+    margin-block: 16px;
+  }
+
+  main .definition-list dt {
+    color: #111;
+    font-size: 1.125rem;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+
+  main .definition-list dd {
+    color: #1a1a1a;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    margin-left: 0;
+  }
+
+  /* The source draws .divider.divider-solid above each pair after the first
+     row; with a two-column grid that is every item from the third on. */
+  main .definition-list > editable-array-item:nth-child(n + 3),
+  main .definition-list > div:nth-child(n + 3) {
+    border-top: 1px solid rgb(0 0 0 / 18%);
+    padding-top: 10px;
+  }
+
+  /* Vertical separation between every coloured block in the content column. */
+  main .cws-main > editable-array > editable-array-item + editable-array-item > .section,
+  main .cws-main > editable-array > editable-array-item > .section {
+    margin-block: 30px;
+  }
+}

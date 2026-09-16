@@ -163,7 +163,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
@@ -258,7 +258,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: The Truth Behind Root Canals
     backToTopHref: '#the-truth-behind-root-canals'

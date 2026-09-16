@@ -208,7 +208,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
@@ -326,7 +326,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: Solutions for Common Denture Problems
     backToTopHref: '#solutions-for-common-denture-problems'

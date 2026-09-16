@@ -54,7 +54,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Why do most people need a root canal?
     contentSections:
@@ -171,7 +171,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -217,7 +217,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
@@ -312,7 +312,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: Root Canal Treatment
     backToTopHref: '#root-canal-treatment'

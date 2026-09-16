@@ -48,7 +48,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: highlight
 - _component: page-sections/builders/custom-section
   label: No More Dentures! with San Diego dentist Christopher Henninger, DMD
   contentSections:
@@ -60,7 +60,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: What are Dental Implants
   contentSections:
@@ -78,7 +78,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: Types of Dental Implants
   contentSections:
@@ -133,7 +133,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: The benefits of Dental Implants
   contentSections:
@@ -165,7 +165,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 - _component: page-sections/builders/custom-section
   label: Frequently Asked Questions
   contentSections:
@@ -206,7 +206,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: dark
 - _component: page-sections/builders/custom-section
   label: Get the Smile that you Deserve
   contentSections:
@@ -239,5 +239,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: base
 ---

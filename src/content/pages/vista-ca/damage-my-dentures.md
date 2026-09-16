@@ -88,7 +88,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -162,7 +162,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:
@@ -196,7 +196,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
@@ -290,7 +290,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: What Do I Do If I Damage My Dentures
     backToTopHref: '#damage-my-dentures'

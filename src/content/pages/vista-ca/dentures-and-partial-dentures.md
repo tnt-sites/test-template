@@ -55,7 +55,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Dentures Can Help Prevent Further Oral Health Issues
     contentSections:
@@ -102,7 +102,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -227,7 +227,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Other Tooth Replacement Options
     contentSections:
@@ -257,7 +257,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: Helping Dentures Last With Proper Care
     contentSections:
@@ -289,7 +289,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: Common Misconceptions About Dentures
     contentSections:
@@ -325,7 +325,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:
@@ -359,7 +359,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
@@ -453,7 +453,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: Artificial Teeth
     backToTopHref: '#dentures-and-partial-dentures'

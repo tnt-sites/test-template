@@ -101,7 +101,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: The Extraction Process
     contentSections:
@@ -140,7 +140,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/builders/custom-section
     label: The Recovery Process After a Tooth Extraction
     contentSections:
@@ -178,7 +178,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: accent
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:
@@ -212,7 +212,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
     class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
@@ -320,7 +320,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: surface
+    backgroundColor: highlight
   - _component: page-sections/info-blocks/page-footer-nav
     backToTopText: When Is a Tooth Extraction Necessary
     backToTopHref: '#when-is-tooth-extraction-necessary'
