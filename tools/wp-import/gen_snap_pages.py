@@ -82,6 +82,8 @@ TARGETS={
  'services':('services.html','services'),
 }
 LIINE={'contact-us':'251055835049963'}
+# pages that show a form in the page flow rather than only in a modal
+FORM_PAGES={'contact-us'}
 
 def main():
     yo=json.load(open(f"{SC}/yoast.json"))
@@ -130,12 +132,16 @@ def main():
                 'heading':'Smile Gallery','beforeLabel':'Before','afterLabel':'After',
                 'pairs':[{'_component':'page-sections/features/before-after-gallery/pair',**x} for x in prs],
                 'backgroundColor':'base'})
-        # every page on the source site carries the appointment form
-        fid=LIINE.get(slug,'251056297507965')
-        sections.append({'_component':'page-sections/forms/liine-form','formId':fid,
-            'heading':'Request an Appointment','subtext':'',
-            'title':'North County Cosmetic and Implant Dentistry - Request an Appointment Form',
-            'height':539,'backgroundColor':'surface'})
+        # Only some pages show a form in the page flow. Checked in a browser:
+        # pages with a banner carry it inside the banner (330x420), contact-us
+        # has a full-width one, and the galleries have none at all - their Liine
+        # iframes live in the fixed-tab modals, which are not page content.
+        if slug in FORM_PAGES:
+            fid=LIINE.get(slug,'251056297507965')
+            sections.append({'_component':'page-sections/forms/liine-form','formId':fid,
+                'heading':'Request an Appointment','subtext':'',
+                'title':'North County Cosmetic and Implant Dentistry - Request an Appointment Form',
+                'height':539,'backgroundColor':'surface'})
         if slug=='home':
             # The source homepage opens with a slider hero (title, subtitle, two
             # CTAs) over UltimateSmiles.jpg, with the appointment form beside it.
