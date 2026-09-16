@@ -157,11 +157,11 @@ pageSections:
     listType: bullet
     items:
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. How do I find a dentist for my family?
+      text: Q. [How do I find a dentist for my family?](/about/find-a-dentist/#how-do-i-find-a-dentist)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. What can I do if I need cosmetic dental work?
+      text: Q. [What can I do if I need cosmetic dental work?](/about/find-a-dentist/#need-cosmetic-dental-work)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. Will reading patient reviews for a dentist help?
+      text: Q. [Will reading patient reviews for a dentist help?](/about/find-a-dentist/#read-patient-reviews)
   - _component: building-blocks/core-elements/heading
     text: People Also Ask
     level: h5
@@ -170,11 +170,11 @@ pageSections:
     listType: bullet
     items:
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. How do I tell if I need a dental checkup?
+      text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. How can I prevent tooth decay?
+      text: Q. [How can I prevent tooth decay?](/vista-ca/oral-hygiene-basics/#prevent-tooth-decay)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. Why is preventative dental care so important?
+      text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

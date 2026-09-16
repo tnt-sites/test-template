@@ -152,11 +152,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the dental treatment hurt?
+        text: Q. [Will the dental treatment hurt?](/vista-ca/general-dentist/#will-the-dental-treatment-hurt)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a general dentist?
+        text: Q. [What is a general dentist?](/vista-ca/general-dentist/#what-is-a-general-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is restorative dentistry?
+        text: Q. [What is restorative dentistry?](/vista-ca/general-dentist/#what-is-a-restorative-dentist)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -165,16 +165,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prepare for my dentist appointment?
+        text: Q. [How can I prepare for my dentist appointment?](/vista-ca/dental-anxiety/#prepare-for-my-dentist-appointment)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What will happen at my dental checkup?
+        text: Q. [What will happen at my dental checkup?](/vista-ca/dental-checkup/#what-will-happen-at-my-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I find a dentist for my family?
+        text: Q. [How do I find a dentist for my family?](/about/find-a-dentist/#how-do-i-find-a-dentist)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -282,6 +283,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: General Dentist
+    backToTopHref: '#general-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Center
+      url: /vista-ca/dental-center/
+    - name: Routine Dental Care
+      url: /vista-ca/routine-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -347,14 +358,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: General Dentist
-  backToTopHref: '#general-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Center
-    url: /vista-ca/dental-center/
-  - name: Routine Dental Care
-    url: /vista-ca/routine-dental-care/
 ---

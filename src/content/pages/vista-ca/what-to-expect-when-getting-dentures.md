@@ -157,11 +157,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take to make the dentures?
+        text: Q. [How long will it take to make the dentures?](/vista-ca/what-to-expect-when-getting-dentures/#how-long-will-it-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take my mouth to get used to the dentures?
+        text: Q. [How long will it take my mouth to get used to the dentures?](/vista-ca/what-to-expect-when-getting-dentures/#how-long-to-get-used-to-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I keep my dentures clean?
+        text: Q. [How do I keep my dentures clean?](/vista-ca/what-to-expect-when-getting-dentures/#keep-my-dentures-clean)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -170,16 +170,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How does the dentures process begin?
+        text: Q. [How does the dentures process begin?](/vista-ca/the-process-for-getting-dentures/#how-does-the-dentures-process-begin)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dentures?
+        text: Q. [How do I take care of my dentures?](/vista-ca/denture-care/#take-care-of-my-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I do if I damage my dentures?
+        text: Q. [What do I do if I damage my dentures?](/vista-ca/damage-my-dentures/#what-do-i-do)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -273,6 +274,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: What to Expect When Getting Dentures
+    backToTopHref: '#what-to-expect-when-getting-dentures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implant Dentures
+      url: /vista-ca/implant-supported-dentures/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -344,14 +355,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: What to Expect When Getting Dentures
-  backToTopHref: '#what-to-expect-when-getting-dentures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implant Dentures
-    url: /vista-ca/implant-supported-dentures/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
 ---

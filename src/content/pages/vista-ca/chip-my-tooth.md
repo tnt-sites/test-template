@@ -204,11 +204,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will I feel any pain from chipping my tooth?
+        text: Q. [Will I feel any pain from chipping my tooth?](/vista-ca/chip-my-tooth/#will-i-feel-pain-from-chipping-my-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do after chipping my tooth?
+        text: Q. [What should I do after chipping my tooth?](/vista-ca/chip-my-tooth/#what-should-i-do-after-chipping-my-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to restore my chipped tooth?
+        text: Q. [What can I do to restore my chipped tooth?](/vista-ca/chip-my-tooth/#restore-my-chipped-tooth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -217,16 +217,18 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](/vista-ca/emergency-dentist/#car-accidents-leading-cause-of-tooth-injury)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can the ER treat any damage to my teeth?
+        text: Q. [Can the ER treat any damage to my teeth?](/vista-ca/emergency-dentist-vs-emergency-room/#can-the-er-treat-damage-to-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I damage my tooth?
+        text: Q. [What can I do if I damage my tooth?](/vista-ca/dental-practice/#damage-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Emergency Terminology
     contentSections:
@@ -318,6 +320,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: What Should I Do If I Chip My Tooth?
+    backToTopHref: '#chip-my-tooth'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Same Day Dentist
+      url: /vista-ca/same-day-dentistry/
+    - name: Emergency Dentist
+      url: /vista-ca/emergency-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -371,14 +383,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: What Should I Do If I Chip My Tooth?
-  backToTopHref: '#chip-my-tooth'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Same Day Dentist
-    url: /vista-ca/same-day-dentistry/
-  - name: Emergency Dentist
-    url: /vista-ca/emergency-dentist/
 ---

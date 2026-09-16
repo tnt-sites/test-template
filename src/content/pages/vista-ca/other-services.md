@@ -57,6 +57,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Other Services
+    backToTopHref: '#other-services'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Center
+      url: /vista-ca/dental-center/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -112,14 +122,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Other Services
-  backToTopHref: '#other-services'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Center
-    url: /vista-ca/dental-center/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
 ---

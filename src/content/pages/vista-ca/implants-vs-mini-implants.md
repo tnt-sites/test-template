@@ -171,11 +171,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the difference between dental implants and mini dental implants?
+        text: Q. [What is the difference between dental implants and mini dental implants?](/vista-ca/implants-vs-mini-implants/#the-difference-between-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental implants made out of?
+        text: Q. [What are dental implants made out of?](/vista-ca/implants-vs-mini-implants/#what-are-dental-implants-made-out-of)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will people know the difference between my natural teeth and the artificial ones?
+        text: Q. [Will people know the difference between my natural teeth and the artificial ones?](/vista-ca/implants-vs-mini-implants/#will-people-know)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -184,16 +184,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants replace my missing teeth?
+        text: Q. [Can dental implants replace my missing teeth?](/vista-ca/dental-implant-candidate/#can-dental-implants-replace-my-missing-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if dental implants are right for me?
+        text: Q. [How do I know if dental implants are right for me?](/vista-ca/dental-implant-candidate/#are-dental-implants-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dental implants?
+        text: Q. [How do I take care of my dental implants?](/vista-ca/dental-implants/#dental-implant-care)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -299,6 +300,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: The Difference Between Dental Implants and Mini Dental Implants
+    backToTopHref: '#implants-vs-mini-implants'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implant Candidate?
+      url: /vista-ca/dental-implant-candidate/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -372,14 +383,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: The Difference Between Dental Implants and Mini Dental Implants
-  backToTopHref: '#implants-vs-mini-implants'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implant Candidate?
-    url: /vista-ca/dental-implant-candidate/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

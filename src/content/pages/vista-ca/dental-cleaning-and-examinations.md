@@ -156,11 +156,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How early should my child receive professional dental care?
+        text: Q. [How early should my child receive professional dental care?](/vista-ca/dental-cleaning-and-examinations/#how-early-child-dental-care)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can a dentist treat my sensitive teeth without hurting me?
+        text: Q. [Can a dentist treat my sensitive teeth without hurting me?](/vista-ca/dental-cleaning-and-examinations/#can-a-dentist-treat-my-sensitive-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -169,16 +169,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do teeth cleanings at your office include?
+        text: Q. [What do teeth cleanings at your office include?](/vista-ca/routine-dental-procedures/#teeth-cleanings-include)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do at home to better take care of my teeth?
+        text: Q. [What can I do at home to better take care of my teeth?](/vista-ca/routine-dental-care/#what-can-i-do-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is restorative dentistry?
+        text: Q. [What is restorative dentistry?](/vista-ca/restorative-dentistry/#what-is-restorative-dentistry)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -286,6 +287,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Cleaning and Examinations
+    backToTopHref: '#dental-cleaning-and-examinations'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
+    - name: Teeth Whitening Dentist
+      url: /vista-ca/teeth-whitening-at-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -339,14 +350,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Cleaning and Examinations
-  backToTopHref: '#dental-cleaning-and-examinations'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
-  - name: Teeth Whitening Dentist
-    url: /vista-ca/teeth-whitening-at-dentist/
 ---

@@ -175,11 +175,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if I need dental restorations?
+        text: Q. [How do I know if I need dental restorations?](/vista-ca/dental-restorations/#need-dental-restorations)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental veneers?
+        text: Q. [What are dental veneers?](/vista-ca/dental-restorations/#what-are-dental-veneers)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental restorations replace teeth?
+        text: Q. [Can dental restorations replace teeth?](/vista-ca/dental-restorations/#can-dental-restorations-replace-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -188,16 +188,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is restorative dentistry?
+        text: Q. [What is restorative dentistry?](/vista-ca/restorative-dentistry/#what-is-restorative-dentistry)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Which tooth replacement is right for me?
+        text: Q. [Which tooth replacement is right for me?](/vista-ca/options-for-replacing-missing-teeth/#which-is-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental crowns?
+        text: Q. [What are dental crowns?](/vista-ca/dental-crowns/#what-are-dental-crowns)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -297,6 +298,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Restorations
+    backToTopHref: '#dental-restorations'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implants
+      url: /vista-ca/dental-implants/
+    - name: Smile Makeover
+      url: /vista-ca/smile-makeover/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -364,14 +375,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Restorations
-  backToTopHref: '#dental-restorations'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implants
-    url: /vista-ca/dental-implants/
-  - name: Smile Makeover
-    url: /vista-ca/smile-makeover/
 ---

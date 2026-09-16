@@ -195,11 +195,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I need a root canal?
+        text: Q. [Do I need a root canal?](/vista-ca/root-canal-treatment/#do-I-need-a-root-canal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will there be any pain during a root canal?
+        text: Q. [Will there be any pain during a root canal?](/vista-ca/root-canal-treatment/#will-there-be-any-pain)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the benefits from getting a root canal?
+        text: Q. [What are the benefits from getting a root canal?](/vista-ca/root-canal-treatment/#benefits-from-getting-a-root-canal)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -208,16 +208,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does a root canal remove the entire tooth?
+        text: Q. [Does a root canal remove the entire tooth?](/vista-ca/the-truth-behind-root-canals/#does-a-root-canal-remove-the-entire-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the root canal process like?
+        text: Q. [What is the root canal process like?](/vista-ca/do-i-need-a-root-canal/#root-canal-process)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental crowns?
+        text: Q. [What are dental crowns?](/vista-ca/dental-crowns/#what-are-dental-crowns)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -312,6 +313,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Root Canal Treatment
+    backToTopHref: '#root-canal-treatment'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -373,14 +384,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Root Canal Treatment
-  backToTopHref: '#root-canal-treatment'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

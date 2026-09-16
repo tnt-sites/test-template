@@ -160,11 +160,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is oral surgery?
+        text: Q. [What is oral surgery?](/vista-ca/oral-surgery/#what-is-oral-surgery)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I prepare for oral surgery?
+        text: Q. [How do I prepare for oral surgery?](/vista-ca/oral-surgery/#how-do-i-prepare-for-oral-surgery)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take to recover from oral surgery?
+        text: Q. [How long will it take to recover from oral surgery?](/vista-ca/oral-surgery/#oral-surgery-recovery-time)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -173,16 +173,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the signs that I may need endodontic surgery?
+        text: Q. [What are the signs that I may need endodontic surgery?](/vista-ca/7-signs-you-need-endodontic-surgery/#signs-that-i-may-need-endodontic-surgery)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is bone augmentation?
+        text: Q. [What is bone augmentation?](/vista-ca/bone-graft-for-dental-implants/#what-is-bone-augmentation)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will the recovery process after implant surgery take?
+        text: Q. [How long will the recovery process after implant surgery take?](/vista-ca/dental-implant-surgery/#recovery-process-how-long)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Oral Surgery Terminology
     contentSections:
@@ -299,6 +300,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Oral Surgery
+    backToTopHref: '#oral-surgery'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Sedation Dentist
+      url: /vista-ca/sedation-dentist/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -360,14 +371,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Oral Surgery
-  backToTopHref: '#oral-surgery'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Sedation Dentist
-    url: /vista-ca/sedation-dentist/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

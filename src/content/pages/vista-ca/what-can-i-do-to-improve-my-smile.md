@@ -148,11 +148,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can teeth whitening truly remove stains off of my teeth?
+        text: Q. [Can teeth whitening truly remove stains off of my teeth?](/vista-ca/what-can-i-do-to-improve-my-smile/#truly-remove-stains)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to improve my smile?
+        text: Q. [What can I do to improve my smile?](/vista-ca/what-can-i-do-to-improve-my-smile/#improve-my-smile-for-your-formal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does drinking water really help clean my teeth?
+        text: Q. [Does drinking water really help clean my teeth?](/vista-ca/what-can-i-do-to-improve-my-smile/#does-drinking-water-really-help)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -161,16 +161,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does whitening toothpaste really work?
+        text: Q. [Does whitening toothpaste really work?](/vista-ca/teeth-whitening-at-dentist/#does-whitening-toothpaste-really-work)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will teeth whitening cause any sensitivity?
+        text: Q. [Will teeth whitening cause any sensitivity?](/vista-ca/teeth-whitening/#will-teeth-whitening-cause-any-sensitivity)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can teeth whitening truly remove stains off of my teeth?
+        text: Q. [Can teeth whitening truly remove stains off of my teeth?](/vista-ca/what-can-i-do-to-improve-my-smile/#truly-remove-stains)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -279,6 +280,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: What Can I Do to Improve My Smile?
+    backToTopHref: '#what-can-i-do-to-improve-my-smile'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Cleaning & Exams
+      url: /vista-ca/dental-cleaning-and-examinations/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -338,14 +349,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: What Can I Do to Improve My Smile?
-  backToTopHref: '#what-can-i-do-to-improve-my-smile'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Cleaning & Exams
-    url: /vista-ca/dental-cleaning-and-examinations/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

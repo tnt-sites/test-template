@@ -161,11 +161,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is laser dentistry?
+        text: Q. [What is laser dentistry?](/vista-ca/laser-dentistry/#what-is-laser-dentistry)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the laser dentistry experience?
+        text: Q. [What happens during the laser dentistry experience?](/vista-ca/laser-dentistry/#what-happens-during-laser-dentistry)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How does laser teeth whitening work?
+        text: Q. [How does laser teeth whitening work?](/vista-ca/laser-dentistry/#how-does-laser-whitening-work)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -174,16 +174,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do receding gums get in the way of a cosmetic procedure?
+        text: Q. [Do receding gums get in the way of a cosmetic procedure?](/vista-ca/cosmetic-dental-services/#do-receding-gums-get-in-the-way-of-a-cosmetic-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can cosmetic dentistry help improve the functionality of my teeth?
+        text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](/vista-ca/cosmetic-dentist/#improve-the-functionality-of-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is it dangerous to bleach teeth at home without professional supervision?
+        text: Q. [Is it dangerous to bleach teeth at home without professional supervision?](/vista-ca/professional-teeth-whitening/#is-it-dangerous-to-bleach-teeth-at-home)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -283,6 +284,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Laser Dentistry
+    backToTopHref: '#laser-dentistry'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Periodontics
+      url: /vista-ca/periodontics/
+    - name: Restorative Dentistry
+      url: /vista-ca/restorative-dentistry/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -328,14 +339,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Laser Dentistry
-  backToTopHref: '#laser-dentistry'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Periodontics
-    url: /vista-ca/periodontics/
-  - name: Restorative Dentistry
-    url: /vista-ca/restorative-dentistry/
 ---

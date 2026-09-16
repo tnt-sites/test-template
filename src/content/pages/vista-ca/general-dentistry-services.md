@@ -175,11 +175,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What will a regular teeth cleaning be like?
+        text: Q. [What will a regular teeth cleaning be like?](/vista-ca/general-dentistry-services/#regular-teeth-cleaning)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental sealants?
+        text: Q. [What are dental sealants?](/vista-ca/general-dentistry-services/#what-are-dental-sealants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some preventative care tips to keep my teeth healthy?
+        text: Q. [What are some preventative care tips to keep my teeth healthy?](/vista-ca/general-dentistry-services/#preventative-care-tips)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -188,16 +188,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I tell if I need a dental checkup?
+        text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How often should I visit the dentist?
+        text: Q. [How often should I visit the dentist?](/vista-ca/routine-dental-care/#how-often-should-i-visit)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is dental bonding?
+        text: Q. [What is dental bonding?](/vista-ca/routine-dental-procedures/#what-is-dental-bonding)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -305,6 +306,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: General Dentistry Services
+    backToTopHref: '#general-dentistry-services'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Center
+      url: /vista-ca/dental-center/
+    - name: Routine Dental Care
+      url: /vista-ca/routine-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -364,14 +375,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: General Dentistry Services
-  backToTopHref: '#general-dentistry-services'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Center
-    url: /vista-ca/dental-center/
-  - name: Routine Dental Care
-    url: /vista-ca/routine-dental-care/
 ---

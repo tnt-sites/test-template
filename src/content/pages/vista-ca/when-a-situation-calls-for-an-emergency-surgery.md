@@ -158,11 +158,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What kind of damage involves a dental emergency?
+        text: Q. [What kind of damage involves a dental emergency?](/vista-ca/when-a-situation-calls-for-an-emergency-surgery/#kind-of-damage-dental-emergency)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do you do to treat a cracked tooth?
+        text: Q. [What do you do to treat a cracked tooth?](/vista-ca/when-a-situation-calls-for-an-emergency-surgery/#treat-cracked-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is there any way to prevent an oral injury?
+        text: Q. [Is there any way to prevent an oral injury?](/vista-ca/when-a-situation-calls-for-an-emergency-surgery/#prevent-an-oral-injury)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -171,16 +171,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will there be any pain during surgery?
+        text: Q. [Will there be any pain during surgery?](/vista-ca/endodontic-surgery/#will-there-be-any-pain)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Should I be worried about a dental abscess?
+        text: Q. [Should I be worried about a dental abscess?](/vista-ca/7-signs-you-need-endodontic-surgery/#worried-about-a-dental-abscess)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the root canal process like?
+        text: Q. [What is the root canal process like?](/vista-ca/do-i-need-a-root-canal/#root-canal-process)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -275,6 +276,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: When a Situation Calls for an Emergency Surgery
+    backToTopHref: '#when-a-situation-calls-for-an-emergency-surgery'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -340,14 +351,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: When a Situation Calls for an Emergency Surgery
-  backToTopHref: '#when-a-situation-calls-for-an-emergency-surgery'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

@@ -231,11 +231,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prepare for the dental implant procedure?
+        text: Q. [How can I prepare for the dental implant procedure?](/vista-ca/dental-implant-procedure/#prepare-for-dental-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will dental implants function like my natural teeth?
+        text: Q. [Will dental implants function like my natural teeth?](/vista-ca/dental-implant-procedure/#dental-implants-like-natural-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long does a dental implant procedure take?
+        text: Q. [How long does a dental implant procedure take?](/vista-ca/dental-implant-procedure/#how-long-dental-implant-procedure)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -244,16 +244,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if dental implants are right for me?
+        text: Q. [How do I know if dental implants are right for me?](/vista-ca/dental-implant-candidate/#are-dental-implants-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dental implants?
+        text: Q. [How do I take care of my dental implants?](/vista-ca/dental-implants/#dental-implant-care)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the implant procedure?
+        text: Q. [What happens during the implant procedure?](/vista-ca/postop-care-for-dental-implants/#what-happens-implant-procedure)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -359,6 +360,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: The Dental Implant Procedure
+    backToTopHref: '#dental-implant-procedure'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implant Candidate?
+      url: /vista-ca/dental-implant-candidate/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -432,14 +443,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: The Dental Implant Procedure
-  backToTopHref: '#dental-implant-procedure'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implant Candidate?
-    url: /vista-ca/dental-implant-candidate/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

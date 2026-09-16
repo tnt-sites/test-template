@@ -186,11 +186,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if my dentures fall out when speaking and eating?
+        text: Q. [What can I do if my dentures fall out when speaking and eating?](/vista-ca/solutions-for-common-denture-problems/#dentures-fall-out)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to deal with loose dentures?
+        text: Q. [What can I do to deal with loose dentures?](/vista-ca/solutions-for-common-denture-problems/#deal-with-loose-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How should I take care of my dentures when I am traveling?
+        text: Q. [How should I take care of my dentures when I am traveling?](/vista-ca/solutions-for-common-denture-problems/#traveling-with-dentures)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -199,16 +199,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dentures?
+        text: Q. [How do I take care of my dentures?](/vista-ca/denture-care/#take-care-of-my-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I do if I damage my dentures?
+        text: Q. [What do I do if I damage my dentures?](/vista-ca/damage-my-dentures/#what-do-i-do)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can I fix my dentures on my own?
+        text: Q. [Can I fix my dentures on my own?](/vista-ca/denture-adjustments/#can-i-fix-dentures-on-my-own)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -326,6 +327,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Solutions for Common Denture Problems
+    backToTopHref: '#solutions-for-common-denture-problems'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implant Dentures
+      url: /vista-ca/implant-supported-dentures/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -397,14 +408,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Solutions for Common Denture Problems
-  backToTopHref: '#solutions-for-common-denture-problems'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implant Dentures
-    url: /vista-ca/implant-supported-dentures/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
 ---

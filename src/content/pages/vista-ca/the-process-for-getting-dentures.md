@@ -150,11 +150,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens after losing an adult tooth?
+        text: Q. [What happens after losing an adult tooth?](/vista-ca/the-process-for-getting-dentures/#what-happens-after-losing-an-adult-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How does the dentures process begin?
+        text: Q. [How does the dentures process begin?](/vista-ca/the-process-for-getting-dentures/#how-does-the-dentures-process-begin)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take me to adjust to the dentures?
+        text: Q. [How long will it take me to adjust to the dentures?](/vista-ca/the-process-for-getting-dentures/#adjust-to-new-dentures)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -163,16 +163,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there different types of dentures?
+        text: Q. [Are there different types of dentures?](/vista-ca/dentures-and-partial-dentures/#types-of-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take to adjust to new dentures?
+        text: Q. [How long will it take to adjust to new dentures?](/vista-ca/adjusting-to-new-dentures/#how-long-will-it-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dentures?
+        text: Q. [How do I take care of my dentures?](/vista-ca/denture-care/#take-care-of-my-dentures)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -266,6 +267,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: The Process for Getting Dentures
+    backToTopHref: '#the-process-for-getting-dentures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Damaged Dentures page
+      url: /vista-ca/damage-my-dentures/
+    - name: Denture Care
+      url: /vista-ca/denture-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -337,14 +348,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: The Process for Getting Dentures
-  backToTopHref: '#the-process-for-getting-dentures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Damaged Dentures page
-    url: /vista-ca/damage-my-dentures/
-  - name: Denture Care
-    url: /vista-ca/denture-care/
 ---

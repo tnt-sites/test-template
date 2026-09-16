@@ -184,11 +184,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is sleep apnea?
+        text: Q. [What is sleep apnea?](/vista-ca/do-i-have-sleep-apnea/#what-is-sleep-apnea)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is sleep apnea a sleep disorder?
+        text: Q. [Is sleep apnea a sleep disorder?](/vista-ca/do-i-have-sleep-apnea/#is-sleep-apnea-a-sleep-disorder)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the treatment options for sleep apnea?
+        text: Q. [What are the treatment options for sleep apnea?](/vista-ca/do-i-have-sleep-apnea/#sleep-apnea-treatment-options)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -197,14 +197,15 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to know when searching for a dentist?
+        text: Q. [What do I need to know when searching for a dentist?](/about/find-best-dentist/#searching-for-a-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What services does a dental center provide?
+        text: Q. [What services does a dental center provide?](/vista-ca/dental-center/#services-provided)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -312,6 +313,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Do I Have Sleep Apnea?
+    backToTopHref: '#do-i-have-sleep-apnea'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Cleaning & Exams
+      url: /vista-ca/dental-cleaning-and-examinations/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -340,14 +351,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Do I Have Sleep Apnea?
-  backToTopHref: '#do-i-have-sleep-apnea'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Cleaning & Exams
-    url: /vista-ca/dental-cleaning-and-examinations/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

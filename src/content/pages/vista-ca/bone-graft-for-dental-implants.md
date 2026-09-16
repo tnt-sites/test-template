@@ -178,11 +178,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is bone augmentation?
+        text: Q. [What is bone augmentation?](/vista-ca/bone-graft-for-dental-implants/#what-is-bone-augmentation)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I need bone grafting?
+        text: Q. [Do I need bone grafting?](/vista-ca/bone-graft-for-dental-implants/#do-i-need-bone-grafting)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What will happen after the bone grafting procedure?
+        text: Q. [What will happen after the bone grafting procedure?](/vista-ca/bone-graft-for-dental-implants/#happen-after-the-grafting-procedure)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -191,16 +191,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the implant procedure?
+        text: Q. [What happens during the implant procedure?](/vista-ca/postop-care-for-dental-implants/#what-happens-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the recovery process for dental implants?
+        text: Q. [What is the recovery process for dental implants?](/vista-ca/dental-implants-consultation/#recovery-process-for-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants replace my missing teeth?
+        text: Q. [Can dental implants replace my missing teeth?](/vista-ca/dental-implant-candidate/#can-dental-implants-replace-my-missing-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -306,6 +307,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Will I Need a Bone Graft for Dental Implants?
+    backToTopHref: '#bone-graft-for-dental-implants'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Cleaning & Exams
+      url: /vista-ca/dental-cleaning-and-examinations/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -379,14 +390,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Will I Need a Bone Graft for Dental Implants?
-  backToTopHref: '#bone-graft-for-dental-implants'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Cleaning & Exams
-    url: /vista-ca/dental-cleaning-and-examinations/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

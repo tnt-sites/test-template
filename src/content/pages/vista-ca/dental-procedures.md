@@ -91,11 +91,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my dental restoration blend in with my surrounding teeth?
+        text: Q. [Will my dental restoration blend in with my surrounding teeth?](/vista-ca/dental-procedures/#dental-restoration-blend-with-surrounding-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to improve my smile?
+        text: Q. [What can I do to improve my smile?](/vista-ca/dental-procedures/#improve-my-smile)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the dental procedure hurt?
+        text: Q. [Will the dental procedure hurt?](/vista-ca/dental-procedures/#patients-remain-comfortable)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -104,16 +104,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to restore my chipped tooth?
+        text: Q. [What can I do to restore my chipped tooth?](/vista-ca/chip-my-tooth/#restore-my-chipped-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can you offer to keep my teeth healthy?
+        text: Q. [What can you offer to keep my teeth healthy?](/vista-ca/routine-dental-procedures/#keep-my-teeth-healthy)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during a routine dental visit?
+        text: Q. [What happens during a routine dental visit?](/vista-ca/routine-dental-care/#what-happens-during-a-visit)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -221,6 +222,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Procedures
+    backToTopHref: '#dental-procedures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Routine Care
+      url: /vista-ca/routine-dental-care/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -282,14 +293,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Procedures
-  backToTopHref: '#dental-procedures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Routine Care
-    url: /vista-ca/routine-dental-care/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

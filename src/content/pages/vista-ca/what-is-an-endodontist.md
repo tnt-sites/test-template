@@ -163,11 +163,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is an endodontist?
+        text: Q. [What is an endodontist?](/vista-ca/what-is-an-endodontist/#what-is-an-endodontist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What treatments does an endodontist offer?
+        text: Q. [What treatments does an endodontist offer?](/vista-ca/what-is-an-endodontist/#treatments-an-endodontist-offers)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for endodontic services?
+        text: Q. [What is the process for endodontic services?](/vista-ca/what-is-an-endodontist/#process-for-endodontic-services)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -176,16 +176,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if my teeth are sensitive to hot or cold foods?
+        text: Q. [What should I do if my teeth are sensitive to hot or cold foods?](/vista-ca/7-signs-you-need-endodontic-surgery/#sensitive-to-hot-or-cold-foods)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How many appointments will the root canal take?
+        text: Q. [How many appointments will the root canal take?](/vista-ca/the-truth-behind-root-canals/#how-many-appointments)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the root canal process like?
+        text: Q. [What is the root canal process like?](/vista-ca/do-i-need-a-root-canal/#root-canal-process)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -280,6 +281,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: What is an Endodontist
+    backToTopHref: '#what-is-an-endodontist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -343,14 +354,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: What is an Endodontist
-  backToTopHref: '#what-is-an-endodontist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

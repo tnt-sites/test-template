@@ -148,11 +148,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some methods for improving my oral health?
+        text: Q. [What are some methods for improving my oral health?](/vista-ca/dental-office/#methods-for-improving-oral-health)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to repair a cracked tooth?
+        text: Q. [What can I do to repair a cracked tooth?](/vista-ca/dental-office/#repair-a-cracked-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I tell if I need a dental checkup?
+        text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -161,16 +161,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will reading patient reviews for a dentist help?
+        text: Q. [Will reading patient reviews for a dentist help?](/about/find-a-dentist/#read-patient-reviews)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prevent tooth decay?
+        text: Q. [How can I prevent tooth decay?](/vista-ca/oral-hygiene-basics/#prevent-tooth-decay)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -278,6 +279,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Office
+    backToTopHref: '#dental-office'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Cleaning & Exam
+      url: /vista-ca/dental-cleaning-and-examinations/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -323,14 +334,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Office
-  backToTopHref: '#dental-office'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Cleaning & Exam
-    url: /vista-ca/dental-cleaning-and-examinations/
 ---

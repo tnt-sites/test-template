@@ -88,11 +88,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental sealants protect my child’s teeth?
+        text: Q. [Can dental sealants protect my child’s teeth?](/vista-ca/why-dental-sealants-protect-childs-teeth/#can-dental-sealants-protect-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is brushing the teeth enough to keep my child’s teeth healthy?
+        text: Q. [Is brushing the teeth enough to keep my child’s teeth healthy?](/vista-ca/why-dental-sealants-protect-childs-teeth/#is-brushing-enough)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental sealants?
+        text: Q. [What are dental sealants?](/vista-ca/why-dental-sealants-protect-childs-teeth/#what-are-dental-sealants)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -101,16 +101,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do dental sealants do?
+        text: Q. [What do dental sealants do?](/vista-ca/dental-sealants/#what-do-dental-sealants-do)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for getting a mouth guard?
+        text: Q. [What is the process for getting a mouth guard?](/vista-ca/reduce-sports-injuries-with-mouth-guards/#process-for-getting-a-mouth-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does my child need regular fluoride treatments?
+        text: Q. [Does my child need regular fluoride treatments?](/vista-ca/kid-friendly-dentist/#need-regular-fluoride-treatments)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Family Dental Terminology
     contentSections:
@@ -204,6 +205,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth
+    backToTopHref: '#why-dental-sealants-protect-childs-teeth'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Tooth Colored Fillings
+      url: /vista-ca/composite-fillings/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -275,14 +286,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Why Dental Sealants Play an Important Part in Protecting Your Child's Teeth
-  backToTopHref: '#why-dental-sealants-protect-childs-teeth'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Tooth Colored Fillings
-    url: /vista-ca/composite-fillings/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

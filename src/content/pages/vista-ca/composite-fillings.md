@@ -167,11 +167,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the benefits of tooth-colored fillings?
+        text: Q. [What are the benefits of tooth-colored fillings?](/vista-ca/composite-fillings/#benefits-of-tooth-colored-fillings)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are composite fillings for?
+        text: Q. [What are composite fillings for?](/vista-ca/composite-fillings/#what-are-composite-fillings-for)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the filling change what I can eat?
+        text: Q. [Will the filling change what I can eat?](/vista-ca/composite-fillings/#will-the-filling-change-what-I-can-eat)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -180,16 +180,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prevent tooth decay?
+        text: Q. [How can I prevent tooth decay?](/vista-ca/oral-hygiene-basics/#prevent-tooth-decay)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why is preventative dental care so important?
+        text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -297,6 +298,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Resin Fillings
+    backToTopHref: '#composite-fillings'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Chipped Tooth?
+      url: /vista-ca/chip-my-tooth/
+    - name: Dental Crowns
+      url: /vista-ca/dental-crowns/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -350,14 +361,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Resin Fillings
-  backToTopHref: '#composite-fillings'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Chipped Tooth?
-    url: /vista-ca/chip-my-tooth/
-  - name: Dental Crowns
-    url: /vista-ca/dental-crowns/
 ---

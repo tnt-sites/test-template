@@ -268,11 +268,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some at-home tips for proper dental hygiene?
+        text: Q. [What are some at-home tips for proper dental hygiene?](/vista-ca/family-dentist/#tips-for-proper-dental-hygiene)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do you provide dental treatment for all ages?
+        text: Q. [Do you provide dental treatment for all ages?](/vista-ca/family-dentist/#dental-treatment-for-all-ages)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can protect my child’s teeth during sports?
+        text: Q. [What can protect my child’s teeth during sports?](/vista-ca/family-dentist/#protect-my-childs-teeth-during-sports)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -281,16 +281,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a kid friendly dentist?
+        text: Q. [What is a kid friendly dentist?](/vista-ca/kid-friendly-dentist/#what-is-a-kid-friendly-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What will a regular teeth cleaning be like?
+        text: Q. [What will a regular teeth cleaning be like?](/vista-ca/general-dentistry-services/#regular-teeth-cleaning)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some methods for improving my oral health?
+        text: Q. [What are some methods for improving my oral health?](/vista-ca/dental-office/#methods-for-improving-oral-health)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -383,6 +384,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Family Dentist
+    backToTopHref: '#family-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Center
+      url: /vista-ca/dental-center/
+    - name: Kid Friendly Dentist
+      url: /vista-ca/kid-friendly-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -454,14 +465,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Family Dentist
-  backToTopHref: '#family-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Center
-    url: /vista-ca/dental-center/
-  - name: Kid Friendly Dentist
-    url: /vista-ca/kid-friendly-dentist/
 ---

@@ -168,11 +168,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the implant procedure?
+        text: Q. [What happens during the implant procedure?](/vista-ca/postop-care-for-dental-implants/#what-happens-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What foods can I eat after the surgery?
+        text: Q. [What foods can I eat after the surgery?](/vista-ca/postop-care-for-dental-implants/#what-foods-can-i-eat)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the implants be obvious?
+        text: Q. [Will the implants be obvious?](/vista-ca/postop-care-for-dental-implants/#will-implants-be-obvious)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -181,16 +181,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will the recovery process after implant surgery take?
+        text: Q. [How long will the recovery process after implant surgery take?](/vista-ca/dental-implant-surgery/#recovery-process-how-long)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dental implants?
+        text: Q. [How do I take care of my dental implants?](/vista-ca/dental-implants/#dental-implant-care)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How many people wear dental implants?
+        text: Q. [How many people wear dental implants?](/vista-ca/dental-implants/#how-many)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -336,6 +337,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Post-Op Care for Dental Implants
+    backToTopHref: '#postop-care-for-dental-implants'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Helpful Dental Info
+      url: /vista-ca/helpful-dental-information/
+    - name: The Implant Procedure
+      url: /vista-ca/dental-implant-procedure/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -409,14 +420,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Post-Op Care for Dental Implants
-  backToTopHref: '#postop-care-for-dental-implants'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Helpful Dental Info
-    url: /vista-ca/helpful-dental-information/
-  - name: The Implant Procedure
-    url: /vista-ca/dental-implant-procedure/
 ---

@@ -225,11 +225,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some full mouth reconstruction treatment options?
+        text: Q. [What are some full mouth reconstruction treatment options?](/vista-ca/full-mouth-reconstruction/#full-mouth-reconstruction-treatment-options)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I damaged my teeth?
+        text: Q. [What can I do if I damaged my teeth?](/vista-ca/full-mouth-reconstruction/#what-can-i-do)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a root canal?
+        text: Q. [What is a root canal?](/vista-ca/full-mouth-reconstruction/#what-is-a-root-canal)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -238,16 +238,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why should I consider dental cosmetics?
+        text: Q. [Why should I consider dental cosmetics?](/vista-ca/dental-cosmetics/#should-i-consider-dental-cosmetics)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is restorative dentistry?
+        text: Q. [What is restorative dentistry?](/vista-ca/restorative-dentistry/#what-is-restorative-dentistry)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental bridges replace my missing teeth and restore my smile?
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](/vista-ca/multiple-teeth-replacement-options/#can-dental-bridges-replace-my-missing-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -363,6 +364,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Full Mouth Reconstruction
+    backToTopHref: '#full-mouth-reconstruction'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Free Consultation
+      url: /vista-ca/dental-implants-consultation/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -430,14 +441,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Full Mouth Reconstruction
-  backToTopHref: '#full-mouth-reconstruction'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Free Consultation
-    url: /vista-ca/dental-implants-consultation/
 ---

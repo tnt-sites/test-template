@@ -167,11 +167,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during an oral cancer screening?
+        text: Q. [What happens during an oral cancer screening?](/vista-ca/oral-cancer-screening/#what-happens-during-an-oral-cancer-screening)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do you provide treatment for oral cancer?
+        text: Q. [Do you provide treatment for oral cancer?](/vista-ca/oral-cancer-screening/#treatment-for-oral-cancer)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is there anything I can do at home to help prevent oral cancer?
+        text: Q. [Is there anything I can do at home to help prevent oral cancer?](/vista-ca/oral-cancer-screening/#anything-i-can-do)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -180,16 +180,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need for a dental checkup?
+        text: Q. [What do I need for a dental checkup?](/vista-ca/dental-checkup/#why-do-i-need-a-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why is preventative dental care so important?
+        text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -305,6 +306,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Oral Cancer Screening
+    backToTopHref: '#oral-cancer-screening'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -366,14 +377,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Oral Cancer Screening
-  backToTopHref: '#oral-cancer-screening'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

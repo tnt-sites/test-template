@@ -184,11 +184,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why should I consider dental cosmetics?
+        text: Q. [Why should I consider dental cosmetics?](/vista-ca/dental-cosmetics/#should-i-consider-dental-cosmetics)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can cosmetic dentistry do for me?
+        text: Q. [What can cosmetic dentistry do for me?](/vista-ca/dental-cosmetics/#what-can-cosmetic-dentistry-do-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental cosmetics replace my teeth?
+        text: Q. [Can dental cosmetics replace my teeth?](/vista-ca/dental-cosmetics/#can-dental-cosmetics-replace-my-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -197,16 +197,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some full mouth reconstruction treatment options?
+        text: Q. [What are some full mouth reconstruction treatment options?](/vista-ca/full-mouth-reconstruction/#full-mouth-reconstruction-treatment-options)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prepare for the dental implant procedure?
+        text: Q. [How can I prepare for the dental implant procedure?](/vista-ca/dental-implant-procedure/#prepare-for-dental-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can social media help to find the best dentist?
+        text: Q. [Can social media help to find the best dentist?](/about/find-best-dentist/#social-media-find-dentist)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -306,6 +307,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Cosmetics
+    backToTopHref: '#dental-cosmetics'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Veneers
+      url: /vista-ca/dental-veneers-and-dental-laminates/
+    - name: Dental Implants Consultation
+      url: /vista-ca/dental-implants-consultation/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -389,14 +400,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Cosmetics
-  backToTopHref: '#dental-cosmetics'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Veneers
-    url: /vista-ca/dental-veneers-and-dental-laminates/
-  - name: Dental Implants Consultation
-    url: /vista-ca/dental-implants-consultation/
 ---

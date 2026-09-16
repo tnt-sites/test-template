@@ -150,11 +150,11 @@ pageSections:
     listType: bullet
     items:
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. Will reading reviews help me find a great dentist?
+      text: Q. [Will reading reviews help me find a great dentist?](/about/find-best-dentist/#dentist-reviews)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. Can social media help to find the best dentist?
+      text: Q. [Can social media help to find the best dentist?](/about/find-best-dentist/#social-media-find-dentist)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. What do I need to know when searching for a dentist?
+      text: Q. [What do I need to know when searching for a dentist?](/about/find-best-dentist/#searching-for-a-dentist)
   - _component: building-blocks/core-elements/heading
     text: People Also Ask
     level: h5
@@ -163,11 +163,11 @@ pageSections:
     listType: bullet
     items:
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. Is flossing really important for my teeth?
+      text: Q. [Is flossing really important for my teeth?](/vista-ca/oral-hygiene-basics/#is-flossing-important)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. What will happen at my dental checkup?
+      text: Q. [What will happen at my dental checkup?](/vista-ca/dental-checkup/#what-will-happen-at-my-dental-checkup)
     - _component: building-blocks/core-elements/list/list-item
-      text: Q. What dental services can help treat an infection?
+      text: Q. [What dental services can help treat an infection?](/vista-ca/dental-services/#treat-an-infection)
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: xl

@@ -141,11 +141,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why is preventative dental care so important?
+        text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How much will preventative dental care cost?
+        text: Q. [How much will preventative dental care cost?](/vista-ca/preventative-dental-care/#preventative-dental-care-cost)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can you use to help prevent tooth loss?
+        text: Q. [What can you use to help prevent tooth loss?](/vista-ca/preventative-dental-care/#prevent-tooth-loss)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -154,18 +154,19 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long can I wait to receive dental care?
+        text: Q. [How long can I wait to receive dental care?](/vista-ca/dental-checkup/#can-i-wait-to-receive-dental-care)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How often should I visit the dentist?
+        text: Q. [How often should I visit the dentist?](/vista-ca/routine-dental-care/#how-often-should-i-visit)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the best toothbrush for my teeth?
+        text: Q. [What is the best toothbrush for my teeth?](/vista-ca/oral-hygiene-basics/#best-toothbrush-for-my-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -289,6 +290,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Preventative Dental Care
+    backToTopHref: '#preventative-dental-care'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Cleaning & Exam
+      url: /vista-ca/dental-cleaning-and-examinations/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -350,14 +361,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Preventative Dental Care
-  backToTopHref: '#preventative-dental-care'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Cleaning & Exam
-    url: /vista-ca/dental-cleaning-and-examinations/
 ---

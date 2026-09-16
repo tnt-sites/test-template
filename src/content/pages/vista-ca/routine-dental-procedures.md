@@ -126,11 +126,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can you offer to keep my teeth healthy?
+        text: Q. [What can you offer to keep my teeth healthy?](/vista-ca/routine-dental-procedures/#keep-my-teeth-healthy)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do teeth cleanings at your office include?
+        text: Q. [What do teeth cleanings at your office include?](/vista-ca/routine-dental-procedures/#teeth-cleanings-include)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is dental bonding?
+        text: Q. [What is dental bonding?](/vista-ca/routine-dental-procedures/#what-is-dental-bonding)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -139,16 +139,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why is preventative dental care so important?
+        text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do at home to better take care of my teeth?
+        text: Q. [What can I do at home to better take care of my teeth?](/vista-ca/routine-dental-care/#what-can-i-do-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is restorative dentistry?
+        text: Q. [What is restorative dentistry?](/vista-ca/restorative-dentistry/#what-is-restorative-dentistry)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -256,6 +257,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Routine Dental Procedures
+    backToTopHref: '#routine-dental-procedures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Cleaning & Exam
+      url: /vista-ca/dental-cleaning-and-examinations/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -317,14 +328,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Routine Dental Procedures
-  backToTopHref: '#routine-dental-procedures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Cleaning & Exam
-    url: /vista-ca/dental-cleaning-and-examinations/
 ---

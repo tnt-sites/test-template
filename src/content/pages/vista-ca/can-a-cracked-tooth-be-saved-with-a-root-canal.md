@@ -151,11 +151,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the symptoms of a cracked tooth?
+        text: Q. [What are the symptoms of a cracked tooth?](/vista-ca/can-a-cracked-tooth-be-saved-with-a-root-canal/#symptoms-of-a-cracked-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can a dental crown treat my cracked tooth?
+        text: Q. [How can a dental crown treat my cracked tooth?](/vista-ca/can-a-cracked-tooth-be-saved-with-a-root-canal/#how-can-a-dental-crown-treat-my-cracked-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of a dental crown?
+        text: Q. [How do I take care of a dental crown?](/vista-ca/can-a-cracked-tooth-be-saved-with-a-root-canal/#how-do-I-take-care-of-a-dental-crown)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -164,16 +164,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does a root canal remove the entire tooth?
+        text: Q. [Does a root canal remove the entire tooth?](/vista-ca/the-truth-behind-root-canals/#does-a-root-canal-remove-the-entire-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental crowns?
+        text: Q. [What are dental crowns?](/vista-ca/dental-crowns/#what-are-dental-crowns)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the root canal process like?
+        text: Q. [What is the root canal process like?](/vista-ca/do-i-need-a-root-canal/#root-canal-process)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -268,6 +269,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Can a Cracked Tooth be Saved with a Root Canal and Crown
+    backToTopHref: '#can-a-cracked-tooth-be-saved-with-a-root-canal'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -331,14 +342,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Can a Cracked Tooth be Saved with a Root Canal and Crown
-  backToTopHref: '#can-a-cracked-tooth-be-saved-with-a-root-canal'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

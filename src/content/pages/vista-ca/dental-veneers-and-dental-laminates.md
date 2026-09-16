@@ -182,11 +182,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a dental veneer?
+        text: Q. [What is a dental veneer?](/vista-ca/dental-veneers-and-dental-laminates/#what-is-a-dental-veneer)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the procedure for getting dental veneers?
+        text: Q. [What is the procedure for getting dental veneers?](/vista-ca/dental-veneers-and-dental-laminates/#what-is-the-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the benefits of dental veneers?
+        text: Q. [What are the benefits of dental veneers?](/vista-ca/dental-veneers-and-dental-laminates/#benefits-of-dental-veneers)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -195,16 +195,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can cosmetic dentistry do for me?
+        text: Q. [What can cosmetic dentistry do for me?](/vista-ca/dental-cosmetics/#what-can-cosmetic-dentistry-do-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How healthy do my teeth need to be for certain cosmetic dental services?
+        text: Q. [How healthy do my teeth need to be for certain cosmetic dental services?](/vista-ca/cosmetic-dental-services/#healthy-teeth-for-cosmetic-dental-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -304,6 +305,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Veneers and Laminates
+    backToTopHref: '#dental-veneers-and-dental-laminates'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Smile Makeover
+      url: /vista-ca/smile-makeover/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -387,14 +398,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Veneers and Laminates
-  backToTopHref: '#dental-veneers-and-dental-laminates'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Smile Makeover
-    url: /vista-ca/smile-makeover/
 ---

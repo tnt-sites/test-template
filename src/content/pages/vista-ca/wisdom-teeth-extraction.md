@@ -170,11 +170,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during a wisdom tooth extraction?
+        text: Q. [What happens during a wisdom tooth extraction?](/vista-ca/wisdom-teeth-extraction/#what-happens-during-wisdom-tooth-extraction)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to do after a wisdom tooth extraction?
+        text: Q. [What do I need to do after a wisdom tooth extraction?](/vista-ca/wisdom-teeth-extraction/#after-wisdom-tooth-extraction)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. When is a wisdom tooth extraction necessary?
+        text: Q. [When is a wisdom tooth extraction necessary?](/vista-ca/wisdom-teeth-extraction/#is-wisdom-tooth-extraction-necessary)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -183,16 +183,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Which tooth replacement is right for me?
+        text: Q. [Which tooth replacement is right for me?](/vista-ca/options-for-replacing-missing-teeth/#which-is-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental bridges replace my missing teeth and restore my smile?
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](/vista-ca/multiple-teeth-replacement-options/#can-dental-bridges-replace-my-missing-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are dental implants better than dentures or dental bridges?
+        text: Q. [Are dental implants better than dentures or dental bridges?](/vista-ca/implant-dentist/#are-dental-implants-better)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -308,6 +309,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Wisdom Teeth Extraction
+    backToTopHref: '#wisdom-teeth-extraction'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -369,14 +380,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Wisdom Teeth Extraction
-  backToTopHref: '#wisdom-teeth-extraction'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

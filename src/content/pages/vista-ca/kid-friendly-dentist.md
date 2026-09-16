@@ -178,11 +178,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a kid friendly dentist?
+        text: Q. [What is a kid friendly dentist?](/vista-ca/kid-friendly-dentist/#what-is-a-kid-friendly-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for helping my child practice good oral hygiene at home?
+        text: Q. [What are some tips for helping my child practice good oral hygiene at home?](/vista-ca/kid-friendly-dentist/#practice-good-oral-hygiene-at-home)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does my child need regular fluoride treatments?
+        text: Q. [Does my child need regular fluoride treatments?](/vista-ca/kid-friendly-dentist/#need-regular-fluoride-treatments)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -191,16 +191,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I find a dentist for my family?
+        text: Q. [How do I find a dentist for my family?](/about/find-a-dentist/#how-do-i-find-a-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to know when searching for a dentist?
+        text: Q. [What do I need to know when searching for a dentist?](/about/find-best-dentist/#searching-for-a-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the benefits of visiting a pediatric dentistry?
+        text: Q. [What are the benefits of visiting a pediatric dentistry?](/vista-ca/other-services/#benefits-of-visiting-a-pediatric-dentistry)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Family Dental Terminology
     contentSections:
@@ -294,6 +295,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Kid Friendly Dentist
+    backToTopHref: '#kid-friendly-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Center
+      url: /vista-ca/dental-center/
+    - name: Family Dentistry Near Me
+      url: /vista-ca/family-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -365,14 +376,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Kid Friendly Dentist
-  backToTopHref: '#kid-friendly-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Center
-    url: /vista-ca/dental-center/
-  - name: Family Dentistry Near Me
-    url: /vista-ca/family-dentist/
 ---

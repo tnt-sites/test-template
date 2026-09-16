@@ -144,11 +144,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How often should I visit the dentist?
+        text: Q. [How often should I visit the dentist?](/vista-ca/routine-dental-care/#how-often-should-i-visit)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during a routine dental visit?
+        text: Q. [What happens during a routine dental visit?](/vista-ca/routine-dental-care/#what-happens-during-a-visit)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do at home to better take care of my teeth?
+        text: Q. [What can I do at home to better take care of my teeth?](/vista-ca/routine-dental-care/#what-can-i-do-at-home)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -157,16 +157,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need for a dental checkup?
+        text: Q. [What do I need for a dental checkup?](/vista-ca/dental-checkup/#why-do-i-need-a-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I tell if I need a dental checkup?
+        text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is it important to treat dental issues early?
+        text: Q. [Is it important to treat dental issues early?](/vista-ca/dental-services/#treat-dental-issues-early)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -274,6 +275,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Routine Dental Care
+    backToTopHref: '#routine-dental-care'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Cleaning & Exam
+      url: /vista-ca/dental-cleaning-and-examinations/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -327,14 +338,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Routine Dental Care
-  backToTopHref: '#routine-dental-care'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Cleaning & Exam
-    url: /vista-ca/dental-cleaning-and-examinations/
 ---

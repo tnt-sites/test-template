@@ -146,11 +146,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is same day dentistry?
+        text: Q. [What is same day dentistry?](/vista-ca/same-day-dentistry/#what-is-same-day)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can same day dentistry offer teeth whitening?
+        text: Q. [Can same day dentistry offer teeth whitening?](/vista-ca/same-day-dentistry/#teeth-whitening)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What does same day dentistry do for dental crowns?
+        text: Q. [What does same day dentistry do for dental crowns?](/vista-ca/same-day-dentistry/#same-day-dentistry-for-dental-crowns)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -159,16 +159,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I tell if I need a dental checkup?
+        text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prevent tooth decay?
+        text: Q. [How can I prevent tooth decay?](/vista-ca/oral-hygiene-basics/#prevent-tooth-decay)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why is preventative dental care so important?
+        text: Q. [Why is preventative dental care so important?](/vista-ca/preventative-dental-care/#preventative-dental-care-important)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -276,6 +277,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Same Day Dentistry
+    backToTopHref: '#same-day-dentistry'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: CEREC® Dentist
+      url: /vista-ca/cerec-dentist/
+    - name: Dental Crowns
+      url: /vista-ca/dental-crowns/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -321,14 +332,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Same Day Dentistry
-  backToTopHref: '#same-day-dentistry'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: CEREC® Dentist
-    url: /vista-ca/cerec-dentist/
-  - name: Dental Crowns
-    url: /vista-ca/dental-crowns/
 ---

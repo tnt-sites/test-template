@@ -145,11 +145,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for a tooth extraction?
+        text: Q. [What is the process for a tooth extraction?](/vista-ca/tooth-extraction/#process-for-a-tooth-extraction)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I care for my teeth after the tooth extraction?
+        text: Q. [How do I care for my teeth after the tooth extraction?](/vista-ca/tooth-extraction/#care-after-a-tooth-extraction)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is there a specific procedure for removing wisdom teeth?
+        text: Q. [Is there a specific procedure for removing wisdom teeth?](/vista-ca/tooth-extraction/#removing-wisdom-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -158,16 +158,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Which tooth replacement is right for me?
+        text: Q. [Which tooth replacement is right for me?](/vista-ca/options-for-replacing-missing-teeth/#which-is-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental bridges replace my missing teeth and restore my smile?
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](/vista-ca/multiple-teeth-replacement-options/#can-dental-bridges-replace-my-missing-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are dental implants better than dentures or dental bridges?
+        text: Q. [Are dental implants better than dentures or dental bridges?](/vista-ca/implant-dentist/#are-dental-implants-better)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -275,6 +276,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Tooth Extraction
+    backToTopHref: '#tooth-extraction'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Chipped Tooth?
+      url: /vista-ca/chip-my-tooth/
+    - name: Extraction Necessary?
+      url: /vista-ca/when-is-tooth-extraction-necessary/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -336,14 +347,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Tooth Extraction
-  backToTopHref: '#tooth-extraction'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Chipped Tooth?
-    url: /vista-ca/chip-my-tooth/
-  - name: Extraction Necessary?
-    url: /vista-ca/when-is-tooth-extraction-necessary/
 ---

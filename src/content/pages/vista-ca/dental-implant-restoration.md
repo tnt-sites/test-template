@@ -169,11 +169,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do when a dental implant becomes loose?
+        text: Q. [What can I do when a dental implant becomes loose?](/vista-ca/dental-implant-restoration/#dental-implant-becomes-loose)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I repair a dental implant?
+        text: Q. [How can I repair a dental implant?](/vista-ca/dental-implant-restoration/#can-i-repair-a-dental-implant)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for replacing dental implants?
+        text: Q. [What is the process for replacing dental implants?](/vista-ca/dental-implant-restoration/#process-for-replacing-dental-implants)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -182,16 +182,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if dental implants are right for me?
+        text: Q. [How do I know if dental implants are right for me?](/vista-ca/dental-implant-candidate/#are-dental-implants-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dental implants?
+        text: Q. [How do I take care of my dental implants?](/vista-ca/dental-implants/#dental-implant-care)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I need bone grafting?
+        text: Q. [Do I need bone grafting?](/vista-ca/bone-graft-for-dental-implants/#do-i-need-bone-grafting)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -297,6 +298,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Implant Restoration
+    backToTopHref: '#dental-implant-restoration'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Implants Consultation
+      url: /vista-ca/dental-implants-consultation/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -370,14 +381,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Implant Restoration
-  backToTopHref: '#dental-implant-restoration'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Implants Consultation
-    url: /vista-ca/dental-implants-consultation/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

@@ -161,11 +161,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is implant supported dentures?
+        text: Q. [What is implant supported dentures?](/vista-ca/implant-supported-dentures/#what-is-implant-supported-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I qualify for implant supported dentures?
+        text: Q. [Do I qualify for implant supported dentures?](/vista-ca/implant-supported-dentures/#do-i-qualify-for-implant-supported-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the recovery process like?
+        text: Q. [What is the recovery process like?](/vista-ca/implant-supported-dentures/#what-is-the-recovery-process-like)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -174,16 +174,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my age determine my options?
+        text: Q. [Will my age determine my options?](/vista-ca/options-for-replacing-missing-teeth/#age-determine-my-options)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prepare for the dental implant procedure?
+        text: Q. [How can I prepare for the dental implant procedure?](/vista-ca/dental-implant-procedure/#prepare-for-dental-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are all-on-4® dental implants?
+        text: Q. [What are all-on-4® dental implants?](/vista-ca/all-on-4/#minimally-invasive-method)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -277,6 +278,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Implant Supported Dentures
+    backToTopHref: '#implant-supported-dentures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dentures
+      url: /vista-ca/dentures-and-partial-dentures/
+    - name: Free Implant Consultation
+      url: /vista-ca/dental-implants-consultation/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -350,14 +361,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Implant Supported Dentures
-  backToTopHref: '#implant-supported-dentures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dentures
-    url: /vista-ca/dentures-and-partial-dentures/
-  - name: Free Implant Consultation
-    url: /vista-ca/dental-implants-consultation/
 ---

@@ -151,11 +151,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can an endodontist treat?
+        text: Q. [What can an endodontist treat?](/vista-ca/endodontic-surgery/#what-can-an-endodontist-treat)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for a typical endodontist?
+        text: Q. [What is the process for a typical endodontist?](/vista-ca/endodontic-surgery/#process-for-typical-endodontist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will there be any pain during surgery?
+        text: Q. [Will there be any pain during surgery?](/vista-ca/endodontic-surgery/#will-there-be-any-pain)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -164,16 +164,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can the tooth hurt without noticeable damage?
+        text: Q. [Can the tooth hurt without noticeable damage?](/vista-ca/types-of-dental-root-fractures/#can-tooth-hurt-without-noticeable-damage)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if I need a root canal?
+        text: Q. [How do I know if I need a root canal?](/vista-ca/do-i-need-a-root-canal/#need-a-root-canal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What treatments does an endodontist offer?
+        text: Q. [What treatments does an endodontist offer?](/vista-ca/what-is-an-endodontist/#treatments-an-endodontist-offers)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -272,6 +273,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Endodontic Surgery
+    backToTopHref: '#endodontic-surgery'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -335,14 +346,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Endodontic Surgery
-  backToTopHref: '#endodontic-surgery'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

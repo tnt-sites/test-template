@@ -151,11 +151,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is Clear Aligner Therapy better than braces?
+        text: Q. [Is Clear Aligner Therapy better than braces?](/vista-ca/which-is-better-clear-aligner-therapy-or-braces/#is-clear-aligner-therapy-better-than-braces)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can Clear Aligner Therapy treat an overbite?
+        text: Q. [Can Clear Aligner Therapy treat an overbite?](/vista-ca/which-is-better-clear-aligner-therapy-or-braces/#can-clear-aligner-therapy-treat-an-overbite)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is Clear Aligner Therapy better for me than braces?
+        text: Q. [Is Clear Aligner Therapy better for me than braces?](/vista-ca/which-is-better-clear-aligner-therapy-or-braces/#-clear-aligner-therapy-better-for-me)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -164,16 +164,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does Clear Aligner Therapy really work for adults?
+        text: Q. [Does Clear Aligner Therapy really work for adults?](/vista-ca/does-clear-aligner-therapy-really-work/#does-clear-aligner-therapy-really-work)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How is Clear Aligner Therapy different from traditional treatment options?
+        text: Q. [How is Clear Aligner Therapy different from traditional treatment options?](/vista-ca/alternative-to-braces-for-teens/#how-is-clear-aligner-therapy-different)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I get started with Clear Aligner Therapy?
+        text: Q. [How do I get started with Clear Aligner Therapy?](/vista-ca/is-clear-aligner-therapy-teen-right-for-my-child/#how-do-i-get-started-with-v)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clear Aligner Therapy Terminology
     contentSections:
@@ -288,6 +289,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Which is Better Clear Aligner Therapy or Braces
+    backToTopHref: '#which-is-better-clear-aligner-therapy-or-braces'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Alternative to Braces
+      url: /vista-ca/alternative-to-braces-for-teens/
+    - name: Clear Braces
+      url: /vista-ca/clear-braces/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -349,14 +360,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Which is Better Clear Aligner Therapy or Braces
-  backToTopHref: '#which-is-better-clear-aligner-therapy-or-braces'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Alternative to Braces
-    url: /vista-ca/alternative-to-braces-for-teens/
-  - name: Clear Braces
-    url: /vista-ca/clear-braces/
 ---

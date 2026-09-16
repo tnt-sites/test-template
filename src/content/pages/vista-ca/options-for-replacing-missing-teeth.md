@@ -145,11 +145,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Which tooth replacement is right for me?
+        text: Q. [Which tooth replacement is right for me?](/vista-ca/options-for-replacing-missing-teeth/#which-is-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the most durable tooth replacement?
+        text: Q. [What is the most durable tooth replacement?](/vista-ca/options-for-replacing-missing-teeth/#most-durable-tooth-replacement)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my age determine my options?
+        text: Q. [Will my age determine my options?](/vista-ca/options-for-replacing-missing-teeth/#age-determine-my-options)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -158,16 +158,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental bridges replace my missing teeth and restore my smile?
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](/vista-ca/multiple-teeth-replacement-options/#can-dental-bridges-replace-my-missing-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are dental implants better than dentures or dental bridges?
+        text: Q. [Are dental implants better than dentures or dental bridges?](/vista-ca/implant-dentist/#are-dental-implants-better)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will I be able to eat my favorite foods after receiving dental implants?
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](/vista-ca/dental-implant-surgery/#will-i-be-able-to-eat-my-favorite-foods)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -296,6 +297,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Options for Replacing Missing Teeth
+    backToTopHref: '#options-for-replacing-missing-teeth'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Implants
+      url: /vista-ca/dental-implants/
+    - name: Dentures
+      url: /vista-ca/dentures-and-partial-dentures/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -369,14 +380,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Options for Replacing Missing Teeth
-  backToTopHref: '#options-for-replacing-missing-teeth'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Implants
-    url: /vista-ca/dental-implants/
-  - name: Dentures
-    url: /vista-ca/dentures-and-partial-dentures/
 ---

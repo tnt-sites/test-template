@@ -165,11 +165,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the signs of gum disease?
+        text: Q. [What are the signs of gum disease?](/vista-ca/periodontics/#signs-of-gum-disease)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the treatment options for gum disease?
+        text: Q. [What are the treatment options for gum disease?](/vista-ca/periodontics/#treatment-options-for-gum-disease)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I keep my gums healthy?
+        text: Q. [How can I keep my gums healthy?](/vista-ca/periodontics/#keep-my-gums-healthy)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -178,16 +178,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why are my gums receding from my teeth?
+        text: Q. [Why are my gums receding from my teeth?](/vista-ca/i-think-my-gums-are-receding/#why-are-my-gums-receding)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Should I be worried if my gums bleed when I floss?
+        text: Q. [Should I be worried if my gums bleed when I floss?](/vista-ca/why-are-my-gums-bleeding/#should-i-worry-if-my-gums-bleed)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is gum contouring?
+        text: Q. [What is gum contouring?](/vista-ca/gum-contouring-and-reshaping/#what-is-gum-contouring)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Periodontic Terminology
     contentSections:
@@ -317,6 +318,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Periodontics
+    backToTopHref: '#periodontics'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -360,14 +371,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Periodontics
-  backToTopHref: '#periodontics'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

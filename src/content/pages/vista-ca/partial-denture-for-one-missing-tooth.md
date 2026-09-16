@@ -169,11 +169,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How many visits does it take to install partial dentures?
+        text: Q. [How many visits does it take to install partial dentures?](/vista-ca/partial-denture-for-one-missing-tooth/#how-many-visits-does-it-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my eating or speaking be different with a partial denture?
+        text: Q. [Will my eating or speaking be different with a partial denture?](/vista-ca/partial-denture-for-one-missing-tooth/#eat-or-speak-different)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are removable partial dentures made of?
+        text: Q. [What are removable partial dentures made of?](/vista-ca/partial-denture-for-one-missing-tooth/#removable-partial-dentures-made-of)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -182,16 +182,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there different types of dentures?
+        text: Q. [Are there different types of dentures?](/vista-ca/dentures-and-partial-dentures/#types-of-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I do if I damage my dentures?
+        text: Q. [What do I do if I damage my dentures?](/vista-ca/damage-my-dentures/#what-do-i-do)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will toothpaste help or harm the dentures?
+        text: Q. [Will toothpaste help or harm the dentures?](/vista-ca/denture-care/#toothpaste-help-or-harm)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -300,6 +301,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Partial Denture for One Missing Tooth
+    backToTopHref: '#partial-denture-for-one-missing-tooth'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Damaged Dentures page
+      url: /vista-ca/damage-my-dentures/
+    - name: Denture Care
+      url: /vista-ca/denture-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -371,14 +382,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Partial Denture for One Missing Tooth
-  backToTopHref: '#partial-denture-for-one-missing-tooth'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Damaged Dentures page
-    url: /vista-ca/damage-my-dentures/
-  - name: Denture Care
-    url: /vista-ca/denture-care/
 ---

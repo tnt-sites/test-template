@@ -138,11 +138,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Am I a candidate for dental implants?
+        text: Q. [Am I a candidate for dental implants?](/vista-ca/helpful-dental-information/#candidate-for-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I take care of my dental implants?
+        text: Q. [How can I take care of my dental implants?](/vista-ca/helpful-dental-information/#how-can-i-take-care-of-my-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the dental implant procedure?
+        text: Q. [What happens during the dental implant procedure?](/vista-ca/helpful-dental-information/#what-happens-during-the-implant-procedure)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -151,16 +151,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during an oral cancer screening?
+        text: Q. [What happens during an oral cancer screening?](/vista-ca/oral-cancer-screening/#what-happens-during-an-oral-cancer-screening)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the benefits from getting a root canal?
+        text: Q. [What are the benefits from getting a root canal?](/vista-ca/root-canal-treatment/#benefits-from-getting-a-root-canal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the best toothbrush for my teeth?
+        text: Q. [What is the best toothbrush for my teeth?](/vista-ca/oral-hygiene-basics/#best-toothbrush-for-my-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -268,6 +269,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Helpful Dental Information
+    backToTopHref: '#helpful-dental-information'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Chipped Tooth?
+      url: /vista-ca/chip-my-tooth/
+    - name: Smile Makeover
+      url: /vista-ca/smile-makeover/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -311,14 +322,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Helpful Dental Information
-  backToTopHref: '#helpful-dental-information'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Chipped Tooth?
-    url: /vista-ca/chip-my-tooth/
-  - name: Smile Makeover
-    url: /vista-ca/smile-makeover/
 ---

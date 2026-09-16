@@ -200,11 +200,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can a smile makeover include teeth whitening?
+        text: Q. [Can a smile makeover include teeth whitening?](/vista-ca/smile-makeover/#smile-makeover-teeth-whitening)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will dental veneers improve my smile?
+        text: Q. [Will dental veneers improve my smile?](/vista-ca/smile-makeover/#dental-veneers-improve-my-smile)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants replace missing teeth?
+        text: Q. [Can dental implants replace missing teeth?](/vista-ca/smile-makeover/#can-dental-implants-replace-missing-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -213,16 +213,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why should I consider dental cosmetics?
+        text: Q. [Why should I consider dental cosmetics?](/vista-ca/dental-cosmetics/#should-i-consider-dental-cosmetics)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental bridges replace my missing teeth and restore my smile?
+        text: Q. [Can dental bridges replace my missing teeth and restore my smile?](/vista-ca/multiple-teeth-replacement-options/#can-dental-bridges-replace-my-missing-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -322,6 +323,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Smile Makeover
+    backToTopHref: '#smile-makeover'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Free Consultation
+      url: /vista-ca/dental-implants-consultation/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -405,14 +416,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Smile Makeover
-  backToTopHref: '#smile-makeover'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Free Consultation
-    url: /vista-ca/dental-implants-consultation/
 ---

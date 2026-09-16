@@ -170,11 +170,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are night guards?
+        text: Q. [What are night guards?](/vista-ca/night-guards/#what-are-night-guards)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why would I need to wear a night guard?
+        text: Q. [Why would I need to wear a night guard?](/vista-ca/night-guards/#why-would-i-need-a-night-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will the night guard last?
+        text: Q. [How long will the night guard last?](/vista-ca/night-guards/#how-long-will the-night-guard-last)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -183,16 +183,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are professional mouth guards better than store-bought brands?
+        text: Q. [Are professional mouth guards better than store-bought brands?](/vista-ca/reduce-sports-injuries-with-mouth-guards/#are-professional-mouth-guards-better)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if I have a toothache?
+        text: Q. [What should I do if I have a toothache?](/vista-ca/emergency-dental-care/#i-have-a-toothache)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do after chipping my tooth?
+        text: Q. [What should I do after chipping my tooth?](/vista-ca/chip-my-tooth/#what-should-i-do-after-chipping-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -289,6 +290,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Night Guards
+    backToTopHref: '#night-guards'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
+    - name: Mouth Guards
+      url: /vista-ca/mouth-guards/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -350,14 +361,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Night Guards
-  backToTopHref: '#night-guards'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
-  - name: Mouth Guards
-    url: /vista-ca/mouth-guards/
 ---

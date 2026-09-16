@@ -157,11 +157,12 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I reduce my risk of getting gum disease?
+        text: Q. [How can I reduce my risk of getting gum disease?](/vista-ca/dental-practice/#reduce-risk-of-getting-gum-disease)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I damage my tooth?
+        text: Q. [What can I do if I damage my tooth?](/vista-ca/dental-practice/#damage-my-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to do to ensure that my restoration is in great shape?
+        text: Q. [What do I need to do to ensure that my restoration is in great shape?](/vista-ca/dental-practice/#dental-restorations
+          inspected)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -170,16 +171,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to improve my smile?
+        text: Q. [What can I do to improve my smile?](/vista-ca/what-can-i-do-to-improve-my-smile/#improve-my-smile-for-your-formal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my dental restoration blend in with my surrounding teeth?
+        text: Q. [Will my dental restoration blend in with my surrounding teeth?](/vista-ca/dental-procedures/#dental-restoration-blend-with-surrounding-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is it important to treat dental issues early?
+        text: Q. [Is it important to treat dental issues early?](/vista-ca/dental-services/#treat-dental-issues-early)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -287,6 +289,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Practice
+    backToTopHref: '#dental-practice'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Checkup
+      url: /vista-ca/dental-checkup/
+    - name: Cleaning & Exam
+      url: /vista-ca/dental-cleaning-and-examinations/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -332,14 +344,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Practice
-  backToTopHref: '#dental-practice'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Checkup
-    url: /vista-ca/dental-checkup/
-  - name: Cleaning & Exam
-    url: /vista-ca/dental-cleaning-and-examinations/
 ---

@@ -196,11 +196,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if I need a root canal?
+        text: Q. [How do I know if I need a root canal?](/vista-ca/do-i-need-a-root-canal/#need-a-root-canal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the root canal process like?
+        text: Q. [What is the root canal process like?](/vista-ca/do-i-need-a-root-canal/#root-canal-process)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a root canal?
+        text: Q. [What is a root canal?](/vista-ca/do-i-need-a-root-canal/#what-is-a-root-canal)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -209,16 +209,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does a root canal remove the entire tooth?
+        text: Q. [Does a root canal remove the entire tooth?](/vista-ca/the-truth-behind-root-canals/#does-a-root-canal-remove-the-entire-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental crowns?
+        text: Q. [What are dental crowns?](/vista-ca/dental-crowns/#what-are-dental-crowns)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can a dental crown treat my cracked tooth?
+        text: Q. [How can a dental crown treat my cracked tooth?](/vista-ca/can-a-cracked-tooth-be-saved-with-a-root-canal/#how-can-a-dental-crown-treat-my-cracked-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -313,6 +314,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Do I Need a Root Canal
+    backToTopHref: '#do-i-need-a-root-canal'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Root Canal Treatment
+      url: /vista-ca/root-canal-treatment/
+    - name: Dental Anxiety
+      url: /vista-ca/dental-anxiety/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -366,14 +377,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Do I Need a Root Canal
-  backToTopHref: '#do-i-need-a-root-canal'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Root Canal Treatment
-    url: /vista-ca/root-canal-treatment/
-  - name: Dental Anxiety
-    url: /vista-ca/dental-anxiety/
 ---

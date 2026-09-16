@@ -171,11 +171,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is gum contouring?
+        text: Q. [What is gum contouring?](/vista-ca/gum-contouring-and-reshaping/#what-is-gum-contouring)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is the gum contouring procedure painful?
+        text: Q. [Is the gum contouring procedure painful?](/vista-ca/gum-contouring-and-reshaping/#is-gum-contouring-painful)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to know about the recovery process?
+        text: Q. [What do I need to know about the recovery process?](/vista-ca/gum-contouring-and-reshaping/#the-recovery-process)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -184,16 +184,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why are my gums receding from my teeth?
+        text: Q. [Why are my gums receding from my teeth?](/vista-ca/i-think-my-gums-are-receding/#why-are-my-gums-receding)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the treatment options for gum disease?
+        text: Q. [What are the treatment options for gum disease?](/vista-ca/periodontics/#treatment-options-for-gum-disease)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What will gum disease do to my teeth?
+        text: Q. [What will gum disease do to my teeth?](/vista-ca/gum-disease/#what-will-gum-disease-do-to-my-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Gum Disease Terminology
     contentSections:
@@ -286,6 +287,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: What Is Gum Contouring and Reshaping
+    backToTopHref: '#gum-contouring-and-reshaping'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Professional Whitening
+      url: /vista-ca/professional-teeth-whitening/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -369,14 +380,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: What Is Gum Contouring and Reshaping
-  backToTopHref: '#gum-contouring-and-reshaping'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Professional Whitening
-    url: /vista-ca/professional-teeth-whitening/
 ---

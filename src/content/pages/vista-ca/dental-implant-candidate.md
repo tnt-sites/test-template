@@ -178,11 +178,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if dental implants are right for me?
+        text: Q. [How do I know if dental implants are right for me?](/vista-ca/dental-implant-candidate/#are-dental-implants-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will my cavities get in the way of dental implants?
+        text: Q. [Will my cavities get in the way of dental implants?](/vista-ca/dental-implant-candidate/#will-cavities-prohibit-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants replace my missing teeth?
+        text: Q. [Can dental implants replace my missing teeth?](/vista-ca/dental-implant-candidate/#can-dental-implants-replace-my-missing-teeth)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -191,16 +191,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the implants be obvious?
+        text: Q. [Will the implants be obvious?](/vista-ca/postop-care-for-dental-implants/#will-implants-be-obvious)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the recovery process for dental implants?
+        text: Q. [What is the recovery process for dental implants?](/vista-ca/dental-implants-consultation/#recovery-process-for-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I qualify for dental implants?
+        text: Q. [Do I qualify for dental implants?](/vista-ca/implant-dentist/#do-i-qualify-for-dental-implants)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Implant Terminology
     contentSections:
@@ -306,6 +307,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Am I a Candidate for Dental Implants
+    backToTopHref: '#dental-implant-candidate'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
+    - name: Replacing Missing Teeth
+      url: /vista-ca/options-for-replacing-missing-teeth/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -379,14 +390,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Am I a Candidate for Dental Implants
-  backToTopHref: '#dental-implant-candidate'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
-  - name: Replacing Missing Teeth
-    url: /vista-ca/options-for-replacing-missing-teeth/
 ---

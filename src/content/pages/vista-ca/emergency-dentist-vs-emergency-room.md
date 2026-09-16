@@ -120,11 +120,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can the ER treat any damage to my teeth?
+        text: Q. [Can the ER treat any damage to my teeth?](/vista-ca/emergency-dentist-vs-emergency-room/#can-the-er-treat-damage-to-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What services does an emergency dentist provide?
+        text: Q. [What services does an emergency dentist provide?](/vista-ca/emergency-dentist-vs-emergency-room/#services-an-emergency-dentist-provides)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. When should I visit the ER first before the dentist?
+        text: Q. [When should I visit the ER first before the dentist?](/vista-ca/emergency-dentist-vs-emergency-room/#should-i-visit-the-er)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -133,16 +133,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if I have a toothache?
+        text: Q. [What should I do if I have a toothache?](/vista-ca/emergency-dental-care/#i-have-a-toothache)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to relieve dental pain?
+        text: Q. [What can I do to relieve dental pain?](/vista-ca/emergency-dentist/#relieve-dental-pain)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to repair damaged teeth?
+        text: Q. [What can I do to repair damaged teeth?](/vista-ca/dental-center/#repair-damaged-teeth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Emergency Terminology
     contentSections:
@@ -234,6 +235,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Emergency Dentist vs. Emergency Room
+    backToTopHref: '#emergency-dentist-vs-emergency-room'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Tooth Colored Fillings
+      url: /vista-ca/composite-fillings/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -287,14 +298,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Emergency Dentist vs. Emergency Room
-  backToTopHref: '#emergency-dentist-vs-emergency-room'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Tooth Colored Fillings
-    url: /vista-ca/composite-fillings/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

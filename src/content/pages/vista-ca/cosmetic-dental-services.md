@@ -107,11 +107,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How healthy do my teeth need to be for certain cosmetic dental services?
+        text: Q. [How healthy do my teeth need to be for certain cosmetic dental services?](/vista-ca/cosmetic-dental-services/#healthy-teeth-for-cosmetic-dental-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do receding gums get in the way of a cosmetic procedure?
+        text: Q. [Do receding gums get in the way of a cosmetic procedure?](/vista-ca/cosmetic-dental-services/#do-receding-gums-get-in-the-way-of-a-cosmetic-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are cosmetic dental products immune to stains?
+        text: Q. [Are cosmetic dental products immune to stains?](/vista-ca/cosmetic-dental-services/#are-cosmetic-dental-products-immune-to-stains)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -120,16 +120,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can a smile makeover include teeth whitening?
+        text: Q. [Can a smile makeover include teeth whitening?](/vista-ca/smile-makeover/#smile-makeover-teeth-whitening)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental cosmetics replace my teeth?
+        text: Q. [Can dental cosmetics replace my teeth?](/vista-ca/dental-cosmetics/#can-dental-cosmetics-replace-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I tell if I need a dental checkup?
+        text: Q. [How do I tell if I need a dental checkup?](/vista-ca/dental-office/#do-i-need-a-dental-checkup)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -229,6 +230,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Cosmetic Dental Services
+    backToTopHref: '#cosmetic-dental-services'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Smile Makeover
+      url: /vista-ca/smile-makeover/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -314,14 +325,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Cosmetic Dental Services
-  backToTopHref: '#cosmetic-dental-services'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Smile Makeover
-    url: /vista-ca/smile-makeover/
 ---

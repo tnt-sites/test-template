@@ -125,11 +125,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I need to know about making adjustments to my dentures?
+        text: Q. [What do I need to know about making adjustments to my dentures?](/vista-ca/denture-adjustments/#making-adjustments-to-my-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can I fix my dentures on my own?
+        text: Q. [Can I fix my dentures on my own?](/vista-ca/denture-adjustments/#can-i-fix-dentures-on-my-own)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can you help make my dentures last a long time?
+        text: Q. [Can you help make my dentures last a long time?](/vista-ca/denture-adjustments/#dentures-last-a-long-time)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -138,16 +138,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take to adjust to new dentures?
+        text: Q. [How long will it take to adjust to new dentures?](/vista-ca/adjusting-to-new-dentures/#how-long-will-it-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I take care of my dentures?
+        text: Q. [How do I take care of my dentures?](/vista-ca/denture-care/#take-care-of-my-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What do I do if I damage my dentures?
+        text: Q. [What do I do if I damage my dentures?](/vista-ca/damage-my-dentures/#what-do-i-do)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -241,6 +242,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Denture Adjustments and Repairs
+    backToTopHref: '#denture-adjustments'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
+    - name: Denture Care
+      url: /vista-ca/denture-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -312,14 +323,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Denture Adjustments and Repairs
-  backToTopHref: '#denture-adjustments'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
-  - name: Denture Care
-    url: /vista-ca/denture-care/
 ---

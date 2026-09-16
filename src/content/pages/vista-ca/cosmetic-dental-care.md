@@ -167,11 +167,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the dental crown be noticeable?
+        text: Q. [Will the dental crown be noticeable?](/vista-ca/cosmetic-dental-care/#are-dental-crown-be-noticeable)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants help with tooth loss?
+        text: Q. [Can dental implants help with tooth loss?](/vista-ca/cosmetic-dental-care/#can-dental-implants-help-with-tooth-loss)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are clear aligners?
+        text: Q. [What are clear aligners?](/vista-ca/cosmetic-dental-care/#what-are-clear-aligners)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -180,16 +180,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are at-home teeth whitening kits better than dentist procedure?
+        text: Q. [Are at-home teeth whitening kits better than dentist procedure?](/vista-ca/professional-teeth-whitening/#at-home-teeth-whitening-kits)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can cosmetic dentistry do for me?
+        text: Q. [What can cosmetic dentistry do for me?](/vista-ca/dental-cosmetics/#what-can-cosmetic-dentistry-do-for-me)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -289,6 +290,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Cosmetic Dental Care
+    backToTopHref: '#cosmetic-dental-care'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Cosmetics
+      url: /vista-ca/dental-cosmetics/
+    - name: Smile Makeover
+      url: /vista-ca/smile-makeover/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -372,14 +383,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Cosmetic Dental Care
-  backToTopHref: '#cosmetic-dental-care'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Cosmetics
-    url: /vista-ca/dental-cosmetics/
-  - name: Smile Makeover
-    url: /vista-ca/smile-makeover/
 ---

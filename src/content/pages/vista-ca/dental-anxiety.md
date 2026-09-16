@@ -190,11 +190,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How can I prepare for my dentist appointment?
+        text: Q. [How can I prepare for my dentist appointment?](/vista-ca/dental-anxiety/#prepare-for-my-dentist-appointment)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can I be asleep during the treatment?
+        text: Q. [Can I be asleep during the treatment?](/vista-ca/dental-anxiety/#asleep-during-treatment)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there any side effects of sedation dentistry?
+        text: Q. [Are there any side effects of sedation dentistry?](/vista-ca/dental-anxiety/#side-effects-of-sedation)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -203,16 +203,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will reading reviews help me find a great dentist?
+        text: Q. [Will reading reviews help me find a great dentist?](/about/find-best-dentist/#dentist-reviews)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to improve my smile?
+        text: Q. [What can I do to improve my smile?](/vista-ca/what-can-i-do-to-improve-my-smile/#improve-my-smile-for-your-formal)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will the dental treatment hurt?
+        text: Q. [Will the dental treatment hurt?](/vista-ca/general-dentist/#will-the-dental-treatment-hurt)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -320,6 +321,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Anxiety
+    backToTopHref: '#dental-anxiety'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Helpful Dental Info
+      url: /vista-ca/helpful-dental-information/
+    - name: Gentle Dentistry
+      url: /about-find-best-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -373,14 +384,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Anxiety
-  backToTopHref: '#dental-anxiety'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Helpful Dental Info
-    url: /vista-ca/helpful-dental-information/
-  - name: Gentle Dentistry
-    url: /about-find-best-dentist/
 ---

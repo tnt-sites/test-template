@@ -390,25 +390,52 @@
     padding-bottom: 12px;
   }
 
-  /* Square markers, not disc dots. */
-  .cws-main ul,
-  .cws-side ul,
-  .section .list ul {
+  /*
+   * Lists. Measured on the source: square markers in the TEXT colour, no
+   * padding-left, an 18px margin. The starter's `main ul` rule (_base.pcss)
+   * sets `display: block` with a Fontello glyph in `li::before`, which
+   * suppresses real markers and adds 24px of padding, so that is unwound too.
+   *
+   * The List component renders <ul class="list"> and CloudCannon wraps each
+   * <li> in <editable-array-item>, so `ul > li` alone never matches.
+   */
+  main ul.list,
+  main .cws-main ul,
+  main .cws-side ul {
     list-style: none;
+    margin: 10px 0;
     padding-left: 0;
   }
 
-  .cws-main ul > li,
-  .section .list ul > li {
-    list-style-type: square;
-    margin-left: 1.15em;
-    padding-left: 0.35em;
+  main ul.list > editable-array-item {
+    display: contents;
   }
 
-  .cws-main ul > li::marker,
-  .section .list ul > li::marker {
-    color: var(--color-brand-secondary, #ba9764);
-    content: "▪";
+  main ul.list li,
+  main .cws-main ul li,
+  main .cws-side ul li {
+    display: list-item;
+    list-style-type: square;
+    margin: 0 0 6px 18px;
+    padding-left: 0;
+  }
+
+  main ul.list li::before,
+  main .cws-main ul li::before,
+  main .cws-side ul li::before {
+    content: none;
+  }
+
+  main ul.list li::marker,
+  main .cws-main ul li::marker,
+  main .cws-side ul li::marker {
+    color: var(--color-text);
+  }
+
+  /* The Q&A blocks are plain linked lines on the source — no markers at all. */
+  main .faq-card ul li {
+    list-style-type: none;
+    margin-left: 0;
   }
 
   /* Vertical rhythm between content blocks. */
@@ -578,5 +605,55 @@
   .sidebar-search .ss-form {
     align-items: center;
     grid-template-columns: 1fr auto;
+  }
+}
+
+@layer overrides {
+  /*
+   * Links. Every link on the source is the body colour, never a brand colour.
+   * In running content they are underlined; in the sidebar rails they are not,
+   * and pick up an underline on hover.
+   *
+   * Scoped to the components rather than the page wrapper so the rules survive
+   * regeneration, and specific enough to beat the starter's own `a` rule.
+   */
+  main .section p a,
+  main .section li a,
+  main .section .text a,
+  main ul.list li a,
+  main .callout-bubble a,
+  main .cws-main a {
+    color: var(--color-text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  main .section p a:hover,
+  main .section li a:hover,
+  main ul.list li a:hover,
+  main .cws-main a:hover {
+    color: var(--color-text-strong);
+  }
+
+  /* Sidebar rails: no underline until hover. */
+  main .cws-side a,
+  main .cws-side li a,
+  main .cws-side ul.list li a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  main .cws-side a:hover,
+  main .cws-side li a:hover,
+  main .cws-side ul.list li a:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* Back-to-top and breadcrumbs sit under the content column, not centred
+     beneath content plus sidebar. */
+  main .page-footer-nav .pfn-inner {
+    margin-inline: 0;
+    max-width: none;
   }
 }

@@ -317,11 +317,12 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know I need an emergency dentist?
+        text: Q. [How do I know I need an emergency dentist?](/vista-ca/emergency-dentist/#do-I-know-I-need-an-emergency-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](/vista-ca/emergency-dentist/#car-accidents-leading-cause-of-tooth-injury)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to relieve dental pain?
+        text: Q. [What can I do to relieve dental pain?](/vista-ca/emergency-dentist/#relieve-dental-pain)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -330,16 +331,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What dental services can help treat an infection?
+        text: Q. [What dental services can help treat an infection?](/vista-ca/dental-services/#treat-an-infection)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if I have a toothache?
+        text: Q. [What should I do if I have a toothache?](/vista-ca/emergency-dental-care/#i-have-a-toothache)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the most durable tooth replacement?
+        text: Q. [What is the most durable tooth replacement?](/vista-ca/options-for-replacing-missing-teeth/#most-durable-tooth-replacement)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Emergency Terminology
     contentSections:
@@ -435,6 +437,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Emergency Dentist
+    backToTopHref: '#emergency-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Chipped Tooth?
+      url: /vista-ca/chip-my-tooth/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -510,14 +522,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Emergency Dentist
-  backToTopHref: '#emergency-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Chipped Tooth?
-    url: /vista-ca/chip-my-tooth/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
 ---

@@ -162,11 +162,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are dental implants better than dentures or dental bridges?
+        text: Q. [Are dental implants better than dentures or dental bridges?](/vista-ca/implant-dentist/#are-dental-implants-better)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I qualify for dental implants?
+        text: Q. [Do I qualify for dental implants?](/vista-ca/implant-dentist/#do-i-qualify-for-dental-implants)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are All-On-4® Implants?
+        text: Q. [What are All-On-4® Implants?](/vista-ca/implant-dentist/#what-are-all-on-4-dental-implants)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -175,16 +175,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if dental implants are right for me?
+        text: Q. [How do I know if dental implants are right for me?](/vista-ca/dental-implant-candidate/#are-dental-implants-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is the process for dental implants?
+        text: Q. [What is the process for dental implants?](/vista-ca/dental-implants/#dental-implant-process)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will I be able to eat my favorite foods after receiving dental implants?
+        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](/vista-ca/dental-implant-surgery/#will-i-be-able-to-eat-my-favorite-foods)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -292,6 +293,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Implant Dentist
+    backToTopHref: '#implant-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Implants Consultation
+      url: /vista-ca/dental-implants-consultation/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -367,14 +378,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Implant Dentist
-  backToTopHref: '#implant-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Implants Consultation
-    url: /vista-ca/dental-implants-consultation/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

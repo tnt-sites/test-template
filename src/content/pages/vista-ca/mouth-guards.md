@@ -164,11 +164,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why do people wear mouth guards?
+        text: Q. [Why do people wear mouth guards?](/vista-ca/mouth-guards/#why-do-people-wear-mouth-guards)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can you customize my mouth guard to ensure it fits?
+        text: Q. [Can you customize my mouth guard to ensure it fits?](/vista-ca/mouth-guards/#can-you-customize-my-mouth-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I clean and care for my mouth guard?
+        text: Q. [How do I clean and care for my mouth guard?](/vista-ca/mouth-guards/#clean-and-care-for-my-mouth-guard)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -177,16 +177,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are professional mouth guards better than store-bought brands?
+        text: Q. [Are professional mouth guards better than store-bought brands?](/vista-ca/reduce-sports-injuries-with-mouth-guards/#are-professional-mouth-guards-better)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why would I need to wear a night guard?
+        text: Q. [Why would I need to wear a night guard?](/vista-ca/night-guards/#why-would-i-need-a-night-guard)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do after chipping my tooth?
+        text: Q. [What should I do after chipping my tooth?](/vista-ca/chip-my-tooth/#what-should-i-do-after-chipping-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Family Dental Terminology
     contentSections:
@@ -288,6 +289,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Mouth Guards
+    backToTopHref: '#mouth-guards'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
+    - name: Night Guards
+      url: /vista-ca/night-guards/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -349,14 +360,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Mouth Guards
-  backToTopHref: '#mouth-guards'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
-  - name: Night Guards
-    url: /vista-ca/night-guards/
 ---

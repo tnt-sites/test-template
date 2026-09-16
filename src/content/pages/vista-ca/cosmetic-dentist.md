@@ -305,11 +305,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can cosmetic dentistry help improve the functionality of my teeth?
+        text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](/vista-ca/cosmetic-dentist/#improve-the-functionality-of-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can cosmetic dentistry help with my dental care?
+        text: Q. [Can cosmetic dentistry help with my dental care?](/vista-ca/cosmetic-dentist/#can-cosmetic-dentistry-help-with-my-dental-care)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -318,16 +318,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I know if I need dental restorations?
+        text: Q. [How do I know if I need dental restorations?](/vista-ca/dental-restorations/#need-dental-restorations)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I need cosmetic dental work?
+        text: Q. [What can I do if I need cosmetic dental work?](/about/find-a-dentist/#need-cosmetic-dental-work)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I damaged my teeth?
+        text: Q. [What can I do if I damaged my teeth?](/vista-ca/full-mouth-reconstruction/#what-can-i-do)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Cosmetic Dentistry Terminology
     contentSections:
@@ -427,6 +428,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Cosmetic Dentist
+    backToTopHref: '#cosmetic-dentist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Implants
+      url: /vista-ca/dental-implants/
+    - name: Professional Whitening
+      url: /vista-ca/professional-teeth-whitening/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -508,14 +519,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Cosmetic Dentist
-  backToTopHref: '#cosmetic-dentist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Implants
-    url: /vista-ca/dental-implants/
-  - name: Professional Whitening
-    url: /vista-ca/professional-teeth-whitening/
 ---

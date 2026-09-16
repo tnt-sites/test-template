@@ -146,11 +146,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can I remove clear aligners when I want?
+        text: Q. [Can I remove clear aligners when I want?](/vista-ca/clear-aligners/#can-i-remove-clear-aligners-when-i-want)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the aligners made of?
+        text: Q. [What are the aligners made of?](/vista-ca/clear-aligners/#what-are-the-aligners-made-of)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can my child use clear aligners?
+        text: Q. [Can my child use clear aligners?](/vista-ca/clear-aligners/#can-my-child-use-clear-aligners)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -159,16 +159,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why should I consider dental cosmetics?
+        text: Q. [Why should I consider dental cosmetics?](/vista-ca/dental-cosmetics/#should-i-consider-dental-cosmetics)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What types of teeth whitening do you offer?
+        text: Q. [What types of teeth whitening do you offer?](/vista-ca/teeth-whitening/#types-of-teeth-whitening)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clear Aligner Therapy Terminology
     contentSections:
@@ -283,6 +284,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Clear Aligners
+    backToTopHref: '#clear-aligners'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Clear vs Traditional
+      url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
+    - name: Clear Aligner Therapy
+      url: /vista-ca/clear-aligner-therapy-dentist/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -344,14 +355,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Clear Aligners
-  backToTopHref: '#clear-aligners'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Clear vs Traditional
-    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
-  - name: Clear Aligner Therapy
-    url: /vista-ca/clear-aligner-therapy-dentist/
 ---

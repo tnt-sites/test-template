@@ -167,11 +167,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a prosthodontist?
+        text: Q. [What is a prosthodontist?](/vista-ca/prosthodontist/#what-is-a-prosthodontist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What does a prosthodontist do?
+        text: Q. [What does a prosthodontist do?](/vista-ca/prosthodontist/#what-does-a-prosthodontist-do)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do I need to see a prosthodontist?
+        text: Q. [Do I need to see a prosthodontist?](/vista-ca/prosthodontist/#do-i-need-a-prosthodontist)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -180,16 +180,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What happens during the implant procedure?
+        text: Q. [What happens during the implant procedure?](/vista-ca/postop-care-for-dental-implants/#what-happens-implant-procedure)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can dental implants replace my missing teeth?
+        text: Q. [Can dental implants replace my missing teeth?](/vista-ca/dental-implant-candidate/#can-dental-implants-replace-my-missing-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How many people wear dental implants?
+        text: Q. [How many people wear dental implants?](/vista-ca/dental-implants/#how-many)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Prosthodontist Terminology
     contentSections:
@@ -306,6 +307,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Prosthodontist
+    backToTopHref: '#prosthodontist'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Dental Implants Consultation
+      url: /vista-ca/dental-implants-consultation/
+    - name: Post-Op Care
+      url: /vista-ca/postop-care-for-dental-implants/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -379,14 +390,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Prosthodontist
-  backToTopHref: '#prosthodontist'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Dental Implants Consultation
-    url: /vista-ca/dental-implants-consultation/
-  - name: Post-Op Care
-    url: /vista-ca/postop-care-for-dental-implants/
 ---

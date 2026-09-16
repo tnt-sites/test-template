@@ -185,11 +185,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the different types of tooth fractures?
+        text: Q. [What are the different types of tooth fractures?](/vista-ca/types-of-dental-root-fractures/#different-types-of-tooth-fractures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can the tooth hurt without noticeable damage?
+        text: Q. [Can the tooth hurt without noticeable damage?](/vista-ca/types-of-dental-root-fractures/#can-tooth-hurt-without-noticeable-damage)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long can I go without treatment for my fractured tooth?
+        text: Q. [How long can I go without treatment for my fractured tooth?](/vista-ca/types-of-dental-root-fractures/#how-long-can-i-go-without-treatment)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -198,16 +198,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the signs that I may need endodontic surgery?
+        text: Q. [What are the signs that I may need endodontic surgery?](/vista-ca/7-signs-you-need-endodontic-surgery/#signs-that-i-may-need-endodontic-surgery)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does a root canal remove the entire tooth?
+        text: Q. [Does a root canal remove the entire tooth?](/vista-ca/the-truth-behind-root-canals/#does-a-root-canal-remove-the-entire-tooth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are dental crowns?
+        text: Q. [What are dental crowns?](/vista-ca/dental-crowns/#what-are-dental-crowns)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Endodontic Terminology
     contentSections:
@@ -302,6 +303,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Types of Dental Root Fractures
+    backToTopHref: '#types-of-dental-root-fractures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Need a Root Canal?
+      url: /vista-ca/do-i-need-a-root-canal/
+    - name: Tooth Extraction?
+      url: /vista-ca/tooth-extraction/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -365,14 +376,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Types of Dental Root Fractures
-  backToTopHref: '#types-of-dental-root-fractures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Need a Root Canal?
-    url: /vista-ca/do-i-need-a-root-canal/
-  - name: Tooth Extraction?
-    url: /vista-ca/tooth-extraction/
 ---

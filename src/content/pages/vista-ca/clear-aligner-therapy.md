@@ -161,11 +161,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is Clear Aligner Therapy?
+        text: Q. [What is Clear Aligner Therapy?](/vista-ca/clear-aligner-therapy/#what-is-clear-aligner-therapy)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long do I need to wear the aligners for?
+        text: Q. [How long do I need to wear the aligners for?](/vista-ca/clear-aligner-therapy/#how-long-do-i-need-to-wear-the-aligners-for)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will people notice that I am wearing Clear Aligners?
+        text: Q. [Will people notice that I am wearing Clear Aligners?](/vista-ca/clear-aligner-therapy/#will-people-notice)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -174,16 +174,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Does Clear Aligner Therapy really work for adults?
+        text: Q. [Does Clear Aligner Therapy really work for adults?](/vista-ca/does-clear-aligner-therapy-really-work/#does-clear-aligner-therapy-really-work)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will I be able to continue eating what I want to eat?
+        text: Q. [Will I be able to continue eating what I want to eat?](/vista-ca/clear-aligner-therapy-vs-traditional-braces/#will-i-be-able-to-eat-what-i-want)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How is Clear Aligner Therapy different from traditional treatment options?
+        text: Q. [How is Clear Aligner Therapy different from traditional treatment options?](/vista-ca/alternative-to-braces-for-teens/#how-is-clear-aligner-therapy-different)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clear Aligner Therapy Terminology
     contentSections:
@@ -298,6 +299,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Clear Aligner Therapy
+    backToTopHref: '#clear-aligner-therapy'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Clear Braces
+      url: /vista-ca/clear-braces/
+    - name: Clear vs Traditional Braces
+      url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -359,14 +370,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Clear Aligner Therapy
-  backToTopHref: '#clear-aligner-therapy'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Clear Braces
-    url: /vista-ca/clear-braces/
-  - name: Clear vs Traditional Braces
-    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---

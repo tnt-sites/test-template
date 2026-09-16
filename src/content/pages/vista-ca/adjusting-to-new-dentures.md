@@ -147,11 +147,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will it take to adjust to new dentures?
+        text: Q. [How long will it take to adjust to new dentures?](/vista-ca/adjusting-to-new-dentures/#how-long-will-it-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there any dangers to not having a full set of teeth in my mouth?
+        text: Q. [Are there any dangers to not having a full set of teeth in my mouth?](/vista-ca/adjusting-to-new-dentures/#individual-has-no-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if I am experiencing tooth pain?
+        text: Q. [What should I do if I am experiencing tooth pain?](/vista-ca/adjusting-to-new-dentures/#experiencing-tooth-pain)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -160,16 +160,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there dentures to replace a few of my teeth?
+        text: Q. [Are there dentures to replace a few of my teeth?](/vista-ca/dentures-and-partial-dentures/#dentures-to-replace-few-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will toothpaste help or harm the dentures?
+        text: Q. [Will toothpaste help or harm the dentures?](/vista-ca/denture-care/#toothpaste-help-or-harm)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How does the dentures process begin?
+        text: Q. [How does the dentures process begin?](/vista-ca/the-process-for-getting-dentures/#how-does-the-dentures-process-begin)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Denture Terminology
     contentSections:
@@ -263,6 +264,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Adjusting to New Dentures
+    backToTopHref: '#adjusting-to-new-dentures'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Implant Dentures
+      url: /vista-ca/implant-supported-dentures/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -334,14 +345,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Adjusting to New Dentures
-  backToTopHref: '#adjusting-to-new-dentures'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Implant Dentures
-    url: /vista-ca/implant-supported-dentures/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
 ---

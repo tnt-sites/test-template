@@ -87,11 +87,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What dental services can help treat an infection?
+        text: Q. [What dental services can help treat an infection?](/vista-ca/dental-services/#treat-an-infection)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is it important to treat dental issues early?
+        text: Q. [Is it important to treat dental issues early?](/vista-ca/dental-services/#treat-dental-issues-early)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How often should I see a dentist?
+        text: Q. [How often should I see a dentist?](/vista-ca/dental-services/#how-often-dentist)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -100,16 +100,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some at-home tips for proper dental hygiene?
+        text: Q. [What are some at-home tips for proper dental hygiene?](/vista-ca/family-dentist/#tips-for-proper-dental-hygiene)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do to repair damaged teeth?
+        text: Q. [What can I do to repair damaged teeth?](/vista-ca/dental-center/#repair-damaged-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are some tips for proper dental care at home?
+        text: Q. [What are some tips for proper dental care at home?](/vista-ca/dental-cleaning-and-examinations/#tips-for-proper-dental-care-at-home)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Terminology
     contentSections:
@@ -217,6 +218,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Dental Services
+    backToTopHref: '#dental-services'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Routine Care
+      url: /vista-ca/routine-dental-care/
+    - name: Preventative Care
+      url: /vista-ca/preventative-dental-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -262,14 +273,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Dental Services
-  backToTopHref: '#dental-services'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Routine Care
-    url: /vista-ca/routine-dental-care/
-  - name: Preventative Care
-    url: /vista-ca/preventative-dental-care/
 ---

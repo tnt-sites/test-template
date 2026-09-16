@@ -162,11 +162,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What is a dental emergency?
+        text: Q. [What is a dental emergency?](/vista-ca/emergency-dental-care/#what-is-a-dental-emergency)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Should I go to the ER instead of the dentist?
+        text: Q. [Should I go to the ER instead of the dentist?](/vista-ca/emergency-dental-care/#er-or-dentist)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What should I do if I have a toothache?
+        text: Q. [What should I do if I have a toothache?](/vista-ca/emergency-dental-care/#i-have-a-toothache)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -175,16 +175,18 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
+        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
+          treatment?](/vista-ca/emergency-dentist/#car-accidents-leading-cause-of-tooth-injury)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can the ER treat any damage to my teeth?
+        text: Q. [Can the ER treat any damage to my teeth?](/vista-ca/emergency-dentist-vs-emergency-room/#can-the-er-treat-damage-to-my-teeth)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What can I do if I damage my tooth?
+        text: Q. [What can I do if I damage my tooth?](/vista-ca/dental-practice/#damage-my-tooth)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Dental Emergency Terminology
     contentSections:
@@ -280,6 +282,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Emergency Dental Care
+    backToTopHref: '#emergency-dental-care'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Emergency Dentist
+      url: /vista-ca/emergency-dentist/
+    - name: Chipped Tooth?
+      url: /vista-ca/chip-my-tooth/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -333,14 +345,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Emergency Dental Care
-  backToTopHref: '#emergency-dental-care'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Emergency Dentist
-    url: /vista-ca/emergency-dentist/
-  - name: Chipped Tooth?
-    url: /vista-ca/chip-my-tooth/
 ---

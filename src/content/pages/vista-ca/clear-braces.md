@@ -156,11 +156,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are clear braces an alternative to metal ones?
+        text: Q. [Are clear braces an alternative to metal ones?](/vista-ca/clear-braces/#are-clear-braces-an-alternative)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What clear braces options are available?
+        text: Q. [What clear braces options are available?](/vista-ca/clear-braces/#what-clear-braces-options-are-available)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Do you treat teenagers?
+        text: Q. [Do you treat teenagers?](/vista-ca/clear-braces/#do-you-treat-teenagers)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -169,16 +169,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Why should I consider dental cosmetics?
+        text: Q. [Why should I consider dental cosmetics?](/vista-ca/dental-cosmetics/#should-i-consider-dental-cosmetics)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the most common cosmetic dental treatment services?
+        text: Q. [What are the most common cosmetic dental treatment services?](/vista-ca/cosmetic-dentist/#what-are-the-most-common-cosmetic-dental-treatment-services)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What types of teeth whitening do you offer?
+        text: Q. [What types of teeth whitening do you offer?](/vista-ca/teeth-whitening/#types-of-teeth-whitening)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clear Aligner Therapy Terminology
     contentSections:
@@ -294,6 +295,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Clear Braces
+    backToTopHref: '#clear-braces'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: ClearCorrect Braces Vista, CA
+      url: /vista-ca/clearcorrect-braces/
+    - name: Clear Aligner Therapy
+      url: /vista-ca/clear-aligner-therapy/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -355,14 +366,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Clear Braces
-  backToTopHref: '#clear-braces'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: ClearCorrect Braces Vista, CA
-    url: /vista-ca/clearcorrect-braces/
-  - name: Clear Aligner Therapy
-    url: /vista-ca/clear-aligner-therapy/
 ---

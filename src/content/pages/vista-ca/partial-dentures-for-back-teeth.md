@@ -157,11 +157,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are removable partial dentures stable on the teeth?
+        text: Q. [Are removable partial dentures stable on the teeth?](/vista-ca/partial-dentures-for-back-teeth/#are-removable-partial-dentures-stable)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are partial dentures the same as dental bridges?
+        text: Q. [Are partial dentures the same as dental bridges?](/vista-ca/partial-dentures-for-back-teeth/#are-partial-dentures-the-same-as-dental-bridges)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Will partial dentures change what I can eat?
+        text: Q. [Will partial dentures change what I can eat?](/vista-ca/partial-dentures-for-back-teeth/#will-partial-dentures-change-what-i-can-eat)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -170,16 +170,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are there different types of dentures?
+        text: Q. [Are there different types of dentures?](/vista-ca/dentures-and-partial-dentures/#types-of-dentures)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Which tooth replacement is right for me?
+        text: Q. [Which tooth replacement is right for me?](/vista-ca/options-for-replacing-missing-teeth/#which-is-right-for-me)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Are dental implants better than dentures or dental bridges?
+        text: Q. [Are dental implants better than dentures or dental bridges?](/vista-ca/implant-dentist/#are-dental-implants-better)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -285,6 +286,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Partial Dentures for Back Teeth
+    backToTopHref: '#partial-dentures-for-back-teeth'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Damaged Dentures?
+      url: /vista-ca/damage-my-dentures/
+    - name: Denture Care
+      url: /vista-ca/denture-care/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -356,14 +367,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Partial Dentures for Back Teeth
-  backToTopHref: '#partial-dentures-for-back-teeth'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Damaged Dentures?
-    url: /vista-ca/damage-my-dentures/
-  - name: Denture Care
-    url: /vista-ca/denture-care/
 ---

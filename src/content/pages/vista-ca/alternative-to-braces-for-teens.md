@@ -155,11 +155,11 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How long will the Clean Aligner Therapy treatment process take?
+        text: Q. [How long will the Clean Aligner Therapy treatment process take?](/vista-ca/alternative-to-braces-for-teens/#how-long-will-the-clear-aligner-therapy-treatment-process-take)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How is Clean Aligner Therapy different from traditional treatment options?
+        text: Q. [How is Clean Aligner Therapy different from traditional treatment options?](/vista-ca/alternative-to-braces-for-teens/#how-is-clear-aligner-therapy-different)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Is it easier to keep teeth clean with Clean Aligner Therapy?
+        text: Q. [Is it easier to keep teeth clean with Clean Aligner Therapy?](/vista-ca/alternative-to-braces-for-teens/#teeth-stay-cleaner)
     - _component: building-blocks/core-elements/heading
       text: People Also Ask
       level: h5
@@ -168,16 +168,17 @@ pageSections:
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. Can my teen wear aligners during other activities such as sports?
+        text: Q. [Can my teen wear aligners during other activities such as sports?](/vista-ca/parents-need-to-know-about-clear-aligner-therapy/#clear-aligner-therapy-teen-for-athletic-teens)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. What are the advantages to Clean Aligner Therapy?
+        text: Q. [What are the advantages to Clean Aligner Therapy?](/vista-ca/clear-aligner-therapy-for-teens/#what-are-the-advantages-to-clear-aligner-therapy)
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. How do I get started with Clean Aligner Therapy?
+        text: Q. [How do I get started with Clean Aligner Therapy?](/vista-ca/is-clear-aligner-therapy-teen-right-for-my-child/#how-do-i-get-started-with-clear-aligner-therapy)
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+    class: faq-card
   - _component: page-sections/builders/custom-section
     label: Definition of Clean Aligner Therapy Terminology
     contentSections:
@@ -293,6 +294,16 @@ pageSections:
     paddingVertical: xl
     colorScheme: default
     backgroundColor: surface
+  - _component: page-sections/info-blocks/page-footer-nav
+    backToTopText: Alternative to Braces for Teens
+    backToTopHref: '#alternative-to-braces-for-teens'
+    crumbs:
+    - name: Vista, CA
+      url: /vista-ca/
+    - name: Clear Braces
+      url: /vista-ca/clear-braces/
+    - name: Clear vs Traditional
+      url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -354,14 +365,4 @@ pageSections:
     backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
-- _component: page-sections/info-blocks/page-footer-nav
-  backToTopText: Alternative to Braces for Teens
-  backToTopHref: '#alternative-to-braces-for-teens'
-  crumbs:
-  - name: Vista, CA
-    url: /vista-ca/
-  - name: Clear Braces
-    url: /vista-ca/clear-braces/
-  - name: Clear vs Traditional
-    url: /vista-ca/clear-aligner-therapy-vs-traditional-braces/
 ---
