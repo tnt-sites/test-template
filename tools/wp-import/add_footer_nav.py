@@ -5,8 +5,8 @@ SNAP=f"{ROOT}/wp-migrator/.wpmig/static"
 PAGES=f"{ROOT}/src/content/pages/vista-ca"
 WRITE='--write' in sys.argv
 # full-width pages: the homepage and the galleries are not the interior layout
-SKIP_SLUGS={'index','blog','search','sitemap','smile-gallery','video-gallery',
-            'patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
+SKIP_SLUGS={'index','blog','contact-us','search','sitemap','smile-gallery','video-gallery',
+            'reviews','patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
             'opt-out-preferences','yelp','google','facebook'}
 
 def t(s): return html.unescape(re.sub(r'\s+',' ',re.sub(r'<[^>]+>','',s))).strip()

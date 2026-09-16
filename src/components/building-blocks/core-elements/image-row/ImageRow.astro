@@ -6,7 +6,15 @@ import Image from "@core-elements/image/Image.astro";
  * at desktop, full width on mobile — and they appear on the cost, financing,
  * snap-in-dentures and membership-club pages.
  */
-const { images = [], class: className, _component, ...rest } = Astro.props;
+const {
+  images = [],
+  preserveAspect = false,
+  minItemWidth = 110,
+  columns = 0,
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
@@ -15,7 +23,11 @@ const htmlAttributes = Object.fromEntries(
 
 {
   images.length > 0 && (
-    <div class:list={["image-row", className]} {...htmlAttributes}>
+    <div
+      class:list={["image-row", preserveAspect && "preserve-aspect", className]}
+      style={`--ir-min: ${minItemWidth}px${columns ? `; --ir-cols: ${columns}` : ""}`}
+      {...htmlAttributes}
+    >
       {images.map((img: any) => (
         <figure class="ir-item">
           <Image source={img.source} alt={img.alt || ""} editable={false} />
@@ -29,7 +41,7 @@ const htmlAttributes = Object.fromEntries(
   .image-row {
     display: grid;
     gap: var(--spacing-sm);
-    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(var(--ir-min, 110px), 1fr));
     margin-block: var(--spacing-md);
   }
 
@@ -43,5 +55,23 @@ const htmlAttributes = Object.fromEntries(
     height: auto;
     object-fit: cover;
     width: 100%;
+  }
+
+  /* Logos and pricing cards have to keep their own proportions - the source
+     lets each one size to its natural height rather than cropping it to the
+     shared 4:3 box that the photo thumbnails use. */
+  .image-row.preserve-aspect {
+    align-items: center;
+  }
+
+  /* An explicit column count for rows the source fixes at a set width - with
+     auto-fit a wide min-width fits fewer tracks and then stretches them. */
+  .image-row:where([style*="--ir-cols"]) {
+    grid-template-columns: repeat(var(--ir-cols), minmax(0, 1fr));
+  }
+
+  .image-row.preserve-aspect .ir-item :global(img) {
+    aspect-ratio: auto;
+    object-fit: contain;
   }
 </style>

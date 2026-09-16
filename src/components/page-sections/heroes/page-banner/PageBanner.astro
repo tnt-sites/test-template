@@ -22,6 +22,9 @@ const {
   formHeight = 420,
   buttonText = "",
   buttonLink = "",
+  ctaImage = "",
+  ctaImageAlt = "",
+  ctaLink = "",
   id = "",
   class: className,
   _component,
@@ -57,6 +60,13 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
               <Text alignX="start" text={p} editable={false} />
             ))}
           </div>
+        )
+      }
+      {
+        ctaImage && (
+          <a class="pb-cta-image" href={ctaLink || "#"} target="_blank" rel="noopener">
+            <Image source={ctaImage} alt={ctaImageAlt || "Apply now"} editable={false} />
+          </a>
         )
       }
       {
@@ -101,6 +111,18 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
     /* the source keeps the photo at 550px and centres it against a taller
        text column rather than stretching it */
     align-self: center;
+  }
+
+  .pb-cta-image {
+    display: inline-block;
+    margin-top: var(--spacing-md);
+    max-width: 260px;
+  }
+
+  .pb-cta-image :global(img) {
+    display: block;
+    height: auto;
+    width: 100%;
   }
 
   .pb-intro :global(p) + :global(p) {

@@ -9,7 +9,7 @@ SNAP=f"{ROOT}/wp-migrator/.wpmig/static"
 PAGES=f"{ROOT}/src/content/pages"
 WRITE='--write' in sys.argv
 # full-width pages: the homepage and the galleries are not the interior layout
-SKIP_SLUGS={'index','blog','search','sitemap','smile-gallery','video-gallery',
+SKIP_SLUGS={'index','blog','contact-us','search','sitemap','smile-gallery','video-gallery',
             'patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
             'opt-out-preferences','yelp','google','facebook'}
 AV=set(os.listdir(f"{ROOT}/src/assets/images/wp"))
@@ -51,7 +51,16 @@ def banner_of(snapfile):
     # remainder into the page body - 33 pages carry more than two, and
     # dental-anesthesia has six.
     ps=[x for x in ps if len(x)>12]
+    # Only a financing CTA belongs in the banner column. Matching any linked
+    # image here pulled the ADA accreditation logo onto /about/ and pointed it
+    # at ada.org, so require the link or the image to name the CTA.
+    cta_img=None; cta_href=''
+    for m in re.finditer(r'<a[^>]*href="([^"]*)"[^>]*>\s*<img[^>]*src="([^"?]+)"[^>]*>',seg,re.S):
+        href,src=m.group(1),m.group(2)
+        if re.search(r'carecredit|apply|financ',href+src,re.I):
+            cta_img=local(src); cta_href=href; break
     return {'heading':name or t(raw_h1),'location':location,
+            'ctaImage':cta_img or '','ctaLink':cta_href,
             'intro':ps,
             'image':local(img.group(1)) if img else None,
             'imageAlt':(img.group(2) if img and img.group(2) else (name or t(raw_h1)))}
@@ -86,7 +95,9 @@ def main():
               'imageSource':b['image'],'imageAlt':b['imageAlt'],
               'formId':'251056297507965','formHeading':'Request An Appointment',
               'formTitle':'North County Cosmetic and Implant Dentistry - Request an Appointment Form',
-              'formHeight':420,'buttonText':'','buttonLink':''}
+              'formHeight':420,'buttonText':'','buttonLink':'',
+              'ctaImage':b.get('ctaImage',''),'ctaImageAlt':'Apply for CareCredit financing',
+              'ctaLink':b.get('ctaLink','')}
         # the banner carries the form, so the page does not need a second one
         secs=[x for x in secs if x.get('_component')!='page-sections/forms/liine-form']
         d['pageSections']=[hero]+secs

@@ -99,51 +99,8 @@ pageSections:
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/logo-15-1.png
         alt: Principal logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-1-1.png
-        alt: Aetna logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-2-1.png
-        alt: Always Care logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-3-1.png
-        alt: Assurant logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-4-1.png
-        alt: Blue Cross Blue Shield logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-5-1-1.png
-        alt: Cigna logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-6-1.png
-        alt: Dearborn National logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-7-1-1.png
-        alt: Delta Dental logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-8-1.png
-        alt: Dental Select logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-9-1.png
-        alt: GEHA logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-10-1-1.png
-        alt: Guardian logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-11-1.png
-        alt: Cigna logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-12-1.png
-        alt: Humana logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-13-1.png
-        alt: Licoln Financial Group logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-14-1.png
-        alt: MetLife logo
-      - _component: building-blocks/core-elements/image
-        source: /src/assets/images/wp/logo-15-1.png
-        alt: Principal logo
+      preserveAspect: true
+      minItemWidth: 160
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

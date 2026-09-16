@@ -7,8 +7,8 @@ pages respectively). They currently render full-width at the foot of the page.
 import glob,os,sys,yaml
 WRITE='--write' in sys.argv
 # full-width pages: the homepage and the galleries are not the interior layout
-SKIP_SLUGS={'index','blog','search','sitemap','smile-gallery','video-gallery',
-            'patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
+SKIP_SLUGS={'index','blog','contact-us','search','sitemap','smile-gallery','video-gallery',
+            'reviews','patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
             'opt-out-preferences','yelp','google','facebook'}
 PAGES="/Users/tharvey/Work/CloudCannon/northcounty/src/content/pages/vista-ca"
 SIDEBAR_LABELS=("related topics","explore additional topics")

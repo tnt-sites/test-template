@@ -83,7 +83,7 @@ TARGETS={
 }
 LIINE={'contact-us':'251055835049963'}
 # pages that show a form in the page flow rather than only in a modal
-FORM_PAGES={'contact-us'}
+FORM_PAGES=set()
 
 def main():
     yo=json.load(open(f"{SC}/yoast.json"))
@@ -165,6 +165,78 @@ def main():
                   "height":420,"backgroundColor":"surface"}
             sections=[hero,form]+[x for x in sections
                                   if x.get('_component')!='page-sections/forms/liine-form']
+
+        if slug=='reviews':
+            # The testimonials live in a Slick carousel whose cloned slides make
+            # every card look identical to the section de-duplicator, so build
+            # the list directly from the markup instead.
+            raw_html=open(path,encoding='utf8',errors='replace').read()
+            raw_html=re.sub(r'<(style|script)\b.*?</\1>','',raw_html,flags=re.S|re.I)
+            seen=set(); cards=[]
+            for mm in re.finditer(r'<div class="testimonial-body">(.*?)(?=<div class="testimonial-heading"|<div class="testimonials-wrap|$)',raw_html,re.S):
+                blk=mm.group(1)
+                vid=re.search(r'youtube\.com/embed/([A-Za-z0-9_-]+)',blk)
+                if not vid or vid.group(1) in seen: continue
+                seen.add(vid.group(1))
+                ttl=re.search(r'<div class="title">(.*?)</div>',blk,re.S)
+                cards.append({'title':t(ttl.group(1)) if ttl else '','id':vid.group(1)})
+            if cards:
+                blocks=[]
+                for c in cards:
+                    inner=[]
+                    if c['title']:
+                        inner.append({'_component':'building-blocks/core-elements/heading',
+                                      'text':c['title'],'level':'h3','size':'sm'})
+                    inner.append({'_component':'building-blocks/core-elements/embed',
+                        'html':('<iframe src="https://www.youtube.com/embed/%s" title="%s" '
+                                'frameborder="0" loading="lazy" allow="accelerometer; autoplay; '
+                                'clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
+                                'allowfullscreen></iframe>' % (c['id'],c['title'].replace('"','&quot;'))),
+                        'aspectRatio':'widescreen'})
+                    # Each testimonial is its own nested section so the grid treats
+                    # the title and its video as a single card rather than as two
+                    # independent items that flow into separate columns.
+                    blocks.append({'_component':'page-sections/builders/custom-section',
+                        'class':'review-card','label':c['title'] or 'Testimonial',
+                        'contentSections':inner,'maxContentWidth':'full',
+                        'paddingHorizontal':'none','paddingVertical':'none',
+                        'colorScheme':'default','backgroundColor':'none'})
+                sections=[s for s in sections
+                          if not any('core-elements/embed' in (x.get('_component') or '')
+                                     for x in (s.get('contentSections') or []))]
+                sections.append({'_component':'page-sections/builders/custom-section',
+                    'class':'reviews-videos','label':'Patient Testimonials',
+                    'contentSections':blocks,'maxContentWidth':'2xl',
+                    'paddingHorizontal':'lg','paddingVertical':'xl',
+                    'colorScheme':'default','backgroundColor':'base'})
+        if slug=='contact-us':
+            intro=[c for sec in sections for c in (sec.get('contentSections') or [])
+                   if 'core-elements/text' in (c.get('_component') or '')][:2]
+            head=next((c for sec in sections for c in (sec.get('contentSections') or [])
+                       if 'core-elements/heading' in (c.get('_component') or '')),None)
+            sections=[{'_component':'page-sections/builders/custom-section',
+                'label':'Location & Contact Information',
+                'contentSections':([head] if head else [])+intro,
+                'maxContentWidth':'2xl','paddingHorizontal':'lg','paddingVertical':'xl',
+                'colorScheme':'default','backgroundColor':'surface'},
+              {'_component':'page-sections/info-blocks/contact-panel',
+               'formHeading':'Contact Us','formId':'251055835049963',
+               'formTitle':'North County Cosmetic and Implant Dentistry - Contact Form',
+               'formHeight':620,
+               'imageSource':'/src/assets/images/wp/18-1.jpg',
+               'imageAlt':'The North County Cosmetic and Implant Dentistry team',
+               'panelHeading':'Contact Information',
+               'address':['1934 Via Centre Ste A','Vista, CA 92081'],
+               'mapUrl':'https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA',
+               'phone':'(760) 940-2273','phoneHref':'tel:+1-760-940-2273',
+               'hours':[{'day':'Monday','time':'7:30AM to 5:00PM'},
+                        {'day':'Tuesday','time':'7:00AM to 5:00PM'},
+                        {'day':'Wednesday','time':'7:30AM to 5:00PM'},
+                        {'day':'Thursday','time':'7:00AM to 5:00PM'},
+                        {'day':'Friday','time':'Closed'},
+                        {'day':'Saturday','time':'Closed'},
+                        {'day':'Sunday','time':'Closed'}],
+               'hoursNote':'Fridays by Appointment Only'}]
 
         p=pages.get(slug,{})
         y=yo.get(str(p.get('id')),{}) if p else {}

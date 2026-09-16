@@ -1,0 +1,182 @@
+---
+import Image from "@core-elements/image/Image.astro";
+import LiineForm from "@page-sections/forms/liine-form/LiineFormEmbed.astro";
+
+/*
+ * The contact page's card: the appointment form on the left, and on the right a
+ * team photo above a green panel carrying the address, phone and office hours.
+ *
+ * The source runs a dead Contact Form 7 here; this uses the Liine form the rest
+ * of the site posts to.
+ */
+const {
+  formHeading = "Contact Us",
+  formId = "251055835049963",
+  formTitle = "North County Cosmetic and Implant Dentistry - Contact Form",
+  formHeight = 620,
+  imageSource = "",
+  imageAlt = "",
+  panelHeading = "Contact Information",
+  address = [],
+  mapUrl = "",
+  phone = "",
+  phoneHref = "",
+  hours = [],
+  hoursNote = "",
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["contact-panel", className]} {...htmlAttributes}>
+  <div class="cp-card">
+    <div class="cp-form">
+      {/* the embedded form carries its own heading */}
+      {formHeading && !formId && <h2 class="cp-form-title">{formHeading}</h2>}
+      <LiineForm formId={formId} title={formTitle} height={formHeight} />
+    </div>
+
+    <div class="cp-aside">
+      {imageSource && <Image source={imageSource} alt={imageAlt} editable={false} class="cp-photo" />}
+
+      <div class="cp-info">
+        <h2 class="cp-info-title">{panelHeading}</h2>
+
+        {
+          address.length > 0 && (
+            <div class="cp-row">
+              <a href={mapUrl || "#"} target="_blank" rel="noopener">
+                {address.map((line: string) => (
+                  <span class="cp-line">{line}</span>
+                ))}
+              </a>
+            </div>
+          )
+        }
+
+        {
+          phone && (
+            <div class="cp-row">
+              <a href={phoneHref || `tel:${phone}`}>{phone}</a>
+            </div>
+          )
+        }
+
+        {
+          hours.length > 0 && (
+            <div class="cp-row cp-hours">
+              {hours.map((h: any) => (
+                <div class="cp-hour">
+                  <span class="cp-day">{h.day}</span>
+                  <span class="cp-time">{h.time}</span>
+                </div>
+              ))}
+              {hoursNote && <p class="cp-note">{hoursNote}</p>}
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="pcss">
+  .contact-panel {
+    padding-block: var(--spacing-xl);
+  }
+
+  .cp-card {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    margin-inline: auto;
+    max-width: var(--content-width-2xl);
+  }
+
+  @media (min-width: 993px) {
+    .cp-card {
+      grid-template-columns: 1fr 380px;
+    }
+  }
+
+  .cp-form {
+    padding: var(--spacing-xl);
+  }
+
+  .cp-form-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    text-transform: none;
+  }
+
+  .cp-photo :global(img) {
+    aspect-ratio: 3 / 2;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .cp-info {
+    background-color: var(--color-brand, #79a37b);
+    color: #fff;
+    padding: var(--spacing-xl);
+  }
+
+  .cp-info-title {
+    border-bottom: 1px solid rgb(255 255 255 / 45%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 0 var(--spacing-md);
+    padding-bottom: var(--spacing-xs);
+    text-align: center;
+    text-transform: none;
+  }
+
+  .cp-row {
+    border-bottom: 1px dashed rgb(255 255 255 / 45%);
+    padding-block: var(--spacing-md);
+  }
+
+  .cp-row:last-child {
+    border-bottom: 0;
+  }
+
+  .cp-row a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .cp-row a:hover {
+    text-decoration: underline;
+  }
+
+  .cp-line {
+    display: block;
+  }
+
+  .cp-hour {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: space-between;
+  }
+
+  .cp-day {
+    font-weight: 500;
+  }
+
+  .cp-note {
+    font-weight: 500;
+    margin: var(--spacing-md) 0 0;
+    text-align: center;
+  }
+</style>

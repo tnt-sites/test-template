@@ -1,0 +1,25 @@
+label: Contact Panel
+icon: contact_page
+description: Contact form beside a photo and a green panel of address, phone and hours.
+value:
+  _component: page-sections/info-blocks/contact-panel
+  id: ""
+  formHeading: Contact Us
+  formId: "251055835049963"
+  formHeight: 620
+  imageSource: ""
+  imageAlt: ""
+  panelHeading: Contact Information
+  address: []
+  mapUrl: ""
+  phone: ""
+  phoneHref: ""
+  hours: []
+  hoursNote: ""
+preview:
+  text:
+    - Contact Panel
+  icon: contact_page
+picker_preview:
+  text: Contact Panel
+  subtext: Form with a contact information panel.

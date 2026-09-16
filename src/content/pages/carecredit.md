@@ -6,23 +6,23 @@ seo:
   description: Use CareCredit to finance your dental treatments at North County Cosmetic and Implant Dentistry
     in Vista, CA. Flexible options to fit your budget.
 pageSections:
+- _component: page-sections/heroes/page-banner
+  heading: Simple Financing with CareCredit
+  location: Vista, CA
+  intro: []
+  imageSource: /src/assets/images/wp/CareCredit-Phone-copy-2.jpg
+  imageAlt: Simple Financing with CareCredit
+  formId: '251056297507965'
+  formHeading: Request An Appointment
+  formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
+  formHeight: 420
+  buttonText: ''
+  buttonLink: ''
+  ctaImage: /src/assets/images/wp/carecredit_button_apply.png
+  ctaImageAlt: Apply for CareCredit financing
+  ctaLink: https://www.carecredit.com/go/ZTX273/
 - _component: page-sections/builders/content-with-sidebar
   main:
-  - _component: page-sections/builders/custom-section
-    label: Simple Financing with CareCredit Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Simple Financing with CareCredit Vista, CA
-      level: h1
-      size: 2xl
-    - _component: building-blocks/core-elements/image
-      source: /src/assets/images/wp/carecredit_button_apply.png
-      alt: Care Credit Image
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
-    colorScheme: default
-    backgroundColor: base
   - _component: page-sections/builders/custom-section
     label: CareCredit healthcare credit card for dental procedure financing.
     contentSections:

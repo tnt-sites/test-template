@@ -888,3 +888,60 @@
     margin: 0;
   }
 }
+
+@layer overrides {
+  /*
+   * The reviews page is a list of video testimonials: a title above each video.
+   * The source shows them in a carousel at 383x215.
+   *
+   * The heading and the embed are siblings, so pair them with a two-column
+   * grid and span each heading across its own row above the video.
+   */
+
+  /* The source shows the testimonials in a 3-up carousel of cards, each a
+     title over its video. Each card is its own nested custom-section so the
+     grid treats the pair as one item instead of flowing titles and videos
+     into separate columns. */
+  .reviews-videos .content {
+    display: grid;
+    gap: var(--spacing-lg) var(--spacing-xl);
+    grid-template-columns: 1fr;
+  }
+
+  .reviews-videos .content > editable-array,
+  .reviews-videos .content > editable-array > editable-array-item {
+    display: contents;
+  }
+
+  .reviews-videos .review-card > .outer-content > .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  /* Titles wrap to two or three lines; reserving three keeps the videos on a
+     shared baseline across each row without needing subgrid, which does not
+     resolve through the nested section wrappers. */
+  .reviews-videos .review-card h3 {
+    margin: 0;
+    min-height: calc(3 * 1.4em);
+    order: 1;
+  }
+
+  .reviews-videos .review-card .embed-wrapper {
+    margin: 0;
+    order: 2;
+  }
+
+  @media (min-width: 900px) {
+    .reviews-videos .content {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .reviews-videos .content {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+}

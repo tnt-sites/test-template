@@ -63,6 +63,8 @@ pageSections:
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/Child-Membership-Annual.png
         alt: ''
+      preserveAspect: true
+      columns: 3
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

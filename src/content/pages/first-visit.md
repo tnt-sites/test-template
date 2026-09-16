@@ -24,6 +24,9 @@ pageSections:
   formHeight: 420
   buttonText: ''
   buttonLink: ''
+  ctaImage: ''
+  ctaImageAlt: Apply for CareCredit financing
+  ctaLink: ''
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
