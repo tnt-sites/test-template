@@ -1,0 +1,22 @@
+heading:
+  type: text
+  comment: Optional heading above the grid.
+cards:
+  type: array
+  label: Cards
+  comment: Each card shows an image, a title and a short description.
+minItemWidth:
+  type: number
+  comment: Minimum card width in pixels before the grid reflows.
+backgroundColor:
+  type: select
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent

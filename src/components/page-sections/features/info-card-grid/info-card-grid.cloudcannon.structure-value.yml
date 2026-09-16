@@ -1,0 +1,36 @@
+label: Info Card Grid
+icon: grid_view
+description: Grid of image cards with a title and description.
+value:
+  _component: page-sections/features/info-card-grid
+  id: ""
+  heading: ""
+  cards: []
+  minItemWidth: 280
+  backgroundColor: base
+preview:
+  text:
+    - key: heading
+    - Info Card Grid
+  icon: grid_view
+picker_preview:
+  text: Info Card Grid
+  subtext: Image cards with title and description.
+_inputs_from_glob:
+  - /src/components/page-sections/features/info-card-grid/info-card-grid.cloudcannon.inputs.yml
+_structures:
+  cards:
+    values:
+      - label: Info Card
+        icon: grid_view
+        value:
+          _component: page-sections/features/info-card-grid/card
+          image: ""
+          imageAlt: ""
+          title: Card title
+          description: ""
+        _inputs:
+          image:
+            type: image
+          description:
+            type: markdown

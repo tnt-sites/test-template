@@ -13,92 +13,6 @@ pageSections:
     text: Welcome to North County Cosmetic and Implant Dentistry
     level: h4
     size: md
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/making-an-appointment.jpg
-    alt: Calendar with dentist appointment circled on the 12th, representing dental scheduling at North
-      County Cosmetic and Implant Dentistry in Vista, CA
-  - _component: building-blocks/core-elements/heading
-    text: Making an Appointment
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: It is easy to make an appointment for your initial examination and dental treatments with North
-      County Cosmetic and Implant Dentistry. Simply call (760) 206-6450 and one of our friendly team members
-      will be happy to assist you. If you schedule an appointment and something comes up, please call
-      and cancel 24 hours in advance so that we can accommodate other patient requests.
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/what-to-expect.jpg
-    alt: Blonde woman smiling in dental chair after successful dental treatment at North County Cosmetic
-      and Implant Dentistry in Vista, CA
-  - _component: building-blocks/core-elements/heading
-    text: What to Expect
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: Walk into our lobby where you will be greeted by our friendly team. We will provide you with
-      new patient paperwork that includes a health questionnaire, request for your insurance information
-      and contact information. We will also provide you with information to familiarize you with our office
-      and how we handle things like patient privacy.
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/initial-examination.jpg
-    alt: Older man in shirt and tie ready for new patient dental exam at North County Cosmetic and Implant
-      Dentistry in Vista, CA
-  - _component: building-blocks/core-elements/heading
-    text: Initial Examination
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: Your initial dental exam will take around one hour. The experienced team at North County Cosmetic
-      and Implant Dentistry will ask you questions, get to know your oral hygiene routine, and listen
-      to your health concerns. We believe in educating patients and empowering them to make good choices
-      to improve their oral health. We will demonstrate how to properly care for your teeth and make additional
-      suggestions as needed. Our dental hygienist will clean your teeth then Dr. Henninger will complete
-      your examination and make recommendations for proposed dental treatments.
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/pain-concerns.jpg
-    alt: Man rubbing his jaw in pain, needing dental treatment at North County Cosmetic and Implant Dentistry
-      in Vista, CA
-  - _component: building-blocks/core-elements/heading
-    text: Pain Concerns
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: We work to ensure our patients feel comfortable, and that includes minimizing their pain as
-      much as possible. If you are undergoing a dental procedure, Dr. Henninger will meet with you to
-      discuss your pain tolerance and create a plan for pain management. Working together, we will treat
-      your dental health problems in a way that minimizes pain and enables you to get back to your life
-      faster.
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/dental-insurance-1.jpg
-    alt: Dental insurance form on clipboard at North County Cosmetic and Implant Dentistry in Vista, CA
-  - _component: building-blocks/core-elements/heading
-    text: Dental Insurance
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: We accept a variety of insurance providers and endeavor to accommodate our patients' request.
-      Please call our office at (760) 206-6450 to see if we are currently working with your insurance
-      provider.
-  - _component: building-blocks/core-elements/text
-    text: Our pricing structure is designed to ensure that patients are able to receive the high quality
-      dental care they deserve. If your dental insurance will not cover all of your dental treatments,
-      we will work with you to identify a payment solution. We are health care professionals first and
-      will work with you to make sure you receive the treatment you need.
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/financial-policy-428x320.jpg
-    alt: Credit card being swiped for dental payment at North County Cosmetic and Implant Dentistry in
-      Vista, CA, financial policy
-  - _component: building-blocks/core-elements/heading
-    text: Financial Policy
-    level: h4
-    size: md
-  - _component: building-blocks/core-elements/text
-    text: North County Cosmetic and Implant Dentistry provides high quality dental care to families throughout
-      the Vista area. We understand that every dental patient has different financial needs. We will work
-      with you to find a solution that enables you to get the dental care you need, with or without insurance.
-      Call our office to ask about our different payment options that may include cash, check, financing,
-      and credit cards. We provide budget friendly dental care so call today and learn how North County
-      Cosmetic and Implant Dentistry is the solution to all of your oral health needs.
   maxContentWidth: xl
   paddingHorizontal: lg
   paddingVertical: 4xl
@@ -190,6 +104,73 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: 4xl
   colorScheme: default
+  backgroundColor: base
+- _component: page-sections/features/info-card-grid
+  heading: ''
+  cards:
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/making-an-appointment.jpg
+    imageAlt: Calendar with dentist appointment circled on the 12th, representing dental scheduling at
+      North County Cosmetic and Implant Dentistry in Vista, CA
+    title: Making an Appointment
+    description: It is easy to make an appointment for your initial examination and dental treatments
+      with North County Cosmetic and Implant Dentistry. Simply call (760) 206-6450 and one of our friendly
+      team members will be happy to assist you. If you schedule an appointment and something comes up,
+      please call and cancel 24 hours in advance so that we can accommodate other patient requests.
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/what-to-expect.jpg
+    imageAlt: Blonde woman smiling in dental chair after successful dental treatment at North County Cosmetic
+      and Implant Dentistry in Vista, CA
+    title: What to Expect
+    description: Walk into our lobby where you will be greeted by our friendly team. We will provide you
+      with new patient paperwork that includes a health questionnaire, request for your insurance information
+      and contact information. We will also provide you with information to familiarize you with our office
+      and how we handle things like patient privacy.
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/initial-examination.jpg
+    imageAlt: Older man in shirt and tie ready for new patient dental exam at North County Cosmetic and
+      Implant Dentistry in Vista, CA
+    title: Initial Examination
+    description: Your initial dental exam will take around one hour. The experienced team at North County
+      Cosmetic and Implant Dentistry will ask you questions, get to know your oral hygiene routine, and
+      listen to your health concerns. We believe in educating patients and empowering them to make good
+      choices to improve their oral health. We will demonstrate how to properly care for your teeth and
+      make additional suggestions as needed. Our dental hygienist will clean your teeth then Dr. Henninger
+      will complete your examination and make recommendations for proposed dental treatments.
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/pain-concerns.jpg
+    imageAlt: Man rubbing his jaw in pain, needing dental treatment at North County Cosmetic and Implant
+      Dentistry in Vista, CA
+    title: Pain Concerns
+    description: We work to ensure our patients feel comfortable, and that includes minimizing their pain
+      as much as possible. If you are undergoing a dental procedure, Dr. Henninger will meet with you
+      to discuss your pain tolerance and create a plan for pain management. Working together, we will
+      treat your dental health problems in a way that minimizes pain and enables you to get back to your
+      life faster.
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/dental-insurance-1.jpg
+    imageAlt: Dental insurance form on clipboard at North County Cosmetic and Implant Dentistry in Vista,
+      CA
+    title: Dental Insurance
+    description: We accept a variety of insurance providers and endeavor to accommodate our patients'
+      request. Please call our office at (760) 206-6450 to see if we are currently working with your insurance
+      provider. Our pricing structure is designed to ensure that patients are able to receive the high
+      quality dental care they deserve. If your dental insurance will not cover all of your dental treatments,
+      we will work with you to identify a payment solution. We are health care professionals first and
+      will work with you to make sure you receive the treatment you need.
+  - _component: page-sections/features/info-card-grid/card
+    image: /src/assets/images/wp/financial-policy-428x320.jpg
+    imageAlt: Credit card being swiped for dental payment at North County Cosmetic and Implant Dentistry
+      in Vista, CA, financial policy
+    title: Financial Policy
+    description: North County Cosmetic and Implant Dentistry provides high quality dental care to families
+      throughout the Vista area. We understand that every dental patient has different financial needs.
+      We will work with you to find a solution that enables you to get the dental care you need, with
+      or without insurance. Call our office to ask about our different payment options that may include
+      cash, check, financing, and credit cards. We provide budget friendly dental care so call today and
+      learn how North County Cosmetic and Implant Dentistry is the solution to all of your oral health
+      needs.
+  minItemWidth: 280
   backgroundColor: base
 - _component: page-sections/forms/liine-form
   formId: '251056297507965'

@@ -1,0 +1,74 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import Card from "@wrappers/card/Card.astro";
+
+const {
+  heading = "",
+  cards = [],
+  minItemWidth = 280,
+  backgroundColor = "base",
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["info-card-grid", className]}
+  maxContentWidth="xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  {...htmlAttributes}
+>
+  {heading && <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />}
+
+  <div class="icg-grid" style={`--icg-min: ${minItemWidth}px;`}>
+    {
+      cards.map((card: any) => (
+        <Card class="icg-card" paddingHorizontal="none" paddingVertical="none" rounded border backgroundColor="base">
+          {card.image && (
+            <Image source={card.image} alt={card.imageAlt || card.title || ""} editable={false} class="icg-image" />
+          )}
+          <div class="icg-body">
+            {card.title && <Heading level="h3" size="sm" alignX="start" text={card.title} />}
+            {card.description && <Text alignX="start" text={card.description} />}
+          </div>
+        </Card>
+      ))
+    }
+  </div>
+</CustomSection>
+
+<style lang="pcss">
+  .icg-grid {
+    display: grid;
+    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(var(--icg-min, 280px), 1fr));
+    margin-top: var(--spacing-xl);
+  }
+
+  .icg-card {
+    overflow: hidden;
+  }
+
+  .icg-card :global(.icg-image img) {
+    aspect-ratio: 3 / 2;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .icg-body {
+    padding: var(--spacing-md);
+  }
+</style>
