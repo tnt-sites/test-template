@@ -10,7 +10,7 @@ landingMainNav:
         id: ''
         text: Request an Appointment
         hideText: false
-        link: /request-an-appointment/
+        link: /contact-us/
         modalTarget: ''
         iconName: ''
         iconPosition: before
@@ -34,7 +34,7 @@ landingFooter:
         id: ''
         text: Request an Appointment
         hideText: false
-        link: /request-an-appointment/
+        link: /contact-us/
         modalTarget: ''
         iconName: ''
         iconPosition: before

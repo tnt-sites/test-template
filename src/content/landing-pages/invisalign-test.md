@@ -10,7 +10,7 @@ landingMainNav:
         id: ''
         text: Request a Free Consultation
         hideText: false
-        link: /request-an-appointment/
+        link: /contact-us/
         modalTarget: ''
         iconName: ''
         iconPosition: before
@@ -53,7 +53,7 @@ landingMainNav:
     phoneLinkHoverColor: ''
     mobileCallLabel: Call Today!
     mobileRequestLabel: Request a Free Consultation
-    mobileRequestHref: /request-an-appointment/
+    mobileRequestHref: /contact-us/
     mobileCallBackgroundColor: ''
     mobileRequestBackgroundColor: ''
     mobileCallTextColor: ''

@@ -126,7 +126,7 @@ pageSections:
     imageSource: /src/assets/images/wp/Dental-Impants-1.jpg
     imageAlt: Dental Implants
     title: Dental Implants
-    href: /vista-ca/implants/
+    href: /vista-ca/implants-vs-mini-implants/
     wide: false
     links: []
   - _component: page-sections/ctas/services-grid/services-grid-item

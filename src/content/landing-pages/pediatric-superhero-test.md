@@ -26,7 +26,7 @@ landingMainNav:
         id: ""
         text: Request an Appointment
         hideText: false
-        link: /request-an-appointment/
+        link: /contact-us/
         modalTarget: ""
         iconName: ""
         iconPosition: before
@@ -272,7 +272,7 @@ landingPageSections:
             id: ""
             text: Learn More About Your Options
             hideText: false
-            link: /request-an-appointment/
+            link: /contact-us/
             modalTarget: ""
             iconName: ""
             iconPosition: before
