@@ -63,7 +63,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -81,14 +81,70 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Frequently Asked Questions About Implant Supported Dentures
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [(760) 940-2273](#760-940-2273)
+        text: Q. Does every dentist perform this procedure?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No, if you live in the Vista area, only certain dentists offer this type of prosthetic.
+          We perform the procedure on a regular basis, and understand the clear benefit of providing patients
+          with a durable set of replacement teeth.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Can anyone qualify for implant supported dentures?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. For the most part, everyone can get the procedure. However, there are a few health
+          factors to consider. We need to examine you to determine if you have any signs of gum disease
+          or other infections that need to be corrected first. Simultaneously, there may be other health
+          conditions that impact the procedure. Diabetics, for example, can receive implant supported
+          dentures, but may need to wait for their blood sugar to be under control before we can begin.
+          We can examine you in our Vista dental office and let you know if we anticipate any roadblocks.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will this procedure work if I have worn dentures for a long time?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Yes, if you have worn dentures for years, you can upgrade your prosthetic. This is
+          an ideal way to do so, because it gives you some of the stability you can expect from dental
+          implants without the need for a drawn out procedure.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Does this procedure hurt?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No, when you visit our office, we will provide you with any necessary sedation. At
+          North County Cosmetic and Implant Dentistry, we understand that dental procedures can be intimidating,
+          and we will take steps to ensure that you remain comfortable and relaxed during the appointment.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What are mini-implants?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Some people will use the terms "mini-implants" and "implant supported dentures" interchangeably.
+          While there are times where they are accomplishing the same thing, this is not always the case.
+          A mini-implant is a titanium screw just like you would expect to see with a traditional implant.
+          The difference is that it is much smaller. This makes it ideal for those suffering from a lack
+          of bone density. Traditional implants require significant density since the implant itself is
+          so long. This is not the case with mini-implants, making them a better solution for someone
+          who has worn dentures for years and has suffered resorption as a result.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What is the recovery time?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Within days of undergoing a procedure for implant supported dentures, you will start
+          to feel like your normal self. You should be careful to avoid eating anything hard or difficult
+          to chew, like a steak, along with anything sharp, like tortilla chips. This type of food can
+          cause further irritation and only serve to prolong your recovery time. Instead, focus on eating
+          soft foods that are easy to chew and can be chewed quickly. Things like steamed vegetables,
+          yogurt, and warm soup are excellent options. If you watch what you eat, take it easy, ice the
+          area, and use ibuprofen, you should feel better within a couple days. Since this is a less invasive
+          procedure, the recovery time is much faster than if you were to undergo surgery for traditional
+          dental implants.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What is the difference between implant supported dentures and traditional dentures?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Traditional dentures are designed to come out every night. They remain in place by
+          wrapping around your gums and creating a suction effect enhanced by denture paste. This can
+          be messy, and if your dentures slip, it can be uncomfortable and inconvenient. With implant
+          dentures, your dentures snap into position, secured in place by the implants themselves. Your
+          new teeth will look natural and be entirely secure, adding further enjoyment to your daily life.
+          To learn more about this procedure, call (760) 940-2273. We will be happy to meet with you and
+          discuss all your options.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -99,24 +155,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is implant supported dentures?](#what-is-implant-supported-dentures)
+        text: Q. What is implant supported dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Do I qualify for implant supported dentures?](#do-i-qualify-for-implant-supported-dentures)
+        text: Q. Do I qualify for implant supported dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is the recovery process like?](#what-is-the-recovery-process-like)
+        text: Q. What is the recovery process like?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will my age determine my options?](#will-my-age-determine-my-options)
+        text: Q. Will my age determine my options?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How can I prepare for the dental implant procedure?](#how-can-i-prepare-for-the-dental-implant-procedure)
+        text: Q. How can I prepare for the dental implant procedure?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are all-on-4® dental implants?](#what-are-all-on-4-dental-implants)
+        text: Q. What are all-on-4® dental implants?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -186,14 +248,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -242,12 +320,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -274,7 +347,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

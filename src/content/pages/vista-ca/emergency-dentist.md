@@ -53,7 +53,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Do I need emergency dentistry? Call us if…
     contentSections:
@@ -146,7 +146,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -221,7 +221,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -252,22 +252,44 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Emergency Dentist FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What should I do if my child's permanent tooth is knocked out?](#q-what-should-i-do-if-my-child-s-permanent-tooth-is-knocked-)
+        text: Q. What should I do if my child's permanent tooth is knocked out?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What should I do if my child's baby tooth is knocked out?](#q-what-should-i-do-if-my-child-s-baby-tooth-is-knocked-out)
+        text: Q. A. Find the tooth and rinse it gently in cool water. (Do not scrub or clean it with soap
+          — use only water!) If possible, replace the tooth in the socket immediately and hold it there
+          with clean gauze or a wash cloth. If you can't put the tooth back in the socket, place the tooth
+          in a clean container with cold milk, saliva or water. Get to the Emergency Dentist immediately.
+          The faster you act, the better your chances of saving the tooth.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What if a tooth is chipped or fractured?](#q-what-if-a-tooth-is-chipped-or-fractured)
+        text: Q. What should I do if my child's baby tooth is knocked out?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What about a severe blow to the head or jaw fracture?](#q-what-about-a-severe-blow-to-the-head-or-jaw-fracture)
+        text: Q. A. Contact your emergency dental office as soon as possible. The baby tooth should not
+          be replanted because of the potential for subsequent damage to the developing permanent tooth.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What if my child has a toothache?](#q-what-if-my-child-has-a-toothache)
+        text: Q. What if a tooth is chipped or fractured?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Contact your Dentist immediately. Quick action can save the tooth, prevent infection
+          and reduce the need for extensive dental treatment. Rinse the mouth with water and apply cold
+          compresses to reduce swelling if the lip also was injured. If you can find the broken tooth
+          fragment, place it in cold milk or water and bring it with you to the dental office.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What about a severe blow to the head or jaw fracture?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. You need immediate medical attention. Keep in mind that an emergency medical team
+          might be able to reach you faster than you can get to the hospital. A severe head injury can
+          be life-threatening.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What if my child has a toothache?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Call our office immediately. Over-the-counter children's pain medication, dosed according
+          to your child's weight and age, might ease the symptoms. You may apply a cold compress or ice
+          wrapped in a cloth to the face in the area of the pain, but do not put heat or aspirin on the
+          sore area.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -289,25 +311,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I know I need an emergency dentist?](#how-do-i-know-i-need-an-emergency-dentist)
+        text: Q. How do I know I need an emergency dentist?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [If I hurt my tooth in a car accident, can I wait a day or two before seeking dental
-          treatment?](#if-i-hurt-my-tooth-in-a-car-accident-can-i-wait-a-day-or-two)
+        text: Q. If I hurt my tooth in a car accident, can I wait a day or two before seeking dental treatment?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can I do to relieve dental pain?](#what-can-i-do-to-relieve-dental-pain)
+        text: Q. What can I do to relieve dental pain?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What dental services can help treat an infection?](#what-dental-services-can-help-treat-an-infection)
+        text: Q. What dental services can help treat an infection?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What should I do if I have a toothache?](#what-should-i-do-if-i-have-a-toothache)
+        text: Q. What should I do if I have a toothache?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is the most durable tooth replacement?](#what-is-the-most-durable-tooth-replacement)
+        text: Q. What is the most durable tooth replacement?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -379,14 +406,30 @@ pageSections:
         text: '[Toothache & Denture Pain Relief](https://www.orajel.com/en/resource-center?category=Tooth+%26+Denture+Pain+Relief)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -419,12 +462,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -469,7 +507,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

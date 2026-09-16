@@ -157,10 +157,11 @@
   .definition-list > editable-array-item,
   .definition-list > div {
     break-inside: avoid;
+    display: block;
     /* DefinitionList.astro spans each item across the whole grid
-       (grid-column: 1 / -1), which defeats the source's two columns. */
+       (grid-column: 1 / -1) and puts the term beside its text; the source
+       stacks them, each the full width of its column. */
     grid-column: auto;
-    grid-template-columns: auto 1fr;
   }
 
   .definition-list dt {
@@ -537,5 +538,45 @@
     font-size: 1rem;
     font-weight: 300;
     line-height: 1.5;
+  }
+}
+
+@layer overrides {
+  /*
+   * Interior content sections are grey cards on a white page — #e6e6e6 with
+   * 40px/30px padding, a 2px radius and 30px vertical margins. (I originally
+   * read this the other way round, as white cards on grey.)
+   */
+  .cws-main > * > .section,
+  .cws-main .section {
+    border-radius: 2px;
+  }
+
+  /* The FAQ and the link panels sit a shade darker, as on the source. */
+  .cws-main .faq-card,
+  .cws-main .links-card {
+    background-color: #dcdcdc;
+  }
+
+  /* Definition panel: dark text on the green, terms italic. */
+  /* Term sits ABOVE its definition, both full column width. Measured: dt 18px/400
+     at y=3477, dd 16px/300 at y=3504, same x, 442px wide. Not italic. */
+  .definition-list dt {
+    color: #111;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+
+  .definition-list dd {
+    color: #1a1a1a;
+    margin-bottom: 20px;
+  }
+
+  /* The sidebar search button is a compact pill, not full width. */
+  .sidebar-search .ss-form {
+    align-items: center;
+    grid-template-columns: 1fr auto;
   }
 }

@@ -29,11 +29,12 @@ pageSections:
     text: No matter your dental challenges, you deserve to be the best version of yourself. We’ll help
       you restore your smile with beautiful dental implants, regain your health, and empower you to live
       life to the fullest.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Real Relationships. Real Results.
   contentSections:
@@ -117,7 +118,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:
@@ -159,7 +160,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: ''
   contentSections:

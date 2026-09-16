@@ -1,0 +1,111 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+/*
+ * The band the source runs above the footer on every interior page: three
+ * calls to action (directions / book / contact) over a strip of accreditation
+ * logos. Both appear on all 133 /vista-ca/ pages.
+ */
+const { ctas = [], logos = [], enabled = true } = Astro.props;
+---
+
+{
+  enabled && (ctas.length > 0 || logos.length > 0) && (
+    <section class="pre-footer">
+      {ctas.length > 0 && (
+        <div class="pf-ctas">
+          {ctas.map((c: any) => (
+            <div class="pf-cta">
+              {c.lines?.map((l: string) => <p class="pf-line">{l}</p>)}
+              {c.buttonText && (
+                <a class="pf-button" href={c.buttonLink || "#"}>
+                  {c.buttonText}
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {logos.length > 0 && (
+        <div class="pf-logos">
+          {logos.map((l: any) => (
+            <Image source={l.source} alt={l.alt || ""} editable={false} class="pf-logo" />
+          ))}
+        </div>
+      )}
+    </section>
+  )
+}
+
+<style lang="pcss">
+  .pre-footer {
+    background-color: #fff;
+  }
+
+  .pf-ctas {
+    background-color: #e6e6e6;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .pf-ctas {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .pf-cta {
+    background-color: #e6e6e6;
+    padding: var(--spacing-lg);
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .pf-cta + .pf-cta {
+      border-left: 1px solid #d2cec7;
+    }
+  }
+
+  .pf-line {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0 0 0.25rem;
+  }
+
+  .pf-button {
+    background-color: var(--color-brand-secondary, #ba9764);
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-family: var(--font-accent, Montserrat, sans-serif);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: var(--spacing-xs);
+    padding: 0.55rem 1.75rem;
+    text-decoration: none;
+  }
+
+  .pf-button:hover {
+    background-color: #a8854f;
+  }
+
+  .pf-logos {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xl);
+    justify-content: center;
+    padding: var(--spacing-xl) var(--spacing-lg);
+  }
+
+  .pf-logos :global(img) {
+    height: auto;
+    max-height: 64px;
+    max-width: 160px;
+    object-fit: contain;
+    width: auto;
+  }
+</style>

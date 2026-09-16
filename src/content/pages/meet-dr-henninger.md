@@ -7,20 +7,20 @@ seo:
     and smile transformations at North County Cosmetic and Implant Dentistry.
 pageSections:
 - _component: page-sections/builders/custom-section
-  label: MEET DR. HENNINGER
+  label: ''
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: MEET DR. HENNINGER
-    level: h1
-    size: 2xl
-    alignX: center
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/CHD-169-2-1.jpg
-    alt: MEET DR. HENNINGER
   - _component: building-blocks/core-elements/text
     text: Dr. Christopher Henninger joined North County Cosmetic and Implant Dentistry in 2011. Dr. Henninger
       is a well-trained general dentist who joins Dr. Huenergardt in providing the highest level of care
       to our patients.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
   - _component: building-blocks/core-elements/text
     text: Dr. Henninger transforms smiles and lives. Using the power of full-mouth reconstruction and
       the oral-systemic connection, he has helped hundreds of people reclaim health and wellbeing through
@@ -38,10 +38,18 @@ pageSections:
     text: Dr. Henninger lives in Carlsbad with his wife Camille and their three children. In his spare
       time, he enjoys many outdoor activities including running, biking, camping, and taking his off-road
       FJ Cruiser out climbing.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: surface
+- _component: page-sections/builders/custom-section
+  label: 'Dr. Henninger is a member of:'
+  contentSections:
   - _component: building-blocks/core-elements/heading
     text: 'Dr. Henninger is a member of:'
     level: h2
-    size: md
+    size: xl
   - _component: building-blocks/core-elements/list
     listType: bullet
     items:
@@ -61,12 +69,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
   backgroundColor: surface
 ---

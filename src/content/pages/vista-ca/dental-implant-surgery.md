@@ -59,7 +59,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -77,16 +77,70 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Dental Implant Recovery FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [760-940-2273](#760-940-2273)
+        text: Q. Here are a few questions we are regularly asked in our dental office.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [(760) 940-2273](#760-940-2273)
+        text: Q. What can I eat after oral surgery?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. We recommend you eat foods that are soft and easy to chew or that require no chewing
+          at all. A perfect example would be yogurt, warm soup, ice cream, smoothies, and steamed vegetables.
+          We can provide you with a more detailed list during a consultation. Also be sure to avoid foods
+          that are difficult to chew, like steak, or things that are sharp, like tortilla chips, since
+          they can further irritate your gum tissue.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How long before I am back to normal?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Most patients report feeling normal within a week of dental implant surgery. The first
+          couple of days will be the most uncomfortable, but every day you should feel slightly better.
+          Ibuprofen or Tylenol can usually be enough to increase your comfort.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Is there any pain after dental implant surgery?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. When you visit our dental office, we will discuss pain management with you. We will
+          give you anesthesia during the actual procedure so you can relax and feel comfortable during
+          the entire process. Afterward, you can take over-the-counter medication to manage your pain.
+          By following the directions, you will remain fairly comfortable. The key is to stay ahead of
+          your discomfort, so if the bottle says that you can take two pills every four hours – take them
+          every four hours. As long as you do so, you will be able to go through your day without any
+          severe discomfort.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will my new tooth be attached right away?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. When you come in for a consultation, we can provide you with a good idea of when we
+          can attach your new tooth. For the most part, we wait until the process of osseointegration
+          takes place and the titanium post integrates into the jawbone. This provides the most durable
+          base to attach your new crown to. Typically, this process can take anywhere from three to six
+          months to complete. However, there are other options we can explore if you are on a tight timeframe.
+          To ensure your smile is intact while you wait, we can provide you with a temporary denture to
+          wear. We will attach the denture using wires, similar to a retainer. You can remove the denture
+          whenever you want to. This way, your smile will appear intact until we are ready to secure your
+          new tooth (crown) in place. We will schedule you for a follow up visit to inspect your implant
+          and give you a better idea of how the healing process is going at that time.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Can dental implants replace my dentures?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Yes, at North County Cosmetic and Implant Dentistry, we place implants on a regular
+          basis. Patients who are tired of wearing removable dentures and want something more permanent
+          can benefit from dental implants. Since dentures can easily slip out of place, switching to
+          implants can make it easier to eat, speak, and engage in normal daily activities. If you have
+          worn dentures for some time, you may be suffering from resorption. If this is the case, your
+          jawbone may not have sufficient density to support an implant. When this happens, we may recommend
+          a bone graft prior to beginning. To discuss this further, call 760-940-2273 and schedule an
+          examination. After physically examining your teeth and taking X-rays, we can create a full treatment
+          plan for you.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Dental Implant Surgery - What to Expect From Your Consultation
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Before you can begin, we need to examine you and take X-rays to determine the density
+          of your jawbone. This appointment will be non-invasive and comfortable. We can present you with
+          all of the options available to you and discuss the ins and outs of each treatment solution.
+          This will allow you to ask questions and select the option that is best for you. To begin, call
+          our Vista dental office at (760) 940-2273.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -97,24 +151,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How long will the recovery process after implant surgery take?](#how-long-will-the-recovery-process-after-implant-surgery-tak)
+        text: Q. How long will the recovery process after implant surgery take?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
+        text: Q. Will I be able to eat my favorite foods after receiving dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How long until they attach the tooth to my dental implant?](#how-long-until-they-attach-the-tooth-to-my-dental-implant)
+        text: Q. How long until they attach the tooth to my dental implant?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+        text: Q. What happens during the implant procedure?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is the recovery process for dental implants?](#what-is-the-recovery-process-for-dental-implants)
+        text: Q. What is the recovery process for dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+        text: Q. Can dental implants replace my missing teeth?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -196,14 +256,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -252,12 +328,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -284,7 +355,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

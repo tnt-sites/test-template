@@ -56,7 +56,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   sidebar:
   - _component: page-sections/builders/custom-section
     label: Related Topics
@@ -86,12 +86,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -114,7 +109,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

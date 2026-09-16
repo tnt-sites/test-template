@@ -57,22 +57,88 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Composite Dental Fillings FAQ
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Composite Dental Fillings FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [760-940-2273](#760-940-2273)
+        text: Q. What is a composite resin (white filling)?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [(760) 940-2273](#760-940-2273)
+        text: Q. A. Resin fillings match the shade of your natural teeth while providing the necessary
+          level of protection. While many refer to a composite resin as a "white" filling, the actual
+          shade may be more of a crème, if that is what is necessary to blend in. Composite resin fillings
+          function in the same way amalgam ones do, so they are still effective for restoring teeth that
+          have suffered from decay or fracture. However, they can blend in and become more discreet for
+          other patients.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What are the advantages of composite vs. amalgam fillings?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. The biggest advantages of composite vs. amalgam fillings is that composite tooth-colored
+          fillings do not stand out. If you have a cavity and need a filling, you can select a restoration
+          that stands out when you smile or one that blends in. Patients do not have to worry about other
+          people noticing the tooth-colored fillings. Another advantage is not having any mercury in the
+          filling and decreasing the risk of other health risks. To learn more about this option, call
+          760-940-2273 and schedule an appointment with our Vista, CA dental office.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How are composite fillings used?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. In our dental office, we use composite fillings to restore tooth structure after removing
+          the pieces of tooth that have decay. In other cases, we will use composite fillings to restore
+          tooth damage. For example, if a tooth is chipped or loses some of the enamel, a filling may
+          be the appropriate restoration.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Can anyone get a filling?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No. At North County Cosmetic and Implant Dentistry, we place fillings on a frequent
+          basis, but in order for this type of restoration to work, you need to have a certain amount
+          of healthy tooth structure remaining. If you are missing too much of the tooth's structure,
+          a dental crown may be the better solution. In this case, a crown surrounds the tooth like a
+          cap, providing a stronger and more protective restoration.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What is the difference between tooth-colored or composite dental fillings?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Composite dental fillings are just one type of tooth-colored fillings available. While
+          professionals can use the alternate types of tooth-colored fillings interchangeably, there is
+          more than one way to receive a tooth-colored filling. Natural-looking fillings typically consist
+          of resin, ceramic, plastic, or glass ionomer; the most common material being composite resin.
+          While all materials are effective, glass ionomer lasts the least amount of time since the material
+          is more fragile.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How long do resin fillings last?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. There is no set expiration date, but we warn patients that fillings can deteriorate
+          and wear down just like normal teeth. This makes it important to practice good oral hygiene
+          and to brush with a soft or electronic toothbrush while avoiding biting down on anything inedible
+          like a pencil.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Are there any special care instructions for cosmetic fillings?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No, you need to care for your fillings just like you do your other teeth. You need
+          to brush at least twice a day and floss on a daily basis. We recommend using fluoride toothpaste,
+          since this can help to further strengthen your teeth and prevent further decay. In some cases,
+          we may even recommend a fluoride treatment in our dental office. You should also be careful
+          to avoid doing anything that could damage your teeth and wear a mouthguard if applicable. Keep
+          in mind that a filling is there to restore your tooth structure both in appearance and in functionality.
+          This means we are not trying to restrict your activities or even what you can eat. Instead,
+          we place fillings to ensure your life is not interrupted and you can return to your normal daily
+          activities quickly.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. When can I eat like normal?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. If you need to have a filling placed, we will first need to remove the decayed portion
+          of your tooth and complete a thorough cleaning. Next, we will place the composite resin filling
+          material on your tooth and shape it before the hardening. The shape needs to be just right so
+          your bite will fit together correctly. It can take a couple of days to get used to eating on
+          the tooth. Thus, while it will not be particularly uncomfortable, you may have one day where
+          you feel as though you are adjusting. For more specific information, call (760) 940-2273 to
+          schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -95,24 +161,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are the benefits of tooth-colored fillings?](#what-are-the-benefits-of-tooth-colored-fillings)
+        text: Q. What are the benefits of tooth-colored fillings?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are composite fillings for?](#what-are-composite-fillings-for)
+        text: Q. What are composite fillings for?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will the filling change what I can eat?](#will-the-filling-change-what-i-can-eat)
+        text: Q. Will the filling change what I can eat?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How can I prevent tooth decay?](#how-can-i-prevent-tooth-decay)
+        text: Q. How can I prevent tooth decay?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are some tips for proper dental care at home?](#what-are-some-tips-for-proper-dental-care-at-home)
+        text: Q. What are some tips for proper dental care at home?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Why is preventative dental care so important?](#why-is-preventative-dental-care-so-important)
+        text: Q. Why is preventative dental care so important?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -196,14 +268,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -236,12 +324,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -264,7 +347,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

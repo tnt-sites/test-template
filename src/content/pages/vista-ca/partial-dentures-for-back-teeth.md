@@ -30,40 +30,105 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: How many partial dentures are required for each arch?
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How many partial dentures are required for each arch?](#q-how-many-partial-dentures-are-required-for-each-arch)
+        text: Q. One partial denture is necessary for each arch. It does not matter how many back teeth
+          you are missing. As long as you are not missing all of your teeth, a single partial denture
+          will suffice for each arch.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Are removable partial dentures for back teeth stable?](#q-are-removable-partial-dentures-for-back-teeth-stable)
+        text: Q. How many partial dentures are required for each arch?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will I be able to smile and eat with confidence once my partial dentures are in place?](#q-will-i-be-able-to-smile-and-eat-with-confidence-once-my-pa)
+        text: Q. A. One partial denture is necessary for each arch. It does not matter how many back teeth
+          you are missing. As long as you are not missing all of your teeth, a single partial denture
+          will suffice for each arch.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will partial dentures for multiple back teeth improve my speech?](#q-will-partial-dentures-for-multiple-back-teeth-improve-my-s)
+        text: Q. Are removable partial dentures for back teeth stable?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will the addition of partial dentures for missing back teeth alter my appearance?](#q-will-the-addition-of-partial-dentures-for-missing-back-tee)
+        text: Q. A. Yes. You can replace several back teeth with a partial denture in full confidence.
+          It will remain firmly in place. Though some claim dental-implant restored teeth are more stable,
+          you cannot beat the economics of partial dentures. This is the most affordable option for replacing
+          multiple back teeth.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Are partial dentures for back teeth the same as bridges?](#q-are-partial-dentures-for-back-teeth-the-same-as-bridges)
+        text: Q. Will I be able to smile and eat with confidence once my partial dentures are in place?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will other teeth move once the partial denture is placed?](#q-will-other-teeth-move-once-the-partial-denture-is-placed)
+        text: Q. A. Yes. You will smile widely and eat without reservation once this natural-looking customized
+          partial denture is in place. It really is the perfect solution for multiple missing back teeth.
+          Your partial denture makes it extremely easy to chew food of all varieties.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will the partial denture affect the look of my gums and other teeth?](#q-will-the-partial-denture-affect-the-look-of-my-gums-and-ot)
+        text: Q. Will partial dentures for multiple back teeth improve my speech?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Are crowns or caps necessary?](#q-are-crowns-or-caps-necessary)
+        text: Q. A. Absolutely. Those who are missing several back teeth often struggle to speak with
+          precision. Partial dentures make speech easier and clearer.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will the partial denture feel odd?](#q-will-the-partial-denture-feel-odd)
+        text: Q. Will the addition of partial dentures for missing back teeth alter my appearance?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will I have to wear my partial dentures for back teeth 24 hours a day?](#q-will-i-have-to-wear-my-partial-dentures-for-back-teeth-24-)
+        text: Q. A. Partial dentures often provide much-needed support for the cheeks and lips. This added
+          support prevents the face from sagging. You read that right. With partial dentures, you might
+          even end up looking younger.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Are adjustments necessary?](#q-are-adjustments-necessary)
+        text: Q. Are partial dentures for back teeth the same as bridges?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Can I eat the same foods after adding partial dentures for back teeth?](#q-can-i-eat-the-same-foods-after-adding-partial-dentures-for)
+        text: Q. A. No. These are two different oral health solutions. A partial denture replaces back
+          teeth with a removable solution. This is why partial dentures are known as "removable." Bridges
+          replace missing teeth with something permanent that one cannot easily remove. Bridges often
+          require reducing the size of adjacent teeth for crowns.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Does this oral health solution require special care?](#q-does-this-oral-health-solution-require-special-care)
+        text: Q. The same is not true of partial dentures for missing back teeth. Partial dentures are
+          ideal when there are not enough teeth available for a bridge. Precision partial dentures have
+          internal attachments instead of clasps that connect to adjacent teeth.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will other teeth move once the partial denture is placed?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No. This is one of the many advantages of partial dentures for back teeth. The partial
+          denture fills the spaces of missing teeth and also stops other teeth from moving.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will the partial denture affect the look of my gums and other teeth?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. No. The acrylic base upon which, we affix the replacement teeth will resemble the
+          color of your gums.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Are crowns or caps necessary?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Your oral health professional might recommend crowns or caps on surrounding teeth
+          to enhance the manner in which the partial denture fits within your unique mouth. Thus, we will
+          review your oral health condition and determine the most effective solution.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will the partial denture feel odd?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. You might feel a bit uncomfortable placing the partial dentures in your mouth. However,
+          once you get used to putting them in and taking them out, you won't mind them one bit. Just
+          be sure to avoid forcing your partial denture into your mouth by biting down. Applying such
+          force has the potential to break or bend the clasps or even damaging teeth. When in doubt, speak
+          with your dentist.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Will I have to wear my partial dentures for back teeth 24 hours a day?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. >No. In fact, patients are advised to take out their partial dentures at some point
+          during the day and/or night. Many dentists recommend taking out partial dentures for back teeth
+          before sleeping. You can put the partial dentures back in place upon waking.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Are adjustments necessary?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Most patients attend follow-up appointments. These appointments address any sore spots,
+          pressure points and possible adjustments for the perfect fit.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Can I eat the same foods after adding partial dentures for back teeth?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Dentists advise starting out with soft foods. Cut them into fairly small pieces so
+          you can get used to eating with your partial dentures in place. Chew on each side of your mouth
+          to maintain even pressure. Avoid especially hard and sticky foods.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Does this oral health solution require special care?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Partial dentures for back teeth require a daily cleaning. Remove the denture, rinse
+          off any leftover food particles, wet the brush and place the denture cleaner on it. Use a special
+          denture-cleaning brush to gently scrub the surface. Avoid toothpaste for cleaning as it has
+          abrasive particles that can cause damage to the base. Rinse the denture following the use of
+          the cleanser.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -86,24 +151,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are removable partial dentures stable on the teeth?](#are-removable-partial-dentures-stable-on-the-teeth)
+        text: Q. Are removable partial dentures stable on the teeth?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are partial dentures the same as dental bridges?](#are-partial-dentures-the-same-as-dental-bridges)
+        text: Q. Are partial dentures the same as dental bridges?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will partial dentures change what I can eat?](#will-partial-dentures-change-what-i-can-eat)
+        text: Q. Will partial dentures change what I can eat?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are there different types of dentures?](#are-there-different-types-of-dentures)
+        text: Q. Are there different types of dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Which tooth replacement is right for me?](#which-tooth-replacement-is-right-for-me)
+        text: Q. Which tooth replacement is right for me?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
+        text: Q. Are dental implants better than dentures or dental bridges?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -185,14 +256,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -239,12 +326,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -271,7 +353,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

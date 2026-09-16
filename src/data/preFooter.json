@@ -1,0 +1,51 @@
+{
+  "enabled": true,
+  "ctas": [
+    {
+      "lines": [
+        "1934 Via Centre Ste A",
+        "Vista, CA 92081"
+      ],
+      "buttonText": "Get Directions",
+      "buttonLink": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+    },
+    {
+      "lines": [
+        "Book Today!",
+        "(760) 940-2273"
+      ],
+      "buttonText": "Request Appointment",
+      "buttonLink": "/contact-us/"
+    },
+    {
+      "lines": [
+        "Comments or",
+        "Suggestions?"
+      ],
+      "buttonText": "Contact Us",
+      "buttonLink": "/contact-us/"
+    }
+  ],
+  "logos": [
+    {
+      "source": "/src/assets/images/wp/logo_ADA.png",
+      "alt": "American Dental Association"
+    },
+    {
+      "source": "/src/assets/images/wp/logo_ADSA.png",
+      "alt": "American Dental Society of Anesthesiology"
+    },
+    {
+      "source": "/src/assets/images/wp/logo_AGD.png",
+      "alt": "Academy of General Dentistry Fellow"
+    },
+    {
+      "source": "/src/assets/images/wp/logo_CDA.png",
+      "alt": "California Dental Association"
+    },
+    {
+      "source": "/src/assets/images/wp/MemberLogoF.jpg",
+      "alt": "American Academy of Dental Sleep Medicine"
+    }
+  ]
+}

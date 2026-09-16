@@ -7,19 +7,19 @@ seo:
     in Vista, CA, specializing in cosmetic and implant dentistry.
 pageSections:
 - _component: page-sections/builders/custom-section
-  label: MEET DR. CRAIG HUENERGARDT
+  label: ''
   contentSections:
-  - _component: building-blocks/core-elements/heading
-    text: MEET DR. CRAIG HUENERGARDT
-    level: h1
-    size: 2xl
-    alignX: center
-  - _component: building-blocks/core-elements/image
-    source: /src/assets/images/wp/CHD-128-1.jpg
-    alt: MEET DR. CRAIG HUENERGARDT
   - _component: building-blocks/core-elements/text
     text: It makes me proud to see the work I have done change someone’s life forever. My passion is restoring
       smiles with lasting beauty.
+  maxContentWidth: xl
+  paddingHorizontal: lg
+  paddingVertical: xl
+  colorScheme: default
+  backgroundColor: base
+- _component: page-sections/builders/custom-section
+  label: ''
+  contentSections:
   - _component: building-blocks/core-elements/text
     text: Dr. Craig Huenergardt received his D.D.S. from Loma Linda University in 1986 and prior to that
       received his B.S. in dental hygiene from Loma Linda University in 1982. Because of the education
@@ -38,12 +38,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
-- _component: page-sections/forms/liine-form
-  formId: '251056297507965'
-  heading: Request an Appointment
-  subtext: ''
-  title: North County Cosmetic and Implant Dentistry - Request an Appointment Form
-  height: 539
   backgroundColor: surface
 ---

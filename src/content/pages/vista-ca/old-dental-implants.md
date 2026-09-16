@@ -56,7 +56,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Facts from the American Academy of Implant Dentistry (aaid.com)
     contentSections:
@@ -142,7 +142,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -151,11 +151,12 @@ pageSections:
         decay like a natural tooth. However, you still need to brush, floss and care for it and your surrounding
         natural teeth in the same manner as natural teeth. Regular professional cleanings and dental checkups
         are also essential.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -213,7 +214,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -243,33 +244,75 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Implant FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I need to replace two missing teeth next to each other. Can I just have one implant
-          placed and attach it to one of my natural teeth and make a bridge?](#q-i-need-to-replace-two-missing-teeth-next-to-each-other-can)
+        text: Q. I need to replace two missing teeth next to each other. Can I just have one implant placed
+          and attach it to one of my natural teeth and make a bridge?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I lost my upper back teeth on one side and have gone for years without doing anything
+        text: Q. A. Generally, this is not a good idea. We find that it is generally much better not to
+          attach implants to teeth. We frequently attach implants to each other, which can improve strength
+          and works well. So in a case like this, although it may be more expensive in the short term
+          to place two implants instead of one, the long-term success is likely to be much better with
+          the two implants.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. I lost my upper back teeth on one side and have gone for years without doing anything
           about it. My sinuses always seem to bother me more on that side than on the side that I have
-          back teeth. Could these problems be related to one another?](#q-i-lost-my-upper-back-teeth-on-one-side-and-have-gone-for-y)
+          back teeth. Could these problems be related to one another?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I've had dentures for several years and have lost a lot of jawbone. My lower dentures
-          are floaters and I need help. Is there still hope for me?](#q-i-ve-had-dentures-for-several-years-and-have-lost-a-lot-of)
+        text: Q. A. In a large majority of people who are missing their upper back teeth for a long period
+          of time, is the increasing downward growth of the maxillary sinus. At birth, it is the size
+          of a pea and progressively grows as the skull matures. This growth is at the expense of the
+          surrounding bone. If you are considering replacing those upper back teeth with fixed teeth that
+          stay in all the time, it may be necessary to perform a sinus elevation procedure to allow room
+          for placement of dental implants into this area to support those teeth. This involves placement
+          of bone and/or bone substitutes into an area which was previously occupied by the lower part
+          of the maxillary sinus. Most importantly, this procedure increases the available bone use to
+          place implants and restore the missing back teeth.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I am missing all of my teeth and am now wearing a full upper and lower denture. I
-          can no longer tolerate my lowers. Will I need an implant for every tooth I am replacing on the
-          lower jaw?](#q-i-am-missing-all-of-my-teeth-and-am-now-wearing-a-full-upp)
+        text: Q. I've had dentures for several years and have lost a lot of jawbone. My lower dentures
+          are floaters and I need help. Is there still hope for me?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I consulted a dentist several years ago about using implants to replace my lower
-          denture and he told me that I did not have adequate bone available to place enough in-the-bone
-          implants without danger of fracturing my now fragile jawbone. Are there any alternatives?](#q-i-consulted-a-dentist-several-years-ago-about-using-implan)
+        text: Q. A. In most cases, with the new options available today in the field of dental implants,
+          some form of treatment is possible. We encourage people to get help as soon as possible if they
+          are already having some problems with their current situation. These problems include excessive
+          use of denture adhesives, chewing only soft food, unable to taste some foods, constant mouth
+          sores, unhappy with the appearance of one's teeth and bite position (in some cases the nose
+          and chin getting closer together). The sooner we correct the problems with dental implants,
+          the more choices one has available for treatment. If you have any or all of the above symptoms,
+          implants can very well be the answer for you.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I had a root canal on a tooth that fractured and now it has to be removed. Can it
-          be replaced with an implant or do I have to have a bridge or a partial?](#q-i-had-a-root-canal-on-a-tooth-that-fractured-and-now-it-ha)
+        text: Q. I am missing all of my teeth and am now wearing a full upper and lower denture. I can
+          no longer tolerate my lowers. Will I need an implant for every tooth I am replacing on the lower
+          jaw?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. It is not necessary to have an implant for every tooth that is being replaced. The
+          number of implants necessary to provide support depends on the type of implants used and the
+          type of teeth (removable vs. non- removable) that will be attached to the implants. A thorough
+          oral exam and panoramic x-ray is all that is necessary in most cases, to determine which implant
+          can be used and how many must be used. Sometimes additional X-rays or CT scans are used in more
+          complicated cases.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. I consulted a dentist several years ago about using implants to replace my lower denture
+          and he told me that I did not have adequate bone available to place enough in-the-bone implants
+          without danger of fracturing my now fragile jawbone. Are there any alternatives?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Because of the advances in the field of implantology, there are now more choices and
+          techniques. It is rare for a person to not be able to receive an implant or a combination of
+          implants. Today we have available many types of implants designed to accommodate multiple problems.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. I had a root canal on a tooth that fractured and now it has to be removed. Can it be
+          replaced with an implant or do I have to have a bridge or a partial?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Teeth that have root canals can fracture more easily than other teeth because they
+          are weaker and somewhat dehydrated. They can sometimes be as brittle as glass. In the past,
+          the best available treatment was to remove the tooth and file down the adjacent teeth to make
+          a bridge - caps on the adjacent teeth with an attached "dummy" tooth between. Sometimes this
+          still is the only way. However, in many cases an implant can replace the fractured tooth and
+          we will not need to grind down a tooth to at all.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -280,24 +323,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How many people wear dental implants?](#how-many-people-wear-dental-implants)
+        text: Q. How many people wear dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is the process for dental implants?](#what-is-the-process-for-dental-implants)
+        text: Q. What is the process for dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+        text: Q. How do I take care of my dental implants?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Can dental implants replace my missing teeth?](#can-dental-implants-replace-my-missing-teeth)
+        text: Q. Can dental implants replace my missing teeth?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will I be able to eat my favorite foods after receiving dental implants?](#will-i-be-able-to-eat-my-favorite-foods-after-receiving-dent)
+        text: Q. Will I be able to eat my favorite foods after receiving dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Are dental implants better than dentures or dental bridges?](#are-dental-implants-better-than-dentures-or-dental-bridges)
+        text: Q. Are dental implants better than dentures or dental bridges?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -379,14 +428,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -433,12 +498,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -465,7 +525,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

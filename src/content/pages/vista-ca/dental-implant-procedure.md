@@ -71,7 +71,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Preparing for Dental Implant Procedure
     contentSections:
@@ -168,26 +168,41 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: The Dental Implant Procedure FAQ
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: The Dental Implant Procedure FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Is the dental implant procedure painful?](#q-is-the-dental-implant-procedure-painful)
+        text: Q. Is the dental implant procedure painful?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Will dental implants function like my natural teeth?](#q-will-dental-implants-function-like-my-natural-teeth)
+        text: Q. A. With the techniques available and aftercare tips, many patients experience minimal
+          pain throughout the process. In most cases, they can resume their routine the following day.
+          Although bruising and pain may occur, they usually last for only a short time.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How long does a dental implant procedure Take?](#q-how-long-does-a-dental-implant-procedure-take)
+        text: Q. Will dental implants function like my natural teeth?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Am I eligible for dental implants?](#q-am-i-eligible-for-dental-implants)
+        text: Q. A. Yes. Implants are as secure and reliable as the natural teeth. By the end of the treatment,
+          you will be able to eat your favorite meals. Generally, it will be hard to tell the difference
+          between dental implants and natural teeth.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How long does a dental implant procedure Take?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. The average treatment period is three to six months. Most of the time is taken up
+          by the osseointegration process. The treatment time usually depends on the patient and the complexity
+          of the situation.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Am I eligible for dental implants?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. There is a good chance that you are eligible for dental implants. However, the dentist
+          will determine your eligibility by performing different examinations. You need to schedule an
+          initial consultation to get started with the process.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -210,24 +225,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How can I prepare for the dental implant procedure?](#how-can-i-prepare-for-the-dental-implant-procedure)
+        text: Q. How can I prepare for the dental implant procedure?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Will dental implants function like my natural teeth?](#will-dental-implants-function-like-my-natural-teeth)
+        text: Q. Will dental implants function like my natural teeth?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How long does a dental implant procedure take?](#how-long-does-a-dental-implant-procedure-take)
+        text: Q. How long does a dental implant procedure take?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I know if dental implants are right for me?](#how-do-i-know-if-dental-implants-are-right-for-me)
+        text: Q. How do I know if dental implants are right for me?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I take care of my dental implants?](#how-do-i-take-care-of-my-dental-implants)
+        text: Q. How do I take care of my dental implants?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What happens during the implant procedure?](#what-happens-during-the-implant-procedure)
+        text: Q. What happens during the implant procedure?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -309,14 +330,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -365,12 +402,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -397,7 +429,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

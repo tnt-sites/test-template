@@ -32,16 +32,46 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Speaking and eating
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: 'Q. [Problem: Dentures can make it difficult when eating or speaking](#problem-dentures-can-make-it-difficult-when-eating-or-speaki)'
+        text: 'Q. Problem: Dentures can make it difficult when eating or speaking'
       - _component: building-blocks/core-elements/list/list-item
-        text: 'Q. [Problem: Unsure of the best way to keep dentures clean](#problem-unsure-of-the-best-way-to-keep-dentures-clean)'
+        text: 'Q. Solution: Patience, practice and proper care'
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. People who acquire new dentures will find that speaking and eating are more difficult
+          than they realize. We recommend that patients take it slow and practice pronouncing any words
+          that are difficult to say quickly. It may take some time and practice but the patient will eventually
+          speak without difficulty.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. When it comes to eating with dentures, the patient needs to start by eating softer foods
+          for the first few days after getting the dentures. If the patient experiences any pain when
+          eating certain foods, it is best to avoid said foods and eat something softer for the time being.
+          Patients can also chew with both sides of the mouth to prevent the dentures from moving forward
+          uncomfortably.
+    - _component: building-blocks/core-elements/heading
+      text: Proper denture care
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Problem: Unsure of the best way to keep dentures clean'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Solution: Use a specific denture-cleaning solution'
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Proper denture care is crucial for the lifespan of dentures. If a patient uses regular
+          toothpaste on the dentures, then the toothpaste will begin to erode the material on the dentures
+          and the dentures will break. The best form of care is to remove the dentures and run water through
+          them to clean out any bits of food.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. After, the patient can use a specific brush for cleaning the dentures and soak the dentures
+          overnight. We can go over the proper cleaning regimen during the fitting appointment. It is
+          important that the dentures do not dry out overnight.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -64,18 +94,65 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Loose Dentures
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: 'Q. [Problem: Dentures become loose over time](#problem-dentures-become-loose-over-time)'
+        text: 'Q. Problem: Dentures become loose over time'
       - _component: building-blocks/core-elements/list/list-item
-        text: 'Q. [Problem: Irritation in the gums or mouth](#problem-irritation-in-the-gums-or-mouth)'
+        text: 'Q. Solution: Seek professional adjustment at our office'
       - _component: building-blocks/core-elements/list/list-item
-        text: 'Q. [Problem: What to do when traveling with dentures](#problem-what-to-do-when-traveling-with-dentures)'
+        text: Q. Over time, dentures will begin to loosen due to the gums and bones changing. Since there
+          are no longer teeth within the jawbone to stimulate the jaw and the body that teeth are still
+          there, the body will go through a process known as resorption. This process leeches calcium
+          from the jaw bone to other areas of the body in need. Fortunately, we can adjust modify or replace
+          denture as necessary with regular appointments.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. When the dentures feel loose, it will not always be a noticeable amount. In some cases,
+          it will begin as a slight shift that the patient may not even notice. However, even if the dentures
+          are only slightly loose, it is crucial to seek repairs from our office.
+    - _component: building-blocks/core-elements/heading
+      text: Irritation in the gums or mouth
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Problem: Irritation in the gums or mouth'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Solution: Proper care and professional treatment'
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. If the dentures do not fit properly, they can cause irritation on the gums or within
+          the mouth. In cases where the dentures begin to loosen after several months of use, there is
+          a higher chance that the gums will begin to hurt. If the patient continues to feel pain or irritation,
+          then give us a call and schedule an appointment.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. The best solution is prevention, if at all possible. By taking the proper precautionary
+          steps, patients can prolong the life of their dentures. When the gums continue to experience
+          irritation, we recommend scheduling an appointment for us to examine the mouth and see what
+          is wrong.
+    - _component: building-blocks/core-elements/heading
+      text: Traveling with dentures
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Problem: What to do when traveling with dentures'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'Q. Solution: Bring the proper cleaning supplies'
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. While one will not need a traveling case for taking the dentures on a flight or car ride,
+          it is crucial to have the proper cleaning tools for the trip. Traveling with dentures can be
+          easy if one brings the proper cleaning fluid and container/glass to soak the denture in overnight.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Similar to bringing a toothbrush, patients need to bring whatever solution or brush they
+          use to clean their dentures with them. Even though one is on vacation, keeping dentures in the
+          best shape possible is important for one's overall health.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -92,34 +169,41 @@ pageSections:
       text: If you are interested in dentures or are experiencing issues with your dentures, give us a
         call at (760) 940-2273 today. We will schedule a consultation and recommend the best course of
         action to help you solve the problem and continue to live a healthy life.
-    maxContentWidth: xl
-    paddingHorizontal: lg
-    paddingVertical: xl
+    maxContentWidth: none
+    paddingHorizontal: none
+    paddingVertical: none
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: none
+    class: callout-bubble
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can I do if my dentures fall out when speaking and eating?](#what-can-i-do-if-my-dentures-fall-out-when-speaking-and-eati)
+        text: Q. What can I do if my dentures fall out when speaking and eating?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can I do to deal with loose dentures?](#what-can-i-do-to-deal-with-loose-dentures)
+        text: Q. What can I do to deal with loose dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How should I take care of my dentures when I am traveling?](#how-should-i-take-care-of-my-dentures-when-i-am-traveling)
+        text: Q. How should I take care of my dentures when I am traveling?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I take care of my dentures?](#how-do-i-take-care-of-my-dentures)
+        text: Q. How do I take care of my dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What do I do if I damage my dentures?](#what-do-i-do-if-i-damage-my-dentures)
+        text: Q. What do I do if I damage my dentures?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Can I fix my dentures on my own?](#can-i-fix-my-dentures-on-my-own)
+        text: Q. Can I fix my dentures on my own?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -213,14 +297,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -267,12 +367,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -299,7 +394,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

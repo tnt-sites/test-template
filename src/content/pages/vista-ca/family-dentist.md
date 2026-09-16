@@ -87,7 +87,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -167,7 +167,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -197,24 +197,49 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Family Dentist FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Are baby teeth really that important to my child?](#q-are-baby-teeth-really-that-important-to-my-child)
+        text: Q. Are baby teeth really that important to my child?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What should I do if my child has a toothache?](#q-what-should-i-do-if-my-child-has-a-toothache)
+        text: Q. A. Primary, or "baby," teeth are important for many reasons. Not only do they help children
+          speak clearly and chew naturally, they also aid in forming a path that permanent teeth can follow
+          when they are ready to come in.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How do dental sealants work?](#q-how-do-dental-sealants-work)
+        text: Q. What should I do if my child has a toothache?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How do I know if my child is getting enough fluoride?](#q-how-do-i-know-if-my-child-is-getting-enough-fluoride)
+        text: Q. A. First, rinse the irritated area with warm salt water and place a cold compress on
+          the face if it is swollen. Give the child acetaminophen for any pain, rather than placing aspirin
+          on the teeth or gums. Finally, see a dentist as soon as possible.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What can I do to protect my teeth during sporting events?](#q-what-can-i-do-to-protect-my-teeth-during-sporting-events)
+        text: Q. How do dental sealants work?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How safe are dental X-rays?](#q-how-safe-are-dental-x-rays)
+        text: Q. A. Sealants work by filling in the crevasses on the chewing surfaces of the teeth. This
+          shuts out food particles that could get caught in the teeth, causing cavities. The application
+          is fast and comfortable and can effectively protect teeth for many years.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How do I know if my child is getting enough fluoride?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Have your family dentist evaluate the fluoride level of your child's primary source
+          of drinking water. If your child is not getting enough fluoride internally through water (especially
+          if the fluoride level is deficient or if your child drinks bottled water without fluoride),
+          then we may prescribe fluoride supplements.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What can I do to protect my teeth during sporting events?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Soft plastic mouthguards can be used to protect teeth, lips, cheeks and gums from
+          sport related injuries. A custom-fitted mouthguard will protect your teeth from injuries and
+          even provide protection from severe injuries to the head.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How safe are dental X-rays?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. There is very little risk in dental X-rays. Family dentists are especially careful
+          to limit the amount of radiation to which you and your family are exposed. Lead aprons and high-speed
+          film are used to ensure safety and minimize the amount of radiation. Digital x-rays provide
+          an even greater level of protection by using up to 90 percent less radiation.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -237,24 +262,30 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are some at-home tips for proper dental hygiene?](#what-are-some-at-home-tips-for-proper-dental-hygiene)
+        text: Q. What are some at-home tips for proper dental hygiene?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Do you provide dental treatment for all ages?](#do-you-provide-dental-treatment-for-all-ages)
+        text: Q. Do you provide dental treatment for all ages?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can protect my child’s teeth during sports?](#what-can-protect-my-child-s-teeth-during-sports)
+        text: Q. What can protect my child’s teeth during sports?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What is a kid friendly dentist?](#what-is-a-kid-friendly-dentist)
+        text: Q. What is a kid friendly dentist?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What will a regular teeth cleaning be like?](#what-will-a-regular-teeth-cleaning-be-like)
+        text: Q. What will a regular teeth cleaning be like?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are some methods for improving my oral health?](#what-are-some-methods-for-improving-my-oral-health)
+        text: Q. What are some methods for improving my oral health?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -323,14 +354,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -375,12 +422,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -409,7 +451,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav

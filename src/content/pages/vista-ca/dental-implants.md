@@ -78,7 +78,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Types of Dental Implants
   contentSections:
@@ -206,7 +206,7 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: highlight
+  backgroundColor: surface
 - _component: page-sections/builders/custom-section
   label: Get the Smile that you Deserve
   contentSections:
@@ -218,11 +218,12 @@ pageSections:
     text: Dental implants are the gold standard treatment for restoring missing or broken teeth. For more
       information about the process, please give us a call at 760-940-2273. Alternatively, you can fill
       out a form on the contact page, and we’ll get back to you as soon as possible.
-  maxContentWidth: xl
-  paddingHorizontal: lg
-  paddingVertical: xl
+  maxContentWidth: none
+  paddingHorizontal: none
+  paddingVertical: none
   colorScheme: default
-  backgroundColor: surface
+  backgroundColor: none
+  class: callout-bubble
 - _component: page-sections/builders/custom-section
   label: Contact Us
   contentSections:
@@ -238,5 +239,5 @@ pageSections:
   paddingHorizontal: lg
   paddingVertical: xl
   colorScheme: default
-  backgroundColor: base
+  backgroundColor: surface
 ---

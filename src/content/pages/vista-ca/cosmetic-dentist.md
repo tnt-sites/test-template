@@ -50,7 +50,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'According to the American Association of Cosmetic Dentistry, the top cosmetic dental treatments
       are:'
@@ -117,7 +117,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -130,7 +130,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Vista, California Cosmetic Dentist
     contentSections:
@@ -182,7 +182,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -224,26 +224,58 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Vista Cosmetic Dental FAQ
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I don't like my teeth or my smile – what can I do?](#q-i-don-t-like-my-teeth-or-my-smile-what-can-i-do)
+        text: Q. I don't like my teeth or my smile – what can I do?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How much does it cost to get a great smile?](#q-how-much-does-it-cost-to-get-a-great-smile)
+        text: Q. A. A wide variety of options are available to improve tooth function and how your smile
+          looks. Ask us about what options are available.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. I have dental insurance. Will it pay for my new smile?](#q-i-have-dental-insurance-will-it-pay-for-my-new-smile)
+        text: Q. How much does it cost to get a great smile?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What are some benefits of cosmetic dentistry?](#q-what-are-some-benefits-of-cosmetic-dentistry)
+        text: Q. A. Like most services, the cost varies on the amount of time necessary and the difficulty
+          of the procedure(s). Generally, improving a smile requires a combination of treatment options
+          such as bleaching, reshaping gums, and using bonded materials (resin or porcelain) to improve
+          the appearance of the teeth. A great way to start is by having a consultation with our dentist
+          to determine how you can reach your goals.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. How many office visits will it take to fix my teeth and improve my smile?](#q-how-many-office-visits-will-it-take-to-fix-my-teeth-and-im)
+        text: Q. I have dental insurance. Will it pay for my new smile?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. What will my new smile look like?](#q-what-will-my-new-smile-look-like)
+        text: Q. A. Most dental insurance has very low total benefits per year. Most insurance companies
+          may offset the cost for regular checkups but probably will not pay toward cosmetic services.
+          We will work to maximize your benefits and may have suggestions for alternative methods of financing
+          so you can obtain the treatment of choice. Learn more about dental insurance and financing.
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Q. Is my new smile permanent?](#q-is-my-new-smile-permanent)
+        text: Q. What are some benefits of cosmetic dentistry?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. A great smile should improve your self-confidence, which can have a positive impact
+          on the social and professional aspects of your life. Cosmetic dentistry is not just about pretty
+          smiles though. New techniques and materials are available for back teeth as well as those seen
+          when you smile.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. How many office visits will it take to fix my teeth and improve my smile?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. This varies with each individual, depending on the need. Sometimes, you can dramatically
+          improve your oral health and appearance in just a couple of visits. Discuss your goals and concerns,
+          so that we can develop the best plan for your individual situation. If you start today, a new
+          smile can be yours sooner than you think.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. What will my new smile look like?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. Our dentist will work with you in choosing the right look for you. A smile enhancement
+          can look both dramatic and natural. We can use photographs (in a process called cosmetic imaging)
+          and models to show you what to expect. Sometimes, we can place trial material directly on your
+          teeth to help you visualize the change.
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. Is my new smile permanent?
+      - _component: building-blocks/core-elements/list/list-item
+        text: Q. A. With good home care and regular visits, modern materials can last for many years,
+          and possibly decades. Like most things, excellent maintenance will extend the life of your dental
+          restorations.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -261,30 +293,36 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: Questions Answered on This Page
     contentSections:
     - _component: building-blocks/core-elements/heading
       text: Questions Answered on This Page
-      level: h2
+      level: h5
       size: sm
-      alignX: center
     - _component: building-blocks/core-elements/list
       listType: bullet
       items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What are the most common cosmetic dental treatment services?](#what-are-the-most-common-cosmetic-dental-treatment-services)
+        text: Q. What are the most common cosmetic dental treatment services?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Can cosmetic dentistry help improve the functionality of my teeth?](#can-cosmetic-dentistry-help-improve-the-functionality-of-my-)
+        text: Q. Can cosmetic dentistry help improve the functionality of my teeth?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [Can cosmetic dentistry help with my dental care?](#can-cosmetic-dentistry-help-with-my-dental-care)
+        text: Q. Can cosmetic dentistry help with my dental care?
+    - _component: building-blocks/core-elements/heading
+      text: People Also Ask
+      level: h5
+      size: sm
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [How do I know if I need dental restorations?](#how-do-i-know-if-i-need-dental-restorations)
+        text: Q. How do I know if I need dental restorations?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can I do if I need cosmetic dental work?](#what-can-i-do-if-i-need-cosmetic-dental-work)
+        text: Q. What can I do if I need cosmetic dental work?
       - _component: building-blocks/core-elements/list/list-item
-        text: Q. [What can I do if I damaged my teeth?](#what-can-i-do-if-i-damaged-my-teeth)
+        text: Q. What can I do if I damaged my teeth?
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -360,14 +398,30 @@ pageSections:
         text: '[Home Page](http://www.aacd.com/)'
       - _component: building-blocks/core-elements/list/list-item
         text: '[WebMD''s Oral Care Guide](http://www.webmd.com/oral-health/guide/default.htm)'
+    - _component: building-blocks/core-elements/heading
+      text: About our business, license, and website security
+      level: h3
+      size: md
+    - _component: building-blocks/core-elements/list
+      listType: bullet
+      items:
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View License Information and Specifics](https://search.dca.ca.gov/details/4401/DDS/57722/ed27cea38a186f9bab1d246b723b39a5)'
+        text: North County Cosmetic and Implant Dentistry was established in 1985.
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View NPI Registry Information](https://npiregistry.cms.hhs.gov/registry/provider-view/1710040134)'
+        text: 'We accept the following payment methods: Cash, Check, MasterCard, and Visa'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://safeweb.norton.com/report/show?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following counties: San Diego County'
       - _component: building-blocks/core-elements/list/list-item
-        text: '[View Details](http://global.sitesafety.trendmicro.com/?url=/www.ultimatesmiles.com)'
+        text: 'We serve patients from the following cities: Vista, San Marcos, Carlsbad, Oceanside, Bonsall,
+          Escondido and San Diego'
+      - _component: building-blocks/core-elements/list/list-item
+        text: 'CA (License #57722) . View License Information and Specifics'
+      - _component: building-blocks/core-elements/list/list-item
+        text: National Provider Identifier Database (1710040134). View NPI Registry Information
+      - _component: building-blocks/core-elements/list/list-item
+        text: Norton Safe Web . View Details
+      - _component: building-blocks/core-elements/list/list-item
+        text: Trend Micro Site Safety Center . View Details
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -406,12 +460,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
-  - _component: page-sections/info-blocks/sidebar-search
-    heading: ''
-    placeholder: Search
-    buttonText: Search
-    action: /search/
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: 'Explore additional topics covered on our website:'
     contentSections:
@@ -456,7 +505,7 @@ pageSections:
     paddingHorizontal: md
     paddingVertical: md
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   maxContentWidth: 2xl
   paddingVertical: xl
 - _component: page-sections/info-blocks/page-footer-nav
