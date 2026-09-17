@@ -77,7 +77,11 @@ TARGETS={
  'reviews':('reviews.html','reviews'),
  'smile-gallery':('smile-gallery.html','smile-gallery'),
  'contact-us':('contact-us.html','contact-us'),
- 'home':('index.html','index'),
+ # 'home' is deliberately absent. The homepage is hand-built against the
+ # source - a three-slide hero-slider with the form docked over it, then
+ # intro-cards, services-grid and location-map. Regenerating it from the
+ # snapshot flattens that into a generic hero-split plus a form band,
+ # which is how index.md was clobbered in 8521002e.
  'video-gallery':('video-gallery.html','video-gallery'),
  'services':('services.html','services'),
 }
@@ -142,30 +146,6 @@ def main():
                 'heading':'Request an Appointment','subtext':'',
                 'title':'North County Cosmetic and Implant Dentistry - Request an Appointment Form',
                 'height':539,'backgroundColor':'surface'})
-        if slug=='home':
-            # The source homepage opens with a slider hero (title, subtitle, two
-            # CTAs) over UltimateSmiles.jpg, with the appointment form beside it.
-            def _btn(text,link,variant="primary"):
-                return {"_component":"building-blocks/core-elements/button","text":text,
-                        "hideText":False,"link":link,"iconName":"","iconPosition":"before",
-                        "variant":variant,"size":"md","borderRadius":"2xl"}
-            hero={"_component":"page-sections/heroes/hero-split","eyebrow":"","eyebrowColor":"",
-                  "heading":"Exceptional Dentistry & Personalized Care",
-                  "subtext":"Personalized care for all your dental needs.",
-                  "imageSource":"/src/assets/images/wp/UltimateSmiles.jpg",
-                  "imageAlt":"Dentist reviewing X-rays with a patient at North County Cosmetic and Implant Dentistry",
-                  "imageAspectRatio":"none",
-                  "buttonSections":[_btn("Call Now","tel:+1-760-940-2273"),
-                                    _btn("Book Now","/contact-us/","secondary")],
-                  "reverse":False,"colorScheme":"default","backgroundColor":"base",
-                  "backgroundGradient":"","paddingVertical":"2xl"}
-            form={"_component":"page-sections/forms/liine-form","formId":"251056297507965",
-                  "heading":"Request an Appointment","subtext":"",
-                  "title":"North County Cosmetic and Implant Dentistry - Request an Appointment Form",
-                  "height":420,"backgroundColor":"surface"}
-            sections=[hero,form]+[x for x in sections
-                                  if x.get('_component')!='page-sections/forms/liine-form']
-
         if slug=='reviews':
             # The testimonials live in a Slick carousel whose cloned slides make
             # every card look identical to the section de-duplicator, so build
