@@ -3,9 +3,11 @@ import Embed from "@core-elements/embed/Embed.astro";
 
 /*
  * The patient-testimonial slider, as measured on the source at 1440px: a
- * 383px card holding a title over a 383x215 (16:9) video, with a 640px slide
- * pitch so the neighbouring cards sit partly in view. The source ships 11
- * testimonials with dot indicators and no arrows.
+ * 600x426 grey card (#e6e6e6, 30px padding, 5px radius) holding a 113px
+ * speech-bubble icon beside five stars, the title, and a 383x215 video. A
+ * 20px triangle hangs off the bottom-left of each card, and the slides are
+ * pitched 640px apart so the neighbours sit partly in view. The source ships
+ * 11 testimonials with gold dot indicators and no arrows.
  *
  * This is the generic building-blocks/wrappers/carousel redesigned for
  * testimonials: same Embla mechanics, but each slide is a typed
@@ -14,7 +16,11 @@ import Embed from "@core-elements/embed/Embed.astro";
  */
 const {
   reviews = [],
-  slideWidth = 383,
+  cardWidth = 600,
+  slidePitch = 640,
+  rating = 5,
+  quoteIcon = "/src/assets/images/wp/icon-speechbubble.png",
+  starIcon = "/src/assets/images/wp/icon-stars.png",
   showIndicators = true,
   showArrows = false,
   autoPlay = false,
@@ -24,6 +30,8 @@ const {
   _component,
   ...rest
 } = Astro.props;
+
+const stars = Array.from({ length: Math.max(0, Math.min(5, Number(rating) || 0)) });
 
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
@@ -63,7 +71,7 @@ const slides = reviews
       role="region"
       aria-roledescription="carousel"
       aria-label={label || "Patient testimonials"}
-      style={`--rc-slide-width: ${slideWidth}px`}
+      style={`--rc-card-width: ${cardWidth}px; --rc-slide-pitch: ${slidePitch}px`}
       data-show-indicators={showIndicators ? "true" : "false"}
       data-show-arrows={showArrows ? "true" : "false"}
       {...(autoPlay ? { "data-autoplay": "5" } : {})}
@@ -78,12 +86,30 @@ const slides = reviews
               aria-roledescription="slide"
               aria-label={`Testimonial ${index + 1} of ${slides.length}`}
             >
-              {slide.title && <h3 class="rc-title">{slide.title}</h3>}
-              <Embed
-                class="rc-video"
-                aspectRatio="widescreen"
-                html={`<iframe src="https://www.youtube.com/embed/${slide.videoId}" title="${slide.title.replace(/"/g, "&quot;")}" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`}
-              />
+              <div class="rc-card">
+                {quoteIcon && (
+                  <div class="rc-quote">
+                    <img src={quoteIcon} alt="" width="113" height="113" loading="lazy" />
+                  </div>
+                )}
+                <div class="rc-body">
+                  {stars.length > 0 && starIcon && (
+                    <ul class="rc-stars" aria-label={`Rated ${stars.length} out of 5`}>
+                      {stars.map(() => (
+                        <li>
+                          <img src={starIcon} alt="" width="32" height="30" loading="lazy" />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  {slide.title && <h3 class="rc-title">{slide.title}</h3>}
+                  <Embed
+                    class="rc-video"
+                    aspectRatio="widescreen"
+                    html={`<iframe src="https://www.youtube.com/embed/${slide.videoId}" title="${slide.title.replace(/"/g, "&quot;")}" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`}
+                  />
+                </div>
+              </div>
             </article>
           ))}
         </div>
@@ -195,23 +221,102 @@ const slides = reviews
       width: 100%;
 
       > .rc-viewport {
-        overflow: hidden;
+        /* The tail hangs 20px below each card, so the viewport clips only
+           sideways and leaves room beneath for it. */
+        overflow: hidden clip;
+        padding-bottom: 24px;
         width: 100%;
       }
 
       > .rc-viewport > .rc-track {
         display: flex;
         flex-wrap: nowrap;
-        /* The source pitches slides 640px apart on a 383px card, leaving the
+        /* The source pitches slides 640px apart on a 600px card, leaving the
            neighbours partly in view either side of the centred slide. Below
-           the card width there is no room for that peek, so the gap closes
-           and the card fills the viewport instead of overflowing it. */
-        gap: max(0px, min(640px, 100%) - var(--rc-slide-width, 383px));
+           the card width the gap closes so the card fills the viewport
+           instead of overflowing it. */
+        gap: max(0px, min(var(--rc-slide-pitch, 640px), 100%) - var(--rc-card-width, 600px));
       }
 
       .rc-slide {
-        flex: 0 0 min(var(--rc-slide-width, 383px), 100%);
+        flex: 0 0 min(var(--rc-card-width, 600px), 100%);
         max-width: 100%;
+      }
+
+      /* 600x426 at 30px padding on the source, in the same #e6e6e6 surface
+         and z-depth-4 shadow the theme uses for raised cards. */
+      .rc-card {
+        background-color: var(--color-bg-surface, #e6e6e6);
+        border-radius: 5px;
+        box-shadow:
+          0 8px 10px 1px rgb(0 0 0 / 14%),
+          0 3px 14px 2px rgb(0 0 0 / 12%),
+          0 5px 5px -3px rgb(0 0 0 / 30%);
+        display: flex;
+        gap: 22px;
+        height: 100%;
+        padding: 30px;
+        position: relative;
+      }
+
+      /* The tail is a border triangle at the bottom-left, matching the
+         callout-bubble motif used elsewhere on the site. */
+      .rc-card::after {
+        border: 20px solid transparent;
+        border-bottom-width: 0;
+        border-top-color: var(--color-bg-surface, #e6e6e6);
+        bottom: -20px;
+        content: "";
+        height: 0;
+        left: 70px;
+        position: absolute;
+        width: 0;
+      }
+
+      .rc-quote {
+        align-self: center;
+        flex: 0 0 113px;
+        line-height: 0;
+      }
+
+      .rc-quote > img {
+        height: auto;
+        max-width: none;
+        width: 113px;
+      }
+
+      .rc-body {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      /* The five stars stay on one row. The interior-page rules give every
+         `main ul li` a square marker and a left margin, so those have to be
+         cleared here or they show up as bullets between the stars. */
+      .rc-stars {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2px;
+        list-style: none;
+        margin: 0 0 var(--spacing-xs);
+        padding: 0;
+
+        > li {
+          line-height: 0;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          &::marker {
+            content: none;
+          }
+        }
+
+        > li > img {
+          height: 30px;
+          max-width: none;
+          width: 32px;
+        }
       }
 
       /* The title sits above the video, at the source's 22.5px/200. These
@@ -242,25 +347,30 @@ const slides = reviews
       > .rc-controls > .rc-indicators {
         display: flex;
         flex-wrap: wrap;
-        gap: var(--spacing-xs);
+        gap: 10px;
         justify-content: center;
       }
 
+      /* Slick renders these as a bulleted list; the active bullet is the
+         site's gold at 75% opacity, the rest a muted grey. */
       .rc-indicator {
-        background-color: var(--color-border, #c9c5be);
+        background-color: #b4b4b4;
         border: none;
         border-radius: var(--radius-full);
+        color: #b4b4b4;
         cursor: pointer;
-        height: 11px;
+        font-size: 15px;
+        height: 15px;
+        line-height: 15px;
         padding: 0;
         transition:
           background-color var(--animation-normal) ease,
           transform var(--animation-normal) ease;
-        width: 11px;
+        width: 15px;
 
         &[data-selected="true"] {
-          background-color: var(--color-brand, #79a37b);
-          transform: scale(1.15);
+          background-color: var(--color-brand-secondary, #ba9764);
+          transform: scale(1.1);
         }
       }
 
@@ -289,6 +399,23 @@ const slides = reviews
 
       &[data-show-arrows="false"] > .rc-controls > .rc-arrow {
         display: none;
+      }
+
+      /* Below the card width the icon column would crowd the video out. */
+      @media (max-width: 600px) {
+        .rc-card {
+          flex-direction: column;
+          gap: var(--spacing-sm);
+          padding: 20px;
+        }
+
+        .rc-quote {
+          flex: 0 0 auto;
+        }
+
+        .rc-quote > img {
+          width: 72px;
+        }
       }
     }
   }

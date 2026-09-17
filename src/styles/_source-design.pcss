@@ -472,6 +472,22 @@
     margin-left: 0;
   }
 
+  /* The star rating is a list only for semantics. The starter's `main ul li`
+     rule paints a Fontello glyph in `li::before`, so that has to be cleared
+     as well as the marker and indent. */
+  main .rc-stars,
+  main .rc-stars li {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  main .rc-stars li::before,
+  main .rc-stars li::marker {
+    content: none;
+    display: none;
+  }
+
   /* Vertical rhythm between content blocks. */
   .cws-main .custom-section + .custom-section {
     margin-top: 30px;

@@ -6,7 +6,11 @@ value:
   id: ""
   label: ""
   reviews: []
-  slideWidth: 383
+  cardWidth: 600
+  slidePitch: 640
+  rating: 5
+  quoteIcon: /src/assets/images/wp/icon-speechbubble.png
+  starIcon: /src/assets/images/wp/icon-stars.png
   showIndicators: true
   showArrows: false
   autoPlay: false

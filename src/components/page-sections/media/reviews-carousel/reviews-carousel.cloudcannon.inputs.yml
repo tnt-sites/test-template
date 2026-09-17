@@ -6,9 +6,22 @@ reviews:
   type: array
   options:
     structures: _structures.reviews
-slideWidth:
-  comment: Width of each testimonial card in pixels. The source site uses 383.
+cardWidth:
+  comment: Width of each testimonial card in pixels. The source site uses 600.
   type: number
+slidePitch:
+  comment: Distance between card centres in pixels. Anything above the card width
+    leaves the neighbouring cards partly in view. The source site uses 640.
+  type: number
+rating:
+  comment: How many stars to show above each title, from 0 to 5.
+  type: number
+quoteIcon:
+  comment: The speech-bubble icon shown beside each testimonial. Leave empty to hide it.
+  type: image
+starIcon:
+  comment: The single star image, repeated for the rating.
+  type: image
 showIndicators:
   comment: Show the dot indicators beneath the slider.
   type: switch
