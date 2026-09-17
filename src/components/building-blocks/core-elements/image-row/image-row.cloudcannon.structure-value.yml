@@ -5,9 +5,62 @@ value:
   _component: building-blocks/core-elements/image-row
   id: ""
   images: []
+  preserveAspect: false
+  minItemWidth: 110
+  columns: 0
+_inputs:
+  images:
+    type: array
+    options:
+      structures: _structures.rowImages
+  preserveAspect:
+    comment: Keep each image's own proportions instead of cropping them all to a
+      shared 4:3 box. Use this for logos and pricing cards.
+    type: switch
+  minItemWidth:
+    comment: Smallest width in pixels an image may shrink to before the row wraps.
+    type: number
+  columns:
+    comment: Force an exact number of columns. Leave at 0 to fit as many as the
+      minimum width allows.
+    type: number
+_structures:
+  rowImages:
+    values:
+      - label: Image
+        value:
+          _component: building-blocks/core-elements/image
+          source: ""
+          alt: ""
+          linkUrl: ""
+          linkText: ""
+        _inputs:
+          source:
+            type: image
+          alt:
+            comment: Describes the image for screen readers. Leave empty if it is decorative.
+            type: text
+          linkUrl:
+            comment: Optional. Shows a button under the image linking here, such as
+              a PDF to download.
+            type: text
+          linkText:
+            comment: The button label. The button only appears when both this and the
+              link are set.
+            type: text
+        preview:
+          icon: image
+          text:
+            - key: alt
+            - Image
+          subtext:
+            - key: linkText
+            - key: source
 preview:
   text:
     - Image Row
+  subtext:
+    - template: "{images|array_length} {\"image\"|pluralize=images}"
   icon: view_column
 picker_preview:
   text: Image Row

@@ -31,6 +31,12 @@ AVAILABLE=set(os.listdir("/Users/tharvey/Work/CloudCannon/northcounty/src/assets
     if os.path.isdir("/Users/tharvey/Work/CloudCannon/northcounty/src/assets/images/wp") else set()
 SIZED=re.compile(r'^(.*)-(\d{2,4})x(\d{2,4})(\.[a-zA-Z0-9]+)$')
 
+def local_href(href):
+    """Point an uploads link at the copy under public/, and drop query strings."""
+    href=(href or '').split('?')[0]
+    m=re.search(r'/wp-content/uploads/(.+)$',href)
+    return '/wp-content/uploads/'+m.group(1) if m else href
+
 def img_path(src):
     """Rewrite a WP upload URL to the local asset, preferring the full-size original."""
     if not src: return None
@@ -139,8 +145,12 @@ def blocks_to_content(blocks):
                 for r in run:
                     src=img_path(r.get('src',''))
                     if src:
-                        items.append({'_component':'building-blocks/core-elements/image',
-                                      'source':src,'alt':r.get('alt','')})
+                        it={'_component':'building-blocks/core-elements/image',
+                            'source':src,'alt':r.get('alt','')}
+                        if r.get('linkUrl') and r.get('linkText'):
+                            it['linkUrl']=local_href(r['linkUrl'])
+                            it['linkText']=r['linkText']
+                        items.append(it)
                 if items:
                     out.append({'_component':'building-blocks/core-elements/image-row',
                                 'images':items})

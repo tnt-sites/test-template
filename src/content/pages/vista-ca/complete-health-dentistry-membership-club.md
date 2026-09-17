@@ -56,13 +56,19 @@ pageSections:
       images:
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/Adult-Membership-Annual.png
-        alt: ''
+        alt: Adult Membership plan
+        linkUrl: /wp-content/uploads/Adult-Membership.pdf
+        linkText: Enroll Now
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/Perio-Membership-Annual.png
-        alt: ''
+        alt: Periodontal Membership plan
+        linkUrl: /wp-content/uploads/Perio-Membership.pdf
+        linkText: Enroll Now
       - _component: building-blocks/core-elements/image
         source: /src/assets/images/wp/Child-Membership-Annual.png
-        alt: ''
+        alt: Child Membership plan
+        linkUrl: /wp-content/uploads/Child-Membership.pdf
+        linkText: Enroll Now
       preserveAspect: true
       columns: 3
     maxContentWidth: xl

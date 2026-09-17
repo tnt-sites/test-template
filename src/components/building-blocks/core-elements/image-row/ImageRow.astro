@@ -31,6 +31,16 @@ const htmlAttributes = Object.fromEntries(
       {images.map((img: any) => (
         <figure class="ir-item">
           <Image source={img.source} alt={img.alt || ""} editable={false} />
+          {img.linkUrl && img.linkText && (
+            <a
+              class="ir-button"
+              href={img.linkUrl}
+              target={img.linkNewTab === false ? undefined : "_blank"}
+              rel={img.linkNewTab === false ? undefined : "noopener"}
+            >
+              {img.linkText}
+            </a>
+          )}
         </figure>
       ))}
     </div>
@@ -49,6 +59,31 @@ const htmlAttributes = Object.fromEntries(
     margin: 0;
   }
 
+  /* The membership plans put a gold pill under each card, linking to that
+     plan's enrolment PDF. Measured on the source: 148x36, 30px radius,
+     15px/500 Montserrat in white. */
+  .ir-button {
+    background-color: var(--color-brand-secondary, #ba9764);
+    border-radius: 30px;
+    color: #fff;
+    display: inline-block;
+    font-family: var(--font-buttons, var(--font-headings));
+    font-size: 0.9375rem;
+    font-weight: 500;
+    line-height: 36px;
+    margin-top: var(--spacing-sm);
+    padding-inline: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: background-color var(--animation-normal) ease;
+  }
+
+  .ir-button:hover {
+    background-color: var(--color-brand, #79a37b);
+    color: #fff;
+  }
+
   .ir-item :global(img) {
     aspect-ratio: 4 / 3;
     display: block;
@@ -62,6 +97,23 @@ const htmlAttributes = Object.fromEntries(
      shared 4:3 box that the photo thumbnails use. */
   .image-row.preserve-aspect {
     align-items: center;
+  }
+
+  /* A card with a button below it stacks, so the images stay top-aligned and
+     the buttons line up along the bottom of the row. */
+  .image-row:has(.ir-button) {
+    align-items: stretch;
+  }
+
+  .image-row:has(.ir-button) .ir-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-row:has(.ir-button) .ir-button {
+    align-self: center;
+    margin-top: auto;
   }
 
   /* An explicit column count for rows the source fixes at a set width - with

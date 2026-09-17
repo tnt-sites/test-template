@@ -27,7 +27,10 @@ def inner(src,start):
 def content_blocks(body):
     """Split a section body into ordered heading/prose/list/image blocks."""
     toks=[]
-    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<dl[^>]*>(.*?)</dl>|<img[^>]*>|<iframe[^>]*>|<div class="[^"]*\bdivider\b[^"]*"[^>]*>\s*</div>',re.S|re.I)
+    # The trailing <a ...>text</a> alternative catches buttons that stand on
+    # their own outside a paragraph - the membership plans' "Enroll Now" pills
+    # sit in a sibling row after the cards, so they belong to the image above.
+    pat=re.compile(r'<(h[1-6])[^>]*>(.*?)</\1>|<p[^>]*>(.*?)</p>|<(ul|ol)[^>]*>(.*?)</\4>|<dl[^>]*>(.*?)</dl>|<img[^>]*>|<iframe[^>]*>|<div class="[^"]*\bdivider\b[^"]*"[^>]*>\s*</div>|<a\b[^>]*\bhref="[^"]*"[^>]*>[^<]{1,40}</a>',re.S|re.I)
     for m in pat.finditer(body):
         raw=m.group(0)
         if m.group(1):
@@ -62,8 +65,51 @@ def content_blocks(body):
                                  'title':(re.search(r'title="([^"]*)"',raw) or [None,''])[1]})
         else:
             src=re.search(r'src="([^"]*)"',raw); alt=re.search(r'alt="([^"]*)"',raw)
-            if src: toks.append({'type':'image','src':src.group(1),'alt':alt.group(1) if alt else ''})
-    return toks
+            if not src:
+                # A button with no image of its own, e.g. the membership plans'
+                # "Enroll Now" pills, which sit in the row after the cards.
+                btn=re.search(r'<a[^>]*href="([^"]*)"[^>]*>\s*([^<]{1,40}?)\s*</a>',raw,re.S)
+                if btn:
+                    toks.append({'type':'imageButton',
+                                 'linkUrl':btn.group(1).split('?')[0],
+                                 'linkText':btn.group(2).strip()})
+            if src:
+                tok={'type':'image','src':src.group(1),'alt':alt.group(1) if alt else ''}
+                btn=re.search(r'<a[^>]*href="([^"]*)"[^>]*>\s*([^<]{1,40}?)\s*</a>',raw,re.S)
+                if btn:
+                    tok['linkUrl']=btn.group(1).split('?')[0]
+                    tok['linkText']=btn.group(2).strip()
+                else:
+                    # A bare <a> with no image is a button for the image in the
+                    # row above: the membership plans put the three cards in one
+                    # div and the three "Enroll Now" pills in the next.
+                    pass
+                toks.append(tok)
+    return pair_image_buttons(toks)
+
+
+def pair_image_buttons(toks):
+    """Fold a run of button-only tokens onto the images immediately before them.
+
+    The membership-club plans render as two sibling rows - three cards, then
+    three "Enroll Now" links - so the button is never inside the image's own
+    markup and has to be matched by position instead.
+    """
+    out=[]
+    for tok in toks:
+        if tok.get('type')!='imageButton':
+            out.append(tok); continue
+        # find the earliest image in the trailing run that has no button yet
+        run=[]
+        for prev in reversed(out):
+            if prev.get('type')!='image': break
+            run.append(prev)
+        target=next((im for im in reversed(run) if not im.get('linkUrl')),None)
+        if target:
+            target['linkUrl']=tok['linkUrl']; target['linkText']=tok['linkText']
+        else:
+            out.append(tok)
+    return [t for t in out if t.get('type')!='imageButton']
 
 def kind_of(classes):
     ws=classes.split()
