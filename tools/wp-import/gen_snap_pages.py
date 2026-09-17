@@ -181,34 +181,17 @@ def main():
                 ttl=re.search(r'<div class="title">(.*?)</div>',blk,re.S)
                 cards.append({'title':t(ttl.group(1)) if ttl else '','id':vid.group(1)})
             if cards:
-                blocks=[]
-                for c in cards:
-                    inner=[]
-                    if c['title']:
-                        inner.append({'_component':'building-blocks/core-elements/heading',
-                                      'text':c['title'],'level':'h3','size':'sm'})
-                    inner.append({'_component':'building-blocks/core-elements/embed',
-                        'html':('<iframe src="https://www.youtube.com/embed/%s" title="%s" '
-                                'frameborder="0" loading="lazy" allow="accelerometer; autoplay; '
-                                'clipboard-write; encrypted-media; gyroscope; picture-in-picture" '
-                                'allowfullscreen></iframe>' % (c['id'],c['title'].replace('"','&quot;'))),
-                        'aspectRatio':'widescreen'})
-                    # Each testimonial is its own nested section so the grid treats
-                    # the title and its video as a single card rather than as two
-                    # independent items that flow into separate columns.
-                    blocks.append({'_component':'page-sections/builders/custom-section',
-                        'class':'review-card','label':c['title'] or 'Testimonial',
-                        'contentSections':inner,'maxContentWidth':'full',
-                        'paddingHorizontal':'none','paddingVertical':'none',
-                        'colorScheme':'default','backgroundColor':'none'})
+                # The source runs these as a Slick slider; ReviewsCarousel is
+                # the CloudCannon carousel redesigned for the title+video pair,
+                # so each testimonial stays intact as one typed slide.
                 sections=[s for s in sections
                           if not any('core-elements/embed' in (x.get('_component') or '')
                                      for x in (s.get('contentSections') or []))]
-                sections.append({'_component':'page-sections/builders/custom-section',
-                    'class':'reviews-videos','label':'Patient Testimonials',
-                    'contentSections':blocks,'maxContentWidth':'2xl',
-                    'paddingHorizontal':'lg','paddingVertical':'xl',
-                    'colorScheme':'default','backgroundColor':'base'})
+                sections.append({'_component':'page-sections/media/reviews-carousel',
+                    'label':'Patient Testimonials',
+                    'reviews':[{'title':c['title'],'videoId':c['id']} for c in cards],
+                    'slideWidth':383,'showIndicators':True,'showArrows':False,
+                    'autoPlay':False})
         if slug=='contact-us':
             intro=[c for sec in sections for c in (sec.get('contentSections') or [])
                    if 'core-elements/text' in (c.get('_component') or '')][:2]

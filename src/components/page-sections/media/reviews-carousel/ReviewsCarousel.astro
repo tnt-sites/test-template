@@ -1,0 +1,295 @@
+---
+import Embed from "@core-elements/embed/Embed.astro";
+
+/*
+ * The patient-testimonial slider, as measured on the source at 1440px: a
+ * 383px card holding a title over a 383x215 (16:9) video, with a 640px slide
+ * pitch so the neighbouring cards sit partly in view. The source ships 11
+ * testimonials with dot indicators and no arrows.
+ *
+ * This is the generic building-blocks/wrappers/carousel redesigned for
+ * testimonials: same Embla mechanics, but each slide is a typed
+ * title + videoId pair rather than a free-form content block, so the pairing
+ * cannot come apart the way a flat heading/embed sequence does.
+ */
+const {
+  reviews = [],
+  slideWidth = 383,
+  showIndicators = true,
+  showArrows = false,
+  autoPlay = false,
+  label = "",
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+const slugify = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
+if (!htmlAttributes.id && (id || label)) {
+  htmlAttributes.id = id || slugify(label);
+}
+
+// A review may carry either a bare YouTube id or a full embed URL.
+const youtubeId = (value: string) => {
+  if (!value) return "";
+  const match = value.match(/(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([A-Za-z0-9_-]+)/);
+
+  return match ? match[1] : value;
+};
+
+const slides = reviews
+  .map((review: any) => {
+    const videoId = youtubeId(review?.videoId || review?.video || "");
+
+    return videoId ? { title: (review?.title || "").trim(), videoId } : null;
+  })
+  .filter(Boolean) as { title: string; videoId: string }[];
+---
+
+{
+  slides.length > 0 && (
+    <section
+      class:list={["reviews-carousel", className]}
+      role="region"
+      aria-roledescription="carousel"
+      aria-label={label || "Patient testimonials"}
+      style={`--rc-slide-width: ${slideWidth}px`}
+      data-show-indicators={showIndicators ? "true" : "false"}
+      data-show-arrows={showArrows ? "true" : "false"}
+      {...(autoPlay ? { "data-autoplay": "5" } : {})}
+      {...htmlAttributes}
+    >
+      <div class="rc-viewport">
+        <div class="rc-track">
+          {slides.map((slide, index) => (
+            <article
+              class="rc-slide"
+              role="group"
+              aria-roledescription="slide"
+              aria-label={`Testimonial ${index + 1} of ${slides.length}`}
+            >
+              {slide.title && <h3 class="rc-title">{slide.title}</h3>}
+              <Embed
+                class="rc-video"
+                aspectRatio="widescreen"
+                html={`<iframe src="https://www.youtube.com/embed/${slide.videoId}" title="${slide.title.replace(/"/g, "&quot;")}" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`}
+              />
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div class="rc-controls">
+        <button class="rc-arrow rc-prev" type="button" aria-label="Previous testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M15 4 7 12l8 8" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+        <div class="rc-indicators" />
+        <button class="rc-arrow rc-next" type="button" aria-label="Next testimonial">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M9 4l8 8-8 8" fill="none" stroke="currentColor" stroke-width="2" />
+          </svg>
+        </button>
+      </div>
+    </section>
+  )
+}
+
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import Autoplay from "embla-carousel-autoplay";
+
+  function setupReviewsCarousels() {
+    document.querySelectorAll<HTMLElement>(".reviews-carousel").forEach((carousel) => {
+      if (carousel.hasAttribute("data-embla-initialized")) return;
+
+      const viewport = carousel.querySelector<HTMLElement>(".rc-viewport");
+      const slides = carousel.querySelectorAll(".rc-slide");
+      if (!viewport || !slides.length) return;
+
+      const plugins = [];
+      if (carousel.hasAttribute("data-autoplay")) {
+        const seconds = Number(carousel.getAttribute("data-autoplay")) || 5;
+        plugins.push(Autoplay({ delay: seconds * 1000, stopOnInteraction: true }));
+      }
+
+      const embla = EmblaCarousel(
+        viewport,
+        { loop: true, align: "center", slidesToScroll: 1, containScroll: false, duration: 20 },
+        plugins
+      );
+
+      carousel.setAttribute("data-embla-initialized", "true");
+      (carousel as any)._embla = embla;
+
+      const prev = carousel.querySelector<HTMLButtonElement>(".rc-prev");
+      const next = carousel.querySelector<HTMLButtonElement>(".rc-next");
+      prev?.addEventListener("click", () => embla.scrollPrev());
+      next?.addEventListener("click", () => embla.scrollNext());
+
+      // Pause a playing video when its slide scrolls away, so audio cannot
+      // keep running from a card the viewer can no longer see.
+      embla.on("select", () => {
+        carousel.querySelectorAll<HTMLIFrameElement>(".rc-slide iframe").forEach((frame) => {
+          frame.contentWindow?.postMessage(
+            JSON.stringify({ event: "command", func: "pauseVideo", args: [] }),
+            "*"
+          );
+        });
+      });
+
+      const indicators = carousel.querySelector(".rc-indicators");
+      if (!indicators) return;
+
+      const renderDots = () => {
+        indicators.innerHTML = "";
+        embla.scrollSnapList().forEach((_, index) => {
+          const dot = document.createElement("button");
+          dot.type = "button";
+          dot.className = "rc-indicator";
+          dot.setAttribute("aria-label", `Go to testimonial ${index + 1}`);
+          dot.addEventListener("click", () => embla.scrollTo(index));
+          indicators.appendChild(dot);
+        });
+        updateDots();
+      };
+
+      const updateDots = () => {
+        const selected = embla.selectedScrollSnap();
+        indicators.querySelectorAll(".rc-indicator").forEach((dot, index) => {
+          dot.setAttribute("data-selected", String(index === selected));
+          dot.setAttribute("aria-current", String(index === selected));
+        });
+      };
+
+      embla.on("select", updateDots);
+      embla.on("reInit", renderDots);
+      renderDots();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", setupReviewsCarousels);
+  } else {
+    setupReviewsCarousels();
+  }
+  document.addEventListener("astro:page-load", setupReviewsCarousels);
+</script>
+
+<style lang="pcss" is:global>
+  @layer components {
+    .reviews-carousel {
+      margin-block: var(--spacing-lg);
+      position: relative;
+      width: 100%;
+
+      > .rc-viewport {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      > .rc-viewport > .rc-track {
+        display: flex;
+        flex-wrap: nowrap;
+        /* The source pitches slides 640px apart on a 383px card, leaving the
+           neighbours partly in view either side of the centred slide. Below
+           the card width there is no room for that peek, so the gap closes
+           and the card fills the viewport instead of overflowing it. */
+        gap: max(0px, min(640px, 100%) - var(--rc-slide-width, 383px));
+      }
+
+      .rc-slide {
+        flex: 0 0 min(var(--rc-slide-width, 383px), 100%);
+        max-width: 100%;
+      }
+
+      /* The title sits above the video, at the source's 22.5px/200. These
+         headings use the body face, not the Raleway heading face. */
+      .rc-title {
+        border: none;
+        font-family: var(--font-body);
+        font-size: 1.406rem;
+        font-weight: 200;
+        line-height: 1.1;
+        margin: 0 0 var(--spacing-xs);
+        padding: 0;
+        text-transform: none;
+      }
+
+      .rc-video {
+        margin: 0;
+      }
+
+      > .rc-controls {
+        align-items: center;
+        display: flex;
+        gap: var(--spacing-md);
+        justify-content: center;
+        margin-top: var(--spacing-md);
+      }
+
+      > .rc-controls > .rc-indicators {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs);
+        justify-content: center;
+      }
+
+      .rc-indicator {
+        background-color: var(--color-border, #c9c5be);
+        border: none;
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        height: 11px;
+        padding: 0;
+        transition:
+          background-color var(--animation-normal) ease,
+          transform var(--animation-normal) ease;
+        width: 11px;
+
+        &[data-selected="true"] {
+          background-color: var(--color-brand, #79a37b);
+          transform: scale(1.15);
+        }
+      }
+
+      .rc-arrow {
+        background: none;
+        border: none;
+        color: var(--color-text);
+        cursor: pointer;
+        flex-shrink: 0;
+        line-height: 0;
+        padding: 4px;
+
+        svg {
+          height: 1.6rem;
+          width: 1.6rem;
+        }
+
+        &:hover {
+          color: var(--color-brand, #79a37b);
+        }
+      }
+
+      &[data-show-indicators="false"] > .rc-controls > .rc-indicators {
+        display: none;
+      }
+
+      &[data-show-arrows="false"] > .rc-controls > .rc-arrow {
+        display: none;
+      }
+    }
+  }
+</style>

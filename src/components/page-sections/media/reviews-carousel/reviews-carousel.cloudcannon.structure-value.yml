@@ -1,0 +1,46 @@
+label: Reviews Carousel
+icon: smart_display
+description: A slider of patient video testimonials.
+value:
+  _component: page-sections/media/reviews-carousel
+  id: ""
+  label: ""
+  reviews: []
+  slideWidth: 383
+  showIndicators: true
+  showArrows: false
+  autoPlay: false
+preview:
+  text:
+    - Reviews Carousel
+  subtext:
+    - key: label
+    - template: "{reviews|array_length} {\"testimonial\"|pluralize=reviews}"
+  icon: smart_display
+picker_preview:
+  text: Reviews Carousel
+  subtext: A slider of patient video testimonials.
+_inputs_from_glob:
+  - /src/components/page-sections/media/reviews-carousel/reviews-carousel.cloudcannon.inputs.yml
+_structures:
+  reviews:
+    values:
+      - label: Testimonial
+        value:
+          title: ""
+          videoId: ""
+        _inputs:
+          title:
+            comment: The heading shown above the video.
+            type: text
+          videoId:
+            comment: The YouTube video ID, or a full YouTube URL.
+            type: text
+        preview:
+          icon: smart_display
+          text:
+            - key: title
+            - Testimonial
+          subtext:
+            - key: videoId
+            - Add a YouTube video ID

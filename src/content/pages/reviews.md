@@ -25,214 +25,34 @@ pageSections:
   ctaImage: ''
   ctaImageAlt: Apply for CareCredit financing
   ctaLink: ''
-- _component: page-sections/builders/custom-section
-  class: reviews-videos
+- _component: page-sections/media/reviews-carousel
   label: Patient Testimonials
-  contentSections:
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Kathleen shares their experience for Sleep Apnea in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Kathleen shares their experience for Sleep Apnea in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/YAIbw5ZgOwM" title="Kathleen shares their experience
-        for Sleep Apnea in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer; autoplay; clipboard-write;
-        encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Emelda shares their experience for Dental Implants in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Emelda shares their experience for Dental Implants in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/otWr6M39X24" title="Emelda shares their experience
-        for Dental Implants in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Patient shares their experience for Periodontal Disease Treatment and Dental Implants in Vista,
+  reviews:
+  - title: Kathleen shares their experience for Sleep Apnea in Vista, CA
+    videoId: YAIbw5ZgOwM
+  - title: Emelda shares their experience for Dental Implants in Vista, CA
+    videoId: otWr6M39X24
+  - title: Patient shares their experience for Periodontal Disease Treatment and Dental Implants in Vista,
       CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Patient shares their experience for Periodontal Disease Treatment and Dental Implants in Vista,
-        CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/EPEKY0-qvVw" title="Patient shares their experience
-        for Periodontal Disease Treatment and Dental Implants in Vista, CA" frameborder="0" loading="lazy"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Patient shares their experience for Dental Implants in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Patient shares their experience for Dental Implants in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/gEX6CIStjpg" title="Patient shares their experience
-        for Dental Implants in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Chris shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Chris shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/3i34oE10gi0" title="Chris shares their experience
-        for North County Cosmetic and Implant Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Rick shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Rick shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/OyRG1McJwp4" title="Rick shares their experience
-        for North County Cosmetic and Implant Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Rudy shares their experience for CEREC Same Day Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Rudy shares their experience for CEREC Same Day Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/PkQt5OomkuM" title="Rudy shares their experience
-        for CEREC Same Day Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Connie shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Connie shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/XG-0LyExIc4" title="Connie shares their experience
-        for North County Cosmetic and Implant Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Scott shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Scott shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/6zApsaEYbP8" title="Scott shares their experience
-        for North County Cosmetic and Implant Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Patient shares their experience for Sedation Dentistry in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Patient shares their experience for Sedation Dentistry in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/HJxgUtLYl8E" title="Patient shares their experience
-        for Sedation Dentistry in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer; autoplay;
-        clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  - _component: page-sections/builders/custom-section
-    class: review-card
-    label: Brad shares their experience for Snoring and Sleep Apnea in Vista, CA
-    contentSections:
-    - _component: building-blocks/core-elements/heading
-      text: Brad shares their experience for Snoring and Sleep Apnea in Vista, CA
-      level: h3
-      size: sm
-    - _component: building-blocks/core-elements/embed
-      html: <iframe src="https://www.youtube.com/embed/NogAS8fooxQ" title="Brad shares their experience
-        for Snoring and Sleep Apnea in Vista, CA" frameborder="0" loading="lazy" allow="accelerometer;
-        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      aspectRatio: widescreen
-    maxContentWidth: full
-    paddingHorizontal: none
-    paddingVertical: none
-    colorScheme: default
-    backgroundColor: none
-  maxContentWidth: 2xl
-  paddingHorizontal: lg
-  paddingVertical: xl
-  colorScheme: default
-  backgroundColor: base
+    videoId: EPEKY0-qvVw
+  - title: Patient shares their experience for Dental Implants in Vista, CA
+    videoId: gEX6CIStjpg
+  - title: Chris shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
+    videoId: 3i34oE10gi0
+  - title: Rick shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
+    videoId: OyRG1McJwp4
+  - title: Rudy shares their experience for CEREC Same Day Dentistry in Vista, CA
+    videoId: PkQt5OomkuM
+  - title: Connie shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
+    videoId: XG-0LyExIc4
+  - title: Scott shares their experience for North County Cosmetic and Implant Dentistry in Vista, CA
+    videoId: 6zApsaEYbP8
+  - title: Patient shares their experience for Sedation Dentistry in Vista, CA
+    videoId: HJxgUtLYl8E
+  - title: Brad shares their experience for Snoring and Sleep Apnea in Vista, CA
+    videoId: NogAS8fooxQ
+  slideWidth: 383
+  showIndicators: true
+  showArrows: false
+  autoPlay: false
 ---

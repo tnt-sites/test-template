@@ -1,0 +1,20 @@
+label:
+  comment: Optional label for the carousel to help identify it in the editor.
+  type: text
+reviews:
+  comment: The patient testimonials shown in the slider.
+  type: array
+  options:
+    structures: _structures.reviews
+slideWidth:
+  comment: Width of each testimonial card in pixels. The source site uses 383.
+  type: number
+showIndicators:
+  comment: Show the dot indicators beneath the slider.
+  type: switch
+showArrows:
+  comment: Show previous/next arrows. The source site uses dots only.
+  type: switch
+autoPlay:
+  comment: Advance the slider automatically every five seconds.
+  type: switch
