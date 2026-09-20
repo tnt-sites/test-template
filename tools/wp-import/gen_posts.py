@@ -66,7 +66,14 @@ def to_md(h):
     h=re.sub(r'</?(ul|ol)[^>]*>','\n',h)
     h=re.sub(r'<p[^>]*>(.*?)</p>',lambda m:'\n'+m.group(1).strip()+'\n',h,flags=re.S)
     h=re.sub(r'<br\s*/?>','\n',h)
-    h=re.sub(r'<[^>]+>','',h)
+    # Strip the remaining tags, but never across a blank line. The source has
+    # malformed fragments (a bare `</` in mini-vs-regular-dental-implants), and
+    # a greedy `<[^>]+>` runs from one of those to the next `>` thousands of
+    # characters later - that ate four headings and their paragraphs.
+    # `[^<>]*` stops at the next `<`, so a malformed fragment drops itself
+    # instead of the paragraphs after it. mdx_safe escapes whatever is left.
+    h=re.sub(r'<[^<>]*>','',h)
+    h=re.sub(r'</(?=\s|$)','',h)
     h=html.unescape(h)
     h=re.sub(r'[ \t]+\n','\n',h)
     h=re.sub(r'\n{3,}','\n\n',h)

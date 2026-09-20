@@ -73,6 +73,10 @@ collections_config:
         type: array
         comment: Tags relevant to this post's content.
         cascade: true
+        options:
+          # Tags are plain strings, so the array needs an explicit entry type -
+          # without one CloudCannon renders it empty with no way to add a row.
+          empty_type: string
     add_options:
       - name: Add New Blog Post
         icon: article
@@ -210,6 +214,8 @@ collections_config:
         type: array
         cascade: true
         comment: Font stylesheet links for the site (Google, Adobe, or mixed).
+        options:
+          empty_type: string
       $.fontLinks[*]:
         type: url
         cascade: true
@@ -263,6 +269,8 @@ collections_config:
         type: array
         comment: Scripts injected into the <head> for this page (e.g. Google Analytics). Sub-pages (form, thank you, etc.) inherit this value.
         cascade: true
+        options:
+          empty_type: string
       $.head_scripts[*]:
         type: textarea
         comment: A single script tag or snippet for the head.
@@ -271,6 +279,8 @@ collections_config:
         type: array
         comment: Scripts injected before </body>. Sub-pages (form, thank you, etc.) inherit this value.
         cascade: true
+        options:
+          empty_type: string
       $.footer_scripts[*]:
         type: textarea
         comment: A single script tag or snippet for the footer.
@@ -279,6 +289,8 @@ collections_config:
         type: array
         comment: Extra font stylesheets for this landing page only (e.g. a Google or Adobe Fonts URL). Does not affect the rest of the site.
         cascade: true
+        options:
+          empty_type: string
       $.extraFonts[*]:
         type: url
         comment: Full stylesheet URL, e.g. https://fonts.googleapis.com/css2?family=Raleway&display=swap
@@ -651,6 +663,8 @@ collections_config:
         type: array
         comment: Scripts injected into the <head> for this page (e.g. Google Analytics). Sub-pages inherit this value.
         cascade: true
+        options:
+          empty_type: string
       $.head_scripts[*]:
         type: textarea
         comment: A single script tag or snippet for the head.
@@ -659,6 +673,8 @@ collections_config:
         type: array
         comment: Scripts injected before </body>. Sub-pages inherit this value.
         cascade: true
+        options:
+          empty_type: string
       $.footer_scripts[*]:
         type: textarea
         comment: A single script tag or snippet for the footer.
@@ -667,6 +683,8 @@ collections_config:
         type: array
         comment: Extra font stylesheets for this PEP page only (e.g. a Google or Adobe Fonts URL). Does not affect the rest of the site.
         cascade: true
+        options:
+          empty_type: string
       $.extraFonts[*]:
         type: url
         comment: Full stylesheet URL, e.g. https://fonts.googleapis.com/css2?family=Raleway&display=swap
@@ -758,6 +776,8 @@ file_config:
         type: array
         comment: Address lines for the office location.
         cascade: true
+        options:
+          empty_type: string
       $.offices[*].addresses[*].city:
         type: text
         comment: City for the office location.
@@ -820,6 +840,8 @@ file_config:
         type: array
         comment: Scripts injected into the head. Add multiple entries as needed.
         cascade: true
+        options:
+          empty_type: string
       $.head_scripts[*]:
         type: textarea
         comment: A single script tag or script snippet for the head.
@@ -828,6 +850,8 @@ file_config:
         type: array
         comment: Scripts injected before the closing body tag. Add multiple entries as needed.
         cascade: true
+        options:
+          empty_type: string
       $.footer_scripts[*]:
         type: textarea
         comment: A single script tag or script snippet for the footer.
