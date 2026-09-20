@@ -1,7 +1,7 @@
 ---
 import Button from "@core-elements/button/Button.astro";
 import Image from "@core-elements/image/Image.astro";
-import Text from "@core-elements/text/Text.astro";
+import RenderBlock from "@components/utils/renderBlock.astro";
 
 /*
  * Homepage welcome band, as measured on the source at 1440px: one row holding a
@@ -70,7 +70,7 @@ const htmlAttributes = Object.fromEntries(
       }
       <div class="ic-divider" aria-hidden="true"></div>
       <div class="ic-prose">
-        {paragraphs.map((block: any) => <Text alignX="start" text={block.text} />)}
+        <RenderBlock contentSections={paragraphs} propName="contentSections" editable={editable} />
       </div>
       {
         videoSource && (
