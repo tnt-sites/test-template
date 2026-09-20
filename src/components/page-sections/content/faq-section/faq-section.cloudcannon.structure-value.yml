@@ -1,0 +1,52 @@
+label: FAQ Section
+icon: quiz
+description: A heading and a set of question and answer pairs.
+value:
+  _component: page-sections/content/faq-section
+  heading: Frequently asked questions
+  level: h2
+  intro: ""
+  questions:
+    - question: A question?
+      answer: The answer.
+  preset: content
+  backgroundColor: highlight
+  variant: faq-card
+  label: ""
+preview:
+  icon: quiz
+  text:
+    - key: heading
+    - FAQ Section
+  subtext:
+    - key: intro
+picker_preview:
+  text: FAQ Section
+  subtext: A heading and a set of question and answer pairs.
+_inputs_from_glob:
+  - /src/components/page-sections/content/faq-section/faq-section.cloudcannon.inputs.yml
+_structures:
+  faqPairs:
+    values:
+      - label: Question
+        value:
+          question: A question?
+          answer: The answer.
+        preview:
+          icon: help
+          text:
+            - key: question
+          subtext:
+            - key: answer
+        _inputs:
+          question:
+            type: text
+            comment: The question.
+          answer:
+            type: markdown
+            comment: The answer.
+            options:
+              bold: true
+              italic: true
+              link: true
+              removeformat: true

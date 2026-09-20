@@ -296,9 +296,9 @@ if (!htmlAttributes.id && label) {
       }
 
       &.bg-gold {
-        /* the source's bg-tertiary band, #ba9764 */
-        background-color: var(--color-bg-gold, #ba9764);
-        color: #fff;
+        /* the source's bg-tertiary band — the gold comes from branding.json */
+        background-color: var(--color-bg-gold, var(--color-brand-secondary));
+        color: var(--color-text-on-brand);
 
         :global(h1),
         :global(h2),
@@ -306,7 +306,7 @@ if (!htmlAttributes.id && label) {
         :global(h4),
         :global(h5),
         :global(a) {
-          color: #fff;
+          color: var(--color-text-on-brand);
         }
       }
 

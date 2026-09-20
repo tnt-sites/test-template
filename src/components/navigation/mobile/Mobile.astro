@@ -90,11 +90,11 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         />
       </slot>
     </div>
-    <label
-      for={toggleId}
+    <button
+      type="button"
       class="mobile-close mobile-button"
       aria-label="Close navigation menu"
-      tabindex="0"
+      aria-controls={toggleId}
     >
       <Button
         variant="tertiary"
@@ -104,7 +104,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         hideText="true"
         class="mobile-nav-close mobile-nav-button"
       />
-    </label>
+    </button>
   </div>
 
   <div class="mobile-content">
@@ -367,12 +367,9 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         handleNavToggle(false);
       };
 
+      // A <button> already fires click on Enter/Space, so no keydown handler
+      // (a second one would run closeHandler twice per keypress).
       closeButton.addEventListener("click", closeHandler);
-      closeButton.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          closeHandler(e);
-        }
-      });
     }
 
     // Handle toggle state changes
@@ -435,6 +432,19 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       border-radius: var(--radius-xs);
       display: inline-block;
       outline-offset: -2px;
+    }
+
+    /* .mobile-close is a <button> (it cannot be a second <label> for the
+       toggle without tripping "multiple form labels"), so strip the UA
+       chrome to keep it identical to the hamburger label beside it. */
+    button.mobile-button {
+      appearance: none;
+      background: none;
+      border: 0;
+      color: inherit;
+      cursor: pointer;
+      font: inherit;
+      padding: 0;
     }
 
     .mobile {

@@ -1,0 +1,26 @@
+label: Video Section
+icon: play_circle
+description: A heading and an embedded video.
+value:
+  _component: page-sections/content/video-section
+  heading: Section heading
+  level: h2
+  intro: ""
+  html: ""
+  aspectRatio: landscape
+  preset: content
+  backgroundColor: surface
+  variant: ""
+  label: ""
+preview:
+  icon: play_circle
+  text:
+    - key: heading
+    - Video Section
+  subtext:
+    - key: intro
+picker_preview:
+  text: Video Section
+  subtext: A heading and an embedded video.
+_inputs_from_glob:
+  - /src/components/page-sections/content/video-section/video-section.cloudcannon.inputs.yml

@@ -1,0 +1,33 @@
+label: Checklist Section
+icon: checklist
+description: A heading and a bulleted or numbered list.
+value:
+  _component: page-sections/content/checklist-section
+  heading: Section heading
+  level: h2
+  intro: ""
+  items:
+    - First item
+    - Second item
+  listType: bullet
+  preset: content
+  backgroundColor: surface
+  variant: ""
+  label: ""
+preview:
+  icon: checklist
+  text:
+    - key: heading
+    - Checklist Section
+  subtext:
+    - key: intro
+picker_preview:
+  text: Checklist Section
+  subtext: A heading and a bulleted or numbered list.
+_inputs_from_glob:
+  - /src/components/page-sections/content/checklist-section/checklist-section.cloudcannon.inputs.yml
+_structures:
+  plainListItems:
+    values:
+      - label: List item
+        value: "List item"

@@ -1,0 +1,410 @@
+---
+/*
+ * The services landing band, as measured on the source at 1440px. Heading,
+ * search box and the eight service cards all share one grey (#dcdcdc) section
+ * -- on the source they are a single `inner-block-services`, not a hero with a
+ * separate grid beneath it.
+ *
+ * The container is 1296px inside a 1440px section (72px gutters). The heading
+ * column is the left half; the search box sits in a 330px column pushed to the
+ * right. Cards are 287px wide with 10px side margins on a 4-up row, and the
+ * source fixes their height at 535px via a matchHeight script -- CSS grid rows
+ * give us the same even row without the script.
+ *
+ * Each card carries its own icon, title, tagline and list of service links; the
+ * icon is a 100px circle with a 2px rule, not a cropped photo, which is why this
+ * is a separate section rather than a variant of info-card-grid.
+ */
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  heading = "",
+  subtext = "",
+  showSearch = true,
+  searchPlaceholder = "Search",
+  searchButtonText = "Search",
+  searchAction = "/search/",
+  cards = [],
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+type ServiceLink = {
+  _component?: string;
+  text?: string;
+  url?: string;
+};
+
+type ServiceCard = {
+  _component?: string;
+  image?: string;
+  imageAlt?: string;
+  title?: string;
+  tagline?: string;
+  links?: ServiceLink[];
+};
+
+const clean = (value: unknown, fallback = "") =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
+
+const normalizedCards = (Array.isArray(cards) ? cards : [])
+  .filter((card): card is ServiceCard => !!card && typeof card === "object")
+  .map((card) => ({
+    image: clean(card.image),
+    imageAlt: clean(card.imageAlt, clean(card.title)),
+    title: clean(card.title),
+    tagline: clean(card.tagline),
+    links: (Array.isArray(card.links) ? card.links : [])
+      .filter((link): link is ServiceLink => !!link && typeof link === "object")
+      .map((link) => ({ text: clean(link.text), url: clean(link.url) }))
+      .filter((link) => link.text),
+  }));
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["service-card-grid", className]} id={id || undefined} {...htmlAttributes}>
+  <div class="scg-inner">
+    <div class="scg-head">
+      <div class="scg-intro">
+        {
+          heading && (
+            <h1 class="scg-heading" data-prop="heading">
+              {heading}
+            </h1>
+          )
+        }
+        {
+          subtext && (
+            <h2 class="scg-subtext" data-prop="subtext">
+              {subtext}
+            </h2>
+          )
+        }
+        <div class="scg-divider" aria-hidden="true"></div>
+      </div>
+
+      {
+        showSearch && (
+          <div class="scg-search">
+            <form class="scg-form" role="search" method="get" action={searchAction}>
+              <label class="sr-only" for="service-search-input">
+                Type your search query here
+              </label>
+              <div class="scg-field">
+                <span class="scg-field-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="7" />
+                    <line x1="16.5" y1="16.5" x2="21" y2="21" stroke-linecap="round" />
+                  </svg>
+                </span>
+                <input
+                  id="service-search-input"
+                  class="scg-input"
+                  type="search"
+                  name="q"
+                  placeholder={searchPlaceholder}
+                  required
+                />
+              </div>
+              <button class="scg-submit" type="submit">{searchButtonText}</button>
+            </form>
+          </div>
+        )
+      }
+    </div>
+
+    <div
+      class="scg-cards"
+      data-editable={editable ? "array" : undefined}
+      data-component-key={editable ? "_component" : undefined}
+      data-id-key={editable ? "_component" : undefined}
+      data-prop={editable ? "cards" : undefined}
+    >
+      {
+        normalizedCards.map((card) => (
+          <editable-array-item
+            class="scg-card"
+            data-component="page-sections/features/service-card-grid/service-card"
+          >
+            {card.image && (
+              <div class="scg-card-icon">
+                <Image source={card.image} alt={card.imageAlt} editable={false} />
+              </div>
+            )}
+            <div class="scg-card-head">
+              {card.title && <h3 class="scg-card-title">{card.title}</h3>}
+              {card.tagline && <p class="scg-card-tagline">{card.tagline}</p>}
+            </div>
+            {card.links.length > 0 && (
+              <ul class="scg-card-list">
+                {card.links.map((link) => (
+                  <li>{link.url ? <a href={link.url}>{link.text}</a> : <span>{link.text}</span>}</li>
+                ))}
+              </ul>
+            )}
+          </editable-array-item>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .service-card-grid {
+      background-color: #dcdcdc;
+      padding-block: 50px;
+    }
+
+    .service-card-grid .scg-inner {
+      box-sizing: border-box;
+      margin: 0 auto;
+      max-width: 1440px;
+      padding-inline: 72px;
+    }
+
+    /* Heading on the left half, search pushed right into its own 330px column,
+       matching the source's `col l6` / `col l4 offset-l2` pair. */
+    .service-card-grid .scg-head {
+      display: grid;
+      gap: var(--spacing-lg);
+      grid-template-columns: 1fr 330px;
+    }
+
+    .service-card-grid .scg-heading {
+      color: #000;
+      font-family: var(--font-headings, Raleway, sans-serif);
+      font-size: 60px;
+      font-weight: 200;
+      line-height: 60px;
+      margin: 0;
+      text-align: center;
+    }
+
+    .service-card-grid .scg-subtext {
+      color: #000;
+      font-family: var(--font-headings, Raleway, sans-serif);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 22px;
+      margin: 20px 0 0;
+      text-align: center;
+    }
+
+    .service-card-grid .scg-divider {
+      border-top: 5px dotted currentcolor;
+      height: 5px;
+      margin: 12px auto;
+      width: 65px;
+    }
+
+    .service-card-grid .scg-search {
+      align-self: start;
+      margin-top: 20px;
+    }
+
+    .service-card-grid .scg-field {
+      align-items: center;
+      background-color: #fff;
+      border: 1px solid #c9c5be;
+      border-radius: 2px;
+      display: flex;
+      gap: 8px;
+      height: 46px;
+      padding-inline: 12px;
+    }
+
+    .service-card-grid .scg-field-icon {
+      color: #7a7a7a;
+      display: inline-flex;
+      flex: none;
+    }
+
+    .service-card-grid .scg-input {
+      background: none;
+      border: 0;
+      font: inherit;
+      height: 100%;
+      min-width: 0;
+      outline-offset: -2px;
+      width: 100%;
+    }
+
+    .service-card-grid .scg-submit {
+      background-color: var(--color-brand-secondary);
+      border: 0;
+      border-radius: 30px;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-family: var(--font-accent, Montserrat, sans-serif);
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      margin: 14px 0 0 auto;
+      padding: 0.5rem 1.75rem;
+      text-transform: capitalize;
+    }
+
+    .service-card-grid .scg-submit:hover {
+      background-color: var(--color-brand-secondary-hover);
+    }
+
+    /* 4-up at 287px per card with 10px side margins on a 1296px container. The
+       source runs a matchHeight script that pins every card to 535px; stretching
+       the cards to fill the row gives the same even bottom edge without the
+       script, and the card's own padding stays inside the card (a subgrid would
+       fold that padding into the shared row tracks and space the blocks out). */
+    .service-card-grid .scg-cards {
+      display: grid;
+      grid-template-columns: repeat(4, 287px);
+      justify-content: space-between;
+      gap: 70px 0;
+      margin-top: 35px;
+    }
+
+    .service-card-grid .scg-card {
+      background-color: #e6e6e6;
+      border-radius: 2px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .service-card-grid .scg-card-icon {
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Image renders as .image > picture > img, so the wrappers have to be sized
+       too or the 100px circle is only applied to the innermost element. */
+    .service-card-grid .scg-card-icon .image,
+    .service-card-grid .scg-card-icon picture {
+      display: block;
+      height: 100px;
+      width: 100px;
+    }
+
+    .service-card-grid .scg-card-icon img {
+      border: 2px solid #000;
+      border-radius: 50%;
+      box-sizing: border-box;
+      display: block;
+      height: 100px;
+      object-fit: contain;
+      padding: 12px;
+      width: 100px;
+    }
+
+    .service-card-grid .scg-card-title {
+      color: #000;
+      font-family: var(--font-headings, Raleway, sans-serif);
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26.4px;
+      margin: 20px 0 0;
+    }
+
+    /* The source separates the two with a <br>, which comes out at 23px. */
+    .service-card-grid .scg-card-tagline {
+      color: #000;
+      font-family: var(--font-headings, Raleway, sans-serif);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 19.8px;
+      margin: 23px 0 0;
+    }
+
+    /* Markers follow the site convention in _source-design.pcss: a square
+       ::marker in the text colour, indented with margin rather than padding.
+       The starter paints a Fontello glyph in li::before, so that is cleared. */
+    .service-card-grid .scg-card-list {
+      font-size: 15px;
+      list-style: none;
+      margin: 20px 0;
+      overflow: visible;
+      padding-left: 0;
+      text-align: left;
+    }
+
+    .service-card-grid .scg-card-list li {
+      display: list-item;
+      font-size: 15px;
+      line-height: 30px;
+      list-style-position: outside;
+      list-style-type: square;
+      margin: 0 0 0 18px;
+      overflow: visible;
+      padding-left: 0;
+    }
+
+    .service-card-grid .scg-card-list li::before {
+      content: none;
+    }
+
+    .service-card-grid .scg-card-list li::marker {
+      color: var(--color-text);
+    }
+
+    .service-card-grid .scg-card-list a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .service-card-grid .scg-card-list a:hover {
+      text-decoration: underline;
+    }
+
+    .service-card-grid .sr-only {
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      height: 1px;
+      overflow: hidden;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
+
+    @media (max-width: 1200px) {
+      .service-card-grid .scg-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+      .service-card-grid .scg-head {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card-grid .scg-search {
+        margin-inline: auto;
+        max-width: 417px;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .service-card-grid .scg-inner {
+        padding-inline: var(--spacing-lg, 24px);
+      }
+
+      .service-card-grid .scg-cards {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .service-card-grid .scg-heading {
+        font-size: 40px;
+        line-height: 44px;
+      }
+    }
+  }
+</style>

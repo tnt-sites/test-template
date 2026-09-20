@@ -1,0 +1,23 @@
+heading:
+  type: text
+  comment: Heading shown at the top of the band.
+subtext:
+  type: text
+  comment: Supporting line beneath the heading.
+showSearch:
+  type: switch
+  comment: Show the search box alongside the heading.
+searchPlaceholder:
+  type: text
+  comment: Placeholder text for the search box.
+searchButtonText:
+  type: text
+  comment: Label for the search button.
+searchAction:
+  type: url
+  comment: Page the search box submits to.
+cards:
+  type: array
+  comment: Service cards shown beneath the heading.
+  options:
+    structures: _structures.serviceCards

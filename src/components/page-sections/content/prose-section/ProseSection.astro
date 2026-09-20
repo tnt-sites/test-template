@@ -1,0 +1,59 @@
+---
+/*
+ * A heading plus a body of prose: the most common shape on the interior pages.
+ *
+ * Replaces a builders/custom-section wrapping a core-elements/heading followed
+ * by core-elements/text blocks. The body is a single markdown field rather than
+ * a nested block array, so adding a paragraph is one input rather than six
+ * levels of nesting.
+ *
+ * The markup mirrors CustomSection's (`.custom-section > .outer-content >
+ * .content`) because the source-design stylesheet targets those selectors --
+ * see sectionChrome.ts.
+ */
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import { chrome, DEFAULT_HEADING_SIZE } from "../sectionChrome";
+
+const {
+  heading,
+  level = "h2",
+  size,
+  body,
+  preset,
+  backgroundColor,
+  variant,
+  label,
+  class: className,
+  id,
+  colorScheme,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const box = chrome({ preset, backgroundColor, variant, class: className, label, id });
+---
+
+<section
+  class:list={["prose-section", ...box.classes]}
+  id={box.id}
+  data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  {...htmlAttributes}
+>
+  <div class="outer-content">
+    <div class:list={box.contentClasses}>
+      {
+        heading && (
+          <Heading
+            text={heading}
+            level={level}
+            size={size ?? DEFAULT_HEADING_SIZE[level]}
+            data-prop="heading"
+          />
+        )
+      }
+      {body && <Text text={body} data-prop="body" />}
+      <slot />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,54 @@
+---
+/*
+ * A heading plus an embedded video. The source pages embed YouTube iframes,
+ * which arrive from the migration as a raw html string.
+ */
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import Embed from "@core-elements/embed/Embed.astro";
+import { chrome, DEFAULT_HEADING_SIZE } from "../sectionChrome";
+
+const {
+  heading,
+  level = "h2",
+  size,
+  intro,
+  html,
+  aspectRatio = "landscape",
+  preset,
+  backgroundColor,
+  variant,
+  label,
+  class: className,
+  id,
+  colorScheme,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const box = chrome({ preset, backgroundColor, variant, class: className, label, id });
+---
+
+<section
+  class:list={["video-section", ...box.classes]}
+  id={box.id}
+  data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  {...htmlAttributes}
+>
+  <div class="outer-content">
+    <div class:list={box.contentClasses}>
+      {
+        heading && (
+          <Heading
+            text={heading}
+            level={level}
+            size={size ?? DEFAULT_HEADING_SIZE[level]}
+            data-prop="heading"
+          />
+        )
+      }
+      {intro && <Text text={intro} data-prop="intro" />}
+      {html && <Embed html={html} aspectRatio={aspectRatio} />}
+    </div>
+  </div>
+</section>

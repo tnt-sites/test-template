@@ -49,10 +49,14 @@
   --font-size-heading-2xl: 2.813rem; /* 45px   — h1 */
   --font-size-heading-3xl: 3.5rem;
 
-  /* Brand palette. */
-  --color-brand: #79a37b;
-  --color-brand-secondary: #ba9764;
-  --color-accent: #ba9764;
+  /*
+   * Brand palette. The hues themselves live in src/data/branding.json (CMS
+   * colour pickers) and are emitted by BaseLayout.astro as --color-brand*;
+   * they used to be repeated here as literals, which meant a rebrand in the
+   * CMS silently left these copies behind. Only the source-design ALIAS stays
+   * here, pointing at the branding-backed token.
+   */
+  --color-accent: var(--color-brand-secondary);
 }
 
 @layer base {
@@ -121,7 +125,7 @@
   a.button {
     background-color: var(--color-brand-secondary);
     border-radius: 30px;
-    color: #fff;
+    color: var(--color-text-on-brand);
     font-family: var(--font-accent);
     font-size: 0.9375rem;
     font-weight: 500;
@@ -132,8 +136,8 @@
 
   .button:hover,
   .btn:hover {
-    background-color: #a8854f;
-    color: #fff;
+    background-color: var(--color-brand-secondary-hover);
+    color: var(--color-text-on-brand);
   }
 }
 
@@ -181,9 +185,13 @@
    * Call-outs on the source are a compact centred bubble (850px, 88% max,
    * 25px padding, 10px radius) - not a full-bleed band. The migrated version
    * paints the whole section green, so constrain the inner content instead.
+   *
+   * Only the bubbles narrow: a plain green section is a content block like the
+   * gold and grey ones and lines up with them, so the inset is scoped to
+   * `.callout-bubble` rather than every `.bg-accent`.
    */
-  .custom-section.bg-accent > .outer-content,
-  .bg-accent > .inner-content {
+  .custom-section.bg-accent.callout-bubble > .outer-content,
+  .bg-accent.callout-bubble > .inner-content {
     margin-inline: auto;
     max-width: 88%;
   }
@@ -202,7 +210,7 @@
    * 50px top strip (address + gold CTA pills) over a 64px nav row. The
    * starter caps the logo at 1.8em, which shrinks it to a smudge.
    */
-  .main-nav > .outer-content .hd-content > a > .image img,
+  .main-nav .hd-utility .logo-link .image img,
   .main-nav .main-nav-logo img {
     height: auto !important;
     max-height: 85px;
@@ -212,7 +220,7 @@
 
   /* Scrolled, the source halves the logo to 45px. `height` is locked to auto
      above, so the scrolled size has to come from max-height. */
-  .main-nav.is-scrolled > .outer-content .hd-content > a > .image img,
+  .main-nav.is-scrolled .hd-utility .logo-link .image img,
   .main-nav.is-scrolled .main-nav-logo img {
     max-height: 45px;
     transition: max-height var(--animation-normal, 200ms) ease-in-out;
@@ -224,34 +232,59 @@
    * the viewport once Sleep Apnea, Medicare Options and Financing are present.
    */
   .main-nav {
-    --chrome-nav-link-size: 13px;
+    /* 13px is the source's size, held wherever the row fits. Below that it
+       eases down with the viewport so all 12 items stay on screen instead of
+       being clipped off the left edge as they are on the source. */
+    --chrome-nav-link-size: clamp(9px, calc(13px - (1310px - 100cqi) / 105), 13px);
   }
 
   .main-nav .desktop-main-nav > .bar-list {
     gap: 0;
+    justify-content: flex-end;
+    min-width: 0;
+  }
+
+  /* The bar must be allowed to shrink. Left to size from its 12 items it
+     overflows the row and the first links are clipped off the left edge —
+     the same thing happens on the source. Shrinking instead lets the items
+     tighten up and stay on screen. */
+  .main-nav .hd-nav .nav-end > .desktop-main-nav.bar {
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  /* The 12 top-level items need about 1300px at the source's 15px of side
+     padding, which is wider than the content column at every desktop width —
+     on the source the first items are simply clipped off the left edge. The
+     padding is scaled with the viewport instead so the whole row stays on
+     screen, reaching the source's 15px only where there is room for it. */
+  .main-nav {
+    --chrome-nav-link-pad: clamp(1px, calc((100cqi - 900px) / 46), 15px);
   }
 
   .main-nav .desktop-main-nav > .bar-list > .nav-item > a {
     font-size: var(--chrome-nav-link-size);
-    padding: 8px 4px 8px 15px;
+    padding: 8px 4px 8px var(--chrome-nav-link-pad);
     white-space: nowrap;
   }
 
   .main-nav .desktop-main-nav > .bar-list > .nav-item:not(.has-children) > a {
-    padding-right: 15px;
+    padding-right: var(--chrome-nav-link-pad);
   }
 
+
   /*
-   * The starter sizes the header's button slot for a single search icon
-   * (flex: 0 0 30px), so the source's two text CTAs overflow the viewport.
-   * Let the group size to its content and wrap onto the address row.
+   * The search control shares the nav row with the bar. It has to reserve its
+   * own width — left to collapse to zero it overlaps the last nav link.
    */
-  .main-nav > .outer-content .hd-content .nav-end > .desktop-button-group.button-group {
+  .main-nav .hd-nav .nav-end > .desktop-button-group.button-group {
+    container-type: normal; /* inline-size containment collapses width to 0 */
     flex: 0 0 auto !important;
+    width: fit-content !important;
   }
 
   .main-nav > .outer-content .hd-content .nav-end {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .main-nav .button-group {
@@ -260,43 +293,16 @@
   }
 
   /*
-   * The source's header is a 50px top strip (address + CTA pills, inline)
-   * over a 64px nav row. The starter stacks .hd-info, .hd-btns and .hd-nav
-   * as three separate rows, so pull the first two onto one line.
+   * The header's own component styles now lay out the two rows — the utility
+   * strip (address + CTA pills) over the logo/nav row — so this layer only
+   * has to keep the nav row's contents right-aligned against the logo.
    */
   @media (min-width: 1025px) {
-    /*
-     * Source header: logo on the left, and to its right a 50px strip holding
-     * the address and the gold CTA pills, with the nav row beneath. The
-     * starter stacks .hd-info / .hd-btns / .hd-nav as three separate rows.
-     */
-    .main-nav .hd-content {
-      align-items: flex-start;
-      display: flex;
-      flex-wrap: nowrap;
-      gap: var(--spacing-lg);
-    }
-
-    .main-nav .hd-content > .logo-link {
-      flex: 0 0 auto;
-    }
-
-    /* Address + CTAs share the top strip. */
-    .main-nav .hd-info {
-      align-items: center;
-      display: flex;
-      gap: var(--spacing-md);
-      justify-content: flex-end;
-      order: 1;
-    }
-
-    .main-nav .hd-btns {
-      margin-top: 0;
-      order: 2;
-    }
-
+    /* The nav gets the full width of the column beside the logo. With 12
+       top-level items there is no room to inset it further — on the source
+       the first items are clipped off the left edge because of it. */
     .main-nav .hd-nav {
-      order: 3;
+      min-width: 0;
       width: 100%;
     }
 
@@ -304,49 +310,19 @@
       justify-content: flex-end;
       width: 100%;
     }
-
-    /* The starter sets .hd-right to flex-column at a higher specificity
-       (> .outer-content .hd-content .hd-right), so match it here. */
-    .main-nav > .outer-content .hd-content .hd-right {
-      align-items: center;
-      display: grid;
-      flex: 1 1 auto;
-      grid-template-areas:
-        "info btns"
-        "nav  nav";
-      grid-template-columns: 1fr auto;
-      margin-right: 0;
-    }
-
-    .main-nav .hd-info {
-      grid-area: info;
-    }
-
-    .main-nav .hd-btns {
-      grid-area: btns;
-    }
-
-    .main-nav .hd-nav {
-      grid-area: nav;
-    }
-
-    .main-nav .hd-info .phy {
-      display: inline;
-      font-size: 15px;
-      letter-spacing: normal;
-      text-transform: none;
-    }
-
-    .main-nav .hd-info .pho {
-      font-size: 15px;
-    }
   }
 
-  /* Header CTAs are compact gold pills, not full-size buttons. */
-  .main-nav .button-group .button {
+  /* The nav row's search control is a compact pill. The utility row's two
+     CTAs are sized by the header component itself, from the source's
+     measurements, so they are left alone here. */
+  .main-nav .hd-nav .button-group .button {
     font-size: 0.875rem;
     padding-block: 0.5rem;
     padding-inline: 20px;
+    white-space: nowrap;
+  }
+
+  .main-nav .page-buttons .button {
     white-space: nowrap;
   }
 
@@ -360,11 +336,11 @@
   /* The dropdown panel is a solid gold sheet with white 13px links. */
   .main-nav .dropdown-content,
   .main-nav [class*="dropdown"] > ul {
-    background-color: var(--chrome-dropdown-bg, #ba9764);
+    background-color: var(--chrome-dropdown-bg, var(--color-brand-secondary));
   }
 
   .main-nav .dropdown-content a {
-    color: var(--chrome-dropdown-item-color, #fff);
+    color: var(--chrome-dropdown-item-color, var(--color-text-on-brand));
     font-size: var(--chrome-dropdown-item-size, 13px);
     font-weight: var(--chrome-dropdown-item-weight, 500);
     padding: 14px 16px;
@@ -518,7 +494,7 @@
 
   /* Call-outs: a narrow green bubble with a tail, not a full-bleed band. */
   .callout-bubble {
-    background-color: var(--color-brand, #79a37b);
+    background-color: var(--color-brand);
     border-radius: 10px;
     margin: 30px auto;
     max-width: min(850px, 88%);
@@ -528,7 +504,7 @@
 
   .callout-bubble::after {
     border: 20px solid transparent;
-    border-top-color: var(--color-brand, #79a37b);
+    border-top-color: var(--color-brand);
     content: "";
     height: 0;
     left: 48px;
@@ -560,6 +536,25 @@
     font-size: 1.031rem;
     font-weight: 300;
     line-height: 1.5;
+  }
+
+  /*
+   * Gap between consecutive paragraphs inside one prose block.
+   *
+   * Before the content components, each paragraph was its own
+   * core-elements/text block and the gap came from that block's own
+   * `margin-top`. prose-section holds the whole run in a single markdown
+   * field, so the paragraphs are now <p> siblings in one `.text` -- without
+   * this they render flush against each other and the page loses ~30px per
+   * pair (caught by a screenshot diff against the pre-migration build).
+   *
+   * Scoped to the content column on purpose: the page banner's intro is also a
+   * `.text`, and it sets its own tighter 0.85em gap (PageBanner.astro). Leaving
+   * that selector out keeps the banner's own spacing authoritative.
+   */
+  .cws-main .text p + p,
+  .cws-side .text p + p {
+    margin-top: var(--spacing-lg);
   }
 
   .cws-main li,
@@ -828,16 +823,16 @@
   main .custom-section.bg-gold h6,
   main .custom-section.bg-gold strong,
   main .custom-section.bg-gold em {
-    color: #fff;
+    color: var(--color-text-on-brand);
   }
 
   main .custom-section.bg-gold a {
-    color: #fff;
+    color: var(--color-text-on-brand);
     text-decoration: underline;
   }
 
   main .custom-section.bg-gold li::marker {
-    color: #fff;
+    color: var(--color-text-on-brand);
   }
 }
 
@@ -894,12 +889,14 @@
    * starter's divider is a 2px light grey line with no margin of its own.
    */
   main .cws-main .custom-section .divider,
-  main .content-with-sidebar .custom-section .divider {
+  main .content-with-sidebar .custom-section .divider,
+  main .services-prose .divider {
     margin-block: 12px;
   }
 
   main .cws-main .custom-section .divider hr,
-  main .content-with-sidebar .custom-section .divider hr {
+  main .content-with-sidebar .custom-section .divider hr,
+  main .services-prose .divider hr {
     border-top: 1px solid var(--color-border, #d2cec7);
     margin: 0;
   }
@@ -918,4 +915,68 @@
      title over its video. Each card is its own nested custom-section so the
      grid treats the pair as one item instead of flowing titles and videos
      into separate columns. */
+}
+
+@layer overrides {
+  /*
+   * First Visit. The Button and Text components set their own size in the
+   * `components` / `page-sections` layers, so the source's measured values for
+   * this page have to land in `overrides` to win.
+   *
+   *   grey-band form buttons   269x39, Montserrat 15px
+   *   policy card copy         15px/22.5 weight 300
+   */
+  main .patient-info-band .pib-form-link {
+    font-size: 0.9375rem;
+    min-height: 39px;
+    min-width: 269px;
+    padding-block: 8px;
+  }
+
+  main .policy-card-grid .pcg-card-body p {
+    font-size: 0.9375rem;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+
+  main .patient-info-band .pib-prose p {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+}
+
+@layer overrides {
+  /*
+   * First Visit hero form buttons: the source runs all five at a uniform
+   * 195x36. The Button component sets its own min-width in `components`, so
+   * the measured size has to be re-stated here to win.
+   */
+  main .page-banner .pb-form-link {
+    box-sizing: border-box;
+    height: 36px;
+    line-height: 36px;
+    min-height: 0;
+    min-width: 0;
+    padding-block: 0;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  /* The label is a span inside the button; the single 36px line has to be set
+     on it too, or it wraps inside the fixed-height pill. */
+  main .page-banner .pb-form-link .label-text {
+    display: block;
+    line-height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* The source clips "Sleep Apnea History Form" at this width; shrinking the
+     label a little keeps every form name readable inside the 195px pill. */
+  main .page-banner .pb-form-link,
+  main .page-banner .pb-form-link .label-text {
+    font-size: 0.7813rem;
+    letter-spacing: 0.2px;
+  }
 }

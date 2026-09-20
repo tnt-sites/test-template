@@ -1,0 +1,98 @@
+label: Patient Info Band
+icon: fact_check
+description: Grey band with visit information, payment methods and downloadable forms.
+value:
+  _component: page-sections/info-blocks/patient-info-band
+  id: ""
+  heading: Your first visit will be about one hour long.
+  paragraphs:
+    - _component: page-sections/info-blocks/patient-info-band/paragraph
+      text: What to expect during the visit.
+  paymentsTitle: Payment Methods
+  paymentIcons:
+    - _component: page-sections/info-blocks/patient-info-band/icon
+      source: ""
+      alt: Payment method
+  formsHeading: "Downloadable Forms:"
+  formLinks:
+    - _component: page-sections/info-blocks/patient-info-band/form-link
+      text: Form name
+      url: /wp-content/uploads/form.pdf
+      newTab: true
+preview:
+  text:
+    - Patient Info Band
+  subtext:
+    - key: heading
+  icon: fact_check
+picker_preview:
+  text: Patient Info Band
+  subtext: Grey band with visit information, payment methods and downloadable forms.
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/patient-info-band/patient-info-band.cloudcannon.inputs.yml
+_structures:
+  patientInfoParagraphs:
+    values:
+      - label: Paragraph
+        icon: notes
+        value:
+          _component: page-sections/info-blocks/patient-info-band/paragraph
+          text: Paragraph text.
+        preview:
+          text:
+            - key: text
+            - Paragraph
+        _inputs:
+          text:
+            type: markdown
+            comment: Paragraph copy.
+  patientInfoIcons:
+    values:
+      - label: Payment Icon
+        icon: credit_card
+        value:
+          _component: page-sections/info-blocks/patient-info-band/icon
+          source: ""
+          alt: Payment method
+        preview:
+          text:
+            - key: alt
+            - Payment Icon
+          image:
+            - key: source
+        _inputs:
+          source:
+            type: image
+            comment: Payment method icon.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          alt:
+            type: text
+            comment: Alt text for the icon.
+  patientInfoFormLinks:
+    values:
+      - label: Form Link
+        icon: description
+        value:
+          _component: page-sections/info-blocks/patient-info-band/form-link
+          text: Form name
+          url: /wp-content/uploads/form.pdf
+          newTab: true
+        preview:
+          text:
+            - key: text
+            - Form Link
+          subtext:
+            - key: url
+        _inputs:
+          text:
+            type: text
+            comment: Button label.
+          url:
+            type: url
+            comment: Link to the form or PDF.
+          newTab:
+            type: switch
+            comment: Open the link in a new tab.

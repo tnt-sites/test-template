@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import siteInfoData from "@data/siteInfo.json";
@@ -115,15 +116,17 @@ const sharedSocials =
       ? resolvedOffices[0].socials
       : ((siteInfoData as any).socials ?? []);
 
-const formatAddressLines = (address: any) => {
-  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+/* The header runs the address on a single line — "1934 Via Centre Ste A Vista,
+   CA 92081" — so the street and the city run together with no comma between
+   them and the country is dropped, matching the source's utility bar. */
+const formatAddressInline = (address: any) => {
+  const street = (Array.isArray(address?.lines) ? address.lines : [])
+    .filter((line: any) => typeof line === "string" && line.trim().length > 0)
+    .join(" ");
   const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
   const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
-  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
 
-  return [...lineItems, locationLine].filter(
-    (line) => typeof line === "string" && line.trim().length > 0
-  );
+  return [street, cityStatePostal].filter(Boolean).join(" ");
 };
 ---
 
@@ -135,79 +138,66 @@ const formatAddressLines = (address: any) => {
   {...htmlAttributes}
 >
   <div class="hd-content">
-    <a class="logo-link" href="/">
-      <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
-    </a>
-    <!-- Desktop Nav -->
-    <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
-        {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
+    <!-- Top row: the logo sits with the address and the two calls to action,
+         so the logo and the info share one line. Becomes the full-width grey
+         bar once scrolled. -->
+    <div class="hd-utility">
+      <div class="hd-utility-inner">
+        <a class="logo-link" href="/">
+          <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
+        </a>
+        <div class="hd-info">
+          {
+            resolvedOffices.map((office: any) =>
+              Array.isArray(office?.addresses)
+                ? office.addresses.map((address: any) => {
+                    const inlineAddress = formatAddressInline(address);
 
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
-
-                    return formattedLines.length > 0 ? (
+                    return inlineAddress ? (
                       <a
                         href={address?.mapUrl || "#"}
                         class="phy"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
+                        <Icon name="map-pin" size="none" class="phy-icon" aria-hidden="true" />
+                        <span>{inlineAddress}</span>
                       </a>
                     ) : null;
-                  })}
-              </div>
-            </>
-          ))
+                  })
+                : null
+            )
+          }
+        </div>
+        {
+          buttons.length > 0 && (
+            <div class="hd-btns page-buttons">
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="desktop-button-group"
+                buttonSections={buttons}
+                editable={false}
+              />
+            </div>
+          )
         }
       </div>
-      {
-        buttons.length > 0 && (
-          <div class="hd-btns page-buttons">
-            <ButtonGroup
-              direction="row"
-              align="center"
-              class="desktop-button-group"
-              buttonSections={buttons}
-              editable={false}
-            />
-          </div>
-        )
-      }
-      <div class="hd-nav">
-        <div class="nav-end">
-          <Bar navData={navData} class="desktop-main-nav" />
+    </div>
 
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
-        </div>
+    <!-- Nav row: its own full-width row beneath the logo and info. -->
+    <div class="hd-nav">
+      <div class="nav-end">
+        <Bar navData={navData} class="desktop-main-nav" />
+
+        <ButtonGroup
+          direction="row"
+          align="center"
+          class="desktop-button-group"
+          buttonSections={searchButtons}
+          editable={false}
+        />
       </div>
-      <!-- End Desktop Nav -->
     </div>
   </div>
   <!-- Mobile Nav -->
@@ -308,17 +298,59 @@ const formatAddressLines = (address: any) => {
       }
 
       /* --- Scrolled state ------------------------------------------------
-         The source shrinks the header from 114px to 90px once scrolled: the
-         logo drops from 85px tall to 45px and the utility row loses its
-         vertical padding. Only the sizes change, so the bar keeps its
-         position and nothing reflows underneath it. */
+         The source shrinks the header from 114px to 90px once scrolled and
+         restructures the top of it: the address and the two buttons move
+         into a full-bleed 30px grey bar (#e6e6e6) that spans above the logo
+         and nav, the buttons square off (radius 0, icons flush to the left
+         edge with no disc), and the logo drops from 85px to 45px and sits on
+         the same row as the nav rather than above it. */
       &.is-scrolled {
         padding-block: 0;
       }
 
-      &.is-scrolled > .outer-content .hd-info {
-        font-size: 0.8125rem;
-        padding-block: 2px;
+      /* The utility row becomes the grey bar. It is pulled out to the full
+         viewport width so the grey runs edge to edge, then padded back by
+         exactly what it was pulled out by, so its contents sit on the same
+         left and right edges as the logo and the nav below. */
+      &.is-scrolled > .outer-content .hd-utility {
+        background-color: #e6e6e6;
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        padding-inline: calc(50vw - 50%);
+      }
+
+      &.is-scrolled > .outer-content .hd-utility .hd-utility-inner {
+        min-height: 30px;
+      }
+
+      &.is-scrolled > .outer-content .hd-info .phy {
+        padding: 0 15px;
+      }
+
+      /* Square, flush-left icons: the disc and its offsets go away and the
+         icon becomes a full-height block at the leading edge of the button. */
+      &.is-scrolled > .outer-content .hd-content .page-buttons .button {
+        border-radius: 0;
+        min-height: 30px;
+        padding-right: 10px;
+      }
+
+      &.is-scrolled > .outer-content .hd-content .page-buttons .button .icon {
+        align-self: stretch;
+        border-radius: 0;
+        height: auto;
+        margin: 0 10px 0 0;
+        padding-inline: 15px;
+        width: auto;
+      }
+
+      /* The logo stays above the nav, as in the unscrolled state, and only
+         halves in height. The source puts it beside the nav here, but with
+         12 top-level items there is not enough room on one line — on the
+         source the nav is clipped because of it — so the stacked rows are
+         kept and the nav gets the full width. */
+      &.is-scrolled > .outer-content .hd-utility .logo-link .image img {
+        height: 45px;
       }
 
       &.is-scrolled > .outer-content .hd-nav {
@@ -337,39 +369,38 @@ const formatAddressLines = (address: any) => {
         }
       }
 
+      /* Two rows: the logo and the info (address + calls to action) share the
+         top row, with the nav on its own full-width row beneath. */
       > .outer-content .hd-content {
-        align-items: center;
+        align-items: stretch;
         container-type: inline-size;
         display: flex;
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
-
-        > a > .image img {
-          height: 1.8em;
-          max-width: min(20em, 100%);
-          width: auto;
-        }
+        flex-direction: column;
 
         .button-group {
           margin-top: 0;
         }
       }
 
-      > .outer-content .hd-content .hd-right {
+      /* The logo leads the top row; the info is pushed to the far end of it. */
+      > .outer-content .hd-utility .logo-link {
+        align-items: center;
         display: flex;
-        flex: 0 1 700px;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-left: auto;
-        align-items: end;
-        margin-right: 20px;
+        flex: 0 0 auto;
+        margin-right: auto;
       }
 
-      > .outer-content .hd-content .hd-actions {
+      > .outer-content .hd-utility .hd-utility-inner {
         align-items: center;
         display: flex;
         gap: var(--spacing-sm);
         justify-content: flex-end;
+      }
+
+      > .outer-content .hd-utility .logo-link .image img {
+        height: 85px;
+        max-width: min(20em, 100%);
+        width: auto;
       }
 
       > .outer-content .hd-content .nav-end {
@@ -398,13 +429,84 @@ const formatAddressLines = (address: any) => {
           margin-left: 0;
         }
       }
+
+      /* --- Call-to-action buttons ----------------------------------------
+         The source builds these as a gold pill with the icon in a slightly
+         lighter gold disc pinned to the left edge, and the label padded off
+         it: 38px tall, 30px icon, 15px/300 text. The starter's Button lays
+         out icon-then-label in a flex row, so the disc is styling on the
+         icon rather than extra markup. */
+      > .outer-content .hd-content .page-buttons .button {
+        border: 0;
+        font-size: 0.9375rem; /* 15px */
+        font-weight: 300;
+        gap: 0;
+        justify-content: flex-start;
+        min-height: 38px;
+        padding: 0 20px 0 0;
+      }
+
+      /* On hover the button takes the disc's lighter gold, so the two merge
+         into one block — as on the source. */
+      > .outer-content .hd-content .page-buttons .button:hover,
+      > .outer-content .hd-content .page-buttons .button:focus-visible {
+        background-color: var(--color-brand-secondary-light);
+        border: 0;
+        color: var(--color-text-on-brand, #fff);
+      }
+
+      > .outer-content .hd-content .page-buttons .button .icon {
+        align-items: center;
+        align-self: center;
+        background-color: var(--color-brand-secondary-light);
+        border-radius: 60px;
+        box-sizing: content-box;
+        display: inline-flex;
+        flex: 0 0 auto;
+        height: 30px;
+        justify-content: center;
+        margin: 0 6px 0 4px;
+        width: 30px;
+      }
+
+      > .outer-content .hd-content .page-buttons .button .icon svg {
+        height: 1rem;
+        width: 1rem;
+      }
     }
 
-    .hd-info{display: flex; justify-content: space-between; align-items: center;}
-    .main-nav .phy{display: block; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text); line-height: 1; transition: .3s;}
-      .main-nav .pho{font-weight: var(--font-weight-bold); color: var(--color-brand); font-size: var(--font-size-2xl); line-height: 1; transition: .3s; display: block; margin: 0 auto 5px;}
+    /* --- Utility row address -------------------------------------------
+       The source runs the address as a single gold line with a map-marker
+       ahead of it — 15px/300, no uppercasing or tracking — sitting to the
+       left of the two call-to-action buttons. */
+    .hd-info {
+      align-items: center;
+      display: flex;
+    }
 
-    .main-nav .pho:hover, .main-nav .phy:hover{color: var(--color-brand-secondary)}
+    .main-nav .phy {
+      align-items: center;
+      color: var(--color-brand-secondary);
+      display: inline-flex;
+      font-size: 0.9375rem; /* 15px */
+      font-weight: 300;
+      gap: 10px;
+      line-height: 1;
+      padding: 0 15px;
+      text-decoration: none;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+
+    .main-nav .phy .phy-icon {
+      color: currentColor;
+      flex: 0 0 auto;
+      width: 1.125rem; /* 18px — matches the source's 20px marker glyph */
+    }
+
+    .main-nav .phy:hover {
+      color: var(--color-brand);
+    }
 
     .mobile-nav-button{min-width: 10px;border-radius: 0; border: none; height: 70px; width: 70px; background-color: var(--color-brand); color: var(--color-text-on-brand); display: flex; align-items: center; justify-content: center;}
     .nav-hamburger .mobile-nav-button .icon {
@@ -450,10 +552,20 @@ const formatAddressLines = (address: any) => {
 
       .main-nav > .outer-content .hd-content .logo-link .image img {
         display: block;
+        height: 55px;
       }
 
-      .hd-info, .top-bar{display: none;}
-      .main-nav > .outer-content .hd-content .hd-right {display: none;}
+      .top-bar {display: none;}
+
+      /* The mobile nav carries the address, buttons and links, so the top
+         row keeps only the logo and the desktop nav row drops out. */
+      .main-nav > .outer-content .hd-info,
+      .main-nav > .outer-content .hd-btns,
+      .main-nav > .outer-content .hd-nav {display: none;}
+
+      .main-nav > .outer-content .hd-utility .logo-link {
+        margin-right: 0;
+      }
     }
   }
 

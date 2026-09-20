@@ -46,6 +46,12 @@ const sanitizeCssValue = (value: string) => value.split(/[<>{}]|;/)[0].trim();
 const brandingColorVars: Record<string, string> = {
   colorBrand: "--color-brand",
   colorBrandSecondary: "--color-brand-secondary",
+  // Derived brand tones. The source uses a darker gold for button/CTA hovers and
+  // a lighter one for the header CTAs' icon discs; components used to hardcode
+  // both, which meant a CMS brand change left them behind.
+  colorBrandSecondaryHover: "--color-brand-secondary-hover",
+  colorBrandSecondaryLight: "--color-brand-secondary-light",
+  colorBrandHover: "--color-brand-hover",
   colorBrandTertiary: "--color-brand-muted",
   colorBrandSubtle: "--color-brand-subtle",
   colorBrandOn: "--color-brand-on",

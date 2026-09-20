@@ -45,7 +45,7 @@
   --color-bg-brand-muted: var(--color-brand-muted);
   --color-bg-inverse: var(--gray-12);
   --color-bg-dark: #2c363c;
-  --color-bg-gold: #ba9764;
+  --color-bg-gold: var(--color-brand-secondary);
   --color-bg-black: #000;
 
   --color-border: var(--gray-4);
@@ -66,7 +66,7 @@
    --color-text as #000000 (black on black) and --color-link as #ffffff; it
    sampled unset/transparent computed values rather than the painted surface.
 
-   The source uses green as the identity colour and GOLD (#ba9764) for calls to
+   The source uses green as the identity colour and GOLD for calls to
    action — buttons, the nav dropdown panel and the top-bar pills are all gold,
    so --color-accent/-brand-secondary drive those, not the green. */
 :root,
@@ -76,22 +76,25 @@
   --color-text-strong: #1a1a1a;
   --color-text-muted: #6b655d;
   --color-link: #5c7f5e;
-  --color-link-hover: #ba9764;
+  --color-link-hover: #8d6d3f;
 
   --color-brand: #79a37b;
-  --color-brand-secondary: #ba9764;
+  --color-brand-hover: #5c7f5e;
+  --color-brand-secondary: #8d6d3f;
+  --color-brand-secondary-hover: #7f6239;
+  --color-brand-secondary-light: #9b7845;
   --color-brand-muted: #a8bfa9;
   --color-brand-subtle: #e6e6e6;
   --color-brand-on: #ffffff;
   --color-text-on-brand: #ffffff;
 
-  --color-accent: #ba9764;
-  --color-bg-accent: #79a37b;
+  --color-accent: var(--color-brand-secondary);
+  --color-bg-accent: var(--color-brand);
   --color-bg-highlight: #dcdcdc;
   --color-bg-surface: #e6e6e6;   /* grey content card */
 
   /* Primary buttons on the source are gold, not the green identity colour. */
-  --color-bg-brand: #ba9764;
-  --color-bg-brand-hover: #a8854f;
+  --color-bg-brand: var(--color-brand-secondary);
+  --color-bg-brand-hover: var(--color-brand-secondary-hover);
 }
 /* mig:end source-theme */

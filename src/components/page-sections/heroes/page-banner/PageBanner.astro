@@ -25,6 +25,10 @@ const {
   ctaImage = "",
   ctaImageAlt = "",
   ctaLink = "",
+  subheading = "",
+  subintro = "",
+  formLinksLabel = "",
+  formLinks = [],
   id = "",
   class: className,
   _component,
@@ -40,6 +44,21 @@ const htmlAttributes = Object.fromEntries(
 const introParagraphs = (Array.isArray(intro) ? intro : [intro])
   .map((p: any) => (typeof p === "string" ? p.trim() : ""))
   .filter(Boolean);
+
+// First Visit carries a second heading ("Contact Us") with its own copy and a
+// set of patient-form buttons beneath the intro; other pages pass none of this.
+const subintroParagraphs = (Array.isArray(subintro) ? subintro : [subintro])
+  .map((p: any) => (typeof p === "string" ? p.trim() : ""))
+  .filter(Boolean);
+
+const bannerFormLinks = (Array.isArray(formLinks) ? formLinks : [])
+  .filter((link: any) => !!link && typeof link === "object")
+  .map((link: any) => ({
+    text: typeof link.text === "string" ? link.text.trim() : "",
+    url: typeof link.url === "string" ? link.url.trim() : "",
+    newTab: link.newTab !== false,
+  }))
+  .filter((link: any) => link.text && link.url);
 ---
 
 <section class:list={["page-banner", className]} {...htmlAttributes}>
@@ -59,6 +78,37 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
             {introParagraphs.map((p: string) => (
               <Text alignX="start" text={p} editable={false} />
             ))}
+          </div>
+        )
+      }
+      {subheading && <h2 class="pb-subheading" data-prop="subheading">{subheading}</h2>}
+      {
+        subintroParagraphs.length > 0 && (
+          <div class="pb-subintro" data-prop="subintro">
+            {subintroParagraphs.map((p: string) => (
+              <Text alignX="start" text={p} editable={false} />
+            ))}
+          </div>
+        )
+      }
+      {
+        bannerFormLinks.length > 0 && (
+          <div class="pb-form-links">
+            {formLinksLabel && <p class="pb-form-links-label">{formLinksLabel}</p>}
+            <div class="pb-form-links-row">
+              {bannerFormLinks.map((link: any) => (
+                <Button
+                  class="pb-form-link"
+                  text={link.text}
+                  link={link.url}
+                  variant="primary"
+                  size="sm"
+                  borderRadius="2xl"
+                  editable={false}
+                  {...(link.newTab ? { target: "_blank", rel: "noopener" } : {})}
+                />
+              ))}
+            </div>
           </div>
         )
       }
@@ -92,6 +142,7 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
 <style lang="pcss">
   .page-banner {
     background-color: var(--color-bg);
+    border-bottom: 10px solid #dcdcdc;
   }
 
   .pb-grid {
@@ -127,6 +178,68 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
 
   .pb-intro :global(p) + :global(p) {
     margin-top: 0.85em;
+  }
+
+  /*
+   * First Visit's second heading and its patient-form buttons. Measured on the
+   * source: h2 22.5px/24.75 Raleway 400, buttons 195x36 with 20px of vertical
+   * margin, wrapping two-up inside the 410px text column.
+   */
+  .pb-subheading {
+    font-family: var(--font-headings);
+    font-size: 1.406rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: var(--spacing-lg) 0 var(--spacing-sm);
+  }
+
+  .pb-subintro :global(p) + :global(p) {
+    margin-top: 0.85em;
+  }
+
+  .pb-form-links {
+    margin-top: var(--spacing-md);
+  }
+
+  .pb-form-links-label {
+    margin: 0 0 var(--spacing-xs);
+  }
+
+  /*
+   * The source lays these out two-up at a uniform 195x36, and centres a final
+   * odd button across both columns. A fixed two-column grid reproduces that;
+   * the last-of-odd-count rule is what centres the fifth.
+   */
+  .pb-form-links-row {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 195px);
+    justify-content: start;
+  }
+
+  /* 8px, not the button default's 30px: the longest label ("Sleep Apnea
+     History Form") needs the width to sit on one line inside the 195px pill. */
+  .pb-form-links-row :global(.pb-form-link) {
+    /* the button's own flex gap sits between the (absent) icon and the label
+       and would eat into the text box */
+    gap: 0;
+    padding-inline: 8px;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* An odd last button spans both tracks and centres itself. */
+  .pb-form-links-row :global(.pb-form-link:last-child:nth-child(odd)) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 195px;
+  }
+
+  @media (max-width: 480px) {
+    .pb-form-links-row {
+      grid-template-columns: 195px;
+      justify-content: center;
+    }
   }
 
   .pb-media :global(img) {
@@ -166,7 +279,7 @@ const introParagraphs = (Array.isArray(intro) ? intro : [intro])
   .pb-location {
     /* The source is inconsistent here - dental-anesthesia renders the location
        in gold, most others in black. Gold everywhere, per the brief. */
-    color: var(--color-brand-secondary, #ba9764);
+    color: var(--color-brand-secondary);
     display: block;
     font-size: 1.5rem; /* 24px, measured */
     font-weight: 200;

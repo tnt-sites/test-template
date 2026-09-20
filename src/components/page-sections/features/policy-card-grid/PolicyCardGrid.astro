@@ -1,0 +1,201 @@
+---
+/*
+ * The First Visit "Welcome to ..." band, as measured on the source at 1440px
+ * (`inner-block-services bg-body`): a centred 60px/66 Raleway heading over a
+ * dotted rule, then six 375px cards three-up inside a 1200px container.
+ *
+ * Each card is a 250px-tall cover photo above a #e6e6e6 body with 30px of side
+ * padding; the source pins the cards in a row to one height with matchHeight,
+ * which stretching the grid items reproduces. This differs from info-card-grid
+ * in the 3-up track count, the taller image and the display heading, which is
+ * why it is its own section.
+ */
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "",
+  showDivider = true,
+  cards = [],
+  id = "",
+  class: className,
+  editable = true,
+  _component,
+  ...rest
+} = Astro.props;
+
+const clean = (value: unknown) =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : "";
+
+const normalizedCards = (Array.isArray(cards) ? cards : [])
+  .filter((card: any) => !!card && typeof card === "object")
+  .map((card: any) => ({
+    image: clean(card.image),
+    imageAlt: clean(card.imageAlt) || clean(card.title),
+    title: clean(card.title),
+    paragraphs: (Array.isArray(card.paragraphs) ? card.paragraphs : [card.description])
+      .map((p: any) => (typeof p === "string" ? p.trim() : clean(p?.text)))
+      .filter(Boolean),
+  }));
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["policy-card-grid", className]} id={id || undefined} {...htmlAttributes}>
+  <div class="pcg-inner">
+    {
+      heading && (
+        <h2 class="pcg-heading" data-prop="heading">
+          {/* the source breaks this heading explicitly after "Welcome to" */}
+          {clean(heading)
+            .split("\n")
+            .map((line: string, i: number) => (
+              <Fragment>
+                {i > 0 && <br />}
+                {line}
+              </Fragment>
+            ))}
+        </h2>
+      )
+    }
+    {showDivider && <div class="pcg-divider" aria-hidden="true" />}
+
+    <div
+      class="pcg-cards"
+      data-editable={editable ? "array" : undefined}
+      data-component-key={editable ? "_component" : undefined}
+      data-id-key={editable ? "_component" : undefined}
+      data-prop={editable ? "cards" : undefined}
+    >
+      {
+        normalizedCards.map((card: any) => (
+          <editable-array-item
+            class="pcg-card"
+            data-component="page-sections/features/policy-card-grid/policy-card"
+          >
+            {card.image && (
+              <div class="pcg-card-image">
+                <Image source={card.image} alt={card.imageAlt} editable={false} />
+              </div>
+            )}
+            <div class="pcg-card-body">
+              {card.title && <h3 class="pcg-card-title">{card.title}</h3>}
+              {card.paragraphs.map((p: string) => (
+                <Text alignX="start" text={p} editable={false} />
+              ))}
+            </div>
+          </editable-array-item>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .policy-card-grid {
+      background-color: var(--color-bg);
+      padding-block: 50px;
+    }
+
+    .policy-card-grid .pcg-inner {
+      box-sizing: border-box;
+      margin: 0 auto;
+      max-width: 1200px;
+      padding-inline: 11.25px;
+    }
+
+    .policy-card-grid .pcg-heading {
+      font-family: var(--font-headings);
+      font-size: 3.75rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0;
+      text-align: center;
+    }
+
+    .policy-card-grid .pcg-divider {
+      border-top: 5px dotted currentcolor;
+      height: 5px;
+      margin: 12px auto;
+      width: 65px;
+    }
+
+    .policy-card-grid .pcg-cards {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 30px;
+    }
+
+    /* The source marks these cards `hoverable` (Materialize), which lifts them
+       on hover. The transition stays on the resting state so it eases out too. */
+    .policy-card-grid .pcg-card {
+      background-color: #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.25s;
+    }
+
+    .policy-card-grid .pcg-card:hover {
+      box-shadow:
+        0 8px 17px 0 rgb(0 0 0 / 20%),
+        0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .policy-card-grid .pcg-card {
+        transition: none;
+      }
+    }
+
+    .policy-card-grid .pcg-card-image img {
+      display: block;
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .policy-card-grid .pcg-card-body {
+      padding: 20px 30px 30px;
+    }
+
+    .policy-card-grid .pcg-card-title {
+      font-family: var(--font-headings);
+      font-size: 1.406rem;
+      font-weight: 500;
+      line-height: 1.1;
+      margin: 0 0 15px;
+    }
+
+    .policy-card-grid .pcg-card-body :global(p) + :global(p) {
+      margin-top: 0.85em;
+    }
+
+    @media (max-width: 992px) {
+      .policy-card-grid .pcg-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .policy-card-grid .pcg-heading {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .policy-card-grid .pcg-inner {
+        padding-inline: var(--spacing-lg);
+      }
+
+      .policy-card-grid .pcg-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .policy-card-grid .pcg-heading {
+        font-size: 2rem;
+      }
+    }
+  }
+</style>

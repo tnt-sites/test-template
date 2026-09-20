@@ -1,0 +1,11 @@
+heading:
+  type: text
+  comment: Centred heading shown above the cards.
+showDivider:
+  type: switch
+  comment: Show the dotted rule beneath the heading.
+cards:
+  type: array
+  comment: Cards shown in the grid.
+  options:
+    structures: _structures.policyCards

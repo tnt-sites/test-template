@@ -1,0 +1,72 @@
+heading:
+  type: text
+  comment: The section heading. Leave blank for a section with no heading.
+level:
+  type: select
+  comment: Heading level. Use h2 for a top-level section and h3 for a sub-section.
+  options:
+    values:
+      - id: h2
+        name: H2 — section
+      - id: h3
+        name: H3 — sub-section
+      - id: h4
+        name: H4
+      - id: h5
+        name: H5
+      - id: h1
+        name: H1 — page title (one per page)
+label:
+  type: text
+  comment: Optional. Sets the section's HTML id for in-page links. Leave blank unless you need to link to this section.
+body:
+  type: markdown
+  comment: The section's prose. Supports bold, italic, links and lists.
+  options:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    removeformat: true
+preset:
+  type: select
+  comment: Where this section sits. "Content" is a block in the main column; "Panel" is a right-rail panel; "Bubble" is a call-out.
+  options:
+    values:
+      - id: content
+        name: Content block
+      - id: panel
+        name: Sidebar panel
+      - id: bubble
+        name: Call-out bubble
+backgroundColor:
+  type: select
+  comment: The section's background.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: gold
+        name: Gold
+variant:
+  type: select
+  comment: An optional treatment from the source design.
+  options:
+    values:
+      - id: ""
+        name: None
+      - id: faq-card
+        name: FAQ card
+      - id: callout-bubble
+        name: Call-out bubble
+      - id: links-card
+        name: Links card

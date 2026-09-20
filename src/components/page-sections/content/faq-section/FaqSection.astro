@@ -1,0 +1,63 @@
+---
+/*
+ * A heading plus question/answer pairs, rendered as a definition list -- the
+ * FAQ and "helpful information" content.
+ *
+ * `questions` is a flat array of {question, answer} rather than the
+ * definition-list-item block array, so a pair is added in one step.
+ */
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import DefinitionList from "@core-elements/definition-list/DefinitionList.astro";
+import { chrome, DEFAULT_HEADING_SIZE } from "../sectionChrome";
+
+const {
+  heading,
+  level = "h2",
+  size,
+  intro,
+  questions = [],
+  preset,
+  backgroundColor,
+  variant,
+  label,
+  class: className,
+  id,
+  colorScheme,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const box = chrome({ preset, backgroundColor, variant, class: className, label, id });
+
+// DefinitionList renders `title` as the <dt> and `text` as the <dd>.
+const items = (questions ?? []).map((entry: { question: string; answer: string }) => ({
+  _component: "building-blocks/core-elements/definition-list/definition-list-item",
+  title: entry.question,
+  text: entry.answer,
+}));
+---
+
+<section
+  class:list={["faq-section", ...box.classes]}
+  id={box.id}
+  data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  {...htmlAttributes}
+>
+  <div class="outer-content">
+    <div class:list={box.contentClasses}>
+      {
+        heading && (
+          <Heading
+            text={heading}
+            level={level}
+            size={size ?? DEFAULT_HEADING_SIZE[level]}
+            data-prop="heading"
+          />
+        )
+      }
+      {intro && <Text text={intro} data-prop="intro" />}
+      {items.length > 0 && <DefinitionList items={items} data-prop="questions" />}
+    </div>
+  </div>
+</section>

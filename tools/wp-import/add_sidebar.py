@@ -9,7 +9,10 @@ WRITE='--write' in sys.argv
 # full-width pages: the homepage and the galleries are not the interior layout
 SKIP_SLUGS={'index','blog','contact-us','search','sitemap','smile-gallery','video-gallery',
             'reviews','patient-testimonials','north-county-cosmetic-and-implant-dentistry-videos',
-            'opt-out-preferences','yelp','google','facebook'}
+            'opt-out-preferences','yelp','google','facebook',
+            # the services landing page is full-width on the source: one grey band
+            # holding the heading, the search box and the eight service cards
+            'services'}
 PAGES="/Users/tharvey/Work/CloudCannon/northcounty/src/content/pages/vista-ca"
 SIDEBAR_LABELS=("related topics","explore additional topics")
 

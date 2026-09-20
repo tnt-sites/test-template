@@ -1,0 +1,65 @@
+---
+/*
+ * A heading, optional intro prose, and a bulleted list -- the "signs of",
+ * "benefits of" and "what to expect" content on the interior pages.
+ *
+ * `items` is a plain array of strings rather than a nested list-item block
+ * array: the migrated pages only ever use bullet or numbered markers, never
+ * per-item icons, so there is nothing per item for an editor to configure.
+ */
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import List from "@core-elements/list/List.astro";
+import { chrome, DEFAULT_HEADING_SIZE } from "../sectionChrome";
+
+const {
+  heading,
+  level = "h2",
+  size,
+  intro,
+  items = [],
+  listType = "bullet",
+  preset,
+  backgroundColor,
+  variant,
+  label,
+  class: className,
+  id,
+  colorScheme,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const box = chrome({ preset, backgroundColor, variant, class: className, label, id });
+
+// List.astro takes item objects; the icon fields stay unset because bullet and
+// numbered markers ignore them.
+const listItems = (items ?? []).map((text: string) => ({
+  _component: "building-blocks/core-elements/list/list-item",
+  text,
+}));
+---
+
+<section
+  class:list={["checklist-section", ...box.classes]}
+  id={box.id}
+  data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  {...htmlAttributes}
+>
+  <div class="outer-content">
+    <div class:list={box.contentClasses}>
+      {
+        heading && (
+          <Heading
+            text={heading}
+            level={level}
+            size={size ?? DEFAULT_HEADING_SIZE[level]}
+            data-prop="heading"
+          />
+        )
+      }
+      {intro && <Text text={intro} data-prop="intro" />}
+      {listItems.length > 0 && <List items={listItems} listType={listType} data-prop="items" />}
+    </div>
+  </div>
+</section>

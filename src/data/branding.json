@@ -1,12 +1,15 @@
 {
   "colorBrand": "#79a37b",
-  "colorBrandSecondary": "#ba9764",
+  "colorBrandSecondary": "#8d6d3f",
+  "colorBrandSecondaryHover": "#7f6239",
+  "colorBrandSecondaryLight": "#9b7845",
   "colorBrandTertiary": "#4a7a4c",
+  "colorBrandHover": "#5c7f5e",
   "colorBrandSubtle": "#e6e6e6",
   "colorBrandOn": "#ffffff",
   "colorTextOnBrand": "#ffffff",
   "colorLink": "#5c7f5e",
-  "colorLinkHover": "#ba9764",
+  "colorLinkHover": "#8d6d3f",
   "extraColors": [],
   "bodyFont": {
     "fontFamily": "\"Source Sans Pro\", \"Source Sans 3\", sans-serif"

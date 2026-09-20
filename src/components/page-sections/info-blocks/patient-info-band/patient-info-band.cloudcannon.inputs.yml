@@ -1,0 +1,24 @@
+heading:
+  type: text
+  comment: Heading for the left column.
+paragraphs:
+  type: array
+  comment: Body paragraphs shown beneath the heading. Markdown is supported.
+  options:
+    structures: _structures.patientInfoParagraphs
+paymentsTitle:
+  type: text
+  comment: Payment methods line shown above the card icons.
+paymentIcons:
+  type: array
+  comment: Payment method icons.
+  options:
+    structures: _structures.patientInfoIcons
+formsHeading:
+  type: text
+  comment: Heading for the downloadable forms column.
+formLinks:
+  type: array
+  comment: Buttons linking to downloadable forms.
+  options:
+    structures: _structures.patientInfoFormLinks

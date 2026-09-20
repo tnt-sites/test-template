@@ -83,7 +83,7 @@ const { ctas = [], logos = [], enabled = true } = Astro.props;
   }
 
   .pf-button {
-    background-color: var(--color-brand-secondary, #ba9764);
+    background-color: var(--color-brand-secondary);
     border-radius: 30px;
     color: #fff;
     display: inline-block;
@@ -99,7 +99,7 @@ const { ctas = [], logos = [], enabled = true } = Astro.props;
   }
 
   .pf-button:hover {
-    background-color: #a8854f;
+    background-color: var(--color-brand-secondary-hover);
   }
 
   /* The source spreads the logos across its full 1296px container

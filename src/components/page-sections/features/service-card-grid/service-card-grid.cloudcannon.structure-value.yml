@@ -1,0 +1,99 @@
+label: Service Card Grid
+icon: grid_view
+description: Heading, search box and a grid of service cards with linked lists.
+value:
+  _component: page-sections/features/service-card-grid
+  id: ""
+  heading: Something to Smile About
+  subtext: ""
+  showSearch: true
+  searchPlaceholder: Search
+  searchButtonText: Search
+  searchAction: /search/
+  cards:
+    - _component: page-sections/features/service-card-grid/service-card
+      image: ""
+      imageAlt: Card icon
+      title: Card title
+      tagline: Card tagline.
+      links:
+        - _component: page-sections/features/service-card-grid/service-link
+          text: Service name
+          url: /vista-ca/
+preview:
+  text:
+    - Service Card Grid
+  subtext:
+    - key: heading
+  icon: grid_view
+picker_preview:
+  text: Service Card Grid
+  subtext: Heading, search box and a grid of service cards with linked lists.
+_inputs_from_glob:
+  - /src/components/page-sections/features/service-card-grid/service-card-grid.cloudcannon.inputs.yml
+_structures:
+  serviceCards:
+    values:
+      - label: Service Card
+        icon: crop_square
+        value:
+          _component: page-sections/features/service-card-grid/service-card
+          image: ""
+          imageAlt: Card icon
+          title: Card title
+          tagline: Card tagline.
+          links:
+            - _component: page-sections/features/service-card-grid/service-link
+              text: Service name
+              url: /vista-ca/
+        preview:
+          text:
+            - key: title
+            - Service Card
+          subtext:
+            - key: tagline
+          image:
+            - key: image
+        _inputs:
+          image:
+            type: image
+            comment: Card icon, shown in a circle.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the card icon.
+          title:
+            type: text
+            comment: Card heading.
+          tagline:
+            type: text
+            comment: Short line beneath the card heading.
+          links:
+            type: array
+            comment: Service links listed on the card.
+            options:
+              structures: _structures.serviceCardLinks
+  serviceCardLinks:
+    values:
+      - label: Service Link
+        icon: link
+        value:
+          _component: page-sections/features/service-card-grid/service-link
+          text: Service name
+          url: /vista-ca/
+        preview:
+          text:
+            - key: text
+            - Service Link
+          subtext:
+            - key: url
+        _inputs:
+          text:
+            type: text
+            comment: Link label.
+          url:
+            type: url
+            comment: Destination for the link.

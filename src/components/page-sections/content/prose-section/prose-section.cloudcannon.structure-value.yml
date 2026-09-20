@@ -1,0 +1,25 @@
+label: Prose Section
+icon: article
+description: A heading and a block of prose. The default for body content.
+value:
+  _component: page-sections/content/prose-section
+  heading: Section heading
+  level: h2
+  body: |
+    Write the section's prose here.
+  preset: content
+  backgroundColor: surface
+  variant: ""
+  label: ""
+preview:
+  icon: article
+  text:
+    - key: heading
+    - Prose Section
+  subtext:
+    - key: body
+picker_preview:
+  text: Prose Section
+  subtext: A heading and a block of prose. The default for body content.
+_inputs_from_glob:
+  - /src/components/page-sections/content/prose-section/prose-section.cloudcannon.inputs.yml

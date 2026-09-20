@@ -86,7 +86,7 @@ const legal = Array.isArray(legalLinks) ? legalLinks.filter((l: any) => l && l.n
       {
         aboutText && (
           <div class="sf-about">
-            <h5 class="sf-heading">{aboutTitle}</h5>
+            <h3 class="sf-heading">{aboutTitle}</h3>
             <p class="sf-text">{aboutText}</p>
           </div>
         )
@@ -98,7 +98,7 @@ const legal = Array.isArray(legalLinks) ? legalLinks.filter((l: any) => l && l.n
         {
           addressLines.length > 0 && (
             <div class="sf-column">
-              <h5 class="sf-heading">{officeTitle}</h5>
+              <h3 class="sf-heading">{officeTitle}</h3>
               {displaySiteName && (
                 <p class="sf-text sf-office-name">
                   <b>{displaySiteName}</b>
@@ -122,7 +122,7 @@ const legal = Array.isArray(legalLinks) ? legalLinks.filter((l: any) => l && l.n
         {
           phone.display && (
             <div class="sf-column">
-              <h5 class="sf-heading">{contactTitle}</h5>
+              <h3 class="sf-heading">{contactTitle}</h3>
               <p class="sf-text sf-phone">
                 <b>{phoneLabel} </b>
                 <a href={phone.href || `tel:${phone.display}`}>{phone.display}</a>

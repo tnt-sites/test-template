@@ -1,0 +1,80 @@
+label: Policy Card Grid
+icon: grid_on
+description: Centred heading over a three-up grid of photo cards.
+value:
+  _component: page-sections/features/policy-card-grid
+  id: ""
+  heading: Welcome
+  showDivider: true
+  cards:
+    - _component: page-sections/features/policy-card-grid/policy-card
+      image: ""
+      imageAlt: Card image
+      title: Card title
+      paragraphs:
+        - _component: page-sections/features/policy-card-grid/paragraph
+          text: Card copy.
+preview:
+  text:
+    - Policy Card Grid
+  subtext:
+    - key: heading
+  icon: grid_on
+picker_preview:
+  text: Policy Card Grid
+  subtext: Centred heading over a three-up grid of photo cards.
+_inputs_from_glob:
+  - /src/components/page-sections/features/policy-card-grid/policy-card-grid.cloudcannon.inputs.yml
+_structures:
+  policyCards:
+    values:
+      - label: Policy Card
+        icon: crop_square
+        value:
+          _component: page-sections/features/policy-card-grid/policy-card
+          image: ""
+          imageAlt: Card image
+          title: Card title
+          paragraphs:
+            - _component: page-sections/features/policy-card-grid/paragraph
+              text: Card copy.
+        preview:
+          text:
+            - key: title
+            - Policy Card
+          image:
+            - key: image
+        _inputs:
+          image:
+            type: image
+            comment: Card photo.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          imageAlt:
+            type: text
+            comment: Alt text for the card photo.
+          title:
+            type: text
+            comment: Card heading.
+          paragraphs:
+            type: array
+            comment: Card body paragraphs.
+            options:
+              structures: _structures.policyCardParagraphs
+  policyCardParagraphs:
+    values:
+      - label: Paragraph
+        icon: notes
+        value:
+          _component: page-sections/features/policy-card-grid/paragraph
+          text: Paragraph text.
+        preview:
+          text:
+            - key: text
+            - Paragraph
+        _inputs:
+          text:
+            type: markdown
+            comment: Paragraph copy.

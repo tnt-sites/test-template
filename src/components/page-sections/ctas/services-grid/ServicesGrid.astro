@@ -298,9 +298,9 @@ const htmlAttributes = Object.fromEntries(
     .services-grid .services-grid-caption::before {
       background-image: linear-gradient(
         to top,
-        rgb(186 151 100 / 100%) 0%,
-        rgb(186 151 100 / 55%) 55%,
-        rgb(186 151 100 / 0%) 100%
+        var(--color-brand-secondary) 0%,
+        color-mix(in srgb, var(--color-brand-secondary) 55%, transparent) 55%,
+        color-mix(in srgb, var(--color-brand-secondary) 0%, transparent) 100%
       );
       content: "";
       inset: 0;

@@ -1,0 +1,203 @@
+---
+/*
+ * The First Visit grey band, as measured on the source at 1440px
+ * (`inner-block-short bg-primary`): a 1200px container split into two 611px
+ * columns inside a #dcdcdc section with 50px of vertical padding.
+ *
+ * Left column carries the H2 (37.5px/41.25 Raleway), the visit prose, then a
+ * payment-methods line with four 48x34 card icons. Right column is just a
+ * heading and a set of gold pill buttons linking to downloadable PDFs -- it
+ * stops at its own content height rather than matching the left column.
+ */
+import Button from "@core-elements/button/Button.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "",
+  paragraphs = [],
+  paymentsTitle = "",
+  paymentIcons = [],
+  formsHeading = "",
+  formLinks = [],
+  id = "",
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+
+const clean = (value: unknown) =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : "";
+
+const bodyParagraphs = (Array.isArray(paragraphs) ? paragraphs : [])
+  .map((p: any) => (typeof p === "string" ? p.trim() : clean(p?.text)))
+  .filter(Boolean);
+
+const icons = (Array.isArray(paymentIcons) ? paymentIcons : [])
+  .filter((i: any) => !!i && typeof i === "object")
+  .map((i: any) => ({ source: clean(i.source), alt: clean(i.alt) }))
+  .filter((i: any) => i.source);
+
+const links = (Array.isArray(formLinks) ? formLinks : [])
+  .filter((l: any) => !!l && typeof l === "object")
+  .map((l: any) => ({
+    text: clean(l.text),
+    url: clean(l.url),
+    newTab: l.newTab !== false,
+  }))
+  .filter((l: any) => l.text && l.url);
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section class:list={["patient-info-band", className]} id={id || undefined} {...htmlAttributes}>
+  <div class="pib-inner">
+    <div class="pib-main">
+      {heading && <h2 class="pib-heading" data-prop="heading">{heading}</h2>}
+      {
+        bodyParagraphs.length > 0 && (
+          <div class="pib-prose">
+            {bodyParagraphs.map((p: string) => (
+              <Text alignX="start" text={p} editable={false} />
+            ))}
+          </div>
+        )
+      }
+      {
+        (paymentsTitle || icons.length > 0) && (
+          <div class="pib-payments">
+            {paymentsTitle && <h5 class="pib-payments-title">{paymentsTitle}</h5>}
+            {icons.length > 0 && (
+              <div class="pib-payment-icons">
+                {icons.map((icon: any) => (
+                  <Image source={icon.source} alt={icon.alt} editable={false} />
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      }
+    </div>
+
+    <div class="pib-side">
+      {formsHeading && <h4 class="pib-forms-heading" data-prop="formsHeading">{formsHeading}</h4>}
+      {
+        links.length > 0 && (
+          <div class="pib-forms">
+            {links.map((link: any) => (
+              <Button
+                class="pib-form-link"
+                text={link.text}
+                link={link.url}
+                variant="primary"
+                size="sm"
+                borderRadius="2xl"
+                editable={false}
+                {...(link.newTab ? { target: "_blank", rel: "noopener" } : {})}
+              />
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .patient-info-band {
+      background-color: #dcdcdc;
+      padding-block: 50px;
+    }
+
+    .patient-info-band .pib-inner {
+      box-sizing: border-box;
+      display: grid;
+      gap: 0 var(--spacing-lg);
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      max-width: 1200px;
+      padding-inline: 11.25px;
+    }
+
+    /* The forms column stops at its own height on the source rather than
+       stretching alongside the much taller prose column. */
+    .patient-info-band .pib-side {
+      align-self: start;
+    }
+
+    .patient-info-band .pib-heading {
+      font-family: var(--font-headings);
+      font-size: 2.344rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 var(--spacing-md);
+    }
+
+    .patient-info-band .pib-prose :global(p) + :global(p) {
+      margin-top: 0.85em;
+    }
+
+    .patient-info-band .pib-payments {
+      margin-top: 30px;
+    }
+
+    .patient-info-band .pib-payments-title {
+      font-family: var(--font-headings);
+      font-size: 0.9375rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 var(--spacing-sm);
+    }
+
+    .patient-info-band .pib-payment-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .patient-info-band .pib-payment-icons img {
+      display: block;
+      height: 34px;
+      object-fit: contain;
+      width: 48px;
+    }
+
+    .patient-info-band .pib-forms-heading {
+      font-family: var(--font-headings);
+      font-size: 1.406rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin: 0 0 30px;
+    }
+
+    .patient-info-band .pib-forms {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .patient-info-band .pib-forms :global(.pib-form-link) {
+      text-align: center;
+    }
+
+    @media (max-width: 992px) {
+      .patient-info-band .pib-inner {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .patient-info-band .pib-inner {
+        padding-inline: var(--spacing-lg);
+      }
+
+      .patient-info-band .pib-heading {
+        font-size: 1.75rem;
+      }
+    }
+  }
+</style>

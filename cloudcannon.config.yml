@@ -135,6 +135,18 @@ collections_config:
         type: color
         cascade: true
         comment: Secondary brand color (--color-brand-secondary).
+      colorBrandSecondaryHover:
+        type: color
+        cascade: true
+        comment: Hover tone for secondary-brand buttons and CTAs (--color-brand-secondary-hover).
+      colorBrandSecondaryLight:
+        type: color
+        cascade: true
+        comment: Lighter secondary-brand tone, used for the header CTA icon discs (--color-brand-secondary-light).
+      colorBrandHover:
+        type: color
+        cascade: true
+        comment: Hover tone for primary-brand elements (--color-brand-hover).
       colorBrandTertiary:
         type: color
         cascade: true
