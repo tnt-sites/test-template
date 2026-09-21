@@ -93,7 +93,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Dr. Christopher Henninger and Dr. Craig Huenergardt have extensive experience with gum grafting
-        surgeries and can help return your mouth to optimal health. Call (760) 940-2273 today to learn
+        surgeries and can help return your mouth to optimal health. Call [[phone]] today to learn
         more.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -155,10 +155,9 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

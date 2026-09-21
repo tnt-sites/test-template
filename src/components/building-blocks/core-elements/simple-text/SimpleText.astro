@@ -1,5 +1,6 @@
 ---
 import MarkdownIt from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 const {
   text,
@@ -13,7 +14,7 @@ const {
 } = Astro.props;
 
 const md = MarkdownIt({ html: true });
-let MarkdownText = text ? md.renderInline(text) : "";
+let MarkdownText = text ? md.renderInline(replaceContactTokens(text)) : "";
 
 MarkdownText = MarkdownText.replace(/\n/g, "<br />");
 

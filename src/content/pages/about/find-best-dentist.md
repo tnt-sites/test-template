@@ -15,7 +15,7 @@ pageSections:
     size: 2xl
   - _component: building-blocks/core-elements/text
     text: If you are looking for the best dentist in Vista to treat you and your family, we invite you
-      to schedule an exam with our dental office by calling [(760) 940-2273](tel:+1-760-940-2273). At
+      to schedule an exam with our dental office by calling [[[phone]]]([[phoneHref]]). At
       North County Cosmetic and Implant Dentistry, we offer high-quality patient care and would be delighted
       to assist you. If you prefer to do research in order to determine which dentist is right one for
       you, it is important to start by understanding what specific character traits or services you are

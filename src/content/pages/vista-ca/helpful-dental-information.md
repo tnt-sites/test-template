@@ -17,7 +17,7 @@ pageSections:
     you become aware of your dental solutions and what you can do to stay healthy at home. Here, we provide
     some helpful dental information on oral health. We encourage you to find the section you are interested
     in and read more details on our website. If you have further questions, call our dental office at
-    (760) 940-2273.
+    [[phone]].
   imageSource: /src/assets/images/wp/helpful-dental-information.jpg
   imageAlt: Helpful Dental Information
   formId: '251056297507965'
@@ -62,7 +62,7 @@ pageSections:
           permanent tooth. We can provide you with a variety of solutions that include dentures, a dental
           bridge, and dental implants. All three are an effective way to restore your smile and give you
           the ability to eat and speak clearly. However, there are distinct advantages to each procedure.
-          To find out which one would work best for you, call 760-940-2273.
+          To find out which one would work best for you, call [[phone]].
       - _component: building-blocks/core-elements/definition-list/definition-list-item
         title: Oral Hygiene Basics
         text: At North County Cosmetic and Implant Dentistry, we are passionate about patient education
@@ -119,7 +119,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: For more helpful dental information, read our website or call [(760) 940-2273](tel:+1-760-940-2273)
+      text: For more helpful dental information, read our website or call [[[phone]]]([[phoneHref]])
         to schedule an appointment with Dr. Henninger. At North County Cosmetic and Implant Dentistry
         we will be happy to answer any questions you have about oral health from our Vista dental office.
     maxContentWidth: none

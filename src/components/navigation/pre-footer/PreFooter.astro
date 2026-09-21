@@ -1,5 +1,6 @@
 ---
 import Image from "@core-elements/image/Image.astro";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 /*
  * The band the source runs above the footer on every interior page: three
@@ -17,10 +18,10 @@ const { ctas = [], logos = [], enabled = true } = Astro.props;
           {ctas.map((c: any) => (
             <div class="pf-cta">
               {c.lines?.map((l: string) => (
-                <p class="pf-line">{l}</p>
+                <p class="pf-line">{replaceContactTokens(l)}</p>
               ))}
               {c.buttonText && (
-                <a class="pf-button" href={c.buttonLink || "#"}>
+                <a class="pf-button" href={replaceContactTokens(c.buttonLink) || "#"}>
                   {c.buttonText}
                 </a>
               )}

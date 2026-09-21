@@ -78,7 +78,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If one or more of your teeth fall out, you may qualify for dental implants as a way to permanently
         replace the missing teeth. In order to find out, schedule an appointment with our Vista dentist
-        office by calling [(760) 940-2273](tel:+1-760-940-2273). We will examine your mouth and jawbone
+        office by calling [[[phone]]]([[phoneHref]]). We will examine your mouth and jawbone
         to determine if the procedure is right for you. Before we begin the procedure, your gums need
         to be healthy, and your jawbone needs to be strong. If we identify any cavities or signs of gum
         disease, we will need to treat it prior to the dental implant procedure.
@@ -169,7 +169,7 @@ pageSections:
         implants in jeopardy because in order to stay secure, the jawbone must be in good health. If it
         becomes infected, your dental implants and all of your teeth will be in jeopardy.
     - _component: building-blocks/core-elements/text
-      text: If you currently have implants and your teeth start to hurt, call [760-940-2273](tel:+1-760-940-2273)
+      text: If you currently have implants and your teeth start to hurt, call [[[phone]]]([[phoneHref]])
         to schedule an appointment immediately. This way we can identify any infection and treat it before
         it can spread into the jawbone. As long as you follow these simple preventative care steps, your
         implants and natural teeth should remain in good health.
@@ -180,7 +180,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: In order to find out if implants are right for you, call [(760) 940-2273](tel:+1-760-940-2273).
+      text: In order to find out if implants are right for you, call [[[phone]]]([[phoneHref]]).
         The team at North County Cosmetic and Implant Dentistry are friendly, welcoming, and will take
         the time to inform you of all of your options. We will make a detailed recommendation about the
         best choice for your oral health by customizing it to your needs. Just remember that you can have

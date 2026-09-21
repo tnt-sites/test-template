@@ -183,7 +183,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you or a loved one are in need of a full mouth reconstruction for any reason, do not hesitate
-        to call North County Cosmetic and Implant Dentistry at [760-940-2273](tel:+1-760-940-2273) and
+        to call North County Cosmetic and Implant Dentistry at [[[phone]]]([[phoneHref]]) and
         schedule an appointment today. Our team will go over all concerns and questions that you may have
         before the appointment. Once you arrive for the appointment, we will make sure that you have a
         complete understanding of the procedure and what happens after. Call and begin a new life with

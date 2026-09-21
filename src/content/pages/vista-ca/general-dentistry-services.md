@@ -11,7 +11,7 @@ pageSections:
   heading: General Dentistry Services
   location: Vista, CA
   intro:
-  - If you are in need of general dentistry services, call (760) 940-2273 to schedule an appointment with
+  - If you are in need of general dentistry services, call [[phone]] to schedule an appointment with
     our Vista dental office. We focus on providing preventative dental care, performing a variety of dental
     procedures to keep patients in excellent oral health. By providing comprehensive care, we can ensure
     your teeth remain as healthy as possible and that if anything does develop, we can treat the condition
@@ -64,7 +64,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If your breath is smelly, you do not have to live with it. Call [760-940-2273](tel:+1-760-940-2273)
+      text: If your breath is smelly, you do not have to live with it. Call [[[phone]]]([[phoneHref]])
         to schedule a dental examination and bad breath treatment. Very often, this is caused by a cavity,
         infection, or gum disease. By cleaning your teeth and your tongue, we can typically remove the
         cause of your bad breath. If you have another issue, like dry mouth, that is causing the problem,
@@ -159,7 +159,7 @@ pageSections:
         family how to brush your teeth properly, how to select the right toothbrush, what foods to avoid
         and what foods to eat for a healthy mouth and beautiful smile. We can also provide you with specific
         instructions that relate to your personal oral health. To learn more or to schedule an appointment,
-        call [(760) 940-2273](tel:+1-760-940-2273).
+        call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

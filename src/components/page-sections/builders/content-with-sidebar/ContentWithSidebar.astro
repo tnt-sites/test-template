@@ -24,7 +24,12 @@ const htmlAttributes = Object.fromEntries(
 ---
 
 <section class:list={["content-with-sidebar", className]} {...htmlAttributes}>
-  <div class="cws-inner" data-max-width={maxContentWidth} data-pad={paddingVertical}>
+  <div
+    class="cws-inner"
+    data-max-width={maxContentWidth}
+    data-pad={paddingVertical}
+    data-has-sidebar={sidebar.length > 0 ? "true" : "false"}
+  >
     <div class="cws-main">
       <Component contentSections={main} propName="main" />
     </div>
@@ -49,7 +54,9 @@ const htmlAttributes = Object.fromEntries(
   }
 
   @media (min-width: 1025px) {
-    .cws-inner {
+    /* Only reserve the right rail when there is actually a sidebar to put in
+     * it; otherwise the main column keeps the full content width. */
+    .cws-inner[data-has-sidebar="true"] {
       grid-template-columns: minmax(0, 1fr) 307px;
       align-items: start;
     }

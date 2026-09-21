@@ -13,7 +13,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry, we are an implant dentist office that can replace
     your missing teeth in a way that looks entirely natural and beautiful. If you have experienced adult
-    tooth loss, we encourage you to call (760) 940-2273 and schedule an appointment with our Vista, CA
+    tooth loss, we encourage you to call [[phone]] and schedule an appointment with our Vista, CA
     dental office to determine if you are a good candidate for this procedure. In the meantime, here are
     some questions that are commonly asked about dental implants.
   imageSource: /src/assets/images/wp/implant-dentist.jpg
@@ -102,7 +102,7 @@ pageSections:
         by an cosmetic dentist are significantly higher than the number of procedures performed by a traditional
         family dentist. As with any surgery, the more often a dentist completes the procedure, the faster
         and more accurate they will be at doing so. For this reason, if you live in Vista, CA or the surrounding
-        area, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment for
+        area, we invite you to call [[[phone]]]([[phoneHref]]) and schedule an appointment for
         a consultation. During your appointment, we can answer your questions and provide you with more
         information regarding the number of procedures we perform and the additional training that we
         have received.
@@ -145,7 +145,7 @@ pageSections:
         secured to a set of four implants. When you come in for the second appointment, the four implants
         are placed, and the new set of teeth are secured to them. You can leave with a full set of natural
         looking teeth that are incredibly durable. If you live in the Vista, CA area, we invite you to
-        call [760-940-2273](tel:+1-760-940-2273) and learn more about this procedure. For those looking
+        call [[[phone]]]([[phoneHref]]) and learn more about this procedure. For those looking
         for a fast solution to tooth loss, this is a fantastic option that will remain in place when you
         speak, eat and engage in high impact activities. To get started, visit our Vista dental office
         today.

@@ -16,7 +16,7 @@ pageSections:
   - _component: building-blocks/core-elements/text
     text: Our office offers a full array of dental services to help you create a satisfying smile. For
       any business or financial matters, you can reach North County Cosmetic and Implant Dentistry at
-      (760) 940-2273.
+      [[phone]].
   - _component: building-blocks/core-elements/text
     text: Simply call, or you can provide us with the following information and we will contact you shortly
       to confirm your appointment. We're looking forward to meeting you.
@@ -33,26 +33,4 @@ pageSections:
   imageSource: /src/assets/images/wp/18-1.jpg
   imageAlt: The North County Cosmetic and Implant Dentistry team
   panelHeading: Contact Information
-  address:
-  - 1934 Via Centre Ste A
-  - Vista, CA 92081
-  mapUrl: https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA
-  phone: (760) 940-2273
-  phoneHref: tel:+1-760-940-2273
-  hours:
-  - day: Monday
-    time: 7:30AM to 5:00PM
-  - day: Tuesday
-    time: 7:00AM to 5:00PM
-  - day: Wednesday
-    time: 7:30AM to 5:00PM
-  - day: Thursday
-    time: 7:00AM to 5:00PM
-  - day: Friday
-    time: Closed
-  - day: Saturday
-    time: Closed
-  - day: Sunday
-    time: Closed
-  hoursNote: Fridays by Appointment Only
 ---

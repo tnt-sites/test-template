@@ -181,6 +181,32 @@ Each component includes CloudCannon configuration:
 - `*.cloudcannon.structure-value.yml` - Defines component structures
 - `*.cloudcannon.snippets.yml` - Defines editor snippets
 
+### Contact detail tokens
+
+The practice's phone number and address live in `src/data/siteInfo.json`. Page
+and blog copy refers to them through tokens rather than spelling them out, so a
+change to that file updates the whole site:
+
+| Token           | Renders as                               |
+| --------------- | ---------------------------------------- |
+| `[[phone]]`     | `(760) 940-2273`                         |
+| `[[phoneHref]]` | `tel:+1-760-940-2273` (for link targets) |
+| `[[address]]`   | `1934 Via Centre Ste A Vista, CA 92081`  |
+| `[[mapUrl]]`    | the office's Google Maps link            |
+| `[[siteName]]`  | the practice name                        |
+
+A phone link is written `[[[phone]]]([[phoneHref]])` — the outer brackets are
+the markdown link, the inner ones the token.
+
+Tokens are resolved in two places, and both must stay in step:
+`src/utils/remarkContactTokens.mjs` (a remark plugin, for markdown and MDX page
+bodies) and `src/utils/contactTokens.ts` (for components that render markdown
+themselves through markdown-it). Square brackets rather than the more usual
+`{{ }}` because MDX parses `{{...}}` as a JavaScript expression and drops it.
+
+Site chrome — the header, footers and contact panel — reads `siteInfo.json`
+directly and needs no tokens.
+
 ## Documentation
 
 The component starter includes comprehensive documentation:

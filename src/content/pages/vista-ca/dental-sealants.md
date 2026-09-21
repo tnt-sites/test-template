@@ -12,8 +12,7 @@ pageSections:
   location: Vista, CA
   intro:
   - At North County Cosmetic and Implant Dentistry, we use dental sealants as a way to protect teeth and
-    prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call (760)
-    940-2273 and schedule an appointment with our dental office. We can examine you and your family before
+    prevent cavities. If you live in Vista, CA or the surrounding area, we encourage you to call [[phone]] and schedule an appointment with our dental office. We can examine you and your family before
     letting you know if dental sealants are the right preventative care solution for your teeth.
   imageSource: /src/assets/images/wp/dental-sealants.jpg
   imageAlt: Dental Sealants
@@ -125,7 +124,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA or the surrounding area, call [760-940-2273](tel:+1-760-940-2273)
+      text: If you live in Vista, CA or the surrounding area, call [[[phone]]]([[phoneHref]])
         to schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry,
         we can examine you and your children's teeth before letting you know if sealants are a good solution
         for you. We can provide you with all of the information you need to make an educated decision

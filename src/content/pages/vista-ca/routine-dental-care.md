@@ -21,7 +21,7 @@ pageSections:
     health problems with age is because they don't have preventative care visits in their 20s, 30s, 40s,
     and 50s. You only have one set of teeth and we recommend that you do what you can to take care of
     them now, while you still can. If you haven't visited the dentist in a while, we invite you to call
-    (760) 940-2273 and schedule an appointment for your dental exam.
+    [[phone]] and schedule an appointment for your dental exam.
   imageSource: /src/assets/images/wp/routine-dental-care.jpg
   imageAlt: Routine Dental Care
   formId: '251056297507965'
@@ -98,7 +98,7 @@ pageSections:
         layer that replaces your lost enamel and reduces or eliminates any sensitivity that you may be
         feeling. This is one procedure that can be easily performed during routine dental care and will
         often prevent the need for crowns in the future. To learn more about bonding, we invite you to
-        call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista dental office.
+        call [[[phone]]]([[phoneHref]]) and schedule an appointment with our Vista dental office.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

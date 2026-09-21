@@ -13,7 +13,7 @@ pageSections:
   - If you feel as though you have no energy and are too tired to keep up with your friends and family,
     you should visit our dental office to talk about sleep apnea. This may be what is causing your issues,
     and a simple non-invasive treatment may be just what you need to feel like yourself again. To schedule
-    an appointment with our dental office, call (760) 940-2273. We will be happy to discuss your treatment
+    an appointment with our dental office, call [[phone]]. We will be happy to discuss your treatment
     and then make a recommendation for how you should proceed.
   imageSource: /src/assets/images/wp/do-i-have-sleep-apnea.jpg
   imageAlt: Do I Have Sleep Apnea
@@ -165,7 +165,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about sleep apnea or discuss your oral health in general, call [760-940-2273](tel:+1-760-940-2273)
+      text: To learn more about sleep apnea or discuss your oral health in general, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our Vista dental office. At North County Cosmetic and Implant
         Dentistry, we are happy to discuss your health challenges and make recommendations, even if we
         have to refer you to a specialist for treatment.

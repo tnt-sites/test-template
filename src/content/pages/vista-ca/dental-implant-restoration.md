@@ -11,7 +11,7 @@ pageSections:
   heading: Dental Implant Restoration
   location: Vista, CA
   intro:
-  - If you are having difficulty with your dental implants, call (760) 940-2273 and schedule an appointment
+  - If you are having difficulty with your dental implants, call [[phone]] and schedule an appointment
     with our Vista, CA dental office. It is critical that we examine your dental implant right away and
     that you do not try to self-diagnose the problem. This can lead to further irritation and dental challenges.
     During an examination, we can let you know if you need a dental implant restoration and the best way
@@ -153,7 +153,7 @@ pageSections:
         of your jawbone. At that point, we will let you know if we can assist you or if you need to be
         referred to a Vista specialist. At North County Cosmetic and Implant Dentistry our focus is on
         your complete oral health and ensuring that you have access to the procedures you need. To learn
-        more, call our dental office at [760-940-2273](tel:+1-760-940-2273).
+        more, call our dental office at [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

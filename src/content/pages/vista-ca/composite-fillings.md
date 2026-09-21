@@ -13,7 +13,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry, we use composite fillings as a treatment method for
     tooth decay. If you live in Vista, CA or surrounding area and are looking for a natural-looking restoration,
-    we encourage you to call (760) 940-2273 and schedule an appointment. Our team has the necessary experience
+    we encourage you to call [[phone]] and schedule an appointment. Our team has the necessary experience
     with placing these tooth-colored fillings and can work to ensure that the patient is comfortable throughout
     the procedure. This is one of our most frequently used procedures, since a filling is typically placed
     after removing tooth decay (common cavities). If you have amalgam fillings now, we can even replace
@@ -86,7 +86,7 @@ pageSections:
           that stands out when you smile or one that blends in. Patients do not have to worry about other
           people noticing the tooth-colored fillings. Another advantage is not having any mercury in the
           filling and decreasing the risk of other health risks. To learn more about this option, call
-          [760-940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista, CA dental office.
+          [[[phone]]]([[phoneHref]]) and schedule an appointment with our Vista, CA dental office.
       - _component: building-blocks/core-elements/list/list-item
         text: Q. How are composite fillings used?
       - _component: building-blocks/core-elements/list/list-item
@@ -138,7 +138,7 @@ pageSections:
           material on your tooth and shape it before the hardening. The shape needs to be just right so
           your bite will fit together correctly. It can take a couple of days to get used to eating on
           the tooth. Thus, while it will not be particularly uncomfortable, you may have one day where
-          you feel as though you are adjusting. For more specific information, call [(760) 940-2273](tel:+1-760-940-2273)
+          you feel as though you are adjusting. For more specific information, call [[[phone]]]([[phoneHref]])
           to schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg

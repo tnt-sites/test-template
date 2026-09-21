@@ -12,7 +12,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry we are regularly asked, "What should I do if I chip
     my tooth?" This is actually a fairly common problem. If you live in the Vista area, we encourage you
-    to call (760) 940-2273 as soon as your tooth becomes chipped. As a general dentist, we can examine
+    to call [[phone]] as soon as your tooth becomes chipped. As a general dentist, we can examine
     and treat you right away.
   - As an emergency dentist, the first thing we want to do is determine how serious the damage is. In
     order to do so, we will ask you several questions when you call to schedule an appointment.
@@ -119,7 +119,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call our cosmetic dental services office at [760-940-2273](tel:+1-760-940-2273) and schedule
+      text: Call our cosmetic dental services office at [[[phone]]]([[phoneHref]]) and schedule
         an appointment to be seen as soon as possible. We will do our best to work around your schedule
         so you can have your tooth restored immediately.
     maxContentWidth: xl
@@ -188,7 +188,7 @@ pageSections:
         to call our our practice. At North County Cosmetic and Implant Dentistry we always try to treat
         you right away so you do not experience unnecessary discomfort. Simultaneously, we will try everything
         in our power to restore your tooth in a way that is both beautiful and natural-looking. To schedule
-        an appointment, call [(760) 940-2273](tel:+1-760-940-2273).
+        an appointment, call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

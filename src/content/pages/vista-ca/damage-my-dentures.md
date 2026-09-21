@@ -14,7 +14,7 @@ pageSections:
     as possible. Still, it is wise to ask, "What do I do if I damage my dentures?" We can offer the information
     and tools necessary to address a problem if you have one. At North County Cosmetic and Implant Dentistry
     can answer any questions you have regarding denture care. To schedule an appointment with our dental
-    office, call (760) 940-2273. In the meantime, here is what you should know.
+    office, call [[phone]]. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/damage-my-dentures.jpg
   imageAlt: What Do I Do If I Damage My Dentures
   formId: '251056297507965'
@@ -40,7 +40,7 @@ pageSections:
         they only need to be adjusted so they can fit perfectly.
     - _component: building-blocks/core-elements/text
       text: We are an emergency dentist, so if you did indeed damage them, we encourage you to schedule
-        an appointment with our dental practice right away. You can do so by calling [760-940-2273](tel:+1-760-940-2273).
+        an appointment with our dental practice right away. You can do so by calling [[[phone]]]([[phoneHref]]).
     - _component: building-blocks/core-elements/heading
       text: Home Care Tips
       level: h2
@@ -153,7 +153,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If your dentures need to be repaired, call [(760) 940-2273](tel:+1-760-940-2273) and schedule
+      text: If your dentures need to be repaired, call [[[phone]]]([[phoneHref]]) and schedule
         an appointment with our dental center right away. We can adjust them so the fit is improved, have
         damage corrected at the dental lab, and make sure your dentures fit as well as they possibly can.
         Since we are an emergency dentist office, we can schedule your appointment for the same day in

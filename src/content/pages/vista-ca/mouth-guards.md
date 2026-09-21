@@ -147,7 +147,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: Start protecting yourself and your children today by having your custom mouth guards created.
-        Call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment with our dental office.
+        Call [[[phone]]]([[phoneHref]]) to schedule an appointment with our dental office.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

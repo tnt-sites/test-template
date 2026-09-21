@@ -1,11 +1,13 @@
 // @ts-expect-error — markdown-it ships no bundled types in this project
 import markdownit from "markdown-it";
 
+import { replaceContactTokens } from "@utils/contactTokens";
+
 const md = markdownit({ html: true });
 
 /** Render a CloudCannon markdown field to HTML for `set:html`. */
 export function renderMarkdown(value: unknown): string {
-  return typeof value === "string" && value.trim() ? md.render(value) : "";
+  return typeof value === "string" && value.trim() ? md.render(replaceContactTokens(value)) : "";
 }
 
 export function hasText(value: unknown): value is string {

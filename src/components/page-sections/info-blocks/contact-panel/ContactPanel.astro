@@ -1,6 +1,7 @@
 ---
 import Image from "@core-elements/image/Image.astro";
 import LiineForm from "@page-sections/forms/liine-form/LiineFormEmbed.astro";
+import siteInfoData from "@data/siteInfo.json";
 
 /*
  * The contact page's card: the appointment form on the left, and on the right a
@@ -29,6 +30,42 @@ const {
   ...rest
 } = Astro.props;
 
+/*
+ * Contact details fall back to siteInfo.json so the practice's address, phone
+ * and hours live in one place. A page may still override any of them by
+ * setting the prop.
+ */
+const primaryOffice = (siteInfoData as any)?.offices?.[0] ?? {};
+const fallbackAddress = primaryOffice.addresses?.[0] ?? {};
+const fallbackPhone = primaryOffice.phones?.[0] ?? {};
+
+const resolvedAddress =
+  address.length > 0
+    ? address
+    : [
+        ...(fallbackAddress.lines ?? []),
+        [
+          [fallbackAddress.city, fallbackAddress.state].filter(Boolean).join(", "),
+          fallbackAddress.postalCode,
+        ]
+          .filter(Boolean)
+          .join(" "),
+      ].filter((line: string) => line && line.trim().length > 0);
+
+const resolvedMapUrl = mapUrl || fallbackAddress.mapUrl || "";
+const resolvedPhone = phone || fallbackPhone.display || "";
+const resolvedPhoneHref = phoneHref || fallbackPhone.href || "";
+
+const resolvedHours =
+  hours.length > 0
+    ? hours
+    : (primaryOffice.officeHours ?? []).map((entry: any) => ({
+        day: entry.day,
+        time: entry.hours,
+      }));
+
+const resolvedHoursNote = hoursNote || primaryOffice.officeHoursNote || "";
+
 const htmlAttributes = Object.fromEntries(
   Object.entries(rest).filter(([key]) => key !== "_component")
 );
@@ -43,16 +80,20 @@ const htmlAttributes = Object.fromEntries(
     </div>
 
     <div class="cp-aside">
-      {imageSource && <Image source={imageSource} alt={imageAlt} editable={false} class="cp-photo" />}
+      {
+        imageSource && (
+          <Image source={imageSource} alt={imageAlt} editable={false} class="cp-photo" />
+        )
+      }
 
       <div class="cp-info">
         <h2 class="cp-info-title">{panelHeading}</h2>
 
         {
-          address.length > 0 && (
+          resolvedAddress.length > 0 && (
             <div class="cp-row">
-              <a href={mapUrl || "#"} target="_blank" rel="noopener">
-                {address.map((line: string) => (
+              <a href={resolvedMapUrl || "#"} target="_blank" rel="noopener">
+                {resolvedAddress.map((line: string) => (
                   <span class="cp-line">{line}</span>
                 ))}
               </a>
@@ -61,23 +102,23 @@ const htmlAttributes = Object.fromEntries(
         }
 
         {
-          phone && (
+          resolvedPhone && (
             <div class="cp-row">
-              <a href={phoneHref || `tel:${phone}`}>{phone}</a>
+              <a href={resolvedPhoneHref || `tel:${resolvedPhone}`}>{resolvedPhone}</a>
             </div>
           )
         }
 
         {
-          hours.length > 0 && (
+          resolvedHours.length > 0 && (
             <div class="cp-row cp-hours">
-              {hours.map((h: any) => (
+              {resolvedHours.map((h: any) => (
                 <div class="cp-hour">
                   <span class="cp-day">{h.day}</span>
                   <span class="cp-time">{h.time}</span>
                 </div>
               ))}
-              {hoursNote && <p class="cp-note">{hoursNote}</p>}
+              {resolvedHoursNote && <p class="cp-note">{resolvedHoursNote}</p>}
             </div>
           )
         }

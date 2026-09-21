@@ -53,7 +53,7 @@ pageSections:
         teeth, we can close gaps, make teeth even in length, cover dark stains and create a uniform looking
         smile. In this way, veneers can create a smile that rivals the most famous Hollywood stars. The
         nice thing is that you do not have to be famous to improve your smile. You simply need to call
-        [760-940-2273](tel:+1-760-940-2273) and schedule an appointment to see Dr. Henninger.
+        [[[phone]]]([[phoneHref]]) and schedule an appointment to see Dr. Henninger.
     - _component: building-blocks/core-elements/heading
       text: Vista, California Veneers
       level: h3

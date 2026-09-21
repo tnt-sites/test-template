@@ -16,7 +16,7 @@ pageSections:
     with until it suddenly turns a corner and becomes unbearable. The key is to visit our dental office
     at that initial stage before you reach the point of severe discomfort. This will give you the largest
     amount of options for how to treat the problem. To schedule an appointment with our family dental
-    office, call (760) 940-2273.
+    office, call [[phone]].
   imageSource: /src/assets/images/wp/do-i-need-a-root-canal.jpg
   imageAlt: Do I Need a Root Canal
   formId: '251056297507965'
@@ -114,7 +114,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you have any of these symptoms, you should call our emergency dentist office at [760-940-2273](tel:+1-760-940-2273)
+      text: If you have any of these symptoms, you should call our emergency dentist office at [[[phone]]]([[phoneHref]])
         and schedule an appointment to be seen right away.
     - _component: building-blocks/core-elements/list
       listType: bullet
@@ -181,7 +181,7 @@ pageSections:
       text: We can treat your damaged or infected tooth, along with improving the appearance of your smile.
         We do so by offering additional solutions like teeth whitening, dental veneers, dental implants,
         dental crowns, and bridges. To schedule a tooth examination or to learn more about a root canal,
-        call [(760) 940-2273](tel:+1-760-940-2273).
+        call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

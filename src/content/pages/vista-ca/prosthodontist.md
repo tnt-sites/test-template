@@ -17,7 +17,7 @@ pageSections:
     visit a general dentist, because you will be visiting someone with more educational and clinical experience.
     With that in mind, we encourage you to visit our dental office and discuss your teeth replacement
     solutions, even if you are under the current care of a general family dentist. To schedule an appointment,
-    call (760) 940-2273. In the meantime, here are the answers to a few frequently asked questions.
+    call [[phone]]. In the meantime, here are the answers to a few frequently asked questions.
   imageSource: /src/assets/images/wp/prosthodontist.jpg
   imageAlt: Prosthodontist
   formId: '251056297507965'
@@ -44,7 +44,7 @@ pageSections:
         necessary to not only replace missing teeth, but to do so in a way that looks entirely natural
         and feels comfortable, so both the form and function of your smile can be restored. As a oral
         prosthetics doctor, we are also referred to as a prosthetic dentist. If you have suffered from
-        tooth loss, we encourage you to call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+        tooth loss, we encourage you to call [[[phone]]]([[phoneHref]]) and schedule an appointment
         to speak with us. At North County Cosmetic and Implant Dentistry, we are confident in our ability
         to provide you with a durable tooth replacement that will allow you to speak and smile with confidence
         and eat your favorite foods without restriction. To learn more, visit our dental office today.
@@ -147,7 +147,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: That is simple – call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment with
+      text: That is simple – call [[[phone]]]([[phoneHref]]) to schedule an appointment with
         Dr. Henninger. As a Vista, CA prosthodontist, we can provide you with a superior level of dental
         care, and we welcome your calls, even if you are currently under the care of another family dentist.
     maxContentWidth: none

@@ -13,7 +13,7 @@ pageSections:
   - If your gums are bleeding, visit our Vista dentist office to have your teeth examined. At North County
     Cosmetic and Implant Dentistry we can examine you and determine whether they are bleeding due to simple
     irritation or if there is a greater health concern. You can schedule an appointment with our office
-    by calling (760) 940-2273. In the meantime, here is what you need to know about your gums.
+    by calling [[phone]]. In the meantime, here is what you need to know about your gums.
   imageSource: /src/assets/images/wp/why-are-my-gums-bleeding.jpg
   imageAlt: Why Are My Gums Bleeding
   formId: '251056297507965'
@@ -48,7 +48,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you notice any of these symptoms, the best thing to do is call a Vista dentist for an official
         diagnosis. Self-treating can lead to additional problems because you may not be addressing the
-        actual cause of the problem. You can schedule an appointment with our office by calling [760-940-2273](tel:+1-760-940-2273).
+        actual cause of the problem. You can schedule an appointment with our office by calling [[[phone]]]([[phoneHref]]).
     - _component: building-blocks/core-elements/heading
       text: Causes of Gum Disease
       level: h3
@@ -148,7 +148,7 @@ pageSections:
         acceptable. Once you begin flossing daily, your gums should no longer bleed. In the process you
         will be removing the plaque from in between your gums and your teeth, helping them to be in better
         health. At North County Cosmetic and Implant Dentistry we can show you how to floss your teeth
-        properly to help ensure that you are getting a really good clean. Call [(760) 940-2273](tel:+1-760-940-2273)
+        properly to help ensure that you are getting a really good clean. Call [[[phone]]]([[phoneHref]])
         and let us know if your gums continue to bleed after a week of flossing daily.
     - _component: building-blocks/core-elements/heading
       text: Why are my gums swollen?
@@ -180,7 +180,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you have further questions about your gums, call [760-940-2273](tel:+1-760-940-2273) and
+      text: If you have further questions about your gums, call [[[phone]]]([[phoneHref]]) and
         schedule an appointment with our dental office. We will be happy to answer your questions, examine
         you and provide you with treatment recommendations.
     maxContentWidth: none

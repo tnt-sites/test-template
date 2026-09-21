@@ -94,7 +94,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: We invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule your dental checkup
+      text: We invite you to call [[[phone]]]([[phoneHref]]) and schedule your dental checkup
         right away. When you come in, our friendly team will make sure everything is ready to go. Next,
         we will take images of your teeth and gums to see if there are any infections or decay that are
         under the surface. We will also perform a visual inspection of your gums and each one of your
@@ -116,7 +116,7 @@ pageSections:
         it to grow and spread. In many cases, we can help you to avoid experiencing any significant discomfort
         by simply removing the decayed area while it is still small. Otherwise, you may find yourself
         with a dental emergency as an untreated cavity spreads. Fortunately, we make it easy to schedule
-        a dental checkup with our Vista dentist office. All you need to do is call [(760) 940-2273](tel:+1-760-940-2273)
+        a dental checkup with our Vista dentist office. All you need to do is call [[[phone]]]([[phoneHref]])
         to schedule an appointment. We will work within your schedule to ensure that you receive the care
         you need, when you need it.
     - _component: building-blocks/core-elements/heading
@@ -140,7 +140,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

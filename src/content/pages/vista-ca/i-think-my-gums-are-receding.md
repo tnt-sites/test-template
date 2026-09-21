@@ -14,7 +14,7 @@ pageSections:
     as much as we do on their teeth. We understand the critical nature of the gums and the role they play
     in keeping teeth healthy, strong, and intact. Through regular dental care, we can work to prevent
     gum disease. In certain situations, regular dental care is all a patient needs. However, if you do
-    notice that your gums begin to recede, call (760) 940-2273 and schedule an appointment with our Vista,
+    notice that your gums begin to recede, call [[phone]] and schedule an appointment with our Vista,
     CA dental office. Since gum recession can lead to further health challenges, it is important to address
     the issue right away.
   imageSource: /src/assets/images/wp/i-think-my-gums-are-receding.jpg
@@ -153,7 +153,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about gum recession and how to treat it, call our dental office at [(760) 940-2273](tel:+1-760-940-2273).
+      text: To learn more about gum recession and how to treat it, call our dental office at [[[phone]]]([[phoneHref]]).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

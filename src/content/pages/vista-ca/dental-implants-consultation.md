@@ -13,7 +13,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry, we provide dental implants as a permanent solution
     to tooth loss that can restore both the appearance and function of our patients' smiles. If you have
-    lost a tooth due to an accident, infection, or age, we encourage you to call (760) 940-2273 and schedule
+    lost a tooth due to an accident, infection, or age, we encourage you to call [[phone]] and schedule
     an appointment with our dental office. We will be happy to answer any questions that you have after
     completing an examination and taking X-rays. Here are some questions you should ask so that you can
     become comfortable with the procedure and be confident in the dentist that you have chosen to work

@@ -48,7 +48,7 @@ pageSections:
         the dentist regularly, like West Virginia, complete tooth loss is incredibly high (up to 37 percent).
         The facts paint a bleak picture for those that don't visit the dentist on a regular basis. However,
         the good news is that you can prevent cavities and tooth loss by simply scheduling preventative
-        dental care appointments. To get started call our office at [(760) 940-2273](tel:+1-760-940-2273).
+        dental care appointments. To get started call our office at [[[phone]]]([[phoneHref]]).
         Our friendly team will be happy to schedule an appointment for a time that works with your job
         and family schedule so that you can receive the care that you need.
     - _component: building-blocks/core-elements/heading
@@ -125,7 +125,7 @@ pageSections:
         top priority. At North County Cosmetic and Implant Dentistry, we can work with you to create a
         plan for preventative dental care and address any current health issues that you have so that
         your dental work is affordable. If you live in the Vista area, don't delay in scheduling your
-        dental exam. Call [760-940-2273](tel:+1-760-940-2273) today.
+        dental exam. Call [[[phone]]]([[phoneHref]]) today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

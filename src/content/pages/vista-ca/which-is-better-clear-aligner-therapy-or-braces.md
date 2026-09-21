@@ -19,7 +19,7 @@ pageSections:
     your lifestyle and determine which solution will work within it. From a day-to-day perspective, patients
     prefer Clear Aligner Therapy due to the flexibility that it provides. If you live in the Vista area,
     we encourage you to schedule an examination so that we can determine the best way to proceed with
-    straightening your teeth. You can do so by calling (760) 940-2273.
+    straightening your teeth. You can do so by calling [[phone]].
   imageSource: /src/assets/images/wp/which-is-better-clear-aligner-therpy-or-braces.jpg
   imageAlt: Which is Better Clear Aligner Therapy or Braces
   formId: '251056297507965'
@@ -134,7 +134,7 @@ pageSections:
         what is better, Clear Aligner Therapy or braces. Our portion of the discussing will revolve around
         the physical changes that will take place with your teeth and bite. You will need to give feedback
         on your lifestyle and expectations so that together, we can create a treatment plan that will
-        work today and a year from now. To learn more, call [760-940-2273](tel:+1-760-940-2273) and schedule
+        work today and a year from now. To learn more, call [[[phone]]]([[phoneHref]]) and schedule
         an appointment with our Vista, CA dental office.
     maxContentWidth: xl
     paddingHorizontal: lg

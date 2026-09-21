@@ -165,7 +165,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we enjoy discussing oral health. If you have
-        questions about your gums or a root scaling and planing procedure, call [(760) 940-2273](tel:+1-760-940-2273)
+        questions about your gums or a root scaling and planing procedure, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our Vista, CA dental office.
     maxContentWidth: none
     paddingHorizontal: none

@@ -1,4 +1,5 @@
 ---
+import { replaceContactTokens } from "@utils/contactTokens";
 import Icon from "@core-elements/icon/Icon.astro";
 
 type FixedTab = {
@@ -50,7 +51,8 @@ if (!_component && visibleTabs.length === 0) {
     visibleTabs.map((tab) => {
       const isModal =
         typeof tab.modal === "string" ? tab.modal.trim().toLowerCase() === "true" : !!tab.modal;
-      const normalizedHref = typeof tab.href === "string" ? tab.href.trim() : "";
+      const normalizedHref =
+        typeof tab.href === "string" ? replaceContactTokens(tab.href).trim() : "";
       const normalizedModalTarget =
         typeof tab.modalTarget === "string" && tab.modalTarget.trim().length > 0
           ? tab.modalTarget.trim().replace(/^#/, "")
@@ -66,9 +68,9 @@ if (!_component && visibleTabs.length === 0) {
         <>
           <span>{tab.icon && <Icon name={tab.icon} size="none" />}</span>
           <span>
-            {tab.textMobile}
-            {tab.textStrong && <strong>{tab.textStrong}</strong>}
-            {tab.textAfter}
+            {replaceContactTokens(tab.textMobile)}
+            {tab.textStrong && <strong>{replaceContactTokens(tab.textStrong)}</strong>}
+            {replaceContactTokens(tab.textAfter)}
           </span>
         </>
       );

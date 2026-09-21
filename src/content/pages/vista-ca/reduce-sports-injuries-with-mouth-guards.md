@@ -95,7 +95,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in getting a properly fitted mouth guard for your child, then give us
-        a call at [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment today.
+        a call at [[[phone]]]([[phoneHref]]) and schedule an appointment today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

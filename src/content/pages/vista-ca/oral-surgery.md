@@ -11,7 +11,7 @@ pageSections:
   heading: Oral Surgery
   location: Vista, CA
   intro:
-  - If you are in need of oral surgery, call (760) 940-2273 to schedule an appointment with our Vista,
+  - If you are in need of oral surgery, call [[phone]] to schedule an appointment with our Vista,
     CA dental office. At North County Cosmetic and Implant Dentistry, we can provide you with the surgical
     procedure you need to maintain or restore your oral health. When it comes to dentistry, only certain
     dentists perform surgical procedures. Whether you are looking for a new dentist or are currently under
@@ -58,7 +58,7 @@ pageSections:
         a strong metal that the body treats like natural matter. As a result, the implant and jaw bone
         will fuse together through the process of osseointegration. This takes a few months, but once
         complete, a new root system is developed, and when the new tooth is attached, it will be as secure
-        as a natural one. To learn more about this process, call [760-940-2273](tel:+1-760-940-2273) and
+        as a natural one. To learn more about this process, call [[[phone]]]([[phoneHref]]) and
         schedule an appointment with our dental office.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -143,7 +143,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To find out if you need oral surgery or to discuss a surgical procedure in greater detail,
-        call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation. We will be happy to answer
+        call [[[phone]]]([[phoneHref]]) and schedule a consultation. We will be happy to answer
         any questions you have and set you on the road to surgery and a full recovery. Our offices are
         conveniently located in Vista, CA, and we are currently accepting new patients.
     maxContentWidth: xl

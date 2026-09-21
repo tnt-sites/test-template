@@ -18,7 +18,7 @@ pageSections:
     for an artificial tooth.
   - The dental implant procedure is available at North County Cosmetic and Implant Dentistry in Vista
     and the surrounding area. To get dental implants, you must be in good health and have healthy and
-    adequate bone density. Contact our office at (760) 940-2273 for a consultation.
+    adequate bone density. Contact our office at [[phone]] for a consultation.
   imageSource: /src/assets/images/wp/dental-implant-procedure.jpg
   imageAlt: The Dental Implant Procedure
   formId: '251056297507965'
@@ -164,7 +164,7 @@ pageSections:
         factors such as the patient, the dentist, the techniques used, and the number of implants involved.
         When done by an experienced dentist, the risks of the procedure are minimal.
     - _component: building-blocks/core-elements/text
-      text: To learn more about the dental implant procedure, call our office at [(760) 940-2273](tel:+1-760-940-2273)
+      text: To learn more about the dental implant procedure, call our office at [[[phone]]]([[phoneHref]])
         to request an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg

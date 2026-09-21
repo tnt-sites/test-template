@@ -168,7 +168,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you are interested in dentures or are experiencing issues with your dentures, give us a
-        call at [(760) 940-2273](tel:+1-760-940-2273) today. We will schedule a consultation and recommend
+        call at [[[phone]]]([[phoneHref]]) today. We will schedule a consultation and recommend
         the best course of action to help you solve the problem and continue to live a healthy life.
     maxContentWidth: none
     paddingHorizontal: none

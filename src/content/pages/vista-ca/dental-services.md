@@ -40,7 +40,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are looking for a Vista dentist that can prevent infections, treat them, and beautifully
         restore or transform your smile; we offer all of those solutions as part of our dental work. If
-        you live or work near the Vista area, we invite you to call [(760) 940-2273](tel:+1-760-940-2273)
+        you live or work near the Vista area, we invite you to call [[[phone]]]([[phoneHref]])
         and schedule an appointment. During your initial examination, we will inspect your teeth and gums
         to determine if there are any cavities or if an infection is present. Early detection is important
         since it allows us to provide treatment before you experience any discomfort. Unlike other physical
@@ -60,7 +60,7 @@ pageSections:
         stains, straighten the teeth, or replace missing teeth. Whatever the case may be, we have the
         skills and experience to successfully complete the transformation and restore your teeth to good
         health in the process. For more information or to schedule an appointment with North County Cosmetic
-        and Implant Dentistry call [760-940-2273](tel:+1-760-940-2273).
+        and Implant Dentistry call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

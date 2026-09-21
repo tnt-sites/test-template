@@ -16,7 +16,7 @@ pageSections:
     teeth, but it requires oral surgery, meaning there is a recovery process that must be taken into consideration.
     When you visit our Vista, CA dental office, we can conduct an examination, take X-rays, and let you
     know what to expect from the implants procedure. This also includes what to expect during your recovery
-    process. For more information, we encourage you to call (760) 940-2273 and schedule an appointment
+    process. For more information, we encourage you to call [[phone]] and schedule an appointment
     with Dr. Henninger. In the meantime, here is what you should know.
   imageSource: /src/assets/images/wp/postop-care-for-dental-implants.jpg
   imageAlt: Post-Op Care for Dental Implants
@@ -149,7 +149,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about post-op care for dental implants, call [760-940-2273](tel:+1-760-940-2273)
+      text: To learn more about post-op care for dental implants, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our Vista, CA dental office. We will be happy to answer any questions
         you have, so you can be confident in your decision to get started.
     maxContentWidth: none

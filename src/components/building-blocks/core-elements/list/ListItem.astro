@@ -1,6 +1,7 @@
 ---
 import Icon from "@core-elements/icon/Icon.astro";
 import MarkdownIt from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 const {
   text = "",
@@ -35,7 +36,7 @@ const textDataAttributes =
     )
   }
   <p {...textDataAttributes}>
-    {text ? <Fragment set:html={md.renderInline(text)} /> : <slot />}
+    {text ? <Fragment set:html={md.renderInline(replaceContactTokens(text))} /> : <slot />}
   </p>
 </li>
 

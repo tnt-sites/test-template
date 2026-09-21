@@ -16,7 +16,7 @@ pageSections:
     Clear Aligner Therapy can sufficiently straighten their child's teeth. Orthodontics is familiar and
     still effective but Clear Aligner Therapy is relatively new and most parents never had access to this
     solution. If you are in this situation, the best way to find out about your child's options is to
-    call (760) 940-2273 and schedule an appointment. We are located in the Vista and are happy to answer
+    call [[phone]] and schedule an appointment. We are located in the Vista and are happy to answer
     any questions that you may have.
   imageSource: /src/assets/images/wp/is-invisalign-teen-right-for-my-child.jpg
   imageAlt: Is Clear Aligner Therapy Teen Right for My Child
@@ -106,7 +106,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: The process is simple. Call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+      text: The process is simple. Call [[[phone]]]([[phoneHref]]) and schedule an appointment
         with our dental office. We can examine your teen's teeth, let you know if they are ready for Clear
         Aligner Therapy now, or when they will be. Next, we will discuss all of the steps involved in
         the process with you and your teen, so that everyone understands what to expect. There will be
@@ -135,7 +135,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about Clear Aligner Therapy Teen® and whether it is right for your child, call
-        [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment with our Vista, California dental
+        [[[phone]]]([[phoneHref]]) and schedule an appointment with our Vista, California dental
         office. At North County Cosmetic and Implant Dentistry we can answer all of your questions, ensure
         that their treatment goes smoothly, and help your teen to gain a bright and beautiful smile.
     maxContentWidth: xl

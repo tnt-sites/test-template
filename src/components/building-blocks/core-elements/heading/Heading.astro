@@ -2,6 +2,7 @@
 import Icon from "@core-elements/icon/Icon.astro";
 // @ts-ignore
 import MarkdownIt from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 const {
   text,
@@ -54,7 +55,7 @@ const renderSource =
       ? normalizedText
       : "";
 
-let MarkdownText = renderSource ? md.renderInline(renderSource) : "";
+let MarkdownText = renderSource ? md.renderInline(replaceContactTokens(renderSource)) : "";
 
 MarkdownText = MarkdownText.replace(/\n/g, "<br />");
 const Tag = level;

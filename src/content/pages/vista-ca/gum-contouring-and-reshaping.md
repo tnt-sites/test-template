@@ -14,7 +14,7 @@ pageSections:
   - At North County Cosmetic and Implant Dentistry we speak with patients who are dissatisfied with the
     appearance or shape of their gums. While most people think of things like teeth whitening when considering
     how to improve their smile, the appearance of the gums also makes a significant impact. If you feel
-    that yours are too large or have receded and are too small, call (760) 940-2273 and schedule an appointment
+    that yours are too large or have receded and are too small, call [[phone]] and schedule an appointment
     with our dental office. We can examine you, make recommendations, and let you know whether we can
     assist you or if you should see a specialist. In the meantime, here are a few frequently asked questions
     about gum contouring and our answers to them.
@@ -46,7 +46,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Typically, this is a highly personal decision that is made based on how you feel about your
         gums. If your gums are uneven, or they cover too much or too little of your teeth, then you may
-        be a good candidate for gum contouring or gum reshaping. To find out, call [760-940-2273](tel:+1-760-940-2273)
+        be a good candidate for gum contouring or gum reshaping. To find out, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our dental office.
     - _component: building-blocks/core-elements/heading
       text: Is there pain associated with the procedure?
@@ -149,7 +149,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you do not like the appearance of your smile, call [(760) 940-2273](tel:+1-760-940-2273)
+      text: If you do not like the appearance of your smile, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our dental office. We can conduct a thorough examination and
         take X-rays before discussing what you do not like about your smile. We can then make a series
         of recommendations for how to address it. If you don't need gum reshaping for medical reasons,

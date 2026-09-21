@@ -111,7 +111,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: We welcome patients throughout the Vista CA area to schedule an appointment with our family
-        dentist office by calling [760-940-2273](tel:+1-760-940-2273). Everyone should have their teeth
+        dentist office by calling [[[phone]]]([[phoneHref]]). Everyone should have their teeth
         cleaned and examined at least twice a year so if it has been awhile since you visited a dentist,
         don't delay in scheduling an appointment. During these ongoing dental exams we will make sure
         that your teeth are thoroughly cleaned and look for any signs of cavities or gum disease. If any
@@ -143,7 +143,7 @@ pageSections:
         their teeth healthy and free from cavities. This often involves additional treatments to strengthen
         and protect their teeth as preventative measures. We know that it is far easier to keep a child's
         teeth healthy and free from cavities than to try and get them comfortable with a major dental
-        treatment. If you have children, call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment
+        treatment. If you have children, call [[[phone]]]([[phoneHref]]) to schedule an appointment
         so that they can stay in good oral health as they grow.
     - _component: building-blocks/core-elements/text
       text: 3 out of 4 people suffer from some form of gum disease. See your Family Dentist at least twice
@@ -165,7 +165,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: We welcome patients from throughout the Vista area to schedule an appointment with our office.
         We are committed to providing high-quality dental care that is painless and comfortable. To schedule
-        an appointment call [760-940-2273](tel:+1-760-940-2273).
+        an appointment call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -252,7 +252,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

@@ -14,7 +14,7 @@ pageSections:
   - At North County Cosmetic and Implant Dentistry, we provide emergency dental care that helps to restore
     a tooth that sustains damage from an accident or infection. If you live in Vista or the surrounding
     area, we encourage you to save our phone number. Since there is no way to tell if or when you may
-    have a dental emergency, putting (760) 940-2273 in your contact list can save you a trip to the emergency
+    have a dental emergency, putting [[phone]] in your contact list can save you a trip to the emergency
     room.
   imageSource: /src/assets/images/wp/emergency-dental-care.jpg
   imageAlt: Emergency Dental Care
@@ -80,7 +80,7 @@ pageSections:
         of milk, then come to our Vista, CA dental office right away. There is a possibility that the
         tooth can be put back in your mouth. Otherwise, we can discuss replacement options that include
         dentures, a dental bridge, or a dental implant. All of these are possibilities that can appear
-        completely natural so to learn more about them, call [760-940-2273](tel:+1-760-940-2273).
+        completely natural so to learn more about them, call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -112,8 +112,7 @@ pageSections:
         and we can provide relief. The good news is that it does not have to be. At North County Cosmetic
         and Implant Dentistry, we have found that most toothaches do not happen without warning. Typically,
         there are signs that can include discomfort when biting down, sensitivity to heat or cold, irritation
-        when brushing or flossing, etc. If you sense any of these things, we encourage you to call [(760)
-        940-2273](tel:+1-760-940-2273) and schedule an appointment for a dental exam. We can examine your
+        when brushing or flossing, etc. If you sense any of these things, we encourage you to call [[[phone]]]([[phoneHref]]) and schedule an appointment for a dental exam. We can examine your
         teeth, look for any signs of infection or decay and treat the problem before you go from moderate
         discomfort to a raging toothache. Our friendly Vista team can work with you to schedule an appointment
         that fits within your schedule so that you have no reason to delay in seeking treatment. However,
@@ -142,7 +141,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA or the surrounding area, call [760-940-2273](tel:+1-760-940-2273)
+      text: If you live in Vista, CA or the surrounding area, call [[[phone]]]([[phoneHref]])
         if you have any type of dental emergency. We will work to get you treated right away so that your
         discomfort can be relieved, your tooth restored, and your smile improved. We can also discuss
         any other oral health concerns that you may have.

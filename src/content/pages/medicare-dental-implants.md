@@ -146,7 +146,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Medicare won’t cover the dental implants procedure itself, but it will cover related services
         such as hospital costs. The only way to know for sure if you qualify for dental implant Medicare
-        coverage is to schedule a consultation with Dr. Henninger by calling [(760) 940-2273](tel:+1-760-940-2273)
+        coverage is to schedule a consultation with Dr. Henninger by calling [[[phone]]]([[phoneHref]])
         or by filling out our [online contact form.](/contact-us/)
     - _component: building-blocks/core-elements/text
       text: What if you find that my Medicare plan excludes dental services?
@@ -154,7 +154,7 @@ pageSections:
       text: If your Medicare plan excludes dental services, you can switch to a plan that includes them.
         At the start of the new year, your plan will include dental services and you may qualify for dental
         implant coverage. We can help you find the plan that’s right for you, so you’ll be certain you
-        choose one that includes dental coverage. Please feel free to call us by dialing [(760) 940-2273](tel:+1-760-940-2273)
+        choose one that includes dental coverage. Please feel free to call us by dialing [[[phone]]]([[phoneHref]])
         if you have any questions, and we’ll be happy to help you.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -169,10 +169,9 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

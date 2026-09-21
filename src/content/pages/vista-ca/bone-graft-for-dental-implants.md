@@ -14,7 +14,7 @@ pageSections:
     Since dental implants are surgically placed and inserted into the jawbone, one of the questions our
     Vista patients ask is whether or not they will need a bone graft prior to the procedure. We encourage
     you to visit our dental office for an examination and X-rays so that we can answer this question based
-    on your health. You can schedule an appointment by calling (760) 940-2273. In the meantime, here are
+    on your health. You can schedule an appointment by calling [[phone]]. In the meantime, here are
     some answers to frequently asked questions about the bone graft procedure.
   imageSource: /src/assets/images/wp/bone-graft-for-dental-implants.jpg
   imageAlt: Will I Need a Bone Graft for Dental Implants
@@ -159,7 +159,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: The best way to find out if you need a bone grafting procedure is to call [760-940-2273](tel:+1-760-940-2273)
+      text: The best way to find out if you need a bone grafting procedure is to call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry,
         we can take X-rays and let you know if your bone is lacking in density. We can then make a recommendation
         for treatment and let you know if you need to see a specialist.

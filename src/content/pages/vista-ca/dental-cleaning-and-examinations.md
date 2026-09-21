@@ -15,7 +15,7 @@ pageSections:
     throughout Vista. We believe that preventative care is essential for staying in good oral health.
     Our goal is to keep our patients as healthy as possible. The best way to do so is through ongoing
     dental care and teaching our patients how to practice good oral hygiene at home. If you live in the
-    Vista area, call (760) 940-2273 to schedule your exam and to learn how you can stay healthy year-round.
+    Vista area, call [[phone]] to schedule your exam and to learn how you can stay healthy year-round.
   imageSource: /src/assets/images/wp/dental-cleaning-and-examinations.jpg
   imageAlt: Dental Cleaning
   formId: '251056297507965'
@@ -51,7 +51,7 @@ pageSections:
         to examine their toy's teeth. These little steps can help children to feel comfortable when getting
         their own teeth cleaned. By doing so twice a year, their baby teeth are more likely to stay in
         until they are supposed to fall out, and their adult teeth will also stay healthier. If you have
-        questions about scheduling an appointment for your child call [760-940-2273](tel:+1-760-940-2273).
+        questions about scheduling an appointment for your child call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -140,7 +140,7 @@ pageSections:
         a diet that contains dairy products, lean protein, green vegetables and complex carbs so that
         your body gets the nutrients it needs to stay healthy. We can provide additional tips and information
         during your dental cleaning and examinations. To schedule your appointment with North County Cosmetic
-        and Implant Dentistry call [(760) 940-2273](tel:+1-760-940-2273).
+        and Implant Dentistry call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

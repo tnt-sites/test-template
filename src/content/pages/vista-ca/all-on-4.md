@@ -122,7 +122,7 @@ pageSections:
       text: The Oral and Maxillofacial Associates state that All-on-4® implants have a success rate of
         98 percent. With All-on-4® implants, patients have a 98 percent probability of leaving our Vista
         offices with a perfect set of teeth that are permanently attached to your jawbone. To discuss
-        how successful the procedure may be for you, call [(760) 940-2273](tel:+1-760-940-2273).
+        how successful the procedure may be for you, call [[[phone]]]([[phoneHref]]).
     - _component: building-blocks/core-elements/heading
       text: The Process of Getting All-on-4® at North County Cosmetic and Implant Dentistry
       level: h3
@@ -166,7 +166,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we can replace your teeth with this convenient
-        and innovative procedure. To discuss the many benefits or to get started, call [(760) 940-2273](tel:+1-760-940-2273)
+        and innovative procedure. To discuss the many benefits or to get started, call [[[phone]]]([[phoneHref]])
         and schedule an examination and consultation with our Vista, CA dental office.
     maxContentWidth: none
     paddingHorizontal: none

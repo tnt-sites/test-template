@@ -13,7 +13,7 @@ value:
       buttons:
         - _component: page-sections/heroes/hero-slider/hero-slide-button
           text: Call Now
-          link: "tel:+1-760-940-2273"
+          link: "[[phoneHref]]"
           newTab: false
   formId: "251056297507965"
   formTitle: North County Cosmetic and Implant Dentistry - Request an Appointment Form
@@ -44,7 +44,7 @@ _structures:
           buttons:
             - _component: page-sections/heroes/hero-slider/hero-slide-button
               text: Call Now
-              link: "tel:+1-760-940-2273"
+              link: "[[phoneHref]]"
               newTab: false
         preview:
           text:
@@ -83,7 +83,7 @@ _structures:
         value:
           _component: page-sections/heroes/hero-slider/hero-slide-button
           text: Call Now
-          link: "tel:+1-760-940-2273"
+          link: "[[phoneHref]]"
           newTab: false
         preview:
           text:

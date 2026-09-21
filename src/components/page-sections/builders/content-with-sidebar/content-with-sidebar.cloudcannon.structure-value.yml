@@ -15,3 +15,5 @@ preview:
 picker_preview:
   text: Content with Sidebar
   subtext: Main content column with a right rail.
+_inputs_from_glob:
+  - /src/components/page-sections/builders/content-with-sidebar/content-with-sidebar.cloudcannon.inputs.yml

@@ -33,7 +33,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, CA, we invite you to call [(760) 940-2273](tel:+1-760-940-2273) and
+      text: If you live in Vista, CA, we invite you to call [[[phone]]]([[phoneHref]]) and
         schedule a consultation to speak with Dr. Henninger. During your appointment, we will examine
         your teeth and discuss the goals that you have for your smile. Since there are so many types of
         procedures to choose from, it is important to understand what you are trying to accomplish so
@@ -91,7 +91,7 @@ pageSections:
         we are closing gaps between teeth, changing their overall shape or size, covering dark stains,
         straightening teeth, or restoring teeth, our cosmetic dental services can give you the smile you
         have always wanted. For more information or to speak with North County Cosmetic and Implant Dentistry
-        call [760-940-2273](tel:+1-760-940-2273).
+        call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

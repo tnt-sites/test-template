@@ -16,7 +16,7 @@ pageSections:
     after we place it on your teeth. We begin the procedure by taking precise measurements of your teeth
     in our dentist office. We will also take an impression, so the dental lab has all the information
     they need to create replacement teeth that look like your natural ones. To find out if you are a good
-    candidate for the procedure, call (760) 940-2273 and schedule a consultation. At North County Cosmetic
+    candidate for the procedure, call [[phone]] and schedule a consultation. At North County Cosmetic
     and Implant Dentistry, we offer several solutions for replacing missing teeth, so if a bridge is not
     suited to your needs, we will recommend a different solution.
   imageSource: /src/assets/images/wp/dental-bridges.jpg
@@ -148,7 +148,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about dental bridges and how they can be used to replace your missing teeth,
-        call [760-940-2273](tel:+1-760-940-2273). Our Vista, CA dental office is conveniently located,
+        call [[[phone]]]([[phoneHref]]). Our Vista, CA dental office is conveniently located,
         and we are currently accepting new patients.
     maxContentWidth: none
     paddingHorizontal: none

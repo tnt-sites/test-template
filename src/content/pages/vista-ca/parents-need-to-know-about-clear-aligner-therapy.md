@@ -16,7 +16,7 @@ pageSections:
     can gain a beautiful smile that they are confident to show off. Now is an excellent time to straighten
     their teeth before the teen heads off to college. Orthodontics, under your supervision, can be an
     effective treatment that gives them a confidence boost for the rest of their life. To find out if
-    your teen qualifies, call (760) 940-2273 and schedule an appointment to speak with our team.
+    your teen qualifies, call [[phone]] and schedule an appointment to speak with our team.
   imageSource: /src/assets/images/wp/parents-need-to-know-about-invisalign.jpg
   imageAlt: 7 Things Parents Need to Know About Clear Aligner Therapy Teen
   formId: '251056297507965'
@@ -129,7 +129,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call [760-940-2273](tel:+1-760-940-2273) and schedule a consultation with North County Cosmetic
+      text: Call [[[phone]]]([[phoneHref]]) and schedule a consultation with North County Cosmetic
         and Implant Dentistry today.
     maxContentWidth: none
     paddingHorizontal: none

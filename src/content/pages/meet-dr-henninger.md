@@ -9,18 +9,33 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
+    label: Meet Dr. Henninger
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: MEET DR. HENNINGER
+      level: h1
+      size: 2xl
+    - _component: building-blocks/core-elements/image
+      source: /src/assets/images/wp/CHD-169-2-1.jpg
+      alt: Dr. Christopher Henninger
+      priority: true
+    maxContentWidth: 2xl
+    paddingHorizontal: lg
+    paddingVertical: lg
+    colorScheme: default
+    backgroundColor: none
+  - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: Dr. Christopher Henninger joined North County Cosmetic and Implant Dentistry in 2011. Dr.
         Henninger is a well-trained general dentist who joins Dr. Huenergardt in providing the highest
         level of care to our patients.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: lg
     colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
@@ -72,7 +87,7 @@ pageSections:
     paddingHorizontal: lg
     paddingVertical: xl
     colorScheme: default
-    backgroundColor: base
+    backgroundColor: surface
   sidebar: []
   maxContentWidth: 2xl
   paddingVertical: xl

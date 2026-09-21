@@ -20,7 +20,7 @@ pageSections:
     fit for you. Whether you are missing a few teeth, several teeth, or all your teeth, dentures may provide
     the relief you have been anticipating. Because our professionals have the necessary knowledge and
     training, you can feel at ease knowing we can set you on the path to a beautiful smile.
-  - Call our office today at (760) 940-2273 so you can make an appointment.
+  - Call our office today at [[phone]] so you can make an appointment.
   imageSource: /src/assets/images/wp/dentures-and-partial-dentures.jpg
   imageAlt: Dentures and Partial Dentures
   formId: '251056297507965'

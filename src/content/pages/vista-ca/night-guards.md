@@ -12,7 +12,7 @@ pageSections:
   intro:
   - Do you wake up with headaches, or teeth or jaw pain? If so, you should visit our Vista, CA dental
     office for an examination. You may be in need of night guard. We can provide you with one designed
-    to improve your oral health and even your quality of sleep. To learn more, call (760) 940-2273 and
+    to improve your oral health and even your quality of sleep. To learn more, call [[phone]] and
     schedule an appointment with our dental office. At North County Cosmetic and Implant Dentistry, we
     provide superior level care and will use the latest in dental technology to ensure your teeth and
     gums are as healthy as they can be. Fitting patients with a night guard is often part of that process.
@@ -102,7 +102,7 @@ pageSections:
         text: Treating TMJ. Severe grinding or jaw clenching can lead to TMJ disorder. This can be incredibly
           uncomfortable, typically starting out as a sore jaw in the morning with the occasional headache.
           If you experience these symptoms or have face pain, neck pain, or your jaw hurts while eating,
-          call 760-940-2273 to schedule an appointment with our Vista office right away. It is critical
+          call [[phone]] to schedule an appointment with our Vista office right away. It is critical
           that you treat TMJ early by wearing a night guard and preventing your teeth from clenching or
           grinding in your sleep. Otherwise, TMJ can become severe. At this stage, some people find it
           difficult to even open their mouth, let alone eat or speak normally.
@@ -154,7 +154,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: To learn more about night guards and how they can help you, call our Vista dental office to
-        schedule an appointment. You can reach us at [(760) 940-2273](tel:+1-760-940-2273).
+        schedule an appointment. You can reach us at [[[phone]]]([[phoneHref]]).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

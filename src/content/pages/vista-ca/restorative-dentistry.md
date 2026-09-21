@@ -14,7 +14,7 @@ pageSections:
   - At North County Cosmetic and Implant Dentistry, we practice restorative dentistry. Understanding how
     essential your teeth are to the overall health of your mouth, jawbone, and body, we seek to restore
     and preserve your teeth whenever possible. If you live in Vista, CA and damage your tooth, we encourage
-    you to call our office at (760) 940-2273. We will examine you and determine the best way to save your
+    you to call our office at [[phone]]. We will examine you and determine the best way to save your
     natural tooth and prevent it from needing to be pulled. Using the latest in dental technology, this
     is possible if you visit our office quickly and don't delay. The more extensive the damage is, or
     the more infected your tooth becomes, the more challenging it can be to save it, making it imperative
@@ -52,7 +52,7 @@ pageSections:
         is that their teeth may continue to grow and if so, the restored tooth may appear shorter and
         need to be touched up when they become an adult. By working in restorative dentistry, we can help
         patients now and in the future. If someone in your family has a damaged tooth, give us a call
-        at [760-940-2273](tel:+1-760-940-2273) so that we can restore it to full functionality.
+        at [[[phone]]]([[phoneHref]]) so that we can restore it to full functionality.
     - _component: building-blocks/core-elements/heading
       text: Restorative Dentistry for Seniors
       level: h2
@@ -160,7 +160,7 @@ pageSections:
         or bite down on anything inedible, avoid grinding your teeth, etc. If you do so and have regular
         dental checkups, you may be wearing your restoration for twenty years or more. For more information
         about restorative dentistry, or to schedule an appointment with our Vista dentist office, call
-        [(760) 940-2273](tel:+1-760-940-2273).
+        [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -170,7 +170,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

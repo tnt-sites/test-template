@@ -260,9 +260,9 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you have questions about our Privacy Policy or how we collect, store, and share data, you
-        can email us using the form on our https://www.ultimatesmiles.com/contact-us/ or call (760) 940-2273.
+        can email us using the form on our https://www.ultimatesmiles.com/contact-us/ or call [[phone]].
         We will be happy to answer your questions. North County Cosmetic and Implant Dentistry is located
-        at [1934 Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+        at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

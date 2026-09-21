@@ -16,7 +16,7 @@ pageSections:
     while also improving your smile. We believe that patients can have teeth that are highly functional
     and look amazing. After all, your teeth are yours for a lifetime, making it important to care for
     them and enjoy the way they look. To schedule a consultation to discuss possible procedures, call
-    (760) 940-2273.
+    [[phone]].
   imageSource: /src/assets/images/wp/dental-cosmetics.jpg
   imageAlt: Dental Cosmetics
   formId: '251056297507965'
@@ -156,7 +156,7 @@ pageSections:
         are perfect for your individual needs and provide you with dental cosmetics that work to keep
         you smiling now and as you age. Whether you have lost a tooth or are dealing with an infected
         and damaged one, we can help. To schedule an appointment to speak with North County Cosmetic and
-        Implant Dentistry call [760-940-2273](tel:+1-760-940-2273). We look forward to assisting you.
+        Implant Dentistry call [[[phone]]]([[phoneHref]]). We look forward to assisting you.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -166,7 +166,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

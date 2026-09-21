@@ -128,7 +128,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: At North County Cosmetic and Implant Dentistry, we will go over all of the necessary steps
         for denture care and how long the adjustment process will take. Once the patient adjusts to the
-        dentures, we are confident that the dentures will be a perfect fit. Call us at [(760) 940-2273](tel:+1-760-940-2273),
+        dentures, we are confident that the dentures will be a perfect fit. Call us at [[[phone]]]([[phoneHref]]),
         if you have any interest or questions about dentures. We will schedule an appointment to examine
         your teeth and determine the best form of dentures to give you the appearance and functionality
         of a full smile.

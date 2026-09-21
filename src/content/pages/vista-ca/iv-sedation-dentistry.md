@@ -19,7 +19,7 @@ pageSections:
     still during the appointment and treatment. This way, the patient will be able to receive the care
     they need without their health issues getting in the way. We will help customize the treatment experience
     for each patient and determine if IV sedation dentistry is the right form of treatment.
-  - Call us at (760) 940-2273 to learn more about IV sedation dentistry or schedule an appointment.
+  - Call us at [[phone]] to learn more about IV sedation dentistry or schedule an appointment.
   imageSource: /src/assets/images/wp/IV-Sedation-Dentistry.jpg
   imageAlt: IV Sedation Dentistry
   formId: '251056297507965'
@@ -33,7 +33,7 @@ pageSections:
   - _component: page-sections/builders/custom-section
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: Call us at 760-940-2273 to learn more about IV sedation dentistry or schedule an appointment.
+      text: Call us at [[phone]] to learn more about IV sedation dentistry or schedule an appointment.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -212,10 +212,9 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

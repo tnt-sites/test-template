@@ -1,6 +1,7 @@
 ---
 // @ts-ignore
 import markdownit from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 const md = markdownit({ html: true });
 
@@ -14,7 +15,7 @@ const {
   ...htmlAttributes
 } = Astro.props;
 
-const markdownContent = text ? md.render(text) : "";
+const markdownContent = text ? md.render(replaceContactTokens(text)) : "";
 
 const textDataAttributes =
   editable && customDataProp

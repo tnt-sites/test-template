@@ -138,12 +138,11 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: If you are ready to see if dental implants are the right choice for you, give us a call today
-        760-940-2273 for a free consultation!
+        [[phone]] for a free consultation!
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

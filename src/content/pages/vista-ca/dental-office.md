@@ -15,7 +15,7 @@ pageSections:
     oral health. At North County Cosmetic and Implant Dentistry, we understand the importance of offering
     comprehensive dental services so that regardless of whether you need a general teeth cleaning or a
     full restoration, we have the solutions for a perfectly healthy and functioning smile. If you live
-    in or around the Vista area, we invite you to call (760) 940-2273 and schedule an appointment to meet
+    in or around the Vista area, we invite you to call [[phone]] and schedule an appointment to meet
     Dr. Henninger and have your teeth examined.
   imageSource: /src/assets/images/wp/dental-office.jpg
   imageAlt: Dental Office

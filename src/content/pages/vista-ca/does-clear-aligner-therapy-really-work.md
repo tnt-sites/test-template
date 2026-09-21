@@ -75,7 +75,7 @@ pageSections:
         teeth and to align the bite. It is a misconception that braces are the only way to address an
         overbite or underbite. While they are traditionally the most effective, aligners can correct a
         bite, as well. In order to find out if this process will work for yours, we recommend that you
-        visit our Vista, CA dental office. Call [(760) 940-2273](tel:+1-760-940-2273) to schedule a consultation
+        visit our Vista, CA dental office. Call [[[phone]]]([[phoneHref]]) to schedule a consultation
         so we can examine you, take X-rays, and determine whether or not Clear Aligner Therapy is right
         for you. If your bite needs more adjustment than what aligners can offer, braces may be necessary
         or even oral surgery.
@@ -153,7 +153,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call [760-940-2273](tel:+1-760-940-2273) and schedule a consultation with Dr. Henninger.
+      text: Call [[[phone]]]([[phoneHref]]) and schedule a consultation with Dr. Henninger.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

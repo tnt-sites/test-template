@@ -91,7 +91,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Our dentist know how to treat snoring to make sure you and the people in your life can sleep
-        comfortably every night. Call (760) 940-2273 today to learn more.
+        comfortably every night. Call [[phone]] today to learn more.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -157,10 +157,9 @@ pageSections:
     - _component: building-blocks/core-elements/divider
       paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

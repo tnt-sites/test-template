@@ -225,7 +225,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: Dental implants are the gold standard treatment for restoring missing or broken teeth. For
-        more information about the process, please give us a call at 760-940-2273. Alternatively, you
+        more information about the process, please give us a call at [[phone]]. Alternatively, you
         can fill out a form on the contact page, and we’ll get back to you as soon as possible.
     maxContentWidth: none
     paddingHorizontal: none
@@ -241,10 +241,9 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7)
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7)
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

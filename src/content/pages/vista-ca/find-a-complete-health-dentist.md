@@ -19,7 +19,7 @@ pageSections:
     that help these systems function optimally. Therefore, we should focus on the mouth as the gateway
     to the rest of the body.
   - Learn more about the oral health connection to your overall well-being. Choose a dentist who offers
-    a complete health perspective. Call (760) 940-2273 to schedule an appointment today.
+    a complete health perspective. Call [[phone]] to schedule an appointment today.
   imageSource: /src/assets/images/wp/Find-a-Complete-Health-Dentist.jpg
   imageAlt: Find a Complete Health Dentist
   formId: '251056297507965'
@@ -34,7 +34,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: Learn more about the oral health connection to your overall well-being. Choose a dentist who
-        offers a complete health perspective. Call 760-940-2273 to schedule an appointment today.
+        offers a complete health perspective. Call [[phone]] to schedule an appointment today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -156,7 +156,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: There is a connection between your mouth and general well-being. Choose a complete health
-        dentist who will work to help both your dental and overall health. Call 760-940-2273 today to
+        dentist who will work to help both your dental and overall health. Call [[phone]] today to
         schedule an appointment at North County Cosmetic and Implant Dentistry.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -216,10 +216,9 @@ pageSections:
     - _component: building-blocks/core-elements/divider
       paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

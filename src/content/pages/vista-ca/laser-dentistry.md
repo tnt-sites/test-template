@@ -16,7 +16,7 @@ pageSections:
     are looking for modern dental care, give us a call. Lasers are revolutionizing dentistry, but a family
     dentist still typically uses traditional metal dental tools, making it necessary to visit a laser
     dentist. As a laser dentist in Vista, we can use lasers in the majority of our procedures to correct
-    damage without causing irritation. We invite you to call (760) 940-2273 and experience the difference
+    damage without causing irritation. We invite you to call [[phone]] and experience the difference
     that laser dentistry can make.
   imageSource: /src/assets/images/wp/laser-dentistry.jpg
   imageAlt: Laser Dentistry
@@ -61,7 +61,7 @@ pageSections:
         lasers can also be used to help stop the bleeding so that when a more intensive procedure is being
         performed, gauze may be unnecessary or only used temporarily. Patients can appreciate the opportunity
         to have dental work completed in this non-invasive way. If you would like to experience laser
-        dentistry for yourself, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule
+        dentistry for yourself, we invite you to call [[[phone]]]([[phoneHref]]) and schedule
         an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg

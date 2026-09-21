@@ -44,7 +44,7 @@ pageSections:
           to visit the dentist for a professional teeth cleaning twice a year. We can remove the plaque
           that has formed on and in between your teeth along with at your gum line. This is not just important
           for preventing cavities, it also prevents gum disease. Gum disease is typically a result of
-          plaque becoming trapped under your gums. To schedule your appointment call (760) 940-2273. Our
+          plaque becoming trapped under your gums. To schedule your appointment call [[phone]]. Our
           team is gentle and we are confident that you will have a pleasant experience.
       - _component: building-blocks/core-elements/list/list-item
         text: Deep Cleanings. Gum disease creates the need for a deep cleaning. During this procedure
@@ -79,7 +79,7 @@ pageSections:
           is placed on the teeth and when it is, it penetrates the enamel and starts the process of oxidization.
           This is where the molecules inside of the teeth change to reflect less light, appear colorless
           and give your teeth a bright white appearance. If you have an important event coming up, call
-          760-940-2273 to schedule an appointment with us and discuss this procedure in further detail.
+          [[phone]] to schedule an appointment with us and discuss this procedure in further detail.
       - _component: building-blocks/core-elements/list/list-item
         text: Dental Bonding. When it comes to routine dental procedures, dental bonding is one of the
           most widely used solutions for improving the appearance of teeth and restoring damaged ones.

@@ -145,7 +145,7 @@ pageSections:
         take additional time, and the recovery period is longer since the procedures will take several
         steps. Therefore, one possible solution is for us to attempt to save your tooth by performing
         a root canal endodontics procedure. To learn more about this option call [North County Cosmetic
-        and Implant Dentistry]() at [760-940-2273](tel:+1-760-940-2273) and schedule an appointment.
+        and Implant Dentistry]() at [[[phone]]]([[phoneHref]]) and schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -155,7 +155,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

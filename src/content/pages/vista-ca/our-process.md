@@ -59,8 +59,7 @@ pageSections:
       paddingVertical: none
     - _component: building-blocks/core-elements/text
       text: Contact Drs. Henninger and Huenergardt’s office today to learn how you can upgrade your smile
-        with Teeth in a Day dental implants in San Diego, CA! Schedule your consultation by calling (760)
-        940-2273.
+        with Teeth in a Day dental implants in San Diego, CA! Schedule your consultation by calling [[phone]].
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -73,10 +72,9 @@ pageSections:
     - _component: building-blocks/core-elements/divider
       paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

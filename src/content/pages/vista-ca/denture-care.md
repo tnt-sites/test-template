@@ -117,7 +117,7 @@ pageSections:
     contentSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in restoring your smile with a fully-functional set of teeth, give us
-        a call at [(760) 940-2273](tel:+1-760-940-2273). We will schedule an appointment as soon as possible
+        a call at [[[phone]]]([[phoneHref]]). We will schedule an appointment as soon as possible
         and help you on the path to a better, brighter smile. We will customize the dentures to match
         the size of your mouth and fit perfectly.
     maxContentWidth: xl

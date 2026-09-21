@@ -1,4 +1,6 @@
 ---
+import { replaceContactTokens } from "@utils/contactTokens";
+
 const {
   title,
   text,
@@ -26,6 +28,9 @@ const contentDataAttributes =
       }
     : {};
 
+const resolvedTitle = replaceContactTokens(title);
+const resolvedText = replaceContactTokens(text);
+
 const hasTitle = title?.trim().length > 0;
 const titleSlotContent = Astro.slots.has("title") ? await Astro.slots.render("title") : null;
 const hasTitleSlotContent = (titleSlotContent?.toString().trim().length ?? 0) > 0;
@@ -39,14 +44,14 @@ if (!_component && ((!hasTitle && !hasTitleSlotContent) || (!hasText && !hasSlot
 <dt class:list={["title", className]} role="term" {...titleDataAttributes} {...htmlAttributes}>
   <span {...titleDataAttributes}>
     <slot name="title">
-      {title}
+      {resolvedTitle}
     </slot>
   </span>
 </dt>
 <dd class:list={["content", className]} role="definition" {...htmlAttributes}>
   <span {...contentDataAttributes}>
     <slot>
-      {text}
+      {resolvedText}
     </slot>
   </span>
 </dd>

@@ -81,7 +81,7 @@ pageSections:
         throughout Vista CA. Even a backyard game of basketball can lead to someone damaging a tooth or
         someone knocking a player's tooth out. The same holds true for kids playing sports as well. While
         there are ways to protect yourself like wearing a mouth guard, a dental emergency is still possible.
-        When an emergency strikes call [760-940-2273](tel:+1-760-940-2273).
+        When an emergency strikes call [[[phone]]]([[phoneHref]]).
     - _component: building-blocks/core-elements/text
       text: Car accidents are another leading cause of tooth injury. While the enamel on your teeth is
         strong, it may not be strong enough to prevent your tooth from breaking when colliding with the
@@ -174,7 +174,7 @@ pageSections:
         dental veneers and a dental crown. Both are excellent options and can restore your tooth to full
         functionality while keeping it natural looking. As an emergency dental facility, we can provide
         you with information on what your options are and the best way to restore your tooth while achieving
-        the goals that you have for your smile. To schedule an appointment, call [(760) 940-2273](tel:+1-760-940-2273).
+        the goals that you have for your smile. To schedule an appointment, call [[[phone]]]([[phoneHref]]).
     - _component: building-blocks/core-elements/text
       text: When a tooth is infected… As an emergency dentist, we will assess the situation and inform
         you of where the infection is and the best way to quickly treat it. Our job is to keep you comfortable,
@@ -189,7 +189,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: At [North County Cosmetic and Implant Dentistry]() we strive to keep our patients comfortable
         and free from injury or pain. As such, we are cognizant of the fact that most dental emergencies
-        are unplanned. If your tooth has been damaged or you are in pain, call [760-940-2273](tel:+1-760-940-2273)
+        are unplanned. If your tooth has been damaged or you are in pain, call [[[phone]]]([[phoneHref]])
         right away so that we can schedule your appointment and treat the issue quickly. Our friendly
         team will do our best to accommodate your schedule and ensure that you can get back to a life
         that is free from oral pain. While many dentists, require you to schedule appointments far in

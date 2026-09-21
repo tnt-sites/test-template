@@ -16,7 +16,7 @@ pageSections:
     it can also increase your risk of infection and decay. This is why we often recommend that our patients
     have their wisdom teeth removed. When you schedule an appointment with North County Cosmetic and Implant
     Dentistry, we can examine you, take X-rays, and let you know if and when you should schedule an extraction
-    procedure. You can reach us by calling (760) 940-2273.
+    procedure. You can reach us by calling [[phone]].
   imageSource: /src/assets/images/wp/wisdom-teeth-extraction.jpg
   imageAlt: Wisdom Teeth Extraction
   formId: '251056297507965'
@@ -140,7 +140,7 @@ pageSections:
         your teeth and your third molars, they can stay in place. There is no point in removing something
         that grows in straight and is healthy. However, any tooth that grows in impacted needs to be removed
         because it is posing a direct threat to your other teeth and roots in addition to being a target
-        for infections. The best way to find out if your wisdom teeth should be removed is to call [760-940-2273](tel:+1-760-940-2273)
+        for infections. The best way to find out if your wisdom teeth should be removed is to call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our Vista dentist office. We can make a recommendation and answer
         any other questions you have about the procedure itself.
     maxContentWidth: xl
@@ -152,7 +152,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good dental health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

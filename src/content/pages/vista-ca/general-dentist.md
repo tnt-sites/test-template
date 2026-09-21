@@ -47,7 +47,7 @@ pageSections:
         care, we can help our patients live a full life. After all, a major tooth infection can create
         oral pain and make it difficult to enjoy even the most basic of normal activities like eating
         your favorite piece of pie or playing a game of softball. If you don't currently have a dentist,
-        call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment and experience how our general
+        call [[[phone]]]([[phoneHref]]) to schedule an appointment and experience how our general
         dentistry services can keep you and your family in good oral health.
     - _component: building-blocks/core-elements/heading
       text: Painless Dentistry
@@ -93,7 +93,7 @@ pageSections:
         from having a full set of teeth.
     - _component: building-blocks/core-elements/text
       text: To learn more about what options are available for restoring or replacing your teeth, call
-        [760-940-2273](tel:+1-760-940-2273) to schedule your appointment. We will conduct a thorough exam
+        [[[phone]]]([[phoneHref]]) to schedule your appointment. We will conduct a thorough exam
         and make recommendations for what can be done to restore the full functionality and appearance
         of your smile.
     maxContentWidth: xl
@@ -137,7 +137,7 @@ pageSections:
         a beautiful smile that they can be proud of. Our general dentistry office has the solutions patients'
         need for transforming their smile into something that is straight, bright, white, and beautiful.
         Regardless of why you do not like your smile, we can help by fixing any cosmetic or health issues
-        to create something beautiful and natural. To learn more, call [(760) 940-2273](tel:+1-760-940-2273)
+        to create something beautiful and natural. To learn more, call [[[phone]]]([[phoneHref]])
         to schedule an appointment.
     maxContentWidth: xl
     paddingHorizontal: lg

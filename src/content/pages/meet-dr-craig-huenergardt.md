@@ -9,17 +9,32 @@ pageSections:
 - _component: page-sections/builders/content-with-sidebar
   main:
   - _component: page-sections/builders/custom-section
+    label: Meet Dr. Craig Huenergardt
+    contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: MEET DR. CRAIG HUENERGARDT
+      level: h1
+      size: 2xl
+    - _component: building-blocks/core-elements/image
+      source: /src/assets/images/wp/CHD-128-1.jpg
+      alt: Dr. Craig Huenergardt
+      priority: true
+    maxContentWidth: 2xl
+    paddingHorizontal: lg
+    paddingVertical: lg
+    colorScheme: default
+    backgroundColor: none
+  - _component: page-sections/builders/custom-section
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
       text: It makes me proud to see the work I have done change someone’s life forever. My passion is
         restoring smiles with lasting beauty.
-    maxContentWidth: none
-    paddingHorizontal: none
-    paddingVertical: none
+    maxContentWidth: xl
+    paddingHorizontal: lg
+    paddingVertical: lg
     colorScheme: default
-    backgroundColor: none
-    class: callout-bubble
+    backgroundColor: surface
   - _component: page-sections/builders/custom-section
     label: ''
     contentSections:

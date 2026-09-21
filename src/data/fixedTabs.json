@@ -11,15 +11,15 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "tel:+1-760-940-2273",
+      "href": "[[phoneHref]]",
       "icon": "phone",
       "textMobile": "Call",
-      "textStrong": " (760) 940-2273"
+      "textStrong": " [[phone]]"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA",
+      "href": "[[mapUrl]]",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",

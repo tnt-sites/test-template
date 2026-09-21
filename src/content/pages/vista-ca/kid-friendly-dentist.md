@@ -138,7 +138,7 @@ pageSections:
         when you are considering the overall health and well-being of your child. With that in mind, we
         use whatever tools are at our disposal to ensure that your child is as healthy and as comfortable
         as possible both now and as they age. If you live in the Vista area, we invite you to schedule
-        a dental exam by calling [(760) 940-2273](tel:+1-760-940-2273).
+        a dental exam by calling [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

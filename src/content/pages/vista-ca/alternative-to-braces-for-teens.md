@@ -14,7 +14,7 @@ pageSections:
     At North County Cosmetic and Implant Dentistry, we regularly answer questions about Clean Aligner
     Therapy Teen® as an alternative to braces for teens. This product is growing in popularity as more
     and more teens are transforming their smile without the use of bulky and noticeable braces. If you
-    live in Vista, CA or the area, we encourage you to call (760) 940-2273 and schedule an examination.
+    live in Vista, CA or the area, we encourage you to call [[phone]] and schedule an examination.
     We can let you know whether or not Clean Aligner Therapy is the right solution for your child and
     how to get started.
   imageSource: /src/assets/images/wp/alternative-to-braces-for-teens.jpg
@@ -137,9 +137,8 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [760-940-2273](tel:+1-760-940-2273) to schedule a consultation
-        with North County Cosmetic and Implant Dentistry. We are located at [1934 Via Centre Ste A Vista,
-        CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule a consultation
+        with North County Cosmetic and Implant Dentistry. We are located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

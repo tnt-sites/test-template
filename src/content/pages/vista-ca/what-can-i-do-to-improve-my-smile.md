@@ -35,7 +35,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call [(760) 940-2273](tel:+1-760-940-2273) and schedule a teeth cleaning with our dental office.
+      text: Call [[[phone]]]([[phoneHref]]) and schedule a teeth cleaning with our dental office.
         We can get you scheduled right away, and you will be amazed by how much better your teeth look
         when they are clean and the plaque and tartar have been removed. Plaque can make your teeth appear
         yellow and stained, even when they are not actually dirty. The good news is that a teeth cleaning
@@ -131,7 +131,7 @@ pageSections:
         welcoming, encouraging, playful and exciting — all the things you are and want to be. The key
         is for you to be confident enough in how your smile looks to be willing to show it off. The good
         news is that by visiting our dental office, your smile can be drastically improved, even if you
-        only have a week or two before the big event. To get started, call [760-940-2273](tel:+1-760-940-2273)
+        only have a week or two before the big event. To get started, call [[[phone]]]([[phoneHref]])
         and schedule an appointment with North County Cosmetic and Implant Dentistry.
     maxContentWidth: xl
     paddingHorizontal: lg

@@ -10,8 +10,7 @@ pageSections:
   heading: Am I a Candidate for Dental Implants
   location: Vista, CA
   intro:
-  - If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call (760)
-    940-2273 and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct an
+  - If you have ever wondered, "Am I a candidate for dental implants?" we encourage you to call [[phone]] and schedule an appointment with our Vista, CA dental office. Dr. Henninger can conduct an
     examination and take X-rays to determine if you qualify for implant surgery, and if not, what it will
     take to get you there. At North County Cosmetic and Implant Dentistry, we will work with you to come
     up with the best way to replace your missing teeth, even if that means conducting additional procedures
@@ -106,7 +105,7 @@ pageSections:
         natural one. Patients appreciate how durable this solution is and how it allows them to maintain
         an active lifestyle while eating all their favorite foods. If you are simultaneously evaluating
         dentures or a dental bridge, consider how dental implants can positively impact your lifestyle
-        and then call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment with North County
+        and then call [[[phone]]]([[phoneHref]]) to schedule an appointment with North County
         Cosmetic and Implant Dentistry.
     - _component: building-blocks/core-elements/heading
       text: Can I get implants if I have gum disease?
@@ -160,9 +159,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn how this solution can work for you, call and schedule an appointment by calling [(760)
-        940-2273](tel:+1-760-940-2273). North County Cosmetic and Implant Dentistry is located at [1934
-        Via Centre Ste A Vista, CA 92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: To learn how this solution can work for you, call and schedule an appointment by calling [[[phone]]]([[phoneHref]]). North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

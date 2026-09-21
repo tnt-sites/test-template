@@ -16,7 +16,7 @@ pageSections:
     their lifetime. The challenge is that gum disease can lead to bone and tooth loss, making it incredibly
     important to both prevent and treat it. If you live in Vista or the surrounding area, we can examine
     you and let you know if you are showing any signs of the condition, along with making recommendations
-    for how to prevent it. To schedule an appointment, call (760) 940-2273.
+    for how to prevent it. To schedule an appointment, call [[phone]].
   imageSource: /src/assets/images/wp/gum-disease.jpg
   imageAlt: Gum Disease
   formId: '251056297507965'
@@ -76,7 +76,7 @@ pageSections:
       - _component: building-blocks/core-elements/list/list-item
         text: Loose teeth
     - _component: building-blocks/core-elements/text
-      text: If you notice any of these symptoms, we recommend that you call [760-940-2273](tel:+1-760-940-2273)
+      text: If you notice any of these symptoms, we recommend that you call [[[phone]]]([[phoneHref]])
         to schedule an examination with our dental office.
     - _component: building-blocks/core-elements/heading
       text: Treatment Options for Gum Disease
@@ -164,7 +164,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good dental health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

@@ -2,6 +2,7 @@
 import Icon from "@core-elements/icon/Icon.astro";
 // @ts-ignore
 import MarkdownIt from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 
 const {
   text: textValue = "",
@@ -35,7 +36,7 @@ const normalizedText = text
   .replace(/<\/p>\s*$/i, "");
 
 const md = MarkdownIt({ html: true });
-let markdownText = normalizedText ? md.renderInline(normalizedText) : "";
+let markdownText = normalizedText ? md.renderInline(replaceContactTokens(normalizedText)) : "";
 markdownText = markdownText.replace(/\n/g, "<br />");
 const textForAria = markdownText
   .replace(/<[^>]*>/g, " ")
@@ -114,7 +115,7 @@ const tagProps = normalizedModalTarget
       "aria-controls": normalizedModalTarget,
     }
   : Tag === "a" && link
-    ? { href: link }
+    ? { href: replaceContactTokens(link) }
     : Tag === "button"
       ? { type: "button" }
       : {};

@@ -2,12 +2,12 @@
   "enabled": true,
   "ctas": [
     {
-      "lines": ["1934 Via Centre Ste A", "Vista, CA 92081"],
+      "lines": ["[[addressLine1]]", "[[addressLocality]]"],
       "buttonText": "Get Directions",
-      "buttonLink": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+      "buttonLink": "[[mapUrl]]"
     },
     {
-      "lines": ["Book Today!", "(760) 940-2273"],
+      "lines": ["Book Today!", "[[phone]]"],
       "buttonText": "Request Appointment",
       "buttonLink": "/contact-us/"
     },

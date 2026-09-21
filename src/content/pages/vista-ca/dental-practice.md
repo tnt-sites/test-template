@@ -50,7 +50,7 @@ pageSections:
         cleaning is so important. We can prevent gum disease by performing a deep cleaning to remove all
         of the plaque and tartar from your mouth. If we identify early signs of gum disease, we can treat
         it right away before it causes irritation or gum recession. If you live in the Vista area, we
-        invite you to call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment for your dental
+        invite you to call [[[phone]]]([[phoneHref]]) to schedule an appointment for your dental
         cleaning today.
     - _component: building-blocks/core-elements/heading
       text: Visit a dental practice in Vista if your tooth becomes damaged
@@ -80,7 +80,7 @@ pageSections:
         of cancer, the sooner it is detected and treated, the better chance you have of successfully irradiating
         it. We also recommend that you self-examine at home by running your tongue along your gums and
         cheeks on a daily basis. Look for any bumps, lumps, or rough spots that were not there before.
-        If they do not go away after a couple of days. Call [760-940-2273](tel:+1-760-940-2273) to schedule
+        If they do not go away after a couple of days. Call [[[phone]]]([[phoneHref]]) to schedule
         an examination with our dental office. At North County Cosmetic and Implant Dentistry, we do not
         treat cancer, but we can help to determine if anything looks out of the ordinary and whether or
         not you need further testing.
@@ -130,8 +130,7 @@ pageSections:
         twice a year. This will help to prevent cavities and gum disease. Your treatment plan should also
         include steps that can be taken to keep your smile bright and beautiful. For example, we can whiten
         your teeth on a set schedule. When you visit our dental office, we can work together to create
-        a plan that works for your health both now and well into the future. To get started, call [(760)
-        940-2273](tel:+1-760-940-2273).
+        a plan that works for your health both now and well into the future. To get started, call [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -141,7 +140,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

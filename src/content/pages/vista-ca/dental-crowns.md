@@ -140,7 +140,7 @@ pageSections:
         cracked or chipped tooth or have undergone a root canal. Similarly, a bridge makes it possible
         to eat and speak like normal without worrying about your new tooth becoming loose or falling out.
         They are both ideal for people that have active lifestyles and don't want to be constrained by
-        their teeth. To find out if the procedure is right for you, call [760-940-2273](tel:+1-760-940-2273)
+        their teeth. To find out if the procedure is right for you, call [[[phone]]]([[phoneHref]])
         to schedule an appointment with us and discuss your options. At North County Cosmetic and Implant
         Dentistry, we make it easier for patients throughout Vista to have a beautiful and functional
         smile.
@@ -153,7 +153,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

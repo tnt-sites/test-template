@@ -14,7 +14,7 @@ pageSections:
   - 'The team at North County Cosmetic and Implant Dentistry is committed to providing excellent dental care in a comfortable environment where patients can relax and feel at ease. Here you will find information on what to expect during your first appointment along with links to patient forms and paperwork.'
   subheading: Contact Us
   subintro:
-  - 'We are happy to hear from you, answer your questions, and schedule an appointment. Call North County Cosmetic and Implant Dentistry at (760) 940-2273 or stop by our office. 1934 Via Centre Ste A Vista, CA 92081'
+  - 'We are happy to hear from you, answer your questions, and schedule an appointment. Call North County Cosmetic and Implant Dentistry at [[phone]] or stop by our office. [[address]]'
   formLinksLabel: 'Forms:'
   formLinks:
   - text: 'New Patient Form'

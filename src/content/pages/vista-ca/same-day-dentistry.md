@@ -12,7 +12,7 @@ pageSections:
   intro:
   - If you are looking for solutions to any esthetic challenges with your smile or any oral health problems,
     call our office for same day dentistry . We are conveniently located in Vista, and you can schedule
-    an appointment by calling (760) 940-2273. In our dental office, we are passionate about oral health
+    an appointment by calling [[phone]]. In our dental office, we are passionate about oral health
     and believe in the critical nature of preventative dental care. For this reason, we recommend having
     your teeth professionally cleaned and examined once or twice a year. Our objective is to use these
     appointments to prevent many common oral health problems like cavities and gum disease. While our
@@ -45,7 +45,7 @@ pageSections:
         and begin the process of oxidization. This is where the molecules inside of your teeth will change
         to reflect less light and appear colorless. As it does, your teeth will appear bright and white.
         This is typically the fastest way for you to see a significant improvement to the esthetics of
-        your smile. If you live in or near the Vista area, call [760-940-2273](tel:+1-760-940-2273) to
+        your smile. If you live in or near the Vista area, call [[[phone]]]([[phoneHref]]) to
         schedule an appointment with our Vista dentist office so that you can enjoy living with a more
         beautiful smile.
     - _component: building-blocks/core-elements/divider
@@ -107,8 +107,7 @@ pageSections:
         life. To address this issue, we offer same day dentistry where dental crowns can be created in
         our office, the day that you come in needing a restoration.
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area and have a damaged tooth, we recommend that you call [(760)
-        940-2273](tel:+1-760-940-2273) to schedule an appointment with our dental office. There is no
+      text: If you live in the Vista area and have a damaged tooth, we recommend that you call [[[phone]]]([[phoneHref]]) to schedule an appointment with our dental office. There is no
         need to wait for the dental lab to create a permanent crown for you when we offer a solution that
         can be completed in one day. This will allow you to walk in with a cracked or chipped tooth and
         leave with one that looks natural and is fully functional. Since crowns are also used for cosmetic
@@ -121,7 +120,7 @@ pageSections:
         is being restored. The model includes the exact dimensions of the crown. Our 3D printer then goes
         to work printing the crown while your tooth is being prepared. This is perhaps the most convenient
         way to restore your damaged tooth or to change the appearance of your smile. To learn more, call
-        [760-940-2273](tel:+1-760-940-2273) and visit our Vista dental office today.
+        [[[phone]]]([[phoneHref]]) and visit our Vista dental office today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -131,7 +130,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

@@ -23,7 +23,7 @@ pageSections:
     text: As a local dentist, we understand the needs of our patients and their families. We offer a variety
       of dental procedures that make it possible to keep your teeth and gums in excellent oral health
       while also providing cosmetic dentistry solutions for improving the look and feel of your smile.
-      To learn more about the services we provide call [(760) 940-2273](tel:+1-760-940-2273) and schedule
+      To learn more about the services we provide call [[[phone]]]([[phoneHref]]) and schedule
       an appointment with North County Cosmetic and Implant Dentistry.
   maxContentWidth: xl
   paddingHorizontal: lg
@@ -58,7 +58,7 @@ pageSections:
       everyone in the family has an appointment scheduled for a time that is convenient for you. This
       often means scheduling multiple teeth cleanings at once so that you only have to make one trip to
       the dentist. Our dental office is conveniently located in the Vista area, and you can schedule an
-      appointment by calling [760-940-2273](tel:+1-760-940-2273).
+      appointment by calling [[[phone]]]([[phoneHref]]).
   - _component: building-blocks/core-elements/text
     text: If you have children, our team will help them to feel comfortable during their dental exam and
       treatment. Understanding that many children are worried about something new, we take the time to
@@ -81,7 +81,7 @@ pageSections:
     size: md
   - _component: building-blocks/core-elements/text
     text: As a Vista dentist, we perform cosmetic dentistry that can be used to transform your smile from
-      ordinary into extraordinary. If you want a stunning, Hollywood style smile, call [(760) 940-2273](tel:+1-760-940-2273)
+      ordinary into extraordinary. If you want a stunning, Hollywood style smile, call [[[phone]]]([[phoneHref]])
       and schedule your consultation. There are a variety of methods to help with cosmetic dentistry work,
       including teeth whitening, dental veneers, dental crowns, and [dental implants](/vista-ca/dental-implants/).
       These procedures, alone or together, can restore teeth to a beautiful and youthful appearance.
@@ -140,7 +140,7 @@ pageSections:
     level: h2
     size: md
   - _component: building-blocks/core-elements/text
-    text: If you are looking to find a dentist in the Vista CA area, call [760-940-2273](tel:+1-760-940-2273)
+    text: If you are looking to find a dentist in the Vista CA area, call [[[phone]]]([[phoneHref]])
       and schedule an appointment. We are looking forward to meeting you and your family.
   maxContentWidth: xl
   paddingHorizontal: lg

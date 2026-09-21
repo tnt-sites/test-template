@@ -13,6 +13,8 @@ import postcssNested from "postcss-nested";
 
 import mdx from "@astrojs/mdx";
 
+import remarkContactTokens from "./src/utils/remarkContactTokens.mjs";
+
 import tailwindcss from "@tailwindcss/vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -27,6 +29,12 @@ export default defineConfig({
     "/google":
       "https://www.google.com/maps/place/North+County+Cosmetic+and+Implant+Dentistry/@33.183882,-117.282445,15z",
     "/facebook": "https://www.facebook.com/ultimatesmiles4161",
+  },
+
+  // Resolves [[phone]] / [[address]] tokens in page and blog copy from
+  // src/data/siteInfo.json. See src/utils/contactTokens.ts.
+  markdown: {
+    remarkPlugins: [remarkContactTokens],
   },
 
   build: {
@@ -92,6 +100,7 @@ export default defineConfig({
         "@component-library": path.resolve(__dirname, "src/component-library"),
         "@layouts": path.resolve(__dirname, "src/layouts"),
         "@styles": path.resolve(__dirname, "src/styles"),
+        "@utils": path.resolve(__dirname, "src/utils"),
       },
     },
 

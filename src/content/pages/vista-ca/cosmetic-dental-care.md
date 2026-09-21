@@ -13,7 +13,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry, we provide cosmetic dental care for patients throughout
     the Vista area. If you are looking for a local dentist that can transform your smile and restore your
-    confidence, call (760) 940-2273 to schedule an appointment. We will examine your teeth, take X-rays,
+    confidence, call [[phone]] to schedule an appointment. We will examine your teeth, take X-rays,
     and discuss the goals you have for your smile. These appointments are an excellent opportunity for
     us to get to know you and to learn more about your lifestyle. The more we know, the better recommendations
     we can make regarding what type of dental work will be in your best interest to consider. Many patients
@@ -67,7 +67,7 @@ pageSections:
         tooth loss may not be a good candidate for dental bridges, since a dental bridge requires healthy,
         natural teeth to hold it in place. Otherwise, they are a good non-surgical solution for tooth
         loss and can look completely natural. If you live in the Vista area and are tired of wearing dentures
-        or are considering tooth replacement options, we invite you to call [760-940-2273](tel:+1-760-940-2273)
+        or are considering tooth replacement options, we invite you to call [[[phone]]]([[phoneHref]])
         and learn more.
     - _component: building-blocks/core-elements/heading
       text: Dental Implants
@@ -150,7 +150,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: To learn more about cosmetic dental care and which options would be best for you, call [760-940-2273](tel:+1-760-940-2273)
+      text: To learn more about cosmetic dental care and which options would be best for you, call [[[phone]]]([[phoneHref]])
         to schedule an appointment with our dental office.
     maxContentWidth: none
     paddingHorizontal: none

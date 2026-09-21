@@ -1,6 +1,7 @@
 ---
 import Image from "@core-elements/image/Image.astro";
 import MarkdownIt from "markdown-it";
+import { replaceContactTokens } from "@utils/contactTokens";
 const {
   text,
   authorName,
@@ -17,7 +18,7 @@ const {
 } = Astro.props;
 
 const md = MarkdownIt({ html: true });
-const MarkdownText = text ? md.render(text) : "";
+const MarkdownText = text ? md.render(replaceContactTokens(text)) : "";
 
 const textDataAttributes =
   editable && customDataProp

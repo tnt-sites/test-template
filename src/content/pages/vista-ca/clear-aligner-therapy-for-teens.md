@@ -61,7 +61,7 @@ pageSections:
         and Implant Dentistry, we can create customized treatment plans for the needs of each patient.
         With this in mind, we will provide you with all of the information you need in order to make an
         informed decision as to whether or not clear braces are for you. If you live in the Vista area,
-        call [(760) 940-2273](tel:+1-760-940-2273) to schedule your consultation to ask about Clear Aligner
+        call [[[phone]]]([[phoneHref]]) to schedule your consultation to ask about Clear Aligner
         Therapy for Teens.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -148,7 +148,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: For more information on Clear Aligner Therapy Teen or to schedule a consultation, call [760-940-2273](tel:+1-760-940-2273).
+      text: For more information on Clear Aligner Therapy Teen or to schedule a consultation, call [[[phone]]]([[phoneHref]]).
         Call today so you can have a beautiful smile tomorrow.
     maxContentWidth: none
     paddingHorizontal: none

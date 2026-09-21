@@ -20,7 +20,7 @@ pageSections:
     and may be beneficial for many patients.
   - Improving your overall wellbeing requires proper care for oral health. We help patients understand
     how oral health and overall wellness intertwine so they can improve their quality of life. Call us
-    at (760) 940-2273 to schedule an appointment today.
+    at [[phone]] to schedule an appointment today.
   imageSource: /src/assets/images/wp/How-Proper-Oral-Hygiene-May-Improve-Overall-Health.jpg
   imageAlt: How Proper Oral Hygiene May Improve Overall Health
   formId: '251056297507965'
@@ -36,7 +36,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: Improving your overall wellbeing requires proper care for oral health. We help patients understand
         how oral health and overall wellness intertwine so they can improve their quality of life. Call
-        us at 760-940-2273 to schedule an appointment today.
+        us at [[phone]] to schedule an appointment today.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none
@@ -142,7 +142,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: A complete health dentist can help you improve your overall wellbeing by identifying problems
         that begin in your mouth. At North County Cosmetic and Implant Dentistry, we enhance the quality
-        of our patient's experience. Call us today at 760-940-2273 to schedule an appointment and start
+        of our patient's experience. Call us today at [[phone]] to schedule an appointment and start
         taking care of your oral health.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -204,10 +204,9 @@ pageSections:
     - _component: building-blocks/core-elements/divider
       paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

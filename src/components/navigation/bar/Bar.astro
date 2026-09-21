@@ -14,6 +14,14 @@ function hasCurrentChild(item) {
   return Boolean(item.children?.some((child) => hasCurrentChild(child)));
 }
 
+/* The source's Dental Services panel leads with a "View all Services" link
+   set as a heading over a rule. No other dropdown has one, so it is matched
+   by name rather than by position — a first child that is an ordinary link
+   stays an ordinary column link. */
+function isSectionLink(item, index) {
+  return index === 0 && /^view all\b/i.test(item?.name ?? "");
+}
+
 // Helper function to create navigation item data
 function createNavItemData(item, level, parentGroupId) {
   const hasChildren = Boolean(item.children?.length);
@@ -83,12 +91,13 @@ function createNavItemData(item, level, parentGroupId) {
               aria-hidden="true"
             >
               <ul class="nav-list">
-                {itemData.children!.map((child) => {
+                {itemData.children!.map((child, childIndex) => {
                   const childData = createNavItemData(child, "child", itemData.parentGroupId);
+                  const sectionLink = isSectionLink(child, childIndex);
 
                   if (!childData.hasChildren) {
                     return (
-                      <li class="nav-item">
+                      <li class:list={["nav-item", sectionLink && "is-section-link"]}>
                         <a
                           href={childData.path}
                           aria-current={childData.isCurrent ? "page" : undefined}
@@ -562,14 +571,17 @@ function createNavItemData(item, level, parentGroupId) {
             text-decoration: underline;
           }
 
-          /* First child is the section link — the source renders it as a
-             24px/300 heading spanning the full panel, above a rule. */
-          .nav-item-content .nav-list > .nav-item:first-child {
+          /* Only a "View all …" first child is a section link — the source
+             renders that one as a 24px/300 heading spanning the full panel,
+             above a rule. Every other dropdown's first child is an ordinary
+             column link, so this is opted into per item rather than applied
+             to whatever happens to come first. */
+          .nav-item-content .nav-list > .nav-item.is-section-link {
             column-span: all;
             margin-bottom: 18px;
           }
 
-          .nav-item-content .nav-list > .nav-item:first-child > a {
+          .nav-item-content .nav-list > .nav-item.is-section-link > a {
             border-bottom: 1px solid rgb(255 255 255 / 45%);
             font-size: 1.5rem; /* 24px */
             font-weight: 300;

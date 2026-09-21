@@ -144,7 +144,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: Call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation with Dr. Henninger.
+      text: Call [[[phone]]]([[phoneHref]]) and schedule a consultation with Dr. Henninger.
     maxContentWidth: none
     paddingHorizontal: none
     paddingVertical: none

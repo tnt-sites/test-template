@@ -17,7 +17,7 @@ pageSections:
         buttons:
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Call Now
-            link: tel:+1-760-940-2273
+            link: [[phoneHref]]
             newTab: false
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Book Now
@@ -31,7 +31,7 @@ pageSections:
         buttons:
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Call Now
-            link: tel:+1-760-940-2273
+            link: [[phoneHref]]
             newTab: false
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Book Now
@@ -45,7 +45,7 @@ pageSections:
         buttons:
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Call Now
-            link: tel:+1-760-940-2273
+            link: [[phoneHref]]
             newTab: false
           - _component: page-sections/heroes/hero-slider/hero-slide-button
             text: Book Now
@@ -70,7 +70,7 @@ pageSections:
           we’ll help you achieve the healthy lifestyle and beautiful smile you’ve always wanted for you and
           your family.
       - _component: building-blocks/core-elements/text
-        text: Give us a call today at [760-940-2273](tel:+1-760-940-2273) .
+        text: Give us a call today at [[[phone]]]([[phoneHref]]) .
     videoSource: /videos/wp/Henninger-BROLL.mp4
     videoPoster: ""
     cards:

@@ -128,7 +128,7 @@ pageSections:
         Attempting to repair the dentures without professional experience can result in catastrophic results.
     - _component: building-blocks/core-elements/text
       text: For more information on the denture process and if dentures are the right choice for you,
-        give us a call at [(760) 940-2273](tel:+1-760-940-2273) to schedule a consultation today.
+        give us a call at [[[phone]]]([[phoneHref]]) to schedule a consultation today.
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -138,7 +138,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

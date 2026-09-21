@@ -60,7 +60,7 @@ pageSections:
         tray is created in a dental lab. It is made to fit perfectly so that the whitening solution stays
         in place, and your teeth feel comfortable. If necessary, we will provide you with a whitening
         solution that can be used at home so that you can improve the appearance of your teeth regardless
-        of where you are or how busy your schedule is. To learn more, call [760-940-2273](tel:+1-760-940-2273)
+        of where you are or how busy your schedule is. To learn more, call [[[phone]]]([[phoneHref]])
         and schedule a consultation.
     - _component: building-blocks/core-elements/heading
       text: Dental Veneers
@@ -158,7 +158,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: To get started on your smile makeover call our Vista dentist office and schedule an appointment
-        with Dr. Henninger. You can reach us at [(760) 940-2273](tel:+1-760-940-2273) and we will be happy
+        with Dr. Henninger. You can reach us at [[[phone]]]([[phoneHref]]) and we will be happy
         to schedule a time that is convenient for your schedule.
     maxContentWidth: none
     paddingHorizontal: none

@@ -13,7 +13,7 @@ pageSections:
   - Millions of Americans suffer from periodontal disease. At North County Cosmetic and Implant Dentistry,
     we treat patients throughout the Vista area that are struggling with this condition and provide a
     variety of treatment solutions to help combat the symptoms and heal the gums. If you are concerned
-    that your gums are unhealthy, call (760) 940-2273 to schedule an appointment with Dr. Henninger and
+    that your gums are unhealthy, call [[phone]] to schedule an appointment with Dr. Henninger and
     receive a dental examination.
   imageSource: /src/assets/images/wp/periodontics.jpg
   imageAlt: Periodontics
@@ -103,7 +103,7 @@ pageSections:
         and sealed so that the bone can start to regenerate.
     - _component: building-blocks/core-elements/text
       text: These procedures combined can help to both heal and restore your gums. In order to tell which
-        procedures are necessary for you, call [760-940-2273](tel:+1-760-940-2273) and schedule a consultation
+        procedures are necessary for you, call [[[phone]]]([[phoneHref]]) and schedule a consultation
         with Dr. Henninger. At [North County Cosmetic and Implant Dentistry](), we may start with a deep
         cleaning to see how well your gums react and start to heal. If they do not recover in short order,
         we may move to surgical procedures as necessary.
@@ -148,7 +148,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

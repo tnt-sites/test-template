@@ -102,7 +102,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in Vista, California call [(760) 940-2273](tel:+1-760-940-2273) and schedule your
+      text: If you live in Vista, California call [[[phone]]]([[phoneHref]]) and schedule your
         appointment to experience why patients trust [North County Cosmetic and Implant Dentistry]() with
         their child's dental needs.
     maxContentWidth: none

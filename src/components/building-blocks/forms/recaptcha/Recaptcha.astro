@@ -32,8 +32,9 @@ const effectiveSiteKey = siteKey || (siteInfoData as any).recaptchaSiteKey || ""
   ) : (
     import.meta.env.DEV && (
       <script is:inline>
-        console.warn( "Recaptcha block: no site key configured (set a `siteKey` prop or
-        `recaptchaSiteKey` in siteInfo.json).", );
+        console.warn(
+          "Recaptcha block: no site key configured (set a `siteKey` prop or `recaptchaSiteKey` in siteInfo.json).",
+        );
       </script>
     )
   )

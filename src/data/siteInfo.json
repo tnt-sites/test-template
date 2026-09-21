@@ -58,22 +58,22 @@
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "7:30am - 5:00pm",
+          "hours": "7:30AM to 5:00PM",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "7:00am - 5:00pm",
+          "hours": "7:00AM to 5:00PM",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "7:30am - 5:00pm",
+          "hours": "7:30AM to 5:00PM",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "7:00am - 5:00pm",
+          "hours": "7:00AM to 5:00PM",
           "note": ""
         },
         {
@@ -92,7 +92,7 @@
           "note": ""
         }
       ],
-      "officeHoursNote": ""
+      "officeHoursNote": "Fridays by Appointment Only"
     }
   ],
   "modals": [],

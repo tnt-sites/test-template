@@ -13,7 +13,7 @@ pageSections:
   intro:
   - At North County Cosmetic and Implant Dentistry, we can provide patients with implant supported dentures
     to give them a dependable and durable alternative to dentures, dental bridges, and traditional dental
-    implants. If you live in Vista, CA or the surrounding area, we encourage you to call (760) 940-2273
+    implants. If you live in Vista, CA or the surrounding area, we encourage you to call [[phone]]
     and schedule a consultation so we can examine you and determine if you are a good candidate for this
     procedure.
   imageSource: /src/assets/images/wp/implant-supported-dentures.jpg
@@ -59,7 +59,7 @@ pageSections:
         they are firmly in place, we can snap in your dentures. These implants are an alternative to simply
         hoping your dentures stay in place or using adhesive to ensure they do. With implants to secure
         to, your teeth will not fall out, even if you are going on a run or eating pizza. For more information,
-        call our Vista, CA dental office at [760-940-2273](tel:+1-760-940-2273).
+        call our Vista, CA dental office at [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl
@@ -144,7 +144,7 @@ pageSections:
           be messy, and if your dentures slip, it can be uncomfortable and inconvenient. With implant
           dentures, your dentures snap into position, secured in place by the implants themselves. Your
           new teeth will look natural and be entirely secure, adding further enjoyment to your daily life.
-          To learn more about this procedure, call [(760) 940-2273](tel:+1-760-940-2273). We will be happy
+          To learn more about this procedure, call [[[phone]]]([[phoneHref]]). We will be happy
           to meet with you and discuss all your options.
     maxContentWidth: xl
     paddingHorizontal: lg

@@ -50,7 +50,7 @@ pageSections:
         in with the natural color of the teeth. This option is not a practical solution for children but
         is extremely effective for older patients. Not everyone provides this option, so it is important
         to work with a dentist before the procedure. If you live in or near Vista CA, we invite you to
-        call [(760) 940-2273](tel:+1-760-940-2273) and schedule a consultation to determine if invisible
+        call [[[phone]]]([[phoneHref]]) and schedule a consultation to determine if invisible
         orthodontics are right for you.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -113,7 +113,7 @@ pageSections:
         for a photo. With clear aligners, there is no need to adjust what you eat or worry about getting
         food stuck between the brackets. Patients can remove clear aligners for any reason, so long as
         they continue to wear the aligners for at least 22 hours per day. If you are interested in learning
-        more about the process, we invite you to call [760-940-2273](tel:+1-760-940-2273) and schedule
+        more about the process, we invite you to call [[[phone]]]([[phoneHref]]) and schedule
         an appointment with our Vista office.
     - _component: building-blocks/core-elements/heading
       text: Teen Braces and Adult Braces
@@ -140,7 +140,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: If you are interested in clear aligners or need us to replace some lost aligners, give us
         a call to schedule an appointment. We will go over options and determine if clear aligners are
-        the best treatment for straightening your teeth. Give us a call at [(760) 940-2273](tel:+1-760-940-2273)
+        the best treatment for straightening your teeth. Give us a call at [[[phone]]]([[phoneHref]])
         today.
     maxContentWidth: none
     paddingHorizontal: none

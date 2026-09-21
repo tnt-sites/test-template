@@ -14,8 +14,7 @@ pageSections:
     This is an understandable question because no one wants to have a tooth pulled unless it is absolutely
     beneficial. We are not interested in extracting teeth unless absolutely necessary. In fact, if you
     damage a tooth, our preferred method of treatment is to restore it using dental veneers or dental
-    crowns. There are times, however, where we do recommend visiting our dental office located at 1934
-    Via Centre Ste A Vista, CA 92081 for an extraction.
+    crowns. There are times, however, where we do recommend visiting our dental office located at [[address]] for an extraction.
   imageSource: /src/assets/images/wp/when-is-tooth-extraction-necessary.jpg
   imageAlt: When Is a Tooth Extraction Necessary
   formId: '251056297507965'
@@ -38,7 +37,7 @@ pageSections:
         completed. In some cases, dental damage is only part of the problem and immediate solutions are
         necessary. If possible, we will restore the tooth using dental bonding, dental veneers, or dental
         crowns. However, if the problem is urgent, a tooth extraction may be necessary. If you do need
-        an emergency dentist, call [(760) 940-2273](tel:+1-760-940-2273) to schedule an appointment.
+        an emergency dentist, call [[[phone]]]([[phoneHref]]) to schedule an appointment.
     - _component: building-blocks/core-elements/heading
       text: An infection has spread.
       level: h3
@@ -171,7 +170,7 @@ pageSections:
       level: h3
       size: md
     - _component: building-blocks/core-elements/text
-      text: To find out if you need a tooth extraction, call [760-940-2273](tel:+1-760-940-2273) and schedule
+      text: To find out if you need a tooth extraction, call [[[phone]]]([[phoneHref]]) and schedule
         an appointment with North County Cosmetic and Implant Dentistry. We will be happy to answer any
         questions you have, schedule your procedure, and replace your teeth with dental implants or dental
         crowns and bridges once the extraction has been completed.

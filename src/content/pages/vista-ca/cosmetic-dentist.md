@@ -45,7 +45,7 @@ pageSections:
         ages are delighted to find that there are many ways to restore their damaged teeth and replace
         missing ones. While, in years past, there may have been very few options available for replacing
         missing teeth, cosmetic dentistry has opened the door to solutions that are permanent, durable,
-        and natural looking. To find out what procedures will work best for you, call [(760) 940-2273](tel:+1-760-940-2273)
+        and natural looking. To find out what procedures will work best for you, call [[[phone]]]([[phoneHref]])
         and schedule a consultation.
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -143,7 +143,7 @@ pageSections:
       text: We can make restorations that appear so natural, no one can tell that there are artificial
         teeth in the patient's smile. This can be a lifesaver for people that want to live an active lifestyle
         and maintain the appearance they had prior to the accident. We do, however, recommend that if
-        you damaged your tooth, you call [760-940-2273](tel:+1-760-940-2273) to schedule an appointment
+        you damaged your tooth, you call [[[phone]]]([[phoneHref]]) to schedule an appointment
         right away. The faster you can come into our dental office, the more options you will have for
         restoring the damaged tooth. This is especially true if you had a tooth fall out and are trying
         to save it.
@@ -290,7 +290,7 @@ pageSections:
       text: If you are looking for a cosmetic dentist in Vista CA, schedule an appointment to visit North
         County Cosmetic and Implant Dentistry. You will be delighted with the level of patient care that
         you receive along with the stunning results. You can schedule an appointment by calling North
-        County Cosmetic and Implant Dentistry at [(760) 940-2273](tel:+1-760-940-2273).
+        County Cosmetic and Implant Dentistry at [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

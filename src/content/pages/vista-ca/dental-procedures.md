@@ -15,8 +15,7 @@ pageSections:
     and transform your smile into something truly beautiful. At North County Cosmetic and Implant Dentistry,
     we understand that each of our patients' smiles is unique and so are their health concerns. As such,
     we meet with each patient to discuss any health concerns and goals prior to recommending specific
-    dental procedures . If you live in Vista, we invite you to schedule an appointment by calling (760)
-    940-2273. During your examination, we can look for any signs of infection or cavities; discuss what
+    dental procedures . If you live in Vista, we invite you to schedule an appointment by calling [[phone]]. During your examination, we can look for any signs of infection or cavities; discuss what
     you do and do not like about your smile; and determine the best way to proceed.
   imageSource: /src/assets/images/wp/dental-procedures.jpg
   imageAlt: Dental Procedures
@@ -64,7 +63,7 @@ pageSections:
         worked on and at times, simply need to relax. Whether you do so through sedation or friendly conversation,
         we are here to help. With more intensive procedures, we will ensure that you do not feel any discomfort
         along the way. To learn more or to schedule an appointment with our Vista dentist office, call
-        [760-940-2273](tel:+1-760-940-2273).
+        [[[phone]]]([[phoneHref]]).
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

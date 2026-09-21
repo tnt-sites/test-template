@@ -18,7 +18,7 @@ pageSections:
     keep your teeth healthy and intact. As a general dentist, we will also work to restore your tooth
     if it has been damaged – all of which can help you to maintain your natural teeth for years to come.
     If you are experiencing discomfort or your tooth is in need of repair, we invite you to call our dental
-    office at (760) 940-2273 to schedule an appointment. During your examination, we will let you know
+    office at [[phone]] to schedule an appointment. During your examination, we will let you know
     if your tooth can be saved or if a tooth extraction is the best option for preventing the spread of
     infection and eliminating your discomfort. In our dentist office, we will take the steps necessary
     to ensure your comfort so that regardless of which treatment option you select, you will feel relaxed
@@ -112,7 +112,7 @@ pageSections:
         in an emergency situation. If you feel intense discomfort in your tooth or your jaw, give us a
         call since this could be a sign of a dental abscess or severe infection. Simultaneously, if it
         hurts when you bite down or chew this can also be an indication of a cavity or infection. Other
-        signs like puss or bleeding indicate that you should call [760-940-2273](tel:+1-760-940-2273)
+        signs like puss or bleeding indicate that you should call [[[phone]]]([[phoneHref]])
         and schedule an appointment with our family dentistry office right away.
     - _component: building-blocks/core-elements/heading
       text: What you should know about wisdom teeth removal
@@ -128,7 +128,7 @@ pageSections:
         when and why we perform the procedure. At North County Cosmetic and Implant Dentistry, we typically
         recommend wisdom teeth removal in the teenage years. General extractions are more common as people
         age and have a tooth that needs to be removed due to a severe infection or significant damage.
-        To find out whether or not you should keep your wisdom teeth, call [(760) 940-2273](tel:+1-760-940-2273)
+        To find out whether or not you should keep your wisdom teeth, call [[[phone]]]([[phoneHref]])
         to schedule an appointment to speak with Dr. Henninger.
     maxContentWidth: xl
     paddingHorizontal: lg

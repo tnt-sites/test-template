@@ -13,7 +13,7 @@ pageSections:
   - At North County Cosmetic and Implant Dentistry, we have several options for replacing missing teeth.
     If you have a tooth that has been knocked out in an accident or was removed due to decay, we can perform
     a procedure to replace it so you can regain the full functionality and appearance of your smile. If
-    you live in Vista, CA area, we invite you to call (760) 940-2273 and schedule an appointment with
+    you live in Vista, CA area, we invite you to call [[phone]] and schedule an appointment with
     our dental office. After examining you, we will make a recommendation as to which procedure is likely
     to provide the best results for your appearance and lifestyle goals.
   imageSource: /src/assets/images/wp/options-for-replacing-missing-teeth.jpg
@@ -122,7 +122,7 @@ pageSections:
         you then go to replace the tooth, your options could be more limited. This makes losing a tooth
         an urgent matter to attend to.
     - _component: building-blocks/core-elements/text
-      text: We recommend that you call [760-940-2273](tel:+1-760-940-2273) and schedule an appointment
+      text: We recommend that you call [[[phone]]]([[phoneHref]]) and schedule an appointment
         with our dental office as soon as your tooth has either fallen or been knocked out. During your
         appointment, we will examine your gums, take X-rays, and make a recommendation as to which tooth
         replacement option will be best suited for your needs. Acting on this quickly will help in restoring

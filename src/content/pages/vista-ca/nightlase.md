@@ -90,7 +90,7 @@ pageSections:
       size: md
     - _component: building-blocks/core-elements/text
       text: 'Dr. Henninger is dedicated to helping you enjoy all life has to offer: passion, excitement,
-        energy and success, starting with a good night’s sleep. Call (760)-940-2273 and schedule a consultation
+        energy and success, starting with a good night’s sleep. Call [[phone]] and schedule a consultation
         today.'
     maxContentWidth: xl
     paddingHorizontal: lg
@@ -145,10 +145,9 @@ pageSections:
     - _component: building-blocks/core-elements/divider
       paddingVertical: none
     - _component: building-blocks/core-elements/text
-      text: North County Cosmetic and Implant Dentistry is located at [1934 Via Centre Ste A Vista, CA
-        92081](https://goo.gl/maps/JNSRubU6nnm45LvN7).
+      text: North County Cosmetic and Implant Dentistry is located at [[[address]]](https://goo.gl/maps/JNSRubU6nnm45LvN7).
     - _component: building-blocks/core-elements/text
-      text: '[(760) 940-2273](tel:+1-760-940-2273)'
+      text: '[[[phone]]]([[phoneHref]])'
     maxContentWidth: xl
     paddingHorizontal: lg
     paddingVertical: xl

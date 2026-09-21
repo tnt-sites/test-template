@@ -157,7 +157,7 @@ pageSections:
         than normal. Dental lasers can also help treat tooth decay, gum disease, and has applications
         in restorative procedures. If you want a more comfortable experience and to reduce your dental
         anxiety, we highly recommend visiting a laser dentistry office. To learn about the procedures
-        that we perform using lasers, call [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment.
+        that we perform using lasers, call [[[phone]]]([[phoneHref]]) and schedule an appointment.
         At North County Cosmetic and Implant Dentistry, we find that many of our patients no longer need
         sedation or pain medication because the common factors that create fear of dentists are eliminated.
         For example, the noise, heat, and vibration that is traditionally associated with the dental drill

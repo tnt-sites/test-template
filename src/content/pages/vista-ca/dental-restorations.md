@@ -15,7 +15,7 @@ pageSections:
     stay in excellent oral health. We can complete restorations in a way that restores the functionality
     and appearance of a tooth. This is important for ensuring that once the dental work is complete, no
     one can tell your tooth was ever damaged. If your tooth is cracked, chipped or damaged in any way,
-    call (760) 940-2273 to schedule your appointment.
+    call [[phone]] to schedule your appointment.
   imageSource: /src/assets/images/wp/dental-restorations.jpg
   imageAlt: Dental Restorations
   formId: '251056297507965'
@@ -129,7 +129,7 @@ pageSections:
     - _component: building-blocks/core-elements/text
       text: At times, patients need dental restorations to replace teeth. Whether a tooth has been knocked
         out or has fallen out due to an infection, there are several ways that it can be replaced. In
-        order to determine what procedure is right for you, call [760-940-2273](tel:+1-760-940-2273) to
+        order to determine what procedure is right for you, call [[[phone]]]([[phoneHref]]) to
         schedule an appointment and consultation.
     - _component: building-blocks/core-elements/text
       text: In many cases, the patient wears temporary dentures while deciding how they want to permanently
@@ -157,7 +157,7 @@ pageSections:
     label: ''
     contentSections:
     - _component: building-blocks/core-elements/text
-      text: If you live in the Vista area, call [(760) 940-2273](tel:+1-760-940-2273) to schedule your
+      text: If you live in the Vista area, call [[[phone]]]([[phoneHref]]) to schedule your
         dental exam so that you can remain in good health or receive treatment for a current condition.
     maxContentWidth: none
     paddingHorizontal: none

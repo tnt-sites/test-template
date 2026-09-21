@@ -36,7 +36,7 @@ pageSections:
       level: h2
       size: md
     - _component: building-blocks/core-elements/text
-      text: We invite you to call [(760) 940-2273](tel:+1-760-940-2273) and schedule an appointment with
+      text: We invite you to call [[[phone]]]([[phoneHref]]) and schedule an appointment with
         our dental center. If you are currently in search of a dentist, you can be confident that visiting
         our office will give you access to comprehensive dental care that will address all of your oral
         health concerns along with the goals that you have for your smile. We are located in Vista and
