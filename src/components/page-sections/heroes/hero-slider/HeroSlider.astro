@@ -197,12 +197,16 @@ const multiple = normalized.length > 1;
     }
 
     /* The source centres the 450px panel in the band (x=559 at 1440px) rather
-       than flushing it to the gutter, leaving the photo readable on both sides. */
+       than flushing it to the gutter, leaving the photo readable on both sides.
+       It shares the form's centred 1440px column so that past 1440px the panel
+       stops tracking the viewport edge and cannot slide under the form card. */
     .hero-slider .hs-caption {
       align-items: center;
       display: flex;
       inset: 0;
       justify-content: center;
+      margin: 0 auto;
+      max-width: 1440px;
       padding-inline: 72px;
       position: absolute;
     }
@@ -213,7 +217,16 @@ const multiple = normalized.length > 1;
     @media (min-width: 993px) {
       .hero-slider .hs-caption {
         justify-content: flex-end;
+        /* 312px card + 72px gutter + 47px gap, so the reserve is derived from
+           the card's own geometry rather than guessed at. */
         padding-right: 431px;
+      }
+
+      /* Between 993px and ~1250px the band is too narrow for the full 450px
+         panel beside the card, so the panel gives up width instead of
+         overflowing its padding box and sliding underneath. */
+      .hero-slider .hs-panel {
+        width: min(450px, 100%);
       }
     }
 
@@ -320,6 +333,11 @@ const multiple = normalized.length > 1;
       .hero-slider .hs-caption,
       .hero-slider .hs-form {
         padding-inline: 32px;
+      }
+
+      /* Gutter drops to 32px, so the reserve follows it down. */
+      .hero-slider .hs-caption {
+        padding-right: 391px;
       }
     }
 
