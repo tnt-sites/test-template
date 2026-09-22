@@ -1,0 +1,19 @@
+label: About Columbine Creek Dentistry
+icon: interests
+description: About Columbine Creek Dentistry section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-columbine-creek-dentistry
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - About Columbine Creek Dentistry
+  icon: interests
+picker_preview:
+  text: About Columbine Creek Dentistry
+  subtext: About Columbine Creek Dentistry section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-columbine-creek-dentistry/about-columbine-creek-dentistry.cloudcannon.inputs.yml

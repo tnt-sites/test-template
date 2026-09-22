@@ -1,0 +1,29 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, for anchor links.
+heading:
+  type: text
+  comment: Page H1. Displayed in uppercase.
+subheading:
+  type: text
+  comment: Larger supporting headline shown under the H1.
+backgroundColor:
+  type: select
+  comment: Section background color.
+  options:
+    values: _select_data.brandColors
+textColor:
+  type: select
+  comment: Main text color (headings, body copy, captions).
+  options:
+    values: _select_data.brandColors
+accentColor:
+  type: select
+  comment: Accent color — link/button hover states, star ratings, and similar highlights.
+  options:
+    values: _select_data.brandColors
+iconColor:
+  type: select
+  comment: Icon color (SVG fill/stroke).
+  options:
+    values: _select_data.brandColors

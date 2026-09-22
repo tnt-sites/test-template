@@ -1,0 +1,17 @@
+label: Home Ameritas
+icon: interests
+description: Home Ameritas section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-ameritas
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Ameritas
+  icon: interests
+picker_preview:
+  text: Home Ameritas
+  subtext: Home Ameritas section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-ameritas/home-ameritas.cloudcannon.inputs.yml

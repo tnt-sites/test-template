@@ -12,4 +12,71 @@ openFirst:
 singleOpen:
   comment: Whether only one item can be open at a time within this accordion.
   type: switch
-
+iconName:
+  type: text
+  comment: >-
+    Icon shown at the end of each title bar. Empty renders no icon — the source
+    accordions this was migrated from use the title-bar colour change as the
+    only open/closed cue.
+theme:
+  type: object
+  label: Design
+  comment: >-
+    Measured styling for the panels, filled in by the migrator from the source
+    site. Leave empty to use the theme's own accordion design.
+  options:
+    preview:
+      icon: palette
+      text:
+        - Accordion Design
+      subtext:
+        - key: titleBackground
+        - Theme default
+theme.titleBackground:
+  type: color
+  comment: Fill behind a closed panel's title bar.
+theme.titleColor:
+  type: color
+  comment: Text colour of a closed panel's title bar.
+theme.titleBackgroundOpen:
+  type: color
+  comment: Fill behind the open panel's title bar.
+theme.titleColorOpen:
+  type: color
+  comment: Text colour of the open panel's title bar.
+theme.titleFontSize:
+  type: text
+  comment: "CSS length for the title text, e.g. 18px."
+theme.titleFontWeight:
+  type: text
+  comment: "CSS font weight for the title text, e.g. 400."
+theme.titlePadding:
+  type: text
+  comment: "CSS padding shorthand for the title bar, e.g. 15px."
+theme.titleGap:
+  type: text
+  comment: Space between the title text and its icon.
+theme.itemGap:
+  type: text
+  comment: Space between one panel and the next.
+theme.itemBorder:
+  type: text
+  comment: "CSS border shorthand under each panel. Empty keeps the theme's hairline rule."
+theme.detailPadding:
+  type: text
+  comment: CSS padding shorthand for an open panel's content.
+theme.detailBorderTop:
+  type: text
+  comment: CSS border shorthand above an open panel's content.
+theme.detailBorderBottom:
+  type: text
+  comment: CSS border shorthand below an open panel's content.
+theme.detailBackground:
+  type: color
+  comment: Fill behind an open panel's content.
+theme.detailBorderRight:
+  type: text
+  comment: CSS border shorthand on an open panel's right edge.
+theme.detailBorderLeft:
+  type: text
+  comment: CSS border shorthand on an open panel's left edge.

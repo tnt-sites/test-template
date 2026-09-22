@@ -1,0 +1,88 @@
+extracting from /Users/tharvey/Work/CloudCannon/toothbar/wp-migrator/.wpmig/static (writing)…
+  ! 2 font file(s) referenced but not found in the snapshot
+
+scanned 412 page(s), sampled 6 for colors/type, 412 for SEO/images
+
+color roles: {
+  "bgPage": "#ffffff",
+  "text": "#333333",
+  "heading": "#000000",
+  "link": "#cc3366",
+  "linkHover": "#333366",
+  "brand": "#d8fffb",
+  "brandSecondary": "#007bff",
+  "brandMuted": "#acbad5",
+  "brandSubtle": "#f6bb06"
+}
+fonts: body=Montserrat, sans-serif  headings=Lato, sans-serif
+font files: 266 copied, 2 missing
+
+site name: Toothbar
+nav items: 8
+office: {
+  "name": null,
+  "addresses": [
+    {
+      "lines": [
+        "123 Main Street",
+        "Suite 200"
+      ],
+      "city": "City",
+      "state": "ST",
+      "postalCode": "12345",
+      "country": null,
+      "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+    }
+  ],
+  "phones": [
+    {
+      "type": "phone",
+      "display": "(512) 607-4286",
+      "href": "tel:(512) 607-4286"
+    }
+  ],
+  "emails": [
+    {
+      "display": "info@dentalstudio.com",
+      "href": "mailto:info@dentalstudio.com"
+    }
+  ],
+  "officeHours": [
+    {
+      "day": "Monday",
+      "hours": "8:00 am - 5:00 pm",
+      "note": ""
+    },
+    {
+      "day": "Tuesday",
+      "hours": "8:00 am - 5:00 pm",
+      "note": ""
+    },
+    {
+      "day": "Wednesday",
+      "hours": "8:00 am - 5:00 pm",
+      "note": ""
+    },
+    {
+      "day": "Thursday",
+      "hours": "8:00 am - 5:00 pm",
+      "note": ""
+    },
+    {
+      "day": "Friday",
+      "hours": "8:00 am - 2:00 pm",
+      "note": ""
+    }
+  ],
+  "officeHoursNote": ""
+}
+socials: Instagram, Youtube, Facebook, Linkedin, Yelp
+chrome assets: 2 copied, 0 missing
+footer columns: Phone Number:[1] Contact[2]
+header top bar: Book Appointment (512) 607-4286
+
+seo: title suffix = "Toothbar"
+
+images: 206 referenced, 135 copied/verified, 71 missing
+
+writer summary: {"updated":230,"unchanged":178,"created":3}

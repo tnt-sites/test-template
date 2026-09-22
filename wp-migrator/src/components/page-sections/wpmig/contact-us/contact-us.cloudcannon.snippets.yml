@@ -1,0 +1,10 @@
+_snippets:
+  contact_us:
+    template: astro_component
+    inline: false
+    preview:
+      text: Contact Us
+    definitions:
+      component_name: page-sections/wpmig/contact-us
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/contact-us/contact-us.cloudcannon.inputs.yml

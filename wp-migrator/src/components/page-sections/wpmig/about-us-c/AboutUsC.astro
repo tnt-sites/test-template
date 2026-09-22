@@ -1,0 +1,568 @@
+---
+/**
+ * About Us C — migrated from about-us/blog [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `cards`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  subheading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  text = "",
+  cards = [],
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  cardBackgroundColor = "#ffffff",
+  titleColor = "#3b6278",
+  textColor2 = "#777777",
+  textColor3 = "#adadad",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  hoverColor = "#0056b3",
+  textHoverColor = "#09498c",
+  hoverColor2 = "#09498c",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<div class="about-us-c" id={id || undefined} style={`--btntx:${buttonTextColor};--tx:${textColor};--cardbg:${cardBackgroundColor};--tt:${titleColor};--c5:${textColor2};--c6:${textColor3};--c7:${hoverBackgroundColor};--c8:${hoverBackgroundColor2};--c9:${hoverBackgroundColor3};--c10:${hoverColor};--c11:${textHoverColor};--c12:${hoverColor2}`} {...rest}>
+  <div class="auc-box">
+    <div class="auc-box2">
+      <div class="auc-box3">
+        <div class="auc-box4">
+          {subheading && <h4 class="auc-heading">{subheading}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="auc-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+        </div>
+      </div>
+      <div class="auc-box5">
+        <div class="auc-box6">
+          <div class="auc-box7">
+            <div class="auc-box8">
+              <div class="auc-grid">
+                {list.map((c) => (
+                  <div class="auc-box9">
+                    <a class="auc-box10" href={c.link || "#"}>
+                      <div class="auc-box11">
+                        {c.image && <img class="auc-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" width="840" height="500" />}
+                      </div>
+                    </a>
+                    <div class="auc-box12">
+                      <h3 class="auc-heading2">{c.title}</h3>
+                      <div class="auc-box13">
+                        <p class="auc-text">{c.text}</p>
+                      </div>
+                      {c.buttonText && <a class="auc-link" href={c.buttonLink || "#"}>{c.buttonText}</a>}
+                    </div>
+                    <div class="auc-text2">{c.text2}</div>
+                  </div>
+                ))}
+              </div>
+              {text && <nav class="auc-text21" set:html={text} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .about-us-c {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .auc-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .auc-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .auc-box3 {
+    display: none;
+  }
+
+  .auc-box4 {
+    display: none;
+  }
+
+  .auc-heading {
+    display: none;
+  }
+
+  :global(.auc-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auc-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auc-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auc-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auc-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.auc-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .auc-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .auc-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .auc-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .auc-box7::after {
+    border-radius: 0px;
+    content: "0.66";
+  }
+
+  .auc-box8 {
+    box-sizing: border-box;
+  }
+
+  .auc-grid {
+    align-items: stretch;
+    box-sizing: border-box;
+    column-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 35px;
+  }
+
+  .auc-box9 {
+    background-color: var(--cardbg);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+  }
+
+  .auc-box10 {
+    box-sizing: border-box;
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .auc-box10::after {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0) 75%);
+    background-repeat: no-repeat;
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .auc-box11 {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 170px;
+    position: relative;
+  }
+
+  .auc-media {
+    bottom: -119px;
+    box-sizing: border-box;
+    display: block;
+    left: 171px;
+    position: absolute;
+    right: -172px;
+    top: 86px;
+    transform: matrix(1.01, 0, 0, 1.01, -172.205, -102.499);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .auc-box12 {
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .auc-heading2 {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-family: Montserrat, sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 25.2px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+  }
+
+  .auc-box13 {
+    box-sizing: border-box;
+    line-height: 27.2px;
+    margin-bottom: 25px;
+  }
+
+  .auc-text {
+    box-sizing: border-box;
+    color: var(--c5);
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .auc-link {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    transition: all 0.25s ease;
+  }
+
+  .auc-text2 {
+    border-top: 1px solid #eaeaea;
+    box-sizing: border-box;
+    color: var(--c6);
+    font-size: 12px;
+    line-height: 15.6px;
+    padding: 15px 30px;
+  }
+
+  .auc-text21 {
+    box-sizing: border-box;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  :global(.auc-btn):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.auc-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.auc-btn3):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.auc-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.auc-btn5):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.auc-btn6):hover {
+    background-color: var(--c9);
+  }
+
+  .auc-box10:hover {
+    border-top-color: #0056b3;
+    color: var(--c10);
+  }
+
+  .auc-box10:hover .auc-box11 {
+    border-top-color: #0056b3;
+    color: var(--c10);
+  }
+
+  .auc-box10:hover .auc-media {
+    border-top-color: #0056b3;
+    color: var(--c10);
+  }
+
+  .auc-link:hover {
+    border-top-color: #09498c;
+    color: var(--c11);
+  }
+
+  @media (min-width: 768px) {
+    .auc-box {
+      max-width: 720px;
+    }
+
+    .auc-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 3597px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .auc-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .auc-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.auc-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.auc-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.auc-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auc-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .auc-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .auc-box9 {
+      width: 46.51%;
+    }
+
+    .auc-box11 {
+      padding-bottom: 132px;
+    }
+
+    .auc-media {
+      bottom: -67px;
+      left: 101px;
+      right: -122.7px;
+      top: 67px;
+      transform: matrix(1.01, 0, 0, 1.01, -111.984, -66.66);
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .auc-box {
+      max-width: 1140px;
+    }
+
+    .auc-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 3130px;
+    }
+
+    :global(.auc-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.auc-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .auc-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .auc-box9 {
+      width: 50%;
+    }
+
+    .auc-box11 {
+      padding-bottom: 255.8px;
+    }
+
+    .auc-media {
+      bottom: -128.9px;
+      left: 194.8px;
+      right: -236.9px;
+      top: 128.9px;
+      transform: matrix(1.01, 0, 0, 1.01, -216.976, -129.154);
+    }
+  }
+</style>

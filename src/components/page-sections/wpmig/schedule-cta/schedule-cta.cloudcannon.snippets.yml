@@ -1,0 +1,10 @@
+_snippets:
+  schedule_cta:
+    template: astro_component
+    inline: false
+    preview:
+      text: Schedule CTA
+    definitions:
+      component_name: page-sections/wpmig/schedule-cta
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/schedule-cta/schedule-cta.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  call_us_today_to_b:
+    template: astro_component
+    inline: false
+    preview:
+      text: Call Us Today To B
+    definitions:
+      component_name: page-sections/wpmig/call-us-today-to-b
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/call-us-today-to-b/call-us-today-to-b.cloudcannon.inputs.yml

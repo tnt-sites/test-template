@@ -1,87 +1,351 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2024/10/chapel-hill-dental-logo-scaled.png",
+  "logoAlt": "Chapel Hill Dental Arts logo",
   "navData": [
     {
-      "name": "Home",
-      "path": "/",
-      "children": []
-    },
-    {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "/our-practice/",
+      "icon": "",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "Meet the Dentists",
+          "path": "/meet-the-dentists/",
+          "icon": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "New Patients",
+      "path": "/new-patients/",
+      "icon": "",
+      "children": [
+        {
+          "name": "Patient Information",
+          "path": "/new-patients/#patient-information",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Payment Options",
+          "path": "/new-patients/#payment-options",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Financing",
+          "path": "/new-patients/#financing-options",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Dental Videos",
+          "path": "/new-patients/#dental-videos",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Patient Forms",
+          "path": "/new-patients/#patient-forms",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "FAQ",
+          "path": "/new-patients/#faq",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Dental Implant Credit Qualification",
+          "path": "/dental-implant-credit-qualification/",
+          "icon": "",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "path": "",
+      "icon": "",
+      "children": [
+        {
+          "name": "Cleanings & Prevention",
+          "path": "",
+          "icon": "",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dental Checkups & Cleanings",
+              "path": "/dental-exams-cleanings/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Digital Dental X-Rays",
+              "path": "/digital-x-rays/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "",
+          "icon": "",
+          "children": [
+            {
+              "name": "Dental Crowns",
+              "path": "/porcelain-crowns-caps/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Veneers",
+              "path": "/porcelain-veneers/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Teeth Whitening",
+              "path": "/tooth-whitening/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Restorations",
+          "path": "",
+          "icon": "",
+          "children": [
+            {
+              "name": "Same Day Teeth",
+              "path": "/same-day-teeth/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Tooth-Colored Fillings",
+              "path": "/composite-fillings/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Fixed Bridges",
+              "path": "/fixed-bridges/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Oral & Maxillofacial Surgery",
+          "path": "#",
+          "icon": "",
+          "children": [
+            {
+              "name": "Apicoectomy",
+              "path": "/apicoectomy/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Bone Grafting",
+              "path": "/bone-grafting/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Wisdom Teeth Extractions",
+              "path": "/wisdom-teeth-extractions/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Periodontics",
+          "path": "",
+          "icon": "",
+          "children": [
+            {
+              "name": "What is a Periodontist?",
+              "path": "/what-is-a-periodontist/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "When to See a Periodontist",
+              "path": "/when-to-see-a-periodontist/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Bone Grafting",
+              "path": "/bone-grafting/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Bruxism Treatment",
+              "path": "/bruxism/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Crown Lengthening",
+              "path": "/crown-lengthening/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Gum Grafting",
+              "path": "/gum-grafting/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Gum Recession",
+              "path": "/gum-recession/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Scaling & Root Planing",
+              "path": "/periodontal-scaling-root-planing/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Pocket Irrigation",
+              "path": "/pocket-irrigation/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Pocket Reduction Surgery",
+              "path": "/pocket-reduction-surgery/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Prophylaxis (Teeth Cleaning)",
+              "path": "/prophylaxis-teeth-cleaning/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Sinus Augmentation",
+              "path": "/sinus-augmentation/",
+              "icon": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Endodontics",
+          "path": "",
+          "icon": "",
+          "children": [
+            {
+              "name": "Cracked Tooth",
+              "path": "/cracked-tooth/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-therapy/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Root Canal Retreatment",
+              "path": "/root-canal-retreatment/",
+              "icon": "",
+              "children": []
+            },
+            {
+              "name": "Root Amputation",
+              "path": "/root-amputation/",
+              "icon": "",
+              "children": []
             }
           ]
         },
         {
           "name": "Dental Implants",
-          "path": "/dental-implants",
+          "path": "/dental-implants/",
+          "icon": "",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Implant",
+              "path": "/dental-implants/",
+              "icon": "",
+              "children": []
             }
           ]
+        },
+        {
+          "name": "Dental Anxiety and Fear",
+          "path": "/dental-anxiety-and-fear/",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Emergency Dentist",
+          "path": "/dental-emergencies/",
+          "icon": "",
+          "children": []
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/",
+      "icon": "",
       "children": []
     },
     {
       "name": "Blog",
       "path": "/blog/",
+      "icon": "",
       "children": []
+    },
+    {
+      "name": "Contact",
+      "path": "",
+      "icon": "",
+      "children": [
+        {
+          "name": "Contact Us",
+          "path": "/contact/",
+          "icon": "",
+          "children": []
+        },
+        {
+          "name": "Book an Appointment",
+          "path": "https://s.hsone.io/MdxGf8ajzH",
+          "icon": "",
+          "children": []
+        }
+      ]
     }
   ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
+  "buttonSections": [],
+  "pageButtons": [],
+  "topBar": {
+    "label": "Contact Us",
+    "link": "/contact/",
+    "phone": {
+      "display": "(732) 365-0123",
+      "href": "tel:7323650123"
     }
-  ],
-  "pageButtons": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Request an Appointment",
-      "hideText": false,
-      "link": "/request-an-appointment/",
-      "modalTarget": "",
-      "iconName": "",
-      "iconPosition": "before",
-      "variant": "primary",
-      "size": "md",
-      "width": "md",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ]
+  }
 }

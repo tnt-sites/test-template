@@ -1,0 +1,280 @@
+---
+/**
+ * Smile Gallery — before/after comparison sliders. Migrated from smile-gallery [1].
+ *
+ * The source used the Royal Addons "wpr-before-after" widget: a draggable
+ * divider that wipes between a "before" and "after" photo. The auto-migrated
+ * version froze the wipe at measured pixel offsets (valid at one width only);
+ * this is a clean, responsive rebuild that keeps the same prop shape
+ * (`cards[]` with image/image2/text/text2/title).
+ */
+const {
+  heading = "",
+  text = "",
+  cards = [],
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#333333",
+  textColorHex = "",
+  cardBackgroundColor = "",
+  cardBackgroundColorHex = "#f4f8f7",
+  labelColor = "#ffffff",
+  titleColor = "var(--color-brand)",
+  titleColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#333333";
+const cardBackgroundColorValue = cardBackgroundColorHex || cardBackgroundColor || "#f4f8f7";
+const titleColorValue = titleColorHex || titleColor || "var(--color-brand)";
+const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+<section
+  class="smile-gallery"
+  id={id || undefined}
+  style={`--hd:${headingColorValue};--tx:${textColorValue};--cardbg:${cardBackgroundColorValue};--label:${labelColor};--tt:${titleColorValue}`}
+  {...rest}
+>
+  <div class="sg-inner">
+    {heading && <h2 class="sg-heading">{heading}</h2>}
+    {text && <div class="sg-body" set:html={text} />}
+    {list.length > 0 && (
+      <div class="sg-grid">
+        {list.map((c) => (
+          <figure class="sg-card">
+            <div class="ba-slider" data-ba data-position="50">
+              <img class="ba-img ba-after" src={c.image2} alt={c.image2Alt || c.title || "After"} loading="lazy" draggable="false" />
+              <div class="ba-before-wrap">
+                <img class="ba-img ba-before" src={c.image} alt={c.imageAlt || c.title || "Before"} loading="lazy" draggable="false" />
+              </div>
+              {c.text && <span class="ba-label ba-label-before">{c.text}</span>}
+              {c.text2 && <span class="ba-label ba-label-after">{c.text2}</span>}
+              <div class="ba-divider" aria-hidden="true">
+                <span class="ba-handle">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </span>
+              </div>
+              <input class="ba-range" type="range" min="0" max="100" value="50" aria-label={`Reveal before and after${c.title ? ` — ${c.title}` : ""}`} />
+            </div>
+            {c.title && <figcaption class="sg-title">{c.title}</figcaption>}
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  .smile-gallery {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-family: Lato, sans-serif;
+    padding: 70px 20px;
+    width: 100%;
+  }
+
+  .sg-inner {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1200px;
+  }
+
+  .sg-heading {
+    color: var(--hd);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin: 0 0 0.5em;
+    text-align: center;
+  }
+
+  .sg-body {
+    margin: 0 auto 2.5rem;
+    max-width: 760px;
+    text-align: center;
+  }
+
+  .sg-body :global(p) {
+    margin: 0 0 1rem;
+  }
+
+  .sg-grid {
+    box-sizing: border-box;
+    display: grid;
+    gap: 28px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .sg-card {
+    background-color: var(--cardbg);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .ba-slider {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    position: relative;
+    touch-action: none;
+    user-select: none;
+    width: 100%;
+  }
+
+  .ba-img {
+    display: block;
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  /* The "before" layer is clipped to the divider position. */
+  .ba-before-wrap {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: var(--pos, 50%);
+    will-change: width;
+  }
+
+  .ba-before-wrap .ba-before {
+    /* Keep the before image aligned to the card, not to the clip box. */
+    max-width: none;
+    width: var(--card-w, 100%);
+  }
+
+  .ba-label {
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 3px;
+    color: var(--label);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 4px 10px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 12px;
+    z-index: 3;
+  }
+
+  .ba-label-before {
+    left: 12px;
+  }
+
+  .ba-label-after {
+    right: 12px;
+  }
+
+  .ba-divider {
+    background-color: #fff;
+    bottom: 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+    left: var(--pos, 50%);
+    margin-left: -1px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 4;
+  }
+
+  .ba-handle {
+    align-items: center;
+    background-color: var(--hd);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.35);
+    color: #fff;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+  }
+
+  .ba-handle svg {
+    display: block;
+  }
+
+  /* The range input is the actual drag surface; invisible but on top. */
+  .ba-range {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: ew-resize;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+  }
+
+  .ba-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 100%;
+    width: 44px;
+  }
+
+  .ba-range::-moz-range-thumb {
+    background: transparent;
+    border: none;
+    height: 100%;
+    width: 44px;
+  }
+
+  .ba-range:focus-visible {
+    outline: none;
+  }
+
+  .ba-range:focus-visible + .ba-divider .ba-handle,
+  .ba-slider:focus-within .ba-handle {
+    outline: 2px solid var(--hd);
+    outline-offset: 3px;
+  }
+
+  .sg-title {
+    color: var(--tt);
+    font-family: "Playfair Display", serif;
+    font-size: 1.15rem;
+    padding: 16px;
+    text-align: center;
+  }
+</style>
+<script>
+  function initBeforeAfter(root: HTMLElement) {
+    const range = root.querySelector<HTMLInputElement>(".ba-range");
+    if (!range) return;
+    const setPos = (v: number) => {
+      root.style.setProperty("--pos", v + "%");
+    };
+    const setCardWidth = () => {
+      const wrap = root.querySelector<HTMLElement>(".ba-before-wrap");
+      const before = root.querySelector<HTMLImageElement>(".ba-before");
+      if (wrap && before) before.style.setProperty("--card-w", root.clientWidth + "px");
+    };
+    setCardWidth();
+    setPos(Number(range.value));
+    range.addEventListener("input", () => setPos(Number(range.value)));
+    window.addEventListener("resize", setCardWidth);
+  }
+
+  function boot() {
+    document.querySelectorAll<HTMLElement>("[data-ba]").forEach(initBeforeAfter);
+  }
+
+  if (document.readyState !== "loading") boot();
+  else document.addEventListener("DOMContentLoaded", boot);
+</script>

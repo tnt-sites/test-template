@@ -6,11 +6,51 @@ const {
   openFirst,
   singleOpen = false,
   label,
+  theme,
+  iconName = "chevron-down",
   editable = true,
   "data-prop": customDataProp = "items",
   _component,
+  style: styleProp,
   ...htmlAttributes
 } = Astro.props;
+
+/**
+ * A measured accordion's design, as the custom properties `AccordionItem`
+ * reads. Only the values that were actually measured are written: an empty
+ * custom property is invalid at computed-value time, so emitting one would
+ * unset the item's own default rather than fall back to it.
+ */
+const THEME_PROPS: Record<string, string> = {
+  titleBackground: "--accordion-title-bg",
+  titleColor: "--accordion-title-color",
+  titleBackgroundOpen: "--accordion-title-bg-open",
+  titleColorOpen: "--accordion-title-color-open",
+  titleBackgroundHover: "--accordion-title-bg-hover",
+  titleColorHover: "--accordion-title-color-hover",
+  titleFontSize: "--accordion-title-font-size",
+  titleFontWeight: "--accordion-title-font-weight",
+  titlePadding: "--accordion-title-padding",
+  titleGap: "--accordion-title-gap",
+  itemGap: "--accordion-item-gap",
+  itemBorder: "--accordion-item-border",
+  detailBackground: "--accordion-detail-bg",
+  detailPadding: "--accordion-detail-padding",
+  detailBorderTop: "--accordion-detail-border-top",
+  detailBorderRight: "--accordion-detail-border-right",
+  detailBorderBottom: "--accordion-detail-border-bottom",
+  detailBorderLeft: "--accordion-detail-border-left",
+};
+
+const themeStyle = Object.entries(THEME_PROPS)
+  .map(([key, prop]) => {
+    const value = theme?.[key];
+    return value === undefined || value === null || value === "" ? "" : `${prop}: ${value}`;
+  })
+  .filter(Boolean)
+  .join("; ");
+
+const style = [themeStyle, styleProp].filter(Boolean).join("; ") || undefined;
 
 const slugifyLabel = (label: string) => {
   return label
@@ -43,7 +83,7 @@ const hasSlotContent = (slotContent?.toString().trim().length ?? 0) > 0;
 if (!_component && !hasItems && !hasSlotContent) return;
 ---
 
-<div class:list={["accordion"]} {...arrayDataAttributes} {...htmlAttributes}>
+<div class:list={["accordion"]} style={style} {...arrayDataAttributes} {...htmlAttributes}>
   <slot>
     {
       items &&
@@ -58,6 +98,7 @@ if (!_component && !hasItems && !hasSlotContent) return;
                 contentSections={item.contentSections}
                 isOpen={isFirst}
                 accordionName={accordionName}
+                iconName={iconName}
               />
             </editable-array-item>
           );

@@ -1,0 +1,196 @@
+---
+/**
+ * Appointments Now Available — migrated from  [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "#3b6278",
+  headingColor = "#ffffff",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonTextHoverColor = "#3b6278",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="appointments-now-available" id={id || undefined} style={`--bg:${backgroundColor};--hd:${headingColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonTextHoverColor}`} {...rest}>
+  <div class="ana-box">
+    <div class="ana-box2">
+      <div class="ana-box3">
+        <p class="ana-text">{heading}</p>
+      </div>
+      <div class="ana-box4">
+        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="ana-btn" text={buttonText} link={buttonLink || "#"} />}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .appointments-now-available {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .ana-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ana-box2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .ana-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  .ana-text {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+  }
+
+  .ana-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    text-align: center;
+  }
+
+  :global(.ana-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.25) 2px 2px 3px 0px;
+    box-sizing: border-box;
+    display: block;
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+    padding: 10px 15px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  :global(.ana-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.ana-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #3b6278;
+    box-shadow: none;
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .ana-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .ana-box3 {
+      flex-shrink: 0;
+    }
+
+    .ana-box4 {
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ana-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ana-box3 {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+      text-align: left;
+    }
+
+    .ana-text {
+      margin-bottom: 0px;
+    }
+
+    .ana-box4 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      text-align: right;
+    }
+
+    :global(.ana-btn) {
+      display: inline;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ana-text {
+    color: rgb(255, 255, 255);
+  }
+  :global(.ana-btn) {
+    align-items: normal;
+    color: rgb(255, 255, 255);
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .ana-text {
+      color: rgb(255, 255, 255);
+    }
+
+    :global(.ana-btn) {
+      align-items: normal;
+      color: rgb(255, 255, 255);
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.ana-btn) {
+      align-items: normal;
+      color: rgb(255, 255, 255);
+      justify-content: normal;
+      text-align: right;
+    }
+
+    .ana-text {
+      color: rgb(255, 255, 255);
+    }
+  }
+/* wpmig:corrections:end */
+</style>

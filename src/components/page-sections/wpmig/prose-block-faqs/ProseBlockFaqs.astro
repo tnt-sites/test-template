@@ -1,0 +1,1000 @@
+---
+/**
+ * Prose Block Faqs — migrated from new-patients [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  text5 = "",
+  text6 = "",
+  text7 = "",
+  text8 = "",
+  text9 = "",
+  text10 = "",
+  text11 = "",
+  text12 = "",
+  text13 = "",
+  text14 = "",
+  text15 = "",
+  text16 = "",
+  text17 = "",
+  text18 = "",
+  text19 = "",
+  items = [],
+  items2 = [],
+  backgroundColor = "",
+  backgroundColorHex = "#f4f8f7",
+  eyebrowColor = "",
+  eyebrowColorHex = "#555555",
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  textColor3 = "",
+  textColor3Hex = "#1f2124",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#f4f8f7";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#555555";
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const textColor3Value = textColor3Hex || textColor3 || "#1f2124";
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+---
+<div class="prose-block-faqs" id={id || undefined} style={`--bg:${backgroundColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue};--c5:${textColor2Value};--c6:${textColor3Value}`} {...rest}>
+  <div class="pbfa-box">
+    <div class="pbfa-box2">
+      <div class="pbfa-box3">
+        {eyebrow && <div class="pbfa-text">{eyebrow}</div>}
+      </div>
+      <div class="pbfa-box4">
+        <h2 class="pbfa-heading">{heading}</h2>
+      </div>
+      <div class="pbfa-box5">
+        {text && <div class="pbfa-text2">{text}</div>}
+      </div>
+      <div class="pbfa-box6" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+        <details class="pbfa-box7">
+          <summary class="pbfa-box8" aria-expanded="true" aria-controls="e-n-accordion-item-1410">
+            <span class="pbfa-box9">
+              {text2 && <div class="pbfa-text3">{text2}</div>}
+            </span>
+          </summary>
+          <div class="pbfa-box10" role="region" aria-labelledby="e-n-accordion-item-1410">
+            <div class="pbfa-box11">
+              {text3 && <div class="pbfa-body" set:html={text3} />}
+              <ul class="pbfa-grid">
+                {itemsList.map((it) => (
+                  <li class="pbfa-box12">
+                    <div class="pbfa-text4">{it.text}</div>
+                  </li>
+                ))}
+              </ul>
+              {text4 && <p class="pbfa-text14" set:html={text4} />}
+              <div class="pbfa-spacer" aria-hidden="true"></div>
+              {text5 && <p class="pbfa-text15" set:html={text5} />}
+              <div class="pbfa-spacer2" aria-hidden="true"></div>
+              <ul class="pbfa-grid2">
+                {items2List.map((it) => (
+                  <li class="pbfa-box22">
+                    <div class="pbfa-text16">{it.text}</div>
+                  </li>
+                ))}
+              </ul>
+              {text6 && <p class="pbfa-text21" set:html={text6} />}
+            </div>
+          </div>
+        </details>
+        <details class="pbfa-box27">
+          <summary class="pbfa-box28" aria-expanded="false" aria-controls="e-n-accordion-item-1411">
+            <span class="pbfa-box29">
+              {text7 && <div class="pbfa-text22">{text7}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box30">
+          <summary class="pbfa-box31" aria-expanded="false" aria-controls="e-n-accordion-item-1412">
+            <span class="pbfa-box32">
+              {text8 && <div class="pbfa-text23">{text8}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box33">
+          <summary class="pbfa-box34" aria-expanded="false" aria-controls="e-n-accordion-item-1413">
+            <span class="pbfa-box35">
+              {text9 && <div class="pbfa-text24">{text9}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box36">
+          <summary class="pbfa-box37" aria-expanded="false" aria-controls="e-n-accordion-item-1414">
+            <span class="pbfa-box38">
+              {text10 && <div class="pbfa-text25">{text10}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box39">
+          <summary class="pbfa-box40" aria-expanded="false" aria-controls="e-n-accordion-item-1415">
+            <span class="pbfa-box41">
+              {text11 && <div class="pbfa-text26">{text11}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box42">
+          <summary class="pbfa-box43" aria-expanded="false" aria-controls="e-n-accordion-item-1416">
+            <span class="pbfa-box44">
+              {text12 && <div class="pbfa-text27">{text12}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box45">
+          <summary class="pbfa-box46" aria-expanded="false" aria-controls="e-n-accordion-item-1417">
+            <span class="pbfa-box47">
+              {text13 && <div class="pbfa-text28">{text13}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box48">
+          <summary class="pbfa-box49" aria-expanded="false" aria-controls="e-n-accordion-item-1418">
+            <span class="pbfa-box50">
+              {text14 && <div class="pbfa-text29">{text14}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box51">
+          <summary class="pbfa-box52" aria-expanded="false" aria-controls="e-n-accordion-item-1419">
+            <span class="pbfa-box53">
+              {text15 && <div class="pbfa-text30">{text15}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box54">
+          <summary class="pbfa-box55" aria-expanded="false" aria-controls="e-n-accordion-item-14110">
+            <span class="pbfa-box56">
+              {text16 && <div class="pbfa-text31">{text16}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box57">
+          <summary class="pbfa-box58" aria-expanded="false" aria-controls="e-n-accordion-item-14111">
+            <span class="pbfa-box59">
+              {text17 && <div class="pbfa-text32">{text17}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box60">
+          <summary class="pbfa-box61" aria-expanded="false" aria-controls="e-n-accordion-item-14112">
+            <span class="pbfa-box62">
+              {text18 && <div class="pbfa-text33">{text18}</div>}
+            </span>
+          </summary>
+        </details>
+        <details class="pbfa-box63">
+          <summary class="pbfa-box64" aria-expanded="false" aria-controls="e-n-accordion-item-14113">
+            <span class="pbfa-box65">
+              {text19 && <div class="pbfa-text34">{text19}</div>}
+            </span>
+          </summary>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .prose-block-faqs {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .pbfa-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .pbfa-box2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pbfa-box3 {
+    box-sizing: border-box;
+    color: var(--eb, #555);
+    font-family: "Playfair Display", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pbfa-text {
+    box-sizing: border-box;
+  }
+
+  .pbfa-box4 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .pbfa-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbfa-box5 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pbfa-text2 {
+    box-sizing: border-box;
+  }
+
+  .pbfa-box6 {
+    box-sizing: border-box;
+  }
+
+  .pbfa-box7 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box8 {
+    align-items: center;
+    background-color: var(--color-brand, #047ac0);
+    box-sizing: border-box;
+    color: #ffffff;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box9 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box10 {
+    border: 1px solid #d5d8dc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pbfa-box11 {
+    box-sizing: border-box;
+  }
+
+  .pbfa-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .pbfa-grid {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbfa-box12 {
+    box-sizing: border-box;
+  }
+
+  .pbfa-text4 {
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+  .pbfa-text14 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .pbfa-spacer {
+    box-sizing: border-box;
+    height: 27px;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    min-height: 27px;
+    text-align: justify;
+  }
+
+  .pbfa-text15 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .pbfa-spacer2 {
+    box-sizing: border-box;
+    height: 27px;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    min-height: 27px;
+    text-align: justify;
+  }
+
+  .pbfa-grid2 {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbfa-box22 {
+    box-sizing: border-box;
+  }
+
+  .pbfa-text16 {
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+  .pbfa-text21 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .pbfa-box27 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box28 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box29 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 93.44%;
+    max-width: 93.44%;
+  }
+
+  .pbfa-text22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box30 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box31 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box32 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 87.5%;
+    max-width: 87.5%;
+  }
+
+  .pbfa-text23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box33 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box34 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box35 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box36 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box37 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box38 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box39 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box40 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box41 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box42 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box43 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box44 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box45 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box46 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box47 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text28 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box48 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box49 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box50 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box51 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box52 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box53 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text30 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box54 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box55 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box56 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box57 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box58 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box59 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text32 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box60 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .pbfa-box61 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box62 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 91.25%;
+    max-width: 91.25%;
+  }
+
+  .pbfa-text33 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-box63 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .pbfa-box64 {
+    align-items: center;
+    background-color: var(--color-brand-secondary, #1f7da6);
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .pbfa-box65 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pbfa-text34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .pbfa-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .pbfa-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .pbfa-box4 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 413px;
+    }
+
+    .pbfa-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .pbfa-box9 {
+      flex: 0 0 45.13%;
+      max-width: 45.13%;
+    }
+
+    .pbfa-box10 {
+      flex-wrap: nowrap;
+    }
+
+    .pbfa-box29 {
+      flex: 0 0 42.84%;
+      max-width: 42.84%;
+    }
+
+    .pbfa-box32 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .pbfa-box35 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .pbfa-box38 {
+      flex: 0 0 72.92%;
+      max-width: 72.92%;
+    }
+
+    .pbfa-box41 {
+      flex: 0 0 46.42%;
+      max-width: 46.42%;
+    }
+
+    .pbfa-box44 {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+
+    .pbfa-box47 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .pbfa-box50 {
+      flex: 0 0 57.31%;
+      max-width: 57.31%;
+    }
+
+    .pbfa-box53 {
+      flex: 0 0 52.29%;
+      max-width: 52.29%;
+    }
+
+    .pbfa-box56 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .pbfa-box62 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .pbfa-box65 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pbfa-box {
+      max-width: min(100%, 1440px);
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .pbfa-box4 {
+      max-width: 580px;
+    }
+
+    .pbfa-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .pbfa-box6 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1120px;
+    }
+
+    .pbfa-box9 {
+      flex: 0 0 28.9%;
+      max-width: 28.9%;
+    }
+
+    .pbfa-box29 {
+      flex: 0 0 27.43%;
+      max-width: 27.43%;
+    }
+
+    .pbfa-box32 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .pbfa-box35 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+
+    .pbfa-box38 {
+      flex: 0 0 46.7%;
+      max-width: 46.7%;
+    }
+
+    .pbfa-box41 {
+      flex: 0 0 29.72%;
+      max-width: 29.72%;
+    }
+
+    .pbfa-box44 {
+      flex: 0 0 52.2%;
+      max-width: 52.2%;
+    }
+
+    .pbfa-box47 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .pbfa-box50 {
+      flex: 0 0 36.7%;
+      max-width: 36.7%;
+    }
+
+    .pbfa-box53 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    .pbfa-box56 {
+      flex: 0 0 47.43%;
+      max-width: 47.43%;
+    }
+
+    .pbfa-box59 {
+      flex: 0 0 71.56%;
+      max-width: 71.56%;
+    }
+
+    .pbfa-box62 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .pbfa-box65 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+  }
+</style>

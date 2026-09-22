@@ -1,0 +1,10 @@
+_snippets:
+  broken_fillings_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Broken Fillings Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/broken-fillings-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/broken-fillings-treatment-littleton/broken-fillings-treatment-littleton.cloudcannon.inputs.yml

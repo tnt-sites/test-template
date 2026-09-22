@@ -1,0 +1,18 @@
+label: Careington
+icon: vertical_split
+description: Careington section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/careington
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Careington
+  icon: vertical_split
+picker_preview:
+  text: Careington
+  subtext: Careington section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/careington/careington.cloudcannon.inputs.yml

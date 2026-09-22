@@ -1,0 +1,415 @@
+---
+/**
+ * Lincoln Financial Group Employers — migrated from lincoln-financial-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="lincoln-financial-group-employers" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="lfge-box">
+    <div class="lfge-box2">
+      <div class="lfge-box3">
+        <div class="lfge-box4">
+          <div class="lfge-box5">
+            {image && <img class="lfge-media" src={image} alt={imageAlt || ""} loading="lazy" width="575" height="410" />}
+          </div>
+        </div>
+        <div class="lfge-box6">
+          <div class="lfge-box7">
+            <h2 class="lfge-heading">{heading}</h2>
+          </div>
+          <div class="lfge-box8">
+            {text && <div class="lfge-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="lfge-box9">
+        <div class="lfge-box10">
+          {subheading && <h2 class="lfge-heading2">{subheading}</h2>}
+        </div>
+        <div class="lfge-box11">
+          <div class="lfge-box12">
+            {text2 && <div class="lfge-body" set:html={text2} />}
+          </div>
+        </div>
+      </div>
+      <div class="lfge-box13">
+        <div class="lfge-box14">
+          {heading2 && <h2 class="lfge-heading3">{heading2}</h2>}
+        </div>
+        <div class="lfge-box15">
+          <div class="lfge-box16">
+            {text3 && <div class="lfge-body2" set:html={text3} />}
+          </div>
+        </div>
+      </div>
+      <div class="lfge-box17">
+        <div class="lfge-box18">
+          {heading3 && <h2 class="lfge-heading4">{heading3}</h2>}
+        </div>
+        <div class="lfge-box19">
+          <div class="lfge-box20">
+            {text4 && <p class="lfge-text2">{text4}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .lincoln-financial-group-employers {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .lfge-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .lfge-box2 {
+    box-sizing: border-box;
+  }
+
+  .lfge-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .lfge-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .lfge-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .lfge-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .lfge-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .lfge-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lfge-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lfge-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .lfge-text {
+    box-sizing: border-box;
+  }
+
+  .lfge-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .lfge-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lfge-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lfge-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .lfge-box12 {
+    box-sizing: border-box;
+    min-height: 448px;
+  }
+
+  .lfge-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .lfge-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .lfge-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lfge-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lfge-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .lfge-box16 {
+    box-sizing: border-box;
+    min-height: 472px;
+  }
+
+  .lfge-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .lfge-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .lfge-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .lfge-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .lfge-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .lfge-box20 {
+    box-sizing: border-box;
+  }
+
+  .lfge-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .lfge-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .lfge-box3 {
+      max-width: 1024px;
+    }
+
+    .lfge-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 544px;
+    }
+
+    .lfge-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .lfge-box12 {
+      min-height: 232px;
+    }
+
+    .lfge-box16 {
+      min-height: 256px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .lfge-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .lfge-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .lfge-box4 {
+      min-height: auto;
+    }
+
+    .lfge-box6 {
+      min-height: 401px;
+    }
+
+    .lfge-box12 {
+      min-height: 160px;
+    }
+
+    .lfge-box16 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .lfge-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .lfge-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .lfge-box3 {
+    text-align: center;
+  }
+  .lfge-box4 {
+    text-align: center;
+  }
+  .lfge-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .lfge-media {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .lfge-box14 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .lfge-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .lfge-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .lfge-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .lfge-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

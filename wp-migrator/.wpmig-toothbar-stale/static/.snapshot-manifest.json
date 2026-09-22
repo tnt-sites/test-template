@@ -1,0 +1,5322 @@
+{
+  "pages": {
+    "/4-side-effects-veneers/": {
+      "file": "4-side-effects-veneers.html",
+      "sha": "ca777e7376707a29",
+      "fetchedAt": "2026-08-22T15:35:53.063Z"
+    },
+    "/4-reasons-to-visit-your-dentist-regularly/": {
+      "file": "4-reasons-to-visit-your-dentist-regularly.html",
+      "sha": "aca46b5aa2229948",
+      "fetchedAt": "2026-08-22T15:35:53.072Z"
+    },
+    "/": {
+      "file": "index.html",
+      "sha": "af138936e78b7aab",
+      "fetchedAt": "2026-08-22T15:35:53.154Z"
+    },
+    "/5-effective-dental-health-tips-for-kids/": {
+      "file": "5-effective-dental-health-tips-for-kids.html",
+      "sha": "21424761c263a9c1",
+      "fetchedAt": "2026-08-22T15:35:54.678Z"
+    },
+    "/4-tips-to-take-care-of-your-braces/": {
+      "file": "4-tips-to-take-care-of-your-braces.html",
+      "sha": "68a60c7c0902d09d",
+      "fetchedAt": "2026-08-22T15:35:54.682Z"
+    },
+    "/5-reasons-to-improve-your-smile/": {
+      "file": "5-reasons-to-improve-your-smile.html",
+      "sha": "91b0e6787a781bb2",
+      "fetchedAt": "2026-08-22T15:35:54.732Z"
+    },
+    "/a-must-read-article-before-getting-botox-for-jaw-clenching/": {
+      "file": "a-must-read-article-before-getting-botox-for-jaw-clenching.html",
+      "sha": "7f7abb22ff25c92d",
+      "fetchedAt": "2026-08-22T15:35:56.229Z"
+    },
+    "/a-woman-having-trouble-deciding-on-dental-treatment/": {
+      "file": "a-woman-having-trouble-deciding-on-dental-treatment.html",
+      "sha": "82726bd3fe931353",
+      "fetchedAt": "2026-08-22T15:35:56.371Z"
+    },
+    "/7-ways-to-stop-grinding-your-teeth/": {
+      "file": "7-ways-to-stop-grinding-your-teeth.html",
+      "sha": "c010491f1ed95663",
+      "fetchedAt": "2026-08-22T15:35:56.409Z"
+    },
+    "/acid-reflux-tooth-health/": {
+      "file": "acid-reflux-tooth-health.html",
+      "sha": "11c10736c01e78bd",
+      "fetchedAt": "2026-08-22T15:35:57.883Z"
+    },
+    "/advantages-of-digital-imaging/": {
+      "file": "advantages-of-digital-imaging.html",
+      "sha": "de9533ee8e70e28c",
+      "fetchedAt": "2026-08-22T15:35:58.020Z"
+    },
+    "/am-i-a-candidate-for-invisalign/": {
+      "file": "am-i-a-candidate-for-invisalign.html",
+      "sha": "43e92238a21ab05d",
+      "fetchedAt": "2026-08-22T15:35:58.037Z"
+    },
+    "/are-all-mouthwashes-the-same/": {
+      "file": "are-all-mouthwashes-the-same.html",
+      "sha": "aed3b5c5ce16b769",
+      "fetchedAt": "2026-08-22T15:35:59.547Z"
+    },
+    "/are-teeth-implants-safe/": {
+      "file": "are-teeth-implants-safe.html",
+      "sha": "babaaf2c754fc662",
+      "fetchedAt": "2026-08-22T15:35:59.735Z"
+    },
+    "/are-dental-implants-painful/": {
+      "file": "are-dental-implants-painful.html",
+      "sha": "ec21cb2414ea2563",
+      "fetchedAt": "2026-08-22T15:35:59.810Z"
+    },
+    "/are-veneers-worth-it/": {
+      "file": "are-veneers-worth-it.html",
+      "sha": "65462e7d69c6f9c4",
+      "fetchedAt": "2026-08-22T15:36:01.488Z"
+    },
+    "/bad-breath-behind-your-mask/": {
+      "file": "bad-breath-behind-your-mask.html",
+      "sha": "cbe0832e8b46443a",
+      "fetchedAt": "2026-08-22T15:36:01.863Z"
+    },
+    "/author/tntadmin/": {
+      "file": "author-tntadmin.html",
+      "sha": "2d59a5ab8a75bace",
+      "fetchedAt": "2026-08-22T15:36:02.207Z"
+    },
+    "/benefits-implants-tooth-restoration/": {
+      "file": "benefits-implants-tooth-restoration.html",
+      "sha": "c7d484b58a849df9",
+      "fetchedAt": "2026-08-22T15:36:04.293Z"
+    },
+    "/beautiful-smiles-depend-healthy-gums/": {
+      "file": "beautiful-smiles-depend-healthy-gums.html",
+      "sha": "a590e10bcbfcd0a0",
+      "fetchedAt": "2026-08-22T15:36:04.305Z"
+    },
+    "/benefits-of-dental-spa/": {
+      "file": "benefits-of-dental-spa.html",
+      "sha": "fbd9f6469d84c6d9",
+      "fetchedAt": "2026-08-22T15:36:04.719Z"
+    },
+    "/benefits-of-flossing-your-teeth/": {
+      "file": "benefits-of-flossing-your-teeth.html",
+      "sha": "7948717a2c3c5089",
+      "fetchedAt": "2026-08-22T15:36:05.793Z"
+    },
+    "/benefits-of-having-whiter-teeth/": {
+      "file": "benefits-of-having-whiter-teeth.html",
+      "sha": "190f7d21819cec50",
+      "fetchedAt": "2026-08-22T15:36:05.955Z"
+    },
+    "/benefits-of-invisalign-vs-braces/": {
+      "file": "benefits-of-invisalign-vs-braces.html",
+      "sha": "6826d3e348b9b01f",
+      "fetchedAt": "2026-08-22T15:36:06.483Z"
+    },
+    "/benefits-of-jaw-botox/": {
+      "file": "benefits-of-jaw-botox.html",
+      "sha": "16ebfb4d837d9896",
+      "fetchedAt": "2026-08-22T15:36:07.597Z"
+    },
+    "/benefits-of-porcelain-veneers/": {
+      "file": "benefits-of-porcelain-veneers.html",
+      "sha": "066dc31d90fe4aef",
+      "fetchedAt": "2026-08-22T15:36:07.613Z"
+    },
+    "/best-brushing-habits/": {
+      "file": "best-brushing-habits.html",
+      "sha": "6a682d71469bfc70",
+      "fetchedAt": "2026-08-22T15:36:08.441Z"
+    },
+    "/blog/": {
+      "file": "blog.html",
+      "sha": "86046b168c2981a6",
+      "fetchedAt": "2026-08-22T15:36:09.285Z"
+    },
+    "/bonding-vs-gum-grafting/": {
+      "file": "bonding-vs-gum-grafting.html",
+      "sha": "57d3d6729bf752d4",
+      "fetchedAt": "2026-08-22T15:36:09.452Z"
+    },
+    "/burning-mouth/": {
+      "file": "burning-mouth.html",
+      "sha": "7b0274e03393f1f7",
+      "fetchedAt": "2026-08-22T15:36:10.130Z"
+    },
+    "/can-i-switch-from-dentures-to-dental-implants/": {
+      "file": "can-i-switch-from-dentures-to-dental-implants.html",
+      "sha": "a69600db6e3468dd",
+      "fetchedAt": "2026-08-22T15:36:11.232Z"
+    },
+    "/can-teeth-whitening-damage-gums/": {
+      "file": "can-teeth-whitening-damage-gums.html",
+      "sha": "4bb908cca7a6edf4",
+      "fetchedAt": "2026-08-22T15:36:11.284Z"
+    },
+    "/category/cosmetic-bonding/": {
+      "file": "category-cosmetic-bonding.html",
+      "sha": "8db450eb3fd8651e",
+      "fetchedAt": "2026-08-22T15:36:11.885Z"
+    },
+    "/category/cosmetic-dentist/": {
+      "file": "category-cosmetic-dentist.html",
+      "sha": "fbfa2e110558e042",
+      "fetchedAt": "2026-08-22T15:36:12.880Z"
+    },
+    "/category/daily-health-tips/": {
+      "file": "category-daily-health-tips.html",
+      "sha": "793fe89b7fbc2e84",
+      "fetchedAt": "2026-08-22T15:36:12.950Z"
+    },
+    "/category/dental-center/": {
+      "file": "category-dental-center.html",
+      "sha": "8179726e297f82cb",
+      "fetchedAt": "2026-08-22T15:36:13.658Z"
+    },
+    "/category/dental-crown/": {
+      "file": "category-dental-crown.html",
+      "sha": "5360cdcb14049286",
+      "fetchedAt": "2026-08-22T15:36:14.472Z"
+    },
+    "/category/dental-imaging/": {
+      "file": "category-dental-imaging.html",
+      "sha": "a39ff9661b907e12",
+      "fetchedAt": "2026-08-22T15:36:14.555Z"
+    },
+    "/category/dental-implants/": {
+      "file": "category-dental-implants.html",
+      "sha": "697630fedafefcba",
+      "fetchedAt": "2026-08-22T15:36:15.338Z"
+    },
+    "/category/dental-spa/": {
+      "file": "category-dental-spa.html",
+      "sha": "173fb383f6e082c7",
+      "fetchedAt": "2026-08-22T15:36:16.030Z"
+    },
+    "/category/invisalign/": {
+      "file": "category-invisalign.html",
+      "sha": "aaf2688e11a959a1",
+      "fetchedAt": "2026-08-22T15:36:16.143Z"
+    },
+    "/category/jaw-botox/": {
+      "file": "category-jaw-botox.html",
+      "sha": "3188e78a95c57f12",
+      "fetchedAt": "2026-08-22T15:36:16.943Z"
+    },
+    "/category/lock-jaw/": {
+      "file": "category-lock-jaw.html",
+      "sha": "eb87c5cd8cbbf0cd",
+      "fetchedAt": "2026-08-22T15:36:17.790Z"
+    },
+    "/category/patient-education/": {
+      "file": "category-patient-education.html",
+      "sha": "f0b66907fe42fc1a",
+      "fetchedAt": "2026-08-22T15:36:17.802Z"
+    },
+    "/category/preventive-dentistry/": {
+      "file": "category-preventive-dentistry.html",
+      "sha": "b8ec4036ea11abbf",
+      "fetchedAt": "2026-08-22T15:36:18.551Z"
+    },
+    "/category/restorative-dentistry/": {
+      "file": "category-restorative-dentistry.html",
+      "sha": "ed703a2d95bc3d12",
+      "fetchedAt": "2026-08-22T15:36:19.341Z"
+    },
+    "/category/smile-makeover/": {
+      "file": "category-smile-makeover.html",
+      "sha": "20bedb8878c738a2",
+      "fetchedAt": "2026-08-22T15:36:19.531Z"
+    },
+    "/category/teeth-whitening/": {
+      "file": "category-teeth-whitening.html",
+      "sha": "040bb60eb7175ea8",
+      "fetchedAt": "2026-08-22T15:36:20.294Z"
+    },
+    "/category/tips/": {
+      "file": "category-tips.html",
+      "sha": "7db794d21f69567c",
+      "fetchedAt": "2026-08-22T15:36:21.130Z"
+    },
+    "/category/uncategorized/": {
+      "file": "category-uncategorized.html",
+      "sha": "815d7fd606dd2d31",
+      "fetchedAt": "2026-08-22T15:36:21.387Z"
+    },
+    "/category/veneers/": {
+      "file": "category-veneers.html",
+      "sha": "3d1f39ba09360012",
+      "fetchedAt": "2026-08-22T15:36:21.936Z"
+    },
+    "/causes-and-symptoms-of-gum-disease/": {
+      "file": "causes-and-symptoms-of-gum-disease.html",
+      "sha": "c131846dd9909126",
+      "fetchedAt": "2026-08-22T15:36:22.648Z"
+    },
+    "/causes-and-treatments-for-tmj/": {
+      "file": "causes-and-treatments-for-tmj.html",
+      "sha": "2728ecd5af6db734",
+      "fetchedAt": "2026-08-22T15:36:22.916Z"
+    },
+    "/causes-of-white-spots-on-teeth/": {
+      "file": "causes-of-white-spots-on-teeth.html",
+      "sha": "6fcb3f9515ca9a6e",
+      "fetchedAt": "2026-08-22T15:36:23.597Z"
+    },
+    "/causes-treatment-and-prevention-of-toothaches/": {
+      "file": "causes-treatment-and-prevention-of-toothaches.html",
+      "sha": "c04ff084e559fa22",
+      "fetchedAt": "2026-08-22T15:36:24.396Z"
+    },
+    "/cavities-fillings/": {
+      "file": "cavities-fillings.html",
+      "sha": "719149f07c8bcbd7",
+      "fetchedAt": "2026-08-22T15:36:25.027Z"
+    },
+    "/cavity-detection-options/": {
+      "file": "cavity-detection-options.html",
+      "sha": "fdaf58674b17337d",
+      "fetchedAt": "2026-08-22T15:36:25.307Z"
+    },
+    "/change-the-shape-of-your-gums/": {
+      "file": "change-the-shape-of-your-gums.html",
+      "sha": "536ef7b994c4c48a",
+      "fetchedAt": "2026-08-22T15:36:26.232Z"
+    },
+    "/change-your-toothbrush/": {
+      "file": "change-your-toothbrush.html",
+      "sha": "cbf4cac573de1fe3",
+      "fetchedAt": "2026-08-22T15:36:26.811Z"
+    },
+    "/cheap-ways-to-straigthen-your-teeth/": {
+      "file": "cheap-ways-to-straigthen-your-teeth.html",
+      "sha": "959785f3639a095a",
+      "fetchedAt": "2026-08-22T15:36:27.030Z"
+    },
+    "/cheapest-way-to-straighten-teeth/": {
+      "file": "cheapest-way-to-straighten-teeth.html",
+      "sha": "c07c2dfbc6e23c71",
+      "fetchedAt": "2026-08-22T15:36:27.836Z"
+    },
+    "/clean-and-care-for-invisalign/": {
+      "file": "clean-and-care-for-invisalign.html",
+      "sha": "0cfe88c8436a9ea0",
+      "fetchedAt": "2026-08-22T15:36:28.645Z"
+    },
+    "/color-braces-to-make-teeth-look-white/": {
+      "file": "color-braces-to-make-teeth-look-white.html",
+      "sha": "98783034473fc19a",
+      "fetchedAt": "2026-08-22T15:36:28.820Z"
+    },
+    "/common-oral-health-ailments-treatments/": {
+      "file": "common-oral-health-ailments-treatments.html",
+      "sha": "379fb46f396e150b",
+      "fetchedAt": "2026-08-22T15:36:29.763Z"
+    },
+    "/common-toothbrushing-mistakes-fix/": {
+      "file": "common-toothbrushing-mistakes-fix.html",
+      "sha": "8b88f2205aa89a32",
+      "fetchedAt": "2026-08-22T15:36:30.542Z"
+    },
+    "/contact/": {
+      "file": "contact.html",
+      "sha": "9dc36fda15525302",
+      "fetchedAt": "2026-08-22T15:36:31.018Z"
+    },
+    "/cosmetic-dentist-procedures-austin/": {
+      "file": "cosmetic-dentist-procedures-austin.html",
+      "sha": "376370e7c47c0dec",
+      "fetchedAt": "2026-08-22T15:36:31.460Z"
+    },
+    "/cosmetic-dentist-procedures/": {
+      "file": "cosmetic-dentist-procedures.html",
+      "sha": "772409d15ed4f922",
+      "fetchedAt": "2026-08-22T15:36:32.132Z"
+    },
+    "/crowns-and-bridges/": {
+      "file": "crowns-and-bridges.html",
+      "sha": "4c938fbccca0f0d0",
+      "fetchedAt": "2026-08-22T15:36:32.688Z"
+    },
+    "/dark-lines-around-my-crowns-and-veneers/": {
+      "file": "dark-lines-around-my-crowns-and-veneers.html",
+      "sha": "f6e4f79243c82790",
+      "fetchedAt": "2026-08-22T15:36:32.920Z"
+    },
+    "/dental-anxiety-in-austin-how-a-dental-lounge-experience-changes-everything/": {
+      "file": "dental-anxiety-in-austin-how-a-dental-lounge-experience-changes-everything.html",
+      "sha": "7e14700d10ea75ac",
+      "fetchedAt": "2026-08-22T15:36:33.682Z"
+    },
+    "/dental-bonding/": {
+      "file": "dental-bonding.html",
+      "sha": "66cf0eeaae8d5f76",
+      "fetchedAt": "2026-08-22T15:36:34.174Z"
+    },
+    "/dental-care-and-pregnancy/": {
+      "file": "dental-care-and-pregnancy.html",
+      "sha": "ca706d47e6c3a2b3",
+      "fetchedAt": "2026-08-22T15:36:34.550Z"
+    },
+    "/dental-cosmetic-bonding-service-in-austin-texas/": {
+      "file": "dental-cosmetic-bonding-service-in-austin-texas.html",
+      "sha": "a7d31a4ce5d59f77",
+      "fetchedAt": "2026-08-22T15:36:35.330Z"
+    },
+    "/dental-fads-to-avoid/": {
+      "file": "dental-fads-to-avoid.html",
+      "sha": "cad426ca78c68c42",
+      "fetchedAt": "2026-08-22T15:36:35.699Z"
+    },
+    "/dental-implants-improve-facial-appearance/": {
+      "file": "dental-implants-improve-facial-appearance.html",
+      "sha": "d82c30d106644f49",
+      "fetchedAt": "2026-08-22T15:36:36.294Z"
+    },
+    "/dental-implants-permanent/": {
+      "file": "dental-implants-permanent.html",
+      "sha": "85c8a40544ae2113",
+      "fetchedAt": "2026-08-22T15:36:37.322Z"
+    },
+    "/dental-implants/": {
+      "file": "dental-implants.html",
+      "sha": "f90e2e8ad1cfeb51",
+      "fetchedAt": "2026-08-22T15:36:37.657Z"
+    },
+    "/dental-plaque/": {
+      "file": "dental-plaque.html",
+      "sha": "678f79afe686ab4d",
+      "fetchedAt": "2026-08-22T15:36:38.209Z"
+    },
+    "/dental-problems-invisalign-austin/": {
+      "file": "dental-problems-invisalign-austin.html",
+      "sha": "c78a4b06b5bf34d9",
+      "fetchedAt": "2026-08-22T15:36:38.901Z"
+    },
+    "/dental-routine-length/": {
+      "file": "dental-routine-length.html",
+      "sha": "e28cafa888e3a9f2",
+      "fetchedAt": "2026-08-22T15:36:40.336Z"
+    },
+    "/dental-veneers/": {
+      "file": "dental-veneers.html",
+      "sha": "11a9ba168d977c16",
+      "fetchedAt": "2026-08-22T15:36:40.822Z"
+    },
+    "/difference-between-composite-and-porcelain-veneers/": {
+      "file": "difference-between-composite-and-porcelain-veneers.html",
+      "sha": "2c4f56c8765dd1ac",
+      "fetchedAt": "2026-08-22T15:36:41.274Z"
+    },
+    "/difference-between-composite-porcelain-veneers/": {
+      "file": "difference-between-composite-porcelain-veneers.html",
+      "sha": "886f5ceec7a7e483",
+      "fetchedAt": "2026-08-22T15:36:42.088Z"
+    },
+    "/different-cosmetic-dental-procedures/": {
+      "file": "different-cosmetic-dental-procedures.html",
+      "sha": "4b1321e9da9b6490",
+      "fetchedAt": "2026-08-22T15:36:42.606Z"
+    },
+    "/difference-between-veneers/": {
+      "file": "difference-between-veneers.html",
+      "sha": "f1a42ffdd607ba77",
+      "fetchedAt": "2026-08-22T15:36:42.692Z"
+    },
+    "/different-services-we-provide/": {
+      "file": "different-services-we-provide.html",
+      "sha": "b36e3fe8d654c451",
+      "fetchedAt": "2026-08-22T15:36:43.989Z"
+    },
+    "/digital-imaging/": {
+      "file": "digital-imaging.html",
+      "sha": "e0e0b2a6f96e52f7",
+      "fetchedAt": "2026-08-22T15:36:44.249Z"
+    },
+    "/do-veneers-last-forever/": {
+      "file": "do-veneers-last-forever.html",
+      "sha": "57d5bf829f98998b",
+      "fetchedAt": "2026-08-22T15:36:44.397Z"
+    },
+    "/do-you-need-a-night-guard/": {
+      "file": "do-you-need-a-night-guard.html",
+      "sha": "bb5bf02ca099a35c",
+      "fetchedAt": "2026-08-22T15:36:45.793Z"
+    },
+    "/do-your-teeth-change-as-you-age/": {
+      "file": "do-your-teeth-change-as-you-age.html",
+      "sha": "34fa7c7e81fd7eb3",
+      "fetchedAt": "2026-08-22T15:36:46.147Z"
+    },
+    "/does-invisalign-hurt/": {
+      "file": "does-invisalign-hurt.html",
+      "sha": "1f892742d9317430",
+      "fetchedAt": "2026-08-22T15:36:46.371Z"
+    },
+    "/does-teeth-whitening-damage-your-teeth/": {
+      "file": "does-teeth-whitening-damage-your-teeth.html",
+      "sha": "c32ac35c3640e8ee",
+      "fetchedAt": "2026-08-22T15:36:47.706Z"
+    },
+    "/does-teeth-whitening-hurt/": {
+      "file": "does-teeth-whitening-hurt.html",
+      "sha": "34b0f93bc2c2c916",
+      "fetchedAt": "2026-08-22T15:36:48.218Z"
+    },
+    "/does-whitening-toothpaste-work/": {
+      "file": "does-whitening-toothpaste-work.html",
+      "sha": "043c6f58db9bae2a",
+      "fetchedAt": "2026-08-22T15:36:48.227Z"
+    },
+    "/dont-replace-a-missing-tooth/": {
+      "file": "dont-replace-a-missing-tooth.html",
+      "sha": "195f61ac249d731e",
+      "fetchedAt": "2026-08-22T15:36:49.752Z"
+    },
+    "/dont-skip-your-next-dental-visit/": {
+      "file": "dont-skip-your-next-dental-visit.html",
+      "sha": "8cb1f9752f12d850",
+      "fetchedAt": "2026-08-22T15:36:51.075Z"
+    },
+    "/dr-andrea-bakke/": {
+      "file": "dr-andrea-bakke.html",
+      "sha": "0e9fe6c4e2ae4b19",
+      "fetchedAt": "2026-08-22T15:36:51.250Z"
+    },
+    "/dr-danielle-gibbons/": {
+      "file": "dr-danielle-gibbons.html",
+      "sha": "b215fd74a48a4175",
+      "fetchedAt": "2026-08-22T15:36:51.770Z"
+    },
+    "/dr-lauren-jacobsen/": {
+      "file": "dr-lauren-jacobsen.html",
+      "sha": "719260556e86349d",
+      "fetchedAt": "2026-08-22T15:36:53.275Z"
+    },
+    "/dr-kimberly-barclay/": {
+      "file": "dr-kimberly-barclay.html",
+      "sha": "24aeaef901cedcae",
+      "fetchedAt": "2026-08-22T15:36:53.459Z"
+    },
+    "/dr-rachel-morren/": {
+      "file": "dr-rachel-morren.html",
+      "sha": "c961e8f289524808",
+      "fetchedAt": "2026-08-22T15:36:53.751Z"
+    },
+    "/easy-oral-care-tips-for-kids/": {
+      "file": "easy-oral-care-tips-for-kids.html",
+      "sha": "79c8db2c7621f616",
+      "fetchedAt": "2026-08-22T15:36:54.814Z"
+    },
+    "/eating-with-braces/": {
+      "file": "eating-with-braces.html",
+      "sha": "0e3a44c25611cc9a",
+      "fetchedAt": "2026-08-22T15:36:55.077Z"
+    },
+    "/effects-leaving-cavities-untreated/": {
+      "file": "effects-leaving-cavities-untreated.html",
+      "sha": "8b780d604f27615e",
+      "fetchedAt": "2026-08-22T15:36:55.492Z"
+    },
+    "/eight-things-didnt-know-about-teeth/": {
+      "file": "eight-things-didnt-know-about-teeth.html",
+      "sha": "7e7cfafbe0c870ea",
+      "fetchedAt": "2026-08-22T15:36:56.921Z"
+    },
+    "/enjoy-your-invisalign-experience/": {
+      "file": "enjoy-your-invisalign-experience.html",
+      "sha": "fe7d1439e94f3496",
+      "fetchedAt": "2026-08-22T15:36:57.523Z"
+    },
+    "/electric-vs-regular-toothbrush/": {
+      "file": "electric-vs-regular-toothbrush.html",
+      "sha": "98c2fc6275174eb6",
+      "fetchedAt": "2026-08-22T15:36:57.606Z"
+    },
+    "/everything-about-dental-caries/": {
+      "file": "everything-about-dental-caries.html",
+      "sha": "e47589a95a99ca83",
+      "fetchedAt": "2026-08-22T15:36:58.939Z"
+    },
+    "/express-teeth-whitening/": {
+      "file": "express-teeth-whitening.html",
+      "sha": "93006dcb27a3f1d8",
+      "fetchedAt": "2026-08-22T15:36:59.238Z"
+    },
+    "/express-dental-services/": {
+      "file": "express-dental-services.html",
+      "sha": "69707f1ad06ee416",
+      "fetchedAt": "2026-08-22T15:36:59.255Z"
+    },
+    "/five-tips-children-dental-habits/": {
+      "file": "five-tips-children-dental-habits.html",
+      "sha": "6c877ed56eabd0cb",
+      "fetchedAt": "2026-08-22T15:37:00.478Z"
+    },
+    "/five-types-of-cosmetic-dentistry/": {
+      "file": "five-types-of-cosmetic-dentistry.html",
+      "sha": "937b6331080062dd",
+      "fetchedAt": "2026-08-22T15:37:01.084Z"
+    },
+    "/five-tips-good-healthy-oral-hygiene/": {
+      "file": "five-tips-good-healthy-oral-hygiene.html",
+      "sha": "e775f9ee08ade818",
+      "fetchedAt": "2026-08-22T15:37:01.109Z"
+    },
+    "/floss-teeth-properly/": {
+      "file": "floss-teeth-properly.html",
+      "sha": "9f88081b1eeae335",
+      "fetchedAt": "2026-08-22T15:37:02.391Z"
+    },
+    "/getting-rid-of-bad-breath-how-do-you-do-it/": {
+      "file": "getting-rid-of-bad-breath-how-do-you-do-it.html",
+      "sha": "1e787afff8004a2e",
+      "fetchedAt": "2026-08-22T15:37:03.143Z"
+    },
+    "/getting-a-dental-check-up/": {
+      "file": "getting-a-dental-check-up.html",
+      "sha": "d2c1eb9e19b8f193",
+      "fetchedAt": "2026-08-22T15:37:03.154Z"
+    },
+    "/gum-contouring-results/": {
+      "file": "gum-contouring-results.html",
+      "sha": "41b1a73d7772bc4f",
+      "fetchedAt": "2026-08-22T15:37:04.019Z"
+    },
+    "/gum-lift-surgery-reshaping-a-receding-gumline/": {
+      "file": "gum-lift-surgery-reshaping-a-receding-gumline.html",
+      "sha": "091db2397bc3085f",
+      "fetchedAt": "2026-08-22T15:37:04.745Z"
+    },
+    "/halitosis-bad-breath-causes/": {
+      "file": "halitosis-bad-breath-causes.html",
+      "sha": "f6e0118c87a05e8e",
+      "fetchedAt": "2026-08-22T15:37:04.862Z"
+    },
+    "/helpful-tips-documents/": {
+      "file": "helpful-tips-documents.html",
+      "sha": "6f5558ef6e545324",
+      "fetchedAt": "2026-08-22T15:37:05.565Z"
+    },
+    "/home-whitening-vs-in-office-whitening/": {
+      "file": "home-whitening-vs-in-office-whitening.html",
+      "sha": "f66b72abfa4a0281",
+      "fetchedAt": "2026-08-22T15:37:06.541Z"
+    },
+    "/how-are-teeth-implants-done/": {
+      "file": "how-are-teeth-implants-done.html",
+      "sha": "1e638558aed2c1c8",
+      "fetchedAt": "2026-08-22T15:37:06.565Z"
+    },
+    "/how-cosmetic-dentistry-can-improve-your-smile/": {
+      "file": "how-cosmetic-dentistry-can-improve-your-smile.html",
+      "sha": "5207817519d00832",
+      "fetchedAt": "2026-08-22T15:37:07.321Z"
+    },
+    "/how-dental-crowns-work/": {
+      "file": "how-dental-crowns-work.html",
+      "sha": "b7aeea573414fdce",
+      "fetchedAt": "2026-08-22T15:37:08.201Z"
+    },
+    "/how-dental-implants-work/": {
+      "file": "how-dental-implants-work.html",
+      "sha": "a84d5720e1354712",
+      "fetchedAt": "2026-08-22T15:37:08.239Z"
+    },
+    "/how-do-teeth-whitening-strips-work/": {
+      "file": "how-do-teeth-whitening-strips-work.html",
+      "sha": "ef71b70517e87e64",
+      "fetchedAt": "2026-08-22T15:37:08.909Z"
+    },
+    "/how-does-invisalign-move-teeth/": {
+      "file": "how-does-invisalign-move-teeth.html",
+      "sha": "2240d49007831292",
+      "fetchedAt": "2026-08-22T15:37:09.731Z"
+    },
+    "/how-good-can-modern-dentures-look/": {
+      "file": "how-good-can-modern-dentures-look.html",
+      "sha": "6d2546756c4770e8",
+      "fetchedAt": "2026-08-22T15:37:09.768Z"
+    },
+    "/how-jaw-botox-helps-with-tmj/": {
+      "file": "how-jaw-botox-helps-with-tmj.html",
+      "sha": "752f9c45e539ebcd",
+      "fetchedAt": "2026-08-22T15:37:10.627Z"
+    },
+    "/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning/": {
+      "file": "how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning.html",
+      "sha": "c4631d0d5c7af7a4",
+      "fetchedAt": "2026-08-22T15:37:11.636Z"
+    },
+    "/how-long-can-a-dental-bridge-last/": {
+      "file": "how-long-can-a-dental-bridge-last.html",
+      "sha": "b59606dc9044cb23",
+      "fetchedAt": "2026-08-22T15:37:11.647Z"
+    },
+    "/how-long-do-porcelain-veneers-last/": {
+      "file": "how-long-do-porcelain-veneers-last.html",
+      "sha": "5c066a73f35060fd",
+      "fetchedAt": "2026-08-22T15:37:12.217Z"
+    },
+    "/how-long-does-a-cavity-filling-take/": {
+      "file": "how-long-does-a-cavity-filling-take.html",
+      "sha": "1eabe18a3f3bfb68",
+      "fetchedAt": "2026-08-22T15:37:13.020Z"
+    },
+    "/how-long-does-a-teeth-cleaning-takes/": {
+      "file": "how-long-does-a-teeth-cleaning-takes.html",
+      "sha": "29cb17c455b6b5ca",
+      "fetchedAt": "2026-08-22T15:37:13.083Z"
+    },
+    "/how-long-does-cosmetic-bonding-last/": {
+      "file": "how-long-does-cosmetic-bonding-last.html",
+      "sha": "fce4d6cda1ecfff0",
+      "fetchedAt": "2026-08-22T15:37:13.964Z"
+    },
+    "/how-long-does-dental-bonding-last/": {
+      "file": "how-long-does-dental-bonding-last.html",
+      "sha": "717d8eb38242643f",
+      "fetchedAt": "2026-08-22T15:37:14.457Z"
+    },
+    "/how-long-does-invisalign-take/": {
+      "file": "how-long-does-invisalign-take.html",
+      "sha": "6bdcda38ec4edd18",
+      "fetchedAt": "2026-08-22T15:37:14.545Z"
+    },
+    "/how-long-does-professional-teeth-whitening-last/": {
+      "file": "how-long-does-professional-teeth-whitening-last.html",
+      "sha": "8d989570f1df13ab",
+      "fetchedAt": "2026-08-22T15:37:15.775Z"
+    },
+    "/how-many-teeth-kids-have/": {
+      "file": "how-many-teeth-kids-have.html",
+      "sha": "d70f623b24a18d9e",
+      "fetchedAt": "2026-08-22T15:37:16.530Z"
+    },
+    "/how-often-should-you-change-your-toothbrush/": {
+      "file": "how-often-should-you-change-your-toothbrush.html",
+      "sha": "e2730e1f13765867",
+      "fetchedAt": "2026-08-22T15:37:16.679Z"
+    },
+    "/how-often-should-you-get-your-teeth-cleaned/": {
+      "file": "how-often-should-you-get-your-teeth-cleaned.html",
+      "sha": "3e47f26b091875ff",
+      "fetchedAt": "2026-08-22T15:37:17.419Z"
+    },
+    "/how-prevent-tooth-decay/": {
+      "file": "how-prevent-tooth-decay.html",
+      "sha": "963431071edd23ae",
+      "fetchedAt": "2026-08-22T15:37:18.062Z"
+    },
+    "/how-professional-teeth-whitening-can-transform-your-smile-and-confidence-in-austin-tx/": {
+      "file": "how-professional-teeth-whitening-can-transform-your-smile-and-confidence-in-austin-tx.html",
+      "sha": "79c973c72e0d8783",
+      "fetchedAt": "2026-08-22T15:37:18.584Z"
+    },
+    "/how-to-clean-invisalign/": {
+      "file": "how-to-clean-invisalign.html",
+      "sha": "ec0eac200efa68b9",
+      "fetchedAt": "2026-08-22T15:37:19.481Z"
+    },
+    "/how-to-fix-lock-jaw/": {
+      "file": "how-to-fix-lock-jaw.html",
+      "sha": "092228f7705fef5c",
+      "fetchedAt": "2026-08-22T15:37:20.017Z"
+    },
+    "/how-to-floss-with-braces/": {
+      "file": "how-to-floss-with-braces.html",
+      "sha": "416f1f26bcd3365c",
+      "fetchedAt": "2026-08-22T15:37:20.578Z"
+    },
+    "/how-to-get-help-with-dental-implants/": {
+      "file": "how-to-get-help-with-dental-implants.html",
+      "sha": "e9aecaf584c45d8a",
+      "fetchedAt": "2026-08-22T15:37:21.303Z"
+    },
+    "/how-to-get-rid-of-stained-teeth/": {
+      "file": "how-to-get-rid-of-stained-teeth.html",
+      "sha": "7c8ffc8419369c02",
+      "fetchedAt": "2026-08-22T15:37:21.784Z"
+    },
+    "/how-to-keep-healthy-smiles-this-halloween/": {
+      "file": "how-to-keep-healthy-smiles-this-halloween.html",
+      "sha": "5181bafcdb0d5fa9",
+      "fetchedAt": "2026-08-22T15:37:22.538Z"
+    },
+    "/how-to-know-if-youre-suffering-from-gum-disease/": {
+      "file": "how-to-know-if-youre-suffering-from-gum-disease.html",
+      "sha": "f85ee542d11c1135",
+      "fetchedAt": "2026-08-22T15:37:23.030Z"
+    },
+    "/how-to-maintain-dental-implants-austin/": {
+      "file": "how-to-maintain-dental-implants-austin.html",
+      "sha": "a7851b8af2355196",
+      "fetchedAt": "2026-08-22T15:37:24.266Z"
+    },
+    "/how-to-pick-the-best-cosmetic-dentist-in-austin-tx/": {
+      "file": "how-to-pick-the-best-cosmetic-dentist-in-austin-tx.html",
+      "sha": "3a7a2cb6666231c4",
+      "fetchedAt": "2026-08-22T15:37:25.021Z"
+    },
+    "/how-to-reverse-gum-disease/": {
+      "file": "how-to-reverse-gum-disease.html",
+      "sha": "31c4d6428095185e",
+      "fetchedAt": "2026-08-22T15:37:25.586Z"
+    },
+    "/how-to-stop-grinding-teeth/": {
+      "file": "how-to-stop-grinding-teeth.html",
+      "sha": "71b3a5b7fc57ef1b",
+      "fetchedAt": "2026-08-22T15:37:25.930Z"
+    },
+    "/how-to-unlock-a-locked-jaw/": {
+      "file": "how-to-unlock-a-locked-jaw.html",
+      "sha": "e508a10487f18aaa",
+      "fetchedAt": "2026-08-22T15:37:26.776Z"
+    },
+    "/how-to-use-teeth-whitening-strips/": {
+      "file": "how-to-use-teeth-whitening-strips.html",
+      "sha": "7336d8ff239f686e",
+      "fetchedAt": "2026-08-22T15:37:27.453Z"
+    },
+    "/i-dont-smoke-can-i-still-get-oral-cancer/": {
+      "file": "i-dont-smoke-can-i-still-get-oral-cancer.html",
+      "sha": "2a7750ea41868ab6",
+      "fetchedAt": "2026-08-22T15:37:27.927Z"
+    },
+    "/ignoring-painless-cracked-tooth/": {
+      "file": "ignoring-painless-cracked-tooth.html",
+      "sha": "ad9a87856db7b254",
+      "fetchedAt": "2026-08-22T15:37:28.810Z"
+    },
+    "/invisalign-after-braces/": {
+      "file": "invisalign-after-braces.html",
+      "sha": "86b7ab39d8a9cca1",
+      "fetchedAt": "2026-08-22T15:37:29.166Z"
+    },
+    "/invisalign-for-underbite/": {
+      "file": "invisalign-for-underbite.html",
+      "sha": "30441f0015587b6f",
+      "fetchedAt": "2026-08-22T15:37:29.689Z"
+    },
+    "/invisalign/": {
+      "file": "invisalign.html",
+      "sha": "02321c1e20cab111",
+      "fetchedAt": "2026-08-22T15:37:30.668Z"
+    },
+    "/is-coconut-oil-good-for-your-teeth/": {
+      "file": "is-coconut-oil-good-for-your-teeth.html",
+      "sha": "fbfcc846d7e69d62",
+      "fetchedAt": "2026-08-22T15:37:30.886Z"
+    },
+    "/is-cosmetic-dentistry-permanent/": {
+      "file": "is-cosmetic-dentistry-permanent.html",
+      "sha": "bc290643f7af407b",
+      "fetchedAt": "2026-08-22T15:37:31.662Z"
+    },
+    "/is-invisalign-right-for-you/": {
+      "file": "is-invisalign-right-for-you.html",
+      "sha": "4c25748503d8c086",
+      "fetchedAt": "2026-08-22T15:37:32.290Z"
+    },
+    "/is-it-painful-having-a-wisdom-tooth-removed/": {
+      "file": "is-it-painful-having-a-wisdom-tooth-removed.html",
+      "sha": "69217599c6d19e21",
+      "fetchedAt": "2026-08-22T15:37:32.626Z"
+    },
+    "/is-lockjaw-a-dental-emergency/": {
+      "file": "is-lockjaw-a-dental-emergency.html",
+      "sha": "f913311549b1f5ba",
+      "fetchedAt": "2026-08-22T15:37:33.260Z"
+    },
+    "/is-periodontal-disease-contagious/": {
+      "file": "is-periodontal-disease-contagious.html",
+      "sha": "bb27dfdfa3928a44",
+      "fetchedAt": "2026-08-22T15:37:33.939Z"
+    },
+    "/is-whitening-bad-for-your-teeth/": {
+      "file": "is-whitening-bad-for-your-teeth.html",
+      "sha": "f5a2efb11dc1a506",
+      "fetchedAt": "2026-08-22T15:37:34.280Z"
+    },
+    "/jaw-botox-in-austin-cosmetic-benefits-and-pain-relief-at-toothbar/": {
+      "file": "jaw-botox-in-austin-cosmetic-benefits-and-pain-relief-at-toothbar.html",
+      "sha": "f04c3f1ac9f6554d",
+      "fetchedAt": "2026-08-22T15:37:34.835Z"
+    },
+    "/jaw-botox/": {
+      "file": "jaw-botox.html",
+      "sha": "9b6bf520c6d22a7c",
+      "fetchedAt": "2026-08-22T15:37:35.539Z"
+    },
+    "/keeping-mouths-healthy-age/": {
+      "file": "keeping-mouths-healthy-age.html",
+      "sha": "30a47c3e43f6e48a",
+      "fetchedAt": "2026-08-22T15:37:35.965Z"
+    },
+    "/keeping-your-childs-teeth-healthy/": {
+      "file": "keeping-your-childs-teeth-healthy.html",
+      "sha": "e850be0d56855cfc",
+      "fetchedAt": "2026-08-22T15:37:36.413Z"
+    },
+    "/keeping-your-gums-healthy-guide/": {
+      "file": "keeping-your-gums-healthy-guide.html",
+      "sha": "0d7b1b8f283319b0",
+      "fetchedAt": "2026-08-22T15:37:37.344Z"
+    },
+    "/key-to-a-prettier-smile/": {
+      "file": "key-to-a-prettier-smile.html",
+      "sha": "9dcd893cd88abbd5",
+      "fetchedAt": "2026-08-22T15:37:37.480Z"
+    },
+    "/kids-teeth-care/": {
+      "file": "kids-teeth-care.html",
+      "sha": "7c6b803cdc23af6a",
+      "fetchedAt": "2026-08-22T15:37:38.022Z"
+    },
+    "/life-of-porcelain-veneers/": {
+      "file": "life-of-porcelain-veneers.html",
+      "sha": "50c24b23c6a542b9",
+      "fetchedAt": "2026-08-22T15:37:38.935Z"
+    },
+    "/loose-tooth-simple-steps-save-smile/": {
+      "file": "loose-tooth-simple-steps-save-smile.html",
+      "sha": "35c338a380c3ae95",
+      "fetchedAt": "2026-08-22T15:37:39.029Z"
+    },
+    "/lose-a-tooth/": {
+      "file": "lose-a-tooth.html",
+      "sha": "c86b1979f3451b9d",
+      "fetchedAt": "2026-08-22T15:37:39.599Z"
+    },
+    "/main-causes-of-gum-recession/": {
+      "file": "main-causes-of-gum-recession.html",
+      "sha": "08337dea25006de1",
+      "fetchedAt": "2026-08-22T15:37:40.591Z"
+    },
+    "/most-common-causes-of-toothaches/": {
+      "file": "most-common-causes-of-toothaches.html",
+      "sha": "e97f80c556352202",
+      "fetchedAt": "2026-08-22T15:37:40.691Z"
+    },
+    "/natural-ways-keeping-gums-healthy/": {
+      "file": "natural-ways-keeping-gums-healthy.html",
+      "sha": "4176b9b2712d08c5",
+      "fetchedAt": "2026-08-22T15:37:41.203Z"
+    },
+    "/new-patients/": {
+      "file": "new-patients.html",
+      "sha": "5c6b079f91a93311",
+      "fetchedAt": "2026-08-22T15:37:42.069Z"
+    },
+    "/never-be-afraid-of-wearing-your-dentures/": {
+      "file": "never-be-afraid-of-wearing-your-dentures.html",
+      "sha": "10320f1c74887b99",
+      "fetchedAt": "2026-08-22T15:37:42.082Z"
+    },
+    "/nitrous-sedation/": {
+      "file": "nitrous-sedation.html",
+      "sha": "64e3e84b6801dbf0",
+      "fetchedAt": "2026-08-22T15:37:42.790Z"
+    },
+    "/partial-dentures/": {
+      "file": "partial-dentures.html",
+      "sha": "3e511e16d460e432",
+      "fetchedAt": "2026-08-22T15:37:43.566Z"
+    },
+    "/opt-out-preferences/": {
+      "file": "opt-out-preferences.html",
+      "sha": "47cca7ec9e6f36d3",
+      "fetchedAt": "2026-08-22T15:37:43.595Z"
+    },
+    "/periodontitis-and-its-symptoms/": {
+      "file": "periodontitis-and-its-symptoms.html",
+      "sha": "421095ab1e79ed59",
+      "fetchedAt": "2026-08-22T15:37:44.367Z"
+    },
+    "/poor-dental-health-lead-to-liver-cancer/": {
+      "file": "poor-dental-health-lead-to-liver-cancer.html",
+      "sha": "d8ce34ced0c6628a",
+      "fetchedAt": "2026-08-22T15:37:45.207Z"
+    },
+    "/practice-sets-a-standard-for-innovation/": {
+      "file": "practice-sets-a-standard-for-innovation.html",
+      "sha": "176615d4456f0fa1",
+      "fetchedAt": "2026-08-22T15:37:45.214Z"
+    },
+    "/prevent-tooth-decay/": {
+      "file": "prevent-tooth-decay.html",
+      "sha": "2a5dae9ce0f9b360",
+      "fetchedAt": "2026-08-22T15:37:46.055Z"
+    },
+    "/reasons-tooth-picking-is-bad-for-your-teeth/": {
+      "file": "reasons-tooth-picking-is-bad-for-your-teeth.html",
+      "sha": "2c139d5a3d7f1b98",
+      "fetchedAt": "2026-08-22T15:37:47.065Z"
+    },
+    "/problems-caused-by-missing-teeth/": {
+      "file": "problems-caused-by-missing-teeth.html",
+      "sha": "3bf4f1299e840802",
+      "fetchedAt": "2026-08-22T15:37:47.384Z"
+    },
+    "/reasons-why-brushing-your-tongue-is-important/": {
+      "file": "reasons-why-brushing-your-tongue-is-important.html",
+      "sha": "c20710e4439cb843",
+      "fetchedAt": "2026-08-22T15:37:47.640Z"
+    },
+    "/replace-your-broken-or-missing-tooth/": {
+      "file": "replace-your-broken-or-missing-tooth.html",
+      "sha": "cf64c20a40b285a9",
+      "fetchedAt": "2026-08-22T15:37:48.868Z"
+    },
+    "/reduce-teeth-clenching-grinding/": {
+      "file": "reduce-teeth-clenching-grinding.html",
+      "sha": "6601f0170188dee9",
+      "fetchedAt": "2026-08-22T15:37:48.881Z"
+    },
+    "/replace-your-missing-teeth/": {
+      "file": "replace-your-missing-teeth.html",
+      "sha": "b9fa95111600de37",
+      "fetchedAt": "2026-08-22T15:37:49.405Z"
+    },
+    "/restorative-dentistry-practices-plan-for-them/": {
+      "file": "restorative-dentistry-practices-plan-for-them.html",
+      "sha": "30ca0a72f326d551",
+      "fetchedAt": "2026-08-22T15:37:50.378Z"
+    },
+    "/replacing-broken-crown-implant/": {
+      "file": "replacing-broken-crown-implant.html",
+      "sha": "616cee2084f2e3e0",
+      "fetchedAt": "2026-08-22T15:37:50.602Z"
+    },
+    "/root-canal-treatments/": {
+      "file": "root-canal-treatments.html",
+      "sha": "8c0698b885a33cfb",
+      "fetchedAt": "2026-08-22T15:37:50.893Z"
+    },
+    "/schedule/": {
+      "file": "schedule.html",
+      "sha": "1c3e5c009590f57c",
+      "fetchedAt": "2026-08-22T15:37:51.635Z"
+    },
+    "/sensitive-teeth-do-hot-and-cold-bother-you/": {
+      "file": "sensitive-teeth-do-hot-and-cold-bother-you.html",
+      "sha": "c98deeb2469cfad1",
+      "fetchedAt": "2026-08-22T15:37:52.453Z"
+    },
+    "/signs-you-need-a-night-guard/": {
+      "file": "signs-you-need-a-night-guard.html",
+      "sha": "78c5df92c6a3b847",
+      "fetchedAt": "2026-08-22T15:37:53.023Z"
+    },
+    "/simple-ways-to-strengthen-your-teeth/": {
+      "file": "simple-ways-to-strengthen-your-teeth.html",
+      "sha": "91fe32f06390c48e",
+      "fetchedAt": "2026-08-22T15:37:53.413Z"
+    },
+    "/smile-makeover-chances-job-interviews/": {
+      "file": "smile-makeover-chances-job-interviews.html",
+      "sha": "5bc849eb87c9ec5e",
+      "fetchedAt": "2026-08-22T15:37:54.211Z"
+    },
+    "/smile-makeover/": {
+      "file": "smile-makeover.html",
+      "sha": "9653e823ac0d074e",
+      "fetchedAt": "2026-08-22T15:37:54.599Z"
+    },
+    "/smoking-and-getting-dental-implants/": {
+      "file": "smoking-and-getting-dental-implants.html",
+      "sha": "74a74b364045abf6",
+      "fetchedAt": "2026-08-22T15:37:54.859Z"
+    },
+    "/snow-vs-professional-teeth-whitening/": {
+      "file": "snow-vs-professional-teeth-whitening.html",
+      "sha": "01a1ab5fec1e19b6",
+      "fetchedAt": "2026-08-22T15:37:55.723Z"
+    },
+    "/straighten-crooked-teeth-without-braces/": {
+      "file": "straighten-crooked-teeth-without-braces.html",
+      "sha": "dc8abfcd1bdf6770",
+      "fetchedAt": "2026-08-22T15:37:56.428Z"
+    },
+    "/straight-teeth-without-braces/": {
+      "file": "straight-teeth-without-braces.html",
+      "sha": "5a68eb80c3932e1a",
+      "fetchedAt": "2026-08-22T15:37:56.435Z"
+    },
+    "/straighten-your-teeth-with-clear-aligners/": {
+      "file": "straighten-your-teeth-with-clear-aligners.html",
+      "sha": "0fa166237b6292b1",
+      "fetchedAt": "2026-08-22T15:37:57.563Z"
+    },
+    "/sudden-wisdom-toothpain/": {
+      "file": "sudden-wisdom-toothpain.html",
+      "sha": "2f54ec6d93787a62",
+      "fetchedAt": "2026-08-22T15:37:58.285Z"
+    },
+    "/sudden-wisdom-tooth-pain-how-to-put-a-stop-to-it/": {
+      "file": "sudden-wisdom-tooth-pain-how-to-put-a-stop-to-it.html",
+      "sha": "d260710b52e0d672",
+      "fetchedAt": "2026-08-22T15:37:58.291Z"
+    },
+    "/symptoms-most-people-feel-who-need-a-root-canal/": {
+      "file": "symptoms-most-people-feel-who-need-a-root-canal.html",
+      "sha": "f36e163f4adc6fb8",
+      "fetchedAt": "2026-08-22T15:37:59.342Z"
+    },
+    "/tag/advanced-dentistry-austin/": {
+      "file": "tag-advanced-dentistry-austin.html",
+      "sha": "1d2b9262b4f69977",
+      "fetchedAt": "2026-08-22T15:37:59.776Z"
+    },
+    "/symptoms-of-tmj-disorder/": {
+      "file": "symptoms-of-tmj-disorder.html",
+      "sha": "1397f3227f3159f4",
+      "fetchedAt": "2026-08-22T15:37:59.796Z"
+    },
+    "/tag/affordable-cosmetic-dentist-austin/": {
+      "file": "tag-affordable-cosmetic-dentist-austin.html",
+      "sha": "beb06f6a3e1f8373",
+      "fetchedAt": "2026-08-22T15:38:01.247Z"
+    },
+    "/tag/anxious-dental-patients/": {
+      "file": "tag-anxious-dental-patients.html",
+      "sha": "f366a672081d3a9b",
+      "fetchedAt": "2026-08-22T15:38:01.568Z"
+    },
+    "/tag/anxiety-free-dentist/": {
+      "file": "tag-anxiety-free-dentist.html",
+      "sha": "bb4cba344c1b53b5",
+      "fetchedAt": "2026-08-22T15:38:01.595Z"
+    },
+    "/tag/austin-cosmetic-dentist-reviews/": {
+      "file": "tag-austin-cosmetic-dentist-reviews.html",
+      "sha": "dabf321bcbef02cb",
+      "fetchedAt": "2026-08-22T15:38:03.080Z"
+    },
+    "/tag/austin-cosmetic-dentist/": {
+      "file": "tag-austin-cosmetic-dentist.html",
+      "sha": "1f2983e6ba03ae66",
+      "fetchedAt": "2026-08-22T15:38:03.530Z"
+    },
+    "/tag/austin-cosmetic-dentistry/": {
+      "file": "tag-austin-cosmetic-dentistry.html",
+      "sha": "8053f8f23a630a84",
+      "fetchedAt": "2026-08-22T15:38:03.552Z"
+    },
+    "/tag/austin-dental-spa/": {
+      "file": "tag-austin-dental-spa.html",
+      "sha": "0f42ecf29d010f37",
+      "fetchedAt": "2026-08-22T15:38:04.756Z"
+    },
+    "/tag/austin-dental-wellness/": {
+      "file": "tag-austin-dental-wellness.html",
+      "sha": "509f4950cd90317b",
+      "fetchedAt": "2026-08-22T15:38:05.458Z"
+    },
+    "/tag/austin-teeth-whitening/": {
+      "file": "tag-austin-teeth-whitening.html",
+      "sha": "4e7e6f220d66c3d4",
+      "fetchedAt": "2026-08-22T15:38:05.485Z"
+    },
+    "/tag/austin-tx-dental-health/": {
+      "file": "tag-austin-tx-dental-health.html",
+      "sha": "9f366b10039b5026",
+      "fetchedAt": "2026-08-22T15:38:06.747Z"
+    },
+    "/tag/austin-tx-dentist/": {
+      "file": "tag-austin-tx-dentist.html",
+      "sha": "a4180473b7ffe311",
+      "fetchedAt": "2026-08-22T15:38:07.156Z"
+    },
+    "/tag/austin-tx-dental-office/": {
+      "file": "tag-austin-tx-dental-office.html",
+      "sha": "54a945f01534fd22",
+      "fetchedAt": "2026-08-22T15:38:07.332Z"
+    },
+    "/tag/best-cosmetic-dentist-austin-tx/": {
+      "file": "tag-best-cosmetic-dentist-austin-tx.html",
+      "sha": "1a259bd81c6c240a",
+      "fetchedAt": "2026-08-22T15:38:08.330Z"
+    },
+    "/tag/best-cosmetic-dentist-austin/": {
+      "file": "tag-best-cosmetic-dentist-austin.html",
+      "sha": "098914a721781998",
+      "fetchedAt": "2026-08-22T15:38:08.943Z"
+    },
+    "/tag/best-dental-clinic-in-austin/": {
+      "file": "tag-best-dental-clinic-in-austin.html",
+      "sha": "104e5d84c8f75f43",
+      "fetchedAt": "2026-08-22T15:38:09.412Z"
+    },
+    "/tag/best-dentist-in-austin-tx/": {
+      "file": "tag-best-dentist-in-austin-tx.html",
+      "sha": "02c7f1820a09b6d6",
+      "fetchedAt": "2026-08-22T15:38:10.254Z"
+    },
+    "/tag/botox-cosmetic-dental-office-austin/": {
+      "file": "tag-botox-cosmetic-dental-office-austin.html",
+      "sha": "18d38201b5a7c7a7",
+      "fetchedAt": "2026-08-22T15:38:10.947Z"
+    },
+    "/tag/botox-for-clenching-austin/": {
+      "file": "tag-botox-for-clenching-austin.html",
+      "sha": "c80b3de33a1734a0",
+      "fetchedAt": "2026-08-22T15:38:11.555Z"
+    },
+    "/tag/botox-for-teeth-grinding-austin/": {
+      "file": "tag-botox-for-teeth-grinding-austin.html",
+      "sha": "742a708e19e295db",
+      "fetchedAt": "2026-08-22T15:38:12.154Z"
+    },
+    "/tag/botox-for-tmj-austin/": {
+      "file": "tag-botox-for-tmj-austin.html",
+      "sha": "fd803234eb0e147b",
+      "fetchedAt": "2026-08-22T15:38:12.877Z"
+    },
+    "/tag/braces/": {
+      "file": "tag-braces.html",
+      "sha": "9ef5f858c61a33fd",
+      "fetchedAt": "2026-08-22T15:38:13.623Z"
+    },
+    "/tag/bright-smile/": {
+      "file": "tag-bright-smile.html",
+      "sha": "1d67c7e74d50dc52",
+      "fetchedAt": "2026-08-22T15:38:14.062Z"
+    },
+    "/tag/bruxism-treatment-austin/": {
+      "file": "tag-bruxism-treatment-austin.html",
+      "sha": "7ace1b0d405d163c",
+      "fetchedAt": "2026-08-22T15:38:14.361Z"
+    },
+    "/tag/comfortable-dental-care/": {
+      "file": "tag-comfortable-dental-care.html",
+      "sha": "7d7a92a50c95c1c3",
+      "fetchedAt": "2026-08-22T15:38:15.099Z"
+    },
+    "/tag/confident-smile/": {
+      "file": "tag-confident-smile.html",
+      "sha": "21daf0fa15afb0a6",
+      "fetchedAt": "2026-08-22T15:38:15.685Z"
+    },
+    "/tag/connection-between-teeth-and-health/": {
+      "file": "tag-connection-between-teeth-and-health.html",
+      "sha": "c6ba3ee229aaa613",
+      "fetchedAt": "2026-08-22T15:38:16.214Z"
+    },
+    "/tag/cosmetic-botox-austin-tx/": {
+      "file": "tag-cosmetic-botox-austin-tx.html",
+      "sha": "fc67f79520f3eceb",
+      "fetchedAt": "2026-08-22T15:38:16.897Z"
+    },
+    "/tag/cosmetic-dentist-austin/": {
+      "file": "tag-cosmetic-dentist-austin.html",
+      "sha": "e2d0d14f152a6a83",
+      "fetchedAt": "2026-08-22T15:38:17.499Z"
+    },
+    "/tag/cosmetic-dentist-botox-austin/": {
+      "file": "tag-cosmetic-dentist-botox-austin.html",
+      "sha": "13700dae362e34fe",
+      "fetchedAt": "2026-08-22T15:38:17.923Z"
+    },
+    "/tag/cosmetic-dentistry-austin/": {
+      "file": "tag-cosmetic-dentistry-austin.html",
+      "sha": "859915df95b69130",
+      "fetchedAt": "2026-08-22T15:38:18.688Z"
+    },
+    "/tag/cosmetic-dentistry/": {
+      "file": "tag-cosmetic-dentistry.html",
+      "sha": "149dad778f516aac",
+      "fetchedAt": "2026-08-22T15:38:18.967Z"
+    },
+    "/tag/dental-aesthetics/": {
+      "file": "tag-dental-aesthetics.html",
+      "sha": "dc9cf7a1da652336",
+      "fetchedAt": "2026-08-22T15:38:19.605Z"
+    },
+    "/tag/dental-anxiety-in-austin/": {
+      "file": "tag-dental-anxiety-in-austin.html",
+      "sha": "c2209de65aaeee0a",
+      "fetchedAt": "2026-08-22T15:38:20.366Z"
+    },
+    "/tag/dental-anxiety/": {
+      "file": "tag-dental-anxiety.html",
+      "sha": "4d55f50a2a647929",
+      "fetchedAt": "2026-08-22T15:38:20.376Z"
+    },
+    "/tag/dental-bonding-austin/": {
+      "file": "tag-dental-bonding-austin.html",
+      "sha": "be02b81b5f894813",
+      "fetchedAt": "2026-08-22T15:38:21.205Z"
+    },
+    "/tag/dental-care-for-adults/": {
+      "file": "tag-dental-care-for-adults.html",
+      "sha": "e9490474734defa0",
+      "fetchedAt": "2026-08-22T15:38:21.888Z"
+    },
+    "/tag/dental-care-austin-tx/": {
+      "file": "tag-dental-care-austin-tx.html",
+      "sha": "cec2ab4aec189820",
+      "fetchedAt": "2026-08-22T15:38:22.011Z"
+    },
+    "/tag/dental-checkups-austin/": {
+      "file": "tag-dental-checkups-austin.html",
+      "sha": "e3f8d4294804aca6",
+      "fetchedAt": "2026-08-22T15:38:22.740Z"
+    },
+    "/tag/dental-cleanings-austin/": {
+      "file": "tag-dental-cleanings-austin.html",
+      "sha": "d4637b02d060ec0e",
+      "fetchedAt": "2026-08-22T15:38:23.579Z"
+    },
+    "/tag/dental-crowns-austin/": {
+      "file": "tag-dental-crowns-austin.html",
+      "sha": "907d14b9239e99de",
+      "fetchedAt": "2026-08-22T15:38:23.589Z"
+    },
+    "/tag/dental-implant/": {
+      "file": "tag-dental-implant.html",
+      "sha": "b70317f3e7572050",
+      "fetchedAt": "2026-08-22T15:38:24.340Z"
+    },
+    "/tag/dental-lounge-experience/": {
+      "file": "tag-dental-lounge-experience.html",
+      "sha": "7f7aa2c5cd1048e5",
+      "fetchedAt": "2026-08-22T15:38:25.118Z"
+    },
+    "/tag/dental-implants-austin/": {
+      "file": "tag-dental-implants-austin.html",
+      "sha": "650f6cf228bd2719",
+      "fetchedAt": "2026-08-22T15:38:25.250Z"
+    },
+    "/tag/dental-spa-austin/": {
+      "file": "tag-dental-spa-austin.html",
+      "sha": "16ddd94b7d2c09e1",
+      "fetchedAt": "2026-08-22T15:38:25.968Z"
+    },
+    "/tag/dental-technology/": {
+      "file": "tag-dental-technology.html",
+      "sha": "a82839f0595a5e94",
+      "fetchedAt": "2026-08-22T15:38:26.848Z"
+    },
+    "/tag/dental-touch-ups/": {
+      "file": "tag-dental-touch-ups.html",
+      "sha": "a184bc1d1eb3430c",
+      "fetchedAt": "2026-08-22T15:38:27.106Z"
+    },
+    "/tag/dental-wellness/": {
+      "file": "tag-dental-wellness.html",
+      "sha": "2eb8c1ab82aaa703",
+      "fetchedAt": "2026-08-22T15:38:28.006Z"
+    },
+    "/tag/dental-whitening/": {
+      "file": "tag-dental-whitening.html",
+      "sha": "9dcafae80e35b47e",
+      "fetchedAt": "2026-08-22T15:38:28.340Z"
+    },
+    "/tag/dentist-botox-injections-austin/": {
+      "file": "tag-dentist-botox-injections-austin.html",
+      "sha": "a29ab8f6d10d85a8",
+      "fetchedAt": "2026-08-22T15:38:28.732Z"
+    },
+    "/tag/dentist-in-austin/": {
+      "file": "tag-dentist-in-austin.html",
+      "sha": "8bd268ddd0892fc2",
+      "fetchedAt": "2026-08-22T15:38:29.639Z"
+    },
+    "/tag/dentist-near-downtown-austin/": {
+      "file": "tag-dentist-near-downtown-austin.html",
+      "sha": "3154a18f50303d3e",
+      "fetchedAt": "2026-08-22T15:38:30.043Z"
+    },
+    "/tag/digital-dental-imaging/": {
+      "file": "tag-digital-dental-imaging.html",
+      "sha": "6adbacb7458888cf",
+      "fetchedAt": "2026-08-22T15:38:30.243Z"
+    },
+    "/tag/downtown-austin-dentist/": {
+      "file": "tag-downtown-austin-dentist.html",
+      "sha": "e5a1a7624fcc50e2",
+      "fetchedAt": "2026-08-22T15:38:31.389Z"
+    },
+    "/tag/facial-aesthetics-dentist-austin/": {
+      "file": "tag-facial-aesthetics-dentist-austin.html",
+      "sha": "993cbc4531302e81",
+      "fetchedAt": "2026-08-22T15:38:31.878Z"
+    },
+    "/tag/express-dental-treatments/": {
+      "file": "tag-express-dental-treatments.html",
+      "sha": "5c9d0faf252d8aaa",
+      "fetchedAt": "2026-08-22T15:38:31.905Z"
+    },
+    "/tag/family-dentist-austin/": {
+      "file": "tag-family-dentist-austin.html",
+      "sha": "82171060b4209df5",
+      "fetchedAt": "2026-08-22T15:38:33.019Z"
+    },
+    "/tag/first-dental-visit/": {
+      "file": "tag-first-dental-visit.html",
+      "sha": "b4444808c7fb6620",
+      "fetchedAt": "2026-08-22T15:38:33.431Z"
+    },
+    "/tag/fear-of-the-dentist/": {
+      "file": "tag-fear-of-the-dentist.html",
+      "sha": "edf8e9f860de2a75",
+      "fetchedAt": "2026-08-22T15:38:33.516Z"
+    },
+    "/tag/gentle-dentistry/": {
+      "file": "tag-gentle-dentistry.html",
+      "sha": "6c9929fe75bb6d26",
+      "fetchedAt": "2026-08-22T15:38:34.495Z"
+    },
+    "/tag/gum-disease-and-heart-health/": {
+      "file": "tag-gum-disease-and-heart-health.html",
+      "sha": "6b12bcaad770bc74",
+      "fetchedAt": "2026-08-22T15:38:34.821Z"
+    },
+    "/tag/gum-disease-prevention/": {
+      "file": "tag-gum-disease-prevention.html",
+      "sha": "116ab3e28667b0a9",
+      "fetchedAt": "2026-08-22T15:38:35.065Z"
+    },
+    "/tag/healthy-gums-healthy-body/": {
+      "file": "tag-healthy-gums-healthy-body.html",
+      "sha": "0e618bada68798c8",
+      "fetchedAt": "2026-08-22T15:38:36.178Z"
+    },
+    "/tag/holistic-dentistry-austin/": {
+      "file": "tag-holistic-dentistry-austin.html",
+      "sha": "5448ba82c3eb6589",
+      "fetchedAt": "2026-08-22T15:38:36.509Z"
+    },
+    "/tag/how-to-whiten-teeth/": {
+      "file": "tag-how-to-whiten-teeth.html",
+      "sha": "32b87995da2e718e",
+      "fetchedAt": "2026-08-22T15:38:36.702Z"
+    },
+    "/tag/in-office-whitening/": {
+      "file": "tag-in-office-whitening.html",
+      "sha": "494b1d2ca6baed2a",
+      "fetchedAt": "2026-08-22T15:38:37.863Z"
+    },
+    "/tag/invisalign-austin-tx/": {
+      "file": "tag-invisalign-austin-tx.html",
+      "sha": "df89d9335c2fb218",
+      "fetchedAt": "2026-08-22T15:38:38.093Z"
+    },
+    "/tag/invisalign/": {
+      "file": "tag-invisalign.html",
+      "sha": "d40ead8527a5f620",
+      "fetchedAt": "2026-08-22T15:38:38.351Z"
+    },
+    "/tag/jaw-botox-austin/": {
+      "file": "tag-jaw-botox-austin.html",
+      "sha": "b20b25c4cbd5a0c0",
+      "fetchedAt": "2026-08-22T15:38:39.509Z"
+    },
+    "/tag/jaw-tension-relief-austin/": {
+      "file": "tag-jaw-tension-relief-austin.html",
+      "sha": "4e37a17cd8c8ab89",
+      "fetchedAt": "2026-08-22T15:38:39.516Z"
+    },
+    "/tag/jawline-contouring-austin/": {
+      "file": "tag-jawline-contouring-austin.html",
+      "sha": "2b2919479eed0396",
+      "fetchedAt": "2026-08-22T15:38:39.783Z"
+    },
+    "/tag/jawline-slimming-botox-austin/": {
+      "file": "tag-jawline-slimming-botox-austin.html",
+      "sha": "6c6c813d496f8e14",
+      "fetchedAt": "2026-08-22T15:38:41.029Z"
+    },
+    "/tag/lockjaw/": {
+      "file": "tag-lockjaw.html",
+      "sha": "42b595665c2df603",
+      "fetchedAt": "2026-08-22T15:38:41.036Z"
+    },
+    "/tag/masseter-botox-austin/": {
+      "file": "tag-masseter-botox-austin.html",
+      "sha": "98d8af0d4bb1b951",
+      "fetchedAt": "2026-08-22T15:38:41.200Z"
+    },
+    "/tag/masseter-reduction-austin/": {
+      "file": "tag-masseter-reduction-austin.html",
+      "sha": "85aa0deec9430787",
+      "fetchedAt": "2026-08-22T15:38:42.520Z"
+    },
+    "/tag/modern-dentistry-austin/": {
+      "file": "tag-modern-dentistry-austin.html",
+      "sha": "a84825081a3a0640",
+      "fetchedAt": "2026-08-22T15:38:42.525Z"
+    },
+    "/tag/modern-dentistry/": {
+      "file": "tag-modern-dentistry.html",
+      "sha": "e39f16b786f681c6",
+      "fetchedAt": "2026-08-22T15:38:42.672Z"
+    },
+    "/tag/nitrous-sedation-dentistry/": {
+      "file": "tag-nitrous-sedation-dentistry.html",
+      "sha": "4cacb7278c1a245c",
+      "fetchedAt": "2026-08-22T15:38:43.985Z"
+    },
+    "/tag/new-dental-patients/": {
+      "file": "tag-new-dental-patients.html",
+      "sha": "634bfea7194de97a",
+      "fetchedAt": "2026-08-22T15:38:44.137Z"
+    },
+    "/tag/oral-care-austin/": {
+      "file": "tag-oral-care-austin.html",
+      "sha": "757e4fbb1dfca3aa",
+      "fetchedAt": "2026-08-22T15:38:44.296Z"
+    },
+    "/tag/oral-care-tips/": {
+      "file": "tag-oral-care-tips.html",
+      "sha": "ff1f79e8dc0861a0",
+      "fetchedAt": "2026-08-22T15:38:45.397Z"
+    },
+    "/tag/oral-health-and-overall-health/": {
+      "file": "tag-oral-health-and-overall-health.html",
+      "sha": "5de39cdb6df4068f",
+      "fetchedAt": "2026-08-22T15:38:45.569Z"
+    },
+    "/tag/oral-health-austin/": {
+      "file": "tag-oral-health-austin.html",
+      "sha": "b2dd5b8ac9922a35",
+      "fetchedAt": "2026-08-22T15:38:45.751Z"
+    },
+    "/tag/oral-hygiene-tips/": {
+      "file": "tag-oral-hygiene-tips.html",
+      "sha": "e071941890f11821",
+      "fetchedAt": "2026-08-22T15:38:47.092Z"
+    },
+    "/tag/pain-free-dentistry-austin/": {
+      "file": "tag-pain-free-dentistry-austin.html",
+      "sha": "1e9a88d68ca06aa3",
+      "fetchedAt": "2026-08-22T15:38:47.176Z"
+    },
+    "/tag/patient-comfort-dentistry/": {
+      "file": "tag-patient-comfort-dentistry.html",
+      "sha": "960f37ac9f8f96a8",
+      "fetchedAt": "2026-08-22T15:38:47.353Z"
+    },
+    "/tag/patient-focused-dentistry/": {
+      "file": "tag-patient-focused-dentistry.html",
+      "sha": "f671cb32aa9c3cb8",
+      "fetchedAt": "2026-08-22T15:38:48.545Z"
+    },
+    "/tag/periodontal-health-austin/": {
+      "file": "tag-periodontal-health-austin.html",
+      "sha": "51dafd2d47a4eb0b",
+      "fetchedAt": "2026-08-22T15:38:48.627Z"
+    },
+    "/tag/porcelain-veneers-austin/": {
+      "file": "tag-porcelain-veneers-austin.html",
+      "sha": "6a441fede5d2a77f",
+      "fetchedAt": "2026-08-22T15:38:48.813Z"
+    },
+    "/tag/professional-whitening/": {
+      "file": "tag-professional-whitening.html",
+      "sha": "8621b1cd5665d73d",
+      "fetchedAt": "2026-08-22T15:38:50.055Z"
+    },
+    "/tag/preventive-dental-care/": {
+      "file": "tag-preventive-dental-care.html",
+      "sha": "cfed805798525226",
+      "fetchedAt": "2026-08-22T15:38:50.074Z"
+    },
+    "/tag/relaxing-dental-experience/": {
+      "file": "tag-relaxing-dental-experience.html",
+      "sha": "6dc85f0ed17783fc",
+      "fetchedAt": "2026-08-22T15:38:50.351Z"
+    },
+    "/tag/restorative-dentistry-austin/": {
+      "file": "tag-restorative-dentistry-austin.html",
+      "sha": "63c32773e4281c5d",
+      "fetchedAt": "2026-08-22T15:38:51.615Z"
+    },
+    "/tag/restorative-dentistry/": {
+      "file": "tag-restorative-dentistry.html",
+      "sha": "d015bc6b7658c662",
+      "fetchedAt": "2026-08-22T15:38:51.717Z"
+    },
+    "/tag/sedation-dentistry-austin/": {
+      "file": "tag-sedation-dentistry-austin.html",
+      "sha": "bfaf13a790a6442f",
+      "fetchedAt": "2026-08-22T15:38:51.768Z"
+    },
+    "/tag/smile-makeover-austin/": {
+      "file": "tag-smile-makeover-austin.html",
+      "sha": "1507a3a77d720a68",
+      "fetchedAt": "2026-08-22T15:38:53.421Z"
+    },
+    "/tag/sedation-dentistry/": {
+      "file": "tag-sedation-dentistry.html",
+      "sha": "207f7fd5a6f1b75f",
+      "fetchedAt": "2026-08-22T15:38:53.446Z"
+    },
+    "/tag/shame-free-dentistry-austin/": {
+      "file": "tag-shame-free-dentistry-austin.html",
+      "sha": "f1f97744020cb62e",
+      "fetchedAt": "2026-08-22T15:38:53.460Z"
+    },
+    "/tag/spa-dentistry-austin/": {
+      "file": "tag-spa-dentistry-austin.html",
+      "sha": "18b7be160d83b55d",
+      "fetchedAt": "2026-08-22T15:38:55.167Z"
+    },
+    "/tag/smile-makeover/": {
+      "file": "tag-smile-makeover.html",
+      "sha": "e71ff4aacf547e2b",
+      "fetchedAt": "2026-08-22T15:38:55.171Z"
+    },
+    "/tag/special-event-dental-prep/": {
+      "file": "tag-special-event-dental-prep.html",
+      "sha": "262a5b7d3cbade95",
+      "fetchedAt": "2026-08-22T15:38:55.191Z"
+    },
+    "/tag/teeth-cleaning-near-me/": {
+      "file": "tag-teeth-cleaning-near-me.html",
+      "sha": "320864f9994d8c16",
+      "fetchedAt": "2026-08-22T15:38:56.994Z"
+    },
+    "/tag/stress-free-dentistry/": {
+      "file": "tag-stress-free-dentistry.html",
+      "sha": "1dca37ca9269559d",
+      "fetchedAt": "2026-08-22T15:38:57.107Z"
+    },
+    "/tag/take-home-whitening-kits/": {
+      "file": "tag-take-home-whitening-kits.html",
+      "sha": "eaf04a81c937b254",
+      "fetchedAt": "2026-08-22T15:38:57.135Z"
+    },
+    "/tag/teeth-whitening-near-me/": {
+      "file": "tag-teeth-whitening-near-me.html",
+      "sha": "ffd1672db0c75fea",
+      "fetchedAt": "2026-08-22T15:38:58.800Z"
+    },
+    "/tag/teeth-cleaning/": {
+      "file": "tag-teeth-cleaning.html",
+      "sha": "ae5bfa4868ec199c",
+      "fetchedAt": "2026-08-22T15:38:58.864Z"
+    },
+    "/tag/teeth-whitening-austin/": {
+      "file": "tag-teeth-whitening-austin.html",
+      "sha": "f504c2fc5a2cc790",
+      "fetchedAt": "2026-08-22T15:38:59.060Z"
+    },
+    "/tag/teeth-whitening/": {
+      "file": "tag-teeth-whitening.html",
+      "sha": "5a25a301bce9f233",
+      "fetchedAt": "2026-08-22T15:39:00.874Z"
+    },
+    "/tag/tmj-dentist-downtown-austin/": {
+      "file": "tag-tmj-dentist-downtown-austin.html",
+      "sha": "49db889cbf94fda5",
+      "fetchedAt": "2026-08-22T15:39:01.180Z"
+    },
+    "/tag/tmj-pain-relief-dentist-austin/": {
+      "file": "tag-tmj-pain-relief-dentist-austin.html",
+      "sha": "ed564b062faaffb8",
+      "fetchedAt": "2026-08-22T15:39:01.321Z"
+    },
+    "/tag/tmj-specialist-austin/": {
+      "file": "tag-tmj-specialist-austin.html",
+      "sha": "3306a54e90668e04",
+      "fetchedAt": "2026-08-22T15:39:02.942Z"
+    },
+    "/tag/tmj/": {
+      "file": "tag-tmj.html",
+      "sha": "e3aae45ff100bc77",
+      "fetchedAt": "2026-08-22T15:39:03.224Z"
+    },
+    "/tag/tooth-grinding-treatment-austin/": {
+      "file": "tag-tooth-grinding-treatment-austin.html",
+      "sha": "fa1e72da09b5abe9",
+      "fetchedAt": "2026-08-22T15:39:04.074Z"
+    },
+    "/tag/toothbar-austin-tx/": {
+      "file": "tag-toothbar-austin-tx.html",
+      "sha": "534eb98c56747c1a",
+      "fetchedAt": "2026-08-22T15:39:04.981Z"
+    },
+    "/tag/toothbar-austin/": {
+      "file": "tag-toothbar-austin.html",
+      "sha": "f6282357d42a9578",
+      "fetchedAt": "2026-08-22T15:39:05.041Z"
+    },
+    "/tag/toothbar-jaw-botox/": {
+      "file": "tag-toothbar-jaw-botox.html",
+      "sha": "9b3c44092ccff8d5",
+      "fetchedAt": "2026-08-22T15:39:05.852Z"
+    },
+    "/tag/toothbar-lounge/": {
+      "file": "tag-toothbar-lounge.html",
+      "sha": "7fb21b5601ad9721",
+      "fetchedAt": "2026-08-22T15:39:06.666Z"
+    },
+    "/tag/top-rated-austin-dentist/": {
+      "file": "tag-top-rated-austin-dentist.html",
+      "sha": "a94de0f28a6cde6f",
+      "fetchedAt": "2026-08-22T15:39:06.741Z"
+    },
+    "/tag/top-rated-dentist-austin/": {
+      "file": "tag-top-rated-dentist-austin.html",
+      "sha": "e7ccb43b9646960f",
+      "fetchedAt": "2026-08-22T15:39:07.601Z"
+    },
+    "/tag/veneers-and-botox-austin/": {
+      "file": "tag-veneers-and-botox-austin.html",
+      "sha": "4971b93abdf10ac4",
+      "fetchedAt": "2026-08-22T15:39:08.655Z"
+    },
+    "/tag/total-body-health-dentist/": {
+      "file": "tag-total-body-health-dentist.html",
+      "sha": "0fd222188b10b300",
+      "fetchedAt": "2026-08-22T15:39:08.893Z"
+    },
+    "/tag/veneers-austin-tx/": {
+      "file": "tag-veneers-austin-tx.html",
+      "sha": "38603c5a03fae7dc",
+      "fetchedAt": "2026-08-22T15:39:09.533Z"
+    },
+    "/tag/wellness-dentistry/": {
+      "file": "tag-wellness-dentistry.html",
+      "sha": "29f889a72bb2a395",
+      "fetchedAt": "2026-08-22T15:39:10.170Z"
+    },
+    "/tag/white-smile-tips/": {
+      "file": "tag-white-smile-tips.html",
+      "sha": "9b26d785e9e8caf9",
+      "fetchedAt": "2026-08-22T15:39:10.463Z"
+    },
+    "/tag/whitening-for-weddings/": {
+      "file": "tag-whitening-for-weddings.html",
+      "sha": "ac19d462fd1836e4",
+      "fetchedAt": "2026-08-22T15:39:11.092Z"
+    },
+    "/tag/whiter-teeth-fast/": {
+      "file": "tag-whiter-teeth-fast.html",
+      "sha": "b16acf7ab55c103e",
+      "fetchedAt": "2026-08-22T15:39:11.719Z"
+    },
+    "/teeth-cleaning-last-longer/": {
+      "file": "teeth-cleaning-last-longer.html",
+      "sha": "9290280836412948",
+      "fetchedAt": "2026-08-22T15:39:12.030Z"
+    },
+    "/teeth-cleaning/": {
+      "file": "teeth-cleaning.html",
+      "sha": "8d090190670227bd",
+      "fetchedAt": "2026-08-22T15:39:12.659Z"
+    },
+    "/teeth-grinding-due-pandemic-stress/": {
+      "file": "teeth-grinding-due-pandemic-stress.html",
+      "sha": "925b68a14241358e",
+      "fetchedAt": "2026-08-22T15:39:13.314Z"
+    },
+    "/teeth-whitening-for-children/": {
+      "file": "teeth-whitening-for-children.html",
+      "sha": "0b20237c74fc4291",
+      "fetchedAt": "2026-08-22T15:39:13.779Z"
+    },
+    "/teeth-whitening/": {
+      "file": "teeth-whitening.html",
+      "sha": "d105585eef59bd86",
+      "fetchedAt": "2026-08-22T15:39:14.887Z"
+    },
+    "/the-benefits-of-invisalign-with-toothbar/": {
+      "file": "the-benefits-of-invisalign-with-toothbar.html",
+      "sha": "de8721d2976d008d",
+      "fetchedAt": "2026-08-22T15:39:15.185Z"
+    },
+    "/the-connection-between-oral-health-overall-health-what-austin-dentists-want-you-to-know/": {
+      "file": "the-connection-between-oral-health-overall-health-what-austin-dentists-want-you-to-know.html",
+      "sha": "fd7370d8df93b374",
+      "fetchedAt": "2026-08-22T15:39:16.182Z"
+    },
+    "/the-effects-of-smoking-on-your-teeth/": {
+      "file": "the-effects-of-smoking-on-your-teeth.html",
+      "sha": "debf7a2386418ee8",
+      "fetchedAt": "2026-08-22T15:39:16.945Z"
+    },
+    "/times-where-a-dental-inlay-is-the-best-option/": {
+      "file": "times-where-a-dental-inlay-is-the-best-option.html",
+      "sha": "19fbaf25f28ca6e5",
+      "fetchedAt": "2026-08-22T15:39:17.133Z"
+    },
+    "/tips-for-picking-the-right-toothpaste/": {
+      "file": "tips-for-picking-the-right-toothpaste.html",
+      "sha": "15be3fe293a1ebaf",
+      "fetchedAt": "2026-08-22T15:39:17.888Z"
+    },
+    "/tips-to-know-when-travelling-with-invisalign/": {
+      "file": "tips-to-know-when-travelling-with-invisalign.html",
+      "sha": "23531a6be39722f9",
+      "fetchedAt": "2026-08-22T15:39:18.556Z"
+    },
+    "/tonsil-stones-causes-symptoms-and-treatment/": {
+      "file": "tonsil-stones-causes-symptoms-and-treatment.html",
+      "sha": "dfa3044c4da80b7c",
+      "fetchedAt": "2026-08-22T15:39:18.769Z"
+    },
+    "/tooth-abscess-go-away-on-its-own/": {
+      "file": "tooth-abscess-go-away-on-its-own.html",
+      "sha": "eaeda365266179bb",
+      "fetchedAt": "2026-08-22T15:39:19.482Z"
+    },
+    "/tooth-extractions/": {
+      "file": "tooth-extractions.html",
+      "sha": "2fdf7e85fb35f75e",
+      "fetchedAt": "2026-08-22T15:39:20.146Z"
+    },
+    "/tooth-mobility-and-tooth-loss/": {
+      "file": "tooth-mobility-and-tooth-loss.html",
+      "sha": "3fe47ef7db548b66",
+      "fetchedAt": "2026-08-22T15:39:20.366Z"
+    },
+    "/toothbar-austin-tx-teeth-whitening/": {
+      "file": "toothbar-austin-tx-teeth-whitening.html",
+      "sha": "23c7ae2ff98d0237",
+      "fetchedAt": "2026-08-22T15:39:21.086Z"
+    },
+    "/toothbar-wins-the-design-innovation-awards/": {
+      "file": "toothbar-wins-the-design-innovation-awards.html",
+      "sha": "8f818922355325a1",
+      "fetchedAt": "2026-08-22T15:39:21.825Z"
+    },
+    "/toothbars-tips-to-prevent-gum-disease/": {
+      "file": "toothbars-tips-to-prevent-gum-disease.html",
+      "sha": "f2d95fa54c430182",
+      "fetchedAt": "2026-08-22T15:39:21.854Z"
+    },
+    "/travel-tips-for-your-teeth/": {
+      "file": "travel-tips-for-your-teeth.html",
+      "sha": "eb73b29247edd805",
+      "fetchedAt": "2026-08-22T15:39:22.665Z"
+    },
+    "/type-of-sedation/": {
+      "file": "type-of-sedation.html",
+      "sha": "cc4f4c191e3dbaaf",
+      "fetchedAt": "2026-08-22T15:39:23.395Z"
+    },
+    "/try-invisalign-for-crossbite/": {
+      "file": "try-invisalign-for-crossbite.html",
+      "sha": "2f2e3e7bc2d94061",
+      "fetchedAt": "2026-08-22T15:39:23.569Z"
+    },
+    "/types-of-dental-implants/": {
+      "file": "types-of-dental-implants.html",
+      "sha": "1307067316ccccfb",
+      "fetchedAt": "2026-08-22T15:39:24.478Z"
+    },
+    "/types-of-teeth-and-their-function/": {
+      "file": "types-of-teeth-and-their-function.html",
+      "sha": "06949ea193ba63a0",
+      "fetchedAt": "2026-08-22T15:39:25.113Z"
+    },
+    "/understanding-dental-veneers/": {
+      "file": "understanding-dental-veneers.html",
+      "sha": "9ab2f1e528264388",
+      "fetchedAt": "2026-08-22T15:39:25.285Z"
+    },
+    "/unlock-a-locked-jaw/": {
+      "file": "unlock-a-locked-jaw.html",
+      "sha": "70052d1c2f177075",
+      "fetchedAt": "2026-08-22T15:39:26.529Z"
+    },
+    "/vaping-and-oral-health/": {
+      "file": "vaping-and-oral-health.html",
+      "sha": "66f870b11279d280",
+      "fetchedAt": "2026-08-22T15:39:27.010Z"
+    },
+    "/ways-to-prevent-a-poor-bite/": {
+      "file": "ways-to-prevent-a-poor-bite.html",
+      "sha": "a842beb9f770e6fc",
+      "fetchedAt": "2026-08-22T15:39:27.323Z"
+    },
+    "/ways-to-protect-childrens-teeth/": {
+      "file": "ways-to-protect-childrens-teeth.html",
+      "sha": "f3726bfec51e5d91",
+      "fetchedAt": "2026-08-22T15:39:28.057Z"
+    },
+    "/ways-to-reduce-dental-anxiety-at-the-dentist/": {
+      "file": "ways-to-reduce-dental-anxiety-at-the-dentist.html",
+      "sha": "9dfdff967f88d3de",
+      "fetchedAt": "2026-08-22T15:39:28.727Z"
+    },
+    "/ways-to-reduce-teeth-grinding/": {
+      "file": "ways-to-reduce-teeth-grinding.html",
+      "sha": "234f8b356034f7af",
+      "fetchedAt": "2026-08-22T15:39:29.350Z"
+    },
+    "/ways-unknowingly-harming-teeth/": {
+      "file": "ways-unknowingly-harming-teeth.html",
+      "sha": "19749fd96a2236fe",
+      "fetchedAt": "2026-08-22T15:39:29.919Z"
+    },
+    "/what-are-dental-sealants/": {
+      "file": "what-are-dental-sealants.html",
+      "sha": "c6a735ae3c69ddd5",
+      "fetchedAt": "2026-08-22T15:39:30.516Z"
+    },
+    "/what-are-no-prep-veneers/": {
+      "file": "what-are-no-prep-veneers.html",
+      "sha": "93d7607ae94116b0",
+      "fetchedAt": "2026-08-22T15:39:31.163Z"
+    },
+    "/what-are-the-advantages-of-mouthwash/": {
+      "file": "what-are-the-advantages-of-mouthwash.html",
+      "sha": "43547530d6982d58",
+      "fetchedAt": "2026-08-22T15:39:31.528Z"
+    },
+    "/what-causes-lockjaw/": {
+      "file": "what-causes-lockjaw.html",
+      "sha": "ead6ad2755c3f6ef",
+      "fetchedAt": "2026-08-22T15:39:32.533Z"
+    },
+    "/what-does-your-saliva-reveal/": {
+      "file": "what-does-your-saliva-reveal.html",
+      "sha": "37f9f9a6cc6b0874",
+      "fetchedAt": "2026-08-22T15:39:33.028Z"
+    },
+    "/what-happens-if-you-smoke-with-dental-implants/": {
+      "file": "what-happens-if-you-smoke-with-dental-implants.html",
+      "sha": "5ddc482bf5c821fa",
+      "fetchedAt": "2026-08-22T15:39:33.768Z"
+    },
+    "/what-happens-remove-wisdom-teeth/": {
+      "file": "what-happens-remove-wisdom-teeth.html",
+      "sha": "3896e3248bb3574d",
+      "fetchedAt": "2026-08-22T15:39:34.453Z"
+    },
+    "/what-happens-to-teeth-under-veneers/": {
+      "file": "what-happens-to-teeth-under-veneers.html",
+      "sha": "bb452136f121cc16",
+      "fetchedAt": "2026-08-22T15:39:34.965Z"
+    },
+    "/what-is-a-bridge-dentist/": {
+      "file": "what-is-a-bridge-dentist.html",
+      "sha": "c8d40c527c631cf0",
+      "fetchedAt": "2026-08-22T15:39:35.534Z"
+    },
+    "/what-is-a-deep-dental-cleaning/": {
+      "file": "what-is-a-deep-dental-cleaning.html",
+      "sha": "4964f49b3b295e81",
+      "fetchedAt": "2026-08-22T15:39:36.552Z"
+    },
+    "/what-is-a-dental-bridge/": {
+      "file": "what-is-a-dental-bridge.html",
+      "sha": "68f34a1817273a72",
+      "fetchedAt": "2026-08-22T15:39:36.868Z"
+    },
+    "/what-is-a-dental-crown/": {
+      "file": "what-is-a-dental-crown.html",
+      "sha": "00eb722d11ec3adf",
+      "fetchedAt": "2026-08-22T15:39:37.574Z"
+    },
+    "/what-is-a-scale-polish/": {
+      "file": "what-is-a-scale-polish.html",
+      "sha": "14aa06bab22d47c3",
+      "fetchedAt": "2026-08-22T15:39:38.323Z"
+    },
+    "/what-is-considered-a-dental-emergency/": {
+      "file": "what-is-considered-a-dental-emergency.html",
+      "sha": "2a604bf546ee4e95",
+      "fetchedAt": "2026-08-22T15:39:38.944Z"
+    },
+    "/what-is-cosmetic-bonding/": {
+      "file": "what-is-cosmetic-bonding.html",
+      "sha": "9aef8133f2d2fa97",
+      "fetchedAt": "2026-08-22T15:39:39.519Z"
+    },
+    "/what-is-cosmetic-dentistry/": {
+      "file": "what-is-cosmetic-dentistry.html",
+      "sha": "968e653772078403",
+      "fetchedAt": "2026-08-22T15:39:39.987Z"
+    },
+    "/what-is-digital-imaging/": {
+      "file": "what-is-digital-imaging.html",
+      "sha": "63683f0c99932ea3",
+      "fetchedAt": "2026-08-22T15:39:40.648Z"
+    },
+    "/what-is-dmd-dentist/": {
+      "file": "what-is-dmd-dentist.html",
+      "sha": "147a86d47d8891ca",
+      "fetchedAt": "2026-08-22T15:39:41.294Z"
+    },
+    "/what-is-invisalign/": {
+      "file": "what-is-invisalign.html",
+      "sha": "d72a8d1fda80ccfe",
+      "fetchedAt": "2026-08-22T15:39:41.818Z"
+    },
+    "/what-is-the-best-teeth-whitening-method/": {
+      "file": "what-is-the-best-teeth-whitening-method.html",
+      "sha": "79e0edeedde978a9",
+      "fetchedAt": "2026-08-22T15:39:42.307Z"
+    },
+    "/what-problems-can-cosmetic-dentistry-fix/": {
+      "file": "what-problems-can-cosmetic-dentistry-fix.html",
+      "sha": "df8805dde75a86f3",
+      "fetchedAt": "2026-08-22T15:39:43.037Z"
+    },
+    "/what-to-do-if-you-chipped-a-tooth/": {
+      "file": "what-to-do-if-you-chipped-a-tooth.html",
+      "sha": "cc159625a53554e1",
+      "fetchedAt": "2026-08-22T15:39:43.495Z"
+    },
+    "/what-to-eat-after-wisdom-teeth-removal/": {
+      "file": "what-to-eat-after-wisdom-teeth-removal.html",
+      "sha": "0d2f88edd4e248d7",
+      "fetchedAt": "2026-08-22T15:39:44.062Z"
+    },
+    "/what-to-know-about-dentures/": {
+      "file": "what-to-know-about-dentures.html",
+      "sha": "88cbfb7e87192eaf",
+      "fetchedAt": "2026-08-22T15:39:44.708Z"
+    },
+    "/whats-this-white-spot-on-my-tongue/": {
+      "file": "whats-this-white-spot-on-my-tongue.html",
+      "sha": "c8d347407b041446",
+      "fetchedAt": "2026-08-22T15:39:45.028Z"
+    },
+    "/when-you-should-consider-dentures/": {
+      "file": "when-you-should-consider-dentures.html",
+      "sha": "e9d4b61cf39da727",
+      "fetchedAt": "2026-08-22T15:39:45.675Z"
+    },
+    "/white-spots-on-my-teeth/": {
+      "file": "white-spots-on-my-teeth.html",
+      "sha": "95f339ec91a7aabe",
+      "fetchedAt": "2026-08-22T15:39:46.442Z"
+    },
+    "/who-we-are/": {
+      "file": "who-we-are.html",
+      "sha": "f930478de09c0706",
+      "fetchedAt": "2026-08-22T15:39:46.684Z"
+    },
+    "/why-a-great-smile-is-so-important/": {
+      "file": "why-a-great-smile-is-so-important.html",
+      "sha": "16507fdc1346dace",
+      "fetchedAt": "2026-08-22T15:39:47.248Z"
+    },
+    "/why-dental-hygiene-is-important/": {
+      "file": "why-dental-hygiene-is-important.html",
+      "sha": "74234601af97bc2b",
+      "fetchedAt": "2026-08-22T15:39:48.049Z"
+    },
+    "/why-do-i-need-temporary-veneers/": {
+      "file": "why-do-i-need-temporary-veneers.html",
+      "sha": "042de4d5bbd620bc",
+      "fetchedAt": "2026-08-22T15:39:48.234Z"
+    },
+    "/why-do-my-gums-feel-itchy/": {
+      "file": "why-do-my-gums-feel-itchy.html",
+      "sha": "cbbe1372e01d5428",
+      "fetchedAt": "2026-08-22T15:39:48.884Z"
+    },
+    "/why-do-whitening-strips-hurt/": {
+      "file": "why-do-whitening-strips-hurt.html",
+      "sha": "a06738c36aaa0a09",
+      "fetchedAt": "2026-08-22T15:39:49.648Z"
+    },
+    "/why-is-dry-mouth-risky-for-your-teeth/": {
+      "file": "why-is-dry-mouth-risky-for-your-teeth.html",
+      "sha": "2c5fc0ae6fe0e9a3",
+      "fetchedAt": "2026-08-22T15:39:49.891Z"
+    },
+    "/why-is-my-dental-crown-hurting/": {
+      "file": "why-is-my-dental-crown-hurting.html",
+      "sha": "39b2794636b644df",
+      "fetchedAt": "2026-08-22T15:39:50.493Z"
+    },
+    "/why-tongue-health-is-important/": {
+      "file": "why-tongue-health-is-important.html",
+      "sha": "fab883c6b2eb6bba",
+      "fetchedAt": "2026-08-22T15:39:51.246Z"
+    },
+    "/why-you-bite-your-cheek-and-how-to-stop/": {
+      "file": "why-you-bite-your-cheek-and-how-to-stop.html",
+      "sha": "dd4d20de4d8e4470",
+      "fetchedAt": "2026-08-22T15:39:51.523Z"
+    },
+    "/will-gums-grow-back-contouring-surgery/": {
+      "file": "will-gums-grow-back-contouring-surgery.html",
+      "sha": "0b30380fa60632db",
+      "fetchedAt": "2026-08-22T15:39:52.122Z"
+    },
+    "/will-invisalign-change-my-speech/": {
+      "file": "will-invisalign-change-my-speech.html",
+      "sha": "810961fc91b1d34f",
+      "fetchedAt": "2026-08-22T15:39:52.651Z"
+    },
+    "/winner-for-the-new-build-category/": {
+      "file": "winner-for-the-new-build-category.html",
+      "sha": "addb061156d8dd88",
+      "fetchedAt": "2026-08-22T15:39:53.199Z"
+    }
+  },
+  "assets": {
+    "/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widget.css": {
+      "sha": "9f9a2460f9858396",
+      "bytes": 3933
+    },
+    "/wp-content/uploads/2026/05/AdobeStock_187242830__37___1778007828_95213.jpg": {
+      "sha": "2b5c4b5b5b9c46e2",
+      "bytes": 42742
+    },
+    "/wp-includes/css/dist/block-library/style.min.css": {
+      "sha": "81511e960d890828",
+      "bytes": 140761
+    },
+    "/wp-content/plugins/elementor/assets/css/frontend.min.css": {
+      "sha": "0a5d398672e25dc7",
+      "bytes": 54666
+    },
+    "/wp-content/uploads/elementor/css/post-186.css": {
+      "sha": "342e614f2a11f5aa",
+      "bytes": 13242
+    },
+    "/wp-content/uploads/elementor/css/post-654.css": {
+      "sha": "fcde7c37853ed386",
+      "bytes": 31461
+    },
+    "/wp-content/themes/hello-elementor/assets/css/reset.css": {
+      "sha": "2f01a854a759c0a6",
+      "bytes": 5456
+    },
+    "/wp-content/themes/hello-elementor/assets/css/theme.css": {
+      "sha": "9a7cfe03ec763818",
+      "bytes": 5097
+    },
+    "/wp-content/themes/hello-elementor/assets/css/header-footer.css": {
+      "sha": "5052c28c33de9956",
+      "bytes": 7182
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css": {
+      "sha": "dad3795cefb3d9f5",
+      "bytes": 198
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-image.min.css": {
+      "sha": "fb8690e594b2f9b8",
+      "bytes": 214
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css": {
+      "sha": "d9c370831c74b185",
+      "bytes": 77
+    },
+    "/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css": {
+      "sha": "cf502b45ef8bcae3",
+      "bytes": 6713
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css": {
+      "sha": "91079644ee1e7614",
+      "bytes": 5110
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-heading.min.css": {
+      "sha": "f68e889145cb0e47",
+      "bytes": 560
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-divider.min.css": {
+      "sha": "f042f3243af9c3e3",
+      "bytes": 4258
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-google_maps.min.css": {
+      "sha": "dd9c588958cd66ea",
+      "bytes": 261
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css": {
+      "sha": "1b34d4c7324321e3",
+      "bytes": 10255
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css": {
+      "sha": "13037a61480cee3d",
+      "bytes": 137
+    },
+    "/wp-content/plugins/elementor/assets/css/conditionals/shapes.min.css": {
+      "sha": "c5feb6bfb7973d12",
+      "bytes": 645
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/modules/motion-fx.min.css": {
+      "sha": "830e206b42444c7b",
+      "bytes": 778
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css": {
+      "sha": "398e2425ac154b75",
+      "bytes": 4726
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css": {
+      "sha": "f816256388ebc664",
+      "bytes": 27363
+    },
+    "/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInRight.min.css": {
+      "sha": "80a88126612557f5",
+      "bytes": 139
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/conditionals/popup.min.css": {
+      "sha": "3e86e49c78cd2bef",
+      "bytes": 995
+    },
+    "/wp-content/uploads/elementor/css/post-76.css": {
+      "sha": "9b8dbb93a8880371",
+      "bytes": 10322
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css": {
+      "sha": "c6b4e990dd45cb5f",
+      "bytes": 22258
+    },
+    "/wp-content/uploads/elementor/css/post-77.css": {
+      "sha": "5469ccf794db2f4c",
+      "bytes": 33791
+    },
+    "/wp-content/uploads/elementor/css/post-505.css": {
+      "sha": "dc511db696492762",
+      "bytes": 10295
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/common.css": {
+      "sha": "df5fcebef7c9b1eb",
+      "bytes": 201699
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/nav-menu.css": {
+      "sha": "10e38e4356c428f4",
+      "bytes": 21806
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-search.css": {
+      "sha": "be0057fb4cf94e78",
+      "bytes": 3592
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-offcanvas.css": {
+      "sha": "3e288a64fb569b0d",
+      "bytes": 3012
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/header-info.css": {
+      "sha": "44c4249fac35367f",
+      "bytes": 422
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/marcellus.css": {
+      "sha": "bf2c7b008a4d7ba2",
+      "bytes": 881
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/overpass.css": {
+      "sha": "f3d07766b72149f9",
+      "bytes": 34857
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/montserrat.css": {
+      "sha": "692a8f6d5356874c",
+      "bytes": 35442
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/lato.css": {
+      "sha": "0e5f90c84c347186",
+      "bytes": 8564
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/poppins.css": {
+      "sha": "a2ec132249cfc14d",
+      "bytes": 15792
+    },
+    "/wp-content/uploads/elementor/google-fonts/css/outfit.css": {
+      "sha": "19df2b53b2d84430",
+      "bytes": 7749
+    },
+    "/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css": {
+      "sha": "134b35ef34e29434",
+      "bytes": 83510
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css": {
+      "sha": "eea3d6ccda7f6503",
+      "bytes": 677
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css": {
+      "sha": "37bab6cd583982e8",
+      "bytes": 669
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css": {
+      "sha": "fafc4160788beca6",
+      "bytes": 58071
+    },
+    "/wp-includes/js/jquery/jquery-migrate.min.js": {
+      "sha": "5274f11e6fb32ae0",
+      "bytes": 13577
+    },
+    "/wp-content/uploads/2024/10/cropped-faviconV2-32x32.png": {
+      "sha": "53318da2bda3b7a7",
+      "bytes": 881
+    },
+    "/wp-content/uploads/2024/10/cropped-faviconV2-192x192.png": {
+      "sha": "2bc853357b3b149a",
+      "bytes": 12093
+    },
+    "/wp-content/uploads/2024/10/cropped-faviconV2-180x180.png": {
+      "sha": "c6efc571f496819b",
+      "bytes": 11428
+    },
+    "/wp-content/uploads/2024/10/logo-3.png": {
+      "sha": "d5ef0f7e3517adbb",
+      "bytes": 4870
+    },
+    "/wp-includes/js/jquery/jquery.min.js": {
+      "sha": "cb6f2d32c49d1c2b",
+      "bytes": 87553
+    },
+    "/wp-content/uploads/2026/05/AdobeStock_187242830__37___1778007828_95213-300x200.jpg": {
+      "sha": "a03a26610be2e282",
+      "bytes": 8492
+    },
+    "/wp-content/uploads/2026/05/AdobeStock_187242830__37___1778007828_95213-768x512.jpg": {
+      "sha": "f3b30213f22681be",
+      "bytes": 33895
+    },
+    "/wp-content/uploads/2024/10/cropped-faviconV2-270x270.png": {
+      "sha": "fbe6789f221733d2",
+      "bytes": 19376
+    },
+    "/wp-content/uploads/elementor/css/post-304.css": {
+      "sha": "9fc8ec511223e0e7",
+      "bytes": 8574
+    },
+    "/wp-content/uploads/elementor/css/post-298.css": {
+      "sha": "95ea2c59a655b622",
+      "bytes": 29851
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css": {
+      "sha": "6f0b2e96bd88c2d8",
+      "bytes": 162
+    },
+    "/wp-content/plugins/fluentform/assets/css/fluent-forms-public.css": {
+      "sha": "84528cf64dce364f",
+      "bytes": 44165
+    },
+    "/wp-content/plugins/fluentform/assets/css/fluentform-public-default.css": {
+      "sha": "b920eba31c8b756a",
+      "bytes": 3595
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css": {
+      "sha": "9cd63b8cea25045c",
+      "bytes": 675
+    },
+    "/wp-content/plugins/fluentform/assets/js/fluent-forms-elementor-widget.js": {
+      "sha": "01ec2e58020a9aea",
+      "bytes": 751
+    },
+    "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf": {
+      "sha": "39ce37652770dae6",
+      "bytes": 180699
+    },
+    "/wp-content/themes/hello-elementor/assets/js/hello-frontend.js": {
+      "sha": "268cae8c2e7a7330",
+      "bytes": 1830
+    },
+    "/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js": {
+      "sha": "b374e10bcffae8cc",
+      "bytes": 5819
+    },
+    "/wp-content/plugins/elementor/assets/js/frontend-modules.min.js": {
+      "sha": "c66f47147d5fe3cc",
+      "bytes": 50602
+    },
+    "/wp-includes/js/jquery/ui/core.min.js": {
+      "sha": "b7a27a4b4abfc300",
+      "bytes": 18674
+    },
+    "/wp-content/plugins/elementor/assets/js/frontend.min.js": {
+      "sha": "1842d6e4d3c7399f",
+      "bytes": 32098
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/core.js": {
+      "sha": "c12a1d1ec37a647e",
+      "bytes": 2928
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/nav-menu.js": {
+      "sha": "30c5d1dde6568f76",
+      "bytes": 3154
+    },
+    "/wp-content/plugins/elementskit-lite/assets/libs/magnific-popup/jquery.magnific-popup.min.js": {
+      "sha": "36ff873ebe85ca30",
+      "bytes": 20849
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/nav-menu.js": {
+      "sha": "45de0e5c45a5d81e",
+      "bytes": 1778
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/header-search.js": {
+      "sha": "95720581303ec7ce",
+      "bytes": 589
+    },
+    "/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js": {
+      "sha": "34bbd1c367ffc7d8",
+      "bytes": 3721
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/header-offcanvas.js": {
+      "sha": "c14960982664ef67",
+      "bytes": 485
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js": {
+      "sha": "572ba6815ff75cb8",
+      "bytes": 6242
+    },
+    "/wp-includes/js/dist/hooks.min.js": {
+      "sha": "fc774906082b59de",
+      "bytes": 5107
+    },
+    "/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js": {
+      "sha": "f9b60ae2f2938c58",
+      "bytes": 24109
+    },
+    "/wp-includes/js/dist/i18n.min.js": {
+      "sha": "5083905862c2b7aa",
+      "bytes": 5791
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/frontend.min.js": {
+      "sha": "d46a627fff19a13c",
+      "bytes": 23939
+    },
+    "/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js": {
+      "sha": "ebab28651fc9ac84",
+      "bytes": 43922
+    },
+    "/wp-includes/js/wp-emoji-release.min.js": {
+      "sha": "063840b4b3f5869e",
+      "bytes": 22752
+    },
+    "/wp-includes/js/wp-emoji-loader.min.js": {
+      "sha": "2312e2af7de8ecba",
+      "bytes": 2977
+    },
+    "/wp-content/uploads/2022/06/danielle-profile1-tiny.jpg": {
+      "sha": "621d63fa64a3e8ba",
+      "bytes": 39552
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-call-to-action.min.css": {
+      "sha": "d81ef7a8d87b5f22",
+      "bytes": 11027
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/conditionals/transitions.min.css": {
+      "sha": "63bc9667d37a904f",
+      "bytes": 7256
+    },
+    "/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css": {
+      "sha": "b7908a015a567ec2",
+      "bytes": 11256
+    },
+    "/wp-includes/js/mediaelement/wp-mediaelement.min.css": {
+      "sha": "2e10d353ff038c2c",
+      "bytes": 4186
+    },
+    "/wp-content/plugins/elementskit-lite/assets/libs/magnific-popup/magnific-popup.css": {
+      "sha": "3c0655d78ef5492e",
+      "bytes": 7488
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/css/video.css": {
+      "sha": "3a11edda4c7501aa",
+      "bytes": 10751
+    },
+    "/wp-content/plugins/elementor/assets/css/widget-spacer.min.css": {
+      "sha": "808a659eb4e85607",
+      "bytes": 1793
+    },
+    "/wp-content/uploads/2024/11/feaured-toothbar.jpg": {
+      "sha": "619c25bb367def33",
+      "bytes": 281484
+    },
+    "/wp-content/uploads/elementor/css/post-6.css": {
+      "sha": "f309252f8e110764",
+      "bytes": 108509
+    },
+    "/wp-content/uploads/2023/04/69041b_03cc837a6e15445a87e39fbe98dfd103mv2_d_1920_1279_s_2-1-1024x682.webp": {
+      "sha": "c3baf5d9fffabaf7",
+      "bytes": 42846
+    },
+    "/wp-content/uploads/2024/10/jaw-measurement-system-on-a-young-woman-patient-1024x684.jpg": {
+      "sha": "05c547735ff8e0ad",
+      "bytes": 71452
+    },
+    "/wp-content/uploads/2024/10/344695414_616120447091195_3792298587403524302_n-819x1024.jpg": {
+      "sha": "77c7d5421faa99a9",
+      "bytes": 188693
+    },
+    "/wp-content/uploads/2024/10/woman-with-perfect-smile-on-vacation-1024x682.jpg": {
+      "sha": "678733a63d15326a",
+      "bytes": 86905
+    },
+    "/wp-content/uploads/2024/10/333808105_1539001909933535_8834971831067339394_n-1024x1024.jpg": {
+      "sha": "b396e17977c240cf",
+      "bytes": 104426
+    },
+    "/wp-content/uploads/2024/10/merry-young-woman-demonstrating-perfect-smile-in-clinic-1024x682.jpg": {
+      "sha": "ba6fcd40ddfd6752",
+      "bytes": 65234
+    },
+    "/wp-content/uploads/2024/10/the-perfect-smile-683x1024.jpg": {
+      "sha": "e54b7b09203cfe0d",
+      "bytes": 70920
+    },
+    "/wp-content/uploads/2024/10/315113162_1115515139095857_1789880300819776704_n-1024x1024.jpg": {
+      "sha": "6d79a2aec3370f6f",
+      "bytes": 75186
+    },
+    "/wp-content/uploads/2024/10/orthodontics-concept-smiling-muslim-woman-in-hijab-holding-invisalign-or-invisible-braces-1024x676.jpg": {
+      "sha": "2b9d94f759a91f6f",
+      "bytes": 55516
+    },
+    "/wp-content/uploads/2024/10/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-1024x682.webp": {
+      "sha": "40e2a43d38001621",
+      "bytes": 76338
+    },
+    "/wp-content/uploads/2024/10/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-300x200.webp": {
+      "sha": "f541579cc598c175",
+      "bytes": 15440
+    },
+    "/wp-content/uploads/2024/10/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-768x512.webp": {
+      "sha": "4bf65764c325118d",
+      "bytes": 54408
+    },
+    "/wp-content/uploads/2024/10/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2.webp": {
+      "sha": "fee2ba37e4dde24a",
+      "bytes": 127876
+    },
+    "/wp-content/uploads/2024/10/424989362_18252964084171878_618563660031298880_n-150x150.jpg": {
+      "sha": "5b036ea6aaf62a46",
+      "bytes": 6812
+    },
+    "/wp-content/uploads/2024/10/424989362_18252964084171878_618563660031298880_n-300x300.jpg": {
+      "sha": "af82845d0d585b03",
+      "bytes": 18511
+    },
+    "/wp-content/uploads/2024/10/424989362_18252964084171878_618563660031298880_n-1024x1024.jpg": {
+      "sha": "4a902b4d61453b72",
+      "bytes": 105325
+    },
+    "/wp-content/uploads/2024/10/424989362_18252964084171878_618563660031298880_n-768x768.jpg": {
+      "sha": "d24792242c9cf5f1",
+      "bytes": 69722
+    },
+    "/wp-content/uploads/2024/10/424989362_18252964084171878_618563660031298880_n.jpg": {
+      "sha": "dec1eb22f212d085",
+      "bytes": 113963
+    },
+    "/wp-content/uploads/2024/10/69041b_05f42ce66a15429a98da6d1720127b54mv2_d_1920_1279_s_2-1024x682.webp": {
+      "sha": "b1985f04b1eebaf2",
+      "bytes": 63080
+    },
+    "/wp-content/uploads/2024/10/69041b_05f42ce66a15429a98da6d1720127b54mv2_d_1920_1279_s_2-300x200.webp": {
+      "sha": "7c0ce990eeb6db4e",
+      "bytes": 11858
+    },
+    "/wp-content/uploads/2024/10/69041b_05f42ce66a15429a98da6d1720127b54mv2_d_1920_1279_s_2-768x512.webp": {
+      "sha": "e284e164ca11f811",
+      "bytes": 43728
+    },
+    "/wp-content/uploads/2024/10/69041b_05f42ce66a15429a98da6d1720127b54mv2_d_1920_1279_s_2.webp": {
+      "sha": "5ba04533fc9527ba",
+      "bytes": 108810
+    },
+    "/wp-content/uploads/2024/10/454785234_18271547023171878_8329438457344307971_n-150x150.jpg": {
+      "sha": "00aab50cda110a49",
+      "bytes": 5936
+    },
+    "/wp-content/uploads/2024/10/454785234_18271547023171878_8329438457344307971_n-300x300.jpg": {
+      "sha": "f74a1e9896eb67b2",
+      "bytes": 16481
+    },
+    "/wp-content/uploads/2024/10/454785234_18271547023171878_8329438457344307971_n-1024x1024.jpg": {
+      "sha": "9c3872b6d1c2b320",
+      "bytes": 109536
+    },
+    "/wp-content/uploads/2024/10/454785234_18271547023171878_8329438457344307971_n-768x768.jpg": {
+      "sha": "10cddc67fc43ac90",
+      "bytes": 69102
+    },
+    "/wp-content/uploads/2024/10/69041b_443055cc6b564253b67995ba5ee0d6d9mv2_d_1884_1279_s_2-1024x696.webp": {
+      "sha": "f591068cf37a720e",
+      "bytes": 30914
+    },
+    "/wp-content/uploads/2024/10/454785234_18271547023171878_8329438457344307971_n.jpg": {
+      "sha": "7e5af4a31745c1aa",
+      "bytes": 151243
+    },
+    "/wp-content/uploads/2024/10/69041b_443055cc6b564253b67995ba5ee0d6d9mv2_d_1884_1279_s_2-300x204.webp": {
+      "sha": "44ed5b4c868d3528",
+      "bytes": 7656
+    },
+    "/wp-content/uploads/2024/10/69041b_443055cc6b564253b67995ba5ee0d6d9mv2_d_1884_1279_s_2-768x522.webp": {
+      "sha": "a2fb608dc3e6b0e6",
+      "bytes": 22256
+    },
+    "/wp-content/uploads/2024/10/69041b_443055cc6b564253b67995ba5ee0d6d9mv2_d_1884_1279_s_2.webp": {
+      "sha": "c7c2f7faa0a15f0e",
+      "bytes": 48184
+    },
+    "/wp-content/uploads/2024/10/69041b_bc06192bba1c4b7c8187fe13628de228mv2_d_1865_1279_s_2-300x206.webp": {
+      "sha": "5122404a99bdd4d9",
+      "bytes": 18814
+    },
+    "/wp-content/uploads/2024/10/69041b_bc06192bba1c4b7c8187fe13628de228mv2_d_1865_1279_s_2-1024x703.webp": {
+      "sha": "9b0730b49dec733e",
+      "bytes": 149224
+    },
+    "/wp-content/uploads/2024/10/69041b_bc06192bba1c4b7c8187fe13628de228mv2_d_1865_1279_s_2-768x527.webp": {
+      "sha": "5672943be00c8fbb",
+      "bytes": 97042
+    },
+    "/wp-content/uploads/2024/10/420496755_18251669251171878_8789669427105625776_n-1024x1024.jpg": {
+      "sha": "8f20395708669312",
+      "bytes": 182912
+    },
+    "/wp-content/uploads/2024/10/420496755_18251669251171878_8789669427105625776_n-300x300.jpg": {
+      "sha": "7a4ed6333298cf83",
+      "bytes": 22143
+    },
+    "/wp-content/uploads/2024/10/69041b_bc06192bba1c4b7c8187fe13628de228mv2_d_1865_1279_s_2.webp": {
+      "sha": "a0669a3c7051f7cc",
+      "bytes": 262748
+    },
+    "/wp-content/uploads/2024/10/420496755_18251669251171878_8789669427105625776_n-150x150.jpg": {
+      "sha": "2dbe631626d7982c",
+      "bytes": 7117
+    },
+    "/wp-content/uploads/2024/10/420496755_18251669251171878_8789669427105625776_n-768x768.jpg": {
+      "sha": "f5794cf26086dc54",
+      "bytes": 110163
+    },
+    "/wp-content/uploads/2024/10/344695414_616120447091195_3792298587403524302_n-240x300.jpg": {
+      "sha": "bc157997502a5964",
+      "bytes": 21888
+    },
+    "/wp-content/uploads/2024/10/420496755_18251669251171878_8789669427105625776_n.jpg": {
+      "sha": "a2fcc311876db5a9",
+      "bytes": 286074
+    },
+    "/wp-content/uploads/2024/10/344695414_616120447091195_3792298587403524302_n-768x960.jpg": {
+      "sha": "c9d0cbff93222d1e",
+      "bytes": 167385
+    },
+    "/wp-content/uploads/2024/10/344695414_616120447091195_3792298587403524302_n.jpg": {
+      "sha": "27cf799b7b1de054",
+      "bytes": 452149
+    },
+    "/wp-content/uploads/2024/10/378187287_780945800702877_8655207563192956557_n-1024x1024.jpg": {
+      "sha": "9b34dda1c3d49825",
+      "bytes": 127983
+    },
+    "/wp-content/uploads/2024/10/344695414_616120447091195_3792298587403524302_n-1229x1536.jpg": {
+      "sha": "fc646e2698f61dd9",
+      "bytes": 391279
+    },
+    "/wp-content/uploads/2024/10/378187287_780945800702877_8655207563192956557_n-150x150.jpg": {
+      "sha": "4b675966d9ed7a3d",
+      "bytes": 5656
+    },
+    "/wp-content/uploads/2024/10/378187287_780945800702877_8655207563192956557_n-300x300.jpg": {
+      "sha": "f87f5f3b28a3aa0e",
+      "bytes": 16093
+    },
+    "/wp-content/uploads/2024/10/378187287_780945800702877_8655207563192956557_n-768x768.jpg": {
+      "sha": "d6e7fcafc79563ff",
+      "bytes": 75325
+    },
+    "/wp-content/uploads/2024/10/378187287_780945800702877_8655207563192956557_n.jpg": {
+      "sha": "669eaffcf62aeaf0",
+      "bytes": 203755
+    },
+    "/wp-content/uploads/2024/10/69041b_7577799473e44d72978160e615d542e0mv2-300x200.webp": {
+      "sha": "c6dd25f6c0d297d5",
+      "bytes": 11182
+    },
+    "/wp-content/uploads/2024/10/69041b_7577799473e44d72978160e615d542e0mv2-1024x683.webp": {
+      "sha": "5e9101b5fedbfb82",
+      "bytes": 56602
+    },
+    "/wp-content/uploads/2024/10/Geha-1.png": {
+      "sha": "d6737c54f2cb6ab2",
+      "bytes": 5124
+    },
+    "/wp-content/uploads/2024/10/Lincoln-Financial-Group.png": {
+      "sha": "e91bac9472afa4e7",
+      "bytes": 8474
+    },
+    "/wp-content/uploads/2024/10/BlueCross-Blueshield.png": {
+      "sha": "254125c7de4cc9fc",
+      "bytes": 12286
+    },
+    "/wp-content/uploads/2024/10/dental-network-of-america.png": {
+      "sha": "968c4452b3ea7797",
+      "bytes": 8047
+    },
+    "/wp-content/uploads/2024/10/69041b_7577799473e44d72978160e615d542e0mv2-768x512.webp": {
+      "sha": "d4cdcc5b647bde17",
+      "bytes": 39866
+    },
+    "/wp-content/uploads/2024/10/plan_3.png": {
+      "sha": "1f1bf8c938ed7a99",
+      "bytes": 3309
+    },
+    "/wp-content/uploads/2024/10/plan_2.png": {
+      "sha": "a7dc011c865c1ba2",
+      "bytes": 4484
+    },
+    "/wp-content/uploads/2024/10/plan_5.png": {
+      "sha": "5b18adfe23cb80dc",
+      "bytes": 3212
+    },
+    "/wp-content/uploads/2024/10/69041b_7577799473e44d72978160e615d542e0mv2.webp": {
+      "sha": "1018ba1f94282d81",
+      "bytes": 98172
+    },
+    "/wp-content/uploads/2024/10/plan_4.png": {
+      "sha": "7a7a9e5f673b7470",
+      "bytes": 3491
+    },
+    "/wp-content/uploads/2024/10/plan_6.png": {
+      "sha": "713054d793931798",
+      "bytes": 5797
+    },
+    "/wp-content/uploads/2024/10/b42c3ccd8a01202fc47511178ccc41d6.mp4": {
+      "sha": "49e3ea2723e10bf9",
+      "bytes": 29836720
+    },
+    "/wp-content/uploads/elementor/css/post-464.css": {
+      "sha": "c9becb775aa6330b",
+      "bytes": 8716
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widgets/video.js": {
+      "sha": "78d62aacc700ae3e",
+      "bytes": 3684
+    },
+    "/wp-content/uploads/elementor/css/post-13801.css": {
+      "sha": "6e730d9562641db6",
+      "bytes": 32982
+    },
+    "/wp-includes/js/mediaelement/mediaelement-and-player.min.js": {
+      "sha": "b15c3ea03d50c243",
+      "bytes": 158005
+    },
+    "/wp-includes/js/mediaelement/mediaelement-migrate.min.js": {
+      "sha": "6d161e98e47ae150",
+      "bytes": 1191
+    },
+    "/wp-includes/js/mediaelement/wp-mediaelement.min.js": {
+      "sha": "79cb399203843f65",
+      "bytes": 1107
+    },
+    "/wp-content/uploads/2024/04/49602.jpg": {
+      "sha": "a547c83c6b6715d4",
+      "bytes": 472509
+    },
+    "/wp-content/uploads/2020/08/shutterstock_520962286-1.jpg": {
+      "sha": "7ac4e443c2d7430e",
+      "bytes": 61199
+    },
+    "/wp-content/uploads/2023/05/extreme-close-up-mixed-race-handsome-man-has-trendy-hairdo-smiles-pleasantly-blinks-eye.jpg": {
+      "sha": "eaa5d784689f9285",
+      "bytes": 583795
+    },
+    "/wp-content/uploads/2026/08/AdobeStock_541244802.jpg": {
+      "sha": "9159c507a909431a",
+      "bytes": 157020
+    },
+    "/wp-content/uploads/2020/09/shutterstock_1538855762-1.jpg": {
+      "sha": "5aa3e5f0b9bf51f6",
+      "bytes": 42906
+    },
+    "/wp-content/uploads/2023/05/young-man-feeling-sick-holding-his-chest-pain-while-drinking-tea-living-room.jpg": {
+      "sha": "fff19e11dad39152",
+      "bytes": 319020
+    },
+    "/wp-content/uploads/2020/01/umanoide-KeVKEs1_RDU-unsplash-1-705x529-1.jpg": {
+      "sha": "3c1a8724d8bd3b0c",
+      "bytes": 53043
+    },
+    "/wp-content/uploads/2023/09/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background.jpg": {
+      "sha": "6d56b24fc95dfd6f",
+      "bytes": 1101655
+    },
+    "/wp-content/uploads/2023/01/shutterstock_1598735734-1.jpg": {
+      "sha": "5da6e27227540a36",
+      "bytes": 39620
+    },
+    "/wp-content/uploads/2021/05/shutterstock_1404252305-1.jpeg": {
+      "sha": "18c7fa33e66a2449",
+      "bytes": 50194
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-scaled.jpg": {
+      "sha": "1f68a7032213e901",
+      "bytes": 460030
+    },
+    "/wp-content/uploads/2022/07/dental-implant-toothbar-1.jpg": {
+      "sha": "495f32919b78cb23",
+      "bytes": 57458
+    },
+    "/wp-content/uploads/2021/12/veneere-1.jpg": {
+      "sha": "4e5671ca2edd88dc",
+      "bytes": 71432
+    },
+    "/wp-content/plugins/elementor-pro/assets/css/widget-posts.min.css": {
+      "sha": "fac1551c4bea4e42",
+      "bytes": 16951
+    },
+    "/wp-content/uploads/2021/07/shutterstock_1530801923-1.jpeg": {
+      "sha": "9d212bb1b40309f7",
+      "bytes": 48613
+    },
+    "/wp-content/uploads/elementor/css/post-501.css": {
+      "sha": "260c48ee88f32b38",
+      "bytes": 15440
+    },
+    "/wp-content/uploads/2026/08/AdobeStock_541244802-1024x683.jpg": {
+      "sha": "488d5e517e75fb35",
+      "bytes": 66196
+    },
+    "/wp-content/uploads/2026/08/AdobeStock_541244802-300x200.jpg": {
+      "sha": "c3cefe3747ef3bbe",
+      "bytes": 9886
+    },
+    "/wp-content/uploads/2026/08/AdobeStock_541244802-768x512.jpg": {
+      "sha": "31eaa0e36aed4c25",
+      "bytes": 41912
+    },
+    "/wp-content/uploads/2026/08/AdobeStock_541244802-1536x1024.jpg": {
+      "sha": "ad1bcac6cbe4e652",
+      "bytes": 126284
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-1024x684.jpg": {
+      "sha": "435401a12ff7025c",
+      "bytes": 69183
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-300x200.jpg": {
+      "sha": "51b61daba856a7ea",
+      "bytes": 10549
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-768x513.jpg": {
+      "sha": "c4e3ca113e184750",
+      "bytes": 44599
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-1536x1025.jpg": {
+      "sha": "d957e46432e0c332",
+      "bytes": 130944
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-2048x1367.jpg": {
+      "sha": "160c6cedc4bcb7be",
+      "bytes": 207555
+    },
+    "/wp-content/uploads/2026/06/tips-to-know-when-travelling-with-invisa.jpeg": {
+      "sha": "7d30f6d77c3f4b9f",
+      "bytes": 43241
+    },
+    "/wp-content/uploads/2026/06/tips-to-know-when-travelling-with-invisa-300x200.jpeg": {
+      "sha": "387282113a5fcc24",
+      "bytes": 9717
+    },
+    "/wp-content/uploads/2026/06/tips-to-know-when-travelling-with-invisa-768x512.jpeg": {
+      "sha": "6eba5b287deb9956",
+      "bytes": 35522
+    },
+    "/wp-content/uploads/2026/05/AdobeStock_291115741-2.jpg": {
+      "sha": "8f6088f29bc0f86b",
+      "bytes": 48883
+    },
+    "/wp-content/uploads/2024/10/332485478_2418394121649217_3408524559894985687_n-1024x985.jpg": {
+      "sha": "7f1d1ab92c059653",
+      "bytes": 127982
+    },
+    "/wp-content/uploads/2024/10/332485478_2418394121649217_3408524559894985687_n-300x289.jpg": {
+      "sha": "183937edd787de37",
+      "bytes": 18127
+    },
+    "/wp-content/uploads/2024/10/332485478_2418394121649217_3408524559894985687_n-768x739.jpg": {
+      "sha": "19432d675e3f2eb5",
+      "bytes": 80519
+    },
+    "/wp-content/uploads/2024/10/332485478_2418394121649217_3408524559894985687_n.jpg": {
+      "sha": "4411ef99a2b9695b",
+      "bytes": 161033
+    },
+    "/wp-content/uploads/2024/10/69041b_6c1cfa257729450598a0d2c7139820b9mv2_d_1920_1279_s_2-1024x682.webp": {
+      "sha": "212985e6f68d5f5c",
+      "bytes": 45442
+    },
+    "/wp-content/uploads/2024/10/69041b_6c1cfa257729450598a0d2c7139820b9mv2_d_1920_1279_s_2-300x200.webp": {
+      "sha": "cb3560714e41116f",
+      "bytes": 9046
+    },
+    "/wp-content/uploads/2024/10/69041b_6c1cfa257729450598a0d2c7139820b9mv2_d_1920_1279_s_2-768x512.webp": {
+      "sha": "2d6620d3aa7f7c19",
+      "bytes": 30876
+    },
+    "/wp-content/uploads/2024/10/69041b_6c1cfa257729450598a0d2c7139820b9mv2_d_1920_1279_s_2.webp": {
+      "sha": "1828745b0d18fd22",
+      "bytes": 79144
+    },
+    "/wp-content/uploads/2024/10/69041b_70eb4c4cb10946a49822bf65a443d3d1mv2-1024x682.webp": {
+      "sha": "455da0228db60c41",
+      "bytes": 59714
+    },
+    "/wp-content/uploads/2024/10/69041b_70eb4c4cb10946a49822bf65a443d3d1mv2-300x200.webp": {
+      "sha": "59c172d937eca6a6",
+      "bytes": 13470
+    },
+    "/wp-content/uploads/2024/10/69041b_70eb4c4cb10946a49822bf65a443d3d1mv2-768x512.webp": {
+      "sha": "f22c7f81dd066ef4",
+      "bytes": 42212
+    },
+    "/wp-content/uploads/2024/10/69041b_70eb4c4cb10946a49822bf65a443d3d1mv2.webp": {
+      "sha": "11d0ded3de16bd59",
+      "bytes": 101568
+    },
+    "/wp-includes/js/imagesloaded.min.js": {
+      "sha": "b65b3de1bc923b93",
+      "bytes": 5520
+    },
+    "/wp-content/uploads/2023/03/Tooth-Implant.jpg": {
+      "sha": "dd58d5a3d903ef55",
+      "bytes": 30552
+    },
+    "/wp-content/uploads/2021/09/shutterstock_1662297199.jpg": {
+      "sha": "794d278e31d45796",
+      "bytes": 184150
+    },
+    "/wp-content/uploads/2019/07/spatablet.jpg": {
+      "sha": "e182fe2804160a4c",
+      "bytes": 172896
+    },
+    "/wp-content/uploads/2019/11/Benefits-of-Flossing-Your-Teeth.jpg": {
+      "sha": "9a67e1cd17b7a8b7",
+      "bytes": 25000
+    },
+    "/wp-content/uploads/2022/03/white-teeth-austin-G.jpg": {
+      "sha": "3e180a1c868184d1",
+      "bytes": 57833
+    },
+    "/wp-content/uploads/2022/08/austin-invisalign-1.jpg": {
+      "sha": "202b5c454085b8d2",
+      "bytes": 55660
+    },
+    "/wp-content/uploads/2022/02/shutterstock_231558334-1.jpg": {
+      "sha": "2248982d7e923fb5",
+      "bytes": 54007
+    },
+    "/wp-content/uploads/2019/10/smiling-woman-standing-beside-plant-1.jpeg": {
+      "sha": "ffd8482ef9136a6c",
+      "bytes": 32881
+    },
+    "/wp-content/uploads/2019/06/white-and-blue-toothbrush-with-blue-toothpaste-1.jpg": {
+      "sha": "f8e1e0ab7c8c0255",
+      "bytes": 25634
+    },
+    "/wp-content/uploads/2023/07/young-female-patient-visiting-dentist-office.jpg": {
+      "sha": "52001ad9ca6b90c4",
+      "bytes": 945642
+    },
+    "/wp-content/uploads/2021/08/shutterstock_1051437563-1.jpeg": {
+      "sha": "ebb6618fdf0f8443",
+      "bytes": 27625
+    },
+    "/wp-content/uploads/2020/05/burning-mouth-syndrome-symptoms-.jpg": {
+      "sha": "6ba6a174ecbfefed",
+      "bytes": 36245
+    },
+    "/wp-content/uploads/2023/07/young-female-patient-visiting-dentist-office-1024x683.jpg": {
+      "sha": "cca612317608ced0",
+      "bytes": 93677
+    },
+    "/wp-content/uploads/2023/07/young-female-patient-visiting-dentist-office-300x200.jpg": {
+      "sha": "8aa8a9f95861082a",
+      "bytes": 14454
+    },
+    "/wp-content/uploads/2020/06/can-teeth-whitening-damage-gums.jpg": {
+      "sha": "4b98d8c81db39000",
+      "bytes": 31749
+    },
+    "/wp-content/uploads/2023/07/young-female-patient-visiting-dentist-office-768x512.jpg": {
+      "sha": "03d5ba84ca1b6de4",
+      "bytes": 59403
+    },
+    "/wp-content/uploads/2023/09/shutterstock_1718366740.jpg": {
+      "sha": "5814e373876033ce",
+      "bytes": 559609
+    },
+    "/wp-content/uploads/2023/09/shutterstock_1718366740-300x200.jpg": {
+      "sha": "78695c1a0d7e820a",
+      "bytes": 14748
+    },
+    "/wp-content/uploads/2023/09/shutterstock_1718366740-768x512.jpg": {
+      "sha": "8a5cf418493a2988",
+      "bytes": 56643
+    },
+    "/wp-content/uploads/2022/12/Trismus.jpg": {
+      "sha": "c367da00a8e65b0f",
+      "bytes": 54059
+    },
+    "/wp-content/uploads/2022/12/Trismus-300x200.jpg": {
+      "sha": "8679d0b3571530b8",
+      "bytes": 11480
+    },
+    "/wp-content/uploads/2022/12/Trismus-768x513.jpg": {
+      "sha": "e156acfd46a3ebe8",
+      "bytes": 49926
+    },
+    "/wp-content/uploads/2022/11/teeth-bonding-1.jpg": {
+      "sha": "137d99e311368214",
+      "bytes": 64293
+    },
+    "/wp-content/uploads/2022/11/teeth-bonding-1-300x200.jpg": {
+      "sha": "2bbacf5aed4ebbb3",
+      "bytes": 13980
+    },
+    "/wp-content/uploads/2022/11/teeth-bonding-1-768x512.jpg": {
+      "sha": "69825140ef6c5b1c",
+      "bytes": 58599
+    },
+    "/wp-content/uploads/2024/09/how-do-teeth-whitening-strips-work.jpg": {
+      "sha": "87b5d54fecb705e1",
+      "bytes": 74592
+    },
+    "/wp-content/uploads/2024/09/how-do-teeth-whitening-strips-work-300x200.jpg": {
+      "sha": "59688fdfe0929ef9",
+      "bytes": 13454
+    },
+    "/wp-content/uploads/2024/09/how-do-teeth-whitening-strips-work-768x512.jpg": {
+      "sha": "ca7bb8e166ec0fb0",
+      "bytes": 58355
+    },
+    "/wp-content/uploads/2023/02/porcelain-veneers.jpg": {
+      "sha": "1283c3c7e53c626e",
+      "bytes": 37132
+    },
+    "/wp-content/uploads/2023/02/porcelain-veneers-300x200.jpg": {
+      "sha": "945ed28fbd92c621",
+      "bytes": 11803
+    },
+    "/wp-content/uploads/2023/02/porcelain-veneers-768x512.jpg": {
+      "sha": "0799798064fd0f93",
+      "bytes": 53552
+    },
+    "/wp-content/uploads/2023/08/foto-dentista-sonriente-pie-brazos-cruzados-su-colega-mostrando-signo-bien-1024x683.jpg": {
+      "sha": "a3bf341fbf94a289",
+      "bytes": 102893
+    },
+    "/wp-content/uploads/2023/08/foto-dentista-sonriente-pie-brazos-cruzados-su-colega-mostrando-signo-bien-300x200.jpg": {
+      "sha": "96e2da8acd274a27",
+      "bytes": 15773
+    },
+    "/wp-content/uploads/2023/08/foto-dentista-sonriente-pie-brazos-cruzados-su-colega-mostrando-signo-bien-768x512.jpg": {
+      "sha": "222f67fbe89c7845",
+      "bytes": 66236
+    },
+    "/wp-content/uploads/2024/04/2858-1024x683.jpg": {
+      "sha": "15dfb4d6ac4de4c9",
+      "bytes": 64306
+    },
+    "/wp-content/uploads/2024/04/2858-300x200.jpg": {
+      "sha": "5d3aa17aa6249010",
+      "bytes": 9397
+    },
+    "/wp-content/uploads/2024/04/2858-768x512.jpg": {
+      "sha": "0c40851bb58d86f8",
+      "bytes": 39583
+    },
+    "/wp-content/uploads/2024/04/2858-1536x1025.jpg": {
+      "sha": "effd8d91370802dc",
+      "bytes": 128458
+    },
+    "/wp-content/uploads/2024/04/2858.jpg": {
+      "sha": "23a7a03986a0cb06",
+      "bytes": 597725
+    },
+    "/wp-content/uploads/2024/03/18598-1024x682.jpg": {
+      "sha": "5185a3a1aeaa2747",
+      "bytes": 81996
+    },
+    "/wp-content/uploads/2024/03/18598-300x200.jpg": {
+      "sha": "e8322c7e653ab831",
+      "bytes": 13691
+    },
+    "/wp-content/uploads/2024/03/18598-768x512.jpg": {
+      "sha": "e9fd07bf24bfecb5",
+      "bytes": 53142
+    },
+    "/wp-content/uploads/2023/08/foto-dentista-sonriente-pie-brazos-cruzados-su-colega-mostrando-signo-bien.jpg": {
+      "sha": "529f5c4aa179a039",
+      "bytes": 960363
+    },
+    "/wp-content/uploads/2024/03/18598-1536x1024.jpg": {
+      "sha": "2c2ec3b389b7aad2",
+      "bytes": 151134
+    },
+    "/wp-content/uploads/2024/03/18598.jpg": {
+      "sha": "7a48f25d8a89a075",
+      "bytes": 894827
+    },
+    "/wp-content/uploads/2024/02/2149085891-300x200.jpg": {
+      "sha": "661d2540cb1566ec",
+      "bytes": 8249
+    },
+    "/wp-content/uploads/2024/02/2149085891-1024x684.jpg": {
+      "sha": "f0410642ad6555e2",
+      "bytes": 54915
+    },
+    "/wp-content/uploads/2024/02/2149085891-768x513.jpg": {
+      "sha": "0465d032ee5368f2",
+      "bytes": 34656
+    },
+    "/wp-content/uploads/2024/02/2149085891-1536x1025.jpg": {
+      "sha": "c06317af6dfd252b",
+      "bytes": 109215
+    },
+    "/wp-content/uploads/2024/02/2149085891.jpg": {
+      "sha": "13c26d2ab43cb79f",
+      "bytes": 1001725
+    },
+    "/wp-content/uploads/2024/02/young-woman-covering-her-mouth-with-hand-gray-background-300x200.jpg": {
+      "sha": "d92a7a74d802aa44",
+      "bytes": 9343
+    },
+    "/wp-content/uploads/2024/02/young-woman-covering-her-mouth-with-hand-gray-background-768x513.jpg": {
+      "sha": "0e23f4b08ec42d44",
+      "bytes": 40832
+    },
+    "/wp-content/uploads/2024/02/young-woman-covering-her-mouth-with-hand-gray-background-1024x684.jpg": {
+      "sha": "4f1dfe2c4351e4aa",
+      "bytes": 66050
+    },
+    "/wp-content/uploads/2024/02/young-woman-covering-her-mouth-with-hand-gray-background-1536x1025.jpg": {
+      "sha": "46fc6a16fec7b29f",
+      "bytes": 134388
+    },
+    "/wp-content/uploads/2024/02/young-woman-covering-her-mouth-with-hand-gray-background.jpg": {
+      "sha": "3eac2cad79177e03",
+      "bytes": 1050917
+    },
+    "/wp-content/uploads/2023/08/cerrar-cliente-feliz-clinica-dental-1024x683.jpg": {
+      "sha": "22106ccbefbef5c3",
+      "bytes": 72177
+    },
+    "/wp-content/uploads/2023/08/cerrar-cliente-feliz-clinica-dental-300x200.jpg": {
+      "sha": "89a2e3183e99218c",
+      "bytes": 11673
+    },
+    "/wp-content/uploads/2023/08/cerrar-cliente-feliz-clinica-dental-768x512.jpg": {
+      "sha": "925ec04c9a14a0b7",
+      "bytes": 46011
+    },
+    "/wp-content/uploads/2023/08/cerrar-cliente-feliz-clinica-dental.jpg": {
+      "sha": "46fa705f36ffa20b",
+      "bytes": 888908
+    },
+    "/wp-content/uploads/2023/11/shocked-young-caucasian-woman-puts-hands-mouth-1024x722.jpg": {
+      "sha": "8c4ad3b536ec8434",
+      "bytes": 54207
+    },
+    "/wp-content/uploads/2023/11/shocked-young-caucasian-woman-puts-hands-mouth-300x212.jpg": {
+      "sha": "c54eb98a19d62f56",
+      "bytes": 8742
+    },
+    "/wp-content/uploads/2023/11/shocked-young-caucasian-woman-puts-hands-mouth-768x541.jpg": {
+      "sha": "2a04ab64135b4e53",
+      "bytes": 34466
+    },
+    "/wp-content/uploads/2023/11/shocked-young-caucasian-woman-puts-hands-mouth-1536x1083.jpg": {
+      "sha": "f048bac6d46ac684",
+      "bytes": 104931
+    },
+    "/wp-content/uploads/2023/11/shocked-young-caucasian-woman-puts-hands-mouth.jpg": {
+      "sha": "528ddf7380430eaf",
+      "bytes": 900555
+    },
+    "/wp-content/uploads/2022/06/danielle-profile1-tiny-300x210.jpg": {
+      "sha": "b6a3abdcb73c4138",
+      "bytes": 14956
+    },
+    "/wp-content/uploads/2024/04/49602-300x183.jpg": {
+      "sha": "4445bd2f8fa97c63",
+      "bytes": 8400
+    },
+    "/wp-content/uploads/2024/04/49602-768x468.jpg": {
+      "sha": "90e471e50edbda9e",
+      "bytes": 37629
+    },
+    "/wp-content/uploads/2024/04/49602-1024x625.jpg": {
+      "sha": "7442c7187817653b",
+      "bytes": 60383
+    },
+    "/wp-content/uploads/2024/04/49602-1536x937.jpg": {
+      "sha": "0ec59ccac0dbeaab",
+      "bytes": 116851
+    },
+    "/wp-content/uploads/2024/02/66485-300x200.jpg": {
+      "sha": "d3c28e16143d9540",
+      "bytes": 8251
+    },
+    "/wp-content/uploads/2024/02/66485-1024x682.jpg": {
+      "sha": "3cb88dd308f29237",
+      "bytes": 51077
+    },
+    "/wp-content/uploads/2024/02/66485-768x512.jpg": {
+      "sha": "8bd46785730d3b88",
+      "bytes": 32395
+    },
+    "/wp-content/uploads/2024/02/66485-1536x1024.jpg": {
+      "sha": "d3ab7922ac0c2a53",
+      "bytes": 99351
+    },
+    "/wp-content/uploads/2024/02/66485.jpg": {
+      "sha": "8179c5162f506ca9",
+      "bytes": 839451
+    },
+    "/wp-content/uploads/2023/12/toothbrush-composition-300x200.jpg": {
+      "sha": "31f40faf555750d5",
+      "bytes": 13227
+    },
+    "/wp-content/uploads/2023/12/toothbrush-composition-1024x682.jpg": {
+      "sha": "420a3cf797ece864",
+      "bytes": 91171
+    },
+    "/wp-content/uploads/2023/12/toothbrush-composition-768x512.jpg": {
+      "sha": "5e8fcd3381b93ae6",
+      "bytes": 56793
+    },
+    "/wp-content/uploads/2023/12/toothbrush-composition-1536x1024.jpg": {
+      "sha": "967487db7b6cb810",
+      "bytes": 178857
+    },
+    "/wp-content/uploads/2023/12/toothbrush-composition.jpg": {
+      "sha": "8d9ba28fdb58e2bb",
+      "bytes": 1792481
+    },
+    "/wp-content/uploads/2023/08/chica-sintiendo-dolor-muelas-haciendo-muecas-dolor-mientras-muerde-manzana-verde-300x200.jpg": {
+      "sha": "957cd141a174458c",
+      "bytes": 7925
+    },
+    "/wp-content/uploads/2023/08/chica-sintiendo-dolor-muelas-haciendo-muecas-dolor-mientras-muerde-manzana-verde-768x512.jpg": {
+      "sha": "186c877db62acf6c",
+      "bytes": 32638
+    },
+    "/wp-content/uploads/2023/08/chica-sintiendo-dolor-muelas-haciendo-muecas-dolor-mientras-muerde-manzana-verde-1024x683.jpg": {
+      "sha": "578be8f146b6a1f8",
+      "bytes": 52549
+    },
+    "/wp-content/uploads/2023/08/chica-sintiendo-dolor-muelas-haciendo-muecas-dolor-mientras-muerde-manzana-verde.jpg": {
+      "sha": "ceb3dfb0489dc106",
+      "bytes": 631077
+    },
+    "/wp-content/uploads/2023/08/paciente-femenino-sonriendo-clinica-1024x683.jpg": {
+      "sha": "775e8566517df795",
+      "bytes": 69143
+    },
+    "/wp-content/uploads/2023/08/paciente-femenino-sonriendo-clinica-768x512.jpg": {
+      "sha": "a4df84d929e99b30",
+      "bytes": 44326
+    },
+    "/wp-content/uploads/2023/08/paciente-femenino-sonriendo-clinica-300x200.jpg": {
+      "sha": "2d20197c9eaa0614",
+      "bytes": 11209
+    },
+    "/wp-content/uploads/2023/08/paciente-femenino-sonriendo-clinica.jpg": {
+      "sha": "a49fb7fe09206033",
+      "bytes": 730533
+    },
+    "/wp-content/uploads/2023/06/close-up-portrait-cute-kid-gray-pajamas-brushing-her-teeth-1024x683.jpg": {
+      "sha": "c778a034d6861fd2",
+      "bytes": 83187
+    },
+    "/wp-content/uploads/2023/06/close-up-portrait-cute-kid-gray-pajamas-brushing-her-teeth-300x200.jpg": {
+      "sha": "0c2fd7ec45e7cfce",
+      "bytes": 10707
+    },
+    "/wp-content/uploads/2023/06/close-up-portrait-cute-kid-gray-pajamas-brushing-her-teeth-768x512.jpg": {
+      "sha": "a8ef8a7f693555eb",
+      "bytes": 51043
+    },
+    "/wp-content/uploads/2023/06/close-up-portrait-cute-kid-gray-pajamas-brushing-her-teeth.jpg": {
+      "sha": "28808ea90d059a29",
+      "bytes": 837601
+    },
+    "/wp-content/uploads/2023/06/woman-smiles-broadly-points-her-perfect-even-teeth-indicates-corners-lips-looks-away-wears-casual-blue-jumper-isolated-white-with-blank-copy-space.jpg": {
+      "sha": "bec92cbf220b7695",
+      "bytes": 297636
+    },
+    "/wp-content/uploads/2023/06/woman-smiles-broadly-points-her-perfect-even-teeth-indicates-corners-lips-looks-away-wears-casual-blue-jumper-isolated-white-with-blank-copy-space-300x169.jpg": {
+      "sha": "bda5870e21cdab5a",
+      "bytes": 9601
+    },
+    "/wp-content/uploads/2023/05/young-man-feeling-sick-holding-his-chest-pain-while-drinking-tea-living-room-300x200.jpg": {
+      "sha": "40463ab1347b8563",
+      "bytes": 14115
+    },
+    "/wp-content/uploads/2023/06/woman-smiles-broadly-points-her-perfect-even-teeth-indicates-corners-lips-looks-away-wears-casual-blue-jumper-isolated-white-with-blank-copy-space-768x432.jpg": {
+      "sha": "4c98d9d74b25a3bc",
+      "bytes": 44143
+    },
+    "/wp-content/uploads/2023/05/young-man-feeling-sick-holding-his-chest-pain-while-drinking-tea-living-room-768x512.jpg": {
+      "sha": "1450a0e2aedb58db",
+      "bytes": 59029
+    },
+    "/wp-content/uploads/2024/08/how-many-teeth-kids-have.jpg": {
+      "sha": "2a05682615095a1f",
+      "bytes": 29410
+    },
+    "/wp-content/uploads/2024/08/how-many-teeth-kids-have-300x200.jpg": {
+      "sha": "bc3b51a6415dfadc",
+      "bytes": 8081
+    },
+    "/wp-content/uploads/2024/08/how-many-teeth-kids-have-768x512.jpg": {
+      "sha": "9e4a6c35944a0d9b",
+      "bytes": 30333
+    },
+    "/wp-content/uploads/2024/09/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning.jpg": {
+      "sha": "d5c34dc33319f88d",
+      "bytes": 39431
+    },
+    "/wp-content/uploads/2024/09/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning-300x212.jpg": {
+      "sha": "ae079057094f88b9",
+      "bytes": 8868
+    },
+    "/wp-content/uploads/2024/09/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning-768x542.jpg": {
+      "sha": "3fd7a79f6c41da76",
+      "bytes": 33497
+    },
+    "/wp-content/uploads/2021/10/what-type-of-sedation-is-right-for-me.jpg": {
+      "sha": "22bfb243c49bbb20",
+      "bytes": 56033
+    },
+    "/wp-content/uploads/2021/10/what-type-of-sedation-is-right-for-me-300x200.jpg": {
+      "sha": "09e214e7db103652",
+      "bytes": 13387
+    },
+    "/wp-content/uploads/2021/10/what-type-of-sedation-is-right-for-me-768x512.jpg": {
+      "sha": "6ffe0d6707a53c32",
+      "bytes": 53760
+    },
+    "/wp-content/uploads/2021/08/shutterstock_462323689-1.jpeg": {
+      "sha": "c44dc43e99f8ee02",
+      "bytes": 73026
+    },
+    "/wp-content/uploads/2021/08/shutterstock_462323689-1-300x190.jpeg": {
+      "sha": "4e73157942a37934",
+      "bytes": 9773
+    },
+    "/wp-content/uploads/2021/08/shutterstock_462323689-1-768x487.jpeg": {
+      "sha": "2dd1a02c994ba233",
+      "bytes": 39772
+    },
+    "/wp-content/uploads/2021/08/shutterstock_714402862-1-1-300x200.jpeg": {
+      "sha": "310b27f05400178d",
+      "bytes": 6545
+    },
+    "/wp-content/uploads/2021/08/shutterstock_714402862-1-1.jpeg": {
+      "sha": "1f0102de51dda2ec",
+      "bytes": 28864
+    },
+    "/wp-content/uploads/2024/10/962de0ac28320c69bb02cb024eed7850.mp4": {
+      "sha": "83c3c95f0cbf2493",
+      "bytes": 45972652
+    },
+    "/wp-content/uploads/2021/08/shutterstock_1051437563-1-300x200.jpeg": {
+      "sha": "1f710c4ec112dd66",
+      "bytes": 6967
+    },
+    "/wp-content/uploads/2021/07/shutterstock_1530801923-1-300x200.jpeg": {
+      "sha": "473c45954a845b32",
+      "bytes": 11734
+    },
+    "/wp-content/uploads/2021/08/shutterstock_714402862-1-1-768x512.jpeg": {
+      "sha": "5cb0f882040eb071",
+      "bytes": 26922
+    },
+    "/wp-content/uploads/2021/08/shutterstock_1051437563-1-768x512.jpeg": {
+      "sha": "a084a6405ad2022d",
+      "bytes": 27146
+    },
+    "/wp-content/uploads/2021/07/shutterstock_1530801923-1-768x512.jpeg": {
+      "sha": "0b9a316fb6606bb8",
+      "bytes": 48582
+    },
+    "/wp-content/uploads/2021/06/49706630_304673416846704_8429231802140327936_o-846x529-1-300x188.jpeg": {
+      "sha": "619e612b2853cc54",
+      "bytes": 15675
+    },
+    "/wp-content/uploads/2021/06/49706630_304673416846704_8429231802140327936_o-846x529-1-768x480.jpeg": {
+      "sha": "d364f696fea8cfcf",
+      "bytes": 79557
+    },
+    "/wp-content/uploads/2022/07/dental-crown-1.jpg": {
+      "sha": "2f799078db9388d4",
+      "bytes": 46675
+    },
+    "/wp-content/uploads/2022/07/dental-crown-1-300x200.jpg": {
+      "sha": "e6478f14442b1efc",
+      "bytes": 10612
+    },
+    "/wp-content/uploads/2022/07/dental-crown-1-768x512.jpg": {
+      "sha": "28b95b25271fae26",
+      "bytes": 39817
+    },
+    "/wp-content/uploads/2022/07/dental-implant-toothbar-1-300x200.jpg": {
+      "sha": "96f76dc04ece6e8f",
+      "bytes": 14152
+    },
+    "/wp-content/uploads/2022/07/dental-implant-toothbar-1-768x512.jpg": {
+      "sha": "42c018f43fbc0557",
+      "bytes": 56513
+    },
+    "/wp-content/uploads/2022/06/dentalcrownsexampl-1.jpg": {
+      "sha": "50ddc8f703a43338",
+      "bytes": 48592
+    },
+    "/wp-content/uploads/2022/06/dentalcrownsexampl-1-300x226.jpg": {
+      "sha": "e215a6e8afc3364d",
+      "bytes": 10073
+    },
+    "/wp-content/uploads/2022/06/dentalcrownsexampl-1-768x578.jpg": {
+      "sha": "f41a807b4eed6e0c",
+      "bytes": 41971
+    },
+    "/wp-content/uploads/2021/06/49706630_304673416846704_8429231802140327936_o-846x529-1.jpeg": {
+      "sha": "d83f1a47af2b651d",
+      "bytes": 105273
+    },
+    "/wp-content/uploads/2022/05/shutterstock_1448097926.jpg": {
+      "sha": "39560b6436dfbcf5",
+      "bytes": 630555
+    },
+    "/wp-content/uploads/2023/03/Tooth-Implant-300x200.jpg": {
+      "sha": "1a21b6ea2ca30d54",
+      "bytes": 10110
+    },
+    "/wp-content/uploads/2022/05/shutterstock_1448097926-300x200.jpg": {
+      "sha": "e3c39c9c146daeeb",
+      "bytes": 16507
+    },
+    "/wp-content/uploads/2023/03/Tooth-Implant-768x512.jpg": {
+      "sha": "92778e028d0abbe6",
+      "bytes": 44914
+    },
+    "/wp-content/uploads/2022/05/shutterstock_1448097926-768x513.jpg": {
+      "sha": "c5d1d6878fabbdc5",
+      "bytes": 67908
+    },
+    "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite-1024x696.jpg": {
+      "sha": "68a3b2ee0b5c324e",
+      "bytes": 48210
+    },
+    "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite-300x204.jpg": {
+      "sha": "a8aa72b4f40b0a75",
+      "bytes": 7952
+    },
+    "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite-1536x1044.jpg": {
+      "sha": "54959d499896c685",
+      "bytes": 89725
+    },
+    "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite-768x522.jpg": {
+      "sha": "e65d079b23a34170",
+      "bytes": 30874
+    },
+    "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite.jpg": {
+      "sha": "e9b832f0f22956b8",
+      "bytes": 356592
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-1024x683.jpg": {
+      "sha": "603cc42b204c58a6",
+      "bytes": 103366
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-300x200.jpg": {
+      "sha": "797f43727bf94ebc",
+      "bytes": 14952
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-768x512.jpg": {
+      "sha": "a5f8f9faa46452f7",
+      "bytes": 65268
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-1536x1024.jpg": {
+      "sha": "4ff0ce252dbb3d24",
+      "bytes": 197367
+    },
+    "/wp-content/uploads/2019/04/baylee-gramling-OTTKWktB8zU-unsplash-1-2048x1365.jpg": {
+      "sha": "46e6f4088d009f0d",
+      "bytes": 316885
+    },
+    "/wp-content/uploads/2023/05/extreme-close-up-mixed-race-handsome-man-has-trendy-hairdo-smiles-pleasantly-blinks-eye-300x200.jpg": {
+      "sha": "b03a1da9f014a401",
+      "bytes": 11452
+    },
+    "/wp-content/uploads/2023/05/extreme-close-up-mixed-race-handsome-man-has-trendy-hairdo-smiles-pleasantly-blinks-eye-768x512.jpg": {
+      "sha": "eac51913ab06f7f0",
+      "bytes": 57329
+    },
+    "/wp-content/uploads/2022/09/toothbrushing-1-300x200.jpg": {
+      "sha": "5c7c68fc0f6ea0f0",
+      "bytes": 14483
+    },
+    "/wp-content/uploads/2022/09/toothbrushing-1.jpg": {
+      "sha": "90bc6c84f6e9e1fe",
+      "bytes": 56492
+    },
+    "/wp-content/uploads/2022/09/toothbrushing-1-768x512.jpg": {
+      "sha": "973eaebb97d40aee",
+      "bytes": 57210
+    },
+    "/wp-content/uploads/2022/07/gumabsess-1.jpg": {
+      "sha": "7bf91f0b75065cf7",
+      "bytes": 70582
+    },
+    "/wp-content/uploads/2022/07/gumabsess-1-300x200.jpg": {
+      "sha": "bb3cc5a810d2c837",
+      "bytes": 10468
+    },
+    "/wp-content/uploads/2022/07/gumabsess-1-768x512.jpg": {
+      "sha": "0fcf02ac1e5b989a",
+      "bytes": 47145
+    },
+    "/wp-content/uploads/2019/07/spatablet-300x186.jpg": {
+      "sha": "da97f8bf5f6486af",
+      "bytes": 10118
+    },
+    "/wp-content/uploads/2019/07/spatablet-1024x634.jpg": {
+      "sha": "ba255effe4c1e268",
+      "bytes": 80434
+    },
+    "/wp-content/uploads/2019/07/spatablet-768x476.jpg": {
+      "sha": "3f5a496b19dc4264",
+      "bytes": 49129
+    },
+    "/wp-content/uploads/2019/07/spatablet-1536x951.jpg": {
+      "sha": "487f3ddcd766823c",
+      "bytes": 158742
+    },
+    "/wp-content/uploads/2023/01/shutterstock_1598735734-1-300x200.jpg": {
+      "sha": "004bcd8403c060b7",
+      "bytes": 14341
+    },
+    "/wp-content/uploads/2023/01/shutterstock_1598735734-1-768x511.jpg": {
+      "sha": "572a1fa6cadbea45",
+      "bytes": 57612
+    },
+    "/wp-content/uploads/2024/01/dentist-assisting-patient-wear-invisible-braces-1024x682.jpg": {
+      "sha": "0ff01f8ea62d2022",
+      "bytes": 70508
+    },
+    "/wp-content/uploads/2024/01/dentist-assisting-patient-wear-invisible-braces-300x200.jpg": {
+      "sha": "f1e4436a9a4e49fa",
+      "bytes": 11417
+    },
+    "/wp-content/uploads/2024/01/dentist-assisting-patient-wear-invisible-braces-768x512.jpg": {
+      "sha": "de9579de052565ae",
+      "bytes": 44778
+    },
+    "/wp-content/uploads/2024/01/dentist-assisting-patient-wear-invisible-braces-1536x1024.jpg": {
+      "sha": "8010d9a0008f855b",
+      "bytes": 132922
+    },
+    "/wp-content/uploads/2024/01/dentist-assisting-patient-wear-invisible-braces.jpg": {
+      "sha": "8f650db6ba3fa25a",
+      "bytes": 833260
+    },
+    "/wp-content/uploads/2023/04/shutterstock_285790634.jpeg": {
+      "sha": "d690a5678eba1d98",
+      "bytes": 202815
+    },
+    "/wp-content/uploads/2023/04/shutterstock_285790634-300x200.jpeg": {
+      "sha": "38ba10abb9a8d7df",
+      "bytes": 12819
+    },
+    "/wp-content/uploads/2023/02/dentist-1.jpg": {
+      "sha": "8f2ebec7f896d4a7",
+      "bytes": 30589
+    },
+    "/wp-content/uploads/2023/02/dentist-1-300x200.jpg": {
+      "sha": "18bc1e8c068ba23c",
+      "bytes": 11829
+    },
+    "/wp-content/uploads/2023/02/dentist-1-768x512.jpg": {
+      "sha": "541b2fe303a1ca78",
+      "bytes": 46327
+    },
+    "/wp-content/uploads/2022/12/Invisalign.jpg": {
+      "sha": "c4a8b1b2807d3e63",
+      "bytes": 47282
+    },
+    "/wp-content/uploads/2022/12/Invisalign-300x200.jpg": {
+      "sha": "6cc530c8a1d56934",
+      "bytes": 11684
+    },
+    "/wp-content/uploads/2022/12/Invisalign-768x512.jpg": {
+      "sha": "be0a4225fc0ea2fc",
+      "bytes": 44874
+    },
+    "/wp-content/uploads/2022/11/Invisalignok.jpg": {
+      "sha": "f6ad5649ace87094",
+      "bytes": 71661
+    },
+    "/wp-content/uploads/2022/11/Invisalignok-300x200.jpg": {
+      "sha": "ecb910ea56a44a6d",
+      "bytes": 9627
+    },
+    "/wp-content/uploads/2022/11/Invisalignok-768x513.jpg": {
+      "sha": "8b9c97c67dbc8977",
+      "bytes": 45560
+    },
+    "/wp-content/uploads/2023/09/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background-1024x682.jpg": {
+      "sha": "e428c3acff6b143d",
+      "bytes": 67224
+    },
+    "/wp-content/uploads/2023/09/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background-300x200.jpg": {
+      "sha": "70f8d1824af4e1bd",
+      "bytes": 8871
+    },
+    "/wp-content/uploads/2023/09/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background-768x512.jpg": {
+      "sha": "08d3eb4c3d212300",
+      "bytes": 40044
+    },
+    "/wp-content/uploads/2023/02/teethgrinding.jpg": {
+      "sha": "75ca0d0fff69add5",
+      "bytes": 23610
+    },
+    "/wp-content/uploads/2023/09/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background-1536x1024.jpg": {
+      "sha": "65efb2a07d693fa8",
+      "bytes": 138870
+    },
+    "/wp-content/uploads/2023/02/teethgrinding-300x200.jpg": {
+      "sha": "f92e0c6a27f418ed",
+      "bytes": 9823
+    },
+    "/wp-content/uploads/2023/02/teethgrinding-768x512.jpg": {
+      "sha": "2be55cb94c5fe6f8",
+      "bytes": 38579
+    },
+    "/wp-content/uploads/2022/08/jawbotox-for-tmj-1.jpg": {
+      "sha": "b25f1996d7d00f96",
+      "bytes": 30307
+    },
+    "/wp-content/uploads/2022/08/jawbotox-for-tmj-1-300x200.jpg": {
+      "sha": "3936e811649cbb4e",
+      "bytes": 7883
+    },
+    "/wp-content/uploads/2022/08/jawbotox-for-tmj-1-768x512.jpg": {
+      "sha": "432671c1da4bd8e0",
+      "bytes": 31019
+    },
+    "/wp-content/uploads/2022/02/lock-jaw-1.jpg": {
+      "sha": "e423f8de5bff3cf9",
+      "bytes": 66037
+    },
+    "/wp-content/uploads/2022/02/lock-jaw-1-300x200.jpg": {
+      "sha": "e577680ef7472b46",
+      "bytes": 12100
+    },
+    "/wp-content/uploads/2022/02/lock-jaw-1-768x512.jpg": {
+      "sha": "881ffa7b52036c6c",
+      "bytes": 53490
+    },
+    "/wp-content/uploads/2022/02/lockjaw-G.jpg": {
+      "sha": "10d1e09b605e0b3b",
+      "bytes": 43593
+    },
+    "/wp-content/uploads/2022/02/lockjaw-G-300x200.jpg": {
+      "sha": "5cdb8651b45680fa",
+      "bytes": 10107
+    },
+    "/wp-content/uploads/2022/02/lockjaw-G-768x512.jpg": {
+      "sha": "410f416bef371af1",
+      "bytes": 39826
+    },
+    "/wp-content/uploads/2022/02/shutterstock_231558334-1-300x200.jpg": {
+      "sha": "faf0760850c50dfb",
+      "bytes": 11230
+    },
+    "/wp-content/uploads/2022/02/shutterstock_231558334-1-768x512.jpg": {
+      "sha": "f51c2972b7fc2b80",
+      "bytes": 47368
+    },
+    "/wp-content/uploads/2023/10/aching-young-pretty-girl-touching-cheek-suffering-from-toothache-1024x747.jpg": {
+      "sha": "be76f26152860384",
+      "bytes": 57261
+    },
+    "/wp-content/uploads/2023/10/aching-young-pretty-girl-touching-cheek-suffering-from-toothache-300x219.jpg": {
+      "sha": "438902b4b9d8eb6c",
+      "bytes": 8429
+    },
+    "/wp-content/uploads/2023/10/aching-young-pretty-girl-touching-cheek-suffering-from-toothache-768x560.jpg": {
+      "sha": "ca144eb51a1181cd",
+      "bytes": 34757
+    },
+    "/wp-content/uploads/2023/10/aching-young-pretty-girl-touching-cheek-suffering-from-toothache-1536x1121.jpg": {
+      "sha": "7c72e6dbc03c24df",
+      "bytes": 119412
+    },
+    "/wp-content/uploads/2023/10/aching-young-pretty-girl-touching-cheek-suffering-from-toothache.jpg": {
+      "sha": "3ff41ba8e5d2514f",
+      "bytes": 1025253
+    },
+    "/wp-content/uploads/2022/04/shutterstock_1437249140.jpg": {
+      "sha": "85a6e583a7a8b552",
+      "bytes": 384434
+    },
+    "/wp-content/uploads/2022/04/shutterstock_1437249140-300x200.jpg": {
+      "sha": "6e5db18a1fbf09c3",
+      "bytes": 10087
+    },
+    "/wp-content/uploads/2022/04/shutterstock_1437249140-768x512.jpg": {
+      "sha": "4c99836cb5d4041e",
+      "bytes": 39799
+    },
+    "/wp-content/uploads/2019/11/Symptoms-of-TMJ-disorder-300x147.jpg": {
+      "sha": "ba95f9a00c9976f4",
+      "bytes": 5242
+    },
+    "/wp-content/uploads/2019/11/Symptoms-of-TMJ-disorder.jpg": {
+      "sha": "6e030334bf141b59",
+      "bytes": 22701
+    },
+    "/wp-content/uploads/2019/11/Symptoms-of-TMJ-disorder-768x377.jpg": {
+      "sha": "d2f759b3b880be73",
+      "bytes": 21773
+    },
+    "/wp-content/uploads/2023/10/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background-1024x683.jpg": {
+      "sha": "689f1ac965f0e306",
+      "bytes": 54845
+    },
+    "/wp-content/uploads/2023/10/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background-768x512.jpg": {
+      "sha": "e72eb9671934c460",
+      "bytes": 32502
+    },
+    "/wp-content/uploads/2023/10/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background-300x200.jpg": {
+      "sha": "6d82bb5dd424ab5f",
+      "bytes": 7681
+    },
+    "/wp-content/uploads/2023/10/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background-1536x1025.jpg": {
+      "sha": "994faf8cefeaad4e",
+      "bytes": 121783
+    },
+    "/wp-content/uploads/2023/10/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background.jpg": {
+      "sha": "e1765214b41e1153",
+      "bytes": 550811
+    },
+    "/wp-content/uploads/2023/04/young-girl-with-bruxism.jpeg": {
+      "sha": "00578c0b3963e11c",
+      "bytes": 391500
+    },
+    "/wp-content/uploads/2023/04/young-girl-with-bruxism-300x200.jpeg": {
+      "sha": "8d3b0aaa81884434",
+      "bytes": 8653
+    },
+    "/wp-content/uploads/2023/04/young-girl-with-bruxism-768x512.jpeg": {
+      "sha": "db5089073b128e03",
+      "bytes": 38379
+    },
+    "/wp-content/uploads/2023/02/Toothache.jpg": {
+      "sha": "715a0272466bcf10",
+      "bytes": 26525
+    },
+    "/wp-content/uploads/2023/02/Toothache-300x200.jpg": {
+      "sha": "6047821c905e8a9e",
+      "bytes": 8474
+    },
+    "/wp-content/uploads/2023/02/Toothache-768x512.jpg": {
+      "sha": "6e079300570484d0",
+      "bytes": 36071
+    },
+    "/wp-content/uploads/2023/01/Tooth-ache-300x200.jpg": {
+      "sha": "10fce0c27ea1ff75",
+      "bytes": 12571
+    },
+    "/wp-content/uploads/2023/01/Tooth-ache.jpg": {
+      "sha": "0a3b837d2f75463f",
+      "bytes": 50056
+    },
+    "/wp-content/uploads/2023/01/Tooth-ache-768x512.jpg": {
+      "sha": "d97cc5ae545bd359",
+      "bytes": 50296
+    },
+    "/wp-content/uploads/2023/01/natural-dental-care.jpg": {
+      "sha": "7e2bcbc531c0d43b",
+      "bytes": 78013
+    },
+    "/wp-content/uploads/2023/01/natural-dental-care-300x200.jpg": {
+      "sha": "94dd1b8bbb3be8d3",
+      "bytes": 11982
+    },
+    "/wp-content/uploads/2023/01/natural-dental-care-768x512.jpg": {
+      "sha": "57d648e9db0cf46e",
+      "bytes": 54663
+    },
+    "/wp-content/uploads/2022/10/charcoal-teethbrushing-1.jpg": {
+      "sha": "c3eea49a01e041e6",
+      "bytes": 55386
+    },
+    "/wp-content/uploads/2022/10/charcoal-teethbrushing-1-300x200.jpg": {
+      "sha": "0a39df30cce511d1",
+      "bytes": 11728
+    },
+    "/wp-content/uploads/2022/10/charcoal-teethbrushing-1-768x512.jpg": {
+      "sha": "d1bf9c821aac7684",
+      "bytes": 46142
+    },
+    "/wp-content/uploads/2024/06/29272-300x204.jpg": {
+      "sha": "653bba6bd4912786",
+      "bytes": 9447
+    },
+    "/wp-content/uploads/2024/06/29272-1024x695.jpg": {
+      "sha": "dbd1b0b1f23fa575",
+      "bytes": 59158
+    },
+    "/wp-content/uploads/2024/06/29272-768x521.jpg": {
+      "sha": "f3286ddb9e641a3b",
+      "bytes": 37779
+    },
+    "/wp-content/uploads/2024/06/29272-1536x1042.jpg": {
+      "sha": "864e4179e30dbbf6",
+      "bytes": 117998
+    },
+    "/wp-content/uploads/2024/06/29272.jpg": {
+      "sha": "0568f16c4ea6c63c",
+      "bytes": 910089
+    },
+    "/wp-content/uploads/2024/05/40926-1024x682.jpg": {
+      "sha": "e76e3b2d3d8edc61",
+      "bytes": 72700
+    },
+    "/wp-content/uploads/2024/05/40926-300x200.jpg": {
+      "sha": "5e6173c642a9f03c",
+      "bytes": 12205
+    },
+    "/wp-content/uploads/2024/05/40926-768x512.jpg": {
+      "sha": "7fa669e433f77ecc",
+      "bytes": 47861
+    },
+    "/wp-content/uploads/2024/05/40926-1536x1024.jpg": {
+      "sha": "dcd1dc1bf632ca39",
+      "bytes": 132388
+    },
+    "/wp-content/uploads/2024/05/40926.jpg": {
+      "sha": "c86dae6446ed823c",
+      "bytes": 1112264
+    },
+    "/wp-content/uploads/2024/04/2149195934-300x186.jpg": {
+      "sha": "e5b8bbed8ba5e516",
+      "bytes": 11003
+    },
+    "/wp-content/uploads/2024/04/2149195934-1024x635.jpg": {
+      "sha": "5ab5843ab1b90ea2",
+      "bytes": 63014
+    },
+    "/wp-content/uploads/2024/04/2149195934-768x476.jpg": {
+      "sha": "59122a8caedf73f2",
+      "bytes": 41684
+    },
+    "/wp-content/uploads/2024/04/2149195934-1536x952.jpg": {
+      "sha": "425fa22400493c9e",
+      "bytes": 113902
+    },
+    "/wp-content/uploads/2024/04/2149195934.jpg": {
+      "sha": "267202e38658a515",
+      "bytes": 1070871
+    },
+    "/wp-content/uploads/2023/04/girl-smiling-choosing-veneers-300x200.jpeg": {
+      "sha": "cfc9a2365b3b40c1",
+      "bytes": 10040
+    },
+    "/wp-content/uploads/2023/04/girl-smiling-choosing-veneers.jpeg": {
+      "sha": "f0316be52495d4a9",
+      "bytes": 163125
+    },
+    "/wp-content/uploads/2023/01/Job-interview.jpg": {
+      "sha": "ad368d6fc20b9da3",
+      "bytes": 78333
+    },
+    "/wp-content/uploads/2023/01/Job-interview-300x168.jpg": {
+      "sha": "610a58918d7f755c",
+      "bytes": 11990
+    },
+    "/wp-content/uploads/2023/01/Job-interview-768x430.jpg": {
+      "sha": "e96506ab3a4cf336",
+      "bytes": 47342
+    },
+    "/wp-content/uploads/2023/08/problemas-dentales-hombre-revisando-sus-dientes-mirando-perturbado-1024x681.jpg": {
+      "sha": "d723c9bd549a6583",
+      "bytes": 61524
+    },
+    "/wp-content/uploads/2023/08/problemas-dentales-hombre-revisando-sus-dientes-mirando-perturbado-300x200.jpg": {
+      "sha": "c13a47dba8713a5c",
+      "bytes": 9873
+    },
+    "/wp-content/uploads/2023/08/problemas-dentales-hombre-revisando-sus-dientes-mirando-perturbado-768x511.jpg": {
+      "sha": "71ae157718d3d3d3",
+      "bytes": 39652
+    },
+    "/wp-content/uploads/2022/11/Professional-teeth-whitening.jpg": {
+      "sha": "6dfb15291d394c84",
+      "bytes": 61153
+    },
+    "/wp-content/uploads/2022/11/Professional-teeth-whitening-300x200.jpg": {
+      "sha": "20a38f58e8e8990e",
+      "bytes": 11209
+    },
+    "/wp-content/uploads/2022/11/Professional-teeth-whitening-768x512.jpg": {
+      "sha": "dce04614d8589800",
+      "bytes": 46298
+    },
+    "/wp-content/uploads/2022/08/laser-teeth-whitening-1.jpg": {
+      "sha": "40fea7da197b3c45",
+      "bytes": 65768
+    },
+    "/wp-content/uploads/2022/08/laser-teeth-whitening-1-300x200.jpg": {
+      "sha": "479984bc77701c06",
+      "bytes": 13922
+    },
+    "/wp-content/uploads/2022/08/laser-teeth-whitening-1-768x512.jpg": {
+      "sha": "3f2e10fc6ae04866",
+      "bytes": 56270
+    },
+    "/wp-content/uploads/2023/08/problemas-dentales-hombre-revisando-sus-dientes-mirando-perturbado.jpg": {
+      "sha": "82e07596e946df2c",
+      "bytes": 551427
+    },
+    "/wp-content/uploads/2022/03/white-teeth-austin-G-300x200.jpg": {
+      "sha": "3d99ed4c24b07443",
+      "bytes": 10387
+    },
+    "/wp-content/uploads/2022/03/white-teeth-austin-G-768x512.jpg": {
+      "sha": "1dc4d286eb2945e6",
+      "bytes": 43818
+    },
+    "/wp-content/uploads/2024/03/dentist-doing-check-up-patient-1024x682.jpg": {
+      "sha": "1ace301d2a958787",
+      "bytes": 81447
+    },
+    "/wp-content/uploads/2024/03/dentist-doing-check-up-patient-300x200.jpg": {
+      "sha": "38f420489a6419b7",
+      "bytes": 13157
+    },
+    "/wp-content/uploads/2024/03/dentist-doing-check-up-patient-768x512.jpg": {
+      "sha": "e1c9ffd0831fdfab",
+      "bytes": 52468
+    },
+    "/wp-content/uploads/2024/03/dentist-doing-check-up-patient-1536x1024.jpg": {
+      "sha": "0f08482ddf26f39e",
+      "bytes": 153955
+    },
+    "/wp-content/uploads/2024/03/dentist-doing-check-up-patient.jpg": {
+      "sha": "03eb148c3f23e221",
+      "bytes": 1270849
+    },
+    "/wp-content/uploads/2024/02/65410-300x200.jpg": {
+      "sha": "f58653cdcaf5f7a0",
+      "bytes": 12683
+    },
+    "/wp-content/uploads/2024/02/65410-768x512.jpg": {
+      "sha": "630709c2d651140f",
+      "bytes": 48354
+    },
+    "/wp-content/uploads/2024/02/65410-1024x682.jpg": {
+      "sha": "b081e8da39954cc8",
+      "bytes": 74228
+    },
+    "/wp-content/uploads/2024/02/65410-1536x1024.jpg": {
+      "sha": "254924cf18284e9a",
+      "bytes": 134086
+    },
+    "/wp-content/uploads/2024/02/65410.jpg": {
+      "sha": "87a9bb3ca8e4cd10",
+      "bytes": 738126
+    },
+    "/wp-content/uploads/2023/06/headshot-glad-woman-laughs-smiles-broadly-300x200.jpg": {
+      "sha": "cacb8368e2091fce",
+      "bytes": 19270
+    },
+    "/wp-content/uploads/2023/06/headshot-glad-woman-laughs-smiles-broadly-1024x683.jpg": {
+      "sha": "60bd9a763576a4e2",
+      "bytes": 148196
+    },
+    "/wp-content/uploads/2023/06/headshot-glad-woman-laughs-smiles-broadly-768x512.jpg": {
+      "sha": "fe74318915f7278e",
+      "bytes": 92089
+    },
+    "/wp-content/uploads/2023/05/scared-blond-woman-biting-nails-fingers-panic-afraid-something-scary-trembling-from-fear-while-standing-anxious-against-white-wall.jpg": {
+      "sha": "5c43886bad30b942",
+      "bytes": 278234
+    },
+    "/wp-content/uploads/2023/05/scared-blond-woman-biting-nails-fingers-panic-afraid-something-scary-trembling-from-fear-while-standing-anxious-against-white-wall-300x200.jpg": {
+      "sha": "053f037cbe0d0df1",
+      "bytes": 9817
+    },
+    "/wp-content/uploads/2023/06/headshot-glad-woman-laughs-smiles-broadly.jpg": {
+      "sha": "9987e723ef70bcb9",
+      "bytes": 1361814
+    },
+    "/wp-content/uploads/2023/10/dentist-examining-female-patient-with-teeth-shades-300x200.jpg": {
+      "sha": "b92e30d1ea699d4d",
+      "bytes": 11793
+    },
+    "/wp-content/uploads/2023/05/scared-blond-woman-biting-nails-fingers-panic-afraid-something-scary-trembling-from-fear-while-standing-anxious-against-white-wall-768x512.jpg": {
+      "sha": "8cddff166cb203b8",
+      "bytes": 50309
+    },
+    "/wp-content/uploads/2023/10/dentist-examining-female-patient-with-teeth-shades-1024x682.jpg": {
+      "sha": "8364f6329164d8e5",
+      "bytes": 76348
+    },
+    "/wp-content/uploads/2023/10/dentist-examining-female-patient-with-teeth-shades-768x512.jpg": {
+      "sha": "c5f03f92105df7ac",
+      "bytes": 48730
+    },
+    "/wp-content/uploads/2023/10/dentist-examining-female-patient-with-teeth-shades-1536x1024.jpg": {
+      "sha": "cc67aba8b4053545",
+      "bytes": 142896
+    },
+    "/wp-content/uploads/2023/01/white-spot.jpg": {
+      "sha": "b3665e8f16ca1829",
+      "bytes": 54910
+    },
+    "/wp-content/uploads/2019/04/periodontitis.jpg": {
+      "sha": "2b798d1dd2fff9d0",
+      "bytes": 85408
+    },
+    "/wp-content/uploads/2020/07/shutterstock_1527451409-1.jpg": {
+      "sha": "9077305e0ead2499",
+      "bytes": 54898
+    },
+    "/wp-content/uploads/elementor/css/post-671.css": {
+      "sha": "53e6fe2e7855522e",
+      "bytes": 77
+    },
+    "/wp-content/uploads/2023/10/dentist-examining-female-patient-with-teeth-shades.jpg": {
+      "sha": "511e4c5bef533658",
+      "bytes": 909556
+    },
+    "/wp-content/uploads/elementor/css/post-199.css": {
+      "sha": "9890a84614bc4a4a",
+      "bytes": 13596
+    },
+    "/wp-content/uploads/elementor/css/post-160.css": {
+      "sha": "1df7899134096da6",
+      "bytes": 7747
+    },
+    "/wp-content/uploads/2019/06/dentists-watching-x-ray-1.jpg": {
+      "sha": "b993c175ee7648dd",
+      "bytes": 47855
+    },
+    "/wp-content/uploads/2021/03/shutterstock_1058754506-1.jpg": {
+      "sha": "e1c52818ac5918e5",
+      "bytes": 98648
+    },
+    "/wp-content/uploads/2022/01/adcrookedteeth-1.jpg": {
+      "sha": "52747692fdff99be",
+      "bytes": 57121
+    },
+    "/wp-content/uploads/2020/07/shutterstock_345988874-1.jpg": {
+      "sha": "0fa56c5fc97d0f7c",
+      "bytes": 40261
+    },
+    "/wp-content/uploads/elementor/css/post-301.css": {
+      "sha": "91d755af3592585d",
+      "bytes": 54454
+    },
+    "/wp-content/plugins/fluentform/assets/js/form-submission.js": {
+      "sha": "db768f34f3b53453",
+      "bytes": 56702
+    },
+    "/wp-content/uploads/2019/01/teeth-denture-on-top-of-blue-shelf-scaled.jpg": {
+      "sha": "645e1e3e357a76eb",
+      "bytes": 168716
+    },
+    "/wp-content/uploads/2020/08/shutterstock_675761230-1.jpg": {
+      "sha": "52e4b6ca028765e3",
+      "bytes": 38340
+    },
+    "/wp-content/uploads/2024/11/242024582_858520651461975_738656016553976769_n-300x200.jpg": {
+      "sha": "d0e240bf7f278ced",
+      "bytes": 8414
+    },
+    "/wp-content/uploads/2024/11/242024582_858520651461975_738656016553976769_n.jpg": {
+      "sha": "05be679b2d366465",
+      "bytes": 31252
+    },
+    "/wp-content/uploads/2020/07/shutterstock_1514580746-1.jpg": {
+      "sha": "c369767603d3f6f9",
+      "bytes": 50703
+    },
+    "/wp-content/uploads/2020/01/luis-machado-nCGl8FrGHb0-unsplash-1-scaled-1.jpg": {
+      "sha": "da3cabde1d1989b8",
+      "bytes": 348707
+    },
+    "/wp-content/uploads/2021/05/shutterstock_1504845494-1.jpeg": {
+      "sha": "a417bce61156bb79",
+      "bytes": 68431
+    },
+    "/wp-content/uploads/2018/12/Screen-Shot-2018-12-28-at-1.07.33-PM.png": {
+      "sha": "2818b065434563b1",
+      "bytes": 84978
+    },
+    "/wp-content/uploads/2018/12/Screen-Shot-2018-12-10-at-12.21.14-PM.png": {
+      "sha": "05a75272238acb9c",
+      "bytes": 137811
+    },
+    "/wp-content/uploads/2019/02/Dental-Plaque-scaled.jpg": {
+      "sha": "b36742e626ade222",
+      "bytes": 339960
+    },
+    "/wp-content/uploads/2019/08/young-woman-brushing-her-teeth-1.jpg": {
+      "sha": "7565731731a39b9b",
+      "bytes": 33063
+    },
+    "/wp-content/uploads/elementor/css/post-673.css": {
+      "sha": "ddfca36a4d60ae17",
+      "bytes": 77
+    },
+    "/wp-content/uploads/2024/10/69041b_966d830ba76947d09bb6f0706f2e9a3amv2_d_1920_1279_s_2-1024x682.webp": {
+      "sha": "5eba59f27610a23f",
+      "bytes": 89862
+    },
+    "/wp-content/uploads/2024/10/69041b_966d830ba76947d09bb6f0706f2e9a3amv2_d_1920_1279_s_2-300x200.webp": {
+      "sha": "bff79f2a11c3cb74",
+      "bytes": 16178
+    },
+    "/wp-content/uploads/2024/10/69041b_966d830ba76947d09bb6f0706f2e9a3amv2_d_1920_1279_s_2-768x512.webp": {
+      "sha": "28a7f48b83df82dd",
+      "bytes": 60784
+    },
+    "/wp-content/uploads/2024/10/69041b_966d830ba76947d09bb6f0706f2e9a3amv2_d_1920_1279_s_2.webp": {
+      "sha": "ea5a51bf03246234",
+      "bytes": 153636
+    },
+    "/wp-content/uploads/2019/01/Cosmetic-Dentistry-Market.jpg": {
+      "sha": "1cdcde434930e649",
+      "bytes": 61799
+    },
+    "/wp-content/uploads/2023/04/woman-choosing-veneers.jpeg": {
+      "sha": "9c6ffc56837635db",
+      "bytes": 173322
+    },
+    "/wp-content/uploads/2023/04/woman-choosing-veneers-300x200.jpeg": {
+      "sha": "52577f950fae2562",
+      "bytes": 12856
+    },
+    "/wp-content/uploads/2017/08/toothbar_ShareImage_B.png": {
+      "sha": "10227d97aa12679a",
+      "bytes": 227496
+    },
+    "/wp-content/uploads/2024/11/301217931_1069555487025156_3062814281449795531_n-819x1024.jpg": {
+      "sha": "72d9f9cdc70c59ca",
+      "bytes": 89899
+    },
+    "/wp-content/uploads/2024/11/301217931_1069555487025156_3062814281449795531_n-240x300.jpg": {
+      "sha": "b4dae096e8080ab0",
+      "bytes": 14367
+    },
+    "/wp-content/uploads/2024/11/301217931_1069555487025156_3062814281449795531_n-768x960.jpg": {
+      "sha": "28f26ac46cb997d2",
+      "bytes": 81246
+    },
+    "/wp-content/uploads/2024/11/301217931_1069555487025156_3062814281449795531_n-1229x1536.jpg": {
+      "sha": "7b989b771ade513a",
+      "bytes": 162246
+    },
+    "/wp-content/uploads/2024/11/301217931_1069555487025156_3062814281449795531_n.jpg": {
+      "sha": "769fe36e29905864",
+      "bytes": 159544
+    },
+    "/wp-content/uploads/2020/11/shutterstock_1687009768-1.jpg": {
+      "sha": "87a196aef7665d5d",
+      "bytes": 37839
+    },
+    "/wp-content/uploads/2020/09/shutterstock_773757976-1.jpg": {
+      "sha": "0047a4c555f6e2aa",
+      "bytes": 43615
+    },
+    "/wp-content/uploads/2022/01/texas-smile-.jpg": {
+      "sha": "a14ec8167883f24f",
+      "bytes": 86449
+    },
+    "/wp-content/uploads/2021/02/shutterstock_254735842-1.jpg": {
+      "sha": "8309fb02be4e8454",
+      "bytes": 33322
+    },
+    "/wp-content/uploads/2020/05/dont-replace-a-missing-tooth.jpg": {
+      "sha": "893bbdc699aca14b",
+      "bytes": 28669
+    },
+    "/wp-content/uploads/2021/06/shutterstock_722601751-1.jpeg": {
+      "sha": "5605a30cc8ec8770",
+      "bytes": 69873
+    },
+    "/wp-content/uploads/elementor/css/post-13791.css": {
+      "sha": "11b3f19d6c4f8a8c",
+      "bytes": 17626
+    },
+    "/wp-content/uploads/elementor/css/post-13794.css": {
+      "sha": "b6a418abed625dad",
+      "bytes": 17615
+    },
+    "/wp-content/uploads/elementor/css/post-13792.css": {
+      "sha": "39cb117fc8b76c6d",
+      "bytes": 17630
+    },
+    "/wp-content/uploads/elementor/css/post-13793.css": {
+      "sha": "7a426b680a381874",
+      "bytes": 17633
+    },
+    "/wp-content/uploads/elementor/css/post-13884.css": {
+      "sha": "3400f902438e1e39",
+      "bytes": 17631
+    },
+    "/wp-content/uploads/2020/03/s-b-vonlanthen-FaiZNiofP-U-unsplash-1-768x513-1.jpg": {
+      "sha": "d54ec8ac2ba80903",
+      "bytes": 52436
+    },
+    "/wp-content/uploads/2022/08/preventive-dentist1-1.jpg": {
+      "sha": "a7abea4351e56ddc",
+      "bytes": 67397
+    },
+    "/wp-content/uploads/2020/10/shutterstock_554660845-1.jpg": {
+      "sha": "78c8571525602863",
+      "bytes": 60892
+    },
+    "/wp-content/uploads/2021/06/shutterstock_1115346134-1.jpeg": {
+      "sha": "4ba5d85c47f6ecb4",
+      "bytes": 42020
+    },
+    "/wp-content/uploads/2022/02/gum-and-braces.jpg": {
+      "sha": "dc49e77182e93eb0",
+      "bytes": 542249
+    },
+    "/wp-content/uploads/2019/12/Electric-vs-Regular-Toothbrush-1.jpg": {
+      "sha": "fb17b431720bff1e",
+      "bytes": 23734
+    },
+    "/wp-content/uploads/2022/04/shutterstock_1229852500.jpg": {
+      "sha": "10fdee8d0f91c023",
+      "bytes": 506067
+    },
+    "/wp-content/uploads/elementor/css/post-663.css": {
+      "sha": "4c279953a887b113",
+      "bytes": 42160
+    },
+    "/wp-content/uploads/2021/07/shutterstock_1019069908-1.jpg": {
+      "sha": "14259e5a9b7659df",
+      "bytes": 61341
+    },
+    "/wp-content/uploads/2022/10/cosmeticdent-1.jpg": {
+      "sha": "6cd703397ba0131d",
+      "bytes": 43645
+    },
+    "/wp-content/uploads/2020/07/107504097_603403186973724_2262707603960157141_o.jpg": {
+      "sha": "c6ea75a8b1693204",
+      "bytes": 69700
+    },
+    "/wp-content/uploads/2021/10/what-can-happen-if-i-dont-floss-my-teeth-properly.jpg": {
+      "sha": "73e9eafeff31a377",
+      "bytes": 56361
+    },
+    "/wp-content/uploads/2019/09/TD_April2018Blog_BadBreath-1080x675-1024x640-1.jpg": {
+      "sha": "9c386bd275163884",
+      "bytes": 46177
+    },
+    "/wp-content/uploads/2022/03/dental-checkup-G-G.jpg": {
+      "sha": "6943d5b415177ec1",
+      "bytes": 46316
+    },
+    "/wp-content/uploads/2021/08/shutterstock_1941500632-1.jpeg": {
+      "sha": "284d10d966c623ea",
+      "bytes": 52016
+    },
+    "/wp-content/uploads/2020/11/shutterstock_358283384-1.jpg": {
+      "sha": "a7489cb33fe320f1",
+      "bytes": 49110
+    },
+    "/wp-content/uploads/2019/08/Bad-Breath-1.jpg": {
+      "sha": "cb84f63df4fe098d",
+      "bytes": 15501
+    },
+    "/wp-content/uploads/elementor/css/post-13839.css": {
+      "sha": "dd9d144e1d869b94",
+      "bytes": 53353
+    },
+    "/wp-content/uploads/2024/12/Invisalign-Delivery-Instructions.docx.pdf": {
+      "sha": "201af887b2d82d1d",
+      "bytes": 766823
+    },
+    "/wp-content/uploads/2024/12/Nightguard-Instructions.pdf": {
+      "sha": "71c161fc8365f177",
+      "bytes": 34915
+    },
+    "/wp-content/uploads/2024/12/EMA-Appliance-Instructions.pdf": {
+      "sha": "bb1459f560fac62d",
+      "bytes": 62741
+    },
+    "/wp-content/uploads/2024/12/Vivera-Retainer-Instructions.pdf": {
+      "sha": "c091651b2976202b",
+      "bytes": 31485
+    },
+    "/wp-content/uploads/2025/03/Arestin-Post-Op-Instructions.pdf": {
+      "sha": "b146483ea8be8fa5",
+      "bytes": 24866
+    },
+    "/wp-content/uploads/2025/03/Temporary-Crown-Post-Op-Instructions.pdf": {
+      "sha": "5cce4bd64ef387df",
+      "bytes": 35970
+    },
+    "/wp-content/uploads/2024/12/Bleach-TraysWhitening-Trays.pdf": {
+      "sha": "43a42f888709c157",
+      "bytes": 35412
+    },
+    "/wp-content/uploads/2024/12/Tooth-Extractions-Protocol.pdf": {
+      "sha": "cc8a9f6bba09c595",
+      "bytes": 58131
+    },
+    "/wp-content/uploads/2018/10/implants.jpg": {
+      "sha": "7e1a3280f54221c0",
+      "bytes": 49576
+    },
+    "/wp-content/uploads/2018/10/cosmetic-dentistry-austin.jpg": {
+      "sha": "bcba2bdddeb1c7ad",
+      "bytes": 110375
+    },
+    "/wp-content/uploads/2025/03/Whitening-Post-Op-Instructions.pdf": {
+      "sha": "2b2c01ba70193d7d",
+      "bytes": 62748
+    },
+    "/wp-content/uploads/2020/01/daniel-frank-wKbWAMlHgNo-unsplash-1-scaled-1.jpg": {
+      "sha": "672ccb5a9dd1b3a4",
+      "bytes": 267541
+    },
+    "/wp-content/uploads/2019/11/person-wearing-silver-colored-ring-while-holding-denture-1.jpg": {
+      "sha": "49d6e037c00873a6",
+      "bytes": 29336
+    },
+    "/wp-content/uploads/2020/01/hao-shaw-G4SOKpR-Uoc-unsplash-1-768x512-1.jpg": {
+      "sha": "d2dfb8ad32553f2f",
+      "bytes": 49218
+    },
+    "/wp-content/uploads/2022/02/invisalignbraces.jpg": {
+      "sha": "8bbbbe8c07a97060",
+      "bytes": 62109
+    },
+    "/wp-content/uploads/2024/12/Botulism-Toxin-POST-TREATMENT-INSTRUCTIONS.pdf": {
+      "sha": "e9d87395b7ce897a",
+      "bytes": 27524
+    },
+    "/wp-content/uploads/2020/06/shutterstock_1676006977-1-768x512-1.jpg": {
+      "sha": "e787481d4060168b",
+      "bytes": 18811
+    },
+    "/wp-content/uploads/2019/08/Home-whitening-vs.-In-Office-Whitening-1.jpg": {
+      "sha": "c71199fe718c4c8c",
+      "bytes": 42796
+    },
+    "/wp-content/uploads/2019/02/teethbrushing-1.jpg": {
+      "sha": "3153b2aa89b808a2",
+      "bytes": 67936
+    },
+    "/wp-content/uploads/2022/02/placing-invisalign.jpg": {
+      "sha": "86b4c62c1877726f",
+      "bytes": 56482
+    },
+    "/wp-content/uploads/2022/02/braces-and-floss-1.jpg": {
+      "sha": "4592e68ac7dcab8b",
+      "bytes": 117061
+    },
+    "/wp-content/uploads/2019/10/Healthy-Smiles-This-Halloween-1.jpg": {
+      "sha": "cfffec76213474f3",
+      "bytes": 43095
+    },
+    "/wp-content/uploads/2020/09/shutterstock_616331219-1.jpg": {
+      "sha": "9217d39af689df33",
+      "bytes": 50324
+    },
+    "/wp-content/uploads/2018/09/iStock-609685270.jpg": {
+      "sha": "926caf6f1a8a0583",
+      "bytes": 134036
+    },
+    "/wp-content/uploads/2019/04/zahnreinigung_dental_repairs_treat_teeth_brushing_teeth_catching_teeth_dentist_dental_instruments_dentist_equipment-579991.jpg": {
+      "sha": "738f71fe73eabcc4",
+      "bytes": 68273
+    },
+    "/wp-content/uploads/2020/08/shutterstock_48422968-1.jpg": {
+      "sha": "9faec5e8cd6a4e73",
+      "bytes": 35684
+    },
+    "/wp-content/uploads/2021/04/shutterstock_566451454-1.jpeg": {
+      "sha": "f2c64b6ddce180f1",
+      "bytes": 54588
+    },
+    "/wp-content/uploads/2026/07/Invisalign-1-Small-scaled.jpg": {
+      "sha": "620b6cd3cdfc0de3",
+      "bytes": 297500
+    },
+    "/wp-content/uploads/2024/11/328728313_570250818361070_3644556574751754925_n-1024x1006.jpg": {
+      "sha": "dfa2ba70bfc19d2f",
+      "bytes": 77465
+    },
+    "/wp-content/uploads/2024/11/328728313_570250818361070_3644556574751754925_n-300x295.jpg": {
+      "sha": "420f04ba2eb5008e",
+      "bytes": 12451
+    },
+    "/wp-content/uploads/2024/11/328728313_570250818361070_3644556574751754925_n-768x755.jpg": {
+      "sha": "e19d980e4ee10232",
+      "bytes": 50500
+    },
+    "/wp-content/uploads/2024/11/328728313_570250818361070_3644556574751754925_n.jpg": {
+      "sha": "330f8b76ebd4b63d",
+      "bytes": 91639
+    },
+    "/wp-content/uploads/2019/07/Spoon-Of-Coconut-Oil-1.jpeg": {
+      "sha": "5704bea42c3967cc",
+      "bytes": 61485
+    },
+    "/wp-content/uploads/2021/10/is-cosmetic-dentistry-permanent.jpg": {
+      "sha": "e7dae26604f902c3",
+      "bytes": 58894
+    },
+    "/wp-content/uploads/2019/10/woman-wearing-invisalign.jpg": {
+      "sha": "52e0b6fa0041eb41",
+      "bytes": 34218
+    },
+    "/wp-content/uploads/2018/09/main-qimg-d7933d14cb6c8f73c313ca262b547358.jpg": {
+      "sha": "fec99e39043155dc",
+      "bytes": 27180
+    },
+    "/wp-content/uploads/2020/03/Is-periodontal-disease-contagious.jpg": {
+      "sha": "5d40a6840c145bc7",
+      "bytes": 57430
+    },
+    "/wp-content/uploads/2019/02/teethwhiteningGeio.jpg": {
+      "sha": "341b9ab308bacff6",
+      "bytes": 85325
+    },
+    "/wp-content/uploads/2021/09/shutterstock_773757976.jpg": {
+      "sha": "2f32cffd83793018",
+      "bytes": 165250
+    },
+    "/wp-content/uploads/2019/09/kid-brushing-her-teeth-1.jpg": {
+      "sha": "df933af95493fab7",
+      "bytes": 36247
+    },
+    "/wp-content/uploads/2019/07/healthygums-1.jpg": {
+      "sha": "26edcb25ea0940fe",
+      "bytes": 61831
+    },
+    "/wp-content/uploads/2020/10/shutterstock_252392584-1.jpg": {
+      "sha": "729ce558b2501606",
+      "bytes": 55303
+    },
+    "/wp-content/uploads/2020/11/shutterstock_647794081-1.jpg": {
+      "sha": "bd8752c5ed58a4f2",
+      "bytes": 62988
+    },
+    "/wp-content/uploads/2022/09/loosetoothadult-1.jpg": {
+      "sha": "98bf584d7ae79ee1",
+      "bytes": 71327
+    },
+    "/wp-content/uploads/2021/10/what-to-do-when-you-lose-a-tooth.jpg": {
+      "sha": "744170388f3a2b47",
+      "bytes": 57904
+    },
+    "/wp-content/uploads/2022/10/gum-recession.jpg": {
+      "sha": "22eeb31aa2d8d458",
+      "bytes": 39484
+    },
+    "/wp-content/uploads/elementor/css/post-339.css": {
+      "sha": "dd075f2a1d679ad4",
+      "bytes": 35740
+    },
+    "/wp-content/uploads/2021/02/shutterstock_1284302962-1.jpg": {
+      "sha": "b294fb60e2c8500f",
+      "bytes": 56263
+    },
+    "/wp-content/uploads/2024/10/Home-Banner-Light-2.jpg": {
+      "sha": "5ca6e40271977d8e",
+      "bytes": 285993
+    },
+    "/wp-content/uploads/2024/10/Home-Banner-Light-2-300x136.jpg": {
+      "sha": "7921b8ea464481a1",
+      "bytes": 11554
+    },
+    "/wp-content/uploads/2024/10/Home-Banner-Light-2-1024x463.jpg": {
+      "sha": "bb72e6cc878c435f",
+      "bytes": 83502
+    },
+    "/wp-content/uploads/2024/10/Home-Banner-Light-2-768x347.jpg": {
+      "sha": "d2e194b54bdfe43e",
+      "bytes": 52688
+    },
+    "/wp-content/uploads/2024/10/Home-Banner-Light-2-1536x694.jpg": {
+      "sha": "e6c9a14942c212b3",
+      "bytes": 159501
+    },
+    "/wp-content/uploads/2024/11/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-1024x682.jpeg": {
+      "sha": "b7f3fae98b10e576",
+      "bytes": 102467
+    },
+    "/wp-content/uploads/2024/11/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-300x200.jpeg": {
+      "sha": "592ea5a04eebf6b0",
+      "bytes": 15464
+    },
+    "/wp-content/uploads/2024/11/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2-768x512.jpeg": {
+      "sha": "9a0284fd7ce015fe",
+      "bytes": 66757
+    },
+    "/wp-content/uploads/2024/11/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2.jpeg": {
+      "sha": "ca89ef76e0401314",
+      "bytes": 204416
+    },
+    "/wp-content/uploads/2022/06/shutterstock_616331219.jpg": {
+      "sha": "6345af439fa611ab",
+      "bytes": 592501
+    },
+    "/wp-content/uploads/2019/07/poor-dental-health-lead-to-liver-cancer-1.jpg": {
+      "sha": "4f7b4a80f6633658",
+      "bytes": 90705
+    },
+    "/wp-content/uploads/2021/01/edited-MobileThirdImage.jpg": {
+      "sha": "38812db6f7b09446",
+      "bytes": 61252
+    },
+    "/wp-content/uploads/2021/10/306283610_1074853769828661_499037235804106975_n.jpeg": {
+      "sha": "536d739b10a0fafc",
+      "bytes": 85949
+    },
+    "/wp-content/uploads/2019/09/Toothpicks.jpg": {
+      "sha": "376b08e85bff9589",
+      "bytes": 87037
+    },
+    "/wp-content/uploads/2020/02/Brushing-your-tongue-is-important.jpg": {
+      "sha": "ff62c947e1c7055d",
+      "bytes": 27627
+    },
+    "/wp-content/uploads/2022/04/shutterstock_162886907.jpg": {
+      "sha": "5080b3ba51450473",
+      "bytes": 480717
+    },
+    "/wp-content/uploads/2019/06/Missing-Teeth-1-scaled.jpg": {
+      "sha": "dbb042954e3a6587",
+      "bytes": 284171
+    },
+    "/wp-content/uploads/2022/11/restorativedentistryimage-1.jpg": {
+      "sha": "dacb27dc35c60c77",
+      "bytes": 58666
+    },
+    "/wp-content/uploads/2021/01/shutterstock_1800233047-1.jpg": {
+      "sha": "bef3900ebedbd589",
+      "bytes": 34956
+    },
+    "/wp-content/uploads/2019/04/care-chair-clean-305568-scaled.jpg": {
+      "sha": "ad37e04957f83f28",
+      "bytes": 365170
+    },
+    "/wp-content/uploads/2021/02/shutterstock_1215868702-1.jpg": {
+      "sha": "f0bb18a35b6699f5",
+      "bytes": 35632
+    },
+    "/wp-content/uploads/2020/12/shutterstock_1706287213-1.jpg": {
+      "sha": "97350ff421c46570",
+      "bytes": 145323
+    },
+    "/wp-content/uploads/2019/11/closeup-photography-of-woman-smiling-1.jpg": {
+      "sha": "022bf583dcd03b65",
+      "bytes": 51504
+    },
+    "/wp-content/uploads/2024/11/275385777_958086871505352_9034590421616072977_n-1024x1024.jpg": {
+      "sha": "171b7f395f6094cc",
+      "bytes": 134639
+    },
+    "/wp-content/uploads/2024/11/275385777_958086871505352_9034590421616072977_n-300x300.jpg": {
+      "sha": "ea50b2659f95a69d",
+      "bytes": 20948
+    },
+    "/wp-content/uploads/2024/11/275385777_958086871505352_9034590421616072977_n-150x150.jpg": {
+      "sha": "cfa6b9dadba57782",
+      "bytes": 7177
+    },
+    "/wp-content/uploads/2024/11/275385777_958086871505352_9034590421616072977_n-768x768.jpg": {
+      "sha": "eed4d33ffcc49e8e",
+      "bytes": 87431
+    },
+    "/wp-content/uploads/2024/11/275385777_958086871505352_9034590421616072977_n.jpg": {
+      "sha": "10b6e745f8ec2e04",
+      "bytes": 177509
+    },
+    "/wp-content/uploads/2023/04/shutterstock_1515575510.jpeg": {
+      "sha": "7d01a9adf39aac76",
+      "bytes": 119710
+    },
+    "/wp-content/uploads/2023/04/shutterstock_1515575510-300x155.jpeg": {
+      "sha": "5d8203243490d5ea",
+      "bytes": 8939
+    },
+    "/wp-content/uploads/2019/10/Wisdom-Tooth-Pain.jpeg": {
+      "sha": "7b153f1bdd611b5a",
+      "bytes": 19345
+    },
+    "/wp-content/uploads/2020/05/straighten-your-teeth-with-clear-aligners.jpg": {
+      "sha": "73a28471a53750b3",
+      "bytes": 25550
+    },
+    "/wp-content/uploads/2021/01/shutterstock_623291072-1.jpg": {
+      "sha": "786310fdfa67592f",
+      "bytes": 42296
+    },
+    "/wp-content/uploads/2022/02/gum-and-braces-300x200.jpg": {
+      "sha": "d6cc145d75f50315",
+      "bytes": 12492
+    },
+    "/wp-content/uploads/2022/02/gum-and-braces-768x511.jpg": {
+      "sha": "87620490de5128ec",
+      "bytes": 50977
+    },
+    "/wp-content/uploads/2018/10/cosmetic-dentistry-austin-300x201.jpg": {
+      "sha": "3b6ffc8ca1129934",
+      "bytes": 8122
+    },
+    "/wp-content/uploads/2018/09/iStock-609685270-1024x738.jpg": {
+      "sha": "73ae68b4c07ea73f",
+      "bytes": 73237
+    },
+    "/wp-content/uploads/2018/09/iStock-609685270-300x216.jpg": {
+      "sha": "8432812d03a2ea3c",
+      "bytes": 10489
+    },
+    "/wp-content/uploads/2018/09/iStock-609685270-768x553.jpg": {
+      "sha": "ec1ed3c0825db325",
+      "bytes": 46878
+    },
+    "/wp-content/uploads/2018/09/iStock-609685270-1536x1107.jpg": {
+      "sha": "4b1db14e220bdad0",
+      "bytes": 135115
+    },
+    "/wp-content/uploads/2022/02/placing-invisalign-300x200.jpg": {
+      "sha": "7d73aedb8b1d23d8",
+      "bytes": 13955
+    },
+    "/wp-content/uploads/2022/02/placing-invisalign-768x511.jpg": {
+      "sha": "827adbd17d10a7c3",
+      "bytes": 56708
+    },
+    "/wp-content/uploads/2019/08/Bad-Breath-1-300x225.jpg": {
+      "sha": "4a0963e4d9d71fdd",
+      "bytes": 8557
+    },
+    "/wp-content/uploads/2019/07/poor-dental-health-lead-to-liver-cancer-1-300x200.jpg": {
+      "sha": "a86bd4f765110d8d",
+      "bytes": 10638
+    },
+    "/wp-content/uploads/2019/07/poor-dental-health-lead-to-liver-cancer-1-768x512.jpg": {
+      "sha": "5cbf7a048917743a",
+      "bytes": 70968
+    },
+    "/wp-content/uploads/2024/11/402984962_18244918330171878_1672563705604970783_n-819x1024.jpg": {
+      "sha": "2006a815ecfe3e0b",
+      "bytes": 155481
+    },
+    "/wp-content/uploads/2024/11/402984962_18244918330171878_1672563705604970783_n-240x300.jpg": {
+      "sha": "046b3062498ddd73",
+      "bytes": 18493
+    },
+    "/wp-content/uploads/2024/11/402984962_18244918330171878_1672563705604970783_n-768x960.jpg": {
+      "sha": "97e7dc8aa79ecd86",
+      "bytes": 138486
+    },
+    "/wp-content/uploads/2024/11/402984962_18244918330171878_1672563705604970783_n-1229x1536.jpg": {
+      "sha": "922af62c313722f8",
+      "bytes": 310736
+    },
+    "/wp-content/uploads/2024/11/402984962_18244918330171878_1672563705604970783_n.jpg": {
+      "sha": "f834a81de8b8db46",
+      "bytes": 342582
+    },
+    "/wp-content/uploads/2021/09/shutterstock_1538855759.jpg": {
+      "sha": "3503deae29e05774",
+      "bytes": 177463
+    },
+    "/wp-content/uploads/2021/07/shutterstock_1290948973-1.jpeg": {
+      "sha": "f52c99193a60b479",
+      "bytes": 58423
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup-1024x1024.jpg": {
+      "sha": "b294e4e496aeadca",
+      "bytes": 83553
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup-300x300.jpg": {
+      "sha": "35cbed4fa6057a4b",
+      "bytes": 12358
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup-150x150.jpg": {
+      "sha": "5835e8ced6ea502b",
+      "bytes": 4583
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup-768x768.jpg": {
+      "sha": "df1429eb4f57f0d9",
+      "bytes": 52700
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup-1536x1536.jpg": {
+      "sha": "72be2121ebdad703",
+      "bytes": 163087
+    },
+    "/wp-content/uploads/2024/11/perfect-smile-closeup.jpg": {
+      "sha": "5d5fedc9ffa17e83",
+      "bytes": 323249
+    },
+    "/wp-content/uploads/2018/11/invisalign-1.jpeg": {
+      "sha": "658d5e671461d493",
+      "bytes": 28275
+    },
+    "/wp-content/uploads/2019/08/broken-cigarette-1.jpg": {
+      "sha": "70b8772504ea17eb",
+      "bytes": 33323
+    },
+    "/wp-content/uploads/2020/02/tips-for-picking-the-right-toothpaste.jpg": {
+      "sha": "de95abb2c89290ae",
+      "bytes": 25746
+    },
+    "/wp-content/uploads/2021/03/shutterstock_1276642348-1.jpg": {
+      "sha": "85893783f06f1c81",
+      "bytes": 85567
+    },
+    "/wp-content/uploads/2020/06/tonsil-stones-causes-symptoms.jpg": {
+      "sha": "6f23f30510280c63",
+      "bytes": 49216
+    },
+    "/wp-content/uploads/2024/11/patient-showing-okay-with-perfect-smile-taking-selfie-vlogging-blogging-at-stomatological-checkup--1024x683.jpg": {
+      "sha": "2c5170c665c9bec4",
+      "bytes": 59991
+    },
+    "/wp-content/uploads/2024/11/patient-showing-okay-with-perfect-smile-taking-selfie-vlogging-blogging-at-stomatological-checkup--300x200.jpg": {
+      "sha": "9859078079e49663",
+      "bytes": 9189
+    },
+    "/wp-content/uploads/2024/11/patient-showing-okay-with-perfect-smile-taking-selfie-vlogging-blogging-at-stomatological-checkup--768x512.jpg": {
+      "sha": "753e24ca27bf9983",
+      "bytes": 37785
+    },
+    "/wp-content/uploads/2024/11/patient-showing-okay-with-perfect-smile-taking-selfie-vlogging-blogging-at-stomatological-checkup--1536x1025.jpg": {
+      "sha": "cf8b9bad12d5b4f4",
+      "bytes": 117403
+    },
+    "/wp-content/uploads/2024/11/patient-showing-okay-with-perfect-smile-taking-selfie-vlogging-blogging-at-stomatological-checkup-.jpg": {
+      "sha": "4a1036b245bfecc4",
+      "bytes": 237503
+    },
+    "/wp-content/uploads/2022/02/pearlywhiteteeth.jpg": {
+      "sha": "ecc0531058b1778f",
+      "bytes": 33955
+    },
+    "/wp-content/uploads/2021/03/shutterstock_1307669605-1.jpg": {
+      "sha": "d830c1e19b4775e6",
+      "bytes": 93636
+    },
+    "/wp-content/uploads/2018/10/1_shocking_diseases_dentists_vadimguzhva-760x506-1.jpg": {
+      "sha": "5a15a6090b6632ad",
+      "bytes": 30960
+    },
+    "/wp-content/uploads/2019/09/Travel-Tips-for-Your-Teeth-1.jpg": {
+      "sha": "b46c1974a908d64c",
+      "bytes": 92319
+    },
+    "/wp-content/uploads/2020/10/shutterstock_371279323-1.jpg": {
+      "sha": "f6eb2aa87784105d",
+      "bytes": 65410
+    },
+    "/wp-content/uploads/2020/03/vaping-and-oral-health.jpg": {
+      "sha": "d70a05c656d93bc3",
+      "bytes": 18602
+    },
+    "/wp-content/uploads/2020/03/3-ways-to-prevent-a-poor-bite.jpg": {
+      "sha": "e6097bd282e91033",
+      "bytes": 33306
+    },
+    "/wp-content/uploads/2023/01/toothbrush-and-tooth-paste-1.jpg": {
+      "sha": "2b2e00cf5c54843b",
+      "bytes": 36876
+    },
+    "/wp-content/uploads/2023/01/chewing-ice-1.jpg": {
+      "sha": "7ff14d0d99609cc2",
+      "bytes": 40868
+    },
+    "/wp-content/uploads/2021/05/web-home-slider-986x493-1.png": {
+      "sha": "f69b168375978529",
+      "bytes": 559029
+    },
+    "/wp-content/uploads/2023/01/shutterstock_1256701261-1.jpg": {
+      "sha": "296565375d24a33f",
+      "bytes": 63390
+    },
+    "/wp-content/uploads/2021/05/shutterstock_1050606914-1.jpeg": {
+      "sha": "cfdf45c65d042171",
+      "bytes": 72874
+    },
+    "/wp-content/uploads/2023/05/shutterstock_1224151894.jpg": {
+      "sha": "7194411447551101",
+      "bytes": 499959
+    },
+    "/wp-content/uploads/2023/05/shutterstock_1810201546.jpg": {
+      "sha": "0d1cf08b73022894",
+      "bytes": 139662
+    },
+    "/wp-content/uploads/2023/05/shutterstock_1810201546-300x200.jpg": {
+      "sha": "b8de008ceb0dc77a",
+      "bytes": 11185
+    },
+    "/wp-content/uploads/2021/02/shutterstock_1892166514-1.jpg": {
+      "sha": "688898607c74fc79",
+      "bytes": 56860
+    },
+    "/wp-content/uploads/2019/12/matthew-poetker-nWZs_SnBDmg-unsplash-1-scaled-1.jpg": {
+      "sha": "799a84cef379a20b",
+      "bytes": 137582
+    },
+    "/wp-content/uploads/2022/04/shutterstock_660478255.jpg": {
+      "sha": "d6cabedde2324717",
+      "bytes": 455885
+    },
+    "/wp-content/uploads/2020/11/shutterstock_1093014014-1.jpg": {
+      "sha": "f0a3136bb989e774",
+      "bytes": 50496
+    },
+    "/wp-content/uploads/2022/06/female-dentist-is-installing-patient-s-mouth-device-making-molded-tooth.jpg": {
+      "sha": "c4ddba8ea92d8be5",
+      "bytes": 300941
+    },
+    "/wp-content/uploads/2020/10/shutterstock_142808959-1.jpg": {
+      "sha": "2eb36019f94abb8c",
+      "bytes": 40063
+    },
+    "/wp-content/uploads/2022/05/shutterstock_1530279239.jpg": {
+      "sha": "fe28395a00e0ec1e",
+      "bytes": 515165
+    },
+    "/wp-content/uploads/2022/05/shutterstock_1718366740.jpg": {
+      "sha": "2c30cf3597b9e533",
+      "bytes": 559407
+    },
+    "/wp-content/uploads/2020/11/shutterstock_1054704908-1.jpg": {
+      "sha": "4af532a6c8ddec3a",
+      "bytes": 55674
+    },
+    "/wp-content/uploads/2022/03/Dentures-1.jpg": {
+      "sha": "41d14d5a1fb37326",
+      "bytes": 73507
+    },
+    "/wp-content/uploads/2021/01/shutterstock_1401918893-1.jpg": {
+      "sha": "22e2d1edd2b523ec",
+      "bytes": 76158
+    },
+    "/wp-content/uploads/elementor/css/post-310.css": {
+      "sha": "f472d79f492289fb",
+      "bytes": 23756
+    },
+    "/wp-content/uploads/2019/12/women-smiling-while-laying-on-lawn-field.jpeg": {
+      "sha": "0417ac89f0a5558a",
+      "bytes": 40937
+    },
+    "/wp-content/uploads/2022/07/dentistcavities-G.jpg": {
+      "sha": "c4607b7345dc5b57",
+      "bytes": 68550
+    },
+    "/wp-content/uploads/2020/02/why-do-my-gums-feel-itchy.jpg": {
+      "sha": "38b9c420cedd6053",
+      "bytes": 45035
+    },
+    "/wp-content/uploads/2021/03/maria-lysenko-KbIZwj8d3Bo-unsplash-1-scaled-1.jpg": {
+      "sha": "bd12adc6a9c439b4",
+      "bytes": 779179
+    },
+    "/wp-content/uploads/2020/12/h-shaw-5LcgjahE0vo-unsplash-1-scaled-1.jpg": {
+      "sha": "42d1fe7bdbceecfa",
+      "bytes": 259350
+    },
+    "/wp-content/uploads/2021/04/shutterstock_757893178-1.jpeg": {
+      "sha": "19b475a50815905f",
+      "bytes": 61594
+    },
+    "/wp-content/uploads/2020/05/why-you-bite-your-cheek-.jpg": {
+      "sha": "95e97e3ce27ae6aa",
+      "bytes": 37123
+    },
+    "/wp-content/uploads/2021/08/pexels-shiny-diamond-3762453-1-scaled-1.jpg": {
+      "sha": "252c2226c7111252",
+      "bytes": 286175
+    },
+    "/wp-content/uploads/2020/12/shutterstock_1823263868-1.jpg": {
+      "sha": "f9bf310449120b99",
+      "bytes": 40331
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot": {
+      "sha": "2fdd188a80e7ba4e",
+      "bytes": 241504
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff": {
+      "sha": "cf400416960acceb",
+      "bytes": 133180
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf": {
+      "sha": "387f78a74d2f72e3",
+      "bytes": 241344
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2": {
+      "sha": "c5c2d415be83a8d2",
+      "bytes": 108000
+    },
+    "/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg": {
+      "sha": "ec7403feacf5d8a9",
+      "bytes": 372159
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/img/arrow.png": {
+      "sha": "3e016c23ae514173",
+      "bytes": 201
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_desc.png": {
+      "sha": "d08ed0e21f187dd3",
+      "bytes": 158
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_asc.png": {
+      "sha": "595704c3f3cf4cb6",
+      "bytes": 160
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/img/sort_asc_disabled.png": {
+      "sha": "a65b8f4f84d6427a",
+      "bytes": 148
+    },
+    "/wp-content/plugins/elementskit-lite/widgets/init/assets/img/cross-out.svg": {
+      "sha": "7b136998787dd550",
+      "bytes": 257
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/marcellus-weo_ebrok8hqldviaf81wpok7es.woff2": {
+      "sha": "9e666f53be2fb4ee",
+      "bytes": 8900
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/marcellus-weo_ebrok8hqldviaf81vvok.woff2": {
+      "sha": "8a539799d12e3a14",
+      "bytes": 14552
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdb35wcmi96ajtm81ggy9tqxycj.woff2": {
+      "sha": "2e2e275ace96af3a",
+      "bytes": 16744
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdb35wcmi96ajtm81ggy93qxycj.woff2": {
+      "sha": "adfc2ea29f483d75",
+      "bytes": 23424
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdb35wcmi96ajtm81ggy9bqxycj.woff2": {
+      "sha": "491fa36fac452d42",
+      "bytes": 8840
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdb35wcmi96ajtm81ggy9fqxycj.woff2": {
+      "sha": "9b02123d06b4da83",
+      "bytes": 48908
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdb35wcmi96ajtm81ggy9nqxw.woff2": {
+      "sha": "3d13e308a3bc8d21",
+      "bytes": 40796
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdh35wcmi96ajtm81gou9vyww.woff2": {
+      "sha": "12a07033692a4d1e",
+      "bytes": 16708
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdh35wcmi96ajtm81ghu9vyww.woff2": {
+      "sha": "77b83f0f4040e008",
+      "bytes": 27448
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdh35wcmi96ajtm81gqu9vyww.woff2": {
+      "sha": "45d2a9a17a5d513e",
+      "bytes": 8480
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdh35wcmi96ajtm81gru9vyww.woff2": {
+      "sha": "7aa945e0d94831e4",
+      "bytes": 46080
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/overpass-qfdh35wcmi96ajtm81glu9s.woff2": {
+      "sha": "29217ef8adef5f6c",
+      "bytes": 39380
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtuqjig1_i6t8kchkm459wxrxc7mw9c.woff2": {
+      "sha": "468ffe8053d3c85c",
+      "bytes": 26912
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtuqjig1_i6t8kchkm459wxrzs7mw9c.woff2": {
+      "sha": "3ae053b94003c33e",
+      "bytes": 24620
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtuqjig1_i6t8kchkm459wxrxi7mw9c.woff2": {
+      "sha": "e7cc08e857ebbc4c",
+      "bytes": 13868
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtuqjig1_i6t8kchkm459wxrxy7mw9c.woff2": {
+      "sha": "8a75a31c95f80ea5",
+      "bytes": 75044
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtuqjig1_i6t8kchkm459wxrys7m.woff2": {
+      "sha": "96a874a36a161a53",
+      "bytes": 39608
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459wrhyzbi.woff2": {
+      "sha": "dcbe843efc8bfb86",
+      "bytes": 26476
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459w1hyzbi.woff2": {
+      "sha": "9a6dde39d72bcc64",
+      "bytes": 23836
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459wzhyzbi.woff2": {
+      "sha": "1d9320d0a0261ae7",
+      "bytes": 13020
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459wdhyzbi.woff2": {
+      "sha": "516507425d7f314a",
+      "bytes": 70768
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/montserrat-jtusjig1_i6t8kchkm459wlhyw.woff2": {
+      "sha": "fdc9964050bfa24c",
+      "bytes": 37828
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u-w4bmutphjxsipx-mpclq7a.woff2": {
+      "sha": "a4c91aa229c7cf94",
+      "bytes": 4208
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u-w4bmutphjxsipx-opci.woff2": {
+      "sha": "b19efe906c9b0345",
+      "bytes": 17072
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi9w2_fqft1dw.woff2": {
+      "sha": "930c525f792cc92f",
+      "bytes": 4340
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi9w2_gwft.woff2": {
+      "sha": "a961366b4346f607",
+      "bytes": 17728
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u8w4bmutphjxsaui-qjcy.woff2": {
+      "sha": "ff0c0340150f8d44",
+      "bytes": 5600
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u8w4bmutphjxsaxc-q.woff2": {
+      "sha": "bca1d88ada544d9c",
+      "bytes": 24408
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi5wq_fqft1dw.woff2": {
+      "sha": "c6c11bbe6b802037",
+      "bytes": 5616
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi5wq_gwft.woff2": {
+      "sha": "6c84348296ebe2e2",
+      "bytes": 24448
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi3wi_fqft1dw.woff2": {
+      "sha": "847049de9339386e",
+      "bytes": 5560
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u_w4bmutphjxsi3wi_gwft.woff2": {
+      "sha": "d32335c2c5fd5de9",
+      "bytes": 23736
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u8w4bmutphh30aui-qjcy.woff2": {
+      "sha": "63aee53d26311c1c",
+      "bytes": 5364
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh7usswapgr_p.woff2": {
+      "sha": "c9455def209bbd01",
+      "bytes": 5624
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u8w4bmutphh30axc-q.woff2": {
+      "sha": "a79b4c65b454a795",
+      "bytes": 21508
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh7usswipgq.woff2": {
+      "sha": "115f6a626ca115d4",
+      "bytes": 23236
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6uyw4bmutphjxawxjeu.woff2": {
+      "sha": "1c2fc265baaeba4f",
+      "bytes": 5472
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6uyw4bmutphjx4wxg.woff2": {
+      "sha": "918b7dc3e2e2d015",
+      "bytes": 23580
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh6uvswapgr_p.woff2": {
+      "sha": "4ef7cd3d4ed7de91",
+      "bytes": 5368
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh50xswapgr_p.woff2": {
+      "sha": "f89e4b21bccfed71",
+      "bytes": 5412
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh6uvswipgq.woff2": {
+      "sha": "c447dd7677b419db",
+      "bytes": 23040
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/lato-s6u9w4bmutphh50xswipgq.woff2": {
+      "sha": "08664859baab5ed9",
+      "bytes": 22504
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxiayp8kv8jhgfvrjjlme0tmmpkzsq.woff2": {
+      "sha": "541e2d0cd4e67f7a",
+      "bytes": 5720
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxiayp8kv8jhgfvrjjlme0tcmpi.woff2": {
+      "sha": "d80200523e723113",
+      "bytes": 8404
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmv1pvgdeoceg.woff2": {
+      "sha": "5dfaf84dcae2a308",
+      "bytes": 5980
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmv1pvf9eo.woff2": {
+      "sha": "28d28631a83de4ed",
+      "bytes": 8720
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm21lvgdeoceg.woff2": {
+      "sha": "f1f727141c2243e9",
+      "bytes": 5956
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm21lvf9eo.woff2": {
+      "sha": "f0ae296f5c19db04",
+      "bytes": 8712
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxigyp8kv8jhgfvrjjlufntakpy.woff2": {
+      "sha": "1e91b430ebe5aa34",
+      "bytes": 5964
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxigyp8kv8jhgfvrjjluchta.woff2": {
+      "sha": "50d0c1742d80ac71",
+      "bytes": 8668
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmg1hvgdeoceg.woff2": {
+      "sha": "248a4c1403251015",
+      "bytes": 5856
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmr19vgdeoceg.woff2": {
+      "sha": "10a9b6414cbebd69",
+      "bytes": 6012
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmg1hvf9eo.woff2": {
+      "sha": "1ddb074f9963be8f",
+      "bytes": 8504
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmr19vf9eo.woff2": {
+      "sha": "3ad6c8bd3624555d",
+      "bytes": 8724
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmy15vgdeoceg.woff2": {
+      "sha": "4c05ae2d20c308c3",
+      "bytes": 5860
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlmy15vf9eo.woff2": {
+      "sha": "4b0864712c6e7ca7",
+      "bytes": 8596
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm111vgdeoceg.woff2": {
+      "sha": "fabc455f55219e7f",
+      "bytes": 5932
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm111vf9eo.woff2": {
+      "sha": "494d66c1f510af56",
+      "bytes": 8680
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm81xvgdeoceg.woff2": {
+      "sha": "596b940732c1bd30",
+      "bytes": 5812
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxidyp8kv8jhgfvrjjlm81xvf9eo.woff2": {
+      "sha": "ed79248088783dd5",
+      "bytes": 8488
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxigyp8kv8jhgfvrlptufntakpy.woff2": {
+      "sha": "b49bddf0704c9a43",
+      "bytes": 5364
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxigyp8kv8jhgfvrlptuchta.woff2": {
+      "sha": "a9220f99b916978e",
+      "bytes": 7484
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlfj_z1jlfc-k.woff2": {
+      "sha": "385e10dd29173c67",
+      "bytes": 5508
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlfj_z1xlfq.woff2": {
+      "sha": "6f0c572590421075",
+      "bytes": 7932
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrldz8z1jlfc-k.woff2": {
+      "sha": "33ff412e573782b8",
+      "bytes": 5524
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrldz8z1xlfq.woff2": {
+      "sha": "78bc3aa78faec288",
+      "bytes": 7840
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxieyp8kv8jhgfvrjjnecmne.woff2": {
+      "sha": "0b1fcab42c18b69b",
+      "bytes": 5644
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxieyp8kv8jhgfvrjjfecg.woff2": {
+      "sha": "7d93459d86585bfc",
+      "bytes": 7884
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlgt9z1jlfc-k.woff2": {
+      "sha": "af5fda16a19169e0",
+      "bytes": 5484
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlgt9z1xlfq.woff2": {
+      "sha": "cd36de204aca2d5f",
+      "bytes": 7748
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlej6z1jlfc-k.woff2": {
+      "sha": "bb1f2d582e7fba58",
+      "bytes": 5524
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlej6z1xlfq.woff2": {
+      "sha": "f4e80d9dfd374d02",
+      "bytes": 8000
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlcz7z1xlfq.woff2": {
+      "sha": "9338e65fc077355c",
+      "bytes": 7816
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlcz7z1jlfc-k.woff2": {
+      "sha": "ccfd87f69ef00d81",
+      "bytes": 5432
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrldd4z1jlfc-k.woff2": {
+      "sha": "a72eccfa6cfa9c26",
+      "bytes": 5492
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrldd4z1xlfq.woff2": {
+      "sha": "60bf0aba6526436f",
+      "bytes": 7824
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlbt5z1jlfc-k.woff2": {
+      "sha": "0270140e6150b816",
+      "bytes": 5380
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/poppins-pxibyp8kv8jhgfvrlbt5z1xlfq.woff2": {
+      "sha": "17ea10196a490a8d",
+      "bytes": 7632
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/outfit-qgyvz_mvcbenp4njtetq.woff2": {
+      "sha": "45447a2b45991ea4",
+      "bytes": 32272
+    },
+    "/wp-content/uploads/elementor/google-fonts/fonts/outfit-qgyvz_mvcbenp4njuktqq4e.woff2": {
+      "sha": "46ef61bf3ff76e84",
+      "bytes": 14324
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot": {
+      "sha": "cf83ffb8cf0023bd",
+      "bytes": 34034
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2": {
+      "sha": "8afc6e5e842baab1",
+      "bytes": 13276
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff": {
+      "sha": "14c9db4ff87fde08",
+      "bytes": 16276
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf": {
+      "sha": "c651b8a67d319320",
+      "bytes": 33736
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg": {
+      "sha": "2326849b6c3dfa21",
+      "bytes": 144714
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2": {
+      "sha": "d0b4256abed72481",
+      "bytes": 78196
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot": {
+      "sha": "75a761159ae266c5",
+      "bytes": 203030
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff": {
+      "sha": "74edc18b67c487e3",
+      "bytes": 101652
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg": {
+      "sha": "fa498fb2596a5235",
+      "bytes": 918991
+    },
+    "/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/fonts/elementskit.woff": {
+      "sha": "84687b1145eebcd3",
+      "bytes": 464672
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf": {
+      "sha": "3d06af1f31cd83ac",
+      "bytes": 202744
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot": {
+      "sha": "52633a4bd205e19c",
+      "bytes": 151556
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2": {
+      "sha": "6b2680fab784d245",
+      "bytes": 81612
+    },
+    "/wp-content/uploads/2024/10/193722043_803023710345003_765382938418736866_n.jpg": {
+      "sha": "a5fc660dda4b9873",
+      "bytes": 208928
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff": {
+      "sha": "284ec4299d1c9337",
+      "bytes": 97804
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf": {
+      "sha": "7c6ce17d6e55fb2b",
+      "bytes": 151368
+    },
+    "/wp-content/uploads/2024/10/69041b_a9c7362558ce45f5ada7764b9448fdb0mv2_d_1920_1279_s_2.webp": {
+      "sha": "c1fa97cf328ef46c",
+      "bytes": 127308
+    },
+    "/wp-includes/js/mediaelement/mejs-controls.svg": {
+      "sha": "ad55816ac6c62f21",
+      "bytes": 4598
+    },
+    "/wp-content/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg": {
+      "sha": "5accc59868cdb3e8",
+      "bytes": 749223
+    },
+    "/wp-content/uploads/2024/11/Toothbar-3.jpg": {
+      "sha": "ea584c9520df7501",
+      "bytes": 18211
+    },
+    "/wp-content/uploads/2023/04/Toothbar-5.jpg": {
+      "sha": "5aa497970cf8ec69",
+      "bytes": 93779
+    },
+    "/wp-content/uploads/2024/11/Barclay.jpg": {
+      "sha": "cf8009af0199dfe6",
+      "bytes": 36530
+    },
+    "/wp-content/uploads/2025/07/Dr.-Rachel.jpg": {
+      "sha": "c06f896e16a522cd",
+      "bytes": 109294
+    },
+    "/wp-content/uploads/2024/11/danielle-2.jpg": {
+      "sha": "d058974b6683a516",
+      "bytes": 33870
+    },
+    "/wp-content/uploads/2024/11/Bakke.jpg": {
+      "sha": "25c871292ebeb36c",
+      "bytes": 46703
+    },
+    "/wp-content/uploads/2024/10/69041b_03cc837a6e15445a87e39fbe98dfd103mv2_d_1920_1279_s_2.webp": {
+      "sha": "56bf45f99c09c5bb",
+      "bytes": 74468
+    },
+    "/wp-content/uploads/2024/11/woman-looking-at-her-teeth-smiling-lady-at-dentist-office-dentist-treatment-perfect-smile-.jpg": {
+      "sha": "7cc17dff5c2a44d2",
+      "bytes": 244135
+    },
+    "/wp-content/uploads/2024/11/Jacobsen-.jpg": {
+      "sha": "cf73188cd7ff7b65",
+      "bytes": 34593
+    },
+    "/wp-content/uploads/2024/10/69041b_8b2377b1491a434684c196e78fc77d90mv2_d_1920_1279_s_2.webp": {
+      "sha": "0c458d2e63559124",
+      "bytes": 76492
+    }
+  }
+}

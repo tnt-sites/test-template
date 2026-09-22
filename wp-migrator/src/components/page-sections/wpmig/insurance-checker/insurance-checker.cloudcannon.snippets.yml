@@ -1,0 +1,10 @@
+_snippets:
+  insurance_checker:
+    template: astro_component
+    inline: false
+    preview:
+      text: Insurance Checker
+    definitions:
+      component_name: page-sections/wpmig/insurance-checker
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/insurance-checker/insurance-checker.cloudcannon.inputs.yml

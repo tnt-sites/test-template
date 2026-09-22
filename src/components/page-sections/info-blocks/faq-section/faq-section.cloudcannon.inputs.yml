@@ -54,6 +54,12 @@ singleOpen:
 openFirst:
   type: switch
   comment: Whether the first accordion item should be open by default.
+iconName:
+  type: text
+  comment: >-
+    Icon shown at the end of each title bar. Empty renders no icon — the source
+    accordions this was migrated from use the title-bar colour change as the
+    only open/closed cue.
 items:
   type: array
   label: FAQ Items
@@ -197,3 +203,65 @@ backgroundImage.positionHorizontal:
         name: Center
       - id: right
         name: Right
+accordionTheme:
+  type: object
+  label: Accordion Design
+  comment: >-
+    Measured styling for the panels, filled in by the migrator from the source
+    site. Leave empty to use the theme's own accordion design.
+  options:
+    preview:
+      icon: palette
+      text:
+        - Accordion Design
+      subtext:
+        - key: titleBackground
+        - Theme default
+accordionTheme.titleBackground:
+  type: color
+  comment: Fill behind a closed panel's title bar.
+accordionTheme.titleColor:
+  type: color
+  comment: Text colour of a closed panel's title bar.
+accordionTheme.titleBackgroundOpen:
+  type: color
+  comment: Fill behind the open panel's title bar.
+accordionTheme.titleColorOpen:
+  type: color
+  comment: Text colour of the open panel's title bar.
+accordionTheme.titleFontSize:
+  type: text
+  comment: "CSS length for the title text, e.g. 18px."
+accordionTheme.titleFontWeight:
+  type: text
+  comment: "CSS font weight for the title text, e.g. 400."
+accordionTheme.titlePadding:
+  type: text
+  comment: "CSS padding shorthand for the title bar, e.g. 15px."
+accordionTheme.titleGap:
+  type: text
+  comment: Space between the title text and its icon.
+accordionTheme.itemGap:
+  type: text
+  comment: Space between one panel and the next.
+accordionTheme.itemBorder:
+  type: text
+  comment: "CSS border shorthand under each panel. Empty keeps the theme's hairline rule."
+accordionTheme.detailPadding:
+  type: text
+  comment: CSS padding shorthand for an open panel's content.
+accordionTheme.detailBorderTop:
+  type: text
+  comment: CSS border shorthand above an open panel's content.
+accordionTheme.detailBorderBottom:
+  type: text
+  comment: CSS border shorthand below an open panel's content.
+accordionTheme.detailBackground:
+  type: color
+  comment: Fill behind an open panel's content.
+accordionTheme.detailBorderRight:
+  type: text
+  comment: CSS border shorthand on an open panel's right edge.
+accordionTheme.detailBorderLeft:
+  type: text
+  comment: CSS border shorthand on an open panel's left edge.

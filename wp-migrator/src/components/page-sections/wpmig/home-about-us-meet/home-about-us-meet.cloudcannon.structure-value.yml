@@ -1,0 +1,17 @@
+label: Home About Us Meet
+icon: interests
+description: Home About Us Meet section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-about-us-meet
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home About Us Meet
+  icon: interests
+picker_preview:
+  text: Home About Us Meet
+  subtext: Home About Us Meet section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-about-us-meet/home-about-us-meet.cloudcannon.inputs.yml

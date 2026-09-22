@@ -1,0 +1,50 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  name = "Provider Name",
+  href = "#",
+  imageSource = "",
+  imageAlt = "",
+  variant = "button",
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const cleanText = (value: unknown, fallback = "") =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
+
+const safeVariant = variant === "name" ? "name" : "button";
+const labelClass = safeVariant === "name" ? "name" : "btn";
+const providerName = cleanText(name, "Provider Name");
+const providerHref = cleanText(href, "#");
+const providerImage = cleanText(imageSource);
+const providerImageAlt = cleanText(imageAlt, providerName);
+
+if (!_component && providerName.length === 0 && providerImage.length === 0) {
+  return;
+}
+---
+
+<a href={providerHref} {...htmlAttributes}>
+  {
+    providerImage && (
+      <Image
+        source={providerImage}
+        alt={providerImageAlt}
+        editable={editable}
+        data-editable={editable ? "image" : undefined}
+        data-prop-src={editable ? "imageSource" : undefined}
+        data-prop-alt={editable ? "imageAlt" : undefined}
+      />
+    )
+  }
+  <span
+    class={labelClass}
+    data-editable={editable ? "text" : undefined}
+    data-prop={editable ? "name" : undefined}
+  >
+    {providerName}
+  </span>
+</a>

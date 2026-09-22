@@ -1,0 +1,155 @@
+---
+/**
+ * See If Your Exam — migrated from insurance-checker [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="see-if-your-exam" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="siye-box">
+    <section class="siye-box2">
+      <div class="siye-box3">
+        <div class="siye-box4">
+          <h2 class="siye-heading">{heading}</h2>
+        </div>
+        <div class="siye-box5">
+          <div class="siye-box6">
+            {text && <p class="siye-text">{text}</p>}
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+<style>
+  .see-if-your-exam {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .siye-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .siye-box2 {
+    box-sizing: border-box;
+    padding: 8px;
+    position: relative;
+  }
+
+  .siye-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .siye-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .siye-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .siye-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22.5px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .siye-box6 {
+    box-sizing: border-box;
+  }
+
+  .siye-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .siye-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .siye-box2 {
+      padding: 48px;
+    }
+
+    .siye-box3 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 500px;
+    }
+
+    .siye-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .siye-box5 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .siye-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .siye-text {
+    font-size: 15px;
+  }
+  @media (min-width: 768px) {
+    .siye-text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .siye-text {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

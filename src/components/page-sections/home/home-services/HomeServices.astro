@@ -1,0 +1,184 @@
+---
+/**
+ * Home Services — the homepage's four service callout cards.
+ *
+ * This row is not a standalone band: in the source design it overlaps upwards
+ * into the "Full-Service Dental Care" banner above it by 100px, landing in the
+ * 150px of padding that banner reserves at its foot. The two are one visual
+ * unit, so this component's `margin-top` and `.pb-box`'s `padding-bottom` in
+ * HomeProseBlock have to move together.
+ *
+ * Forked from the shared `wpmig/media-prose` card layout, which 18 other pages
+ * also use. That component had no rule for the overlap, the brand tint or the
+ * numbering — it set `--mp-cardimg` and nothing ever read it, so every card
+ * photo in the page data rendered as nothing at all.
+ *
+ * Each card is a photo under a brand-blue wash, with the title and copy at the
+ * top and the icon and number sharing a row at the foot.
+ *
+ * The wash is deliberately darker than the source site's. The original uses
+ * #3db5fb at 80%, which leaves white body copy at roughly 1.8:1 against the
+ * photo behind it — a WCAG AA failure that WAVE flags. #046caa at 90% holds the
+ * same brand hue (202deg) and measures 4.68:1 on the worst card, clearing the
+ * 4.5:1 body-text threshold. Lightening either value puts the text back under.
+ */
+const {
+  cards = [],
+  tintColor = "",
+  tintColorHex = "",
+  tintOpacity = 0.9,
+  titleColor = "",
+  titleColorHex = "",
+  textColor = "",
+  textColorHex = "",
+  overlapTop = 100,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const pick = (hex: string, token: string) => hex || token || "";
+const vars = Object.entries({
+  "--hs-tint": pick(tintColorHex, tintColor),
+  "--hs-tint-op": tintOpacity === 0 || tintOpacity ? String(tintOpacity) : "",
+  "--hs-tt": pick(titleColorHex, titleColor),
+  "--hs-tx": pick(textColorHex, textColor),
+  "--hs-overlap": Number.isFinite(Number(overlapTop)) ? `-${Number(overlapTop)}px` : "",
+})
+  .filter(([, v]) => v)
+  .map(([k, v]) => `${k}:${v}`)
+  .join(";");
+
+const cardList = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+
+<section class="home-services" id={id || undefined} style={vars || undefined} {...rest}>
+  <div class="hs-row">
+    {
+      cardList.map((c: any) => (
+        <article class="hs-card" style={c.bgImage ? `--hs-cardimg:url('${c.bgImage}')` : undefined}>
+          <div class="hs-card-inner">
+            {c.title && <h3 class="hs-card-title">{c.title}</h3>}
+            {c.text && <p class="hs-card-text">{c.text}</p>}
+            <div class="hs-card-foot">
+              {c.image && <img class="hs-card-icon" src={c.image} alt={c.imageAlt || ""} loading="lazy" />}
+              {c.text2 && <span class="hs-card-badge">{c.text2}</span>}
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .home-services {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* Edge-to-edge, and pulled up into the banner above. */
+  .hs-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-inline: auto;
+    max-width: min(100%, 1440px);
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .hs-card {
+    background-color: #ffffff;
+    background-image: var(--hs-cardimg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-inline: 20px;
+    position: relative;
+  }
+
+  /* The brand wash over the photo. Text sits above it via .hs-card-inner. */
+  .hs-card::before {
+    background-color: var(--hs-tint, #046caa);
+    content: "";
+    inset: 0;
+    opacity: var(--hs-tint-op, 0.9);
+    position: absolute;
+  }
+
+  .hs-card-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 10px;
+    padding-block: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hs-card-title {
+    color: var(--hs-tt, #ffffff);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hs-card-text {
+    color: var(--hs-tx, #ffffff);
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* Icon and number share the foot of the card, pushed down by the auto margin
+     so cards of differing copy length still line their numbers up. */
+  .hs-card-foot {
+    align-items: flex-end;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 16px;
+  }
+
+  .hs-card-icon {
+    display: block;
+    flex: 0 0 auto;
+    height: 52px;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .hs-card-badge {
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  @media (min-width: 768px) {
+    .hs-row {
+      flex-direction: row;
+      margin-top: var(--hs-overlap, -100px);
+    }
+
+    .hs-card {
+      flex: 1 1 0;
+      min-height: 273px;
+    }
+  }
+</style>

@@ -1,0 +1,211 @@
+---
+/**
+ * New Patients E — migrated from new-patients/new-patient-specials [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="new-patients-e" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="npe-box">
+    <h3 class="npe-heading">{heading}</h3>
+    {subheading && <h1 class="npe-heading2">{subheading}</h1>}
+  </div>
+</div>
+<style>
+  .new-patients-e {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .npe-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .npe-heading {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .npe-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .new-patients-e {
+      justify-content: flex-start;
+    }
+
+    .npe-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .new-patients-e {
+      text-align: left;
+    }
+
+    .npe-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .npe-text {
+    background-color: rgb(235, 242, 246);
+    color: rgb(27, 46, 56);
+    font-size: 78px;
+    font-weight: 700;
+    line-height: 117px;
+  }
+  .npe-text2 {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .npe-box12 {
+    background-color: rgb(255, 255, 255);
+  }
+  .npe-box13 {
+    background-color: rgb(0, 101, 148);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 21px;
+    line-height: 31.5px;
+  }
+  .npe-box14 {
+    color: rgb(128, 128, 128);
+  }
+  .npe-decor {
+    color: rgb(134, 134, 134);
+    font-size: 13px;
+    line-height: 19.5px;
+  }
+  .npe-text3 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .npe-heading {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .npe-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    .npe-btn5 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .npe-heading {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .npe-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .npe-decor {
+      color: rgb(128, 128, 128);
+    }
+
+    .npe-btn5 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .npe-heading {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

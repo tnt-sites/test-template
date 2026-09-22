@@ -1,0 +1,53 @@
+label: New Patients B
+icon: grid_view
+description: New Patients B section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/new-patients-b
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  subheading: ""
+  text: ""
+  heading2: ""
+  text2: ""
+  heading3: ""
+  heading4: ""
+  text3: ""
+  text4: ""
+  heading5: ""
+  text5: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+  items2:
+    - text: ""
+  items3:
+    - text: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#ffffff"
+  textColor3: "#555555"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  textHoverColor: "#064d96"
+  hoverColor: "#064d96"
+  hoverColor2: "#09498c"
+preview:
+  text:
+    - New Patients B
+  icon: grid_view
+picker_preview:
+  text: New Patients B
+  subtext: New Patients B section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/new-patients-b/new-patients-b.cloudcannon.inputs.yml

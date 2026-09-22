@@ -1,0 +1,10 @@
+_snippets:
+  beam_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Beam Dental
+    definitions:
+      component_name: page-sections/wpmig/beam-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/beam-dental/beam-dental.cloudcannon.inputs.yml

@@ -1,0 +1,23 @@
+label: Schedule CTA
+icon: event_available
+description: Full-width appointment CTA band. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/schedule-cta
+  id: ""
+  heading: Schedule Your Appointment at Our 5-Star Rated Dental Practice
+  subtext: ""
+  buttonText: Book an Appointment
+  buttonLink: ""
+  backgroundColor: var(--color-brand)
+  hidden: false
+preview:
+  text:
+    - Schedule CTA
+  subtext:
+    - key: heading
+  icon: event_available
+picker_preview:
+  text: Schedule CTA
+  subtext: Full-width appointment CTA band. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/schedule-cta/schedule-cta.cloudcannon.inputs.yml

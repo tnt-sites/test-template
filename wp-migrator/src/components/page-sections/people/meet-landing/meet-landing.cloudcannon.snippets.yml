@@ -1,0 +1,33 @@
+meetLanding:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Meet Landing
+    icon: add
+  definitions:
+    component_name: MeetLanding
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: variant
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: doctors
+        type: array
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundGradient
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundImage
+        type: object
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/people/meet-landing/meet-landing.cloudcannon.inputs.yml

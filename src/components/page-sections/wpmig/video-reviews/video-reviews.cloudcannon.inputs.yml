@@ -1,0 +1,300 @@
+_inputs:
+  heading:
+    type: text
+  text:
+    type: html
+  text2:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  subheading:
+    type: text
+  text3:
+    type: textarea
+  text4:
+    type: text
+  text5:
+    type: text
+  text6:
+    type: text
+  text7:
+    type: text
+  text8:
+    type: text
+  text9:
+    type: text
+  text10:
+    type: html
+  text11:
+    type: text
+  text12:
+    type: text
+  items:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items2:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items3:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items4:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items5:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items6:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items7:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items8:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items9:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items10:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items11:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items12:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  items13:
+    type: array
+    options:
+      structures: _structures.media_prose_patient_item
+  headingColor:
+    type: select
+    comment: Heading colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  headingColorHex:
+    type: color
+    comment: Optional custom hex that overrides the headingColor selection.
+  textColor:
+    type: select
+    comment: Text colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColorHex:
+    type: color
+    comment: Optional custom hex that overrides the textColor selection.
+  buttonBackgroundColor:
+    type: select
+    comment: ButtonBackground colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonBackgroundColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonBackgroundColor selection.
+  buttonTextColor:
+    type: select
+    comment: ButtonText colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonTextColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonTextColor selection.
+  textColor2:
+    type: select
+    comment: TextColor2 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColor2Hex:
+    type: color
+    comment: Optional custom hex that overrides the textColor2 selection.
+  textColor3:
+    type: select
+    comment: TextColor3 colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColor3Hex:
+    type: color
+    comment: Optional custom hex that overrides the textColor3 selection.
+  buttonTextHoverColor:
+    type: select
+    comment: ButtonTextHover colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  buttonTextHoverColorHex:
+    type: color
+    comment: Optional custom hex that overrides the buttonTextHoverColor selection.
+_structures:
+  media_prose_patient_item:
+    values:
+      - value: {}
+        _inputs: {}

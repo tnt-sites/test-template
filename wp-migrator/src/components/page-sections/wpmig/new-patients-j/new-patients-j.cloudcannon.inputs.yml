@@ -1,0 +1,116 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  secondaryButtonText3:
+    type: text
+  secondaryButtonLink3:
+    type: url
+  text:
+    type: html
+  text2:
+    type: html
+  text3:
+    type: html
+  text4:
+    type: html
+  text5:
+    type: html
+  text6:
+    type: html
+  text7:
+    type: html
+  text8:
+    type: html
+  text9:
+    type: html
+  text10:
+    type: html
+  text11:
+    type: html
+  text12:
+    type: html
+  text13:
+    type: html
+  text14:
+    type: html
+  text15:
+    type: html
+  text16:
+    type: html
+  text17:
+    type: html
+  text18:
+    type: html
+  subheading:
+    type: text
+  text19:
+    type: html
+  text20:
+    type: html
+  text21:
+    type: html
+  text22:
+    type: html
+  heading2:
+    type: text
+  text23:
+    type: html
+  text24:
+    type: html
+  text25:
+    type: html
+  text26:
+    type: html
+  text27:
+    type: html
+  text28:
+    type: html
+  heading3:
+    type: text
+  items:
+    type: array
+    options:
+      structures: _structures.new_patients_j_item
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  buttonTextColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  titleColor:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color
+_structures:
+  new_patients_j_item:
+    values:
+      - value:
+          title: ""
+          text: ""
+        _inputs:
+          title:
+            type: text
+          text:
+            type: textarea

@@ -1,30 +1,114 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/wp-content/uploads/2024/10/chapel-hill-dental-logo-scaled.png",
+  "logoAlt": "Chapel Hill Dental Arts logo",
   "links": [
     {
-      "name": "Home",
-      "path": "/"
+      "name": "Book an Appointment",
+      "path": "https://s.hsone.io/MdxGf8ajzH"
     },
     {
-      "name": "Why",
-      "path": "/why/"
+      "name": "1,390 reviews",
+      "path": "https://www.google.com/search?q=chapel+hill+dental+arts&oq=Chapel+Hi&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGIMBGLEDGIAEMgYIAhBFGDkyBwgDEC4YgAQyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxNzQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#"
     },
     {
-      "name": "Blog",
-      "path": "/blog/"
+      "name": "About Us",
+      "path": "/our-practice/"
+    },
+    {
+      "name": "Services",
+      "path": "/services/"
+    },
+    {
+      "name": "Smile Gallery",
+      "path": "/smile-gallery/"
+    },
+    {
+      "name": "Contact Us",
+      "path": "/contact/"
+    },
+    {
+      "name": "HIPAA Policy",
+      "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+    },
+    {
+      "name": "Opt-out preferences",
+      "path": "/opt-out-preferences/"
+    },
+    {
+      "name": "429 Highway 35, Red Bank, NJ 07701",
+      "path": "https://share.google/YSYlAQLTap26ytHRt"
     }
   ],
   "contactTitle": "Contact Us",
   "officeHoursTitle": "Office Hours",
   "legalLinks": [
     {
-      "name": "Sitemap",
-      "path": "/sitemap"
+      "name": "Privacy Policy",
+      "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+    }
+  ],
+  "linkColumns": [
+    {
+      "title": "",
+      "brand": true,
+      "logo": {
+        "source": "/wp-content/uploads/2024/10/chapel-hill-dental-logo-scaled.png",
+        "alt": "Chapel Hill Dental Arts logo"
+      },
+      "links": []
     },
     {
-      "name": "Privacy Policy",
-      "path": "/privacy-policy"
+      "title": "Quick Links",
+      "links": [
+        {
+          "name": "About Us",
+          "path": "/our-practice/"
+        },
+        {
+          "name": "Services",
+          "path": "/services/"
+        },
+        {
+          "name": "Smile Gallery",
+          "path": "/smile-gallery/"
+        },
+        {
+          "name": "Contact Us",
+          "path": "/contact/"
+        },
+        {
+          "name": "Book an Appointment",
+          "path": "https://s.hsone.io/MdxGf8ajzH",
+          "external": true
+        },
+        {
+          "name": "Privacy Policy",
+          "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf",
+          "external": true
+        },
+        {
+          "name": "HIPAA Policy",
+          "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf",
+          "external": true
+        },
+        {
+          "name": "Opt-out preferences",
+          "path": "/opt-out-preferences/"
+        }
+      ]
     }
-  ]
+  ],
+  "copyright": {
+    "text": "@2026 Chapel Hill Dental Arts",
+    "links": []
+  },
+  "contactBand": {
+    "eyebrow": "Questions / Schedule An Appointment",
+    "title": "Contact Us",
+    "mapEmbedUrl": "https://maps.google.com/maps?q=Chapel%20Hill%20Dental%20Art&t=m&z=14&output=embed&iwloc=near",
+    "mapHeight": 1000,
+    "formEmbedUrl": "https://forms.liine.com/252015254376958",
+    "formHeight": 800,
+    "formTitle": "Chapel Hill Dental Arts  - Contact Form"
+  }
 }

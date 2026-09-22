@@ -1,0 +1,53 @@
+_inputs:
+  eyebrow:
+    type: textarea
+  heading:
+    type: text
+  text:
+    type: html
+  text2:
+    type: textarea
+  subheading:
+    type: text
+  text3:
+    type: html
+  heading2:
+    type: text
+  text4:
+    type: html
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  items:
+    type: array
+    options:
+      structures: _structures.dental_emergencies_item
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  buttonBackgroundColor:
+    type: color
+  buttonTextColor:
+    type: color
+  buttonBackgroundColor2:
+    type: color
+  buttonBackgroundHoverColor:
+    type: color
+  buttonBackgroundColor2HoverColor:
+    type: color
+_structures:
+  dental_emergencies_item:
+    values:
+      - value:
+          text: ""
+        _inputs:
+          text:
+            type: html

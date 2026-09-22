@@ -7,6 +7,7 @@ const {
   contentSections,
   isOpen = false,
   accordionName,
+  iconName = "chevron-down",
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -15,7 +16,7 @@ const {
 <details class="accordion-item" open={isOpen} name={accordionName} {...htmlAttributes}>
   <summary class="accordion-item-title">
     <span class="accordion-item-title-text">{title}</span>
-    <Icon name="chevron-down" size="none" class="accordion-item-icon" />
+    {iconName && <Icon name={iconName} size="none" class="accordion-item-icon" />}
   </summary>
   <div class="accordion-item-detail">
     <slot>
@@ -26,18 +27,36 @@ const {
 
 <style lang="pcss" is:global>
   @layer components {
+    /**
+     * Every value here is a custom property with the design's own default as
+     * its fallback, so an accordion that sets none of them renders exactly as
+     * it always has. `Accordion.astro` sets the ones it is given on the
+     * wrapper, and they inherit down.
+     *
+     * The reason they exist: a migrated accordion is a *measured* one. This
+     * site's source accordions are stacks of filled title bars — grey-green or
+     * pale blue when closed, brand blue with white text when open, 10px apart,
+     * with hairline rules around the open panel and no chevron at all — which
+     * is nothing like the bordered, bold, chevron'd default below. Without
+     * somewhere for that measurement to land, routing a migrated accordion
+     * here would only trade one wrong design for another.
+     */
     .accordion-item {
-    border-bottom: 1px solid var(--color-border-subtle);
+    border-bottom: var(--accordion-item-border, 1px solid var(--color-border-subtle));
     container-type: inline-size;
+    margin-bottom: var(--accordion-item-gap, 0);
 
     > .accordion-item-title {
       align-items: center;
+      background-color: var(--accordion-title-bg, transparent);
+      color: var(--accordion-title-color, inherit);
       cursor: pointer;
       display: flex;
-      font-size: var(--font-size-xl);
-      font-weight: var(--font-weight-bold);
+      font-size: var(--accordion-title-font-size, var(--font-size-xl));
+      font-weight: var(--accordion-title-font-weight, var(--font-weight-bold));
+      gap: var(--accordion-title-gap, 0);
       justify-content: space-between;
-      padding: var(--spacing-md);
+      padding: var(--accordion-title-padding, var(--spacing-md));
       transition: background-color var(--animation-normal) ease-out;
       -webkit-user-select: none;
       -ms-user-select: none;
@@ -47,8 +66,15 @@ const {
         list-style-type: none;
       }
 
+      /* A themed accordion has no separate hover measurement — the source
+         expresses hover as a preview of the open state, so that is the
+         fallback chain before the untouched default. */
       &:hover {
-        background-color: var(--color-bg-surface);
+        background-color: var(
+          --accordion-title-bg-hover,
+          var(--accordion-title-bg-open, var(--color-bg-surface))
+        );
+        color: var(--accordion-title-color-hover, var(--accordion-title-color-open, inherit));
       }
 
       &::-webkit-details-marker {
@@ -61,8 +87,14 @@ const {
     }
 
     > .accordion-item-detail {
-      padding-inline: var(--spacing-md);
-      padding-bottom: var(--spacing-md);
+      /* All four sides: the source's open panel is a bordered card, and a
+         top/bottom pair alone reads as two loose rules. */
+      background-color: var(--accordion-detail-bg, transparent);
+      border-top: var(--accordion-detail-border-top, 0);
+      border-right: var(--accordion-detail-border-right, 0);
+      border-bottom: var(--accordion-detail-border-bottom, 0);
+      border-left: var(--accordion-detail-border-left, 0);
+      padding: var(--accordion-detail-padding, 0 var(--spacing-md) var(--spacing-md));
 
       > editable-array > editable-array-item:first-child > *:first-child,
       > :not(editable-array):first-child {
@@ -72,8 +104,13 @@ const {
   }
 
   .accordion-item[open] {
-    > .accordion-item-title .accordion-item-icon {
-      transform: rotate(180deg);
+    > .accordion-item-title {
+      background-color: var(--accordion-title-bg-open, var(--accordion-title-bg, transparent));
+      color: var(--accordion-title-color-open, var(--accordion-title-color, inherit));
+
+      .accordion-item-icon {
+        transform: rotate(180deg);
+      }
     }
 
     > .accordion-item-detail {

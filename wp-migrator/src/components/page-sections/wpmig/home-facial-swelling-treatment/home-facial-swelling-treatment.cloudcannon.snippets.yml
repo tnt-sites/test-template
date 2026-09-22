@@ -1,0 +1,10 @@
+_snippets:
+  home_facial_swelling_treatment:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Facial Swelling Treatment
+    definitions:
+      component_name: page-sections/wpmig/home-facial-swelling-treatment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-facial-swelling-treatment/home-facial-swelling-treatment.cloudcannon.inputs.yml

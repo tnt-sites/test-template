@@ -1,0 +1,17 @@
+label: Home Shooting Pain Treatment
+icon: interests
+description: Home Shooting Pain Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-shooting-pain-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Shooting Pain Treatment
+  icon: interests
+picker_preview:
+  text: Home Shooting Pain Treatment
+  subtext: Home Shooting Pain Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-shooting-pain-treatment/home-shooting-pain-treatment.cloudcannon.inputs.yml

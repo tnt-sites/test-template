@@ -1,0 +1,585 @@
+---
+/**
+ * Media Prose B — migrated from our-practice [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items` — the office-tour slides.
+ */
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  text3 = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text4 = "",
+  items = [],
+  autoPlay = true,
+  interval = 5000,
+  backgroundColor = "var(--color-brand)",
+  backgroundColorHex = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const backgroundColorValue = backgroundColorHex || backgroundColor || "var(--color-brand)";
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+/**
+ * The source's office-tour slideshow was a Swiper whose slides JavaScript
+ * injected, so the snapshot captured an empty shell — five spacer divs and two
+ * arrow icons with no paths. `items` carries the photos instead and the gallery
+ * below is a real one: one slide at a time, arrows, dots, and a swipe.
+ */
+const itemsList = (Array.isArray(items) ? items : [])
+  .filter((it) => it && (it.image || it.source))
+  .map((it) => ({ image: it.image || it.source, imageAlt: it.imageAlt || it.alt || "" }));
+---
+<div class="media-prose-b" id={id || undefined} style={`--bg:${backgroundColorValue};--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
+  <div class="mpb-box">
+    <div class="mpb-box2">
+      <div class="mpb-box3">
+        <div class="mpb-box4">
+          <h2 class="mpb-heading">{heading}</h2>
+        </div>
+        <div class="mpb-box5">
+          {text && <div class="mpb-text">{text}</div>}
+        </div>
+        <div class="mpb-box6">
+          {text2 && <div class="mpb-text2">{text2}</div>}
+        </div>
+        <div class="mpb-box7">
+          {text3 && <div class="mpb-text3">{text3}</div>}
+        </div>
+      </div>
+      <div class="mpb-box8">
+        <div class="mpb-box9">
+          {image && <img class="mpb-media" src={image} alt={imageAlt || ""} loading="lazy" width="800" height="533" />}
+        </div>
+      </div>
+    </div>
+    <div class="mpb-box10">
+      <div class="mpb-box11">
+        {itemsList.length > 0 && (
+          <div
+            class="mpb-gallery"
+            data-carousel
+            data-autoplay={String(autoPlay) !== "false" ? "true" : "false"}
+            data-interval={interval}
+            role="region"
+            aria-roledescription="carousel"
+            aria-label={`${subheading || heading || "Gallery"} slideshow`}
+          >
+            <div class="mpb-frame">
+              <div class="mpb-track">
+                {itemsList.map((it, i) => (
+                  <div
+                    class="mpb-slide"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={`Slide ${i + 1} of ${itemsList.length}`}
+                  >
+                    <img src={it.image} alt={it.imageAlt} loading="lazy" draggable="false" />
+                  </div>
+                ))}
+              </div>
+              <button class="mpb-arrow mpb-prev" type="button" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+              </button>
+              <button class="mpb-arrow mpb-next" type="button" aria-label="Next slide">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
+            </div>
+            <div class="mpb-dots" role="tablist" aria-label="Choose slide" />
+          </div>
+        )}
+      </div>
+      <div class="mpb-box28">
+        <div class="mpb-box29">
+          {subheading && <h2 class="mpb-heading2">{subheading}</h2>}
+        </div>
+        <div class="mpb-box30">
+          {text4 && <div class="mpb-body" set:html={text4} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .media-prose-b {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mpb-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .mpb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .mpb-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 105.71%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 105.71%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mpb-box4 {
+    box-sizing: border-box;
+  }
+
+  .mpb-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mpb-box5 {
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .mpb-text {
+    box-sizing: border-box;
+  }
+
+  .mpb-box6 {
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .mpb-text2 {
+    box-sizing: border-box;
+  }
+
+  .mpb-box7 {
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .mpb-text3 {
+    box-sizing: border-box;
+  }
+
+  .mpb-box8 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 105.71%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 105.71%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mpb-box9 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .mpb-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .mpb-box10 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .mpb-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 105.71%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 105.71%;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ---- Office-tour gallery ---- */
+  .mpb-frame {
+    border-radius: 8px;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .mpb-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .mpb-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+
+  .mpb-slide img {
+    aspect-ratio: 4 / 3;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .mpb-arrow {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    border: 0;
+    border-radius: 50%;
+    color: var(--bg);
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s;
+    width: 44px;
+    z-index: 2;
+  }
+
+  .mpb-arrow:hover {
+    background: #ffffff;
+  }
+
+  .mpb-prev {
+    left: 14px;
+  }
+
+  .mpb-next {
+    right: 14px;
+  }
+
+  /* Below the frame rather than over it: on a white treatment-room photo a
+     white dot row disappears. */
+  .mpb-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding-top: 16px;
+  }
+
+  /* The dots are built by the script, so they never carry Astro's scoping
+     attribute — these rules have to reach them globally. */
+  .mpb-dots :global(button) {
+    background: rgba(255, 255, 255, 0.5);
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    padding: 0;
+    width: 10px;
+  }
+
+  .mpb-dots :global(button[aria-selected="true"]) {
+    background: #ffffff;
+  }
+
+
+
+  .mpb-box28 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 105.71%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 105.71%;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+  }
+
+  .mpb-box29 {
+    box-sizing: border-box;
+  }
+
+  .mpb-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mpb-box30 {
+    box-sizing: border-box;
+    color: #ffffff;
+    min-height: 529px;
+  }
+
+  .mpb-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .mpb-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .mpb-box2 {
+      flex-wrap: nowrap;
+      padding: 10px;
+    }
+
+    .mpb-box3 {
+      flex: 0 0 50%;
+      flex-wrap: nowrap;
+      max-width: 50%;
+    }
+
+    .mpb-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .mpb-box8 {
+      flex: 0 0 50%;
+      flex-wrap: nowrap;
+      max-width: 50%;
+      min-height: 760px;
+    }
+
+    .mpb-box10 {
+      flex-wrap: nowrap;
+      padding: 10px;
+    }
+
+    .mpb-box11 {
+      flex: 0 0 50%;
+      flex-wrap: nowrap;
+      max-width: 50%;
+      min-height: 655px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .mpb-box28 {
+      flex: 0 0 50%;
+      flex-wrap: nowrap;
+      max-width: 50%;
+    }
+
+    .mpb-heading2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .mpb-box30 {
+      min-height: 583px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .mpb-box {
+      max-width: min(100%, 1440px);
+    }
+
+    .mpb-box3 {
+      min-height: 466px;
+    }
+
+    .mpb-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .mpb-box8 {
+      min-height: auto;
+    }
+
+    .mpb-box11 {
+      min-height: auto;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .mpb-box28 {
+      min-height: 520px;
+    }
+
+    .mpb-heading2 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .mpb-box30 {
+      min-height: 313px;
+    }
+  }
+</style>
+
+<script>
+  /** One slide at a time, with arrows, dots, swipe, and a pause on hover. */
+  function initGallery(root: HTMLElement) {
+    const track = root.querySelector<HTMLElement>(".mpb-track");
+    const slides = Array.from(root.querySelectorAll<HTMLElement>(".mpb-slide"));
+    const dotsWrap = root.querySelector<HTMLElement>(".mpb-dots");
+    if (!track || slides.length === 0) return;
+
+    let index = 0;
+    let timer: number | undefined;
+
+    const go = (i: number) => {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, di) => d.setAttribute("aria-selected", di === index ? "true" : "false"));
+    };
+
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-label", `Go to slide ${i + 1}`);
+      b.addEventListener("click", () => {
+        go(i);
+        restart();
+      });
+      dotsWrap?.appendChild(b);
+      return b;
+    });
+
+    const autoplay = root.dataset.autoplay === "true";
+    const interval = Number(root.dataset.interval) || 5000;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const start = () => {
+      if (!autoplay || reduced || slides.length < 2) return;
+      timer = window.setInterval(() => go(index + 1), interval);
+    };
+    const stop = () => {
+      if (timer) window.clearInterval(timer);
+      timer = undefined;
+    };
+    const restart = () => {
+      stop();
+      start();
+    };
+
+    root.querySelector(".mpb-prev")?.addEventListener("click", () => {
+      go(index - 1);
+      restart();
+    });
+    root.querySelector(".mpb-next")?.addEventListener("click", () => {
+      go(index + 1);
+      restart();
+    });
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+
+    let startX = 0;
+    root.addEventListener("touchstart", (e) => {
+      startX = e.changedTouches[0].clientX;
+      stop();
+    }, { passive: true });
+    root.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 40) go(index + (dx < 0 ? 1 : -1));
+      start();
+    }, { passive: true });
+
+    go(0);
+    start();
+  }
+
+  document
+    .querySelectorAll<HTMLElement>(".mpb-gallery[data-carousel]")
+    .forEach((el) => initGallery(el));
+</script>

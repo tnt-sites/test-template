@@ -1,0 +1,17 @@
+label: Home United Concordia
+icon: interests
+description: Home United Concordia section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-united-concordia
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home United Concordia
+  icon: interests
+picker_preview:
+  text: Home United Concordia
+  subtext: Home United Concordia section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-united-concordia/home-united-concordia.cloudcannon.inputs.yml

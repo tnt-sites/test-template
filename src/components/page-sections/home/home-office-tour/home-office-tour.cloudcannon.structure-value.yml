@@ -1,0 +1,67 @@
+label: Home Office Tour
+icon: vertical_split
+description: Media Prose Meet The section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/home/home-office-tour
+  id: ""
+  heading: ""
+  text: ""
+  image: ""
+  imageAlt: ""
+  image2: ""
+  image2Alt: ""
+  image3: ""
+  image3Alt: ""
+  image4: ""
+  image4Alt: ""
+  image5: ""
+  image5Alt: ""
+  image6: ""
+  image6Alt: ""
+  image7: ""
+  image7Alt: ""
+  image8: ""
+  image8Alt: ""
+  image9: ""
+  image9Alt: ""
+  image10: ""
+  image10Alt: ""
+  image11: ""
+  image11Alt: ""
+  image12: ""
+  image12Alt: ""
+  image13: ""
+  image13Alt: ""
+  image14: ""
+  image14Alt: ""
+  image15: ""
+  image15Alt: ""
+  image16: ""
+  image16Alt: ""
+  image17: ""
+  image17Alt: ""
+  subheading: ""
+  embedUrl: ""
+  buttonText: ""
+  buttonLink: ""
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  buttonBackgroundColor: "#ffffff"
+  buttonBackgroundColorHex: ""
+  buttonTextColor: var(--color-brand)
+  buttonTextColorHex: ""
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#bee6fe"
+  buttonBackgroundHoverColor: ""
+  buttonBackgroundHoverColorHex: "#7ecefc"
+preview:
+  text:
+    - Media Prose Meet The
+  icon: vertical_split
+picker_preview:
+  text: Home Office Tour
+  subtext: Homepage team and office tour — photo mosaic with an embedded video.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-office-tour/home-office-tour.cloudcannon.inputs.yml

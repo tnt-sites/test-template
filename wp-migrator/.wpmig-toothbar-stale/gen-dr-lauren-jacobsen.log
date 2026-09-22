@@ -1,0 +1,9 @@
+3 section(s) detected on dr-lauren-jacobsen.html
+  [0] -> page-banner (shared, ~0.99)  props=8  icons=6
+  [1] -> card-grid-b (shared, ~0.97)  props=6
+  [2] -> prose-section-f (shared, identical)  props=6
+
+icons: 6 substituted from the project set
+
+wrote 3 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/dr-lauren-jacobsen.md (copy into src/content/pages/ manually for now)

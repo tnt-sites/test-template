@@ -1,0 +1,93 @@
+_inputs:
+  media:
+    type: select
+    comment: What fills the left column — the map embed, or contact details with an icon.
+    options:
+      values:
+        - id: map
+          name: Map embed
+        - id: info
+          name: Icon + phone/address
+  mapEmbedUrl:
+    type: url
+    comment: Google Maps embed URL. Used when the left column is set to Map embed.
+  icon:
+    type: text
+    comment: "Icon name from the site's icon set (src/icons), e.g. headset, phone or map-pin. Used when the left column is set to Icon + phone/address."
+  phoneText:
+    type: text
+    comment: Phone number as displayed text.
+  phoneHref:
+    type: text
+    comment: "Phone link, e.g. tel:+17323650123."
+  addressLabel:
+    type: text
+    comment: "Italic label above the address, e.g. \"Address :\". Leave blank to omit."
+  addressText:
+    type: text
+    comment: Address as displayed text.
+  addressHref:
+    type: url
+    comment: Link for the address. Leave blank to render plain text.
+  eyebrow:
+    type: text
+    comment: Small label above the form heading.
+  title:
+    type: text
+    comment: Heading above the form.
+  formEmbedUrl:
+    type: url
+    comment: Liine (or other) form embed URL.
+  formTitle:
+    type: text
+    comment: Accessible title for the form iframe.
+  formHeight:
+    type: number
+    comment: Height of the form embed in pixels.
+  backgroundColor:
+    type: color
+    comment: Band background. Leave empty to use the measured brand colour from the source site.
+  panelBackgroundColor:
+    type: color
+    comment: Background behind the form. Leave empty to use the measured colour; set to white for a plain white form side.
+  panelPadding:
+    type: text
+    comment: "CSS padding shorthand for the form side, e.g. 40px 32px. Leave empty for the measured value."
+  titleColor:
+    type: select
+    comment: Colour of the eyebrow and heading above the form. Leave empty for the measured white.
+    options:
+      values:
+        - id: ""
+          name: Default (measured)
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  titleSize:
+    type: text
+    comment: "CSS length for the heading above the form, e.g. 48px. Leave empty for the measured 28px."
+  infoTextColor:
+    type: select
+    comment: Colour of the icon and contact links. Leave empty for the measured white.
+    options:
+      values:
+        - id: ""
+          name: Default (measured)
+        - id: "#ffffff"
+          name: White
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hidden:
+    type: switch
+    comment: Hide this section on this page without removing it.

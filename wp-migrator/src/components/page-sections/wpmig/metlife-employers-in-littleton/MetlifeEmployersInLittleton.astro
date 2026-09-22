@@ -1,0 +1,361 @@
+---
+/**
+ * Metlife Employers In Littleton — migrated from metlife-dental-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="metlife-employers-in-littleton" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="meil-box">
+    <div class="meil-box2">
+      <div class="meil-box3">
+        <div class="meil-box4">
+          <div class="meil-box5">
+            {image && <img class="meil-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="520" />}
+          </div>
+        </div>
+        <div class="meil-box6">
+          <div class="meil-box7">
+            <h2 class="meil-heading">{heading}</h2>
+          </div>
+          <div class="meil-box8">
+            {text && <div class="meil-body" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="meil-box9">
+        <div class="meil-box10">
+          {subheading && <h2 class="meil-heading2">{subheading}</h2>}
+        </div>
+        <div class="meil-box11">
+          {text2 && <div class="meil-text">{text2}</div>}
+        </div>
+      </div>
+      <div class="meil-box12">
+        <div class="meil-box13">
+          {heading2 && <h2 class="meil-heading3">{heading2}</h2>}
+        </div>
+        <div class="meil-box14">
+          {text3 && <div class="meil-body2" set:html={text3} />}
+        </div>
+      </div>
+      <div class="meil-box15">
+        <div class="meil-box16">
+          {heading3 && <h2 class="meil-heading4">{heading3}</h2>}
+        </div>
+        <div class="meil-box17">
+          {text4 && <div class="meil-body3" set:html={text4} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .metlife-employers-in-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .meil-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .meil-box2 {
+    box-sizing: border-box;
+  }
+
+  .meil-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .meil-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .meil-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .meil-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .meil-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .meil-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .meil-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .meil-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 536px;
+  }
+
+  .meil-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .meil-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .meil-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .meil-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .meil-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .meil-text {
+    box-sizing: border-box;
+  }
+
+  .meil-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .meil-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .meil-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .meil-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 544px;
+  }
+
+  .meil-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .meil-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .meil-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .meil-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .meil-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 488px;
+  }
+
+  .meil-body3 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .meil-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .meil-box3 {
+      max-width: 1024px;
+    }
+
+    .meil-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 736px;
+    }
+
+    .meil-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .meil-box14 {
+      min-height: 280px;
+    }
+
+    .meil-box17 {
+      min-height: 272px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .meil-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .meil-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .meil-box4 {
+      min-height: auto;
+    }
+
+    .meil-box8 {
+      min-height: 344px;
+    }
+
+    .meil-box14 {
+      min-height: 184px;
+    }
+
+    .meil-box17 {
+      min-height: 200px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .meil-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .meil-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .meil-box3 {
+    text-align: center;
+  }
+  .meil-box4 {
+    text-align: center;
+  }
+  .meil-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .meil-media {
+    text-align: left;
+  }
+/* wpmig:corrections:end */
+</style>

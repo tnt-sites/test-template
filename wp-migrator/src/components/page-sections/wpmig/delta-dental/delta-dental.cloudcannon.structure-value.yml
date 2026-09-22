@@ -1,0 +1,18 @@
+label: Delta Dental
+icon: vertical_split
+description: Delta Dental section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/delta-dental
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Delta Dental
+  icon: vertical_split
+picker_preview:
+  text: Delta Dental
+  subtext: Delta Dental section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/delta-dental/delta-dental.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  call_us_today_to_e:
+    template: astro_component
+    inline: false
+    preview:
+      text: Call Us Today To E
+    definitions:
+      component_name: page-sections/wpmig/call-us-today-to-e
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/call-us-today-to-e/call-us-today-to-e.cloudcannon.inputs.yml

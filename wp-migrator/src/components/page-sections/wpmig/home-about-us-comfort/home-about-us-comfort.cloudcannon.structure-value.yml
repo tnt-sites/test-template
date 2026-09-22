@@ -1,0 +1,17 @@
+label: Home About Us Comfort
+icon: interests
+description: Home About Us Comfort section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-about-us-comfort
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home About Us Comfort
+  icon: interests
+picker_preview:
+  text: Home About Us Comfort
+  subtext: Home About Us Comfort section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-about-us-comfort/home-about-us-comfort.cloudcannon.inputs.yml

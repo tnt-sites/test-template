@@ -1,0 +1,10 @@
+_snippets:
+  home_partners:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Partners
+    definitions:
+      component_name: page-sections/wpmig/home-partners
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-partners/home-partners.cloudcannon.inputs.yml

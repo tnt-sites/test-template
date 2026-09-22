@@ -1,0 +1,485 @@
+---
+/**
+ * Same Day Appointments — migrated from lp/dental-emergency [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  buttonText = "",
+  buttonLink = "",
+  headingColor = "#3b6278",
+  textColor = "#3b6278",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="same-day-appointments" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor}`} {...rest}>
+  <section class="sda-box">
+    <div class="sda-box2">
+      <div class="sda-box3">
+        <div class="sda-decor" aria-hidden="true"></div>
+      </div>
+      <div class="sda-box4">
+        <div class="sda-box5">
+          <div class="sda-box6">
+            {image && <img class="sda-media" src={image} alt={imageAlt || ""} loading="lazy" width="650" height="575" />}
+          </div>
+        </div>
+        <div class="sda-box7">
+          <div class="sda-box8">
+            <h2 class="sda-heading" set:html={heading} />
+          </div>
+        </div>
+        <div class="sda-box9">
+          <div class="sda-box10">
+            {text && <p class="sda-text">{text}</p>}
+          </div>
+        </div>
+        <div class="sda-box11">
+          {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sda-btn" text={buttonText} link={buttonLink || "#"} />}
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+<style>
+  .same-day-appointments {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .same-day-appointments :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sda-box {
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .sda-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sda-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .sda-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sda-box3 {
+    display: none;
+  }
+
+  .sda-decor {
+    display: none;
+  }
+
+  .sda-box4 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-width: 100%;
+    padding: 30px;
+    position: relative;
+  }
+
+  .sda-box4 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sda-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sda-box6 {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+
+  .sda-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .sda-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sda-box8 {
+    box-sizing: border-box;
+    margin-bottom: 12px;
+  }
+
+  .sda-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: capitalize;
+  }
+
+  .sda-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sda-box10 {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+
+  .sda-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sda-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sda-box11 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.sda-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sda-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sda-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.sda-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  @media (min-width: 768px) {
+    .same-day-appointments {
+      left: -39px;
+      right: 39px;
+    }
+
+    .sda-box2 {
+      max-width: 1024px;
+    }
+
+    .sda-box3 {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 1px;
+      order: 10;
+      position: relative;
+    }
+
+    .sda-decor {
+      align-content: center;
+      align-items: center;
+      background-image: url("/wp-content/uploads/2024/01/img-Appointments.jpg");
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+      min-height: 369px;
+      position: relative;
+      transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    .sda-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .sda-box5 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .sda-box6 {
+      display: none;
+      margin-bottom: 0px;
+    }
+
+    .sda-media {
+      display: none;
+    }
+
+    .sda-box7 {
+      text-align: start;
+    }
+
+    .sda-heading {
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .sda-box9 {
+      text-align: start;
+    }
+
+    .sda-text {
+      font-size: 24px;
+      line-height: 35px;
+    }
+
+    .sda-box11 {
+      text-align: left;
+    }
+
+    :global(.sda-btn) {
+      text-align: center;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .same-day-appointments {
+      left: -165px;
+      right: 165px;
+    }
+
+    .sda-box2 {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .sda-box3 {
+      order: 0;
+    }
+
+    .sda-decor {
+      min-height: 545px;
+    }
+
+    .sda-box4 {
+      padding: 100px 50px;
+    }
+
+    .sda-box7 {
+      margin-bottom: 20px;
+    }
+
+    .sda-heading {
+      font-size: 45px;
+      line-height: 60px;
+    }
+
+    .sda-box9 {
+      margin-bottom: 20px;
+    }
+
+    .sda-box10 {
+      margin-bottom: 12px;
+    }
+
+    .sda-text {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sda-box8 {
+    color: rgb(59, 98, 120);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+  }
+  .sda-heading {
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .sda-box9 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  .sda-box10 {
+    background-color: rgb(255, 255, 255);
+    color: rgb(91, 183, 129);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+  }
+  .sda-box6 {
+    color: rgb(59, 98, 120);
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .sda-box4 {
+    align-items: normal;
+    justify-content: normal;
+    text-align: center;
+  }
+  .sda-box2 {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  @media (min-width: 768px) {
+    .sda-box8 {
+      color: rgb(59, 98, 120);
+      font-family: Montserrat, sans-serif;
+      font-size: 38px;
+      line-height: 48px;
+    }
+
+    .sda-heading {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .sda-box10 {
+      color: rgb(59, 98, 120);
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 35px;
+    }
+
+    .sda-text {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .sda-box11 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    :global(.sda-btn) {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      font-family: Quicksand, sans-serif;
+      font-size: 18px;
+      justify-content: normal;
+      line-height: 24px;
+      text-align: start;
+    }
+
+    .sda-box3 {
+      align-items: center;
+    }
+
+    .sda-decor {
+      justify-content: flex-start;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sda-heading {
+      font-weight: 400;
+    }
+
+    :global(.sda-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

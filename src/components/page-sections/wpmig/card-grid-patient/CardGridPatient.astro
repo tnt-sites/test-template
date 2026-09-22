@@ -1,0 +1,306 @@
+---
+/**
+ * Card Grid Patient — migrated from new-patients [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  subheading = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  headingColor = "",
+  headingColorHex = "var(--color-brand)",
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+---
+<div class="card-grid-patient" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--c3:${textColor2Value}`} {...rest}>
+  <div class="cgp-box">
+    <div class="cgp-box2">
+      <div class="cgp-box3">
+        <div class="cgp-box4">
+          <h2 class="cgp-heading">{heading}</h2>
+        </div>
+        <div class="cgp-box5">
+          {text && <div class="cgp-text">{text}</div>}
+        </div>
+        <div class="cgp-box6">
+          {text2 && <div class="cgp-body" set:html={text2} />}
+        </div>
+      </div>
+      <div class="cgp-box7">
+        <div class="cgp-box8">
+          {subheading && <h2 class="cgp-heading2">{subheading}</h2>}
+        </div>
+        <div class="cgp-box9">
+          {text3 && <div class="cgp-text2">{text3}</div>}
+        </div>
+      </div>
+      <div class="cgp-box10">
+        <div class="cgp-box11">
+          {heading2 && <h2 class="cgp-heading3">{heading2}</h2>}
+        </div>
+        <div class="cgp-box12">
+          {text4 && <div class="cgp-body2" set:html={text4} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .card-grid-patient {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .cgp-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .cgp-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgp-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 112.12%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 112.12%;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    position: relative;
+  }
+
+  .cgp-box4 {
+    box-sizing: border-box;
+  }
+
+  .cgp-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgp-box5 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cgp-text {
+    box-sizing: border-box;
+  }
+
+  .cgp-box6 {
+    box-sizing: border-box;
+  }
+
+  .cgp-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgp-box7 {
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 112.12%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 112.12%;
+    padding: 25px;
+    position: relative;
+  }
+
+  .cgp-box8 {
+    box-sizing: border-box;
+  }
+
+  .cgp-heading2 {
+    box-sizing: border-box;
+    color: var(--color-brand, #047ac0);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgp-box9 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cgp-text2 {
+    box-sizing: border-box;
+  }
+
+  .cgp-box10 {
+    background-color: var(--color-brand, #047ac0);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 112.12%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 112.12%;
+    padding: 25px;
+    position: relative;
+  }
+
+  .cgp-box11 {
+    box-sizing: border-box;
+  }
+
+  .cgp-heading3 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgp-box12 {
+    box-sizing: border-box;
+    color: #ffffff;
+  }
+
+  .cgp-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  /* Bullets are a Fontello glyph coloured --color-brand-secondary globally,
+     which disappears against this card's brand-blue background. */
+  .cgp-body2 :global(li::before) {
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    .cgp-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .cgp-box2 {
+      flex-wrap: nowrap;
+      padding: 10px;
+    }
+
+    .cgp-box3 {
+      flex: 0 0 40%;
+      flex-wrap: nowrap;
+      max-width: 40%;
+    }
+
+    .cgp-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cgp-box7 {
+      flex: 0 0 30.09%;
+      flex-wrap: nowrap;
+      max-width: 30.09%;
+    }
+
+    .cgp-heading2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cgp-box10 {
+      flex: 0 0 30.09%;
+      flex-wrap: nowrap;
+      max-width: 30.09%;
+    }
+
+    .cgp-heading3 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cgp-box {
+      max-width: min(100%, 1440px);
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .cgp-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .cgp-box7 {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    .cgp-heading2 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .cgp-box10 {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
+
+    .cgp-heading3 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+  }
+</style>

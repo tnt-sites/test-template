@@ -1,0 +1,462 @@
+---
+/**
+ * Media Prose — unified replacement for the 16 generated `media-prose-*` variants.
+ *
+ * The generator emitted one component per page section, flattening what was really
+ * an ordered sequence of content blocks into positional props (`text2`, `heading3`,
+ * `items2`, …). This component takes that sequence back as a `blocks` array, so one
+ * component covers every variant.
+ *
+ * Three layouts cover all 16 originals:
+ *   stack — one centred column
+ *   split — prose column plus a sticky contact/CTA rail
+ *   cards — intro blocks above a card grid
+ *
+ * The interactive widgets that were also named `media-prose-*` are NOT folded in
+ * here; they live on as smile-gallery, office-tour and video-reviews.
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const {
+  layout = "stack",
+  blocks = [],
+  rail = [],
+  cards = [],
+  cardStyle = "caption",
+  align = "",
+  width = "wide",
+  padded = true,
+  backgroundColor = "",
+  backgroundColorHex = "",
+  headingColor = "",
+  headingColorHex = "",
+  textColor = "",
+  textColorHex = "",
+  cardBackgroundColor = "",
+  cardBackgroundColorHex = "",
+  titleColor = "",
+  titleColorHex = "",
+  railTextColor = "",
+  railTextColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const pick = (hex: string, token: string, fallback = "") => hex || token || fallback;
+
+const vars = Object.entries({
+  "--mp-bg": pick(backgroundColorHex, backgroundColor),
+  "--mp-hd": pick(headingColorHex, headingColor),
+  "--mp-tx": pick(textColorHex, textColor),
+  "--mp-cardbg": pick(cardBackgroundColorHex, cardBackgroundColor),
+  "--mp-tt": pick(titleColorHex, titleColor),
+  "--mp-railtx": pick(railTextColorHex, railTextColor),
+  "--mp-eb": pick(eyebrowColorHex, eyebrowColor),
+})
+  .filter(([, v]) => v)
+  .map(([k, v]) => `${k}:${v}`)
+  .join(";");
+
+const list = (v: unknown) => (Array.isArray(v) ? v.filter(Boolean) : []);
+const blockList = list(blocks);
+const railList = list(rail);
+const cardList = list(cards);
+
+const classes = [
+  "media-prose",
+  `mp-${layout}`,
+  `mp-w-${width}`,
+  align ? `mp-align-${align}` : "",
+  padded ? "mp-padded" : "",
+  pick(backgroundColorHex, backgroundColor) ? "mp-has-bg" : "",
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<div class={classes} id={id || undefined} style={vars || undefined} {...rest}>
+  <div class="mp-inner">
+    <div class="mp-main">
+      {
+        blockList.map((b: any) => {
+          const type = b?.type || (b?.items ? "list" : b?.image ? "image" : b?.embedUrl ? "embed" : "text");
+
+          if (type === "heading") {
+            const Tag = (b.level || "h3") as any;
+            return <Tag class="mp-heading" set:html={b.text} />;
+          }
+          if (type === "eyebrow") return <p class="mp-eyebrow">{b.text}</p>;
+          if (type === "text") return b.text ? <div class="mp-body" set:html={b.text} /> : null;
+          if (type === "list") {
+            const Tag = (b.ordered ? "ol" : "ul") as any;
+            return (
+              <Tag class:list={["mp-list", b.ordered && "mp-list-ordered"]}>
+                {list(b.items).map((it: any) => (
+                  <li class="mp-list-item">{typeof it === "string" ? it : it.text}</li>
+                ))}
+              </Tag>
+            );
+          }
+          if (type === "image")
+            return b.image ? (
+              <img
+                class="mp-media"
+                src={b.image}
+                alt={b.imageAlt || ""}
+                loading="lazy"
+                width={b.width || undefined}
+                height={b.height || undefined}
+              />
+            ) : null;
+          if (type === "embed")
+            return b.embedUrl ? (
+              <div class="mp-embed-wrap" style={b.aspect ? `--mp-aspect:${b.aspect}` : undefined}>
+                <iframe
+                  class="mp-embed"
+                  src={b.embedUrl}
+                  title={b.title || "Embedded content"}
+                  allow="geolocation; microphone; camera; fullscreen; payment"
+                  frameborder="0"
+                  loading="lazy"></iframe>
+              </div>
+            ) : null;
+          if (type === "button")
+            return b.buttonText ? (
+              <div class="mp-cta">
+                <Button
+                  variant={b.variant || "primary"}
+                  size={b.size || "md"}
+                  uppercase
+                  class="mp-btn"
+                  text={b.buttonText}
+                  link={b.buttonLink || "#"}
+                />
+              </div>
+            ) : null;
+          return null;
+        })
+      }
+
+      {
+        layout === "cards" && cardList.length > 0 && (
+          <div class={`mp-cards mp-cards-${cardStyle}`}>
+            {cardList.map((c: any) => (
+              <div class="mp-card" style={c.bgImage ? `--mp-cardimg:url('${c.bgImage}')` : undefined}>
+                {cardStyle === "media-first" && c.image && (
+                  <img class="mp-card-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />
+                )}
+                {c.title && <h3 class="mp-card-title">{c.title}</h3>}
+                {c.text && <p class="mp-card-text">{c.text}</p>}
+                {cardStyle !== "media-first" && c.image && (
+                  <img class="mp-card-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />
+                )}
+                {c.text2 && <div class="mp-card-badge">{c.text2}</div>}
+              </div>
+            ))}
+          </div>
+        )
+      }
+    </div>
+
+    {
+      layout === "split" && railList.length > 0 && (
+        <aside class="mp-rail">
+          {railList.map((b: any) => {
+            const type = b?.type || (b?.image ? "image" : b?.embedUrl ? "embed" : "text");
+            if (type === "image")
+              return b.image ? <img class="mp-rail-media" src={b.image} alt={b.imageAlt || ""} loading="lazy" /> : null;
+            if (type === "heading") return <h2 class="mp-rail-heading" set:html={b.text} />;
+            if (type === "text") return b.text ? <p class="mp-rail-text" set:html={b.text} /> : null;
+            if (type === "embed")
+              return b.embedUrl ? (
+                <div class="mp-rail-embed-wrap">
+                  <iframe
+                    class="mp-rail-embed"
+                    src={b.embedUrl}
+                    title={b.title || "Contact form"}
+                    allow="geolocation; microphone; camera; fullscreen; payment"
+                    frameborder="0"
+                    loading="lazy"></iframe>
+                </div>
+              ) : null;
+            if (type === "button")
+              return b.buttonText ? (
+                <Button
+                  variant={b.variant || "primary"}
+                  size={b.size || "md"}
+                  uppercase
+                  class="mp-btn"
+                  text={b.buttonText}
+                  link={b.buttonLink || "#"}
+                />
+              ) : null;
+            return null;
+          })}
+        </aside>
+      )
+    }
+  </div>
+</div>
+
+<style>
+  /* Shared shell. Every original had the same base: Lato 18/27 on a neutral body
+     colour, optional background, optional 10px side padding. */
+  .media-prose {
+    box-sizing: border-box;
+    color: var(--mp-tx, #333333);
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .media-prose.mp-has-bg {
+    background-color: var(--mp-bg);
+  }
+
+  .media-prose.mp-padded {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .mp-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+  .mp-w-narrow .mp-inner {
+    max-width: min(100%, 767px);
+  }
+  .mp-w-wide .mp-inner {
+    max-width: min(100%, 1024px);
+  }
+  .mp-w-full .mp-inner {
+    max-width: 100%;
+  }
+
+  .mp-main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+  }
+
+  .mp-align-center .mp-main {
+    text-align: center;
+  }
+
+  /* Typography — the originals all resolved to this ramp at each breakpoint. */
+  .mp-heading {
+    box-sizing: border-box;
+    color: var(--mp-hd, inherit);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+  }
+
+  .mp-eyebrow {
+    color: var(--mp-eb, var(--mp-hd, inherit));
+    letter-spacing: 0.08em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .mp-body :global(p) {
+    margin-bottom: 14.4px;
+    margin-top: 0;
+  }
+
+  .mp-body :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .mp-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: disc;
+    margin: 0;
+    padding-left: 1.25em;
+  }
+
+  .mp-list-ordered {
+    list-style: decimal;
+  }
+
+  .mp-media {
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mp-embed-wrap {
+    aspect-ratio: var(--mp-aspect, 16 / 9);
+    width: 100%;
+  }
+
+  .mp-embed {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mp-cta {
+    display: flex;
+  }
+
+  .mp-align-center .mp-cta {
+    justify-content: center;
+  }
+
+  /* Split — prose plus a contact rail. Stacks below 768px, as the originals did. */
+  .mp-split .mp-inner {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .mp-rail {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .mp-rail-media {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mp-rail-heading {
+    color: var(--mp-hd, inherit);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  .mp-rail-text {
+    color: var(--mp-railtx, inherit);
+    margin: 0;
+  }
+
+  .mp-rail-embed-wrap {
+    aspect-ratio: 0.72 / 1;
+    width: 100%;
+  }
+
+  .mp-rail-embed {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* Cards */
+  .mp-cards {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+  }
+
+  .mp-card {
+    background-color: var(--mp-cardbg, transparent);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .mp-card:has(> .mp-card-media:first-child) {
+    padding: 0;
+  }
+
+  .mp-card:has(> .mp-card-media:first-child) > :not(.mp-card-media) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .mp-card:has(> .mp-card-media:first-child) > :last-child {
+    padding-bottom: 20px;
+  }
+
+  .mp-card-title {
+    color: var(--mp-tt, inherit);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .mp-card-text {
+    margin: 0;
+  }
+
+  .mp-card-media {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .mp-card-badge {
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .mp-heading {
+      font-size: 32px;
+    }
+
+    .mp-split .mp-inner {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 340px);
+    }
+
+    .mp-cards {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .mp-inner {
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .mp-w-wide .mp-inner,
+    .mp-w-narrow .mp-inner {
+      max-width: min(100%, 1440px);
+    }
+
+    .mp-heading {
+      font-size: 45px;
+    }
+
+    .mp-split .mp-inner {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 400px);
+    }
+  }
+</style>

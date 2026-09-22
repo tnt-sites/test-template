@@ -1,0 +1,46 @@
+_inputs:
+  heading:
+    type: text
+    comment: Main heading for the CTA band.
+  subtext:
+    type: markdown
+    comment: Supporting text below the heading.
+    options:
+      blockquote: false
+      bold: true
+      format: p
+      italic: true
+      link: true
+      strike: false
+      subscript: false
+      superscript: false
+      underline: false
+      bulletedlist: false
+      numberedlist: false
+      styles: /.cloudcannon/styles/editor.css
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  backgroundColor:
+    type: select
+    comment: Background colour, from the site palette.
+    options:
+      values:
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hidden:
+    type: switch
+    comment: Hide this section on this page without removing it.

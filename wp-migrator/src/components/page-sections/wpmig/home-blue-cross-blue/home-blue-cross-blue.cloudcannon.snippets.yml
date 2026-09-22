@@ -1,0 +1,10 @@
+_snippets:
+  home_blue_cross_blue:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Blue Cross Blue
+    definitions:
+      component_name: page-sections/wpmig/home-blue-cross-blue
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-blue-cross-blue/home-blue-cross-blue.cloudcannon.inputs.yml

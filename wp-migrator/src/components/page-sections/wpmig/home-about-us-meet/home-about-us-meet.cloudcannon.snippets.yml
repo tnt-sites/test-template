@@ -1,0 +1,10 @@
+_snippets:
+  home_about_us_meet:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home About Us Meet
+    definitions:
+      component_name: page-sections/wpmig/home-about-us-meet
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-about-us-meet/home-about-us-meet.cloudcannon.inputs.yml

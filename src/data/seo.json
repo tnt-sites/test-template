@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
+  "name": "Chapel Hill Dental Arts",
   "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "description": "Experience expert dental care with a personal touch when you visit the dentist in Middletown here at Chapel Hill Dental Arts.",
+  "logoSource": "/wp-content/uploads/2024/10/chapel-hill-dental-logo-scaled.png",
+  "titleFormat": "{title} | Chapel Hill Dental Arts",
   "twitterHandle": "@yourusername"
 }

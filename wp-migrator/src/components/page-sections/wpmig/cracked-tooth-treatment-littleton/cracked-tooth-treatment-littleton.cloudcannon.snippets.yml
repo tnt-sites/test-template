@@ -1,0 +1,10 @@
+_snippets:
+  cracked_tooth_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Cracked Tooth Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/cracked-tooth-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/cracked-tooth-treatment-littleton/cracked-tooth-treatment-littleton.cloudcannon.inputs.yml

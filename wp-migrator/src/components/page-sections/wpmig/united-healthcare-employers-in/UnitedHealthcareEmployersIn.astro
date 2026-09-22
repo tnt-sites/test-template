@@ -1,0 +1,358 @@
+---
+/**
+ * United Healthcare Employers In — migrated from united-healthcare-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="united-healthcare-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="uhei-box">
+    <div class="uhei-box2">
+      <div class="uhei-box3">
+        <div class="uhei-box4">
+          <div class="uhei-box5">
+            {image && <img class="uhei-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+          </div>
+        </div>
+        <div class="uhei-box6">
+          <div class="uhei-box7">
+            <h2 class="uhei-heading">{heading}</h2>
+          </div>
+          <div class="uhei-box8">
+            {text && <div class="uhei-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="uhei-box9">
+        <div class="uhei-box10">
+          {subheading && <h2 class="uhei-heading2">{subheading}</h2>}
+        </div>
+        <div class="uhei-box11">
+          {text2 && <div class="uhei-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="uhei-box12">
+        <div class="uhei-box13">
+          {heading2 && <h2 class="uhei-heading3">{heading2}</h2>}
+        </div>
+        <div class="uhei-box14">
+          {text3 && <div class="uhei-text3" set:html={text3} />}
+        </div>
+      </div>
+      <div class="uhei-box15">
+        <div class="uhei-box16">
+          {heading3 && <h2 class="uhei-heading4">{heading3}</h2>}
+        </div>
+        <div class="uhei-box17">
+          <div class="uhei-box18">
+            {text4 && <div class="uhei-body" set:html={text4} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .united-healthcare-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .uhei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .uhei-box2 {
+    box-sizing: border-box;
+  }
+
+  .uhei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .uhei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .uhei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .uhei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .uhei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .uhei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .uhei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .uhei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .uhei-text {
+    box-sizing: border-box;
+  }
+
+  .uhei-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .uhei-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .uhei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .uhei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .uhei-text2 {
+    box-sizing: border-box;
+  }
+
+  .uhei-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .uhei-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .uhei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .uhei-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .uhei-text3 {
+    box-sizing: border-box;
+  }
+
+  .uhei-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .uhei-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .uhei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .uhei-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .uhei-box18 {
+    box-sizing: border-box;
+    min-height: 400px;
+  }
+
+  .uhei-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .uhei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .uhei-box3 {
+      max-width: 1024px;
+    }
+
+    .uhei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 544px;
+    }
+
+    .uhei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .uhei-box18 {
+      min-height: 208px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .uhei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .uhei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .uhei-box4 {
+      min-height: auto;
+    }
+
+    .uhei-box6 {
+      min-height: 402px;
+    }
+
+    .uhei-box18 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .uhei-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .uhei-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .uhei-box3 {
+    text-align: center;
+  }
+  .uhei-box4 {
+    text-align: center;
+  }
+  .uhei-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .uhei-media {
+    text-align: left;
+  }
+/* wpmig:corrections:end */
+</style>

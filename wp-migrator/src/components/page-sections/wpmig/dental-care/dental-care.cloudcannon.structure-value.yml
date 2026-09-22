@@ -1,0 +1,19 @@
+label: Dental Care
+icon: interests
+description: Dental Care section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dental-care
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Dental Care
+  icon: interests
+picker_preview:
+  text: Dental Care
+  subtext: Dental Care section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dental-care/dental-care.cloudcannon.inputs.yml

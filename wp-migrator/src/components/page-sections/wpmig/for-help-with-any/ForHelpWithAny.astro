@@ -1,0 +1,353 @@
+---
+/**
+ * For Help With Any — migrated from facial-swelling [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text = "",
+  heading = "",
+  items = [],
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="for-help-with-any" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="fhwa-box">
+    <div class="fhwa-box2">
+      <section class="fhwa-box3">
+        <div class="fhwa-box4">
+          <div class="fhwa-box5">
+            <div class="fhwa-grid">
+              {list.map((it) => (
+                <div class="fhwa-box6">
+                  <div class="fhwa-box7">
+                    <p class="fhwa-text">{it.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="fhwa-box10">
+              <div class="fhwa-box11">
+                {image && <img class="fhwa-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="657" />}
+              </div>
+            </div>
+          </div>
+          <div class="fhwa-box12">
+            <div class="fhwa-box13">
+              {subheading && <h4 class="fhwa-heading">{subheading}</h4>}
+            </div>
+            <div class="fhwa-box14">
+              <div class="fhwa-box15">
+                {text && <p class="fhwa-text3" set:html={text} />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fhwa-box16">
+        <div class="fhwa-box17">
+          <div class="fhwa-box18">
+            <h4 class="fhwa-heading2" set:html={heading} />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<style>
+  .for-help-with-any {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    min-height: 1325px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .fhwa-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .fhwa-box2 {
+    box-sizing: border-box;
+  }
+
+  .fhwa-box3 {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .fhwa-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .fhwa-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fhwa-grid {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .fhwa-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fhwa-box7 {
+    box-sizing: border-box;
+  }
+
+  .fhwa-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .fhwa-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .fhwa-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .fhwa-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .fhwa-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .fhwa-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .fhwa-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .fhwa-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .fhwa-box15 {
+    box-sizing: border-box;
+  }
+
+  .fhwa-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .fhwa-box16 {
+    background-color: #3b6278;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .fhwa-box17 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .fhwa-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .fhwa-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .for-help-with-any {
+      min-height: 824px;
+    }
+
+    .fhwa-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .fhwa-grid {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+
+    .fhwa-box10 {
+      flex: 0 0 30%;
+      max-width: 30%;
+      min-height: 336px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .for-help-with-any {
+      min-height: 644px;
+    }
+
+    .fhwa-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .fhwa-box5 {
+      flex-wrap: nowrap;
+    }
+
+    .fhwa-box10 {
+      min-height: auto;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .fhwa-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .fhwa-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .fhwa-box10 {
+    text-align: center;
+  }
+  .fhwa-media {
+    text-align: left;
+  }
+  .fhwa-box16 {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+  }
+  .fhwa-box17 {
+    align-items: normal;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    justify-content: normal;
+    line-height: 36px;
+    text-align: center;
+  }
+  .fhwa-box15 {
+    background-color: rgb(59, 98, 120);
+  }
+  .fhwa-text3 {
+    align-items: center;
+    font-size: 16px;
+    justify-content: center;
+    line-height: 24px;
+  }
+  .fhwa-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .fhwa-heading {
+      line-height: 24px;
+    }
+
+    .fhwa-text {
+      line-height: 24px;
+    }
+
+    .fhwa-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .fhwa-heading {
+      line-height: 24px;
+    }
+
+    .fhwa-text {
+      line-height: 24px;
+    }
+
+    .fhwa-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

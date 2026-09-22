@@ -1,0 +1,35 @@
+
+! call-tracking numbers replaced with the markup's own (5129498202):
+    header.aside: (512) 607-4338 -> (512) 949-8202
+    header.phones[0].label: (512) 607-4338 -> (512) 949-8202
+    header.phones[0]: (512) 607-4338 -> 5129498202
+    header.phones[1]: (512) 607-4338 -> 5129498202
+    footer.phones[0].label: (512) 607-4338 -> (512) 949-8202
+    footer.phones[0]: (512) 607-4338 -> 5129498202
+    footer.phones[1]: (512) 607-4338 -> 5129498202
+    footer.phones[2].label: (512) 607-4338 -> (512) 949-8202
+    footer.phones[2]: (512) 607-4338 -> 5129498202
+    footer.phones[3]: (512) 607-4338 -> 5129498202
+    footer.phones[4]: (512) 607-4338 -> 5129498202
+    footer.columns[0].links[0]: (512) 607-4338 -> (512) 949-8202
+    footer.columns[1].links[0]: (512) 607-4338 -> (512) 949-8202
+
+chrome styling: 7 role(s) measured at 390, 768, 992, 1440px
+  -> src/styles/_chrome.pcss (49 lines)
+
+nav items: 8
+header top bar: "Book Appointment" (512) 949-8202
+footer columns: Phone Number:[1]  Contact[2]
+footer social images: 0
+copyright: —
+chrome assets: 2 copied, 0 missing
+
+! 3 chrome value(s) the source does not contain:
+    siteInfo.offices[0].emails[0].display = "info@dentalstudio.com"
+      not found in the source page — likely a starter placeholder the source never contradicted
+    siteInfo.offices[0].emails[0].href = "mailto:info@dentalstudio.com"
+      not found in the source page — likely a starter placeholder the source never contradicted
+    siteInfo.offices[0].addresses[0].lines[1] = "Suite 200"
+      not found in the source page — likely a starter placeholder the source never contradicted
+
+writes: {"created":1,"unchanged":2,"updated":3}

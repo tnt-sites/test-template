@@ -1,0 +1,157 @@
+---
+/**
+ * Covid19 Coronavirus Office Policy — migrated from covid19-coronavirus-office-policy [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="covid19-coronavirus-office-policy" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="ccop-box">
+    <div class="ccop-box2">
+      <div class="ccop-box3">
+        <h1 class="ccop-heading">{heading}</h1>
+      </div>
+      <div class="ccop-box4">
+        {text && <div class="ccop-body" set:html={text} />}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .covid19-coronavirus-office-policy {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    position: relative;
+    text-align: left;
+  }
+
+  .ccop-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .ccop-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccop-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ccop-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 25.6px;
+    line-height: 25.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ccop-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    line-height: 30.4px;
+    max-width: 100%;
+    min-height: 2133px;
+  }
+
+  .ccop-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ccop-body :global(ol) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .ccop-box {
+      max-width: 1024px;
+    }
+
+    .ccop-box4 {
+      min-height: 1160px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ccop-box {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ccop-box4 {
+      min-height: 856px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ccop-box2 {
+    font-family: Montserrat, sans-serif;
+    font-size: 25.6px;
+    font-weight: 700;
+    line-height: 25.6px;
+    text-align: start;
+  }
+  .covid19-coronavirus-office-policy {
+    text-align: start;
+  }
+  .ccop-box {
+    text-align: start;
+  }
+  @media (min-width: 768px) {
+    .ccop-box2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 25.6px;
+      font-weight: 700;
+      line-height: 25.6px;
+      text-align: start;
+    }
+
+    .covid19-coronavirus-office-policy {
+      text-align: start;
+    }
+
+    .ccop-box {
+      text-align: start;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ccop-box3 {
+      text-align: start;
+    }
+
+    .ccop-heading {
+      text-align: start;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

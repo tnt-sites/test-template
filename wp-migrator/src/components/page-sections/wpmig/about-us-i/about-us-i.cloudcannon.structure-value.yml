@@ -1,0 +1,60 @@
+label: About Us I
+icon: grid_view
+description: About Us I section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-i
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  text: ""
+  image: ""
+  imageAlt: ""
+  text2: ""
+  subheading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  heading3: ""
+  text5: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  secondaryButtonText7: ""
+  secondaryButtonLink7: ""
+  items:
+    - text: ""
+  images:
+    - image: ""
+      imageAlt: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.68)
+  buttonBackgroundHoverColor: "#4bad73"
+  buttonBackgroundColor2HoverColor: "#54595f"
+preview:
+  text:
+    - About Us I
+  icon: grid_view
+picker_preview:
+  text: About Us I
+  subtext: About Us I section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-i/about-us-i.cloudcannon.inputs.yml

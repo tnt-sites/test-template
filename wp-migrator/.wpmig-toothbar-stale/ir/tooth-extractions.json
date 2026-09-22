@@ -1,0 +1,596 @@
+{
+  "page": "tooth-extractions",
+  "route": "/tooth-extractions/",
+  "source": "tooth-extractions.html",
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "sections": [
+    {
+      "id": "page-banner",
+      "sectionIndex": 0,
+      "rootClass": "page-banner",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "page-banner"
+        },
+        {
+          "n": 1,
+          "cls": "pb-box"
+        },
+        {
+          "n": 2,
+          "cls": "pb-raw"
+        },
+        {
+          "n": 3,
+          "cls": "pb-box2"
+        },
+        {
+          "n": 4,
+          "cls": "pb-box3"
+        },
+        {
+          "n": 5,
+          "cls": "pb-heading"
+        },
+        {
+          "n": 6,
+          "cls": "pb-box4"
+        },
+        {
+          "n": 7,
+          "cls": "pb-box5"
+        },
+        {
+          "n": 8,
+          "cls": "pb-decor"
+        },
+        {
+          "n": 9,
+          "cls": "pb-box6"
+        },
+        {
+          "n": 10,
+          "cls": "pb-heading2"
+        },
+        {
+          "n": 11,
+          "cls": "pb-box7"
+        },
+        {
+          "n": 12,
+          "cls": "pb-box8"
+        },
+        {
+          "n": 13,
+          "cls": "pb-box9"
+        },
+        {
+          "n": 14,
+          "cls": "pb-link"
+        }
+      ]
+    },
+    {
+      "id": "media-prose-k",
+      "sectionIndex": 1,
+      "rootClass": "media-prose-k",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "media-prose-k"
+        },
+        {
+          "n": 1,
+          "cls": "mpk-box"
+        },
+        {
+          "n": 2,
+          "cls": "mpk-box2"
+        },
+        {
+          "n": 3,
+          "cls": "mpk-box3"
+        },
+        {
+          "n": 4,
+          "cls": "mpk-text"
+        },
+        {
+          "n": 5,
+          "cls": "mpk-heading"
+        },
+        {
+          "n": 6,
+          "cls": "mpk-body"
+        },
+        {
+          "n": 8,
+          "cls": "mpk-heading2"
+        },
+        {
+          "n": 9,
+          "cls": "mpk-box4"
+        },
+        {
+          "n": 10,
+          "cls": "mpk-media"
+        },
+        {
+          "n": 11,
+          "cls": "mpk-box5"
+        },
+        {
+          "n": 12,
+          "cls": "mpk-box6"
+        },
+        {
+          "n": 13,
+          "cls": "mpk-box7"
+        },
+        {
+          "n": 14,
+          "cls": "mpk-box8"
+        },
+        {
+          "n": 15,
+          "cls": "mpk-box9"
+        },
+        {
+          "n": 16,
+          "cls": "mpk-box10"
+        },
+        {
+          "n": 17,
+          "cls": "mpk-box11"
+        },
+        {
+          "n": 18,
+          "cls": "mpk-media2"
+        },
+        {
+          "n": 19,
+          "cls": "mpk-box12"
+        },
+        {
+          "n": 20,
+          "cls": "mpk-heading3"
+        },
+        {
+          "n": 21,
+          "cls": "mpk-box13"
+        },
+        {
+          "n": 22,
+          "cls": "mpk-box14"
+        },
+        {
+          "n": 23,
+          "cls": "mpk-link"
+        },
+        {
+          "n": 24,
+          "cls": "mpk-box15"
+        },
+        {
+          "n": 25,
+          "cls": "mpk-box16"
+        },
+        {
+          "n": 26,
+          "cls": "mpk-embed"
+        }
+      ]
+    },
+    {
+      "id": "card-grid-o",
+      "sectionIndex": 2,
+      "rootClass": "card-grid-o",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "card-grid-o"
+        },
+        {
+          "n": 1,
+          "cls": "cgo-box"
+        },
+        {
+          "n": 2,
+          "cls": "cgo-box2"
+        },
+        {
+          "n": 3,
+          "cls": "cgo-box3"
+        },
+        {
+          "n": 4,
+          "cls": "cgo-heading"
+        },
+        {
+          "n": 5,
+          "cls": "cgo-heading2"
+        },
+        {
+          "n": 6,
+          "cls": "cgo-heading3"
+        },
+        {
+          "n": 7,
+          "cls": "cgo-text"
+        },
+        {
+          "n": 8,
+          "cls": "cgo-heading4"
+        },
+        {
+          "n": 9,
+          "cls": "cgo-box4"
+        },
+        {
+          "n": 10,
+          "cls": "cgo-box5"
+        },
+        {
+          "n": 11,
+          "cls": "cgo-text2"
+        },
+        {
+          "n": 12,
+          "cls": "cgo-heading5"
+        },
+        {
+          "n": 13,
+          "cls": "cgo-text3"
+        },
+        {
+          "n": 14,
+          "cls": "cgo-heading6"
+        },
+        {
+          "n": 15,
+          "cls": "cgo-box6"
+        },
+        {
+          "n": 16,
+          "cls": "cgo-box7"
+        },
+        {
+          "n": 17,
+          "cls": "cgo-text4"
+        },
+        {
+          "n": 18,
+          "cls": "cgo-heading7"
+        },
+        {
+          "n": 19,
+          "cls": "cgo-text5"
+        },
+        {
+          "n": 20,
+          "cls": "cgo-heading8"
+        },
+        {
+          "n": 21,
+          "cls": "cgo-box8"
+        },
+        {
+          "n": 22,
+          "cls": "cgo-box9"
+        },
+        {
+          "n": 23,
+          "cls": "cgo-text6"
+        },
+        {
+          "n": 24,
+          "cls": "cgo-heading9"
+        },
+        {
+          "n": 25,
+          "cls": "cgo-text7"
+        },
+        {
+          "n": 26,
+          "cls": "cgo-heading10"
+        },
+        {
+          "n": 27,
+          "cls": "cgo-box10"
+        },
+        {
+          "n": 28,
+          "cls": "cgo-box11"
+        },
+        {
+          "n": 29,
+          "cls": "cgo-text8"
+        },
+        {
+          "n": 30,
+          "cls": "cgo-box12"
+        },
+        {
+          "n": 31,
+          "cls": "cgo-box13"
+        },
+        {
+          "n": 32,
+          "cls": "cgo-body"
+        },
+        {
+          "n": 33,
+          "cls": "cgo-heading11"
+        },
+        {
+          "n": 34,
+          "cls": "cgo-box14"
+        },
+        {
+          "n": 35,
+          "cls": "cgo-box15"
+        },
+        {
+          "n": 36,
+          "cls": "cgo-text9"
+        },
+        {
+          "n": 37,
+          "cls": "cgo-heading12"
+        },
+        {
+          "n": 38,
+          "cls": "cgo-text10"
+        },
+        {
+          "n": 39,
+          "cls": "cgo-heading13"
+        },
+        {
+          "n": 40,
+          "cls": "cgo-heading14"
+        },
+        {
+          "n": 41,
+          "cls": "cgo-heading15"
+        },
+        {
+          "n": 42,
+          "cls": "cgo-text11"
+        },
+        {
+          "n": 43,
+          "cls": "cgo-heading16"
+        },
+        {
+          "n": 44,
+          "cls": "cgo-box16"
+        },
+        {
+          "n": 45,
+          "cls": "cgo-box17"
+        },
+        {
+          "n": 46,
+          "cls": "cgo-text12"
+        },
+        {
+          "n": 47,
+          "cls": "cgo-box18"
+        },
+        {
+          "n": 48,
+          "cls": "cgo-box19"
+        },
+        {
+          "n": 49,
+          "cls": "cgo-body2"
+        },
+        {
+          "n": 50,
+          "cls": "cgo-box20"
+        },
+        {
+          "n": 51,
+          "cls": "cgo-box21"
+        },
+        {
+          "n": 52,
+          "cls": "cgo-body3"
+        },
+        {
+          "n": 53,
+          "cls": "cgo-heading17"
+        },
+        {
+          "n": 54,
+          "cls": "cgo-text13"
+        },
+        {
+          "n": 55,
+          "cls": "cgo-heading18"
+        },
+        {
+          "n": 56,
+          "cls": "cgo-heading19"
+        },
+        {
+          "n": 57,
+          "cls": "cgo-heading20"
+        },
+        {
+          "n": 58,
+          "cls": "cgo-text14"
+        },
+        {
+          "n": 59,
+          "cls": "cgo-heading21"
+        },
+        {
+          "n": 60,
+          "cls": "cgo-box22"
+        },
+        {
+          "n": 61,
+          "cls": "cgo-box23"
+        },
+        {
+          "n": 62,
+          "cls": "cgo-text15"
+        },
+        {
+          "n": 63,
+          "cls": "cgo-box24"
+        },
+        {
+          "n": 64,
+          "cls": "cgo-box25"
+        },
+        {
+          "n": 65,
+          "cls": "cgo-body4"
+        },
+        {
+          "n": 66,
+          "cls": "cgo-box26"
+        },
+        {
+          "n": 67,
+          "cls": "cgo-box27"
+        },
+        {
+          "n": 68,
+          "cls": "cgo-body5"
+        },
+        {
+          "n": 69,
+          "cls": "cgo-box28"
+        },
+        {
+          "n": 70,
+          "cls": "cgo-box29"
+        },
+        {
+          "n": 71,
+          "cls": "cgo-body6"
+        },
+        {
+          "n": 72,
+          "cls": "cgo-heading22"
+        },
+        {
+          "n": 73,
+          "cls": "cgo-heading23"
+        },
+        {
+          "n": 74,
+          "cls": "cgo-heading24"
+        },
+        {
+          "n": 75,
+          "cls": "cgo-text16"
+        },
+        {
+          "n": 76,
+          "cls": "cgo-heading25"
+        },
+        {
+          "n": 77,
+          "cls": "cgo-heading26"
+        },
+        {
+          "n": 78,
+          "cls": "cgo-heading27"
+        },
+        {
+          "n": 79,
+          "cls": "cgo-text17"
+        },
+        {
+          "n": 80,
+          "cls": "cgo-heading28"
+        },
+        {
+          "n": 81,
+          "cls": "cgo-text18"
+        },
+        {
+          "n": 82,
+          "cls": "cgo-heading29"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-f",
+      "sectionIndex": 3,
+      "rootClass": "prose-section-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-f"
+        },
+        {
+          "n": 1,
+          "cls": "psf-box"
+        },
+        {
+          "n": 2,
+          "cls": "psf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psf-decor"
+        },
+        {
+          "n": 9,
+          "cls": "psf-box4"
+        },
+        {
+          "n": 10,
+          "cls": "psf-box5"
+        },
+        {
+          "n": 11,
+          "cls": "psf-text"
+        },
+        {
+          "n": 12,
+          "cls": "psf-box6"
+        },
+        {
+          "n": 13,
+          "cls": "psf-box7"
+        },
+        {
+          "n": 14,
+          "cls": "psf-decor2"
+        },
+        {
+          "n": 15,
+          "cls": "psf-box8"
+        },
+        {
+          "n": 16,
+          "cls": "psf-heading"
+        },
+        {
+          "n": 17,
+          "cls": "psf-box9"
+        },
+        {
+          "n": 18,
+          "cls": "psf-text2"
+        }
+      ]
+    }
+  ]
+}

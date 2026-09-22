@@ -1,0 +1,10 @@
+_snippets:
+  media_prose_patient:
+    template: astro_component
+    inline: false
+    preview:
+      text: Media Prose Patient
+    definitions:
+      component_name: page-sections/wpmig/video-reviews
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/video-reviews/video-reviews.cloudcannon.inputs.yml

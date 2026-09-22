@@ -1,0 +1,160 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  eyebrow = "",
+  eyebrowColor = "",
+  heading = "",
+  subtext = "",
+  imageSource = "",
+  imageAlt = "",
+  buttonSections = [],
+  reverse = false,
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  style: styleProp,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+// Left blank, the eyebrow inherits the section's `colorScheme` text color.
+const heroStyle =
+  [eyebrowColor && `--hero-split-eyebrow-color: ${eyebrowColor}`, styleProp]
+    .filter(Boolean)
+    .join("; ") || undefined;
+---
+
+<CustomSection
+  paddingHorizontal="none"
+  paddingVertical="none"
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  class:list={["hero", className]}
+  style={heroStyle}
+  {...htmlAttributes}
+>
+  <div class:list={["hero-split-grid", { reverse }]}>
+    <div class="hero-split-text">
+      <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
+      <Heading
+        level="h2"
+        size="2xl"
+        class="hero-split-heading"
+        data-prop="heading"
+        text={heading}
+      />
+      <Text class="subtext" data-prop="subtext" text={subtext} />
+      <ButtonGroup class="buttons-container" buttonSections={buttonSections} />
+    </div>
+    <div class="hero-split-image">
+      <Image
+        source={imageSource}
+        alt={imageAlt}
+        editable={true}
+        data-prop-src="imageSource"
+        data-prop-alt="imageAlt"
+        data-editable="image"
+        priority={true}
+      />
+    </div>
+  </div>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .hero-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      min-height: 34rem;
+      padding: 5px 20px 60px;
+
+      &.reverse {
+        grid-template-columns: 1fr 1fr;
+
+        .hero-split-text {
+          order: 2;
+        }
+
+        .hero-split-image {
+          order: 1;
+        }
+      }
+    }
+
+    .hero-split-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;;
+      max-width: 510px;
+      margin: 0 auto;
+
+      /* Falls back to `inherit` so the eyebrow follows the section's
+         `colorScheme` when the editor hasn't picked an explicit color. This
+         used to be hardcoded to `--color-text-on-brand`, which rendered
+         near-white regardless of scheme and was invisible on light sections. */
+      .eyebrow {
+        color: var(--hero-split-eyebrow-color, inherit);
+      }
+
+    }
+
+    .hero-split-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-2xl);
+    }
+
+    .hero-split-heading {
+      margin: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-split-grid,
+      .hero-split-grid.reverse {
+        grid-template-columns: 1fr;
+        min-height: 0;
+
+        .hero-split-text,
+        .hero-split-image {
+          order: initial;
+        }
+
+        .hero-split-image{padding: 0;}
+
+        .hero-split-text {
+          align-items: center;
+          margin-inline: auto;
+          text-align: center;
+
+          .eyebrow,
+          .heading,
+          .hero-split-heading,
+          .subtext,
+          .text {
+            text-align: center;
+          }
+
+          .buttons-container {
+            justify-content: center;
+          }
+        }
+
+        .hero-split-image {
+          order: -1;
+        }
+      }
+    }
+  }
+</style>

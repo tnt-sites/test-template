@@ -160,7 +160,13 @@ const globalModals = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Favicons carried over from the WordPress site, at the same sizes it served.
+         These are the source's own artwork (the full wordmark in a square), which is
+         faint at 32px; keeping them is a deliberate match to the old site. -->
+    <link rel="icon" href="/wp-content/uploads/2024/10/cropped-Chapel-Hill-Favicon-32x32.jpg" sizes="32x32" />
+    <link rel="icon" href="/wp-content/uploads/2024/10/cropped-Chapel-Hill-Favicon-192x192.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/wp-content/uploads/2024/10/cropped-Chapel-Hill-Favicon-180x180.jpg" />
+    <meta name="msapplication-TileImage" content="/wp-content/uploads/2024/10/cropped-Chapel-Hill-Favicon-270x270.jpg" />
     <meta name="generator" content={Astro.generator} />
     <style is:inline>
       @layer reset, base, components, page-sections, utils, overrides;

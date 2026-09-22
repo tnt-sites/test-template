@@ -1,0 +1,278 @@
+---
+/**
+ * Card Grid Payment — migrated from new-patients [3] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text2 = "",
+  text3 = "",
+  headingColor = "",
+  headingColorHex = "var(--color-brand)",
+  textColor = "#000000",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+---
+<div class="card-grid-payment" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
+  <div class="cgpa-box">
+    <div class="cgpa-box2">
+      <h2 class="cgpa-heading">{heading}</h2>
+    </div>
+    <div class="cgpa-box3">
+      {text && <div class="cgpa-body" set:html={text} />}
+    </div>
+    <div class="cgpa-box4">
+      {image && <img class="cgpa-media" src={image} alt={imageAlt || ""} loading="lazy" width="800" height="155" />}
+    </div>
+    <div class="cgpa-box5">
+      {subheading && <h2 class="cgpa-heading2">{subheading}</h2>}
+    </div>
+    <div class="cgpa-box6">
+      {text2 && <div class="cgpa-body2" set:html={text2} />}
+    </div>
+    <div class="cgpa-box7">
+      <div class="cgpa-box8">
+        {text3 && <p class="cgpa-text" set:html={text3} />}
+      </div>
+    </div>
+  </div>
+  <div class="cgpa-box9">
+    <div class="cgpa-box10">
+      <div class="cgpa-spacer" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+<style>
+  .card-grid-payment {
+    align-items: center;
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    gap: 20px;
+    justify-content: center;
+    line-height: 27px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cgpa-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 19.5px;
+    position: relative;
+  }
+
+  .cgpa-box2 {
+    box-sizing: border-box;
+  }
+
+  .cgpa-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgpa-box3 {
+    box-sizing: border-box;
+    min-height: 203px;
+  }
+
+  .cgpa-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgpa-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgpa-box4 {
+    box-sizing: border-box;
+  }
+
+  .cgpa-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .cgpa-box5 {
+    box-sizing: border-box;
+  }
+
+  .cgpa-heading2 {
+    box-sizing: border-box;
+    color: var(--color-brand, #047ac0);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgpa-box6 {
+    box-sizing: border-box;
+    min-height: 203px;
+  }
+
+  .cgpa-body2 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgpa-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgpa-box7 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cgpa-box8 {
+    box-sizing: border-box;
+  }
+
+  .cgpa-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgpa-box9 {
+    background-image: url("/wp-content/uploads/2024/11/Fun-Pic.jpg");
+    background-position: 100% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgpa-box9::before {
+    background-image: linear-gradient(260deg, #ffffff 19%, rgba(242, 41, 91, 0) 10%);
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .cgpa-box10 {
+    box-sizing: border-box;
+  }
+
+  /* .cgpa-box9 is a background-image panel with no content, so this spacer is
+     what gives it height. Use a ratio so it scales instead of a baked-in pixel
+     height captured from the original page. */
+  .cgpa-spacer {
+    aspect-ratio: 3 / 2;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .card-grid-payment {
+      flex-wrap: nowrap;
+    }
+
+    .cgpa-box {
+      flex-wrap: nowrap;
+      padding: 38.4px 46.1px 38.4px 15.4px;
+    }
+
+    .cgpa-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cgpa-box3 {
+      min-height: 122px;
+    }
+
+    .cgpa-heading2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cgpa-box6 {
+      min-height: 176px;
+    }
+
+    .cgpa-box9 {
+      flex-wrap: nowrap;
+    }
+
+    .cgpa-spacer {
+      aspect-ratio: 4 / 3;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .card-grid-payment {
+      align-items: stretch;
+      flex-direction: row-reverse;
+    }
+
+    .cgpa-box {
+      flex: 0 0 52.68%;
+      max-width: 52.68%;
+      padding: 72px;
+    }
+
+    .cgpa-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .cgpa-heading2 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .cgpa-box9 {
+      flex: 0 0 47.32%;
+      max-width: 47.32%;
+    }
+
+    /* Side by side here: the panel stretches to match the text column, so the
+       spacer must not force a height of its own. */
+    .cgpa-spacer {
+      aspect-ratio: auto;
+      height: 100%;
+    }
+  }
+</style>

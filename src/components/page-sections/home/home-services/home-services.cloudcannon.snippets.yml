@@ -1,0 +1,10 @@
+_snippets:
+  home_services:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Services
+    definitions:
+      component_name: page-sections/home/home-services
+    _inputs_from_glob:
+      - /src/components/page-sections/home/home-services/home-services.cloudcannon.inputs.yml

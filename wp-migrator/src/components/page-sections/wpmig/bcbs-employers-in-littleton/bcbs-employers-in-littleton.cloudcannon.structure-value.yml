@@ -1,0 +1,28 @@
+label: Bcbs Employers In Littleton
+icon: vertical_split
+description: Bcbs Employers In Littleton section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/bcbs-employers-in-littleton
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  text5: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Bcbs Employers In Littleton
+  icon: vertical_split
+picker_preview:
+  text: Bcbs Employers In Littleton
+  subtext: Bcbs Employers In Littleton section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/bcbs-employers-in-littleton/bcbs-employers-in-littleton.cloudcannon.inputs.yml

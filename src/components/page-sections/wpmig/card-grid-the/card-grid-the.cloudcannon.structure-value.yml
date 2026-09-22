@@ -1,0 +1,32 @@
+label: Card Grid The
+icon: grid_view
+description: Card Grid The section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/card-grid-the
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text3: ""
+  embedUrl: ""
+  text4: ""
+  items:
+    - text: ""
+  headingColor: "#000000"
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+preview:
+  text:
+    - Card Grid The
+  icon: grid_view
+picker_preview:
+  text: Card Grid The
+  subtext: Card Grid The section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/card-grid-the/card-grid-the.cloudcannon.inputs.yml

@@ -1,0 +1,71 @@
+label: Media Prose Patient
+icon: grid_view
+description: Media Prose Patient section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/video-reviews
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  buttonText: ""
+  buttonLink: ""
+  subheading: ""
+  text3: ""
+  text4: ""
+  text5: ""
+  text6: ""
+  text7: ""
+  text8: ""
+  text9: ""
+  text10: ""
+  text11: ""
+  text12: ""
+  items:
+    - text: ""
+  items2:
+    - {}
+  items3:
+    - {}
+  items4:
+    - {}
+  items5:
+    - {}
+  items6:
+    - {}
+  items7:
+    - {}
+  items8:
+    - {}
+  items9:
+    - {}
+  items10:
+    - {}
+  items11:
+    - {}
+  items12:
+    - {}
+  items13:
+    - {}
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#047ac0"
+  buttonTextColor: "#ffffff"
+  buttonTextColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+  textColor3: ""
+  textColor3Hex: "#1f2124"
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#333333"
+preview:
+  text:
+    - Media Prose Patient
+  icon: grid_view
+picker_preview:
+  text: Media Prose Patient
+  subtext: Media Prose Patient section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/video-reviews/video-reviews.cloudcannon.inputs.yml

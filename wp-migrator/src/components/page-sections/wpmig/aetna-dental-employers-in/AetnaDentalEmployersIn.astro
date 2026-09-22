@@ -1,0 +1,386 @@
+---
+/**
+ * Aetna Dental Employers In — migrated from aetna-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="aetna-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="adei-box">
+    <div class="adei-box2">
+      <div class="adei-box3">
+        <div class="adei-box4">
+          <div class="adei-box5">
+            {image && <img class="adei-media" src={image} alt={imageAlt || ""} loading="lazy" width="1344" height="960" />}
+          </div>
+        </div>
+        <div class="adei-box6">
+          <div class="adei-box7">
+            <h2 class="adei-heading">{heading}</h2>
+          </div>
+          <div class="adei-box8">
+            {text && <p class="adei-text" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="adei-box9">
+        <div class="adei-box10">
+          {subheading && <h2 class="adei-heading2">{subheading}</h2>}
+        </div>
+        <div class="adei-box11">
+          {text2 && <div class="adei-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="adei-box12">
+        <div class="adei-box13">
+          {heading2 && <h2 class="adei-heading3">{heading2}</h2>}
+        </div>
+        <div class="adei-box14">
+          {text3 && <div class="adei-body" set:html={text3} />}
+        </div>
+      </div>
+      <div class="adei-box15">
+        <div class="adei-box16">
+          {heading3 && <h2 class="adei-heading4">{heading3}</h2>}
+        </div>
+        <div class="adei-box17">
+          <div class="adei-box18">
+            {text4 && <div class="adei-body2" set:html={text4} />}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .aetna-dental-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .adei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .adei-box2 {
+    box-sizing: border-box;
+  }
+
+  .adei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .adei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .adei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .adei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 280px;
+  }
+
+  .adei-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .adei-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adei-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .adei-text2 {
+    box-sizing: border-box;
+  }
+
+  .adei-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adei-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adei-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 688px;
+  }
+
+  .adei-body :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .adei-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .adei-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .adei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .adei-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .adei-box18 {
+    box-sizing: border-box;
+    min-height: 448px;
+  }
+
+  .adei-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .adei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .adei-box3 {
+      max-width: 1024px;
+    }
+
+    .adei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 488px;
+    }
+
+    .adei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .adei-box8 {
+      min-height: 304px;
+    }
+
+    .adei-box14 {
+      min-height: 328px;
+    }
+
+    .adei-box18 {
+      min-height: 232px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .adei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .adei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .adei-box4 {
+      min-height: auto;
+    }
+
+    .adei-box6 {
+      min-height: 402px;
+    }
+
+    .adei-box8 {
+      min-height: 184px;
+    }
+
+    .adei-box14 {
+      min-height: 256px;
+    }
+
+    .adei-box18 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .adei-box6 {
+    align-items: normal;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .adei-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .adei-box3 {
+    text-align: center;
+  }
+  .adei-box4 {
+    text-align: center;
+  }
+  .adei-box5 {
+    align-items: center;
+    text-align: left;
+  }
+  .adei-media {
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .adei-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .adei-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

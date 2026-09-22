@@ -1,0 +1,779 @@
+---
+/**
+ * Payment Options C — migrated from payment-options/dental-insurance [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="payment-options-c" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="poc-box">
+    <h3 class="poc-heading">{heading}</h3>
+    {subheading && <h1 class="poc-heading2">{subheading}</h1>}
+  </div>
+</div>
+<style>
+  .payment-options-c {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .poc-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .poc-heading {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .poc-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .payment-options-c {
+      justify-content: flex-start;
+    }
+
+    .poc-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .payment-options-c {
+      text-align: left;
+    }
+
+    .poc-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .poc-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .poc-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .poc-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box24 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .poc-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box34 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .poc-heading6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box38 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 31.2px;
+  }
+  .poc-heading7 {
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box42 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .poc-heading8 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .poc-box44 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .poc-btn5 {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .poc-box45 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .poc-box17 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link2 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link3 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link4 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link5 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box25 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link6 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link7 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link8 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link9 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link10 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link11 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-grid {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link12 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-link14 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+  }
+  .poc-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box18 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box19 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box20 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box21 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box22 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box26 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box27 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box28 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box29 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box30 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box31 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-box35 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .poc-heading {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .poc-box13 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .poc-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .poc-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .poc-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .poc-box24 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .poc-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .poc-box34 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .poc-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .poc-box38 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+    }
+
+    .poc-heading7 {
+      align-items: center;
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .poc-box42 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .poc-heading8 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .poc-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-box44 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .poc-box17 {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .poc-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link3 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link4 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link5 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-box25 {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .poc-link6 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link7 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link8 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link9 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link10 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link11 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-grid {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .poc-link12 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link14 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+    }
+
+    .poc-text {
+      line-height: 24px;
+    }
+
+    .poc-box18 {
+      line-height: 24px;
+    }
+
+    .poc-box19 {
+      line-height: 24px;
+    }
+
+    .poc-text2 {
+      line-height: 24px;
+    }
+
+    .poc-box20 {
+      line-height: 24px;
+    }
+
+    .poc-box21 {
+      line-height: 24px;
+    }
+
+    .poc-box22 {
+      line-height: 24px;
+    }
+
+    .poc-box26 {
+      line-height: 24px;
+    }
+
+    .poc-text3 {
+      line-height: 24px;
+    }
+
+    .poc-box27 {
+      line-height: 24px;
+    }
+
+    .poc-box28 {
+      line-height: 24px;
+    }
+
+    .poc-box29 {
+      line-height: 24px;
+    }
+
+    .poc-text4 {
+      line-height: 24px;
+    }
+
+    .poc-box30 {
+      line-height: 24px;
+    }
+
+    .poc-box31 {
+      line-height: 24px;
+    }
+
+    .poc-box35 {
+      line-height: 24px;
+    }
+
+    .poc-heading {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .poc-heading3 {
+      font-weight: 400;
+    }
+
+    .poc-heading8 {
+      font-weight: 400;
+    }
+
+    .poc-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .poc-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link3 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link4 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link5 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link6 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link7 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link8 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link9 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link10 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link11 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link12 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .poc-link14 {
+      color: rgb(27, 46, 56);
+    }
+
+    .poc-btn5 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .poc-text {
+      line-height: 24px;
+    }
+
+    .poc-box17 {
+      line-height: 24px;
+    }
+
+    .poc-box18 {
+      line-height: 24px;
+    }
+
+    .poc-box19 {
+      line-height: 24px;
+    }
+
+    .poc-text2 {
+      line-height: 24px;
+    }
+
+    .poc-box20 {
+      line-height: 24px;
+    }
+
+    .poc-box21 {
+      line-height: 24px;
+    }
+
+    .poc-box22 {
+      line-height: 24px;
+    }
+
+    .poc-box25 {
+      line-height: 24px;
+    }
+
+    .poc-box26 {
+      line-height: 24px;
+    }
+
+    .poc-text3 {
+      line-height: 24px;
+    }
+
+    .poc-box27 {
+      line-height: 24px;
+    }
+
+    .poc-box28 {
+      line-height: 24px;
+    }
+
+    .poc-box29 {
+      line-height: 24px;
+    }
+
+    .poc-text4 {
+      line-height: 24px;
+    }
+
+    .poc-box30 {
+      line-height: 24px;
+    }
+
+    .poc-box31 {
+      line-height: 24px;
+    }
+
+    .poc-grid {
+      line-height: 24px;
+    }
+
+    .poc-box35 {
+      line-height: 24px;
+    }
+
+    .poc-heading {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

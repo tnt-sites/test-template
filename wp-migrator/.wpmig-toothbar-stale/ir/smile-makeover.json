@@ -1,0 +1,472 @@
+{
+  "page": "smile-makeover",
+  "route": "/smile-makeover/",
+  "source": "smile-makeover.html",
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "sections": [
+    {
+      "id": "page-banner",
+      "sectionIndex": 0,
+      "rootClass": "page-banner",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "page-banner"
+        },
+        {
+          "n": 1,
+          "cls": "pb-box"
+        },
+        {
+          "n": 2,
+          "cls": "pb-raw"
+        },
+        {
+          "n": 3,
+          "cls": "pb-box2"
+        },
+        {
+          "n": 4,
+          "cls": "pb-box3"
+        },
+        {
+          "n": 5,
+          "cls": "pb-heading"
+        },
+        {
+          "n": 6,
+          "cls": "pb-box4"
+        },
+        {
+          "n": 7,
+          "cls": "pb-box5"
+        },
+        {
+          "n": 8,
+          "cls": "pb-decor"
+        },
+        {
+          "n": 9,
+          "cls": "pb-box6"
+        },
+        {
+          "n": 10,
+          "cls": "pb-heading2"
+        },
+        {
+          "n": 11,
+          "cls": "pb-box7"
+        },
+        {
+          "n": 12,
+          "cls": "pb-box8"
+        },
+        {
+          "n": 13,
+          "cls": "pb-box9"
+        },
+        {
+          "n": 14,
+          "cls": "pb-link"
+        }
+      ]
+    },
+    {
+      "id": "card-grid-e",
+      "sectionIndex": 1,
+      "rootClass": "card-grid-e",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "card-grid-e"
+        },
+        {
+          "n": 1,
+          "cls": "cge-box"
+        },
+        {
+          "n": 2,
+          "cls": "cge-box2"
+        },
+        {
+          "n": 3,
+          "cls": "cge-box3"
+        },
+        {
+          "n": 4,
+          "cls": "cge-text"
+        },
+        {
+          "n": 5,
+          "cls": "cge-heading"
+        },
+        {
+          "n": 6,
+          "cls": "cge-body"
+        },
+        {
+          "n": 8,
+          "cls": "cge-box4"
+        },
+        {
+          "n": 9,
+          "cls": "cge-media"
+        },
+        {
+          "n": 10,
+          "cls": "cge-box5"
+        },
+        {
+          "n": 11,
+          "cls": "cge-box6"
+        },
+        {
+          "n": 12,
+          "cls": "cge-box7"
+        },
+        {
+          "n": 13,
+          "cls": "cge-box8"
+        },
+        {
+          "n": 14,
+          "cls": "cge-box9"
+        },
+        {
+          "n": 15,
+          "cls": "cge-box10"
+        },
+        {
+          "n": 16,
+          "cls": "cge-box11"
+        },
+        {
+          "n": 17,
+          "cls": "cge-media2"
+        },
+        {
+          "n": 18,
+          "cls": "cge-box12"
+        },
+        {
+          "n": 19,
+          "cls": "cge-heading2"
+        },
+        {
+          "n": 20,
+          "cls": "cge-box13"
+        },
+        {
+          "n": 21,
+          "cls": "cge-box14"
+        },
+        {
+          "n": 22,
+          "cls": "cge-link"
+        },
+        {
+          "n": 23,
+          "cls": "cge-box15"
+        },
+        {
+          "n": 24,
+          "cls": "cge-box16"
+        },
+        {
+          "n": 25,
+          "cls": "cge-embed"
+        }
+      ]
+    },
+    {
+      "id": "card-grid-j",
+      "sectionIndex": 2,
+      "rootClass": "card-grid-j",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "card-grid-j"
+        },
+        {
+          "n": 1,
+          "cls": "cgj-box"
+        },
+        {
+          "n": 2,
+          "cls": "cgj-box2"
+        },
+        {
+          "n": 3,
+          "cls": "cgj-box3"
+        },
+        {
+          "n": 4,
+          "cls": "cgj-heading"
+        },
+        {
+          "n": 5,
+          "cls": "cgj-text"
+        },
+        {
+          "n": 6,
+          "cls": "cgj-heading2"
+        },
+        {
+          "n": 7,
+          "cls": "cgj-heading3"
+        },
+        {
+          "n": 8,
+          "cls": "cgj-heading4"
+        },
+        {
+          "n": 9,
+          "cls": "cgj-text2"
+        },
+        {
+          "n": 10,
+          "cls": "cgj-heading5"
+        },
+        {
+          "n": 11,
+          "cls": "cgj-text3"
+        },
+        {
+          "n": 12,
+          "cls": "cgj-heading6"
+        },
+        {
+          "n": 13,
+          "cls": "cgj-heading7"
+        },
+        {
+          "n": 14,
+          "cls": "cgj-heading8"
+        },
+        {
+          "n": 15,
+          "cls": "cgj-text4"
+        },
+        {
+          "n": 16,
+          "cls": "cgj-heading9"
+        },
+        {
+          "n": 17,
+          "cls": "cgj-box4"
+        },
+        {
+          "n": 18,
+          "cls": "cgj-box5"
+        },
+        {
+          "n": 19,
+          "cls": "cgj-text5"
+        },
+        {
+          "n": 20,
+          "cls": "cgj-box6"
+        },
+        {
+          "n": 21,
+          "cls": "cgj-box7"
+        },
+        {
+          "n": 22,
+          "cls": "cgj-body"
+        },
+        {
+          "n": 23,
+          "cls": "cgj-box8"
+        },
+        {
+          "n": 24,
+          "cls": "cgj-box9"
+        },
+        {
+          "n": 25,
+          "cls": "cgj-body2"
+        },
+        {
+          "n": 26,
+          "cls": "cgj-box10"
+        },
+        {
+          "n": 27,
+          "cls": "cgj-box11"
+        },
+        {
+          "n": 28,
+          "cls": "cgj-body3"
+        },
+        {
+          "n": 29,
+          "cls": "cgj-box12"
+        },
+        {
+          "n": 30,
+          "cls": "cgj-box13"
+        },
+        {
+          "n": 31,
+          "cls": "cgj-body4"
+        },
+        {
+          "n": 32,
+          "cls": "cgj-box14"
+        },
+        {
+          "n": 33,
+          "cls": "cgj-box15"
+        },
+        {
+          "n": 34,
+          "cls": "cgj-body5"
+        },
+        {
+          "n": 35,
+          "cls": "cgj-box16"
+        },
+        {
+          "n": 36,
+          "cls": "cgj-box17"
+        },
+        {
+          "n": 37,
+          "cls": "cgj-body6"
+        },
+        {
+          "n": 38,
+          "cls": "cgj-heading10"
+        },
+        {
+          "n": 39,
+          "cls": "cgj-text6"
+        },
+        {
+          "n": 40,
+          "cls": "cgj-heading11"
+        },
+        {
+          "n": 41,
+          "cls": "cgj-heading12"
+        },
+        {
+          "n": 42,
+          "cls": "cgj-heading13"
+        },
+        {
+          "n": 43,
+          "cls": "cgj-text7"
+        },
+        {
+          "n": 44,
+          "cls": "cgj-heading14"
+        },
+        {
+          "n": 45,
+          "cls": "cgj-text8"
+        },
+        {
+          "n": 46,
+          "cls": "cgj-heading15"
+        },
+        {
+          "n": 47,
+          "cls": "cgj-heading16"
+        },
+        {
+          "n": 48,
+          "cls": "cgj-heading17"
+        },
+        {
+          "n": 49,
+          "cls": "cgj-text9"
+        },
+        {
+          "n": 50,
+          "cls": "cgj-heading18"
+        },
+        {
+          "n": 51,
+          "cls": "cgj-text10"
+        },
+        {
+          "n": 52,
+          "cls": "cgj-heading19"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-f",
+      "sectionIndex": 3,
+      "rootClass": "prose-section-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-f"
+        },
+        {
+          "n": 1,
+          "cls": "psf-box"
+        },
+        {
+          "n": 2,
+          "cls": "psf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psf-decor"
+        },
+        {
+          "n": 9,
+          "cls": "psf-box4"
+        },
+        {
+          "n": 10,
+          "cls": "psf-box5"
+        },
+        {
+          "n": 11,
+          "cls": "psf-text"
+        },
+        {
+          "n": 12,
+          "cls": "psf-box6"
+        },
+        {
+          "n": 13,
+          "cls": "psf-box7"
+        },
+        {
+          "n": 14,
+          "cls": "psf-decor2"
+        },
+        {
+          "n": 15,
+          "cls": "psf-box8"
+        },
+        {
+          "n": 16,
+          "cls": "psf-heading"
+        },
+        {
+          "n": 17,
+          "cls": "psf-box9"
+        },
+        {
+          "n": 18,
+          "cls": "psf-text2"
+        }
+      ]
+    }
+  ]
+}

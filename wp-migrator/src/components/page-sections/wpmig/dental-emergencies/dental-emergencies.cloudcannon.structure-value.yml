@@ -1,0 +1,37 @@
+label: Dental Emergencies
+icon: grid_view
+description: Dental Emergencies section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/dental-emergencies
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  text2: ""
+  subheading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  items:
+    - text: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  buttonBackgroundHoverColor: "#49ab71"
+  buttonBackgroundColor2HoverColor: "#54595f"
+preview:
+  text:
+    - Dental Emergencies
+  icon: grid_view
+picker_preview:
+  text: Dental Emergencies
+  subtext: Dental Emergencies section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/dental-emergencies/dental-emergencies.cloudcannon.inputs.yml

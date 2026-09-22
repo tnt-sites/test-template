@@ -1,0 +1,10 @@
+_snippets:
+  cta_band_restore:
+    template: astro_component
+    inline: false
+    preview:
+      text: Cta Band Restore
+    definitions:
+      component_name: page-sections/wpmig/cta-band-restore
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/cta-band-restore/cta-band-restore.cloudcannon.inputs.yml

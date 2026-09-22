@@ -1,0 +1,10 @@
+_snippets:
+  home_delta_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Delta Dental
+    definitions:
+      component_name: page-sections/wpmig/home-delta-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-delta-dental/home-delta-dental.cloudcannon.inputs.yml

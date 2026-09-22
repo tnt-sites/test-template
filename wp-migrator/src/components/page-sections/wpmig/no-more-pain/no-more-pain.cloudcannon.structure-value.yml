@@ -1,0 +1,25 @@
+label: No More Pain
+icon: grid_view
+description: No More Pain section with editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/no-more-pain
+  id: ""
+  buttonText: ""
+  buttonLink: ""
+  items:
+    - title: ""
+      text: ""
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor: "#ffffff"
+  titleColor: "#3b6278"
+  textColor: "#3b6278"
+  buttonBackgroundHoverColor: "#49ab71"
+preview:
+  text:
+    - No More Pain
+  icon: grid_view
+picker_preview:
+  text: No More Pain
+  subtext: No More Pain section with editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/no-more-pain/no-more-pain.cloudcannon.inputs.yml

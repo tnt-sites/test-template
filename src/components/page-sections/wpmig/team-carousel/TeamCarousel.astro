@@ -1,0 +1,239 @@
+---
+/**
+ * Team Carousel — a rotating gallery of team photos for the Meet the Team page.
+ *
+ * The source used an Elementor/Swiper image carousel whose slides are injected
+ * by JavaScript, so the images are not in the static snapshot; the photo set is
+ * recovered from the WordPress media library. Rebuilt here as a lightweight,
+ * auto-advancing, swipeable carousel with a flat `images[]` array.
+ */
+const {
+  heading = "",
+  subheading = "",
+  images = [],
+  autoPlay = true,
+  interval = 4500,
+  headingColor = "var(--color-brand)",
+  id = "",
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter((i) => i && i.image) : [];
+const autoAttr = String(autoPlay) !== "false";
+---
+<section class="team-carousel" id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+  <div class="tc-inner">
+    {heading && <h2 class="tc-heading">{heading}</h2>}
+    {subheading && <p class="tc-sub">{subheading}</p>}
+    {list.length > 0 && (
+      <div class="tc-viewport" data-carousel data-autoplay={autoAttr ? "true" : "false"} data-interval={interval}>
+        <div class="tc-track">
+          {list.map((it) => (
+            <div class="tc-slide">
+              <img src={it.image} alt={it.imageAlt || ""} loading="lazy" draggable="false" />
+              {it.caption && <span class="tc-caption">{it.caption}</span>}
+            </div>
+          ))}
+        </div>
+        <button class="tc-arrow tc-prev" type="button" aria-label="Previous">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="tc-arrow tc-next" type="button" aria-label="Next">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <div class="tc-dots" role="tablist"></div>
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  .team-carousel {
+    box-sizing: border-box;
+    padding: 70px 20px;
+    width: 100%;
+  }
+
+  .tc-inner {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1080px;
+  }
+
+  .tc-heading {
+    color: var(--hd);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin: 0 0 0.3em;
+    text-align: center;
+  }
+
+  .tc-sub {
+    color: #333;
+    font-family: Lato, sans-serif;
+    margin: 0 auto 2rem;
+    max-width: 640px;
+    text-align: center;
+  }
+
+  .tc-viewport {
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .tc-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    will-change: transform;
+  }
+
+  .tc-slide {
+    flex: 0 0 100%;
+    position: relative;
+  }
+
+  .tc-slide img {
+    aspect-ratio: 16 / 9;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .tc-caption {
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    bottom: 0;
+    color: #fff;
+    font-family: Lato, sans-serif;
+    left: 0;
+    padding: 40px 20px 16px;
+    position: absolute;
+    right: 0;
+  }
+
+  .tc-arrow {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    border: none;
+    border-radius: 50%;
+    color: var(--hd);
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.2s;
+    width: 44px;
+    z-index: 2;
+  }
+
+  .tc-arrow:hover {
+    background: #fff;
+  }
+
+  .tc-prev {
+    left: 14px;
+  }
+
+  .tc-next {
+    right: 14px;
+  }
+
+  .tc-dots {
+    bottom: 14px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .tc-dots button {
+    background: rgba(255, 255, 255, 0.55);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 10px;
+    padding: 0;
+    width: 10px;
+  }
+
+  .tc-dots button[aria-selected="true"] {
+    background: #fff;
+  }
+</style>
+<script>
+  function initCarousel(root: HTMLElement) {
+    const track = root.querySelector<HTMLElement>(".tc-track");
+    const slides = Array.from(root.querySelectorAll<HTMLElement>(".tc-slide"));
+    const dotsWrap = root.querySelector<HTMLElement>(".tc-dots");
+    if (!track || slides.length === 0) return;
+    let index = 0;
+    let timer: number | undefined;
+
+    const dots = slides.map((_, i) => {
+      const b = document.createElement("button");
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-label", `Go to slide ${i + 1}`);
+      b.addEventListener("click", () => {
+        go(i);
+        restart();
+      });
+      dotsWrap?.appendChild(b);
+      return b;
+    });
+
+    const go = (i: number) => {
+      index = (i + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, di) => d.setAttribute("aria-selected", di === index ? "true" : "false"));
+    };
+
+    const autoplay = root.dataset.autoplay === "true";
+    const interval = Number(root.dataset.interval) || 4500;
+    const start = () => {
+      if (autoplay && slides.length > 1) timer = window.setInterval(() => go(index + 1), interval);
+    };
+    const restart = () => {
+      if (timer) window.clearInterval(timer);
+      start();
+    };
+
+    root.querySelector(".tc-next")?.addEventListener("click", () => {
+      go(index + 1);
+      restart();
+    });
+    root.querySelector(".tc-prev")?.addEventListener("click", () => {
+      go(index - 1);
+      restart();
+    });
+
+    // Basic touch swipe.
+    let x0: number | null = null;
+    root.addEventListener("touchstart", (e) => (x0 = e.touches[0].clientX), { passive: true });
+    root.addEventListener("touchend", (e) => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) {
+        go(index + (dx < 0 ? 1 : -1));
+        restart();
+      }
+      x0 = null;
+    });
+
+    go(0);
+    start();
+  }
+
+  function boot() {
+    document.querySelectorAll<HTMLElement>("[data-carousel]").forEach(initCarousel);
+  }
+  if (document.readyState !== "loading") boot();
+  else document.addEventListener("DOMContentLoaded", boot);
+</script>

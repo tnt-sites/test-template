@@ -1,0 +1,34 @@
+label: Media Prose
+icon: vertical_split
+description: >-
+  A section built from an ordered list of content blocks — headings, rich text,
+  lists, images, embeds and buttons — in a stack, split or card layout.
+value:
+  _component: page-sections/wpmig/media-prose
+  id: ""
+  layout: stack
+  width: wide
+  align: ""
+  padded: true
+  blocks:
+    - type: heading
+      level: h2
+      text: ""
+    - type: text
+      text: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  headingColor: ""
+  headingColorHex: ""
+  textColor: ""
+  textColorHex: ""
+preview:
+  text:
+    - key: blocks[0].text
+    - Media Prose
+  icon: vertical_split
+picker_preview:
+  text: Media Prose
+  subtext: Headings, copy, lists, images and embeds in a stack, split or card layout.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/media-prose/media-prose.cloudcannon.inputs.yml

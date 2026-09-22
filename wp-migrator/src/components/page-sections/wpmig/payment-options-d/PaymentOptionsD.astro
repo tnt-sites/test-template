@@ -1,0 +1,1106 @@
+---
+/**
+ * Payment Options D — migrated from payment-options/dental-savers-plan [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  heading2 = "",
+  text2 = "",
+  text3 = "",
+  heading3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#69727d",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const raw0 = `<table>
+<thead>
+<tr>
+<th>Type</th>
+<!--
+<th scope="col">Monthly</th>
+-->
+<th>Annually</th>
+</tr>
+</thead>
+<tbody><!--row-->
+<tr><!--
+<th scope="row">1</th>
+-->
+<td>Member</td>
+<!--
+<td>$19.99*</td>
+-->
+<td>$299*</td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">1</th>
+-->
+<td>Additional Family Member</td>
+<!--
+<td>$29.99*</td>
+-->
+<td>$179*</td>
+</tr>
+</tbody>
+</table>`;
+const raw1 = `<table>
+<thead>
+<tr>
+<th>Treatment</th>
+<th>Them*</th>
+<th>Us**</th>
+</tr>
+</thead>
+<tbody><!--row-->
+<tr><!--
+<th scope="row">1</th>
+-->
+<td>Exams &amp; X-Rays</td>
+<td>$256</td>
+<td><b>$0</b></td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">2</th>
+-->
+<td>Extraction (Single Tooth)</td>
+<td>$349</td>
+<td><b>$270</b></td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">3</th>
+-->
+<td>Tooth-Colored Filling</td>
+<td>$205</td>
+<td><b>$162</b></td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">3</th>
+-->
+<td>Root Canal</td>
+<td>$960</td>
+<td><b>$727</b></td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">3</th>
+-->
+<td>Porcelain Crown</td>
+<td>$1699</td>
+<td><b>$1349</b></td>
+</tr>
+<!--row-->
+<tr><!--
+<th scope="row">3</th>
+-->
+<td>Denture</td>
+<td>$2270</td>
+<td><b>$1706</b></td>
+</tr>
+</tbody>
+</table>`;
+---
+<div class="payment-options-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor}`} {...rest}>
+  <div class="pod-box">
+    <div class="pod-box2">
+      <div class="pod-box3">
+        <div class="pod-box4">
+          {eyebrow && <h4 class="pod-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="pod-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="pod-box5">
+        <div class="pod-box6">
+          <div class="pod-box7">
+            <div class="pod-box8">
+              <div class="pod-box9">
+                <h2 class="pod-heading2">{heading}</h2>
+              </div>
+              <div class="pod-box10">
+                {text && <div class="pod-text">{text}</div>}
+              </div>
+            </div>
+            <div class="pod-box11">
+              <div class="pod-box12">
+                <div class="pod-box13">
+                  {subheading && <h3 class="pod-heading3">{subheading}</h3>}
+                </div>
+                <div class="pod-box14">
+                  <div class="pod-box15">
+                    <div class="pod-raw"><Fragment set:html={raw0} /></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pod-box16">
+              <div class="pod-box17">
+                {heading2 && <h3 class="pod-heading4">{heading2}</h3>}
+              </div>
+              <div class="pod-box18">
+                <div class="pod-box19">
+                  {text2 && <div class="pod-body" set:html={text2} />}
+                </div>
+              </div>
+              <div class="pod-box20">
+                <div class="pod-raw2"><Fragment set:html={raw1} /></div>
+              </div>
+              <div class="pod-box21">
+                {text3 && <div class="pod-text2" set:html={text3} />}
+              </div>
+            </div>
+            <div class="pod-box22">
+              <div class="pod-box23">
+                <div class="pod-box24">
+                  <div class="pod-spacer" aria-hidden="true"></div>
+                </div>
+                <div class="pod-box25">
+                  {heading3 && <h2 class="pod-heading5">{heading3}</h2>}
+                </div>
+                <div class="pod-box26">
+                  <div class="pod-box27">
+                    {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pod-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                  </div>
+                </div>
+                <div class="pod-box28">
+                  <div class="pod-box29">
+                    <div class="pod-box30">
+                      {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pod-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .payment-options-d {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .pod-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .pod-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .pod-box3 {
+    display: none;
+  }
+
+  .pod-box4 {
+    display: none;
+  }
+
+  .pod-heading {
+    display: none;
+  }
+
+  :global(.pod-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pod-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pod-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.pod-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .pod-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .pod-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pod-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-box7 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-box8 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .pod-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pod-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-text {
+    box-sizing: border-box;
+  }
+
+  .pod-text::after {
+    border-radius: 0px;
+    content: "";
+  }
+
+  .pod-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .pod-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pod-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box15 {
+    box-sizing: border-box;
+  }
+
+  .pod-raw {
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 16px;
+  }
+
+  .pod-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .pod-box16 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pod-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box18 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-box19 {
+    box-sizing: border-box;
+  }
+
+  .pod-box19 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .pod-body :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .pod-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-raw2 {
+    color: #212529;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin-bottom: 16px;
+  }
+
+  .pod-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-text2 {
+    box-sizing: border-box;
+  }
+
+  .pod-text2::after {
+    border-radius: 0px;
+    content: "";
+  }
+
+  .pod-box22 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .pod-box23 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-spacer {
+    box-sizing: border-box;
+    height: 19px;
+    min-height: 19px;
+  }
+
+  .pod-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .pod-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pod-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box27 {
+    box-sizing: border-box;
+  }
+
+  :global(.pod-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.pod-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .pod-box28 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pod-box29 {
+    box-sizing: border-box;
+  }
+
+  .pod-box30 {
+    box-sizing: border-box;
+  }
+
+  :global(.pod-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.pod-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.pod-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.pod-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.pod-btn3):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.pod-btn4):hover {
+    background-color: var(--c8);
+  }
+
+  @media (min-width: 768px) {
+    .pod-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .pod-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1164px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .pod-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pod-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.pod-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.pod-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .pod-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .pod-box11 {
+      max-width: 1024px;
+    }
+
+    .pod-box22 {
+      max-width: 1024px;
+    }
+
+    .pod-box28 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .pod-box29 {
+      display: none;
+    }
+
+    .pod-box30 {
+      display: none;
+    }
+
+    :global(.pod-btn6) {
+      background-color: #69727d;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pod-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .pod-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1032px;
+    }
+
+    :global(.pod-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.pod-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .pod-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .pod-box11 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .pod-box12 {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+    }
+
+    .pod-box22 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .pod-box23 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .pod-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .pod-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .pod-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .pod-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .pod-spacer {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 32px;
+  }
+  .pod-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .pod-box26 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .pod-box15 {
+    color: rgb(33, 37, 41);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+  }
+  .pod-raw {
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+  }
+  .pod-box20 {
+    color: rgb(33, 37, 41);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+  }
+  .pod-raw2 {
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+  }
+  :global(.pod-btn5) {
+    align-items: normal;
+    background-color: rgb(105, 114, 125);
+    justify-content: normal;
+  }
+  .pod-box27 {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .pod-box13 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    .pod-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pod-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    .pod-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pod-spacer {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
+    .pod-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.pod-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .pod-box26 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .pod-box15 {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+
+    .pod-raw {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .pod-box20 {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+
+    .pod-raw2 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.pod-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.pod-btn5) {
+      align-items: normal;
+      background-color: rgb(91, 183, 129);
+      justify-content: normal;
+    }
+
+    .pod-box13 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pod-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    .pod-box17 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pod-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 28px;
+    }
+
+    .pod-spacer {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .pod-heading5 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+
+    .pod-box26 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .pod-box27 {
+      color: rgb(27, 46, 56);
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .pod-box15 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .pod-raw {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+
+    .pod-box20 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .pod-raw2 {
+      color: rgb(33, 37, 41);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,22 @@
+label: Columbine Creek Dentistry Provides
+icon: grid_view
+description: Columbine Creek Dentistry Provides section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/columbine-creek-dentistry-provides
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  items:
+    - text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Columbine Creek Dentistry Provides
+  icon: grid_view
+picker_preview:
+  text: Columbine Creek Dentistry Provides
+  subtext: Columbine Creek Dentistry Provides section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/columbine-creek-dentistry-provides/columbine-creek-dentistry-provides.cloudcannon.inputs.yml

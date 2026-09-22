@@ -1,9 +1,9 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Button from "@core-elements/button/Button.astro";
-import Divider from "@core-elements/divider/Divider.astro";
 import Image from "@core-elements/image/Image.astro";
 import siteInfoData from "@data/siteInfo.json";
+import ContactBand from "@components/page-sections/wpmig/contact-band/ContactBand.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
@@ -31,9 +31,46 @@ const {
   phoneLinkHoverColor = "",
   logoSource,
   logoAlt,
+  linkColumns = [],
+  copyright = null,
+  contactBand = null,
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+/*
+ * The footer's own columns of links, as the source drew them.
+ *
+ * The brand column is dropped rather than rendered: it carries the logo, and
+ * the logo already has its own place above this row, so passing it through
+ * prints it twice.
+ */
+const navColumns = (Array.isArray(linkColumns) ? linkColumns : []).filter(
+  (column: any) => !column?.brand && Array.isArray(column?.links) && column.links.length > 0
+);
+
+/*
+ * The strip under the footer proper.
+ *
+ * The line below it is not a styling default — it credits a named agency on
+ * every page of the site. So where a site has supplied its own notice that
+ * wins outright, text and links together, and only a site that has none keeps
+ * the template's.
+ */
+/*
+ * The band of map and form the source's footer ends with.
+ *
+ * Both halves are third-party iframes, which is why this band went missing:
+ * a mirrored snapshot cannot load either, so to every pass that reads content
+ * it is an empty region. What the migrator carries across is the two URLs and
+ * the heights they were given, and that is enough to draw it.
+ */
+const band = contactBand && (contactBand.mapEmbedUrl || contactBand.formEmbedUrl) ? contactBand : null;
+
+const sourceCopyright =
+  copyright && (copyright.text || (Array.isArray(copyright.links) && copyright.links.length > 0))
+    ? copyright
+    : null;
 
 const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
 
@@ -130,19 +167,49 @@ const footerStyle = [
 ---
 
 <footer class="footer" style={footerStyle || undefined} {...htmlAttributes}>
+  {
+    band && (
+      <ContactBand
+        media="map"
+        mapEmbedUrl={band.mapEmbedUrl}
+        eyebrow={band.eyebrow}
+        title={band.title}
+        formEmbedUrl={band.formEmbedUrl}
+        formTitle={band.formTitle || "Contact form"}
+        formHeight={band.formHeight}
+      />
+    )
+  }
+
   <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="2xl">
-    <div class="footer-content">
-      <div class="content-container">
+    <div id="fo-content" class="fo-content">
+      <div class="fo-brand">
         <a href="/">
           <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
         </a>
       </div>
-      <!-- <div class="content-container">
-        <Bar navData={links} />
-      </div> -->
-    </div>
 
-    <div id="fo-content" class="fo-content block lg:flex justify-around items-start text-center">
+      {
+        navColumns.map((column: any) => (
+          <div class="fo-links">
+            {column.title && <span class="fo-title">{column.title}</span>}
+            <ul class="fo-links-list">
+              {column.links.map((link: any) => (
+                <li>
+                  <a
+                    href={link.path || "#"}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+
       <div class="fo-info">
         <span class="fo-title">{contactTitle}</span>
         {
@@ -261,24 +328,48 @@ const footerStyle = [
       )
     }
 
-    <Divider />
+  </CustomSection>
 
-    <div class="footer-content">
-      <div class="content-container">
-        <div class="footer-legal-text" id="copy">
-          <span class="footer-legal-line footer-legal-line--primary">
-            &copy;<span class="inline" id="copyDate">{copyYear}</span>
-            {displaySiteName}
-          </span>
-          {
-            legalLinks.length > 0 && (
+  <div class="footer-copyright">
+    <div class="fc-inner">
+    <div class="footer-legal-text" id="copy">
+      {
+        sourceCopyright ? (
+          <>
+            {sourceCopyright.text && (
+              <span class="footer-legal-line footer-legal-line--primary">
+                {sourceCopyright.text}
+              </span>
+            )}
+            {(sourceCopyright.links ?? []).map((item: any) => (
+              <>
+                <span class="footer-legal-separator" aria-hidden="true">
+                  |
+                </span>
+                <span class="footer-legal-line footer-legal-line--links">
+                  <a
+                    href={item.path || "#"}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                  >
+                    {item.name || "Link"}
+                  </a>
+                </span>
+              </>
+            ))}
+          </>
+        ) : (
+          <>
+            <span class="footer-legal-line footer-legal-line--primary">
+              &copy;<span class="inline" id="copyDate">{copyYear}</span>
+              {displaySiteName}
+            </span>
+            {legalLinks.length > 0 && (
               <span class="footer-legal-separator" aria-hidden="true">
                 |
               </span>
-            )
-          }
-          {
-            legalLinks.length > 0 && (
+            )}
+            {legalLinks.length > 0 && (
               <span class="footer-legal-line footer-legal-line--links">
                 {legalLinks.map((item: any, index: number) => (
                   <>
@@ -287,26 +378,57 @@ const footerStyle = [
                   </>
                 ))}
               </span>
-            )
-          }
-          <span class="footer-legal-separator" aria-hidden="true">|</span>
-          <span class="footer-legal-line footer-legal-line--credit">
-            Site designed and maintained by{" "}
-            <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
-              TNT Dental
-            </a>
-          </span>
-        </div>
-        {blurb && <p class="footer-legal-blurb">{blurb}</p>}
-      </div>
+            )}
+            <span class="footer-legal-separator" aria-hidden="true">|</span>
+            <span class="footer-legal-line footer-legal-line--credit">
+              Site designed and maintained by{" "}
+              <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
+                TNT Dental
+              </a>
+            </span>
+          </>
+        )
+      }
     </div>
-  </CustomSection>
+    {blurb && <p class="footer-legal-blurb">{blurb}</p>}
+    </div>
+  </div>
 </footer>
 
 <style lang="pcss" is:global>
   @layer page-sections {
     .footer {
+      /*
+       * Ground, type and rhythm are the source's own, measured by
+       * `wpmig dev-chrome`. The hardcoded values behind each are what the
+       * template drew before it had anything to measure, and are what a site
+       * with no chrome layer still gets.
+       */
+      background-color: var(--chrome-footer-bg, #3a3f43);
+      color: var(--chrome-footer-link-color, #c9ced1);
       container-type: inline-size;
+
+      .fo-title,
+      .office-name,
+      .footer-heading {
+        color: var(--chrome-footer-heading-color, #ffffff);
+        font-family: var(--chrome-footer-heading-font, inherit);
+        font-size: var(--chrome-footer-heading-size, inherit);
+        font-weight: var(--chrome-footer-heading-weight, var(--font-weight-semibold));
+        line-height: var(--chrome-footer-heading-line, inherit);
+      }
+
+      .pho,
+      .phy,
+      a {
+        color: var(--chrome-footer-link-color, #c9ced1);
+      }
+
+      .pho:hover,
+      .phy:hover,
+      a:hover {
+        color: var(--color-brand, #047ac0);
+      }
 
       &[data-fixed-tabs-active="true"] {
         @media (max-width: 1024px) {
@@ -355,11 +477,8 @@ const footerStyle = [
       }
 
       .footer-legal-text {
-        color: var(--color-text-muted);
-        text-align: center;
-        @container (min-width: 600px) {
-          text-align: start;
-        }
+        color: inherit;
+        text-align: inherit;
       }
 
       .footer-legal-blurb {
@@ -380,7 +499,8 @@ const footerStyle = [
 
         img {
           margin: 0 auto 30px;
-          width: auto;
+          max-width: 100%;
+          width: var(--chrome-footer-logo-width, auto);
         }
       }
 
@@ -392,19 +512,35 @@ const footerStyle = [
         }
       }
 
+      /*
+       * One row of equal columns — brand, links, contact, hours — reading left
+       * to right, which is how the source draws it and how a footer of lists is
+       * read. The template's centred, space-around arrangement gives each
+       * column a different left edge and turns four lists into four blobs.
+       */
+      > .custom-section > .outer-content > .content {
+        max-width: none;
+        padding-inline: var(--chrome-footer-inset, var(--spacing-md));
+      }
+
       .fo-content {
+        display: grid;
+        gap: var(--spacing-xl);
         margin-block: var(--spacing-lg);
+        text-align: start;
 
         @container (min-width: 700px) {
           grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
+        @container (min-width: 1000px) {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
         .fo-title {
-          color: var(--color-text-strong);
           display: block;
-          font-weight: var(--font-weight-semibold);
-          margin-bottom: var(--spacing-sm);
-          text-align: center;
+          margin-bottom: var(--spacing-md);
+          text-align: start;
         }
 
         .office-block,
@@ -419,9 +555,19 @@ const footerStyle = [
           margin-bottom: var(--spacing-xs);
         }
 
+        /*
+         * `--chrome-footer-link-color` is the source footer's own text colour,
+         * measured by `wpmig dev-chrome`. It sits between the per-site
+         * overrides and the template's default so that a migrated footer reads
+         * against its migrated background — the template's `--color-text` is
+         * chosen for a light page and disappears on the dark band most of
+         * these footers turn out to have.
+         */
+        color: var(--chrome-footer-link-color, var(--color-text));
+
         .pho,
         .phy {
-          color: var(--color-text);
+          color: var(--chrome-footer-link-color, var(--color-text));
           display: block;
           margin-bottom: var(--spacing-sm);
           text-decoration: none;
@@ -433,7 +579,7 @@ const footerStyle = [
         }
 
         .pho {
-          color: var(--footer-phone-link-color, var(--color-text));
+          color: var(--footer-phone-link-color, var(--chrome-footer-link-color, var(--color-text)));
 
           &:hover,
           &:focus-visible {
@@ -442,7 +588,7 @@ const footerStyle = [
         }
 
         .phy {
-          color: var(--footer-address-link-color, var(--color-text));
+          color: var(--footer-address-link-color, var(--chrome-footer-link-color, var(--color-text)));
 
           &:hover,
           &:focus-visible {
@@ -452,24 +598,145 @@ const footerStyle = [
 
         .office-hours {
           display: table;
-          margin: 10px auto;
+          margin: 0;
           text-align: left;
+        }
 
-          .fo-title { text-align: center; }
+        /* The brand column: the mark sits level with the columns beside it
+           rather than on a row of its own above them. */
+        .fo-brand {
+          align-self: center;
+        }
+
+        .fo-links {
+          margin-bottom: var(--spacing-lg);
+
+          @container (min-width: 700px) {
+            margin-bottom: 0;
+          }
+        }
+
+        .fo-links-list {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li + li {
+            margin-top: var(--chrome-footer-link-gap, var(--spacing-xs));
+          }
+
+          a {
+            color: var(--chrome-footer-link-color, var(--color-text));
+            font-family: var(--chrome-footer-link-font, inherit);
+            font-size: var(--chrome-footer-link-size, inherit);
+            font-weight: var(--chrome-footer-link-weight, inherit);
+            line-height: var(--chrome-footer-link-line, inherit);
+            text-decoration: none;
+
+            &:hover,
+            &:focus-visible {
+              color: var(--color-link-hover);
+            }
+          }
+        }
+
+        /*
+         * The office-hours palette is declared once for the page, where the
+         * ground is light. In a footer it is not: these three inherit a colour
+         * chosen against white and land a shade off the background, which is
+         * how the opening hours end up unreadable on a footer that is
+         * otherwise correct.
+         */
+        .office-hours-day,
+        .office-hours-time,
+        .office-hours-note,
+        .office-hours-general-note {
+          color: var(--chrome-footer-link-color, var(--office-hours-color));
+          font-family: var(--chrome-footer-link-font, inherit);
+        }
+
+        .office-hours-day {
+          font-weight: var(--chrome-footer-link-weight, var(--font-weight-semibold));
         }
 
         .social {
-          margin-top: var(--spacing-sm); 
+          margin-top: var(--spacing-md);
 
-          .button{min-width: auto;}
+          /*
+           * Round white badges at the source's size, rather than the
+           * template's flat monochrome icons on the footer's own ground.
+           *
+           * The glyph is brand blue by choice, not by measurement: the source
+           * draws it slate (`--chrome-footer-social-color`, still measured and
+           * still emitted), and this overrides it. Left as a deliberate
+           * departure so a later re-run of `dev-chrome` cannot quietly put the
+           * slate back.
+           */
+          .button {
+            background-color: var(--chrome-footer-social-bg, transparent);
+            border-radius: var(--chrome-footer-social-radius, 0);
+            color: var(--color-brand, #047ac0);
+            height: var(--chrome-footer-social-size, auto);
+            min-width: auto;
+            padding: 0;
+            width: var(--chrome-footer-social-size, auto);
+
+            &:hover,
+            &:focus-visible {
+              background-color: var(--chrome-footer-social-bg, transparent);
+              color: var(--color-brand-secondary, var(--color-brand, currentColor));
+            }
+          }
+
+          /* One row: the column is only as wide as the address above it, so
+             the icons wrap and the last network drops onto a line by itself. */
+          .button-group {
+            flex-wrap: nowrap;
+            gap: var(--spacing-xs);
+            justify-content: flex-start;
+          }
         }
       }
     }
 
+    /*
+     * The strip under the footer, as its own full-width band.
+     *
+     * On this source it is the brand blue with the columns' grey above it —
+     * the inverse of the band it sits under, which is why the template's
+     * hairline rule and muted small print inside the same container reads as a
+     * different footer even when the words match.
+     */
+    .footer-copyright {
+      background-color: var(--chrome-copyright-bg, transparent);
+      color: var(--chrome-copyright-color, var(--color-text-muted));
+      font-family: var(--chrome-copyright-font, inherit);
+      font-size: var(--chrome-copyright-size, var(--font-size-sm));
+      font-weight: var(--chrome-copyright-weight, inherit);
+
+      .fc-inner {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-2xs) var(--spacing-xs);
+        justify-content: center;
+        margin: 0 auto;
+        min-height: var(--chrome-copyright-height, auto);
+        padding: var(--spacing-sm) var(--chrome-footer-inset, var(--spacing-md));
+        text-align: var(--chrome-copyright-align, center);
+      }
+
+      /* A band with a ground of its own needs a rule above it no more than the
+         footer above it does; without one the template draws both. */
+      a {
+        color: inherit;
+        text-decoration: underline;
+      }
+    }
+
     #copy {
-      font-size: var(--font-size-sm);
+      color: inherit;
       line-height: 1.5;
-      padding: var(--spacing-md) var(--spacing-sm);
       text-align: center;
 
       .footer-legal-line {
@@ -487,6 +754,15 @@ const footerStyle = [
         &:hover,
         &:focus-visible {
           color: var(--color-link-hover);
+        }
+      }
+
+      a {
+        color: inherit;
+
+        &:hover,
+        &:focus-visible {
+          color: inherit;
         }
       }
 

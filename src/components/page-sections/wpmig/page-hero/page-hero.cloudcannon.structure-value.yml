@@ -1,0 +1,19 @@
+label: Page Hero
+icon: vertical_split
+description: Page Hero section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/page-hero
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/uploads/2024/10/5027-Group-of-4-drs-T2-scaled.jpg
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+preview:
+  text:
+    - Page Hero
+  icon: vertical_split
+picker_preview:
+  text: Page Hero
+  subtext: Page Hero section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/page-hero/page-hero.cloudcannon.inputs.yml

@@ -1,0 +1,151 @@
+
+──────── 1440px ────────
+page-banner @ 1440px
+  pixel mismatch: 78.90%  (height delta 0px)
+  - pb-raw: 91px too low
+  - pb-raw: 91px too short
+  - pb-link: 47px too narrow
+  - page-banner: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-raw: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 8 more
+card-grid @ 1440px
+  - card-grid: element not present in the built page
+  - cg-box: element not present in the built page
+  - cg-box2: element not present in the built page
+  - cg-box3: element not present in the built page
+  - cg-box4: element not present in the built page
+  - cg-box5: element not present in the built page
+  - cg-spacer: element not present in the built page
+  - cg-box6: element not present in the built page
+  - cg-box7: element not present in the built page
+  - cg-text: element not present in the built page
+  - cg-box8: element not present in the built page
+  - cg-box9: element not present in the built page
+  … 7 more
+prose-section-f @ 1440px
+  pixel mismatch: 25.15%  (height delta 0px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box2: 50px too high
+  - psf-box3: 50px too high
+  - psf-box4: 50px too high
+  - psf-box5: 50px too high
+  - psf-box7: 50px too high
+  - psf-box8: 50px too high
+  - psf-text: 50px too high
+  - psf-box9: 50px too high
+  - psf-box11: 45px too high
+  - psf-heading: 45px too high
+  … 45 more
+
+──────── 768px ────────
+page-banner @ 768px
+  pixel mismatch: 73.63%  (height delta 0px)
+  - pb-box9: fontWeight is smaller by 100
+  - pb-raw: 50px too low
+  - pb-raw: 50px too short
+  - pb-box9: display: expected inline-block, got block
+  - pb-box9: lineHeight is larger by 9
+  - page-banner: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-raw: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pb-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 8 more
+card-grid @ 768px
+  - card-grid: element not present in the built page
+  - cg-box: element not present in the built page
+  - cg-box2: element not present in the built page
+  - cg-box3: element not present in the built page
+  - cg-box4: element not present in the built page
+  - cg-box5: element not present in the built page
+  - cg-spacer: element not present in the built page
+  - cg-box6: element not present in the built page
+  - cg-box7: element not present in the built page
+  - cg-text: element not present in the built page
+  - cg-box8: element not present in the built page
+  - cg-box9: element not present in the built page
+  … 7 more
+prose-section-f @ 768px
+  pixel mismatch: 27.74%  (height delta 0px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box8: 51px too high
+  - psf-text: 51px too high
+  - psf-box9: 51px too high
+  - psf-box2: 50px too high
+  - psf-box3: 50px too high
+  - psf-box4: 50px too high
+  - psf-box5: 50px too high
+  - psf-box7: 50px too high
+  - psf-box11: 46px too high
+  - psf-heading: 46px too high
+  … 23 more
+
+──────── 390px ────────
+page-banner @ 390px
+  pixel mismatch: 73.76%  (height delta 0px)
+  - pb-box7: 146px too narrow
+  - pb-box8: 202px too narrow
+  - pb-box9: 103px too narrow
+  - pb-link: 103px too narrow
+  - pb-heading2: fontWeight is smaller by 100
+  - pb-box7: fontWeight is larger by 100
+  - pb-raw: 51px too low
+  - pb-raw: 50px too short
+  - pb-box5: textAlign: expected start, got left
+  - pb-box5: display: expected block, got flex
+  - pb-box6: textAlign: expected left, got start
+  - pb-box6: display: expected flex, got block
+  … 38 more
+card-grid @ 390px
+  - card-grid: element not present in the built page
+  - cg-box: element not present in the built page
+  - cg-box2: element not present in the built page
+  - cg-box3: element not present in the built page
+  - cg-box4: element not present in the built page
+  - cg-box5: element not present in the built page
+  - cg-spacer: element not present in the built page
+  - cg-box6: element not present in the built page
+  - cg-box7: element not present in the built page
+  - cg-text: element not present in the built page
+  - cg-box8: element not present in the built page
+  - cg-box9: element not present in the built page
+  … 7 more
+prose-section-f @ 390px
+  pixel mismatch: 33.10%  (height delta -15px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box2: 293px too tall
+  - psf-box3: 90px too short
+  - psf-box7: 258px too tall
+  - psf-box10: 303px too wide
+  - psf-decor: 296px too narrow
+  - psf-heading: 118px too short
+  - psf-text2: 189px too high
+  - psf-text2: 134px too tall
+  - psf-box8: fontWeight is smaller by 200
+  - psf-text: fontWeight is larger by 200
+  … 65 more
+
+════════ worst sections ════════
+    78.9%   20 findings   page-banner @1440
+   73.76%   50 findings   page-banner @390
+   73.63%   20 findings   page-banner @768
+    33.1%   77 findings  2 MISSING   prose-section-f @390
+   27.74%   35 findings  2 MISSING   prose-section-f @768
+   25.15%   57 findings  2 MISSING   prose-section-f @1440
+       —%   19 findings  19 MISSING   card-grid @390
+       —%   19 findings  19 MISSING   card-grid @768
+       —%   19 findings  19 MISSING   card-grid @1440
+
+report: .wpmig/compare/dr-andrea-bakke/report.json

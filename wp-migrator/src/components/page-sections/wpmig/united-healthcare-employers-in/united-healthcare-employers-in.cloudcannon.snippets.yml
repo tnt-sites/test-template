@@ -1,0 +1,10 @@
+_snippets:
+  united_healthcare_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: United Healthcare Employers In
+    definitions:
+      component_name: page-sections/wpmig/united-healthcare-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/united-healthcare-employers-in/united-healthcare-employers-in.cloudcannon.inputs.yml

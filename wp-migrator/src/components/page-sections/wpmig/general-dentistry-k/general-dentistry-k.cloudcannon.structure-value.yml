@@ -1,0 +1,58 @@
+label: General Dentistry K
+icon: interests
+description: General Dentistry K section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/general-dentistry-k
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  secondaryButtonText6: ""
+  secondaryButtonLink6: ""
+  secondaryButtonText7: ""
+  secondaryButtonLink7: ""
+  secondaryButtonText8: ""
+  secondaryButtonLink8: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  secondaryButtonText9: ""
+  secondaryButtonLink9: ""
+  secondaryButtonText10: ""
+  secondaryButtonLink10: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.68)
+  hoverBackgroundColor4: rgba(241, 241, 241, 0.77)
+  buttonBackgroundHoverColor: "#49ab71"
+preview:
+  text:
+    - General Dentistry K
+  icon: interests
+picker_preview:
+  text: General Dentistry K
+  subtext: General Dentistry K section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/general-dentistry-k/general-dentistry-k.cloudcannon.inputs.yml

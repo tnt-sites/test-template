@@ -1,0 +1,34 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Accordion from "@wrappers/accordion/Accordion.astro";
+
+const {
+  heading = "Frequently Asked Questions",
+  items = [],
+  label = "About FAQ",
+  paddingVertical = "4xl",
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  {...htmlAttributes}
+  class:list={["faq-section", className]}
+  maxContentWidth="xl"
+  paddingHorizontal="lg"
+  paddingVertical={paddingVertical}
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+>
+  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <Accordion label={label} singleOpen={true} openFirst={false} items={items} />
+</CustomSection>

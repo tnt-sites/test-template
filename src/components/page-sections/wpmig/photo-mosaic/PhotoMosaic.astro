@@ -1,0 +1,96 @@
+---
+/**
+ * Photo Mosaic — migrated from contact [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  embedUrl = "",
+  id,
+  hidden = false,
+  _component,
+  ...rest
+} = Astro.props;
+---
+{!hidden && (
+  <div class="photo-mosaic" id={id || undefined} {...rest}>
+    <div class="pm-box">
+      <div class="pm-box2">
+        <iframe class="pm-embed" src={embedUrl} title="Chapel Hill Dental Art" aria-label="Chapel Hill Dental Art" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+)}
+<style>
+  .photo-mosaic {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .pm-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+  }
+
+  .pm-box2 {
+    box-sizing: border-box;
+    line-height: 0px;
+  }
+
+  .pm-embed {
+    aspect-ratio: 1.56 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 18px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .photo-mosaic {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .pm-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+      padding-bottom: 100px;
+    }
+
+    .pm-embed {
+      aspect-ratio: 1.62 / 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .photo-mosaic {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .pm-box {
+      max-width: min(100%, 1440px);
+    }
+
+    .pm-embed {
+      aspect-ratio: 3.2 / 1;
+    }
+  }
+</style>

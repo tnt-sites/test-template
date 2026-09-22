@@ -1,0 +1,17 @@
+label: Home Beam Dental
+icon: interests
+description: Home Beam Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-beam-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Beam Dental
+  icon: interests
+picker_preview:
+  text: Home Beam Dental
+  subtext: Home Beam Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-beam-dental/home-beam-dental.cloudcannon.inputs.yml

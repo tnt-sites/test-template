@@ -1,0 +1,11 @@
+import { chromium } from "playwright";
+const b = await chromium.launch();
+const p = await b.newPage({ viewport: { width: 1440, height: 900 } });
+const route=process.argv[2]||"/cavities-fillings/";
+await p.goto("http://localhost:4341"+route, { waitUntil:"domcontentloaded", timeout:60000 });
+await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=400){window.scrollTo(0,y);await new Promise(r=>setTimeout(r,40));}});
+await p.waitForTimeout(2500);
+const el=await p.$(".reviews-slider");
+if(el) await el.screenshot({path:"/Users/tharvey/Work/CloudCannon/toothbar/wp-migrator/.wpmig/shots/"+(process.argv[3]||"rv")+".png"});
+else console.log("no .reviews-slider found");
+await b.close(); console.log("done");

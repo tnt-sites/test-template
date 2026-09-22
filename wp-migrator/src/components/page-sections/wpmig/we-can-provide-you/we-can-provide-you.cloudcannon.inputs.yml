@@ -1,0 +1,23 @@
+_inputs:
+  heading:
+    type: text
+  text:
+    type: html
+  subheading:
+    type: text
+  heading2:
+    type: text
+  text2:
+    type: textarea
+  text3:
+    type: text
+  heading3:
+    type: text
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color

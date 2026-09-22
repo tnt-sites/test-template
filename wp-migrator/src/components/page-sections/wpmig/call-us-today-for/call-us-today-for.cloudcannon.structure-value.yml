@@ -1,0 +1,26 @@
+label: Call Us Today For
+icon: vertical_split
+description: Call Us Today For section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-for
+  id: ""
+  text: ""
+  text2: ""
+  text3: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text4: ""
+  heading: ""
+  text5: ""
+  heading2: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today For
+  icon: vertical_split
+picker_preview:
+  text: Call Us Today For
+  subtext: Call Us Today For section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-for/call-us-today-for.cloudcannon.inputs.yml

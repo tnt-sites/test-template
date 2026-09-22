@@ -1,0 +1,10 @@
+_snippets:
+  home_frequently_asked_questions:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Frequently Asked Questions
+    definitions:
+      component_name: page-sections/wpmig/home-frequently-asked-questions
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-frequently-asked-questions/home-frequently-asked-questions.cloudcannon.inputs.yml

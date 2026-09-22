@@ -1,0 +1,32 @@
+label: Prose Block We
+icon: grid_view
+description: Prose Block We section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/prose-block-we
+  id: ""
+  heading: ""
+  subheading: ""
+  text: ""
+  text2: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+  textHoverColor: ""
+  textHoverColorHex: "#bee6fe"
+  hoverBackgroundColor: ""
+  hoverBackgroundColorHex: "#7ecefc"
+  hoverColor: "#000000"
+  hoverColorHex: ""
+preview:
+  text:
+    - Prose Block We
+  icon: grid_view
+picker_preview:
+  text: Prose Block We
+  subtext: Prose Block We section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/prose-block-we/prose-block-we.cloudcannon.inputs.yml

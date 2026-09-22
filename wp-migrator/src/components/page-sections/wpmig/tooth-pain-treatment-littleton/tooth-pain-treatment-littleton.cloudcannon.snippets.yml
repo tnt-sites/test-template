@@ -1,0 +1,10 @@
+_snippets:
+  tooth_pain_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Tooth Pain Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/tooth-pain-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/tooth-pain-treatment-littleton/tooth-pain-treatment-littleton.cloudcannon.inputs.yml

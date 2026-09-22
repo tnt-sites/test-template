@@ -1,0 +1,34 @@
+label: Call Us Today To C
+icon: vertical_split
+description: Call Us Today To C section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-to-c
+  id: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  image: ""
+  imageAlt: ""
+  text5: ""
+  text6: ""
+  text7: ""
+  text8: ""
+  text9: ""
+  text10: ""
+  heading3: ""
+  text11: ""
+  heading4: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today To C
+  icon: vertical_split
+picker_preview:
+  text: Call Us Today To C
+  subtext: Call Us Today To C section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-to-c/call-us-today-to-c.cloudcannon.inputs.yml

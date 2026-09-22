@@ -1,0 +1,18 @@
+label: Ameritas
+icon: vertical_split
+description: Ameritas section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/ameritas
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Ameritas
+  icon: vertical_split
+picker_preview:
+  text: Ameritas
+  subtext: Ameritas section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/ameritas/ameritas.cloudcannon.inputs.yml

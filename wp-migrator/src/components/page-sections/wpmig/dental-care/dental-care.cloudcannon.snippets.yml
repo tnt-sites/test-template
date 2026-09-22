@@ -1,0 +1,10 @@
+_snippets:
+  dental_care:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dental Care
+    definitions:
+      component_name: page-sections/wpmig/dental-care
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dental-care/dental-care.cloudcannon.inputs.yml

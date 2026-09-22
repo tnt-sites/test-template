@@ -1,0 +1,10 @@
+4 section(s) detected on cavities-fillings.html
+  [0] -> page-banner-c (shared, ~1.00)  props=8  icons=6
+  [1] -> media-prose-g  props=12
+  [2] -> prose-section-r  props=24
+  [3] -> prose-section-f (shared, ~0.91)  props=6
+
+icons: 6 substituted from the project set
+
+wrote 4 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/cavities-fillings.md (copy into src/content/pages/ manually for now)

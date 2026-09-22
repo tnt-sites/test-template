@@ -1,0 +1,375 @@
+---
+/**
+ * Equitable Dental Employers In — migrated from equitable-dental-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="equitable-dental-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="edei-box">
+    <div class="edei-box2">
+      <div class="edei-box3">
+        <div class="edei-box4">
+          <div class="edei-box5">
+            {image && <img class="edei-media" src={image} alt={imageAlt || ""} loading="lazy" width="635" height="457" />}
+          </div>
+        </div>
+        <div class="edei-box6">
+          <div class="edei-box7">
+            <h2 class="edei-heading">{heading}</h2>
+          </div>
+          <div class="edei-box8">
+            {text && <div class="edei-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="edei-box9">
+        <div class="edei-box10">
+          {subheading && <h2 class="edei-heading2">{subheading}</h2>}
+        </div>
+        <div class="edei-box11">
+          <div class="edei-box12">
+            {text2 && <p class="edei-text2">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="edei-box13">
+        <div class="edei-box14">
+          {heading2 && <h2 class="edei-heading3" set:html={heading2} />}
+        </div>
+        <div class="edei-box15">
+          {text3 && <div class="edei-body" set:html={text3} />}
+        </div>
+      </div>
+      <div class="edei-box16">
+        <div class="edei-box17">
+          {heading3 && <h2 class="edei-heading4">{heading3}</h2>}
+        </div>
+        <div class="edei-box18">
+          {text4 && <div class="edei-text3">{text4}</div>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .equitable-dental-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .edei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .edei-box2 {
+    box-sizing: border-box;
+  }
+
+  .edei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .edei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .edei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .edei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .edei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .edei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .edei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .edei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .edei-text {
+    box-sizing: border-box;
+  }
+
+  .edei-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .edei-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .edei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .edei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .edei-box12 {
+    box-sizing: border-box;
+  }
+
+  .edei-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .edei-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .edei-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .edei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .edei-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 616px;
+  }
+
+  .edei-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .edei-body :global(ul) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .edei-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .edei-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .edei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .edei-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .edei-text3 {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .edei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .edei-box3 {
+      max-width: 1024px;
+    }
+
+    .edei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 496px;
+    }
+
+    .edei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .edei-box15 {
+      min-height: 280px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .edei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .edei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .edei-box4 {
+      min-height: auto;
+    }
+
+    .edei-box6 {
+      min-height: 405px;
+    }
+
+    .edei-box15 {
+      min-height: 232px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .edei-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .edei-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .edei-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .edei-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .edei-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .edei-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .edei-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

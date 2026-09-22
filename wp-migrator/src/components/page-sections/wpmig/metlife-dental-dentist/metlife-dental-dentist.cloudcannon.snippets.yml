@@ -1,0 +1,10 @@
+_snippets:
+  metlife_dental_dentist:
+    template: astro_component
+    inline: false
+    preview:
+      text: Metlife Dental Dentist
+    definitions:
+      component_name: page-sections/wpmig/metlife-dental-dentist
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/metlife-dental-dentist/metlife-dental-dentist.cloudcannon.inputs.yml

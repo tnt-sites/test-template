@@ -1,0 +1,42 @@
+label: Office Tour
+icon: view_carousel
+description: Description for office-tour component.
+value:
+  _component: page-sections/features/office-tour
+  id: ""
+  heading: Office Tour
+  tourSlides: []
+  slideNumbers: false
+  floatingArrows: false
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/features/office-tour/office-tour.cloudcannon.inputs.yml
+_structures:
+  carouselSections:
+    values:
+      - label: Slide
+        icon: image
+        value:
+          image:
+            source: ""
+            alt: ""
+          caption: ""
+        _inputs:
+          image:
+            type: object
+          image.source:
+            type: image
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          image.alt:
+            type: textarea
+          caption:
+            type: text

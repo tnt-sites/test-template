@@ -62,7 +62,11 @@
     p,
     ul,
     ol {
-      color: var(--color-text);
+      /* Inherit rather than force the default text colour: `body` already sets
+         `color: var(--color-text)` so unstyled prose is unchanged, but text
+         inside a coloured section (a brand band, a card) now takes that
+         section's colour instead of being overridden dark. */
+      color: inherit;
       font-size: var(--font-size-md);
       line-height: 1.6;
     }

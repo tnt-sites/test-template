@@ -1,0 +1,193 @@
+---
+/**
+ * Meet the Team & Tour the Office. Migrated from index [6].
+ *
+ * The source shows a continuously left-scrolling strip of team/office photos
+ * (an Elementor swiper set to autoplay-slide), then a "Take a Tour" heading over
+ * a large video embed. The auto-migrated version froze the swiper at measured
+ * pixel offsets with dead arrows; this is a clean rebuild — a CSS marquee that
+ * cycles the photos to the left, plus a full-width tour video.
+ */
+import Button from "@core-elements/button/Button.astro";
+const props = Astro.props;
+const {
+  heading = "",
+  text = "",
+  subheading = "",
+  embedUrl = "",
+  buttonText = "",
+  buttonLink = "",
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  id,
+  _component,
+} = props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+// Collect image1..image17 into a flat list.
+const images = [] as { src: string; alt: string }[];
+for (let i = 1; i <= 24; i++) {
+  const key = i === 1 ? "image" : `image${i}`;
+  const src = (props as any)[key];
+  if (src) images.push({ src, alt: (props as any)[`${key}Alt`] || "" });
+}
+// Duplicate the strip so the marquee loops seamlessly.
+const loop = images.length > 0 ? [...images, ...images] : [];
+---
+<section class="mpmt" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue}`}>
+  <div class="mpmt-inner">
+    {heading && <h2 class="mpmt-heading" set:html={heading} />}
+    {text && <p class="mpmt-text">{text}</p>}
+  </div>
+
+  {loop.length > 0 && (
+    <div class="mpmt-marquee" aria-label="Team and office photos">
+      <div class="mpmt-track" style={`--count:${loop.length}`}>
+        {loop.map((im, i) => (
+          <div class="mpmt-slide" aria-hidden={i >= images.length ? "true" : undefined}>
+            <img src={im.src} alt={i >= images.length ? "" : im.alt} loading="lazy" draggable="false" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="mpmt-inner mpmt-tour">
+    {subheading && <h2 class="mpmt-heading" set:html={subheading} />}
+    {embedUrl && (
+      <div class="mpmt-video">
+        <iframe
+          src={embedUrl}
+          allowfullscreen
+          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+          title="Office tour video"
+          loading="lazy"></iframe>
+      </div>
+    )}
+    {buttonText && (
+      <div class="mpmt-cta">
+        <Button variant="secondary" size="md" uppercase class="mpmt-btn" text={buttonText} link={buttonLink || "#"} />
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  .mpmt {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-family: Lato, sans-serif;
+    padding: 50px 0;
+    width: 100%;
+  }
+
+  .mpmt-inner {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1080px;
+    padding-inline: 20px;
+    text-align: center;
+  }
+
+  .mpmt-heading {
+    color: var(--hd);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin: 0 0 0.5em;
+  }
+
+  .mpmt-text {
+    margin: 0 auto 1.5rem;
+    max-width: 820px;
+  }
+
+  .mpmt-marquee {
+    box-sizing: border-box;
+    margin: 30px 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .mpmt-track {
+    animation: mpmt-scroll 60s linear infinite;
+    display: flex;
+    gap: 14px;
+    width: max-content;
+  }
+
+  .mpmt-marquee:hover .mpmt-track {
+    animation-play-state: paused;
+  }
+
+  .mpmt-slide {
+    flex: 0 0 auto;
+    height: 240px;
+    width: 340px;
+  }
+
+  .mpmt-slide img {
+    border-radius: 6px;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @keyframes mpmt-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      /* Shift by half the track (the first, non-duplicated copy). */
+      transform: translateX(calc(-50% - 7px));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mpmt-track {
+      animation: none;
+    }
+  }
+
+  .mpmt-tour {
+    margin-top: 40px;
+  }
+
+  .mpmt-video {
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    margin: 0 auto 1.5rem;
+    max-width: 960px;
+    width: 100%;
+  }
+
+  .mpmt-video iframe {
+    border: 0;
+    border-radius: 8px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mpmt-cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mpmt :global(.mpmt-btn) {
+    background-color: #ffffff;
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    color: var(--color-brand, #047ac0);
+    font-family: Montserrat, Lato, sans-serif;
+    font-weight: 600;
+  }
+
+  .mpmt :global(.mpmt-btn:hover) {
+    background-color: var(--color-brand, #047ac0);
+    border-color: var(--color-brand, #047ac0);
+    color: #ffffff;
+  }
+</style>

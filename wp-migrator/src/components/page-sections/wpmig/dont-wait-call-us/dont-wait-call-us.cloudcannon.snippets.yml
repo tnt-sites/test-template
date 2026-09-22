@@ -1,0 +1,10 @@
+_snippets:
+  dont_wait_call_us:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dont Wait Call Us
+    definitions:
+      component_name: page-sections/wpmig/dont-wait-call-us
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dont-wait-call-us/dont-wait-call-us.cloudcannon.inputs.yml

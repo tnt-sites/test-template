@@ -1,0 +1,10 @@
+_snippets:
+  media_prose_see:
+    template: astro_component
+    inline: false
+    preview:
+      text: Media Prose See
+    definitions:
+      component_name: page-sections/wpmig/smile-gallery
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/smile-gallery/smile-gallery.cloudcannon.inputs.yml

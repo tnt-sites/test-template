@@ -1,0 +1,10 @@
+_snippets:
+  payment_options_d:
+    template: astro_component
+    inline: false
+    preview:
+      text: Payment Options D
+    definitions:
+      component_name: page-sections/wpmig/payment-options-d
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/payment-options-d/payment-options-d.cloudcannon.inputs.yml

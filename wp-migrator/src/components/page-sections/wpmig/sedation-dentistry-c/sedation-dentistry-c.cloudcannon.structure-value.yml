@@ -1,0 +1,40 @@
+label: Sedation Dentistry C
+icon: interests
+description: Sedation Dentistry C section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/sedation-dentistry-c
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  buttonBackgroundColor2: "#3b6278"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.77)
+  buttonBackgroundHoverColor: "#4eaf76"
+  buttonBackgroundColor2HoverColor: "#54595f"
+preview:
+  text:
+    - Sedation Dentistry C
+  icon: interests
+picker_preview:
+  text: Sedation Dentistry C
+  subtext: Sedation Dentistry C section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/sedation-dentistry-c/sedation-dentistry-c.cloudcannon.inputs.yml

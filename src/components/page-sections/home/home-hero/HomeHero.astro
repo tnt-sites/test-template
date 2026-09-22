@@ -1,0 +1,585 @@
+---
+/**
+ * Media Prose — migrated from  [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `images`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  items = [],
+  images = [],
+  backgroundColor = "",
+  backgroundColorHex = "rgba(247, 196, 93, 0.11)",
+  overlayColor = "#000000",
+  overlayColorHex = "",
+  eyebrowColor = "#ffffff",
+  eyebrowColorHex = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  buttonBackgroundColor = "",
+  buttonBackgroundColorHex = "var(--color-brand)",
+  buttonTextColor = "#ffffff",
+  buttonTextColorHex = "",
+  buttonBackgroundColor2 = "#ffffff",
+  buttonBackgroundColor2Hex = "",
+  buttonTextColor2 = "var(--color-brand)",
+  buttonTextColor2Hex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  buttonTextHoverColor = "",
+  buttonTextHoverColorHex = "#6c6c6c",
+  buttonBackgroundHoverColor = "",
+  buttonBackgroundHoverColorHex = "#b8e5ff",
+  buttonTextColor2HoverColor = "",
+  buttonTextColor2HoverColorHex = "#ade0fd",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const backgroundColorValue = backgroundColorHex || backgroundColor || "rgba(247, 196, 93, 0.11)";
+const overlayColorValue = overlayColorHex || overlayColor || "#000000";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#ffffff";
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const buttonBackgroundColorValue = buttonBackgroundColorHex || buttonBackgroundColor || "var(--color-brand)";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#ffffff";
+const buttonBackgroundColor2Value = buttonBackgroundColor2Hex || buttonBackgroundColor2 || "#ffffff";
+const buttonTextColor2Value = buttonTextColor2Hex || buttonTextColor2 || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#ffffff";
+const buttonTextHoverColorValue = buttonTextHoverColorHex || buttonTextHoverColor || "#6c6c6c";
+const buttonBackgroundHoverColorValue = buttonBackgroundHoverColorHex || buttonBackgroundHoverColor || "#b8e5ff";
+const buttonTextColor2HoverColorValue = buttonTextColor2HoverColorHex || buttonTextColor2HoverColor || "#ade0fd";
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const imagesList = Array.isArray(images) ? images.filter(Boolean) : [];
+const raw0 = `<svg aria-hidden="true" viewBox="0 0 512 512" width="26" height="26" fill="currentColor"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg>`;
+---
+<div class="media-prose" id={id || undefined} style={`--bg:${backgroundColorValue};--ov:${overlayColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--btnbg:${buttonBackgroundColorValue};--btntx:${buttonTextColorValue};--c7:${buttonBackgroundColor2Value};--c8:${buttonTextColor2Value};--tx:${textColorValue};--c10:${buttonTextHoverColorValue};--c11:${buttonBackgroundHoverColorValue};--c12:${buttonTextColor2HoverColorValue}`} {...rest}>
+  <div class="mp-box">
+    <div class="mp-box2">
+      <video class="mp-embed" role="presentation" autoplay muted playsinline loop preload="metadata" src="/wp-content/uploads/2025/09/Chapel-Hill-Homepage-Hero-Video.mp4"></video>
+    </div>
+    <div class="mp-box3">
+      <div class="mp-box4">
+        <div class="mp-box5">
+          <div class="mp-box6">
+            {eyebrow && <p class="mp-text">{eyebrow}</p>}
+          </div>
+        </div>
+        <div class="mp-box7">
+          <h1 class="mp-heading">{heading}</h1>
+        </div>
+        <div class="mp-box8">
+          <ul class="mp-grid no-check">
+            {itemsList.map((it) => (
+              <li class="mp-box9">
+                <span class="mp-check" set:html={raw0} />
+                <span class="mp-text2">{it.text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="mp-box15">
+          <div class="mp-box16">
+            {buttonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" uppercase class="mp-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+          <div class="mp-box17">
+            {secondaryButtonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" class="mp-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mp-box18">
+      <div class="mp-box19">
+        <div class="mp-grid2">
+          {imagesList.map((it) => (
+            <div class="mp-box20">
+              {it.image && <img class="mp-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="678" height="646" />}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .media-prose {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .media-prose::before {
+    background-color: var(--ov);
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0.5;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .mp-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 0px;
+    /* Same as the banner: the cap needs auto margins or the hero column sits
+       hard against the left edge on wide screens. */
+    margin-inline: auto;
+    max-width: min(100%, 767px);
+    min-height: 703px;
+    padding-bottom: 20px;
+  }
+
+  .mp-box2 {
+    bottom: 0px;
+    box-sizing: border-box;
+    left: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 0;
+  }
+
+  .mp-box2::before {
+    background-color: #000000;
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0.3;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+
+  .mp-embed {
+    aspect-ratio: 0.55 / 1;
+    bottom: -351.3px;
+    box-sizing: border-box;
+    display: block;
+    height: auto;
+    left: 195px;
+    line-height: 18px;
+    max-width: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: -195px;
+    top: 351.3px;
+    transform: matrix(1, 0, 0, 1, -195, -351.273);
+    width: 100%;
+  }
+
+  .mp-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mp-box4 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-inline: auto;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .mp-box5 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    letter-spacing: 5.3px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .mp-box6 {
+    box-sizing: border-box;
+  }
+
+  .mp-text {
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .mp-box7 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .mp-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -2px;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .mp-box8 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .mp-grid {
+    box-sizing: border-box;
+    column-gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding-left: 0px;
+    row-gap: 6px;
+  }
+
+  .mp-box9 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    gap: 8px;
+    justify-content: center;
+    list-style: none;
+    /* The source spaces the three items with 8px side margins and centres the
+       label inside each one; without these the labels sit hard against their
+       check icons and the row reads as misaligned even though the row itself
+       is centred. */
+    margin-inline: 8px;
+    position: relative;
+    text-align: center;
+  }
+
+  .mp-box9::marker {
+    content: none;
+  }
+
+  .mp-check {
+    align-items: center;
+    color: var(--color-brand, #047ac0);
+    display: inline-flex;
+    flex: 0 0 auto;
+  }
+
+  .mp-check :global(svg) {
+    display: block;
+  }
+
+  .mp-text2 {
+    align-self: center;
+    box-sizing: border-box;
+    color: var(--tx);
+    display: block;
+    flex: 0 0 auto;
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 2px;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .mp-box15 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+  }
+
+  .mp-box16 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+
+  :global(.mp-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 37px 1px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.mp-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .mp-box17 {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+  }
+
+  :global(.mp-btn2) {
+    background-color: var(--c7);
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 37px 1px;
+    box-sizing: border-box;
+    color: var(--c8);
+    display: inline-block;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 22px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.mp-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .mp-box18 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mp-box19 {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-inline: auto;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .mp-grid2 {
+    align-content: start;
+    box-sizing: border-box;
+    display: grid;
+    filter: saturate(0) brightness(1.1);
+    flex: 0 0 100%;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mp-box20 {
+    box-sizing: border-box;
+    /* The badge is narrower than its grid cell; without the auto margins it
+       hugs the cell's left edge and the row reads as off-centre against the
+       heading and buttons above it. */
+    margin-inline: auto;
+    text-align: center;
+    width: 56%;
+  }
+
+  .mp-media {
+    box-sizing: border-box;
+    display: inline-block;
+    opacity: 0.8;
+  }
+
+  :global(.mp-btn):hover {
+    background-color: var(--c11);
+    color: var(--c10);
+  }
+
+  :global(.mp-btn2):hover {
+    background-color: #8fd4fd;
+    border-top-color: #52baf1;
+    color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .media-prose {
+      min-height: 940px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .mp-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+      min-height: 940px;
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+
+    .mp-embed {
+      aspect-ratio: 0.82 / 1;
+      bottom: -470px;
+      left: 384px;
+      right: -384px;
+      top: 470px;
+      transform: matrix(1, 0, 0, 1, -384, -470);
+    }
+
+    .mp-box3 {
+      margin-top: 150px;
+    }
+
+    .mp-box4 {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .mp-heading {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    .mp-box8 {
+      min-height: 91px;
+    }
+
+    .mp-box9 {
+      flex: 0 0 auto;
+      max-width: none;
+    }
+
+    .mp-box15 {
+      flex-wrap: nowrap;
+    }
+
+    .mp-box16 {
+      flex: 0 0 auto;
+      max-width: none;
+    }
+
+    .mp-box17 {
+      flex: 0 0 auto;
+      max-width: none;
+    }
+
+    .mp-box19 {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 560px;
+    }
+
+    .mp-grid2 {
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .mp-box20 {
+      width: 64%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .media-prose {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .mp-box {
+      max-width: min(100%, 1440px);
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .mp-embed {
+      aspect-ratio: 3 / 2;
+      left: 720px;
+      right: -720px;
+      transform: matrix(1, 0, 0, 1, -720, -470);
+    }
+
+    .mp-box4 {
+      max-width: min(100%, 1440px);
+    }
+
+    .mp-box7 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 978px;
+    }
+
+    .mp-heading {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    .mp-box8 {
+      min-height: 66px;
+    }
+
+    .mp-box19 {
+      max-width: 720px;
+    }
+
+    .mp-box20 {
+      width: 68%;
+    }
+
+    .mp-box16 {
+      flex: 0 0 auto;
+      max-width: none;
+    }
+
+    .mp-box17 {
+      flex: 0 0 auto;
+      max-width: none;
+    }
+  }
+</style>

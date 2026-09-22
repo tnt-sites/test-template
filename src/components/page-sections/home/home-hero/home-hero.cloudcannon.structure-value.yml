@@ -1,0 +1,50 @@
+label: Home Hero
+icon: grid_view
+description: Media Prose section with heading, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/home/home-hero
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  items:
+    - text: ""
+  images:
+    - image: ""
+      imageAlt: ""
+  backgroundColor: ""
+  backgroundColorHex: rgba(247, 196, 93, 0.11)
+  overlayColor: "#000000"
+  overlayColorHex: ""
+  eyebrowColor: "#ffffff"
+  eyebrowColorHex: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  buttonBackgroundColor: ""
+  buttonBackgroundColorHex: "#047ac0"
+  buttonTextColor: "#ffffff"
+  buttonTextColorHex: ""
+  buttonBackgroundColor2: "#ffffff"
+  buttonBackgroundColor2Hex: ""
+  buttonTextColor2: var(--color-brand)
+  buttonTextColor2Hex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#6c6c6c"
+  buttonBackgroundHoverColor: ""
+  buttonBackgroundHoverColorHex: "#b8e5ff"
+  buttonTextColor2HoverColor: ""
+  buttonTextColor2HoverColorHex: "#ade0fd"
+preview:
+  text:
+    - Media Prose
+  icon: grid_view
+picker_preview:
+  text: Home Hero
+  subtext: Homepage hero — video background, eyebrow, headline, checklist and trust badges.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-hero/home-hero.cloudcannon.inputs.yml

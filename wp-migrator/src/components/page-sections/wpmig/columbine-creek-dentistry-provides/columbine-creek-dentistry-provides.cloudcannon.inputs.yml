@@ -1,0 +1,23 @@
+_inputs:
+  heading:
+    type: textarea
+  text:
+    type: html
+  text2:
+    type: html
+  items:
+    type: array
+    options:
+      structures: _structures.columbine_creek_dentistry_provides_item
+  headingColor:
+    type: color
+  textColor:
+    type: color
+_structures:
+  columbine_creek_dentistry_provides_item:
+    values:
+      - value:
+          text: ""
+        _inputs:
+          text:
+            type: html

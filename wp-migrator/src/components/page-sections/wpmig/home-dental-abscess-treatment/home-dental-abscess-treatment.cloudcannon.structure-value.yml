@@ -1,0 +1,17 @@
+label: Home Dental Abscess Treatment
+icon: interests
+description: Home Dental Abscess Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-dental-abscess-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Dental Abscess Treatment
+  icon: interests
+picker_preview:
+  text: Home Dental Abscess Treatment
+  subtext: Home Dental Abscess Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-dental-abscess-treatment/home-dental-abscess-treatment.cloudcannon.inputs.yml

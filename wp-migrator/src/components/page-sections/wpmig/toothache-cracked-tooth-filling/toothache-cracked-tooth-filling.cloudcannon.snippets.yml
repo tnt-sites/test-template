@@ -1,0 +1,10 @@
+_snippets:
+  toothache_cracked_tooth_filling:
+    template: astro_component
+    inline: false
+    preview:
+      text: Toothache Cracked Tooth Filling
+    definitions:
+      component_name: page-sections/wpmig/toothache-cracked-tooth-filling
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/toothache-cracked-tooth-filling/toothache-cracked-tooth-filling.cloudcannon.inputs.yml

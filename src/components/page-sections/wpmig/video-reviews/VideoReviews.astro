@@ -1,0 +1,1119 @@
+---
+/**
+ * Media Prose Patient — migrated from new-patients [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`, `items3`, `items4`, `items5`, `items6`, `items7`, `items8`, `items9`, `items10`, `items11`, `items12`, `items13`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  buttonText = "",
+  buttonLink = "",
+  subheading = "",
+  text3 = "",
+  text4 = "",
+  text5 = "",
+  text6 = "",
+  text7 = "",
+  text8 = "",
+  text9 = "",
+  text10 = "",
+  text11 = "",
+  text12 = "",
+  items = [],
+  items2 = [],
+  items3 = [],
+  items4 = [],
+  items5 = [],
+  items6 = [],
+  items7 = [],
+  items8 = [],
+  items9 = [],
+  items10 = [],
+  items11 = [],
+  items12 = [],
+  items13 = [],
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  buttonBackgroundColor = "",
+  buttonBackgroundColorHex = "var(--color-brand)",
+  buttonTextColor = "#ffffff",
+  buttonTextColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  textColor3 = "",
+  textColor3Hex = "#1f2124",
+  buttonTextHoverColor = "",
+  buttonTextHoverColorHex = "#333333",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+const buttonBackgroundColorValue = buttonBackgroundColorHex || buttonBackgroundColor || "var(--color-brand)";
+const buttonTextColorValue = buttonTextColorHex || buttonTextColor || "#ffffff";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const textColor3Value = textColor3Hex || textColor3 || "#1f2124";
+const buttonTextHoverColorValue = buttonTextHoverColorHex || buttonTextHoverColor || "#333333";
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+const items3List = Array.isArray(items3) ? items3.filter(Boolean) : [];
+const items4List = Array.isArray(items4) ? items4.filter(Boolean) : [];
+const items5List = Array.isArray(items5) ? items5.filter(Boolean) : [];
+const items6List = Array.isArray(items6) ? items6.filter(Boolean) : [];
+const items7List = Array.isArray(items7) ? items7.filter(Boolean) : [];
+const items8List = Array.isArray(items8) ? items8.filter(Boolean) : [];
+const items9List = Array.isArray(items9) ? items9.filter(Boolean) : [];
+const items10List = Array.isArray(items10) ? items10.filter(Boolean) : [];
+const items11List = Array.isArray(items11) ? items11.filter(Boolean) : [];
+const items12List = Array.isArray(items12) ? items12.filter(Boolean) : [];
+const items13List = Array.isArray(items13) ? items13.filter(Boolean) : [];
+---
+<div class="media-prose-patient" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--btnbg:${buttonBackgroundColorValue};--btntx:${buttonTextColorValue};--c5:${textColor2Value};--c6:${textColor3Value};--c7:${buttonTextHoverColorValue}`} {...rest}>
+  <div class="mpp-box">
+    <div class="mpp-box2">
+      <div class="mpp-box3">
+        <h2 class="mpp-heading">{heading}</h2>
+      </div>
+      <div class="mpp-box4">
+        {text && <div class="mpp-text" set:html={text} />}
+      </div>
+      <div class="mpp-box5">
+        {text2 && <div class="mpp-text2">{text2}</div>}
+      </div>
+      <div class="mpp-box6">
+        {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="xs" uppercase class="mpp-btn" text={buttonText} link={buttonLink || "#"} />}
+      </div>
+      <div class="mpp-box7">
+        <div class="mpp-decor" aria-hidden="true"></div>
+      </div>
+      <div class="mpp-box8">
+        {subheading && <h2 class="mpp-heading2">{subheading}</h2>}
+      </div>
+      <div class="mpp-box9">
+        {text3 && <div class="mpp-text3">{text3}</div>}
+      </div>
+      <div class="mpp-box10" aria-label="Accordion. Open links with Enter or Space, close with Escape, and navigate with Arrow Keys">
+        <details class="mpp-box11">
+          <summary class="mpp-box12" aria-expanded="true" aria-controls="e-n-accordion-item-7180">
+            <span class="mpp-box13">
+              {text4 && <div class="mpp-text4">{text4}</div>}
+            </span>
+          </summary>
+          <div class="mpp-grid">
+            {itemsList.map((it) => (
+              <div class="mpp-box14">
+                <div class="mpp-box15">
+                  <div class="mpp-box16">
+                    {it.text && <div class="mpp-text5">{it.text}</div>}
+                  </div>
+                  <div class="mpp-box17">
+                    <video class="mpp-embed" src="//video.prosites.com/vod/mediamed/AFV.mp4" controls poster="/wp-content/uploads/2024/12/AFV.png"></video>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </details>
+        <details class="mpp-box24">
+          <summary class="mpp-box25" aria-expanded="false" aria-controls="e-n-accordion-item-7181">
+            <span class="mpp-box26">
+              {text5 && <div class="mpp-text8">{text5}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box27" role="region" aria-labelledby="e-n-accordion-item-7181">
+            <div class="mpp-box28" role="region" aria-labelledby="e-n-accordion-item-7181">
+              <div class="mpp-grid2">
+                {items2List.map((it) => (
+                  <div class="mpp-box29">
+                    <div class="mpp-box30">
+                      <div class="mpp-box31">
+                        <video class="mpp-embed4" src="https://video.prosites.com/vod/mediamed/HOMBL.mp4" controls poster="/wp-content/uploads/2024/12/HOMBL.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="mpp-grid3">
+              {items3List.map((it) => (
+                <div class="mpp-box38">
+                  <div class="mpp-box39">
+                    <div class="mpp-box40">
+                      <video class="mpp-embed7" src="video.prosites.com/vod/mediamed/INLAYPORC.mp4" controls poster="/wp-content/uploads/2024/12/INLAYPORC.png"></video>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="mpp-grid4">
+              {items4List.map((it) => (
+                <div class="mpp-box47">
+                  <div class="mpp-box48">
+                    <div class="mpp-box49">
+                      <video class="mpp-embed10" src="https://video.prosites.com/vod/mediamed/OFCBL.mp4" controls poster="/wp-content/uploads/2024/12/OFCBL.png"></video>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box53">
+          <summary class="mpp-box54" aria-expanded="false" aria-controls="e-n-accordion-item-7182">
+            <span class="mpp-box55">
+              {text6 && <div class="mpp-text9">{text6}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box56" role="region" aria-labelledby="e-n-accordion-item-7182">
+            <div class="mpp-box57" role="region" aria-labelledby="e-n-accordion-item-7182">
+              <div class="mpp-grid5">
+                {items5List.map((it) => (
+                  <div class="mpp-box58">
+                    <div class="mpp-box59">
+                      <div class="mpp-box60">
+                        <video class="mpp-embed12" src="https://video.prosites.com/vod/mediamed/PROPHY.mp4" controls poster="/wp-content/uploads/2024/12/PROPHY.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div class="mpp-box64" role="region" aria-labelledby="e-n-accordion-item-7182">
+              <div class="mpp-box65">
+                <div class="mpp-box66">
+                  <div class="mpp-box67">
+                    <video class="mpp-embed14" src="https://video.prosites.com/vod/mediamed/HOMBL.mp4" controls poster="/wp-content/uploads/2024/12/HOMBL.png"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mpp-box68" role="region" aria-labelledby="e-n-accordion-item-7182">
+              <div class="mpp-box69">
+                <div class="mpp-box70">
+                  <div class="mpp-box71">
+                    <video class="mpp-embed15" src="https://video.prosites.com/vod/mediamed/IMPDENT.mp4" controls poster="/wp-content/uploads/2024/12/IMPDENT.png"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box72">
+          <summary class="mpp-box73" aria-expanded="false" aria-controls="e-n-accordion-item-7183">
+            <span class="mpp-box74">
+              {text7 && <div class="mpp-text10">{text7}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box75" role="region" aria-labelledby="e-n-accordion-item-7183">
+            <div class="mpp-box76" role="region" aria-labelledby="e-n-accordion-item-7183">
+              <div class="mpp-box77">
+                <div class="mpp-box78">
+                  <div class="mpp-box79">
+                    <div class="mpp-box80">
+                      <video class="mpp-embed16" src="https://video.prosites.com/vod/mediamed/IMPCRWN.mp4" controls poster="/wp-content/uploads/2024/12/IMPCRWN-1.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mpp-box81" role="region" aria-labelledby="e-n-accordion-item-7183">
+              <div class="mpp-box82">
+                <div class="mpp-box83">
+                  <div class="mpp-box84">
+                    <video class="mpp-embed17" src="https://video.prosites.com/vod/mediamed/IMPDENT.mp4" controls poster="/wp-content/uploads/2024/12/IMPDENT.png"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box85">
+          <summary class="mpp-box86" aria-expanded="false" aria-controls="e-n-accordion-item-7184">
+            <span class="mpp-box87">
+              {text8 && <div class="mpp-text11">{text8}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box88" role="region" aria-labelledby="e-n-accordion-item-7184">
+            <div class="mpp-box89" role="region" aria-labelledby="e-n-accordion-item-7184">
+              <div class="mpp-box90">
+                <div class="mpp-box91">
+                  <div class="mpp-box92">
+                    <div class="mpp-box93">
+                      <video class="mpp-embed18" src="https://video.prosites.com/vod/mediamed/RCT.mp4" controls poster="/wp-content/uploads/2024/12/RCT.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mpp-box94" role="region" aria-labelledby="e-n-accordion-item-7184">
+              <div class="mpp-box95">
+                <div class="mpp-box96">
+                  <div class="mpp-box97">
+                    <video class="mpp-embed19" src="https://video.prosites.com/vod/mediamed/RCT2.mp4" controls poster="/wp-content/uploads/2024/12/RCT2.png"></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box98">
+          <summary class="mpp-box99" aria-expanded="false" aria-controls="e-n-accordion-item-7185">
+            <span class="mpp-box100">
+              {text9 && <div class="mpp-text12">{text9}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box101" role="region" aria-labelledby="e-n-accordion-item-7185">
+            <div class="mpp-box102">
+              <div class="mpp-grid6">
+                {items6List.map((it) => (
+                  <div class="mpp-box103">
+                    <div class="mpp-box104">
+                      <div class="mpp-box105">
+                        <video class="mpp-embed20" src="https://video.prosites.com/vod/mediamed/EXTR.mp4" controls poster="/wp-content/uploads/2024/12/EXTR.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-grid7">
+                {items7List.map((it) => (
+                  <div class="mpp-box109">
+                    <div class="mpp-box110">
+                      <div class="mpp-box111">
+                        <video class="mpp-embed22" src="https://video.prosites.com/vod/mediamed/WSDM.mp4" controls poster="/wp-content/uploads/2024/12/WSDM.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-box115" role="region" aria-labelledby="e-n-accordion-item-7185">
+                <div class="mpp-box116">
+                  <div class="mpp-box117">
+                    <div class="mpp-box118">
+                      <video class="mpp-embed24" src="https://video.prosites.com/vod/mediamed/POSTOP.mp4" controls poster="/wp-content/uploads/2024/12/POSTOP.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box119">
+          <summary class="mpp-box120" aria-expanded="false" aria-controls="e-n-accordion-item-7186">
+            <span class="mpp-box121">
+              {text10 && <div class="mpp-text13" set:html={text10} />}
+            </span>
+          </summary>
+          <div class="mpp-box122" role="region" aria-labelledby="e-n-accordion-item-7186">
+            <div class="mpp-box123">
+              <div class="mpp-grid8">
+                {items8List.map((it) => (
+                  <div class="mpp-box124">
+                    <div class="mpp-box125">
+                      <div class="mpp-box126">
+                        <video class="mpp-embed25" src="CROWN" controls poster="/wp-content/uploads/2024/12/CROWN.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-grid9">
+                {items9List.map((it) => (
+                  <div class="mpp-box133">
+                    <div class="mpp-box134">
+                      <div class="mpp-box135">
+                        <video class="mpp-embed28" src="https://video.prosites.com/vod/mediamed/CRWNPORC.mp4" controls poster="/wp-content/uploads/2024/12/CRWNPORC-1.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-grid10">
+                {items10List.map((it) => (
+                  <div class="mpp-box142">
+                    <div class="mpp-box143">
+                      <div class="mpp-box144">
+                        <video class="mpp-embed31" src="https://video.prosites.com/vod/mediamed/CRWNMTL.mp4" controls poster="/wp-content/uploads/2024/12/CRWNMTL.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box148">
+          <summary class="mpp-box149" aria-expanded="false" aria-controls="e-n-accordion-item-7187">
+            <span class="mpp-box150">
+              {text11 && <div class="mpp-text14">{text11}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box151" role="region" aria-labelledby="e-n-accordion-item-7187">
+            <div class="mpp-box152">
+              <div class="mpp-grid11">
+                {items11List.map((it) => (
+                  <div class="mpp-box153">
+                    <div class="mpp-box154">
+                      <div class="mpp-box155">
+                        <video class="mpp-embed33" src="https://video.prosites.com/vod/mediamed/CDENT.mp4" controls poster="/wp-content/uploads/2024/12/CDENT.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-grid12">
+                {items12List.map((it) => (
+                  <div class="mpp-box159">
+                    <div class="mpp-box160">
+                      <div class="mpp-box161">
+                        <video class="mpp-embed35" src="https://video.prosites.com/vod/mediamed/STAYPLT.mp4" controls poster="/wp-content/uploads/2024/12/STAYPLT.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div class="mpp-grid13">
+                {items13List.map((it) => (
+                  <div class="mpp-box165">
+                    <div class="mpp-box166">
+                      <div class="mpp-box167">
+                        <video class="mpp-embed37" src="https://video.prosites.com/vod/mediamed/PDENT.mp4" controls poster="/wp-content/uploads/2024/12/PDENT.png"></video>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="mpp-box171">
+          <summary class="mpp-box172" aria-expanded="false" aria-controls="e-n-accordion-item-7188">
+            <span class="mpp-box173">
+              {text12 && <div class="mpp-text15">{text12}</div>}
+            </span>
+          </summary>
+          <div class="mpp-box174" role="region" aria-labelledby="e-n-accordion-item-7188">
+            <div class="mpp-box175">
+              <div class="mpp-box176" role="region" aria-labelledby="e-n-accordion-item-7188">
+                <div class="mpp-box177">
+                  <div class="mpp-box178">
+                    <div class="mpp-box179">
+                      <video class="mpp-embed39" src="https://video.prosites.com/vod/mediamed/CMPAR.mp4" controls poster="/wp-content/uploads/2024/12/CMPAR.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mpp-box180" role="region" aria-labelledby="e-n-accordion-item-7188">
+                <div class="mpp-box181">
+                  <div class="mpp-box182">
+                    <div class="mpp-box183">
+                      <video class="mpp-embed40" src="https://video.prosites.com/vod/mediamed/AMAL.mp4" controls poster="/wp-content/uploads/2024/12/AMAL.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mpp-box184" role="region" aria-labelledby="e-n-accordion-item-7188">
+                <div class="mpp-box185">
+                  <div class="mpp-box186">
+                    <div class="mpp-box187">
+                      <video class="mpp-embed41" src="https://video.prosites.com/vod/mediamed/NIGHTGRD.mp4" controls poster="/wp-content/uploads/2024/12/NIGHTGRD.png"></video>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .media-prose-patient {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mpp-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .mpp-box2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mpp-box3 {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 181px;
+    text-align: center;
+  }
+
+  .mpp-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mpp-box4 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .mpp-text {
+    box-sizing: border-box;
+  }
+
+  .mpp-box5 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .mpp-text2 {
+    box-sizing: border-box;
+  }
+
+  .mpp-box6 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  :global(.mpp-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 0px 37px 1px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.mpp-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .mpp-box7 {
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  .mpp-decor {
+    border-top: 1px solid var(--color-brand, #047ac0);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    min-height: 1px;
+  }
+
+  .mpp-box8 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .mpp-heading2 {
+    box-sizing: border-box;
+    color: var(--color-brand, #047ac0);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mpp-box9 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .mpp-text3 {
+    box-sizing: border-box;
+  }
+
+  .mpp-box10 {
+    box-sizing: border-box;
+  }
+
+  .mpp-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box12 {
+    align-items: center;
+    background-color: var(--color-brand, #047ac0);
+    box-sizing: border-box;
+    color: #ffffff;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box13 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .mpp-text4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-grid {
+    border: 1px solid #d5d8dc;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mpp-box14 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 113.1%;
+    flex-direction: column;
+    max-width: 113.1%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .mpp-box15 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  .mpp-box16 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .mpp-text5 {
+    box-sizing: border-box;
+  }
+
+  .mpp-box17 {
+    box-sizing: border-box;
+  }
+
+  .mpp-embed {
+    aspect-ratio: 16 / 9;
+    background-color: #000000;
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    line-height: 18px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .mpp-box24 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box25 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box26 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .mpp-text8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box53 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box54 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box55 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 31.25%;
+    max-width: 31.25%;
+  }
+
+  .mpp-text9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box72 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box73 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box74 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .mpp-text10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box85 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box86 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box87 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 30.63%;
+    max-width: 30.63%;
+  }
+
+  .mpp-text11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box98 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box99 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box100 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 31.25%;
+    max-width: 31.25%;
+  }
+
+  .mpp-text12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box119 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box120 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box121 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .mpp-text13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box148 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .mpp-box149 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box150 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+
+  .mpp-text14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mpp-box171 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .mpp-box172 {
+    align-items: center;
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+    color: #1f2124;
+    column-gap: 10px;
+    display: flex;
+    padding: 15px;
+    row-gap: 0px;
+  }
+
+  .mpp-box173 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 15%;
+    max-width: 15%;
+  }
+
+  .mpp-text15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  :global(.mpp-btn):hover {
+    background-color: rgba(0, 0, 0, 0);
+    border-top-color: #333333;
+    box-shadow: none;
+    color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .mpp-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .mpp-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .mpp-box3 {
+      max-width: 207px;
+    }
+
+    .mpp-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .mpp-box8 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 387px;
+    }
+
+    .mpp-heading2 {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .mpp-box13 {
+      flex: 0 0 17.62%;
+      max-width: 17.62%;
+    }
+
+    .mpp-grid {
+      flex-wrap: nowrap;
+    }
+
+    .mpp-box14 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+
+    .mpp-box15 {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .mpp-box26 {
+      flex: 0 0 10.6%;
+      max-width: 10.6%;
+    }
+
+    .mpp-box55 {
+      flex: 0 0 14.33%;
+      max-width: 14.33%;
+    }
+
+    .mpp-box74 {
+      flex: 0 0 17.91%;
+      max-width: 17.91%;
+    }
+
+    .mpp-box87 {
+      flex: 0 0 14.04%;
+      max-width: 14.04%;
+    }
+
+    .mpp-box100 {
+      flex: 0 0 14.33%;
+      max-width: 14.33%;
+    }
+
+    .mpp-box121 {
+      flex: 0 0 17.91%;
+      max-width: 17.91%;
+    }
+
+    .mpp-box150 {
+      flex: 0 0 10.6%;
+      max-width: 10.6%;
+    }
+
+    .mpp-box173 {
+      flex: 0 0 6.88%;
+      max-width: 6.88%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .mpp-box {
+      max-width: min(100%, 1440px);
+      padding-bottom: 70px;
+      padding-top: 70px;
+    }
+
+    .mpp-box3 {
+      max-width: 291px;
+    }
+
+    .mpp-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .mpp-box8 {
+      max-width: 545px;
+    }
+
+    .mpp-heading2 {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .mpp-box10 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1120px;
+    }
+
+    .mpp-box13 {
+      flex: 0 0 11.28%;
+      max-width: 11.28%;
+    }
+
+    .mpp-box15 {
+      max-width: min(100%, 1440px);
+    }
+
+    .mpp-box26 {
+      flex: 0 0 6.79%;
+      max-width: 6.79%;
+    }
+
+    .mpp-box55 {
+      flex: 0 0 9.17%;
+      max-width: 9.17%;
+    }
+
+    .mpp-box74 {
+      flex: 0 0 11.47%;
+      max-width: 11.47%;
+    }
+
+    .mpp-box87 {
+      flex: 0 0 8.99%;
+      max-width: 8.99%;
+    }
+
+    .mpp-box100 {
+      flex: 0 0 9.17%;
+      max-width: 9.17%;
+    }
+
+    .mpp-box121 {
+      flex: 0 0 11.47%;
+      max-width: 11.47%;
+    }
+
+    .mpp-box150 {
+      flex: 0 0 6.79%;
+      max-width: 6.79%;
+    }
+
+    .mpp-box173 {
+      flex: 0 0 4.4%;
+      max-width: 4.4%;
+    }
+  }
+</style>

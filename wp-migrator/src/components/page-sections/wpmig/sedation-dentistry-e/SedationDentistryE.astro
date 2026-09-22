@@ -1,0 +1,633 @@
+---
+/**
+ * Sedation Dentistry E — migrated from dental-services/sedation-dentistry/oral-conscious-sedation [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4eaf76",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="sedation-dentistry-e" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${buttonBackgroundHoverColor};--c11:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="sde-box">
+    <div class="sde-box2">
+      <div class="sde-box3">
+        <div class="sde-box4">
+          {eyebrow && <h4 class="sde-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sde-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sde-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sde-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+        </div>
+      </div>
+      <div class="sde-box5">
+        <div class="sde-box6">
+          <div class="sde-box7">
+            <div class="sde-box8">
+              <h2 class="sde-heading2">{heading}</h2>
+            </div>
+            <div class="sde-box9">
+              <div class="sde-box10">
+                {text && <div class="sde-body" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="sde-box11">
+            <div class="sde-box12">
+              <div class="sde-decor" aria-hidden="true"></div>
+            </div>
+            <div class="sde-box13">
+              {subheading && <h2 class="sde-heading3">{subheading}</h2>}
+            </div>
+            <div class="sde-box14">
+              <div class="sde-box15">
+                {text2 && <p class="sde-text" set:html={text2} />}
+              </div>
+            </div>
+            <div class="sde-box16">
+              <div class="sde-box17">
+                {secondaryButtonText3 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sde-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+              </div>
+            </div>
+            <div class="sde-box18">
+              <div class="sde-box19">
+                <div class="sde-box20">
+                  {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="sde-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .sedation-dentistry-e {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .sde-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sde-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .sde-box3 {
+    display: none;
+  }
+
+  .sde-box4 {
+    display: none;
+  }
+
+  .sde-heading {
+    display: none;
+  }
+
+  :global(.sde-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sde-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sde-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .sde-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .sde-box6 {
+    box-sizing: border-box;
+  }
+
+  .sde-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sde-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sde-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sde-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sde-box10 {
+    box-sizing: border-box;
+    min-height: 256px;
+  }
+
+  .sde-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .sde-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sde-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .sde-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .sde-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sde-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sde-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sde-box15 {
+    box-sizing: border-box;
+  }
+
+  .sde-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .sde-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sde-box17 {
+    box-sizing: border-box;
+  }
+
+  :global(.sde-btn4) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sde-btn4) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .sde-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sde-box19 {
+    box-sizing: border-box;
+  }
+
+  .sde-box20 {
+    box-sizing: border-box;
+  }
+
+  :global(.sde-btn5) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sde-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sde-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sde-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.sde-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.sde-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.sde-btn5):hover {
+    background-color: var(--c11);
+  }
+
+  @media (min-width: 768px) {
+    .sde-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .sde-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 634px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .sde-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sde-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.sde-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.sde-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.sde-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sde-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .sde-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .sde-heading2 {
+      line-height: 32px;
+    }
+
+    .sde-box10 {
+      min-height: 184px;
+    }
+
+    .sde-heading3 {
+      line-height: 32px;
+    }
+
+    .sde-box18 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .sde-box19 {
+      display: none;
+    }
+
+    .sde-box20 {
+      display: none;
+    }
+
+    :global(.sde-btn5) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sde-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .sde-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 490px;
+    }
+
+    :global(.sde-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.sde-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sde-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.sde-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .sde-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .sde-box10 {
+      min-height: 112px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sde-box13 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .sde-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .sde-box17 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.sde-btn4) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .sde-box18 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .sde-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .sde-box13 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .sde-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.sde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .sde-box17 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .sde-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sde-heading3 {
+      font-weight: 400;
+    }
+
+    :global(.sde-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sde-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sde-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sde-btn4) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .sde-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

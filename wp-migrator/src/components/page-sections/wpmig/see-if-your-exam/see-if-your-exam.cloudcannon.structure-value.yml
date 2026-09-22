@@ -1,0 +1,19 @@
+label: See If Your Exam
+icon: interests
+description: See If Your Exam section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/see-if-your-exam
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - See If Your Exam
+  icon: interests
+picker_preview:
+  text: See If Your Exam
+  subtext: See If Your Exam section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/see-if-your-exam/see-if-your-exam.cloudcannon.inputs.yml

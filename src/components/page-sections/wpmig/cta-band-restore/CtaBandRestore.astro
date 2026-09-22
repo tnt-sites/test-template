@@ -1,0 +1,237 @@
+---
+/**
+ * Cta Band Restore — migrated from dental-implant-credit-qualification [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  items = [],
+  backgroundImage = "/wp-content/uploads/2024/10/5027-Group-of-4-drs-T2-scaled.jpg",
+  backgroundColor = "var(--color-brand)",
+  backgroundColorHex = "",
+  overlayColor = "#000000",
+  overlayColorHex = "",
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  textHoverColor = "",
+  textHoverColorHex = "#555555",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#c7ebff",
+  hoverColor = "",
+  hoverColorHex = "#ade0fd",
+  hoverBackgroundColor2 = "",
+  hoverBackgroundColor2Hex = "#8fd4fd",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const backgroundColorValue = backgroundColorHex || backgroundColor || "var(--color-brand)";
+const overlayColorValue = overlayColorHex || overlayColor || "#000000";
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#ffffff";
+const textHoverColorValue = textHoverColorHex || textHoverColor || "#555555";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#c7ebff";
+const hoverColorValue = hoverColorHex || hoverColor || "#ade0fd";
+const hoverBackgroundColor2Value = hoverBackgroundColor2Hex || hoverBackgroundColor2 || "#8fd4fd";
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="cta-band-restore" id={id || undefined} style={`--bg:${backgroundColorValue};--ov:${overlayColorValue};--hd:${headingColorValue};--tx:${textColorValue};--c5:${textHoverColorValue};--c6:${hoverBackgroundColorValue};--c7:${hoverColorValue};--c8:${hoverBackgroundColor2Value}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="cbr-box">
+    <div class="cbr-box2">
+      <div class="cbr-box3">
+        <h1 class="cbr-heading">{heading}</h1>
+      </div>
+      <div class="cbr-box4">
+        <div class="cbr-box5">
+          {text && <p class="cbr-text">{text}</p>}
+        </div>
+      </div>
+      <div class="cbr-grid">
+        {list.map((it) => (
+          <div class="cbr-box6">
+            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cbr-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cta-band-restore {
+    background-color: var(--bg);
+    background-image: var(--bgimg, none);
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    min-height: 752px;
+    position: relative;
+  }
+
+  .cta-band-restore::before {
+    background-color: var(--ov);
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0.4;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .cbr-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: min(100%, 767px);
+    padding-bottom: 50px;
+    padding-top: 180px;
+  }
+
+  .cbr-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cbr-box3 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .cbr-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cbr-box4 {
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .cbr-box5 {
+    box-sizing: border-box;
+  }
+
+  .cbr-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cbr-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+  }
+
+  .cbr-box6 {
+    box-sizing: border-box;
+    flex: 0 0 83.14%;
+    max-width: 83.14%;
+  }
+
+  :global(.cbr-btn) {
+    background-color: var(--color-brand, #047ac0);
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 37px 1px;
+    box-sizing: border-box;
+    color: var(--tx);
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cbr-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cbr-btn):hover {
+    background-color: var(--c6);
+    color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .cbr-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+      min-height: 752px;
+    }
+
+    .cbr-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .cbr-heading {
+      font-size: 50px;
+      line-height: 50px;
+    }
+
+    .cbr-grid {
+      flex-wrap: nowrap;
+    }
+
+    .cbr-box6 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cbr-box {
+      max-width: min(100%, 1440px);
+    }
+
+    .cbr-heading {
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    .cbr-box6 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+label: If Youre Experiencing Dental
+icon: interests
+description: If Youre Experiencing Dental section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/if-youre-experiencing-dental
+  id: ""
+  heading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - If Youre Experiencing Dental
+  icon: interests
+picker_preview:
+  text: If Youre Experiencing Dental
+  subtext: If Youre Experiencing Dental section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/if-youre-experiencing-dental/if-youre-experiencing-dental.cloudcannon.inputs.yml

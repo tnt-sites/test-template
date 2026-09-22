@@ -1,0 +1,10 @@
+_snippets:
+  look_forward_to_the:
+    template: astro_component
+    inline: false
+    preview:
+      text: Look Forward To The
+    definitions:
+      component_name: page-sections/wpmig/look-forward-to-the
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/look-forward-to-the/look-forward-to-the.cloudcannon.inputs.yml

@@ -1,0 +1,75 @@
+label: Referral Form
+icon: add
+description: Section with a Referral form and editable fields.
+value:
+  _component: page-sections/forms/referral-form
+  id: ""
+  heading: Refer a Patient
+  subtext: ""
+  formAction: ./
+  formBlocks:
+    - _component: building-blocks/forms/input
+      label: Your Name
+      name: name
+      type: text
+      required: true
+    - _component: building-blocks/forms/input
+      label: Your Email
+      name: email
+      type: email
+      required: true
+    - _component: building-blocks/forms/input
+      label: Your Phone
+      name: phone
+      type: tel
+      required: false
+    - _component: building-blocks/forms/input
+      label: Patient's Name
+      name: patient-name
+      type: text
+      required: true
+    - _component: building-blocks/forms/input
+      label: Patient's Email
+      name: patient-email
+      type: email
+      required: true
+    - _component: building-blocks/forms/input
+      label: Patient's Phone
+      name: patient-phone
+      type: tel
+      required: true
+    - _component: building-blocks/forms/textarea
+      label: Reason for Referral
+      name: reason
+      required: true
+    - _component: building-blocks/forms/textarea
+      label: Description of Previous Treatments
+      name: treatments
+      required: true
+    - _component: building-blocks/forms/hidden
+      name: _subject
+      value: Refer a Patient
+    - _component: building-blocks/forms/hidden
+      name: _redirect
+      value: thanks.html
+    - _component: building-blocks/forms/submit
+      text: Submit
+      variant: primary
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Referral Form
+  subtext:
+    - key: heading
+  icon: add
+picker_preview:
+  text: Referral Form
+  subtext: Refer-a-patient form with editable fields.
+_inputs_from_glob:
+  - /src/components/page-sections/forms/referral-form/referral-form.cloudcannon.inputs.yml

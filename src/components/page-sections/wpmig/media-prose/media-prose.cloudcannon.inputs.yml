@@ -1,0 +1,296 @@
+_structures:
+  media_prose_blocks:
+    values:
+      - label: Heading
+        icon: title
+        value: { type: heading, level: h3, text: "" }
+      - label: Eyebrow
+        icon: short_text
+        value: { type: eyebrow, text: "" }
+      - label: Rich text
+        icon: notes
+        value: { type: text, text: "" }
+      - label: List
+        icon: format_list_bulleted
+        value: { type: list, ordered: false, items: [] }
+      - label: Image
+        icon: image
+        value: { type: image, image: "", imageAlt: "" }
+      - label: Embed
+        icon: smart_display
+        value: { type: embed, embedUrl: "", title: "" }
+      - label: Button
+        icon: smart_button
+        value: { type: button, buttonText: "", buttonLink: "" }
+
+_inputs:
+  layout:
+    type: select
+    comment: >-
+      stack = one centred column; split = prose plus a contact rail;
+      cards = intro blocks above a card grid.
+    options:
+      values:
+        - id: stack
+          name: Stack (single column)
+        - id: split
+          name: Split (prose + rail)
+        - id: cards
+          name: Cards (intro + grid)
+  width:
+    type: select
+    comment: Maximum content width.
+    options:
+      values:
+        - id: narrow
+          name: Narrow (767px)
+        - id: wide
+          name: Wide (1024px)
+        - id: full
+          name: Full width
+  align:
+    type: select
+    comment: Text alignment for the main column.
+    options:
+      values:
+        - id: ""
+          name: Left (default)
+        - id: center
+          name: Centred
+  padded:
+    type: checkbox
+    comment: Adds 10px of horizontal padding to the section shell.
+  cardStyle:
+    type: select
+    comment: Card layout, used when layout is "cards".
+    options:
+      values:
+        - id: caption
+          name: Caption (title, text, then image)
+        - id: title-first
+          name: Title first
+        - id: media-first
+          name: Image first
+  blocks:
+    type: array
+    comment: The main column content, in order.
+    options:
+      structures: _structures.media_prose_blocks
+  rail:
+    type: array
+    comment: The right-hand rail, used when layout is "split".
+    options:
+      structures: _structures.media_prose_blocks
+  cards:
+    type: array
+    comment: Cards, used when layout is "cards".
+  backgroundColor:
+    type: select
+    comment: Background colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  backgroundColorHex:
+    type: color
+    comment: Optional custom hex that overrides the backgroundColor selection.
+  headingColor:
+    type: select
+    comment: Heading colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  headingColorHex:
+    type: color
+    comment: Optional custom hex that overrides the headingColor selection.
+  textColor:
+    type: select
+    comment: Text colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  textColorHex:
+    type: color
+    comment: Optional custom hex that overrides the textColor selection.
+  eyebrowColor:
+    type: select
+    comment: Eyebrow colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  eyebrowColorHex:
+    type: color
+    comment: Optional custom hex that overrides the eyebrowColor selection.
+  cardBackgroundColor:
+    type: select
+    comment: Card background colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  cardBackgroundColorHex:
+    type: color
+    comment: Optional custom hex that overrides the cardBackgroundColor selection.
+  titleColor:
+    type: select
+    comment: Card title colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  titleColorHex:
+    type: color
+    comment: Optional custom hex that overrides the titleColor selection.
+  railTextColor:
+    type: select
+    comment: Rail text colour, from the site palette.
+    options:
+      values:
+        - id: ""
+          name: Default
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: var(--color-brand-muted)
+          name: Brand (Tertiary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: var(--color-text-on-brand)
+          name: Text on Brand
+        - id: var(--color-link)
+          name: Link
+        - id: var(--color-link-hover)
+          name: Link Hover
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  railTextColorHex:
+    type: color
+    comment: Optional custom hex that overrides the railTextColor selection.

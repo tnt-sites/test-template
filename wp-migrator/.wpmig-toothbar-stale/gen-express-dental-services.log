@@ -1,0 +1,13 @@
+6 section(s) detected on express-dental-services.html
+  [0] -> page-banner (shared, ~0.98)  props=8  icons=6
+  [1] -> prose-section-m (shared, identical)  props=3
+  [2] -> prose-section-p  props=9  repeat=4x(high)
+  [3] -> media-prose-f  props=10  icons=2
+  [4] -> prose-section-q  props=7
+  [5] -> prose-section-f (shared, identical)  props=6
+
+icons: 8 substituted from the project set, 1 unresolved (cancel)
+assets: 1 copied
+
+wrote 6 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/express-dental-services.md (copy into src/content/pages/ manually for now)

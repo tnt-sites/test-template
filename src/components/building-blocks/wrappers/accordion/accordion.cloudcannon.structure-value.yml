@@ -8,6 +8,8 @@ value:
   items: []
   openFirst: false
   singleOpen: false
+  iconName: chevron-down
+  theme: null
 preview:
   text:
     - Accordion

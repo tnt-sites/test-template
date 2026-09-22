@@ -1,0 +1,16 @@
+---
+const { label = "", text = "", href = "#", _component, ...htmlAttributes } = Astro.props;
+
+const linkLabel =
+  typeof label === "string" && label.trim().length > 0
+    ? label.trim()
+    : typeof text === "string"
+      ? text.trim()
+      : "";
+
+if (!_component && linkLabel.length === 0) return;
+---
+
+<li {...htmlAttributes}>
+  <a href={href} data-editable="text" data-prop="label">{linkLabel}</a>
+</li>

@@ -1,0 +1,10 @@
+_snippets:
+  patient_reviews:
+    template: astro_component
+    inline: false
+    preview:
+      text: Patient Reviews
+    definitions:
+      component_name: page-sections/wpmig/patient-reviews
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/patient-reviews/patient-reviews.cloudcannon.inputs.yml

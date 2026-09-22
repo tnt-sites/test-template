@@ -1,0 +1,642 @@
+---
+/**
+ * Clear Dental Aligners — migrated from dental-services/cosmetic-dentistry/invisalign [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  image2 = "",
+  image2Alt = "",
+  text2 = "",
+  subheading = "",
+  image3 = "",
+  image3Alt = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="clear-dental-aligners" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="cda-box">
+    <div class="cda-box2">
+      <div class="cda-box3">
+        <div class="cda-box4">
+          {image && <img class="cda-media" src={image} alt={imageAlt || ""} loading="lazy" width="498" height="116" />}
+        </div>
+      </div>
+      <div class="cda-box5">
+        <div class="cda-box6">
+          <div class="cda-box7">
+            {text && <div class="cda-body" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="cda-box8">
+        <div class="cda-box9">
+          {image2 && <img class="cda-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="1024" height="380" />}
+        </div>
+      </div>
+      <div class="cda-box10">
+        <div class="cda-box11">
+          <h3 class="cda-heading">{heading}</h3>
+        </div>
+        <div class="cda-box12">
+          {text2 && <div class="cda-body2" set:html={text2} />}
+        </div>
+      </div>
+      <div class="cda-box13">
+        <div class="cda-box14">
+          {subheading && <h3 class="cda-heading2">{subheading}</h3>}
+        </div>
+        <div class="cda-box15">
+          {image3 && <img class="cda-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="498" height="116" />}
+        </div>
+        <div class="cda-box16">
+          <div class="cda-box17">
+            {text3 && <p class="cda-text">{text3}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="cda-box18">
+        <div class="cda-box19">
+          <div class="cda-decor" aria-hidden="true"></div>
+        </div>
+        <div class="cda-box20">
+          {heading2 && <h2 class="cda-heading3">{heading2}</h2>}
+        </div>
+        <div class="cda-box21">
+          <div class="cda-box22">
+            {text4 && <p class="cda-text2" set:html={text4} />}
+          </div>
+        </div>
+        <div class="cda-box23">
+          <div class="cda-box24">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cda-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+        <div class="cda-box25">
+          <div class="cda-box26">
+            <div class="cda-box27">
+              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cda-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .clear-dental-aligners {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cda-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cda-box2 {
+    box-sizing: border-box;
+  }
+
+  .cda-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cda-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cda-box5 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cda-box7 {
+    box-sizing: border-box;
+    min-height: 256px;
+  }
+
+  .cda-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cda-box8 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cda-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cda-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cda-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cda-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 472px;
+  }
+
+  .cda-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cda-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cda-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cda-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cda-media3 {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cda-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cda-box17 {
+    box-sizing: border-box;
+  }
+
+  .cda-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cda-box18 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cda-box19 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cda-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .cda-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cda-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cda-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cda-box22 {
+    box-sizing: border-box;
+  }
+
+  .cda-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cda-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cda-box24 {
+    box-sizing: border-box;
+  }
+
+  :global(.cda-btn) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cda-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cda-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cda-box26 {
+    box-sizing: border-box;
+  }
+
+  .cda-box27 {
+    box-sizing: border-box;
+  }
+
+  :global(.cda-btn2) {
+    background-color: var(--c5);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cda-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cda-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.cda-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .cda-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cda-box7 {
+      min-height: 136px;
+    }
+
+    .cda-heading {
+      line-height: 28px;
+    }
+
+    .cda-box12 {
+      min-height: 256px;
+    }
+
+    .cda-heading2 {
+      line-height: 28px;
+    }
+
+    .cda-heading3 {
+      line-height: 32px;
+    }
+
+    .cda-box25 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .cda-box26 {
+      display: none;
+    }
+
+    .cda-box27 {
+      display: none;
+    }
+
+    :global(.cda-btn2) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cda-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cda-box7 {
+      min-height: 112px;
+    }
+
+    .cda-box12 {
+      min-height: 184px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cda-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cda-heading2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: start;
+  }
+  .cda-decor {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .cda-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cda-box4 {
+    text-align: start;
+  }
+  .cda-media {
+    text-align: start;
+  }
+  .cda-box8 {
+    text-align: center;
+  }
+  .cda-media2 {
+    text-align: left;
+  }
+  .cda-box15 {
+    text-align: start;
+  }
+  .cda-box23 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cda-box11 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cda-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  :global(.cda-btn) {
+    align-items: normal;
+    background-color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  .cda-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cda-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cda-heading {
+      font-weight: 400;
+    }
+
+    .cda-heading2 {
+      font-weight: 400;
+    }
+
+    .cda-heading3 {
+      font-weight: 400;
+    }
+
+    .cda-box4 {
+      text-align: start;
+    }
+
+    .cda-media {
+      text-align: start;
+    }
+
+    .cda-box15 {
+      text-align: start;
+    }
+
+    .cda-media3 {
+      text-align: start;
+    }
+
+    :global(.cda-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cda-text {
+      line-height: 24px;
+    }
+
+    .cda-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cda-heading {
+      font-weight: 400;
+    }
+
+    .cda-heading2 {
+      font-weight: 400;
+    }
+
+    .cda-heading3 {
+      font-weight: 400;
+    }
+
+    .cda-box4 {
+      text-align: start;
+    }
+
+    .cda-media {
+      text-align: start;
+    }
+
+    .cda-box15 {
+      text-align: start;
+    }
+
+    .cda-media3 {
+      text-align: start;
+    }
+
+    :global(.cda-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cda-text {
+      line-height: 24px;
+    }
+
+    .cda-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

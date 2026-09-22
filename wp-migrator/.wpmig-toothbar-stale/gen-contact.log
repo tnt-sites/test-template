@@ -1,0 +1,11 @@
+4 section(s) detected on contact.html
+  [0] -> page-banner (shared, ~0.99)  props=8  icons=6
+  [1] -> media-prose-d  props=9
+  [2] -> card-grid-d  props=12  icons=6
+  [3] -> media-prose-e  props=40  repeat=4x(high)  icons=62
+
+icons: 74 substituted from the project set, 3 unresolved (alarm-clock1, phone1, calendar1)
+assets: 2 copied
+
+wrote 4 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/contact.md (copy into src/content/pages/ manually for now)

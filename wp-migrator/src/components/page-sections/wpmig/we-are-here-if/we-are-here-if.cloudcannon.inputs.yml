@@ -1,0 +1,15 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: html
+  image:
+    type: image
+  imageAlt:
+    type: text
+  backgroundImage:
+    type: image
+  backgroundColor:
+    type: color
+  headingColor:
+    type: color

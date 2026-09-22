@@ -1,0 +1,10 @@
+_snippets:
+  umr_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Umr Dental
+    definitions:
+      component_name: page-sections/wpmig/umr-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/umr-dental/umr-dental.cloudcannon.inputs.yml

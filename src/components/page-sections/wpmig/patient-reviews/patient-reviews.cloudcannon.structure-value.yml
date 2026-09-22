@@ -1,0 +1,29 @@
+label: Patient Reviews
+icon: reviews
+description: "\"What Our Patients Say\" testimonials band. Migrated by wp-migrator."
+value:
+  _component: page-sections/wpmig/patient-reviews
+  id: ""
+  heading: What Our Patients Say
+  subheading: ""
+  rating: "5.0"
+  reviewCount: ""
+  reviewers:
+    - name: ""
+      text: ""
+  googleUrl: ""
+  yelpUrl: ""
+  backgroundColor: surface
+  headingColor: var(--color-brand)
+  hidden: false
+preview:
+  text:
+    - Patient Reviews
+  subtext:
+    - key: heading
+  icon: reviews
+picker_preview:
+  text: Patient Reviews
+  subtext: "\"What Our Patients Say\" testimonials band. Migrated by wp-migrator."
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/patient-reviews/patient-reviews.cloudcannon.inputs.yml

@@ -1,0 +1,22 @@
+label: We Are Here If
+icon: vertical_split
+description: We Are Here If section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/we-are-here-if
+  id: ""
+  heading: ""
+  subheading: ""
+  image: ""
+  imageAlt: ""
+  backgroundImage: /wp-content/uploads/2020/03/Hero-BG-Photo.jpg
+  backgroundColor: "#eeeeee"
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - We Are Here If
+  icon: vertical_split
+picker_preview:
+  text: We Are Here If
+  subtext: We Are Here If section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/we-are-here-if/we-are-here-if.cloudcannon.inputs.yml

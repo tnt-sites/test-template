@@ -1,0 +1,19 @@
+label: Covid19 Coronavirus Office Policy
+icon: interests
+description: Covid19 Coronavirus Office Policy section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/covid19-coronavirus-office-policy
+  id: ""
+  heading: ""
+  text: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Covid19 Coronavirus Office Policy
+  icon: interests
+picker_preview:
+  text: Covid19 Coronavirus Office Policy
+  subtext: Covid19 Coronavirus Office Policy section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/covid19-coronavirus-office-policy/covid19-coronavirus-office-policy.cloudcannon.inputs.yml

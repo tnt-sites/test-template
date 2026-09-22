@@ -1,0 +1,643 @@
+---
+/**
+ * Childrens Dentistry — migrated from dental-services/pediatric-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  heading4 = "",
+  text5 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="childrens-dentistry" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="cd-box">
+    <div class="cd-box2">
+      <div class="cd-box3">
+        <div class="cd-box4">
+          <h2 class="cd-heading">{heading}</h2>
+        </div>
+        <div class="cd-box5">
+          <div class="cd-box6">
+            {text && <p class="cd-text" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="cd-box7">
+        <div class="cd-box8">
+          {subheading && <h3 class="cd-heading2">{subheading}</h3>}
+        </div>
+        <div class="cd-box9">
+          <div class="cd-box10">
+            {text2 && <p class="cd-text2">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="cd-box11">
+        <div class="cd-box12">
+          {heading2 && <h3 class="cd-heading3">{heading2}</h3>}
+        </div>
+        <div class="cd-box13">
+          <div class="cd-box14">
+            {text3 && <p class="cd-text3" set:html={text3} />}
+          </div>
+        </div>
+      </div>
+      <div class="cd-box15">
+        <div class="cd-box16">
+          {heading3 && <h3 class="cd-heading4">{heading3}</h3>}
+        </div>
+        <div class="cd-box17">
+          <div class="cd-box18">
+            {text4 && <p class="cd-text4">{text4}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="cd-box19">
+        <div class="cd-box20">
+          <div class="cd-decor" aria-hidden="true"></div>
+        </div>
+        <div class="cd-box21">
+          {heading4 && <h2 class="cd-heading5">{heading4}</h2>}
+        </div>
+        <div class="cd-box22">
+          <div class="cd-box23">
+            {text5 && <p class="cd-text5" set:html={text5} />}
+          </div>
+        </div>
+        <div class="cd-box24">
+          <div class="cd-box25">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cd-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+        <div class="cd-box26">
+          <div class="cd-box27">
+            <div class="cd-box28">
+              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .childrens-dentistry {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cd-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cd-box2 {
+    box-sizing: border-box;
+  }
+
+  .cd-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cd-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cd-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box6 {
+    box-sizing: border-box;
+  }
+
+  .cd-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cd-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cd-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cd-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box10 {
+    box-sizing: border-box;
+  }
+
+  .cd-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cd-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cd-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cd-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box14 {
+    box-sizing: border-box;
+  }
+
+  .cd-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cd-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cd-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cd-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box18 {
+    box-sizing: border-box;
+  }
+
+  .cd-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cd-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cd-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cd-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .cd-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cd-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cd-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box23 {
+    box-sizing: border-box;
+  }
+
+  .cd-text5 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cd-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box25 {
+    box-sizing: border-box;
+  }
+
+  :global(.cd-btn) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cd-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cd-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cd-box27 {
+    box-sizing: border-box;
+  }
+
+  .cd-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.cd-btn2) {
+    background-color: var(--c5);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cd-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cd-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.cd-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .cd-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cd-heading {
+      line-height: 32px;
+    }
+
+    .cd-heading2 {
+      line-height: 28px;
+    }
+
+    .cd-heading3 {
+      line-height: 28px;
+    }
+
+    .cd-heading4 {
+      line-height: 28px;
+    }
+
+    .cd-heading5 {
+      line-height: 32px;
+    }
+
+    .cd-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .cd-box27 {
+      display: none;
+    }
+
+    .cd-box28 {
+      display: none;
+    }
+
+    :global(.cd-btn2) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cd-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cd-heading2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cd-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cd-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cd-box19 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .cd-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cd-text3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cd-box23 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cd-box24 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cd-box8 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cd-box11 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cd-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cd-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cd-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cd-text5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cd-heading2 {
+      font-weight: 400;
+    }
+
+    .cd-heading3 {
+      font-weight: 400;
+    }
+
+    .cd-heading4 {
+      font-weight: 400;
+    }
+
+    .cd-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.cd-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cd-text {
+      line-height: 24px;
+    }
+
+    .cd-text2 {
+      line-height: 24px;
+    }
+
+    .cd-text3 {
+      line-height: 24px;
+    }
+
+    .cd-text4 {
+      line-height: 24px;
+    }
+
+    .cd-text5 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cd-heading2 {
+      font-weight: 400;
+    }
+
+    .cd-heading3 {
+      font-weight: 400;
+    }
+
+    .cd-heading4 {
+      font-weight: 400;
+    }
+
+    .cd-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.cd-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cd-text {
+      line-height: 24px;
+    }
+
+    .cd-text2 {
+      line-height: 24px;
+    }
+
+    .cd-text3 {
+      line-height: 24px;
+    }
+
+    .cd-text4 {
+      line-height: 24px;
+    }
+
+    .cd-text5 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

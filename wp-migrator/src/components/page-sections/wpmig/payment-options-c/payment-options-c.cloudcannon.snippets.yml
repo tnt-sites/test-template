@@ -1,0 +1,10 @@
+_snippets:
+  payment_options_c:
+    template: astro_component
+    inline: false
+    preview:
+      text: Payment Options C
+    definitions:
+      component_name: page-sections/wpmig/payment-options-c
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/payment-options-c/payment-options-c.cloudcannon.inputs.yml

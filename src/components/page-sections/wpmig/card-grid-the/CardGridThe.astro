@@ -1,0 +1,366 @@
+---
+/**
+ * Card Grid The — migrated from dental-anxiety-and-fear [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text3 = "",
+  embedUrl = "",
+  text4 = "",
+  items = [],
+  headingColor = "#000000",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "#000000";
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="card-grid-the" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--c3:${textColor2Value}`} {...rest}>
+  <div class="cgt-box">
+    <div class="cgt-box2">
+      <div class="cgt-box3">
+        {text && <div class="cgt-body" set:html={text} />}
+        <ul class="cgt-grid">
+          {list.map((it) => (
+            <li class="cgt-box4">
+              <div class="cgt-text">{it.text}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="cgt-box12">
+        <h3 class="cgt-heading">{heading}</h3>
+      </div>
+      <div class="cgt-box13">
+        {text2 && <div class="cgt-body2" set:html={text2} />}
+      </div>
+    </div>
+    <div class="cgt-box14">
+      <div class="cgt-box15">
+        <div class="cgt-box16">
+          <div class="cgt-box17">
+            {image && <img class="cgt-media" src={image} alt={imageAlt || ""} loading="lazy" width="621" height="243" />}
+          </div>
+          <div class="cgt-box18">
+            <div class="cgt-box19">
+              {subheading && <h2 class="cgt-heading2" set:html={subheading} />}
+            </div>
+          </div>
+          <div class="cgt-box20">
+            <div class="cgt-box21">
+              {text3 && <p class="cgt-text9" set:html={text3} />}
+            </div>
+          </div>
+          <div class="cgt-box22">
+            <iframe class="cgt-embed" src={embedUrl} title="Chapel Hill Dental Arts  - Contact Form" allow="geolocation; microphone; camera; fullscreen; payment" frameborder="0" loading="lazy"></iframe>
+          </div>
+        </div>
+        {text4 && <span class="cgt-text10">{text4}</span>}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .card-grid-the {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .cgt-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: min(100%, 767px);
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  .cgt-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgt-box3 {
+    box-sizing: border-box;
+  }
+
+  .cgt-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .cgt-grid {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgt-box4 {
+    box-sizing: border-box;
+  }
+
+  .cgt-text {
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+  .cgt-box12 {
+    box-sizing: border-box;
+  }
+
+  .cgt-heading {
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgt-box13 {
+    box-sizing: border-box;
+    min-height: 1636px;
+  }
+
+  .cgt-body2 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgt-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgt-box14 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgt-box15 {
+    box-sizing: border-box;
+  }
+
+  .cgt-box16 {
+    background-color: var(--color-brand, #047ac0);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    padding-top: 25px;
+    position: relative;
+  }
+
+  .cgt-box17 {
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  .cgt-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .cgt-box18 {
+    background-color: rgba(31, 125, 166, 0);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cgt-box19 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .cgt-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgt-box20 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .cgt-box21 {
+    box-sizing: border-box;
+  }
+
+  .cgt-text9 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgt-box22 {
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+  }
+
+  .cgt-embed {
+    aspect-ratio: 0.46 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 18px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .cgt-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .cgt-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .cgt-heading {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .cgt-box13 {
+      min-height: 907px;
+    }
+
+    .cgt-box14 {
+      flex-wrap: nowrap;
+      width: 33.33%;
+    }
+
+    .cgt-box16 {
+      flex-wrap: nowrap;
+    }
+
+    .cgt-box18 {
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+
+    .cgt-heading2 {
+      font-size: 31px;
+      line-height: 31px;
+    }
+
+    .cgt-box21 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .cgt-embed {
+      aspect-ratio: 0.31 / 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .card-grid-the {
+      padding-left: 45px;
+      padding-right: 0px;
+    }
+
+    .cgt-box {
+      flex-direction: row;
+      max-width: min(100%, 1440px);
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+
+    .cgt-box2 {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+    }
+
+    .cgt-box13 {
+      min-height: 760px;
+    }
+
+    .cgt-box14 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      min-height: 1300px;
+    }
+
+    .cgt-embed {
+      aspect-ratio: 0.57 / 1;
+    }
+  }
+
+  /* The scraped logo keeps its natural 621px width, which overflowed the rail's
+     card. It sits at a width the card can actually hold. */
+  .cgt-media {
+    height: auto;
+    max-width: 190px;
+    width: 100%;
+  }
+
+  /* This line sits on the brand-blue card, where the site's blue link colour
+     left the phone number all but invisible. */
+  .cgt-text9,
+  .cgt-text9 :global(a) {
+    color: #ffffff;
+  }
+</style>

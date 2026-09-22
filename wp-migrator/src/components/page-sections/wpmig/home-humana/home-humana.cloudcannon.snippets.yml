@@ -1,0 +1,10 @@
+_snippets:
+  home_humana:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Humana
+    definitions:
+      component_name: page-sections/wpmig/home-humana
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-humana/home-humana.cloudcannon.inputs.yml

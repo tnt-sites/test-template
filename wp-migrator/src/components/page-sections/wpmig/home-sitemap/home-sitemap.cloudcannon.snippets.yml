@@ -1,0 +1,10 @@
+_snippets:
+  home_sitemap:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Sitemap
+    definitions:
+      component_name: page-sections/wpmig/home-sitemap
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-sitemap/home-sitemap.cloudcannon.inputs.yml

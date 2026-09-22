@@ -1,0 +1,25 @@
+_inputs:
+  image:
+    type: image
+  imageAlt:
+    type: text
+  subheading:
+    type: text
+  text:
+    type: html
+  heading:
+    type: html
+  items:
+    type: array
+    options:
+      structures: _structures.for_help_with_any_item
+  textColor:
+    type: color
+_structures:
+  for_help_with_any_item:
+    values:
+      - value:
+          text: ""
+        _inputs:
+          text:
+            type: textarea

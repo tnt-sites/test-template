@@ -9,13 +9,16 @@ value:
   headingSize: lg
   singleOpen: true
   openFirst: false
+  iconName: chevron-down
   items: []
   maxContentWidth: xl
   paddingHorizontal: xl
   paddingVertical: 4xl
   colorScheme: inherit
   backgroundColor: base
+  backgroundColorHex: ""
   backgroundGradient: ""
+  accordionTheme: null
   backgroundImage:
     source: ""
     alt: ""
@@ -57,31 +60,8 @@ _structures:
           contentSections:
             type: array
             label: Answer Content
-            comment: Content sections for the answer (typically text).
+            comment: >-
+              Content for the answer. Usually text, but a panel can hold any
+              core element — a migrated video accordion puts a Video here.
             options:
-              structures:
-                - label: Text
-                  icon: text_fields
-                  value:
-                    _component: building-blocks/core-elements/text
-                    text: Answer text goes here.
-                  preview:
-                    text:
-                      - key: text
-                      - Text content
-                  _inputs:
-                    text:
-                      type: markdown
-                      comment: The answer text content.
-                      options:
-                        blockquote: false
-                        bold: true
-                        format:
-                        italic: true
-                        link: true
-                        strike: false
-                        subscript: true
-                        superscript: true
-                        underline: false
-                        bulletedlist: false
-                        numberedlist: false
+              structures: _structures.accordionSections

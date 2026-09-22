@@ -1,0 +1,15 @@
+label: Section B
+icon: interests
+description: Section B section. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/section-b
+  id: ""
+preview:
+  text:
+    - Section B
+  icon: interests
+picker_preview:
+  text: Section B
+  subtext: Section B section. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/section-b/section-b.cloudcannon.inputs.yml

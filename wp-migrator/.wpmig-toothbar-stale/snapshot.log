@@ -1,0 +1,74 @@
+Discovering pages from https://toothbar.com …
+  strategy: /wp-sitemap.xml — 412 page(s)
+  … 10 fetched
+  … 20 fetched
+  … 30 fetched
+  … 40 fetched
+  … 50 fetched
+  … 60 fetched
+  … 70 fetched
+  … 80 fetched
+  … 90 fetched
+  … 100 fetched
+  … 110 fetched
+  … 120 fetched
+  … 130 fetched
+  … 140 fetched
+  … 150 fetched
+  … 160 fetched
+  … 170 fetched
+  … 180 fetched
+  … 190 fetched
+  … 200 fetched
+  … 210 fetched
+  … 220 fetched
+  … 230 fetched
+  … 240 fetched
+  … 250 fetched
+  … 260 fetched
+  … 270 fetched
+  … 280 fetched
+  … 290 fetched
+  … 300 fetched
+  … 310 fetched
+  … 320 fetched
+  … 330 fetched
+  … 340 fetched
+  … 350 fetched
+  … 360 fetched
+  … 370 fetched
+  … 380 fetched
+  … 390 fetched
+  … 400 fetched
+  … 410 fetched
+Pages: 412 fetched, 0 already on disk, 0 failed
+  … 50 assets
+  … 100 assets
+  … 150 assets
+  … 200 assets
+  … 250 assets
+  … 300 assets
+  … 350 assets
+  … 400 assets
+  … 450 assets
+  … 500 assets
+  … 550 assets
+  … 600 assets
+  … 650 assets
+  … 700 assets
+  … 750 assets
+  … 800 assets
+Assets: 814 downloaded, 0 already on disk, 0 repaired from stale multisite paths, 32 failed
+
+wrote 412 page(s) to /Users/tharvey/Work/CloudCannon/toothbar/wp-migrator/.wpmig/static
+32 asset failure(s) (first 10):
+  404  /wp-content/uploads/2024/11/toothbar-logo.png
+  404  /wp-content/themes/hello-elementor/js/ajax-search.js
+  404  /wp-content/uploads/2023/05/close-up-cute-dreamy-young-woman-smiling-winking-front-encourage-client-standing-white-wall-500x334.jpg
+  404  /wp-content/uploads/2023/09/plastic-surgery-attractive-handsome-man-500x333.jpg
+  404  /wp-content/uploads/2023/05/indoor-photo-young-pretty-redhead-lady-keeping-her-eyes-closed-frowning-face-while-having-stomachache-standing-pink-background-casual-clothes-500x334.jpg
+  404  /wp-content/uploads/2019/10/photo-1555170629-9240c8e7df1d.jpeg
+  404  /wp-content/uploads/1-s2.0-S0889540614006234-main.pdf
+  404  /wp-content/uploads/2023/12/beautiful-woman-holding-her-toothbrush-500x403.jpg
+  404  /wp-content/uploads/2023/10/pretty-young-woman-brushing-her-teeth-bathroom-500x333.jpg
+  404  /wp-content/uploads/2023/06/2023-Texas-Oral-Health-Report-Card.pdf

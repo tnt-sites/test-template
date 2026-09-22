@@ -1,0 +1,77 @@
+---
+/**
+ * Schedule CTA — the full-width blue "Schedule Your Appointment" band that sits
+ * near the foot of the homepage in the source design.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  subtext = "",
+  buttonText = "",
+  buttonLink = "",
+  backgroundColor = "var(--color-brand)",
+  id = "",
+  hidden = false,
+  _component,
+  ...rest
+} = Astro.props;
+---
+{!hidden && (
+  <section class="schedule-cta" id={id || undefined} style={`--bg:${backgroundColor}`} {...rest}>
+    <div class="sc-inner">
+      {heading && <h2 class="sc-heading" set:html={heading} />}
+      {subtext && <div class="sc-sub" set:html={subtext} />}
+      {buttonText && (
+        <Button variant="secondary" size="lg" uppercase class="sc-btn" text={buttonText} link={buttonLink || "#"} />
+      )}
+    </div>
+  </section>
+)}
+<style>
+  .schedule-cta {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    padding: 64px 20px;
+    width: 100%;
+  }
+
+  .sc-inner {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .sc-heading {
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    line-height: 1.2;
+    margin: 0 0 0.6em;
+  }
+
+  .sc-sub {
+    color: #fff;
+    font-family: Lato, sans-serif;
+    font-size: 1.05rem;
+    margin: 0 auto 1.6em;
+    max-width: 680px;
+  }
+
+  .sc-sub :global(p) {
+    margin: 0 0 0.6em;
+  }
+
+  .schedule-cta :global(.sc-btn) {
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: var(--color-brand, #047ac0);
+    font-family: Montserrat, Lato, sans-serif;
+    font-weight: 600;
+  }
+
+  .schedule-cta :global(.sc-btn:hover) {
+    background-color: transparent;
+    color: #fff;
+  }
+</style>

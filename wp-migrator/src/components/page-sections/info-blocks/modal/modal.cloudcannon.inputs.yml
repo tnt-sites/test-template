@@ -1,0 +1,17 @@
+id:
+  type: text
+  comment: Unique modal ID used by buttons via modalTarget.
+closeLabel:
+  type: text
+  comment: Accessible label for the close button.
+showCloseButton:
+  type: switch
+  comment: Toggle the close button visibility.
+class:
+  type: text
+  comment: Optional custom class name for modal styling.
+contentSections:
+  type: array
+  comment: Content blocks rendered inside the modal body.
+  options:
+    structures: _structures.cardSections

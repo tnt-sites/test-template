@@ -20,6 +20,12 @@ const toggleId = `mobile-toggle-${crypto.randomUUID()}`;
 const navInstanceId = crypto.randomUUID();
 
 // Check if item is current page
+// Empty or placeholder paths must not become href="" (which resolves to the current page)
+function navHref(item) {
+  const path = typeof item.path === "string" ? item.path.trim() : "";
+  return path && path !== "#" ? path : undefined;
+}
+
 function isCurrentPage(item) {
   return Boolean(item.path && Astro.url.pathname === item.path);
 }
@@ -37,6 +43,7 @@ function createNavItemData(item, level, parentGroupId) {
   return {
     ...item,
     hasChildren,
+    href: navHref(item),
     level,
     dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
@@ -59,12 +66,19 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 };
 ---
 
-<input type="checkbox" id={toggleId} class="nav-toggle" autocomplete="off" />
-<label
-  for={toggleId}
+<input
+  type="checkbox"
+  id={toggleId}
+  class="nav-toggle"
+  autocomplete="off"
+  aria-label="Navigation menu open state"
+  tabindex="-1"
+/>
+<button
+  type="button"
   class="nav-hamburger mobile-button"
   aria-label="Toggle navigation menu"
-  tabindex="0"
+  data-toggle-target={toggleId}
 >
   <Button
     variant="tertiary"
@@ -74,7 +88,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     hideText="true"
     class="mobile-nav-button"
   />
-</label>
+</button>
 
 <nav class:list={["mobile", className]} data-toggle-id={toggleId} {...htmlAttributes}>
   <div class="mobile-header">
@@ -90,11 +104,10 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         />
       </slot>
     </div>
-    <label
-      for={toggleId}
+    <button
+      type="button"
       class="mobile-close mobile-button"
       aria-label="Close navigation menu"
-      tabindex="0"
     >
       <Button
         variant="tertiary"
@@ -104,7 +117,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         hideText="true"
         class="mobile-nav-close mobile-nav-button"
       />
-    </label>
+    </button>
   </div>
 
   <div class="mobile-content">
@@ -135,7 +148,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           if (!itemData.hasChildren) {
             return (
               <li class="nav-item">
-                <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+                <a href={itemData.href} aria-current={itemData.isCurrent ? "page" : undefined}>
                   {itemData.name}
                 </a>
               </li>
@@ -154,7 +167,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 autocomplete="off"
                 checked={itemData.hasCurrent}
               />
-              <a href={itemData.path} aria-current={itemData.isCurrent ? "page" : undefined}>
+              <a href={itemData.href} aria-current={itemData.isCurrent ? "page" : undefined}>
                 {itemData.name}
               </a>
               <label
@@ -184,7 +197,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                       return (
                         <li class="nav-item">
                           <a
-                            href={childData.path}
+                            href={childData.href}
                             aria-current={childData.isCurrent ? "page" : undefined}
                           >
                             {childData.name}
@@ -206,7 +219,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           checked={childData.hasCurrent}
                         />
                         <a
-                          href={childData.path}
+                          href={childData.href}
                           aria-current={childData.isCurrent ? "page" : undefined}
                         >
                           {childData.name}
@@ -241,7 +254,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                               return (
                                 <li class="nav-item">
                                   <a
-                                    href={grandChildData.path}
+                                    href={grandChildData.href}
                                     aria-current={grandChildData.isCurrent ? "page" : undefined}
                                   >
                                     {grandChildData.name}
@@ -323,7 +336,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     // Find the toggle for this specific nav instance
     const toggleId = nav.getAttribute("data-toggle-id");
     const toggle = document.getElementById(toggleId);
-    const hamburger = document.querySelector(`label[for="${toggleId}"].nav-hamburger`);
+    const hamburger = document.querySelector(`.nav-hamburger[data-toggle-target="${toggleId}"]`);
 
     // Handle navigation toggle state and accessibility
     function handleNavToggle(isOpen) {
@@ -432,9 +445,13 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     }
 
     .mobile-button {
+      background: none;
+      border: 0;
       border-radius: var(--radius-xs);
+      cursor: pointer;
       display: inline-block;
       outline-offset: -2px;
+      padding: 0;
     }
 
     .mobile {

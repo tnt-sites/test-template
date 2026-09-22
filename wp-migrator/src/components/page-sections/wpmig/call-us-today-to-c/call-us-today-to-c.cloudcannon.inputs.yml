@@ -1,0 +1,39 @@
+_inputs:
+  text:
+    type: textarea
+  subheading:
+    type: text
+  text2:
+    type: textarea
+  heading:
+    type: text
+  text3:
+    type: textarea
+  heading2:
+    type: text
+  text4:
+    type: textarea
+  image:
+    type: image
+  imageAlt:
+    type: text
+  text5:
+    type: textarea
+  text6:
+    type: html
+  text7:
+    type: html
+  text8:
+    type: html
+  text9:
+    type: html
+  text10:
+    type: html
+  heading3:
+    type: text
+  text11:
+    type: html
+  heading4:
+    type: html
+  textColor:
+    type: color

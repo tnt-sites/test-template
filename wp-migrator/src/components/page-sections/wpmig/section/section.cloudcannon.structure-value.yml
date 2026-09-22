@@ -1,0 +1,17 @@
+label: Section
+icon: vertical_split
+description: Section section with imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/section
+  id: ""
+  image: ""
+  imageAlt: ""
+preview:
+  text:
+    - Section
+  icon: vertical_split
+picker_preview:
+  text: Section
+  subtext: Section section with imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/section/section.cloudcannon.inputs.yml

@@ -1,0 +1,269 @@
+---
+/**
+ * Columbine Creek Has A — migrated from dental-implants-littleton-co [6] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  subheading = "",
+  image = "",
+  imageAlt = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="columbine-creek-has-a" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="ccha-box">
+    <div class="ccha-box2">
+      <div class="ccha-box3">
+        {text && <p class="ccha-text">{text}</p>}
+      </div>
+      <div class="ccha-box4">
+        <div class="ccha-box5">
+          <div class="ccha-box6">
+            {subheading && <h5 class="ccha-heading" set:html={subheading} />}
+          </div>
+        </div>
+        <div class="ccha-box7">
+          <div class="ccha-box8">
+            <div class="ccha-box9">
+              {image && <img class="ccha-media" src={image} alt={imageAlt || ""} loading="lazy" width="135" height="18" />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ccha-box10">
+      <iframe class="ccha-embed" src="https://www.youtube.com/embed/cmzlzKGBpLk" title="YouTube video" loading="lazy" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+    </div>
+  </div>
+</section>
+<style>
+  .columbine-creek-has-a {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 75px;
+    padding-top: 100px;
+    position: relative;
+    text-align: left;
+  }
+
+  .ccha-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .ccha-box2 {
+    align-content: flex-start;
+    background-image: url("/wp-content/uploads/2020/03/quote.png");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccha-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20.8px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 27px;
+    margin-bottom: -24px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ccha-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ccha-box4 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ccha-box5 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccha-box6 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ccha-heading {
+    box-sizing: border-box;
+    color: #3b6278;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-transform: uppercase;
+  }
+
+  .ccha-box7 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccha-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .ccha-box9 {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .ccha-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .ccha-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ccha-embed {
+    aspect-ratio: 16 / 9;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .ccha-box {
+      max-width: 1024px;
+    }
+
+    .ccha-box2 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ccha-box5 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ccha-box6 {
+      text-align: end;
+    }
+
+    .ccha-box7 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .ccha-box8 {
+      text-align: start;
+    }
+
+    .ccha-box10 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 413px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ccha-box {
+      flex-wrap: nowrap;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ccha-box3 {
+      line-height: 41.6px;
+    }
+
+    .ccha-box4 {
+      flex-wrap: nowrap;
+    }
+
+    .ccha-box10 {
+      min-height: 394px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ccha-heading {
+    font-weight: 700;
+  }
+  .ccha-text {
+    font-size: 20.8px;
+    line-height: 27.04px;
+  }
+  @media (min-width: 768px) {
+    .ccha-heading {
+      font-weight: 700;
+    }
+
+    .ccha-text {
+      font-size: 20.8px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ccha-text {
+      font-size: 20.8px;
+      line-height: 41.6px;
+    }
+
+    .ccha-heading {
+      font-weight: 700;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

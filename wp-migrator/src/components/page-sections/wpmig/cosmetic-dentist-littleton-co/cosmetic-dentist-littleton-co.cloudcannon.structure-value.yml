@@ -1,0 +1,18 @@
+label: Cosmetic Dentist Littleton Co
+icon: vertical_split
+description: Cosmetic Dentist Littleton Co section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cosmetic-dentist-littleton-co
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Cosmetic Dentist Littleton Co
+  icon: vertical_split
+picker_preview:
+  text: Cosmetic Dentist Littleton Co
+  subtext: Cosmetic Dentist Littleton Co section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cosmetic-dentist-littleton-co/cosmetic-dentist-littleton-co.cloudcannon.inputs.yml

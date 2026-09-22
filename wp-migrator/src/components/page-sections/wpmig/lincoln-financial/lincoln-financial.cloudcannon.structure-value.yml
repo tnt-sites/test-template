@@ -1,0 +1,18 @@
+label: Lincoln Financial
+icon: vertical_split
+description: Lincoln Financial section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/lincoln-financial
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Lincoln Financial
+  icon: vertical_split
+picker_preview:
+  text: Lincoln Financial
+  subtext: Lincoln Financial section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/lincoln-financial/lincoln-financial.cloudcannon.inputs.yml

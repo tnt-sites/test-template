@@ -1,0 +1,55 @@
+---
+/**
+ * Home About Us — migrated from about-us [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="home-about-us" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  {text && <div class="hau-text" set:html={text} />}
+</div>
+<style>
+  .home-about-us {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  .hau-text {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .home-about-us {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .home-about-us {
+      max-width: 1140px;
+    }
+
+    .hau-text {
+      padding-top: 20px;
+      text-align: left;
+    }
+  }
+</style>

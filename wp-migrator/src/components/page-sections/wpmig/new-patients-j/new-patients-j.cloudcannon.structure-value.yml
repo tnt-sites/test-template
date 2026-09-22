@@ -1,0 +1,68 @@
+label: New Patients J
+icon: grid_view
+description: New Patients J section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/new-patients-j
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  text: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  text5: ""
+  text6: ""
+  text7: ""
+  text8: ""
+  text9: ""
+  text10: ""
+  text11: ""
+  text12: ""
+  text13: ""
+  text14: ""
+  text15: ""
+  text16: ""
+  text17: ""
+  text18: ""
+  subheading: ""
+  text19: ""
+  text20: ""
+  text21: ""
+  text22: ""
+  heading2: ""
+  text23: ""
+  text24: ""
+  text25: ""
+  text26: ""
+  text27: ""
+  text28: ""
+  heading3: ""
+  items:
+    - title: ""
+      text: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  textColor2: "#333333"
+  titleColor: "#1b2e38"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.68)
+preview:
+  text:
+    - New Patients J
+  icon: grid_view
+picker_preview:
+  text: New Patients J
+  subtext: New Patients J section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/new-patients-j/new-patients-j.cloudcannon.inputs.yml

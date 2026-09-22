@@ -1,0 +1,26 @@
+modal:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Modal
+    icon: add
+  definitions:
+    component_name: Modal
+    named_args:
+      - editor_key: id
+        type: string
+        optional: true
+      - editor_key: closeLabel
+        type: string
+        optional: true
+      - editor_key: showCloseButton
+        type: boolean
+        optional: true
+      - editor_key: contentSections
+        type: array
+      - editor_key: class
+        type: string
+        optional: true
+  _inputs_from_glob:
+    - /src/components/page-sections/info-blocks/modal/modal.cloudcannon.inputs.yml

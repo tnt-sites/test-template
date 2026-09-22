@@ -1,0 +1,10 @@
+_snippets:
+  prose_block_faqs:
+    template: astro_component
+    inline: false
+    preview:
+      text: Prose Block Faqs
+    definitions:
+      component_name: page-sections/wpmig/prose-block-faqs
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/prose-block-faqs/prose-block-faqs.cloudcannon.inputs.yml

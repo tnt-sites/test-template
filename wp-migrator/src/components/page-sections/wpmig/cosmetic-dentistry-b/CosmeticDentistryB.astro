@@ -1,0 +1,989 @@
+---
+/**
+ * Cosmetic Dentistry B — migrated from dental-services/cosmetic-dentistry/dental-bridges [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  heading4 = "",
+  text5 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="cosmetic-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${buttonBackgroundHoverColor};--c11:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="cdb-box">
+    <div class="cdb-box2">
+      <div class="cdb-box3">
+        <div class="cdb-box4">
+          {eyebrow && <h4 class="cdb-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdb-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="cdb-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+        </div>
+      </div>
+      <div class="cdb-box5">
+        <div class="cdb-box6">
+          <div class="cdb-box7">
+            <div class="cdb-box8">
+              <h2 class="cdb-heading2">{heading}</h2>
+            </div>
+            <div class="cdb-box9">
+              <div class="cdb-box10">
+                {text && <p class="cdb-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="cdb-box11">
+            <div class="cdb-box12">
+              {subheading && <h3 class="cdb-heading3">{subheading}</h3>}
+            </div>
+            <div class="cdb-box13">
+              <div class="cdb-box14">
+                {text2 && <p class="cdb-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cdb-box15">
+            <div class="cdb-box16">
+              {heading2 && <h3 class="cdb-heading4">{heading2}</h3>}
+            </div>
+            <div class="cdb-box17">
+              <div class="cdb-box18">
+                {text3 && <p class="cdb-text3" set:html={text3} />}
+              </div>
+            </div>
+          </div>
+          <div class="cdb-box19">
+            <div class="cdb-box20">
+              {heading3 && <h3 class="cdb-heading5">{heading3}</h3>}
+            </div>
+            <div class="cdb-box21">
+              <div class="cdb-box22">
+                {text4 && <p class="cdb-text4">{text4}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cdb-box23">
+            <div class="cdb-box24">
+              <div class="cdb-decor" aria-hidden="true"></div>
+            </div>
+            <div class="cdb-box25">
+              {heading4 && <h2 class="cdb-heading6">{heading4}</h2>}
+            </div>
+            <div class="cdb-box26">
+              <div class="cdb-box27">
+                {text5 && <p class="cdb-text5" set:html={text5} />}
+              </div>
+            </div>
+            <div class="cdb-box28">
+              <div class="cdb-box29">
+                {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdb-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+              </div>
+            </div>
+            <div class="cdb-box30">
+              <div class="cdb-box31">
+                <div class="cdb-box32">
+                  {secondaryButtonText6 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cdb-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .cosmetic-dentistry-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cdb-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cdb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .cdb-box3 {
+    display: none;
+  }
+
+  .cdb-box4 {
+    display: none;
+  }
+
+  .cdb-heading {
+    display: none;
+  }
+
+  :global(.cdb-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdb-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdb-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdb-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.cdb-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .cdb-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .cdb-box6 {
+    box-sizing: border-box;
+  }
+
+  .cdb-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdb-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdb-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdb-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box10 {
+    box-sizing: border-box;
+  }
+
+  .cdb-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdb-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdb-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdb-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdb-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box14 {
+    box-sizing: border-box;
+  }
+
+  .cdb-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdb-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdb-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdb-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdb-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box18 {
+    box-sizing: border-box;
+  }
+
+  .cdb-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdb-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdb-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdb-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdb-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box22 {
+    box-sizing: border-box;
+  }
+
+  .cdb-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdb-box23 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cdb-box24 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .cdb-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .cdb-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cdb-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cdb-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box27 {
+    box-sizing: border-box;
+  }
+
+  .cdb-text5 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cdb-box28 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box29 {
+    box-sizing: border-box;
+  }
+
+  :global(.cdb-btn6) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cdb-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .cdb-box30 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cdb-box31 {
+    box-sizing: border-box;
+  }
+
+  .cdb-box32 {
+    box-sizing: border-box;
+  }
+
+  :global(.cdb-btn7) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.cdb-btn7) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.cdb-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cdb-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.cdb-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cdb-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cdb-btn5):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.cdb-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.cdb-btn7):hover {
+    background-color: var(--c11);
+  }
+
+  @media (min-width: 768px) {
+    .cdb-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cdb-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1470px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .cdb-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cdb-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.cdb-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.cdb-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .cdb-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .cdb-heading2 {
+      line-height: 32px;
+    }
+
+    .cdb-heading3 {
+      line-height: 28px;
+    }
+
+    .cdb-heading4 {
+      line-height: 28px;
+    }
+
+    .cdb-heading5 {
+      line-height: 28px;
+    }
+
+    .cdb-heading6 {
+      line-height: 32px;
+    }
+
+    .cdb-box30 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .cdb-box31 {
+      display: none;
+    }
+
+    .cdb-box32 {
+      display: none;
+    }
+
+    :global(.cdb-btn7) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .cdb-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cdb-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1062px;
+    }
+
+    .cdb-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cdb-heading2 {
+    font-weight: 400;
+  }
+  .cdb-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdb-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdb-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdb-box23 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .cdb-heading6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cdb-text3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cdb-box27 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cdb-box28 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .cdb-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cdb-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .cdb-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cdb-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cdb-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cdb-text5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cdb-heading2 {
+      font-weight: 400;
+    }
+
+    .cdb-heading3 {
+      font-weight: 400;
+    }
+
+    .cdb-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cdb-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .cdb-decor {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cdb-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.cdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .cdb-box28 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .cdb-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cdb-box19 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .cdb-text {
+      line-height: 24px;
+    }
+
+    .cdb-text2 {
+      line-height: 24px;
+    }
+
+    .cdb-text3 {
+      line-height: 24px;
+    }
+
+    .cdb-text4 {
+      line-height: 24px;
+    }
+
+    .cdb-text5 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cdb-heading2 {
+      font-weight: 400;
+    }
+
+    .cdb-heading3 {
+      font-weight: 400;
+    }
+
+    .cdb-heading4 {
+      font-weight: 400;
+    }
+
+    .cdb-heading5 {
+      font-weight: 400;
+    }
+
+    .cdb-heading6 {
+      font-weight: 400;
+    }
+
+    :global(.cdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.cdb-btn6) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .cdb-text {
+      line-height: 24px;
+    }
+
+    .cdb-text2 {
+      line-height: 24px;
+    }
+
+    .cdb-text3 {
+      line-height: 24px;
+    }
+
+    .cdb-text4 {
+      line-height: 24px;
+    }
+
+    .cdb-text5 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

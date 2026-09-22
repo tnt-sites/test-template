@@ -1,0 +1,6 @@
+_inputs:
+  embedUrl:
+    type: url
+  hidden:
+    type: switch
+    comment: Hide this map section on this page without removing it.

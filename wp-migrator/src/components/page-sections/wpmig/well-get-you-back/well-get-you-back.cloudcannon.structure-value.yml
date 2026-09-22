@@ -1,0 +1,18 @@
+label: Well Get You Back
+icon: interests
+description: Well Get You Back section with heading. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/well-get-you-back
+  id: ""
+  heading: ""
+  subheading: ""
+  headingColor: "#3b6278"
+preview:
+  text:
+    - Well Get You Back
+  icon: interests
+picker_preview:
+  text: Well Get You Back
+  subtext: Well Get You Back section with heading. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/well-get-you-back/well-get-you-back.cloudcannon.inputs.yml

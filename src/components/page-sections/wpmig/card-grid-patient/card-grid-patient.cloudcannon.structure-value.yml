@@ -1,0 +1,28 @@
+label: Card Grid Patient
+icon: interests
+description: Card Grid Patient section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/card-grid-patient
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  subheading: ""
+  text3: ""
+  heading2: ""
+  text4: ""
+  headingColor: ""
+  headingColorHex: "#047ac0"
+  textColor: "#000000"
+  textColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+preview:
+  text:
+    - Card Grid Patient
+  icon: interests
+picker_preview:
+  text: Card Grid Patient
+  subtext: Card Grid Patient section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/card-grid-patient/card-grid-patient.cloudcannon.inputs.yml

@@ -1,0 +1,422 @@
+---
+/**
+ * State Of The Art — migrated from lp/new-patient [5] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  buttonText = "",
+  buttonLink = "",
+  items = [],
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  titleColor = "#3b6278",
+  textColor = "#3b6278",
+  buttonBackgroundHoverColor = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<section class="state-of-the-art" id={id || undefined} style={`--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--tt:${titleColor};--tx:${textColor};--c5:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="sota-box">
+    <div class="sota-box2">
+      <div class="sota-grid">
+        {list.map((it) => (
+          <div class="sota-box3">
+            <div class="sota-box4">
+              <h3 class="sota-heading">{it.title}</h3>
+            </div>
+            <div class="sota-box5">
+              {it.text && <p class="sota-text">{it.text}</p>}
+            </div>
+          </div>
+        ))}
+      </div>
+      <section class="sota-box13">
+        <div class="sota-box14">
+          <div class="sota-box15">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sota-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+<style>
+  .state-of-the-art {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    left: -15px;
+    line-height: 24px;
+    position: relative;
+    right: 15px;
+    text-align: left;
+  }
+
+  .state-of-the-art :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sota-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1195px;
+    position: relative;
+  }
+
+  .sota-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sota-box2 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 813px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sota-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sota-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sota-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-height: 234px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sota-box4 {
+    border-top: 2px solid #5bb781;
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 10px;
+    margin-top: 6px;
+    max-width: 100%;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  .sota-heading {
+    box-sizing: border-box;
+    color: var(--tt);
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sota-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sota-text {
+    box-sizing: border-box;
+    color: var(--tx);
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sota-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sota-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sota-box14 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sota-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .sota-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .sota-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  :global(.sota-btn) {
+    background-color: var(--btnbg);
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.sota-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.sota-btn) :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 15px;
+    width: 15px;
+  }
+
+  :global(.sota-btn):hover {
+    background-color: var(--c5);
+  }
+
+  @media (min-width: 768px) {
+    .state-of-the-art {
+      left: -39px;
+      padding-bottom: 40px;
+      padding-top: 40px;
+      right: 39px;
+    }
+
+    .sota-box2 {
+      min-height: auto;
+    }
+
+    .sota-box3 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      min-height: auto;
+    }
+
+    .sota-box4 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      text-align: start;
+    }
+
+    .sota-heading {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .sota-box5 {
+      text-align: start;
+    }
+
+    .sota-text {
+      font-size: 20px;
+      line-height: 35px;
+    }
+
+    .sota-box13 {
+      margin-bottom: 0px;
+      margin-top: 50px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .state-of-the-art {
+      left: -165px;
+      padding-bottom: 83px;
+      padding-top: 0px;
+      right: 165px;
+    }
+
+    .sota-box {
+      flex-wrap: nowrap;
+      margin-left: 122.5px;
+      margin-right: 122.5px;
+    }
+
+    .sota-grid {
+      flex: 0 0 97.02%;
+      flex-wrap: nowrap;
+      margin-left: 17.5px;
+      margin-right: 17.5px;
+      max-width: 97.02%;
+    }
+
+    .sota-box5 {
+      margin-bottom: 12px;
+    }
+
+    .sota-text {
+      font-size: 22px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sota-heading {
+    font-weight: 400;
+  }
+  .sota-text {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  :global(.sota-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(59, 98, 120);
+    font-family: Roboto, sans-serif;
+    font-size: 22px;
+    font-weight: 300;
+    justify-content: normal;
+    line-height: 30px;
+  }
+  .sota-box3 {
+    text-align: center;
+  }
+  .sota-box13 {
+    color: rgb(59, 98, 120);
+    font-family: Montserrat, sans-serif;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+  }
+  .sota-box14 {
+    justify-content: normal;
+    text-align: center;
+  }
+  .sota-box {
+    justify-content: center;
+  }
+  .sota-box2 {
+    justify-content: normal;
+  }
+  @media (min-width: 768px) {
+    .sota-heading {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .sota-box13 {
+      color: rgb(59, 98, 120);
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 35px;
+      text-align: start;
+    }
+
+    :global(.sota-btn) {
+      align-items: normal;
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      justify-content: normal;
+      line-height: 24px;
+    }
+
+    .sota-box4 {
+      color: rgb(59, 98, 120);
+      font-family: Montserrat, sans-serif;
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    .sota-box3 {
+      text-align: start;
+    }
+
+    .sota-box15 {
+      justify-content: center;
+      text-align: left;
+    }
+
+    .sota-box {
+      justify-content: center;
+    }
+
+    .sota-box2 {
+      justify-content: normal;
+    }
+
+    .sota-box14 {
+      justify-content: normal;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sota-heading {
+      font-weight: 400;
+    }
+
+    :global(.sota-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

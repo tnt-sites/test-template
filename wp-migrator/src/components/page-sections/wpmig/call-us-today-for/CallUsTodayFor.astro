@@ -1,0 +1,452 @@
+---
+/**
+ * Call Us Today For — migrated from broken-fillings [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  text2 = "",
+  text3 = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text4 = "",
+  heading = "",
+  text5 = "",
+  heading2 = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="call-us-today-for" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="cutf-box">
+    <div class="cutf-box2">
+      <section class="cutf-box3">
+        <div class="cutf-box4">
+          <div class="cutf-box5">
+            <div class="cutf-box6">
+              <div class="cutf-box7">
+                <div class="cutf-box8">
+                  {text && <p class="cutf-text" set:html={text} />}
+                </div>
+              </div>
+              <div class="cutf-box9">
+                {text2 && <div class="cutf-body" set:html={text2} />}
+              </div>
+              <div class="cutf-box10">
+                {text3 && <div class="cutf-text2">{text3}</div>}
+              </div>
+            </div>
+            <div class="cutf-box11">
+              <div class="cutf-box12">
+                {image && <img class="cutf-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="678" />}
+              </div>
+            </div>
+          </div>
+          <div class="cutf-box13">
+            <div class="cutf-box14">
+              {subheading && <h4 class="cutf-heading">{subheading}</h4>}
+            </div>
+            <div class="cutf-box15">
+              <div class="cutf-box16">
+                {text4 && <p class="cutf-text3" set:html={text4} />}
+              </div>
+            </div>
+          </div>
+          <div class="cutf-box17">
+            <div class="cutf-box18">
+              <h4 class="cutf-heading2">{heading}</h4>
+            </div>
+            <div class="cutf-box19">
+              <div class="cutf-box20">
+                {text5 && <p class="cutf-text4" set:html={text5} />}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cutf-box21">
+        <div class="cutf-box22">
+          <div class="cutf-box23">
+            {heading2 && <h4 class="cutf-heading3" set:html={heading2} />}
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<style>
+  .call-us-today-for {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    min-height: 1681px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cutf-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cutf-box2 {
+    box-sizing: border-box;
+  }
+
+  .cutf-box3 {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .cutf-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutf-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutf-box8 {
+    box-sizing: border-box;
+  }
+
+  .cutf-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cutf-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutf-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .cutf-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutf-text2 {
+    box-sizing: border-box;
+  }
+
+  .cutf-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cutf-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cutf-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutf-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cutf-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutf-box16 {
+    box-sizing: border-box;
+  }
+
+  .cutf-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cutf-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutf-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cutf-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutf-box20 {
+    box-sizing: border-box;
+  }
+
+  .cutf-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cutf-box21 {
+    background-color: #3b6278;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .cutf-box22 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutf-box23 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cutf-heading3 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .call-us-today-for {
+      min-height: 1101px;
+    }
+
+    .cutf-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cutf-box6 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .cutf-box11 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      min-height: 424px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .call-us-today-for {
+      min-height: 861px;
+    }
+
+    .cutf-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cutf-box5 {
+      flex-wrap: nowrap;
+    }
+
+    .cutf-box11 {
+      min-height: auto;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cutf-box18 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  .cutf-heading2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .cutf-box22 {
+    align-items: normal;
+    justify-content: normal;
+    text-align: center;
+  }
+  .cutf-box23 {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .cutf-heading {
+    line-height: 24px;
+  }
+  .cutf-text4 {
+    background-color: rgb(59, 98, 120);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cutf-box21 {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+  }
+  .cutf-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cutf-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cutf-heading {
+      line-height: 24px;
+    }
+
+    .cutf-heading2 {
+      line-height: 24px;
+    }
+
+    .cutf-text {
+      line-height: 24px;
+    }
+
+    .cutf-text3 {
+      line-height: 24px;
+    }
+
+    .cutf-text4 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cutf-heading {
+      line-height: 24px;
+    }
+
+    .cutf-heading2 {
+      line-height: 24px;
+    }
+
+    .cutf-text {
+      line-height: 24px;
+    }
+
+    .cutf-text3 {
+      line-height: 24px;
+    }
+
+    .cutf-text4 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

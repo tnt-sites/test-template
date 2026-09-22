@@ -1,0 +1,18 @@
+label: Thank You
+icon: vertical_split
+description: Thank You section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/thank-you
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Thank You
+  icon: vertical_split
+picker_preview:
+  text: Thank You
+  subtext: Thank You section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/thank-you/thank-you.cloudcannon.inputs.yml

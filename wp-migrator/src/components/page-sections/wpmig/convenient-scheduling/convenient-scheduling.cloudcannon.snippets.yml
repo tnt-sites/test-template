@@ -1,0 +1,10 @@
+_snippets:
+  convenient_scheduling:
+    template: astro_component
+    inline: false
+    preview:
+      text: Convenient Scheduling
+    definitions:
+      component_name: page-sections/wpmig/convenient-scheduling
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/convenient-scheduling/convenient-scheduling.cloudcannon.inputs.yml

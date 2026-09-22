@@ -1,0 +1,10 @@
+_snippets:
+  cosmetic_dentistry_e:
+    template: astro_component
+    inline: false
+    preview:
+      text: Cosmetic Dentistry E
+    definitions:
+      component_name: page-sections/wpmig/cosmetic-dentistry-e
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/cosmetic-dentistry-e/cosmetic-dentistry-e.cloudcannon.inputs.yml

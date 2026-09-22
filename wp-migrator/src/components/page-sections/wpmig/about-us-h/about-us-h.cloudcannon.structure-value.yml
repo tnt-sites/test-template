@@ -1,0 +1,52 @@
+label: About Us H
+icon: grid_view
+description: About Us H section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-h
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  image2: ""
+  image2Alt: ""
+  heading3: ""
+  text3: ""
+  text4: ""
+  heading4: ""
+  items:
+    - text: ""
+  items2:
+    - text: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.58)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.68)
+preview:
+  text:
+    - About Us H
+  icon: grid_view
+picker_preview:
+  text: About Us H
+  subtext: About Us H section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-h/about-us-h.cloudcannon.inputs.yml

@@ -54,6 +54,11 @@ const {
     .video {
       display: block;
       margin-top: var(--spacing-lg);
+      /* Without this a hosted <video> lays out at its own intrinsic pixel size
+         and sits marooned in whatever column it was put in — the source's
+         videos fill theirs. */
+      max-width: 100%;
+      width: 100%;
     }
   }
 </style>

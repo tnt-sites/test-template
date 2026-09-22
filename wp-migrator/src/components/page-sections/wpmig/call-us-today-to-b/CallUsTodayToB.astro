@@ -1,0 +1,421 @@
+---
+/**
+ * Call Us Today To B — migrated from cracked-tooth [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+const {
+  text = "",
+  text2 = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text3 = "",
+  text4 = "",
+  heading = "",
+  items = [],
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="call-us-today-to-b" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="cutt-box">
+    <div class="cutt-box2">
+      <section class="cutt-box3">
+        <div class="cutt-box4">
+          <div class="cutt-box5">
+            <div class="cutt-box6">
+              <div class="cutt-box7">
+                <div class="cutt-box8">
+                  {text && <p class="cutt-text" set:html={text} />}
+                </div>
+              </div>
+              <div class="cutt-box9">
+                {text2 && <div class="cutt-body" set:html={text2} />}
+              </div>
+            </div>
+            <div class="cutt-box10">
+              <div class="cutt-box11">
+                {image && <img class="cutt-media" src={image} alt={imageAlt || ""} loading="lazy" width="1024" height="534" />}
+              </div>
+            </div>
+          </div>
+          <div class="cutt-box12">
+            <div class="cutt-box13">
+              {subheading && <h4 class="cutt-heading">{subheading}</h4>}
+            </div>
+            <div class="cutt-box14">
+              <div class="cutt-box15">
+                {text3 && <p class="cutt-text2">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="cutt-grid">
+            {list.map((it) => (
+              <div class="cutt-box16">
+                <div class="cutt-box17">
+                  {it.text && <div class="cutt-body2" set:html={it.text} />}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="cutt-box20">
+            <div class="cutt-box21">
+              {text4 && <div class="cutt-text3" set:html={text4} />}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cutt-box22">
+        <div class="cutt-box23">
+          <div class="cutt-box24">
+            <h4 class="cutt-heading2" set:html={heading} />
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<style>
+  .call-us-today-to-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    min-height: 1901px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .cutt-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .cutt-box2 {
+    box-sizing: border-box;
+  }
+
+  .cutt-box3 {
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  .cutt-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box5 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutt-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutt-box8 {
+    box-sizing: border-box;
+  }
+
+  .cutt-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cutt-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutt-body :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .cutt-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cutt-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .cutt-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutt-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cutt-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutt-box15 {
+    box-sizing: border-box;
+  }
+
+  .cutt-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .cutt-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutt-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .cutt-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .cutt-box20 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cutt-text3 {
+    box-sizing: border-box;
+  }
+
+  .cutt-box22 {
+    background-color: #3b6278;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .cutt-box23 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cutt-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .cutt-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .call-us-today-to-b {
+      min-height: 1178px;
+    }
+
+    .cutt-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .cutt-box6 {
+      flex: 0 0 60%;
+      max-width: 60%;
+    }
+
+    .cutt-box10 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      min-height: 350px;
+    }
+
+    .cutt-box16 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 176px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .call-us-today-to-b {
+      min-height: 878px;
+    }
+
+    .cutt-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .cutt-box5 {
+      flex-wrap: nowrap;
+    }
+
+    .cutt-box10 {
+      min-height: auto;
+    }
+
+    .cutt-grid {
+      flex-wrap: nowrap;
+    }
+
+    .cutt-box16 {
+      min-height: auto;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .cutt-heading {
+    line-height: 24px;
+  }
+  .cutt-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .cutt-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .cutt-heading {
+      line-height: 24px;
+    }
+
+    .cutt-text {
+      line-height: 24px;
+    }
+
+    .cutt-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .cutt-heading {
+      line-height: 24px;
+    }
+
+    .cutt-text {
+      line-height: 24px;
+    }
+
+    .cutt-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

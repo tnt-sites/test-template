@@ -1,0 +1,17 @@
+label: Home Facial Swelling Treatment
+icon: interests
+description: Home Facial Swelling Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-facial-swelling-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Facial Swelling Treatment
+  icon: interests
+picker_preview:
+  text: Home Facial Swelling Treatment
+  subtext: Home Facial Swelling Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-facial-swelling-treatment/home-facial-swelling-treatment.cloudcannon.inputs.yml

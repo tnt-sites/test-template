@@ -1,0 +1,22 @@
+14 section(s) detected on index.html
+  [0] -> its-time-to-love  props=7  icons=6
+  [1] -> prose-section  props=4  repeat=3x(high)
+  [2] -> prose-section-b  props=9  icons=6
+  [3] -> media-prose  props=10  icons=2
+  [4] -> prose-section-c  props=11
+  [5] -> prose-section-d  props=4
+  [6] -> prose-section-e  props=7  repeat=5x(high)  icons=23
+  [7] -> prose-section-f  props=6
+  [8] -> media-prose-b  props=21  icons=2
+  [9] -> prose-section-g  props=7
+  [10] -> prose-section-h  props=7  repeat=6x(high)
+  [11] -> prose-section-i  props=5
+  [12] -> media-block  props=1  repeat=10x(low)
+  [13] -> media-prose-c  props=7  repeat=9x(high)
+
+icons: 39 substituted from the project set, 2 unresolved (cancel, calendar-full)
+assets: 5 copied, 1 missing from the snapshot
+  ! /wp-content/uploads/2024/10/893d09db414e3856ee7f8806624a7daa.mp4
+
+wrote 14 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/index.md (copy into src/content/pages/ manually for now)

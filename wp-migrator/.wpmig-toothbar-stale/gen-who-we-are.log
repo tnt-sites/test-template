@@ -1,0 +1,12 @@
+5 section(s) detected on who-we-are.html
+  [0] -> page-banner  props=8  icons=6
+  [1] -> prose-section-j  props=12
+  [2] -> prose-section-k  props=6
+  [3] -> prose-section-l  props=6  repeat=5x(high)  icons=23
+  [4] -> prose-section-f (shared, identical)  props=6
+
+icons: 29 substituted from the project set, 1 unresolved (calendar-full)
+assets: 2 copied
+
+wrote 5 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/who-we-are.md (copy into src/content/pages/ manually for now)

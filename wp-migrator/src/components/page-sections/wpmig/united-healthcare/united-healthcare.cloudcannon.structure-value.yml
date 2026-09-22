@@ -1,0 +1,18 @@
+label: United Healthcare
+icon: vertical_split
+description: United Healthcare section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/united-healthcare
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - United Healthcare
+  icon: vertical_split
+picker_preview:
+  text: United Healthcare
+  subtext: United Healthcare section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/united-healthcare/united-healthcare.cloudcannon.inputs.yml

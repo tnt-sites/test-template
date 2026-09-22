@@ -1,0 +1,10 @@
+_snippets:
+  guardian_dental:
+    template: astro_component
+    inline: false
+    preview:
+      text: Guardian Dental
+    definitions:
+      component_name: page-sections/wpmig/guardian-dental
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/guardian-dental/guardian-dental.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  home_sunlife:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Sunlife
+    definitions:
+      component_name: page-sections/wpmig/home-sunlife
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-sunlife/home-sunlife.cloudcannon.inputs.yml

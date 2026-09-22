@@ -1,0 +1,363 @@
+---
+/**
+ * United Concordia Employers In — migrated from united-concordia-dentist [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="united-concordia-employers-in" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="ucei-box">
+    <div class="ucei-box2">
+      <div class="ucei-box3">
+        <div class="ucei-box4">
+          <div class="ucei-box5">
+            {image && <img class="ucei-media" src={image} alt={imageAlt || ""} loading="lazy" width="620" height="474" />}
+          </div>
+        </div>
+        <div class="ucei-box6">
+          <div class="ucei-box7">
+            <h2 class="ucei-heading">{heading}</h2>
+          </div>
+          <div class="ucei-box8">
+            {text && <div class="ucei-text">{text}</div>}
+          </div>
+        </div>
+      </div>
+      <div class="ucei-box9">
+        <div class="ucei-box10">
+          {subheading && <h2 class="ucei-heading2">{subheading}</h2>}
+        </div>
+        <div class="ucei-box11">
+          {text2 && <div class="ucei-text2">{text2}</div>}
+        </div>
+      </div>
+      <div class="ucei-box12">
+        <div class="ucei-box13">
+          {heading2 && <h2 class="ucei-heading3">{heading2}</h2>}
+        </div>
+        <div class="ucei-box14">
+          <div class="ucei-box15">
+            {text3 && <p class="ucei-text3">{text3}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="ucei-box16">
+        <div class="ucei-box17">
+          {heading3 && <h2 class="ucei-heading4">{heading3}</h2>}
+        </div>
+        <div class="ucei-box18">
+          {text4 && <div class="ucei-text4">{text4}</div>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .united-concordia-employers-in {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .ucei-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .ucei-box2 {
+    box-sizing: border-box;
+  }
+
+  .ucei-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .ucei-box4 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ucei-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .ucei-media {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .ucei-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ucei-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ucei-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ucei-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ucei-text {
+    box-sizing: border-box;
+  }
+
+  .ucei-box9 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ucei-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ucei-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ucei-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ucei-text2 {
+    box-sizing: border-box;
+  }
+
+  .ucei-box12 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ucei-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ucei-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ucei-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ucei-box15 {
+    box-sizing: border-box;
+  }
+
+  .ucei-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .ucei-box16 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .ucei-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ucei-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .ucei-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .ucei-text4 {
+    box-sizing: border-box;
+  }
+
+  @media (min-width: 768px) {
+    .ucei-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .ucei-box3 {
+      max-width: 1024px;
+    }
+
+    .ucei-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 472px;
+    }
+
+    .ucei-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .ucei-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .ucei-box3 {
+      flex-wrap: nowrap;
+      max-width: 1140px;
+    }
+
+    .ucei-box4 {
+      min-height: auto;
+    }
+
+    .ucei-box6 {
+      min-height: 429px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .ucei-box17 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 48px;
+  }
+  .ucei-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .ucei-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .ucei-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 48px;
+    }
+
+    .ucei-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .ucei-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .ucei-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

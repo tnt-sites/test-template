@@ -1,0 +1,10 @@
+_snippets:
+  card_grid_patient:
+    template: astro_component
+    inline: false
+    preview:
+      text: Card Grid Patient
+    definitions:
+      component_name: page-sections/wpmig/card-grid-patient
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/card-grid-patient/card-grid-patient.cloudcannon.inputs.yml

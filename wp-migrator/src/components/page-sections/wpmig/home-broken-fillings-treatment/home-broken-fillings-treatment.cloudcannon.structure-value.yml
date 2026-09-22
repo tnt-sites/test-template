@@ -1,0 +1,17 @@
+label: Home Broken Fillings Treatment
+icon: interests
+description: Home Broken Fillings Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-broken-fillings-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Broken Fillings Treatment
+  icon: interests
+picker_preview:
+  text: Home Broken Fillings Treatment
+  subtext: Home Broken Fillings Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-broken-fillings-treatment/home-broken-fillings-treatment.cloudcannon.inputs.yml

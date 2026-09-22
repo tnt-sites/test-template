@@ -1,0 +1,18 @@
+label: Thank You For Your
+icon: vertical_split
+description: Thank You For Your section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/thank-you-for-your
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Thank You For Your
+  icon: vertical_split
+picker_preview:
+  text: Thank You For Your
+  subtext: Thank You For Your section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/thank-you-for-your/thank-you-for-your.cloudcannon.inputs.yml

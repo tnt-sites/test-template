@@ -1,0 +1,121 @@
+id:
+  type: text
+  comment: Optional HTML id attribute for this component.
+services:
+  type: array
+  label: Services
+  comment: Grid cards for service categories and optional sub-links.
+  options:
+    structures: _structures.servicesGridItems
+ctaCard:
+  type: object
+  comment: Optional CTA tile (defaults to id="all") displayed in the same grid.
+  options:
+    preview:
+      icon: ads_click
+      text:
+        - key: heading
+        - CTA card
+      subtext:
+        - key: href
+ctaCard.enabled:
+  type: switch
+  comment: Show the CTA tile in the grid.
+ctaCard.id:
+  type: text
+  comment: HTML id for the CTA tile. Use all to match the legacy #all style.
+ctaCard.href:
+  type: text
+  comment: Link URL for the CTA tile.
+ctaCard.heading:
+  type: markdown
+  comment: Main CTA heading text.
+  options:
+    blockquote: false
+    bold: true
+    format:
+    italic: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+ctaCard.buttonText:
+  type: text
+  comment: Button-style label shown inside the CTA tile.
+ctaCard.wide:
+  type: switch
+  comment: Make the CTA tile span two grid columns on larger screens.
+backgroundColor:
+  type: select
+  comment: Background color used behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+backgroundGradient:
+  type: textarea
+  comment: "Optional CSS gradient applied behind the section content."
+backgroundImage:
+  type: object
+  comment: Background image configuration for the section.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  comment: URL or path to the background image.
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  comment: Alt text for the background image.
+  type: textarea
+backgroundImage.positionVertical:
+  comment: Vertical position of the background image.
+  type: select
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  comment: Horizontal position of the background image.
+  type: select
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

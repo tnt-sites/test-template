@@ -1,0 +1,10 @@
+_snippets:
+  humana_employers_in_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Humana Employers In Littleton
+    definitions:
+      component_name: page-sections/wpmig/humana-employers-in-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/humana-employers-in-littleton/humana-employers-in-littleton.cloudcannon.inputs.yml

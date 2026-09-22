@@ -1,0 +1,17 @@
+label: Home Blue Cross Blue
+icon: interests
+description: Home Blue Cross Blue section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-blue-cross-blue
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Blue Cross Blue
+  icon: interests
+picker_preview:
+  text: Home Blue Cross Blue
+  subtext: Home Blue Cross Blue section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-blue-cross-blue/home-blue-cross-blue.cloudcannon.inputs.yml

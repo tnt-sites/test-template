@@ -1,0 +1,50 @@
+label: About Us C
+icon: grid_view
+description: About Us C section with copy, editable cards. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us-c
+  id: ""
+  subheading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  secondaryButtonText5: ""
+  secondaryButtonLink5: ""
+  text: ""
+  cards:
+    - link: ""
+      image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+      buttonText: ""
+      buttonLink: ""
+      text2: ""
+  buttonTextColor: "#1b2e38"
+  textColor: "#1b2e38"
+  cardBackgroundColor: "#ffffff"
+  titleColor: "#3b6278"
+  textColor2: "#777777"
+  textColor3: "#adadad"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.58)
+  hoverColor: "#0056b3"
+  textHoverColor: "#09498c"
+  hoverColor2: "#09498c"
+preview:
+  text:
+    - About Us C
+  icon: grid_view
+picker_preview:
+  text: About Us C
+  subtext: About Us C section with copy, editable cards. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us-c/about-us-c.cloudcannon.inputs.yml

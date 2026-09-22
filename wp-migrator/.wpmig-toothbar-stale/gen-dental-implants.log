@@ -1,0 +1,10 @@
+4 section(s) detected on dental-implants.html
+  [0] -> page-banner (shared, ~0.98)  props=8  icons=6
+  [1] -> media-prose-h (shared, identical)  props=15
+  [2] -> card-grid-e  props=51
+  [3] -> prose-section-f (shared, ~0.91)  props=6
+
+icons: 6 substituted from the project set
+
+wrote 4 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/dental-implants.md (copy into src/content/pages/ manually for now)

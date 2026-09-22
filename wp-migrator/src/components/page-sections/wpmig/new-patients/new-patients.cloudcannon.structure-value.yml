@@ -1,0 +1,18 @@
+label: New Patients
+icon: vertical_split
+description: New Patients section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/new-patients
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - New Patients
+  icon: vertical_split
+picker_preview:
+  text: New Patients
+  subtext: New Patients section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/new-patients/new-patients.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  lincoln_financial:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lincoln Financial
+    definitions:
+      component_name: page-sections/wpmig/lincoln-financial
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/lincoln-financial/lincoln-financial.cloudcannon.inputs.yml

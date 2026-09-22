@@ -1,0 +1,33 @@
+label: Home Doctors
+icon: groups
+description: Homepage "Meet Our Doctors" row — portrait cards with name and credentials.
+value:
+  _component: page-sections/home/home-doctors
+  id: ""
+  eyebrow: ""
+  heading: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      title: ""
+      text: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  headingColor: ""
+  headingColorHex: ""
+  eyebrowColor: ""
+  eyebrowColorHex: ""
+  titleColor: ""
+  titleColorHex: ""
+  textColor: ""
+  textColorHex: ""
+preview:
+  text:
+    - key: heading
+    - Home Doctors
+  icon: groups
+picker_preview:
+  text: Home Doctors
+  subtext: Portrait cards for the practice's doctors.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-doctors/home-doctors.cloudcannon.inputs.yml

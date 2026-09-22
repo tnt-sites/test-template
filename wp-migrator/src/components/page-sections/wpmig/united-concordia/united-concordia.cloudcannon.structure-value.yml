@@ -1,0 +1,18 @@
+label: United Concordia
+icon: vertical_split
+description: United Concordia section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/united-concordia
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - United Concordia
+  icon: vertical_split
+picker_preview:
+  text: United Concordia
+  subtext: United Concordia section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/united-concordia/united-concordia.cloudcannon.inputs.yml

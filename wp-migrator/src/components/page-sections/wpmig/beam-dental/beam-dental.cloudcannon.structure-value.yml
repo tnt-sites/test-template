@@ -1,0 +1,18 @@
+label: Beam Dental
+icon: vertical_split
+description: Beam Dental section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/beam-dental
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Beam Dental
+  icon: vertical_split
+picker_preview:
+  text: Beam Dental
+  subtext: Beam Dental section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/beam-dental/beam-dental.cloudcannon.inputs.yml

@@ -1,0 +1,55 @@
+---
+/**
+ * Home Dental Services Littleton — migrated from dental-services [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="home-dental-services-littleton" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  {text && <div class="hdsl-text" set:html={text} />}
+</div>
+<style>
+  .home-dental-services-littleton {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  .hdsl-text {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 21px;
+    padding-top: 10px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .home-dental-services-littleton {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 720px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .home-dental-services-littleton {
+      max-width: 1140px;
+    }
+
+    .hdsl-text {
+      padding-top: 20px;
+      text-align: left;
+    }
+  }
+</style>

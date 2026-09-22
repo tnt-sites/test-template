@@ -1,0 +1,31 @@
+_inputs:
+  heading:
+    type: text
+  text:
+    type: html
+  embedUrl:
+    type: url
+  image:
+    type: image
+  imageAlt:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  text2:
+    type: html
+  embedUrl2:
+    type: url
+  headingColor:
+    type: color
+  textColor:
+    type: color
+  hoverColor:
+    type: color
+  hoverColor2:
+    type: color

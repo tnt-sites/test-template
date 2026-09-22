@@ -1,0 +1,1428 @@
+---
+/**
+ * General Dentistry D — migrated from dental-services/general-dentistry/cracked-tooth-repair [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  heading3 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  text3 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  text4 = "",
+  heading4 = "",
+  text5 = "",
+  heading5 = "",
+  text6 = "",
+  secondaryButtonText11 = "",
+  secondaryButtonLink11 = "",
+  secondaryButtonText12 = "",
+  secondaryButtonLink12 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.84)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor4 = "rgba(241, 241, 241, 0.77)",
+  hoverColor = "#064d96",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-d" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${hoverBackgroundColor4};--c12:${hoverColor}`} {...rest}>
+  <div class="gdd-box">
+    <div class="gdd-box2">
+      <div class="gdd-box3">
+        <div class="gdd-box4">
+          {eyebrow && <h4 class="gdd-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdd-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdd-box5">
+        <div class="gdd-box6">
+          <div class="gdd-box7">
+            <div class="gdd-box8">
+              <h2 class="gdd-heading2">{heading}</h2>
+            </div>
+            <div class="gdd-box9">
+              <div class="gdd-box10">
+                {text && <p class="gdd-text" set:html={text} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdd-box11">
+            <div class="gdd-box12">
+              {subheading && <h3 class="gdd-heading3">{subheading}</h3>}
+            </div>
+            <div class="gdd-box13">
+              <div class="gdd-box14">
+                {text2 && <p class="gdd-text2">{text2}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdd-box15">
+            <div class="gdd-box16">
+              {heading2 && <h3 class="gdd-heading4">{heading2}</h3>}
+            </div>
+            <div class="gdd-box17">
+              {heading3 && <h5 class="gdd-heading5">{heading3}</h5>}
+            </div>
+            <div class="gdd-box18">
+              <ul class="gdd-box19">
+                <li class="gdd-box20">
+                  {secondaryButtonText9 && <a class="gdd-link" href={secondaryButtonLink9 || "#"}>{secondaryButtonText9}</a>}
+                </li>
+                {text3 && <li class="gdd-text3" set:html={text3} />}
+                <li class="gdd-box21">
+                  {secondaryButtonText10 && <a class="gdd-link2" href={secondaryButtonLink10 || "#"}>{secondaryButtonText10}</a>}
+                </li>
+              </ul>
+            </div>
+            <div class="gdd-box22">
+              <div class="gdd-box23">
+                {text4 && <p class="gdd-text4">{text4}</p>}
+              </div>
+            </div>
+            <div class="gdd-box24">
+              {heading4 && <h4 class="gdd-heading6">{heading4}</h4>}
+            </div>
+            <div class="gdd-box25">
+              <div class="gdd-box26">
+                {text5 && <div class="gdd-body" set:html={text5} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdd-box27">
+            <div class="gdd-box28">
+              <div class="gdd-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdd-box29">
+              {heading5 && <h2 class="gdd-heading7">{heading5}</h2>}
+            </div>
+            <div class="gdd-box30">
+              <div class="gdd-box31">
+                {text6 && <p class="gdd-text5" set:html={text6} />}
+              </div>
+            </div>
+            <div class="gdd-box32">
+              <div class="gdd-box33">
+                {secondaryButtonText11 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdd-btn10" text={secondaryButtonText11} link={secondaryButtonLink11 || "#"} />}
+              </div>
+            </div>
+            <div class="gdd-box34">
+              <div class="gdd-box35">
+                <div class="gdd-box36">
+                  {secondaryButtonText12 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdd-btn11" text={secondaryButtonText12} link={secondaryButtonLink12 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-d {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdd-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdd-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdd-box3 {
+    display: none;
+  }
+
+  .gdd-box4 {
+    display: none;
+  }
+
+  .gdd-heading {
+    display: none;
+  }
+
+  :global(.gdd-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdd-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdd-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdd-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdd-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdd-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box10 {
+    box-sizing: border-box;
+  }
+
+  .gdd-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdd-box11 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdd-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box14 {
+    box-sizing: border-box;
+  }
+
+  .gdd-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdd-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdd-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box18 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box19 {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .gdd-box19 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box20 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    padding-bottom: 12.5px;
+    position: relative;
+  }
+
+  .gdd-box20 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-link {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .gdd-link :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-text3 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 12.5px;
+    padding-bottom: 12.5px;
+    position: relative;
+  }
+
+  .gdd-text3 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box21 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 12.5px;
+    position: relative;
+  }
+
+  .gdd-box21 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-link2 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    transition: all 0.25s ease;
+  }
+
+  .gdd-link2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdd-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box23 {
+    box-sizing: border-box;
+  }
+
+  .gdd-text4 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdd-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading6 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box25 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box26 {
+    box-sizing: border-box;
+    min-height: 280px;
+  }
+
+  .gdd-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdd-box27 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdd-box28 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdd-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdd-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdd-heading7 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdd-box30 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box31 {
+    box-sizing: border-box;
+  }
+
+  .gdd-text5 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdd-box32 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box33 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdd-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdd-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdd-box34 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdd-box35 {
+    box-sizing: border-box;
+  }
+
+  .gdd-box36 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdd-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdd-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdd-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdd-btn2):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdd-btn3):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdd-btn4):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdd-btn5):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdd-btn6):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdd-btn7):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdd-btn8):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdd-btn9):hover {
+    background-color: var(--c11);
+  }
+
+  .gdd-link:hover {
+    border-top-color: #064d96;
+    color: var(--c12);
+  }
+
+  .gdd-link2:hover {
+    border-top-color: #064d96;
+    color: #064d96;
+  }
+
+  :global(.gdd-btn10):hover {
+    background-color: #4eaf76;
+  }
+
+  :global(.gdd-btn11):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .gdd-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdd-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1684px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdd-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdd-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdd-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdd-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdd-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdd-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdd-heading2 {
+      line-height: 32px;
+    }
+
+    .gdd-heading3 {
+      line-height: 28px;
+    }
+
+    .gdd-heading4 {
+      line-height: 28px;
+    }
+
+    .gdd-heading5 {
+      line-height: 20px;
+    }
+
+    .gdd-heading6 {
+      line-height: 24px;
+    }
+
+    .gdd-box26 {
+      min-height: 232px;
+    }
+
+    .gdd-heading7 {
+      line-height: 32px;
+    }
+
+    .gdd-box34 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdd-box35 {
+      display: none;
+    }
+
+    .gdd-box36 {
+      display: none;
+    }
+
+    :global(.gdd-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdd-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdd-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1232px;
+    }
+
+    :global(.gdd-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdd-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdd-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdd-box26 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdd-heading2 {
+    font-weight: 400;
+  }
+  .gdd-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdd-heading4 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 26px;
+  }
+  .gdd-box27 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gdd-heading7 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdd-box31 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdd-box32 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdd-box12 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gdd-box15 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .gdd-box23 {
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+  }
+  .gdd-heading6 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-box18 {
+    align-items: center;
+  }
+  .gdd-box19 {
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-link {
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-box21 {
+    align-items: normal;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-link2 {
+    align-items: normal;
+    color: rgb(27, 46, 56);
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-box20 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdd-text5 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdd-heading2 {
+      font-weight: 400;
+    }
+
+    .gdd-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdd-heading4 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .gdd-box28 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdd-heading7 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdd-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdd-text5 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gdd-box12 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .gdd-box16 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    .gdd-text4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .gdd-heading6 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+    }
+
+    .gdd-box17 {
+      font-family: Montserrat, sans-serif;
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    .gdd-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .gdd-box19 {
+      align-items: center;
+      line-height: 24px;
+    }
+
+    .gdd-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .gdd-link2 {
+      align-items: normal;
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .gdd-text {
+      line-height: 24px;
+    }
+
+    .gdd-text2 {
+      line-height: 24px;
+    }
+
+    .gdd-box20 {
+      line-height: 24px;
+    }
+
+    .gdd-text3 {
+      line-height: 24px;
+    }
+
+    .gdd-box21 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdd-heading2 {
+      font-weight: 400;
+    }
+
+    .gdd-heading3 {
+      font-weight: 400;
+    }
+
+    .gdd-heading4 {
+      font-weight: 400;
+    }
+
+    .gdd-heading7 {
+      font-weight: 400;
+    }
+
+    :global(.gdd-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdd-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdd-link {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    .gdd-link2 {
+      color: rgb(27, 46, 56);
+      line-height: 24px;
+    }
+
+    :global(.gdd-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdd-text {
+      line-height: 24px;
+    }
+
+    .gdd-text2 {
+      line-height: 24px;
+    }
+
+    .gdd-box19 {
+      line-height: 24px;
+    }
+
+    .gdd-box20 {
+      line-height: 24px;
+    }
+
+    .gdd-text3 {
+      line-height: 24px;
+    }
+
+    .gdd-box21 {
+      line-height: 24px;
+    }
+
+    .gdd-text4 {
+      line-height: 24px;
+    }
+
+    .gdd-text5 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

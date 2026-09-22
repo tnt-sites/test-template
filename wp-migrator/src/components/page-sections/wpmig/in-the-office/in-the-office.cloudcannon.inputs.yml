@@ -1,0 +1,7 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: text
+  headingColor:
+    type: color

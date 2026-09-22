@@ -6,6 +6,12 @@ const { navData = [], class: className, _component, ...htmlAttributes } = Astro.
 // Generate a unique ID for this navigation instance to scope radio buttons
 const navInstanceId = crypto.randomUUID();
 
+// Empty or placeholder paths must not become href="" (which resolves to the current page)
+function navHref(item) {
+  const path = typeof item.path === "string" ? item.path.trim() : "";
+  return path && path !== "#" ? path : undefined;
+}
+
 // Helper function to check if item is current page
 function isCurrentPage(item) {
   return item.path && Astro.url.pathname === item.path;
@@ -114,7 +120,7 @@ function hasCurrentChild(item) {
                                 ? child.children.map((grandChild) => (
                                     <li class="nav-item">
                                       <a
-                                        href={grandChild.path}
+                                        href={navHref(grandChild)}
                                         aria-current={
                                           isCurrentPage(grandChild) ? "page" : undefined
                                         }

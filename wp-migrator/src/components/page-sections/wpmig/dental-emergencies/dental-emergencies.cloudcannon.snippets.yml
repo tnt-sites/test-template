@@ -1,0 +1,10 @@
+_snippets:
+  dental_emergencies:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dental Emergencies
+    definitions:
+      component_name: page-sections/wpmig/dental-emergencies
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dental-emergencies/dental-emergencies.cloudcannon.inputs.yml

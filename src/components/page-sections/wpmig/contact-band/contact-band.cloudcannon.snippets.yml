@@ -1,0 +1,10 @@
+_snippets:
+  contact_band:
+    template: astro_component
+    inline: false
+    preview:
+      text: Contact Band
+    definitions:
+      component_name: page-sections/wpmig/contact-band
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/contact-band/contact-band.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  cosmetic_dentistry_dentist_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Cosmetic Dentistry Dentist In
+    definitions:
+      component_name: page-sections/wpmig/cosmetic-dentistry-dentist-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/cosmetic-dentistry-dentist-in/cosmetic-dentistry-dentist-in.cloudcannon.inputs.yml

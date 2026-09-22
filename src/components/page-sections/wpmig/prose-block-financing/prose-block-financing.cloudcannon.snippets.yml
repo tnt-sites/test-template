@@ -1,0 +1,10 @@
+_snippets:
+  prose_block_financing:
+    template: astro_component
+    inline: false
+    preview:
+      text: Prose Block Financing
+    definitions:
+      component_name: page-sections/wpmig/prose-block-financing
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/prose-block-financing/prose-block-financing.cloudcannon.inputs.yml

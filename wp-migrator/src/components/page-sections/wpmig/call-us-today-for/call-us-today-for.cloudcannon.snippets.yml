@@ -1,0 +1,10 @@
+_snippets:
+  call_us_today_for:
+    template: astro_component
+    inline: false
+    preview:
+      text: Call Us Today For
+    definitions:
+      component_name: page-sections/wpmig/call-us-today-for
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/call-us-today-for/call-us-today-for.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  home_careington:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Careington
+    definitions:
+      component_name: page-sections/wpmig/home-careington
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-careington/home-careington.cloudcannon.inputs.yml

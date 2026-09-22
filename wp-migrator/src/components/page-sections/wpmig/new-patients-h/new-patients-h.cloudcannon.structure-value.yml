@@ -1,0 +1,42 @@
+label: New Patients H
+icon: interests
+description: New Patients H section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/new-patients-h
+  id: ""
+  eyebrow: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  secondaryButtonText: ""
+  secondaryButtonLink: ""
+  secondaryButtonText2: ""
+  secondaryButtonLink2: ""
+  secondaryButtonText3: ""
+  secondaryButtonLink3: ""
+  text: ""
+  text2: ""
+  text3: ""
+  secondaryButtonText4: ""
+  secondaryButtonLink4: ""
+  eyebrowColor: "#1b2e38"
+  headingColor: "#1b2e38"
+  buttonTextColor: "#1b2e38"
+  textColor: "#ffffff"
+  textColor2: "#1b2e38"
+  textColor3: "#868686"
+  buttonBackgroundColor: "#5bb781"
+  buttonTextColor2: "#ffffff"
+  hoverBackgroundColor: rgba(241, 241, 241, 0.84)
+  hoverBackgroundColor2: rgba(241, 241, 241, 0.68)
+  hoverBackgroundColor3: rgba(241, 241, 241, 0.77)
+  hoverBackgroundColor4: rgba(241, 241, 241, 0.58)
+preview:
+  text:
+    - New Patients H
+  icon: interests
+picker_preview:
+  text: New Patients H
+  subtext: New Patients H section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/new-patients-h/new-patients-h.cloudcannon.inputs.yml

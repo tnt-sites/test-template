@@ -1,0 +1,10 @@
+3 section(s) detected on dr-andrea-bakke.html
+  [0] -> page-banner (shared, ~1.00)  props=8  icons=6
+  [1] -> card-grid  props=7
+  [2] -> prose-section-f (shared, identical)  props=6
+
+icons: 6 substituted from the project set
+assets: 1 copied
+
+wrote 3 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/dr-andrea-bakke.md (copy into src/content/pages/ manually for now)

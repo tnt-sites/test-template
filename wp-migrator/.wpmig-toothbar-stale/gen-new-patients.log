@@ -1,0 +1,10 @@
+5 section(s) detected on new-patients.html
+  [0] -> page-banner-b  props=5
+  [1] -> prose-section-m  props=3
+  [2] -> prose-section-n  props=17
+  [3] -> prose-section-o  props=13  repeat=2x(low)
+  [4] -> prose-section-f (shared, identical)  props=6
+assets: 2 copied
+
+wrote 5 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/new-patients.md (copy into src/content/pages/ manually for now)

@@ -1,0 +1,37 @@
+label: Contact Band
+icon: contact_page
+description: The footer's map/form band, usable as a page section. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/contact-band
+  id: ""
+  media: info
+  mapEmbedUrl: ""
+  icon: headset
+  phoneText: ""
+  phoneHref: ""
+  addressLabel: "Address :"
+  addressText: ""
+  addressHref: ""
+  eyebrow: Send Message
+  title: Contact Us
+  formEmbedUrl: ""
+  formTitle: Contact form
+  formHeight: 800
+  backgroundColor: ""
+  panelBackgroundColor: ""
+  panelPadding: ""
+  titleColor: ""
+  titleSize: ""
+  infoTextColor: ""
+  hidden: false
+preview:
+  text:
+    - Contact Band
+  subtext:
+    - key: title
+  icon: contact_page
+picker_preview:
+  text: Contact Band
+  subtext: Map or contact details beside an embedded form.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/contact-band/contact-band.cloudcannon.inputs.yml

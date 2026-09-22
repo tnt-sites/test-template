@@ -1,0 +1,10 @@
+_snippets:
+  ameritas:
+    template: astro_component
+    inline: false
+    preview:
+      text: Ameritas
+    definitions:
+      component_name: page-sections/wpmig/ameritas
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/ameritas/ameritas.cloudcannon.inputs.yml

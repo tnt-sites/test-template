@@ -1,0 +1,10 @@
+_snippets:
+  bcbs_employers_in_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Bcbs Employers In Littleton
+    definitions:
+      component_name: page-sections/wpmig/bcbs-employers-in-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/bcbs-employers-in-littleton/bcbs-employers-in-littleton.cloudcannon.inputs.yml

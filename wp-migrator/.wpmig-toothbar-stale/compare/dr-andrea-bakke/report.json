@@ -1,0 +1,2983 @@
+{
+  "page": "dr-andrea-bakke",
+  "generatedAt": "2026-08-22T19:31:10.080Z",
+  "viewports": {
+    "390": [
+      {
+        "id": "page-banner",
+        "findings": [
+          {
+            "element": "pb-box7",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 370,
+            "built": 224,
+            "delta": -146,
+            "severity": 80,
+            "detail": "146px too narrow"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 370,
+            "built": 168,
+            "delta": -202,
+            "severity": 80,
+            "detail": "202px too narrow"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 168,
+            "delta": -103,
+            "severity": 80,
+            "detail": "103px too narrow"
+          },
+          {
+            "element": "pb-link",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 168,
+            "delta": -103,
+            "severity": 80,
+            "detail": "103px too narrow"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "400",
+            "built": "300",
+            "delta": -100,
+            "severity": 60,
+            "detail": "fontWeight is smaller by 100"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "300",
+            "built": "400",
+            "delta": 100,
+            "severity": 60,
+            "detail": "fontWeight is larger by 100"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 362,
+            "built": 413,
+            "delta": 51,
+            "severity": 51,
+            "detail": "51px too low"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 65,
+            "built": 15,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too short"
+          },
+          {
+            "element": "pb-box5",
+            "kind": "style",
+            "prop": "textAlign",
+            "source": "start",
+            "built": "left",
+            "severity": 50,
+            "detail": "textAlign: expected start, got left"
+          },
+          {
+            "element": "pb-box5",
+            "kind": "style",
+            "prop": "display",
+            "source": "block",
+            "built": "flex",
+            "severity": 50,
+            "detail": "display: expected block, got flex"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "style",
+            "prop": "textAlign",
+            "source": "left",
+            "built": "start",
+            "severity": 50,
+            "detail": "textAlign: expected left, got start"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "style",
+            "prop": "display",
+            "source": "flex",
+            "built": "block",
+            "severity": 50,
+            "detail": "display: expected flex, got block"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "display",
+            "source": "block",
+            "built": "flex",
+            "severity": 50,
+            "detail": "display: expected block, got flex"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "textAlign",
+            "source": "start",
+            "built": "center",
+            "severity": 50,
+            "detail": "textAlign: expected start, got center"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "display",
+            "source": "flex",
+            "built": "block",
+            "severity": 50,
+            "detail": "display: expected flex, got block"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 206,
+            "built": 244,
+            "delta": 38,
+            "severity": 38,
+            "detail": "38px too low"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "16px",
+            "delta": -8,
+            "severity": 32,
+            "detail": "lineHeight is smaller by 8"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "16px",
+            "built": "24px",
+            "delta": 8,
+            "severity": 32,
+            "detail": "lineHeight is larger by 8"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 1,
+            "built": 32,
+            "delta": 31,
+            "severity": 31,
+            "detail": "31px too tall"
+          },
+          {
+            "element": "page-banner",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "style",
+            "prop": "fontFamily",
+            "source": "Montserrat, sans-serif",
+            "built": "Outfit, sans-serif",
+            "severity": 30,
+            "detail": "fontFamily: expected Montserrat, sans-serif, got Outfit, sans-serif"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(255, 255, 255)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(255, 255, 255)"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "fontFamily",
+            "source": "Outfit, sans-serif",
+            "built": "Montserrat, sans-serif",
+            "severity": 30,
+            "detail": "fontFamily: expected Outfit, sans-serif, got Montserrat, sans-serif"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(255, 255, 255)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(255, 255, 255), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "normal",
+            "built": "flex-start",
+            "severity": 30,
+            "detail": "justifyContent: expected normal, got flex-start"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "normal",
+            "built": "stretch",
+            "severity": 30,
+            "detail": "alignItems: expected normal, got stretch"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "flex-start",
+            "built": "normal",
+            "severity": 30,
+            "detail": "justifyContent: expected flex-start, got normal"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "stretch",
+            "built": "normal",
+            "severity": 30,
+            "detail": "alignItems: expected stretch, got normal"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 32,
+            "built": 56,
+            "delta": 24,
+            "severity": 24,
+            "detail": "24px too tall"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 41,
+            "built": 56,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 41,
+            "built": 56,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "pb-link",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 41,
+            "built": 56,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 206,
+            "built": 192,
+            "delta": -14,
+            "severity": 14,
+            "detail": "14px too high"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 258,
+            "built": 244,
+            "delta": -14,
+            "severity": 14,
+            "detail": "14px too high"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 258,
+            "built": 244,
+            "delta": -14,
+            "severity": 14,
+            "detail": "14px too high"
+          },
+          {
+            "element": "pb-link",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 258,
+            "built": 244,
+            "delta": -14,
+            "severity": 14,
+            "detail": "14px too high"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 181,
+            "built": 192,
+            "delta": 11,
+            "severity": 11,
+            "detail": "11px too low"
+          },
+          {
+            "element": "pb-box4",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 186,
+            "built": 179,
+            "delta": -7,
+            "severity": 7,
+            "detail": "7px too high"
+          },
+          {
+            "element": "pb-heading2",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "16px",
+            "delta": 1,
+            "severity": 4,
+            "detail": "fontSize is larger by 1"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "16px",
+            "built": "15px",
+            "delta": -1,
+            "severity": 4,
+            "detail": "fontSize is smaller by 1"
+          }
+        ],
+        "pixel": {
+          "mismatched": 123122,
+          "total": 166920,
+          "ratio": 0.7376108315360652,
+          "heightDelta": 0,
+          "comparedAt": {
+            "width": 390,
+            "height": 428
+          }
+        }
+      },
+      {
+        "id": "card-grid",
+        "findings": [
+          {
+            "element": "card-grid",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box3",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box4",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box5",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box6",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box7",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-text",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box8",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box9",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-decor",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box10",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-heading",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box11",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          }
+        ],
+        "pixel": null
+      },
+      {
+        "id": "prose-section-f",
+        "findings": [
+          {
+            "element": "psf-box6",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-spacer",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 284,
+            "built": 577,
+            "delta": 293,
+            "severity": 80,
+            "detail": "293px too tall"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 374,
+            "built": 284,
+            "delta": -90,
+            "severity": 80,
+            "detail": "90px too short"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 15,
+            "built": 273,
+            "delta": 258,
+            "severity": 80,
+            "detail": "258px too tall"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 67,
+            "built": 370,
+            "delta": 303,
+            "severity": 80,
+            "detail": "303px too wide"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 370,
+            "built": 74,
+            "delta": -296,
+            "severity": 80,
+            "detail": "296px too narrow"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 144,
+            "built": 26,
+            "delta": -118,
+            "severity": 80,
+            "detail": "118px too short"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 582,
+            "built": 393,
+            "delta": -189,
+            "severity": 80,
+            "detail": "189px too high"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 0,
+            "built": 134,
+            "delta": 134,
+            "severity": 80,
+            "detail": "134px too tall"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "600",
+            "built": "400",
+            "delta": -200,
+            "severity": 60,
+            "detail": "fontWeight is smaller by 200"
+          },
+          {
+            "element": "psf-text",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "400",
+            "built": "600",
+            "delta": 200,
+            "severity": 60,
+            "detail": "fontWeight is larger by 200"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "300",
+            "built": "400",
+            "delta": 100,
+            "severity": 60,
+            "detail": "fontWeight is larger by 100"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "400",
+            "built": "300",
+            "delta": -100,
+            "severity": 60,
+            "detail": "fontWeight is smaller by 100"
+          },
+          {
+            "element": "psf-box",
+            "kind": "style",
+            "prop": "display",
+            "source": "flex",
+            "built": "block",
+            "severity": 50,
+            "detail": "display: expected flex, got block"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "display",
+            "source": "block",
+            "built": "flex",
+            "severity": 50,
+            "detail": "display: expected block, got flex"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "style",
+            "prop": "display",
+            "source": "block",
+            "built": "flex",
+            "severity": 50,
+            "detail": "display: expected block, got flex"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "style",
+            "prop": "textAlign",
+            "source": "left",
+            "built": "start",
+            "severity": 50,
+            "detail": "textAlign: expected left, got start"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "style",
+            "prop": "display",
+            "source": "flex",
+            "built": "block",
+            "severity": 50,
+            "detail": "display: expected flex, got block"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "style",
+            "prop": "textAlign",
+            "source": "start",
+            "built": "left",
+            "severity": 50,
+            "detail": "textAlign: expected start, got left"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "style",
+            "prop": "display",
+            "source": "block",
+            "built": "flex",
+            "severity": 50,
+            "detail": "display: expected block, got flex"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 357,
+            "built": 309,
+            "delta": -48,
+            "severity": 48,
+            "detail": "48px too high"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "26px",
+            "built": "15px",
+            "delta": -11,
+            "severity": 44,
+            "detail": "fontSize is smaller by 11"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "26px",
+            "delta": 11,
+            "severity": 44,
+            "detail": "fontSize is larger by 11"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 403,
+            "built": 360,
+            "delta": -43,
+            "severity": 43,
+            "detail": "43px too high"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "15px",
+            "built": "24px",
+            "delta": 9,
+            "severity": 36,
+            "detail": "lineHeight is larger by 9"
+          },
+          {
+            "element": "psf-text",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "15px",
+            "delta": -9,
+            "severity": 36,
+            "detail": "lineHeight is smaller by 9"
+          },
+          {
+            "element": "prose-section-f",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "stretch",
+            "built": "normal",
+            "severity": 30,
+            "detail": "alignItems: expected stretch, got normal"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "flexDirection",
+            "source": "column",
+            "built": "row",
+            "severity": 30,
+            "detail": "flexDirection: expected column, got row"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "center",
+            "built": "normal",
+            "severity": 30,
+            "detail": "justifyContent: expected center, got normal"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "normal",
+            "built": "stretch",
+            "severity": 30,
+            "detail": "alignItems: expected normal, got stretch"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "normal",
+            "built": "center",
+            "severity": 30,
+            "detail": "justifyContent: expected normal, got center"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "space-evenly",
+            "built": "normal",
+            "severity": 30,
+            "detail": "justifyContent: expected space-evenly, got normal"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "center",
+            "built": "normal",
+            "severity": 30,
+            "detail": "alignItems: expected center, got normal"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "justifyContent",
+            "source": "normal",
+            "built": "space-evenly",
+            "severity": 30,
+            "detail": "justifyContent: expected normal, got space-evenly"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "alignItems",
+            "source": "normal",
+            "built": "center",
+            "severity": 30,
+            "detail": "alignItems: expected normal, got center"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 324,
+            "built": 294,
+            "delta": -30,
+            "severity": 30,
+            "detail": "30px too high"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(36, 215, 195)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(36, 215, 195), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-text",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(36, 215, 195)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(36, 215, 195)"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "style",
+            "prop": "fontFamily",
+            "source": "Lato, sans-serif",
+            "built": "Montserrat, sans-serif",
+            "severity": 30,
+            "detail": "fontFamily: expected Lato, sans-serif, got Montserrat, sans-serif"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "style",
+            "prop": "fontFamily",
+            "source": "Montserrat, sans-serif",
+            "built": "Lato, sans-serif",
+            "severity": 30,
+            "detail": "fontFamily: expected Montserrat, sans-serif, got Lato, sans-serif"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 370,
+            "built": 344,
+            "delta": -26,
+            "severity": 26,
+            "detail": "26px too high"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 25,
+            "built": 0,
+            "delta": -25,
+            "severity": 25,
+            "detail": "25px too high"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 36,
+            "built": 11,
+            "delta": -25,
+            "severity": 25,
+            "detail": "25px too high"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 26,
+            "built": 1,
+            "delta": -25,
+            "severity": 25,
+            "detail": "25px too short"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 348,
+            "built": 370,
+            "delta": 22,
+            "severity": 22,
+            "detail": "22px too wide"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 370,
+            "built": 390,
+            "delta": 20,
+            "severity": 20,
+            "detail": "20px too wide"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 352,
+            "built": 372,
+            "delta": 20,
+            "severity": 20,
+            "detail": "20px too tall"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 26,
+            "built": 10,
+            "delta": -16,
+            "severity": 16,
+            "detail": "16px too high"
+          },
+          {
+            "element": "prose-section-f",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 592,
+            "built": 577,
+            "delta": -15,
+            "severity": 15,
+            "detail": "15px too short"
+          },
+          {
+            "element": "psf-box",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 15,
+            "built": 0,
+            "delta": -15,
+            "severity": 15,
+            "detail": "15px too high"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 25,
+            "built": 10,
+            "delta": -15,
+            "severity": 15,
+            "detail": "15px too high"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 324,
+            "built": 309,
+            "delta": -15,
+            "severity": 15,
+            "detail": "15px too high"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 15,
+            "built": 30,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 0,
+            "built": 15,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 21,
+            "built": 10,
+            "delta": -11,
+            "severity": 11,
+            "detail": "11px too far left"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 10,
+            "built": 0,
+            "delta": -10,
+            "severity": 10,
+            "detail": "10px too far left"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 370,
+            "built": 360,
+            "delta": -10,
+            "severity": 10,
+            "detail": "10px too high"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 403,
+            "built": 393,
+            "delta": -10,
+            "severity": 10,
+            "detail": "10px too high"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "26px",
+            "built": "24px",
+            "delta": -2,
+            "severity": 8,
+            "detail": "lineHeight is smaller by 2"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "26px",
+            "delta": 2,
+            "severity": 8,
+            "detail": "lineHeight is larger by 2"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "22.4px",
+            "delta": -1.6,
+            "severity": 6.400000000000006,
+            "detail": "lineHeight is smaller by 1.6"
+          },
+          {
+            "element": "psf-text",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "14px",
+            "delta": -1,
+            "severity": 4,
+            "detail": "fontSize is smaller by 1"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "14px",
+            "delta": -1,
+            "severity": 4,
+            "detail": "fontSize is smaller by 1"
+          }
+        ],
+        "pixel": {
+          "mismatched": 74606,
+          "total": 225420,
+          "ratio": 0.33096442196788217,
+          "heightDelta": -15,
+          "comparedAt": {
+            "width": 390,
+            "height": 578
+          }
+        }
+      }
+    ],
+    "768": [
+      {
+        "id": "page-banner",
+        "findings": [
+          {
+            "element": "pb-box9",
+            "kind": "typography",
+            "prop": "fontWeight",
+            "source": "500",
+            "built": "400",
+            "delta": -100,
+            "severity": 60,
+            "detail": "fontWeight is smaller by 100"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 302,
+            "built": 352,
+            "delta": 50,
+            "severity": 50,
+            "detail": "50px too low"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 65,
+            "built": 15,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too short"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "style",
+            "prop": "display",
+            "source": "inline-block",
+            "built": "block",
+            "severity": 50,
+            "detail": "display: expected inline-block, got block"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "15px",
+            "built": "24px",
+            "delta": 9,
+            "severity": 36,
+            "detail": "lineHeight is larger by 9"
+          },
+          {
+            "element": "page-banner",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(255, 255, 255)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(255, 255, 255), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 1,
+            "built": 19,
+            "delta": 18,
+            "severity": 18,
+            "detail": "18px too tall"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 265,
+            "delta": -6,
+            "severity": 6,
+            "detail": "6px too narrow"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 265,
+            "delta": -6,
+            "severity": 6,
+            "detail": "6px too narrow"
+          }
+        ],
+        "pixel": {
+          "mismatched": 207531,
+          "total": 281856,
+          "ratio": 0.736301515667575,
+          "heightDelta": 0,
+          "comparedAt": {
+            "width": 768,
+            "height": 367
+          }
+        }
+      },
+      {
+        "id": "card-grid",
+        "findings": [
+          {
+            "element": "card-grid",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box3",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box4",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box5",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box6",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box7",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-text",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box8",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box9",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-decor",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box10",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-heading",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box11",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          }
+        ],
+        "pixel": null
+      },
+      {
+        "id": "prose-section-f",
+        "findings": [
+          {
+            "element": "psf-box6",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-spacer",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 152,
+            "built": 101,
+            "delta": -51,
+            "severity": 51,
+            "detail": "51px too high"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 152,
+            "built": 101,
+            "delta": -51,
+            "severity": 51,
+            "detail": "51px too high"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 185,
+            "built": 134,
+            "delta": -51,
+            "severity": 51,
+            "detail": "51px too high"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 50,
+            "built": 0,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 50,
+            "built": 0,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 80,
+            "built": 30,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 81,
+            "built": 31,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 121,
+            "built": 71,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 198,
+            "built": 152,
+            "delta": -46,
+            "severity": 46,
+            "detail": "46px too high"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 218,
+            "built": 172,
+            "delta": -46,
+            "severity": 46,
+            "detail": "46px too high"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 259,
+            "built": 213,
+            "delta": -46,
+            "severity": 46,
+            "detail": "46px too high"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 259,
+            "built": 213,
+            "delta": -46,
+            "severity": 46,
+            "detail": "46px too high"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 174,
+            "built": 134,
+            "delta": -40,
+            "severity": 40,
+            "detail": "40px too high"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 176,
+            "built": 136,
+            "delta": -40,
+            "severity": 40,
+            "detail": "40px too high"
+          },
+          {
+            "element": "prose-section-f",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 120,
+            "built": 143,
+            "delta": 23,
+            "severity": 23,
+            "detail": "23px too tall"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 15,
+            "built": 30,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "25.6px",
+            "delta": 1.6,
+            "severity": 6.400000000000006,
+            "detail": "lineHeight is larger by 1.6"
+          },
+          {
+            "element": "psf-text",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "16px",
+            "delta": 1,
+            "severity": 4,
+            "detail": "fontSize is larger by 1"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "16px",
+            "delta": 1,
+            "severity": 4,
+            "detail": "fontSize is larger by 1"
+          }
+        ],
+        "pixel": {
+          "mismatched": 112913,
+          "total": 407040,
+          "ratio": 0.2774002555031447,
+          "heightDelta": 0,
+          "comparedAt": {
+            "width": 768,
+            "height": 530
+          }
+        }
+      }
+    ],
+    "1440": [
+      {
+        "id": "page-banner",
+        "findings": [
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 362,
+            "built": 453,
+            "delta": 91,
+            "severity": 80,
+            "detail": "91px too low"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 106,
+            "built": 15,
+            "delta": -91,
+            "severity": 80,
+            "detail": "91px too short"
+          },
+          {
+            "element": "pb-link",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 224,
+            "delta": -47,
+            "severity": 47,
+            "detail": "47px too narrow"
+          },
+          {
+            "element": "page-banner",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-raw",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "pb-box6",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 1,
+            "built": 19,
+            "delta": 18,
+            "severity": 18,
+            "detail": "18px too tall"
+          },
+          {
+            "element": "pb-decor",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 772,
+            "built": 783,
+            "delta": 11,
+            "severity": 11,
+            "detail": "11px too wide"
+          },
+          {
+            "element": "pb-box8",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 261,
+            "delta": -10,
+            "severity": 10,
+            "detail": "10px too narrow"
+          },
+          {
+            "element": "pb-box9",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 271,
+            "built": 261,
+            "delta": -10,
+            "severity": 10,
+            "detail": "10px too narrow"
+          },
+          {
+            "element": "pb-box7",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 400,
+            "built": 392,
+            "delta": -8,
+            "severity": 8,
+            "detail": "8px too narrow"
+          }
+        ],
+        "pixel": {
+          "mismatched": 530569,
+          "total": 672480,
+          "ratio": 0.788973649773971,
+          "heightDelta": 0,
+          "comparedAt": {
+            "width": 1440,
+            "height": 467
+          }
+        }
+      },
+      {
+        "id": "card-grid",
+        "findings": [
+          {
+            "element": "card-grid",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box3",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box4",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box5",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box6",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box7",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-text",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box8",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box9",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-decor",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box10",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-heading",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-box11",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-spacer2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          },
+          {
+            "element": "cg-body2",
+            "kind": "missing",
+            "severity": 100,
+            "detail": "element not present in the built page"
+          }
+        ],
+        "pixel": null
+      },
+      {
+        "id": "prose-section-f",
+        "findings": [
+          {
+            "element": "psf-box6",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-spacer",
+            "kind": "not-rendered",
+            "severity": 90,
+            "detail": "visible in source, hidden in build"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 50,
+            "built": 0,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 50,
+            "built": 0,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 80,
+            "built": 30,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 81,
+            "built": 31,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 249,
+            "built": 199,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 249,
+            "built": 199,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 249,
+            "built": 199,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 282,
+            "built": 232,
+            "delta": -50,
+            "severity": 50,
+            "detail": "50px too high"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 295,
+            "built": 250,
+            "delta": -45,
+            "severity": 45,
+            "detail": "45px too high"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 295,
+            "built": 250,
+            "delta": -45,
+            "severity": 45,
+            "detail": "45px too high"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 336,
+            "built": 291,
+            "delta": -45,
+            "severity": 45,
+            "detail": "45px too high"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 336,
+            "built": 291,
+            "delta": -45,
+            "severity": 45,
+            "detail": "45px too high"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 271,
+            "built": 232,
+            "delta": -39,
+            "severity": 39,
+            "detail": "39px too high"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "y",
+            "source": 273,
+            "built": 234,
+            "delta": -39,
+            "severity": 39,
+            "detail": "39px too high"
+          },
+          {
+            "element": "prose-section-f",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "style",
+            "prop": "color",
+            "source": "rgb(0, 0, 0)",
+            "built": "rgb(51, 51, 51)",
+            "severity": 30,
+            "detail": "color: expected rgb(0, 0, 0), got rgb(51, 51, 51)"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 72,
+            "built": 92,
+            "delta": 20,
+            "severity": 20,
+            "detail": "20px too tall"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 762,
+            "built": 778,
+            "delta": 16,
+            "severity": 16,
+            "detail": "16px too wide"
+          },
+          {
+            "element": "psf-box3",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 561,
+            "built": 576,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too wide"
+          },
+          {
+            "element": "psf-box4",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 501,
+            "built": 516,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too wide"
+          },
+          {
+            "element": "psf-box5",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 479,
+            "built": 494,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too wide"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 591,
+            "built": 606,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too far right"
+          },
+          {
+            "element": "psf-box7",
+            "kind": "geometry",
+            "prop": "width",
+            "source": 849,
+            "built": 864,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too wide"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "height",
+            "source": 15,
+            "built": 30,
+            "delta": 15,
+            "severity": 15,
+            "detail": "15px too tall"
+          },
+          {
+            "element": "psf-box8",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-text",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-box9",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-box10",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-decor",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-box11",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-heading",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-box12",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "geometry",
+            "prop": "x",
+            "source": 678,
+            "built": 692,
+            "delta": 14,
+            "severity": 14,
+            "detail": "14px too far right"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "lineHeight",
+            "source": "24px",
+            "built": "25.6px",
+            "delta": 1.6,
+            "severity": 6.400000000000006,
+            "detail": "lineHeight is larger by 1.6"
+          },
+          {
+            "element": "psf-text",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "16px",
+            "delta": 1,
+            "severity": 4,
+            "detail": "fontSize is larger by 1"
+          },
+          {
+            "element": "psf-text2",
+            "kind": "typography",
+            "prop": "fontSize",
+            "source": "15px",
+            "built": "16px",
+            "delta": 1,
+            "severity": 4,
+            "detail": "fontSize is larger by 1"
+          }
+        ],
+        "pixel": {
+          "mismatched": 249173,
+          "total": 990720,
+          "ratio": 0.2515069848191214,
+          "heightDelta": 0,
+          "comparedAt": {
+            "width": 1440,
+            "height": 688
+          }
+        }
+      }
+    ]
+  },
+  "summary": {
+    "worst": [
+      {
+        "width": 1440,
+        "id": "page-banner",
+        "findings": 20,
+        "missing": 0,
+        "pixel": 78.9
+      },
+      {
+        "width": 390,
+        "id": "page-banner",
+        "findings": 50,
+        "missing": 0,
+        "pixel": 73.76
+      },
+      {
+        "width": 768,
+        "id": "page-banner",
+        "findings": 20,
+        "missing": 0,
+        "pixel": 73.63
+      },
+      {
+        "width": 390,
+        "id": "prose-section-f",
+        "findings": 77,
+        "missing": 2,
+        "pixel": 33.1
+      },
+      {
+        "width": 768,
+        "id": "prose-section-f",
+        "findings": 35,
+        "missing": 2,
+        "pixel": 27.74
+      },
+      {
+        "width": 1440,
+        "id": "prose-section-f",
+        "findings": 57,
+        "missing": 2,
+        "pixel": 25.15
+      },
+      {
+        "width": 390,
+        "id": "card-grid",
+        "findings": 19,
+        "missing": 19,
+        "pixel": null
+      },
+      {
+        "width": 768,
+        "id": "card-grid",
+        "findings": 19,
+        "missing": 19,
+        "pixel": null
+      },
+      {
+        "width": 1440,
+        "id": "card-grid",
+        "findings": 19,
+        "missing": 19,
+        "pixel": null
+      }
+    ]
+  }
+}

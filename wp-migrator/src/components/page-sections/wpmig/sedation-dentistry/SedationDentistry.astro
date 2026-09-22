@@ -1,0 +1,106 @@
+---
+/**
+ * Sedation Dentistry — migrated from dental-services/sedation-dentistry [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="sedation-dentistry" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="sd-box">
+    <h3 class="sd-heading">{heading}</h3>
+    {subheading && <h1 class="sd-heading2">{subheading}</h1>}
+  </div>
+</div>
+<style>
+  .sedation-dentistry {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .sd-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sd-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .sedation-dentistry {
+      justify-content: flex-start;
+    }
+
+    .sd-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sedation-dentistry {
+      text-align: left;
+    }
+
+    .sd-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sd-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19.2px;
+  }
+  @media (min-width: 768px) {
+    .sd-heading {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19.2px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .sd-heading {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19.2px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,22 @@
+label: Call Us Today To
+icon: interests
+description: Call Us Today To section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/call-us-today-to
+  id: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  heading: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Call Us Today To
+  icon: interests
+picker_preview:
+  text: Call Us Today To
+  subtext: Call Us Today To section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/call-us-today-to/call-us-today-to.cloudcannon.inputs.yml

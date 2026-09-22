@@ -1,0 +1,241 @@
+{
+  "page": "dr-kimberly-barclay",
+  "route": "/dr-kimberly-barclay/",
+  "source": "dr-kimberly-barclay.html",
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "sections": [
+    {
+      "id": "page-banner",
+      "sectionIndex": 0,
+      "rootClass": "page-banner",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "page-banner"
+        },
+        {
+          "n": 1,
+          "cls": "pb-box"
+        },
+        {
+          "n": 2,
+          "cls": "pb-raw"
+        },
+        {
+          "n": 3,
+          "cls": "pb-box2"
+        },
+        {
+          "n": 4,
+          "cls": "pb-box3"
+        },
+        {
+          "n": 5,
+          "cls": "pb-heading"
+        },
+        {
+          "n": 6,
+          "cls": "pb-box4"
+        },
+        {
+          "n": 7,
+          "cls": "pb-box5"
+        },
+        {
+          "n": 8,
+          "cls": "pb-decor"
+        },
+        {
+          "n": 9,
+          "cls": "pb-box6"
+        },
+        {
+          "n": 10,
+          "cls": "pb-heading2"
+        },
+        {
+          "n": 11,
+          "cls": "pb-box7"
+        },
+        {
+          "n": 12,
+          "cls": "pb-box8"
+        },
+        {
+          "n": 13,
+          "cls": "pb-box9"
+        },
+        {
+          "n": 14,
+          "cls": "pb-link"
+        }
+      ]
+    },
+    {
+      "id": "card-grid",
+      "sectionIndex": 1,
+      "rootClass": "card-grid",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "card-grid"
+        },
+        {
+          "n": 1,
+          "cls": "cg-box"
+        },
+        {
+          "n": 2,
+          "cls": "cg-box2"
+        },
+        {
+          "n": 3,
+          "cls": "cg-box3"
+        },
+        {
+          "n": 4,
+          "cls": "cg-box4"
+        },
+        {
+          "n": 5,
+          "cls": "cg-box5"
+        },
+        {
+          "n": 6,
+          "cls": "cg-spacer"
+        },
+        {
+          "n": 7,
+          "cls": "cg-box6"
+        },
+        {
+          "n": 8,
+          "cls": "cg-box7"
+        },
+        {
+          "n": 9,
+          "cls": "cg-text"
+        },
+        {
+          "n": 10,
+          "cls": "cg-box8"
+        },
+        {
+          "n": 11,
+          "cls": "cg-box9"
+        },
+        {
+          "n": 12,
+          "cls": "cg-decor"
+        },
+        {
+          "n": 13,
+          "cls": "cg-box10"
+        },
+        {
+          "n": 14,
+          "cls": "cg-heading"
+        },
+        {
+          "n": 15,
+          "cls": "cg-box11"
+        },
+        {
+          "n": 16,
+          "cls": "cg-body"
+        },
+        {
+          "n": 21,
+          "cls": "cg-spacer2"
+        },
+        {
+          "n": 22,
+          "cls": "cg-body2"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-f",
+      "sectionIndex": 2,
+      "rootClass": "prose-section-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-f"
+        },
+        {
+          "n": 1,
+          "cls": "psf-box"
+        },
+        {
+          "n": 2,
+          "cls": "psf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psf-box4"
+        },
+        {
+          "n": 5,
+          "cls": "psf-box5"
+        },
+        {
+          "n": 6,
+          "cls": "psf-box6"
+        },
+        {
+          "n": 7,
+          "cls": "psf-spacer"
+        },
+        {
+          "n": 8,
+          "cls": "psf-box7"
+        },
+        {
+          "n": 9,
+          "cls": "psf-box8"
+        },
+        {
+          "n": 10,
+          "cls": "psf-text"
+        },
+        {
+          "n": 11,
+          "cls": "psf-box9"
+        },
+        {
+          "n": 12,
+          "cls": "psf-box10"
+        },
+        {
+          "n": 13,
+          "cls": "psf-decor"
+        },
+        {
+          "n": 14,
+          "cls": "psf-box11"
+        },
+        {
+          "n": 15,
+          "cls": "psf-heading"
+        },
+        {
+          "n": 16,
+          "cls": "psf-box12"
+        },
+        {
+          "n": 17,
+          "cls": "psf-text2"
+        }
+      ]
+    }
+  ]
+}

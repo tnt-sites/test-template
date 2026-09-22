@@ -1,0 +1,37 @@
+label: Cta Band Restore
+icon: grid_view
+description: Cta Band Restore section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cta-band-restore
+  id: ""
+  heading: ""
+  text: ""
+  items:
+    - buttonText: ""
+      buttonLink: ""
+  backgroundImage: /wp-content/uploads/2024/10/5027-Group-of-4-drs-T2-scaled.jpg
+  backgroundColor: var(--color-brand)
+  backgroundColorHex: ""
+  overlayColor: "#000000"
+  overlayColorHex: ""
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+  textHoverColor: ""
+  textHoverColorHex: "#555555"
+  hoverBackgroundColor: ""
+  hoverBackgroundColorHex: "#c7ebff"
+  hoverColor: ""
+  hoverColorHex: "#ade0fd"
+  hoverBackgroundColor2: ""
+  hoverBackgroundColor2Hex: "#8fd4fd"
+preview:
+  text:
+    - Cta Band Restore
+  icon: grid_view
+picker_preview:
+  text: Cta Band Restore
+  subtext: Cta Band Restore section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cta-band-restore/cta-band-restore.cloudcannon.inputs.yml

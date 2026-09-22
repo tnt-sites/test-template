@@ -4,5 +4,8 @@ accordionSections:
   values_from_glob:
     - /src/components/building-blocks/wrappers/button-group/button-group.cloudcannon.structure-value.yml
     - /src/components/building-blocks/forms/form/form.cloudcannon.structure-value.yml
+    # A migrated accordion's panel can be a row — the source's video panels are
+    # three across — which comes through as a grid of the row's columns.
+    - /src/components/building-blocks/wrappers/grid/grid.cloudcannon.structure-value.yml
     - /src/components/building-blocks/core-elements/**/*.cloudcannon.structure-value.yml
     - "!/src/components/building-blocks/core-elements/button/button.cloudcannon.structure-value.yml"

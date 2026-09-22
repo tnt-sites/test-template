@@ -1,0 +1,36 @@
+{
+  "name": "@cloudcannon/wp-migrator",
+  "version": "0.1.0",
+  "description": "WordPress-only site migrator: scans a rendered WordPress site, extracts brand/site data, detects bespoke section designs, and generates CloudCannon Astro components from their rendered HTML and computed CSS.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "wpmig": "./bin/wpmig.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.122.0",
+    "citty": "^0.1.6",
+    "culori": "^4.0.1",
+    "mime": "^4.0.6",
+    "node-diff3": "^3.1.2",
+    "parse5": "^7.2.1",
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.49.1",
+    "pngjs": "^7.0.0",
+    "postcss": "^8.4.49",
+    "postcss-safe-parser": "^7.0.1",
+    "postcss-value-parser": "^4.2.0",
+    "yaml": "^2.6.1"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ]
+}

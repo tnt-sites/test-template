@@ -1,0 +1,71 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Card from "@wrappers/card/Card.astro";
+
+const {
+  name = "",
+  role = "",
+  bio = "",
+  imageSource = "",
+  imageAlt = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const cardClasses = ["team-item", className].filter(Boolean).join(" ");
+---
+
+<Card
+  {...htmlAttributes}
+  class={cardClasses || undefined}
+  paddingHorizontal="lg"
+  paddingVertical="sm"
+  rounded
+  border
+  backgroundColor="base"
+>
+  <Image
+    class="team-image"
+    source={imageSource}
+    alt={imageAlt || name}
+    aspectRatio="square"
+    widths={[400, 800]}
+    sizes="400px"
+    editable={true}
+    data-prop-src="imageSource"
+    data-prop-alt="imageAlt"
+    data-editable="image"
+    slot="before"
+  />
+  <Heading
+    class="team-name"
+    level="h3"
+    size="md"
+    alignX="start"
+    style="margin-bottom: var(--spacing-xs); margin-top: 0;"
+    data-prop="name"
+  >
+    {name}
+  </Heading>
+  <SimpleText
+    class="team-role"
+    size="sm"
+    alignX="start"
+    style=" color: var(--color-text-subtle); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-sm);margin-top: 0;;"
+    data-prop="role"
+  >
+    {role}
+  </SimpleText>
+  <SimpleText
+    class="team-bio"
+    size="sm"
+    alignX="start"
+    style=" color: var(--color-text-muted); margin-top: 0;"
+    data-prop="bio"
+  >
+    {bio}
+  </SimpleText>
+</Card>

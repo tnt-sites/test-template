@@ -1,0 +1,227 @@
+---
+/**
+ * Prose Block — migrated from  [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  overlayColor = "#000000",
+  overlayColorHex = "",
+  eyebrowColor = "#ffffff",
+  eyebrowColorHex = "",
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const overlayColorValue = overlayColorHex || overlayColor || "#000000";
+const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#ffffff";
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+---
+<div class="prose-block" id={id || undefined} style={`--ov:${overlayColorValue};--eb:${eyebrowColorValue};--hd:${headingColorValue};--tx:${textColorValue}`} {...rest}>
+  <div class="pb-box">
+    <div class="pb-box2">
+      <div class="pb-box3">
+        <div class="pb-box4">
+          {eyebrow && <p class="pb-text">{eyebrow}</p>}
+        </div>
+        <div class="pb-box5">
+          <h2 class="pb-heading">{heading}</h2>
+        </div>
+        <div class="pb-box6">
+          {text && <p class="pb-text2">{text}</p>}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .prose-block {
+    /* The source banner is a parallax panel: `fixed` sizes the photo to the
+       viewport rather than the element, so what shows through here is a calm
+       mid-grey band of the image instead of the doctor's face. Dropping the
+       attachment makes the section far busier than the original. */
+    background-attachment: fixed;
+    background-image: url("/wp-content/uploads/2024/10/AZ-Photo.jpg");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  }
+
+  .prose-block::before {
+    background-color: var(--ov);
+    border-radius: 0px;
+    bottom: 0px;
+    content: "";
+    left: 0px;
+    opacity: 0.7;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  /* iOS Safari ignores `fixed` attachment and can drop the image entirely, so
+     hand touch devices a scrolling background instead. */
+  @media (hover: none) {
+    .prose-block {
+      background-attachment: scroll;
+    }
+  }
+
+  .pb-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Capped width with no auto margins pins the whole banner to the left of
+       any viewport wider than the cap — 230px off centre at 1920px. */
+    margin-inline: auto;
+    max-width: min(100%, 767px);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .pb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .pb-box3 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pb-box4 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 300;
+    letter-spacing: 5.5px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .pb-text {
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .pb-box5 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .pb-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pb-box6 {
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .pb-text2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .pb-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+      /* The foot of the banner is the landing strip for the service cards,
+         which pull up into it by 100px. Keep this in step with the
+         `margin-top` on .home-services. */
+      padding-bottom: 150px;
+      padding-top: 70px;
+    }
+
+    .pb-box2 {
+      flex-wrap: nowrap;
+      padding: 10px;
+    }
+
+    .pb-box3 {
+      flex-wrap: nowrap;
+    }
+
+    .pb-box4 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 381px;
+    }
+
+    .pb-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .pb-box6 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 566px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pb-box {
+      max-width: min(100%, 1440px);
+    }
+
+    .pb-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .pb-box6 {
+      max-width: 1104px;
+    }
+  }
+</style>

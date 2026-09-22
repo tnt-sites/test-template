@@ -1,0 +1,25 @@
+label: Prose Block Financing
+icon: interests
+description: Prose Block Financing section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/prose-block-financing
+  id: ""
+  heading: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  backgroundColor: var(--color-brand)
+  backgroundColorHex: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+preview:
+  text:
+    - Prose Block Financing
+  icon: interests
+picker_preview:
+  text: Prose Block Financing
+  subtext: Prose Block Financing section with heading, copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/prose-block-financing/prose-block-financing.cloudcannon.inputs.yml

@@ -1,0 +1,262 @@
+---
+/**
+ * Patient Reviews — the "What Our Patients Say" band.
+ *
+ * The source used a Trustindex Google-reviews *slider* widget. Its review text
+ * is fetched by JavaScript at runtime and is not in the static snapshot (only
+ * the reviewer names and the aggregate rating/count were captured), and Trust-
+ * index exposes no widget hash to re-embed. This rebuild reproduces the widget's
+ * look: the aggregate Google rating up top, then an auto-scrolling row of review
+ * cards (avatar, name, stars, Google mark). To restore the live, auto-updating
+ * reviews with their text, drop the Trustindex embed back in here.
+ */
+const {
+  heading = "What Our Patients Say",
+  subheading = "",
+  rating = "5.0",
+  reviewCount = "1,390",
+  reviewers = [],
+  googleUrl = "https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ",
+  yelpUrl = "",
+  backgroundColor = "surface",
+  headingColor = "var(--color-brand)",
+  id = "",
+  hidden = false,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(reviewers)
+  ? reviewers.filter(Boolean).map((r) => (typeof r === "string" ? { name: r } : r))
+  : [];
+const loop = list.length > 0 ? [...list, ...list] : [];
+const Stars = 5;
+---
+{!hidden && (
+<section class="previews" data-bg={backgroundColor} id={id || undefined} style={`--hd:${headingColor}`} {...rest}>
+  <div class="pr-head">
+    <h2 class="pr-heading">{heading}</h2>
+    <div class="pr-agg">
+      <span class="pr-google" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38z"/></svg>
+      </span>
+      <span class="pr-rating-num">{rating}</span>
+      <span class="pr-stars" aria-label={`${rating} out of 5`}>
+        {Array.from({ length: Stars }).map(() => (
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#fbbc04" aria-hidden="true"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        ))}
+      </span>
+      {reviewCount && <span class="pr-count">Based on {reviewCount} Google reviews</span>}
+    </div>
+    {subheading && <p class="pr-sub">{subheading}</p>}
+  </div>
+
+  {loop.length > 0 && (
+    <div class="pr-marquee">
+      <div class="pr-track" style={`--count:${loop.length}`}>
+        {loop.map((r, i) => (
+          <article class="pr-card" aria-hidden={i >= list.length ? "true" : undefined}>
+            <header class="pr-card-head">
+              <span class="pr-meta">
+                <span class="pr-name">{r.name}</span>
+                <span class="pr-src">Google review</span>
+              </span>
+              <span class="pr-gmark" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84C6.71 7.3 9.14 5.38 12 5.38z"/></svg>
+              </span>
+            </header>
+            <span class="pr-cardstars" aria-hidden="true">
+              {Array.from({ length: Stars }).map(() => (
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="#fbbc04"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              ))}
+            </span>
+            {r.text && <p class="pr-text">{r.text}</p>}
+          </article>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <div class="pr-cta">
+    {googleUrl && <a class="pr-btn" href={googleUrl} target="_blank" rel="noopener">Read Our Google Reviews</a>}
+    {yelpUrl && <a class="pr-btn pr-btn-alt" href={yelpUrl} target="_blank" rel="noopener">See Us on Yelp</a>}
+  </div>
+</section>
+)}
+<style>
+  .previews {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 70px 0;
+    width: 100%;
+  }
+
+  .pr-head {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1080px;
+    padding-inline: 20px;
+    text-align: center;
+  }
+
+  .pr-heading {
+    color: var(--hd);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    line-height: 1.1;
+    margin: 0 0 0.5em;
+  }
+
+  .pr-agg {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .pr-rating-num {
+    color: #222;
+    font-family: Lato, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .pr-stars {
+    display: inline-flex;
+  }
+
+  .pr-count {
+    color: #666;
+    font-family: Lato, sans-serif;
+    font-size: 0.95rem;
+  }
+
+  .pr-sub {
+    color: #333;
+    font-family: Lato, sans-serif;
+    margin: 1rem auto 0;
+    max-width: 640px;
+  }
+
+  .pr-marquee {
+    box-sizing: border-box;
+    margin: 34px 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .pr-track {
+    animation: pr-scroll 45s linear infinite;
+    display: flex;
+    gap: 20px;
+    padding-inline: 20px;
+    width: max-content;
+  }
+
+  .pr-marquee:hover .pr-track {
+    animation-play-state: paused;
+  }
+
+  .pr-card {
+    background: #fff;
+    border: 1px solid #eceff1;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    padding: 20px;
+    text-align: left;
+    width: 320px;
+  }
+
+  .pr-card-head {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+  }
+
+  .pr-meta {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .pr-name {
+    color: #202124;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+  }
+
+  .pr-src {
+    color: #70757a;
+    font-family: Lato, sans-serif;
+    font-size: 0.8rem;
+  }
+
+  .pr-gmark {
+    flex: 0 0 auto;
+  }
+
+  .pr-cardstars {
+    display: inline-flex;
+    margin-top: 12px;
+  }
+
+  .pr-text {
+    color: #3c4043;
+    font-family: Lato, sans-serif;
+    margin: 8px 0 0;
+  }
+
+  @keyframes pr-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-50% - 10px));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pr-track {
+      animation: none;
+    }
+  }
+
+  .pr-cta {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+    padding-inline: 20px;
+  }
+
+  .pr-btn {
+    background: var(--color-brand, #047ac0);
+    border-radius: 4px;
+    color: #fff;
+    display: inline-block;
+    font-family: Montserrat, Lato, sans-serif;
+    font-weight: 600;
+    padding: 12px 26px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+
+  .pr-btn:hover {
+    background: var(--color-brand-muted, #147bb4);
+  }
+
+  .pr-btn-alt {
+    background: #d32323;
+  }
+
+  .pr-btn-alt:hover {
+    background: #b31d1d;
+  }
+</style>

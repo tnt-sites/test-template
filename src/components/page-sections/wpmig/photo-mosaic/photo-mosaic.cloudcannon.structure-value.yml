@@ -1,0 +1,17 @@
+label: Photo Mosaic
+icon: interests
+description: Photo Mosaic section. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/photo-mosaic
+  id: ""
+  embedUrl: ""
+  hidden: false
+preview:
+  text:
+    - Photo Mosaic
+  icon: interests
+picker_preview:
+  text: Photo Mosaic
+  subtext: Photo Mosaic section. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/photo-mosaic/photo-mosaic.cloudcannon.inputs.yml

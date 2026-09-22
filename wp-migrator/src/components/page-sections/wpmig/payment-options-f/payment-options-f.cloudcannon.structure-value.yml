@@ -1,0 +1,19 @@
+label: Payment Options F
+icon: vertical_split
+description: Payment Options F section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/payment-options-f
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Payment Options F
+  icon: vertical_split
+picker_preview:
+  text: Payment Options F
+  subtext: Payment Options F section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/payment-options-f/payment-options-f.cloudcannon.inputs.yml

@@ -1,0 +1,91 @@
+---
+/**
+ * Everything From Scheduling Appointments — migrated from about-us [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  text = "",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="everything-from-scheduling-appointments" id={id || undefined} style={`--tx:${textColor}`} {...rest}>
+  <div class="efsa-box">
+    <div class="efsa-box2">
+      <div class="efsa-box3">
+        {text && <p class="efsa-text">{text}</p>}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .everything-from-scheduling-appointments {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .efsa-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .efsa-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .efsa-box3 {
+    box-sizing: border-box;
+  }
+
+  .efsa-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .everything-from-scheduling-appointments {
+      max-width: 690px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .everything-from-scheduling-appointments {
+      max-width: 1110px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .efsa-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .efsa-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .efsa-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

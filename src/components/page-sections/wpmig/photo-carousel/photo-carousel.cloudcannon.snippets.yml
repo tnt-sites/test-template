@@ -1,0 +1,10 @@
+_snippets:
+  media_prose_b:
+    template: astro_component
+    inline: false
+    preview:
+      text: Media Prose B
+    definitions:
+      component_name: page-sections/wpmig/photo-carousel
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/photo-carousel/photo-carousel.cloudcannon.inputs.yml

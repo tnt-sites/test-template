@@ -1,0 +1,10 @@
+_snippets:
+  lp:
+    template: astro_component
+    inline: false
+    preview:
+      text: Lp
+    definitions:
+      component_name: page-sections/wpmig/lp
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/lp/lp.cloudcannon.inputs.yml

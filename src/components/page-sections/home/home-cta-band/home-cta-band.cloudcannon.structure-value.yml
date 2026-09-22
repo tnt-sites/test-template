@@ -1,0 +1,34 @@
+label: Home CTA Band
+icon: grid_view
+description: Cta Band section with heading, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/home/home-cta-band
+  id: ""
+  heading: ""
+  buttonText: ""
+  buttonLink: ""
+  items:
+    - link: ""
+  backgroundColor: "#ffffff"
+  backgroundColorHex: ""
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  buttonBackgroundColor: "#ffffff"
+  buttonBackgroundColorHex: ""
+  buttonTextColor: var(--color-brand)
+  buttonTextColorHex: ""
+  hoverColor: "#ffffff"
+  hoverColorHex: ""
+  hoverColor2: ""
+  hoverColor2Hex: "#333333"
+  buttonTextHoverColor: ""
+  buttonTextHoverColorHex: "#333333"
+preview:
+  text:
+    - Cta Band
+  icon: grid_view
+picker_preview:
+  text: Home CTA Band
+  subtext: Homepage "In the News" band — heading, press image grid and a CTA button.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-cta-band/home-cta-band.cloudcannon.inputs.yml

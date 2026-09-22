@@ -1,0 +1,10 @@
+_snippets:
+  columbine_creek_dentistry_provides:
+    template: astro_component
+    inline: false
+    preview:
+      text: Columbine Creek Dentistry Provides
+    definitions:
+      component_name: page-sections/wpmig/columbine-creek-dentistry-provides
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/columbine-creek-dentistry-provides/columbine-creek-dentistry-provides.cloudcannon.inputs.yml

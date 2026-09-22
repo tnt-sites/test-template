@@ -1,0 +1,5 @@
+_inputs:
+  text:
+    type: textarea
+  textColor:
+    type: color

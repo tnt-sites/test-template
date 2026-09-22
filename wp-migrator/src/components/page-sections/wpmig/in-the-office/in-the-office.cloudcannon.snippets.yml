@@ -1,0 +1,10 @@
+_snippets:
+  in_the_office:
+    template: astro_component
+    inline: false
+    preview:
+      text: In The Office
+    definitions:
+      component_name: page-sections/wpmig/in-the-office
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/in-the-office/in-the-office.cloudcannon.inputs.yml

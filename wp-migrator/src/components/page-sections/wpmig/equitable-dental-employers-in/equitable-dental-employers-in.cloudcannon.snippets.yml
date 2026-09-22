@@ -1,0 +1,10 @@
+_snippets:
+  equitable_dental_employers_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Equitable Dental Employers In
+    definitions:
+      component_name: page-sections/wpmig/equitable-dental-employers-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/equitable-dental-employers-in/equitable-dental-employers-in.cloudcannon.inputs.yml

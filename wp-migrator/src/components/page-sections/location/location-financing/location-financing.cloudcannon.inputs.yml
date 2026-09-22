@@ -1,0 +1,48 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, for anchor links.
+heading:
+  type: text
+  comment: Section heading.
+intro:
+  type: markdown
+  comment: Introductory paragraph shown above the icons.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: false
+    superscript: false
+    underline: false
+    bulletedlist: true
+    numberedlist: true
+    styles: /.cloudcannon/styles/editor.css
+icons:
+  type: array
+  label: Payment Options
+  comment: Icon callouts, each opening a pop-up describing a payment option.
+  options:
+    structures: _structures.locationIcons
+backgroundColor:
+  type: select
+  comment: Section background color.
+  options:
+    values: _select_data.brandColors
+textColor:
+  type: select
+  comment: Main text color (headings, body copy, captions).
+  options:
+    values: _select_data.brandColors
+accentColor:
+  type: select
+  comment: Accent color — link/button hover states, star ratings, and similar highlights.
+  options:
+    values: _select_data.brandColors
+iconColor:
+  type: select
+  comment: Icon color (SVG fill/stroke).
+  options:
+    values: _select_data.brandColors

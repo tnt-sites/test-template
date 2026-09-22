@@ -1,0 +1,74 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import TeamItem from "@page-sections/people/team-grid/TeamItem.astro";
+import Grid from "@wrappers/grid/Grid.astro";
+import GridItem from "@wrappers/grid/GridItem.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  subtext = "",
+  teamMembers = [],
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  paddingVertical = "4xl",
+  class: className,
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["team-grid", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical={paddingVertical}
+  colorScheme={colorScheme}
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+>
+  <SimpleText alignX="center" class="eyebrow" data-prop="eyebrow">
+    {eyebrow}
+  </SimpleText>
+  <Heading class="team-grid-heading" level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+  <SimpleText class="team-grid-subtext" size="md" alignX="center" data-prop="subtext">
+    {subtext}
+  </SimpleText>
+  <Grid
+    class="team-grid-grid"
+    gap="md"
+    minItemWidth={260}
+    maxItemWidth={400}
+    data-prop="teamMembers"
+    layout="start"
+  >
+    {
+      teamMembers.map((member: any, index: number) => (
+        <GridItem>
+          <editable-array-item data-component="page-sections/people/team-grid/team-item">
+            <TeamItem {...member} class="team-grid-item" data-index={index} />
+          </editable-array-item>
+        </GridItem>
+      ))
+    }
+  </Grid>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .team-grid-heading {
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .team-grid-subtext {
+      margin-top: 0;
+    }
+
+    .team-grid-grid {
+      margin-top: var(--spacing-xl);
+    }
+  }
+</style>

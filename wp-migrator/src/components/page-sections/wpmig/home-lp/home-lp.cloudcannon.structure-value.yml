@@ -1,0 +1,17 @@
+label: Home Lp
+icon: interests
+description: Home Lp section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-lp
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Lp
+  icon: interests
+picker_preview:
+  text: Home Lp
+  subtext: Home Lp section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-lp/home-lp.cloudcannon.inputs.yml

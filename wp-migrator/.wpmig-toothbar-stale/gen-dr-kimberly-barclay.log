@@ -1,0 +1,9 @@
+3 section(s) detected on dr-kimberly-barclay.html
+  [0] -> page-banner (shared, ~0.99)  props=8  icons=6
+  [1] -> card-grid (shared, ~0.96)  props=7
+  [2] -> prose-section-f (shared, identical)  props=6
+
+icons: 6 substituted from the project set
+
+wrote 3 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/dr-kimberly-barclay.md (copy into src/content/pages/ manually for now)

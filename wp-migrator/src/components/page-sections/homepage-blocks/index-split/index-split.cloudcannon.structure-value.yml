@@ -1,0 +1,16 @@
+label: Index Split
+icon: add
+description: Description for Index Split component.
+value:
+  _component: page-sections/homepage-blocks/index-split
+  id: ""
+  heading: Index Split <span class="heading-color">Heading</span>
+  backgroundColor: base
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-split/index-split.cloudcannon.inputs.yml

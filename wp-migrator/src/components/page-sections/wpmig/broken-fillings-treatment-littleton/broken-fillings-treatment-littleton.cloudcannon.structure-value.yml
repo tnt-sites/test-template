@@ -1,0 +1,18 @@
+label: Broken Fillings Treatment Littleton
+icon: vertical_split
+description: Broken Fillings Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/broken-fillings-treatment-littleton
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Broken Fillings Treatment Littleton
+  icon: vertical_split
+picker_preview:
+  text: Broken Fillings Treatment Littleton
+  subtext: Broken Fillings Treatment Littleton section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/broken-fillings-treatment-littleton/broken-fillings-treatment-littleton.cloudcannon.inputs.yml

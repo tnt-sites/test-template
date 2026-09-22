@@ -1,0 +1,17 @@
+label: Home Principal
+icon: interests
+description: Home Principal section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-principal
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Principal
+  icon: interests
+picker_preview:
+  text: Home Principal
+  subtext: Home Principal section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-principal/home-principal.cloudcannon.inputs.yml

@@ -1,0 +1,111 @@
+---
+/**
+ * About Columbine Creek Dentistry — migrated from about-us [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="about-columbine-creek-dentistry" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="accd-box">
+    <div class="accd-box2">
+      <h2 class="accd-heading">{heading}</h2>
+    </div>
+    <div class="accd-box3">
+      <div class="accd-box4">
+        {text && <p class="accd-text" set:html={text} />}
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .about-columbine-creek-dentistry {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+    position: relative;
+    text-align: left;
+  }
+
+  .accd-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .accd-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .accd-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .accd-box3 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .accd-box4 {
+    box-sizing: border-box;
+  }
+
+  .accd-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .about-columbine-creek-dentistry {
+      max-width: 690px;
+    }
+
+    .accd-heading {
+      line-height: 32px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .about-columbine-creek-dentistry {
+      max-width: 1110px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  @media (min-width: 768px) {
+    .accd-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .accd-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

@@ -1,0 +1,17 @@
+label: Home Sunlife
+icon: interests
+description: Home Sunlife section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-sunlife
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Sunlife
+  icon: interests
+picker_preview:
+  text: Home Sunlife
+  subtext: Home Sunlife section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-sunlife/home-sunlife.cloudcannon.inputs.yml

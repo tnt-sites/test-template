@@ -1,0 +1,204 @@
+---
+/**
+ * Meet Our Provider — migrated from dental-implants-littleton-co [4] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  image = "",
+  imageAlt = "",
+  subheading = "",
+  text = "",
+  headingColor = "#1b2e38",
+  textColor = "#585858",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="meet-our-provider" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor}`} {...rest}>
+  <div class="mop-box">
+    <div class="mop-box2">
+      <h2 class="mop-heading">{heading}</h2>
+    </div>
+    <div class="mop-box3">
+      <div class="mop-box4">
+        <div class="mop-box5">
+          {image && <img class="mop-media" src={image} alt={imageAlt || ""} loading="lazy" width="600" height="600" />}
+        </div>
+      </div>
+      <div class="mop-box6">
+        <div class="mop-box7">
+          {subheading && <h3 class="mop-heading2">{subheading}</h3>}
+        </div>
+        <div class="mop-box8">
+          {text && <div class="mop-body" set:html={text} />}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .meet-our-provider {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding: 25px;
+    position: relative;
+    text-align: left;
+  }
+
+  .mop-box {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mop-box2 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mop-heading {
+    box-sizing: border-box;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 32px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mop-box3 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .mop-box4 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mop-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .mop-media {
+    border: 6px solid #e5e5e5;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .mop-box6 {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .mop-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .mop-heading2 {
+    box-sizing: border-box;
+    color: #3b6278;
+    font-family: "Open Sans", sans-serif;
+    font-size: 19.2px;
+    font-weight: 600;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .mop-box8 {
+    box-sizing: border-box;
+    color: #585858;
+    flex: 0 0 100%;
+    font-family: "Open Sans", sans-serif;
+    line-height: 32px;
+    max-width: 100%;
+    min-height: 624px;
+  }
+
+  .mop-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .mop-heading {
+      font-size: 48px;
+      line-height: 48px;
+    }
+
+    .mop-box4 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      min-height: 672px;
+    }
+
+    .mop-box6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    .mop-heading2 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    .mop-box8 {
+      min-height: 592px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .mop-box {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 1140px;
+    }
+
+    .mop-box3 {
+      flex-wrap: nowrap;
+    }
+
+    .mop-box4 {
+      min-height: 448px;
+    }
+
+    .mop-box8 {
+      min-height: 368px;
+    }
+  }
+</style>

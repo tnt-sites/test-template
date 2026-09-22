@@ -1,0 +1,19 @@
+label: Restorative Dentistry
+icon: vertical_split
+description: Restorative Dentistry section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/restorative-dentistry
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Restorative Dentistry
+  icon: vertical_split
+picker_preview:
+  text: Restorative Dentistry
+  subtext: Restorative Dentistry section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/restorative-dentistry/restorative-dentistry.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  careington:
+    template: astro_component
+    inline: false
+    preview:
+      text: Careington
+    definitions:
+      component_name: page-sections/wpmig/careington
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/careington/careington.cloudcannon.inputs.yml

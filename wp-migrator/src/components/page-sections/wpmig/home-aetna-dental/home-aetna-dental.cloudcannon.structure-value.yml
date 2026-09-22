@@ -1,0 +1,17 @@
+label: Home Aetna Dental
+icon: interests
+description: Home Aetna Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-aetna-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Aetna Dental
+  icon: interests
+picker_preview:
+  text: Home Aetna Dental
+  subtext: Home Aetna Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-aetna-dental/home-aetna-dental.cloudcannon.inputs.yml

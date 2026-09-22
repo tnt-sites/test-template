@@ -1,0 +1,34 @@
+label: Media Prose B
+icon: grid_view
+description: Media Prose B section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/photo-carousel
+  id: ""
+  heading: ""
+  text: ""
+  text2: ""
+  text3: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text4: ""
+  autoPlay: true
+  interval: 5000
+  items:
+    - image: ""
+      imageAlt: ""
+  backgroundColor: var(--color-brand)
+  backgroundColorHex: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+preview:
+  text:
+    - Media Prose B
+  icon: grid_view
+picker_preview:
+  text: Media Prose B
+  subtext: Media Prose B section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/photo-carousel/photo-carousel.cloudcannon.inputs.yml

@@ -1,0 +1,307 @@
+---
+import Component from "@components/utils/renderBlock.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
+
+const {
+  label,
+  contentSections,
+  maxContentWidth,
+  paddingHorizontal,
+  paddingVertical = "4xl",
+  colorScheme = "inherit",
+  backgroundColor,
+  backgroundGradient = "",
+  backgroundImage,
+  rounded = false,
+  class: className,
+  style: styleProp,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const bgImage = await backgroundImageCss(backgroundImage);
+
+// `styleProp` is merged rather than spread over: callers such as the pep
+// components and LocationSection pass their own custom properties, and before
+// this merge a caller-supplied `style` silently replaced the gradient/image
+// custom properties this component sets.
+const sectionStyle =
+  [backgroundGradient && `--section-bg-gradient: ${backgroundGradient}`, bgImage.style, styleProp]
+    .filter(Boolean)
+    .join("; ") || undefined;
+
+const slugifyLabel = (label: string) => {
+  return label
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
+
+if (!htmlAttributes.id && label) {
+  htmlAttributes.id = slugifyLabel(label);
+}
+---
+
+{
+  bgImage.preload && (
+    <link
+      rel="preload"
+      as="image"
+      href={bgImage.preload.href}
+      imagesrcset={bgImage.preload.imagesrcset}
+    />
+  )
+}
+<section
+  class:list={[
+    "custom-section",
+    "bg-layers",
+    rounded && "rounded",
+    backgroundColor && backgroundColor !== "none" && `bg-${backgroundColor}`,
+    className,
+  ]}
+  data-theme={colorScheme && colorScheme !== "inherit" ? colorScheme : undefined}
+  style={sectionStyle}
+  {...htmlAttributes}
+>
+  <div class="outer-content">
+    <div
+      class:list={[
+        "content",
+        paddingHorizontal && `pad-x-${paddingHorizontal}`,
+        paddingVertical && `pad-y-${paddingVertical}`,
+        maxContentWidth && `max-width-${maxContentWidth}`,
+      ]}
+    >
+      <slot>
+        {
+          contentSections && (
+            <Component contentSections={contentSections} propName="contentSections" />
+          )
+        }
+      </slot>
+    </div>
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer components {
+    .custom-section {
+      position: relative;
+
+      /* Gradient + image composition lives in the shared `.bg-layers` rule
+         (src/styles/base/_background-image.pcss) — that file also explains why
+         backgrounds must stay on this element rather than on an overlay div. */
+      --bg-gradient: var(--section-bg-gradient, none);
+
+      &.rounded {
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+      }
+
+      > .outer-content {
+        height: 100%;
+      }
+
+      > .outer-content > .content {
+        height: 100%;
+        margin-inline: auto;
+        position: relative;
+        z-index: var(--layer-1);
+        container-type: inline-size;
+
+        > *:not(editable-array-item):first-child, 
+        > editable-array > editable-array-item:first-child > *:first-child {
+          margin-top: 0 !important;
+        }
+
+        > *:not(editable-array-item):last-child, 
+        > editable-array > editable-array-item:last-child > *:last-child {
+          margin-bottom: 0 !important;
+        }
+
+        &.pad-x-xs {
+          padding-inline: var(--spacing-xs);
+        }
+
+        &.pad-x-sm {
+          padding-inline: var(--spacing-sm);
+        }
+
+        &.pad-x-md {
+          padding-inline: var(--spacing-md);
+        }
+
+        &.pad-x-lg {
+          padding-inline: var(--spacing-lg);
+        }
+
+        &.pad-x-xl {
+          padding-inline: var(--spacing-xl);
+        }
+
+        &.pad-x-2xl {
+          padding-inline: var(--spacing-2xl);
+        }
+
+        &.pad-x-3xl {
+          padding-inline: var(--spacing-3xl);
+        }
+
+        &.pad-x-4xl {
+          padding-inline: var(--spacing-4xl);
+        }
+
+        &.pad-x-5xl {
+          padding-inline: var(--spacing-5xl);
+        }
+
+        &.pad-x-6xl {
+          padding-inline: var(--spacing-6xl);
+        }
+
+        &.pad-y-xs {
+          padding-block: var(--spacing-xs);
+        }
+
+        &.pad-y-sm {
+          padding-block: var(--spacing-sm);
+        }
+
+        &.pad-y-md {
+          padding-block: var(--spacing-md);
+        }
+
+        &.pad-y-lg {
+          padding-block: var(--spacing-lg);
+        }
+
+        &.pad-y-xl {
+          padding-block: var(--spacing-xl);
+        }
+
+        &.pad-y-2xl {
+          padding-block: var(--spacing-2xl);
+        }
+
+        &.pad-y-3xl {
+          padding-block: var(--spacing-3xl);
+        }
+
+        &.pad-y-4xl {
+          padding-block: var(--spacing-4xl);
+        }
+
+        &.pad-y-5xl {
+          padding-block: var(--spacing-5xl);
+        }
+
+        &.pad-y-6xl {
+          padding-block: var(--spacing-6xl);
+        }
+
+        @media (--to-sm) {
+          &.pad-y-xs {
+            padding-block: var(--spacing-xs);
+          }
+
+          &.pad-y-sm {
+            padding-block: var(--spacing-xs);
+          }
+
+          &.pad-y-md {
+            padding-block: var(--spacing-sm);
+          }
+
+          &.pad-y-lg {
+            padding-block: var(--spacing-md);
+          }
+
+          &.pad-y-xl {
+            padding-block: var(--spacing-md);
+          }
+
+          &.pad-y-2xl {
+            padding-block: var(--spacing-lg);
+          }
+
+          &.pad-y-3xl {
+            padding-block: var(--spacing-xl);
+          }
+
+          &.pad-y-4xl {
+            padding-block: var(--spacing-2xl);
+          }
+
+          &.pad-y-5xl {
+            padding-block: var(--spacing-3xl);
+          }
+
+          &.pad-y-6xl {
+            padding-block: var(--spacing-4xl);
+          }
+        }
+
+        &.max-width-xs {
+          max-width: var(--content-width-xs);
+        }
+
+        &.max-width-sm {
+          max-width: var(--content-width-sm);
+        }
+
+        &.max-width-md {
+          max-width: var(--content-width-md);
+        }
+
+        &.max-width-lg {
+          max-width: var(--content-width-lg);
+        }
+
+        &.max-width-xl {
+          max-width: var(--content-width-xl);
+        }
+
+        &.max-width-2xl {
+          max-width: var(--content-width-2xl);
+        }
+
+        &.max-width-3xl {
+          max-width: var(--content-width-3xl);
+        }
+      }
+
+      &.bg-base {
+        background-color: var(--color-bg);
+      }
+
+      &.bg-surface {
+        background-color: var(--color-bg-surface);
+      }
+
+      &.bg-brand {
+        background-color: var(--color-bg-brand);
+      }
+
+      &.bg-brand-secondary {
+        background-color: var(--color-bg-brand-secondary);
+      }
+
+      &.bg-accent {
+        background-color: var(--color-bg-accent);
+      }
+
+      &.bg-highlight {
+        background-color: var(--color-bg-highlight);
+      }
+
+      &.bg-dark {
+        background-color: var(--color-bg-dark);
+      }
+
+      &.bg-black {
+        background-color: var(--color-bg-black);
+      }
+    }
+  }
+</style>

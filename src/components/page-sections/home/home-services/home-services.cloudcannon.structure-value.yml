@@ -1,0 +1,31 @@
+label: Home Services
+icon: medical_services
+description: >-
+  Homepage service callouts — numbered cards with an icon, title and copy over a
+  background photo.
+value:
+  _component: page-sections/home/home-services
+  id: ""
+  cards:
+    - title: ""
+      text: ""
+      image: ""
+      imageAlt: ""
+      text2: ""
+      bgImage: ""
+  tintColorHex: "#046caa"
+  tintOpacity: 0.9
+  titleColor: "#ffffff"
+  titleColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+  overlapTop: 100
+preview:
+  text:
+    - Home Services
+  icon: medical_services
+picker_preview:
+  text: Home Services
+  subtext: Numbered service cards with icons and photo backgrounds.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-services/home-services.cloudcannon.inputs.yml

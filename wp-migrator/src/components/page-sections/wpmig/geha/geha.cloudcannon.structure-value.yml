@@ -1,0 +1,18 @@
+label: Geha
+icon: vertical_split
+description: Geha section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/geha
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Geha
+  icon: vertical_split
+picker_preview:
+  text: Geha
+  subtext: Geha section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/geha/geha.cloudcannon.inputs.yml

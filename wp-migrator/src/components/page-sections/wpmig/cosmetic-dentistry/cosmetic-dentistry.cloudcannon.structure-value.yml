@@ -1,0 +1,19 @@
+label: Cosmetic Dentistry
+icon: vertical_split
+description: Cosmetic Dentistry section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/cosmetic-dentistry
+  id: ""
+  heading: ""
+  subheading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Cosmetic Dentistry
+  icon: vertical_split
+picker_preview:
+  text: Cosmetic Dentistry
+  subtext: Cosmetic Dentistry section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/cosmetic-dentistry/cosmetic-dentistry.cloudcannon.inputs.yml

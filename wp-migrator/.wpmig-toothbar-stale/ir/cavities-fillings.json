@@ -1,0 +1,364 @@
+{
+  "page": "cavities-fillings",
+  "route": "/cavities-fillings/",
+  "source": "cavities-fillings.html",
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "sections": [
+    {
+      "id": "page-banner-c",
+      "sectionIndex": 0,
+      "rootClass": "page-banner-c",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "page-banner-c"
+        },
+        {
+          "n": 1,
+          "cls": "pbc-box"
+        },
+        {
+          "n": 2,
+          "cls": "pbc-raw"
+        },
+        {
+          "n": 3,
+          "cls": "pbc-box2"
+        },
+        {
+          "n": 4,
+          "cls": "pbc-box3"
+        },
+        {
+          "n": 5,
+          "cls": "pbc-heading"
+        },
+        {
+          "n": 6,
+          "cls": "pbc-box4"
+        },
+        {
+          "n": 7,
+          "cls": "pbc-box5"
+        },
+        {
+          "n": 8,
+          "cls": "pbc-decor"
+        },
+        {
+          "n": 9,
+          "cls": "pbc-box6"
+        },
+        {
+          "n": 10,
+          "cls": "pbc-heading2"
+        },
+        {
+          "n": 11,
+          "cls": "pbc-box7"
+        },
+        {
+          "n": 12,
+          "cls": "pbc-box8"
+        },
+        {
+          "n": 13,
+          "cls": "pbc-box9"
+        },
+        {
+          "n": 14,
+          "cls": "pbc-link"
+        }
+      ]
+    },
+    {
+      "id": "media-prose-e",
+      "sectionIndex": 1,
+      "rootClass": "media-prose-e",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "media-prose-e"
+        },
+        {
+          "n": 1,
+          "cls": "mpe-box"
+        },
+        {
+          "n": 2,
+          "cls": "mpe-box2"
+        },
+        {
+          "n": 3,
+          "cls": "mpe-box3"
+        },
+        {
+          "n": 4,
+          "cls": "mpe-box4"
+        },
+        {
+          "n": 5,
+          "cls": "mpe-box5"
+        },
+        {
+          "n": 6,
+          "cls": "mpe-body"
+        },
+        {
+          "n": 8,
+          "cls": "mpe-box6"
+        },
+        {
+          "n": 9,
+          "cls": "mpe-media"
+        },
+        {
+          "n": 10,
+          "cls": "mpe-spacer"
+        },
+        {
+          "n": 11,
+          "cls": "mpe-box7"
+        },
+        {
+          "n": 12,
+          "cls": "mpe-box8"
+        },
+        {
+          "n": 13,
+          "cls": "mpe-box9"
+        },
+        {
+          "n": 14,
+          "cls": "mpe-box10"
+        },
+        {
+          "n": 15,
+          "cls": "mpe-box11"
+        },
+        {
+          "n": 16,
+          "cls": "mpe-box12"
+        },
+        {
+          "n": 17,
+          "cls": "mpe-box13"
+        },
+        {
+          "n": 18,
+          "cls": "mpe-media2"
+        },
+        {
+          "n": 19,
+          "cls": "mpe-box14"
+        },
+        {
+          "n": 20,
+          "cls": "mpe-heading"
+        },
+        {
+          "n": 21,
+          "cls": "mpe-box15"
+        },
+        {
+          "n": 22,
+          "cls": "mpe-box16"
+        },
+        {
+          "n": 23,
+          "cls": "mpe-link"
+        },
+        {
+          "n": 24,
+          "cls": "mpe-box17"
+        },
+        {
+          "n": 25,
+          "cls": "mpe-box18"
+        },
+        {
+          "n": 26,
+          "cls": "mpe-embed"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-r",
+      "sectionIndex": 2,
+      "rootClass": "prose-section-r",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-r"
+        },
+        {
+          "n": 1,
+          "cls": "psr-box"
+        },
+        {
+          "n": 2,
+          "cls": "psr-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psr-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psr-heading"
+        },
+        {
+          "n": 5,
+          "cls": "psr-heading2"
+        },
+        {
+          "n": 6,
+          "cls": "psr-heading3"
+        },
+        {
+          "n": 7,
+          "cls": "psr-text"
+        },
+        {
+          "n": 8,
+          "cls": "psr-heading4"
+        },
+        {
+          "n": 9,
+          "cls": "psr-text2"
+        },
+        {
+          "n": 10,
+          "cls": "psr-heading5"
+        },
+        {
+          "n": 11,
+          "cls": "psr-text3"
+        },
+        {
+          "n": 12,
+          "cls": "psr-heading6"
+        },
+        {
+          "n": 13,
+          "cls": "psr-heading7"
+        },
+        {
+          "n": 14,
+          "cls": "psr-heading8"
+        },
+        {
+          "n": 15,
+          "cls": "psr-text4"
+        },
+        {
+          "n": 16,
+          "cls": "psr-heading9"
+        },
+        {
+          "n": 17,
+          "cls": "psr-text5"
+        },
+        {
+          "n": 18,
+          "cls": "psr-heading10"
+        },
+        {
+          "n": 19,
+          "cls": "psr-heading11"
+        },
+        {
+          "n": 20,
+          "cls": "psr-heading12"
+        },
+        {
+          "n": 21,
+          "cls": "psr-text6"
+        },
+        {
+          "n": 22,
+          "cls": "psr-heading13"
+        },
+        {
+          "n": 23,
+          "cls": "psr-text7"
+        },
+        {
+          "n": 24,
+          "cls": "psr-heading14"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-f",
+      "sectionIndex": 3,
+      "rootClass": "prose-section-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-f"
+        },
+        {
+          "n": 1,
+          "cls": "psf-box"
+        },
+        {
+          "n": 2,
+          "cls": "psf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psf-decor"
+        },
+        {
+          "n": 9,
+          "cls": "psf-box4"
+        },
+        {
+          "n": 10,
+          "cls": "psf-box5"
+        },
+        {
+          "n": 11,
+          "cls": "psf-text"
+        },
+        {
+          "n": 12,
+          "cls": "psf-box6"
+        },
+        {
+          "n": 13,
+          "cls": "psf-box7"
+        },
+        {
+          "n": 14,
+          "cls": "psf-decor2"
+        },
+        {
+          "n": 15,
+          "cls": "psf-box8"
+        },
+        {
+          "n": 16,
+          "cls": "psf-heading"
+        },
+        {
+          "n": 17,
+          "cls": "psf-box9"
+        },
+        {
+          "n": 18,
+          "cls": "psf-text2"
+        }
+      ]
+    }
+  ]
+}

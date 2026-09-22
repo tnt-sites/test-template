@@ -1,0 +1,10 @@
+_snippets:
+  see_if_your_exam:
+    template: astro_component
+    inline: false
+    preview:
+      text: See If Your Exam
+    definitions:
+      component_name: page-sections/wpmig/see-if-your-exam
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/see-if-your-exam/see-if-your-exam.cloudcannon.inputs.yml

@@ -1,0 +1,18 @@
+label: About Us
+icon: vertical_split
+description: About Us section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/about-us
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - About Us
+  icon: vertical_split
+picker_preview:
+  text: About Us
+  subtext: About Us section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/about-us/about-us.cloudcannon.inputs.yml

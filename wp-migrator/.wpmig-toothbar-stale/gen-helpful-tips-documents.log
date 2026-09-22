@@ -1,0 +1,9 @@
+2 section(s) detected on helpful-tips-documents.html
+  [0] -> page-banner-c  props=8  icons=6
+  [1] -> cta-band  props=38
+
+icons: 6 substituted from the project set
+assets: 11 copied
+
+wrote 2 component(s) to ../src/components/page-sections/wpmig
+wrote page to .wpmig/out/pages/helpful-tips-documents.md (copy into src/content/pages/ manually for now)

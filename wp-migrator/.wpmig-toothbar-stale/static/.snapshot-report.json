@@ -1,0 +1,2611 @@
+{
+  "generatedAt": "2026-08-22T15:35:51.643Z",
+  "origin": "https://toothbar.com",
+  "strategy": "/wp-sitemap.xml",
+  "pages": [
+    {
+      "path": "/4-side-effects-veneers/",
+      "file": "4-side-effects-veneers.html",
+      "id": "4-side-effects-veneers",
+      "bytes": 123259
+    },
+    {
+      "path": "/4-reasons-to-visit-your-dentist-regularly/",
+      "file": "4-reasons-to-visit-your-dentist-regularly.html",
+      "id": "4-reasons-to-visit-your-dentist-regularly",
+      "bytes": 122679
+    },
+    {
+      "path": "/",
+      "file": "index.html",
+      "id": "index",
+      "bytes": 231883
+    },
+    {
+      "path": "/5-effective-dental-health-tips-for-kids/",
+      "file": "5-effective-dental-health-tips-for-kids.html",
+      "id": "5-effective-dental-health-tips-for-kids",
+      "bytes": 122255
+    },
+    {
+      "path": "/4-tips-to-take-care-of-your-braces/",
+      "file": "4-tips-to-take-care-of-your-braces.html",
+      "id": "4-tips-to-take-care-of-your-braces",
+      "bytes": 121664
+    },
+    {
+      "path": "/5-reasons-to-improve-your-smile/",
+      "file": "5-reasons-to-improve-your-smile.html",
+      "id": "5-reasons-to-improve-your-smile",
+      "bytes": 122563
+    },
+    {
+      "path": "/a-must-read-article-before-getting-botox-for-jaw-clenching/",
+      "file": "a-must-read-article-before-getting-botox-for-jaw-clenching.html",
+      "id": "a-must-read-article-before-getting-botox-for-jaw-clenching",
+      "bytes": 124517
+    },
+    {
+      "path": "/a-woman-having-trouble-deciding-on-dental-treatment/",
+      "file": "a-woman-having-trouble-deciding-on-dental-treatment.html",
+      "id": "a-woman-having-trouble-deciding-on-dental-treatment",
+      "bytes": 123588
+    },
+    {
+      "path": "/7-ways-to-stop-grinding-your-teeth/",
+      "file": "7-ways-to-stop-grinding-your-teeth.html",
+      "id": "7-ways-to-stop-grinding-your-teeth",
+      "bytes": 122361
+    },
+    {
+      "path": "/acid-reflux-tooth-health/",
+      "file": "acid-reflux-tooth-health.html",
+      "id": "acid-reflux-tooth-health",
+      "bytes": 122872
+    },
+    {
+      "path": "/advantages-of-digital-imaging/",
+      "file": "advantages-of-digital-imaging.html",
+      "id": "advantages-of-digital-imaging",
+      "bytes": 122090
+    },
+    {
+      "path": "/am-i-a-candidate-for-invisalign/",
+      "file": "am-i-a-candidate-for-invisalign.html",
+      "id": "am-i-a-candidate-for-invisalign",
+      "bytes": 123354
+    },
+    {
+      "path": "/are-all-mouthwashes-the-same/",
+      "file": "are-all-mouthwashes-the-same.html",
+      "id": "are-all-mouthwashes-the-same",
+      "bytes": 121813
+    },
+    {
+      "path": "/are-teeth-implants-safe/",
+      "file": "are-teeth-implants-safe.html",
+      "id": "are-teeth-implants-safe",
+      "bytes": 122621
+    },
+    {
+      "path": "/are-dental-implants-painful/",
+      "file": "are-dental-implants-painful.html",
+      "id": "are-dental-implants-painful",
+      "bytes": 122074
+    },
+    {
+      "path": "/are-veneers-worth-it/",
+      "file": "are-veneers-worth-it.html",
+      "id": "are-veneers-worth-it",
+      "bytes": 121761
+    },
+    {
+      "path": "/bad-breath-behind-your-mask/",
+      "file": "bad-breath-behind-your-mask.html",
+      "id": "bad-breath-behind-your-mask",
+      "bytes": 121819
+    },
+    {
+      "path": "/author/tntadmin/",
+      "file": "author-tntadmin.html",
+      "id": "author-tntadmin",
+      "bytes": 134066
+    },
+    {
+      "path": "/benefits-implants-tooth-restoration/",
+      "file": "benefits-implants-tooth-restoration.html",
+      "id": "benefits-implants-tooth-restoration",
+      "bytes": 122561
+    },
+    {
+      "path": "/beautiful-smiles-depend-healthy-gums/",
+      "file": "beautiful-smiles-depend-healthy-gums.html",
+      "id": "beautiful-smiles-depend-healthy-gums",
+      "bytes": 121470
+    },
+    {
+      "path": "/benefits-of-dental-spa/",
+      "file": "benefits-of-dental-spa.html",
+      "id": "benefits-of-dental-spa",
+      "bytes": 122068
+    },
+    {
+      "path": "/benefits-of-flossing-your-teeth/",
+      "file": "benefits-of-flossing-your-teeth.html",
+      "id": "benefits-of-flossing-your-teeth",
+      "bytes": 122147
+    },
+    {
+      "path": "/benefits-of-having-whiter-teeth/",
+      "file": "benefits-of-having-whiter-teeth.html",
+      "id": "benefits-of-having-whiter-teeth",
+      "bytes": 122497
+    },
+    {
+      "path": "/benefits-of-invisalign-vs-braces/",
+      "file": "benefits-of-invisalign-vs-braces.html",
+      "id": "benefits-of-invisalign-vs-braces",
+      "bytes": 122811
+    },
+    {
+      "path": "/benefits-of-jaw-botox/",
+      "file": "benefits-of-jaw-botox.html",
+      "id": "benefits-of-jaw-botox",
+      "bytes": 123266
+    },
+    {
+      "path": "/benefits-of-porcelain-veneers/",
+      "file": "benefits-of-porcelain-veneers.html",
+      "id": "benefits-of-porcelain-veneers",
+      "bytes": 123311
+    },
+    {
+      "path": "/best-brushing-habits/",
+      "file": "best-brushing-habits.html",
+      "id": "best-brushing-habits",
+      "bytes": 122295
+    },
+    {
+      "path": "/blog/",
+      "file": "blog.html",
+      "id": "blog",
+      "bytes": 132878
+    },
+    {
+      "path": "/bonding-vs-gum-grafting/",
+      "file": "bonding-vs-gum-grafting.html",
+      "id": "bonding-vs-gum-grafting",
+      "bytes": 122030
+    },
+    {
+      "path": "/burning-mouth/",
+      "file": "burning-mouth.html",
+      "id": "burning-mouth",
+      "bytes": 123094
+    },
+    {
+      "path": "/can-i-switch-from-dentures-to-dental-implants/",
+      "file": "can-i-switch-from-dentures-to-dental-implants.html",
+      "id": "can-i-switch-from-dentures-to-dental-implants",
+      "bytes": 122818
+    },
+    {
+      "path": "/can-teeth-whitening-damage-gums/",
+      "file": "can-teeth-whitening-damage-gums.html",
+      "id": "can-teeth-whitening-damage-gums",
+      "bytes": 122419
+    },
+    {
+      "path": "/category/cosmetic-bonding/",
+      "file": "category-cosmetic-bonding.html",
+      "id": "category-cosmetic-bonding",
+      "bytes": 118911
+    },
+    {
+      "path": "/category/cosmetic-dentist/",
+      "file": "category-cosmetic-dentist.html",
+      "id": "category-cosmetic-dentist",
+      "bytes": 130130
+    },
+    {
+      "path": "/category/daily-health-tips/",
+      "file": "category-daily-health-tips.html",
+      "id": "category-daily-health-tips",
+      "bytes": 130755
+    },
+    {
+      "path": "/category/dental-center/",
+      "file": "category-dental-center.html",
+      "id": "category-dental-center",
+      "bytes": 129303
+    },
+    {
+      "path": "/category/dental-crown/",
+      "file": "category-dental-crown.html",
+      "id": "category-dental-crown",
+      "bytes": 116354
+    },
+    {
+      "path": "/category/dental-imaging/",
+      "file": "category-dental-imaging.html",
+      "id": "category-dental-imaging",
+      "bytes": 112831
+    },
+    {
+      "path": "/category/dental-implants/",
+      "file": "category-dental-implants.html",
+      "id": "category-dental-implants",
+      "bytes": 121538
+    },
+    {
+      "path": "/category/dental-spa/",
+      "file": "category-dental-spa.html",
+      "id": "category-dental-spa",
+      "bytes": 119087
+    },
+    {
+      "path": "/category/invisalign/",
+      "file": "category-invisalign.html",
+      "id": "category-invisalign",
+      "bytes": 129382
+    },
+    {
+      "path": "/category/jaw-botox/",
+      "file": "category-jaw-botox.html",
+      "id": "category-jaw-botox",
+      "bytes": 124968
+    },
+    {
+      "path": "/category/lock-jaw/",
+      "file": "category-lock-jaw.html",
+      "id": "category-lock-jaw",
+      "bytes": 125254
+    },
+    {
+      "path": "/category/patient-education/",
+      "file": "category-patient-education.html",
+      "id": "category-patient-education",
+      "bytes": 126748
+    },
+    {
+      "path": "/category/preventive-dentistry/",
+      "file": "category-preventive-dentistry.html",
+      "id": "category-preventive-dentistry",
+      "bytes": 131403
+    },
+    {
+      "path": "/category/restorative-dentistry/",
+      "file": "category-restorative-dentistry.html",
+      "id": "category-restorative-dentistry",
+      "bytes": 130541
+    },
+    {
+      "path": "/category/smile-makeover/",
+      "file": "category-smile-makeover.html",
+      "id": "category-smile-makeover",
+      "bytes": 119150
+    },
+    {
+      "path": "/category/teeth-whitening/",
+      "file": "category-teeth-whitening.html",
+      "id": "category-teeth-whitening",
+      "bytes": 129484
+    },
+    {
+      "path": "/category/tips/",
+      "file": "category-tips.html",
+      "id": "category-tips",
+      "bytes": 130567
+    },
+    {
+      "path": "/category/uncategorized/",
+      "file": "category-uncategorized.html",
+      "id": "category-uncategorized",
+      "bytes": 114996
+    },
+    {
+      "path": "/category/veneers/",
+      "file": "category-veneers.html",
+      "id": "category-veneers",
+      "bytes": 126392
+    },
+    {
+      "path": "/causes-and-symptoms-of-gum-disease/",
+      "file": "causes-and-symptoms-of-gum-disease.html",
+      "id": "causes-and-symptoms-of-gum-disease",
+      "bytes": 122468
+    },
+    {
+      "path": "/causes-and-treatments-for-tmj/",
+      "file": "causes-and-treatments-for-tmj.html",
+      "id": "causes-and-treatments-for-tmj",
+      "bytes": 123364
+    },
+    {
+      "path": "/causes-of-white-spots-on-teeth/",
+      "file": "causes-of-white-spots-on-teeth.html",
+      "id": "causes-of-white-spots-on-teeth",
+      "bytes": 122571
+    },
+    {
+      "path": "/causes-treatment-and-prevention-of-toothaches/",
+      "file": "causes-treatment-and-prevention-of-toothaches.html",
+      "id": "causes-treatment-and-prevention-of-toothaches",
+      "bytes": 122774
+    },
+    {
+      "path": "/cavities-fillings/",
+      "file": "cavities-fillings.html",
+      "id": "cavities-fillings",
+      "bytes": 128215
+    },
+    {
+      "path": "/cavity-detection-options/",
+      "file": "cavity-detection-options.html",
+      "id": "cavity-detection-options",
+      "bytes": 122256
+    },
+    {
+      "path": "/change-the-shape-of-your-gums/",
+      "file": "change-the-shape-of-your-gums.html",
+      "id": "change-the-shape-of-your-gums",
+      "bytes": 122216
+    },
+    {
+      "path": "/change-your-toothbrush/",
+      "file": "change-your-toothbrush.html",
+      "id": "change-your-toothbrush",
+      "bytes": 122185
+    },
+    {
+      "path": "/cheap-ways-to-straigthen-your-teeth/",
+      "file": "cheap-ways-to-straigthen-your-teeth.html",
+      "id": "cheap-ways-to-straigthen-your-teeth",
+      "bytes": 123012
+    },
+    {
+      "path": "/cheapest-way-to-straighten-teeth/",
+      "file": "cheapest-way-to-straighten-teeth.html",
+      "id": "cheapest-way-to-straighten-teeth",
+      "bytes": 122356
+    },
+    {
+      "path": "/clean-and-care-for-invisalign/",
+      "file": "clean-and-care-for-invisalign.html",
+      "id": "clean-and-care-for-invisalign",
+      "bytes": 123726
+    },
+    {
+      "path": "/color-braces-to-make-teeth-look-white/",
+      "file": "color-braces-to-make-teeth-look-white.html",
+      "id": "color-braces-to-make-teeth-look-white",
+      "bytes": 121759
+    },
+    {
+      "path": "/common-oral-health-ailments-treatments/",
+      "file": "common-oral-health-ailments-treatments.html",
+      "id": "common-oral-health-ailments-treatments",
+      "bytes": 123714
+    },
+    {
+      "path": "/common-toothbrushing-mistakes-fix/",
+      "file": "common-toothbrushing-mistakes-fix.html",
+      "id": "common-toothbrushing-mistakes-fix",
+      "bytes": 123984
+    },
+    {
+      "path": "/contact/",
+      "file": "contact.html",
+      "id": "contact",
+      "bytes": 126925
+    },
+    {
+      "path": "/cosmetic-dentist-procedures-austin/",
+      "file": "cosmetic-dentist-procedures-austin.html",
+      "id": "cosmetic-dentist-procedures-austin",
+      "bytes": 123953
+    },
+    {
+      "path": "/cosmetic-dentist-procedures/",
+      "file": "cosmetic-dentist-procedures.html",
+      "id": "cosmetic-dentist-procedures",
+      "bytes": 123028
+    },
+    {
+      "path": "/crowns-and-bridges/",
+      "file": "crowns-and-bridges.html",
+      "id": "crowns-and-bridges",
+      "bytes": 127347
+    },
+    {
+      "path": "/dark-lines-around-my-crowns-and-veneers/",
+      "file": "dark-lines-around-my-crowns-and-veneers.html",
+      "id": "dark-lines-around-my-crowns-and-veneers",
+      "bytes": 121942
+    },
+    {
+      "path": "/dental-anxiety-in-austin-how-a-dental-lounge-experience-changes-everything/",
+      "file": "dental-anxiety-in-austin-how-a-dental-lounge-experience-changes-everything.html",
+      "id": "dental-anxiety-in-austin-how-a-dental-lounge-experience-changes-everything",
+      "bytes": 130104
+    },
+    {
+      "path": "/dental-bonding/",
+      "file": "dental-bonding.html",
+      "id": "dental-bonding",
+      "bytes": 129474
+    },
+    {
+      "path": "/dental-care-and-pregnancy/",
+      "file": "dental-care-and-pregnancy.html",
+      "id": "dental-care-and-pregnancy",
+      "bytes": 122623
+    },
+    {
+      "path": "/dental-cosmetic-bonding-service-in-austin-texas/",
+      "file": "dental-cosmetic-bonding-service-in-austin-texas.html",
+      "id": "dental-cosmetic-bonding-service-in-austin-texas",
+      "bytes": 124029
+    },
+    {
+      "path": "/dental-fads-to-avoid/",
+      "file": "dental-fads-to-avoid.html",
+      "id": "dental-fads-to-avoid",
+      "bytes": 121485
+    },
+    {
+      "path": "/dental-implants-improve-facial-appearance/",
+      "file": "dental-implants-improve-facial-appearance.html",
+      "id": "dental-implants-improve-facial-appearance",
+      "bytes": 123160
+    },
+    {
+      "path": "/dental-implants-permanent/",
+      "file": "dental-implants-permanent.html",
+      "id": "dental-implants-permanent",
+      "bytes": 122104
+    },
+    {
+      "path": "/dental-implants/",
+      "file": "dental-implants.html",
+      "id": "dental-implants",
+      "bytes": 131826
+    },
+    {
+      "path": "/dental-plaque/",
+      "file": "dental-plaque.html",
+      "id": "dental-plaque",
+      "bytes": 121784
+    },
+    {
+      "path": "/dental-problems-invisalign-austin/",
+      "file": "dental-problems-invisalign-austin.html",
+      "id": "dental-problems-invisalign-austin",
+      "bytes": 121747
+    },
+    {
+      "path": "/dental-routine-length/",
+      "file": "dental-routine-length.html",
+      "id": "dental-routine-length",
+      "bytes": 122283
+    },
+    {
+      "path": "/dental-veneers/",
+      "file": "dental-veneers.html",
+      "id": "dental-veneers",
+      "bytes": 133664
+    },
+    {
+      "path": "/difference-between-composite-and-porcelain-veneers/",
+      "file": "difference-between-composite-and-porcelain-veneers.html",
+      "id": "difference-between-composite-and-porcelain-veneers",
+      "bytes": 122247
+    },
+    {
+      "path": "/difference-between-composite-porcelain-veneers/",
+      "file": "difference-between-composite-porcelain-veneers.html",
+      "id": "difference-between-composite-porcelain-veneers",
+      "bytes": 123391
+    },
+    {
+      "path": "/different-cosmetic-dental-procedures/",
+      "file": "different-cosmetic-dental-procedures.html",
+      "id": "different-cosmetic-dental-procedures",
+      "bytes": 121687
+    },
+    {
+      "path": "/difference-between-veneers/",
+      "file": "difference-between-veneers.html",
+      "id": "difference-between-veneers",
+      "bytes": 123071
+    },
+    {
+      "path": "/different-services-we-provide/",
+      "file": "different-services-we-provide.html",
+      "id": "different-services-we-provide",
+      "bytes": 122581
+    },
+    {
+      "path": "/digital-imaging/",
+      "file": "digital-imaging.html",
+      "id": "digital-imaging",
+      "bytes": 130241
+    },
+    {
+      "path": "/do-veneers-last-forever/",
+      "file": "do-veneers-last-forever.html",
+      "id": "do-veneers-last-forever",
+      "bytes": 121738
+    },
+    {
+      "path": "/do-you-need-a-night-guard/",
+      "file": "do-you-need-a-night-guard.html",
+      "id": "do-you-need-a-night-guard",
+      "bytes": 121421
+    },
+    {
+      "path": "/do-your-teeth-change-as-you-age/",
+      "file": "do-your-teeth-change-as-you-age.html",
+      "id": "do-your-teeth-change-as-you-age",
+      "bytes": 122005
+    },
+    {
+      "path": "/does-invisalign-hurt/",
+      "file": "does-invisalign-hurt.html",
+      "id": "does-invisalign-hurt",
+      "bytes": 122021
+    },
+    {
+      "path": "/does-teeth-whitening-damage-your-teeth/",
+      "file": "does-teeth-whitening-damage-your-teeth.html",
+      "id": "does-teeth-whitening-damage-your-teeth",
+      "bytes": 122510
+    },
+    {
+      "path": "/does-teeth-whitening-hurt/",
+      "file": "does-teeth-whitening-hurt.html",
+      "id": "does-teeth-whitening-hurt",
+      "bytes": 121690
+    },
+    {
+      "path": "/does-whitening-toothpaste-work/",
+      "file": "does-whitening-toothpaste-work.html",
+      "id": "does-whitening-toothpaste-work",
+      "bytes": 122246
+    },
+    {
+      "path": "/dont-replace-a-missing-tooth/",
+      "file": "dont-replace-a-missing-tooth.html",
+      "id": "dont-replace-a-missing-tooth",
+      "bytes": 123166
+    },
+    {
+      "path": "/dont-skip-your-next-dental-visit/",
+      "file": "dont-skip-your-next-dental-visit.html",
+      "id": "dont-skip-your-next-dental-visit",
+      "bytes": 123056
+    },
+    {
+      "path": "/dr-andrea-bakke/",
+      "file": "dr-andrea-bakke.html",
+      "id": "dr-andrea-bakke",
+      "bytes": 119946
+    },
+    {
+      "path": "/dr-danielle-gibbons/",
+      "file": "dr-danielle-gibbons.html",
+      "id": "dr-danielle-gibbons",
+      "bytes": 120797
+    },
+    {
+      "path": "/dr-lauren-jacobsen/",
+      "file": "dr-lauren-jacobsen.html",
+      "id": "dr-lauren-jacobsen",
+      "bytes": 122880
+    },
+    {
+      "path": "/dr-kimberly-barclay/",
+      "file": "dr-kimberly-barclay.html",
+      "id": "dr-kimberly-barclay",
+      "bytes": 121620
+    },
+    {
+      "path": "/dr-rachel-morren/",
+      "file": "dr-rachel-morren.html",
+      "id": "dr-rachel-morren",
+      "bytes": 120903
+    },
+    {
+      "path": "/easy-oral-care-tips-for-kids/",
+      "file": "easy-oral-care-tips-for-kids.html",
+      "id": "easy-oral-care-tips-for-kids",
+      "bytes": 122472
+    },
+    {
+      "path": "/eating-with-braces/",
+      "file": "eating-with-braces.html",
+      "id": "eating-with-braces",
+      "bytes": 122598
+    },
+    {
+      "path": "/effects-leaving-cavities-untreated/",
+      "file": "effects-leaving-cavities-untreated.html",
+      "id": "effects-leaving-cavities-untreated",
+      "bytes": 122005
+    },
+    {
+      "path": "/eight-things-didnt-know-about-teeth/",
+      "file": "eight-things-didnt-know-about-teeth.html",
+      "id": "eight-things-didnt-know-about-teeth",
+      "bytes": 122413
+    },
+    {
+      "path": "/enjoy-your-invisalign-experience/",
+      "file": "enjoy-your-invisalign-experience.html",
+      "id": "enjoy-your-invisalign-experience",
+      "bytes": 122273
+    },
+    {
+      "path": "/electric-vs-regular-toothbrush/",
+      "file": "electric-vs-regular-toothbrush.html",
+      "id": "electric-vs-regular-toothbrush",
+      "bytes": 122827
+    },
+    {
+      "path": "/everything-about-dental-caries/",
+      "file": "everything-about-dental-caries.html",
+      "id": "everything-about-dental-caries",
+      "bytes": 122258
+    },
+    {
+      "path": "/express-teeth-whitening/",
+      "file": "express-teeth-whitening.html",
+      "id": "express-teeth-whitening",
+      "bytes": 122194
+    },
+    {
+      "path": "/express-dental-services/",
+      "file": "express-dental-services.html",
+      "id": "express-dental-services",
+      "bytes": 159772
+    },
+    {
+      "path": "/five-tips-children-dental-habits/",
+      "file": "five-tips-children-dental-habits.html",
+      "id": "five-tips-children-dental-habits",
+      "bytes": 122788
+    },
+    {
+      "path": "/five-types-of-cosmetic-dentistry/",
+      "file": "five-types-of-cosmetic-dentistry.html",
+      "id": "five-types-of-cosmetic-dentistry",
+      "bytes": 123128
+    },
+    {
+      "path": "/five-tips-good-healthy-oral-hygiene/",
+      "file": "five-tips-good-healthy-oral-hygiene.html",
+      "id": "five-tips-good-healthy-oral-hygiene",
+      "bytes": 122376
+    },
+    {
+      "path": "/floss-teeth-properly/",
+      "file": "floss-teeth-properly.html",
+      "id": "floss-teeth-properly",
+      "bytes": 122161
+    },
+    {
+      "path": "/getting-rid-of-bad-breath-how-do-you-do-it/",
+      "file": "getting-rid-of-bad-breath-how-do-you-do-it.html",
+      "id": "getting-rid-of-bad-breath-how-do-you-do-it",
+      "bytes": 123518
+    },
+    {
+      "path": "/getting-a-dental-check-up/",
+      "file": "getting-a-dental-check-up.html",
+      "id": "getting-a-dental-check-up",
+      "bytes": 123070
+    },
+    {
+      "path": "/gum-contouring-results/",
+      "file": "gum-contouring-results.html",
+      "id": "gum-contouring-results",
+      "bytes": 122243
+    },
+    {
+      "path": "/gum-lift-surgery-reshaping-a-receding-gumline/",
+      "file": "gum-lift-surgery-reshaping-a-receding-gumline.html",
+      "id": "gum-lift-surgery-reshaping-a-receding-gumline",
+      "bytes": 123037
+    },
+    {
+      "path": "/halitosis-bad-breath-causes/",
+      "file": "halitosis-bad-breath-causes.html",
+      "id": "halitosis-bad-breath-causes",
+      "bytes": 124117
+    },
+    {
+      "path": "/helpful-tips-documents/",
+      "file": "helpful-tips-documents.html",
+      "id": "helpful-tips-documents",
+      "bytes": 192035
+    },
+    {
+      "path": "/home-whitening-vs-in-office-whitening/",
+      "file": "home-whitening-vs-in-office-whitening.html",
+      "id": "home-whitening-vs-in-office-whitening",
+      "bytes": 122988
+    },
+    {
+      "path": "/how-are-teeth-implants-done/",
+      "file": "how-are-teeth-implants-done.html",
+      "id": "how-are-teeth-implants-done",
+      "bytes": 122034
+    },
+    {
+      "path": "/how-cosmetic-dentistry-can-improve-your-smile/",
+      "file": "how-cosmetic-dentistry-can-improve-your-smile.html",
+      "id": "how-cosmetic-dentistry-can-improve-your-smile",
+      "bytes": 121729
+    },
+    {
+      "path": "/how-dental-crowns-work/",
+      "file": "how-dental-crowns-work.html",
+      "id": "how-dental-crowns-work",
+      "bytes": 121460
+    },
+    {
+      "path": "/how-dental-implants-work/",
+      "file": "how-dental-implants-work.html",
+      "id": "how-dental-implants-work",
+      "bytes": 123408
+    },
+    {
+      "path": "/how-do-teeth-whitening-strips-work/",
+      "file": "how-do-teeth-whitening-strips-work.html",
+      "id": "how-do-teeth-whitening-strips-work",
+      "bytes": 122465
+    },
+    {
+      "path": "/how-does-invisalign-move-teeth/",
+      "file": "how-does-invisalign-move-teeth.html",
+      "id": "how-does-invisalign-move-teeth",
+      "bytes": 122343
+    },
+    {
+      "path": "/how-good-can-modern-dentures-look/",
+      "file": "how-good-can-modern-dentures-look.html",
+      "id": "how-good-can-modern-dentures-look",
+      "bytes": 121742
+    },
+    {
+      "path": "/how-jaw-botox-helps-with-tmj/",
+      "file": "how-jaw-botox-helps-with-tmj.html",
+      "id": "how-jaw-botox-helps-with-tmj",
+      "bytes": 123024
+    },
+    {
+      "path": "/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning/",
+      "file": "how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning.html",
+      "id": "how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning",
+      "bytes": 122828
+    },
+    {
+      "path": "/how-long-can-a-dental-bridge-last/",
+      "file": "how-long-can-a-dental-bridge-last.html",
+      "id": "how-long-can-a-dental-bridge-last",
+      "bytes": 122213
+    },
+    {
+      "path": "/how-long-do-porcelain-veneers-last/",
+      "file": "how-long-do-porcelain-veneers-last.html",
+      "id": "how-long-do-porcelain-veneers-last",
+      "bytes": 122309
+    },
+    {
+      "path": "/how-long-does-a-cavity-filling-take/",
+      "file": "how-long-does-a-cavity-filling-take.html",
+      "id": "how-long-does-a-cavity-filling-take",
+      "bytes": 122719
+    },
+    {
+      "path": "/how-long-does-a-teeth-cleaning-takes/",
+      "file": "how-long-does-a-teeth-cleaning-takes.html",
+      "id": "how-long-does-a-teeth-cleaning-takes",
+      "bytes": 123464
+    },
+    {
+      "path": "/how-long-does-cosmetic-bonding-last/",
+      "file": "how-long-does-cosmetic-bonding-last.html",
+      "id": "how-long-does-cosmetic-bonding-last",
+      "bytes": 123521
+    },
+    {
+      "path": "/how-long-does-dental-bonding-last/",
+      "file": "how-long-does-dental-bonding-last.html",
+      "id": "how-long-does-dental-bonding-last",
+      "bytes": 123801
+    },
+    {
+      "path": "/how-long-does-invisalign-take/",
+      "file": "how-long-does-invisalign-take.html",
+      "id": "how-long-does-invisalign-take",
+      "bytes": 121522
+    },
+    {
+      "path": "/how-long-does-professional-teeth-whitening-last/",
+      "file": "how-long-does-professional-teeth-whitening-last.html",
+      "id": "how-long-does-professional-teeth-whitening-last",
+      "bytes": 122565
+    },
+    {
+      "path": "/how-many-teeth-kids-have/",
+      "file": "how-many-teeth-kids-have.html",
+      "id": "how-many-teeth-kids-have",
+      "bytes": 121981
+    },
+    {
+      "path": "/how-often-should-you-change-your-toothbrush/",
+      "file": "how-often-should-you-change-your-toothbrush.html",
+      "id": "how-often-should-you-change-your-toothbrush",
+      "bytes": 122443
+    },
+    {
+      "path": "/how-often-should-you-get-your-teeth-cleaned/",
+      "file": "how-often-should-you-get-your-teeth-cleaned.html",
+      "id": "how-often-should-you-get-your-teeth-cleaned",
+      "bytes": 123663
+    },
+    {
+      "path": "/how-prevent-tooth-decay/",
+      "file": "how-prevent-tooth-decay.html",
+      "id": "how-prevent-tooth-decay",
+      "bytes": 122019
+    },
+    {
+      "path": "/how-professional-teeth-whitening-can-transform-your-smile-and-confidence-in-austin-tx/",
+      "file": "how-professional-teeth-whitening-can-transform-your-smile-and-confidence-in-austin-tx.html",
+      "id": "how-professional-teeth-whitening-can-transform-your-smile-and-confidence-in-austin-tx",
+      "bytes": 127352
+    },
+    {
+      "path": "/how-to-clean-invisalign/",
+      "file": "how-to-clean-invisalign.html",
+      "id": "how-to-clean-invisalign",
+      "bytes": 121741
+    },
+    {
+      "path": "/how-to-fix-lock-jaw/",
+      "file": "how-to-fix-lock-jaw.html",
+      "id": "how-to-fix-lock-jaw",
+      "bytes": 121713
+    },
+    {
+      "path": "/how-to-floss-with-braces/",
+      "file": "how-to-floss-with-braces.html",
+      "id": "how-to-floss-with-braces",
+      "bytes": 123312
+    },
+    {
+      "path": "/how-to-get-help-with-dental-implants/",
+      "file": "how-to-get-help-with-dental-implants.html",
+      "id": "how-to-get-help-with-dental-implants",
+      "bytes": 122684
+    },
+    {
+      "path": "/how-to-get-rid-of-stained-teeth/",
+      "file": "how-to-get-rid-of-stained-teeth.html",
+      "id": "how-to-get-rid-of-stained-teeth",
+      "bytes": 122829
+    },
+    {
+      "path": "/how-to-keep-healthy-smiles-this-halloween/",
+      "file": "how-to-keep-healthy-smiles-this-halloween.html",
+      "id": "how-to-keep-healthy-smiles-this-halloween",
+      "bytes": 122967
+    },
+    {
+      "path": "/how-to-know-if-youre-suffering-from-gum-disease/",
+      "file": "how-to-know-if-youre-suffering-from-gum-disease.html",
+      "id": "how-to-know-if-youre-suffering-from-gum-disease",
+      "bytes": 123572
+    },
+    {
+      "path": "/how-to-maintain-dental-implants-austin/",
+      "file": "how-to-maintain-dental-implants-austin.html",
+      "id": "how-to-maintain-dental-implants-austin",
+      "bytes": 122762
+    },
+    {
+      "path": "/how-to-pick-the-best-cosmetic-dentist-in-austin-tx/",
+      "file": "how-to-pick-the-best-cosmetic-dentist-in-austin-tx.html",
+      "id": "how-to-pick-the-best-cosmetic-dentist-in-austin-tx",
+      "bytes": 127901
+    },
+    {
+      "path": "/how-to-reverse-gum-disease/",
+      "file": "how-to-reverse-gum-disease.html",
+      "id": "how-to-reverse-gum-disease",
+      "bytes": 121941
+    },
+    {
+      "path": "/how-to-stop-grinding-teeth/",
+      "file": "how-to-stop-grinding-teeth.html",
+      "id": "how-to-stop-grinding-teeth",
+      "bytes": 123116
+    },
+    {
+      "path": "/how-to-unlock-a-locked-jaw/",
+      "file": "how-to-unlock-a-locked-jaw.html",
+      "id": "how-to-unlock-a-locked-jaw",
+      "bytes": 121876
+    },
+    {
+      "path": "/how-to-use-teeth-whitening-strips/",
+      "file": "how-to-use-teeth-whitening-strips.html",
+      "id": "how-to-use-teeth-whitening-strips",
+      "bytes": 122268
+    },
+    {
+      "path": "/i-dont-smoke-can-i-still-get-oral-cancer/",
+      "file": "i-dont-smoke-can-i-still-get-oral-cancer.html",
+      "id": "i-dont-smoke-can-i-still-get-oral-cancer",
+      "bytes": 122955
+    },
+    {
+      "path": "/ignoring-painless-cracked-tooth/",
+      "file": "ignoring-painless-cracked-tooth.html",
+      "id": "ignoring-painless-cracked-tooth",
+      "bytes": 121680
+    },
+    {
+      "path": "/invisalign-after-braces/",
+      "file": "invisalign-after-braces.html",
+      "id": "invisalign-after-braces",
+      "bytes": 122426
+    },
+    {
+      "path": "/invisalign-for-underbite/",
+      "file": "invisalign-for-underbite.html",
+      "id": "invisalign-for-underbite",
+      "bytes": 122872
+    },
+    {
+      "path": "/invisalign/",
+      "file": "invisalign.html",
+      "id": "invisalign",
+      "bytes": 130113
+    },
+    {
+      "path": "/is-coconut-oil-good-for-your-teeth/",
+      "file": "is-coconut-oil-good-for-your-teeth.html",
+      "id": "is-coconut-oil-good-for-your-teeth",
+      "bytes": 122373
+    },
+    {
+      "path": "/is-cosmetic-dentistry-permanent/",
+      "file": "is-cosmetic-dentistry-permanent.html",
+      "id": "is-cosmetic-dentistry-permanent",
+      "bytes": 123268
+    },
+    {
+      "path": "/is-invisalign-right-for-you/",
+      "file": "is-invisalign-right-for-you.html",
+      "id": "is-invisalign-right-for-you",
+      "bytes": 123036
+    },
+    {
+      "path": "/is-it-painful-having-a-wisdom-tooth-removed/",
+      "file": "is-it-painful-having-a-wisdom-tooth-removed.html",
+      "id": "is-it-painful-having-a-wisdom-tooth-removed",
+      "bytes": 122471
+    },
+    {
+      "path": "/is-lockjaw-a-dental-emergency/",
+      "file": "is-lockjaw-a-dental-emergency.html",
+      "id": "is-lockjaw-a-dental-emergency",
+      "bytes": 125814
+    },
+    {
+      "path": "/is-periodontal-disease-contagious/",
+      "file": "is-periodontal-disease-contagious.html",
+      "id": "is-periodontal-disease-contagious",
+      "bytes": 122911
+    },
+    {
+      "path": "/is-whitening-bad-for-your-teeth/",
+      "file": "is-whitening-bad-for-your-teeth.html",
+      "id": "is-whitening-bad-for-your-teeth",
+      "bytes": 123069
+    },
+    {
+      "path": "/jaw-botox-in-austin-cosmetic-benefits-and-pain-relief-at-toothbar/",
+      "file": "jaw-botox-in-austin-cosmetic-benefits-and-pain-relief-at-toothbar.html",
+      "id": "jaw-botox-in-austin-cosmetic-benefits-and-pain-relief-at-toothbar",
+      "bytes": 128733
+    },
+    {
+      "path": "/jaw-botox/",
+      "file": "jaw-botox.html",
+      "id": "jaw-botox",
+      "bytes": 132973
+    },
+    {
+      "path": "/keeping-mouths-healthy-age/",
+      "file": "keeping-mouths-healthy-age.html",
+      "id": "keeping-mouths-healthy-age",
+      "bytes": 122784
+    },
+    {
+      "path": "/keeping-your-childs-teeth-healthy/",
+      "file": "keeping-your-childs-teeth-healthy.html",
+      "id": "keeping-your-childs-teeth-healthy",
+      "bytes": 124671
+    },
+    {
+      "path": "/keeping-your-gums-healthy-guide/",
+      "file": "keeping-your-gums-healthy-guide.html",
+      "id": "keeping-your-gums-healthy-guide",
+      "bytes": 122450
+    },
+    {
+      "path": "/key-to-a-prettier-smile/",
+      "file": "key-to-a-prettier-smile.html",
+      "id": "key-to-a-prettier-smile",
+      "bytes": 122555
+    },
+    {
+      "path": "/kids-teeth-care/",
+      "file": "kids-teeth-care.html",
+      "id": "kids-teeth-care",
+      "bytes": 121060
+    },
+    {
+      "path": "/life-of-porcelain-veneers/",
+      "file": "life-of-porcelain-veneers.html",
+      "id": "life-of-porcelain-veneers",
+      "bytes": 123097
+    },
+    {
+      "path": "/loose-tooth-simple-steps-save-smile/",
+      "file": "loose-tooth-simple-steps-save-smile.html",
+      "id": "loose-tooth-simple-steps-save-smile",
+      "bytes": 122533
+    },
+    {
+      "path": "/lose-a-tooth/",
+      "file": "lose-a-tooth.html",
+      "id": "lose-a-tooth",
+      "bytes": 121664
+    },
+    {
+      "path": "/main-causes-of-gum-recession/",
+      "file": "main-causes-of-gum-recession.html",
+      "id": "main-causes-of-gum-recession",
+      "bytes": 122836
+    },
+    {
+      "path": "/most-common-causes-of-toothaches/",
+      "file": "most-common-causes-of-toothaches.html",
+      "id": "most-common-causes-of-toothaches",
+      "bytes": 122666
+    },
+    {
+      "path": "/natural-ways-keeping-gums-healthy/",
+      "file": "natural-ways-keeping-gums-healthy.html",
+      "id": "natural-ways-keeping-gums-healthy",
+      "bytes": 123232
+    },
+    {
+      "path": "/new-patients/",
+      "file": "new-patients.html",
+      "id": "new-patients",
+      "bytes": 136403
+    },
+    {
+      "path": "/never-be-afraid-of-wearing-your-dentures/",
+      "file": "never-be-afraid-of-wearing-your-dentures.html",
+      "id": "never-be-afraid-of-wearing-your-dentures",
+      "bytes": 122237
+    },
+    {
+      "path": "/nitrous-sedation/",
+      "file": "nitrous-sedation.html",
+      "id": "nitrous-sedation",
+      "bytes": 130444
+    },
+    {
+      "path": "/partial-dentures/",
+      "file": "partial-dentures.html",
+      "id": "partial-dentures",
+      "bytes": 129605
+    },
+    {
+      "path": "/opt-out-preferences/",
+      "file": "opt-out-preferences.html",
+      "id": "opt-out-preferences",
+      "bytes": 119947
+    },
+    {
+      "path": "/periodontitis-and-its-symptoms/",
+      "file": "periodontitis-and-its-symptoms.html",
+      "id": "periodontitis-and-its-symptoms",
+      "bytes": 122225
+    },
+    {
+      "path": "/poor-dental-health-lead-to-liver-cancer/",
+      "file": "poor-dental-health-lead-to-liver-cancer.html",
+      "id": "poor-dental-health-lead-to-liver-cancer",
+      "bytes": 123157
+    },
+    {
+      "path": "/practice-sets-a-standard-for-innovation/",
+      "file": "practice-sets-a-standard-for-innovation.html",
+      "id": "practice-sets-a-standard-for-innovation",
+      "bytes": 123298
+    },
+    {
+      "path": "/prevent-tooth-decay/",
+      "file": "prevent-tooth-decay.html",
+      "id": "prevent-tooth-decay",
+      "bytes": 122717
+    },
+    {
+      "path": "/reasons-tooth-picking-is-bad-for-your-teeth/",
+      "file": "reasons-tooth-picking-is-bad-for-your-teeth.html",
+      "id": "reasons-tooth-picking-is-bad-for-your-teeth",
+      "bytes": 123071
+    },
+    {
+      "path": "/problems-caused-by-missing-teeth/",
+      "file": "problems-caused-by-missing-teeth.html",
+      "id": "problems-caused-by-missing-teeth",
+      "bytes": 122454
+    },
+    {
+      "path": "/reasons-why-brushing-your-tongue-is-important/",
+      "file": "reasons-why-brushing-your-tongue-is-important.html",
+      "id": "reasons-why-brushing-your-tongue-is-important",
+      "bytes": 123250
+    },
+    {
+      "path": "/replace-your-broken-or-missing-tooth/",
+      "file": "replace-your-broken-or-missing-tooth.html",
+      "id": "replace-your-broken-or-missing-tooth",
+      "bytes": 121616
+    },
+    {
+      "path": "/reduce-teeth-clenching-grinding/",
+      "file": "reduce-teeth-clenching-grinding.html",
+      "id": "reduce-teeth-clenching-grinding",
+      "bytes": 122746
+    },
+    {
+      "path": "/replace-your-missing-teeth/",
+      "file": "replace-your-missing-teeth.html",
+      "id": "replace-your-missing-teeth",
+      "bytes": 121236
+    },
+    {
+      "path": "/restorative-dentistry-practices-plan-for-them/",
+      "file": "restorative-dentistry-practices-plan-for-them.html",
+      "id": "restorative-dentistry-practices-plan-for-them",
+      "bytes": 124503
+    },
+    {
+      "path": "/replacing-broken-crown-implant/",
+      "file": "replacing-broken-crown-implant.html",
+      "id": "replacing-broken-crown-implant",
+      "bytes": 122082
+    },
+    {
+      "path": "/root-canal-treatments/",
+      "file": "root-canal-treatments.html",
+      "id": "root-canal-treatments",
+      "bytes": 122570
+    },
+    {
+      "path": "/schedule/",
+      "file": "schedule.html",
+      "id": "schedule",
+      "bytes": 6914
+    },
+    {
+      "path": "/sensitive-teeth-do-hot-and-cold-bother-you/",
+      "file": "sensitive-teeth-do-hot-and-cold-bother-you.html",
+      "id": "sensitive-teeth-do-hot-and-cold-bother-you",
+      "bytes": 123169
+    },
+    {
+      "path": "/signs-you-need-a-night-guard/",
+      "file": "signs-you-need-a-night-guard.html",
+      "id": "signs-you-need-a-night-guard",
+      "bytes": 122602
+    },
+    {
+      "path": "/simple-ways-to-strengthen-your-teeth/",
+      "file": "simple-ways-to-strengthen-your-teeth.html",
+      "id": "simple-ways-to-strengthen-your-teeth",
+      "bytes": 122921
+    },
+    {
+      "path": "/smile-makeover-chances-job-interviews/",
+      "file": "smile-makeover-chances-job-interviews.html",
+      "id": "smile-makeover-chances-job-interviews",
+      "bytes": 122346
+    },
+    {
+      "path": "/smile-makeover/",
+      "file": "smile-makeover.html",
+      "id": "smile-makeover",
+      "bytes": 129550
+    },
+    {
+      "path": "/smoking-and-getting-dental-implants/",
+      "file": "smoking-and-getting-dental-implants.html",
+      "id": "smoking-and-getting-dental-implants",
+      "bytes": 122595
+    },
+    {
+      "path": "/snow-vs-professional-teeth-whitening/",
+      "file": "snow-vs-professional-teeth-whitening.html",
+      "id": "snow-vs-professional-teeth-whitening",
+      "bytes": 123786
+    },
+    {
+      "path": "/straighten-crooked-teeth-without-braces/",
+      "file": "straighten-crooked-teeth-without-braces.html",
+      "id": "straighten-crooked-teeth-without-braces",
+      "bytes": 123020
+    },
+    {
+      "path": "/straight-teeth-without-braces/",
+      "file": "straight-teeth-without-braces.html",
+      "id": "straight-teeth-without-braces",
+      "bytes": 123004
+    },
+    {
+      "path": "/straighten-your-teeth-with-clear-aligners/",
+      "file": "straighten-your-teeth-with-clear-aligners.html",
+      "id": "straighten-your-teeth-with-clear-aligners",
+      "bytes": 122248
+    },
+    {
+      "path": "/sudden-wisdom-toothpain/",
+      "file": "sudden-wisdom-toothpain.html",
+      "id": "sudden-wisdom-toothpain",
+      "bytes": 120905
+    },
+    {
+      "path": "/sudden-wisdom-tooth-pain-how-to-put-a-stop-to-it/",
+      "file": "sudden-wisdom-tooth-pain-how-to-put-a-stop-to-it.html",
+      "id": "sudden-wisdom-tooth-pain-how-to-put-a-stop-to-it",
+      "bytes": 121617
+    },
+    {
+      "path": "/symptoms-most-people-feel-who-need-a-root-canal/",
+      "file": "symptoms-most-people-feel-who-need-a-root-canal.html",
+      "id": "symptoms-most-people-feel-who-need-a-root-canal",
+      "bytes": 122397
+    },
+    {
+      "path": "/tag/advanced-dentistry-austin/",
+      "file": "tag-advanced-dentistry-austin.html",
+      "id": "tag-advanced-dentistry-austin",
+      "bytes": 114560
+    },
+    {
+      "path": "/symptoms-of-tmj-disorder/",
+      "file": "symptoms-of-tmj-disorder.html",
+      "id": "symptoms-of-tmj-disorder",
+      "bytes": 122359
+    },
+    {
+      "path": "/tag/affordable-cosmetic-dentist-austin/",
+      "file": "tag-affordable-cosmetic-dentist-austin.html",
+      "id": "tag-affordable-cosmetic-dentist-austin",
+      "bytes": 114447
+    },
+    {
+      "path": "/tag/anxious-dental-patients/",
+      "file": "tag-anxious-dental-patients.html",
+      "id": "tag-anxious-dental-patients",
+      "bytes": 114304
+    },
+    {
+      "path": "/tag/anxiety-free-dentist/",
+      "file": "tag-anxiety-free-dentist.html",
+      "id": "tag-anxiety-free-dentist",
+      "bytes": 114246
+    },
+    {
+      "path": "/tag/austin-cosmetic-dentist-reviews/",
+      "file": "tag-austin-cosmetic-dentist-reviews.html",
+      "id": "tag-austin-cosmetic-dentist-reviews",
+      "bytes": 114389
+    },
+    {
+      "path": "/tag/austin-cosmetic-dentist/",
+      "file": "tag-austin-cosmetic-dentist.html",
+      "id": "tag-austin-cosmetic-dentist",
+      "bytes": 124380
+    },
+    {
+      "path": "/tag/austin-cosmetic-dentistry/",
+      "file": "tag-austin-cosmetic-dentistry.html",
+      "id": "tag-austin-cosmetic-dentistry",
+      "bytes": 114273
+    },
+    {
+      "path": "/tag/austin-dental-spa/",
+      "file": "tag-austin-dental-spa.html",
+      "id": "tag-austin-dental-spa",
+      "bytes": 117140
+    },
+    {
+      "path": "/tag/austin-dental-wellness/",
+      "file": "tag-austin-dental-wellness.html",
+      "id": "tag-austin-dental-wellness",
+      "bytes": 114253
+    },
+    {
+      "path": "/tag/austin-teeth-whitening/",
+      "file": "tag-austin-teeth-whitening.html",
+      "id": "tag-austin-teeth-whitening",
+      "bytes": 114201
+    },
+    {
+      "path": "/tag/austin-tx-dental-health/",
+      "file": "tag-austin-tx-dental-health.html",
+      "id": "tag-austin-tx-dental-health",
+      "bytes": 114271
+    },
+    {
+      "path": "/tag/austin-tx-dentist/",
+      "file": "tag-austin-tx-dentist.html",
+      "id": "tag-austin-tx-dentist",
+      "bytes": 114188
+    },
+    {
+      "path": "/tag/austin-tx-dental-office/",
+      "file": "tag-austin-tx-dental-office.html",
+      "id": "tag-austin-tx-dental-office",
+      "bytes": 117308
+    },
+    {
+      "path": "/tag/best-cosmetic-dentist-austin-tx/",
+      "file": "tag-best-cosmetic-dentist-austin-tx.html",
+      "id": "tag-best-cosmetic-dentist-austin-tx",
+      "bytes": 114676
+    },
+    {
+      "path": "/tag/best-cosmetic-dentist-austin/",
+      "file": "tag-best-cosmetic-dentist-austin.html",
+      "id": "tag-best-cosmetic-dentist-austin",
+      "bytes": 114331
+    },
+    {
+      "path": "/tag/best-dental-clinic-in-austin/",
+      "file": "tag-best-dental-clinic-in-austin.html",
+      "id": "tag-best-dental-clinic-in-austin",
+      "bytes": 114369
+    },
+    {
+      "path": "/tag/best-dentist-in-austin-tx/",
+      "file": "tag-best-dentist-in-austin-tx.html",
+      "id": "tag-best-dentist-in-austin-tx",
+      "bytes": 114311
+    },
+    {
+      "path": "/tag/botox-cosmetic-dental-office-austin/",
+      "file": "tag-botox-cosmetic-dental-office-austin.html",
+      "id": "tag-botox-cosmetic-dental-office-austin",
+      "bytes": 114752
+    },
+    {
+      "path": "/tag/botox-for-clenching-austin/",
+      "file": "tag-botox-for-clenching-austin.html",
+      "id": "tag-botox-for-clenching-austin",
+      "bytes": 114578
+    },
+    {
+      "path": "/tag/botox-for-teeth-grinding-austin/",
+      "file": "tag-botox-for-teeth-grinding-austin.html",
+      "id": "tag-botox-for-teeth-grinding-austin",
+      "bytes": 114676
+    },
+    {
+      "path": "/tag/botox-for-tmj-austin/",
+      "file": "tag-botox-for-tmj-austin.html",
+      "id": "tag-botox-for-tmj-austin",
+      "bytes": 114462
+    },
+    {
+      "path": "/tag/braces/",
+      "file": "tag-braces.html",
+      "id": "tag-braces",
+      "bytes": 112471
+    },
+    {
+      "path": "/tag/bright-smile/",
+      "file": "tag-bright-smile.html",
+      "id": "tag-bright-smile",
+      "bytes": 114005
+    },
+    {
+      "path": "/tag/bruxism-treatment-austin/",
+      "file": "tag-bruxism-treatment-austin.html",
+      "id": "tag-bruxism-treatment-austin",
+      "bytes": 114538
+    },
+    {
+      "path": "/tag/comfortable-dental-care/",
+      "file": "tag-comfortable-dental-care.html",
+      "id": "tag-comfortable-dental-care",
+      "bytes": 114304
+    },
+    {
+      "path": "/tag/confident-smile/",
+      "file": "tag-confident-smile.html",
+      "id": "tag-confident-smile",
+      "bytes": 114063
+    },
+    {
+      "path": "/tag/connection-between-teeth-and-health/",
+      "file": "tag-connection-between-teeth-and-health.html",
+      "id": "tag-connection-between-teeth-and-health",
+      "bytes": 114503
+    },
+    {
+      "path": "/tag/cosmetic-botox-austin-tx/",
+      "file": "tag-cosmetic-botox-austin-tx.html",
+      "id": "tag-cosmetic-botox-austin-tx",
+      "bytes": 114538
+    },
+    {
+      "path": "/tag/cosmetic-dentist-austin/",
+      "file": "tag-cosmetic-dentist-austin.html",
+      "id": "tag-cosmetic-dentist-austin",
+      "bytes": 117341
+    },
+    {
+      "path": "/tag/cosmetic-dentist-botox-austin/",
+      "file": "tag-cosmetic-dentist-botox-austin.html",
+      "id": "tag-cosmetic-dentist-botox-austin",
+      "bytes": 114636
+    },
+    {
+      "path": "/tag/cosmetic-dentistry-austin/",
+      "file": "tag-cosmetic-dentistry-austin.html",
+      "id": "tag-cosmetic-dentistry-austin",
+      "bytes": 114560
+    },
+    {
+      "path": "/tag/cosmetic-dentistry/",
+      "file": "tag-cosmetic-dentistry.html",
+      "id": "tag-cosmetic-dentistry",
+      "bytes": 116019
+    },
+    {
+      "path": "/tag/dental-aesthetics/",
+      "file": "tag-dental-aesthetics.html",
+      "id": "tag-dental-aesthetics",
+      "bytes": 114103
+    },
+    {
+      "path": "/tag/dental-anxiety-in-austin/",
+      "file": "tag-dental-anxiety-in-austin.html",
+      "id": "tag-dental-anxiety-in-austin",
+      "bytes": 114322
+    },
+    {
+      "path": "/tag/dental-anxiety/",
+      "file": "tag-dental-anxiety.html",
+      "id": "tag-dental-anxiety",
+      "bytes": 114130
+    },
+    {
+      "path": "/tag/dental-bonding-austin/",
+      "file": "tag-dental-bonding-austin.html",
+      "id": "tag-dental-bonding-austin",
+      "bytes": 114193
+    },
+    {
+      "path": "/tag/dental-care-for-adults/",
+      "file": "tag-dental-care-for-adults.html",
+      "id": "tag-dental-care-for-adults",
+      "bytes": 114286
+    },
+    {
+      "path": "/tag/dental-care-austin-tx/",
+      "file": "tag-dental-care-austin-tx.html",
+      "id": "tag-dental-care-austin-tx",
+      "bytes": 114193
+    },
+    {
+      "path": "/tag/dental-checkups-austin/",
+      "file": "tag-dental-checkups-austin.html",
+      "id": "tag-dental-checkups-austin",
+      "bytes": 114253
+    },
+    {
+      "path": "/tag/dental-cleanings-austin/",
+      "file": "tag-dental-cleanings-austin.html",
+      "id": "tag-dental-cleanings-austin",
+      "bytes": 114271
+    },
+    {
+      "path": "/tag/dental-crowns-austin/",
+      "file": "tag-dental-crowns-austin.html",
+      "id": "tag-dental-crowns-austin",
+      "bytes": 114175
+    },
+    {
+      "path": "/tag/dental-implant/",
+      "file": "tag-dental-implant.html",
+      "id": "tag-dental-implant",
+      "bytes": 112883
+    },
+    {
+      "path": "/tag/dental-lounge-experience/",
+      "file": "tag-dental-lounge-experience.html",
+      "id": "tag-dental-lounge-experience",
+      "bytes": 114322
+    },
+    {
+      "path": "/tag/dental-implants-austin/",
+      "file": "tag-dental-implants-austin.html",
+      "id": "tag-dental-implants-austin",
+      "bytes": 114215
+    },
+    {
+      "path": "/tag/dental-spa-austin/",
+      "file": "tag-dental-spa-austin.html",
+      "id": "tag-dental-spa-austin",
+      "bytes": 114404
+    },
+    {
+      "path": "/tag/dental-technology/",
+      "file": "tag-dental-technology.html",
+      "id": "tag-dental-technology",
+      "bytes": 114188
+    },
+    {
+      "path": "/tag/dental-touch-ups/",
+      "file": "tag-dental-touch-ups.html",
+      "id": "tag-dental-touch-ups",
+      "bytes": 114085
+    },
+    {
+      "path": "/tag/dental-wellness/",
+      "file": "tag-dental-wellness.html",
+      "id": "tag-dental-wellness",
+      "bytes": 114148
+    },
+    {
+      "path": "/tag/dental-whitening/",
+      "file": "tag-dental-whitening.html",
+      "id": "tag-dental-whitening",
+      "bytes": 114085
+    },
+    {
+      "path": "/tag/dentist-botox-injections-austin/",
+      "file": "tag-dentist-botox-injections-austin.html",
+      "id": "tag-dentist-botox-injections-austin",
+      "bytes": 114676
+    },
+    {
+      "path": "/tag/dentist-in-austin/",
+      "file": "tag-dentist-in-austin.html",
+      "id": "tag-dentist-in-austin",
+      "bytes": 116193
+    },
+    {
+      "path": "/tag/dentist-near-downtown-austin/",
+      "file": "tag-dentist-near-downtown-austin.html",
+      "id": "tag-dentist-near-downtown-austin",
+      "bytes": 114369
+    },
+    {
+      "path": "/tag/digital-dental-imaging/",
+      "file": "tag-digital-dental-imaging.html",
+      "id": "tag-digital-dental-imaging",
+      "bytes": 114286
+    },
+    {
+      "path": "/tag/downtown-austin-dentist/",
+      "file": "tag-downtown-austin-dentist.html",
+      "id": "tag-downtown-austin-dentist",
+      "bytes": 120650
+    },
+    {
+      "path": "/tag/facial-aesthetics-dentist-austin/",
+      "file": "tag-facial-aesthetics-dentist-austin.html",
+      "id": "tag-facial-aesthetics-dentist-austin",
+      "bytes": 114694
+    },
+    {
+      "path": "/tag/express-dental-treatments/",
+      "file": "tag-express-dental-treatments.html",
+      "id": "tag-express-dental-treatments",
+      "bytes": 114259
+    },
+    {
+      "path": "/tag/family-dentist-austin/",
+      "file": "tag-family-dentist-austin.html",
+      "id": "tag-family-dentist-austin",
+      "bytes": 114193
+    },
+    {
+      "path": "/tag/first-dental-visit/",
+      "file": "tag-first-dental-visit.html",
+      "id": "tag-first-dental-visit",
+      "bytes": 114206
+    },
+    {
+      "path": "/tag/fear-of-the-dentist/",
+      "file": "tag-fear-of-the-dentist.html",
+      "id": "tag-fear-of-the-dentist",
+      "bytes": 114228
+    },
+    {
+      "path": "/tag/gentle-dentistry/",
+      "file": "tag-gentle-dentistry.html",
+      "id": "tag-gentle-dentistry",
+      "bytes": 114170
+    },
+    {
+      "path": "/tag/gum-disease-and-heart-health/",
+      "file": "tag-gum-disease-and-heart-health.html",
+      "id": "tag-gum-disease-and-heart-health",
+      "bytes": 114369
+    },
+    {
+      "path": "/tag/gum-disease-prevention/",
+      "file": "tag-gum-disease-prevention.html",
+      "id": "tag-gum-disease-prevention",
+      "bytes": 114253
+    },
+    {
+      "path": "/tag/healthy-gums-healthy-body/",
+      "file": "tag-healthy-gums-healthy-body.html",
+      "id": "tag-healthy-gums-healthy-body",
+      "bytes": 114311
+    },
+    {
+      "path": "/tag/holistic-dentistry-austin/",
+      "file": "tag-holistic-dentistry-austin.html",
+      "id": "tag-holistic-dentistry-austin",
+      "bytes": 114311
+    },
+    {
+      "path": "/tag/how-to-whiten-teeth/",
+      "file": "tag-how-to-whiten-teeth.html",
+      "id": "tag-how-to-whiten-teeth",
+      "bytes": 114143
+    },
+    {
+      "path": "/tag/in-office-whitening/",
+      "file": "tag-in-office-whitening.html",
+      "id": "tag-in-office-whitening",
+      "bytes": 114143
+    },
+    {
+      "path": "/tag/invisalign-austin-tx/",
+      "file": "tag-invisalign-austin-tx.html",
+      "id": "tag-invisalign-austin-tx",
+      "bytes": 114175
+    },
+    {
+      "path": "/tag/invisalign/",
+      "file": "tag-invisalign.html",
+      "id": "tag-invisalign",
+      "bytes": 112629
+    },
+    {
+      "path": "/tag/jaw-botox-austin/",
+      "file": "tag-jaw-botox-austin.html",
+      "id": "tag-jaw-botox-austin",
+      "bytes": 114386
+    },
+    {
+      "path": "/tag/jaw-tension-relief-austin/",
+      "file": "tag-jaw-tension-relief-austin.html",
+      "id": "tag-jaw-tension-relief-austin",
+      "bytes": 114560
+    },
+    {
+      "path": "/tag/jawline-contouring-austin/",
+      "file": "tag-jawline-contouring-austin.html",
+      "id": "tag-jawline-contouring-austin",
+      "bytes": 114560
+    },
+    {
+      "path": "/tag/jawline-slimming-botox-austin/",
+      "file": "tag-jawline-slimming-botox-austin.html",
+      "id": "tag-jawline-slimming-botox-austin",
+      "bytes": 114636
+    },
+    {
+      "path": "/tag/lockjaw/",
+      "file": "tag-lockjaw.html",
+      "id": "tag-lockjaw",
+      "bytes": 112553
+    },
+    {
+      "path": "/tag/masseter-botox-austin/",
+      "file": "tag-masseter-botox-austin.html",
+      "id": "tag-masseter-botox-austin",
+      "bytes": 114480
+    },
+    {
+      "path": "/tag/masseter-reduction-austin/",
+      "file": "tag-masseter-reduction-austin.html",
+      "id": "tag-masseter-reduction-austin",
+      "bytes": 114560
+    },
+    {
+      "path": "/tag/modern-dentistry-austin/",
+      "file": "tag-modern-dentistry-austin.html",
+      "id": "tag-modern-dentistry-austin",
+      "bytes": 114233
+    },
+    {
+      "path": "/tag/modern-dentistry/",
+      "file": "tag-modern-dentistry.html",
+      "id": "tag-modern-dentistry",
+      "bytes": 114170
+    },
+    {
+      "path": "/tag/nitrous-sedation-dentistry/",
+      "file": "tag-nitrous-sedation-dentistry.html",
+      "id": "tag-nitrous-sedation-dentistry",
+      "bytes": 114362
+    },
+    {
+      "path": "/tag/new-dental-patients/",
+      "file": "tag-new-dental-patients.html",
+      "id": "tag-new-dental-patients",
+      "bytes": 114228
+    },
+    {
+      "path": "/tag/oral-care-austin/",
+      "file": "tag-oral-care-austin.html",
+      "id": "tag-oral-care-austin",
+      "bytes": 114137
+    },
+    {
+      "path": "/tag/oral-care-tips/",
+      "file": "tag-oral-care-tips.html",
+      "id": "tag-oral-care-tips",
+      "bytes": 114045
+    },
+    {
+      "path": "/tag/oral-health-and-overall-health/",
+      "file": "tag-oral-health-and-overall-health.html",
+      "id": "tag-oral-health-and-overall-health",
+      "bytes": 114405
+    },
+    {
+      "path": "/tag/oral-health-austin/",
+      "file": "tag-oral-health-austin.html",
+      "id": "tag-oral-health-austin",
+      "bytes": 114173
+    },
+    {
+      "path": "/tag/oral-hygiene-tips/",
+      "file": "tag-oral-hygiene-tips.html",
+      "id": "tag-oral-hygiene-tips",
+      "bytes": 114155
+    },
+    {
+      "path": "/tag/pain-free-dentistry-austin/",
+      "file": "tag-pain-free-dentistry-austin.html",
+      "id": "tag-pain-free-dentistry-austin",
+      "bytes": 114291
+    },
+    {
+      "path": "/tag/patient-comfort-dentistry/",
+      "file": "tag-patient-comfort-dentistry.html",
+      "id": "tag-patient-comfort-dentistry",
+      "bytes": 114344
+    },
+    {
+      "path": "/tag/patient-focused-dentistry/",
+      "file": "tag-patient-focused-dentistry.html",
+      "id": "tag-patient-focused-dentistry",
+      "bytes": 114344
+    },
+    {
+      "path": "/tag/periodontal-health-austin/",
+      "file": "tag-periodontal-health-austin.html",
+      "id": "tag-periodontal-health-austin",
+      "bytes": 114311
+    },
+    {
+      "path": "/tag/porcelain-veneers-austin/",
+      "file": "tag-porcelain-veneers-austin.html",
+      "id": "tag-porcelain-veneers-austin",
+      "bytes": 114251
+    },
+    {
+      "path": "/tag/professional-whitening/",
+      "file": "tag-professional-whitening.html",
+      "id": "tag-professional-whitening",
+      "bytes": 114201
+    },
+    {
+      "path": "/tag/preventive-dental-care/",
+      "file": "tag-preventive-dental-care.html",
+      "id": "tag-preventive-dental-care",
+      "bytes": 117397
+    },
+    {
+      "path": "/tag/relaxing-dental-experience/",
+      "file": "tag-relaxing-dental-experience.html",
+      "id": "tag-relaxing-dental-experience",
+      "bytes": 114362
+    },
+    {
+      "path": "/tag/restorative-dentistry-austin/",
+      "file": "tag-restorative-dentistry-austin.html",
+      "id": "tag-restorative-dentistry-austin",
+      "bytes": 117439
+    },
+    {
+      "path": "/tag/restorative-dentistry/",
+      "file": "tag-restorative-dentistry.html",
+      "id": "tag-restorative-dentistry",
+      "bytes": 116878
+    },
+    {
+      "path": "/tag/sedation-dentistry-austin/",
+      "file": "tag-sedation-dentistry-austin.html",
+      "id": "tag-sedation-dentistry-austin",
+      "bytes": 114273
+    },
+    {
+      "path": "/tag/smile-makeover-austin/",
+      "file": "tag-smile-makeover-austin.html",
+      "id": "tag-smile-makeover-austin",
+      "bytes": 117517
+    },
+    {
+      "path": "/tag/sedation-dentistry/",
+      "file": "tag-sedation-dentistry.html",
+      "id": "tag-sedation-dentistry",
+      "bytes": 114206
+    },
+    {
+      "path": "/tag/shame-free-dentistry-austin/",
+      "file": "tag-shame-free-dentistry-austin.html",
+      "id": "tag-shame-free-dentistry-austin",
+      "bytes": 114309
+    },
+    {
+      "path": "/tag/spa-dentistry-austin/",
+      "file": "tag-spa-dentistry-austin.html",
+      "id": "tag-spa-dentistry-austin",
+      "bytes": 114462
+    },
+    {
+      "path": "/tag/smile-makeover/",
+      "file": "tag-smile-makeover.html",
+      "id": "tag-smile-makeover",
+      "bytes": 114045
+    },
+    {
+      "path": "/tag/special-event-dental-prep/",
+      "file": "tag-special-event-dental-prep.html",
+      "id": "tag-special-event-dental-prep",
+      "bytes": 114259
+    },
+    {
+      "path": "/tag/teeth-cleaning-near-me/",
+      "file": "tag-teeth-cleaning-near-me.html",
+      "id": "tag-teeth-cleaning-near-me",
+      "bytes": 114253
+    },
+    {
+      "path": "/tag/stress-free-dentistry/",
+      "file": "tag-stress-free-dentistry.html",
+      "id": "tag-stress-free-dentistry",
+      "bytes": 114264
+    },
+    {
+      "path": "/tag/take-home-whitening-kits/",
+      "file": "tag-take-home-whitening-kits.html",
+      "id": "tag-take-home-whitening-kits",
+      "bytes": 114237
+    },
+    {
+      "path": "/tag/teeth-whitening-near-me/",
+      "file": "tag-teeth-whitening-near-me.html",
+      "id": "tag-teeth-whitening-near-me",
+      "bytes": 114219
+    },
+    {
+      "path": "/tag/teeth-cleaning/",
+      "file": "tag-teeth-cleaning.html",
+      "id": "tag-teeth-cleaning",
+      "bytes": 114130
+    },
+    {
+      "path": "/tag/teeth-whitening-austin/",
+      "file": "tag-teeth-whitening-austin.html",
+      "id": "tag-teeth-whitening-austin",
+      "bytes": 114215
+    },
+    {
+      "path": "/tag/teeth-whitening/",
+      "file": "tag-teeth-whitening.html",
+      "id": "tag-teeth-whitening",
+      "bytes": 114063
+    },
+    {
+      "path": "/tag/tmj-dentist-downtown-austin/",
+      "file": "tag-tmj-dentist-downtown-austin.html",
+      "id": "tag-tmj-dentist-downtown-austin",
+      "bytes": 114596
+    },
+    {
+      "path": "/tag/tmj-pain-relief-dentist-austin/",
+      "file": "tag-tmj-pain-relief-dentist-austin.html",
+      "id": "tag-tmj-pain-relief-dentist-austin",
+      "bytes": 114654
+    },
+    {
+      "path": "/tag/tmj-specialist-austin/",
+      "file": "tag-tmj-specialist-austin.html",
+      "id": "tag-tmj-specialist-austin",
+      "bytes": 114480
+    },
+    {
+      "path": "/tag/tmj/",
+      "file": "tag-tmj.html",
+      "id": "tag-tmj",
+      "bytes": 114382
+    },
+    {
+      "path": "/tag/tooth-grinding-treatment-austin/",
+      "file": "tag-tooth-grinding-treatment-austin.html",
+      "id": "tag-tooth-grinding-treatment-austin",
+      "bytes": 114676
+    },
+    {
+      "path": "/tag/toothbar-austin-tx/",
+      "file": "tag-toothbar-austin-tx.html",
+      "id": "tag-toothbar-austin-tx",
+      "bytes": 117533
+    },
+    {
+      "path": "/tag/toothbar-austin/",
+      "file": "tag-toothbar-austin.html",
+      "id": "tag-toothbar-austin",
+      "bytes": 120204
+    },
+    {
+      "path": "/tag/toothbar-jaw-botox/",
+      "file": "tag-toothbar-jaw-botox.html",
+      "id": "tag-toothbar-jaw-botox",
+      "bytes": 114422
+    },
+    {
+      "path": "/tag/toothbar-lounge/",
+      "file": "tag-toothbar-lounge.html",
+      "id": "tag-toothbar-lounge",
+      "bytes": 114063
+    },
+    {
+      "path": "/tag/top-rated-austin-dentist/",
+      "file": "tag-top-rated-austin-dentist.html",
+      "id": "tag-top-rated-austin-dentist",
+      "bytes": 114289
+    },
+    {
+      "path": "/tag/top-rated-dentist-austin/",
+      "file": "tag-top-rated-dentist-austin.html",
+      "id": "tag-top-rated-dentist-austin",
+      "bytes": 114251
+    },
+    {
+      "path": "/tag/veneers-and-botox-austin/",
+      "file": "tag-veneers-and-botox-austin.html",
+      "id": "tag-veneers-and-botox-austin",
+      "bytes": 114538
+    },
+    {
+      "path": "/tag/total-body-health-dentist/",
+      "file": "tag-total-body-health-dentist.html",
+      "id": "tag-total-body-health-dentist",
+      "bytes": 114311
+    },
+    {
+      "path": "/tag/veneers-austin-tx/",
+      "file": "tag-veneers-austin-tx.html",
+      "id": "tag-veneers-austin-tx",
+      "bytes": 114117
+    },
+    {
+      "path": "/tag/wellness-dentistry/",
+      "file": "tag-wellness-dentistry.html",
+      "id": "tag-wellness-dentistry",
+      "bytes": 114173
+    },
+    {
+      "path": "/tag/white-smile-tips/",
+      "file": "tag-white-smile-tips.html",
+      "id": "tag-white-smile-tips",
+      "bytes": 114085
+    },
+    {
+      "path": "/tag/whitening-for-weddings/",
+      "file": "tag-whitening-for-weddings.html",
+      "id": "tag-whitening-for-weddings",
+      "bytes": 114201
+    },
+    {
+      "path": "/tag/whiter-teeth-fast/",
+      "file": "tag-whiter-teeth-fast.html",
+      "id": "tag-whiter-teeth-fast",
+      "bytes": 114103
+    },
+    {
+      "path": "/teeth-cleaning-last-longer/",
+      "file": "teeth-cleaning-last-longer.html",
+      "id": "teeth-cleaning-last-longer",
+      "bytes": 123912
+    },
+    {
+      "path": "/teeth-cleaning/",
+      "file": "teeth-cleaning.html",
+      "id": "teeth-cleaning",
+      "bytes": 130993
+    },
+    {
+      "path": "/teeth-grinding-due-pandemic-stress/",
+      "file": "teeth-grinding-due-pandemic-stress.html",
+      "id": "teeth-grinding-due-pandemic-stress",
+      "bytes": 121769
+    },
+    {
+      "path": "/teeth-whitening-for-children/",
+      "file": "teeth-whitening-for-children.html",
+      "id": "teeth-whitening-for-children",
+      "bytes": 122645
+    },
+    {
+      "path": "/teeth-whitening/",
+      "file": "teeth-whitening.html",
+      "id": "teeth-whitening",
+      "bytes": 130730
+    },
+    {
+      "path": "/the-benefits-of-invisalign-with-toothbar/",
+      "file": "the-benefits-of-invisalign-with-toothbar.html",
+      "id": "the-benefits-of-invisalign-with-toothbar",
+      "bytes": 121938
+    },
+    {
+      "path": "/the-connection-between-oral-health-overall-health-what-austin-dentists-want-you-to-know/",
+      "file": "the-connection-between-oral-health-overall-health-what-austin-dentists-want-you-to-know.html",
+      "id": "the-connection-between-oral-health-overall-health-what-austin-dentists-want-you-to-know",
+      "bytes": 129242
+    },
+    {
+      "path": "/the-effects-of-smoking-on-your-teeth/",
+      "file": "the-effects-of-smoking-on-your-teeth.html",
+      "id": "the-effects-of-smoking-on-your-teeth",
+      "bytes": 123535
+    },
+    {
+      "path": "/times-where-a-dental-inlay-is-the-best-option/",
+      "file": "times-where-a-dental-inlay-is-the-best-option.html",
+      "id": "times-where-a-dental-inlay-is-the-best-option",
+      "bytes": 121957
+    },
+    {
+      "path": "/tips-for-picking-the-right-toothpaste/",
+      "file": "tips-for-picking-the-right-toothpaste.html",
+      "id": "tips-for-picking-the-right-toothpaste",
+      "bytes": 123345
+    },
+    {
+      "path": "/tips-to-know-when-travelling-with-invisalign/",
+      "file": "tips-to-know-when-travelling-with-invisalign.html",
+      "id": "tips-to-know-when-travelling-with-invisalign",
+      "bytes": 122213
+    },
+    {
+      "path": "/tonsil-stones-causes-symptoms-and-treatment/",
+      "file": "tonsil-stones-causes-symptoms-and-treatment.html",
+      "id": "tonsil-stones-causes-symptoms-and-treatment",
+      "bytes": 122983
+    },
+    {
+      "path": "/tooth-abscess-go-away-on-its-own/",
+      "file": "tooth-abscess-go-away-on-its-own.html",
+      "id": "tooth-abscess-go-away-on-its-own",
+      "bytes": 122088
+    },
+    {
+      "path": "/tooth-extractions/",
+      "file": "tooth-extractions.html",
+      "id": "tooth-extractions",
+      "bytes": 132178
+    },
+    {
+      "path": "/tooth-mobility-and-tooth-loss/",
+      "file": "tooth-mobility-and-tooth-loss.html",
+      "id": "tooth-mobility-and-tooth-loss",
+      "bytes": 121745
+    },
+    {
+      "path": "/toothbar-austin-tx-teeth-whitening/",
+      "file": "toothbar-austin-tx-teeth-whitening.html",
+      "id": "toothbar-austin-tx-teeth-whitening",
+      "bytes": 123050
+    },
+    {
+      "path": "/toothbar-wins-the-design-innovation-awards/",
+      "file": "toothbar-wins-the-design-innovation-awards.html",
+      "id": "toothbar-wins-the-design-innovation-awards",
+      "bytes": 123203
+    },
+    {
+      "path": "/toothbars-tips-to-prevent-gum-disease/",
+      "file": "toothbars-tips-to-prevent-gum-disease.html",
+      "id": "toothbars-tips-to-prevent-gum-disease",
+      "bytes": 122438
+    },
+    {
+      "path": "/travel-tips-for-your-teeth/",
+      "file": "travel-tips-for-your-teeth.html",
+      "id": "travel-tips-for-your-teeth",
+      "bytes": 122989
+    },
+    {
+      "path": "/type-of-sedation/",
+      "file": "type-of-sedation.html",
+      "id": "type-of-sedation",
+      "bytes": 122612
+    },
+    {
+      "path": "/try-invisalign-for-crossbite/",
+      "file": "try-invisalign-for-crossbite.html",
+      "id": "try-invisalign-for-crossbite",
+      "bytes": 123286
+    },
+    {
+      "path": "/types-of-dental-implants/",
+      "file": "types-of-dental-implants.html",
+      "id": "types-of-dental-implants",
+      "bytes": 122693
+    },
+    {
+      "path": "/types-of-teeth-and-their-function/",
+      "file": "types-of-teeth-and-their-function.html",
+      "id": "types-of-teeth-and-their-function",
+      "bytes": 122151
+    },
+    {
+      "path": "/understanding-dental-veneers/",
+      "file": "understanding-dental-veneers.html",
+      "id": "understanding-dental-veneers",
+      "bytes": 123414
+    },
+    {
+      "path": "/unlock-a-locked-jaw/",
+      "file": "unlock-a-locked-jaw.html",
+      "id": "unlock-a-locked-jaw",
+      "bytes": 122868
+    },
+    {
+      "path": "/vaping-and-oral-health/",
+      "file": "vaping-and-oral-health.html",
+      "id": "vaping-and-oral-health",
+      "bytes": 121928
+    },
+    {
+      "path": "/ways-to-prevent-a-poor-bite/",
+      "file": "ways-to-prevent-a-poor-bite.html",
+      "id": "ways-to-prevent-a-poor-bite",
+      "bytes": 122137
+    },
+    {
+      "path": "/ways-to-protect-childrens-teeth/",
+      "file": "ways-to-protect-childrens-teeth.html",
+      "id": "ways-to-protect-childrens-teeth",
+      "bytes": 123438
+    },
+    {
+      "path": "/ways-to-reduce-dental-anxiety-at-the-dentist/",
+      "file": "ways-to-reduce-dental-anxiety-at-the-dentist.html",
+      "id": "ways-to-reduce-dental-anxiety-at-the-dentist",
+      "bytes": 123785
+    },
+    {
+      "path": "/ways-to-reduce-teeth-grinding/",
+      "file": "ways-to-reduce-teeth-grinding.html",
+      "id": "ways-to-reduce-teeth-grinding",
+      "bytes": 122188
+    },
+    {
+      "path": "/ways-unknowingly-harming-teeth/",
+      "file": "ways-unknowingly-harming-teeth.html",
+      "id": "ways-unknowingly-harming-teeth",
+      "bytes": 123421
+    },
+    {
+      "path": "/what-are-dental-sealants/",
+      "file": "what-are-dental-sealants.html",
+      "id": "what-are-dental-sealants",
+      "bytes": 121512
+    },
+    {
+      "path": "/what-are-no-prep-veneers/",
+      "file": "what-are-no-prep-veneers.html",
+      "id": "what-are-no-prep-veneers",
+      "bytes": 121867
+    },
+    {
+      "path": "/what-are-the-advantages-of-mouthwash/",
+      "file": "what-are-the-advantages-of-mouthwash.html",
+      "id": "what-are-the-advantages-of-mouthwash",
+      "bytes": 122887
+    },
+    {
+      "path": "/what-causes-lockjaw/",
+      "file": "what-causes-lockjaw.html",
+      "id": "what-causes-lockjaw",
+      "bytes": 122566
+    },
+    {
+      "path": "/what-does-your-saliva-reveal/",
+      "file": "what-does-your-saliva-reveal.html",
+      "id": "what-does-your-saliva-reveal",
+      "bytes": 122288
+    },
+    {
+      "path": "/what-happens-if-you-smoke-with-dental-implants/",
+      "file": "what-happens-if-you-smoke-with-dental-implants.html",
+      "id": "what-happens-if-you-smoke-with-dental-implants",
+      "bytes": 125235
+    },
+    {
+      "path": "/what-happens-remove-wisdom-teeth/",
+      "file": "what-happens-remove-wisdom-teeth.html",
+      "id": "what-happens-remove-wisdom-teeth",
+      "bytes": 121896
+    },
+    {
+      "path": "/what-happens-to-teeth-under-veneers/",
+      "file": "what-happens-to-teeth-under-veneers.html",
+      "id": "what-happens-to-teeth-under-veneers",
+      "bytes": 121854
+    },
+    {
+      "path": "/what-is-a-bridge-dentist/",
+      "file": "what-is-a-bridge-dentist.html",
+      "id": "what-is-a-bridge-dentist",
+      "bytes": 121878
+    },
+    {
+      "path": "/what-is-a-deep-dental-cleaning/",
+      "file": "what-is-a-deep-dental-cleaning.html",
+      "id": "what-is-a-deep-dental-cleaning",
+      "bytes": 121762
+    },
+    {
+      "path": "/what-is-a-dental-bridge/",
+      "file": "what-is-a-dental-bridge.html",
+      "id": "what-is-a-dental-bridge",
+      "bytes": 121718
+    },
+    {
+      "path": "/what-is-a-dental-crown/",
+      "file": "what-is-a-dental-crown.html",
+      "id": "what-is-a-dental-crown",
+      "bytes": 122432
+    },
+    {
+      "path": "/what-is-a-scale-polish/",
+      "file": "what-is-a-scale-polish.html",
+      "id": "what-is-a-scale-polish",
+      "bytes": 121755
+    },
+    {
+      "path": "/what-is-considered-a-dental-emergency/",
+      "file": "what-is-considered-a-dental-emergency.html",
+      "id": "what-is-considered-a-dental-emergency",
+      "bytes": 122510
+    },
+    {
+      "path": "/what-is-cosmetic-bonding/",
+      "file": "what-is-cosmetic-bonding.html",
+      "id": "what-is-cosmetic-bonding",
+      "bytes": 121927
+    },
+    {
+      "path": "/what-is-cosmetic-dentistry/",
+      "file": "what-is-cosmetic-dentistry.html",
+      "id": "what-is-cosmetic-dentistry",
+      "bytes": 121488
+    },
+    {
+      "path": "/what-is-digital-imaging/",
+      "file": "what-is-digital-imaging.html",
+      "id": "what-is-digital-imaging",
+      "bytes": 122189
+    },
+    {
+      "path": "/what-is-dmd-dentist/",
+      "file": "what-is-dmd-dentist.html",
+      "id": "what-is-dmd-dentist",
+      "bytes": 122399
+    },
+    {
+      "path": "/what-is-invisalign/",
+      "file": "what-is-invisalign.html",
+      "id": "what-is-invisalign",
+      "bytes": 121669
+    },
+    {
+      "path": "/what-is-the-best-teeth-whitening-method/",
+      "file": "what-is-the-best-teeth-whitening-method.html",
+      "id": "what-is-the-best-teeth-whitening-method",
+      "bytes": 123368
+    },
+    {
+      "path": "/what-problems-can-cosmetic-dentistry-fix/",
+      "file": "what-problems-can-cosmetic-dentistry-fix.html",
+      "id": "what-problems-can-cosmetic-dentistry-fix",
+      "bytes": 123282
+    },
+    {
+      "path": "/what-to-do-if-you-chipped-a-tooth/",
+      "file": "what-to-do-if-you-chipped-a-tooth.html",
+      "id": "what-to-do-if-you-chipped-a-tooth",
+      "bytes": 122306
+    },
+    {
+      "path": "/what-to-eat-after-wisdom-teeth-removal/",
+      "file": "what-to-eat-after-wisdom-teeth-removal.html",
+      "id": "what-to-eat-after-wisdom-teeth-removal",
+      "bytes": 123693
+    },
+    {
+      "path": "/what-to-know-about-dentures/",
+      "file": "what-to-know-about-dentures.html",
+      "id": "what-to-know-about-dentures",
+      "bytes": 122901
+    },
+    {
+      "path": "/whats-this-white-spot-on-my-tongue/",
+      "file": "whats-this-white-spot-on-my-tongue.html",
+      "id": "whats-this-white-spot-on-my-tongue",
+      "bytes": 122239
+    },
+    {
+      "path": "/when-you-should-consider-dentures/",
+      "file": "when-you-should-consider-dentures.html",
+      "id": "when-you-should-consider-dentures",
+      "bytes": 121581
+    },
+    {
+      "path": "/white-spots-on-my-teeth/",
+      "file": "white-spots-on-my-teeth.html",
+      "id": "white-spots-on-my-teeth",
+      "bytes": 122301
+    },
+    {
+      "path": "/who-we-are/",
+      "file": "who-we-are.html",
+      "id": "who-we-are",
+      "bytes": 137038
+    },
+    {
+      "path": "/why-a-great-smile-is-so-important/",
+      "file": "why-a-great-smile-is-so-important.html",
+      "id": "why-a-great-smile-is-so-important",
+      "bytes": 122849
+    },
+    {
+      "path": "/why-dental-hygiene-is-important/",
+      "file": "why-dental-hygiene-is-important.html",
+      "id": "why-dental-hygiene-is-important",
+      "bytes": 122297
+    },
+    {
+      "path": "/why-do-i-need-temporary-veneers/",
+      "file": "why-do-i-need-temporary-veneers.html",
+      "id": "why-do-i-need-temporary-veneers",
+      "bytes": 123201
+    },
+    {
+      "path": "/why-do-my-gums-feel-itchy/",
+      "file": "why-do-my-gums-feel-itchy.html",
+      "id": "why-do-my-gums-feel-itchy",
+      "bytes": 126369
+    },
+    {
+      "path": "/why-do-whitening-strips-hurt/",
+      "file": "why-do-whitening-strips-hurt.html",
+      "id": "why-do-whitening-strips-hurt",
+      "bytes": 124831
+    },
+    {
+      "path": "/why-is-dry-mouth-risky-for-your-teeth/",
+      "file": "why-is-dry-mouth-risky-for-your-teeth.html",
+      "id": "why-is-dry-mouth-risky-for-your-teeth",
+      "bytes": 123052
+    },
+    {
+      "path": "/why-is-my-dental-crown-hurting/",
+      "file": "why-is-my-dental-crown-hurting.html",
+      "id": "why-is-my-dental-crown-hurting",
+      "bytes": 122501
+    },
+    {
+      "path": "/why-tongue-health-is-important/",
+      "file": "why-tongue-health-is-important.html",
+      "id": "why-tongue-health-is-important",
+      "bytes": 121576
+    },
+    {
+      "path": "/why-you-bite-your-cheek-and-how-to-stop/",
+      "file": "why-you-bite-your-cheek-and-how-to-stop.html",
+      "id": "why-you-bite-your-cheek-and-how-to-stop",
+      "bytes": 122672
+    },
+    {
+      "path": "/will-gums-grow-back-contouring-surgery/",
+      "file": "will-gums-grow-back-contouring-surgery.html",
+      "id": "will-gums-grow-back-contouring-surgery",
+      "bytes": 122490
+    },
+    {
+      "path": "/will-invisalign-change-my-speech/",
+      "file": "will-invisalign-change-my-speech.html",
+      "id": "will-invisalign-change-my-speech",
+      "bytes": 121570
+    },
+    {
+      "path": "/winner-for-the-new-build-category/",
+      "file": "winner-for-the-new-build-category.html",
+      "id": "winner-for-the-new-build-category",
+      "bytes": 122377
+    }
+  ],
+  "assetFailures": [
+    {
+      "ref": "/wp-content/uploads/2024/11/toothbar-logo.png",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/themes/hello-elementor/js/ajax-search.js",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/05/close-up-cute-dreamy-young-woman-smiling-winking-front-encourage-client-standing-white-wall-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/09/plastic-surgery-attractive-handsome-man-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/05/indoor-photo-young-pretty-redhead-lady-keeping-her-eyes-closed-frowning-face-while-having-stomachache-standing-pink-background-casual-clothes-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2019/10/photo-1555170629-9240c8e7df1d.jpeg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/1-s2.0-S0889540614006234-main.pdf",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/12/beautiful-woman-holding-her-toothbrush-500x403.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/10/pretty-young-woman-brushing-her-teeth-bathroom-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/06/2023-Texas-Oral-Health-Report-Card.pdf",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2020/12/2018-02-Oral-Health-in-Texas-Bridging-Gaps-and-Filling-Needs-A-Report-on-the-Burden-of-Oral-Disease-in-Texas.pdf",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/08/cerrar-cliente-feliz-clinica-dental-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2024/01/woman-patient-visiting-dentist-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/10/woman-smiling-while-male-dentist-keeping-teeth-color-range-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/08/hermosa-chica-sentada-oficina-dentista-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/09/shutterstock_1282520254-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/07/young-african-american-man-guy-visiting-dentist-s-office-prevention-oral-cavity-man-famale-doctor-while-checkup-teeth-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/08/primer-disparo-mujer-atractiva-emocionada-feliz-pelo-rizado-riendo-riendo-cubriendo-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/10/young-blonde-woman-black-jacket-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2019/07/2a22eab82645342dd5170312fb83-1446753-1024x682.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/06/handsome-happy-guy-sitting-cafe-drinking-lemonade-using-mobile-phone-laughing-text-message-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2019/11/sayo-garcia-NkOGfv7d5rY-unsplash-1-1024x683.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2022/11/led_mouthguard-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/06/brunette-smiling-female-sits-outdoor-cafeteria-has-broad-smile-has-good-rest-has-satisfied-expression-rests-tropical-resort-country-cute-young-woman-rests-terrace-cafe-positiveness-500x334.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2018/11/The-Benefits-of-invisalign-200x500.png",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2017/02/Health_AustinAreaSustainabilityIndicators2016.pdf",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/10/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite-500x340.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/06/close-up-boy-dentist-333x500.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2019/03/Barclay-1-hero-scaled-tiny-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/08/chica-morena-comiendose-dulce-500x333.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/uploads/2023/11/young-blonde-woman-purple-top-500x500.jpg",
+      "reason": "404"
+    },
+    {
+      "ref": "/wp-content/themes/mesasix/public/images/favicon.ico",
+      "reason": "404"
+    }
+  ],
+  "assetsRepaired": [],
+  "pageFailures": []
+}

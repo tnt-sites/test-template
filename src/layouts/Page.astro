@@ -62,6 +62,18 @@ const navOffices =
     ? (mainNav as any).offices
     : (siteInfo as any)?.offices;
 const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
+
+/*
+ * Does this page open with something the header can sit on top of?
+ *
+ * The source's menu is a transparent bar over the page's first section, which
+ * works there because every page opens with a dark hero image. Not every page
+ * here does — a blog post starts with prose on white, and a transparent bar
+ * over it is white text on white. So the overlay is decided per page by what
+ * the page actually begins with, rather than turned on for the whole site.
+ */
+const HERO_FIRST = /\/(page-hero(-[a-z]+)?|media-prose|home-hero|heroes\/[a-z-]+)$/;
+const opensWithHero = Boolean(hasPageSections && HERO_FIRST.test(pageSections[0]?._component ?? ""));
 ---
 
 <Layout
@@ -72,8 +84,13 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
   canonical={canonical}
   siteInfo={siteInfo}
 >
-  <MainNavigation {...mainNav} offices={navOffices} socials={footerSocials} />
-  <main data-pagefind-body>
+  <MainNavigation
+    {...mainNav}
+    offices={navOffices}
+    socials={footerSocials}
+    overlay={opensWithHero}
+  />
+  <main data-pagefind-body data-under-header={opensWithHero ? "true" : undefined}>
     {
       hasPageSections ? (
         <Components contentSections={pageSections} propName="pageSections" />
@@ -91,3 +108,13 @@ const footerSiteName = (footer as any)?.siteName || (siteInfo as any)?.siteName;
   />
   <FixedTabs {...fixedTabs} />
 </Layout>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    /* The hero slides up under the transparent menu bar, so the page starts at
+       the top of the window the way the source's does. */
+    main[data-under-header="true"] {
+      margin-top: calc(-1 * var(--site-header-height, 86px));
+    }
+  }
+</style>

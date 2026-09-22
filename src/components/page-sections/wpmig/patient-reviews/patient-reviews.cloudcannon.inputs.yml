@@ -1,0 +1,69 @@
+_inputs:
+  heading:
+    type: text
+  subheading:
+    type: textarea
+  rating:
+    type: text
+    comment: "Aggregate rating shown next to the stars, e.g. 5.0."
+  reviewCount:
+    type: text
+    comment: "Google review count text, e.g. 1,390. Leave blank to hide."
+  reviewers:
+    type: array
+    options:
+      structures: _structures.patient_review
+  googleUrl:
+    type: url
+    comment: Link for the "Read Our Google Reviews" button.
+  yelpUrl:
+    type: url
+    comment: Link for the "See Us on Yelp" button. Leave blank to hide the button.
+  backgroundColor:
+    type: select
+    comment: Background colour, from the site palette.
+    options:
+      values:
+        - id: base
+          name: Base
+        - id: surface
+          name: Surface
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-subtle)
+          name: Brand (Subtle)
+        - id: "#ffffff"
+          name: White
+  headingColor:
+    type: select
+    comment: Heading colour, from the site palette.
+    options:
+      values:
+        - id: var(--color-brand)
+          name: Brand (Primary)
+        - id: var(--color-brand-secondary)
+          name: Brand (Secondary)
+        - id: "#ffffff"
+          name: White
+        - id: "#1a1a1a"
+          name: Dark
+        - id: "#000000"
+          name: Black
+  hidden:
+    type: switch
+    comment: Hide this section on this page without removing it.
+_structures:
+  patient_review:
+    values:
+      - label: Review
+        icon: reviews
+        value:
+          name: ""
+          text: ""
+        _inputs:
+          name:
+            type: text
+            comment: Reviewer's name.
+          text:
+            type: textarea
+            comment: Review text.

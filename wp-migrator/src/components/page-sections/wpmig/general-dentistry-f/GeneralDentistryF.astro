@@ -1,0 +1,1084 @@
+---
+/**
+ * General Dentistry F — migrated from dental-services/general-dentistry/gum-disease [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  secondaryButtonText6 = "",
+  secondaryButtonLink6 = "",
+  secondaryButtonText7 = "",
+  secondaryButtonLink7 = "",
+  secondaryButtonText8 = "",
+  secondaryButtonLink8 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  heading3 = "",
+  text5 = "",
+  secondaryButtonText9 = "",
+  secondaryButtonLink9 = "",
+  secondaryButtonText10 = "",
+  secondaryButtonLink10 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.68)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.58)",
+  buttonBackgroundHoverColor = "#4bad73",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-f" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${hoverBackgroundColor};--c9:${hoverBackgroundColor2};--c10:${hoverBackgroundColor3};--c11:${buttonBackgroundHoverColor};--c12:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="gdf-box">
+    <div class="gdf-box2">
+      <div class="gdf-box3">
+        <div class="gdf-box4">
+          {eyebrow && <h4 class="gdf-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+          {secondaryButtonText4 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+          {secondaryButtonText5 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+          {secondaryButtonText6 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn7" text={secondaryButtonText6} link={secondaryButtonLink6 || "#"} />}
+          {secondaryButtonText7 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn8" text={secondaryButtonText7} link={secondaryButtonLink7 || "#"} />}
+          {secondaryButtonText8 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="gdf-btn9" text={secondaryButtonText8} link={secondaryButtonLink8 || "#"} />}
+        </div>
+      </div>
+      <div class="gdf-box5">
+        <div class="gdf-box6">
+          <div class="gdf-box7">
+            <div class="gdf-box8">
+              <h2 class="gdf-heading2">{heading}</h2>
+            </div>
+            <div class="gdf-box9">
+              {text && <div class="gdf-body" set:html={text} />}
+            </div>
+          </div>
+          <div class="gdf-box10">
+            <div class="gdf-box11">
+              {subheading && <h3 class="gdf-heading3">{subheading}</h3>}
+            </div>
+            <div class="gdf-box12">
+              {text2 && <div class="gdf-body2" set:html={text2} />}
+            </div>
+            <div class="gdf-box13">
+              <div class="gdf-box14">
+                {text3 && <p class="gdf-text">{text3}</p>}
+              </div>
+            </div>
+          </div>
+          <div class="gdf-box15">
+            <div class="gdf-box16">
+              {heading2 && <h3 class="gdf-heading4">{heading2}</h3>}
+            </div>
+            <div class="gdf-box17">
+              <div class="gdf-box18">
+                {text4 && <div class="gdf-body3" set:html={text4} />}
+              </div>
+            </div>
+          </div>
+          <div class="gdf-box19">
+            <div class="gdf-box20">
+              <div class="gdf-decor" aria-hidden="true"></div>
+            </div>
+            <div class="gdf-box21">
+              {heading3 && <h2 class="gdf-heading5">{heading3}</h2>}
+            </div>
+            <div class="gdf-box22">
+              <div class="gdf-box23">
+                {text5 && <p class="gdf-text2" set:html={text5} />}
+              </div>
+            </div>
+            <div class="gdf-box24">
+              <div class="gdf-box25">
+                {secondaryButtonText9 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdf-btn10" text={secondaryButtonText9} link={secondaryButtonLink9 || "#"} />}
+              </div>
+            </div>
+            <div class="gdf-box26">
+              <div class="gdf-box27">
+                <div class="gdf-box28">
+                  {secondaryButtonText10 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="gdf-btn11" text={secondaryButtonText10} link={secondaryButtonLink10 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .general-dentistry-f {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .gdf-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdf-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .gdf-box3 {
+    display: none;
+  }
+
+  .gdf-box4 {
+    display: none;
+  }
+
+  .gdf-heading {
+    display: none;
+  }
+
+  :global(.gdf-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn5) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn6) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn7) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn8) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.gdf-btn9) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .gdf-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .gdf-box5 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdf-box6 {
+    box-sizing: border-box;
+  }
+
+  .gdf-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdf-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdf-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdf-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdf-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 544px;
+  }
+
+  .gdf-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdf-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdf-box10 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdf-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdf-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdf-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdf-box12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .gdf-body2 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .gdf-box13 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdf-box14 {
+    box-sizing: border-box;
+  }
+
+  .gdf-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdf-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdf-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdf-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdf-box17 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdf-box18 {
+    box-sizing: border-box;
+    min-height: 256px;
+  }
+
+  .gdf-body3 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdf-box19 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .gdf-box20 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .gdf-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .gdf-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .gdf-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdf-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdf-box23 {
+    box-sizing: border-box;
+  }
+
+  .gdf-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .gdf-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdf-box25 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdf-btn10) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdf-btn10) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .gdf-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .gdf-box27 {
+    box-sizing: border-box;
+  }
+
+  .gdf-box28 {
+    box-sizing: border-box;
+  }
+
+  :global(.gdf-btn11) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.gdf-btn11) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.gdf-btn):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdf-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  :global(.gdf-btn3):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.gdf-btn5):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn6):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn7):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn8):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn9):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.gdf-btn10):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.gdf-btn11):hover {
+    background-color: var(--c12);
+  }
+
+  @media (min-width: 768px) {
+    .gdf-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .gdf-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1714px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .gdf-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gdf-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.gdf-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdf-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.gdf-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn5) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn5) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn6) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn6) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn7) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn7) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn8) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn8) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn9) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn9) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdf-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .gdf-heading2 {
+      line-height: 32px;
+    }
+
+    .gdf-box9 {
+      min-height: 424px;
+    }
+
+    .gdf-heading3 {
+      line-height: 28px;
+    }
+
+    .gdf-heading4 {
+      line-height: 28px;
+    }
+
+    .gdf-box18 {
+      min-height: 232px;
+    }
+
+    .gdf-heading5 {
+      line-height: 32px;
+    }
+
+    .gdf-box26 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .gdf-box27 {
+      display: none;
+    }
+
+    .gdf-box28 {
+      display: none;
+    }
+
+    :global(.gdf-btn11) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .gdf-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .gdf-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1250px;
+    }
+
+    :global(.gdf-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn2) {
+      white-space: nowrap;
+    }
+
+    :global(.gdf-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .gdf-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .gdf-box9 {
+      min-height: 232px;
+    }
+
+    .gdf-box18 {
+      min-height: 136px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdf-heading2 {
+    font-weight: 400;
+  }
+  .gdf-heading3 {
+    font-weight: 400;
+  }
+  .gdf-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdf-decor {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .gdf-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .gdf-box24 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdf-box16 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  :global(.gdf-btn10) {
+    align-items: normal;
+    background-color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  .gdf-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdf-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .gdf-heading2 {
+      font-weight: 400;
+    }
+
+    .gdf-heading3 {
+      font-weight: 400;
+    }
+
+    .gdf-heading4 {
+      font-weight: 400;
+    }
+
+    .gdf-box21 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .gdf-heading5 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    :global(.gdf-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdf-box25 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .gdf-text {
+      line-height: 24px;
+    }
+
+    .gdf-text2 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdf-heading2 {
+      font-weight: 400;
+    }
+
+    .gdf-heading3 {
+      font-weight: 400;
+    }
+
+    .gdf-heading4 {
+      font-weight: 400;
+    }
+
+    .gdf-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.gdf-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn5) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn6) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn7) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn8) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn9) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.gdf-btn10) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdf-text {
+      line-height: 24px;
+    }
+
+    .gdf-text2 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

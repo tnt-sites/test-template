@@ -1,0 +1,10 @@
+_snippets:
+  home_about_us_patient:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home About Us Patient
+    definitions:
+      component_name: page-sections/wpmig/home-about-us-patient
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-about-us-patient/home-about-us-patient.cloudcannon.inputs.yml

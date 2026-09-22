@@ -1,0 +1,152 @@
+eyebrow:
+  type: text
+  comment: Optional eyebrow text displayed above the heading.
+heading:
+  type: markdown
+  comment: Main heading for the split section.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Supporting body copy beneath the heading.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+buttonSections:
+  type: array
+  comment: Calls-to-action shown beneath the copy block.
+  options:
+    structures: _structures.buttonSections
+imageSource:
+  type: image
+  comment: Optional image displayed above the feature list.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text describing the image content.
+imageAspectRatio:
+  type: select
+  comment: Aspect ratio applied to the image.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: portrait
+        name: Portrait
+      - id: square
+        name: Square
+      - id: landscape
+        name: Landscape
+      - id: widescreen
+        name: Widescreen
+imageRounded:
+  type: switch
+  comment: Toggles rounded corners on the image.
+reverse:
+  type: switch
+  comment: Flips the layout so the feature list appears before the copy.
+colorScheme:
+  type: select
+  comment: Color scheme theme applied to the section wrapper.
+  options:
+    values:
+      - id: inherit
+        name: Inherit
+      - id: default
+        name: Default
+      - id: contrast
+        name: Contrast
+backgroundColor:
+  type: select
+  comment: Background color for the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+backgroundGradient:
+  type: textarea
+  comment: "Optional CSS gradient applied behind the section content."
+backgroundImage:
+  type: object
+  comment: Background image configuration for the section.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  comment: URL or path to the background image.
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  comment: Alt text for the background image.
+  type: textarea
+backgroundImage.positionVertical:
+  comment: Vertical position of the background image.
+  type: select
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  comment: Horizontal position of the background image.
+  type: select
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right

@@ -1,0 +1,26 @@
+label: Card Grid Payment
+icon: vertical_split
+description: Card Grid Payment section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/card-grid-payment
+  id: ""
+  heading: ""
+  text: ""
+  image: ""
+  imageAlt: ""
+  subheading: ""
+  text2: ""
+  text3: ""
+  headingColor: ""
+  headingColorHex: "#047ac0"
+  textColor: "#000000"
+  textColorHex: ""
+preview:
+  text:
+    - Card Grid Payment
+  icon: vertical_split
+picker_preview:
+  text: Card Grid Payment
+  subtext: Card Grid Payment section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/card-grid-payment/card-grid-payment.cloudcannon.inputs.yml

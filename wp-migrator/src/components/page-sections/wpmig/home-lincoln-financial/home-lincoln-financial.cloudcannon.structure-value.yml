@@ -1,0 +1,17 @@
+label: Home Lincoln Financial
+icon: interests
+description: Home Lincoln Financial section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-lincoln-financial
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Lincoln Financial
+  icon: interests
+picker_preview:
+  text: Home Lincoln Financial
+  subtext: Home Lincoln Financial section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-lincoln-financial/home-lincoln-financial.cloudcannon.inputs.yml

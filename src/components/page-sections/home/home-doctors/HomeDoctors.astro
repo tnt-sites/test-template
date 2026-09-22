@@ -1,0 +1,164 @@
+---
+/**
+ * Home Doctors — the homepage's "Meet Our Doctors" card row.
+ *
+ * Forked from the shared `wpmig/media-prose` card layout for the same reason
+ * as home-services: this row is a portrait grid with its own caption treatment,
+ * and keeping it here lets the homepage's typography move without touching the
+ * 18 interior pages that share the generic block.
+ *
+ * The page data carried `textColor: #ffffff` and `titleColor: #ffffff` against
+ * a near-white band (#f4f8f7) — white captions on white. The captions sit on
+ * the band here, so they default to readable ink instead.
+ */
+const {
+  eyebrow = "",
+  heading = "",
+  cards = [],
+  backgroundColor = "",
+  backgroundColorHex = "",
+  headingColor = "",
+  headingColorHex = "",
+  eyebrowColor = "",
+  eyebrowColorHex = "",
+  titleColor = "",
+  titleColorHex = "",
+  textColor = "",
+  textColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const pick = (hex: string, token: string) => hex || token || "";
+const vars = Object.entries({
+  "--hd-bg": pick(backgroundColorHex, backgroundColor),
+  "--hd-hd": pick(headingColorHex, headingColor),
+  "--hd-eb": pick(eyebrowColorHex, eyebrowColor),
+  "--hd-tt": pick(titleColorHex, titleColor),
+  "--hd-tx": pick(textColorHex, textColor),
+})
+  .filter(([, v]) => v)
+  .map(([k, v]) => `${k}:${v}`)
+  .join(";");
+
+const cardList = Array.isArray(cards) ? cards.filter(Boolean) : [];
+---
+
+<section class="home-doctors" id={id || undefined} style={vars || undefined} {...rest}>
+  <div class="hd-inner">
+    {eyebrow && <p class="hd-eyebrow">{eyebrow}</p>}
+    {heading && <h2 class="hd-heading" set:html={heading} />}
+
+    <div class="hd-grid">
+      {
+        cardList.map((c: any) => (
+          <article class="hd-card">
+            {c.image && <img class="hd-card-media" src={c.image} alt={c.imageAlt || ""} loading="lazy" />}
+            <div class="hd-card-body">
+              {c.title && <h3 class="hd-card-title">{c.title}</h3>}
+              {c.text && <p class="hd-card-text">{c.text}</p>}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .home-doctors {
+    background-color: var(--hd-bg, transparent);
+    box-sizing: border-box;
+    color: var(--hd-tx, #333333);
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    padding-inline: 10px;
+    width: 100%;
+  }
+
+  .hd-inner {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-inline: auto;
+    max-width: min(100%, 1300px);
+    padding-block: 40px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hd-eyebrow {
+    color: var(--hd-eb, #555555);
+    letter-spacing: 0.08em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .hd-heading {
+    color: var(--hd-hd, inherit);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  .hd-grid {
+    display: grid;
+    gap: 28px;
+    grid-template-columns: 1fr;
+    margin-top: 16px;
+  }
+
+  .hd-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .hd-card-media {
+    aspect-ratio: 3 / 4;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 20%;
+    width: 100%;
+  }
+
+  .hd-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .hd-card-title {
+    color: var(--hd-tt, inherit);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .hd-card-text {
+    margin: 0;
+  }
+
+  @media (min-width: 768px) {
+    .hd-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .hd-heading {
+      font-size: 45px;
+    }
+
+    .hd-inner {
+      padding-block: 70px;
+    }
+  }
+</style>

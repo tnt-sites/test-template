@@ -1,0 +1,10 @@
+_snippets:
+  card_grid_same:
+    template: astro_component
+    inline: false
+    preview:
+      text: Card Grid Same
+    definitions:
+      component_name: page-sections/wpmig/card-grid-same
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/card-grid-same/card-grid-same.cloudcannon.inputs.yml

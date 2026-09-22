@@ -1,0 +1,294 @@
+---
+/**
+ * General Dentistry C — migrated from dental-services/general-dentistry/cleanings-check-ups [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  heading = "",
+  subheading = "",
+  backgroundImage = "/wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg",
+  headingColor = "#1b2e38",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="general-dentistry-c" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
+  <div class="gdc-box">
+    <h3 class="gdc-heading">{heading}</h3>
+    {subheading && <h1 class="gdc-heading2" set:html={subheading} />}
+  </div>
+</div>
+<style>
+  .general-dentistry-c {
+    align-items: center;
+    background-image: var(--bgimg, none);
+    background-position: 50% 50%;
+    background-size: cover;
+    box-sizing: border-box;
+    color: #1b2e38;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    justify-content: center;
+    line-height: 24px;
+    min-height: 150px;
+    text-align: center;
+  }
+
+  .gdc-box {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .gdc-heading {
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    line-height: 19.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .gdc-heading2 {
+    box-sizing: border-box;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 8px;
+    margin-top: 0px;
+  }
+
+  @media (min-width: 768px) {
+    .general-dentistry-c {
+      justify-content: flex-start;
+    }
+
+    .gdc-box {
+      flex: 0 0 93.75%;
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 93.75%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .general-dentistry-c {
+      text-align: left;
+    }
+
+    .gdc-box {
+      flex: 0 0 80%;
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 80%;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .gdc-heading5 {
+    font-weight: 400;
+  }
+  .gdc-heading6 {
+    font-weight: 400;
+  }
+  .gdc-box28 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .gdc-btn10 {
+    align-items: normal;
+    justify-content: normal;
+  }
+  .gdc-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdc-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdc-text4 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .gdc-heading {
+    font-size: 16px;
+  }
+  @media (min-width: 768px) {
+    .gdc-heading5 {
+      font-weight: 400;
+    }
+
+    .gdc-heading6 {
+      font-weight: 400;
+    }
+
+    .gdc-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn7 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn8 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn9 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn10 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdc-text {
+      line-height: 24px;
+    }
+
+    .gdc-text2 {
+      line-height: 24px;
+    }
+
+    .gdc-text4 {
+      line-height: 24px;
+    }
+
+    .gdc-heading {
+      font-size: 16px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .gdc-heading5 {
+      font-weight: 400;
+    }
+
+    .gdc-heading6 {
+      font-weight: 400;
+    }
+
+    .gdc-btn {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn2 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn3 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn4 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn5 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn6 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn7 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn8 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn9 {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .gdc-btn10 {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .gdc-text {
+      line-height: 24px;
+    }
+
+    .gdc-text2 {
+      line-height: 24px;
+    }
+
+    .gdc-text4 {
+      line-height: 24px;
+    }
+
+    .gdc-heading {
+      font-size: 16px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

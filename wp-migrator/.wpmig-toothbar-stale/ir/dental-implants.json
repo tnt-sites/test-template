@@ -1,0 +1,580 @@
+{
+  "page": "dental-implants",
+  "route": "/dental-implants/",
+  "source": "dental-implants.html",
+  "breakpoints": [
+    1440,
+    768,
+    390
+  ],
+  "sections": [
+    {
+      "id": "page-banner",
+      "sectionIndex": 0,
+      "rootClass": "page-banner",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "page-banner"
+        },
+        {
+          "n": 1,
+          "cls": "pb-box"
+        },
+        {
+          "n": 2,
+          "cls": "pb-raw"
+        },
+        {
+          "n": 3,
+          "cls": "pb-box2"
+        },
+        {
+          "n": 4,
+          "cls": "pb-box3"
+        },
+        {
+          "n": 5,
+          "cls": "pb-heading"
+        },
+        {
+          "n": 6,
+          "cls": "pb-box4"
+        },
+        {
+          "n": 7,
+          "cls": "pb-box5"
+        },
+        {
+          "n": 8,
+          "cls": "pb-decor"
+        },
+        {
+          "n": 9,
+          "cls": "pb-box6"
+        },
+        {
+          "n": 10,
+          "cls": "pb-heading2"
+        },
+        {
+          "n": 11,
+          "cls": "pb-box7"
+        },
+        {
+          "n": 12,
+          "cls": "pb-box8"
+        },
+        {
+          "n": 13,
+          "cls": "pb-box9"
+        },
+        {
+          "n": 14,
+          "cls": "pb-link"
+        }
+      ]
+    },
+    {
+      "id": "media-prose-f",
+      "sectionIndex": 1,
+      "rootClass": "media-prose-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "media-prose-f"
+        },
+        {
+          "n": 1,
+          "cls": "mpf-box"
+        },
+        {
+          "n": 2,
+          "cls": "mpf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "mpf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "mpf-text"
+        },
+        {
+          "n": 5,
+          "cls": "mpf-heading"
+        },
+        {
+          "n": 6,
+          "cls": "mpf-text2"
+        },
+        {
+          "n": 7,
+          "cls": "mpf-box4"
+        },
+        {
+          "n": 8,
+          "cls": "mpf-media"
+        },
+        {
+          "n": 9,
+          "cls": "mpf-box5"
+        },
+        {
+          "n": 10,
+          "cls": "mpf-box6"
+        },
+        {
+          "n": 11,
+          "cls": "mpf-box7"
+        },
+        {
+          "n": 12,
+          "cls": "mpf-box8"
+        },
+        {
+          "n": 13,
+          "cls": "mpf-box9"
+        },
+        {
+          "n": 14,
+          "cls": "mpf-box10"
+        },
+        {
+          "n": 15,
+          "cls": "mpf-box11"
+        },
+        {
+          "n": 16,
+          "cls": "mpf-media2"
+        },
+        {
+          "n": 17,
+          "cls": "mpf-box12"
+        },
+        {
+          "n": 18,
+          "cls": "mpf-heading2"
+        },
+        {
+          "n": 19,
+          "cls": "mpf-box13"
+        },
+        {
+          "n": 20,
+          "cls": "mpf-box14"
+        },
+        {
+          "n": 21,
+          "cls": "mpf-link"
+        },
+        {
+          "n": 22,
+          "cls": "mpf-box15"
+        },
+        {
+          "n": 23,
+          "cls": "mpf-box16"
+        },
+        {
+          "n": 24,
+          "cls": "mpf-embed"
+        }
+      ]
+    },
+    {
+      "id": "card-grid-g",
+      "sectionIndex": 2,
+      "rootClass": "card-grid-g",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "card-grid-g"
+        },
+        {
+          "n": 1,
+          "cls": "cgg-box"
+        },
+        {
+          "n": 2,
+          "cls": "cgg-box2"
+        },
+        {
+          "n": 3,
+          "cls": "cgg-box3"
+        },
+        {
+          "n": 4,
+          "cls": "cgg-heading"
+        },
+        {
+          "n": 5,
+          "cls": "cgg-text"
+        },
+        {
+          "n": 6,
+          "cls": "cgg-heading2"
+        },
+        {
+          "n": 7,
+          "cls": "cgg-heading3"
+        },
+        {
+          "n": 8,
+          "cls": "cgg-heading4"
+        },
+        {
+          "n": 9,
+          "cls": "cgg-text2"
+        },
+        {
+          "n": 10,
+          "cls": "cgg-heading5"
+        },
+        {
+          "n": 11,
+          "cls": "cgg-box4"
+        },
+        {
+          "n": 12,
+          "cls": "cgg-box5"
+        },
+        {
+          "n": 13,
+          "cls": "cgg-text3"
+        },
+        {
+          "n": 14,
+          "cls": "cgg-box6"
+        },
+        {
+          "n": 15,
+          "cls": "cgg-box7"
+        },
+        {
+          "n": 16,
+          "cls": "cgg-body"
+        },
+        {
+          "n": 17,
+          "cls": "cgg-box8"
+        },
+        {
+          "n": 18,
+          "cls": "cgg-box9"
+        },
+        {
+          "n": 19,
+          "cls": "cgg-body2"
+        },
+        {
+          "n": 20,
+          "cls": "cgg-box10"
+        },
+        {
+          "n": 21,
+          "cls": "cgg-box11"
+        },
+        {
+          "n": 22,
+          "cls": "cgg-body3"
+        },
+        {
+          "n": 23,
+          "cls": "cgg-box12"
+        },
+        {
+          "n": 24,
+          "cls": "cgg-box13"
+        },
+        {
+          "n": 25,
+          "cls": "cgg-body4"
+        },
+        {
+          "n": 26,
+          "cls": "cgg-heading6"
+        },
+        {
+          "n": 27,
+          "cls": "cgg-text4"
+        },
+        {
+          "n": 28,
+          "cls": "cgg-heading7"
+        },
+        {
+          "n": 29,
+          "cls": "cgg-heading8"
+        },
+        {
+          "n": 30,
+          "cls": "cgg-heading9"
+        },
+        {
+          "n": 31,
+          "cls": "cgg-text5"
+        },
+        {
+          "n": 32,
+          "cls": "cgg-heading10"
+        },
+        {
+          "n": 33,
+          "cls": "cgg-heading11"
+        },
+        {
+          "n": 34,
+          "cls": "cgg-heading12"
+        },
+        {
+          "n": 35,
+          "cls": "cgg-text6"
+        },
+        {
+          "n": 36,
+          "cls": "cgg-heading13"
+        },
+        {
+          "n": 37,
+          "cls": "cgg-box14"
+        },
+        {
+          "n": 38,
+          "cls": "cgg-box15"
+        },
+        {
+          "n": 39,
+          "cls": "cgg-text7"
+        },
+        {
+          "n": 40,
+          "cls": "cgg-box16"
+        },
+        {
+          "n": 41,
+          "cls": "cgg-box17"
+        },
+        {
+          "n": 42,
+          "cls": "cgg-body5"
+        },
+        {
+          "n": 43,
+          "cls": "cgg-box18"
+        },
+        {
+          "n": 44,
+          "cls": "cgg-box19"
+        },
+        {
+          "n": 45,
+          "cls": "cgg-body6"
+        },
+        {
+          "n": 46,
+          "cls": "cgg-box20"
+        },
+        {
+          "n": 47,
+          "cls": "cgg-box21"
+        },
+        {
+          "n": 48,
+          "cls": "cgg-body7"
+        },
+        {
+          "n": 49,
+          "cls": "cgg-heading14"
+        },
+        {
+          "n": 50,
+          "cls": "cgg-text8"
+        },
+        {
+          "n": 51,
+          "cls": "cgg-heading15"
+        },
+        {
+          "n": 52,
+          "cls": "cgg-heading16"
+        },
+        {
+          "n": 53,
+          "cls": "cgg-heading17"
+        },
+        {
+          "n": 54,
+          "cls": "cgg-text9"
+        },
+        {
+          "n": 55,
+          "cls": "cgg-heading18"
+        },
+        {
+          "n": 56,
+          "cls": "cgg-heading19"
+        },
+        {
+          "n": 57,
+          "cls": "cgg-heading20"
+        },
+        {
+          "n": 58,
+          "cls": "cgg-box22"
+        },
+        {
+          "n": 59,
+          "cls": "cgg-box23"
+        },
+        {
+          "n": 60,
+          "cls": "cgg-text10"
+        },
+        {
+          "n": 61,
+          "cls": "cgg-box24"
+        },
+        {
+          "n": 62,
+          "cls": "cgg-box25"
+        },
+        {
+          "n": 63,
+          "cls": "cgg-body8"
+        },
+        {
+          "n": 64,
+          "cls": "cgg-box26"
+        },
+        {
+          "n": 65,
+          "cls": "cgg-box27"
+        },
+        {
+          "n": 66,
+          "cls": "cgg-body9"
+        },
+        {
+          "n": 67,
+          "cls": "cgg-box28"
+        },
+        {
+          "n": 68,
+          "cls": "cgg-box29"
+        },
+        {
+          "n": 69,
+          "cls": "cgg-body10"
+        },
+        {
+          "n": 70,
+          "cls": "cgg-box30"
+        },
+        {
+          "n": 71,
+          "cls": "cgg-box31"
+        },
+        {
+          "n": 72,
+          "cls": "cgg-body11"
+        },
+        {
+          "n": 73,
+          "cls": "cgg-heading21"
+        },
+        {
+          "n": 74,
+          "cls": "cgg-heading22"
+        },
+        {
+          "n": 75,
+          "cls": "cgg-heading23"
+        },
+        {
+          "n": 76,
+          "cls": "cgg-text11"
+        },
+        {
+          "n": 77,
+          "cls": "cgg-heading24"
+        },
+        {
+          "n": 78,
+          "cls": "cgg-text12"
+        },
+        {
+          "n": 79,
+          "cls": "cgg-heading25"
+        }
+      ]
+    },
+    {
+      "id": "prose-section-f",
+      "sectionIndex": 3,
+      "rootClass": "prose-section-f",
+      "nodeMap": [
+        {
+          "n": 0,
+          "cls": "prose-section-f"
+        },
+        {
+          "n": 1,
+          "cls": "psf-box"
+        },
+        {
+          "n": 2,
+          "cls": "psf-box2"
+        },
+        {
+          "n": 3,
+          "cls": "psf-box3"
+        },
+        {
+          "n": 4,
+          "cls": "psf-decor"
+        },
+        {
+          "n": 9,
+          "cls": "psf-box4"
+        },
+        {
+          "n": 10,
+          "cls": "psf-box5"
+        },
+        {
+          "n": 11,
+          "cls": "psf-text"
+        },
+        {
+          "n": 12,
+          "cls": "psf-box6"
+        },
+        {
+          "n": 13,
+          "cls": "psf-box7"
+        },
+        {
+          "n": 14,
+          "cls": "psf-decor2"
+        },
+        {
+          "n": 15,
+          "cls": "psf-box8"
+        },
+        {
+          "n": 16,
+          "cls": "psf-heading"
+        },
+        {
+          "n": 17,
+          "cls": "psf-box9"
+        },
+        {
+          "n": 18,
+          "cls": "psf-text2"
+        }
+      ]
+    }
+  ]
+}

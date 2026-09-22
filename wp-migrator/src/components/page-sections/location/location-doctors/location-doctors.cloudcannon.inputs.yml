@@ -1,0 +1,38 @@
+id:
+  type: text
+  comment: Optional HTML id for this section, for anchor links.
+heading:
+  type: text
+  comment: Section heading. Shown below the headshots.
+doctors:
+  type: array
+  label: Doctors
+  comment: Headshot cards. Each one can open a bio pop-up and add a button to the row below.
+  options:
+    structures: _structures.locationDoctors
+icons:
+  type: array
+  label: Credential Icons
+  comment: Icon callouts shown under the headshots.
+  options:
+    structures: _structures.locationIcons
+backgroundColor:
+  type: select
+  comment: Section background color.
+  options:
+    values: _select_data.brandColors
+textColor:
+  type: select
+  comment: Main text color (headings, body copy, captions).
+  options:
+    values: _select_data.brandColors
+accentColor:
+  type: select
+  comment: Accent color — link/button hover states, star ratings, and similar highlights.
+  options:
+    values: _select_data.brandColors
+iconColor:
+  type: select
+  comment: Icon color (SVG fill/stroke).
+  options:
+    values: _select_data.brandColors

@@ -1,0 +1,27 @@
+label: United Concordia Employers In
+icon: vertical_split
+description: United Concordia Employers In section with heading, copy, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/united-concordia-employers-in
+  id: ""
+  heading: ""
+  image: ""
+  imageAlt: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  heading2: ""
+  text3: ""
+  heading3: ""
+  text4: ""
+  headingColor: "#1b2e38"
+  textColor: "#1b2e38"
+preview:
+  text:
+    - United Concordia Employers In
+  icon: vertical_split
+picker_preview:
+  text: United Concordia Employers In
+  subtext: United Concordia Employers In section with heading, copy, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/united-concordia-employers-in/united-concordia-employers-in.cloudcannon.inputs.yml

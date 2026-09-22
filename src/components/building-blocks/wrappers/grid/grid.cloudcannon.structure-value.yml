@@ -6,6 +6,7 @@ value:
   id: ""
   label: ""
   layout: center
+  columns: null
   minItemWidth: 280
   maxItemWidth: 400
   items: []

@@ -1,0 +1,17 @@
+label: Home Payment Options Alphaeon
+icon: interests
+description: Home Payment Options Alphaeon section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-payment-options-alphaeon
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Payment Options Alphaeon
+  icon: interests
+picker_preview:
+  text: Home Payment Options Alphaeon
+  subtext: Home Payment Options Alphaeon section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-payment-options-alphaeon/home-payment-options-alphaeon.cloudcannon.inputs.yml

@@ -1,0 +1,10 @@
+_snippets:
+  principal:
+    template: astro_component
+    inline: false
+    preview:
+      text: Principal
+    definitions:
+      component_name: page-sections/wpmig/principal
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/principal/principal.cloudcannon.inputs.yml

@@ -1,0 +1,18 @@
+label: Partners
+icon: vertical_split
+description: Partners section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/partners
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Partners
+  icon: vertical_split
+picker_preview:
+  text: Partners
+  subtext: Partners section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/partners/partners.cloudcannon.inputs.yml

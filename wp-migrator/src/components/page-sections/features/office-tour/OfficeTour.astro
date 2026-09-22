@@ -1,0 +1,210 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Component from "@components/utils/renderBlock.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Carousel from "@wrappers/carousel/Carousel.astro";
+import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
+
+const {
+  heading = "",
+  backgroundColor = "base",
+  backgroundGradient = "",
+  backgroundImage,
+  tourSlides = [],
+  slideNumbers = true,
+  floatingArrows = false,
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const normalizedTourSlides = Array.isArray(tourSlides)
+  ? tourSlides.filter((slide) => slide && typeof slide === "object")
+  : [];
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+// Peek mode: add class="peek" in the CMS to show flanking slides at reduced opacity.
+const isPeek = String(className ?? "")
+  .split(" ")
+  .includes("peek");
+---
+
+<CustomSection
+  class:list={["office-tour", className, slideNumbers ? "slide-numbers" : "", floatingArrows ? "floating-arrows" : ""]}
+  maxContentWidth={isPeek ? undefined : "2xl"}
+  paddingHorizontal="none"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColor}
+  backgroundGradient={backgroundGradient}
+  backgroundImage={backgroundImage}
+  {...htmlAttributes}
+>
+  {
+    heading && (
+      <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+    )
+  }
+
+  <Carousel
+    label={heading || "Office tour"}
+    class="office-tour-carousel"
+    maxSlideWidth={isPeek ? 800 : 0}
+    autoPlay={false}
+    autoScroll={false}
+    data-prop="tourSlides"
+    editable={editable}
+    {...(isPeek ? { "data-no-contain-scroll": true, "data-slides-to-scroll": "1" } : {})}
+  >
+    {
+      normalizedTourSlides.map((slide, index) => (
+        <CarouselSlide aria-label={`Slide ${index + 1} of ${normalizedTourSlides.length}`}>
+          <editable-array-item
+            data-component={slide._component || "building-blocks/core-elements/image"}
+          >
+            <Component contentSections={[slide]} editable={false} />
+          </editable-array-item>
+        </CarouselSlide>
+      ))
+    }
+  </Carousel>
+
+  {
+    slideNumbers && normalizedTourSlides.length > 0 && (
+      <div id="carouselSlideNumber" class="carousel-slide-number">
+        1 / {normalizedTourSlides.length}
+      </div>
+    )
+  }
+</CustomSection>
+
+
+
+<style is:global>
+  .office-tour {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .office-tour .carousel {
+    position: relative;
+  }
+
+  .office-tour:not(.peek) .carousel .viewport {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+
+  /* PEEK LAYOUT — add class="peek" in the CMS */
+  .office-tour.peek .office-tour-carousel {
+    margin-inline: calc(-1 * var(--spacing-lg));
+    width: calc(100% + 2 * var(--spacing-lg));
+  }
+
+  .office-tour.peek {
+    overflow: hidden;
+  }
+
+  .office-tour.peek .office-tour-carousel > .viewport {
+    overflow: visible;
+  }
+
+  .office-tour .viewport > .track {
+    align-items: center;
+  }
+
+  .office-tour.peek .slide {
+    margin: 0 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+
+  .office-tour.peek .slide.is-snapped {
+    opacity: 1;
+  }
+
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .prev,
+  .office-tour.floating-arrows .carousel > .controls-wrapper > .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .prev {
+    left: 0.5rem;
+  }
+
+  .office-tour .carousel > .controls-wrapper > .next {
+    right: 0.5rem;
+  }
+
+  /* Only hide the pager indicators if slideNumbers is true */
+  .office-tour.slide-numbers .carousel > .controls-wrapper > .indicators {
+    display: none;
+  }
+
+  /* Slide number overlay */
+  .carousel-slide-number {
+      display: table;
+    font-size: 1.2rem;
+      margin: 0;
+    text-align: center;
+  }
+</style>
+
+<!-- Only run the slide number script if slideNumbers is true -->
+{slideNumbers && (
+  <script is:inline type="module">
+      const sections = document.querySelectorAll(".office-tour.slide-numbers");
+
+      sections.forEach((section) => {
+        const carousel = section.querySelector(".carousel");
+        const counter = section.querySelector(".carousel-slide-number");
+        const controlsWrapper = carousel?.querySelector(".controls-wrapper");
+
+        if (!carousel || !counter || !controlsWrapper) return;
+
+        const nextButton = controlsWrapper.querySelector(".next");
+        if (nextButton && !controlsWrapper.contains(counter)) {
+          controlsWrapper.insertBefore(counter, nextButton);
+        } else if (!controlsWrapper.contains(counter)) {
+          controlsWrapper.appendChild(counter);
+        }
+
+        const waitForIndicators = () => {
+          const indicators = carousel.querySelectorAll(".indicator");
+          if (indicators.length === 0) {
+            requestAnimationFrame(waitForIndicators);
+            return;
+          }
+
+          const updateCounter = () => {
+            const currentIndicators = Array.from(carousel.querySelectorAll(".indicator"));
+            const activeIndex = currentIndicators.findIndex(
+              (dot) =>
+                dot.getAttribute("aria-selected") === "true" ||
+                dot.getAttribute("data-selected") === "true"
+            );
+
+            counter.textContent = `${(activeIndex >= 0 ? activeIndex : 0) + 1} / ${currentIndicators.length}`;
+          };
+
+          updateCounter();
+
+          const observer = new MutationObserver(updateCounter);
+          observer.observe(carousel, {
+            subtree: true,
+            attributes: true,
+            attributeFilter: ["aria-selected", "data-selected"],
+          });
+        };
+
+        waitForIndicators();
+      });
+  </script>
+)}

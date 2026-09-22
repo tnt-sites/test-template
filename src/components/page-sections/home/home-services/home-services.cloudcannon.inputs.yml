@@ -1,0 +1,63 @@
+_structures:
+  home_services_cards:
+    values:
+      - label: Service card
+        icon: medical_services
+        value:
+          title: ""
+          text: ""
+          image: ""
+          imageAlt: ""
+          text2: ""
+          bgImage: ""
+
+_inputs:
+  cards:
+    type: array
+    label: Service cards
+    comment: Each card shows a number, an icon, a title and a line of copy over a photo.
+    options:
+      structures: _structures.home_services_cards
+  title:
+    type: text
+  text:
+    type: textarea
+  image:
+    type: image
+    label: Icon
+  imageAlt:
+    type: text
+    label: Icon alt text
+  text2:
+    type: text
+    label: Number badge
+    comment: e.g. "01."
+  bgImage:
+    type: image
+    label: Background photo
+  tintColor:
+    type: text
+    comment: >-
+      Brand wash laid over each card photo. The white card text needs this dark
+      enough to keep 4.5:1 contrast — #046caa at 0.9 measures 4.68:1. Lightening
+      it fails WCAG AA.
+  tintColorHex:
+    type: color
+  tintOpacity:
+    type: number
+    comment: >-
+      0 = photo only, 1 = flat colour. 0.9 is the minimum that keeps white text
+      at 4.5:1 over the photos; lower values fail WCAG AA.
+  titleColor:
+    type: text
+  titleColorHex:
+    type: color
+  textColor:
+    type: text
+  textColorHex:
+    type: color
+  overlapTop:
+    type: number
+    comment: >-
+      How far the card row pulls up into the banner above, in pixels. Keep in
+      step with the banner's reserved bottom padding (150px).

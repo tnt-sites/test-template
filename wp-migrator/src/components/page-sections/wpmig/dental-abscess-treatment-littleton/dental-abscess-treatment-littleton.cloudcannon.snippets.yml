@@ -1,0 +1,10 @@
+_snippets:
+  dental_abscess_treatment_littleton:
+    template: astro_component
+    inline: false
+    preview:
+      text: Dental Abscess Treatment Littleton
+    definitions:
+      component_name: page-sections/wpmig/dental-abscess-treatment-littleton
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/dental-abscess-treatment-littleton/dental-abscess-treatment-littleton.cloudcannon.inputs.yml

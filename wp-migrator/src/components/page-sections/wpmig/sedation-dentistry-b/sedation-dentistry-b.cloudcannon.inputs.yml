@@ -1,0 +1,61 @@
+_inputs:
+  eyebrow:
+    type: text
+  heading:
+    type: text
+  buttonText:
+    type: text
+  buttonLink:
+    type: url
+  secondaryButtonText:
+    type: text
+  secondaryButtonLink:
+    type: url
+  secondaryButtonText2:
+    type: text
+  secondaryButtonLink2:
+    type: url
+  text:
+    type: html
+  subheading:
+    type: text
+  image:
+    type: image
+  imageAlt:
+    type: text
+  text2:
+    type: html
+  text3:
+    type: text
+  image2:
+    type: image
+  image2Alt:
+    type: text
+  text4:
+    type: html
+  text5:
+    type: text
+  image3:
+    type: image
+  image3Alt:
+    type: text
+  text6:
+    type: html
+  text7:
+    type: text
+  eyebrowColor:
+    type: color
+  headingColor:
+    type: color
+  buttonTextColor:
+    type: color
+  textColor:
+    type: color
+  textColor2:
+    type: color
+  hoverBackgroundColor:
+    type: color
+  hoverBackgroundColor2:
+    type: color
+  hoverBackgroundColor3:
+    type: color

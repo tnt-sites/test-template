@@ -1,0 +1,869 @@
+---
+/**
+ * Sedation Dentistry B — migrated from dental-services/sedation-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  text = "",
+  subheading = "",
+  image = "",
+  imageAlt = "",
+  text2 = "",
+  text3 = "",
+  image2 = "",
+  image2Alt = "",
+  text4 = "",
+  text5 = "",
+  image3 = "",
+  image3Alt = "",
+  text6 = "",
+  text7 = "",
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  textColor2 = "#d44d5c",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="sedation-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--c5:${textColor2};--c6:${hoverBackgroundColor};--c7:${hoverBackgroundColor2};--c8:${hoverBackgroundColor3}`} {...rest}>
+  <div class="sdb-box">
+    <div class="sdb-box2">
+      <div class="sdb-box3">
+        <div class="sdb-box4">
+          {eyebrow && <h4 class="sdb-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="sdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+        </div>
+      </div>
+      <div class="sdb-box5">
+        <div class="sdb-box6">
+          <div class="sdb-box7">
+            <h2 class="sdb-heading2">{heading}</h2>
+          </div>
+          <div class="sdb-box8">
+            <div class="sdb-box9">
+              {text && <p class="sdb-text" set:html={text} />}
+            </div>
+          </div>
+          <div class="sdb-box10">
+            {subheading && <h4 class="sdb-heading3">{subheading}</h4>}
+          </div>
+          <div class="sdb-box11">
+            <div class="sdb-box12">
+              <div class="sdb-box13">
+                <div class="sdb-box14">
+                  {image && <img class="sdb-media" src={image} alt={imageAlt || ""} loading="lazy" width="150" height="150" />}
+                </div>
+                <div class="sdb-box15">
+                  {text2 && <div class="sdb-text2" set:html={text2} />}
+                </div>
+                <div class="sdb-box16">
+                  {text3 && <p class="sdb-text3">{text3}</p>}
+                </div>
+              </div>
+            </div>
+            <div class="sdb-box17">
+              <div class="sdb-box18">
+                <div class="sdb-box19">
+                  {image2 && <img class="sdb-media2" src={image2} alt={image2Alt || ""} loading="lazy" width="150" height="150" />}
+                </div>
+                <div class="sdb-box20">
+                  {text4 && <div class="sdb-text4" set:html={text4} />}
+                </div>
+                <div class="sdb-box21">
+                  {text5 && <p class="sdb-text5">{text5}</p>}
+                </div>
+              </div>
+            </div>
+            <div class="sdb-box22">
+              <div class="sdb-box23">
+                <div class="sdb-box24">
+                  {image3 && <img class="sdb-media3" src={image3} alt={image3Alt || ""} loading="lazy" width="150" height="150" />}
+                </div>
+                <div class="sdb-box25">
+                  {text6 && <div class="sdb-text6" set:html={text6} />}
+                </div>
+                <div class="sdb-box26">
+                  {text7 && <p class="sdb-text7">{text7}</p>}
+                </div>
+              </div>
+            </div>
+            <div class="sdb-box27">
+              <div class="sdb-spacer" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .sedation-dentistry-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .sdb-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sdb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .sdb-box3 {
+    display: none;
+  }
+
+  .sdb-box4 {
+    display: none;
+  }
+
+  .sdb-heading {
+    display: none;
+  }
+
+  :global(.sdb-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sdb-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.sdb-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .sdb-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .sdb-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdb-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sdb-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sdb-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdb-box9 {
+    box-sizing: border-box;
+  }
+
+  .sdb-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .sdb-box10 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .sdb-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .sdb-box11 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .sdb-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sdb-box13 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdb-box14 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .sdb-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .sdb-box15 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdb-text2 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .sdb-box16 {
+    display: none;
+  }
+
+  .sdb-text3 {
+    display: none;
+  }
+
+  .sdb-box17 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sdb-box18 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdb-box19 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .sdb-media2 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .sdb-box20 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdb-text4 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .sdb-box21 {
+    display: none;
+  }
+
+  .sdb-text5 {
+    display: none;
+  }
+
+  .sdb-box22 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sdb-box23 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .sdb-box24 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .sdb-media3 {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .sdb-box25 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .sdb-text6 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .sdb-box26 {
+    display: none;
+  }
+
+  .sdb-text7 {
+    display: none;
+  }
+
+  .sdb-box27 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .sdb-spacer {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    height: 211px;
+    max-width: 100%;
+    min-height: 211px;
+    position: relative;
+  }
+
+  :global(.sdb-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.sdb-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.sdb-btn3):hover {
+    background-color: var(--c8);
+  }
+
+  @media (min-width: 768px) {
+    .sdb-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .sdb-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 670px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .sdb-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .sdb-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.sdb-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.sdb-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.sdb-btn2) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sdb-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .sdb-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .sdb-heading2 {
+      line-height: 32px;
+    }
+
+    .sdb-heading3 {
+      line-height: 24px;
+    }
+
+    .sdb-box12 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .sdb-box13 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .sdb-box14 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .sdb-media {
+      width: 100%;
+    }
+
+    .sdb-box15 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .sdb-box16 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+      text-align: center;
+    }
+
+    .sdb-text3 {
+      box-sizing: border-box;
+      color: var(--c5);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .sdb-box17 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .sdb-box18 {
+      flex: 0 0 83.33%;
+      max-width: 83.33%;
+      min-height: 226px;
+    }
+
+    .sdb-box19 {
+      flex: 0 0 94.29%;
+      max-width: 94.29%;
+    }
+
+    .sdb-media2 {
+      width: 100%;
+    }
+
+    .sdb-box20 {
+      flex: 0 0 94.29%;
+      max-width: 94.29%;
+    }
+
+    .sdb-box21 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 94.29%;
+      max-width: 94.29%;
+      text-align: center;
+    }
+
+    .sdb-text5 {
+      box-sizing: border-box;
+      color: var(--c5);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .sdb-box22 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .sdb-box23 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .sdb-box24 {
+      flex: 0 0 95.4%;
+      max-width: 95.4%;
+    }
+
+    .sdb-media3 {
+      width: 100%;
+    }
+
+    .sdb-box25 {
+      flex: 0 0 95.4%;
+      max-width: 95.4%;
+    }
+
+    .sdb-box26 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 95.4%;
+      max-width: 95.4%;
+      text-align: center;
+    }
+
+    .sdb-text7 {
+      box-sizing: border-box;
+      color: var(--c5);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .sdb-box27 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .sdb-spacer {
+      height: 246px;
+      min-height: 246px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .sdb-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .sdb-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 497px;
+    }
+
+    :global(.sdb-btn) {
+      white-space: nowrap;
+    }
+
+    :global(.sdb-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.sdb-btn3) {
+      white-space: nowrap;
+    }
+
+    :global(.sdb-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .sdb-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .sdb-box11 {
+      flex-wrap: nowrap;
+    }
+
+    .sdb-box13 {
+      flex: 0 0 90.05%;
+      max-width: 90.05%;
+    }
+
+    .sdb-box14 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box15 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box16 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box18 {
+      flex: 0 0 90.05%;
+      max-width: 90.05%;
+      min-height: auto;
+    }
+
+    .sdb-box19 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box20 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box21 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box23 {
+      flex: 0 0 90.05%;
+      max-width: 90.05%;
+    }
+
+    .sdb-box24 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box25 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-box26 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .sdb-spacer {
+      height: 225px;
+      min-height: 225px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .sdb-box19 {
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+  }
+  .sdb-box24 {
+    text-align: left;
+  }
+  .sdb-media3 {
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    text-align: left;
+  }
+  .sdb-box18 {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .sdb-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    :global(.sdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .sdb-text {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    :global(.sdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.sdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    .sdb-text {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

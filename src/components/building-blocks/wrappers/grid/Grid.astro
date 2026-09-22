@@ -3,6 +3,7 @@ import GridItem from "./GridItem.astro";
 
 const {
   layout = "center",
+  columns,
   minItemWidth = 200,
   maxItemWidth = 320,
   class: className,
@@ -31,6 +32,7 @@ const gridStyles = [
   `--min-item-width: ${minItemWidth}px`,
   `--max-item-width: ${maxItemWidth}px`,
   `--grid-spacing: var(--spacing-${gap})`,
+  columns ? `--grid-columns: ${columns}` : "",
   userStyle,
 ]
   .filter(Boolean)
@@ -81,8 +83,20 @@ if (!_component && !hasItems && !hasSlotContent) return;
       &.layout-start {
         align-items: stretch;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(min(var(--min-item-width), 100%), 1fr));
+        /* `--grid-columns` states the count outright, for a layout that was
+           measured rather than chosen — a migrated accordion panel is "three
+           across", and deriving that from a pixel minimum only reproduces it at
+           the width it happened to be measured at. Unset, this is the
+           auto-filling behaviour it has always had. */
+        grid-template-columns: repeat(
+          var(--grid-columns, auto-fill),
+          minmax(min(var(--min-item-width), 100%), 1fr)
+        );
         justify-content: start;
+
+        @media (width < 640px) {
+          grid-template-columns: 1fr;
+        }
       }
 
       &.layout-center {

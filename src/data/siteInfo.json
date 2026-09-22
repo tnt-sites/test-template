@@ -1,20 +1,25 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Chapel Hill Dental Arts",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/ChapelHillDentalArts"
     },
     {
-      "label": "Instagram",
-      "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "label": "Youtube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UCpemQcGgJtirWy0CqLXsl8w"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://share.google/YSYlAQLTap26ytHRt"
+    },
+    {
+      "label": "Yelp",
+      "icon": "social/yelp",
+      "link": "https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3"
     }
   ],
   "offices": [
@@ -22,10 +27,12 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "429 Highway 35"
+          ],
+          "city": "Red Bank",
+          "state": "NJ",
+          "postalCode": "07701",
           "country": null,
           "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
         }
@@ -33,40 +40,35 @@
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(732) 365-0123",
+          "href": "tel:7323650123"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "9:00 AM - 5:00 PM",
           "note": ""
         },
         {
           "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "hours": "9:00 AM - 5:00 PM",
           "note": ""
         }
       ],
@@ -74,8 +76,12 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

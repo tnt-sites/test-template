@@ -1,0 +1,18 @@
+label: Payment Options
+icon: vertical_split
+description: Payment Options section with heading, imagery. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/payment-options
+  id: ""
+  heading: ""
+  backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+  headingColor: "#1b2e38"
+preview:
+  text:
+    - Payment Options
+  icon: vertical_split
+picker_preview:
+  text: Payment Options
+  subtext: Payment Options section with heading, imagery. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/payment-options/payment-options.cloudcannon.inputs.yml

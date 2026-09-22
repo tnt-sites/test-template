@@ -1,0 +1,17 @@
+label: Home Geha
+icon: interests
+description: Home Geha section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-geha
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Geha
+  icon: interests
+picker_preview:
+  text: Home Geha
+  subtext: Home Geha section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-geha/home-geha.cloudcannon.inputs.yml

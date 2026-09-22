@@ -1,0 +1,636 @@
+---
+/**
+ * ContentSection — the one interior-page content band.
+ *
+ * The migrator emits one component per section it detects, so the same
+ * WordPress layout captured with three headings and captured with twenty
+ * becomes two components that no fixed prop list can ever unify. That is how
+ * this site ended up with `media-prose-b` through `-i`, `card-grid-home-botox`
+ * through `-teeth`, and `prose-block-home-cerec` through `-success`: forty
+ * files for one design at forty lengths.
+ *
+ * The length is the variable, so the content is an ordered `blocks` array and
+ * the design lives here once. What genuinely differs between instances — the
+ * side the photo sits on, the alignment, the band's colours — are inputs.
+ *
+ * Layout follows the source's `.page-section` / `.top-page-section`: the photo
+ * is a floated figure the prose wraps around, not a rigid column, which is why
+ * a section with two paragraphs and one with ten both look right.
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const {
+  blocks = [],
+  media = null,
+  align = "left",
+  variant = "",
+  contentWidth = "",
+  divider = true,
+  backgroundColor = "",
+  headingColor = "",
+  subheadingColor = "",
+  textColor = "",
+  eyebrowColor = "",
+  design = null,
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const list = Array.isArray(blocks) ? blocks.filter(Boolean) : [];
+/** Prose that already carries its own block markup renders as-is. */
+const isRich = (html: string) =>
+  /<(?:p|ul|ol|h[1-6]|table|blockquote|div|figure)\b/i.test(String(html || ""));
+const mediaSide = media?.side === "left" ? "left" : "right";
+
+/**
+ * An embed is the service pages' scheduling rail, not a figure the copy wraps.
+ * A float only reserves space for its own height, so every heading below the
+ * form — each one clearing the float — snapped back to full width halfway down
+ * the page. The rail is a real second column instead: it holds the gutter open
+ * for the whole section and sticks as the reader scrolls.
+ */
+const hasAside = media?.type === "embed" && !!media?.url;
+const asideHeading = media?.heading || media?.title || "";
+const asideTitle = String(asideHeading).replace(/<[^>]*>/g, " ").trim() || "Schedule an appointment";
+
+// A section's own measured design, when the migrator captured one. The
+// component bakes one site's numbers; these let it paint with this section's
+// instead, and anything not measured falls back to the baked value below.
+const hd = design?.heading || {};
+const eb = design?.eyebrow || {};
+const bt = design?.button || {};
+const dv = design?.divider || {};
+const style = [
+  backgroundColor && `--cs-bg:${backgroundColor}`,
+  (headingColor || hd.color) && `--cs-hd:${headingColor || hd.color}`,
+  subheadingColor && `--cs-sub:${subheadingColor}`,
+  textColor && `--cs-tx:${textColor}`,
+  eyebrowColor && `--cs-eyebrow:${eyebrowColor}`,
+  hd.fontFamily && `--cs-hd-font:${hd.fontFamily}`,
+  hd.fontSize && `--cs-hd-size:${hd.fontSize}px`,
+  hd.fontWeight && `--cs-hd-weight:${hd.fontWeight}`,
+  hd.lineHeight && `--cs-hd-lh:${hd.lineHeight}px`,
+  hd.textTransform && `--cs-hd-transform:${hd.textTransform}`,
+  hd.align && `--cs-hd-align:${hd.align}`,
+  eb.fontFamily && `--cs-eyebrow-font:${eb.fontFamily}`,
+  eb.fontSize && `--cs-eyebrow-size:${eb.fontSize}px`,
+  eb.fontStyle && `--cs-eyebrow-style:${eb.fontStyle}`,
+  eb.fontWeight && `--cs-eyebrow-weight:${eb.fontWeight}`,
+  eb.letterSpacing && `--cs-eyebrow-spacing:${eb.letterSpacing}`,
+  eb.textTransform && `--cs-eyebrow-transform:${eb.textTransform}`,
+  bt.background && `--cs-btn-bg:${bt.background}`,
+  bt.background && `--cs-btn-border-color:transparent`,
+  bt.color && `--cs-btn-color:${bt.color}`,
+  bt.radius && `--cs-btn-radius:${bt.radius}`,
+  bt.uppercase && `--cs-btn-transform:uppercase`,
+  dv.color && `--cs-rule-color:${dv.color}`,
+  dv.weight && `--cs-rule-weight:${dv.weight}`,
+  dv.maxWidth && `--cs-rule-maxw:${dv.maxWidth}`,
+]
+  .filter(Boolean)
+  .join(";");
+---
+
+<section
+  class="content-section"
+  id={id || undefined}
+  data-align={align === "center" ? "center" : "left"}
+  data-variant={variant === "profile" ? "profile" : undefined}
+  data-width={contentWidth === "narrow" ? "narrow" : undefined}
+  data-divider={variant === "profile" && divider === false ? "false" : undefined}
+  data-aside={hasAside ? "true" : undefined}
+  data-banded={backgroundColor ? "true" : undefined}
+  data-designed={design?.heading ? "true" : undefined}
+  style={style || undefined}
+  {...rest}
+>
+  <div class="cs-inner">
+    {
+      media?.type === "image" && media.source && (
+        <figure class="cs-media" data-side={mediaSide} data-fullbleed={media.fullBleed ? "true" : undefined}>
+          <img src={media.source} alt={media.alt || ""} loading="lazy" />
+        </figure>
+      )
+    }
+    <div class="cs-body">
+    {
+      list.map((block) => {
+        if (block.type === "eyebrow") return <p class="cs-eyebrow" set:html={block.html} />;
+        if (block.type === "heading" && block.level === 1)
+          return <h1 class="cs-title" set:html={block.html} />;
+        if (block.type === "heading") return <h2 class="cs-heading" set:html={block.html} />;
+        if (block.type === "subheading") return <h3 class="cs-subheading" set:html={block.html} />;
+        if (block.type === "image" && block.source)
+          return (
+            <figure class="cs-media" data-side={block.side === "left" ? "left" : "right"}>
+              <img src={block.source} alt={block.alt || ""} loading="lazy" />
+            </figure>
+          );
+        if (block.type === "divider") return <hr class="cs-rule" />;
+        if (block.type === "buttons")
+          return (
+            <div class="cs-buttons">
+              {(block.buttons || []).map((b: any) => (
+                <Button
+                  variant="secondary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  uppercase
+                  class="cs-btn"
+                  text={b.text}
+                  link={b.link || "#"}
+                  target={b.newTab ? "_blank" : undefined}
+                  rel={b.newTab ? "noopener" : undefined}
+                  editable={false}
+                />
+              ))}
+            </div>
+          );
+        // A paragraph stays a paragraph. Wrapping plain copy in a bare `<div>`
+        // reads as a block of text to a browser but as nothing to anything
+        // walking the document — including this repo's own coverage check,
+        // which reported every converted page as having lost its prose.
+        const columns = Number(block.columns) === 2 ? "2" : undefined;
+        return isRich(block.html) ? (
+          <div class="cs-prose" data-columns={columns} set:html={block.html} />
+        ) : (
+          <p class="cs-prose" data-columns={columns} set:html={block.html} />
+        );
+      })
+    }
+    </div>
+
+    {
+      hasAside && (
+        <aside class="cs-aside">
+          <div class="cs-card">
+            {(media.logo || asideHeading || media.subtext) && (
+              <div class="cs-card-head">
+                {media.logo && (
+                  <img class="cs-card-logo" src={media.logo} alt={media.logoAlt || ""} loading="lazy" />
+                )}
+                {asideHeading && <h2 class="cs-card-heading" set:html={asideHeading} />}
+                {media.subtext && <div class="cs-card-subtext" set:html={media.subtext} />}
+              </div>
+            )}
+            <div class="cs-card-body">
+              <iframe src={media.url} title={asideTitle} loading="lazy" />
+              {media.button?.text && (
+                <Button
+                  variant="secondary"
+                  size="md"
+                  width="none"
+                  borderRadius="none"
+                  uppercase
+                  class="cs-btn"
+                  text={media.button.text}
+                  link={media.button.link || "#"}
+                  editable={false}
+                />
+              )}
+            </div>
+          </div>
+        </aside>
+      )
+    }
+  </div>
+</section>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .content-section {
+      --cs-navy: #2c3e50;
+      --cs-teal: var(--color-brand, #047ac0);
+      --cs-lime: var(--color-brand, #047ac0);
+
+      background: var(--cs-bg, transparent);
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .content-section .cs-inner {
+      box-sizing: border-box;
+      margin-inline: auto;
+      max-width: 1300px;
+      padding: 0 15px 75px;
+      width: 100%;
+    }
+
+    /* The float has to be contained or the next section rides up beside it. */
+    .content-section .cs-inner::after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+
+    .content-section[data-align="center"] .cs-inner {
+      text-align: center;
+    }
+
+    /* A single column of copy under a centred heading reads better short of
+       the full 1300 — the source's "In-House Lab" band. */
+    .content-section[data-width="narrow"] .cs-inner {
+      max-width: 1000px;
+    }
+
+    .content-section[data-banded="true"] .cs-inner {
+      padding-block: 45px;
+    }
+
+    .content-section + .content-section .cs-inner {
+      padding-top: 0;
+    }
+
+    /* ---- Media: a floated figure the prose wraps, as the source has it ---- */
+    .content-section .cs-media {
+      margin: 0 0 15px;
+      max-width: max-content;
+    }
+
+    .content-section .cs-media img {
+      display: block;
+      height: auto;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    /* The homepage "About" image floats left and carries an angled edge in the
+       source design; only left-floated media gets the slant. */
+    .content-section .cs-media[data-side="left"] img {
+      clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+    }
+
+    @media (min-width: 768px) {
+      .content-section .cs-media[data-side="left"] {
+        float: left;
+        margin: 0 30px 15px 0;
+      }
+
+      .content-section .cs-media[data-side="right"] {
+        float: right;
+        margin: 0 0 15px 30px;
+      }
+
+      /* A left-aligned image becomes a full-height column beside the copy
+         rather than a float the short copy leaves stranded (the homepage
+         "About" row). Right-side media keeps the float — that is the service
+         pages' sidebar form. */
+      .content-section:has(> .cs-inner > .cs-media[data-side="left"]) .cs-inner {
+        align-items: center;
+        display: flex;
+        gap: 44px;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-side="left"]) .cs-media[data-side="left"] {
+        flex: 0 0 50%;
+        float: none;
+        margin: 0;
+        max-width: 50%;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-side="left"]) .cs-media[data-side="left"] img {
+        max-width: 100%;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-side="left"]) .cs-body {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      /* Full-bleed: the photo runs off the left edge of the viewport and
+         stretches the full height of the section — top to bottom, through
+         the band's own padding — so it sits flush against the section above
+         and the one below with no gap. It's pulled out of the flex row into
+         a position:absolute panel sized in viewport units (the classic
+         break-out-of-a-centred-container trick), so `.cs-inner` has to be
+         the positioning context and the text column gets an explicit offset
+         instead of the flex gap it would otherwise share the row with. */
+      .content-section:has(> .cs-inner > .cs-media[data-fullbleed="true"]) .cs-inner {
+        position: relative;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-fullbleed="true"]) .cs-media[data-fullbleed="true"] {
+        bottom: 0;
+        left: calc(50% - 50vw);
+        margin: 0;
+        max-width: none;
+        position: absolute;
+        top: 0;
+        width: 50vw;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-fullbleed="true"]) .cs-media[data-fullbleed="true"] img {
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .content-section:has(> .cs-inner > .cs-media[data-fullbleed="true"]) .cs-body {
+        margin-left: 50%;
+        padding-left: 44px;
+        padding-top: 40px;
+      }
+    }
+
+    /* ---- Aside: the scheduling rail, a column rather than a float ---- */
+    .content-section .cs-aside {
+      margin-top: 40px;
+    }
+
+    @media (min-width: 992px) {
+      .content-section[data-aside] .cs-inner {
+        align-items: start;
+        column-gap: 40px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 400px;
+      }
+
+      /* The float-containing pseudo would otherwise take a grid cell of its
+         own and open a phantom third column. */
+      .content-section[data-aside] .cs-inner::after {
+        display: none;
+      }
+
+      .content-section[data-aside] .cs-body {
+        grid-column: 1;
+        min-width: 0;
+      }
+
+      /* Row 1 regardless of its DOM position, which is after the copy so the
+         phone layout leads with the page rather than with a 760px form. */
+      .content-section[data-aside] .cs-aside {
+        grid-column: 2;
+        grid-row: 1;
+        margin-top: 0;
+        position: sticky;
+        top: 20px;
+      }
+
+      /* Beside the rail the copy column is already narrow, so a 500px photo
+         floated inside it strands a two-word ragged gutter. It runs the width
+         of the column instead. */
+      .content-section[data-aside] .cs-body .cs-media,
+      .content-section[data-aside] .cs-body .cs-media img {
+        float: none;
+        margin-inline: 0;
+        max-width: 100%;
+      }
+    }
+
+    .content-section .cs-card {
+      background-color: #f2f6f8;
+      border-radius: 6px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+    }
+
+    .content-section .cs-card-head {
+      background-color: var(--cs-teal);
+      color: #ffffff;
+      padding: 30px 24px 34px;
+      text-align: center;
+    }
+
+    .content-section .cs-card-logo {
+      display: block;
+      height: auto;
+      margin: 0 auto 20px;
+      max-width: 190px;
+      width: 100%;
+    }
+
+    .content-section .cs-card-heading {
+      color: #ffffff;
+      font-family: var(--font-headings, inherit);
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin: 0;
+    }
+
+    .content-section .cs-card-subtext {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    .content-section .cs-card-subtext :where(p) {
+      margin: 0;
+    }
+
+    .content-section .cs-card-subtext :where(a) {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .content-section .cs-card-body iframe {
+      border: 0;
+      display: block;
+      min-height: 760px;
+      width: 100%;
+    }
+
+    .content-section .cs-card-body .cs-btn.button {
+      margin: 0 20px 20px;
+    }
+
+    /* ---- Typography: the source's `.inner-page` scale ---- */
+    .content-section .cs-title {
+      clear: both;
+      color: var(--cs-hd, var(--cs-navy));
+      font-family: var(--cs-hd-font, inherit);
+      font-size: var(--cs-hd-size, 36px);
+      font-weight: var(--cs-hd-weight, 700);
+      line-height: var(--cs-hd-lh, 1.4);
+      margin-block: 0 36px;
+      text-align: center;
+      text-transform: var(--cs-hd-transform, uppercase);
+    }
+
+    /* One converted section can hold several of the source's, so a heading
+       starts a fresh band rather than running alongside the previous float. */
+    .content-section .cs-heading {
+      clear: both;
+      color: var(--cs-hd, var(--cs-teal));
+      font-family: var(--cs-hd-font, inherit);
+      font-size: var(--cs-hd-size, 24px);
+      font-weight: var(--cs-hd-weight, 400);
+      line-height: var(--cs-hd-lh, 1.4);
+      margin-block: 30px;
+      position: relative;
+      /* A heading can be centred over copy that stays left — the source's
+         "In-House Lab" band — so its alignment is its own, not the band's. */
+      text-align: var(--cs-hd-align, inherit);
+      text-transform: var(--cs-hd-transform, capitalize);
+    }
+
+    /* The 1px rule the source draws under every interior heading. It sits
+       directly under the words — clearing it here pushed it past the figure
+       and took the copy that should wrap beside the photo down with it. This is
+       one site's heading treatment, so a section that carried its own measured
+       heading design (`data-designed`) opts out of it. */
+    .content-section:not([data-designed]) .cs-heading::after {
+      background-color: var(--cs-hd, var(--cs-teal));
+      content: "";
+      display: block;
+      height: 1px;
+      margin: 15px auto;
+      width: 100%;
+    }
+
+    .content-section .cs-subheading {
+      color: var(--cs-sub, var(--cs-navy));
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-block: 20px 10px;
+    }
+
+    /* The site's eyebrow treatment, shared with `prose-block`: the heading
+       serif, spaced out and set in caps above the heading it introduces. */
+    .content-section .cs-eyebrow {
+      color: var(--cs-eyebrow, var(--cs-teal));
+      font-family: var(--cs-eyebrow-font, var(--font-headings, inherit));
+      font-size: var(--cs-eyebrow-size, inherit);
+      font-style: var(--cs-eyebrow-style, normal);
+      font-weight: var(--cs-eyebrow-weight, 300);
+      letter-spacing: var(--cs-eyebrow-spacing, 5.5px);
+      margin-block: 0 15px;
+      text-transform: var(--cs-eyebrow-transform, uppercase);
+    }
+
+    .content-section .cs-prose,
+    .content-section .cs-prose :where(p, li) {
+      color: var(--cs-tx, inherit);
+      line-height: 30px;
+    }
+
+    /* The reset zeroes margins, so a run of plain prose blocks — each one a
+       paragraph of its own — needs the gap the rich markup below gets. */
+    .content-section p.cs-prose {
+      margin-block: 0 20px;
+    }
+
+    .content-section .cs-prose :where(p) {
+      margin-block: 0 20px;
+    }
+
+    .content-section .cs-prose :where(p):last-child {
+      margin-bottom: 0;
+    }
+
+    .content-section .cs-prose :where(a) {
+      color: var(--cs-lime);
+    }
+
+    .content-section .cs-prose :where(a):hover {
+      color: var(--cs-teal);
+    }
+
+    .content-section .cs-prose :where(ul, ol) {
+      text-align: left;
+    }
+
+    /* A long single-topic list — the insurance carriers — reads as a lookup
+       table, not as prose, so it splits into columns rather than running the
+       reader down one 30-item rail. Multi-column keeps it one list to anything
+       walking the document; only the painting changes. */
+    @media (min-width: 600px) {
+      .content-section .cs-prose[data-columns="2"] :where(ul, ol) {
+        column-gap: 40px;
+        columns: 2;
+      }
+    }
+
+    .content-section .cs-prose[data-columns="2"] :where(li) {
+      break-inside: avoid;
+    }
+
+    /* The separator the source draws between one carrier's list and the next. */
+    .content-section .cs-rule {
+      background-color: var(--cs-rule-color, color-mix(in srgb, var(--cs-navy) 20%, transparent));
+      border: 0;
+      clear: both;
+      height: var(--cs-rule-weight, 1px);
+      margin-block: 30px;
+      margin-inline: auto;
+      max-width: var(--cs-rule-maxw, 100%);
+      width: 100%;
+    }
+
+    /* ---- Profile: a person's headshot beside their bio ---- */
+    /* The doctors read as a stack of people rather than one wrapped article,
+       so the photo is a fixed column the copy never runs under and a rule
+       separates one bio from the next. */
+    .content-section[data-variant="profile"] .cs-inner,
+    .content-section + .content-section[data-variant="profile"] .cs-inner {
+      border-top: 1px solid color-mix(in srgb, var(--cs-navy) 12%, transparent);
+      padding-block: 55px;
+    }
+
+    /* The rule belongs between people, so the first of a run turns it off.
+       It cannot be found with a sibling selector: in the editor each section
+       renders inside its own `editable-array-item`, so no two sections are
+       ever siblings. */
+    .content-section[data-variant="profile"][data-divider="false"] .cs-inner {
+      border-top: 0;
+    }
+
+    .content-section[data-variant="profile"] .cs-media[data-side="left"] img {
+      clip-path: none;
+    }
+
+    @media (min-width: 768px) {
+      .content-section[data-variant="profile"]:has(> .cs-inner > .cs-media[data-side="left"]) .cs-inner {
+        align-items: start;
+        gap: 60px;
+      }
+
+      .content-section[data-variant="profile"]:has(> .cs-inner > .cs-media[data-side="left"])
+        .cs-media[data-side="left"] {
+        flex: 0 0 38%;
+        max-width: 38%;
+      }
+    }
+
+    .content-section[data-variant="profile"] .cs-heading:first-child {
+      margin-top: 0;
+    }
+
+    .content-section[data-variant="profile"] .cs-subheading {
+      font-size: 17px;
+      margin-block: 6px 22px;
+    }
+
+    .content-section .cs-buttons {
+      clear: both;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-block: 20px 0;
+      padding-top: 10px;
+    }
+
+    .content-section[data-align="center"] .cs-buttons {
+      justify-content: center;
+    }
+
+    .content-section .cs-btn.button {
+      background-color: var(--cs-btn-bg, #ffffff);
+      border: 1px solid var(--cs-btn-border-color, var(--color-brand-secondary, #1f7da6));
+      border-radius: var(--cs-btn-radius, 0);
+      color: var(--cs-btn-color, var(--color-brand, #047ac0));
+      font-weight: 700;
+      text-transform: var(--cs-btn-transform, none);
+    }
+
+    .content-section .cs-btn.button:hover {
+      background-color: var(--color-brand, #047ac0);
+      border-color: var(--color-brand, #047ac0);
+      color: #ffffff;
+    }
+  }
+</style>

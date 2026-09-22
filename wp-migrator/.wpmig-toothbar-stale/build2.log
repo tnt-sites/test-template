@@ -1,0 +1,330 @@
+
+> astro-component-starter@1.0.0 build
+> astro build
+
+11:21:33 [vite] Re-optimizing dependencies because vite config has changed
+11:21:33 [content] Syncing content
+11:21:34 [content] Synced content
+11:21:34 [types] Generated 965ms
+11:21:34 [build] output: "static"
+11:21:34 [build] mode: "static"
+11:21:34 [build] directory: /Users/tharvey/Work/CloudCannon/toothbar/dist/
+11:21:34 [build] Collecting build info...
+11:21:34 [build] ✓ Completed in 1.02s.
+11:21:34 [build] Building static entrypoints...
+11:21:48 [astro-icon] Loaded icons from /Users/tharvey/Work/CloudCannon/toothbar/src/icons
+11:21:52 [WARN] [vite] [esbuild css minify]
+▲ [WARNING] "max-wdith" is not a known CSS property [unsupported-css-property]
+
+    <stdin>:7945:8:
+      7945 │         max-wdith: 1200px;
+           │         ~~~~~~~~~
+           ╵         max-width
+
+  Did you mean "max-width" instead?
+
+
+11:21:52 [vite] ✓ built in 18.16s
+11:21:52 [build] ✓ Completed in 18.20s.
+
+ building client (vite) 
+11:21:52 [vite] transforming...
+11:21:59 [astro-icon] Loaded icons from /Users/tharvey/Work/CloudCannon/toothbar/src/icons
+11:22:03 [vite] ✓ 1088 modules transformed.
+11:22:03 [vite] rendering chunks...
+11:22:03 [WARN] [vite] [esbuild css minify]
+▲ [WARNING] "max-wdith" is not a known CSS property [unsupported-css-property]
+
+    <stdin>:8158:8:
+      8158 │         max-wdith: 1200px;
+           │         ~~~~~~~~~
+           ╵         max-width
+
+  Did you mean "max-width" instead?
+
+
+11:22:04 [vite] computing gzip size...
+11:22:04 [vite] dist/_astro/website-hero.D4U7jVob.svg                                                                                                                                                                             0.84 kB │ gzip:   0.32 kB
+11:22:04 [vite] dist/_astro/website-feature.DEna4FuL.svg                                                                                                                                                                          1.15 kB │ gzip:   0.49 kB
+11:22:04 [vite] dist/_astro/website-documented.DRWTqUgf.svg                                                                                                                                                                       3.17 kB │ gzip:   0.77 kB
+11:22:04 [vite] dist/_astro/website-split.-E1vECzt.svg                                                                                                                                                                            3.70 kB │ gzip:   0.59 kB
+11:22:04 [vite] dist/_astro/logo.CYULZAsd.svg                                                                                                                                                                                     5.23 kB │ gzip:   2.44 kB
+11:22:04 [vite] dist/_astro/AdobeStock_187242830__37___1778007828_95213-300x200.DYFem91g.jpg                                                                                                                                      8.49 kB
+11:22:04 [vite] dist/_astro/profile.Dck5cZ4v.jpg                                                                                                                                                                                 12.07 kB
+11:22:04 [vite] dist/_astro/profile3.CFgrGJnX.jpg                                                                                                                                                                                12.36 kB
+11:22:04 [vite] dist/_astro/Bad-Breath-1.i3oDUo46.jpg                                                                                                                                                                            15.50 kB
+11:22:04 [vite] dist/_astro/profile4.hPOV2cWw.jpg                                                                                                                                                                                16.17 kB
+11:22:04 [vite] dist/_astro/profile1.3Da2ia4z.jpg                                                                                                                                                                                16.20 kB
+11:22:04 [vite] dist/_astro/vaping-and-oral-health.D2iX6zzs.jpg                                                                                                                                                                  18.60 kB
+11:22:04 [vite] dist/_astro/shutterstock_1676006977-1-768x512-1.BtyAS2MQ.jpg                                                                                                                                                     18.81 kB
+11:22:04 [vite] dist/_astro/Wisdom-Tooth-Pain.BPstnuaz.jpeg                                                                                                                                                                      19.35 kB
+11:22:04 [vite] dist/_astro/profile5.OBHKIg-k.jpg                                                                                                                                                                                19.62 kB
+11:22:04 [vite] dist/_astro/Symptoms-of-TMJ-disorder.Ckx1Qzdh.jpg                                                                                                                                                                22.70 kB
+11:22:04 [vite] dist/_astro/teethgrinding.B-bYBi2V.jpg                                                                                                                                                                           23.61 kB
+11:22:04 [vite] dist/_astro/Electric-vs-Regular-Toothbrush-1.BRFVN6wZ.jpg                                                                                                                                                        23.73 kB
+11:22:04 [vite] dist/_astro/Benefits-of-Flossing-Your-Teeth.BV-GYnpJ.jpg                                                                                                                                                         25.00 kB
+11:22:04 [vite] dist/_astro/profile2.CPtbMybO.jpg                                                                                                                                                                                25.22 kB
+11:22:04 [vite] dist/_astro/straighten-your-teeth-with-clear-aligners.sU8wwlYU.jpg                                                                                                                                               25.55 kB
+11:22:04 [vite] dist/_astro/white-and-blue-toothbrush-with-blue-toothpaste-1.kojrqoST.jpg                                                                                                                                        25.63 kB
+11:22:04 [vite] dist/_astro/tips-for-picking-the-right-toothpaste.k-YeuXiI.jpg                                                                                                                                                   25.75 kB
+11:22:04 [vite] dist/_astro/Toothache.e-LyfB2L.jpg                                                                                                                                                                               26.53 kB
+11:22:04 [vite] dist/_astro/main-qimg-d7933d14cb6c8f73c313ca262b547358.BZrzjC-m.jpg                                                                                                                                              27.18 kB
+11:22:04 [vite] dist/_astro/shutterstock_1051437563-1.RaBNL9oP.jpeg                                                                                                                                                              27.63 kB
+11:22:04 [vite] dist/_astro/Brushing-your-tongue-is-important.B80BUmVY.jpg                                                                                                                                                       27.63 kB
+11:22:04 [vite] dist/_astro/invisalign-1.vNv4f_jq.jpeg                                                                                                                                                                           28.28 kB
+11:22:04 [vite] dist/_astro/dont-replace-a-missing-tooth.DJcneQeF.jpg                                                                                                                                                            28.67 kB
+11:22:04 [vite] dist/_astro/shutterstock_714402862-1-1.CSxRLvjS.jpeg                                                                                                                                                             28.86 kB
+11:22:04 [vite] dist/_astro/person-wearing-silver-colored-ring-while-holding-denture-1.FYfPFinS.jpg                                                                                                                              29.34 kB
+11:22:04 [vite] dist/_astro/how-many-teeth-kids-have.CyxT8ERy.jpg                                                                                                                                                                29.41 kB
+11:22:04 [vite] dist/_astro/jawbotox-for-tmj-1.CeYgt7p1.jpg                                                                                                                                                                      30.31 kB
+11:22:04 [vite] dist/_astro/Tooth-Implant.CJhrg0Qe.jpg                                                                                                                                                                           30.55 kB
+11:22:04 [vite] dist/_astro/dentist-1.BzExywwc.jpg                                                                                                                                                                               30.59 kB
+11:22:04 [vite] dist/_astro/1_shocking_diseases_dentists_vadimguzhva-760x506-1.BXVVx5ys.jpg                                                                                                                                      30.96 kB
+11:22:04 [vite] dist/_astro/can-teeth-whitening-damage-gums.B5Ny0oOc.jpg                                                                                                                                                         31.75 kB
+11:22:04 [vite] dist/_astro/smiling-woman-standing-beside-plant-1.C9TghpMh.jpeg                                                                                                                                                  32.88 kB
+11:22:04 [vite] dist/_astro/young-woman-brushing-her-teeth-1.Dc7Y1erj.jpg                                                                                                                                                        33.06 kB
+11:22:04 [vite] dist/_astro/3-ways-to-prevent-a-poor-bite.Cq4jKxMc.jpg                                                                                                                                                           33.31 kB
+11:22:04 [vite] dist/_astro/shutterstock_254735842-1.BV-KyjKr.jpg                                                                                                                                                                33.32 kB
+11:22:04 [vite] dist/_astro/broken-cigarette-1.BIWEOL8B.jpg                                                                                                                                                                      33.32 kB
+11:22:04 [vite] dist/_astro/pearlywhiteteeth.BQjgH3PO.jpg                                                                                                                                                                        33.96 kB
+11:22:04 [vite] dist/_astro/woman-wearing-invisalign.1QOXVaSk.jpg                                                                                                                                                                34.22 kB
+11:22:04 [vite] dist/_astro/shutterstock_1800233047-1.qjVsWmzX.jpg                                                                                                                                                               34.96 kB
+11:22:04 [vite] dist/_astro/shutterstock_1215868702-1.Cjzi2ihq.jpg                                                                                                                                                               35.63 kB
+11:22:04 [vite] dist/_astro/shutterstock_48422968-1.DRjZl7uk.jpg                                                                                                                                                                 35.68 kB
+11:22:04 [vite] dist/_astro/ppc-pediatric-footer-bg.B9K8WsKo.png                                                                                                                                                                 35.83 kB
+11:22:04 [vite] dist/_astro/burning-mouth-syndrome-symptoms-.ZtL34cRG.jpg                                                                                                                                                        36.25 kB
+11:22:04 [vite] dist/_astro/kid-brushing-her-teeth-1.lP4eQaZQ.jpg                                                                                                                                                                36.25 kB
+11:22:04 [vite] dist/_astro/toothbrush-and-tooth-paste-1.MW2YzlGW.jpg                                                                                                                                                            36.88 kB
+11:22:04 [vite] dist/_astro/why-you-bite-your-cheek-.BoZUxtMV.jpg                                                                                                                                                                37.12 kB
+11:22:04 [vite] dist/_astro/porcelain-veneers.DSlC1pKs.jpg                                                                                                                                                                       37.13 kB
+11:22:04 [vite] dist/_astro/shutterstock_1687009768-1.DHO_bc2K.jpg                                                                                                                                                               37.84 kB
+11:22:04 [vite] dist/_astro/shutterstock_675761230-1.DHCNz0qN.jpg                                                                                                                                                                38.34 kB
+11:22:04 [vite] dist/_astro/how-long-after-wisdom-teeth-removal-can-i-get-a-dental-cleaning.CEzFQZxl.jpg                                                                                                                         39.43 kB
+11:22:04 [vite] dist/_astro/gum-recession.Bl6umvbk.jpg                                                                                                                                                                           39.48 kB
+11:22:04 [vite] dist/_astro/danielle-profile1-tiny.BkErRIOv.jpg                                                                                                                                                                  39.55 kB
+11:22:04 [vite] dist/_astro/shutterstock_1598735734-1.ijfqX0Km.jpg                                                                                                                                                               39.62 kB
+11:22:04 [vite] dist/_astro/shutterstock_142808959-1.zVV_eZNG.jpg                                                                                                                                                                40.06 kB
+11:22:04 [vite] dist/_astro/shutterstock_345988874-1.CATBjg0b.jpg                                                                                                                                                                40.26 kB
+11:22:04 [vite] dist/_astro/shutterstock_1823263868-1.C1txzfAj.jpg                                                                                                                                                               40.33 kB
+11:22:04 [vite] dist/_astro/chewing-ice-1.IMiHz9EN.jpg                                                                                                                                                                           40.87 kB
+11:22:04 [vite] dist/_astro/women-smiling-while-laying-on-lawn-field.BQ-DbDMY.jpeg                                                                                                                                               40.94 kB
+11:22:04 [vite] dist/_astro/shutterstock_1115346134-1.DNeGnhH9.jpeg                                                                                                                                                              42.02 kB
+11:22:04 [vite] dist/_astro/shutterstock_623291072-1.CoZcBOGE.jpg                                                                                                                                                                42.30 kB
+11:22:04 [vite] dist/_astro/AdobeStock_187242830__37___1778007828_95213.DrEewN0a.jpg                                                                                                                                             42.74 kB
+11:22:04 [vite] dist/_astro/Home-whitening-vs.-In-Office-Whitening-1.4Wwo6OsA.jpg                                                                                                                                                42.80 kB
+11:22:04 [vite] dist/_astro/shutterstock_1538855762-1.CgTG81hS.jpg                                                                                                                                                               42.91 kB
+11:22:04 [vite] dist/_astro/Healthy-Smiles-This-Halloween-1.CNPi-dY9.jpg                                                                                                                                                         43.10 kB
+11:22:04 [vite] dist/_astro/tips-to-know-when-travelling-with-invisa.JzeJtfO6.jpeg                                                                                                                                               43.24 kB
+11:22:04 [vite] dist/_astro/lockjaw-G.VIOn2l53.jpg                                                                                                                                                                               43.59 kB
+11:22:04 [vite] dist/_astro/shutterstock_773757976-1._g8vYskO.jpg                                                                                                                                                                43.62 kB
+11:22:04 [vite] dist/_astro/cosmeticdent-1.DTpjGTvn.jpg                                                                                                                                                                          43.65 kB
+11:22:04 [vite] dist/_astro/why-do-my-gums-feel-itchy.D-Mkcy3e.jpg                                                                                                                                                               45.04 kB
+11:22:04 [vite] dist/_astro/TD_April2018Blog_BadBreath-1080x675-1024x640-1.XkUJHgKF.jpg                                                                                                                                          46.18 kB
+11:22:04 [vite] dist/_astro/dental-checkup-G-G.DNdJU6OD.jpg                                                                                                                                                                      46.32 kB
+11:22:04 [vite] dist/_astro/dental-crown-1.CepJgl_S.jpg                                                                                                                                                                          46.68 kB
+11:22:04 [vite] dist/_astro/Invisalign.mzuk8YAe.jpg                                                                                                                                                                              47.28 kB
+11:22:04 [vite] dist/_astro/dentists-watching-x-ray-1.C0VC6gIF.jpg                                                                                                                                                               47.86 kB
+11:22:04 [vite] dist/_astro/dentalcrownsexampl-1.Cl3vfqto.jpg                                                                                                                                                                    48.59 kB
+11:22:04 [vite] dist/_astro/shutterstock_1530801923-1.OtQg7RTp.jpeg                                                                                                                                                              48.61 kB
+11:22:04 [vite] dist/_astro/AdobeStock_291115741-2.CKaHEjG_.jpg                                                                                                                                                                  48.88 kB
+11:22:04 [vite] dist/_astro/shutterstock_358283384-1.B8D6BDNx.jpg                                                                                                                                                                49.11 kB
+11:22:04 [vite] dist/_astro/tonsil-stones-causes-symptoms.BI4qHAt7.jpg                                                                                                                                                           49.22 kB
+11:22:04 [vite] dist/_astro/hao-shaw-G4SOKpR-Uoc-unsplash-1-768x512-1.CD8SYaCo.jpg                                                                                                                                               49.22 kB
+11:22:04 [vite] dist/_astro/implants.FTeBMdbW.jpg                                                                                                                                                                                49.58 kB
+11:22:04 [vite] dist/_astro/Tooth-ache.DVfBhUxd.jpg                                                                                                                                                                              50.06 kB
+11:22:04 [vite] dist/_astro/shutterstock_1404252305-1.46p2VxHI.jpeg                                                                                                                                                              50.19 kB
+11:22:04 [vite] dist/_astro/shutterstock_616331219-1.HXDecGlT.jpg                                                                                                                                                                50.32 kB
+11:22:04 [vite] dist/_astro/shutterstock_1093014014-1.CzaEaEqQ.jpg                                                                                                                                                               50.50 kB
+11:22:04 [vite] dist/_astro/shutterstock_1514580746-1.BQFTu26H.jpg                                                                                                                                                               50.70 kB
+11:22:04 [vite] dist/_astro/closeup-photography-of-woman-smiling-1.ZNkxOzN-.jpg                                                                                                                                                  51.50 kB
+11:22:04 [vite] dist/_astro/shutterstock_1941500632-1.k5y6kzF9.jpeg                                                                                                                                                              52.02 kB
+11:22:04 [vite] dist/_astro/s-b-vonlanthen-FaiZNiofP-U-unsplash-1-768x513-1.0g7g2daq.jpg                                                                                                                                         52.44 kB
+11:22:04 [vite] dist/_astro/umanoide-KeVKEs1_RDU-unsplash-1-705x529-1.jiBMsBLK.jpg                                                                                                                                               53.04 kB
+11:22:04 [vite] dist/_astro/shutterstock_231558334-1.CF5coeIl.jpg                                                                                                                                                                54.01 kB
+11:22:04 [vite] dist/_astro/Trismus.Do_gnc2W.jpg                                                                                                                                                                                 54.06 kB
+11:22:04 [vite] dist/_astro/shutterstock_566451454-1.xP-9Og7F.jpeg                                                                                                                                                               54.59 kB
+11:22:04 [vite] dist/_astro/shutterstock_1527451409-1.CGzpnWsk.jpg                                                                                                                                                               54.90 kB
+11:22:04 [vite] dist/_astro/white-spot.DSAydc9w.jpg                                                                                                                                                                              54.91 kB
+11:22:04 [vite] dist/_astro/shutterstock_252392584-1.D87yZd8z.jpg                                                                                                                                                                55.30 kB
+11:22:04 [vite] dist/_astro/charcoal-teethbrushing-1.BLNvxxC9.jpg                                                                                                                                                                55.39 kB
+11:22:04 [vite] dist/_astro/austin-invisalign-1.Bw_8VRI4.jpg                                                                                                                                                                     55.66 kB
+11:22:04 [vite] dist/_astro/shutterstock_1054704908-1.s-rBAGns.jpg                                                                                                                                                               55.67 kB
+11:22:04 [vite] dist/_astro/what-type-of-sedation-is-right-for-me.BaU0jAe4.jpg                                                                                                                                                   56.03 kB
+11:22:04 [vite] dist/_astro/shutterstock_1284302962-1.Cis1EWG8.jpg                                                                                                                                                               56.26 kB
+11:22:04 [vite] dist/_astro/what-can-happen-if-i-dont-floss-my-teeth-properly.Bylpfbx3.jpg                                                                                                                                       56.36 kB
+11:22:04 [vite] dist/_astro/placing-invisalign.pUL__mc2.jpg                                                                                                                                                                      56.48 kB
+11:22:04 [vite] dist/_astro/toothbrushing-1.h50CIplH.jpg                                                                                                                                                                         56.49 kB
+11:22:04 [vite] dist/_astro/shutterstock_1892166514-1.DXRRmIh_.jpg                                                                                                                                                               56.86 kB
+11:22:04 [vite] dist/_astro/adcrookedteeth-1.DvQ30oCA.jpg                                                                                                                                                                        57.12 kB
+11:22:04 [vite] dist/_astro/Is-periodontal-disease-contagious.DwP8qmat.jpg                                                                                                                                                       57.43 kB
+11:22:04 [vite] dist/_astro/dental-implant-toothbar-1.B_gJvn2h.jpg                                                                                                                                                               57.46 kB
+11:22:04 [vite] dist/_astro/white-teeth-austin-G.BIE8umCM.jpg                                                                                                                                                                    57.83 kB
+11:22:04 [vite] dist/_astro/what-to-do-when-you-lose-a-tooth.C-Bc8cCv.jpg                                                                                                                                                        57.90 kB
+11:22:04 [vite] dist/_astro/shutterstock_1290948973-1.CHNM-QHG.jpeg                                                                                                                                                              58.42 kB
+11:22:04 [vite] dist/_astro/restorativedentistryimage-1.D_3pzGJA.jpg                                                                                                                                                             58.67 kB
+11:22:04 [vite] dist/_astro/is-cosmetic-dentistry-permanent.C1un-7el.jpg                                                                                                                                                         58.89 kB
+11:22:04 [vite] dist/_astro/shutterstock_554660845-1.Dy78ttkq.jpg                                                                                                                                                                60.89 kB
+11:22:04 [vite] dist/_astro/Professional-teeth-whitening.BK4RJNRy.jpg                                                                                                                                                            61.15 kB
+11:22:04 [vite] dist/_astro/shutterstock_520962286-1.Bd2mm7hw.jpg                                                                                                                                                                61.20 kB
+11:22:04 [vite] dist/_astro/edited-MobileThirdImage.Bu9zxuk0.jpg                                                                                                                                                                 61.25 kB
+11:22:04 [vite] dist/_astro/shutterstock_1019069908-1.Dlv3iMTV.jpg                                                                                                                                                               61.34 kB
+11:22:04 [vite] dist/_astro/Spoon-Of-Coconut-Oil-1.Bz4c2X6e.jpeg                                                                                                                                                                 61.49 kB
+11:22:04 [vite] dist/_astro/shutterstock_757893178-1.D8YTWDqe.jpeg                                                                                                                                                               61.59 kB
+11:22:04 [vite] dist/_astro/Cosmetic-Dentistry-Market.C9gc_OCD.jpg                                                                                                                                                               61.80 kB
+11:22:04 [vite] dist/_astro/healthygums-1.BZyH2woA.jpg                                                                                                                                                                           61.83 kB
+11:22:04 [vite] dist/_astro/invisalignbraces.DzATL4pE.jpg                                                                                                                                                                        62.11 kB
+11:22:04 [vite] dist/_astro/shutterstock_647794081-1.eE60eqpH.jpg                                                                                                                                                                62.99 kB
+11:22:04 [vite] dist/_astro/shutterstock_1256701261-1.BZMLbEFZ.jpg                                                                                                                                                               63.39 kB
+11:22:04 [vite] dist/_astro/teeth-bonding-1.TfNnR7Ok.jpg                                                                                                                                                                         64.29 kB
+11:22:04 [vite] dist/_astro/shutterstock_371279323-1.D8DOBlY0.jpg                                                                                                                                                                65.41 kB
+11:22:04 [vite] dist/_astro/laser-teeth-whitening-1.Dd0N_uuG.jpg                                                                                                                                                                 65.77 kB
+11:22:04 [vite] dist/_astro/lock-jaw-1.WBzTnJAl.jpg                                                                                                                                                                              66.04 kB
+11:22:04 [vite] dist/_astro/preventive-dentist1-1.DGs-xQI6.jpg                                                                                                                                                                   67.40 kB
+11:22:04 [vite] dist/_astro/teethbrushing-1.DM-2flb9.jpg                                                                                                                                                                         67.94 kB
+11:22:04 [vite] dist/_astro/zahnreinigung_dental_repairs_treat_teeth_brushing_teeth_catching_teeth_dentist_dental_instruments_dentist_equipment-579991.DR0-94sp.jpg                                                              68.27 kB
+11:22:04 [vite] dist/_astro/shutterstock_1504845494-1.DeRJl3K6.jpeg                                                                                                                                                              68.43 kB
+11:22:04 [vite] dist/_astro/dentistcavities-G.CzNzrt66.jpg                                                                                                                                                                       68.55 kB
+11:22:04 [vite] dist/_astro/Invisalign-1-Small-1024x684.DjVt8Mrk.jpg                                                                                                                                                             69.18 kB
+11:22:04 [vite] dist/_astro/107504097_603403186973724_2262707603960157141_o.CjIsXvzp.jpg                                                                                                                                         69.70 kB
+11:22:04 [vite] dist/_astro/shutterstock_722601751-1.BeuNxsvE.jpeg                                                                                                                                                               69.87 kB
+11:22:04 [vite] dist/_astro/gumabsess-1.CkUL0lKN.jpg                                                                                                                                                                             70.58 kB
+11:22:04 [vite] dist/_astro/loosetoothadult-1.DH7d-mxM.jpg                                                                                                                                                                       71.33 kB
+11:22:04 [vite] dist/_astro/veneere-1.jO8KeDvC.jpg                                                                                                                                                                               71.43 kB
+11:22:04 [vite] dist/_astro/Invisalignok.sPmDq1SX.jpg                                                                                                                                                                            71.66 kB
+11:22:04 [vite] dist/_astro/shutterstock_1050606914-1.ChmK_epv.jpeg                                                                                                                                                              72.87 kB
+11:22:04 [vite] dist/_astro/shutterstock_462323689-1.9e_MmBIv.jpeg                                                                                                                                                               73.03 kB
+11:22:04 [vite] dist/_astro/Dentures-1.C-uw-GQk.jpg                                                                                                                                                                              73.51 kB
+11:22:04 [vite] dist/_astro/how-do-teeth-whitening-strips-work.CS-UeXiK.jpg                                                                                                                                                      74.59 kB
+11:22:04 [vite] dist/_astro/shutterstock_1401918893-1.CFhnGbx-.jpg                                                                                                                                                               76.16 kB
+11:22:04 [vite] dist/_astro/natural-dental-care.DuEl_CR2.jpg                                                                                                                                                                     78.01 kB
+11:22:04 [vite] dist/_astro/Job-interview.hMF9NZDg.jpg                                                                                                                                                                           78.33 kB
+11:22:04 [vite] dist/_astro/69041b_6c1cfa257729450598a0d2c7139820b9mv2_d_1920_1279_s_2.CFx35BCv.webp                                                                                                                             79.14 kB
+11:22:04 [vite] dist/_astro/Screen-Shot-2018-12-28-at-1.07.33-PM.C4q_b7pT.png                                                                                                                                                    84.98 kB
+11:22:04 [vite] dist/_astro/teethwhiteningGeio.Dd-BsjBu.jpg                                                                                                                                                                      85.33 kB
+11:22:04 [vite] dist/_astro/periodontitis.HtI9zdHV.jpg                                                                                                                                                                           85.41 kB
+11:22:04 [vite] dist/_astro/shutterstock_1276642348-1.DNbzhfuf.jpg                                                                                                                                                               85.57 kB
+11:22:04 [vite] dist/_astro/306283610_1074853769828661_499037235804106975_n.obiTnlIu.jpeg                                                                                                                                        85.95 kB
+11:22:04 [vite] dist/_astro/texas-smile-.DYA0O7YD.jpg                                                                                                                                                                            86.45 kB
+11:22:04 [vite] dist/_astro/Toothpicks.C1KZda4Y.jpg                                                                                                                                                                              87.04 kB
+11:22:04 [vite] dist/_astro/poor-dental-health-lead-to-liver-cancer-1.KYATHU1q.jpg                                                                                                                                               90.71 kB
+11:22:04 [vite] dist/_astro/Travel-Tips-for-Your-Teeth-1.luRuikr8.jpg                                                                                                                                                            92.32 kB
+11:22:04 [vite] dist/_astro/shutterstock_1307669605-1.BaZJh5PU.jpg                                                                                                                                                               93.64 kB
+11:22:04 [vite] dist/_astro/shutterstock_1058754506-1.B7BKXzs1.jpg                                                                                                                                                               98.65 kB
+11:22:04 [vite] dist/_astro/69041b_70eb4c4cb10946a49822bf65a443d3d1mv2.jKlrwF30.webp                                                                                                                                            101.57 kB
+11:22:04 [vite] dist/_astro/49706630_304673416846704_8429231802140327936_o-846x529-1.DOi2F681.jpeg                                                                                                                              105.27 kB
+11:22:04 [vite] dist/_astro/sunset.DuRdBenu.jpg                                                                                                                                                                                 107.58 kB
+11:22:04 [vite] dist/_astro/cosmetic-dentistry-austin.vbLrmiq-.jpg                                                                                                                                                              110.38 kB
+11:22:04 [vite] dist/_astro/braces-and-floss-1.DbNOWBW9.jpg                                                                                                                                                                     117.06 kB
+11:22:04 [vite] dist/_astro/shutterstock_1515575510.CZM8YFHf.jpeg                                                                                                                                                               119.71 kB
+11:22:04 [vite] dist/_astro/69041b_28c5595ed3114ebda3bbd15f55fde240mv2_d_1920_1279_s_2.qbF8rKlx.webp                                                                                                                            127.88 kB
+11:22:04 [vite] dist/_astro/iStock-609685270.BDYbo86i.jpg                                                                                                                                                                       134.04 kB
+11:22:04 [vite] dist/_astro/matthew-poetker-nWZs_SnBDmg-unsplash-1-scaled-1.Wkyh28ZO.jpg                                                                                                                                        137.58 kB
+11:22:04 [vite] dist/_astro/Screen-Shot-2018-12-10-at-12.21.14-PM.Ck7Vwpd7.png                                                                                                                                                  137.81 kB
+11:22:04 [vite] dist/_astro/shutterstock_1810201546.CV0o4Yxa.jpg                                                                                                                                                                139.66 kB
+11:22:04 [vite] dist/_astro/shutterstock_1706287213-1.DNmbUO7k.jpg                                                                                                                                                              145.32 kB
+11:22:04 [vite] dist/_astro/AdobeStock_541244802.BS7Q-vUW.jpg                                                                                                                                                                   157.02 kB
+11:22:04 [vite] dist/_astro/332485478_2418394121649217_3408524559894985687_n.Do3vyL5R.jpg                                                                                                                                       161.03 kB
+11:22:04 [vite] dist/_astro/girl-smiling-choosing-veneers.C0O1d64S.jpeg                                                                                                                                                         163.13 kB
+11:22:04 [vite] dist/_astro/shutterstock_773757976.DqVAbfMp.jpg                                                                                                                                                                 165.25 kB
+11:22:04 [vite] dist/_astro/teeth-denture-on-top-of-blue-shelf-scaled.BQbGHbTl.jpg                                                                                                                                              168.72 kB
+11:22:04 [vite] dist/_astro/spatablet.BPfBZXyG.jpg                                                                                                                                                                              172.90 kB
+11:22:04 [vite] dist/_astro/woman-choosing-veneers.mz1AWJCW.jpeg                                                                                                                                                                173.32 kB
+11:22:04 [vite] dist/_astro/shutterstock_1538855759.luy1QITA.jpg                                                                                                                                                                177.46 kB
+11:22:04 [vite] dist/_astro/shutterstock_1662297199.BsuU8zhi.jpg                                                                                                                                                                184.15 kB
+11:22:04 [vite] dist/_astro/shutterstock_285790634.CRT9yE-w.jpeg                                                                                                                                                                202.82 kB
+11:22:04 [vite] dist/_astro/toothbar_ShareImage_B.DKeZGxgm.png                                                                                                                                                                  227.50 kB
+11:22:04 [vite] dist/_astro/h-shaw-5LcgjahE0vo-unsplash-1-scaled-1.D8DqMUQu.jpg                                                                                                                                                 259.35 kB
+11:22:04 [vite] dist/_astro/daniel-frank-wKbWAMlHgNo-unsplash-1-scaled-1.BIJPweHJ.jpg                                                                                                                                           267.54 kB
+11:22:04 [vite] dist/_astro/scared-blond-woman-biting-nails-fingers-panic-afraid-something-scary-trembling-from-fear-while-standing-anxious-against-white-wall.DgGR5sJz.jpg                                                     278.23 kB
+11:22:04 [vite] dist/_astro/Missing-Teeth-1-scaled.B4J-j1kf.jpg                                                                                                                                                                 284.17 kB
+11:22:04 [vite] dist/_astro/pexels-shiny-diamond-3762453-1-scaled-1.BilK3WD_.jpg                                                                                                                                                286.18 kB
+11:22:04 [vite] dist/_astro/sheep.3ubwki29.jpg                                                                                                                                                                                  292.74 kB
+11:22:04 [vite] dist/_astro/Invisalign-1-Small-scaled.CPR6q4pU.jpg                                                                                                                                                              297.50 kB
+11:22:04 [vite] dist/_astro/woman-smiles-broadly-points-her-perfect-even-teeth-indicates-corners-lips-looks-away-wears-casual-blue-jumper-isolated-white-with-blank-copy-space.Bme_aEMP.jpg                                     297.64 kB
+11:22:04 [vite] dist/_astro/female-dentist-is-installing-patient-s-mouth-device-making-molded-tooth.CnNo74CM.jpg                                                                                                                300.94 kB
+11:22:04 [vite] dist/_astro/young-man-feeling-sick-holding-his-chest-pain-while-drinking-tea-living-room.DD-iatK2.jpg                                                                                                           319.02 kB
+11:22:04 [vite] dist/_astro/Dental-Plaque-scaled.B726-XVU.jpg                                                                                                                                                                   339.96 kB
+11:22:04 [vite] dist/_astro/luis-machado-nCGl8FrGHb0-unsplash-1-scaled-1.mRSuwKb5.jpg                                                                                                                                           348.71 kB
+11:22:04 [vite] dist/_astro/dental-implants-surgery-concept-pen-tool-created-clipping-path-included-jpeg-easy-composite.CFR66Hja.jpg                                                                                            356.59 kB
+11:22:04 [vite] dist/_astro/quiet-street.XSHPHwVz.jpg                                                                                                                                                                           361.95 kB
+11:22:04 [vite] dist/_astro/care-chair-clean-305568-scaled.D6xaq-Zw.jpg                                                                                                                                                         365.17 kB
+11:22:04 [vite] dist/_astro/shutterstock_1437249140.60ySkdVK.jpg                                                                                                                                                                384.43 kB
+11:22:04 [vite] dist/_astro/young-girl-with-bruxism.BdWzo013.jpeg                                                                                                                                                               391.50 kB
+11:22:04 [vite] dist/_astro/castle.Cb20OytX.jpg                                                                                                                                                                                 392.29 kB
+11:22:04 [vite] dist/_astro/shutterstock_660478255.DcK62t_r.jpg                                                                                                                                                                 455.89 kB
+11:22:04 [vite] dist/_astro/baylee-gramling-OTTKWktB8zU-unsplash-1-scaled.DUVM1T_N.jpg                                                                                                                                          460.03 kB
+11:22:04 [vite] dist/_astro/49602.SNNI-Q57.jpg                                                                                                                                                                                  472.51 kB
+11:22:04 [vite] dist/_astro/shutterstock_162886907.BjR3L63N.jpg                                                                                                                                                                 480.72 kB
+11:22:04 [vite] dist/_astro/shutterstock_1224151894.CWpwefbE.jpg                                                                                                                                                                499.96 kB
+11:22:04 [vite] dist/_astro/shutterstock_1229852500.BrLeKFGR.jpg                                                                                                                                                                506.07 kB
+11:22:04 [vite] dist/_astro/shutterstock_1530279239.Crbu0Of1.jpg                                                                                                                                                                515.17 kB
+11:22:04 [vite] dist/_astro/gum-and-braces.DO3lgAHq.jpg                                                                                                                                                                         542.25 kB
+11:22:04 [vite] dist/_astro/beautiful-happy-fair-haired-european-woman-points-index-fingers-mouth-forces-cheerful-smile-shows-perfect-white-teeth-wears-green-jumper-being-good-mood-isolated-purple-background.Cebq-SwG.jpg    550.81 kB
+11:22:04 [vite] dist/_astro/problemas-dentales-hombre-revisando-sus-dientes-mirando-perturbado.B-NSJqPi.jpg                                                                                                                     551.43 kB
+11:22:04 [vite] dist/_astro/web-home-slider-986x493-1.DpJVdMcO.png                                                                                                                                                              559.03 kB
+11:22:04 [vite] dist/_astro/shutterstock_1718366740-2.v7RsUidM.jpg                                                                                                                                                              559.41 kB
+11:22:04 [vite] dist/_astro/shutterstock_1718366740.B-fkAQU5.jpg                                                                                                                                                                559.61 kB
+11:22:04 [vite] dist/_astro/extreme-close-up-mixed-race-handsome-man-has-trendy-hairdo-smiles-pleasantly-blinks-eye.KJNogYu9.jpg                                                                                                583.80 kB
+11:22:04 [vite] dist/_astro/shutterstock_616331219.Bv2JUpaO.jpg                                                                                                                                                                 592.50 kB
+11:22:04 [vite] dist/_astro/2858.qoo5V0oN.jpg                                                                                                                                                                                   597.73 kB
+11:22:04 [vite] dist/_astro/shutterstock_1448097926.00p3LtfA.jpg                                                                                                                                                                630.56 kB
+11:22:04 [vite] dist/_astro/chica-sintiendo-dolor-muelas-haciendo-muecas-dolor-mientras-muerde-manzana-verde.DKsEjpdJ.jpg                                                                                                       631.08 kB
+11:22:04 [vite] dist/_astro/dunedin-cliff.txhlGVUZ.jpg                                                                                                                                                                          641.96 kB
+11:22:04 [vite] dist/_astro/paciente-femenino-sonriendo-clinica.Chd8lV4O.jpg                                                                                                                                                    730.53 kB
+11:22:04 [vite] dist/_astro/65410.O02aQvth.jpg                                                                                                                                                                                  738.13 kB
+11:22:04 [vite] dist/_astro/maria-lysenko-KbIZwj8d3Bo-unsplash-1-scaled-1.DJO7_4vN.jpg                                                                                                                                          779.18 kB
+11:22:04 [vite] dist/_astro/dentist-assisting-patient-wear-invisible-braces.nM-aRh9C.jpg                                                                                                                                        833.26 kB
+11:22:04 [vite] dist/_astro/close-up-portrait-cute-kid-gray-pajamas-brushing-her-teeth.k4plXwGd.jpg                                                                                                                             837.60 kB
+11:22:04 [vite] dist/_astro/66485.C98K1vnF.jpg                                                                                                                                                                                  839.45 kB
+11:22:04 [vite] dist/_astro/cerrar-cliente-feliz-clinica-dental.BxcEL7G7.jpg                                                                                                                                                    888.91 kB
+11:22:04 [vite] dist/_astro/18598.azwWK2ji.jpg                                                                                                                                                                                  894.83 kB
+11:22:04 [vite] dist/_astro/shocked-young-caucasian-woman-puts-hands-mouth.B4CTk5VF.jpg                                                                                                                                         900.56 kB
+11:22:04 [vite] dist/_astro/dentist-examining-female-patient-with-teeth-shades.zS7PqwaZ.jpg                                                                                                                                     909.56 kB
+11:22:04 [vite] dist/_astro/29272.DsDhBZ7X.jpg                                                                                                                                                                                  910.09 kB
+11:22:04 [vite] dist/_astro/young-female-patient-visiting-dentist-office.BqOGQIbl.jpg                                                                                                                                           945.64 kB
+11:22:04 [vite] dist/_astro/foto-dentista-sonriente-pie-brazos-cruzados-su-colega-mostrando-signo-bien.D1HG_DZN.jpg                                                                                                             960.36 kB
+11:22:04 [vite] dist/_astro/2149085891.zrelcexE.jpg                                                                                                                                                                           1,001.73 kB
+11:22:04 [vite] dist/_astro/aching-young-pretty-girl-touching-cheek-suffering-from-toothache.Bef5DCps.jpg                                                                                                                     1,025.25 kB
+11:22:04 [vite] dist/_astro/young-woman-covering-her-mouth-with-hand-gray-background.NUE3yi3i.jpg                                                                                                                             1,050.92 kB
+11:22:04 [vite] dist/_astro/2149195934.K4PmhIvU.jpg                                                                                                                                                                           1,070.87 kB
+11:22:04 [vite] dist/_astro/portrait-man-with-toothache-grimacing-from-pain-touching-cheek-standing-against-blue-background.CSe5Uo9i.jpg                                                                                      1,101.66 kB
+11:22:04 [vite] dist/_astro/40926.sqr5qYQ5.jpg                                                                                                                                                                                1,112.26 kB
+11:22:04 [vite] dist/_astro/dentist-doing-check-up-patient.DMKC7kq6.jpg                                                                                                                                                       1,270.85 kB
+11:22:04 [vite] dist/_astro/headshot-glad-woman-laughs-smiles-broadly.1jJ2XEcX.jpg                                                                                                                                            1,361.81 kB
+11:22:04 [vite] dist/_astro/toothbrush-composition.3MEH1Hfh.jpg                                                                                                                                                               1,792.48 kB
+11:22:04 [vite] dist/_astro/BaseLayout.astro_astro_type_script_index_0_lang.Rt1CgKUk.js                                                                                                                                           0.07 kB │ gzip:   0.09 kB
+11:22:04 [vite] dist/_astro/BaseLayout.astro_astro_type_script_index_1_lang.43DrWgjH.js                                                                                                                                           1.16 kB │ gzip:   0.69 kB
+11:22:04 [vite] dist/_astro/LibraryLayout.astro_astro_type_script_index_0_lang.CXkZ2eDX.js                                                                                                                                       17.06 kB │ gzip:   5.07 kB
+11:22:04 [vite] dist/_astro/Carousel.astro_astro_type_script_index_0_lang.Cwd3VSdV.js                                                                                                                                            27.11 kB │ gzip:  10.34 kB
+11:22:04 [vite] dist/_astro/live-editing.Cdd8DzI4.js                                                                                                                                                                          1,515.05 kB │ gzip: 396.69 kB
+11:22:04 [WARN] [vite] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+11:22:04 [vite] ✓ built in 11.36s
+
+ generating static routes 
+11:22:04 ▶ src/pages/[...slug].astro
+11:22:04   ├─ /contact/index.html (+58ms) 
+11:22:04   ├─ /crowns-and-bridges/index.html (+32ms) 
+11:22:04   ├─ /dental-bonding/index.html (+32ms) 
+11:22:04   ├─ /digital-imaging/index.html (+22ms) 
+11:22:04   ├─ /cavities-fillings/index.html (+23ms) 
+11:22:04   ├─ /dental-implants/index.html (+22ms) 
+11:22:04   ├─ /dental-veneers/index.html (+23ms) 
+11:22:04   ├─ /dr-andrea-bakke/index.html (+30ms) 
+11:22:04   ├─ /dr-danielle-gibbons/index.html (+31ms) 
+11:22:04   ├─ /express-dental-services/index.html (+32ms) 
+11:22:04   ├─ /dr-kimberly-barclay/index.html (+25ms) 
+11:22:04   ├─ /helpful-tips-documents/index.html (+65ms) 
+11:22:04   ├─ /dr-lauren-jacobsen/index.html (+18ms) 
+11:22:04   ├─ /dr-rachel-morren/index.html (+23ms) 
+11:22:04   ├─ /invisalign/index.html (+18ms) 
+11:22:04   ├─ /jaw-botox/index.html (+25ms) 
+11:22:04   ├─ /new-patients/index.html (+21ms) 
+11:22:04   ├─ /nitrous-sedation/index.html (+29ms) 
+11:22:04   ├─ /index.html (+37ms) 
+11:22:05   ├─ /sitemap/index.htmlCannot read properties of undefined (reading 'map')
+  Stack trace:
+    at file:///Users/tharvey/Work/CloudCannon/toothbar/dist/chunks/Footer_DY3qZH1l.mjs:13246:44

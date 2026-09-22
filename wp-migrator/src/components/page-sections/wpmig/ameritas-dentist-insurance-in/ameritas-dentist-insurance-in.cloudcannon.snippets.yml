@@ -1,0 +1,10 @@
+_snippets:
+  ameritas_dentist_insurance_in:
+    template: astro_component
+    inline: false
+    preview:
+      text: Ameritas Dentist Insurance In
+    definitions:
+      component_name: page-sections/wpmig/ameritas-dentist-insurance-in
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/ameritas-dentist-insurance-in/ameritas-dentist-insurance-in.cloudcannon.inputs.yml

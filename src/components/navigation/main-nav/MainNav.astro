@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import siteInfoData from "@data/siteInfo.json";
@@ -26,9 +27,27 @@ const {
   officeHours = [],
   officeHoursNote = "",
   officeHoursNotes = [],
+  topBar = null,
+  overlay = false,
   _component,
   ...htmlAttributes
 } = Astro.props;
+
+/*
+ * The strip above the menu: a phone number, a "Contact Us", an address, laid
+ * across the full width in the brand colour.
+ *
+ * It is a tier of its own, not a column of the menu row. Folded into the menu
+ * row instead — which is where a template with no notion of one puts it — the
+ * number and the address stack up beside the logo at menu-link size, and that
+ * single difference is what makes a migrated header read as a different site
+ * from three metres away.
+ *
+ * Drawn only when the source had one, so a header that is just a logo and a
+ * menu keeps the template's single tier.
+ */
+const topBarPhone = topBar?.phone?.display ? topBar.phone : null;
+const topBarLink = topBar?.link && topBar?.label ? { label: topBar.label, link: topBar.link } : null;
 
 const defaultSearchButtonSections = [
   {
@@ -44,10 +63,17 @@ const defaultSearchButtonSections = [
   },
 ];
 
-const resolvedSearchButtonSections =
-  Array.isArray(buttonSections) && buttonSections.length > 0
-    ? buttonSections
-    : defaultSearchButtonSections;
+/*
+ * An empty list means no button, not "use the default".
+ *
+ * The template ships a search control for sites that never say otherwise, and
+ * the only way for a site to say otherwise is to set the list to nothing — so
+ * treating empty as unset leaves a search icon in the header of every site
+ * whose original had none, with no way to remove it. Absent still falls back.
+ */
+const resolvedSearchButtonSections = Array.isArray(buttonSections)
+  ? buttonSections
+  : defaultSearchButtonSections;
 
 const sanitizeButtonSection = (button: any) => ({
   ...button,
@@ -115,23 +141,64 @@ const sharedSocials =
       ? resolvedOffices[0].socials
       : ((siteInfoData as any).socials ?? []);
 
-const formatAddressLines = (address: any) => {
-  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
-  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
-  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
-  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+/*
+ * The address as the strip writes it — one line, not the stacked block the
+ * footer uses. There is a single row to put it in.
+ */
+const topBarAddress = (() => {
+  const address = resolvedOffices[0]?.addresses?.[0];
+  if (!address) return null;
+  const stateAndPostal = [address.state, address.postalCode].filter(Boolean).join(" ");
+  const text = [...(address.lines ?? []), address.city, stateAndPostal, address.country]
+    .filter((part: any) => typeof part === "string" && part.trim())
+    .join(", ");
+  return text ? { text, mapUrl: address.mapUrl || "" } : null;
+})();
 
-  return [...lineItems, locationLine].filter(
-    (line) => typeof line === "string" && line.trim().length > 0
-  );
-};
+const hasTopBar = Boolean(topBarPhone || topBarLink || topBarAddress);
+
 ---
+
+{
+  hasTopBar && (
+    <div class="site-top-bar" data-overlay={overlay ? "true" : undefined}>
+      <div class="stb-inner">
+        <div class="stb-group">
+          {topBarPhone && (
+            <a class="stb-item" href={topBarPhone.href || "#"}>
+              <Icon name="phone" size="none" aria-hidden="true" />
+              <span>{topBarPhone.display}</span>
+            </a>
+          )}
+          {topBarLink && (
+            <a class="stb-item" href={topBarLink.link}>
+              <Icon name="envelope" size="none" aria-hidden="true" />
+              <span>{topBarLink.label}</span>
+            </a>
+          )}
+        </div>
+        {topBarAddress && (
+          <a
+            class="stb-item"
+            href={topBarAddress.mapUrl || "#"}
+            target={topBarAddress.mapUrl ? "_blank" : undefined}
+            rel={topBarAddress.mapUrl ? "noopener noreferrer" : undefined}
+          >
+            <Icon name="map-pin" size="none" aria-hidden="true" />
+            <span>{topBarAddress.text}</span>
+          </a>
+        )}
+      </div>
+    </div>
+  )
+}
 
 <CustomSection
   maxContentWidth="2xl"
   paddingHorizontal="lg"
   paddingVertical="none"
   class:list={["main-nav", className]}
+  data-overlay={overlay ? "true" : undefined}
   {...htmlAttributes}
 >
   <div class="hd-content">
@@ -140,47 +207,6 @@ const formatAddressLines = (address: any) => {
     </a>
     <!-- Desktop Nav -->
     <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
-        {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
-
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
-
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
-              </div>
-            </>
-          ))
-        }
-      </div>
       {
         buttons.length > 0 && (
           <div class="hd-btns page-buttons">
@@ -198,13 +224,15 @@ const formatAddressLines = (address: any) => {
         <div class="nav-end">
           <Bar navData={navData} class="desktop-main-nav" />
 
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
+          {searchButtons.length > 0 && (
+            <ButtonGroup
+              direction="row"
+              align="center"
+              class="desktop-button-group"
+              buttonSections={searchButtons}
+              editable={false}
+            />
+          )}
         </div>
       </div>
       <!-- End Desktop Nav -->
@@ -242,6 +270,20 @@ const formatAddressLines = (address: any) => {
         resizeObserver.observe(mainNav);
       }
 
+      /*
+       * A transparent bar has to know when it has run out of hero. Threshold
+       * rather than zero so the state does not flip on the first pixel of a
+       * momentum scroll, and rather than the hero's height so it does not have
+       * to know which section is the hero.
+       */
+      if (mainNav.getAttribute("data-overlay") === "true") {
+        const syncScrolled = () => {
+          mainNav.setAttribute("data-scrolled", window.scrollY > 24 ? "true" : "false");
+        };
+        syncScrolled();
+        window.addEventListener("scroll", syncScrolled, { passive: true });
+      }
+
       mainNav.setAttribute("data-header-height-initialized", "true");
     });
   };
@@ -255,12 +297,124 @@ const formatAddressLines = (address: any) => {
 
 <style lang="pcss" is:global>
   @layer page-sections {
-    .main-nav {
+    /*
+     * The strip above the menu. Its colour, type and height are the source's
+     * own, measured by `wpmig dev-chrome`; the fallbacks are what a site with
+     * no such strip would get if one were ever rendered anyway.
+     */
+    .site-top-bar {
+      background-color: var(--chrome-topbar-bg, var(--color-brand));
+      color: var(--chrome-topbar-color, var(--color-text-on-brand, #fff));
+      font-family: var(--chrome-topbar-font, inherit);
+      font-size: var(--chrome-topbar-size, var(--font-size-sm));
+      font-weight: var(--chrome-topbar-weight, 400);
+      position: relative;
       z-index: var(--layer-2);
-      background-color: var(--color-bg); 
+
+      /*
+       * Not decoration. The source spreads a near-black wash two hundred
+       * pixels past this forty-five pixel strip, and that wash is what the
+       * white menu below is legible against — without it the bar floats
+       * transparently over a bright hero and the links disappear.
+       *
+       * Only where the menu is actually floating, though. On a page that opens
+       * with prose rather than a hero the menu has a ground of its own, and
+       * the wash would be two hundred pixels of grey spilling down the top of
+       * an article.
+       */
+      &[data-overlay="true"] {
+        box-shadow: var(--chrome-topbar-shadow, none);
+      }
+
+      /* Hidden on phones, where the source drops it: three items across a
+         390px row wrap into a block taller than the menu it introduces. */
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      .stb-inner {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs) var(--spacing-lg);
+        justify-content: space-between;
+        margin: 0 auto;
+        min-height: var(--chrome-topbar-height, 45px);
+        /* The source runs its strip to the edges of the window; the template's
+           centred column would set it in by seventy pixels a side. */
+        padding: var(--spacing-2xs) calc(var(--chrome-header-inset, var(--spacing-lg)) + var(--spacing-xl));
+      }
+
+      .stb-group {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-xs) var(--spacing-lg);
+      }
+
+      .stb-item {
+        align-items: center;
+        color: inherit;
+        display: inline-flex;
+        gap: var(--spacing-2xs);
+        line-height: 1.2;
+        text-decoration: none;
+
+        .icon {
+          flex: 0 0 auto;
+          font-size: 1.05em;
+          margin-right: 0.15em;
+        }
+
+        &:hover,
+        &:focus-visible {
+          opacity: 0.85;
+        }
+      }
+    }
+
+    .main-nav {
+      z-index: var(--layer-3);
+      background-color: var(--nav-bg, var(--color-bg));
       padding-block: var(--spacing-md);
       position: sticky; 
       top: 0;
+
+      /*
+       * Over the hero, not above it.
+       *
+       * The source draws its menu as a transparent bar sitting on the page's
+       * first section — the logo and the links float over a dark hero image,
+       * and the page begins at the top of the window rather than under a
+       * white band. `main` is pulled up by the bar's own height to put it
+       * back there; `data-overlay` is set per page by the layout, because the
+       * trick only works where the page actually opens with a hero.
+       */
+      &[data-overlay="true"] {
+        /*
+         * Not fully transparent. The hero image is a sibling of this bar, not
+         * an ancestor — `main` sits below it in the DOM and is only pulled up
+         * visually with a negative margin — so a contrast checker walking up
+         * from the white nav text never finds the hero and resolves against
+         * the white <body> instead, flagging white-on-white. A real (if
+         * faint) dark scrim painted here gives it an ancestor background to
+         * resolve against, the same fix already used for `.site-top-bar`.
+         */
+        --nav-bg: rgba(0, 0, 0, 0.6);
+
+        /* Once the hero has scrolled past, there is nothing dark left to sit
+           on and white links on white would vanish, so the bar takes a ground
+           of its own. */
+        &[data-scrolled="true"] {
+          --nav-bg: var(--chrome-nav-scrolled-bg, #2f3438);
+        }
+      }
+
+      /* Pages with no hero — a blog post, a search result — never go
+         transparent: there is nothing underneath to read against. */
+      &:not([data-overlay="true"]) {
+        --nav-bg: var(--chrome-nav-scrolled-bg, #2f3438);
+      }
 
       .desktop-main-nav.bar,
       .desktop-button-group.button-group {
@@ -279,6 +433,14 @@ const formatAddressLines = (address: any) => {
         }
       }
 
+      /* Edge to edge, like the source, rather than inside the template's
+         centred column — and as tall as the source's bar, which is what sets
+         the logo down off the strip above it. */
+      > .outer-content > .content {
+        max-width: none;
+        padding-inline: var(--chrome-header-inset, var(--spacing-lg));
+      }
+
       > .outer-content .hd-content {
         align-items: center;
         container-type: inline-size;
@@ -286,10 +448,19 @@ const formatAddressLines = (address: any) => {
         flex-wrap: wrap;
         gap: var(--spacing-md);
 
+        @media (min-width: 1025px) {
+          min-height: calc(
+            var(--chrome-navbar-height, 86px) - (2 * var(--spacing-md))
+          );
+        }
+
         > a > .image img {
-          height: 1.8em;
-          max-width: min(20em, 100%);
-          width: auto;
+          height: auto;
+          max-width: 100%;
+          /* The source's own logo width. Without it the mark renders at the
+             template's 1.8em cap — about a third of the original — and the
+             brand end of the bar looks empty next to it. */
+          width: var(--chrome-header-logo-width, auto);
         }
 
         .button-group {
@@ -342,15 +513,75 @@ const formatAddressLines = (address: any) => {
       }
     }
 
+    /*
+     * The menu's own type, measured from the source: Lato 14/600 uppercase in
+     * white. The caret is the template's chevron turned to point down, which
+     * is where this menu's carets point, and stripped of the bordered box the
+     * template draws around it — the source has a bare glyph.
+     */
+    .main-nav .desktop-main-nav.bar {
+      > .bar-list > .nav-item > a,
+      > .bar-list > .nav-item > .nav-item-trigger {
+        color: var(--chrome-nav-link-color, var(--color-text));
+        font-family: var(--chrome-nav-link-font, inherit);
+        font-size: var(--chrome-nav-link-size, var(--font-size-sm));
+        font-weight: var(--chrome-nav-link-weight, var(--font-weight-semibold));
+        text-transform: var(--chrome-nav-link-transform, none);
+      }
+
+      > .bar-list > .nav-item > .nav-item-trigger {
+        background: none;
+        border: 0;
+        padding-inline: var(--spacing-2xs);
+
+        /* The source marks a menu that opens with a solid caret under the
+           label. The template's hairline chevron in a bordered box reads as a
+           control rather than as punctuation, so the box goes and the glyph
+           takes the link's own weight and colour. */
+        .nav-item-icon {
+          color: var(--chrome-nav-link-color, currentColor);
+          font-size: 0.85em;
+          rotate: 90deg;
+
+          svg {
+            stroke-width: 3;
+          }
+        }
+      }
+    }
+
     .hd-info{display: flex; justify-content: space-between; align-items: center;}
     .main-nav .phy{display: block; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text); line-height: 1; transition: .3s;}
       .main-nav .pho{font-weight: var(--font-weight-bold); color: var(--color-brand); font-size: var(--font-size-2xl); line-height: 1; transition: .3s; display: block; margin: 0 auto 5px;}
 
-    .main-nav .pho:hover, .main-nav .phy:hover{color: var(--color-brand-secondary)}
+    /* The strip's second destination. Sized with the address rather than the
+       phone number: at `.pho` it reads as a second number to call. */
+    .main-nav .top-bar-link{display: block; color: var(--color-text); line-height: 1; margin-bottom: 5px; transition: .3s;}
 
-    .mobile-nav-button{min-width: 10px;border-radius: 0; border: none; height: 70px; width: 70px; background-color: var(--color-brand); color: var(--color-text-on-brand); display: flex; align-items: center; justify-content: center;}
+    .main-nav .pho:hover, .main-nav .phy:hover, .main-nav .top-bar-link:hover{color: var(--color-brand-secondary)}
+
+    /*
+     * The collapsed menu's button, at the size and colour the source drew it.
+     *
+     * The template's is a 70px brand-coloured block flush to the edge of the
+     * window; the source's is a small white square set in from it. Over a hero
+     * the difference is the loudest thing in the header, because the template's
+     * block is the only saturated colour on the screen.
+     */
+    .mobile-nav-button{
+      min-width: 10px;
+      border: none;
+      border-radius: var(--chrome-nav-toggle-radius, 0);
+      height: var(--chrome-nav-toggle-size, 70px);
+      width: var(--chrome-nav-toggle-size, 70px);
+      background-color: var(--chrome-nav-toggle-bg, var(--color-brand));
+      color: var(--chrome-nav-toggle-color, var(--color-text-on-brand));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     .nav-hamburger .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
+      font-size: calc(var(--chrome-nav-toggle-size, 70px) * 0.62);
     }
 
     .nav-hamburger .mobile-nav-button .icon svg path {
@@ -375,7 +606,9 @@ const formatAddressLines = (address: any) => {
         display: flex;
         gap: var(--spacing-sm);
         justify-content: space-between;
-        padding-right: 0;
+        /* The toggle is a small square set in from the edge now, not a
+           full-height block flush against it. */
+        padding-right: var(--chrome-header-inset, var(--spacing-lg));
       }
 
       .main-nav > .outer-content .hd-content {

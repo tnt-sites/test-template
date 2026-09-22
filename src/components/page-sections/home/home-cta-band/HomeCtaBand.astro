@@ -1,0 +1,121 @@
+---
+/**
+ * In the News band — heading, a responsive row of press/media images, and a
+ * "see more" button. (Originally auto-migrated as a tangle of absolutely
+ * positioned, opacity:0 spacers; rebuilt to actually show the images.)
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  items = [],
+  backgroundColor = "#ffffff",
+  backgroundColorHex = "",
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#ffffff";
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const list = Array.isArray(items) ? items.filter((i) => i && (i.image || i.link)) : [];
+// Each item's `link` is the image path unless an explicit `image`/`href` is set.
+const isImg = (s = "") => /\.(png|jpe?g|webp|gif|svg)$/i.test(s);
+const slides = list.map((it, i) => {
+  const image = it.image || (isImg(it.link) ? it.link : "");
+  const href = it.href || (isImg(it.link) ? "" : it.link) || buttonLink || "";
+  const fallbackAlt = heading ? `${heading} — press mention ${i + 1}` : `Press mention ${i + 1}`;
+  return { image, href, alt: it.alt || it.imageAlt || fallbackAlt };
+});
+---
+<section class="cta-band" data-bg="base" id={id || undefined} style={`--bg:${backgroundColorValue};--hd:${headingColorValue}`} {...rest}>
+  <div class="cb-inner">
+    {heading && <h2 class="cb-heading">{heading}</h2>}
+    {slides.length > 0 && (
+      <div class="cb-grid">
+        {slides.map((s) =>
+          s.href ? (
+            <a class="cb-item" href={s.href} target="_blank" rel="noopener">
+              <img src={s.image} alt={s.alt} loading="lazy" />
+            </a>
+          ) : (
+            <div class="cb-item">
+              <img src={s.image} alt={s.alt} loading="lazy" />
+            </div>
+          )
+        )}
+      </div>
+    )}
+    {buttonText && (
+      <div class="cb-cta">
+        <Button variant="secondary" size="md" uppercase text={buttonText} link={buttonLink || "#"} />
+      </div>
+    )}
+  </div>
+</section>
+<style>
+  .cta-band {
+    background-color: var(--bg);
+    box-sizing: border-box;
+    padding: 60px 20px;
+    width: 100%;
+  }
+
+  .cb-inner {
+    box-sizing: border-box;
+    margin-inline: auto;
+    max-width: 1200px;
+    text-align: center;
+  }
+
+  .cb-heading {
+    color: var(--hd);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1.1;
+    margin: 0 0 2rem;
+  }
+
+  .cb-grid {
+    box-sizing: border-box;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 2rem;
+  }
+
+  .cb-item {
+    display: block;
+    overflow: hidden;
+  }
+
+  .cb-item img {
+    aspect-ratio: 3 / 4;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    width: 100%;
+  }
+
+  .cb-cta {
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-band :global(.cb-cta .button) {
+    background-color: #ffffff;
+    border: 1px solid var(--color-brand, #047ac0);
+    border-radius: 0;
+    color: var(--color-brand, #047ac0);
+    font-family: Montserrat, Lato, sans-serif;
+    font-weight: 600;
+  }
+
+  .cta-band :global(.cb-cta .button:hover) {
+    background-color: var(--color-brand, #047ac0);
+    color: #ffffff;
+  }
+</style>

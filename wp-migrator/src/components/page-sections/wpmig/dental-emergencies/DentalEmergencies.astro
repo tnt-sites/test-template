@@ -1,0 +1,805 @@
+---
+/**
+ * Dental Emergencies — migrated from dental-services/emergency-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  text = "",
+  text2 = "",
+  subheading = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  items = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="dental-emergencies" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c6:${buttonBackgroundColor2};--c7:${buttonBackgroundHoverColor};--c8:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="de-box">
+    <div class="de-box2">
+      <div class="de-box3">
+        <div class="de-box4">
+          <div class="de-box5">
+            {eyebrow && <p class="de-text">{eyebrow}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="de-box6">
+        <div class="de-box7">
+          <h3 class="de-heading">{heading}</h3>
+        </div>
+        <div class="de-grid">
+          {list.map((it) => (
+            <div class="de-box8">
+              <div class="de-box9">
+                {it.text && <div class="de-body" set:html={it.text} />}
+              </div>
+            </div>
+          ))}
+        </div>
+        <section class="de-box12">
+          <div class="de-box13">
+            <div class="de-box14">
+              <div class="de-box15">
+                <div class="de-box16">
+                  <div class="de-box17">
+                    {text && <div class="de-body3" set:html={text} />}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="de-box18">
+          <div class="de-box19">
+            {text2 && <p class="de-text2">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="de-box20">
+        <div class="de-box21">
+          {subheading && <h3 class="de-heading2">{subheading}</h3>}
+        </div>
+        <div class="de-box22">
+          <div class="de-box23">
+            {text3 && <div class="de-body4" set:html={text3} />}
+          </div>
+        </div>
+      </div>
+      <div class="de-box24">
+        <div class="de-box25">
+          <div class="de-decor" aria-hidden="true"></div>
+        </div>
+        <div class="de-box26">
+          {heading2 && <h2 class="de-heading3">{heading2}</h2>}
+        </div>
+        <div class="de-box27">
+          <div class="de-box28">
+            {text4 && <p class="de-text3" set:html={text4} />}
+          </div>
+        </div>
+        <div class="de-box29">
+          <div class="de-box30">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="de-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+        <div class="de-box31">
+          <div class="de-box32">
+            <div class="de-box33">
+              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="de-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .dental-emergencies {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .dental-emergencies :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .de-box :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box2 {
+    box-sizing: border-box;
+  }
+
+  .de-box2 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .de-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box5 {
+    box-sizing: border-box;
+  }
+
+  .de-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .de-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .de-box6 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .de-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .de-grid {
+    display: none;
+  }
+
+  .de-grid :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box8 {
+    display: none;
+  }
+
+  .de-box8 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box9 {
+    display: none;
+  }
+
+  .de-box9 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box12 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box13 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 767px;
+    position: relative;
+  }
+
+  .de-box13 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box14 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .de-box14 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box15 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px;
+    position: relative;
+  }
+
+  .de-box15 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box16 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box16 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-box17 {
+    box-sizing: border-box;
+  }
+
+  .de-box17 :global(svg) {
+    display: block;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px;
+  }
+
+  .de-body3 :global(ul) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-left: 0px;
+  }
+
+  .de-box18 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 367px;
+    position: relative;
+  }
+
+  .de-box19 {
+    box-sizing: border-box;
+    margin-top: 15px;
+  }
+
+  .de-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .de-box20 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .de-box21 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .de-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .de-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box23 {
+    box-sizing: border-box;
+    min-height: 448px;
+  }
+
+  .de-body4 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .de-box24 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .de-box25 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .de-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .de-box26 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .de-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .de-box27 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box28 {
+    box-sizing: border-box;
+  }
+
+  .de-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .de-box29 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box30 {
+    box-sizing: border-box;
+  }
+
+  :global(.de-btn) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.de-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .de-box31 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .de-box32 {
+    box-sizing: border-box;
+  }
+
+  .de-box33 {
+    box-sizing: border-box;
+  }
+
+  :global(.de-btn2) {
+    background-color: var(--c6);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.de-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.de-btn):hover {
+    background-color: var(--c7);
+  }
+
+  :global(.de-btn2):hover {
+    background-color: var(--c8);
+  }
+
+  @media (min-width: 768px) {
+    .de-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .de-heading {
+      line-height: 28px;
+    }
+
+    .de-grid {
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .de-box8 {
+      align-content: flex-start;
+      box-sizing: border-box;
+      display: flex;
+      flex: 0 0 50%;
+      flex-wrap: wrap;
+      max-width: 50%;
+      padding: 10px;
+      position: relative;
+    }
+
+    .de-box9 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .de-body :global(ul) {
+      box-sizing: border-box;
+      margin-bottom: 0px;
+      margin-top: 0px;
+      padding-left: 0px;
+    }
+
+    .de-box12 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .de-box13 {
+      display: none;
+      max-width: 1024px;
+    }
+
+    .de-box14 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .de-box15 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .de-box16 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .de-box17 {
+      display: none;
+    }
+
+    .de-box18 {
+      min-height: 199px;
+    }
+
+    .de-heading2 {
+      line-height: 28px;
+    }
+
+    .de-box23 {
+      min-height: 256px;
+    }
+
+    .de-heading3 {
+      line-height: 32px;
+    }
+
+    .de-box31 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .de-box32 {
+      display: none;
+    }
+
+    .de-box33 {
+      display: none;
+    }
+
+    :global(.de-btn2) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .de-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .de-grid {
+      flex-wrap: nowrap;
+    }
+
+    .de-box18 {
+      min-height: 151px;
+    }
+
+    .de-box23 {
+      min-height: 160px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .de-heading2 {
+    font-weight: 400;
+  }
+  .de-box26 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .de-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .de-box30 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.de-btn) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .de-box31 {
+    background-color: rgb(59, 98, 120);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .de-box7 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .de-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .de-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .de-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .de-heading {
+      font-weight: 400;
+    }
+
+    .de-heading2 {
+      font-weight: 400;
+    }
+
+    .de-box26 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .de-heading3 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .de-box30 {
+      background-color: rgb(91, 183, 129);
+      color: rgb(255, 255, 255);
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+    }
+
+    .de-text {
+      line-height: 24px;
+    }
+
+    .de-text2 {
+      line-height: 24px;
+    }
+
+    .de-text3 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .de-heading {
+      font-weight: 400;
+    }
+
+    .de-heading2 {
+      font-weight: 400;
+    }
+
+    .de-heading3 {
+      font-weight: 400;
+    }
+
+    :global(.de-btn) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .de-text {
+      line-height: 24px;
+    }
+
+    .de-text2 {
+      line-height: 24px;
+    }
+
+    .de-text3 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

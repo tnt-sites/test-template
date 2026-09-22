@@ -1,0 +1,26 @@
+label: Home Prose Block
+icon: interests
+description: Prose Block section with heading, copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/home/home-prose-block
+  id: ""
+  eyebrow: ""
+  heading: ""
+  text: ""
+  overlayColor: "#000000"
+  overlayColorHex: ""
+  eyebrowColor: "#ffffff"
+  eyebrowColorHex: ""
+  headingColor: "#ffffff"
+  headingColorHex: ""
+  textColor: "#ffffff"
+  textColorHex: ""
+preview:
+  text:
+    - Prose Block
+  icon: interests
+picker_preview:
+  text: Home Prose Block
+  subtext: Homepage services intro — eyebrow, heading and copy over a photo background.
+_inputs_from_glob:
+  - /src/components/page-sections/home/home-prose-block/home-prose-block.cloudcannon.inputs.yml

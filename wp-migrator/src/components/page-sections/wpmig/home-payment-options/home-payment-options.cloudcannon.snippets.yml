@@ -1,0 +1,10 @@
+_snippets:
+  home_payment_options:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Payment Options
+    definitions:
+      component_name: page-sections/wpmig/home-payment-options
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-payment-options/home-payment-options.cloudcannon.inputs.yml

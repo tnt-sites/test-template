@@ -1,0 +1,610 @@
+
+──────── 1440px ────────
+its-time-to-love @ 1440px
+  pixel mismatch: 72.27%  (height delta 1px)
+  - ittl-raw: 91px too low
+  - ittl-raw: 91px too short
+  - ittl-link: 47px too narrow
+  - its-time-to-love: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-embed: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-raw: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 10 more
+prose-section @ 1440px
+  pixel mismatch: 16.50%  (height delta 0px)
+  - prose-section: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+prose-section-b @ 1440px
+  pixel mismatch: 17.49%  (height delta 29px)
+  - psb-body: 500px too tall
+  - psb-box7: 77px too tall
+  - psb-box2: 69px too tall
+  - psb-box8: 47px too low
+  - psb-box9: 47px too low
+  - psb-btn: 47px too low
+  - psb-btn: 42px too narrow
+  - prose-section-b: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psb-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psb-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psb-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 24 more
+media-prose @ 1440px
+  pixel mismatch: 90.33%  (height delta 170px)
+  - media-prose: 171px too tall
+  - mp-box2: 171px too tall
+  - mp-box3: 171px too tall
+  - mp-box4: 171px too tall
+  - mp-box5: 215px too far left
+  - mp-box5: 171px too tall
+  - mp-decor: 215px too far left
+  - mp-decor: 81px too low
+  - media-prose: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 2 more
+prose-section-c @ 1440px
+  pixel mismatch: 23.13%  (height delta 16px)
+  - psc-box7: visible in source, hidden in build
+  - psc-spacer: visible in source, hidden in build
+  - psc-box13: 85px too tall
+  - psc-body: 229px too tall
+  - psc-box8: 77px too tall
+  - psc-btn: 46px too narrow
+  - psc-box14: 45px too low
+  - psc-box15: 45px too low
+  - psc-btn: 45px too low
+  - psc-box8: 31px too high
+  - psc-box9: 31px too high
+  - psc-text: 31px too high
+  … 63 more
+prose-section-d @ 1440px
+  pixel mismatch: 2.82%  (height delta 5px)
+  - prose-section-d: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-decor: 22px too wide
+  - psd-box3: 15px too tall
+  - psd-box5: 11px too low
+  - psd-decor: 11px too low
+  … 1 more
+prose-section-e @ 1440px
+  pixel mismatch: 33.45%  (height delta 23px)
+  - pse-box5: visible in source, hidden in build
+  - pse-box6: visible in source, hidden in build
+  - pse-spacer: visible in source, hidden in build
+  - pse-box3: 268px too narrow
+  - pse-box4: 268px too narrow
+  - pse-btn: 46px too narrow
+  - prose-section-e: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pse-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pse-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pse-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pse-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - pse-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 15 more
+prose-section-f @ 1440px
+  pixel mismatch: 23.18%  (height delta 0px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box2: 50px too high
+  - psf-box3: 50px too high
+  - psf-box4: 50px too high
+  - psf-box5: 50px too high
+  - psf-box7: 50px too high
+  - psf-box8: 50px too high
+  - psf-text: 50px too high
+  - psf-box9: 50px too high
+  - psf-box11: 45px too high
+  - psf-heading: 45px too high
+  … 45 more
+media-prose-b @ 1440px
+  pixel mismatch: 28.48%  (height delta 687px)
+  - mpb-box7: visible in source, hidden in build
+  - mpb-spacer: visible in source, hidden in build
+  - mpb-box18: visible in source, hidden in build
+  - mpb-spacer2: visible in source, hidden in build
+  - media-prose-b: 687px too tall
+  - mpb-box: 687px too tall
+  - mpb-box2: 687px too tall
+  - mpb-box3: 687px too tall
+  - mpb-box4: 323px too low
+  - mpb-box4: 363px too tall
+  - mpb-box5: 323px too low
+  - mpb-box5: 363px too tall
+  … 220 more
+prose-section-g @ 1440px
+  pixel mismatch: 6.96%  (height delta 9px)
+  - prose-section-g: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-text2: color: expected rgb(77, 77, 77), got rgb(51, 51, 51)
+  - psg-box2: 15px too tall
+  - prose-section-g: 10px too tall
+  - psg-box: 10px too tall
+  - psg-text2: lineHeight is larger by 1.6
+  … 2 more
+prose-section-h @ 1440px
+  pixel mismatch: 69.20%  (height delta -1px)
+  - psh-heading: fontWeight is larger by 300
+  - prose-section-h: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+prose-section-i @ 1440px
+  pixel mismatch: 7.15%  (height delta 8px)
+  - psi-heading: fontSize is larger by 31
+  - prose-section-i: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-heading: fontFamily: expected Montserrat, sans-serif, got Lato, sans-serif
+  - psi-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box7: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-text: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 3 more
+media-block @ 1440px
+  pixel mismatch: 74.68%  (height delta 324px)
+  - media-block: 325px too tall
+  - mb-grid: 1072px too wide
+  - mb-grid: 325px too tall
+  - media-block: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-grid: flexDirection: expected column, got row
+  - mb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-media: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-box: 7px too wide
+  - mb-media: 7px too wide
+media-prose-c @ 1440px
+  pixel mismatch: 7.38%  (height delta 50px)
+  - mpc-box4: 103px too far right
+  - mpc-box4: 205px too narrow
+  - mpc-box5: 103px too far right
+  - mpc-box5: 205px too narrow
+  - mpc-decor: 103px too far right
+  - mpc-grid: 95px too tall
+  - mpc-box8: 92px too far left
+  - mpc-media: 92px too far left
+  - media-prose-c: 50px too tall
+  - mpc-box: 50px too tall
+  - mpc-box7: 42px too tall
+  - mpc-decor: 37px too narrow
+  … 23 more
+
+──────── 768px ────────
+its-time-to-love @ 768px
+  pixel mismatch: 74.71%  (height delta 0px)
+  - ittl-raw: 91px too low
+  - ittl-raw: 91px too short
+  - ittl-box10: fontWeight is smaller by 100
+  - ittl-box10: display: expected inline-block, got block
+  - ittl-box10: lineHeight is larger by 9
+  - its-time-to-love: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-embed: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-raw: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ittl-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 8 more
+prose-section @ 768px
+  pixel mismatch: 25.55%  (height delta -1px)
+  - prose-section: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+prose-section-b @ 768px
+  pixel mismatch: 35.42%  (height delta 61px)
+  - psb-decor: visible in source, hidden in build
+  - psb-body: 422px too tall
+  - psb-box9: 439px too wide
+  - psb-btn: 1888px too low
+  - psb-btn: 476px too narrow
+  - psb-btn: 148px too short
+  - psb-box7: 71px too tall
+  - prose-section-b: 63px too tall
+  - psb-box: 63px too tall
+  - psb-box2: 63px too tall
+  - psb-box8: 61px too low
+  - psb-box9: 61px too low
+  … 29 more
+media-prose @ 768px
+  pixel mismatch: 86.68%  (height delta 172px)
+  - media-prose: 171px too tall
+  - mp-box2: 171px too tall
+  - mp-box3: 171px too tall
+  - mp-box4: 171px too tall
+  - mp-box5: 215px too far left
+  - mp-box5: 171px too tall
+  - mp-decor: 215px too far left
+  - mp-decor: 81px too low
+  - media-prose: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mp-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 2 more
+prose-section-c @ 768px
+  pixel mismatch: 25.97%  (height delta 23px)
+  - psc-box7: visible in source, hidden in build
+  - psc-spacer: visible in source, hidden in build
+  - psc-decor: 598px too narrow
+  - psc-box12: 613px too wide
+  - psc-box13: 252px too tall
+  - psc-box14: 176px too low
+  - psc-box14: 80px too short
+  - psc-heading: fontSize is larger by 19
+  - psc-heading: fontWeight is smaller by 100
+  - psc-box13: fontSize is smaller by 19
+  - psc-box13: fontWeight is larger by 100
+  - psc-box13: 59px too low
+  … 44 more
+prose-section-d @ 768px
+  pixel mismatch: 4.16%  (height delta 5px)
+  - prose-section-d: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box3: 15px too tall
+  - psd-box5: 11px too low
+  - psd-decor: 11px too low
+  - psd-text: fontSize is larger by 1
+prose-section-e @ 768px
+  pixel mismatch: 39.01%  (height delta 88px)
+  - pse-box5: visible in source, hidden in build
+  - pse-box6: visible in source, hidden in build
+  - pse-spacer: visible in source, hidden in build
+  - prose-section-e: 87px too tall
+  - pse-box: 87px too tall
+  - pse-grid: 87px too tall
+  - pse-box3: 247px too narrow
+  - pse-box4: 247px too narrow
+  - pse-box8: 109px too wide
+  - pse-btn: 155px too narrow
+  - pse-text: 344px too far left
+  - pse-text: 532px too low
+  … 45 more
+prose-section-f @ 768px
+  pixel mismatch: 27.81%  (height delta 0px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box2: 50px too high
+  - psf-box3: 50px too high
+  - psf-box4: 50px too high
+  - psf-box5: 50px too high
+  - psf-box8: 50px too high
+  - psf-text: 50px too high
+  - psf-box9: 50px too high
+  - psf-box7: 49px too high
+  - psf-box11: 45px too high
+  - psf-heading: 45px too high
+  … 23 more
+media-prose-b @ 768px
+  pixel mismatch: 28.32%  (height delta 1108px)
+  - mpb-box7: visible in source, hidden in build
+  - mpb-spacer: visible in source, hidden in build
+  - mpb-box18: visible in source, hidden in build
+  - mpb-spacer2: visible in source, hidden in build
+  - media-prose-b: 1109px too tall
+  - mpb-box: 1109px too tall
+  - mpb-box2: 1109px too tall
+  - mpb-box3: 1109px too tall
+  - mpb-box4: 363px too tall
+  - mpb-box5: 335px too narrow
+  - mpb-box5: 363px too tall
+  - mpb-box6: 335px too narrow
+  … 359 more
+prose-section-g @ 768px
+  pixel mismatch: 12.32%  (height delta 12px)
+  - prose-section-g: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-text2: color: expected rgb(77, 77, 77), got rgb(51, 51, 51)
+  - psg-box2: 15px too tall
+  - prose-section-g: 11px too tall
+  - psg-box: 11px too tall
+  - psg-text2: lineHeight is larger by 1.6
+  … 2 more
+prose-section-h @ 768px
+  pixel mismatch: 82.63%  (height delta 0px)
+  - psh-heading: fontWeight is larger by 300
+  - prose-section-h: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+prose-section-i @ 768px
+  pixel mismatch: 12.84%  (height delta 8px)
+  - psi-heading: fontSize is larger by 31
+  - prose-section-i: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-heading: fontFamily: expected Montserrat, sans-serif, got Lato, sans-serif
+  - psi-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box7: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-text: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 3 more
+media-block @ 768px
+  pixel mismatch: 72.57%  (height delta 342px)
+  - media-block: 342px too tall
+  - mb-grid: 568px too wide
+  - mb-grid: 342px too tall
+  - media-block: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-grid: flexDirection: expected column, got row
+  - mb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-media: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-box: 13px too tall
+  - mb-media: 13px too tall
+  - mb-box: 7px too wide
+  - mb-media: 7px too wide
+media-prose-c @ 768px
+  pixel mismatch: 9.48%  (height delta 0px)
+  - mpc-box4: 138px too narrow
+  - mpc-box5: 138px too narrow
+  - mpc-box4: 69px too far right
+  - mpc-box5: 69px too far right
+  - mpc-decor: 69px too far right
+  - mpc-grid: 59px too tall
+  - mpc-box7: 48px too wide
+  - mpc-text2: 48px too wide
+  - media-prose-c: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mpc-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mpc-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mpc-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 26 more
+
+──────── 390px ────────
+its-time-to-love @ 390px
+  pixel mismatch: 79.09%  (height delta 20px)
+  - ittl-raw: 113px too low
+  - ittl-raw: 91px too short
+  - ittl-box9: 103px too narrow
+  - ittl-box7: fontWeight is larger by 100
+  - ittl-heading2: fontWeight is smaller by 100
+  - ittl-box9: fontWeight is smaller by 100
+  - ittl-box5: textAlign: expected left, got start
+  - ittl-box5: display: expected flex, got block
+  - ittl-decor: textAlign: expected start, got left
+  - ittl-decor: display: expected block, got flex
+  - ittl-heading2: display: expected flex, got block
+  - ittl-box8: textAlign: expected center, got start
+  … 42 more
+prose-section @ 390px
+  pixel mismatch: 50.08%  (height delta 31px)
+  - prose-section: 31px too tall
+  - ps-grid: 31px too tall
+  - prose-section: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-decor2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - ps-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+  … 11 more
+prose-section-b @ 390px
+  pixel mismatch: 37.41%  (height delta 0px)
+  - psb-decor: visible in source, hidden in build
+  - psb-body: 574px too tall
+  - psb-box9: 101px too wide
+  - psb-btn: 2026px too low
+  - psb-btn: 131px too narrow
+  - psb-btn: 180px too short
+  - psb-box9: fontWeight is smaller by 100
+  - psb-btn: fontWeight is larger by 100
+  - psb-box9: textAlign: expected center, got left
+  - psb-box9: display: expected inline-block, got block
+  - psb-btn: textAlign: expected start, got center
+  - psb-btn: display: expected block, got inline-block
+  … 27 more
+media-prose @ 390px
+  - media-prose: visible in source, hidden in build
+  - mp-box: visible in source, hidden in build
+  - mp-heading: visible in source, hidden in build
+  - mp-box2: visible in source, hidden in build
+  - mp-box3: visible in source, hidden in build
+  - mp-box4: visible in source, hidden in build
+  - mp-box5: visible in source, hidden in build
+  - mp-decor: visible in source, hidden in build
+prose-section-c @ 390px
+  pixel mismatch: 35.53%  (height delta 6px)
+  - psc-box6: visible in source, hidden in build
+  - psc-box7: visible in source, hidden in build
+  - psc-spacer: visible in source, hidden in build
+  - psc-box4: 348px too narrow
+  - psc-box4: 90px too short
+  - psc-box5: 326px too narrow
+  - psc-box8: 617px too tall
+  - psc-body: 202px too tall
+  - psc-box15: 116px too wide
+  - psc-box9: fontWeight is smaller by 200
+  - psc-text: fontWeight is larger by 200
+  - psc-box15: fontWeight is smaller by 100
+  … 37 more
+prose-section-d @ 390px
+  pixel mismatch: 7.63%  (height delta 5px)
+  - prose-section-d: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psd-box3: 15px too tall
+  - psd-box5: 11px too low
+  - psd-decor: 11px too low
+  - psd-decor: 7px too wide
+  … 1 more
+prose-section-e @ 390px
+  pixel mismatch: 46.52%  (height delta -56px)
+  - pse-box5: visible in source, hidden in build
+  - pse-box6: visible in source, hidden in build
+  - pse-spacer: visible in source, hidden in build
+  - pse-box3: 318px too narrow
+  - pse-box4: 318px too narrow
+  - pse-box8: 153px too wide
+  - pse-btn: 199px too narrow
+  - pse-text: 114px too high
+  - pse-text: 398px too short
+  - pse-heading: 77px too short
+  - pse-box8: fontWeight is smaller by 100
+  - pse-btn: fontWeight is larger by 100
+  … 43 more
+prose-section-f @ 390px
+  pixel mismatch: 33.04%  (height delta -15px)
+  - psf-box6: visible in source, hidden in build
+  - psf-spacer: visible in source, hidden in build
+  - psf-box2: 293px too tall
+  - psf-box3: 90px too short
+  - psf-box7: 258px too tall
+  - psf-box10: 303px too wide
+  - psf-decor: 296px too narrow
+  - psf-heading: 118px too short
+  - psf-text2: 189px too high
+  - psf-text2: 134px too tall
+  - psf-box8: fontWeight is smaller by 200
+  - psf-text: fontWeight is larger by 200
+  … 65 more
+media-prose-b @ 390px
+  pixel mismatch: 25.60%  (height delta 1113px)
+  - mpb-box7: visible in source, hidden in build
+  - mpb-spacer: visible in source, hidden in build
+  - mpb-box18: visible in source, hidden in build
+  - mpb-spacer2: visible in source, hidden in build
+  - media-prose-b: 1113px too tall
+  - mpb-box: 1113px too tall
+  - mpb-box2: 1113px too tall
+  - mpb-box3: 1113px too tall
+  - mpb-box4: 218px too narrow
+  - mpb-box4: 399px too tall
+  - mpb-box5: 230px too narrow
+  - mpb-box5: 387px too tall
+  … 286 more
+prose-section-g @ 390px
+  pixel mismatch: 15.27%  (height delta -28px)
+  - psg-box6: 34px too short
+  - psg-box7: 34px too short
+  - psg-text2: 34px too short
+  - prose-section-g: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psg-text2: color: expected rgb(77, 77, 77), got rgb(51, 51, 51)
+  - prose-section-g: 29px too short
+  … 5 more
+prose-section-h @ 390px
+  pixel mismatch: 79.11%  (height delta 0px)
+  - psh-heading: fontWeight is larger by 300
+  - prose-section-h: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psh-heading: color: expected rgb(255, 255, 255), got rgb(0, 0, 0)
+prose-section-i @ 390px
+  pixel mismatch: 14.40%  (height delta 0px)
+  - psi-heading: fontSize is larger by 23
+  - prose-section-i: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box2: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box3: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-heading: fontFamily: expected Montserrat, sans-serif, got Lato, sans-serif
+  - psi-box4: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box5: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-decor: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box6: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-box7: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - psi-text: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 3 more
+media-block @ 390px
+  pixel mismatch: 73.36%  (height delta 0px)
+  - mb-grid: 871px too tall
+  - mb-box: 129px too narrow
+  - mb-box: 108px too short
+  - mb-media: 129px too narrow
+  - mb-media: 108px too short
+  - media-block: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-grid: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mb-media: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+media-prose-c @ 390px
+  pixel mismatch: 9.77%  (height delta 0px)
+  - mpc-grid: 170px too tall
+  - mpc-box8: 123px too narrow
+  - mpc-media: 108px too narrow
+  - mpc-box4: 70px too narrow
+  - mpc-box5: 70px too narrow
+  - mpc-box8: 49px too short
+  - mpc-media: 49px too short
+  - mpc-box4: 35px too far right
+  - mpc-box5: 35px too far right
+  - mpc-decor: 35px too far right
+  - media-prose-c: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  - mpc-box: color: expected rgb(0, 0, 0), got rgb(51, 51, 51)
+  … 20 more
+
+════════ worst sections ════════
+   90.33%   14 findings   media-prose @1440
+   86.68%   14 findings   media-prose @768
+   82.63%    6 findings   prose-section-h @768
+   79.11%    6 findings   prose-section-h @390
+   79.09%   54 findings   its-time-to-love @390
+   74.71%   20 findings   its-time-to-love @768
+   74.68%   10 findings   media-block @1440
+   73.36%    9 findings   media-block @390
+   72.57%   12 findings   media-block @768
+   72.27%   22 findings   its-time-to-love @1440
+    69.2%    6 findings   prose-section-h @1440
+   50.08%   23 findings   prose-section @390
+
+report: .wpmig/compare/index/report.json

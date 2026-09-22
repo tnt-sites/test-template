@@ -1,0 +1,10 @@
+_snippets:
+  thank_you_for_your:
+    template: astro_component
+    inline: false
+    preview:
+      text: Thank You For Your
+    definitions:
+      component_name: page-sections/wpmig/thank-you-for-your
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/thank-you-for-your/thank-you-for-your.cloudcannon.inputs.yml

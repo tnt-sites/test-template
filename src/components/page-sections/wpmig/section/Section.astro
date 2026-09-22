@@ -1,0 +1,45 @@
+---
+/**
+ * Section — migrated from meet-the-doctors [0] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+const {
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<section class="section" id={id || undefined} {...rest}>
+</section>
+<style>
+  .section {
+    box-sizing: border-box;
+    color: #333333;
+    font-family: Playfair, sans-serif;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 8px auto 16px auto;
+    max-width: 370px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      font-size: 50px;
+      line-height: 60px;
+      max-width: 600px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .section {
+      font-size: 70px;
+      line-height: 84px;
+      max-width: 1140px;
+    }
+  }
+</style>

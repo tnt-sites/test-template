@@ -1,0 +1,146 @@
+
+> astro-component-starter@1.0.0 dev
+> astro dev
+
+16:13:40 [types] Generated 1ms
+16:13:41 [content] Syncing content
+16:13:42 [content] Synced content
+16:13:42 [vite] Port 4321 is in use, trying another one...
+16:13:42 [vite] Port 4322 is in use, trying another one...
+
+ astro  v5.18.2 ready in 3861 ms
+
+┃ Local    http://localhost:4323/
+┃ Network  use --host to expose
+
+16:13:42 watching for file changes...
+16:13:50 [astro-icon] Loaded icons from /Users/tharvey/Work/CloudCannon/toothbar/src/icons
+16:14:22 [200] /cavities-fillings/ 10116ms
+16:15:02 [200] /who-we-are/ 216ms
+16:15:03 [200] /dr-andrea-bakke/ 185ms
+16:15:03 [200] /contact/ 174ms
+16:15:04 [200] /new-patients/ 184ms
+16:15:04 [200] /express-dental-services/ 158ms
+16:15:05 [200] /helpful-tips-documents/ 197ms
+16:15:05 [200] /jaw-botox/ 164ms
+16:15:06 [200] /teeth-whitening/ 166ms
+16:15:15 [200] / 131ms
+16:15:30 [200] / 111ms
+16:16:49 [200] / 1061ms
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:17:43 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:17:43 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:17:43 [watch] src/components/page-sections/wpmig/prose-section/ProseSection.astro
+16:17:44 [watch] src/components/page-sections/wpmig/prose-section-b/ProseSectionB.astro
+16:17:44 [watch] src/components/page-sections/wpmig/media-prose/MediaProse.astro
+16:17:44 [watch] src/components/page-sections/wpmig/prose-section-c/ProseSectionC.astro
+16:17:44 [watch] src/components/page-sections/wpmig/prose-section-d/ProseSectionD.astro
+16:17:44 [watch] src/components/page-sections/wpmig/prose-section-e/ProseSectionE.astro
+16:17:44 [watch] src/components/page-sections/wpmig/prose-section-f/ProseSectionF.astro
+16:17:44 [watch] src/components/page-sections/wpmig/media-prose-b/MediaProseB.astro
+16:17:45 [watch] src/components/page-sections/wpmig/prose-section-g/ProseSectionG.astro
+16:17:45 [watch] src/components/page-sections/wpmig/prose-section-h/ProseSectionH.astro
+16:17:45 [watch] src/components/page-sections/wpmig/prose-section-i/ProseSectionI.astro
+16:17:45 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:17:45 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:17:45 [watch] src/components/page-sections/wpmig/media-prose-c/MediaProseC.astro
+16:17:45 [watch] /src/components/page-sections/wpmig/its-time-to-love/ItsTimeToLove.astro?astro&type=style&index=0&lang.css
+16:17:45 [watch] /src/components/page-sections/wpmig/its-time-to-love/ItsTimeToLove.astro?astro&type=style&index=0&lang.css
+16:17:45 [watch] src/components/page-sections/wpmig/media-block/MediaBlock.astro
+16:18:04 [watch] src/content/pages/index.md
+16:18:04 [watch] src/content/pages/index.md
+16:18:04 [WARN] [glob-loader] Duplicate id "index" found in /Users/tharvey/Work/CloudCannon/toothbar/src/content/pages/index.md. Later items with the same id will overwrite earlier ones.
+16:18:05 [glob-loader] Reloaded data from index.md
+16:19:01 [watch] src/components/page-sections/wpmig/media-prose/MediaProse.astro
+16:19:01 [watch] src/components/page-sections/wpmig/prose-section-h/ProseSectionH.astro
+16:19:01 [watch] src/components/page-sections/wpmig/prose-section-f/ProseSectionF.astro
+16:19:01 [watch] src/components/page-sections/wpmig/prose-section-g/ProseSectionG.astro
+16:19:01 [watch] src/components/page-sections/wpmig/prose-section-i/ProseSectionI.astro
+16:19:02 [watch] src/components/page-sections/wpmig/media-prose-b/MediaProseB.astro
+16:19:02 [watch] src/components/page-sections/wpmig/media-prose-c/MediaProseC.astro
+16:19:02 [watch] src/components/page-sections/wpmig/prose-section/ProseSection.astro
+16:19:02 [watch] src/components/page-sections/wpmig/prose-section-e/ProseSectionE.astro
+16:19:02 [watch] src/components/page-sections/wpmig/prose-section-b/ProseSectionB.astro
+16:19:02 [watch] src/components/page-sections/wpmig/prose-section-c/ProseSectionC.astro
+16:19:02 [watch] src/components/page-sections/wpmig/prose-section-d/ProseSectionD.astro
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/ItsTimeToLove.astro
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:21:12 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:21:12 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:21:12 [watch] src/components/page-sections/wpmig/prose-section/ProseSection.astro
+16:21:12 [watch] src/components/page-sections/wpmig/prose-section-b/ProseSectionB.astro
+16:21:12 [watch] src/components/page-sections/wpmig/media-prose/MediaProse.astro
+16:21:12 [watch] src/components/page-sections/wpmig/prose-section-c/ProseSectionC.astro
+16:21:12 [watch] src/components/page-sections/wpmig/prose-section-d/ProseSectionD.astro
+16:21:12 [watch] src/components/page-sections/wpmig/prose-section-e/ProseSectionE.astro
+16:21:13 [watch] src/components/page-sections/wpmig/prose-section-f/ProseSectionF.astro
+16:21:13 [watch] src/components/page-sections/wpmig/media-prose-b/MediaProseB.astro
+16:21:13 [watch] src/components/page-sections/wpmig/prose-section-g/ProseSectionG.astro
+16:21:13 [watch] src/components/page-sections/wpmig/prose-section-h/ProseSectionH.astro
+16:21:13 [watch] src/components/page-sections/wpmig/prose-section-i/ProseSectionI.astro
+16:21:13 [watch] src/components/page-sections/wpmig/media-prose-c/MediaProseC.astro
+16:21:13 [watch] src/components/page-sections/wpmig/media-block/MediaBlock.astro
+16:21:22 [watch] src/content/pages/index.md
+16:21:22 [watch] src/content/pages/index.md
+16:21:22 [WARN] [glob-loader] Duplicate id "index" found in /Users/tharvey/Work/CloudCannon/toothbar/src/content/pages/index.md. Later items with the same id will overwrite earlier ones.
+16:21:22 [glob-loader] Reloaded data from index.md
+16:21:35 [watch] src/content/pages/index.md
+16:21:35 [watch] src/content/pages/index.md
+16:21:36 [watch] src/components/page-sections/wpmig/media-prose/MediaProse.astro
+16:21:36 [watch] src/components/page-sections/wpmig/media-prose-b/MediaProseB.astro
+16:21:36 [watch] src/components/page-sections/wpmig/media-prose-c/MediaProseC.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section/ProseSection.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-b/ProseSectionB.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-c/ProseSectionC.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-d/ProseSectionD.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-e/ProseSectionE.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-f/ProseSectionF.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-g/ProseSectionG.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-h/ProseSectionH.astro
+16:21:36 [watch] src/components/page-sections/wpmig/prose-section-i/ProseSectionI.astro
+16:21:36 [WARN] [glob-loader] Duplicate id "index" found in /Users/tharvey/Work/CloudCannon/toothbar/src/content/pages/index.md. Later items with the same id will overwrite earlier ones.
+16:21:36 [glob-loader] Reloaded data from index.md
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/ItsTimeToLove.astro
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.inputs.yml
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.structure-value.yml
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:23:47 [watch] src/components/page-sections/wpmig/its-time-to-love/its-time-to-love.cloudcannon.snippets.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.inputs.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.structure-value.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:23:48 [watch] src/components/page-sections/wpmig/media-block/media-block.cloudcannon.snippets.yml
+16:23:48 [watch] src/components/page-sections/wpmig/prose-section/ProseSection.astro
+16:23:48 [watch] src/components/page-sections/wpmig/prose-section-b/ProseSectionB.astro
+16:23:48 [watch] src/components/page-sections/wpmig/media-prose/MediaProse.astro
+16:23:48 [watch] src/components/page-sections/wpmig/prose-section-c/ProseSectionC.astro
+16:23:48 [watch] src/components/page-sections/wpmig/prose-section-d/ProseSectionD.astro
+16:23:49 [watch] src/components/page-sections/wpmig/prose-section-e/ProseSectionE.astro
+16:23:49 [watch] src/components/page-sections/wpmig/prose-section-f/ProseSectionF.astro
+16:23:49 [watch] src/components/page-sections/wpmig/media-prose-b/MediaProseB.astro
+16:23:49 [watch] src/components/page-sections/wpmig/prose-section-g/ProseSectionG.astro
+16:23:49 [watch] src/components/page-sections/wpmig/prose-section-h/ProseSectionH.astro
+16:23:49 [watch] src/components/page-sections/wpmig/prose-section-i/ProseSectionI.astro
+16:23:49 [watch] src/components/page-sections/wpmig/media-prose-c/MediaProseC.astro
+16:23:50 [watch] src/components/page-sections/wpmig/media-block/MediaBlock.astro

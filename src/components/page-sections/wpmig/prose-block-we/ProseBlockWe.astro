@@ -1,0 +1,254 @@
+---
+/**
+ * Prose Block We — migrated from dental-implant-credit-qualification [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  subheading = "",
+  text = "",
+  text2 = "",
+  items = [],
+  headingColor = "#ffffff",
+  headingColorHex = "",
+  textColor = "#ffffff",
+  textColorHex = "",
+  textHoverColor = "",
+  textHoverColorHex = "#bee6fe",
+  hoverBackgroundColor = "",
+  hoverBackgroundColorHex = "#7ecefc",
+  hoverColor = "#000000",
+  hoverColorHex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "#ffffff";
+const textColorValue = textColorHex || textColor || "#ffffff";
+const textHoverColorValue = textHoverColorHex || textHoverColor || "#bee6fe";
+const hoverBackgroundColorValue = hoverBackgroundColorHex || hoverBackgroundColor || "#7ecefc";
+const hoverColorValue = hoverColorHex || hoverColor || "#000000";
+const list = Array.isArray(items) ? items.filter(Boolean) : [];
+---
+<div class="prose-block-we" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--c3:${textHoverColorValue};--c4:${hoverBackgroundColorValue};--c5:${hoverColorValue}`} {...rest}>
+  <div class="pbw-box">
+    <div class="pbw-box2">
+      <div class="pbw-box3">
+        <h2 class="pbw-heading">{heading}</h2>
+      </div>
+      <div class="pbw-box4">
+        {subheading && <h3 class="pbw-heading2">{subheading}</h3>}
+      </div>
+      <div class="pbw-box5">
+        <div class="pbw-box6">
+          {text && <p class="pbw-text">{text}</p>}
+        </div>
+      </div>
+      <div class="pbw-grid">
+        {list.map((it) => (
+          <div class="pbw-box7">
+            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pbw-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="pbw-box9">
+      {text2 && <div class="pbw-text2">{text2}</div>}
+    </div>
+  </div>
+</div>
+<style>
+  .prose-block-we {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .pbw-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: min(100%, 767px);
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  .pbw-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .pbw-box3 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .pbw-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbw-box4 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .pbw-heading2 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .pbw-box5 {
+    box-sizing: border-box;
+    color: #ffffff;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pbw-box6 {
+    box-sizing: border-box;
+  }
+
+  .pbw-text {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .pbw-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+  }
+
+  .pbw-box7 {
+    box-sizing: border-box;
+    flex: 0 0 88.18%;
+    max-width: 88.18%;
+  }
+
+  :global(.pbw-btn) {
+    background-color: #000000;
+    border: 1px solid var(--color-brand-secondary, #1f7da6);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 37px 1px;
+    box-sizing: border-box;
+    color: var(--tx);
+    display: inline-block;
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    margin: 0px;
+    padding: 15px 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.pbw-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .pbw-box9 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .pbw-text2 {
+    box-sizing: border-box;
+  }
+
+  :global(.pbw-btn):hover {
+    background-color: var(--c4);
+    border-top-color: #4eb9f3;
+    color: var(--c3);
+  }
+
+  @media (min-width: 768px) {
+    .pbw-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .pbw-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .pbw-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .pbw-heading2 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .pbw-grid {
+      flex-wrap: nowrap;
+    }
+
+    .pbw-box7 {
+      flex: 0 0 40%;
+      max-width: 40%;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .pbw-box {
+      max-width: min(100%, 1440px);
+    }
+
+    .pbw-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .pbw-box7 {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
+</style>

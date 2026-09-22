@@ -1,0 +1,10 @@
+_snippets:
+  swollen_or_bleeding_gums:
+    template: astro_component
+    inline: false
+    preview:
+      text: Swollen Or Bleeding Gums
+    definitions:
+      component_name: page-sections/wpmig/swollen-or-bleeding-gums
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/swollen-or-bleeding-gums/swollen-or-bleeding-gums.cloudcannon.inputs.yml

@@ -1,0 +1,45 @@
+label: Card Grid Same
+icon: grid_view
+description: Card Grid Same section with heading, copy, editable items. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/card-grid-same
+  id: ""
+  heading: ""
+  text: ""
+  subheading: ""
+  text2: ""
+  text3: ""
+  text4: ""
+  heading2: ""
+  text5: ""
+  text6: ""
+  heading3: ""
+  text7: ""
+  text8: ""
+  heading4: ""
+  text9: ""
+  image: ""
+  imageAlt: ""
+  heading5: ""
+  text10: ""
+  embedUrl: ""
+  text11: ""
+  items:
+    - text: ""
+  items2:
+    - text: ""
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+preview:
+  text:
+    - Card Grid Same
+  icon: grid_view
+picker_preview:
+  text: Card Grid Same
+  subtext: Card Grid Same section with heading, copy, editable items. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/card-grid-same/card-grid-same.cloudcannon.inputs.yml

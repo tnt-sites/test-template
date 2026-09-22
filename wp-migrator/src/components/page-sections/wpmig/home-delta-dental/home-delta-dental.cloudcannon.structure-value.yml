@@ -1,0 +1,17 @@
+label: Home Delta Dental
+icon: interests
+description: Home Delta Dental section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-delta-dental
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Delta Dental
+  icon: interests
+picker_preview:
+  text: Home Delta Dental
+  subtext: Home Delta Dental section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-delta-dental/home-delta-dental.cloudcannon.inputs.yml

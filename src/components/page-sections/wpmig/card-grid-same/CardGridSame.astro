@@ -1,0 +1,601 @@
+---
+/**
+ * Card Grid Same — migrated from dental-emergencies [1] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `items`, `items2`.
+ */
+const {
+  heading = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  text3 = "",
+  text4 = "",
+  heading2 = "",
+  text5 = "",
+  text6 = "",
+  heading3 = "",
+  text7 = "",
+  text8 = "",
+  heading4 = "",
+  text9 = "",
+  image = "",
+  imageAlt = "",
+  heading5 = "",
+  text10 = "",
+  embedUrl = "",
+  text11 = "",
+  items = [],
+  items2 = [],
+  headingColor = "var(--color-brand)",
+  headingColorHex = "",
+  textColor = "#000000",
+  textColorHex = "",
+  textColor2 = "#ffffff",
+  textColor2Hex = "",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
+const textColorValue = textColorHex || textColor || "#000000";
+const textColor2Value = textColor2Hex || textColor2 || "#ffffff";
+const itemsList = Array.isArray(items) ? items.filter(Boolean) : [];
+const items2List = Array.isArray(items2) ? items2.filter(Boolean) : [];
+---
+<div class="card-grid-same" id={id || undefined} style={`--hd:${headingColorValue};--tx:${textColorValue};--c3:${textColor2Value}`} {...rest}>
+  <div class="cgs-box">
+    <div class="cgs-box2">
+      <div class="cgs-box3">
+        <h2 class="cgs-heading">{heading}</h2>
+      </div>
+      <div class="cgs-box4">
+        {text && <div class="cgs-body" set:html={text} />}
+      </div>
+      <div class="cgs-box5">
+        {subheading && <h3 class="cgs-heading2">{subheading}</h3>}
+      </div>
+      <div class="cgs-box6">
+        {text2 && <div class="cgs-body2" set:html={text2} />}
+      </div>
+      <div class="cgs-box7">
+        {text3 && <div class="cgs-body3" set:html={text3} />}
+      </div>
+      <div class="cgs-box8">
+        {text4 && <div class="cgs-text">{text4}</div>}
+      </div>
+      <div class="cgs-box9">
+        {heading2 && <h3 class="cgs-heading3">{heading2}</h3>}
+      </div>
+      <div class="cgs-box10">
+        {text5 && <div class="cgs-body4" set:html={text5} />}
+        <ol class="cgs-grid">
+          {itemsList.map((it) => (
+            <li class="cgs-box11">
+              <div class="cgs-text2">{it.text}</div>
+            </li>
+          ))}
+        </ol>
+        {text6 && <p class="cgs-text6" set:html={text6} />}
+      </div>
+      <div class="cgs-box15">
+        {heading3 && <h3 class="cgs-heading4">{heading3}</h3>}
+      </div>
+      <div class="cgs-box16">
+        {text7 && <div class="cgs-body5" set:html={text7} />}
+        <ol class="cgs-grid2">
+          {items2List.map((it) => (
+            <li class="cgs-box17">
+              <div class="cgs-text7">{it.text}</div>
+            </li>
+          ))}
+        </ol>
+        {text8 && <p class="cgs-text13" set:html={text8} />}
+      </div>
+      <div class="cgs-box23">
+        {heading4 && <h3 class="cgs-heading5">{heading4}</h3>}
+      </div>
+      <div class="cgs-box24">
+        {text9 && <div class="cgs-body6" set:html={text9} />}
+      </div>
+    </div>
+    <div class="cgs-box25">
+      <div class="cgs-box26">
+        <div class="cgs-box27">
+          <div class="cgs-box28">
+            {image && <img class="cgs-media" src={image} alt={imageAlt || ""} loading="lazy" width="621" height="243" />}
+          </div>
+          <div class="cgs-box29">
+            <div class="cgs-box30">
+              {heading5 && <h2 class="cgs-heading6" set:html={heading5} />}
+            </div>
+          </div>
+          <div class="cgs-box31">
+            <div class="cgs-box32">
+              {text10 && <p class="cgs-text14" set:html={text10} />}
+            </div>
+          </div>
+          <div class="cgs-box33">
+            <iframe class="cgs-embed" src={embedUrl} title="Chapel Hill Dental Arts  - Contact Form" allow="geolocation; microphone; camera; fullscreen; payment" frameborder="0" loading="lazy"></iframe>
+          </div>
+        </div>
+        {text11 && <span class="cgs-text15">{text11}</span>}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .card-grid-same {
+    box-sizing: border-box;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+  }
+
+  .cgs-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: min(100%, 767px);
+    padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  .cgs-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgs-box3 {
+    box-sizing: border-box;
+  }
+
+  .cgs-heading {
+    box-sizing: border-box;
+    color: var(--hd);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box4 {
+    box-sizing: border-box;
+    min-height: 419px;
+  }
+
+  .cgs-body :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgs-box5 {
+    box-sizing: border-box;
+  }
+
+  .cgs-heading2 {
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box6 {
+    box-sizing: border-box;
+    min-height: 257px;
+  }
+
+  .cgs-body2 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgs-box7 {
+    box-sizing: border-box;
+    min-height: 365px;
+  }
+
+  .cgs-body3 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgs-body3 :global(ol) {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box8 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .cgs-text {
+    box-sizing: border-box;
+  }
+
+  .cgs-box9 {
+    box-sizing: border-box;
+  }
+
+  .cgs-heading3 {
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box10 {
+    box-sizing: border-box;
+  }
+
+  .cgs-body4 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .cgs-grid {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box11 {
+    box-sizing: border-box;
+  }
+
+  .cgs-text2 {
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+  .cgs-text6 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: justify;
+  }
+
+  .cgs-box15 {
+    box-sizing: border-box;
+  }
+
+  .cgs-heading4 {
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box16 {
+    box-sizing: border-box;
+  }
+
+  .cgs-body5 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .cgs-grid2 {
+    box-sizing: border-box;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .cgs-box17 {
+    box-sizing: border-box;
+  }
+
+  .cgs-text7 {
+    box-sizing: border-box;
+    text-align: justify;
+  }
+
+  .cgs-text13 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+    text-align: left;
+  }
+
+  .cgs-box23 {
+    box-sizing: border-box;
+  }
+
+  .cgs-heading5 {
+    box-sizing: border-box;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box24 {
+    box-sizing: border-box;
+    min-height: 434px;
+  }
+
+  .cgs-body6 :global(p) {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgs-box25 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+  }
+
+  .cgs-box26 {
+    box-sizing: border-box;
+  }
+
+  .cgs-box27 {
+    background-color: var(--color-brand, #047ac0);
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 100%;
+    padding-top: 25px;
+    position: relative;
+  }
+
+  .cgs-box28 {
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+  }
+
+  .cgs-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .cgs-box29 {
+    background-color: rgba(31, 125, 166, 0);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .cgs-box30 {
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .cgs-heading6 {
+    box-sizing: border-box;
+    color: #ffffff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .cgs-box31 {
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .cgs-box32 {
+    box-sizing: border-box;
+  }
+
+  .cgs-text14 {
+    box-sizing: border-box;
+    margin-bottom: 14.4px;
+    margin-top: 0px;
+  }
+
+  .cgs-box33 {
+    background-color: #f4f8f7;
+    box-sizing: border-box;
+  }
+
+  .cgs-embed {
+    aspect-ratio: 0.46 / 1;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    height: auto;
+    line-height: 18px;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .cgs-box {
+      flex-wrap: nowrap;
+      max-width: min(100%, 1024px);
+    }
+
+    .cgs-box2 {
+      flex-wrap: nowrap;
+    }
+
+    .cgs-heading {
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    .cgs-box4 {
+      min-height: 230px;
+    }
+
+    .cgs-heading2 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .cgs-box6 {
+      min-height: 149px;
+    }
+
+    .cgs-box7 {
+      min-height: 203px;
+    }
+
+    .cgs-heading3 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .cgs-heading4 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .cgs-heading5 {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    .cgs-box24 {
+      min-height: 218px;
+    }
+
+    .cgs-box25 {
+      flex-wrap: nowrap;
+      width: 33.33%;
+    }
+
+    .cgs-box27 {
+      flex-wrap: nowrap;
+    }
+
+    .cgs-box29 {
+      flex-wrap: nowrap;
+      padding: 30px;
+    }
+
+    .cgs-heading6 {
+      font-size: 31px;
+      line-height: 31px;
+    }
+
+    .cgs-box32 {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .cgs-embed {
+      aspect-ratio: 0.31 / 1;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .card-grid-same {
+      padding-left: 45px;
+      padding-right: 0px;
+    }
+
+    .cgs-box {
+      flex-direction: row;
+      max-width: min(100%, 1440px);
+      padding-bottom: 100px;
+      padding-top: 100px;
+    }
+
+    .cgs-box2 {
+      flex: 0 0 66.67%;
+      max-width: 66.67%;
+    }
+
+    .cgs-heading {
+      font-size: 45px;
+      line-height: 45px;
+    }
+
+    .cgs-box4 {
+      min-height: 191px;
+    }
+
+    .cgs-box6 {
+      min-height: 137px;
+    }
+
+    .cgs-box24 {
+      min-height: 232px;
+    }
+
+    .cgs-box25 {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      min-height: 2012px;
+    }
+
+    .cgs-embed {
+      aspect-ratio: 0.57 / 1;
+    }
+  }
+
+  /* The scraped logo keeps its natural 621px width, which overflowed the rail's
+     card. It sits at a width the card can actually hold. */
+  .cgs-media {
+    height: auto;
+    max-width: 190px;
+    width: 100%;
+  }
+
+  /* This line sits on the brand-blue card, where the site's blue link colour
+     left the phone number all but invisible. */
+  .cgs-text14,
+  .cgs-text14 :global(a) {
+    color: #ffffff;
+  }
+</style>

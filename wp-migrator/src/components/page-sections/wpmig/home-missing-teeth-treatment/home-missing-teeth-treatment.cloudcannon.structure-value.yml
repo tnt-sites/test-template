@@ -1,0 +1,17 @@
+label: Home Missing Teeth Treatment
+icon: interests
+description: Home Missing Teeth Treatment section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-missing-teeth-treatment
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Missing Teeth Treatment
+  icon: interests
+picker_preview:
+  text: Home Missing Teeth Treatment
+  subtext: Home Missing Teeth Treatment section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-missing-teeth-treatment/home-missing-teeth-treatment.cloudcannon.inputs.yml

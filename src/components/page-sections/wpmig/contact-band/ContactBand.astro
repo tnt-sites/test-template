@@ -1,0 +1,305 @@
+---
+/**
+ * Contact Band — the map/form band the source's footer ends with, extracted
+ * from Footer.astro so it can be used both there and as a page section.
+ *
+ * Both halves of the source band are third-party iframes, which is why the
+ * band went missing from every extraction pass: a mirrored snapshot cannot
+ * load either, so to anything reading content it is an empty region. What the
+ * migrator carries across is the two URLs and the heights they were given.
+ *
+ * Two layouts for the left column:
+ *   media="map"  — the map iframe. The footer's own layout; unchanged.
+ *   media="info" — an icon over phone/address links, for pages that want the
+ *                  contact details rather than a second copy of the map.
+ *
+ * Every colour and measure falls back to the `--chrome-footer-form-*` tokens
+ * measured off the source, so a band with no props renders exactly as the
+ * footer's did before it was a component.
+ */
+import Icon from "@core-elements/icon/Icon.astro";
+
+const {
+  id = "",
+  media = "map",
+
+  // media="map"
+  mapEmbedUrl = "",
+
+  // media="info"
+  icon = "headset",
+  phoneText = "",
+  phoneHref = "",
+  addressLabel = "Address :",
+  addressText = "",
+  addressHref = "",
+
+  // form panel
+  eyebrow = "",
+  title = "",
+  formEmbedUrl = "",
+  formTitle = "Contact form",
+  formHeight = 800,
+
+  // theme overrides — empty falls back to the measured chrome tokens
+  backgroundColor = "",
+  panelBackgroundColor = "",
+  panelPadding = "",
+  titleColor = "",
+  titleSize = "",
+  infoTextColor = "",
+
+  hidden = false,
+  _component,
+  ...rest
+} = Astro.props;
+
+/*
+ * The map's height comes from the measured token rather than a prop: the
+ * extraction reads it once at one window size, where a full-height embed
+ * reports the window rather than its own design, while the style pass
+ * measures it at every breakpoint. The form's is a prop, since a form embed
+ * is given a fixed height by whoever pasted it in.
+ */
+const resolvedFormHeight = Number(formHeight) > 0 ? `${Number(formHeight)}px` : "800px";
+
+const showMap = media === "map" && mapEmbedUrl;
+const showInfo = media === "info";
+
+const style = [
+  backgroundColor && `--cb-bg:${backgroundColor}`,
+  panelBackgroundColor && `--cb-panel-bg:${panelBackgroundColor}`,
+  panelPadding && `--cb-panel-pad:${panelPadding}`,
+  titleColor && `--cb-title-color:${titleColor}`,
+  titleSize && `--cb-title-size:${titleSize}`,
+  infoTextColor && `--cb-info-color:${infoTextColor}`,
+  `--cb-form-height:${resolvedFormHeight}`,
+]
+  .filter(Boolean)
+  .join(";");
+---
+
+{
+  !hidden && (
+    <div class="contact-band" id={id || undefined} style={style} {...rest}>
+      <div class="cb-grid">
+        {showMap && (
+          <div class="cb-map">
+            <iframe
+              src={mapEmbedUrl}
+              title="Map to our office"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        )}
+
+        {showInfo && (
+          <div class="cb-info">
+            {icon && <Icon name={icon} size="3xl" class="cb-icon" />}
+            {phoneText && (
+              <a class="cb-phone" href={phoneHref || undefined}>
+                {phoneText}
+              </a>
+            )}
+            {addressText && (
+              <div class="cb-address">
+                {addressLabel && <p class="cb-address-label">{addressLabel}</p>}
+                <a
+                  class="cb-address-link"
+                  href={addressHref || undefined}
+                  target={addressHref ? "_blank" : undefined}
+                  rel={addressHref ? "noopener" : undefined}
+                >
+                  {addressText}
+                </a>
+              </div>
+            )}
+          </div>
+        )}
+
+        <div class="cb-panel">
+          {eyebrow && <p class="cb-eyebrow">{eyebrow}</p>}
+          {title && <h2 class="cb-title">{title}</h2>}
+          {formEmbedUrl && (
+            <div class="cb-form-frame">
+              <iframe class="cb-form" src={formEmbedUrl} title={formTitle} loading="lazy" />
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+<style>
+  /*
+   * Full-bleed and split the way the source splits it — the left column runs
+   * to the edge of the window, the form sits in a padded panel beside it.
+   * Stacked below the split, where a 900px map beside an 800px form would be
+   * two screens of scrolling.
+   *
+   * The outer element carries the container-type and the inner one is the
+   * grid, because an element cannot query the container it establishes
+   * itself. In the footer the split resolved against `.footer`; as a page
+   * section there is no container ancestor at all, so without this wrapper
+   * the query never matches and the two halves stack at every width.
+   */
+  .contact-band {
+    background-color: var(--cb-bg, var(--chrome-footer-form-bg, var(--color-brand)));
+    box-sizing: border-box;
+    container-type: inline-size;
+    width: 100%;
+  }
+
+  .cb-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @container (min-width: 900px) {
+    .cb-grid {
+      align-items: stretch;
+      grid-template-columns: var(--chrome-footer-form-map-share, 40%) minmax(0, 1fr);
+    }
+  }
+
+  /*
+   * The map fills its column top to bottom.
+   *
+   * Its measured height is the height it happened to have beside a form of one
+   * particular length; pinning that leaves a band of bare colour under the map
+   * as soon as the form is a different size. Stretching to the row keeps it
+   * flush against both edges whatever the form does, with the measured height
+   * as the minimum so a short form cannot collapse it to a strip.
+   */
+  .cb-map {
+    display: flex;
+    min-height: 40vh;
+  }
+
+  @container (min-width: 900px) {
+    .cb-map {
+      min-height: var(--chrome-footer-form-map-height, 900px);
+    }
+  }
+
+  .cb-map iframe {
+    border: 0;
+    display: block;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+  }
+
+  /*
+   * The info column stands in for the map: same ground, but the details set
+   * ragged-left and centred down the column, the way the source sets them.
+   */
+  .cb-info {
+    align-items: flex-start;
+    box-sizing: border-box;
+    color: var(--cb-info-color, var(--chrome-footer-form-title-color, #fff));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40vh;
+    padding: var(--spacing-2xl, 56px) var(--spacing-xl, 48px);
+    text-align: left;
+  }
+
+  @container (min-width: 900px) {
+    .cb-info {
+      min-height: var(--chrome-footer-form-map-height, 900px);
+    }
+  }
+
+  .cb-icon {
+    color: inherit;
+    margin-bottom: var(--spacing-md, 20px);
+  }
+
+  /*
+   * The phone is the loudest thing on this panel — the source sets it in the
+   * display serif at roughly twice the address, which is what carries the
+   * "call us" hierarchy the map used to carry visually.
+   */
+  .cb-phone {
+    color: inherit;
+    display: block;
+    font-family: var(--chrome-footer-form-title-font, inherit);
+    font-size: var(--cb-phone-size, clamp(2rem, 4vw, 2.75rem));
+    font-weight: var(--chrome-footer-form-title-weight, var(--font-weight-bold));
+    line-height: 1.1;
+    text-decoration: none;
+  }
+
+  .cb-phone:hover {
+    text-decoration: underline;
+  }
+
+  .cb-address {
+    margin-top: var(--spacing-md, 20px);
+  }
+
+  .cb-address-label {
+    color: inherit;
+    font-family: var(--chrome-footer-form-title-font, inherit);
+    font-size: var(--cb-address-label-size, 1.35rem);
+    font-style: italic;
+    font-weight: var(--chrome-footer-form-title-weight, var(--font-weight-bold));
+    margin: 0 0 var(--spacing-3xs, 4px);
+  }
+
+  .cb-address-link {
+    color: inherit;
+    font-family: var(--chrome-footer-link-font, inherit);
+    font-size: var(--cb-address-size, 1.25rem);
+    text-decoration: none;
+  }
+
+  .cb-address-link:hover {
+    text-decoration: underline;
+  }
+
+  .cb-panel {
+    background-color: var(--cb-panel-bg, transparent);
+    box-sizing: border-box;
+    padding: var(--cb-panel-pad, var(--chrome-footer-form-pad, var(--spacing-lg)));
+  }
+
+  .cb-eyebrow {
+    color: var(--cb-title-color, var(--chrome-footer-form-title-color, #fff));
+    font-family: var(--chrome-footer-form-title-font, inherit);
+    font-size: var(--chrome-footer-form-eyebrow-size, var(--font-size-md));
+    font-weight: var(--chrome-footer-form-eyebrow-weight, var(--font-weight-bold));
+    margin: 0;
+  }
+
+  .cb-title {
+    color: var(--cb-title-color, var(--chrome-footer-form-title-color, #fff));
+    font-family: var(--chrome-footer-form-title-font, inherit);
+    font-size: var(--cb-title-size, var(--chrome-footer-form-title-size, var(--font-size-3xl)));
+    font-weight: var(--chrome-footer-form-title-weight, var(--font-weight-bold));
+    line-height: var(--chrome-footer-form-title-line, 1.1);
+    margin: var(--spacing-xs) 0 var(--spacing-md);
+  }
+
+  /*
+   * The form embed draws its inputs and nothing behind them, so on a coloured
+   * band its grey placeholder text is set against the band. This is the card
+   * the source mounts it on.
+   */
+  .cb-form-frame {
+    background-color: var(--cb-panel-bg, var(--chrome-footer-form-frame-bg, #fff));
+    padding: var(--chrome-footer-form-frame-pad, 0);
+  }
+
+  .cb-form {
+    border: 0;
+    display: block;
+    height: var(--cb-form-height, 800px);
+    max-width: 100%;
+    width: 100%;
+  }
+</style>

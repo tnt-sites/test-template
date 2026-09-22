@@ -1,0 +1,10 @@
+_snippets:
+  home_shooting_pain_treatment:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Shooting Pain Treatment
+    definitions:
+      component_name: page-sections/wpmig/home-shooting-pain-treatment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-shooting-pain-treatment/home-shooting-pain-treatment.cloudcannon.inputs.yml

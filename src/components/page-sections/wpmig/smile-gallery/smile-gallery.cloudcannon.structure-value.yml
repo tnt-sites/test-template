@@ -1,0 +1,35 @@
+label: Media Prose See
+icon: grid_view
+description: Media Prose See section with heading, copy, editable cards. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/smile-gallery
+  id: ""
+  heading: ""
+  text: ""
+  cards:
+    - image: ""
+      imageAlt: ""
+      image2: ""
+      image2Alt: ""
+      text: ""
+      text2: ""
+      title: ""
+  headingColor: var(--color-brand)
+  headingColorHex: ""
+  textColor: "#000000"
+  textColorHex: ""
+  cardBackgroundColor: ""
+  cardBackgroundColorHex: "#f4f8f7"
+  textColor2: "#ffffff"
+  textColor2Hex: ""
+  titleColor: var(--color-brand)
+  titleColorHex: ""
+preview:
+  text:
+    - Media Prose See
+  icon: grid_view
+picker_preview:
+  text: Media Prose See
+  subtext: Media Prose See section with heading, copy, editable cards. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/smile-gallery/smile-gallery.cloudcannon.inputs.yml

@@ -1,0 +1,17 @@
+label: Home Partners
+icon: interests
+description: Home Partners section with copy. Migrated by wp-migrator.
+value:
+  _component: page-sections/wpmig/home-partners
+  id: ""
+  text: ""
+  textColor: "#1b2e38"
+preview:
+  text:
+    - Home Partners
+  icon: interests
+picker_preview:
+  text: Home Partners
+  subtext: Home Partners section with copy. Migrated by wp-migrator.
+_inputs_from_glob:
+  - /src/components/page-sections/wpmig/home-partners/home-partners.cloudcannon.inputs.yml

@@ -1,0 +1,953 @@
+---
+/**
+ * Restorative Dentistry B — migrated from dental-services/restorative-dentistry [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours. Arrays: `images`.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  eyebrow = "",
+  heading = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  secondaryButtonText2 = "",
+  secondaryButtonLink2 = "",
+  secondaryButtonText3 = "",
+  secondaryButtonLink3 = "",
+  text = "",
+  subheading = "",
+  text2 = "",
+  heading2 = "",
+  text3 = "",
+  heading3 = "",
+  text4 = "",
+  secondaryButtonText4 = "",
+  secondaryButtonLink4 = "",
+  secondaryButtonText5 = "",
+  secondaryButtonLink5 = "",
+  images = [],
+  eyebrowColor = "#1b2e38",
+  headingColor = "#1b2e38",
+  buttonTextColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor2 = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  textColor2 = "#d44d5c",
+  hoverBackgroundColor = "rgba(241, 241, 241, 0.77)",
+  hoverBackgroundColor2 = "rgba(241, 241, 241, 0.58)",
+  hoverBackgroundColor3 = "rgba(241, 241, 241, 0.68)",
+  buttonBackgroundHoverColor = "#4bad73",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+const list = Array.isArray(images) ? images.filter(Boolean) : [];
+---
+<div class="restorative-dentistry-b" id={id || undefined} style={`--eb:${eyebrowColor};--hd:${headingColor};--btntx:${buttonTextColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--c6:${buttonTextColor2};--c7:${buttonBackgroundColor2};--c8:${textColor2};--c9:${hoverBackgroundColor};--c10:${hoverBackgroundColor2};--c11:${hoverBackgroundColor3};--c12:${buttonBackgroundHoverColor}`} {...rest}>
+  <div class="rdb-box">
+    <div class="rdb-box2">
+      <div class="rdb-box3">
+        <div class="rdb-box4">
+          {eyebrow && <h4 class="rdb-heading">{eyebrow}</h4>}
+          {buttonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn" text={buttonText} link={buttonLink || "#"} />}
+          {secondaryButtonText && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+          {secondaryButtonText2 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn3" text={secondaryButtonText2} link={secondaryButtonLink2 || "#"} />}
+          {secondaryButtonText3 && <Button variant="tertiary" size="md" width="none" borderRadius="none" borderWidth="xs" class="rdb-btn4" text={secondaryButtonText3} link={secondaryButtonLink3 || "#"} />}
+        </div>
+      </div>
+      <div class="rdb-box5">
+        <div class="rdb-box6">
+          <div class="rdb-box7">
+            <div class="rdb-box8">
+              <h2 class="rdb-heading2">{heading}</h2>
+            </div>
+            <div class="rdb-box9">
+              <div class="rdb-box10">
+                {text && <p class="rdb-text" set:html={text} />}
+              </div>
+            </div>
+            <div class="rdb-box11">
+              {subheading && <h4 class="rdb-heading3">{subheading}</h4>}
+            </div>
+            <div class="rdb-grid">
+              {list.map((it) => (
+                <div class="rdb-box12">
+                  <div class="rdb-box13">
+                    <div class="rdb-box14">
+                      {it.image && <img class="rdb-media" src={it.image} alt={it.imageAlt || ""} loading="lazy" width="150" height="150" />}
+                    </div>
+                    <div class="rdb-box15">
+                      <div class="rdb-text2">{it.text}</div>
+                    </div>
+                    <div class="rdb-box16">
+                      <p class="rdb-text3">{it.text2}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="rdb-box32">
+            <div class="rdb-box33">
+              <div class="rdb-box34">
+                {text2 && <p class="rdb-text10" set:html={text2} />}
+              </div>
+            </div>
+          </div>
+          <div class="rdb-box35">
+            <div class="rdb-box36">
+              {heading2 && <h3 class="rdb-heading4">{heading2}</h3>}
+            </div>
+            <div class="rdb-box37">
+              {text3 && <div class="rdb-body" set:html={text3} />}
+            </div>
+          </div>
+          <div class="rdb-box38">
+            <div class="rdb-box39">
+              <div class="rdb-decor" aria-hidden="true"></div>
+            </div>
+            <div class="rdb-box40">
+              {heading3 && <h2 class="rdb-heading5">{heading3}</h2>}
+            </div>
+            <div class="rdb-box41">
+              <div class="rdb-box42">
+                {text4 && <p class="rdb-text11" set:html={text4} />}
+              </div>
+            </div>
+            <div class="rdb-box43">
+              <div class="rdb-box44">
+                {secondaryButtonText4 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdb-btn5" text={secondaryButtonText4} link={secondaryButtonLink4 || "#"} />}
+              </div>
+            </div>
+            <div class="rdb-box45">
+              <div class="rdb-box46">
+                <div class="rdb-box47">
+                  {secondaryButtonText5 && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="rdb-btn6" text={secondaryButtonText5} link={secondaryButtonLink5 || "#"} />}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .restorative-dentistry-b {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .rdb-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .rdb-box2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .rdb-box3 {
+    display: none;
+  }
+
+  .rdb-box4 {
+    display: none;
+  }
+
+  .rdb-heading {
+    display: none;
+  }
+
+  :global(.rdb-btn) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdb-btn2) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdb-btn3) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  :global(.rdb-btn4) {
+    display: none;
+    transition: all 0.25s ease;
+  }
+
+  .rdb-box5 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
+
+  .rdb-box6 {
+    box-sizing: border-box;
+  }
+
+  .rdb-box7 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdb-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdb-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdb-box9 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box10 {
+    box-sizing: border-box;
+  }
+
+  .rdb-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdb-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdb-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 31.2px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdb-grid {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box12 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    min-height: 1px;
+    position: relative;
+  }
+
+  .rdb-box13 {
+    align-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border: 2px solid rgba(84, 89, 95, 0.04);
+    border-radius: 7px;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 88.24%;
+    flex-wrap: wrap;
+    margin: 10px;
+    max-width: 88.24%;
+    min-height: 215px;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdb-box14 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    max-width: 96.92%;
+    text-align: center;
+  }
+
+  .rdb-media {
+    box-sizing: border-box;
+    display: inline-block;
+  }
+
+  .rdb-box15 {
+    box-sizing: border-box;
+    flex: 0 0 96.92%;
+    margin-bottom: 20px;
+    max-width: 96.92%;
+    position: relative;
+    text-align: center;
+  }
+
+  .rdb-text2 {
+    box-sizing: border-box;
+    margin-top: -8px;
+  }
+
+  .rdb-box16 {
+    display: none;
+  }
+
+  .rdb-text3 {
+    display: none;
+  }
+
+  .rdb-box32 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdb-box33 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box34 {
+    box-sizing: border-box;
+  }
+
+  .rdb-text10 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdb-box35 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdb-box36 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdb-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdb-box37 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 472px;
+  }
+
+  .rdb-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdb-box38 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .rdb-box39 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .rdb-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .rdb-box40 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .rdb-heading5 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .rdb-box41 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box42 {
+    box-sizing: border-box;
+  }
+
+  .rdb-text11 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .rdb-box43 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box44 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdb-btn5) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdb-btn5) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .rdb-box45 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .rdb-box46 {
+    box-sizing: border-box;
+  }
+
+  .rdb-box47 {
+    box-sizing: border-box;
+  }
+
+  :global(.rdb-btn6) {
+    background-color: var(--c7);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--c6);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.rdb-btn6) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.rdb-btn):hover {
+    background-color: var(--c9);
+  }
+
+  :global(.rdb-btn2):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.rdb-btn3):hover {
+    background-color: var(--c11);
+  }
+
+  :global(.rdb-btn4):hover {
+    background-color: var(--c10);
+  }
+
+  :global(.rdb-btn5):hover {
+    background-color: var(--c12);
+  }
+
+  :global(.rdb-btn6):hover {
+    background-color: #54595f;
+  }
+
+  @media (min-width: 768px) {
+    .rdb-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .rdb-box3 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 33.33%;
+      flex-shrink: 0;
+      max-width: 33.33%;
+      min-height: 1576px;
+      padding-left: 15px;
+      padding-right: 15px;
+      position: relative;
+    }
+
+    .rdb-box4 {
+      background-color: #ffffff;
+      border: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      display: block;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rdb-heading {
+      background-color: #f5f5f5;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 21px;
+      line-height: 25.2px;
+      margin-bottom: 8px;
+      margin-top: 0px;
+      padding: 10px 10px 10px 20px;
+    }
+
+    :global(.rdb-btn) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdb-btn) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdb-btn2) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    :global(.rdb-btn3) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
+
+    :global(.rdb-btn3) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    :global(.rdb-btn4) {
+      border-bottom-width: 1px;
+      border-top-color: #1b2e38;
+      box-sizing: border-box;
+      display: block;
+      font-family: Montserrat, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 22.5px;
+      margin: 0px;
+      padding: 10px 20px;
+    }
+
+    .rdb-box5 {
+      flex: 0 0 66.67%;
+      flex-shrink: 0;
+      max-width: 66.67%;
+    }
+
+    .rdb-heading2 {
+      line-height: 32px;
+    }
+
+    .rdb-heading3 {
+      line-height: 24px;
+    }
+
+    .rdb-box12 {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+
+    .rdb-box13 {
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 226px;
+    }
+
+    .rdb-box14 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .rdb-media {
+      width: 100%;
+    }
+
+    .rdb-box15 {
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+    }
+
+    .rdb-box16 {
+      box-sizing: border-box;
+      display: block;
+      flex: 0 0 95.45%;
+      max-width: 95.45%;
+      text-align: center;
+    }
+
+    .rdb-text3 {
+      box-sizing: border-box;
+      color: var(--c8);
+      display: block;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 14px;
+      margin-bottom: 0px;
+      margin-top: 0px;
+    }
+
+    .rdb-heading4 {
+      line-height: 28px;
+    }
+
+    .rdb-box37 {
+      min-height: 376px;
+    }
+
+    .rdb-heading5 {
+      line-height: 32px;
+    }
+
+    .rdb-box45 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .rdb-box46 {
+      display: none;
+    }
+
+    .rdb-box47 {
+      display: none;
+    }
+
+    :global(.rdb-btn6) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .rdb-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .rdb-box3 {
+      flex: 0 0 25%;
+      max-width: 25%;
+      min-height: 1211px;
+    }
+
+    :global(.rdb-btn4) {
+      white-space: nowrap;
+    }
+
+    :global(.rdb-btn4) :global(.label-text) {
+      white-space: nowrap;
+    }
+
+    .rdb-box5 {
+      flex: 0 0 75%;
+      max-width: 75%;
+    }
+
+    .rdb-grid {
+      flex-wrap: nowrap;
+    }
+
+    .rdb-box13 {
+      flex: 0 0 90.05%;
+      max-width: 90.05%;
+      min-height: 229px;
+    }
+
+    .rdb-box14 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .rdb-box15 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .rdb-box16 {
+      flex: 0 0 97.52%;
+      max-width: 97.52%;
+    }
+
+    .rdb-box37 {
+      min-height: 232px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .rdb-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdb-heading5 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .rdb-text11 {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .rdb-box32 {
+    text-align: center;
+  }
+  :global(.rdb-btn5) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .rdb-box47 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  :global(.rdb-btn6) {
+    align-items: normal;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    justify-content: normal;
+    line-height: 24px;
+    text-align: left;
+  }
+  .rdb-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  @media (min-width: 768px) {
+    .rdb-heading4 {
+      font-weight: 400;
+    }
+
+    .rdb-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.rdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .rdb-text {
+      line-height: 24px;
+    }
+
+    .rdb-text10 {
+      line-height: 24px;
+    }
+
+    .rdb-text11 {
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .rdb-heading4 {
+      font-weight: 400;
+    }
+
+    .rdb-heading5 {
+      font-weight: 400;
+    }
+
+    :global(.rdb-btn) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn2) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn3) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn4) {
+      align-items: normal;
+      justify-content: normal;
+      text-align: left;
+    }
+
+    :global(.rdb-btn5) {
+      align-items: normal;
+      justify-content: normal;
+    }
+
+    .rdb-text {
+      line-height: 24px;
+    }
+
+    .rdb-text10 {
+      line-height: 24px;
+    }
+
+    .rdb-text11 {
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

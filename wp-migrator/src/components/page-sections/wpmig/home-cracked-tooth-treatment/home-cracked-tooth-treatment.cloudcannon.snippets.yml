@@ -1,0 +1,10 @@
+_snippets:
+  home_cracked_tooth_treatment:
+    template: astro_component
+    inline: false
+    preview:
+      text: Home Cracked Tooth Treatment
+    definitions:
+      component_name: page-sections/wpmig/home-cracked-tooth-treatment
+    _inputs_from_glob:
+      - /src/components/page-sections/wpmig/home-cracked-tooth-treatment/home-cracked-tooth-treatment.cloudcannon.inputs.yml

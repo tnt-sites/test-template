@@ -41,4 +41,8 @@ gap:
         name: 2xl
       - id: 3xl
         name: 3xl
-
+columns:
+  type: number
+  comment: >-
+    Fixed number of columns. Leave empty to fit as many as the minimum item
+    width allows. Collapses to one column below 640px either way.
