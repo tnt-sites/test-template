@@ -3,7 +3,6 @@ import Icon from "@core-elements/icon/Icon.astro";
 
 const { navData = [], class: className, _component, ...htmlAttributes } = Astro.props;
 
-const navInstanceId = crypto.randomUUID();
 
 function isCurrentPage(item) {
   return Boolean(item.path && Astro.url.pathname === item.path);
@@ -26,7 +25,6 @@ function createNavItemData(item, level, parentGroupId) {
     contentId: `dropdown-content-${crypto.randomUUID()}`,
     isCurrent: isCurrentPage(item),
     hasCurrent: hasCurrentChild(item),
-    groupName: level === "top" ? `bar-nav-top-${navInstanceId}` : `bar-nav-${parentGroupId}`,
     parentGroupId: parentGroupId || crypto.randomUUID(),
   };
 }
@@ -115,8 +113,7 @@ function createNavItemData(item, level, parentGroupId) {
                   return (
                     <li class="nav-item has-children">
                       <input
-                        type="radio"
-                        name={childData.groupName}
+                        type="checkbox"
                         id={childData.dropdownId}
                         class="nav-item-toggle"
                         aria-expanded="false"
@@ -209,30 +206,22 @@ function createNavItemData(item, level, parentGroupId) {
     }
   }
 
-  // Handle toggle change events
+  // Handle toggle change events. Toggles are unnamed checkboxes rather than a
+  // named radio group (which WAVE reports as a group missing its fieldset), so
+  // opening one closes its siblings here instead of natively.
   function handleToggleChange(e) {
     const target = e.target as HTMLInputElement;
-
-    // Only handle checkboxes closing other checkboxes
-    // Radio buttons handle themselves and don't affect parents
-    if (target.type !== "checkbox") {
-      updateAriaStates(target, target.checked);
-      return;
-    }
-
-    const barNav = target.closest(".bar");
     updateAriaStates(target, target.checked);
+    if (!target.checked) return;
 
-    if (target.checked && barNav) {
-      // Close other open checkbox dropdowns
-      barNav.querySelectorAll(".nav-item-toggle[type='checkbox']").forEach((toggle) => {
-        const checkbox = toggle as HTMLInputElement;
-        if (checkbox !== target && checkbox.checked) {
-          checkbox.checked = false;
-          updateAriaStates(checkbox, false);
-        }
-      });
-    }
+    const list = target.closest(".nav-item")?.parentElement;
+    list?.querySelectorAll(":scope > .nav-item > .nav-item-toggle").forEach((toggle) => {
+      const checkbox = toggle as HTMLInputElement;
+      if (checkbox !== target && checkbox.checked) {
+        checkbox.checked = false;
+        updateAriaStates(checkbox, false);
+      }
+    });
   }
 
   // A trigger only carries `for` when it's the sole label for its checkbox (no

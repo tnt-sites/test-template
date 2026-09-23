@@ -17,7 +17,6 @@ const {
 } = Astro.props as Props;
 
 const toggleId = `mobile-toggle-${crypto.randomUUID()}`;
-const navInstanceId = crypto.randomUUID();
 
 // Check if item is current page
 function isCurrentPage(item) {
@@ -42,7 +41,6 @@ function createNavItemData(item, level, parentGroupId) {
     contentId: `dropdown-content-${crypto.randomUUID()}`,
     isCurrent: isCurrentPage(item),
     hasCurrent: hasCurrentChild(item),
-    groupName: level === "top" ? `mobile-nav-top-${navInstanceId}` : `mobile-nav-${parentGroupId}`,
     parentGroupId: parentGroupId || crypto.randomUUID(),
   };
 }
@@ -149,8 +147,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           return (
             <li class="nav-item has-children">
               <input
-                type="radio"
-                name={itemData.groupName}
+                type="checkbox"
                 id={itemData.dropdownId}
                 class="nav-item-toggle"
                 aria-expanded={itemData.hasCurrent}
@@ -210,8 +207,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                     return (
                       <li class="nav-item has-children">
                         <input
-                          type="radio"
-                          name={childData.groupName}
+                          type="checkbox"
                           id={childData.dropdownId}
                           class="nav-item-toggle"
                           aria-expanded={childData.hasCurrent}
@@ -420,6 +416,16 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       if (dropdownToggle) {
         e.preventDefault();
         dropdownToggle.checked = !dropdownToggle.checked;
+
+        // Unnamed checkboxes, not a named radio group (which WAVE reports as a
+        // group missing its fieldset), so close the open sibling by hand.
+        if (dropdownToggle.checked) {
+          const list = dropdownToggle.closest(".nav-item")?.parentElement;
+          list?.querySelectorAll(":scope > .nav-item > .nav-item-toggle").forEach((sibling) => {
+            if (sibling !== dropdownToggle) sibling.checked = false;
+          });
+        }
+
         dropdownToggle.dispatchEvent(new Event("change"));
       }
     };

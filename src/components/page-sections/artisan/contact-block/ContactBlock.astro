@@ -40,18 +40,23 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
     <div class="cb-inner">
       <div class="cb-details">
         {detailsHeading && <h2>{detailsHeading}</h2>}
-        {list.map((d: any) => (
-          <div class="cb-row">
-            {d.icon && <img class="cb-icon" src={d.icon} alt="" loading="lazy" />}
-            <div class="cb-copy">
-              {/* Label stays plain text: the value below links to the same place, and two adjacent links to one URL is a redundant link. */}
-              <p class="cb-label">{d.label}</p>
-              {d.link
-                ? <a class:list={["cb-value", { linked: d.valueIsLink }]} href={d.link}>{d.value}</a>
-                : <p class="cb-value">{d.value}</p>}
+        {/* Label/value pairs, so a <dl>: as <p>s the bold labels read as
+            unmarked headings. The label stays plain text — the value links to
+            the same place, and two adjacent links to one URL is redundant. The
+            icon is decorative and drawn in CSS, since a <dl> row may only
+            hold <dt>/<dd>. */}
+        <dl class="cb-list">
+          {list.map((d: any) => (
+            <div class:list={["cb-row", { "has-icon": d.icon }]} style={d.icon ? `--icon:url('${d.icon}')` : undefined}>
+              <dt class="cb-label">{d.label}</dt>
+              <dd>
+                {d.link
+                  ? <a class:list={["cb-value", { linked: d.valueIsLink }]} href={d.link}>{d.value}</a>
+                  : <span class="cb-value">{d.value}</span>}
+              </dd>
             </div>
-          </div>
-        ))}
+          ))}
+        </dl>
       </div>
       {(heading || hasForm) && (
         <div class="cb-formwrap">
@@ -85,9 +90,13 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
 
   /* An icon beside each row, and a hairline between them — the source builds
      these out of image-box widgets separated by divider widgets. */
-  .cb-row { display: flex; gap: 20px; }
+  .cb-list { margin: 0; }
+  .cb-row { column-gap: 20px; display: grid; grid-template-rows: auto 1fr; }
   .cb-row + .cb-row { border-top: 1px solid rgb(0 0 0 / 10%); margin-top: 15px; padding-top: 15px; }
-  .cb-icon { flex: 0 0 auto; height: auto; width: 73px; }
+  .cb-row.has-icon { grid-template-columns: 73px 1fr; }
+  .cb-row.has-icon::before { aspect-ratio: 1; background: var(--icon) center / contain no-repeat; content: ""; grid-row: 1 / 3; }
+  .cb-row.has-icon > * { grid-column: 2; }
+  .cb-row dd { margin: 0; }
   .cb-label { color: var(--lb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; line-height: 28px; margin: 8px 0 5px; }
   .cb-value, .cb-details a.cb-value { color: var(--tx); display: block; font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0; text-decoration: none; }
   .cb-details a:hover { text-decoration: underline; }
