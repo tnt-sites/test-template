@@ -55,6 +55,11 @@
         margin: 0 0 10px;
         width: 100%;
 
+        /* Radio groups are a <fieldset> (with a hidden <legend>) so screen
+           readers announce the question; strip the browser's fieldset box. */
+        border: 0;
+        min-width: 0;
+
         label {
           font-family: "Open Sans", sans-serif;
           font-size: 18px;

@@ -53,7 +53,9 @@ pageSections:
 
       \            <!-- Patient Type -->
 
-      \            <div class=\"form-row checkboxes\">
+      \            <fieldset class=\"form-row checkboxes\">
+
+      \                <legend class=\"visually-hidden\">Patient type</legend>
 
       \                <label class=\"radio-inline\">
 
@@ -67,7 +69,7 @@ pageSections:
 
       \                </label>
 
-      \            </div>
+      \            </fieldset>
 
 
       \            <!-- Name -->
@@ -76,17 +78,17 @@ pageSections:
 
       \                <div class=\"column\">
 
-      \                    <label>First Name</label>
+      \                    <label for=\"appt-first-name\">First Name</label>
 
-      \                    <input type=\"text\" class=\"first_name\" name=\"first_name\" required=\"\">
+      \                    <input type=\"text\" class=\"first_name\" id=\"appt-first-name\" name=\"first_name\" autocomplete=\"given-name\" required=\"\">
 
       \                </div>
 
       \                <div class=\"column\">
 
-      \                    <label>Last Name</label>
+      \                    <label for=\"appt-last-name\">Last Name</label>
 
-      \                    <input type=\"text\" class=\"last_name\" name=\"last_name\" required=\"\">
+      \                    <input type=\"text\" class=\"last_name\" id=\"appt-last-name\" name=\"last_name\" autocomplete=\"family-name\" required=\"\">
 
       \                </div>
 
@@ -101,9 +103,9 @@ pageSections:
 
       \            <div class=\"form-row full\">
 
-      \                <label>Email Address</label>
+      \                <label for=\"appt-email\">Email Address</label>
 
-      \                <input type=\"email\" name=\"email\" required=\"\">
+      \                <input type=\"email\" id=\"appt-email\" name=\"email\" autocomplete=\"email\" required=\"\">
 
       \            </div>
 
@@ -114,18 +116,18 @@ pageSections:
 
       \                <div class=\"column\">
 
-      \                    <label>Phone #</label>
+      \                    <label for=\"appt-phone\">Phone #</label>
 
-      \                    <input type=\"tel\" name=\"phone\" required=\"\">
+      \                    <input type=\"tel\" id=\"appt-phone\" name=\"phone\" autocomplete=\"tel\" required=\"\">
 
       \                </div>
 
 
       \                <div class=\"column\">
 
-      \                    <label>DOB:</label>
+      \                    <label for=\"appt-dob\">DOB:</label>
 
-      \                    <input type=\"date\" name=\"date_of_birth\" class=\"date-input all-dates date-empty\" autocomplete=\"bday\" data-placeholder=\"mm/dd/yyyy\" required=\"\">
+      \                    <input type=\"date\" id=\"appt-dob\" name=\"date_of_birth\" class=\"date-input all-dates date-empty\" autocomplete=\"bday\" data-placeholder=\"mm/dd/yyyy\" required=\"\">
 
       \                </div>
 
@@ -136,14 +138,14 @@ pageSections:
 
       \            <div class=\"form-row full\">
 
-      \                <input type=\"text\" name=\"insurance_provider\" placeholder=\"Insurance Provider\" required=\"\">
+      \                <label for=\"appt-insurance-provider\" class=\"visually-hidden\">Insurance Provider</label><input type=\"text\" id=\"appt-insurance-provider\" name=\"insurance_provider\" placeholder=\"Insurance Provider\" required=\"\">
 
       \            </div>
 
 
       \            <div class=\"form-row full\">
 
-      \                <input type=\"text\" name=\"how_you_heard_about_us\" placeholder=\"How did you hear about us?\" required=\"\">
+      \                <label for=\"appt-how-you-heard-about-us\" class=\"visually-hidden\">How did you hear about us?</label><input type=\"text\" id=\"appt-how-you-heard-about-us\" name=\"how_you_heard_about_us\" placeholder=\"How did you hear about us?\" required=\"\">
 
       \            </div>
 
@@ -152,7 +154,7 @@ pageSections:
 
       \            <div class=\"form-row full\">
 
-      \                <textarea name=\"message\" placeholder=\"Notes / Comments\" required=\"\"></textarea>
+      \                <label for=\"appt-message\" class=\"visually-hidden\">Notes / Comments</label><textarea id=\"appt-message\" name=\"message\" placeholder=\"Notes / Comments\" required=\"\"></textarea>
 
       \            </div>
 
@@ -172,13 +174,13 @@ pageSections:
 
       \                <div class=\"column\">
 
-      \                    <input type=\"text\" name=\"name_of_insurance\" placeholder=\"Name of Insurance\" required=\"\">
+      \                    <label for=\"appt-name-of-insurance\" class=\"visually-hidden\">Name of Insurance</label><input type=\"text\" id=\"appt-name-of-insurance\" name=\"name_of_insurance\" placeholder=\"Name of Insurance\" required=\"\">
 
       \                </div>
 
       \                <div class=\"column\">
 
-      \                    <input type=\"text\" name=\"subscriber_name\" placeholder=\"Subscriber Name\" required=\"\">
+      \                    <label for=\"appt-subscriber-name\" class=\"visually-hidden\">Subscriber Name</label><input type=\"text\" id=\"appt-subscriber-name\" name=\"subscriber_name\" placeholder=\"Subscriber Name\" required=\"\">
 
       \                </div>
 
@@ -189,13 +191,13 @@ pageSections:
 
       \                <div class=\"column\">
 
-      \                    <input type=\"text\" name=\"subscriber_id\" placeholder=\"Subscriber ID\" required=\"\">
+      \                    <label for=\"appt-subscriber-id\" class=\"visually-hidden\">Subscriber ID</label><input type=\"text\" id=\"appt-subscriber-id\" name=\"subscriber_id\" placeholder=\"Subscriber ID\" required=\"\">
 
       \                </div>
 
       \                <div class=\"column\">
 
-      \                    <input type=\"text\" name=\"group_id\" placeholder=\"Group #\" required=\"\">
+      \                    <label for=\"appt-group-id\" class=\"visually-hidden\">Group #</label><input type=\"text\" id=\"appt-group-id\" name=\"group_id\" placeholder=\"Group #\" required=\"\">
 
       \                </div>
 
@@ -278,10 +280,12 @@ pageSections:
                   <!-- Name -->
                   <div class="form-row half">
                       <div class="column">
-                          <input type="text" class="first_name" name="first_name" placeholder="First Name" required="">
+                          <label for="msg-first-name" class="visually-hidden">First Name</label>
+                          <input type="text" class="first_name" id="msg-first-name" name="first_name" autocomplete="given-name" placeholder="First Name" required="">
                       </div>
                       <div class="column">
-                          <input type="text" class="last_name" name="last_name" placeholder="Last Name" required="">
+                          <label for="msg-last-name" class="visually-hidden">Last Name</label>
+                          <input type="text" class="last_name" id="msg-last-name" name="last_name" autocomplete="family-name" placeholder="Last Name" required="">
                       </div>
                       <!-- Full Name: Combines first_name & last_name -->
                       <input type="hidden" name="name">
@@ -289,22 +293,26 @@ pageSections:
 
                   <!-- Email -->
                   <div class="form-row full">
-                      <input type="text" name="email" placeholder="Email Address" required="">
+                      <label for="msg-email" class="visually-hidden">Email Address</label>
+                          <input type="email" id="msg-email" name="email" autocomplete="email" placeholder="Email Address" required="">
                   </div>
 
                   <!-- Phone -->
                   <div class="form-row full">
-                      <input type="tel" name="phone" placeholder="Phone" required="">
+                      <label for="msg-phone" class="visually-hidden">Phone</label>
+                          <input type="tel" id="msg-phone" name="phone" autocomplete="tel" placeholder="Phone" required="">
                   </div>
 
                   <!-- Subject -->
                   <div class="form-row full">
-                      <input type="text" name="subject" placeholder="Subject" required="">
+                      <label for="msg-subject" class="visually-hidden">Subject</label>
+                          <input type="text" id="msg-subject" name="subject" placeholder="Subject" required="">
                   </div>
 
                   <!-- Message -->
                   <div class="form-row full">
-                      <textarea name="message" placeholder="Message" required=""></textarea>
+                      <label for="msg-message" class="visually-hidden">Message</label>
+                      <textarea id="msg-message" name="message" placeholder="Message" required=""></textarea>
                   </div>
 
                   <!-- Submit -->
