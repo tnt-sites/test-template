@@ -49,7 +49,7 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
         >
           <div class="hero-scrim">
             <div class="hero-inner">
-              {slide.eyebrow && <p class="hero-eyebrow">{slide.eyebrow}</p>}
+              {slide.eyebrow && <div class="hero-eyebrow">{slide.eyebrow}</div>}
               {slide.heading && <h1 class="hero-heading" set:html={slide.heading.replace(/\n/g, "<br />")} />}
               {slide.text && <p class="hero-text">{slide.text}</p>}
               {slide.buttonText && (
@@ -138,6 +138,8 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
     font-style: italic;
     font-weight: 400;
     margin: 0 0 0.25rem;
+    /* Was a <p>, which the base styles gave 1.6. */
+    line-height: 1.6;
   }
 
   .hero-heading {

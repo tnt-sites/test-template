@@ -36,7 +36,7 @@ const image = typeof backgroundImage === "string" ? backgroundImage : (backgroun
 >
   {image && <div class="pb-scrim" />}
   <div class="pb-inner">
-    {eyebrow && <p class="pb-eyebrow">{eyebrow}</p>}
+    {eyebrow && <div class="pb-eyebrow">{eyebrow}</div>}
     {heading && <h1>{heading}</h1>}
   </div>
 </section>
@@ -81,6 +81,8 @@ const image = typeof backgroundImage === "string" ? backgroundImage : (backgroun
     font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0 0 0.25rem;
+    /* Was a <p>, which the base styles gave 1.6. */
+    line-height: 1.6;
   }
 
   h1 {

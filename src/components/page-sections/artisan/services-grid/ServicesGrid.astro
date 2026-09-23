@@ -28,7 +28,7 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
   {backgroundImage && <div class="sg-wood" aria-hidden="true"></div>}
   <div class="sg-inner">
     <div class="sg-intro">
-      {eyebrow && <p class="sg-eyebrow">{eyebrow}</p>}
+      {eyebrow && <div class="sg-eyebrow">{eyebrow}</div>}
       {heading && <h2>{heading}</h2>}
       {text && <p class="sg-lead">{text}</p>}
       {buttonText && <Button variant="primary" size="lg" link={buttonLink} text={buttonText} />}
@@ -57,6 +57,8 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0;
+    /* Was a <p>, which the base styles gave 1.6. */
+    line-height: 1.6;
   }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; line-height: 1.15; margin: 0.25rem 0 1rem; }
   .sg-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 1.75rem; }

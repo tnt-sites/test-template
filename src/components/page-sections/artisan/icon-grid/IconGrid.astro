@@ -43,7 +43,7 @@ const plain = !list.some((c: any) => c.text);
     style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--ic:${iconColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
     <div class="ig-inner">
       <div class="ig-copy-col">
-        {eyebrow && <p class="ig-eyebrow">{eyebrow}</p>}
+        {eyebrow && <div class="ig-eyebrow">{eyebrow}</div>}
         {heading && <h2>{heading}</h2>}
         {text && <p class="ig-lead">{text}</p>}
         <ul class:list={["ig-cards", "no-check", { plain }]}>
@@ -85,7 +85,7 @@ const plain = !list.some((c: any) => c.text);
      1200px container — not the 50/50 its `elementor-col-50` classes imply. */
   .with-video .ig-inner { align-items: center; display: grid; gap: 2.5rem; grid-template-columns: 2fr 3fr; }
   .ig-media :global(lite-youtube) { aspect-ratio: 16 / 9; display: block; margin-top: 0; max-width: 100%; width: 100%; }
-  .ig-eyebrow { color: var(--eb); font-family: "Open Sans", sans-serif; font-size: 18px; font-style: italic; font-weight: 400; letter-spacing: 0.5px; margin: 0; }
+  .ig-eyebrow { color: var(--eb); font-family: "Open Sans", sans-serif; font-size: 18px; font-style: italic; font-weight: 400; letter-spacing: 0.5px; margin: 0; line-height: 1.6; }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 1rem; }
   .ig-lead { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0 0 2rem; max-width: 640px; }
   .ig-cards { display: grid; gap: 1.75rem 2.5rem; grid-template-columns: repeat(var(--cols, 3), 1fr); list-style: none; margin: 2rem 0 0; padding: 0; }

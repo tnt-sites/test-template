@@ -38,7 +38,7 @@ const isGrid = layout === "grid";
 <section class:list={["a-logostrip", maxWidth === "none" && "is-bleed", isGrid && "is-grid"]} data-autoplay={isGrid ? 0 : autoplaySeconds} id={id || undefined}
   style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--per:${perView};--cols:${columns};--gap:${gap};--maxw:${maxWidth};--padblock:${paddingBlock};--fit:${itemFit};--ih:${itemHeight};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="ls-inner">
-    {eyebrow && <p class="ls-eyebrow">{eyebrow}</p>}
+    {eyebrow && <div class="ls-eyebrow">{eyebrow}</div>}
     {heading && <h2>{heading}</h2>}
     <div class="ls-viewport">
       <ul class="ls-logos no-check">
@@ -81,6 +81,8 @@ const isGrid = layout === "grid";
     font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0;
+    /* Was a <p>, which the base styles gave 1.6. */
+    line-height: 1.6;
   }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(1.75rem,3vw,40px); font-weight: 700; margin: 0.25rem 0 2rem; }
 

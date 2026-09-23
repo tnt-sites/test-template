@@ -26,7 +26,7 @@ const {
   {image && <div class="ph-scrim" />}
   <div class="ph-inner">
     <div class="ph-panel">
-    {eyebrow && <p class="ph-eyebrow">{eyebrow}</p>}
+    {eyebrow && <div class="ph-eyebrow">{eyebrow}</div>}
     {heading && <h2>{heading}</h2>}
     {text && <div class="ph-body" set:html={text} />}
     {(buttonText || secondaryButtonText) && (
@@ -84,6 +84,8 @@ const {
     font-weight: 400;
     letter-spacing: 0.5px;
     margin: 0;
+    /* Was a <p>, which the base styles gave 1.6. */
+    line-height: 1.6;
   }
   h2 { color: var(--hd); font-family: Poppins, sans-serif; font-size: clamp(2rem,4vw,65px); font-weight: 700; letter-spacing: -1px; line-height: 1.08; margin: 0.25rem 0 1rem; max-width: 720px; }
   .ph-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin-bottom: 1.75rem; max-width: 560px; }
