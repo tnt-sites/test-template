@@ -25,7 +25,8 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
       <li>
         <a href={c.link || "#"}>
           <div class="cg-media">
-            {c.image && <img src={c.image} alt={c.title || ""} loading="lazy" />}
+            {/* alt="" — the caption below is inside the same link, so repeating it as alt text is redundant. */}
+            {c.image && <img src={c.image} alt="" loading="lazy" />}
           </div>
           <span class="cg-cap">{c.title}</span>
           {c.text && <p>{c.text}</p>}

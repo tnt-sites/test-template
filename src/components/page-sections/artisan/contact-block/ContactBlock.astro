@@ -44,7 +44,8 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
           <div class="cb-row">
             {d.icon && <img class="cb-icon" src={d.icon} alt="" loading="lazy" />}
             <div class="cb-copy">
-              <p class="cb-label">{d.link ? <a href={d.link}>{d.label}</a> : d.label}</p>
+              {/* Label stays plain text: the value below links to the same place, and two adjacent links to one URL is a redundant link. */}
+              <p class="cb-label">{d.label}</p>
               {d.link
                 ? <a class:list={["cb-value", { linked: d.valueIsLink }]} href={d.link}>{d.value}</a>
                 : <p class="cb-value">{d.value}</p>}
@@ -88,7 +89,6 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
   .cb-row + .cb-row { border-top: 1px solid rgb(0 0 0 / 10%); margin-top: 15px; padding-top: 15px; }
   .cb-icon { flex: 0 0 auto; height: auto; width: 73px; }
   .cb-label { color: var(--lb); font-family: Poppins, sans-serif; font-size: 18px; font-weight: 700; line-height: 28px; margin: 8px 0 5px; }
-  .cb-label a { color: inherit; text-decoration: none; }
   .cb-value, .cb-details a.cb-value { color: var(--tx); display: block; font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin: 0; text-decoration: none; }
   .cb-details a:hover { text-decoration: underline; }
 

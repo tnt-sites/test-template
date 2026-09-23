@@ -31,7 +31,7 @@ pageSections:
     labelColor: "#321c0e"
     textColor: "#333333"
   - _component: page-sections/artisan/split-feature
-    id: ""
+    id: request-appointment
     eyebrow: ""
     heading: Appointment Request Form
     text: "

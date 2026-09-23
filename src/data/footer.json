@@ -170,7 +170,7 @@
           },
           {
             "name": "Request Appointment",
-            "path": "/contact-us/"
+            "path": "/contact-us/#request-appointment"
           },
           {
             "name": "Call Us",
