@@ -276,15 +276,15 @@ pageSections:
     id: ""
     heading: Send us a message
     details:
+      - label: Phone
+        value: (608) 467-8022
+        link: tel:6084678022
       - label: Address
         value: 10 North Livingston Street, Suite 301, Madison, WI 53703
         link: https://g.page/artisandds?share
       - label: Email
         value: info@artisandentalmadison.com
         link: mailto:info@artisandentalmadison.com
-      - label: Phone
-        value: (608) 467-8022
-        link: tel:6084678022
     formBlocks:
       - _component: building-blocks/forms/input
         id: ""

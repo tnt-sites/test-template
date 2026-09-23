@@ -10,7 +10,7 @@
     },
     {
       "itemClass": "call",
-      "enabled": true,
+      "enabled": false,
       "href": "#modal-contact",
       "icon": "phone",
       "textMobile": "Offices",
