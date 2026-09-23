@@ -37,6 +37,10 @@ function createNavItemData(item, level, parentGroupId) {
     {
       navData.map((item) => {
         const itemData = createNavItemData(item, "top");
+        // A trigger without `for` (the item has no page, so its .nav-item-label
+        // already labels the toggle) isn't a form label at all — render it as a
+        // span so it isn't an orphaned <label>. Scripts toggle it either way.
+        const Trigger = itemData.path ? "label" : "span";
 
         if (!itemData.hasChildren) {
           return (
@@ -71,7 +75,7 @@ function createNavItemData(item, level, parentGroupId) {
                 {itemData.name}
               </label>
             )}
-            <label
+            <Trigger
               for={itemData.path ? itemData.dropdownId : undefined}
               class="nav-item-trigger"
               role="button"
@@ -83,7 +87,7 @@ function createNavItemData(item, level, parentGroupId) {
               <span class="nav-item-icon">
                 <Icon name="chevron-right" size="none" aria-hidden="true" />
               </span>
-            </label>
+            </Trigger>
             <div
               id={itemData.contentId}
               class="nav-item-content"
@@ -94,6 +98,7 @@ function createNavItemData(item, level, parentGroupId) {
               <ul class="nav-list">
                 {itemData.children!.map((child) => {
                   const childData = createNavItemData(child, "child", itemData.parentGroupId);
+                  const ChildTrigger = childData.path ? "label" : "span";
 
                   if (!childData.hasChildren) {
                     return (
@@ -131,7 +136,7 @@ function createNavItemData(item, level, parentGroupId) {
                           {childData.name}
                         </label>
                       )}
-                      <label
+                      <ChildTrigger
                         for={childData.path ? childData.dropdownId : undefined}
                         class="nav-item-trigger"
                         role="button"
@@ -142,7 +147,7 @@ function createNavItemData(item, level, parentGroupId) {
                         <span class="nav-item-icon">
                           <Icon name="chevron-right" size="none" aria-hidden="true" />
                         </span>
-                      </label>
+                      </ChildTrigger>
                       <div
                         id={childData.contentId}
                         class="nav-item-nested"
@@ -187,8 +192,9 @@ function createNavItemData(item, level, parentGroupId) {
   function updateAriaStates(toggle, isExpanded) {
     const contentId = toggle.getAttribute("aria-controls");
     const content = document.getElementById(contentId || "");
-    const triggerId = toggle.getAttribute("id");
-    const trigger = document.querySelector(`label[for="${triggerId}"]`);
+    // The chevron button, not whichever label carries `for` — on items with no
+    // page that was the text label, so the role="button" never got aria-expanded.
+    const trigger = toggle.closest(".nav-item")?.querySelector(":scope > .nav-item-trigger");
 
     toggle.setAttribute("aria-expanded", isExpanded.toString());
 

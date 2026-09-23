@@ -90,7 +90,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         />
       </slot>
     </div>
-    <label
+    <span
       class="mobile-close mobile-button"
       role="button"
       aria-label="Close navigation menu"
@@ -104,7 +104,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         hideText="true"
         class="mobile-nav-close mobile-nav-button"
       />
-    </label>
+    </span>
   </div>
 
   <div class="mobile-content">
@@ -131,6 +131,10 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       {
         navData.map((item) => {
           const itemData = createNavItemData(item, "top");
+          // A trigger without `for` (the item has no page, so its .nav-item-label
+          // already labels the toggle) isn't a form label at all — render it as a
+          // span so it isn't an orphaned <label>. Scripts toggle it either way.
+          const Trigger = itemData.path ? "label" : "span";
 
           if (!itemData.hasChildren) {
             return (
@@ -166,7 +170,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                   {itemData.name}
                 </label>
               )}
-              <label
+              <Trigger
                 for={itemData.path ? itemData.dropdownId : undefined}
                 class="nav-item-trigger"
                 role="button"
@@ -177,7 +181,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 <span class="nav-item-icon">
                   <Icon name="chevron-right" size="none" aria-hidden="true" />
                 </span>
-              </label>
+              </Trigger>
               <div
                 id={itemData.contentId}
                 class="nav-item-content"
@@ -188,6 +192,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                 <ul class="nav-list">
                   {itemData.children!.map((child) => {
                     const childData = createNavItemData(child, "child", itemData.parentGroupId);
+                    const ChildTrigger = childData.path ? "label" : "span";
 
                     if (!childData.hasChildren) {
                       return (
@@ -226,7 +231,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                             {childData.name}
                           </label>
                         )}
-                        <label
+                        <ChildTrigger
                           for={childData.path ? childData.dropdownId : undefined}
                           class="nav-item-trigger"
                           role="button"
@@ -237,7 +242,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                           <span class="nav-item-icon">
                             <Icon name="chevron-right" size="none" aria-hidden="true" />
                           </span>
-                        </label>
+                        </ChildTrigger>
                         <div
                           id={childData.contentId}
                           class="nav-item-content"
