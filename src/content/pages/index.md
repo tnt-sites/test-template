@@ -7,6 +7,25 @@ title: Home
 description: ""
 canonical: /
 pageSections:
+  - _component: page-sections/info-blocks/announcement-modal
+    id: insurance-update-modal
+    closeLabel: Close modal
+    showCloseButton: true
+    openOnLoad: true
+    class: ""
+    contentSections:
+      - _component: building-blocks/core-elements/heading
+        text: Important Insurance Update
+        level: h3
+        size: default
+        alignX: center
+        iconName: null
+        iconPosition: before
+      - _component: building-blocks/core-elements/text
+        text: |-
+          You may receive a letter from your insurance company that our office is no longer in-network. If you were previously in-network, kindly disregard. Insurance companies automatically generate these stock letters when there is a disturbance in the credentialing process. We are in the midst of recredentialing and anticipate receiving confirmation of network participation shortly.
+
+          If your EOB processes as out-of-network during the transition, we will honor the in-network fee schedule that we will have once we are back in-network for covered plans.
   - _component: page-sections/heroes/artisan-hero
     id: ""
     slides:

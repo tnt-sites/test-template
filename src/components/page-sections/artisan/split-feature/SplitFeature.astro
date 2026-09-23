@@ -12,7 +12,7 @@ const {
   backgroundColor = "transparent", backgroundImage = "", overlayOpacity = 0.15,
   marginBottom = "0px",
   eyebrowColor = "var(--color-brand-secondary)",
-  headingColor = "var(--color-brand)", textColor = "#333333",
+  headingColor = "var(--color-brand)", textColor = "#333333", linkColor = "",
   buttonBackgroundColor = "", buttonTextColor = "", buttonAlign = "",
   headingSize = "", paddingBlock = "",
   id, _component, ...rest
@@ -36,7 +36,7 @@ const btnStyle = [
 ].filter(Boolean).join(";") || undefined;
 ---
 <section class:list={["a-split", { reverse, solo, center: !image && align === "center", wide: !image && align === "left" }]} id={id || undefined}
-  style={`--mediah:${mediaMinHeight};--mb:${marginBottom};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}${headingSize ? `;--hdsize:${headingSize}` : ""}${paddingBlock ? `;--pad:${paddingBlock}` : ""}`} {...rest}>
+  style={`--mediah:${mediaMinHeight};--mb:${marginBottom};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}${linkColor ? `;--lk:${linkColor}` : ""}${headingSize ? `;--hdsize:${headingSize}` : ""}${paddingBlock ? `;--pad:${paddingBlock}` : ""}`} {...rest}>
   <div class="sf-inner">
     {image && <div class="sf-media"><img src={image} alt={imageAlt || heading || ""} loading="lazy" /></div>}
     {hasCopy && <div class="sf-copy">
@@ -96,11 +96,14 @@ const btnStyle = [
   .sf-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 28px; margin-bottom: 1.75rem; }
   .sf-body :global(p) { color: inherit; margin: 0 0 1rem; }
 
-  /* MEASURED: #bf9800, no underline until hover. `--color-link` carries that
-     now, but name the subtle-brand token so the prose keeps the source's link
-     gold even if the link token is retuned. */
-  .sf-body :global(a) { color: var(--color-brand-subtle, #bf9800); text-decoration: none; }
-  .sf-body :global(a:hover) { text-decoration: underline; }
+  /* The source's link gold (#bf9800, --color-brand-subtle) is only 2.7:1 on
+     white and 2.1:1 on the #e0e0e0 callout boxes, so prose links default to a
+     darker gold: 6.6:1 on white, 5:1 on #e0e0e0. --color-brand-subtle stays
+     #bf9800 because the footer and header use it on brown, where it passes.
+     Set linkColor (e.g. #bf9800) on a dark section. Underlined because the
+     gold is too close to the #333 body copy to tell links apart by colour. */
+  .sf-body :global(a) { color: var(--lk, #6e5c10); text-decoration: underline; text-underline-offset: 0.15em; }
+  .sf-body :global(a:hover) { text-decoration-thickness: 2px; }
 
   .sf-body :global(img.alignleft) { float: left; margin: 0 2em 1em 0; }
   .sf-body :global(img.alignright) { float: right; margin: 0 0 1em 2em; }

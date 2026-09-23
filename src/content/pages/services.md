@@ -34,7 +34,7 @@ pageSections:
     buttonLink: /contact-us/
     secondaryButtonText: View Services
     secondaryButtonLink: "#down"
-    eyebrowColor: "var(--color-brand-secondary)"
+    eyebrowColor: "#d2b22e"
     headingColor: "#ffffff"
     textColor: "#ffffff"
   - _component: page-sections/artisan/logo-strip

@@ -8,6 +8,7 @@ siteModals:
         id: ""
         closeLabel: Close modal
         showCloseButton: true
+        openOnLoad: false
         class: ""
         contentSections: []
       preview:
@@ -31,6 +32,9 @@ siteModals:
         showCloseButton:
           type: switch
           comment: Toggle close button visibility.
+        openOnLoad:
+          type: switch
+          comment: Automatically open this modal when the page loads.
         class:
           type: text
           comment: Optional custom class for modal styling.

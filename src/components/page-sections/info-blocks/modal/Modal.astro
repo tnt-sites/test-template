@@ -7,6 +7,7 @@ const {
   id,
   closeLabel = "Close modal",
   showCloseButton = true,
+  openOnLoad = false,
   contentSections,
   propName = "contentSections",
   class: className,
@@ -19,7 +20,13 @@ const htmlAttributes = Object.fromEntries(
 );
 ---
 
-<dialog id={id} class:list={["modal", className]} tabindex="-1" {...htmlAttributes}>
+<dialog
+  id={id}
+  class:list={["modal", className]}
+  tabindex="-1"
+  data-open-on-load={openOnLoad ? "true" : undefined}
+  {...htmlAttributes}
+>
   {
     showCloseButton && (
       <button type="button" class="modal-close" data-modal-close aria-label={closeLabel}>
@@ -148,6 +155,10 @@ const htmlAttributes = Object.fromEntries(
       modal.addEventListener("close", () => {
         stopModalVids(modal);
       });
+
+      if (modal.dataset.openOnLoad === "true") {
+        openDialog(modal);
+      }
     });
 
     document.addEventListener("click", (event) => {
@@ -229,6 +240,10 @@ const htmlAttributes = Object.fromEntries(
       position: absolute;
       top: 0;
       right: 0;
+      /* CustomSection's own .content sits at z-index: var(--layer-1) (10),
+         so this button needs to clear that or its clicks get swallowed by
+         modal body content even though it's visually on top. */
+      z-index: var(--layer-2);
     }
 
     .modal-body {

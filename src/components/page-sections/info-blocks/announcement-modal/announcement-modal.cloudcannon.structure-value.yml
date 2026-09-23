@@ -1,0 +1,22 @@
+label: Announcement Modal
+icon: campaign
+description: A banner-style popup with a dark heading bar that opens automatically when the page loads. Good for practice-wide notices.
+value:
+  _component: page-sections/info-blocks/announcement-modal
+  id: announcement-modal
+  closeLabel: Close modal
+  showCloseButton: true
+  openOnLoad: true
+  class: ""
+  contentSections:
+    - _component: building-blocks/core-elements/heading
+      text: Important Update
+      level: h3
+      size: default
+      alignX: center
+      iconName: null
+      iconPosition: before
+    - _component: building-blocks/core-elements/text
+      text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/announcement-modal/announcement-modal.cloudcannon.inputs.yml

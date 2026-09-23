@@ -12,7 +12,7 @@ value:
   buttonLink: ""
   secondaryButtonText: ""
   secondaryButtonLink: ""
-  eyebrowColor: "var(--color-brand-secondary)"
+  eyebrowColor: "#d2b22e"
   headingColor: "#ffffff"
   textColor: "#ffffff"
 preview:

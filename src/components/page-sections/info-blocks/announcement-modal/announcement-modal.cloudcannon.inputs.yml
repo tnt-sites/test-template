@@ -15,6 +15,6 @@ class:
   comment: Optional custom class name for modal styling.
 contentSections:
   type: array
-  comment: Content blocks rendered inside the modal body.
+  comment: Content blocks rendered inside the modal body. The first block renders as the banner heading, the rest as the body.
   options:
     structures: _structures.cardSections

@@ -13,6 +13,9 @@ _inputs:
     type: color
   textColor:
     type: color
+  linkColor:
+    type: color
+    comment: Leave blank for the default dark gold. Use a lighter colour (e.g. #bf9800) on dark backgrounds.
   buttonBackgroundColor:
     type: color
     comment: Leave blank for the default brand button colour.

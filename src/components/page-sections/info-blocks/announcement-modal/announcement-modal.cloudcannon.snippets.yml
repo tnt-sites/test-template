@@ -1,12 +1,12 @@
-modal:
+announcement-modal:
   template: mdx_component
   inline: false
   preview:
     text:
-      - Modal
+      - Announcement Modal
     icon: add
   definitions:
-    component_name: Modal
+    component_name: AnnouncementModal
     named_args:
       - editor_key: id
         type: string
@@ -26,4 +26,4 @@ modal:
         type: string
         optional: true
   _inputs_from_glob:
-    - /src/components/page-sections/info-blocks/modal/modal.cloudcannon.inputs.yml
+    - /src/components/page-sections/info-blocks/announcement-modal/announcement-modal.cloudcannon.inputs.yml

@@ -16,7 +16,7 @@ const {
   eyebrow = "", heading = "", text = "", image = "",
   buttonText = "", buttonLink = "",
   secondaryButtonText = "", secondaryButtonLink = "",
-  eyebrowColor = "var(--color-brand-secondary)",
+  eyebrowColor = "#d2b22e",
   headingColor = "#ffffff", textColor = "#ffffff",
   id, _component, ...rest
 } = Astro.props;
@@ -25,6 +25,7 @@ const {
   style={`--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor}${image ? `;--img:url('${image}')` : ""}`} {...rest}>
   {image && <div class="ph-scrim" />}
   <div class="ph-inner">
+    <div class="ph-panel">
     {eyebrow && <p class="ph-eyebrow">{eyebrow}</p>}
     {heading && <h2>{heading}</h2>}
     {text && <div class="ph-body" set:html={text} />}
@@ -36,10 +37,15 @@ const {
         )}
       </div>
     )}
+    </div>
   </div>
 </section>
 <style>
+  /* The dark background-color sits under the photo so white copy still has
+     contrast if the image fails to load, and so contrast checkers (WAVE,
+     axe), which can't sample a photo, measure against something real. */
   .a-photohero {
+    background-color: #292929;
     background-image: var(--img, none);
     background-position: top right;
     background-repeat: no-repeat;
@@ -63,6 +69,13 @@ const {
     position: relative;
     width: 100%;
   }
+  /* The scrim alone left white copy near 3:1 over bright photos (windows,
+     white walls), so the copy sits on its own solid brand-brown panel. */
+  .ph-panel {
+    background-color: #321c0e;
+    max-width: 640px;
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
   .ph-eyebrow {
     color: var(--eb);
     font-family: "Open Sans", sans-serif;
@@ -76,5 +89,7 @@ const {
   .ph-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 26px; margin-bottom: 1.75rem; max-width: 560px; }
   .ph-body :global(p) { color: inherit; margin: 0 0 1rem; }
   .ph-buttons { display: flex; flex-wrap: wrap; gap: 1rem; }
+  /* The secondary button is brand brown, the same as the panel. */
+  .ph-buttons :global(.button.variant-secondary) { box-shadow: inset 0 0 0 2px #fff; }
   @media (max-width: 640px) { .a-photohero { background-attachment: scroll; min-height: 70vh; } }
 </style>

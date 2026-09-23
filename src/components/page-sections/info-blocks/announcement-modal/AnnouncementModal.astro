@@ -1,0 +1,77 @@
+---
+/**
+ * A site-notice modal: the shared Modal component (dark backdrop, open/close/
+ * focus handling all come from its controller) wearing a banner-style skin —
+ * a solid heading bar over a plain-text body, for practice-wide announcements
+ * like insurance or hours updates.
+ */
+import Modal from "@page-sections/info-blocks/modal/Modal.astro";
+
+const {
+  id,
+  closeLabel = "Close modal",
+  showCloseButton = true,
+  openOnLoad = true,
+  contentSections,
+  class: className,
+  _component,
+  ...rest
+} = Astro.props;
+---
+
+<Modal
+  id={id}
+  class:list={["announcement-modal", className]}
+  closeLabel={closeLabel}
+  showCloseButton={showCloseButton}
+  openOnLoad={openOnLoad}
+  contentSections={contentSections}
+  {...rest}
+/>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .modal.announcement-modal {
+      border: none;
+      max-width: min(640px, calc(100vw - 2rem));
+      overflow: hidden;
+      padding: 0;
+
+      &::backdrop {
+        background: rgb(0 0 0 / 55%);
+      }
+
+      .modal-body {
+        margin-top: 0;
+        position: relative;
+      }
+
+      .modal-body .heading {
+        background: var(--color-brand);
+        color: var(--color-text-on-brand);
+        margin: 0;
+        padding: var(--spacing-lg) var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
+        text-align: center;
+      }
+
+      .modal-body .text {
+        color: var(--gray-11);
+        margin: 0;
+        padding: var(--spacing-xl);
+      }
+
+      .modal-body .text p + p {
+        margin-top: var(--spacing-md);
+      }
+
+      .modal-close {
+        background-color: var(--color-brand-secondary);
+        color: var(--color-text-on-brand);
+        height: 2.75rem;
+        min-height: 0;
+        min-width: 0;
+        width: 2.75rem;
+      }
+    }
+  }
+</style>
