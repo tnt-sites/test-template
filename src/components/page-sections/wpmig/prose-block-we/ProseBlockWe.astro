@@ -49,7 +49,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       <div class="pbw-grid">
         {list.map((it) => (
           <div class="pbw-box7">
-            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pbw-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="pbw-btn" editable={false} text={it.buttonText} link={it.buttonLink || "#"} />}
           </div>
         ))}
       </div>

@@ -54,7 +54,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       <div class="cbr-grid">
         {list.map((it) => (
           <div class="cbr-box6">
-            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cbr-btn" text={it.buttonText} link={it.buttonLink || "#"} />}
+            {it.buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="cbr-btn" editable={false} text={it.buttonText} link={it.buttonLink || "#"} />}
           </div>
         ))}
       </div>

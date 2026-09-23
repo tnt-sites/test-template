@@ -1,0 +1,722 @@
+---
+/**
+ * What Are Dental Implants — migrated from dental-services/restorative-dentistry/dental-implants [2] (auto) by wp-migrator.
+ *
+ * Baked in: layout, spacing, typography. Props: text, images, links, colours.
+ */
+import Button from "@core-elements/button/Button.astro";
+const {
+  heading = "",
+  text = "",
+  text2 = "",
+  subheading = "",
+  text3 = "",
+  heading2 = "",
+  text4 = "",
+  heading3 = "",
+  text5 = "",
+  buttonText = "",
+  buttonLink = "",
+  secondaryButtonText = "",
+  secondaryButtonLink = "",
+  headingColor = "#1b2e38",
+  textColor = "#1b2e38",
+  buttonBackgroundColor = "#5bb781",
+  buttonTextColor = "#ffffff",
+  buttonBackgroundColor2 = "#3b6278",
+  buttonBackgroundHoverColor = "#49ab71",
+  buttonBackgroundColor2HoverColor = "#54595f",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+---
+<div class="what-are-dental-implants" id={id || undefined} style={`--hd:${headingColor};--tx:${textColor};--btnbg:${buttonBackgroundColor};--btntx:${buttonTextColor};--c5:${buttonBackgroundColor2};--c6:${buttonBackgroundHoverColor};--c7:${buttonBackgroundColor2HoverColor}`} {...rest}>
+  <div class="wadi-box">
+    <div class="wadi-box2">
+      <div class="wadi-box3">
+        <div class="wadi-box4">
+          <div class="wadi-box5">
+            {text && <div class="wadi-body" set:html={text} />}
+          </div>
+        </div>
+      </div>
+      <div class="wadi-box6">
+        <div class="wadi-box7">
+          <h3 class="wadi-heading">{heading}</h3>
+        </div>
+        <div class="wadi-box8">
+          <div class="wadi-box9">
+            {text2 && <p class="wadi-text">{text2}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="wadi-box10">
+        <div class="wadi-box11">
+          {subheading && <h3 class="wadi-heading2">{subheading}</h3>}
+        </div>
+        <div class="wadi-box12">
+          {text3 && <div class="wadi-body2" set:html={text3} />}
+        </div>
+      </div>
+      <div class="wadi-box13">
+        <div class="wadi-box14">
+          {heading2 && <h3 class="wadi-heading3">{heading2}</h3>}
+        </div>
+        <div class="wadi-box15">
+          <div class="wadi-box16">
+            {text4 && <p class="wadi-text2">{text4}</p>}
+          </div>
+        </div>
+      </div>
+      <div class="wadi-box17">
+        <div class="wadi-box18">
+          <div class="wadi-decor" aria-hidden="true"></div>
+        </div>
+        <div class="wadi-box19">
+          {heading3 && <h2 class="wadi-heading4">{heading3}</h2>}
+        </div>
+        <div class="wadi-box20">
+          <div class="wadi-box21">
+            {text5 && <p class="wadi-text3" set:html={text5} />}
+          </div>
+        </div>
+        <div class="wadi-box22">
+          <div class="wadi-box23">
+            {buttonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="wadi-btn" text={buttonText} link={buttonLink || "#"} />}
+          </div>
+        </div>
+        <div class="wadi-box24">
+          <div class="wadi-box25">
+            <div class="wadi-box26">
+              {secondaryButtonText && <Button variant="primary" size="md" width="none" borderRadius="default" borderWidth="none" class="wadi-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  .what-are-dental-implants {
+    box-sizing: border-box;
+    color: #1b2e38;
+    font-family: Roboto, sans-serif;
+    line-height: 24px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: left;
+  }
+
+  .wadi-box {
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .wadi-box2 {
+    box-sizing: border-box;
+  }
+
+  .wadi-box3 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wadi-box4 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box5 {
+    box-sizing: border-box;
+    min-height: 208px;
+  }
+
+  .wadi-body :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wadi-box6 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wadi-box7 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wadi-heading {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wadi-box8 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box9 {
+    box-sizing: border-box;
+  }
+
+  .wadi-text {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wadi-box10 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wadi-box11 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wadi-heading2 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wadi-box12 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 496px;
+  }
+
+  .wadi-body2 :global(p) {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wadi-box13 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wadi-box14 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wadi-heading3 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wadi-box15 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box16 {
+    box-sizing: border-box;
+  }
+
+  .wadi-text2 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wadi-box17 {
+    align-content: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: relative;
+  }
+
+  .wadi-box18 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+
+  .wadi-decor {
+    border-top: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+  }
+
+  .wadi-box19 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .wadi-heading4 {
+    box-sizing: border-box;
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .wadi-box20 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box21 {
+    box-sizing: border-box;
+  }
+
+  .wadi-text3 {
+    box-sizing: border-box;
+    margin-top: 0px;
+  }
+
+  .wadi-box22 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box23 {
+    box-sizing: border-box;
+  }
+
+  :global(.wadi-btn) {
+    background-color: var(--btnbg);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.wadi-btn) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  .wadi-box24 {
+    box-sizing: border-box;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  .wadi-box25 {
+    box-sizing: border-box;
+  }
+
+  .wadi-box26 {
+    box-sizing: border-box;
+  }
+
+  :global(.wadi-btn2) {
+    background-color: var(--c5);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--btntx);
+    display: inline-block;
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 15px;
+    margin: 0px;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  :global(.wadi-btn2) :global(.label-text) {
+    white-space: nowrap;
+  }
+
+  :global(.wadi-btn):hover {
+    background-color: var(--c6);
+  }
+
+  :global(.wadi-btn2):hover {
+    background-color: var(--c7);
+  }
+
+  @media (min-width: 768px) {
+    .wadi-box {
+      margin-left: 24px;
+      margin-right: 24px;
+      max-width: 720px;
+    }
+
+    .wadi-box5 {
+      min-height: 136px;
+    }
+
+    .wadi-heading {
+      line-height: 28px;
+    }
+
+    .wadi-heading2 {
+      line-height: 28px;
+    }
+
+    .wadi-box12 {
+      min-height: 280px;
+    }
+
+    .wadi-heading3 {
+      line-height: 28px;
+    }
+
+    .wadi-heading4 {
+      line-height: 32px;
+    }
+
+    .wadi-box24 {
+      display: none;
+      flex: 0 1 auto;
+      max-width: none;
+    }
+
+    .wadi-box25 {
+      display: none;
+    }
+
+    .wadi-box26 {
+      display: none;
+    }
+
+    :global(.wadi-btn2) {
+      background-color: #3b6278;
+      color: #ffffff;
+      display: none;
+      white-space: normal;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .wadi-box {
+      margin-left: 150px;
+      margin-right: 150px;
+      max-width: 1140px;
+    }
+
+    .wadi-box5 {
+      min-height: 88px;
+    }
+
+    .wadi-box12 {
+      min-height: 184px;
+    }
+  }
+
+/* wpmig:corrections:begin */
+  .wadi-heading {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .wadi-heading2 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .wadi-heading3 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .wadi-decor {
+    font-family: Montserrat, sans-serif;
+    font-size: 32px;
+    line-height: 41.6px;
+  }
+  .wadi-heading4 {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .wadi-box22 {
+    background-color: rgb(91, 183, 129);
+    color: rgb(255, 255, 255);
+    font-family: Montserrat, sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: center;
+  }
+  .wadi-box7 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .wadi-box11 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  .wadi-box14 {
+    font-family: Montserrat, sans-serif;
+    font-size: 28px;
+    line-height: 36.4px;
+  }
+  :global(.wadi-btn) {
+    align-items: normal;
+    background-color: rgb(59, 98, 120);
+    justify-content: normal;
+  }
+  .wadi-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wadi-text2 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wadi-text3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .wadi-box23 {
+    color: rgb(27, 46, 56);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .wadi-heading {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    :global(.wadi-btn) {
+      align-items: normal;
+      background-color: rgb(91, 183, 129);
+      justify-content: normal;
+    }
+
+    .wadi-text {
+      line-height: 24px;
+    }
+
+    .wadi-text2 {
+      line-height: 24px;
+    }
+
+    .wadi-text3 {
+      line-height: 24px;
+    }
+
+    .wadi-decor {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box22 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .wadi-box23 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .wadi-box7 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box11 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box14 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .wadi-heading {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading2 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading3 {
+      font-family: Montserrat, sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .wadi-heading4 {
+      font-family: Montserrat, sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 32px;
+    }
+
+    :global(.wadi-btn) {
+      align-items: normal;
+      background-color: rgb(91, 183, 129);
+      justify-content: normal;
+    }
+
+    .wadi-text {
+      line-height: 24px;
+    }
+
+    .wadi-text2 {
+      line-height: 24px;
+    }
+
+    .wadi-text3 {
+      line-height: 24px;
+    }
+
+    .wadi-decor {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box22 {
+      background-color: rgba(0, 0, 0, 0);
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .wadi-box23 {
+      color: rgb(27, 46, 56);
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+    }
+
+    .wadi-box7 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box11 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .wadi-box14 {
+      font-family: Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+/* wpmig:corrections:end */
+</style>

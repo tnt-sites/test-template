@@ -1,0 +1,46 @@
+---
+_schema: default
+_mig:
+  v: 0.1.0
+  gen: wpmig
+  hash: ""
+title: Dental Implant Littleton CO
+description: ""
+canonical: /dental-services/restorative-dentistry/dental-implants/
+pageSections:
+  - _component: page-sections/wpmig/dental-implant-littleton-co
+    id: ""
+    heading: Dental Implant Littleton CO
+    backgroundImage: /wp-content/themes/ColumbineCreek/img/texture-bg-blue.jpg
+    headingColor: "#1b2e38"
+  - _component: page-sections/wpmig/home-dental-services-littleton
+    id: ""
+    text: <span><a title="Go to Columbine Creek Dentistry - Dentist Littleton." href=""><span>Home</span></a></span> &gt; <span><a title="Go to Dental Services Littleton CO." href="/dental-services/"><span>Dental Services Littleton CO</span></a></span> &gt; <span><a title="Go to Restorative Dentistry Littleton CO." href="/dental-services/restorative-dentistry/"><span>Restorative Dentistry Littleton CO</span></a></span> &gt; <span>Dental Implant Littleton CO</span>
+    textColor: "#1b2e38"
+  - _component: page-sections/wpmig/what-are-dental-implants
+    id: ""
+    heading: What are Dental Implants in Littleton, CO?
+    text: |-
+      <p>When dental restorations are needed, dental implants offer the most natural and functional results. At Columbine Creek Dentistry, we welcome patients that are looking to restore their smiles and offer dental implant services.</p>
+      <p>Dental Implants in Littleton, CO are among the restorative dentistry services we offer. <a href="/dental-services/restorative-dentistry/" target="_blank" rel="noopener">Click here</a>&nbsp;for more.</p>
+    text2: Dental implants are surgically placed artificial teeth that look and function like natural teeth. The ‘root’ of the new tooth is a titanium post that is surgically placed in the jaw bone. Once the surgical site heals, a dental crown is adhered to the post to create a new tooth that can last for decades.
+    subheading: Are Dental Implants Right for You?
+    text3: |-
+      <p>While dental implants offer the best results for replacing missing teeth, there are considerations when determining whether implants are right for you. Like any surgical procedure, our medical team will need to ensure you are a good candidate for implants. The good news is that most of our patients who have suffered tooth loss can undergo implant surgery.</p>
+      <p>Many patients are concerned that their health or previous dental issues may preclude them from getting dental implants. While we do take this into consideration, many of these pre-existing conditions will not hinder patients from receiving dental implants. Even those that may have lost teeth due to periodontal disease can be candidates for implants. We can help our patients overcome their existing oral health issues to give them a chance to pursue dental implants.</p>
+    heading2: Excellence in Implant Dentistry
+    text4: At Columbine Creek Dentistry, we put your oral health first, especially when it comes to making permanent changes to your smile. We utilize the latest dental technology and techniques to ensure our dental implants look beautiful and have the elements in place to last a lifetime. You can trust that our implant experts will use their experience to give you back your complete smile.
+    heading3: Schedule an Appointment
+    text5: If you have a tooth or multiple teeth that are missing, <a href="/contact-us/">contact Columbine Creek Dentistry today to schedule a consultation</a> at our office to learn more about dental implant Littleton. Most dental plans are accepted and we have payment options available.
+    buttonText: Schedule Appointment
+    buttonLink: https://www.flexbook.me/schedulecc/1
+    secondaryButtonText: Call Us Now
+    secondaryButtonLink: tel:(720) 583-3549
+    headingColor: "#1b2e38"
+    textColor: "#1b2e38"
+    buttonBackgroundColor: "#5bb781"
+    buttonTextColor: "#ffffff"
+    buttonBackgroundColor2: "#3b6278"
+    buttonBackgroundHoverColor: "#49ab71"
+    buttonBackgroundColor2HoverColor: "#54595f"
+---

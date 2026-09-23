@@ -22,7 +22,7 @@ const {
       {heading && <h2 class="sc-heading" set:html={heading} />}
       {subtext && <div class="sc-sub" set:html={subtext} />}
       {buttonText && (
-        <Button variant="secondary" size="lg" uppercase class="sc-btn" text={buttonText} link={buttonLink || "#"} />
+        <Button variant="secondary" size="lg" uppercase class="sc-btn" data-prop="buttonText" text={buttonText} link={buttonLink || "#"} />
       )}
     </div>
   </section>

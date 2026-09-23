@@ -68,7 +68,7 @@ const loop = images.length > 0 ? [...images, ...images] : [];
     )}
     {buttonText && (
       <div class="mpmt-cta">
-        <Button variant="secondary" size="md" uppercase class="mpmt-btn" text={buttonText} link={buttonLink || "#"} />
+        <Button variant="secondary" size="md" uppercase class="mpmt-btn" data-prop="buttonText" text={buttonText} link={buttonLink || "#"} />
       </div>
     )}
   </div>

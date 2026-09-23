@@ -85,10 +85,10 @@ const raw0 = `<svg aria-hidden="true" viewBox="0 0 512 512" width="26" height="2
         </div>
         <div class="mp-box15">
           <div class="mp-box16">
-            {buttonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" uppercase class="mp-btn" text={buttonText} link={buttonLink || "#"} />}
+            {buttonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" uppercase class="mp-btn" data-prop="buttonText" text={buttonText} link={buttonLink || "#"} />}
           </div>
           <div class="mp-box17">
-            {secondaryButtonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" class="mp-btn2" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
+            {secondaryButtonText && <Button variant="primary" size="lg" width="none" borderRadius="default" borderWidth="xs" class="mp-btn2" data-prop="secondaryButtonText" text={secondaryButtonText} link={secondaryButtonLink || "#"} />}
           </div>
         </div>
       </div>
