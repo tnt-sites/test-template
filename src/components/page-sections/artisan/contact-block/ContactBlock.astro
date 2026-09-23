@@ -94,8 +94,9 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
 
   /* The source links every row's label but only the phone number's value, and
      the theme paints that one link gold — which is why the phone reads
-     differently from the address and email sitting above it. */
-  .cb-value.linked, .cb-details a.cb-value.linked { color: var(--color-brand-subtle, #bf9800); }
+     differently from the address and email sitting above it. The source's
+     #bf9800 fails contrast on white, so it takes the darkened --color-link. */
+  .cb-value.linked, .cb-details a.cb-value.linked { color: var(--color-link); }
   .a-form { display: grid; gap: 1rem; }
   @media (max-width: 860px) { .cb-inner { grid-template-columns: 1fr; } }
 </style>

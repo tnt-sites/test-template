@@ -394,7 +394,7 @@ pageSections:
     eyebrowColor: "var(--color-brand-secondary)"
     headingColor: "#321c0e"
     textColor: "#333333"
-    buttonBackgroundColor: rgb(210, 178, 46)
+    buttonBackgroundColor: "#7e6a1c"
     buttonTextColor: rgb(255, 255, 255)
   - _component: page-sections/artisan/faq-accordion
     id: ""

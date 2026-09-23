@@ -5,8 +5,8 @@
   "colorBrandSubtle": "#bf9800",
   "colorBrandOn": "",
   "colorTextOnBrand": "#efefef",
-  "colorLink": "#cc3366",
-  "colorLinkHover": "#333366",
+  "colorLink": "#6e5c10",
+  "colorLinkHover": "#321c0e",
   "extraColors": [],
   "bodyFont": {
     "fontFamily": "\"Open Sans\", sans-serif"

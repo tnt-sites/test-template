@@ -162,8 +162,16 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
     margin: 0 0 1.25rem;
   }
 
-  .pb2-prose :global(a) {
-    color: var(--hbg);
+  /* Buttons excluded: this rule used to paint their labels brown on the gold
+     button fill (3:1). */
+  .pb2-prose :global(a:not(.button)) {
+    color: var(--color-link);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+  }
+
+  .pb2-prose :global(a:not(.button):hover) {
+    color: var(--color-link-hover);
   }
 
   .pb2-prose :global(.media-columns) {

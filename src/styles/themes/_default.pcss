@@ -80,9 +80,12 @@
      the starter's placeholder pink (#c36 — it shows up as three tokens here,
      which is the giveaway). MEASURED on the source: body links are #bf9800 and
      do not change on hover. Lifted prose links read this token, so the
-     placeholder was rendering pink links on pages like contact-us. */
-  --color-link: #bf9800;
-  --color-link-hover: #bf9800;
+     placeholder was rendering pink links on pages like contact-us.
+     Darkened from that measured #bf9800 (2.7:1 on white) to pass WCAG AA:
+     6.6:1 on white, 5:1 on the #e0e0e0 callout boxes. #bf9800 lives on as
+     --color-brand-subtle for links on the brown header and footer. */
+  --color-link: #6e5c10;
+  --color-link-hover: #321c0e;
   --color-brand: #321c0e;
   --color-brand-secondary: #7e6a1c;
   --color-brand-muted: #c36;

@@ -96,13 +96,10 @@ const btnStyle = [
   .sf-body { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 18px; line-height: 28px; margin-bottom: 1.75rem; }
   .sf-body :global(p) { color: inherit; margin: 0 0 1rem; }
 
-  /* The source's link gold (#bf9800, --color-brand-subtle) is only 2.7:1 on
-     white and 2.1:1 on the #e0e0e0 callout boxes, so prose links default to a
-     darker gold: 6.6:1 on white, 5:1 on #e0e0e0. --color-brand-subtle stays
-     #bf9800 because the footer and header use it on brown, where it passes.
+  /* --color-link is the darkened, AA-passing gold (see themes/_default.pcss).
      Set linkColor (e.g. #bf9800) on a dark section. Underlined because the
      gold is too close to the #333 body copy to tell links apart by colour. */
-  .sf-body :global(a) { color: var(--lk, #6e5c10); text-decoration: underline; text-underline-offset: 0.15em; }
+  .sf-body :global(a) { color: var(--lk, var(--color-link)); text-decoration: underline; text-underline-offset: 0.15em; }
   .sf-body :global(a:hover) { text-decoration-thickness: 2px; }
 
   .sf-body :global(img.alignleft) { float: left; margin: 0 2em 1em 0; }
@@ -148,7 +145,7 @@ const btnStyle = [
     align-items: center;
     background-color: #e4d9b8;
     border-radius: 4px;
-    color: var(--color-brand-subtle, #bf9800);
+    color: var(--color-link);
     display: flex;
     flex: 0 0 auto;
     height: 48px;
@@ -168,5 +165,5 @@ const btnStyle = [
 
   .sf-body :global(.printable-contact p) { margin: 0; }
 
-  .sf-body :global(.printable-contact a) { color: var(--color-brand-subtle, #bf9800); font-weight: 700; }
+  .sf-body :global(.printable-contact a) { color: var(--color-link); font-weight: 700; }
 </style>
