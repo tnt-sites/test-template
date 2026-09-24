@@ -18,7 +18,6 @@ const {
 } = Astro.props as Props;
 
 const toggleId = `mobile-toggle-${crypto.randomUUID()}`;
-const navInstanceId = crypto.randomUUID();
 
 // Check if item is current page
 function isCurrentPage(item) {
@@ -41,11 +40,9 @@ function createNavItemData(item, level, parentGroupId) {
     // Spread onto the item's anchor — empty for everything but booking links.
     linkAttrs: schedulingLinkAttrs(item.path),
     level,
-    dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
     isCurrent: isCurrentPage(item),
     hasCurrent: hasCurrentChild(item),
-    groupName: level === "top" ? `mobile-nav-top-${navInstanceId}` : `mobile-nav-${parentGroupId}`,
     parentGroupId: parentGroupId || crypto.randomUUID(),
   };
 }
@@ -151,16 +148,6 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 
           return (
             <li class="nav-item has-children">
-              <input
-                type="radio"
-                name={itemData.groupName}
-                id={itemData.dropdownId}
-                class="nav-item-toggle"
-                aria-expanded={itemData.hasCurrent}
-                aria-controls={itemData.contentId}
-                autocomplete="off"
-                checked={itemData.hasCurrent}
-              />
               <a
                 href={itemData.path}
                 {...itemData.linkAttrs}
@@ -171,7 +158,6 @@ const getOfficeHoursGeneralNotes = (office: any) => {
               <button
                 type="button"
                 class="nav-item-trigger"
-                data-toggle={itemData.dropdownId}
                 aria-controls={itemData.contentId}
                 aria-expanded={itemData.hasCurrent ? "true" : "false"}
               >
@@ -207,16 +193,6 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 
                     return (
                       <li class="nav-item has-children">
-                        <input
-                          type="radio"
-                          name={childData.groupName}
-                          id={childData.dropdownId}
-                          class="nav-item-toggle"
-                          aria-expanded={childData.hasCurrent}
-                          aria-controls={childData.contentId}
-                          autocomplete="off"
-                          checked={childData.hasCurrent}
-                        />
                         <a
                           href={childData.path}
                           {...childData.linkAttrs}
@@ -227,7 +203,6 @@ const getOfficeHoursGeneralNotes = (office: any) => {
                         <button
                           type="button"
                           class="nav-item-trigger"
-                          data-toggle={childData.dropdownId}
                           aria-controls={childData.contentId}
                           aria-expanded={childData.hasCurrent ? "true" : "false"}
                         >
@@ -396,34 +371,31 @@ const getOfficeHoursGeneralNotes = (office: any) => {
       });
     }
 
-    // Handle dropdown interactions using event delegation
-    // Opening one submenu closes its siblings (the toggles are radios), so
-    // every trigger's state is re-read rather than just the one clicked.
-    const syncExpanded = () => {
-      nav.querySelectorAll(".nav-item-trigger").forEach((trigger) => {
-        const input = document.getElementById(trigger.dataset.toggle || "");
-        const open = Boolean(input?.checked);
-        trigger.setAttribute("aria-expanded", String(open));
-        document.getElementById(trigger.getAttribute("aria-controls") || "")?.setAttribute("aria-hidden", String(!open));
-      });
+    // Each submenu's open state lives on its trigger button's aria-expanded,
+    // which the CSS keys off. Enter and Space click a button natively, so the
+    // one click handler covers keyboard use too.
+    const setExpanded = (trigger, isExpanded) => {
+      trigger.setAttribute("aria-expanded", String(isExpanded));
+      document.getElementById(trigger.getAttribute("aria-controls") || "")?.setAttribute("aria-hidden", String(!isExpanded));
     };
 
-    // The trigger is a real button (Enter and Space click it natively)
-    // driving the hidden radio the open/closed CSS keys off.
     const handleDropdownToggle = (e) => {
       const trigger = e.target?.closest(".nav-item-trigger");
       if (!trigger) return;
 
-      const dropdownToggle =
-        document.getElementById(trigger.dataset.toggle || "") ??
-        trigger.closest(".nav-item")?.querySelector(".nav-item-toggle");
+      e.preventDefault();
+      const opening = trigger.getAttribute("aria-expanded") !== "true";
 
-      if (dropdownToggle) {
-        e.preventDefault();
-        dropdownToggle.checked = !dropdownToggle.checked;
-        dropdownToggle.dispatchEvent(new Event("change"));
-        syncExpanded();
+      // One submenu open per level, as the source's accordion behaves.
+      if (opening) {
+        const list = trigger.closest(".nav-item")?.parentElement;
+
+        list?.querySelectorAll(":scope > .nav-item > .nav-item-trigger").forEach((sibling) => {
+          if (sibling !== trigger) setExpanded(sibling, false);
+        });
       }
+
+      setExpanded(trigger, opening);
     };
 
     nav.addEventListener("click", handleDropdownToggle);
@@ -599,20 +571,16 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           }
         }
 
-        .nav-item-toggle {
-          display: none;
-        }
-
         .nav-item-content {
           display: none;
         }
 
-        .nav-item-toggle:checked ~ .nav-item-content {
+        .nav-item-trigger[aria-expanded="true"] ~ .nav-item-content {
           animation: grow-out var(--animation-normal) ease-out;
           display: block;
         }
 
-        .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+        .nav-item-trigger[aria-expanded="true"] .nav-item-icon {
           transform: rotate(90deg);
         }
       }

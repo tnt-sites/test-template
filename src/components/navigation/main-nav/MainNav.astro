@@ -549,7 +549,7 @@ const formatAddressLines = (address: any) => {
         transform: rotate(90deg);
       }
 
-      .desktop-main-nav.bar .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+      .desktop-main-nav.bar .nav-item-trigger[aria-expanded="true"] .nav-item-icon {
         transform: rotate(-90deg);
       }
 
@@ -596,7 +596,7 @@ const formatAddressLines = (address: any) => {
        * item it belongs to. `grow-out` is the same fade-and-drop without the
        * horizontal half-step, which leaves `left: 0` to do the positioning.
        */
-      .desktop-main-nav.bar .nav-item-toggle:checked ~ .nav-item-content {
+      .desktop-main-nav.bar .nav-item-trigger[aria-expanded="true"] ~ .nav-item-content {
         animation-name: grow-out;
       }
 

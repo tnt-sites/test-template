@@ -4,8 +4,6 @@ import { schedulingLinkAttrs } from "@component-utils/scheduling-links";
 
 const { navData = [], class: className, _component, ...htmlAttributes } = Astro.props;
 
-const navInstanceId = crypto.randomUUID();
-
 function isCurrentPage(item) {
   return Boolean(item.path && Astro.url.pathname === item.path);
 }
@@ -25,11 +23,9 @@ function createNavItemData(item, level, parentGroupId) {
     // Spread onto the item's anchor — empty for everything but booking links.
     linkAttrs: schedulingLinkAttrs(item.path),
     level,
-    dropdownId: `dropdown-toggle-${crypto.randomUUID()}`,
     contentId: `dropdown-content-${crypto.randomUUID()}`,
     isCurrent: isCurrentPage(item),
     hasCurrent: hasCurrentChild(item),
-    groupName: level === "top" ? `bar-nav-top-${navInstanceId}` : `bar-nav-${parentGroupId}`,
     parentGroupId: parentGroupId || crypto.randomUUID(),
   };
 }
@@ -60,15 +56,6 @@ function createNavItemData(item, level, parentGroupId) {
 
         return (
           <li class="nav-item has-children">
-            <input
-              type="checkbox"
-              name={itemData.groupName}
-              id={itemData.dropdownId}
-              class="nav-item-toggle"
-              aria-expanded="false"
-              aria-controls={itemData.contentId}
-              autocomplete="off"
-            />
             <a
               href={itemData.path}
               {...itemData.linkAttrs}
@@ -79,7 +66,6 @@ function createNavItemData(item, level, parentGroupId) {
             <button
               type="button"
               class="nav-item-trigger"
-              data-toggle={itemData.dropdownId}
               aria-controls={itemData.contentId}
               aria-expanded="false"
             >
@@ -123,15 +109,6 @@ function createNavItemData(item, level, parentGroupId) {
 
                   return (
                     <li class="nav-item has-children">
-                      <input
-                        type="radio"
-                        name={childData.groupName}
-                        id={childData.dropdownId}
-                        class="nav-item-toggle"
-                        aria-expanded="false"
-                        aria-controls={childData.contentId}
-                        autocomplete="off"
-                      />
                       <a
                         href={childData.path}
                         {...childData.linkAttrs}
@@ -150,7 +127,6 @@ function createNavItemData(item, level, parentGroupId) {
                       <button
                         type="button"
                         class="nav-item-trigger"
-                        data-toggle={childData.dropdownId}
                         aria-controls={childData.contentId}
                         aria-expanded="false"
                       >
@@ -209,123 +185,62 @@ function createNavItemData(item, level, parentGroupId) {
 </nav>
 
 <script>
-  function updateAriaStates(toggle, isExpanded) {
-    const contentId = toggle.getAttribute("aria-controls");
-    const content = document.getElementById(contentId || "");
-    const triggerId = toggle.getAttribute("id");
-    const trigger = document.querySelector(`.nav-item-trigger[data-toggle="${triggerId}"]`);
+  // Each submenu's open state lives on its trigger button's aria-expanded,
+  // which the CSS keys off — the button is both the control and the state.
+  function setExpanded(trigger, isExpanded) {
+    trigger.setAttribute("aria-expanded", String(isExpanded));
+    const content = document.getElementById(trigger.getAttribute("aria-controls") || "");
 
-    toggle.setAttribute("aria-expanded", isExpanded.toString());
+    content?.setAttribute("aria-hidden", String(!isExpanded));
 
-    if (content) {
-      content.setAttribute("aria-hidden", (!isExpanded).toString());
-      content.querySelectorAll(".nav-item-nested").forEach((nested) => {
-        nested.setAttribute("aria-hidden", (!isExpanded).toString());
-      });
-    }
-
-    if (trigger) {
-      trigger.setAttribute("aria-expanded", isExpanded.toString());
-    }
-  }
-
-  // Handle toggle change events
-  function handleToggleChange(e) {
-    const target = e.target as HTMLInputElement;
-
-    // Only handle checkboxes closing other checkboxes
-    // Radio buttons handle themselves and don't affect parents
-    if (target.type !== "checkbox") {
-      updateAriaStates(target, target.checked);
-      return;
-    }
-
-    const barNav = target.closest(".bar");
-    updateAriaStates(target, target.checked);
-
-    if (target.checked && barNav) {
-      // Close other open checkbox dropdowns
-      barNav.querySelectorAll(".nav-item-toggle[type='checkbox']").forEach((toggle) => {
-        const checkbox = toggle as HTMLInputElement;
-        if (checkbox !== target && checkbox.checked) {
-          checkbox.checked = false;
-          updateAriaStates(checkbox, false);
-        }
+    // Closing a menu closes whatever was open inside it.
+    if (!isExpanded) {
+      content?.querySelectorAll('.nav-item-trigger[aria-expanded="true"]').forEach((nested) => {
+        setExpanded(nested, false);
       });
     }
   }
 
-  // The trigger is a real button (Enter and Space click it natively) driving
-  // the hidden checkbox the open/closed CSS keys off.
+  function closeAll(scope) {
+    scope.querySelectorAll('.bar .nav-item-trigger[aria-expanded="true"]').forEach((trigger) => {
+      setExpanded(trigger, false);
+    });
+  }
+
+  // Enter and Space click a button natively, so one handler covers keyboard too.
   function handleTriggerClick(e) {
     const trigger = e.currentTarget as HTMLElement;
-    const toggle = document.getElementById(trigger.dataset.toggle || "") as HTMLInputElement;
+    const opening = trigger.getAttribute("aria-expanded") !== "true";
 
-    if (toggle) {
-      toggle.checked = !toggle.checked;
-      toggle.dispatchEvent(new Event("change"));
+    // One submenu open per level: opening this closes its siblings.
+    if (opening) {
+      const list = trigger.closest(".nav-item")?.parentElement;
+
+      list?.querySelectorAll(":scope > .nav-item > .nav-item-trigger").forEach((sibling) => {
+        if (sibling !== trigger) setExpanded(sibling, false);
+      });
     }
+
+    setExpanded(trigger, opening);
   }
 
-  // Initialize bar navigation
   function initBarNavigation() {
-    // Handle clicks outside bar navigation to close dropdowns
+    // Clicking anywhere outside the bar closes its menus.
     document.addEventListener("click", (e) => {
       const target = e.target as HTMLElement;
-      if (!target) return;
 
-      const clickedBar = target.closest(".bar");
-
-      // Only close dropdowns if clicking completely outside the bar
-      if (!clickedBar) {
-        document.querySelectorAll(".bar .nav-item-toggle").forEach((toggle) => {
-          const checkbox = toggle as HTMLInputElement;
-          if (checkbox.checked) {
-            checkbox.checked = false;
-            updateAriaStates(checkbox, false);
-          }
-        });
-      }
+      if (target && !target.closest(".bar")) closeAll(document);
     });
 
-    // Handle escape key to close all dropdowns
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        document.querySelectorAll(".bar .nav-item-toggle").forEach((toggle) => {
-          if (toggle.checked) {
-            toggle.checked = false;
-            updateAriaStates(toggle, false);
-          }
-        });
-      }
+      if (e.key === "Escape") closeAll(document);
     });
 
-    // Initialize all bar navigation instances
-    document.querySelectorAll(".bar").forEach((barNav) => {
-      barNav.querySelectorAll(".nav-item-toggle").forEach((toggle) => {
-        const isChecked = toggle.checked;
-        updateAriaStates(toggle, isChecked);
-        toggle.addEventListener("change", handleToggleChange);
-      });
-
-      barNav.querySelectorAll(".nav-item-trigger").forEach((trigger) => {
-        trigger.addEventListener("click", handleTriggerClick);
-      });
-
-      // Prevent clicks inside dropdown content from bubbling to document handler
-      barNav.querySelectorAll(".nav-item-content, .nav-item-nested").forEach((content) => {
-        content.addEventListener("click", (e) => {
-          // Don't stop if clicking directly on a trigger (let it handle itself)
-          const target = e.target as HTMLElement;
-          if (!target.closest(".nav-item-trigger")) {
-            e.stopPropagation();
-          }
-        });
-      });
+    document.querySelectorAll(".bar .nav-item-trigger").forEach((trigger) => {
+      trigger.addEventListener("click", handleTriggerClick);
     });
   }
 
-  // Initialize bar navigation
   initBarNavigation();
 </script>
 
@@ -434,25 +349,21 @@ function createNavItemData(item, level, parentGroupId) {
         color: currentColor;
       }
 
-      .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+      .nav-item-trigger[aria-expanded="true"] .nav-item-icon {
         transform: rotate(90deg);
       }
 
-      .nav-item-toggle {
+      .nav-item-trigger ~ .nav-item-content,
+      .nav-item-trigger ~ .nav-item-nested {
         display: none;
       }
 
-      .nav-item-toggle ~ .nav-item-content,
-      .nav-item-toggle ~ .nav-item-nested {
-        display: none;
-      }
-
-      .nav-item-toggle:checked ~ .nav-item-content {
+      .nav-item-trigger[aria-expanded="true"] ~ .nav-item-content {
         animation: grow-out-centered var(--animation-normal) ease-out forwards;
         display: block;
       }
 
-      .nav-item-toggle:checked ~ .nav-item-nested {
+      .nav-item-trigger[aria-expanded="true"] ~ .nav-item-nested {
         animation: grow-out var(--animation-normal) ease-out forwards;
         display: block;
       }
