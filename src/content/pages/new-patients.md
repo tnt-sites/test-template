@@ -53,37 +53,9 @@ pageSections:
         html: GET IN TOUCH
       - type: heading
         html: Schedule Your First Visit To<br>Toothbar
-      - type: form
-        action: ""
-        submitText: Send
-        subject: New Patients - Appointment Request
-        redirect: ""
-        fields:
-          - name: first_name
-            label: First Name
-            type: text
-            width: half
-            required: true
-          - name: last_name
-            label: Last Name
-            type: text
-            width: half
-            required: true
-          - name: phone
-            label: Phone Number
-            type: tel
-            width: half
-            required: true
-          - name: email
-            label: Email Address
-            type: email
-            width: half
-            required: true
-          - name: message
-            label: Your Message
-            type: textarea
-            width: full
-            required: false
+      - type: embed
+        url: https://forms.liine.com/251886659763982?isIframeEmbed=1
+        title: Schedule your first visit to Toothbar
     align: center
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"

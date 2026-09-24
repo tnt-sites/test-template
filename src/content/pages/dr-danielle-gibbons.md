@@ -20,6 +20,8 @@ pageSections:
   - _component: page-sections/shared-blocks/content-section
     id: ""
     blocks:
+      - type: heading
+        html: Dr. Danielle Gibbons, D.D.S.
       - type: prose
         html: |-
           <p>Growing up, Dr. Danielle Gibbons always looked forward to her visit to the dentist and recognizes that not everyone feels similarly. Because of this, she is committed to managing patient anxiety by providing a dental experience that is compassionate and sensitive to each patient’s needs. Dr. Gibbons implements her expertise, steadfast attention to detail, humor and artistic flair in order to provide exceptional dental care in a fun, relaxed environment.&nbsp; She understands the importance of human connection and strives to build lasting, meaningful relationships with her patients in Austin—something that she considers as one of the best aspects of dentistry.</p>
@@ -31,8 +33,12 @@ pageSections:
           <p>Dr. Gibbons’ focus on lifelong learning encourages her to seek continuing education courses that allow her to master the latest advancements in both Cosmetic and General dentistry. She is active in the dental community through local and national societies including the Capital Area Dental Society and the American Academy of Cosmetic Dentistry.</p>
           <p><strong>Professional Affiliations:</strong></p>
           <ul><li>American Dental Association</li><li>Texas Dental Association</li><li>Capital Area Dental Society</li><li>Academy of General Dentistry</li><li>American Academy of Cosmetic Dentistry</li><li>American Academy of Clear Aligners</li><li>American Academy of Facial Esthetics</li></ul>
-      - type: heading
-        html: Dr. Danielle Gibbons, D.D.S.
+    media:
+      type: image
+      source: /wp-content/uploads/2024/11/danielle-2.jpg
+      alt: Dr. Danielle Gibbons
+      side: left
+      portrait: true
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"

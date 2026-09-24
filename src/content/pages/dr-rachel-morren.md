@@ -50,8 +50,9 @@ pageSections:
     media:
       type: image
       source: /wp-content/uploads/2025/07/Dr.-Rachel.jpg
-      alt: ""
+      alt: Dr. Rachel Morren
       side: left
+      portrait: true
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"

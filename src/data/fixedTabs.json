@@ -3,7 +3,8 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "https://schedule.jarvisanalytics.com/frame/toothbar?location_id=7180&lnsg=01a02a31-b958-70c0-866c-0e5c829775c4",
+      "target": "_blank",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -19,7 +20,7 @@
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/oKFbcfbqrPjJLf7Z7",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -28,7 +29,7 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/new-patients/",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "
@@ -36,7 +37,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/toothbar/",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +46,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/oKFbcfbqrPjJLf7Z7",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",

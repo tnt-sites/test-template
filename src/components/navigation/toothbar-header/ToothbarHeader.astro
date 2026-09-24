@@ -32,7 +32,7 @@ const isCurrent = (path: string) => {
   <input type="checkbox" id={toggleId} class="tb-toggle" autocomplete="off" />
 
   <div class="tb-bar">
-    <label for={toggleId} class="tb-hamburger" aria-label="Open menu" tabindex="0">
+    <label for={toggleId} class="tb-hamburger" role="button" aria-label="Open menu" tabindex="0">
       <span class="tb-hamburger-line tb-hamburger-line-1"></span>
       <span class="tb-hamburger-line tb-hamburger-line-2"></span>
       <span class="tb-hamburger-line tb-hamburger-line-3"></span>
@@ -59,7 +59,7 @@ const isCurrent = (path: string) => {
   </div>
 
   <nav class="tb-overlay" aria-label="Main navigation">
-    <label for={toggleId} class="tb-close" aria-label="Close menu" tabindex="0">
+    <label for={toggleId} class="tb-close" role="button" aria-label="Close menu" tabindex="0">
       <Icon name="x-mark" size="none" aria-hidden="true" />
     </label>
 
@@ -131,6 +131,15 @@ const isCurrent = (path: string) => {
       document.body.style.overflow = toggle.checked ? "hidden" : "";
     };
     toggle.addEventListener("change", sync);
+    // The open/close labels are focusable, so let Enter and Space toggle the menu too.
+    document.querySelectorAll<HTMLLabelElement>(".tb-hamburger, .tb-close").forEach((label) => {
+      label.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        toggle.checked = !toggle.checked;
+        sync();
+      });
+    });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && toggle.checked) {
         toggle.checked = false;
@@ -144,6 +153,28 @@ const isCurrent = (path: string) => {
         sync();
       });
     });
+  }
+
+  // Pin a condensed bar to the top once the visitor scrolls past the hero's top edge.
+  const header = document.querySelector<HTMLElement>(".tb-header");
+  if (header) {
+    const CONDENSE_AT = 160;
+    let ticking = false;
+    const update = () => {
+      header.classList.toggle("is-condensed", window.scrollY > CONDENSE_AT);
+      ticking = false;
+    };
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(update);
+        }
+      },
+      { passive: true }
+    );
+    update();
   }
 </script>
 
@@ -274,13 +305,57 @@ const isCurrent = (path: string) => {
       color: var(--color-brand, #117d6f);
     }
 
+    /* ---- Condensed bar, pinned after scrolling ---- */
+    @keyframes tb-slide-down {
+      from {
+        transform: translateY(-100%);
+      }
+
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    .tb-header.is-condensed .tb-bar {
+      animation: tb-slide-down 0.3s ease-out;
+      background: rgba(12, 22, 21, 0.94);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+      inset: 0 0 auto 0;
+      position: fixed;
+
+      > .tb-logo,
+      > .tb-actions {
+        margin-block: var(--spacing-xs, 0.35rem);
+      }
+
+      .tb-hamburger {
+        height: 48px;
+        padding-inline-end: 12px;
+        width: 48px;
+      }
+
+      .tb-logo img {
+        max-height: 26px;
+      }
+
+      .tb-phone {
+        padding: 0.4em 0.8em;
+      }
+    }
+
     @media (max-width: 767px) {
       .tb-bar {
         grid-template-columns: auto 1fr auto;
       }
+      /* Icon-only on mobile; keep the text for screen readers. */
       .tb-actions .tb-book span,
       .tb-actions .tb-phone span {
-        display: none;
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
       }
       .tb-phone,
       .tb-book {

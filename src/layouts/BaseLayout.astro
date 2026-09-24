@@ -168,6 +168,38 @@ const globalModals = [
       @layer reset, base, components, page-sections, utils, overrides;
     </style>
     <style is:inline set:html={brandingCssRule || "/* no branding overrides set */"}></style>
+    <script is:inline>
+      // Scroll reveal for [data-reveal] elements (styles in base/_animations.pcss).
+      (function () {
+        var root = document.documentElement;
+        if (
+          window.inEditorMode ||
+          !("IntersectionObserver" in window) ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+          return;
+        }
+        root.classList.add("reveal-ready");
+        document.addEventListener("cloudcannon:load", function () {
+          root.classList.remove("reveal-ready");
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add("is-revealed");
+                observer.unobserve(entry.target);
+              });
+            },
+            { threshold: 0.15, rootMargin: "0px 0px -5% 0px" }
+          );
+          document.querySelectorAll("[data-reveal]").forEach(function (el) {
+            observer.observe(el);
+          });
+        });
+      })();
+    </script>
 
     <script>
       if (window.inEditorMode) {

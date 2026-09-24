@@ -42,9 +42,10 @@ pageSections:
           <p><span>Toothbar won the American Dental Association’s award for ‘best new practice’ which recognizes excellence in dental facilities that seamlessly combine esthetics appeal, function and design across the United States.</span></p>
     media:
       type: image
-      source: /wp-content/uploads/2024/11/Bakke.jpg
-      alt: ""
+      source: /wp-content/uploads/2024/11/Barclay.jpg
+      alt: Dr. Kimberly Barclay
       side: left
+      portrait: true
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"

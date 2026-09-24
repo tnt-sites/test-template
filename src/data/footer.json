@@ -28,15 +28,15 @@
     },
     {
       "name": "Privacy Policy",
-      "path": "/toothbar-hipaa-notice-of-privacy-practices/"
-    },
-    {
-      "name": "Opt-out preferences",
-      "path": "/opt-out-preferences/"
+      "path": "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf"
     },
     {
       "name": "HIPAA Notice",
       "path": "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
     }
   ],
   "featuredTitle": "Featured Services",

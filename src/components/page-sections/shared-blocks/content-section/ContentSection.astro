@@ -63,6 +63,7 @@ const defaultFormFields = [
       "has-map": media?.type === "map",
       "has-bg": !!backgroundColor,
       "media-left": media?.side === "left",
+      "media-portrait": media?.type === "image" && !!media?.portrait,
       "is-centered": align === "center",
     },
   ]}
@@ -571,6 +572,16 @@ const defaultFormFields = [
         min-width: 0;
       }
 
+      /* Headshots keep their portrait shape instead of stretching to the bio's height. */
+      &.media-portrait .cs-media {
+        align-self: start;
+        aspect-ratio: 4 / 5;
+        background-position: center top;
+        min-height: 0;
+        position: sticky;
+        top: 80px;
+      }
+
       .sr-only {
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
@@ -591,6 +602,14 @@ const defaultFormFields = [
         }
         .cs-media {
           min-height: 220px;
+        }
+        /* Headshots sit right under the banner, whole, rather than as a cropped strip below the bio. */
+        &.media-portrait .cs-media {
+          justify-self: center;
+          max-width: 420px;
+          order: -1;
+          position: static;
+          width: 100%;
         }
       }
 

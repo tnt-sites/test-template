@@ -125,12 +125,23 @@ const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
             <div class="footer-info-card">
               <span class="footer-info-card-title">{addressCardTitle}</span>
               <p>
-                {addressLines.map((line: string, index: number) => (
-                  <>
-                    {line}
-                    {index < addressLines.length - 1 && <br />}
-                  </>
-                ))}
+                {primaryAddress?.mapUrl ? (
+                  <a href={primaryAddress.mapUrl} target="_blank" rel="noopener noreferrer">
+                    {addressLines.map((line: string, index: number) => (
+                      <>
+                        {line}
+                        {index < addressLines.length - 1 && <br />}
+                      </>
+                    ))}
+                  </a>
+                ) : (
+                  addressLines.map((line: string, index: number) => (
+                    <>
+                      {line}
+                      {index < addressLines.length - 1 && <br />}
+                    </>
+                  ))
+                )}
               </p>
             </div>
           )}

@@ -40,8 +40,8 @@ const cards = await Promise.all(
 ---
 <div class="why-choose-us-cards" id={id || undefined} style={`--bg:${backgroundColorValue};--tt:${titleColorValue};--tx:${textColorValue}`} {...rest}>
   <div class="wc-grid">
-    {cards.map((it) => (
-      <div class="wc-box">
+    {cards.map((it, index) => (
+      <div class="wc-box" data-reveal="fade-up" style={`--reveal-delay:${index * 150}ms`}>
         <div class="wc-box2">
           <div class="wc-box3">
             <div class="wc-box4">

@@ -39,8 +39,9 @@ pageSections:
     media:
       type: image
       source: /wp-content/uploads/2024/11/Bakke.jpg
-      alt: ""
+      alt: Dr. Andrea Bakke
       side: left
+      portrait: true
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"

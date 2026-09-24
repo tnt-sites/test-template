@@ -572,6 +572,7 @@ _structures:
         source: ''
         alt: ''
         side: right
+        portrait: false
       _inputs:
         source:
           type: image
@@ -583,6 +584,10 @@ _structures:
         alt:
           type: text
           label: Alt text
+        portrait:
+          type: switch
+          label: Portrait photo
+          comment: Shows the whole photo, uncropped, above the text on mobile. Use for headshots.
         side:
           type: select
           options:

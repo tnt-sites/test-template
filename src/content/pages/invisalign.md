@@ -33,8 +33,8 @@ pageSections:
       title: Need To Schedule OR Have A Question?
       logo: /wp-content/uploads/2024/10/logo-3.png
       button:
-        text: Call (512) 607-4337 or send a message!
-        link: tel:(512) 607-4337
+        text: Call (512) 949-8202 or send a message!
+        link: tel:5129498202
     backgroundColor: "#ffffff"
     headingColor: "#000000"
     textColor: "#000000"

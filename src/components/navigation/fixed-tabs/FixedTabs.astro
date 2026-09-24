@@ -140,7 +140,8 @@ if (!_component && visibleTabs.length === 0) {
     }
 
     .call {
-      background-color: var(--color-brand-muted);
+      /* Darker than --color-brand-muted (#acbad5) so the white label meets WCAG AA contrast. */
+      background-color: #4a5d80;
     }
 
     .map,

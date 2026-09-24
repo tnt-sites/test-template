@@ -20,6 +20,8 @@ pageSections:
   - _component: page-sections/shared-blocks/content-section
     id: ""
     blocks:
+      - type: heading
+        html: Dr. Lauren Jacobsen, D.M.D.
       - type: prose
         html: |-
           <p><span>Having suffered from dental trauma as a child, Dr. Lauren Jacobsen in Austin is committed to providing exceptional dental care in a gentle and anxiety-free manner. She has a passion for implementing and offering state-of-the-art technology to allow for better treatment outcomes, making patients happier and healthier.</span></p>
@@ -38,8 +40,12 @@ pageSections:
           <p><span>Dr. Lauren Jacobsen is a top “Platinum Invisalign Provider,” and a member of the:</span></p>
           <ul><li aria-level="1"><span>American Dental Association</span></li><li aria-level="1"><span>Texas Dental Association</span></li><li aria-level="1"><span>American Academy of Clear Aligners</span></li><li aria-level="1"><span>American Academy of Cosmetic Dentistry</span></li><li aria-level="1"><span>American Academy of Facial Esthetics</span></li></ul>
           <p><span>Toothbar is the neighborhood dentist that provides everything from general dentistry to Invisalign, to crowns and veneers and even Botox. Toothbar’s approach is a modern take on dentistry that leverages technology to provide comprehensive patient care.In her spare time, Dr. Jacobsen can be found running around Town Lake, volunteering with the Special Olympics, or cheering on her hometown football team, the Chicago Bears.</span></p>
-      - type: heading
-        html: Dr. Lauren Jacobsen, D.M.D.
+    media:
+      type: image
+      source: /wp-content/uploads/2024/11/Jacobsen-.jpg
+      alt: Dr. Lauren Jacobsen
+      side: left
+      portrait: true
     eyebrowColor: var(--color-brand)
     headingColor: "#000000"
     textColor: "#000000"

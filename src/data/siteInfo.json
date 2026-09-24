@@ -40,7 +40,7 @@
           "state": "TX",
           "postalCode": "78701",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://maps.app.goo.gl/oKFbcfbqrPjJLf7Z7"
         }
       ],
       "phones": [
@@ -58,28 +58,18 @@
       ],
       "officeHours": [
         {
-          "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "day": "Mon-Thurs",
+          "hours": "8:00am - 5:00pm",
           "note": ""
         },
         {
-          "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "day": "Fri",
+          "hours": "By Appointment Only",
           "note": ""
         },
         {
-          "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
-          "note": ""
-        },
-        {
-          "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
-          "note": ""
-        },
-        {
-          "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "day": "Sun",
+          "hours": "Closed",
           "note": ""
         }
       ],
@@ -88,11 +78,10 @@
   ],
   "modals": [],
   "head_scripts": [
-    "/* test header script */"
+    "(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-7QWMYSK1KS';document.head.appendChild(s);})();window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7QWMYSK1KS');",
+    "(function(){var s=document.createElement('script');s.defer=true;s.src='https://analytics.liine.com/v1/bootstrapped/ccd76d02bf6b4b09b6c133c127292ec8.js';document.head.appendChild(s);})();"
   ],
-  "footer_scripts": [
-    "/* Test Footer Script */"
-  ],
+  "footer_scripts": [],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }
