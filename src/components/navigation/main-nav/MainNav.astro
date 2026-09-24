@@ -151,6 +151,7 @@ const formatAddressLines = (address: any) => {
       paddingHorizontal="none"
       paddingVertical="none"
       class:list={["main-nav", "main-nav--tiered", className]}
+      role="banner"
       {...htmlAttributes}
     >
       <div class="hd-topbar">
@@ -174,7 +175,7 @@ const formatAddressLines = (address: any) => {
 
       <div class="hd-navbar">
         <div class="hd-bar-inner">
-          <Bar navData={navData} class="desktop-main-nav" />
+          <Bar navData={navData} class="desktop-main-nav" aria-label="Main" />
 
           <div class="hd-navbar-end">
             {buttons.length > 0 && (
@@ -220,6 +221,7 @@ const formatAddressLines = (address: any) => {
       paddingHorizontal="lg"
       paddingVertical="none"
       class:list={["main-nav", className]}
+      role="banner"
       {...htmlAttributes}
     >
       <div class="hd-content">
@@ -284,7 +286,7 @@ const formatAddressLines = (address: any) => {
           }
           <div class="hd-nav">
             <div class="nav-end">
-              <Bar navData={navData} class="desktop-main-nav" />
+              <Bar navData={navData} class="desktop-main-nav" aria-label="Main" />
 
               <ButtonGroup
                 direction="row"
@@ -318,11 +320,20 @@ const formatAddressLines = (address: any) => {
     document.querySelectorAll(".main-nav").forEach((mainNav) => {
       if (mainNav.getAttribute("data-header-height-initialized") === "true") return;
 
+      const topBar = mainNav.querySelector(".hd-topbar");
+
       const syncHeaderHeight = () => {
         document.documentElement.style.setProperty(
           "--site-header-height",
           `${Math.round(mainNav.getBoundingClientRect().height)}px`
         );
+        // How far the condensed header scrolls before its menu bar pins.
+        if (topBar) {
+          document.documentElement.style.setProperty(
+            "--site-topbar-height",
+            `${Math.round(topBar.getBoundingClientRect().height)}px`
+          );
+        }
       };
 
       syncHeaderHeight();
@@ -363,6 +374,19 @@ const formatAddressLines = (address: any) => {
       background-color: var(--chrome-header-bg, var(--color-bg));
       padding-block: 0;
       position: static;
+
+      /*
+       * Condensed header on narrow screens: the whole header is sticky with a
+       * negative top equal to the logo tier's height, so the logo scrolls away
+       * and the menu bar — booking, phone, menu toggle — stays pinned. Nothing
+       * changes size, so the page never jumps as it condenses.
+       */
+      @media (max-width: 1024px) {
+        box-shadow: 0 2px 6px rgb(0 0 0 / 0.12);
+        position: sticky;
+        top: calc(-1 * var(--site-topbar-height, 80px));
+        z-index: var(--layer-2);
+      }
 
       .hd-bar-inner {
         align-items: center;

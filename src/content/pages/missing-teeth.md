@@ -52,5 +52,5 @@ pageSections:
       heading: What do I do to replace my missing teeth?
       level: h4
       text: If you are missing a tooth (or multiple teeth), there are many possible fixes. For starters, implant-supported restorations are recommended usually, especially if a tooth (or teeth) have been missing for a long time. If a missing tooth is addressed early, then traditional replacement options are recommended. These include&nbsp;<a href="/dental-services/cosmetic-dentistry/dental-bridges/" target="_blank">dental bridges</a>,&nbsp;<a href="/dental-services/general-dentistry/dental-crowns/" target="_blank">crowns</a>, or&nbsp;<a href="/dental-services/restorative-dentistry/dentures/" target="_blank">dentures</a>. However, implant-supported restorations are best for your overall future health, so we recommend these whenever is possible.
-    callUsBar: Call us today to schedule your appointment for missing teeth help! <br><a href="tel:(720) 604-2164">(720) 604-2164</a>
+    callUsBar: Call us today to schedule your appointment for missing teeth help! <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

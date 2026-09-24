@@ -16,12 +16,12 @@ pageSections:
   - _component: page-sections/interior-pages-blocks/contact-us-today
     id: ""
     heading: Contact Us Today
-    text: Give us a call at <a href="tel:(720) 588-4952">(720) 588-4952</a> or fill out the form below and someone from our staff will be in touch with you as soon as possible!
+    text: Give us a call at <a href="tel:7202222345">(720) 222-2345</a> or fill out the form below and someone from our staff will be in touch with you as soon as possible!
     embedUrl: https://forms.liine.com/251395920618967?isIframeEmbed=1
     image: /wp-content/uploads/2019/10/aboutus-homepage.jpg
     imageAlt: Columbine Creek Dentistry Exterior | Littleton, CO
-    buttonText: (720) 588-4952
-    buttonLink: tel:(720) 588-4952
+    buttonText: (720) 222-2345
+    buttonLink: tel:7202222345
     secondaryButtonText: 4760 West Mineral Ave, Suite 60, Littleton, CO 80128
     secondaryButtonLink: https://maps.app.goo.gl/52kg9NAnR3HsHHG18
     text2: |-

@@ -11,10 +11,10 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:7202222345",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call ",
+      "textStrong": "Us"
     },
     {
       "itemClass": "map",

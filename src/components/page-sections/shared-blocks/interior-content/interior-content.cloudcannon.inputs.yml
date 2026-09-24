@@ -101,6 +101,25 @@ _structures:
             type: array
             options:
               structures: _structures.interior_content_blocks_prose
+      - label: FAQ accordion
+        icon: quiz
+        value:
+          _bt: faq
+          heading: ""
+          level: h2
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          heading: { type: text }
+          level:
+            type: select
+            options:
+              values: [h2, h3, h4, h5]
+          items:
+            type: array
+            comment: One entry per question; each expands to show its answer.
+            options:
+              structures: _structures.interior_content_faq
       - label: File links
         icon: attach_file
         value:
@@ -214,6 +233,14 @@ _structures:
           text: ""
         _inputs:
           text: { type: markdown }
+  interior_content_faq:
+    values:
+      - value:
+          question: ""
+          answer: ""
+        _inputs:
+          question: { type: text }
+          answer: { type: markdown }
   interior_content_file:
     values:
       - value:

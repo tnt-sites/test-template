@@ -44,7 +44,7 @@ pageSections:
         link: https://form.flexdental.co/7ee2ce5051e7adedc181551ab7e871745630be82b6b9acc98fe275dbfdce7d8e
         variant: link
       - text: HIPAA Notice of Privacy Practices
-        link: /wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf
+        link: /hipaa-notice/
         variant: pdf
       - text: HIPAA Patient Consent of Information
         link: /wp-content/uploads/2019/10/Form-HIPAA-Consent.docx

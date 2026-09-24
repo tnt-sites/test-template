@@ -31,5 +31,5 @@ pageSections:
       heading: How can you prevent facial swelling?
       level: h4
       text: These dental infections are all easily preventable, especially with proper dental hygiene. Along with <a href="/dental-services/general-dentistry/cleanings-check-ups/">regular dental checkups</a>, and the avoidance of overly sugary foods, your oral health should be good enough to prevent any potential infections. However, if you do experience any facial swelling,&nbsp;<a href="/contact-us/" target="_blank">contact</a>&nbsp;medical services or your dentist as soon as possible.
-    callUsBar: For help with any dental-facial swelling, call our office today! <br><a href="tel:(720) 600-2317">(720) 600-2317</a>
+    callUsBar: For help with any dental-facial swelling, call our office today! <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

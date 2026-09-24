@@ -16,7 +16,7 @@ const {
 ---
 <div class="cosmetic-dentistry" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="cd-box">
-    {eyebrow && <h3 class="cd-eyebrow" set:html={eyebrow} />}
+    {eyebrow && <p class="cd-eyebrow" set:html={eyebrow} />}
     {heading && <h1 class="cd-heading2" set:html={heading} />}
   </div>
 </div>

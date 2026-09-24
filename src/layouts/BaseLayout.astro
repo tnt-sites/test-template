@@ -178,6 +178,7 @@ const globalModals = [
     <SEO
       title={formattedTitle}
       description={pageDescription}
+      canonical={new URL(props.canonical || Astro.url.pathname, Astro.site ?? Astro.url).href}
       openGraph={{
         basic: {
           title: formattedTitle,
@@ -187,14 +188,6 @@ const globalModals = [
         optional: {
           description: pageDescription,
         },
-      }}
-      extend={{
-        link: [
-          {
-            rel: "canonical",
-            href: props.canonical || Astro.url.href,
-          },
-        ],
       }}
     />
 

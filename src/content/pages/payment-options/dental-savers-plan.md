@@ -145,6 +145,6 @@ pageSections:
       - text: Contact Us
         link: /contact-us/
       - text: Call Us Now
-        link: tel:(720) 608-8128
+        link: tel:7202222345
         style: secondary
 ---

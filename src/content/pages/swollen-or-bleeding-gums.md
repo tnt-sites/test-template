@@ -52,5 +52,5 @@ pageSections:
       heading: How do I prevent swollen or bleeding gums?
       level: h4
       text: The easiest way to keep your gums happy and healthy is to have&nbsp;<a href="/dental-services/general-dentistry/cleanings-check-ups/" target="_blank">proper dental hygiene</a>. This includes brushing and flossing at least twice-a-day. Other recommendations we have include upgrading your dental equipment to an electronic toothbrush and eliminating any meds that may cause swollen or bleeding gums (when possible).
-    callUsBar: Call us today to schedule an appointment! <br><a href="tel:(720) 593-4367">(720) 593-4367</a>
+    callUsBar: Call us today to schedule an appointment! <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

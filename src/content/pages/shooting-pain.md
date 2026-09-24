@@ -40,5 +40,5 @@ pageSections:
     - _bt: prose
       heading: If you are experiencing severe tooth pain that just won't go away, call your dentist immediately to schedule an appointment. If you have experienced a serious dental issue that is affecting your overall health -- such as the loss of a tooth or sudden blunt trauma -- contact medical officials right away.
       level: h4
-    callUsBar: Don't wait. Call us today and we can help resolve any dental pain you may be experiencing. <br><a href="tel:(720) 604-0578">(720) 604-0578</a>
+    callUsBar: Don't wait. Call us today and we can help resolve any dental pain you may be experiencing. <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

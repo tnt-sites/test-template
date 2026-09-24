@@ -1,11 +1,11 @@
 {
   "colorBrand": "#3b6278",
-  "colorBrandSecondary": "#007bff",
+  "colorBrandSecondary": "#0062cc",
   "colorBrandTertiary": "#3a8358",
   "colorBrandSubtle": "#40a569",
   "colorBrandOn": "",
   "colorTextOnBrand": "#ffffff",
-  "colorLink": "#007bff",
+  "colorLink": "#0062cc",
   "colorLinkHover": "#0056b3",
   "extraColors": [],
   "bodyFont": {

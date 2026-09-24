@@ -73,7 +73,7 @@ pageSections:
       - text: "<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Centennial</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Highlands Ranch</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Sheridan</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Greenwood Village</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
       - text: "<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Ken Caryl</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Lakewood</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>SouthGlenn</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
     - _bt: prose
-      text: If you live in these cities and are in need of dental care give us a call @ <strong><a href="tel:(720) 600-6424">(720) 600-6424</a> </strong>to schedule an appointment at Columbine Creek Dentistry.
+      text: If you live in these cities and are in need of dental care give us a call @ <strong><a href="tel:7202222345">(720) 222-2345</a> </strong>to schedule an appointment at Columbine Creek Dentistry.
   - _component: page-sections/shared-blocks/interior-content
     id: ''
     blocks:
@@ -83,6 +83,6 @@ pageSections:
       - text: Schedule Appointment
         link: https://www.flexbook.me/schedulecc/1
       - text: Call Us Now
-        link: tel:(720) 600-6424
+        link: tel:7202222345
         style: secondary
 ---

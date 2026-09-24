@@ -82,11 +82,10 @@
   ],
   "modals": [],
   "head_scripts": [
-    "/* test header script */"
+    "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PDPVKVH');",
+    "(function(){var s=document.createElement('script');s.defer=true;s.src='https://analytics.liine.com/v1/bootstrapped/28ed0d3f31624696a3ee78191d0eb472.js';document.head.appendChild(s);})();"
   ],
-  "footer_scripts": [
-    "/* Test Footer Script */"
-  ],
+  "footer_scripts": [],
   "mapEmbedUrl": "",
   "recaptchaSiteKey": ""
 }

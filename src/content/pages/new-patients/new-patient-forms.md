@@ -32,16 +32,15 @@ pageSections:
     heading: New Patient Forms
     blocks:
     - _bt: cta
-      heading: New Patient Forms
       text: New patient forms can be accessed by clicking the button below.
       buttons:
       - text: New Patient Forms
         link: https://form.flexdental.co/7ee2ce5051e7adedc181551ab7e871745630be82b6b9acc98fe275dbfdce7d8e
       - text: HIPAA Notice of Privacy Practices
-        link: /wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf
+        link: /hipaa-notice/
         style: secondary
       - text: HIPAA Patient Consent of Information
         link: /wp-content/uploads/2019/10/Form-HIPAA-Consent.docx
         style: secondary
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

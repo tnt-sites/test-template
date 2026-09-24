@@ -23,7 +23,7 @@ const html = typeof heading === "string" ? heading.trim() : "";
   html && (
     <section class:list={["call-us-bar", className]} {...rest}>
       <div class="call-us-bar-inner">
-        <h4 class="call-us-bar-heading" set:html={html} />
+        <p class="call-us-bar-heading" set:html={html} />
       </div>
     </section>
   )

@@ -79,13 +79,15 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     position: relative;
   }
 
+  /* Sized so "Comprehensive" fits a phone's width whole rather than breaking
+     mid-word; it steps up to the source's 40px from tablet width. */
   .cds-heading {
     box-sizing: border-box;
     color: var(--hd);
     font-family: Montserrat, sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    line-height: 48px;
+    line-height: 36px;
     margin-bottom: 8px;
     margin-top: 0px;
     text-align: center;
@@ -207,6 +209,11 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
   }
 
   @media (min-width: 768px) {
+    .cds-heading {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
     .cds-box {
       margin-left: 24px;
       margin-right: 24px;

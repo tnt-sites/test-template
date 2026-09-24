@@ -33,7 +33,7 @@ pageSections:
     subheading: Our In-Network Insurance Companies
     heading2: Carrington TPA
     secondaryButtonText4: BCBS
-    secondaryButtonLink4: /blue-cross-blue-shield-dentist/%20
+    secondaryButtonLink4: /blue-cross-blue-shield-dentist/
     secondaryButtonText5: BEAM
     secondaryButtonLink5: /beam-dental-dentist/
     text2: |-
@@ -75,7 +75,7 @@ pageSections:
     secondaryButtonText16: Contact Us
     secondaryButtonLink16: /contact-us/
     secondaryButtonText17: Call Us Now
-    secondaryButtonLink17: tel:(720) 593-4367
+    secondaryButtonLink17: tel:7202222345
     items:
       - buttonText: Aetna
         buttonLink: /aetna-dentist/

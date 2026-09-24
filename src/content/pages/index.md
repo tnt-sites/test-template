@@ -99,7 +99,7 @@ pageSections:
     hoverBackgroundColor: rgba(255, 255, 255, 0.77)
   - _component: page-sections/homepage-blocks/wp/comprehenshive-dental-services
     id: ""
-    heading: Comprehenshive Dental Services
+    heading: Comprehensive Dental Services
     text: When choosing Columbine Creek Dentistry as your family's home for dental care, you can trust that we are able to care for every aspect of your smile through each stage of life. We have a comprehensive menu of dental services, ranging from routine pediatric cleanings to dental implants and orthodontics.
     cards:
       - image: /wp-content/uploads/2021/12/General-Dentistry_icon.png
@@ -136,7 +136,7 @@ pageSections:
         title: Dental Crowns
         text: Patients who lose or severely damage teeth can expect to receive top-quality restorations at Columbine Creek Dentistry.
         buttonText: Read More
-        buttonLink: /dental-services/pediatric-dentistry/
+        buttonLink: /dental-services/general-dentistry/dental-crowns/
       - image: /wp-content/uploads/2021/12/implant_icon.png
         imageAlt: ""
         backgroundImage: /wp-content/uploads/2021/12/implant_bg.jpg

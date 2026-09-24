@@ -50,7 +50,7 @@ const {
   headingLevel = "h2",
   blocks = [],
   callUsBar = "",
-  accentColor = "#d44d5c",
+  accentColor = "#c0394a",
   id,
   _component,
   ...rest
@@ -66,6 +66,17 @@ const levelTag = (level: unknown) => HEADING_TAGS[clean(level).toLowerCase()] ??
 // The page heading can be the document's h1 on pages that carry no banner.
 const TOP_TAGS: Record<string, string> = { h1: "h1", ...HEADING_TAGS };
 const HeadingTag = (TOP_TAGS[clean(headingLevel).toLowerCase()] ?? "h2") as any;
+
+// Block headings keep the size their level was chosen for, but their tag never
+// drops more than one level below the heading before it — the migrated pages
+// jump h3 → h5 for looks, which leaves screen-reader users a broken outline.
+// Without a section heading, the page banner's h1 is the one before.
+let outline = heading ? Number(HeadingTag.slice(1)) : 1;
+const subheading = (level: unknown) => {
+  const size = Number(levelTag(level).slice(1));
+  outline = Math.min(size, outline + 1);
+  return [`h${outline}` as any, `is-h${size}`] as const;
+};
 
 // Mirrors SideMenu's own render condition: with no menu the column is the
 // whole container rather than two thirds of it with a gap where the nav was.
@@ -123,6 +134,25 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
               </ul>
             );
           }
+          if (bt === "faq") {
+            // Questions that expand to their answers. Native <details> keeps it
+            // keyboard- and screen-reader-operable with no script.
+            const faqs = (Array.isArray(block.items) ? block.items : []) as { question?: string; answer?: string }[];
+            const [HTag, hSize] = block.heading ? subheading(block.level) : [null, ""];
+            return (
+              <div class="ic-faq">
+                {HTag && <HTag class:list={["ic-subheading", hSize]} set:html={block.heading} />}
+                {faqs
+                  .filter((faq) => clean(faq.question))
+                  .map((faq) => (
+                    <details class="ic-faq-item">
+                      <summary class="ic-faq-question" set:html={faq.question} />
+                      {faq.answer && <div class="ic-faq-answer ic-text" set:html={faq.answer} />}
+                    </details>
+                  ))}
+              </div>
+            );
+          }
           if (bt === "image") {
             return block.src ? (
               <figure class="ic-figure">
@@ -137,6 +167,7 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
           }
           if (bt === "cta") {
             const buttons = Array.isArray(block.buttons) ? block.buttons : [];
+            if (block.heading) outline = 2;
             return (
               <div class="ic-cta">
                 {block.heading && <h2 class="ic-cta-heading" set:html={block.heading} />}
@@ -186,10 +217,10 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
               >
                 <div class="ic-split-text">
                   {parts.map((part) => {
-                    const PartTag = levelTag(part.level) as any;
+                    const [HTag, hSize] = part.heading ? subheading(part.level) : [null, ""];
                     return (
                       <div class="ic-prose">
-                        {part.heading && <PartTag class="ic-subheading" set:html={part.heading} />}
+                        {HTag && <HTag class:list={["ic-subheading", hSize]} set:html={part.heading} />}
                         {part.text && <div class="ic-text" set:html={part.text} />}
                       </div>
                     );
@@ -204,10 +235,10 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
             );
           }
           // prose (default)
-          const Tag = levelTag(block.level) as any;
+          const [HTag, hSize] = block.heading ? subheading(block.level) : [null, ""];
           return (
             <div class="ic-prose">
-              {block.heading && <Tag class="ic-subheading" set:html={block.heading} />}
+              {HTag && <HTag class:list={["ic-subheading", hSize]} set:html={block.heading} />}
               {block.text && <div class="ic-text" set:html={block.text} />}
             </div>
           );
@@ -273,19 +304,19 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
     margin: 0 0 8px;
   }
 
-  h2.ic-subheading {
+  .ic-subheading.is-h2 {
     font-size: 32px;
   }
 
-  h3.ic-subheading {
+  .ic-subheading.is-h3 {
     font-size: 28px;
   }
 
-  h4.ic-subheading {
+  .ic-subheading.is-h4 {
     font-size: 24px;
   }
 
-  h5.ic-subheading {
+  .ic-subheading.is-h5 {
     font-size: 20px;
   }
 
@@ -302,8 +333,15 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
     margin-bottom: 0;
   }
 
+  /* Links in running text stay the brand blue whatever the section accent:
+     the accent red is under 4.5:1 on white, too faint for body-size text. */
   .ic-text :global(a) {
-    color: var(--accent);
+    color: #3b6278;
+    text-decoration: underline;
+  }
+
+  .ic-text :global(a:hover) {
+    color: #1b2e38;
   }
 
   .ic-cols {
@@ -372,6 +410,65 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
     }
   }
 
+  .ic-faq {
+    margin-bottom: 32px;
+  }
+
+  .ic-faq .ic-subheading {
+    margin-bottom: 16px;
+  }
+
+  .ic-faq-item {
+    border: 1px solid #dde3e6;
+    border-radius: 3px;
+    margin-bottom: 8px;
+  }
+
+  .ic-faq-question {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-family: Montserrat, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    gap: 16px;
+    justify-content: space-between;
+    list-style: none;
+    padding: 14px 18px;
+  }
+
+  .ic-faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .ic-faq-question::after {
+    content: "+";
+    flex: 0 0 auto;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .ic-faq-item[open] > .ic-faq-question {
+    background-color: #f3f6f7;
+  }
+
+  .ic-faq-item[open] > .ic-faq-question::after {
+    content: "\2212";
+  }
+
+  .ic-faq-question:hover {
+    background-color: #f3f6f7;
+  }
+
+  .ic-faq-question:focus-visible {
+    outline: 2px solid #3b6278;
+    outline-offset: 2px;
+  }
+
+  .ic-faq-answer {
+    padding: 16px 18px;
+  }
+
   .ic-files {
     list-style: none;
     margin: 0 0 16px;
@@ -399,7 +496,7 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
   }
 
   :global(.ic-file-icon) {
-    color: #d44d5c;
+    color: #c0394a;
     flex: 0 0 auto;
   }
 

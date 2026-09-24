@@ -58,5 +58,5 @@ pageSections:
     - _bt: prose
       heading: Fun Facts
       level: h4
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

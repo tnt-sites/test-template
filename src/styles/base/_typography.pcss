@@ -79,6 +79,13 @@
       }
     }
 
+    /* A link inside a sentence needs more than color to be told apart from
+       the words around it (WCAG 1.4.1). Classed anchors are buttons and cards
+       that style themselves. */
+    :is(p, li) a:not([class]) {
+      text-decoration: underline;
+    }
+
     h1,
     h2,
     h3,

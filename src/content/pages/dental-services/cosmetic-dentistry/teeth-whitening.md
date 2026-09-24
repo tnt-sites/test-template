@@ -58,7 +58,7 @@ pageSections:
       - text: Schedule Appointment
         link: https://www.flexbook.me/schedulecc/1
       - text: Call Us Now
-        link: tel:(720) 604-2164
+        link: tel:7202222345
         style: secondary
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

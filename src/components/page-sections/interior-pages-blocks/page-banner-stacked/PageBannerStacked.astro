@@ -15,7 +15,9 @@ const {
 ---
 <div class="page-banner-stacked" id={id || undefined} style={`--hd:${headingColor}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>
   <div class="pbs-box">
-    <h3 class="pbs-heading">{heading}</h3>
+    {/* The subheading names the page, so it is the h1 and the line above it is
+        an eyebrow. Without one, the heading is all there is to name the page. */}
+    {subheading ? <p class="pbs-heading">{heading}</p> : <h1 class="pbs-heading2">{heading}</h1>}
     {subheading && <h1 class="pbs-heading2">{subheading}</h1>}
   </div>
 </div>
@@ -46,6 +48,7 @@ const {
   .pbs-heading {
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    font-size: 16px;
     font-weight: 300;
     line-height: 19.2px;
     margin-bottom: 0px;

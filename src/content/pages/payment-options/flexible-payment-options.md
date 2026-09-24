@@ -39,7 +39,7 @@ pageSections:
       - text: Contact Us
         link: /contact-us/
       - text: Call Us Now
-        link: tel:(720) 600-4013
+        link: tel:7202222345
         style: secondary
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

@@ -62,6 +62,6 @@ pageSections:
     - _bt: cta
       buttons:
       - text: Read All Reviews
-        link: https://chroot/home/a74ea27a/columbinecreekdentistry.com/html.google.com/maps/place/Columbine+Creek+Dentistry/@39.5802153,-105.0521393,17z/data=!4m7!3m6!1s0x0:0x1ad3d1e117229a62!8m2!3d39.5802153!4d-105.0499506!9m1!1b1
-    accentColor: '#d44d5c'
+        link: https://www.google.com/maps/place/Columbine+Creek+Dentistry/@39.5802153,-105.0521393,17z/data=!4m7!3m6!1s0x0:0x1ad3d1e117229a62!8m2!3d39.5802153!4d-105.0499506!9m1!1b1
+    accentColor: '#c0394a'
 ---

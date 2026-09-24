@@ -105,5 +105,5 @@ pageSections:
       heading: Latest Technology
       level: h4
       text: Our team also uses the latest technology and techniques to complete your dental treatments. We offer a complete list of dental services to give our patients access to everything they need for a healthy smile in one location. On top of our comprehensive list of general dentistry options, we have cosmetic, restorative and sedation dentistry available.&nbsp;<a href="/contact-us/">Contact our dental practice&nbsp;today</a> to learn more about joining the Columbine Creek Dentistry family.
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

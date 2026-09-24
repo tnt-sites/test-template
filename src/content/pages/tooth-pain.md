@@ -35,5 +35,5 @@ pageSections:
       heading: What do I do if I have severe tooth pain?
       level: h4
       text: If you are experiencing serious pain and/or pain over a very long period of time, or you are convinced you have a severe toothache, then contact your dentist immediately to&nbsp;<a href="/contact-us/" target="_blank" rel="noopener">schedule an appointment</a>&nbsp;at your earliest convenience. Do not wait to fix your toothache.
-    callUsBar: Call us today to schedule your appointment. <br><a href="tel:(720) 608-8128">(720) 608-8128</a>
+    callUsBar: Call us today to schedule your appointment. <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

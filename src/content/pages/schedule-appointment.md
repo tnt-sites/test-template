@@ -16,15 +16,15 @@ pageSections:
   - _component: page-sections/interior-pages-blocks/convenient-scheduling
     id: ""
     heading: Schedule an Appointment Today!
-    text: Give us a call at <a href="tel:(720) 583-3549">(720) 583-3549</a> or fill out the form below and someone from our staff will be in touch with you as soon as possible!
+    text: Give us a call at <a href="tel:7202222345">(720) 222-2345</a> or fill out the form below and someone from our staff will be in touch with you as soon as possible!
     embedUrl: https://form.jotform.com/250931863110450?nojump=&isIframeEmbed=1
     text2: "<span>*NOTE: Someone from our staff will contact you to arrange your appointment</span>"
     image: /wp-content/uploads/2019/10/aboutus-homepage.jpg
     imageAlt: Columbine Creek Dentistry Exterior | Littleton, CO
-    buttonText: (720) 583-3549
-    buttonLink: tel:(720) 583-3549
+    buttonText: (720) 222-2345
+    buttonLink: tel:7202222345
     secondaryButtonText: 4760 West Imneral Ave, Suite 60, Littleton, CO 80128
-    secondaryButtonLink: https://chroot/home/a74ea27a/columbinecreekdentistry.com/html.google.com/maps/dir/39.583744,-104.8576/columbine+creek+dentistry/@39.5902488,-105.0994856,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62!2m2!1d-105.0499506!2d39.5802153
+    secondaryButtonLink: https://www.google.com/maps/dir/39.583744,-104.8576/columbine+creek+dentistry/@39.5902488,-105.0994856,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x876b7e122770efed:0x1ad3d1e117229a62!2m2!1d-105.0499506!2d39.5802153
     text3: |-
       <li><span>
       							<i aria-hidden="true"></i>						</span>

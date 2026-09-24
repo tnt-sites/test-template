@@ -41,6 +41,6 @@ pageSections:
       - text: Schedule Appointment
         link: https://www.flexbook.me/schedulecc/1
       - text: Call Us Now
-        link: tel:(720) 600-4013
+        link: tel:7202222345
         style: secondary
 ---

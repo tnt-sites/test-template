@@ -146,6 +146,6 @@ pageSections:
       - text: Contact Us
         link: /contact-us/
       - text: Call Us Now
-        link: tel:303-327-9556
+        link: tel:7202222345
         style: secondary
 ---

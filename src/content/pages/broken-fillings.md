@@ -36,5 +36,5 @@ pageSections:
       heading: What should I do if my dental filling breaks?
       level: h4
       text: A broken filling is an easy fix, so do not stress. Call your dentist as soon as your filling is broken&nbsp;<a href="/contact-us/" target="_blank">to schedule an appointment</a>. Sometimes a filling can be reused if it is loose or undamaged, so the sooner the appointment, the better. Although, worst-case scenario, we put in a new filling.<span>&nbsp;</span>
-    callUsBar: Call us today for an easy fix for your broken filling! <br><a href="tel:(720) 588-4952">(720) 588-4952</a>
+    callUsBar: Call us today for an easy fix for your broken filling! <br><a href="tel:7202222345">(720) 222-2345</a>
 ---

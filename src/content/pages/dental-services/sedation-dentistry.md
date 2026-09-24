@@ -51,5 +51,5 @@ pageSections:
         text: IV Sedation Dentistry
         text2: Read More
         link: /dental-services/sedation-dentistry/iv-sedation-dentistry/
-    accentColor: '#d44d5c'
+    accentColor: '#c0394a'
 ---

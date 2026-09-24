@@ -60,7 +60,8 @@ const {
             <li class="cs-box14">
               {secondaryButtonText && <a class="cs-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
             </li>
-            {text3 && <div class="cs-body" set:html={text3} />}
+            {/* The extra contact rows arrive as <li>s, so they join the list directly. */}
+            {text3 && <Fragment set:html={text3} />}
           </ul>
         </div>
       </div>
@@ -175,6 +176,10 @@ const {
     margin-bottom: 20px;
     max-width: 100%;
     position: relative;
+  }
+
+  .cs-text :global(a) {
+    text-decoration: underline;
   }
 
   .cs-text {
@@ -334,7 +339,7 @@ const {
     width: 16px;
   }
 
-  .cs-body :global(li) {
+  .cs-box12 > :global(li:not([class])) {
     align-items: center;
     box-sizing: border-box;
     margin-top: 7.5px;

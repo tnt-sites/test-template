@@ -76,19 +76,18 @@ function createNavItemData(item, level, parentGroupId) {
             >
               {itemData.name}
             </a>
-            <label
-              for={itemData.dropdownId}
+            <button
+              type="button"
               class="nav-item-trigger"
-              role="button"
+              data-toggle={itemData.dropdownId}
               aria-controls={itemData.contentId}
-              tabindex="0"
-              aria-current={itemData.isCurrent ? "page" : undefined}
-              aria-label={`Toggle ${itemData.name} submenu`}
+              aria-expanded="false"
             >
+              <span class="visually-hidden">{`Toggle ${itemData.name} submenu`}</span>
               <span class="nav-item-icon">
                 <Icon name="chevron-right" size="none" aria-hidden="true" />
               </span>
-            </label>
+            </button>
             <div
               id={itemData.contentId}
               class="nav-item-content"
@@ -148,18 +147,18 @@ function createNavItemData(item, level, parentGroupId) {
                         )}
                         {childData.name}
                       </a>
-                      <label
-                        for={childData.dropdownId}
+                      <button
+                        type="button"
                         class="nav-item-trigger"
-                        role="button"
+                        data-toggle={childData.dropdownId}
                         aria-controls={childData.contentId}
-                        tabindex="0"
-                        aria-label={`Toggle ${childData.name} submenu`}
+                        aria-expanded="false"
                       >
+                        <span class="visually-hidden">{`Toggle ${childData.name} submenu`}</span>
                         <span class="nav-item-icon">
                           <Icon name="chevron-right" size="none" aria-hidden="true" />
                         </span>
-                      </label>
+                      </button>
                       <div
                         id={childData.contentId}
                         class="nav-item-nested"
@@ -214,7 +213,7 @@ function createNavItemData(item, level, parentGroupId) {
     const contentId = toggle.getAttribute("aria-controls");
     const content = document.getElementById(contentId || "");
     const triggerId = toggle.getAttribute("id");
-    const trigger = document.querySelector(`label[for="${triggerId}"]`);
+    const trigger = document.querySelector(`.nav-item-trigger[data-toggle="${triggerId}"]`);
 
     toggle.setAttribute("aria-expanded", isExpanded.toString());
 
@@ -256,25 +255,11 @@ function createNavItemData(item, level, parentGroupId) {
     }
   }
 
-  // Handle trigger click events
+  // The trigger is a real button (Enter and Space click it natively) driving
+  // the hidden checkbox the open/closed CSS keys off.
   function handleTriggerClick(e) {
-    const label = e.currentTarget as HTMLElement;
-    const toggle = document.getElementById(label.getAttribute("for") || "") as HTMLInputElement;
-
-    if (toggle?.checked) {
-      e.preventDefault();
-      toggle.checked = false;
-      toggle.dispatchEvent(new Event("change"));
-    }
-  }
-
-  // Handle keyboard events
-  function handleKeydown(e) {
-    if (e.key !== "Enter" && e.key !== " ") return;
-
-    e.preventDefault();
-    const label = e.currentTarget;
-    const toggle = document.getElementById(label.getAttribute("for") || "");
+    const trigger = e.currentTarget as HTMLElement;
+    const toggle = document.getElementById(trigger.dataset.toggle || "") as HTMLInputElement;
 
     if (toggle) {
       toggle.checked = !toggle.checked;
@@ -325,7 +310,6 @@ function createNavItemData(item, level, parentGroupId) {
 
       barNav.querySelectorAll(".nav-item-trigger").forEach((trigger) => {
         trigger.addEventListener("click", handleTriggerClick);
-        trigger.addEventListener("keydown", handleKeydown);
       });
 
       // Prevent clicks inside dropdown content from bubbling to document handler
@@ -396,7 +380,9 @@ function createNavItemData(item, level, parentGroupId) {
 
       .nav-item-trigger {
         align-items: center;
+        background: none;
         border: 1px solid var(--color-border-subtle);
+        padding: 0;
         border-radius: var(--radius-xs);
         color: var(--color-text-muted);
         cursor: pointer;

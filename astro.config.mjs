@@ -13,6 +13,7 @@ import postcssNested from "postcss-nested";
 
 import mdx from "@astrojs/mdx";
 import rehypeSchedulingLinks from "./src/components/utils/rehype-scheduling-links.mjs";
+import linkTargets from "./src/components/utils/link-targets-integration.mjs";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -20,7 +21,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://example.com",
+  site: "https://www.columbinecreekdentistry.com",
   build: {
     inlineStylesheets: "always",
   },
@@ -52,6 +53,7 @@ export default defineConfig({
       },
     }),
     mdx(),
+    linkTargets(),
   ],
   vite: {
     css: {

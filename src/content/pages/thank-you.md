@@ -21,5 +21,5 @@ pageSections:
       text: 'Thank you for contacting Columbine Creek Dentistry, someone from our staff will get back to you as soon as possible.
 
 
-        Feel free to also give us a call at <a href="tel:(720) 593-4367">(720) 593-4367</a>'
+        Feel free to also give us a call at <a href="tel:7202222345">(720) 222-2345</a>'
 ---

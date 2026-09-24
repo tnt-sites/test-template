@@ -164,10 +164,6 @@ pageSections:
       buttonLink: /dental-services/general-dentistry/root-canal-therapy/
     - buttonText: Same Day Dentistry
       buttonLink: /dental-services/general-dentistry/same-day-dentistry/
-    - buttonText: Sleep Apnea Treatment
-      buttonLink: /sleep-apnea-treatment/
-    - buttonText: TMD/TMJ Treatment
-      buttonLink: /tmd-tmj-treatment
     - buttonText: Tooth Extractions
       buttonLink: /dental-services/general-dentistry/tooth-extractions/
     buttons:

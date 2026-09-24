@@ -64,7 +64,11 @@
     },
     {
       "name": "HIPAA Notice",
-      "path": "/wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf"
+      "path": "/hipaa-notice/"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
     },
     {
       "name": "Columbine Creek Dentistry",
@@ -81,6 +85,10 @@
     {
       "name": "Privacy Policy",
       "path": "/privacy-policy"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
     }
   ],
   "linkColumns": [
@@ -177,8 +185,7 @@
         {
           "name": "Frequently Asked Questions",
           "path": "/frequently-asked-questions/",
-          "icon": "chevron-right",
-          "external": true
+          "icon": "chevron-right"
         }
       ]
     },
@@ -243,13 +250,15 @@
     "links": [
       {
         "name": "HIPAA Notice",
-        "path": "/wp-content/uploads/2026/02/columbine-creek-dentistry-hipaa-notice-of-privacy-practices-2026.pdf",
-        "external": true
+        "path": "/hipaa-notice/"
+      },
+      {
+        "name": "Accessibility Statement",
+        "path": "/accessibility-statement/"
       },
       {
         "name": "Columbine Creek Dentistry",
-        "path": "/",
-        "external": true
+        "path": "/"
       }
     ]
   }

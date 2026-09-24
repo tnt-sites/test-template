@@ -55,7 +55,8 @@ const {
             <li class="cut-box14">
               {secondaryButtonText && <a class="cut-link2" href={secondaryButtonLink || "#"}>{secondaryButtonText}</a>}
             </li>
-            {text2 && <div class="cut-body" set:html={text2} />}
+            {/* The extra contact rows arrive as <li>s, so they join the list directly. */}
+            {text2 && <Fragment set:html={text2} />}
           </ul>
         </div>
       </div>
@@ -309,7 +310,7 @@ const {
     width: 16px;
   }
 
-  .cut-body :global(li) {
+  .cut-box12 > :global(li:not([class])) {
     align-items: center;
     box-sizing: border-box;
     margin-top: 7.5px;

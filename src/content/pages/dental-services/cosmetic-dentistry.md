@@ -51,5 +51,5 @@ pageSections:
         text2: Read More
         link: /dental-services/cosmetic-dentistry/dental-bridges/
     textColor: "#1b2e38"
-    textColor2: "#d44d5c"
+    textColor2: "#c0394a"
 ---

@@ -18,5 +18,5 @@ pageSections:
     heading: We have received your payment
     blocks:
     - _bt: prose
-      text: Thank you for submitting your online payment. Feel free to contact us with any additional questions or concerns at <a href="tel:(720) 600-4013">(720) 600-4013</a>
+      text: Thank you for submitting your online payment. Feel free to contact us with any additional questions or concerns at <a href="tel:7202222345">(720) 222-2345</a>
 ---

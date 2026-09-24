@@ -29,7 +29,7 @@ const hasHeading = typeof heading === "string" && heading.trim().length > 0;
   (hasHeading || items.length > 0) && (
     <nav class:list={["side-menu", className]} aria-label={hasHeading ? heading : "Section navigation"} {...rest}>
       <div class="side-menu-inner">
-        {hasHeading && <h4 class="side-menu-heading">{heading}</h4>}
+        {hasHeading && <p class="side-menu-heading">{heading}</p>}
         {items.map((item) => (
           <a class="side-menu-link" href={item.link}>
             <svg class="side-menu-chevron" viewBox="0 0 6 10" width="6" height="10" aria-hidden="true" focusable="false">
