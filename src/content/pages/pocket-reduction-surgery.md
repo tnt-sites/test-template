@@ -59,7 +59,9 @@ pageSections:
         embedUrl: https://forms.liine.com/252015254376958
     headingColor: "#000000"
     textColor: "#000000"
-    railTextColor: "#ffffff"
+    railTextColor: "#000000"
+    railBackgroundColorHex: "#3db5fb"
+    railFormBackgroundColorHex: "#f4f8f7"
   - _component: page-sections/wpmig/schedule-cta
     id: ""
     heading: Schedule Your Appointment at Our 5-Star Rated Dental Practice
@@ -75,7 +77,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

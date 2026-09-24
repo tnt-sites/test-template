@@ -49,7 +49,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     reviewers:
       - name: Lynn Stirling
         text: "Moved from out of state. So grateful Chapel Hill Dental Arts was recommended to me. Wonderful staff! Knowledgeable and very helpful. I would recommend Chapel Hill Dental Arts to anyone who was looking for a dentist! Very happy patient!"

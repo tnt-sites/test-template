@@ -47,6 +47,13 @@ const textColorValue = textColorHex || textColor || "#ffffff";
   </div>
 </div>
 <style>
+  /* Links sit on the brand band: the site link colour is the band colour. */
+  .prose-block-financing :global(a),
+  .prose-block-financing :global(a *) {
+    color: inherit;
+    text-decoration: underline;
+  }
+
   .prose-block-financing {
     background-color: var(--bg);
     box-sizing: border-box;
@@ -86,6 +93,12 @@ const textColorValue = textColorHex || textColor || "#ffffff";
     gap: 20px;
     justify-content: center;
     position: relative;
+    /* Shrink-to-content inside a centred parent would size this to the 700px
+       divider and the unwrapped paragraph, and run off a phone screen. And a
+       wrapping flex column sizes each line to its content, so it must not wrap
+       for the children to stretch to the screen. */
+    flex-wrap: nowrap;
+    width: 100%;
   }
 
   .pbf-box3 {

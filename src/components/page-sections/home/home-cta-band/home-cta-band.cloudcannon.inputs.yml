@@ -224,6 +224,14 @@ _structures:
     values:
       - value:
           link: ""
+          href: ""
+          imageAlt: ""
         _inputs:
           link:
             type: url
+            comment: The thumbnail image.
+          href:
+            type: url
+            comment: Where a click goes, in a new tab (the article). Empty opens the image in a lightbox instead.
+          imageAlt:
+            type: text

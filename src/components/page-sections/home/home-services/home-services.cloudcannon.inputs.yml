@@ -61,3 +61,8 @@ _inputs:
     comment: >-
       How far the card row pulls up into the banner above, in pixels. Keep in
       step with the banner's reserved bottom padding (150px).
+  inset:
+    type: number
+    comment: >-
+      Space around the card row, in pixels. 0 runs the cards edge to edge
+      (the homepage, under its banner); set it when the row stands alone.

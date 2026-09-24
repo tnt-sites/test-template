@@ -3,23 +3,24 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "https://s.hsone.io/MdxGf8ajzH",
       "icon": "calendar-days",
-      "textMobile": "Request",
-      "textStrong": " an Appointment"
+      "textMobile": "Book",
+      "textStrong": " Online",
+      "target": "_blank"
     },
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:7323650123",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call",
+      "textStrong": " Us"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/xtWsEWogaiqDVA1q9",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -28,7 +29,7 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/new-patients/#patient-forms",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "
@@ -36,7 +37,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/ChapelHillDentalArts",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +46,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/search?q=chapel+hill+dental+arts&oq=Chapel+Hi&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGIMBGLEDGIAEMgYIAhBFGDkyBwgDEC4YgAQyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxNzQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",

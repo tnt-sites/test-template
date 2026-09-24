@@ -16,7 +16,7 @@ value:
     - image: ""
       imageAlt: ""
   backgroundColor: ""
-  backgroundColorHex: rgba(247, 196, 93, 0.11)
+  backgroundColorHex: "#000000"
   overlayColor: "#000000"
   overlayColorHex: ""
   eyebrowColor: "#ffffff"

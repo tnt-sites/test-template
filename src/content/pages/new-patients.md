@@ -270,7 +270,7 @@ pageSections:
     iconName: ""
     accordionTheme:
       titleBackground: var(--color-brand-secondary)
-      titleColor: "#1f2124"
+      titleColor: "#ffffff"
       titleBackgroundOpen: var(--color-brand)
       titleColorOpen: "#ffffff"
       titleFontSize: 18px
@@ -370,7 +370,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

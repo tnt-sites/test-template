@@ -32,6 +32,7 @@ const {
   textColor = "",
   textColorHex = "",
   overlapTop = 100,
+  inset = 0,
   id,
   _component,
   ...rest
@@ -44,6 +45,8 @@ const vars = Object.entries({
   "--hs-tt": pick(titleColorHex, titleColor),
   "--hs-tx": pick(textColorHex, textColor),
   "--hs-overlap": Number.isFinite(Number(overlapTop)) ? `-${Number(overlapTop)}px` : "",
+  // Standalone use (not pulled up into a banner): hold the cards off the page edges.
+  "--hs-inset": Number(inset) > 0 ? `${Number(inset)}px` : "",
 })
   .filter(([, v]) => v)
   .map(([k, v]) => `${k}:${v}`)
@@ -89,12 +92,14 @@ const cardList = Array.isArray(cards) ? cards.filter(Boolean) : [];
     gap: 30px;
     margin-inline: auto;
     max-width: min(100%, 1440px);
-    padding-bottom: 10px;
+    padding: 0 var(--hs-inset, 0) max(10px, var(--hs-inset, 0));
     width: 100%;
   }
 
   .hs-card {
-    background-color: #ffffff;
+    /* The tint, not white, under the photo: it is what contrast checkers
+       (WAVE) and a failed image load measure the white card copy against. */
+    background-color: var(--hs-tint, #046caa);
     background-image: var(--hs-cardimg);
     background-position: 50% 50%;
     background-repeat: no-repeat;

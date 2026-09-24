@@ -7,6 +7,22 @@
       "path": "https://s.hsone.io/MdxGf8ajzH"
     },
     {
+      "name": "Privacy Policy",
+      "path": "/privacy-policy/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/hipaa-notice/"
+    },
+    {
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
+    },
+    {
       "name": "1,390 reviews",
       "path": "https://www.google.com/search?q=chapel+hill+dental+arts&oq=Chapel+Hi&gs_lcrp=EgZjaHJvbWUqBggAEEUYOzIGCAAQRRg7Mg0IARAuGIMBGLEDGIAEMgYIAhBFGDkyBwgDEC4YgAQyBwgEEAAYgAQyBggFEEUYPDIGCAYQRRg8MgYIBxBFGDzSAQgxNzQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8#"
     },
@@ -27,16 +43,8 @@
       "path": "/contact/"
     },
     {
-      "name": "HIPAA Policy",
-      "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
-    },
-    {
-      "name": "Opt-out preferences",
-      "path": "/opt-out-preferences/"
-    },
-    {
       "name": "429 Highway 35, Red Bank, NJ 07701",
-      "path": "https://share.google/YSYlAQLTap26ytHRt"
+      "path": "https://maps.app.goo.gl/xtWsEWogaiqDVA1q9"
     }
   ],
   "contactTitle": "Contact Us",
@@ -44,7 +52,7 @@
   "legalLinks": [
     {
       "name": "Privacy Policy",
-      "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+      "path": "/privacy-policy/"
     }
   ],
   "linkColumns": [
@@ -83,17 +91,19 @@
         },
         {
           "name": "Privacy Policy",
-          "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf",
-          "external": true
+          "path": "/privacy-policy/"
         },
         {
-          "name": "HIPAA Policy",
-          "path": "/wp-content/uploads/2026/02/chapel-hill-dental-arts-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf",
-          "external": true
+          "name": "HIPAA Notice",
+          "path": "/hipaa-notice/"
         },
         {
-          "name": "Opt-out preferences",
-          "path": "/opt-out-preferences/"
+          "name": "ADA Efforts",
+          "path": "/ada-efforts/"
+        },
+        {
+          "name": "Accessibility Statement",
+          "path": "/accessibility-statement/"
         }
       ]
     }

@@ -38,6 +38,10 @@ const {
   titleColorHex = "",
   railTextColor = "",
   railTextColorHex = "",
+  railBackgroundColor = "",
+  railBackgroundColorHex = "",
+  railFormBackgroundColor = "",
+  railFormBackgroundColorHex = "",
   eyebrowColor = "",
   eyebrowColorHex = "",
   id,
@@ -54,6 +58,8 @@ const vars = Object.entries({
   "--mp-cardbg": pick(cardBackgroundColorHex, cardBackgroundColor),
   "--mp-tt": pick(titleColorHex, titleColor),
   "--mp-railtx": pick(railTextColorHex, railTextColor),
+  "--mp-railbg": pick(railBackgroundColorHex, railBackgroundColor),
+  "--mp-railformbg": pick(railFormBackgroundColorHex, railFormBackgroundColor),
   "--mp-eb": pick(eyebrowColorHex, eyebrowColor),
 })
   .filter(([, v]) => v)
@@ -63,6 +69,12 @@ const vars = Object.entries({
 const list = (v: unknown) => (Array.isArray(v) ? v.filter(Boolean) : []);
 const blockList = list(blocks);
 const railList = list(rail);
+// The logo / heading / call line that open the rail sit together on a panel of
+// their own colour (the source's sky-blue box); the form below keeps its ground.
+const railType = (b: any) => b?.type || (b?.image ? "image" : b?.embedUrl ? "embed" : "text");
+const firstNonHead = railList.findIndex((b: any) => !["image", "heading", "text"].includes(railType(b)));
+const railHead = firstNonHead === -1 ? railList : railList.slice(0, firstNonHead);
+const railRest = firstNonHead === -1 ? [] : railList.slice(firstNonHead);
 const cardList = list(cards);
 
 const classes = [
@@ -165,41 +177,50 @@ const classes = [
     {
       layout === "split" && railList.length > 0 && (
         <aside class="mp-rail">
-          {railList.map((b: any) => {
-            const type = b?.type || (b?.image ? "image" : b?.embedUrl ? "embed" : "text");
-            if (type === "image")
-              return b.image ? <img class="mp-rail-media" src={b.image} alt={b.imageAlt || ""} loading="lazy" /> : null;
-            if (type === "heading") return <h2 class="mp-rail-heading" set:html={b.text} />;
-            if (type === "text") return b.text ? <p class="mp-rail-text" set:html={b.text} /> : null;
-            if (type === "embed")
-              return b.embedUrl ? (
-                <div class="mp-rail-embed-wrap">
-                  <iframe
-                    class="mp-rail-embed"
-                    src={b.embedUrl}
-                    title={b.title || "Contact form"}
-                    allow="geolocation; microphone; camera; fullscreen; payment"
-                    frameborder="0"
-                    loading="lazy"></iframe>
-                </div>
-              ) : null;
-            if (type === "button")
-              return b.buttonText ? (
-                <Button
-                  variant={b.variant || "primary"}
-                  size={b.size || "md"}
-                  uppercase
-                  class="mp-btn"
-                  editable={false}
-                  text={b.buttonText}
-                  link={b.buttonLink || "#"}
-                />
-              ) : null;
-            return null;
-          })}
+          {(() => {
+            const renderRail = (b: any) => {
+              const type = railType(b);
+              if (type === "image")
+                return b.image ? <img class="mp-rail-media" src={b.image} alt={b.imageAlt || ""} loading="lazy" /> : null;
+              if (type === "heading") return <h2 class="mp-rail-heading" set:html={b.text} />;
+              if (type === "text") return b.text ? <p class="mp-rail-text" set:html={b.text} /> : null;
+              if (type === "embed")
+                return b.embedUrl ? (
+                  <div class="mp-rail-embed-wrap">
+                    <iframe
+                      class="mp-rail-embed"
+                      src={b.embedUrl}
+                      title={b.title || "Contact form"}
+                      allow="geolocation; microphone; camera; fullscreen; payment"
+                      frameborder="0"
+                      loading="lazy"></iframe>
+                  </div>
+                ) : null;
+              if (type === "button")
+                return b.buttonText ? (
+                  <Button
+                    variant={b.variant || "primary"}
+                    size={b.size || "md"}
+                    uppercase
+                    class="mp-btn"
+                    editable={false}
+                    text={b.buttonText}
+                    link={b.buttonLink || "#"}
+                  />
+                ) : null;
+              return null;
+            };
+            return (
+              <>
+                {railHead.length > 0 && <div class="mp-rail-panel">{railHead.map(renderRail)}</div>}
+                {railRest.map(renderRail)}
+              </>
+            );
+          })()}
         </aside>
       )
     }
+
   </div>
 </div>
 
@@ -343,6 +364,34 @@ const classes = [
     min-width: 0;
   }
 
+  .mp-rail-panel {
+    background-color: var(--mp-railbg, transparent);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .media-prose[style*="--mp-railbg"] .mp-rail-panel {
+    padding: 30px;
+    text-align: center;
+  }
+
+  /* The site link colour is close to the panel's; links take the panel text. */
+  .media-prose[style*="--mp-railbg"] .mp-rail-panel :global(a) {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  .media-prose[style*="--mp-railbg"] .mp-rail-media {
+    margin-inline: auto;
+    max-width: 220px;
+  }
+
+  .media-prose[style*="--mp-railformbg"] .mp-rail-embed-wrap {
+    background-color: var(--mp-railformbg);
+    padding: 20px;
+  }
+
   .mp-rail-media {
     display: block;
     height: auto;
@@ -428,9 +477,32 @@ const classes = [
     font-weight: 700;
   }
 
+  /* Subheadings inside a run of prose (the service pages' "Reasons for…",
+     "What does… involve?") are the source's 25px, not section-title size. */
+  .mp-heading:is(h3, h4) {
+    font-size: 22px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  /* Service-page body copy: the source's 18/27 Lato, set in from the window
+     edge rather than running against it. */
+  .mp-split .mp-main {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
   @media (min-width: 768px) {
     .mp-heading {
       font-size: 32px;
+    }
+
+    .mp-heading:is(h3, h4) {
+      font-size: 25px;
+    }
+
+    .mp-split .mp-main {
+      padding-left: 35px;
     }
 
     .mp-split .mp-inner {
@@ -455,6 +527,10 @@ const classes = [
 
     .mp-heading {
       font-size: 45px;
+    }
+
+    .mp-heading:is(h3, h4) {
+      font-size: 25px;
     }
 
     .mp-split .mp-inner {

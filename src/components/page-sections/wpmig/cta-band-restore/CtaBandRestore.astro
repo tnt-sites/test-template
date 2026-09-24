@@ -165,6 +165,7 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
   }
 
   :global(.cbr-btn) {
+    max-width: 100%;
     background-color: var(--color-brand, #047ac0);
     border: 1px solid var(--color-brand-secondary, #1f7da6);
     border-radius: 3px;
@@ -186,6 +187,13 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
 
   :global(.cbr-btn) :global(.label-text) {
     white-space: nowrap;
+  }
+
+  /* On a phone the longer label is wider than the screen; let it wrap there. */
+  @media (max-width: 479px) {
+    :global(.cbr-btn) :global(.label-text) {
+      white-space: normal;
+    }
   }
 
   :global(.cbr-btn):hover {

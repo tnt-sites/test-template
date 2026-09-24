@@ -294,3 +294,9 @@ _inputs:
   railTextColorHex:
     type: color
     comment: Optional custom hex that overrides the railTextColor selection.
+  railBackgroundColorHex:
+    type: color
+    comment: Panel behind the rail's logo, heading and call line. Empty for none.
+  railFormBackgroundColorHex:
+    type: color
+    comment: Ground behind the rail's form. Empty for none.

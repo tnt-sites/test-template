@@ -15,7 +15,12 @@ const {
   _component,
   ...rest
 } = Astro.props;
-const backgroundColorValue = backgroundColorHex || backgroundColor || "var(--color-brand)";
+// Under a photo the colour is never seen, but it is what contrast checkers
+// (WAVE) and a failed image load measure the heading against, and the brand
+// heading on a brand ground measures 1:1. So a photo gets a dark ground.
+const backgroundColorValue = backgroundImage
+  ? "#1a1a1a"
+  : backgroundColorHex || backgroundColor || "var(--color-brand)";
 const headingColorValue = headingColorHex || headingColor || "var(--color-brand)";
 ---
 <div class="page-hero-digital" id={id || undefined} style={`--bg:${backgroundColorValue};--hd:${headingColorValue}${backgroundImage ? `;--bgimg:url('${backgroundImage}')` : ""}`} {...rest}>

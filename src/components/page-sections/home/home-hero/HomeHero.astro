@@ -15,7 +15,7 @@ const {
   items = [],
   images = [],
   backgroundColor = "",
-  backgroundColorHex = "rgba(247, 196, 93, 0.11)",
+  backgroundColorHex = "#000000",
   overlayColor = "#000000",
   overlayColorHex = "",
   eyebrowColor = "#ffffff",
@@ -42,7 +42,7 @@ const {
   _component,
   ...rest
 } = Astro.props;
-const backgroundColorValue = backgroundColorHex || backgroundColor || "rgba(247, 196, 93, 0.11)";
+const backgroundColorValue = backgroundColorHex || backgroundColor || "#000000";
 const overlayColorValue = overlayColorHex || overlayColor || "#000000";
 const eyebrowColorValue = eyebrowColorHex || eyebrowColor || "#ffffff";
 const headingColorValue = headingColorHex || headingColor || "#ffffff";

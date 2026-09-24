@@ -19,8 +19,8 @@ pageSections:
     id: ""
     layout: split
     blocks:
-      - type: eyebrow
-        text: Crown lengthening in Middletown is generally performed in order to improve the health of the gum tissue, or to prepare the mouth for restorative or cosmetic procedures. In addition, crown lengthening procedures can also be used to correct a “gummy” smile, where teeth are covered with excess gum tissue. Crown lengthening exposes more of the natural tooth by reshaping or recontouring bone and gum tissue. This treatment can be performed on a single tooth, many teeth or the entire gum line, to expose a pleasant, aesthetically pleasing smile.
+      - type: text
+        text: "<p>Crown lengthening in Middletown is generally performed in order to improve the health of the gum tissue, or to prepare the mouth for restorative or cosmetic procedures. In addition, crown lengthening procedures can also be used to correct a “gummy” smile, where teeth are covered with excess gum tissue. Crown lengthening exposes more of the natural tooth by reshaping or recontouring bone and gum tissue. This treatment can be performed on a single tooth, many teeth or the entire gum line, to expose a pleasant, aesthetically pleasing smile.</p>"
       - type: heading
         level: h3
         text: Reasons for crown lengthening
@@ -58,7 +58,9 @@ pageSections:
     headingColor: "#000000"
     textColor: "#000000"
     eyebrowColor: "#000000"
-    railTextColor: "#ffffff"
+    railTextColor: "#000000"
+    railBackgroundColorHex: "#3db5fb"
+    railFormBackgroundColorHex: "#f4f8f7"
   - _component: page-sections/wpmig/schedule-cta
     id: ""
     heading: Schedule Your Appointment at Our 5-Star Rated Dental Practice
@@ -74,7 +76,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

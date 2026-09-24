@@ -340,9 +340,9 @@ const hasTopBar = Boolean(topBarPhone || topBarLink || topBarAddress);
         justify-content: space-between;
         margin: 0 auto;
         min-height: var(--chrome-topbar-height, 45px);
-        /* The source runs its strip to the edges of the window; the template's
-           centred column would set it in by seventy pixels a side. */
-        padding: var(--spacing-2xs) calc(var(--chrome-header-inset, var(--spacing-lg)) + var(--spacing-xl));
+        /* Set in by the same inset as the menu bar below, so the phone and
+           the logo, the address and the last menu item, line up. */
+        padding: var(--spacing-xs) var(--chrome-header-inset, var(--spacing-lg));
       }
 
       .stb-group {
@@ -356,7 +356,7 @@ const hasTopBar = Boolean(topBarPhone || topBarLink || topBarAddress);
         align-items: center;
         color: inherit;
         display: inline-flex;
-        gap: var(--spacing-2xs);
+        gap: var(--spacing-xs);
         line-height: 1.2;
         text-decoration: none;
 
@@ -532,7 +532,7 @@ const hasTopBar = Boolean(topBarPhone || topBarLink || topBarAddress);
       > .bar-list > .nav-item > .nav-item-trigger {
         background: none;
         border: 0;
-        padding-inline: var(--spacing-2xs);
+        padding-inline: var(--spacing-xs);
 
         /* The source marks a menu that opens with a solid caret under the
            label. The template's hairline chevron in a bordered box reads as a

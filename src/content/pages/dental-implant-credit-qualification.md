@@ -17,7 +17,7 @@ pageSections:
       - buttonText: Estimate Your Monthly Payments
         buttonLink: https://www.carecredit.com/payment_calculator/
     backgroundImage: /wp-content/uploads/2024/10/5027-Group-of-4-drs-T2-scaled.jpg
-    backgroundColor: var(--color-brand)
+    backgroundColor: "#000000"
     backgroundColorHex: ""
     overlayColor: "#000000"
     overlayColorHex: ""
@@ -36,83 +36,111 @@ pageSections:
   - _component: page-sections/shared-blocks/content-section
     id: ""
     align: left
+    headingColor: "#0a5a8c"
+    design:
+      heading:
+        fontFamily: var(--font-headings)
+        fontSize: 44
+        fontWeight: 700
     blocks:
       - type: heading
         html: Why Choose Dental Implants?
       - type: prose
         html: Missing teeth don’t just affect your appearance — they can impact your overall health, bone structure, and confidence. Dental implants in Middletown replace both the root and visible portion of the tooth, preventing bone loss and restoring your bite. At Chapel Hill Dental Arts PA, our specialists offer advanced implant solutions, providing you with a one-stop shop for a strong, beautiful smile.
       - type: prose
-        html: <b>Benefits of Dental Implants:</b>
+        html: |-
+          <p><strong>Benefits of Dental Implants:</strong></p>
+          <ul>
+          <li>Look, feel, and function like natural teeth</li>
+          <li>Help preserve bone density</li>
+          <li>Restore bite strength and stability</li>
+          </ul>
       - type: prose
-        html: <span>Look, feel, and function like natural teeth</span><span><br></span>
+        html: Boost your confidence and oral health!
       - type: prose
-        html: <span>Help preserve bone density</span><span><br></span>
-      - type: prose
-        html: Restore bite strength and stability
-      - type: prose
-        html: <span>Boost your confidence and oral health!</span><span><br></span>
-  - _component: page-sections/wpmig/prose-block-we
+        html: <img src="/wp-content/uploads/2025/05/carecredit-logo-vector.png" alt="CareCredit" width="200" style="height:auto" />
+    media:
+      type: image
+      source: /wp-content/uploads/2024/10/2020-Staff-photo-rs.jpeg
+      alt: The Chapel Hill Dental Arts team outside the office
+      side: left
+      fullBleed: true
+  - _component: page-sections/shared-blocks/content-section
     id: ""
-    heading: Financing Made Simple
-    subheading: Easy, Flexible Financing Options
-    text: We proudly offer financing through CareCredit to make dental implants more affordable. Pre-qualifying only takes a few minutes and won’t affect your credit score!
-    text2: We recommend getting pre-qualified before requesting a consultation to make the process even smoother!
-    items:
-      - buttonText: PRE-QUALIFY FOR FINANCING
-        buttonLink: https://go.carecredit.com/consumer/payfone
-      - buttonText: Estimate Your Monthly Payments
-        buttonLink: https://www.carecredit.com/payment_calculator/
-    headingColor: "#ffffff"
-    headingColorHex: ""
-    textColor: "#ffffff"
-    textColorHex: ""
-    textHoverColor: ""
-    textHoverColorHex: "#bee6fe"
-    hoverBackgroundColor: ""
-    hoverBackgroundColorHex: "#7ecefc"
-    hoverColor: "#000000"
-    hoverColorHex: ""
-  - _component: page-sections/wpmig/media-prose
+    align: center
+    headingColor: "#0a3a55"
+    subheadingColor: "#0a3a55"
+    textColor: "#0a3a55"
+    design:
+      heading:
+        fontFamily: var(--font-headings)
+        fontSize: 44
+        fontWeight: 700
+    blocks:
+      - type: heading
+        html: Financing Made Simple
+      - type: subheading
+        html: <em>Easy, Flexible Financing Options</em>
+      - type: prose
+        html: We proudly offer financing through CareCredit to make dental implants more affordable. Pre-qualifying only takes a few minutes and won’t affect your credit score!
+      - type: buttons
+        buttons:
+          - text: PRE-QUALIFY FOR FINANCING
+            link: https://go.carecredit.com/consumer/payfone
+          - text: Estimate Your Monthly Payments
+            link: https://www.carecredit.com/payment_calculator/
+  - _component: page-sections/shared-blocks/content-section
     id: ""
-    layout: cards
-    cardStyle: title-first
+    align: center
+    eyebrowColor: var(--color-brand)
+    headingColor: "#000000"
+    design:
+      eyebrow:
+        fontFamily: var(--font-headings)
+        letterSpacing: 0.3em
+      heading:
+        fontFamily: var(--font-headings)
+        fontSize: 44
+        fontWeight: 400
     blocks:
       - type: eyebrow
-        text: CUSTOM SOLUTIONS FOR YOUR SMILE
+        html: Custom Solutions for Your Smile
       - type: heading
-        level: h2
-        text: Your Implant Options
-      - type: text
-        text: Our implant specialists, Dr. Asim Zaidi and Dr. Steve Reff, will guide you every step of the way, using advanced technology like CT scans for precise, comfortable results.
+        html: <em>Your Implant Options</em>
+      - type: prose
+        html: Our implant specialists, Dr. Asim Zaidi and Dr. Steve Reff, will guide you every step of the way, using advanced technology like CT scans for precise, comfortable results.
+  - _component: page-sections/home/home-services
+    id: ""
     cards:
       - title: Single Dental Implants
         text: Perfect for replacing individual missing teeth without impacting neighboring teeth.
         image: /wp-content/uploads/elementor/thumbs/dental-insurance-qvb5qalx3qguzyv2y3mlq3ct0zhqzt4jwjzvwgcagw.png
         imageAlt: Icon of tooth and checkmarked shield
         text2: "01."
+        bgImage: /wp-content/uploads/2024/10/Dr.-Zaidi-with-Assistant.jpg
       - title: Implant-Supported Bridges
         text: A strong, healthy option to replace multiple missing teeth.
         image: /wp-content/uploads/elementor/thumbs/floss-qvb5r3qwzlkqzvor7y81de03fxi4mfc8ck7xs15340.png
         imageAlt: Icon of tooth being flossed
         text2: "02."
+        bgImage: /wp-content/uploads/2024/10/In-Treatment.jpg
       - title: Implant-Supported Dentures
         text: Same-day full-arch restoration available, crafted right in our in-house dentures lab.
         image: /wp-content/uploads/elementor/thumbs/bonding-qvb5swls361j8z2jp89anfmwfimgdjhplh8fw4gx6o.png
         imageAlt: Icon of dental bonding
         text2: "03."
-    backgroundColor: "#ffffff"
-    headingColor: "#000000"
-    textColor: "#000000"
-    cardBackgroundColor: "#ffffff"
+        bgImage: /wp-content/uploads/2024/10/Surgery-Photo.jpg
+    tintColorHex: "#046caa"
+    tintOpacity: 0.9
     titleColor: "#ffffff"
-    eyebrowColor: var(--color-brand)
-    overlayColor: "#000000"
-    railTextColor: "#ffffff"
+    textColor: "#ffffff"
+    overlapTop: 0
+    inset: 40
   - _component: page-sections/shared-blocks/content-section
     id: ""
     align: left
     blocks:
-      - type: prose
+      - type: eyebrow
         html: Expert Care, All Under One Roof
       - type: heading
         html: Meet Your Implant Specialists
@@ -129,7 +157,7 @@ pageSections:
         level: h2
         text: Take the First Step Toward Your New Smile
       - type: text
-        text: <span>&nbsp;Ready to start your journey to a healthier, more confident smile? Please fill out the form below — and don’t forget to </span><span><strong><a href="https://go.carecredit.com/consumer/payfone">pre-qualify for financing</a></strong></span><span> if you haven’t already!</span>
+        text: <span>&nbsp;Ready to start your journey to a healthier, more confident smile? Please fill out the form below — and don’t forget to </span><span><strong><a style="color:#0a5a8c" href="https://go.carecredit.com/consumer/payfone">pre-qualify for financing</a></strong></span><span> if you haven’t already!</span>
       - type: embed
         embedUrl: https://forms.liine.com/252015254376958
     backgroundColorHex: "#f4f8f7"
@@ -150,7 +178,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

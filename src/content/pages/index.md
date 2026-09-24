@@ -27,7 +27,7 @@ pageSections:
       - image: /wp-content/uploads/2024/10/American-Dental-Association-Logo-white-sq.png
         imageAlt: ADA logo
     backgroundColor: ""
-    backgroundColorHex: rgba(247, 196, 93, 0.11)
+    backgroundColorHex: "#000000"
     overlayColor: "#000000"
     overlayColorHex: ""
     eyebrowColor: "#ffffff"
@@ -136,12 +136,16 @@ pageSections:
     buttonLink: https://issuu.com/industrymagazine/docs/new_jersey_sep_oct_industry_2020w_links
     items:
       - link: /wp-content/uploads/2024/11/In-the-News.png
+        href: /wp-content/uploads/2024/11/In-the-News.png
         imageAlt: Industry New Jersey magazine cover, Fall 2020 Fashion Issue
       - link: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.26-PM.png
+        href: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.26-PM.png
         imageAlt: 'Industry NJ feature "Reason to Smile": portrait of Dr. Asim Zaidi and a photo of him treating a patient'
       - link: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.47-PM.png
+        href: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.47-PM.png
         imageAlt: Industry NJ feature page showing the Chapel Hill Dental Arts team posed together in the office
       - link: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.57-PM.png
+        href: /wp-content/uploads/2024/11/Screen-Shot-2024-11-13-at-12.13.57-PM.png
         imageAlt: Industry NJ feature page showing Dr. Zaidi with a patient and the office's 3D imaging equipment
     backgroundColor: "#ffffff"
     backgroundColorHex: ""
@@ -246,7 +250,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

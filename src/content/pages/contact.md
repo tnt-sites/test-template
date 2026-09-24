@@ -24,7 +24,7 @@ pageSections:
     phoneHref: "tel:+17323650123"
     addressLabel: "Address :"
     addressText: 429 Highway 35, Red Bank, NJ 07701
-    addressHref: https://share.google/YSYlAQLTap26ytHRt
+    addressHref: https://maps.app.goo.gl/xtWsEWogaiqDVA1q9
     eyebrow: Send Message
     title: Contact Us
     formEmbedUrl: https://forms.liine.com/252015254376958
@@ -56,7 +56,7 @@ pageSections:
     backgroundColor: surface
     headingColor: var(--color-brand)
     googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
+    yelpUrl: ""
     hidden: false
     reviewers:
       - name: Lynn Stirling

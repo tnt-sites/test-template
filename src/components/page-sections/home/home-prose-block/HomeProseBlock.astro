@@ -49,6 +49,9 @@ const textColorValue = textColorHex || textColor || "#ffffff";
        mid-grey band of the image instead of the doctor's face. Dropping the
        attachment makes the section far busier than the original. */
     background-attachment: fixed;
+    /* Never seen behind the photo; it is what contrast checkers (WAVE) and a
+       failed image load measure the white copy against. */
+    background-color: #1a1a1a;
     background-image: url("/wp-content/uploads/2024/10/AZ-Photo.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;

@@ -1,103 +1,74 @@
 ---
-_mig:
-  v: 0.1.0
-  gen: wpmig
-  hash: ""
 title: Privacy Policy
 description: ""
 canonical: /privacy-policy/
 pageSections:
-  - _component: page-sections/shared-blocks/content-section
+  - _component: page-sections/wpmig/page-hero-digital
     id: ""
-    align: left
-    blocks:
-      - type: heading
-        html: Privacy Policy
-        level: 1
-  - _component: page-sections/shared-blocks/content-section
-    id: ""
-    align: left
-    blocks:
-      - type: heading
-        html: Who we are
-      - type: prose
-        html: "<strong>Suggested text: </strong>Our website address is: ."
-      - type: heading
-        html: Comments
-      - type: prose
-        html: "<strong>Suggested text: </strong>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection."
-      - type: prose
-        html: "An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment."
-      - type: heading
-        html: Media
-      - type: prose
-        html: "<strong>Suggested text: </strong>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website."
-      - type: heading
-        html: Cookies
-      - type: prose
-        html: "<strong>Suggested text: </strong>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year."
-      - type: prose
-        html: If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.
-      - type: prose
-        html: When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select "Remember Me", your login will persist for two weeks. If you log out of your account, the login cookies will be removed.
-      - type: prose
-        html: If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.
-      - type: heading
-        html: Embedded content from other websites
-      - type: prose
-        html: "<strong>Suggested text: </strong>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website."
-      - type: prose
-        html: These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.
-      - type: heading
-        html: Who we share your data with
-      - type: prose
-        html: "<strong>Suggested text: </strong>If you request a password reset, your IP address will be included in the reset email."
-      - type: heading
-        html: How long we retain your data
-      - type: prose
-        html: "<strong>Suggested text: </strong>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue."
-      - type: prose
-        html: For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.
-      - type: heading
-        html: What rights you have over your data
-      - type: prose
-        html: "<strong>Suggested text: </strong>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes."
-      - type: heading
-        html: Where your data is sent
-      - type: prose
-        html: "<strong>Suggested text: </strong>Visitor comments may be checked through an automated spam detection service."
-  - _component: page-sections/wpmig/schedule-cta
-    id: ""
-    heading: Schedule Your Appointment at Our 5-Star Rated Dental Practice
-    subtext: >-
-      Dr. Zaidi and the team at Chapel Hill Dental Arts look forward to welcoming
-      you. Request your appointment today.
-    buttonText: Book an Appointment
-    buttonLink: https://s.hsone.io/MdxGf8ajzH
-    hidden: false
-  - _component: page-sections/wpmig/patient-reviews
-    id: ""
-    heading: What Our Patients Say
-    subheading: >-
-      We're proud to be one of Red Bank's most highly rated dental practices.
-      Here's what some of our patients have shared.
-    rating: "5.0"
-    backgroundColor: surface
+    heading: Privacy Policy
+    backgroundImage: /wp-content/uploads/2024/10/5027-Group-of-4-drs-T2-scaled.jpg
+    backgroundColor: var(--color-brand)
+    backgroundColorHex: ""
     headingColor: var(--color-brand)
-    googleUrl: https://www.google.com/maps/search/?api=1&query=Chapel+Hill+Dental+Arts+Red+Bank+NJ
-    yelpUrl: https://www.yelp.com/biz/chapel-hill-dental-arts-red-bank-3
-    hidden: false
-    reviewers:
-      - name: Lynn Stirling
-        text: "Moved from out of state. So grateful Chapel Hill Dental Arts was recommended to me. Wonderful staff! Knowledgeable and very helpful. I would recommend Chapel Hill Dental Arts to anyone who was looking for a dentist! Very happy patient!"
-      - name: Becky Sassmann
-        text: "Everyone is very friendly from at the door through the whole visit. All portions were explained very clearly and thoroughly."
-      - name: Sal Coch
-        text: "Great Doctors, great staff, kudos to all."
-      - name: Joe Davino
-        text: "The personnel there are great! Best dentist ever! Reasonable prices and the office rehab that just took place is unbelievable!"
-      - name: R.G. Jones
-        text: "I really feel that the people there are some of the best people I know — from the staff to the doctors, they are all amazing. They try to make everyone as comfortable as possible. You might even find yourself laughing!"
-      - name: Fred Samuel
-        text: "Gabriella was great! Everyone there is helpful, cheerful and knowledgeable. And their equipment is state of the art / high tech. Makes everything much easier for everyone involved."
+    headingColorHex: ""
+  - _component: page-sections/shared-blocks/content-section
+    id: ""
+    align: left
+    blocks:
+      - type: prose
+        html: |-
+          <p>We have prepared this Privacy Policy to explain how, why, and when we collect data from you on our website.</p>
+          <p>Please note that this Privacy Policy only applies to data that we collect when you visit our website. It is separate from our <a href="/hipaa-notice/">HIPAA Notice of Privacy Practices</a>, which describes how we use and disclose protected health information in the dental practice.</p>
+          <h2>1. What data we collect and how we use it</h2>
+          <p>We may collect the following categories of information on our website and use them for the purposes explained below.</p>
+          <ul>
+          <li><strong>Website activity:</strong> Data about your browsing activity on our website.</li>
+          <li><strong>Device and browser information:</strong> Technical information about the device or browser you use to access our website. For example, your device&#8217;s IP address, and (in the case of mobile devices) your device type and mobile device&#8217;s unique identifier such as the Apple IDFA or Android Advertising ID.</li>
+          <li><strong>Contact information:</strong> If you choose to provide your name, email address, or phone number.</li>
+          <li><strong>Customer service information:</strong> Information you may provide to customer service, including survey responses.</li>
+          <li><strong>Financial information:</strong> Credit card number or other payment account information when you use online payment tools.</li>
+          <li><strong>Third-party information:</strong> We may collect additional information about you from third-party sources where we have the rights to do so.</li>
+          <li><strong>No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</strong> All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</li>
+          </ul>
+          <p>We use this data to:</p>
+          <ul>
+          <li>Customize, measure, and improve our website and services.</li>
+          <li>Deliver targeted marketing to you.</li>
+          </ul>
+          <h2>2. Data sharing</h2>
+          <p>We may disclose information about you:</p>
+          <ul>
+          <li><strong>With our service providers:</strong> Companies we contract with who help with parts of our business operations. We require that our service providers only use your information in connection with the services they perform for us.</li>
+          <li><strong>With your service providers:</strong> Companies under contract with, or acting on your behalf, who handle data on your behalf.</li>
+          <li><strong>With our subsidiaries and related companies.</strong></li>
+          <li><strong>In connection with legal proceedings:</strong> When we are under a legal obligation to do so, for example to comply with a binding order of a court, or where disclosure is necessary to exercise, establish, or defend our legal rights or the rights of any other party.</li>
+          <li><strong>In connection with a sale of our business:</strong> If a third party acquires some or all of our business or assets, we may disclose your information in connection with the sale.</li>
+          <li>We also share technical data that we collect about your browsing habits and your device (such as data relating to our cookies, tracking pixels, and similar technologies) with advertising companies in the digital advertising ecosystem. Finally, we may disclose aggregated, anonymized information to third parties.</li>
+          </ul>
+          <h2>3. Cookies and related technologies</h2>
+          <p>This website uses cookies, tracking pixels, and related technologies. Cookies are small data files that are served by our platform and stored on your device. Our site uses cookies dropped by us or third parties for a variety of purposes including to operate and personalize the website. Cookies may also be used to track how you use the site to target ads to you on other websites.</p>
+          <h2>4. Your choices and opting out</h2>
+          <p>We recognize how important your online privacy is to you, so we offer the following options for controlling the targeted ads you receive and how we use your data:</p>
+          <ul>
+          <li>We comply with the Self-Regulatory Principles for Online Behavioral Advertising as managed by the Digital Advertising Alliance (DAA). You may opt out of receiving targeted ads from companies that perform ad targeting services, including some that we may work with, via the DAA website at <a href="https://optout.aboutads.info/">optout.aboutads.info</a>.</li>
+          <li>We also comply with the Canadian Self-regulatory Principles for Online Behavioral Advertising as managed by the Digital Advertising Alliance of Canada (DAAC). You may opt out via the DAAC website at <a href="https://youradchoices.ca/">youradchoices.ca</a>.</li>
+          <li>We also adhere to the European Interactive Advertising Digital Alliance (EDAA) guidelines for online advertising. You may opt out via <a href="https://www.youronlinechoices.com/">Your Online Choices</a>.</li>
+          <li>When using the ad industry opt-out tools described above: if you opt out we may still collect some data about your online activity for operational purposes, but it will not be used by us for the purpose of targeting ads to you. If you use multiple browsers or devices you may need to execute this opt out on each browser or device.</li>
+          <li>You can request that we stop email marketing to you by contacting our office.</li>
+          <li>Some internet browsers allow users to send a &#8220;Do Not Track&#8221; signal to websites they visit. We do not respond to this signal.</li>
+          </ul>
+          <h2>5. Data retention</h2>
+          <p>Identifiable information about you is held no longer than necessary for our business purposes or to meet legal requirements.</p>
+          <h2>6. Security</h2>
+          <p>We apply technical, administrative, and organizational security measures to protect the data we collect against accidental or unlawful destruction and loss, alteration, unauthorized disclosure or access, in particular where the processing involves the transmission of data over a network, and against other unlawful forms of processing.</p>
+          <h2>7. International transfers</h2>
+          <p>We may transfer the information we collect about you to countries other than the country where we originally collected it for the purposes of storage and processing of data and operating our services. Those countries may not have the same data protection laws as your country. However, when we transfer your information to other countries, we will protect that information as described in this Privacy Policy and take steps, where necessary, to ensure that international transfers comply with applicable laws.</p>
+          <h2>8. Changes to this Privacy Policy</h2>
+          <p>Changes to this Privacy Policy will be posted on this page. If we make a material change to our privacy practices, we will provide notice on the site or by other means as appropriate.</p>
+          <h2>9. Contact us about questions or concerns</h2>
+          <p>If you have any questions about this Privacy Policy or our privacy practices, you can contact our office.</p>
+          <p><strong>Chapel Hill Dental Arts</strong><br>
+          429 Highway 35<br>
+          Red Bank, NJ 07701<br>
+          <a href="tel:+17323650123">(732) 365-0123</a> · <a href="/contact/">Contact Us</a></p>
 ---
