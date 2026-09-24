@@ -3,6 +3,9 @@
  * In the News band — heading, a responsive row of press/media images, and a
  * "see more" button. (Originally auto-migrated as a tangle of absolutely
  * positioned, opacity:0 spacers; rebuilt to actually show the images.)
+ *
+ * Each image opens a lightbox gallery of the full-size press pages, unless the
+ * item sets an explicit `href`, in which case it links out instead.
  */
 import Button from "@core-elements/button/Button.astro";
 const {
@@ -25,7 +28,7 @@ const list = Array.isArray(items) ? items.filter((i) => i && (i.image || i.link)
 const isImg = (s = "") => /\.(png|jpe?g|webp|gif|svg)$/i.test(s);
 const slides = list.map((it, i) => {
   const image = it.image || (isImg(it.link) ? it.link : "");
-  const href = it.href || (isImg(it.link) ? "" : it.link) || buttonLink || "";
+  const href = it.href || (isImg(it.link) ? "" : it.link) || "";
   const fallbackAlt = heading ? `${heading} — press mention ${i + 1}` : `Press mention ${i + 1}`;
   return { image, href, alt: it.alt || it.imageAlt || fallbackAlt };
 });
@@ -41,13 +44,19 @@ const slides = list.map((it, i) => {
               <img src={s.image} alt={s.alt} loading="lazy" />
             </a>
           ) : (
-            <div class="cb-item">
+            <button type="button" class="cb-item" data-full={s.image} aria-label={`Enlarge: ${s.alt}`}>
               <img src={s.image} alt={s.alt} loading="lazy" />
-            </div>
+            </button>
           )
         )}
       </div>
     )}
+    <dialog class="cb-lightbox" aria-label={heading ? `${heading} gallery` : "Press gallery"}>
+      <button type="button" class="cb-lb-close" aria-label="Close">&times;</button>
+      <button type="button" class="cb-lb-prev" aria-label="Previous image">&#8249;</button>
+      <img class="cb-lb-img" src="" alt="" />
+      <button type="button" class="cb-lb-next" aria-label="Next image">&#8250;</button>
+    </dialog>
     {buttonText && (
       <div class="cb-cta">
         <Button variant="secondary" size="md" uppercase data-prop="buttonText" text={buttonText} link={buttonLink || "#"} />
@@ -87,8 +96,12 @@ const slides = list.map((it, i) => {
   }
 
   .cb-item {
+    background: none;
+    border: 3px solid var(--color-brand, #047ac0);
+    cursor: pointer;
     display: block;
     overflow: hidden;
+    padding: 0;
   }
 
   .cb-item img {
@@ -97,7 +110,86 @@ const slides = list.map((it, i) => {
     height: 100%;
     object-fit: cover;
     object-position: top center;
+    transition: transform 0.35s ease;
     width: 100%;
+  }
+
+  .cb-item:hover img,
+  .cb-item:focus-visible img {
+    transform: scale(1.08);
+  }
+
+  .cb-item:focus-visible {
+    outline: 2px solid var(--color-brand, #047ac0);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cb-item img {
+      transition: none;
+    }
+  }
+
+  .cb-lightbox {
+    background: none;
+    border: 0;
+
+    /* The reset zeroes <dialog>'s UA `margin: auto`, which is what centers it. */
+    margin: auto;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .cb-lightbox::backdrop {
+    background: rgb(0 0 0 / 85%);
+  }
+
+  .cb-lb-img {
+    display: block;
+    max-height: 90vh;
+    max-width: min(90vw, 1000px);
+    object-fit: contain;
+  }
+
+  .cb-lb-close,
+  .cb-lb-prev,
+  .cb-lb-next {
+    background: none;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 3rem;
+    line-height: 1;
+    padding: 0.25rem 0.75rem;
+    position: fixed;
+  }
+
+  .cb-lb-close {
+    font-size: 2.5rem;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  /* Dark disc keeps the arrows legible where they overlap the image on phones. */
+  .cb-lb-prev,
+  .cb-lb-next {
+    background-color: rgb(0 0 0 / 55%);
+    border-radius: 50%;
+    height: 3rem;
+    padding: 0 0 0.3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3rem;
+  }
+
+  .cb-lb-prev {
+    left: 1rem;
+  }
+
+  .cb-lb-next {
+    right: 1rem;
   }
 
   .cb-cta {
@@ -106,7 +198,7 @@ const slides = list.map((it, i) => {
   }
 
   .cta-band :global(.cb-cta .button) {
-    background-color: #ffffff;
+    background-color: #fff;
     border: 1px solid var(--color-brand, #047ac0);
     border-radius: 0;
     color: var(--color-brand, #047ac0);
@@ -116,6 +208,42 @@ const slides = list.map((it, i) => {
 
   .cta-band :global(.cb-cta .button:hover) {
     background-color: var(--color-brand, #047ac0);
-    color: #ffffff;
+    color: #fff;
   }
 </style>
+<script>
+  // Delegated so it keeps working after the CloudCannon editor re-renders the
+  // section; skipped in the editor so clicking a thumbnail still selects it.
+  document.addEventListener("click", (e) => {
+    if ((window as { inEditorMode?: boolean }).inEditorMode) return;
+    const target = e.target as HTMLElement;
+    const section = target.closest<HTMLElement>(".cta-band");
+    const dialog = section?.querySelector<HTMLDialogElement>(".cb-lightbox");
+    if (!section || !dialog) return;
+
+    const thumbs = [...section.querySelectorAll<HTMLButtonElement>(".cb-item[data-full]")];
+    const img = dialog.querySelector<HTMLImageElement>(".cb-lb-img")!;
+    const show = (i: number) => {
+      const n = (i + thumbs.length) % thumbs.length;
+      dialog.dataset.index = String(n);
+      img.src = thumbs[n].dataset.full!;
+      img.alt = thumbs[n].querySelector("img")?.alt || "";
+    };
+    const current = Number(dialog.dataset.index || 0);
+
+    const thumb = target.closest<HTMLButtonElement>(".cb-item[data-full]");
+    if (thumb) {
+      show(thumbs.indexOf(thumb));
+      dialog.showModal();
+    } else if (target.closest(".cb-lb-prev")) show(current - 1);
+    else if (target.closest(".cb-lb-next")) show(current + 1);
+    // The close button, or a click on the backdrop (which targets the dialog itself).
+    else if (target.closest(".cb-lb-close") || target === dialog) dialog.close();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    const dialog = document.querySelector<HTMLDialogElement>(".cb-lightbox[open]");
+    if (!dialog || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+    dialog.querySelector<HTMLButtonElement>(e.key === "ArrowLeft" ? ".cb-lb-prev" : ".cb-lb-next")?.click();
+  });
+</script>
