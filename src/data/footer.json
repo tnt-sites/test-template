@@ -25,18 +25,6 @@
     {
       "name": "Contact",
       "path": "/contact/"
-    },
-    {
-      "name": "Privacy Policy",
-      "path": "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf"
-    },
-    {
-      "name": "HIPAA Notice",
-      "path": "/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf"
-    },
-    {
-      "name": "Accessibility Statement",
-      "path": "/accessibility-statement/"
     }
   ],
   "featuredTitle": "Featured Services",
@@ -61,5 +49,19 @@
   "contactTitle": "Contact",
   "bookText": "Book Appointment",
   "bookLink": "https://schedule.jarvisanalytics.com/frame/toothbar?location_id=7180&lnsg=01a02a31-b958-70c0-866c-0e5c829775c4",
+  "legalLinks": [
+    {
+      "name": "Privacy Policy",
+      "path": "/hipaa-notice/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/hipaa-notice/"
+    },
+    {
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
+    }
+  ],
   "siteName": "Toothbar"
 }
