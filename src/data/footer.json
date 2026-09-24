@@ -16,7 +16,7 @@
     },
     {
       "name": "HIPAA Notice",
-      "path": "/wp-content/uploads/2021/08/taylor-street-hipaa-notice-of-privacy-practices-updated-2026-02-06.pdf"
+      "path": "/hipaa-notice/"
     },
     {
       "name": "Site Map",
@@ -25,5 +25,18 @@
   ],
   "contactTitle": "Contact Us",
   "officeHoursTitle": "Office Hours",
-  "legalLinks": []
+  "legalLinks": [
+    {
+      "name": "Privacy Policy",
+      "path": "/privacy-policy/"
+    },
+    {
+      "name": "HIPAA Notice",
+      "path": "/hipaa-notice/"
+    },
+    {
+      "name": "Accessibility",
+      "path": "/accessibility/"
+    }
+  ]
 }

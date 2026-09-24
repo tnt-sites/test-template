@@ -9,10 +9,10 @@ canonical: /contact-us/
 pageSections:
   - _component: page-sections/shared-blocks/page-banner
     id: ""
-    as: span
+    as: h1
     image: /wp-content/uploads/2021/11/a-beautiful-woman-is-smiling-1.jpg
     imageAlt: Female patient having teeth examined by dentist
-    heading: <span> Contact Us</span>
+    heading: Contact Us
     overlayColor: ""
     overlayColorHex: "#a6ce39"
     headingColor: "#ffffff"

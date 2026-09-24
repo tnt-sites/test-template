@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/request-an-appointment/",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -11,15 +11,15 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+18015659411",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call",
+      "textStrong": " Us"
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://goo.gl/maps/wcJ8zu7fFQQj8HPX7",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -28,7 +28,7 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/new-patient-registration/",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "
@@ -36,7 +36,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/TaylorDentalCare",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +45,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://goo.gl/maps/vJV2YwL29dwwyzDQA",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",

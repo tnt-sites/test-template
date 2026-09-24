@@ -42,13 +42,7 @@ pageSections:
       - type: heading
         html: How do I learn more about professional teeth whitening options?
       - type: prose
-        html: If you are in the Sandy, UT area and want to find out more about teeth bleaching services, contact Drs. Michelle and Glenn Taylor of Taylor Dental Care to discuss your needs. The office is located at 9924 South 700 E and can be reached by calling <a href="tel:+18015659411">(801) 210-8167</a>. Our husband and wife team of dentists can assist new and existing patients in the practice, providing comprehensive health dentistry.
-      - type: heading
-        html: <span>Teeth Whitening</span>
-      - type: image
-        source: /wp-content/uploads/2021/09/teeth-whitening.jpg
-        alt: Teeth whitening
-        side: right
+        html: If you are in the Sandy, UT area and want to find out more about teeth bleaching services, contact Drs. Michelle and Glenn Taylor of Taylor Dental Care to discuss your needs. The office is located at 9924 South 700 E and can be reached by calling <a href="tel:+18015659411">(801) 565-9411</a>. Our husband and wife team of dentists can assist new and existing patients in the practice, providing comprehensive health dentistry.
   - _component: page-sections/wpmig/closing-cta
     id: ""
     heading: Schedule your first visit

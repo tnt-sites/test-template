@@ -45,6 +45,7 @@ if (!_component && visibleTabs.length === 0) {
 }
 ---
 
+<nav aria-label="Quick links">
 <ul id={id} class:list={["fixed-tabs", className]} {...htmlAttributes}>
   {
     visibleTabs.map((tab) => {
@@ -91,6 +92,7 @@ if (!_component && visibleTabs.length === 0) {
     })
   }
 </ul>
+</nav>
 
 <style lang="pcss">
   .fixed-tabs {

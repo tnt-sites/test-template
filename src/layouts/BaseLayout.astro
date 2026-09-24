@@ -115,6 +115,10 @@ const getScriptArray = (value: unknown): string[] =>
       )
     : [];
 
+// An entry is either a bare JS snippet or pasted tag markup (`<script src=…>`,
+// `<noscript>`, an HTML comment); markup must not be wrapped in another <script>.
+const isMarkup = (script: string) => script.trimStart().startsWith("<");
+
 const uniqueScripts = (scripts: string[]) => Array.from(new Set(scripts));
 const getModalArray = (value: unknown): Record<string, any>[] =>
   Array.isArray(value)
@@ -206,7 +210,11 @@ const globalModals = [
     {allBrandingFontUrls.map((url) => <link href={url} rel="stylesheet" />)}
     {pageExtraFontLinks.map((url) => <link href={url} rel="stylesheet" />)}
     <slot name="head" />
-    {headScripts.map((script: string) => <script is:inline set:html={script} />)}
+    {
+      headScripts.map((script: string) =>
+        isMarkup(script) ? <Fragment set:html={script} /> : <script is:inline set:html={script} />
+      )
+    }
   </head>
   <body>
     <Fragment>
@@ -228,6 +236,10 @@ const globalModals = [
       import "@choctawnationofoklahoma/lite-vimeo";
       import "@justinribeiro/lite-youtube";
     </script>
-    {footerScripts.map((script: string) => <script is:inline set:html={script} />)}
+    {
+      footerScripts.map((script: string) =>
+        isMarkup(script) ? <Fragment set:html={script} /> : <script is:inline set:html={script} />
+      )
+    }
   </body>
 </html>

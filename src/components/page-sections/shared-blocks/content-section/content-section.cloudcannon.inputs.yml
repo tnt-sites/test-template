@@ -103,6 +103,7 @@ _structures:
           type: image
           source: ""
           alt: ""
+          side: right
         _inputs:
           type:
             type: hidden
@@ -110,6 +111,47 @@ _structures:
             type: image
           alt:
             type: text
+          side:
+            type: select
+            comment: Left/right float the photo beside the copy; center puts it on its own line.
+            options:
+              values:
+                - id: left
+                  name: Left
+                - id: center
+                  name: Center
+                - id: right
+                  name: Right
+      - label: Logo row
+        icon: view_week
+        value:
+          type: logos
+          logos:
+            - source: ""
+              alt: ""
+        _inputs:
+          type:
+            type: hidden
+          logos:
+            type: array
+            comment: Small logos (payment, insurance) shown in one centered, wrapping row.
+            options:
+              structures: _structures.content_logo
+      - label: FAQs
+        icon: quiz
+        value:
+          type: faqs
+          items:
+            - question: ""
+              answer: ""
+        _inputs:
+          type:
+            type: hidden
+          items:
+            type: array
+            comment: Questions shown as an accordion; each answer opens on click.
+            options:
+              structures: _structures.content_faq
       - label: Buttons
         icon: smart_button
         value:
@@ -125,6 +167,39 @@ _structures:
             type: array
             options:
               structures: _structures.content_button
+
+  content_logo:
+    values:
+      - value:
+          source: ""
+          alt: ""
+        _inputs:
+          source:
+            type: image
+          alt:
+            type: text
+            comment: Name the logo, e.g. "Visa".
+        preview:
+          text:
+            - key: alt
+            - Logo
+          image:
+            - key: source
+
+  content_faq:
+    values:
+      - value:
+          question: ""
+          answer: ""
+        _inputs:
+          question:
+            type: text
+          answer:
+            type: html
+        preview:
+          text:
+            - key: question
+            - Question
 
   content_button:
     values:

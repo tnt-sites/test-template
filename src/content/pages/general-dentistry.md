@@ -41,12 +41,6 @@ pageSections:
           <ul><li>Dental cleanings – Our dental hygienists perform routine cleanings and provide precise plaque, tartar, and calculus removal. During this time, the dental hygienist may also note anything in the smile that may indicate issues, such as tooth decay or periodontal disease.</li><li>Thorough examinations – during regular six-month appointments at the dentist’s office, patients will also have a comprehensive examination performed. During this evaluation, the dentist will make a physical assessment of the smile, looking for signs of concern. Additionally, they may request that patients have a series of dental x-rays completed to look beyond where the eyes can see and check the health of the bone, teeth, and gums.</li><li>Oral cancer screenings – patients are familiar with many types of cancer that are often in the headlines but are unaware of the dangers of oral cancer. During routine dental visits, our team will assess the smile to determine any areas of concern that might indicate cancerous cells. If so, a biopsy is taken and sent to a lab for further evaluation.</li><li>Dental fillings – when patients have tooth decay, it is essential that they fill the area immediately to keep the condition from getting worse. Dental fillings are used for the treatment of cavities and are tooth-colored for seamless integration into the smile.</li><li>Tooth extractions – there may be times when patients might require the removal of one or more teeth. Standard and surgical extractions are performed in our practice for these individuals.</li></ul>
           <p>Schedule a visit to Taylor Dental Care today to learn more about general and family dentistry services</p>
           <p>Sandy, UT patients ready to improve the health of their smiles are welcome to book a consultation visit with the team at Taylor Dental Care by calling <a href="tel:+18015659411">(801) 565-9411</a>. The office is located at 9924 South 700 E and accepts new patients and families.</p>
-      - type: heading
-        html: <span>General Dentistry</span>
-      - type: image
-        source: /wp-content/uploads/2021/09/myths-and-facts-dentistry.jpg
-        alt: Myths and facts dentistry
-        side: right
   - _component: page-sections/wpmig/closing-cta
     id: ""
     heading: Schedule your first visit

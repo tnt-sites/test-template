@@ -139,7 +139,15 @@ const Heading = as === "h1" ? "h1" : "span";
     /* Below 768px the source drops the wash and moves the caption under the
        photo as a dark uppercase heading. */
     @media (max-width: 767px) {
-      .page-banner::before {
+      /* The caption sits on the page, not the photo, so neither the olive
+         ground nor the dark scrim may reach it — together they left the navy
+         caption at ~1.3:1. */
+      .page-banner {
+        background-color: transparent;
+      }
+
+      .page-banner::before,
+      .page-banner::after {
         display: none;
       }
 

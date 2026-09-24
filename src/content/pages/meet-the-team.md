@@ -38,13 +38,6 @@ pageSections:
         text: |-
           <p><strong>Dental Assistant</strong></p>
           <p>Madalie has been in the dental field for 5 years now. She got into the dental field when she started working with her cousin. She ended up loving being a dental assistant and has stuck with it since. Madalie has been married to her husband for almost 4 years now and they have a 3 year old boy named Asher. When Madalie is not at work, she is typically in the mountains hiking or at the pool being a fish with her little man!</p>
-    titleColor: ""
-    titleColorHex: "#177982"
-    textColor: "#000000"
-    textColorHex: ""
-  - _component: page-sections/wpmig/team-grid
-    id: ""
-    cards:
       - image: /wp-content/uploads/2021/10/Alyssa.jpg
         imageAlt: Alyssa
         title: Alyssa
@@ -58,7 +51,7 @@ pageSections:
           <p><strong>Insurance Coordinator</strong></p>
           <p>Adria has worked in the dental field for about 23 years.&nbsp; She has always enjoyed helping patients feel comfortable in our office and I love to see them achieve a healthy beautiful smile.&nbsp; Adria lives in South Jordan with her husband and 2 children.&nbsp; She stays busy outside of work with her kid’s activities and sports.&nbsp; Adria loves to vacation and always looks forward to a warm beach with her family.</p>
       - image: /wp-content/uploads/2021/11/coming-soon.jpg
-        imageAlt: Coming Soon
+        imageAlt: Jeannie, photo coming soon
         title: Jeannie
         text: |-
           <p><strong>Office Manager</strong></p>

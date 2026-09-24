@@ -101,9 +101,7 @@ pageSections:
           <p>Once you’ve recovered from the procedure, you’ll be able to enjoy the following benefits:</p>
           <ul>
                           <li><strong>Restored Bite Force</strong> – Dental implants can restore up to 80% of your original bite force. So, you won’t have to eat applesauce, plain yogurt, and other soft foods on repeat. Instead, you’ll be able to enjoy a satisfying, well-balanced, and nutrient-dense diet.</li>
-                      </ul>
-          <ul>
-                          <li><strong>Lifelike Appearance</strong> – Unlike other tooth-replacement solutions, dental implants won’t slip or shift unexpectedly. Plus, the restorations secured on top are custom-made for each patient to ensure they look as natural as they feel.</li>
+                                                <li><strong>Lifelike Appearance</strong> – Unlike other tooth-replacement solutions, dental implants won’t slip or shift unexpectedly. Plus, the restorations secured on top are custom-made for each patient to ensure they look as natural as they feel.</li>
                           <li><strong>Clearer Communication</strong> – Oftentimes, patients experience a bit of a learning curve when it comes to speaking with <a href="/dentures-and-partial-dentures/">dentures</a>. That’s not the case with dental implants since they are anchored to your jawbone, can replace any number of missing teeth, and feel natural.</li>
                       </ul>
       - type: subheading

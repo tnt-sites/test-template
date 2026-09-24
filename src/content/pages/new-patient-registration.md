@@ -23,7 +23,6 @@ pageSections:
     blocks:
       - type: prose
         html: |-
-          <div><span><span><span><a href="/">Home</a></span> » <span aria-current="page">New Dental Patient Registration Sandy</span></span></span></div>
           <p>It is easy to make an appointment for your initial examination and dental treatments in Sandy. Call <a href="tel:+18015659411">(801) 565-9411</a> to speak with a staff member and you can download the New Patient Form by clicking to the right.</p>
       - type: heading
         html: "Downloadable Forms:"
@@ -34,34 +33,22 @@ pageSections:
             newTab: true
       - type: heading
         html: Payment Methods – Check or Cash Accepted
-      - type: image
-        source: /wp-content/uploads/2021/09/visa-1.jpg
-        alt: Visa card Logo
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/discover.jpg
-        alt: Discover Card logo
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/american-express.png
-        alt: American Express logo
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/master-card.jpg
-        alt: Master Card logo
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/care-credit.jpg
-        alt: CareCredit logo
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/cheque.png
-        alt: Check icon
-        side: right
-      - type: image
-        source: /wp-content/uploads/2021/09/dollar.png
-        alt: Dollar icon
-        side: right
+      - type: logos
+        logos:
+          - source: /wp-content/uploads/2021/09/visa-1.jpg
+            alt: Visa
+          - source: /wp-content/uploads/2021/09/discover.jpg
+            alt: Discover
+          - source: /wp-content/uploads/2021/09/american-express.png
+            alt: American Express
+          - source: /wp-content/uploads/2021/09/master-card.jpg
+            alt: Mastercard
+          - source: /wp-content/uploads/2021/09/care-credit.jpg
+            alt: CareCredit
+          - source: /wp-content/uploads/2021/09/cheque.png
+            alt: Check
+          - source: /wp-content/uploads/2021/09/dollar.png
+            alt: Cash
   - _component: page-sections/wpmig/closing-cta
     id: ""
     heading: Schedule your first visit

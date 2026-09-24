@@ -92,11 +92,12 @@
   ],
   "modals": [],
   "head_scripts": [
-    "/* test header script */"
+    "<!-- Liine analytics, call tracking and form attribution. -->\n<script defer src=\"https://analytics.liine.com/v1/bootstrapped/9ff6cdbcf9164defa7aaed20707d0763.js\"></script>",
+    "<!-- Passes the referring page URL to embedded Jotform/Liine forms. -->\n<script defer src=\"https://app-widgets.jotform.io/scripts/getUrlReferrer.js\"></script>",
+    "<!-- Google Analytics (ID: G-6H2RXWKREB) -->\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-6H2RXWKREB\"></script>\n<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){ dataLayer.push(arguments); }\n  gtag('js', new Date());\n  gtag('config', 'G-6H2RXWKREB');\n</script>",
+    "<!-- Simpli.fi (Advertising/Analytics) -->\n<script async src=\"https://tag.simpli.fi/sifitag/a3601bd6-96b4-4822-830e-3f0e4874fd28\"></script>"
   ],
-  "footer_scripts": [
-    "/* Test Footer Script */"
-  ],
+  "footer_scripts": [],
   "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12122.78433764327!2d-111.8725113!3d40.5703882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b12a5cd33045c66!2sTaylor%20Dental%20Care!5e0!3m2!1sen!2slk!4v1627884386509!5m2!1sen!2slk",
   "recaptchaSiteKey": ""
 }

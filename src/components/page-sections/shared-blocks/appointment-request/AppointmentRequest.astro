@@ -81,7 +81,7 @@ const addressLine = address
 
     {
       showHours && (
-        <aside class="ar-hours-col">
+        <div class="ar-hours-col">
           <div class="ar-card">
             <h2 class="ar-card-title">{hoursTitle}</h2>
             {hours.length > 0 && (
@@ -117,7 +117,7 @@ const addressLine = address
               )}
             </div>
           </div>
-        </aside>
+        </div>
       )
     }
   </div>
@@ -233,7 +233,10 @@ const addressLine = address
       padding: 0;
     }
 
+    /* White set explicitly: the base list-item colour otherwise wins and
+       paints the hours dark grey on teal (1.75:1). */
     .appointment-request .ar-hours li {
+      color: var(--color-text-on-brand, #fff);
       display: flex;
       justify-content: space-between;
       gap: 1rem;
@@ -265,7 +268,6 @@ const addressLine = address
     .appointment-request .ar-contact-item {
       color: var(--color-text-on-brand, #fff);
       text-decoration: none;
-      opacity: 0.95;
     }
 
     .appointment-request .ar-contact-item:hover {

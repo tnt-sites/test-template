@@ -2,6 +2,16 @@
 _schema: default
 title: Privacy Policy
 pageSections:
+  - _component: page-sections/shared-blocks/page-banner
+    id: ''
+    as: h1
+    heading: Privacy Policy
+    image: /wp-content/uploads/2021/09/a-girl-is-smiling.jpg
+    imageAlt: ''
+    overlayColor: ''
+    overlayColorHex: '#a6ce39'
+    headingColor: '#ffffff'
+    headingColorHex: ''
   - _component: page-sections/builders/custom-section
     id: ''
     label: ''
@@ -20,7 +30,7 @@ pageSections:
           collect when you visit our website.
 
 
-          ### 1\. What data we collect and how we use it
+          ## 1\. What data we collect and how we use it
 
 
           We may collect the following categories of information on our website
@@ -56,7 +66,7 @@ pageSections:
           * Deliver targeted marketing to you.
 
 
-          ### 2\. Data Sharing
+          ## 2\. Data Sharing
 
 
           We may disclose information about you:
@@ -92,7 +102,7 @@ pageSections:
           parties.
 
 
-          ### 3\. Cookies and related technologies
+          ## 3\. Cookies and related technologies
 
 
           This website uses cookies, tracking pixels and related technologies.
@@ -103,7 +113,7 @@ pageSections:
           site to target ads to you on other websites.
 
 
-          ### 4\. Your choices and opting-out
+          ## 4\. Your choices and opting-out
 
 
           We recognize how important your online privacy is to you, so we offer
@@ -147,14 +157,14 @@ pageSections:
           signal to websites they visit. We do not respond to this signal.
             * * In addition, if you are located in the European Economic Area you may also have the right to access, correct or update some of the information we hold about you. You can also request that we delete your information.
 
-          ### 5\. Data Retention
+          ## 5\. Data Retention
 
 
           Identifiable information about you is held no longer than necessary
           for our business purposes or to meet legal requirements.
 
 
-          ### 6\. Security
+          ## 6\. Security
 
 
           We apply technical, administrative and organizational security
@@ -164,7 +174,7 @@ pageSections:
           over a network, and against other unlawful forms of processing.
 
 
-          ### 7\. International transfers
+          ## 7\. International transfers
 
 
           We may transfer the information we collect about you to countries
@@ -181,7 +191,7 @@ pageSections:
           agreements with the data importer where necessary.
 
 
-          ### 8\. Changes to this Privacy Notice
+          ## 8\. Changes to this Privacy Notice
 
 
           Changes to this Privacy Notice will be posted on this page. If we make
@@ -189,11 +199,17 @@ pageSections:
           the site or by other means as appropriate.
 
 
-          ### 9\. Contact us about questions or concerns
+          ## 9\. Contact us about questions or concerns
 
 
           If you have any questions about this Privacy Notice or our privacy
-          practices, you can contact our office.
+          practices, you can contact our office:
+
+
+          Taylor Dental Care\
+          9924 South 700 E, Sandy, UT 84070\
+          Phone: [(801) 565-9411](tel:+18015659411)\
+          Email: [taylordentalom@gmail.com](mailto:taylordentalom@gmail.com)
         alignX: start
     maxContentWidth: 2xl
     paddingHorizontal: md

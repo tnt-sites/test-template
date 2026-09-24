@@ -48,13 +48,7 @@ pageSections:
       - type: heading
         html: How do I learn more?
       - type: prose
-        html: Call Taylor Dental Care at <a href="tel:+18015659411">(801) 210-8084</a> to request an appointment at our facility.
-      - type: heading
-        html: <span>Sleep Apnea</span>
-      - type: image
-        source: /wp-content/uploads/2021/09/sleep-apnea.jpg
-        alt: Sleep apnea
-        side: right
+        html: Call Taylor Dental Care at <a href="tel:+18015659411">(801) 565-9411</a> to request an appointment at our facility.
   - _component: page-sections/wpmig/closing-cta
     id: ""
     heading: Schedule your first visit

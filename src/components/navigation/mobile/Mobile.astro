@@ -11,6 +11,7 @@ const {
   officeHoursTitle = "Office Hours",
   offices = [],
   sharedSocials = [],
+  drawer = false,
   class: className,
   _component,
   ...htmlAttributes
@@ -72,7 +73,12 @@ const getOfficeHoursGeneralNotes = (office: any) => {
   />
 </label>
 
-<nav class:list={["mobile", className]} data-toggle-id={toggleId} {...htmlAttributes}>
+<nav
+  class:list={["mobile", { "mobile-drawer": drawer }, className]}
+  data-toggle-id={toggleId}
+  aria-label="Mobile"
+  {...htmlAttributes}
+>
   <div class="mobile-header">
     <div class="mobile-logo">
       <slot name="logo">
@@ -320,8 +326,21 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     const toggle = document.getElementById(toggleId);
     const hamburger = document.querySelector(`label[for="${toggleId}"].nav-hamburger`);
 
+    // Drawer variant: a narrow panel over a dimmed page; tapping the page closes it.
+    const backdrop = nav.classList.contains("mobile-drawer")
+      ? overlaysContainer.appendChild(
+          Object.assign(document.createElement("div"), { className: "mobile-backdrop" })
+        )
+      : null;
+
+    // Closed, the menu is off-screen but still in the tab order; inert keeps
+    // keyboard and screen-reader users out of links they cannot see.
+    nav.inert = true;
+
     // Handle navigation toggle state and accessibility
     function handleNavToggle(isOpen) {
+      nav.inert = !isOpen;
+      backdrop?.classList.toggle("is-open", isOpen);
       if (isOpen) {
         nav.setAttribute("aria-hidden", "false");
         nav.style.transform = "translateX(0)";
@@ -351,6 +370,11 @@ const getOfficeHoursGeneralNotes = (office: any) => {
         }
       });
     }
+
+    backdrop?.addEventListener("click", () => {
+      if (toggle) toggle.checked = false;
+      handleNavToggle(false);
+    });
 
     // Handle close button interactions
     const closeButton = nav.querySelector(".mobile-close");
@@ -692,6 +716,41 @@ const getOfficeHoursGeneralNotes = (office: any) => {
             font-size: var(--font-size-xs);
           }
         }
+      }
+    }
+
+    .mobile.mobile-drawer {
+      height: 100dvh;
+      inset: 0 auto 0 0;
+      max-width: 360px;
+      width: 85vw;
+    }
+
+    /* Closed, the panel is hidden once its slide-out ends: parked at -100% it
+       can still leave a sub-pixel sliver and its shadow on the page edge. */
+    .mobile.mobile-drawer[inert] {
+      transition:
+        transform var(--animation-normal) ease-in-out,
+        visibility 0s linear var(--animation-normal);
+      visibility: hidden;
+    }
+
+    .mobile.mobile-drawer[aria-hidden="false"] {
+      box-shadow: 4px 0 24px rgb(0 0 0 / 25%);
+    }
+
+    .mobile-backdrop {
+      background: rgb(0 0 0 / 50%);
+      inset: 0;
+      opacity: 0;
+      pointer-events: none;
+      position: fixed;
+      transition: opacity var(--animation-normal) ease-in-out;
+      z-index: calc(var(--layer-5) - 1);
+
+      &.is-open {
+        opacity: 1;
+        pointer-events: auto;
       }
     }
 

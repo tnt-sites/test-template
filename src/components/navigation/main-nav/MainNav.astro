@@ -166,15 +166,21 @@ const sharedSocials =
     </div>
   </div>
 
-  <!-- Mobile Nav -->
-  <Mobile
-    logoSource={logoSource}
-    logoAlt={logoAlt}
-    navData={mobileNavData}
-    class="mobile-main-nav"
-    offices={resolvedOffices}
-    sharedSocials={sharedSocials}
-  />
+  <!-- Mobile bar: logo left, hamburger right; the menu opens as a side drawer -->
+  <div class="tdc-mobilebar">
+    <a class="tdc-mobile-logo" href="/">
+      <img src={logoSource} alt={logoAlt} />
+    </a>
+    <Mobile
+      logoSource={logoSource}
+      logoAlt={logoAlt}
+      navData={mobileNavData}
+      class="mobile-main-nav"
+      offices={resolvedOffices}
+      sharedSocials={sharedSocials}
+      drawer
+    />
+  </div>
 </header>
 
 <script>
@@ -628,9 +634,89 @@ const sharedSocials =
       color: #111;
     }
 
+    /* ---- Mobile bar + drawer ---- */
+    .main-nav .tdc-mobilebar {
+      align-items: center;
+      display: none;
+      background: linear-gradient(90deg, #0f666e, #177982);
+      justify-content: space-between;
+      padding: 10px 16px;
+    }
+
+    .main-nav .tdc-mobile-logo img {
+      display: block;
+      height: auto;
+      max-height: 52px;
+      width: auto;
+    }
+
+    .main-nav .tdc-mobilebar .nav-hamburger {
+      align-items: center;
+      border-radius: 4px;
+      color: #fff;
+      height: 44px;
+      justify-content: center;
+      width: 44px;
+    }
+
+    .main-nav .tdc-mobilebar .nav-hamburger .button {
+      background: transparent;
+      border: 0;
+      color: #fff;
+      height: 44px;
+      min-width: 0;
+      padding: 0;
+      width: 44px;
+    }
+
+    .main-nav .tdc-mobilebar .nav-hamburger .button svg {
+      height: 30px;
+      width: 30px;
+    }
+
+    .main-nav .tdc-mobilebar .nav-hamburger:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+
+    /* The drawer is moved out of the header into #overlays-container, so it is
+       themed by its own class rather than through .main-nav. Teal ground so
+       the white logo shows; every token the menu reads is re-pointed at white. */
+    .mobile.mobile-main-nav {
+      --color-bg: #177982;
+      --color-text: #fff;
+      --color-text-strong: #fff;
+      --color-text-muted: #fff;
+      --color-border-subtle: rgb(255 255 255 / 22%);
+      --color-state-hover: rgb(255 255 255 / 12%);
+
+      background: #177982;
+      color: #fff;
+    }
+
+    .mobile.mobile-main-nav .mobile-header {
+      background: #0f666e;
+    }
+
+    .mobile.mobile-main-nav .mobile-close .button {
+      background: transparent;
+      border: 0;
+      color: #fff;
+    }
+
+    .mobile.mobile-main-nav .nav-item > .nav-item-trigger:hover,
+    .mobile.mobile-main-nav .nav-item > .nav-item-trigger:focus-visible {
+      background: #a6ce39;
+      border-color: #a6ce39;
+      color: #111;
+    }
+
+    .mobile.mobile-main-nav :focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: -2px;
+    }
+
     /* ---- Responsive ---- */
-    .main-nav .mobile-main-nav,
-    .main-nav .nav-hamburger,
     .main-nav .nav-toggle {
       display: none;
     }
@@ -645,10 +731,7 @@ const sharedSocials =
         display: none;
       }
 
-      .main-nav .mobile-main-nav {
-        display: block;
-      }
-
+      .main-nav .tdc-mobilebar,
       .main-nav .nav-hamburger {
         display: flex;
       }

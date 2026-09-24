@@ -247,34 +247,22 @@ pageSections:
     blocks:
       - type: heading
         html: Invisalign FAQs
-      - type: subheading
-        html: Can I Get Invisalign After Braces?
-      - type: prose
-        html: Yes, it’s possible to get Invisalign after braces. In fact, many patients who have experienced orthodontic relapse choose to straighten their teeth with clear aligners! So, if you want to address mild to moderate overcrowding or spacing issues, you shouldn’t hesitate to schedule an appointment with our talented dentists, <a href="/dr-michelle-taylor-dds/">Dr. Michelle Taylor</a> and <a href="/dr-glenn-taylor-dds/">Dr. Glenn Taylor</a>. That way, they can determine if you’re a good candidate and, if you are, begin the process of creating your custom treatment plan.
-      - type: subheading
-        html: How Long Does Invisalign Take?
-      - type: prose
-        html: Invisalign usually takes between 12 and 18 months to deliver the desired results. With that said, your teeth-straightening journey may be shorter or longer than that. Once we’ve created your custom treatment plan, we can provide you with a more precise estimate. We’ll also share what you can do to avoid frustrating delays, like switching to each new set of aligners on the correct day and prioritizing your progress visits at our dental office in Sandy.
-      - type: subheading
-        html: Can I Drink Coffee During My Invisalign Treatment?
-      - type: prose
-        html: Yes, you can enjoy your morning cup of coffee on your journey to your straighter smile! Just make sure that you remove them first (even with iced coffee). Then, before you put them back on, clean your teeth and your trays so they don’t discolor.
-      - type: subheading
-        html: Is There Anyone Who Isn’t a Candidate for Invisalign?
-      - type: prose
-        html: There are some cases where Invisalign isn’t an option – at least not initially. For example, if there is an active infection in your gums, then we will need to eliminate it first. Similarly, if one or more of your teeth are decayed, we will need to provide the necessary restorative care before we can focus on moving them into their ideal positions.
-      - type: subheading
-        html: Are There Any Dietary Restrictions with Invisalign?
-      - type: prose
-        html: No. In fact, as long as you remove your aligners before eating or drinking anything other than Invisalign, you can enjoy all of your favorite foods throughout your orthodontic treatment. Just make sure that you continue to eat mostly healthy, well-balanced meals and limit your intake of sugary treats, like ice cream. That way, your teeth and gums stay healthy throughout your orthodontic treatment.
-      - type: subheading
-        html: What Happens After Invisalign?
-      - type: prose
-        html: "Once you’ve progressed through your entire series of aligners, we will move on to the next step of the process: the retention phase. This involves taking impressions of your teeth so a custom retainer can be made. At your “final” appointment, we will show you how to take care of it and share how often you need to wear it (which is usually nightly)."
-      - type: subheading
-        html: Can I Use Toothpaste to Clean My Invisalign Aligners?
-      - type: prose
-        html: No, you should not use toothpaste to clean your Invisalign aligners. Instead, you should use a damp, soft-bristled toothbrush and clear, mild dishwashing liquid to gently remove debris from the surface. You can also soak them for 15 minutes or so each day in a dentist-approved clear aligner solution to help keep them in pristine condition.
+      - type: faqs
+        items:
+          - question: Can I Get Invisalign After Braces?
+            answer: Yes, it’s possible to get Invisalign after braces. In fact, many patients who have experienced orthodontic relapse choose to straighten their teeth with clear aligners! So, if you want to address mild to moderate overcrowding or spacing issues, you shouldn’t hesitate to schedule an appointment with our talented dentists, <a href="/dr-michelle-taylor-dds/">Dr. Michelle Taylor</a> and <a href="/dr-glenn-taylor-dds/">Dr. Glenn Taylor</a>. That way, they can determine if you’re a good candidate and, if you are, begin the process of creating your custom treatment plan.
+          - question: How Long Does Invisalign Take?
+            answer: Invisalign usually takes between 12 and 18 months to deliver the desired results. With that said, your teeth-straightening journey may be shorter or longer than that. Once we’ve created your custom treatment plan, we can provide you with a more precise estimate. We’ll also share what you can do to avoid frustrating delays, like switching to each new set of aligners on the correct day and prioritizing your progress visits at our dental office in Sandy.
+          - question: Can I Drink Coffee During My Invisalign Treatment?
+            answer: Yes, you can enjoy your morning cup of coffee on your journey to your straighter smile! Just make sure that you remove them first (even with iced coffee). Then, before you put them back on, clean your teeth and your trays so they don’t discolor.
+          - question: Is There Anyone Who Isn’t a Candidate for Invisalign?
+            answer: There are some cases where Invisalign isn’t an option – at least not initially. For example, if there is an active infection in your gums, then we will need to eliminate it first. Similarly, if one or more of your teeth are decayed, we will need to provide the necessary restorative care before we can focus on moving them into their ideal positions.
+          - question: Are There Any Dietary Restrictions with Invisalign?
+            answer: No. In fact, as long as you remove your aligners before eating or drinking anything other than Invisalign, you can enjoy all of your favorite foods throughout your orthodontic treatment. Just make sure that you continue to eat mostly healthy, well-balanced meals and limit your intake of sugary treats, like ice cream. That way, your teeth and gums stay healthy throughout your orthodontic treatment.
+          - question: What Happens After Invisalign?
+            answer: "Once you’ve progressed through your entire series of aligners, we will move on to the next step of the process: the retention phase. This involves taking impressions of your teeth so a custom retainer can be made. At your “final” appointment, we will show you how to take care of it and share how often you need to wear it (which is usually nightly)."
+          - question: Can I Use Toothpaste to Clean My Invisalign Aligners?
+            answer: No, you should not use toothpaste to clean your Invisalign aligners. Instead, you should use a damp, soft-bristled toothbrush and clear, mild dishwashing liquid to gently remove debris from the surface. You can also soak them for 15 minutes or so each day in a dentist-approved clear aligner solution to help keep them in pristine condition.
   - _component: page-sections/wpmig/closing-cta
     id: ""
     heading: Schedule your first visit
