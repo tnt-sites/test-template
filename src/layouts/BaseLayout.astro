@@ -233,6 +233,24 @@ const globalModals = [
     <script>
       import "@choctawnationofoklahoma/lite-vimeo";
       import "@justinribeiro/lite-youtube";
+
+      // Off-site links open in a new tab. Done here rather than per component
+      // because links also arrive via markdown bodies and set:html blobs; the
+      // observer catches sections the CloudCannon editor re-renders.
+      const markExternal = (root: ParentNode) => {
+        root.querySelectorAll<HTMLAnchorElement>("a[href^='http']").forEach((a) => {
+          if (a.hostname === location.hostname) return;
+          a.target = "_blank";
+          const rel = new Set(a.rel.split(/\s+/).filter(Boolean));
+          rel.add("noopener").add("noreferrer");
+          a.rel = [...rel].join(" ");
+        });
+      };
+      markExternal(document);
+      new MutationObserver(() => markExternal(document)).observe(document.body, {
+        childList: true,
+        subtree: true,
+      });
     </script>
     {footerScripts.map((script: string) => <script is:inline set:html={script} />)}
   </body>
