@@ -158,10 +158,13 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
     position: relative;
   }
 
+  /* Each wrapper is as wide as its button. The source's fixed shares of the
+     row (83% / 40% / 20%) were narrower than the longer label, which then ran
+     out of its button. */
   .cbr-box6 {
     box-sizing: border-box;
-    flex: 0 0 83.14%;
-    max-width: 83.14%;
+    flex: 0 1 auto;
+    max-width: 100%;
   }
 
   :global(.cbr-btn) {
@@ -221,10 +224,6 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       flex-wrap: nowrap;
     }
 
-    .cbr-box6 {
-      flex: 0 0 40%;
-      max-width: 40%;
-    }
   }
 
   @media (min-width: 1440px) {
@@ -237,9 +236,5 @@ const list = Array.isArray(items) ? items.filter(Boolean) : [];
       line-height: 70px;
     }
 
-    .cbr-box6 {
-      flex: 0 0 20%;
-      max-width: 20%;
-    }
   }
 </style>
