@@ -6,7 +6,7 @@ value:
   id: ""
   tabs:
     - itemClass: ra
-      href: request-an-appointment.html
+      href: /contact-us/
       icon: calendar-days
       textMobile: Request
       textStrong: " an Appointment"
@@ -22,7 +22,7 @@ value:
       textStrong: "View "
       textAfter: Map
     - itemClass: fr
-      href: for-patients.html#forms
+      href: /online-forms/
       icon: document-arrow-down
       textMobile: "Download "
       textStrong: "Forms "

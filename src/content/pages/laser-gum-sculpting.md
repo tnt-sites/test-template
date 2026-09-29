@@ -30,17 +30,17 @@ pageSections:
       <p><!-- /wp:post-content --><!-- wp:paragraph --></p>
       <p>Our gum tissues provide our teeth the protection they need from bacteria and food debris, protecting us from tooth decay and jaw degradation. However, sometimes those gums can overpower the appearance of your smile. Often referred to as a “gummy smile,” having too much gum show along the gum line can appear excessive. At Artisan Dental, we provide laser gum sculpting to correct this issue and help improve the appearance of your smile. By removing excess tissues from your mouth, your smile will look and feel healthier.</p>								
 
-      					<div style="height:530px;overflow:hidden;margin-bottom:1.677em"></div>
+      					
 
 
       				
 
-      					<div style="height:450px;overflow:hidden;margin-bottom:1.677em"></div>
+      					
 
 
       				
 
-      					<div style="height:200px;overflow:hidden;margin-bottom:1.677em"></div>
+      					
 
 
       				
@@ -50,7 +50,7 @@ pageSections:
       <!-- /wp:heading --><!-- wp:paragraph -->
       <p>Laser gum sculpting, also referred to as gum contouring or gingival sculpting, removes excess gum tissue by surgically trimming it through the use of lasers. The lasers work to make&nbsp;<a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6046393/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">precise cuts to the gum line rather than the use of scalpels.</a>&nbsp;For patients, this means that their smiles can be dramatically improved while decreasing the risk of scarring along the gum line. For many, laser gum reshaping can be included in smile makeovers, where dentists work to reshape the mouth completely to form a perfectly aligned, white, and beautiful smile.</p>
       <!-- /wp:paragraph --><!-- wp:paragraph -->
-      <p>No matter the reasons, <a class="rank-math-link" href="meet-the-team.html">our team</a> at Artisan Dental will provide you with the tools you need to correct uneven gum lines, eliminate excess gum tissue, and improve your smile and overall appearance. When receiving treatment from our practice, we perform the following to make sure you have a safe and effective treatment:</p>
+      <p>No matter the reasons, <a class="rank-math-link" href="/meet-the-team/">our team</a> at Artisan Dental will provide you with the tools you need to correct uneven gum lines, eliminate excess gum tissue, and improve your smile and overall appearance. When receiving treatment from our practice, we perform the following to make sure you have a safe and effective treatment:</p>
       <!-- /wp:paragraph --><!-- wp:list -->
       <ul>
       <li><strong>Dental Examination:</strong> During your dental examination, we will discuss your treatment options for your gummy smile. By observing your medical history, we can ultimately determine your candidacy for treatment.</li>
@@ -66,7 +66,7 @@ pageSections:
       <!-- /wp:paragraph --><!-- wp:heading {"level":3} -->
       <h3>Choose Artisan Dental For Laser Gum Treatment</h3>
       <!-- /wp:heading --><!-- wp:paragraph -->
-      <p>As laser treatments for gum reshaping have&nbsp;<a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4541307/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">become the subject</a> of ongoing study, our dental practice focuses on providing you with safe, effective care to improve your oral health and keep your smile healthy. If you have a gum line that appears puffy, large, and unattractive, <a href="office-tour.html">visit our office</a> in Madison, Wisconsin, to learn more about our treatment options. Our team is here for you to help improve your oral care and give you healthy, happy teeth.</p>
+      <p>As laser treatments for gum reshaping have&nbsp;<a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4541307/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">become the subject</a> of ongoing study, our dental practice focuses on providing you with safe, effective care to improve your oral health and keep your smile healthy. If you have a gum line that appears puffy, large, and unattractive, <a href="/office-tour/">visit our office</a> in Madison, Wisconsin, to learn more about our treatment options. Our team is here for you to help improve your oral care and give you healthy, happy teeth.</p>
       <!-- /wp:paragraph -->								
     backgroundColor: transparent
     headingBackground: "#321c0e"

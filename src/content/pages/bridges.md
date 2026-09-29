@@ -63,7 +63,7 @@ pageSections:
 
 
 
-      <p class=\"wp-block-paragraph\">Are you ready to see if you can restore your beautiful smile? Reach out to Artisan Dental today to arrange a visit to our Madison, WI office. We’ll pencil you in for a <a href=\"contact-us.html\" class=\"rank-math-link\">consultation with a member</a> of our dental team. During your visit, you’ll undergo a complete exam, discuss your dental history, and potentially have dental imaging done. After reviewing the results, our team will provide you with appropriate options for improving and restoring your oral health. Call us today to get started!</p>
+      <p class=\"wp-block-paragraph\">Are you ready to see if you can restore your beautiful smile? Reach out to Artisan Dental today to arrange a visit to our Madison, WI office. We’ll pencil you in for a <a href=\"/contact-us/\" class=\"rank-math-link\">consultation with a member</a> of our dental team. During your visit, you’ll undergo a complete exam, discuss your dental history, and potentially have dental imaging done. After reviewing the results, our team will provide you with appropriate options for improving and restoring your oral health. Call us today to get started!</p>
 
       \t\t\t\t"
     backgroundColor: transparent

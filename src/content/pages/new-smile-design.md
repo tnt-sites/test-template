@@ -38,7 +38,7 @@ pageSections:
     headingColor: "#ffffff"
     textColor: "#ffffff"
   - _component: page-sections/artisan/icon-grid
-    id: ""
+    id: down
     eyebrow: We Can Fix These
     heading: Common Issues
     text: ""
@@ -94,12 +94,12 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p>Dr. Nicole Andersen’s passion for changing someone’s life by making them comfortable and confident with one of their most important assets—a beautiful smile—shows in the extensive cosmetic dentistry she has performed over the last 15 years. Patients have come from all over the area to take advantage of Dr. Anderson’s skill and expertise in Cosmetic Dentistry.</p><p>Dr. Andersen is committed to exceptional, quality care and aesthetically-beautiful outcomes, which results from her hundreds of hours of specialized, hands-on training in cosmetic dental care with some of the world’s most qualified professors and instructors.&nbsp;You can learn more about Dr. Andersen’s training as an expert cosmetic dentist by <a href=\"/doctors-team/dr-nicole-andersen/\">visiting her biography</a>.</p><p>Dr. Andersen understands that aesthetics are an important part of dental work and she loves helping patients look their best. She will take great care to ensure that&nbsp;you have a beautiful smile that is&nbsp;natural-looking and long-lasting.</p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p>Dr. Nicole Andersen’s passion for changing someone’s life by making them comfortable and confident with one of their most important assets—a beautiful smile—shows in the extensive cosmetic dentistry she has performed over the last 15 years. Patients have come from all over the area to take advantage of Dr. Anderson’s skill and expertise in Cosmetic Dentistry.</p><p>Dr. Andersen is committed to exceptional, quality care and aesthetically-beautiful outcomes, which results from her hundreds of hours of specialized, hands-on training in cosmetic dental care with some of the world’s most qualified professors and instructors.&nbsp;You can learn more about Dr. Andersen’s training as an expert cosmetic dentist by <a href=\"/dr-nicole-andersen/\">visiting her biography</a>.</p><p>Dr. Andersen understands that aesthetics are an important part of dental work and she loves helping patients look their best. She will take great care to ensure that&nbsp;you have a beautiful smile that is&nbsp;natural-looking and long-lasting.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2020/10/artisan2020071x2.jpg
     buttonText: View Doctor Bio
-    buttonLink: /doctors-team/dr-nicole-andersen/
+    buttonLink: /dr-nicole-andersen/
     reverse: false
     align: left
     mediaMinHeight: 420px
@@ -245,7 +245,7 @@ pageSections:
     text: ""
     image: ""
     buttonText: View Payment Options
-    buttonLink: /payment-financing-options/
+    buttonLink: /financial/
     reverse: false
     align: center
     mediaMinHeight: 0px

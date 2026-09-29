@@ -27,7 +27,7 @@ pageSections:
     body: "
       <h2 class=\"elementor-heading-title elementor-size-default\">Appointment Request Form</h2>
       <div class=\"tnt-form form-request-appointment-request-appointment-page\">
-      <form action=\"/wp-admin/admin-post.php\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
+      <form action=\"/thank-you/\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
       <!-- Form Validator -->
       <input type=\"hidden\" name=\"action\" value=\"artisan_dental_form_validator\">
       <!-- Patient Type -->

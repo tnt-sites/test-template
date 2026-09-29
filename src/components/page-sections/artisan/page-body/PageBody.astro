@@ -184,6 +184,32 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
     margin-top: 0;
   }
 
+  /* Small illustration + caption cards (e.g. the conditions Invisalign treats).
+     The source images are only 160px wide, so they're held near that size rather
+     than stretched to the column and blurred. */
+  .pb2-prose :global(.image-box-grid) {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .pb2-prose :global(.image-box-grid figure) {
+    margin: 0 0 0.75rem;
+  }
+
+  .pb2-prose :global(.image-box-grid img) {
+    height: auto;
+    margin-inline: auto;
+    max-width: 160px;
+    width: 100%;
+  }
+
+  .pb2-prose :global(.image-box-grid h4) {
+    margin: 0 0 0.5rem;
+  }
+
   /* A dark wood-textured band for grouping a few call-to-action buttons,
      e.g. "Pay Now Directly" / "Care Credit" on the financial page. Same
      recipe as the logo-strip bands: solid brand-brown under the texture,

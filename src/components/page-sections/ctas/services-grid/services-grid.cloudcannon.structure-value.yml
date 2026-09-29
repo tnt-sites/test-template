@@ -125,7 +125,7 @@ value:
   ctaCard:
     enabled: true
     id: all
-    href: request-an-appointment.html
+    href: /contact-us/
     heading: Get Started Now
     buttonText: Request an Appointment
     wide: true

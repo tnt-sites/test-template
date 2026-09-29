@@ -26,7 +26,7 @@ pageSections:
     imageAlt: Bite guard
     body: |-
       
-      									<p>When it comes to treating your teeth, <a class="rank-math-link" href="meet-the-team.html">our dentists</a> at Artisan Dental have multiple treatment options available to help you have a healthy smile. Among those options are bite guards. These devices have multiple uses for people of all ages and can protect your teeth while you sleep and protect your mouth during high-impact sports.</p>								
+      									<p>When it comes to treating your teeth, <a class="rank-math-link" href="/meet-the-team/">our dentists</a> at Artisan Dental have multiple treatment options available to help you have a healthy smile. Among those options are bite guards. These devices have multiple uses for people of all ages and can protect your teeth while you sleep and protect your mouth during high-impact sports.</p>								
 
       					<h3 class="elementor-heading-title elementor-size-default">Why Choose Custom-Fit Bite Guards?</h3>				
 
@@ -75,7 +75,7 @@ pageSections:
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>When you visit <a class="rank-math-link" href="index.html">Artisan Dental </a>in Madison, Wisconsin, you’ll receive custom-fitted night guards and mouth guards that are designed to last. For more information about our services, contact us today to arrange an appointment and get started towards better oral care.</p>
+      <p>When you visit <a class="rank-math-link" href="/">Artisan Dental </a>in Madison, Wisconsin, you’ll receive custom-fitted night guards and mouth guards that are designed to last. For more information about our services, contact us today to arrange an appointment and get started towards better oral care.</p>
       <!-- /wp:paragraph -->								
     backgroundColor: transparent
     headingBackground: "#321c0e"

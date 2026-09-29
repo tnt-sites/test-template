@@ -48,7 +48,7 @@ pageSections:
     heading: Frequently Asked Questions
     items:
       - question: Do I need a tooth extraction?
-        answer: <p>Only your <a href="/doctors-team/dr-nicole-andersen/">dentist</a> can tell you if you need a tooth extraction. However, you may be a candidate for the procedure if one or more of your teeth are decayed so severely that a filling or other restoration is not a possibility for treatment.</p>
+        answer: <p>Only your <a href="/dr-nicole-andersen/">dentist</a> can tell you if you need a tooth extraction. However, you may be a candidate for the procedure if one or more of your teeth are decayed so severely that a filling or other restoration is not a possibility for treatment.</p>
       - question: What should I expect during my tooth extraction appointment?
         answer: <p>If you and your dentist decide to extract one or more teeth, you will be scheduled to return for oral surgery at a later date. You will be given a local anesthetic to prevent pain during the procedure, and you may be prescribed medications to help manage pain in the hours following your extraction.</p>
       - question: What type of post-treatment care will I need to follow?

@@ -38,6 +38,7 @@ _structures:
           role: Job title
           bio: Brief bio or description of the team member.
           imageSource: /src/assets/images/component-library/profile.jpg
+          link: ""
           imageAlt: Team member photo
         preview:
           text:
@@ -68,3 +69,6 @@ _structures:
           imageAlt:
             type: text
             comment: Alt text describing the team member photo.
+          link:
+            type: url
+            comment: Optional page the card links to, such as the team member's bio.

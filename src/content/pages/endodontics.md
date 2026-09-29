@@ -61,7 +61,7 @@ pageSections:
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>These are the most common endodontic procedures that we perform. If you’re experiencing dental pain, it’s time to <a class="rank-math-link" href="contact-us.html">schedule a visit</a> to our Madison, WI offices. Our team will bring you in, perform a complete dental exam, and provide options to treat your discomfort. With their help, you’ll be able to locate and address the source of your pain and preserve your beautiful smile. Please don’t wait until it’s too late to save your tooth. Call today and find out if endodontic treatment is proper for you!</p>
+      <p>These are the most common endodontic procedures that we perform. If you’re experiencing dental pain, it’s time to <a class="rank-math-link" href="/contact-us/">schedule a visit</a> to our Madison, WI offices. Our team will bring you in, perform a complete dental exam, and provide options to treat your discomfort. With their help, you’ll be able to locate and address the source of your pain and preserve your beautiful smile. Please don’t wait until it’s too late to save your tooth. Call today and find out if endodontic treatment is proper for you!</p>
       <!-- /wp:paragraph -->								
     backgroundColor: transparent
     headingBackground: "#321c0e"

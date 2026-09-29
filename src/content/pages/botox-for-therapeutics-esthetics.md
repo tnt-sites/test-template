@@ -10,7 +10,7 @@ pageSections:
   - _component: page-sections/artisan/page-banner
     id: ""
     eyebrow: ""
-    heading: "Reasons patients may consider Botulinum toxin or Botox® therapy for dental conditions and esthetic goals include:"
+    heading: Botox for Therapeutics & Esthetics
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "var(--color-brand-secondary)"

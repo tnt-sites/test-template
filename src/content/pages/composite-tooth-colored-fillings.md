@@ -81,7 +81,7 @@ pageSections:
       <!-- /wp:spacer -->
 
       <!-- wp:paragraph -->
-      <p>Regardless of your reason for getting tooth-colored fillings, the process remains the same. Our team will begin by numbing the area to be treated. The next step is removing existing fillings or decayed dental tissue to prepare for the filling. The composite resin will then be color-matched to your dental enamel and put into place. <a class="rank-math-link" href="meet-the-team.html">Our team</a> will finish by shaping and polishing the resin until it matches the shape of your tooth. When it’s all done, the restoration will be nearly invisible to the casual observer.</p>
+      <p>Regardless of your reason for getting tooth-colored fillings, the process remains the same. Our team will begin by numbing the area to be treated. The next step is removing existing fillings or decayed dental tissue to prepare for the filling. The composite resin will then be color-matched to your dental enamel and put into place. <a class="rank-math-link" href="/meet-the-team/">Our team</a> will finish by shaping and polishing the resin until it matches the shape of your tooth. When it’s all done, the restoration will be nearly invisible to the casual observer.</p>
       <!-- /wp:paragraph -->
 
       <!-- wp:heading {"level":3} -->
@@ -89,7 +89,7 @@ pageSections:
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>Our team here at Artisan Dental is ready to help you restore functionality and beauty to your smile today! <a class="rank-math-link" href="contact-us.html">Contact our team</a>, and we’ll prepare an appointment date for you with one of our specialists. We’re excited to see you again or to welcome you to our dental patient family.</p>
+      <p>Our team here at Artisan Dental is ready to help you restore functionality and beauty to your smile today! <a class="rank-math-link" href="/contact-us/">Contact our team</a>, and we’ll prepare an appointment date for you with one of our specialists. We’re excited to see you again or to welcome you to our dental patient family.</p>
       <!-- /wp:paragraph -->								
     backgroundColor: transparent
     headingBackground: "#321c0e"

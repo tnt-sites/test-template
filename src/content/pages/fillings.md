@@ -22,16 +22,16 @@ pageSections:
     id: ""
     sidebarHeading: ""
     links: []
-    image: /wp-content/uploads/2021/08/shutterstock_611274782-2.jpg
-    imageAlt: ""
+    image: /wp-content/uploads/2020/09/shutterstock_1505970434-2-1.jpg
+    imageAlt: Illustration of tooth-colored composite fillings in molars
     body: "
 
       \t\t\t\t\t\t\t\t\t
 
-      <p class=\"wp-block-paragraph\">For many years getting a filling came with the risk of a noticeable discoloration in your smile. Dental technology has advanced a long way since the introduction of amalgam fillings. <a class=\"rank-math-link\" href=\"index.html\">Artisan Dental</a> is proud to provide less conspicuous composite, tooth colored dental fillings for their patients in Madison, WI.&nbsp;&nbsp;</p>
+      <p class=\"wp-block-paragraph\">For many years getting a filling came with the risk of a noticeable discoloration in your smile. Dental technology has advanced a long way since the introduction of amalgam fillings. <a class=\"rank-math-link\" href=\"/\">Artisan Dental</a> is proud to provide less conspicuous composite, tooth colored dental fillings for their patients in Madison, WI.&nbsp;&nbsp;</p>
 
 
-      <div style=\"height: 615px;overflow: hidden;margin-bottom: 1.677em\"></div>
+      
 
 
       <h4 class=\"wp-block-heading\">Dental Fillings Are Best For Restoring Cavities</h4>
@@ -92,7 +92,7 @@ pageSections:
       <h4 class=\"wp-block-heading\">Learn More About Dental Fillings at Artisan Dental By Calling Today</h4>
 
 
-      <p class=\"wp-block-paragraph\">Above we’ve introduced the basics of dental fillings and when they’re necessary. There are numerous types and techniques of filling that can be applied. Reach out to our office to get more details by <a class=\"rank-math-link\" href=\"contact-us.html\">scheduling a consultation</a>. We look forward to seeing you at our office in Madison, WI.</p>
+      <p class=\"wp-block-paragraph\">Above we’ve introduced the basics of dental fillings and when they’re necessary. There are numerous types and techniques of filling that can be applied. Reach out to our office to get more details by <a class=\"rank-math-link\" href=\"/contact-us/\">scheduling a consultation</a>. We look forward to seeing you at our office in Madison, WI.</p>
 
       \t\t\t\t\t\t\t\t"
     backgroundColor: transparent

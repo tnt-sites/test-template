@@ -31,7 +31,7 @@ pageSections:
       \    <div class=\"tnt-form form-request-appointment-appointments-page\">
 
 
-      \        <form action=\"/wp-admin/admin-post.php\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
+      \        <form action=\"/thank-you/\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
 
 
       \            <!-- Form Validator -->

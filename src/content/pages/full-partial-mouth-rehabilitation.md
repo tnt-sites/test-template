@@ -29,7 +29,7 @@ pageSections:
     buttonBackgroundHoverColor: "#c3a527"
     buttonBackgroundHoverColor2: "#c5a628"
   - _component: page-sections/wpmig/we-can-fix-these
-    id: ""
+    id: down
     eyebrow: We Can Fix These
     heading: Common Issues
     items:
@@ -89,10 +89,10 @@ pageSections:
     text: |-
       <p>Dr. Nicole Andersen’s passion is for changing someone’s life by making them comfortable and confident with one of their most important assets—a beautiful smile. A Full-Mouth Restoration can return decayed, cracked or damaged teeth to full health and function and allow you to smile again with confidence.</p>
       <p>Dr. Andersen provides comprehensive dental services and has the skills necessary to make your full-mouth restoration a success. She is experienced in handling extensive cases and partners with one of the country’s best aesthetic dental labs to make sure the work you have done is not only strong and durable, but also looks aesthetic and natural.</p>
-      <p>Dr. Andersen has completed hundreds of hours of continuing education in full-mouth treatment with specialized, hands on training in the various fields of dental care, including Cosmetic Dentistry, with some of the world’s most qualified professors and instructors.&nbsp;<a href="/doctors-team/dr-nicole-andersen/" target="_blank">You can learn more about Dr. Andersen’s training as an expert dentist by visiting her biography.</a></p>
+      <p>Dr. Andersen has completed hundreds of hours of continuing education in full-mouth treatment with specialized, hands on training in the various fields of dental care, including Cosmetic Dentistry, with some of the world’s most qualified professors and instructors.&nbsp;<a href="/dr-nicole-andersen/" target="_blank">You can learn more about Dr. Andersen’s training as an expert dentist by visiting her biography.</a></p>
       <p>Dr. Andersen takes the time to completely understand the patient’s vision, goals and dreams for their smile. She understands that aesthetics are an important part of dental work and she loves helping patients look their best. She will take great care to ensure that you have a beautiful smile that is natural-looking and long-lasting.</p>
     buttonText: Meet Dr. Andersen
-    buttonLink: /doctors-team/dr-nicole-andersen/
+    buttonLink: /dr-nicole-andersen/
     image3: /wp-content/uploads/2024/07/top-dentist-2024.png
     image3Alt: ""
     backgroundColor: "#f2f2f2"
@@ -157,7 +157,7 @@ pageSections:
       Once your treatment plan is complete, our patient care coordinators will work with you to identify any dental insurance coverage you may have for the procedures. We will also review any discounts available through the Artisan Dental Health Plan or payment the day of services. Lastly, we work closely with affiliated third-party financial partner, CareCredit to create affordable payment options.
       <br><br>
     buttonText: View Payment Options
-    buttonLink: /payment-financing-options/
+    buttonLink: /financial/
     backgroundColor: "#321c0e"
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"

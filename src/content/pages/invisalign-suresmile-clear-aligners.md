@@ -55,7 +55,7 @@ pageSections:
       <li>Get all your questions answered</li>
       </ul>								
 
-      									<p><strong>To make an appointment, call 608-467-8022 or <a href="contact-us.html#form">click here</a> to request an appointment online.</strong></p>								
+      									<p><strong>To make an appointment, call 608-467-8022 or <a href="/contact-us/#form">click here</a> to request an appointment online.</strong></p>								
 
       					<h2 class="elementor-heading-title elementor-size-default">Advantages of Invisalign® and SureSmile® over traditional metal braces 
       </h2>				
@@ -101,7 +101,7 @@ pageSections:
       									<p>Invisalign and SureSmile treatment can fix a wide variety of problems with teeth and bite alignment, from mild cases of crooked teeth to much more difficult problems involving serious bite issues.</p>
       <p>Here are some of the main conditions Artisan Dental can fix with Invisalign or SureSmile:</p>								
 
-      					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/overly-crowded-teeth1.png" class="attachment-full size-full wp-image-7127" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Overly crowded </h4><p class="elementor-image-box-description">When teeth are crowded in the mouth, it can be difficult to clean the teeth properly. This can promote tooth decay and cause a higher risk of gum disease.</p></div></div>				
+      					<div class="image-box-grid"><div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/overly-crowded-teeth1.png" class="attachment-full size-full wp-image-7127" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Overly crowded </h4><p class="elementor-image-box-description">When teeth are crowded in the mouth, it can be difficult to clean the teeth properly. This can promote tooth decay and cause a higher risk of gum disease.</p></div></div>				
 
       					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/overbite11.png" class="attachment-full size-full wp-image-7128" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Overbite</h4><p class="elementor-image-box-description">An overbite can cause excessive wear on the lower teeth, gum irritation and can also cause jaw problems.</p></div></div>				
 
@@ -111,10 +111,10 @@ pageSections:
 
       					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/openbite2.png" class="attachment-full size-full wp-image-7132" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Open Bite</h4><p class="elementor-image-box-description">An open bite can interfere with chewing and can cause speech impairment and jaw problems.</p></div></div>				
 
-      					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/crossbite11.png" class="attachment-full size-full wp-image-7133" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Crossbite</h4><p class="elementor-image-box-description">This is a symptom of jaw misalignment, which can cause worn-down teeth, gum disease or both.</p></div></div>				
+      					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" src="/wp-content/uploads/2020/09/crossbite11.png" class="attachment-full size-full wp-image-7133" alt=""></figure><div class="elementor-image-box-content"><h4 class="elementor-image-box-title">Crossbite</h4><p class="elementor-image-box-description">This is a symptom of jaw misalignment, which can cause worn-down teeth, gum disease or both.</p></div></div></div>
 
-      									<p><!-- wp:heading {"level":4} --></p>
-      <p><strong>To make an appointment, call 608-467-8022 or <a href="contact-us.html#form">click here</a> to request an appointment online.</strong></p>
+      <p><!-- wp:heading {"level":4} --></p>
+      <p><strong>To make an appointment, call 608-467-8022 or <a href="/contact-us/#form">click here</a> to request an appointment online.</strong></p>
       <p><!-- /wp:heading --></p>								
     backgroundColor: transparent
     headingBackground: "#321c0e"

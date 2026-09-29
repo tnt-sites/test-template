@@ -10,7 +10,8 @@
  * icons in place of the Font Awesome glyphs (not loaded anywhere here).
  *
  * Baked in: layout, card shape. Props: text, columns, colours, icon per
- * item (an icon name from this project's icon set). Array: `cards`.
+ * item (an icon name from this project's icon set), optional link per item.
+ * Array: `cards`.
  *
  * `youtubeId` switches to the source's `services` shape: the checklist in one
  * narrow column with an explainer video beside it, instead of the full-width
@@ -51,7 +52,7 @@ const plain = !list.some((c: any) => c.text);
             <li>
               <span class="ig-icon"><Icon name={c.icon || "check-circle-duo"} size="none" /></span>
               <div class="ig-copy">
-                <h3>{c.title}</h3>
+                <h3>{c.link ? <a href={c.link}>{c.title}</a> : c.title}</h3>
                 {c.text && <p>{c.text}</p>}
               </div>
             </li>
@@ -122,4 +123,6 @@ const plain = !list.some((c: any) => c.text);
     .ig-cards { grid-template-columns: 1fr; }
     .with-video .ig-inner { grid-template-columns: 1fr; }
   }
+  .ig-copy h3 a { color: inherit; text-decoration: none; }
+  .ig-copy h3 a:hover, .ig-copy h3 a:focus-visible { text-decoration: underline; }
 </style>

@@ -34,6 +34,7 @@ _structures:
           icon: check-circle-duo
           title: ""
           text: ""
+          link: ""
         _inputs:
           icon:
             type: text
@@ -42,3 +43,6 @@ _structures:
             type: text
           text:
             type: markdown
+          link:
+            type: url
+            comment: Optional page the title links to.

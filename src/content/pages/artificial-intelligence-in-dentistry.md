@@ -126,12 +126,6 @@ pageSections:
     overlayOpacity: 0.15
     eyebrowColor: "#ffffff"
     headingColor: "#ffffff"
-  - _component: page-sections/artisan/video-row
-    id: ""
-    videos:
-      - youtubeId: ToAbj-GZYf4
-        title: ""
-    backgroundColor: "#ffffff"
   - _component: page-sections/artisan/split-feature
     id: ""
     eyebrow: ""
@@ -139,7 +133,7 @@ pageSections:
     text: <p></p>
     image: ""
     buttonText: Article
-    buttonLink: /news/AI-dental-Florian-Hillen/651929/
+    buttonLink: https://www.medtechdive.com/news/AI-dental-Florian-Hillen/651929/
     reverse: false
     align: left
     mediaMinHeight: 0px

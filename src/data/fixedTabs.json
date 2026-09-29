@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/contact-us/",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -19,7 +19,7 @@
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/nbxrJKdFeTWAdae17",
       "target": "_blank",
       "icon": "map-pin",
       "textStrong": "View ",
@@ -28,15 +28,16 @@
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "https://forms.mydentistlink.com/b189b388-42c3-424d-a52c-5f92231226af",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
-      "textStrong": "Forms "
+      "textStrong": "Forms ",
+      "target": "_blank"
     },
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/Artisan-Dental-Madison-417141075083050/",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +46,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/nbxrJKdFeTWAdae17",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",
@@ -54,7 +55,7 @@
     {
       "itemClass": "ig",
       "enabled": false,
-      "href": "https://www.instagram.com/",
+      "href": "https://www.instagram.com/artisandds/",
       "target": "_blank",
       "icon": "social/instagram",
       "textMobile": "Follow ",
@@ -63,7 +64,7 @@
     {
       "itemClass": "tw",
       "enabled": false,
-      "href": "https://x.com/",
+      "href": "https://twitter.com/ArtisanDDS",
       "target": "_blank",
       "icon": "social/x",
       "textMobile": "Follow ",

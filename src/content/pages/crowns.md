@@ -22,8 +22,8 @@ pageSections:
     id: ""
     sidebarHeading: ""
     links: []
-    image: /wp-content/uploads/2021/08/shutterstock_611274782-2.jpg
-    imageAlt: ""
+    image: /wp-content/uploads/2020/09/shutterstock_611274782-1.jpg
+    imageAlt: Illustration of a dental crown being placed over a prepared tooth
     body: "
 
       \t\t\t\t\t

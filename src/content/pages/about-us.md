@@ -10,7 +10,7 @@ pageSections:
   - _component: page-sections/artisan/page-banner
     id: ""
     eyebrow: ""
-    heading: Dental Health Plan
+    heading: About Us
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "var(--color-brand-secondary)"
@@ -38,7 +38,7 @@ pageSections:
     headingColor: "#ffffff"
     textColor: "#ffffff"
   - _component: page-sections/artisan/icon-grid
-    id: ""
+    id: down
     eyebrow: ""
     heading: "MISSION:"
     text: ""
@@ -243,7 +243,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">We offer a variety of ways to make your care affordable, including our Artisan Dental Health </span><span style=\"font-weight: 400;\">Plan and</span><span style=\"font-weight: 400;\"> the ability…</span> <a href=\"https://www.carecredit.com/go/CHG554/\"><i><span style=\"font-weight: 400;\">CareCredit</span></i></a><i><span style=\"font-weight: 400;\">!</span></i></p><p>We offer a variety of ways to make your care affordable, including our Artisan Dental Health Plan. and the ability to make monthly payments for care when working with our patient care financing partner,&nbsp;<a href=\"https://www.carecredit.com/go/CHG554/\">CareCredit.</a></p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">We offer a variety of ways to make your care affordable, including our Artisan Dental Health </span><span style=\"font-weight: 400;\">Plan and</span><span style=\"font-weight: 400;\"> the ability…</span> <a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\"><i><span style=\"font-weight: 400;\">CareCredit</span></i></a><i><span style=\"font-weight: 400;\">!</span></i></p><p>We offer a variety of ways to make your care affordable, including our Artisan Dental Health Plan. and the ability to make monthly payments for care when working with our patient care financing partner,&nbsp;<a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\">CareCredit.</a></p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2020/09/shutterstock_1395159488-1.jpg
@@ -387,7 +387,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is a purpose-oriented company committed to using “Business as a Force for Good”. We have a demonstrated track record of creating benefit for all of the stakeholders connected to Artisan Dental as illustrated in our <a href=\"certified-b-corporation.html\">Certified B Corporation</a> designation and impact summarized in the linked 2025 Artisan Dental Impact Report.</p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is a purpose-oriented company committed to using “Business as a Force for Good”. We have a demonstrated track record of creating benefit for all of the stakeholders connected to Artisan Dental as illustrated in our <a href=\"/certified-b-corporation/\">Certified B Corporation</a> designation and impact summarized in the linked 2025 Artisan Dental Impact Report.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2026/05/artisan-dental-impact-report-2025-border.jpg
@@ -411,7 +411,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p>We incorporate a wide range of&nbsp;sustainability practices&nbsp;as a conscious daily endeavor including measures such as the purchase of 100% of our electrical energy needs from renewable sources through&nbsp;<a href=\"https://www.mge.com/our-environment/green-power/green-power-tomorrow\">MG&amp;E Green Power</a>&nbsp;program.&nbsp; We also purchase certified carbon offsets for all other energy uses and company travel that comprise Scopes 1, 2, &amp; 3 greenhouse gas emissions.&nbsp; The&nbsp;<a href=\"program-details.html\" target=\"_blank\" rel=\"noopener noreferrer\">Artisan Dental Recycling Program</a>&nbsp;is the first oral care recycling program in the Dane County area that is open to the public.&nbsp; We are the United States,&nbsp;<a href=\"https://bcorporation.net/directory/artisan-dental-llc\">2nd Certified B Corporation dental practice</a>, a member of&nbsp;<a href=\"http://www.sustaindane.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustain Dane</a>&nbsp;and its&nbsp;<a href=\"http://www.sustaindane.org/going-sustainable/at-work/sustainable-business-network/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustainable Business Network</a>&nbsp;as well as&nbsp;<a href=\"http://www.danebuylocal.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Dane Buy Local.</a></p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p>We incorporate a wide range of&nbsp;sustainability practices&nbsp;as a conscious daily endeavor including measures such as the purchase of 100% of our electrical energy needs from renewable sources through&nbsp;<a href=\"https://www.mge.com/our-environment/green-power/green-power-tomorrow\">MG&amp;E Green Power</a>&nbsp;program.&nbsp; We also purchase certified carbon offsets for all other energy uses and company travel that comprise Scopes 1, 2, &amp; 3 greenhouse gas emissions.&nbsp; The&nbsp;<a href=\"/program-details/\" target=\"_blank\" rel=\"noopener noreferrer\">Artisan Dental Recycling Program</a>&nbsp;is the first oral care recycling program in the Dane County area that is open to the public.&nbsp; We are the United States,&nbsp;<a href=\"https://www.bcorporation.net/en-us/find-a-b-corp/company/artisan-dental-llc/\">2nd Certified B Corporation dental practice</a>, a member of&nbsp;<a href=\"http://www.sustaindane.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustain Dane</a>&nbsp;and its&nbsp;<a href=\"http://www.sustaindane.org/going-sustainable/at-work/sustainable-business-network/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustainable Business Network</a>&nbsp;as well as&nbsp;<a href=\"http://www.danebuylocal.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Dane Buy Local.</a></p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2020/09/RecycleWithSignRectangle-3-1.jpg
@@ -459,7 +459,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p>We appreciate that we are an interwoven part of a larger local and global community.&nbsp; We are heartened by the opportunity to&nbsp;<a href=\"/philanthropy/\" target=\"_blank\" rel=\"noopener noreferrer\">support the fine work of our non-profit partners</a>&nbsp;with owner and staff volunteer hours, free dental services and/or ongoing financial contributions.</p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p>We appreciate that we are an interwoven part of a larger local and global community.&nbsp; We are heartened by the opportunity to&nbsp;<a href=\"/community-giving/\" target=\"_blank\" rel=\"noopener noreferrer\">support the fine work of our non-profit partners</a>&nbsp;with owner and staff volunteer hours, free dental services and/or ongoing financial contributions.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2020/09/shutterstock_183501380-1.jpg
@@ -483,7 +483,7 @@ pageSections:
 
       \t\t\t\t<div class=\"elementor-widget-container\">
 
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is locally owned by&nbsp;<a href=\"/doctors-team/dr-nicole-andersen/\">Dr. Nicole Andersen</a>&nbsp;and&nbsp;<a href=\"/doctors-team/scott-andersen/\">Scott Andersen</a>, who feel fortunate to be cooperating together with the entire&nbsp;<a href=\"meet-the-team.html\">Artisan Dental Team</a>&nbsp;to provide you with the highest quality care, while strengthening the health of our community and environment.</p>\t\t\t\t\t\t\t\t</div>
+      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is locally owned by&nbsp;<a href=\"/dr-nicole-andersen/\">Dr. Nicole Andersen</a>&nbsp;and&nbsp;<a href=\"/scott-andersen/\">Scott Andersen</a>, who feel fortunate to be cooperating together with the entire&nbsp;<a href=\"/meet-the-team/\">Artisan Dental Team</a>&nbsp;to provide you with the highest quality care, while strengthening the health of our community and environment.</p>\t\t\t\t\t\t\t\t</div>
 
       \t\t\t\t"
     image: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-235.jpg

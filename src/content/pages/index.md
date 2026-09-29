@@ -110,15 +110,15 @@ pageSections:
       - icon: /wp-content/uploads/2021/05/Cosmetic-icon.png
         title: Cosmetic
         text: Looking to brighten up your smile? Have an imperfection you want fixed? We can make it happen!
-        link: /services/cosmetic/
+        link: /cosmetic/
       - icon: /wp-content/uploads/2021/05/Restorative-icon.png
         title: Restorative
         text: Turn that frown upside down. With our advanced techniques we can restore your beautiful smile!
-        link: /services/restorative/
+        link: /restorative/
       - icon: /wp-content/uploads/2021/05/Resorative-icon.png
         title: Preventive
         text: The most important part of maintaining a happy healthy smile is to keep up with routine visits.
-        link: /services/preventive/
+        link: /preventive/
       - icon: /wp-content/uploads/2021/05/Insurance-icon.png
         title: Artisan Dental Health Plan
         text: Affordable oral health care for individuals and families without dental insurance.
@@ -163,7 +163,7 @@ pageSections:
       - image: /wp-content/uploads/2021/05/ArtisanDental-OfficeTechnology-235-rev.jpg
         title: Tour Our Office
         text: Come stop by our office anytime to take a free tour. We also have a wonderful online image gallery to check out!
-        link: /contact-us/
+        link: /office-tour/
     backgroundColor: var(--color-brand)
     titleColor: "#ffffff"
     textColor: "#ffffff"
@@ -224,7 +224,7 @@ pageSections:
     text: Integral to the goal of providing the highest quality dental care available, is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and a more effective long lasting treatment.
     image: ""
     buttonText: Watch a Quick Video
-    buttonLink: /office-tour/
+    buttonLink: /videos/
     reverse: false
     align: left
     backgroundColor: transparent

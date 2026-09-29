@@ -53,7 +53,7 @@ pageSections:
 
 
 
-      <p class=\"wp-block-paragraph\">If you’ve been diagnosed with periodontal disease, our team at <a href=\"meet-the-team.html\" class=\"rank-math-link\">Artisan Dental</a> is here to help. We will work with you to help remove the bacterial infection and keep it from returning through our effective periodontal therapy treatment plan. Through our plan, we will provide:</p>
+      <p class=\"wp-block-paragraph\">If you’ve been diagnosed with periodontal disease, our team at <a href=\"/meet-the-team/\" class=\"rank-math-link\">Artisan Dental</a> is here to help. We will work with you to help remove the bacterial infection and keep it from returning through our effective periodontal therapy treatment plan. Through our plan, we will provide:</p>
 
 
 
@@ -73,7 +73,7 @@ pageSections:
 
 
 
-      <p class=\"wp-block-paragraph\">Because of the severity of periodontal disease, our prevention methods work to help keep periodontal disease at bay from harming your oral and overall health long term. Through good oral practices and regular dental visits at Artisan Dental, patients with periodontal disease can find sufficient care through our team in Madison, Wisconsin. To learn about our health care plans for periodontal disease and other ways you can protect your teeth, arrange an <a href=\"contact-us.html\" class=\"rank-math-link\">appointment</a> with our practice today.</p>
+      <p class=\"wp-block-paragraph\">Because of the severity of periodontal disease, our prevention methods work to help keep periodontal disease at bay from harming your oral and overall health long term. Through good oral practices and regular dental visits at Artisan Dental, patients with periodontal disease can find sufficient care through our team in Madison, Wisconsin. To learn about our health care plans for periodontal disease and other ways you can protect your teeth, arrange an <a href=\"/contact-us/\" class=\"rank-math-link\">appointment</a> with our practice today.</p>
 
       \t\t\t\t"
     backgroundColor: transparent

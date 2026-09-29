@@ -26,7 +26,7 @@ pageSections:
     imageAlt: Young smiling white female business owner, portrait
     body: "
 
-      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<img fetchpriority=\"high\" decoding=\"async\" src=\"/wp-content/uploads/2020/08/young-smiling-white-female-business-owner-portrait-1600x1066.jpg\" class=\"attachment-large size-large wp-image-620\" alt=\"Young smiling white female business owner, portrait\">\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+      \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 
 
       \t\t\t\t\t\t\t\t\t

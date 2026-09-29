@@ -6,7 +6,7 @@ pageSections:
   - _component: page-sections/artisan/page-banner
     id: ""
     eyebrow: ""
-    heading: "Category: Preventive"
+    heading: Preventive
     backgroundColor: "#321c0e"
     headingColor: "#ffffff"
     eyebrowColor: "var(--color-brand-secondary)"

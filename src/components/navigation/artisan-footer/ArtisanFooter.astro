@@ -173,27 +173,31 @@ const mainAddressLines = formatAddressLines(officeAddress);
             </>
           )
         }
+        {
+          (bottom.links ?? []).map((link: any) => (
+            <>
+              {" · "}
+              <a href={link.path}>{link.name}</a>
+            </>
+          ))
+        }
       </p>
       {
         resolvedSocials.length > 0 && (
           <ul class="af-socials">
             {resolvedSocials.map((social: any) => (
               <li>
-                <a
-                  href={social.link}
-                  target="_blank"
+                <Button
+                  variant="ghost"
+                  size="md"
+                  link={social.link}
+                  iconName={social.icon}
+                  hideText="true"
+                  target={social.link?.startsWith("mailto:") ? undefined : "_blank"}
                   rel="noopener noreferrer"
                   aria-label={social.label || social.icon}
-                >
-                  <Button
-                    variant="ghost"
-                    size="md"
-                    iconName={social.icon}
-                    hideText="true"
-                    aria-hidden="true"
-                    tabindex="-1"
-                  />
-                </a>
+                  editable={false}
+                />
               </li>
             ))}
           </ul>
@@ -222,7 +226,7 @@ const mainAddressLines = formatAddressLines(officeAddress);
   .af-affiliations .af-inner {
     display: grid;
     gap: 2.5rem;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
   }
 
   .af-affiliations h3 {

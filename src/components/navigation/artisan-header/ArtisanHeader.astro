@@ -385,6 +385,24 @@ const mobileNavData = navData;
     .ah-topbar .ah-inner {
       justify-content: space-between;
     }
+
+    .ah-cta a {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  /* On phones the socials pushed the CTA off-screen (and gave every page a
+     horizontal scroll). They're repeated in the mobile menu, so drop them here
+     and let the CTA take the bar. */
+  @media (max-width: 480px) {
+    .ah-socials {
+      display: none;
+    }
+
+    .ah-cta {
+      margin-inline: auto;
+    }
   }
 </style>
 

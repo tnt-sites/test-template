@@ -7,7 +7,8 @@
  * renders the source's own hand-written `.tnt-form` markup lifted verbatim
  * (contact-us, where the same page also carries a 20-field appointment form
  * that only exists as lifted markup — one style of form per page beats two).
- * Either way the backend is unwired (see tools/extract-forms.mjs).
+ * Both POST to the thank-you page, where CloudCannon Forms picks them up and
+ * delivers them to the site's default inbox.
  *
  * The map is optional and, when it's the only thing set, renders on its own —
  * the source gives it a full-bleed section of its own above the details.
@@ -64,7 +65,7 @@ const hasInner = list.length > 0 || hasForm || Boolean(heading) || Boolean(detai
           {formHtml
             ? <div class="cb-formhtml" set:html={formHtml} />
             : (
-              <form action={formAction} method="get" class="a-form">
+              <form action={formAction} method="post" class="a-form">
                 {blocks.length > 0 && <Components contentSections={blocks} propName="formBlocks" editable={false} />}
               </form>
             )}

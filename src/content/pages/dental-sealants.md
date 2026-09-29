@@ -59,10 +59,10 @@ pageSections:
       <h3 class=\"wp-block-heading\">Our Dental Sealant Procedure at Artisan Dental</h3>
 
 
-      <p class=\"wp-block-paragraph\">Getting sealants from our team at <a href=\"meet-the-team.html\">Artisan Dental</a> is a two-step process. It begins with the application of gel that will pit the surfaces of the treated tooth. This gel allows us to roughen the surface of the inner tooth and allow the sealant material to attach to the tooth’s enamel. After the gel, the dental sealant is applied, and the sealant will adhere to the tooth’s surface. In some cases, our dentists may use curing lights to harden the material to the grooves and fissures for a tighter seal. Once completed, regular cleaning will be performed, and your treatment is complete.</p>
+      <p class=\"wp-block-paragraph\">Getting sealants from our team at <a href=\"/meet-the-team/\">Artisan Dental</a> is a two-step process. It begins with the application of gel that will pit the surfaces of the treated tooth. This gel allows us to roughen the surface of the inner tooth and allow the sealant material to attach to the tooth’s enamel. After the gel, the dental sealant is applied, and the sealant will adhere to the tooth’s surface. In some cases, our dentists may use curing lights to harden the material to the grooves and fissures for a tighter seal. Once completed, regular cleaning will be performed, and your treatment is complete.</p>
 
 
-      <p class=\"wp-block-paragraph\">Visiting our practice will give you all the tools you need to have good oral care for yourself and your family. <a class=\"rank-math-link\" href=\"office-tour.html\">Visit us today</a> in Madison, Wisconsin, for more information about receiving dental care from our team.</p>
+      <p class=\"wp-block-paragraph\">Visiting our practice will give you all the tools you need to have good oral care for yourself and your family. <a class=\"rank-math-link\" href=\"/office-tour/\">Visit us today</a> in Madison, Wisconsin, for more information about receiving dental care from our team.</p>
 
       \t\t\t\t\t\t\t\t"
     backgroundColor: transparent

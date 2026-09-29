@@ -88,7 +88,7 @@ const rawCtaCard = !!ctaCard && typeof ctaCard === "object" ? (ctaCard as Servic
 const normalizedCtaCard = {
   enabled: rawCtaCard.enabled === undefined ? false : isTrue(rawCtaCard.enabled),
   id: cleanText(rawCtaCard.id, "all").replace(/^#/, "") || "all",
-  href: cleanText(rawCtaCard.href, "request-an-appointment.html"),
+  href: cleanText(rawCtaCard.href, "/contact-us/"),
   heading:
     typeof rawCtaCard.heading === "string" && rawCtaCard.heading.trim().length > 0
       ? stripP(rawCtaCard.heading)

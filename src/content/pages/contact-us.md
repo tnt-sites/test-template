@@ -43,7 +43,7 @@ pageSections:
       \    <div class=\"tnt-form form-request-appointment-contact-us-page\">
 
 
-      \        <form action=\"/wp-admin/admin-post.php\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
+      \        <form action=\"/thank-you/\" class=\"recaptcha-form\" method=\"post\" data-no-elementor-submit=\"\">
 
 
       \            <!-- Form Validator -->
@@ -272,7 +272,7 @@ pageSections:
     formHtml: |-
       <div class="tnt-form form-send-us-a-message-contact-us-page">
 
-              <form action="/wp-admin/admin-post.php" class="recaptcha-form" method="post" data-no-elementor-submit="">
+              <form action="/thank-you/" class="recaptcha-form" method="post" data-no-elementor-submit="">
 
                   <!-- Form Validator -->
                   <input type="hidden" name="action" value="artisan_dental_form_validator">

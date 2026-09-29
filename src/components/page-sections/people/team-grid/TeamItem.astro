@@ -10,6 +10,7 @@ const {
   bio = "",
   imageSource = "",
   imageAlt = "",
+  link = "",
   class: className,
   _component,
   ...htmlAttributes
@@ -20,6 +21,7 @@ const cardClasses = ["team-item", className].filter(Boolean).join(" ");
 
 <Card
   {...htmlAttributes}
+  link={link || undefined}
   class={cardClasses || undefined}
   paddingHorizontal="lg"
   paddingVertical="sm"

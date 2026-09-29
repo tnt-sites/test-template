@@ -64,7 +64,7 @@ pageSections:
 
       \t\t\t\t\t\t\t\t\t<div class=\"elementor-button-wrapper\" style=\"text-align:center\">
 
-      \t\t\t\t\t<a class=\"button variant-primary size-md\" href=\"contact-us.html\">
+      \t\t\t\t\t<a class=\"button variant-primary size-md\" href=\"/contact-us/\">
 
       \t\t\t\t\t\t<span class=\"label-text\">Get Started</span>
 

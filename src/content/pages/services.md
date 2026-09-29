@@ -38,7 +38,7 @@ pageSections:
     headingColor: "#ffffff"
     textColor: "#ffffff"
   - _component: page-sections/artisan/logo-strip
-    id: ""
+    id: down
     eyebrow: ""
     heading: ""
     logos:
@@ -109,24 +109,31 @@ pageSections:
       - icon: check-circle-duo
         title: Full & Partial Rehabilitation
         text: ""
+        link: /full-partial-mouth-rehabilitation/
       - icon: check-circle-duo
         title: Dental Implants
         text: ""
+        link: /dental-implants/
       - icon: check-circle-duo
         title: Fillings, Crowns, Bridges
         text: ""
+        link: /fillings/
       - icon: check-circle-duo
         title: Same-Day Crowns (CEREC)
         text: ""
+        link: /same-day-crowns-cerec/
       - icon: check-circle-duo
         title: Extractions
         text: ""
+        link: /extractions/
       - icon: check-circle-duo
         title: Endodontics
         text: ""
+        link: /endodontics/
       - icon: check-circle-duo
         title: Orthodontics
         text: ""
+        link: /invisalign-suresmile-clear-aligners/
     columns: "3"
     youtubeId: UfEpLime4yw
     videoTitle: Artisan Dental, LLC - Restorative Dental Care
@@ -145,21 +152,27 @@ pageSections:
       - icon: check-circle-duo
         title: Invisalign
         text: ""
+        link: /invisalign-suresmile-clear-aligners/
       - icon: check-circle-duo
         title: Smile Make Over
         text: ""
+        link: /new-smile-design/
       - icon: check-circle-duo
         title: Ceramic Veneers
         text: ""
+        link: /ceramic-veneers/
       - icon: check-circle-duo
         title: Laser Gum Sculpting
         text: ""
+        link: /laser-gum-sculpting/
       - icon: check-circle-duo
         title: Whitening Options
         text: ""
+        link: /teeth-whitening-options/
       - icon: check-circle-duo
         title: White Fillings
         text: ""
+        link: /composite-tooth-colored-fillings/
     columns: "3"
     youtubeId: QqREmap3nOQ
     videoTitle: Artisan Dental, LLC - Cosmetic Dental Care
@@ -178,18 +191,23 @@ pageSections:
       - icon: check-circle-duo
         title: Teeth Cleaning
         text: ""
+        link: /teeth-cleaning/
       - icon: check-circle-duo
         title: Periodontal Therapy
         text: ""
+        link: /periodontal-therapy/
       - icon: check-circle-duo
         title: Dental Sealants
         text: ""
+        link: /dental-sealants/
       - icon: check-circle-duo
         title: Mouth Guards
         text: ""
+        link: /bite-guard/
       - icon: check-circle-duo
         title: Dental Videos
         text: ""
+        link: /videos/
     columns: "3"
     youtubeId: hjMwvWtHPXU
     videoTitle: Artisan Dental, LLC - Preventive Dental Care
@@ -212,7 +230,7 @@ pageSections:
       \t\t\t\t"
     image: /wp-content/uploads/2020/09/Andersen_New3-3-1-1000x1000.jpg
     buttonText: Meet Dr. Andersen
-    buttonLink: /doctors-team/dr-nicole-andersen/
+    buttonLink: /dr-nicole-andersen/
     reverse: false
     align: left
     mediaMinHeight: 420px
