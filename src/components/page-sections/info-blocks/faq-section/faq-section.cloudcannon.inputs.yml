@@ -48,6 +48,14 @@ headingSize:
         name: Extra Large
       - id: 2xl
         name: 2X Large
+intro:
+  type: markdown
+  comment: Optional paragraph under the heading.
+  options:
+    bold: true
+    italic: true
+    link: true
+    styles: /.cloudcannon/styles/editor.css
 singleOpen:
   type: switch
   comment: Whether only one accordion item can be open at a time.

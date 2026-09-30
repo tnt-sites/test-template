@@ -19,6 +19,7 @@ pageSections:
       - type: prose
         html: |-
           <p><strong>Updated:</strong> 2/3/26</p>
+          <p><a href="/wp-content/uploads/2026/03/toothbar-hipaa-notice-of-privacy-practices-2026.pdf" target="_blank" rel="noopener noreferrer">Download this notice as a PDF</a></p>
           <p><strong>THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED AND DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</strong></p>
           <h2>Purpose</h2>
           <p>We respect your privacy. We are also legally required to maintain the privacy of your protected health information (PHI) under the Health Insurance Portability and Accountability Act (HIPAA).</p>

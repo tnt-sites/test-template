@@ -1,11 +1,15 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
 import Accordion from "@wrappers/accordion/Accordion.astro";
 
 const {
   heading = "Frequently Asked Questions",
+  intro = "",
   items = [],
+  singleOpen = true,
+  openFirst = false,
   label = "About FAQ",
   paddingVertical = "4xl",
   colorScheme = "inherit",
@@ -30,5 +34,31 @@ const {
   backgroundImage={backgroundImage}
 >
   <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
-  <Accordion label={label} singleOpen={true} openFirst={false} items={items} />
+  {intro && <Text class="faq-section-intro" text={intro} alignX="center" data-prop="intro" />}
+  <Accordion label={label} singleOpen={singleOpen} openFirst={openFirst} items={items} />
 </CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .faq-section {
+      h2 {
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+
+      .faq-section-intro {
+        margin: var(--spacing-md) auto var(--spacing-xl);
+        max-width: 60rem;
+      }
+
+      .accordion-item-title {
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-medium, 500);
+      }
+
+      .accordion-item-detail .text > * + * {
+        margin-top: var(--spacing-sm);
+      }
+    }
+  }
+</style>

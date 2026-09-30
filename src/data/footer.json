@@ -59,6 +59,10 @@
       "path": "/hipaa-notice/"
     },
     {
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
+    },
+    {
       "name": "Accessibility Statement",
       "path": "/accessibility-statement/"
     }

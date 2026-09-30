@@ -393,6 +393,13 @@ const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
           }
         }
 
+        /* No map on phones, where it pushes the footer down a full screen; the Map tab covers directions. */
+        @media (max-width: 767px) {
+          .footer-contact-map {
+            display: none;
+          }
+        }
+
         .footer-contact-map--fallback {
           align-items: center;
           background: #ffffff;

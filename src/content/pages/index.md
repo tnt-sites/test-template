@@ -400,6 +400,43 @@ pageSections:
     headingColorHex: ''
     textColor: '#000000'
     textColorHex: ''
+  - _component: page-sections/info-blocks/faq-section
+    id: faqs
+    heading: Frequently Asked Questions
+    intro: Is there something you want to ask about our practice or dentistry in general? Our team is always happy to answer your questions! But before you reach out to us, we invite you to read the following FAQs to see if they have the information you’ve been looking for.
+    singleOpen: true
+    openFirst: true
+    items:
+      - _component: building-blocks/wrappers/accordion/accordion-item
+        title: What is the Best Way to Find a Cosmetic Dentist?
+        contentSections:
+          - _component: building-blocks/core-elements/text
+            text: |-
+              There are many practices that offer cosmetic dentistry, but some dentists have more training and experience than others when it comes to procedures meant to enhance the appearance of your smile. As such, when choosing a cosmetic dentist in Austin, it’s always a good idea to check their background and credentials. Ideally, you should look for a dental expert who belongs to a notable cosmetic dentistry organization.
+
+              At Toothbar, our team includes multiple dentists who hold membership with the American Academy of Cosmetic Dentistry. Regardless of whether you’re interested in veneers, teeth whitening, dental bonding, or a full smile makeover, you can count on our team to help you achieve your aesthetic goals and deliver the dazzling results that you deserve.
+      - _component: building-blocks/wrappers/accordion/accordion-item
+        title: How Do I Find the Best Place to Get Dental Work Done?
+        contentSections:
+          - _component: building-blocks/core-elements/text
+            text: |-
+              When trying to find a dental practice that’s truly right for you, it’s important to consider:
+
+              - **Your Specific Needs:** Are you interested in replacing your missing teeth with dental implants in Austin? Do you want to brighten your smile with teeth whitening? Think carefully about your smile goals so that you can look for a practice that offers the services that you need.
+              - **Financial Options:** You should check to see what options a given dental practice offers for making the cost of your dental care more manageable, such as flexible financing through trusted third parties, such as CareCredit or Cherry.
+              - **Location:** You’ll likely want to choose a dentist who’s near your home or workplace so that you can get to them easily when it counts the most.
+
+              It’s a good idea to write down what traits matter the most to you in a dental office. This can help you significantly narrow down your search to practices that may potentially be a good fit for you.
+      - _component: building-blocks/wrappers/accordion/accordion-item
+        title: How Much Does a Dental Cleaning Cost in Austin, TX?
+        contentSections:
+          - _component: building-blocks/core-elements/text
+            text: It’s generally recommended that you have a professional dental cleaning performed every six months in order to minimize your risk for cavities and gum disease. The cost of these visits depends on several factors, such as the location of your dentist’s practice and your overall oral health. When you call our office to schedule your next cleaning, feel free to ask our team any questions you might have about the financial side of your treatment.
+      - _component: building-blocks/wrappers/accordion/accordion-item
+        title: How Much Does It Cost to Get a Tooth Pulled Without Insurance?
+        contentSections:
+          - _component: building-blocks/core-elements/text
+            text: In the United States, the cost of a tooth extraction often falls in the range of $150 to $400. That said, there are several factors that can influence the amount you end up paying, including the difficulty of the extraction and the number of teeth involved. Before you commit to having a tooth removed, our team can provide you with a trustworthy estimate of the cost.
 description: ''
 _mig:
   v: 0.1.0
