@@ -477,13 +477,45 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     justify-content: center;
   }
 
+  /* No min-height: the row is a flex container, so the migrated 64/70px
+     minimum stretched the button into a tall block. */
   .mp-box13 {
+    align-items: center;
     display: flex;
     flex: 0 1 auto;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     max-width: 100%;
+    min-height: 0;
+  }
+
+  /* Same button as "View Our Services" above: the shared Button's own size
+     and the site font (in place of the migrated Helvetica / fixed padding), and
+     a plain darker-green hover in place of the captured white wipe that
+     turned the label white-on-light. */
+  .patient-results :global(.mp-btn),
+  .patient-results :global(.mp-btn2) {
+    font-family: var(--font-body, "PT Sans", sans-serif);
+    font-size: revert-layer;
+    line-height: revert-layer;
+    padding: revert-layer;
+    transform: none;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .patient-results :global(.mp-btn)::before,
+  .patient-results :global(.mp-btn2)::before {
+    content: none;
+  }
+
+  .patient-results :global(.mp-btn):hover,
+  .patient-results :global(.mp-btn):focus-visible {
+    background-color: #93b830;
+    border-color: #93b830;
+    color: var(--btntx);
   }
 
   @media (max-width: 767px) {
