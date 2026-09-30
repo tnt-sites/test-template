@@ -69,10 +69,13 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     padding-right: 15px;
   }
 
+  /* Centred so an odd last tile (three in a two-up grid on phones) sits in the
+     middle rather than under the first column. */
   .wcu-grid {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .wcu-box2 {

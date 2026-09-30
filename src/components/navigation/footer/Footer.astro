@@ -244,17 +244,22 @@ const navLinks = (Array.isArray(links) ? links : []).filter(
       width: 100%;
     }
 
-    /* ---- Secondary link bar (desktop only, matching the source) ---- */
+    /* ---- Secondary link bar ----
+       Shown on phones too (centred, wrapping): it now carries the Privacy,
+       ADA Efforts, Accessibility Statement and HIPAA links, which have to be
+       reachable at every width. */
     .footer .footer-links {
-      display: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      justify-content: center;
+      padding-bottom: 30px;
     }
 
     @media (min-width: 992px) {
       .footer .footer-links {
-        display: flex;
-        flex-wrap: wrap;
         gap: 30px;
-        padding-bottom: 30px;
+        justify-content: flex-start;
       }
     }
 

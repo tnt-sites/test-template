@@ -65,6 +65,8 @@ pageSections:
         side: right
       - type: prose
         html: Invisalign can correct a variety of orthodontic problems, including overcrowding. So, if you want a straighter smile, but you don’t want to wear metal brackets and wires, you should schedule a consultation with <a href="/meet-the-team/">our Sandy dental team</a>! In the meantime, you can read on to learn a little more on the topic of who clear aligners can help.
+      - type: more
+        label: View More
       - type: subheading
         html: Crowded Teeth
       - type: image
@@ -125,6 +127,8 @@ pageSections:
         side: left
       - type: prose
         html: Over two decades since its debut, Invisalign continues to be one of the most sought-after orthodontic treatments. If you are currently in the process of deciding if this clear aligner system is ideal for you, then this next section is for you! In it, we’re covering several noteworthy benefits that come with this teeth-straightening treatment, starting with the fact that the trays won’t draw any unwanted attention to your smile.
+      - type: more
+        label: View More
       - type: subheading
         html: The Clear Aligners Are Virtually Undetectable
       - type: image
@@ -185,6 +189,8 @@ pageSections:
         side: right
       - type: prose
         html: "Whether you just started researching Invisalign or you’re waiting for your clear aligners to arrive, you might be curious what your day-to-day life will look like once you officially begin the teeth-straightening process. We have good news: you’re in the right place! In this next section, we’re covering how often you need to wear your trays, what to do if you accidentally lose one, and more."
+      - type: more
+        label: View More
       - type: subheading
         html: Wearing Your Trays
       - type: image

@@ -463,4 +463,33 @@ const list = Array.isArray(cards) ? cards.filter(Boolean) : [];
     font-weight: 400;
   }
 /* wpmig:corrections:end */
+/* Centred (management QC): the migrated fractional column widths
+   (102.27% / 75% / 27.95%) left the cards and buttons hugging the left. */
+  .mp-grid {
+    justify-content: center;
+  }
+
+  .mp-box2 {
+    margin-inline: auto;
+  }
+
+  .mp-box12 {
+    justify-content: center;
+  }
+
+  .mp-box13 {
+    display: flex;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    .mp-box2 {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
 </style>

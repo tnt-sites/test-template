@@ -13,6 +13,7 @@
  * section falls back to a native `formBlocks` form.
  */
 import Form from "@forms/form/Form.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import siteInfoData from "@data/siteInfo.json";
 
 const {
@@ -60,6 +61,9 @@ const addressLine = address
       {
         embedSrc ? (
           <div class="ar-embed">
+            <span class="ar-embed-corner" aria-hidden="true">
+              <Icon name="calendar-days" size="none" />
+            </span>
             <iframe
               id={`JotFormIFrame-${embedId}`}
               title={formEmbedTitle}
@@ -198,7 +202,37 @@ const addressLine = address
       }
     }
 
-    /* Hosted Liine form; the embed handler overwrites the inline height. */
+    /* Hosted Liine form. Its theme paints white labels and transparent inputs
+       with black text straight onto whatever is behind the iframe, so it needs
+       the source's teal card or it renders white-on-white (invisible). The
+       teal is tuned so BOTH hold AA: white 4.60:1 and black 4.57:1. */
+    .appointment-request .ar-embed {
+      background: #20818a;
+      overflow: hidden;
+      padding: 40px 30px 20px;
+      position: relative;
+    }
+
+    /* The source's lime corner flag with a calendar mark. */
+    .appointment-request .ar-embed-corner {
+      background: var(--color-brand-secondary, #a6ce39);
+      clip-path: polygon(0 0, 100% 0, 0 100%);
+      color: #fff;
+      height: 80px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 80px;
+    }
+
+    .appointment-request .ar-embed-corner .icon {
+      font-size: 26px;
+      left: 10px;
+      position: absolute;
+      top: 10px;
+    }
+
+    /* The embed handler overwrites the inline height. */
     .appointment-request .ar-embed iframe {
       border: 0;
       display: block;

@@ -34,6 +34,11 @@ pageSections:
           <ul>
           <li><strong>Dental veneers</strong> <strong>–</strong> creating the perfect smile while covering imperfections is easy with veneers and laminates, fabricated to bond onto the front of the natural teeth. They look beautiful and natural.</li>
           </ul>
+      - type: buttons
+        buttons:
+          - text: Learn More About Veneers
+            link: /dental-veneers-and-laminates/
+            newTab: false
       - type: prose
         html: |-
           <ul>

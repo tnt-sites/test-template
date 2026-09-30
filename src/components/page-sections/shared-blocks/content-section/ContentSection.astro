@@ -18,6 +18,7 @@
  * a section with two paragraphs and one with ten both look right.
  */
 import Button from "@core-elements/button/Button.astro";
+import ContentBlock from "./ContentBlock.astro";
 
 const {
   blocks = [],
@@ -34,11 +35,17 @@ const {
 } = Astro.props;
 
 const list = Array.isArray(blocks) ? blocks.filter(Boolean) : [];
-/** Prose that already carries its own block markup renders as-is. */
-const isRich = (html: string) =>
-  /<(?:p|ul|ol|h[1-6]|table|blockquote|div|figure)\b/i.test(String(html || ""));
+// A `more` block folds everything after it into a collapsed "View More" group,
+// the source's `.view-more-button` / `.dropdown-container` pattern.
+const moreAt = list.findIndex((block: any) => block.type === "more");
+const segments =
+  moreAt < 0
+    ? [{ more: false, label: "", blocks: list }]
+    : [
+        { more: false, label: "", blocks: list.slice(0, moreAt) },
+        { more: true, label: list[moreAt].label || "View More", blocks: list.slice(moreAt + 1) },
+      ];
 const mediaSide = media?.side === "left" ? "left" : "right";
-const blockSide = (side: string) => (side === "left" || side === "center" ? side : "right");
 const style = [
   backgroundColor && `--cs-bg:${backgroundColor}`,
   headingColor && `--cs-hd:${headingColor}`,
@@ -89,85 +96,21 @@ const style = [
     }
 
     {
-      list.map((block) => {
-        if (block.type === "eyebrow") return <p class="cs-eyebrow" set:html={block.html} />;
-        if (block.type === "heading" && block.level === 1)
-          return <h1 class="cs-title" set:html={block.html} />;
-        if (block.type === "heading") return <h2 class="cs-heading" set:html={block.html} />;
-        if (block.type === "subheading") return <h3 class="cs-subheading" set:html={block.html} />;
-        if (block.type === "image" && block.source)
-          return (
-            <figure class="cs-media" data-side={blockSide(block.side)}>
-              <img src={block.source} alt={block.alt || ""} loading="lazy" />
-            </figure>
-          );
-        if (block.type === "divider") return <hr class="cs-rule" />;
-        // A row of small marks — payment/insurance logos — that reads as one
-        // group, centred and wrapping, instead of a stack of floated photos.
-        if (block.type === "logos")
-          return (
-            <ul class="cs-logos">
-              {(block.logos || [])
-                .filter((logo: any) => logo?.source)
-                .map((logo: any) => (
-                  <li>
-                    <img src={logo.source} alt={logo.alt || ""} loading="lazy" />
-                  </li>
-                ))}
-            </ul>
-          );
-        // Native <details>: keyboard and screen-reader support come free, and
-        // the answer stays in the document for search engines.
-        if (block.type === "faqs")
-          return (
-            <div class="cs-faqs">
-              {(block.items || [])
-                .filter((item: any) => item?.question)
-                .map((item: any) => (
-                  <details class="cs-faq">
-                    <summary class="cs-faq-q">
-                      <span set:html={item.question} />
-                    </summary>
-                    {isRich(item.answer) ? (
-                      <div class="cs-faq-a cs-prose" set:html={item.answer} />
-                    ) : (
-                      <p class="cs-faq-a cs-prose" set:html={item.answer} />
-                    )}
-                  </details>
-                ))}
+      segments.map((segment) =>
+        segment.more ? (
+          <details class="cs-more">
+            <summary class="cs-more-toggle">
+              <span class="cs-more-open">{segment.label}</span>
+              <span class="cs-more-close">View Less</span>
+            </summary>
+            <div class="cs-more-body">
+              {segment.blocks.map((block: any) => <ContentBlock block={block} />)}
             </div>
-          );
-        if (block.type === "buttons")
-          return (
-            <div class="cs-buttons">
-              {(block.buttons || []).map((b: any) => (
-                <Button
-                  variant="secondary"
-                  size="md"
-                  width="none"
-                  borderRadius="none"
-                  uppercase
-                  class="cs-btn"
-                  text={b.text}
-                  link={b.link || "#"}
-                  target={b.newTab ? "_blank" : undefined}
-                  rel={b.newTab ? "noopener" : undefined}
-                  editable={false}
-                />
-              ))}
-            </div>
-          );
-        // A paragraph stays a paragraph. Wrapping plain copy in a bare `<div>`
-        // reads as a block of text to a browser but as nothing to anything
-        // walking the document — including this repo's own coverage check,
-        // which reported every converted page as having lost its prose.
-        const columns = Number(block.columns) === 2 ? "2" : undefined;
-        return isRich(block.html) ? (
-          <div class="cs-prose" data-columns={columns} set:html={block.html} />
+          </details>
         ) : (
-          <p class="cs-prose" data-columns={columns} set:html={block.html} />
-        );
-      })
+          segment.blocks.map((block: any) => <ContentBlock block={block} />)
+        )
+      )
     }
   </div>
 </section>
@@ -400,6 +343,63 @@ const style = [
       max-height: 60px;
       max-width: 140px;
       width: auto;
+    }
+
+    /* ---- "View More" group: the source's green toggle over a collapsed run
+       of subsections. Native <details>, so it works without script and the
+       copy stays in the document. ---- */
+    /* Not cleared: like the source, the toggle sits right under the intro
+       copy, beside the section photo; the subsections inside clear it. */
+    .content-section .cs-more {
+      clear: none;
+    }
+
+    .content-section .cs-more-toggle {
+      background: var(--cs-lime);
+      border: 2px solid var(--cs-lime);
+      color: #111;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 700;
+      list-style: none;
+      margin: 15px 0;
+      padding: 8px 22px;
+      text-transform: uppercase;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+
+    .content-section .cs-more-toggle::-webkit-details-marker {
+      display: none;
+    }
+
+    .content-section .cs-more-toggle:hover,
+    .content-section .cs-more-toggle:focus-visible {
+      background: #fff;
+      border-color: var(--cs-teal);
+      color: var(--cs-teal);
+    }
+
+    .content-section .cs-more-toggle:focus-visible {
+      outline: 2px solid var(--cs-teal);
+      outline-offset: 2px;
+    }
+
+    .content-section .cs-more-close,
+    .content-section .cs-more[open] .cs-more-open {
+      display: none;
+    }
+
+    .content-section .cs-more[open] .cs-more-close {
+      display: inline;
+    }
+
+    .content-section .cs-more-body::after {
+      clear: both;
+      content: "";
+      display: table;
     }
 
     /* ---- FAQ accordion ---- */

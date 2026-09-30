@@ -22,8 +22,6 @@ pageSections:
     heading: Smile Gallery
     subheading: See real results from our Sandy dental patients.
     images:
-      - image: /wp-content/uploads/2021/09/a-woman-is-smiling-2.jpg
-        alt: Patient smiling after treatment
       - image: /wp-content/uploads/2021/09/before-after-1.jpg
         alt: Smile makeover before and after
       - image: /wp-content/uploads/2021/09/before-after-2-1024x1017.jpg

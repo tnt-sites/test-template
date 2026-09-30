@@ -5,6 +5,9 @@ _inputs:
   mapEmbedUrl:
     type: url
     comment: Google Maps embed URL shown beneath the call to action.
+  showMap:
+    type: switch
+    comment: Show the office map beneath the call to action.
   heading:
     type: html
   text:

@@ -90,6 +90,8 @@ pageSections:
         side: left
       - type: prose
         html: "Dental implants are a versatile solution that can restore any number of missing teeth. That’s one of the many reasons they are considered the gold standard in tooth-replacement! They are also widely loved by patients and dentists alike because:"
+      - type: more
+        label: View More
       - type: subheading
         html: Day-to-Day Benefits
       - type: image
@@ -167,6 +169,8 @@ pageSections:
                       these criteria initially, you shouldn’t get discouraged. After all, we provide several <a href="/restorative-dentistry/">restorative dentistry services</a> at
                       our office, including gum disease treatment, so there’s a chance that we will be able to provide the
                       preliminary care that you need right here.
+      - type: more
+        label: View More
       - type: subheading
         html: Missing One Tooth
       - type: image

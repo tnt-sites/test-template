@@ -544,7 +544,10 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           text-decoration: none;
           transition: background var(--animation-normal) ease-in-out;
           user-select: none;
-          white-space: nowrap;
+          /* Long service names ("Periodontal Treatment & Perio Protect Trays")
+             wrap rather than run off the narrow drawer. */
+          overflow-wrap: anywhere;
+          white-space: normal;
           width: 100%;
 
           &[aria-current="page"] {

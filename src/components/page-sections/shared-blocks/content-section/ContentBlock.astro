@@ -1,0 +1,99 @@
+---
+/**
+ * ContentBlock — renders one entry of a ContentSection's `blocks` array.
+ *
+ * Split out so the section can render blocks both in its main flow and inside
+ * a collapsed "View More" group without duplicating the block markup. Styles
+ * live in ContentSection.astro (global, `.content-section` scoped).
+ */
+import Button from "@core-elements/button/Button.astro";
+
+const { block } = Astro.props;
+
+/** Prose that already carries its own block markup renders as-is. */
+const isRich = (html: string) =>
+  /<(?:p|ul|ol|h[1-6]|table|blockquote|div|figure)\b/i.test(String(html || ""));
+const blockSide = (side: string) => (side === "left" || side === "center" ? side : "right");
+---
+
+{
+  (() => {
+    if (block.type === "eyebrow") return <p class="cs-eyebrow" set:html={block.html} />;
+    if (block.type === "heading" && block.level === 1)
+      return <h1 class="cs-title" set:html={block.html} />;
+    if (block.type === "heading") return <h2 class="cs-heading" set:html={block.html} />;
+    if (block.type === "subheading") return <h3 class="cs-subheading" set:html={block.html} />;
+    if (block.type === "image" && block.source)
+      return (
+        <figure class="cs-media" data-side={blockSide(block.side)}>
+          <img src={block.source} alt={block.alt || ""} loading="lazy" />
+        </figure>
+      );
+    if (block.type === "divider") return <hr class="cs-rule" />;
+    // A row of small marks — payment/insurance logos — that reads as one
+    // group, centred and wrapping, instead of a stack of floated photos.
+    if (block.type === "logos")
+      return (
+        <ul class="cs-logos">
+          {(block.logos || [])
+            .filter((logo: any) => logo?.source)
+            .map((logo: any) => (
+              <li>
+                <img src={logo.source} alt={logo.alt || ""} loading="lazy" />
+              </li>
+            ))}
+        </ul>
+      );
+    // Native <details>: keyboard and screen-reader support come free, and
+    // the answer stays in the document for search engines.
+    if (block.type === "faqs")
+      return (
+        <div class="cs-faqs">
+          {(block.items || [])
+            .filter((item: any) => item?.question)
+            .map((item: any) => (
+              <details class="cs-faq">
+                <summary class="cs-faq-q">
+                  <span set:html={item.question} />
+                </summary>
+                {isRich(item.answer) ? (
+                  <div class="cs-faq-a cs-prose" set:html={item.answer} />
+                ) : (
+                  <p class="cs-faq-a cs-prose" set:html={item.answer} />
+                )}
+              </details>
+            ))}
+        </div>
+      );
+    if (block.type === "buttons")
+      return (
+        <div class="cs-buttons">
+          {(block.buttons || []).map((b: any) => (
+            <Button
+              variant="secondary"
+              size="md"
+              width="none"
+              borderRadius="none"
+              uppercase
+              class="cs-btn"
+              text={b.text}
+              link={b.link || "#"}
+              target={b.newTab ? "_blank" : undefined}
+              rel={b.newTab ? "noopener" : undefined}
+              editable={false}
+            />
+          ))}
+        </div>
+      );
+    // A paragraph stays a paragraph. Wrapping plain copy in a bare `<div>`
+    // reads as a block of text to a browser but as nothing to anything
+    // walking the document — including this repo's own coverage check,
+    // which reported every converted page as having lost its prose.
+    const columns = Number(block.columns) === 2 ? "2" : undefined;
+    return isRich(block.html) ? (
+      <div class="cs-prose" data-columns={columns} set:html={block.html} />
+    ) : (
+      <p class="cs-prose" data-columns={columns} set:html={block.html} />
+    );
+  })()
+}

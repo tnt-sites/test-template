@@ -21,22 +21,21 @@
     {
       "name": "Site Map",
       "path": "/site-map/"
-    }
-  ],
-  "contactTitle": "Contact Us",
-  "officeHoursTitle": "Office Hours",
-  "legalLinks": [
+    },
     {
       "name": "Privacy Policy",
       "path": "/privacy-policy/"
     },
     {
-      "name": "HIPAA Notice",
-      "path": "/hipaa-notice/"
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
     },
     {
-      "name": "Accessibility",
-      "path": "/accessibility/"
+      "name": "Accessibility Statement",
+      "path": "/accessibility-statement/"
     }
-  ]
+  ],
+  "contactTitle": "Contact Us",
+  "officeHoursTitle": "Office Hours",
+  "legalLinks": []
 }

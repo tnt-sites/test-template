@@ -137,6 +137,17 @@ _structures:
             comment: Small logos (payment, insurance) shown in one centered, wrapping row.
             options:
               structures: _structures.content_logo
+      - label: View More toggle
+        icon: unfold_more
+        value:
+          type: more
+          label: View More
+        _inputs:
+          type:
+            type: hidden
+          label:
+            type: text
+            comment: Everything after this block in the section is hidden until the visitor clicks this button.
       - label: FAQs
         icon: quiz
         value:

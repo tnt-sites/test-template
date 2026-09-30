@@ -16,6 +16,7 @@ const {
   secondaryButtonText = "",
   secondaryButtonLink = "",
   mapEmbedUrl = "",
+  showMap = true,
   headingColor = "#ffffff",
   headingColorHex = "",
   textColor = "#ffffff",
@@ -44,7 +45,7 @@ const buttonTextColor2Value = buttonTextColor2Hex || buttonTextColor2 || "#fffff
 // falls back to the site's own embed rather than rendering an empty iframe.
 const resolvedMapUrl =
   (typeof mapEmbedUrl === "string" && mapEmbedUrl.trim()) || (siteInfoData as any).mapEmbedUrl || "";
-const embedSrc = String(resolvedMapUrl).trim();
+const embedSrc = showMap === false ? "" : String(resolvedMapUrl).trim();
 ---
 
 <div

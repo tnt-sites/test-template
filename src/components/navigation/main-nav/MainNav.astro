@@ -336,15 +336,52 @@ const sharedSocials =
       opacity: 0.9;
     }
 
+    /* The source's caret sits tight against its label, so the trigger is sized
+       to its icon; padding on it pushed the caret away and down. */
     .main-nav .tdc-nav .nav-item-trigger {
       border: 0;
       background: transparent;
-      padding-block: 0.9rem;
+      min-height: 0;
+      min-width: 0;
+      padding: 0 0.6rem 0 0;
       font-weight: var(--font-weight-semibold, 600);
     }
 
-    .main-nav .tdc-nav > .bar-list > .nav-item > :where(a, .nav-item-trigger) {
-      padding-inline: 0.6rem;
+    .main-nav .tdc-nav .nav-item-trigger:hover,
+    .main-nav .tdc-nav .nav-item-trigger:focus-visible {
+      background: transparent;
+      color: #eaffd0;
+    }
+
+    .main-nav .tdc-nav > .bar-list {
+      gap: 0.25rem;
+    }
+
+    .main-nav .tdc-nav > .bar-list > .nav-item {
+      align-items: center;
+      column-gap: 0;
+    }
+
+    /* Uppercase bold labels, as the source. White on the darkened bar stays;
+       that colour change is the ADA fix, not a styling difference. */
+    .main-nav .tdc-nav > .bar-list > .nav-item > a {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      padding: 0.95rem 0.6rem;
+      text-transform: uppercase;
+    }
+
+    .main-nav .tdc-nav > .bar-list > .nav-item.has-children > a {
+      padding-right: 0.3rem;
+    }
+
+    /* Current page gets the source's boxed highlight (a darker step of the bar,
+       so the white label keeps its contrast). */
+    .main-nav .tdc-nav > .bar-list > .nav-item > a[aria-current="page"] {
+      background: rgb(0 0 0 / 22%);
+      border-radius: 0;
+      text-decoration: none;
     }
 
     /* Nav dropdown panels: the topbar paints every nav link white, so the panels
@@ -395,7 +432,7 @@ const sharedSocials =
     .main-nav .tdc-logobar-inner {
       max-width: var(--content-width-2xl, 1300px);
       margin-inline: auto;
-      padding: var(--spacing-sm, 0.75rem) var(--spacing-md, 1rem);
+      padding: 1.25rem var(--spacing-md, 1rem);
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
@@ -409,7 +446,7 @@ const sharedSocials =
 
     .main-nav .tdc-logo img {
       display: block;
-      height: 64px;
+      height: 88px;
       width: auto;
       max-width: 100%;
     }
@@ -421,8 +458,8 @@ const sharedSocials =
       gap: 0.5em;
       color: #fff;
       text-decoration: none;
-      font-size: var(--font-size-sm, 0.9rem);
-      line-height: 1.25;
+      font-size: 1.2rem;
+      line-height: 1.4;
       transition: opacity 0.2s ease;
     }
 
@@ -444,7 +481,7 @@ const sharedSocials =
     .main-nav .tdc-call {
       justify-self: end;
       text-align: right;
-      font-size: var(--font-size-lg, 1.15rem);
+      font-size: 1.2rem;
     }
 
     .main-nav .tdc-call .icon,
@@ -501,6 +538,7 @@ const sharedSocials =
 
       .main-nav.is-stuck .tdc-address {
         order: 3;
+        font-size: var(--font-size-sm, 0.9rem);
       }
 
       /* Address collapses to a single comma-separated line in the compact row. */
