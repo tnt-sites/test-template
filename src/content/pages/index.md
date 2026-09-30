@@ -259,7 +259,7 @@ pageSections:
       the Sandy area and treat patients of all ages.
     image: /wp-content/uploads/2021/08/footer-cta-bg.jpg
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12122.78433764327!2d-111.8725113!3d40.5703882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x3b12a5cd33045c66!2sTaylor%20Dental%20Care!5e0!3m2!1sen!2slk!4v1627884386509!5m2!1sen!2slk"
-    showMap: false
+    mapOnMobile: false
     buttonText: REQUEST AN APPOINTMENT
     buttonLink: /request-an-appointment/
     secondaryButtonText: SCHEDULE A HYGIENE APPOINTMENT

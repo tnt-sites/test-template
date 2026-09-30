@@ -7,7 +7,7 @@ value:
   heading: ""
   image: /wp-content/uploads/2021/08/footer-cta-bg.jpg
   mapEmbedUrl: ""
-  showMap: true
+  mapOnMobile: true
   text: Closing Call To Action
   buttonText: ""
   buttonLink: ""

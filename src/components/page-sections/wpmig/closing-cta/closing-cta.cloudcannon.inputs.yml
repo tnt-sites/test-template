@@ -5,9 +5,10 @@ _inputs:
   mapEmbedUrl:
     type: url
     comment: Google Maps embed URL shown beneath the call to action.
-  showMap:
+  mapOnMobile:
     type: switch
-    comment: Show the office map beneath the call to action.
+    label: Show map on mobile
+    comment: Turn off to hide the office map on phones; it still shows on desktop.
   heading:
     type: html
   text:

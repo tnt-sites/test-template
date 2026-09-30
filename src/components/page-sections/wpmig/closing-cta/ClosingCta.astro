@@ -16,7 +16,7 @@ const {
   secondaryButtonText = "",
   secondaryButtonLink = "",
   mapEmbedUrl = "",
-  showMap = true,
+  mapOnMobile = true,
   headingColor = "#ffffff",
   headingColorHex = "",
   textColor = "#ffffff",
@@ -45,7 +45,7 @@ const buttonTextColor2Value = buttonTextColor2Hex || buttonTextColor2 || "#fffff
 // falls back to the site's own embed rather than rendering an empty iframe.
 const resolvedMapUrl =
   (typeof mapEmbedUrl === "string" && mapEmbedUrl.trim()) || (siteInfoData as any).mapEmbedUrl || "";
-const embedSrc = showMap === false ? "" : String(resolvedMapUrl).trim();
+const embedSrc = String(resolvedMapUrl).trim();
 ---
 
 <div
@@ -97,7 +97,7 @@ const embedSrc = showMap === false ? "" : String(resolvedMapUrl).trim();
 
   {
     embedSrc && (
-      <div class="mps-map">
+      <div class="mps-map" data-hide-mobile={mapOnMobile === false ? "" : undefined}>
         <iframe
           src={embedSrc}
           title="Office location map"
@@ -227,6 +227,13 @@ const embedSrc = showMap === false ? "" : String(resolvedMapUrl).trim();
       .closing-cta .mps-map iframe {
         height: 300px;
       }
+    }
+  }
+
+  /* Per-page opt-out: the homepage drops the map on phones only. */
+  @media (max-width: 767px) {
+    .mps-map[data-hide-mobile] {
+      display: none;
     }
   }
 </style>
