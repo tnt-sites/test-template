@@ -18,6 +18,13 @@ _inputs:
     type: color
   textColor:
     type: color
+  boxed:
+    type: switch
+    comment: Set the main content in a light grey panel with a thin border.
+  boxBackgroundColor:
+    type: color
+  boxBorderColor:
+    type: color
 _structures:
   page_body_link:
     values:

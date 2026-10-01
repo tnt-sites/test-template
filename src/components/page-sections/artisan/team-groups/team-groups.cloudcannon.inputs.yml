@@ -1,0 +1,52 @@
+_inputs:
+  image:
+    type: image
+    comment: Optional group photo shown above the first group.
+  imageAlt:
+    type: text
+  groups:
+    type: array
+    options:
+      structures: _structures.team_group
+  backgroundColor:
+    type: color
+  boxBackgroundColor:
+    type: color
+  boxBorderColor:
+    type: color
+  headingColor:
+    type: color
+  captionBackgroundColor:
+    type: color
+  captionTextColor:
+    type: color
+_structures:
+  team_group:
+    values:
+      - label: Group
+        value:
+          heading: ""
+          members: []
+        _inputs:
+          members:
+            type: array
+            options:
+              structures: _structures.team_group_member
+  team_group_member:
+    values:
+      - label: Team Member
+        value:
+          name: ""
+          role: ""
+          image: ""
+          link: ""
+        _inputs:
+          image:
+            type: image
+            comment: Square-ish headshot.
+          link:
+            type: url
+            comment: The team member's bio page.
+          role:
+            type: text
+            comment: Optional line under the name. Use <br> for a second line.

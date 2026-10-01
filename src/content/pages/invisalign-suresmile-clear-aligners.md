@@ -37,9 +37,7 @@ pageSections:
       <p>Teeth straightening can improve your smile and bite significantly, but the prospect of wearing traditional braces can be daunting. The metal brackets that come with traditional braces are uncomfortable and conspicuous and they also make your teeth difficult to clean, which can lead to complications during and after your treatment.</p>
       <p>With Invisalign and SureSmile you can straighten your teeth and get that beautiful smile without wearing unattractive metal braces. Invisalign and SureSmile “aligners” are removable, so you can eat anything you want, as well as brush and floss easily.</p>								
 
-      															<img fetchpriority="high" decoding="async" src="/wp-content/uploads/2020/09/1.jpg" class="attachment-large size-large wp-image-7122" alt="">															
-
-      															<img decoding="async" src="/wp-content/uploads/2020/09/2.jpg" class="attachment-large size-large wp-image-7123" alt="">															
+      															<div class="image-row"><img fetchpriority="high" decoding="async" src="/wp-content/uploads/2020/09/1.jpg" alt="Patient putting in a clear aligner"><img decoding="async" src="/wp-content/uploads/2020/09/2.jpg" alt="Patient smiling while wearing a clear aligner"></div>															
 
       					<h2 class="elementor-heading-title elementor-size-default">Experienced Invisalign® and SureSmile® Providers </h2>				
 
@@ -60,7 +58,7 @@ pageSections:
       					<h2 class="elementor-heading-title elementor-size-default">Advantages of Invisalign® and SureSmile® over traditional metal braces 
       </h2>				
 
-      															<img decoding="async" src="/wp-content/uploads/2020/09/3.jpg" class="attachment-large size-large wp-image-7125" alt="">															
+      															<img decoding="async" src="/wp-content/uploads/2020/09/3.jpg" class="attachment-large size-large wp-image-7125" alt="Patient holding a clear aligner">															
 
       									<p>There are numerous advantages of using Invisalign<sup>®</sup> or SureSmile<sup>®</sup> for your teeth straightening, including:</p>
       <ul>

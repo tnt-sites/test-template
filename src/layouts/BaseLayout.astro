@@ -228,6 +228,20 @@ const globalModals = [
       import "@choctawnationofoklahoma/lite-vimeo";
       import "@justinribeiro/lite-youtube";
     </script>
+    <script is:inline>
+      // Links that leave the site open in a new tab. Much of the content is
+      // migrated HTML, so this is enforced here rather than link by link.
+      (function () {
+        var own = [location.hostname, "artisandentalmadison.com", "www.artisandentalmadison.com"];
+        document.querySelectorAll("a[href^='http']").forEach(function (a) {
+          if (own.indexOf(a.hostname) !== -1 || a.hasAttribute("target")) return;
+          a.target = "_blank";
+          var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+          if (rel.indexOf("noopener") === -1) rel.push("noopener");
+          a.setAttribute("rel", rel.join(" "));
+        });
+      })();
+    </script>
     {footerScripts.map((script: string) => <script is:inline set:html={script} />)}
   </body>
 </html>

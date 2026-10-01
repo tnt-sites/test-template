@@ -10,7 +10,9 @@
  * Measured: 300px sidebar / 900px main, sidebar heading Open Sans 20px 700 on a
  * brand bar, nav links Open Sans 16px #222.
  *
- * Baked in: layout and typography. Props: text, image, colours.
+ * Baked in: layout and typography. Props: text, image, colours, and `boxed`
+ * — the source sets nearly every interior page's copy in a light grey panel
+ * with a thin border, so that's the default.
  * Arrays: `links`, so the section nav is editable.
  */
 const {
@@ -25,6 +27,9 @@ const {
   linkColor = "#222222",
   textColor = "#686868",
   reverse = false,
+  boxed = true,
+  boxBackgroundColor = "#f2f2f2",
+  boxBorderColor = "#7a7a7a",
   id,
   _component,
   ...rest
@@ -35,9 +40,9 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
 ---
 
 <section
-  class:list={["a-pagebody", { reverse }]}
+  class:list={["a-pagebody", { reverse, boxed }]}
   id={id || undefined}
-  style={`--bg:${backgroundColor};--hbg:${headingBackground};--hc:${headingColor};--lc:${linkColor};--tx:${textColor}`}
+  style={`--bg:${backgroundColor};--hbg:${headingBackground};--hc:${headingColor};--lc:${linkColor};--tx:${textColor};--boxbg:${boxBackgroundColor};--boxbd:${boxBorderColor}`}
   {...rest}
 >
   <div class:list={["pb2-inner", { "no-sidebar": !hasSidebar }]}>
@@ -84,6 +89,14 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
 
   .pb2-inner.no-sidebar {
     grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Grey #f2f2f2 rather than the source's #eee: the brand gold only just
+     clears 4.5:1 on #eee, and this keeps a little headroom. */
+  .a-pagebody.boxed .pb2-main {
+    background: var(--boxbg);
+    border: 1px solid var(--boxbd);
+    padding: clamp(1.25rem, 4vw, 3.5rem);
   }
 
   .a-pagebody.reverse .pb2-side {
@@ -157,6 +170,17 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
     font-size: 22px;
   }
 
+  /* Migrated bodies lean on <h4> for sub-headings (Step 1, Comfort, …); the
+     source sets them bold Poppins, not the thin body face they fell back to. */
+  .pb2-prose :global(h4) {
+    color: #222222;
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 1.5rem 0 0.5rem;
+  }
+
   .pb2-prose :global(p) {
     color: inherit;
     margin: 0 0 1.25rem;
@@ -187,10 +211,45 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
   /* Small illustration + caption cards (e.g. the conditions Invisalign treats).
      The source images are only 160px wide, so they're held near that size rather
      than stretched to the column and blurred. */
+  /* Lone body images sit centred in the column, as on the source. Floated
+     WordPress images (alignleft/alignright) keep their float. */
+  .pb2-prose :global(img:not(.alignleft):not(.alignright):not(.image-row img)) {
+    display: block;
+    margin-inline: auto;
+  }
+
+  /* Third-party video iframes (Spear, YouTube) at 16:9. */
+  .pb2-prose :global(.video-embed) {
+    aspect-ratio: 16 / 9;
+    margin: 1.5rem 0;
+    max-width: 640px;
+  }
+
+  .pb2-prose :global(.video-embed iframe) {
+    border: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  /* A pair (or more) of images shown side by side, centred. */
+  .pb2-prose :global(.image-row) {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+  }
+
+  .pb2-prose :global(.image-row img) {
+    height: auto;
+    max-width: min(320px, 100%);
+  }
+
   .pb2-prose :global(.image-box-grid) {
     display: grid;
     gap: 2rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     margin: 2rem 0;
     text-align: center;
   }
@@ -207,6 +266,10 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
   }
 
   .pb2-prose :global(.image-box-grid h4) {
+    color: #222222;
+    font-family: Poppins, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
     margin: 0 0 0.5rem;
   }
 
@@ -253,7 +316,8 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
   }
 
   @media (max-width: 700px) {
-    .pb2-prose :global(.media-columns) {
+    .pb2-prose :global(.media-columns),
+    .pb2-prose :global(.image-box-grid) {
       grid-template-columns: 1fr;
     }
   }

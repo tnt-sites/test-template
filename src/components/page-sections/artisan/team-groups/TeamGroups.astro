@@ -1,0 +1,153 @@
+---
+/**
+ * Meet-the-team roster grouped by role — the source's Meet the Team page:
+ * one grey bordered panel holding a group photo, then a heading per group
+ * (Dentists, Hygienists, …) over a 3-up grid of headshots, each with a gold
+ * caption bar carrying the linked name and an optional role.
+ *
+ * Baked in: layout, card shape, type scale. Props: text, images, colours.
+ * Arrays: `groups`, each with its own `members`.
+ */
+const {
+  image = "",
+  imageAlt = "",
+  groups = [],
+  backgroundColor = "#ffffff",
+  boxBackgroundColor = "#f2f2f2",
+  boxBorderColor = "#7a7a7a",
+  headingColor = "#222222",
+  captionBackgroundColor = "#d2b22e",
+  captionTextColor = "#321c0e",
+  id,
+  _component,
+  ...rest
+} = Astro.props;
+
+const list = (Array.isArray(groups) ? groups : []).filter(
+  (g: any) => Array.isArray(g?.members) && g.members.length > 0
+);
+---
+
+<section
+  class="a-teamgroups"
+  id={id || undefined}
+  style={`--bg:${backgroundColor};--boxbg:${boxBackgroundColor};--boxbd:${boxBorderColor};--hd:${headingColor};--capbg:${captionBackgroundColor};--captx:${captionTextColor}`}
+  {...rest}
+>
+  <div class="tg-box">
+    {image && <img class="tg-hero" src={image} alt={imageAlt} loading="lazy" />}
+    {
+      list.map((group: any) => (
+        <div class="tg-group">
+          {group.heading && <h2>{group.heading}</h2>}
+          <ul class="tg-cards no-check">
+            {group.members.map((m: any) => (
+              <li>
+                {m.image && <img src={m.image} alt="" loading="lazy" />}
+                <div class="tg-cap">
+                  {m.link ? <a href={m.link}>{m.name}</a> : <span class="tg-name">{m.name}</span>}
+                  {m.role && <p set:html={m.role} />}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .a-teamgroups {
+    background: var(--bg);
+    padding-block: 60px;
+  }
+
+  .tg-box {
+    background: var(--boxbg);
+    border: 1px solid var(--boxbd);
+    margin-inline: max(clamp(1rem, 3vw, 2.5rem), (100% - 1200px) / 2);
+    padding: clamp(1.25rem, 4vw, 3rem);
+  }
+
+  .tg-hero {
+    display: block;
+    height: auto;
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  .tg-group + .tg-group {
+    margin-top: 2rem;
+  }
+
+  .tg-group h2 {
+    color: var(--hd);
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+
+  .tg-cards {
+    display: grid;
+    gap: 1.5rem 1.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tg-cards li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tg-cards img {
+    aspect-ratio: 1 / 1;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    width: 100%;
+  }
+
+  /* The caption grows to match its row-mates, so a role line under one name
+     doesn't leave its neighbours' gold bars short. */
+  .tg-cap {
+    background: var(--capbg);
+    color: var(--captx);
+    flex: 1;
+    font-family: "Open Sans", sans-serif;
+    padding: 0.9rem 1rem;
+    text-align: center;
+  }
+
+  .tg-cap a,
+  .tg-name {
+    color: var(--captx);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .tg-cap a {
+    text-decoration: underline;
+  }
+
+  .tg-cap p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0.35rem 0 0;
+  }
+
+  @media (max-width: 900px) {
+    .tg-cards {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 520px) {
+    .tg-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

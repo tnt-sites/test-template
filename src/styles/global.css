@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+/* Migrated WordPress images carry `size-full` / `size-large`, which Tailwind
+   reads as its own sizing utilities (width/height: 100%) and blows small
+   images up to the column width. Unlayered, so this beats the utility. */
+img[class*="wp-image-"] {
+  height: auto;
+  width: auto;
+}

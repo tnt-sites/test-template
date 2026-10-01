@@ -1,4 +1,17 @@
 _inputs:
+  boxed:
+    type: switch
+    comment: Set this section in a light grey panel with a thin border.
+  boxBackgroundColor:
+    type: color
+  boxBorderColor:
+    type: color
+  paddingBlock:
+    type: text
+    comment: Vertical padding, e.g. "40px" or "40px 0px". Defaults to 100px.
+  intro:
+    type: html
+    comment: Optional copy above the heading, e.g. Mission and Vision ahead of Core Values.
   backgroundColor:
     type: color
   backgroundImage:

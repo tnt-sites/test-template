@@ -10,7 +10,9 @@
  * icons in place of the Font Awesome glyphs (not loaded anywhere here).
  *
  * Baked in: layout, card shape. Props: text, columns, colours, icon per
- * item (an icon name from this project's icon set), optional link per item.
+ * item (an icon name from this project's icon set), optional link per item,
+ * `intro` HTML above the heading (e.g. the Mission/Vision copy ahead of
+ * "Core Values"), and `boxed` for the source's grey bordered panel.
  * Array: `cards`.
  *
  * `youtubeId` switches to the source's `services` shape: the checklist in one
@@ -26,6 +28,7 @@ const {
   youtubeId = "", videoTitle = "",
   backgroundColor = "#ffffff", backgroundImage = "", overlayOpacity = 0.15,
   eyebrowColor = "var(--color-brand-secondary)", headingColor = "#321c0e", textColor = "#333333", iconColor = "var(--color-brand-secondary)",
+  intro = "", paddingBlock = "", boxed = false, boxBackgroundColor = "#f2f2f2", boxBorderColor = "#7a7a7a",
   id, _component, ...rest
 } = Astro.props;
 const list = Array.isArray(cards) ? cards.filter((c: any) => c?.title) : [];
@@ -40,10 +43,11 @@ const hasVideo = Boolean(youtubeId);
 const plain = !list.some((c: any) => c.text);
 ---
 {list.length > 0 && (
-  <section class:list={["a-icongrid", hasVideo ? "with-video" : `cols-${cols}`]} id={id || undefined}
-    style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--ic:${iconColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""}`} {...rest}>
+  <section class:list={["a-icongrid", hasVideo ? "with-video" : `cols-${cols}`, { boxed }]} id={id || undefined}
+    style={`--bg:${backgroundColor};--eb:${eyebrowColor};--hd:${headingColor};--tx:${textColor};--ic:${iconColor};--woodopacity:${overlayOpacity}${backgroundImage ? `;--wood:url('${backgroundImage}')` : ""};--boxbg:${boxBackgroundColor};--boxbd:${boxBorderColor}${paddingBlock ? `;--pad:${paddingBlock}` : ""}`} {...rest}>
     <div class="ig-inner">
       <div class="ig-copy-col">
+        {intro && <div class="ig-intro" set:html={intro} />}
         {eyebrow && <div class="ig-eyebrow">{eyebrow}</div>}
         {heading && <h2>{heading}</h2>}
         {text && <p class="ig-lead">{text}</p>}
@@ -68,7 +72,7 @@ const plain = !list.some((c: any) => c.text);
   </section>
 )}
 <style>
-  .a-icongrid { background-color: var(--bg); padding-block: 100px; position: relative; }
+  .a-icongrid { background-color: var(--bg); padding-block: var(--pad, 100px); position: relative; }
   .a-icongrid::before {
     background-color: var(--bg);
     background-image: var(--wood, none);
@@ -125,4 +129,13 @@ const plain = !list.some((c: any) => c.text);
   }
   .ig-copy h3 a { color: inherit; text-decoration: none; }
   .ig-copy h3 a:hover, .ig-copy h3 a:focus-visible { text-decoration: underline; }
+  .a-icongrid.boxed .ig-inner {
+    background: var(--boxbg);
+    border: 1px solid var(--boxbd);
+    margin-inline: max(clamp(1rem, 3vw, 2.5rem), (100% - 1200px) / 2);
+    max-width: none;
+    padding: clamp(1.25rem, 5%, 3.5rem);
+  }
+  .ig-intro :global(h2), .ig-intro :global(h3) { color: var(--hd); font-family: Poppins, sans-serif; font-weight: 700; margin: 0 0 0.75rem; }
+  .ig-intro :global(p) { color: var(--tx); font-family: "Open Sans", sans-serif; font-size: 17px; line-height: 1.6; margin: 0 0 1.75rem; }
 </style>

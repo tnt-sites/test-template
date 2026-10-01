@@ -149,7 +149,7 @@ pageSections:
     id: ""
   - _component: page-sections/wpmig/we-have-felixble-payment
     id: ""
-    eyebrow: We have felixble payment options.
+    eyebrow: We have flexible payment options.
     heading: COMPLIMENTARY RESTORATION CONSULTATION
     text: |-
       We provide complimentary consultations, where you have the opportunity to meet Dr. Andersen. During the complimentary consultation, she will recommend cosmetic dental approaches designed to help you achieve your vision and goals. Dr. Andersen will then provide an outline of the next steps in the process. 

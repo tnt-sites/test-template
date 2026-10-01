@@ -256,7 +256,7 @@ pageSections:
       - icon: /wp-content/uploads/2020/08/icon-06-1.png
         label: Address
         value: 10 North Livingston Street, Suite 301, Madison, WI 53703
-        link: https://g.page/artisandds?share
+        link: https://maps.app.goo.gl/nbxrJKdFeTWAdae17
         valueIsLink: false
       - icon: /wp-content/uploads/2020/08/icon-05-1.png
         label: Email

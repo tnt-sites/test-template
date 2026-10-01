@@ -1,4 +1,11 @@
 _inputs:
+  boxed:
+    type: switch
+    comment: Set this section in a light grey panel with a thin border.
+  boxBackgroundColor:
+    type: color
+  boxBorderColor:
+    type: color
   imageAlt:
     type: text
     comment: Describes the image for screen readers. Falls back to the heading.

@@ -1,0 +1,24 @@
+label: Team Groups
+icon: groups
+description: Meet-the-team roster grouped by role, in a grey bordered panel.
+value:
+  _component: page-sections/artisan/team-groups
+  id: ""
+  image: ""
+  imageAlt: ""
+  groups: []
+  backgroundColor: "#ffffff"
+  boxBackgroundColor: "#f2f2f2"
+  boxBorderColor: "#7a7a7a"
+  headingColor: "#222222"
+  captionBackgroundColor: "#d2b22e"
+  captionTextColor: "#321c0e"
+preview:
+  text:
+    - Team Groups
+  icon: groups
+picker_preview:
+  text: Team Groups
+  subtext: Team roster grouped by role.
+_inputs_from_glob:
+  - /src/components/page-sections/artisan/team-groups/team-groups.cloudcannon.inputs.yml

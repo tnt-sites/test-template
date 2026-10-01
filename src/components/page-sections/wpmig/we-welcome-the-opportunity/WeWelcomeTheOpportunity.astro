@@ -52,7 +52,7 @@ const {
     line-height: 26px;
     margin-left: auto;
     margin-right: auto;
-    max-width: 298px;
+    max-width: 100%;
     padding: 40px;
     position: relative;
   }
@@ -156,15 +156,15 @@ const {
     transition: all 0.3s ease;
   }
 
-  :global(.wwto-btn):hover {
-    background-color: rgba(0, 0, 0, 0);
-    border-top-color: #ffffff;
-    letter-spacing: -2px;
-  }
-
-  :global(.wwto-btn2):hover {
-    background-color: rgba(0, 0, 0, 0);
-    border-top-color: #ffffff;
+  /* The source faded the fill to transparent on hover, which left white text
+     on a white page — the button vanished. Darken to brand brown instead. */
+  :global(.wwto-btn):hover,
+  :global(.wwto-btn):focus-visible,
+  :global(.wwto-btn2):hover,
+  :global(.wwto-btn2):focus-visible {
+    background-color: #321c0e;
+    border-color: #321c0e;
+    color: #ffffff;
   }
 
   @media (min-width: 768px) {

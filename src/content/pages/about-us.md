@@ -4,499 +4,467 @@ _mig:
   gen: content
   hash: f3714f938497ae06
 title: About Us
-description: ""
+description: ''
 canonical: /about-us/
 pageSections:
-  - _component: page-sections/artisan/page-banner
-    id: ""
-    eyebrow: ""
-    heading: About Us
-    backgroundColor: "#321c0e"
-    headingColor: "#ffffff"
-    eyebrowColor: "var(--color-brand-secondary)"
-    backgroundImage: ""
-    overlayColor: rgba(50, 28, 14, 0.55)
-    align: center
-    minHeight: ""
-  - _component: page-sections/artisan/photo-intro-hero
-    id: ""
-    eyebrow: We Invite You To
-    heading: Learn More About Us
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is an award-winning, mission, vision and values oriented general dentistry practice in downtown Madison, Wisconsin. As a member of the broader, Business For Good movement and Certified B Corporation, our mission is to optimize the health and happiness of our patients, team members, suppliers, community, and the environment through exceptional quality care and sustainable business practices.</p><p>We designed our facility in downtown Madison, Wisconsin to be warm, calming, and supportive of your health and healing.&nbsp; From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation”, our intention is that your dental care experience is comfortable and enjoyable.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-239.jpeg
-    buttonText: Schedule Your Consultation
-    buttonLink: /contact-us/
-    secondaryButtonText: Learn More
-    secondaryButtonLink: "#down"
-    eyebrowColor: "#d2b22e"
-    headingColor: "#ffffff"
-    textColor: "#ffffff"
-  - _component: page-sections/artisan/icon-grid
-    id: down
-    eyebrow: ""
-    heading: "MISSION:"
-    text: ""
-    cards:
-      - icon: check-circle-duo
-        title: Love
-        text: ""
-      - icon: check-circle-duo
-        title: Wisdom
-        text: ""
-      - icon: check-circle-duo
-        title: Compassion
-        text: ""
-      - icon: check-circle-duo
-        title: Service
-        text: ""
-      - icon: check-circle-duo
-        title: Collaboration
-        text: ""
-      - icon: check-circle-duo
-        title: Creativity
-        text: ""
-      - icon: check-circle-duo
-        title: Ethical Integrity
-        text: ""
-      - icon: check-circle-duo
-        title: Empathy
-        text: ""
-      - icon: check-circle-duo
-        title: Fun
-        text: ""
-    columns: "3"
-    backgroundColor: "#ffffff"
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    iconColor: "var(--color-brand-secondary)"
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: ★★★★★
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<h3><span style=\"color: var(--color-brand-secondary);\">★★★★★</span></h3><h3><span style=\"color: #321c0e;\">Award-Winning</span></h3><p>In 2026 Dr. Nicole Andersen was again named Top Dentist by her colleagues since 2011. In 2025 Artisan received the Great Places to Work certification and our B Corporation Recertification for the third time!</p><p>In 2023 Scott Andersen was awarded the Wisconsin Sustainable Business Council’s, Sustainable Leadership Executive Award. This same year Artisan’s Impact Report won two American Graphic award in the Designing for Good and Wellness categories. In 2022, Artisan Dental received the Community’s Excellence Award.</p><p>In 2020 and 2021 Artisan Dental was named Climate Champion by Dane County Office of Energy &amp; Climate Change. In 2021 Artisan Dental received the Communitas Award, a MarCom Award and our Director of Business Development was honored with the AADOM Green Leader Award.</p><p>In 2017, 2018 &amp; 2019 Artisan Dental was recognized by Madison Magazine as a Best Place to Work in the small company category. In 2018, Artisan Dental, was one of the winners of the In Business Magazine, Dane County Small Business award. Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019. The Best For The World designation is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment. In 2019, Artisan Dental was selected as a winner in the Wisconsin based, Force for Positive Change award.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: ""
-    buttonTextColor: ""
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: Our Team Provides
-    heading: Exceptional Quality
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>At Artisan Dental our commitment to providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts.&nbsp; Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/Team-Lake-ShoreHomePage.jpg
-    buttonText: View All Reviews
-    buttonLink: /patient-reviews/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: Proud to be
-    heading: Certified B Corporation
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is Wisconsin’s 1st dental practice to be certified as a B corporation. &nbsp;Called “the highest standard for socially responsible business” by Inc. magazine, B Corp certification is to sustainable business what USDA Organic certification is to food or Leed certification is to buildings.&nbsp;</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/bthechange.jpg
-    buttonText: Learn More
-    buttonLink: /certified-b-corporation/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: ""
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<div style=\"background:#e0e0e0;border:1px solid #696969;border-radius:6px;padding:1.5rem 1.75rem;overflow:hidden;\"><p><img decoding=\"async\" class=\"alignleft\" src=\"/wp-content/uploads/2020/09/logo-black-certified-b-corpora-.png\" alt=\"Certified B Corporation\" width=\"100\" height=\"163\">B corporation certification is one of the most respected and credible certifications for conscious and sustainable businesses globally with more than 6737 companies, 161 industries and 90 countries as of 5/8/2023.&nbsp;&nbsp;Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019.&nbsp;<a href=\"https://bthechange.com/2018-best-for-the-world-workers-honorees-e285649d2514\">The Best For The World designation</a>&nbsp;is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment.&nbsp; You can learn more at our&nbsp;Certified B Corporations page.</p></div>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: ""
-    buttonTextColor: ""
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: The Artisan
-    heading: Dental Health Plan
-    text: <p></p>
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: ""
-    buttonTextColor: ""
-    paddingBlock: 60px 0px
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: ""
-    text: <p></p>
-    image: /wp-content/uploads/2022/12/Graphic-without-prices.jpg
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: ""
-    buttonTextColor: ""
-    paddingBlock: 0px 60px
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Insurance Compatibility
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<h3><span style=\"color: #321c0e\">Insurance Compatibility</span></h3><p>We work with a range of dental insurance companies and our team of patient care professionals will assist you in maximizing your insurance benefits.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: ""
-    buttonText: ""
-    buttonLink: ""
-    reverse: false
-    align: left
-    mediaMinHeight: 0px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: ""
-    buttonTextColor: ""
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Affordability
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">We offer a variety of ways to make your care affordable, including our Artisan Dental Health </span><span style=\"font-weight: 400;\">Plan and</span><span style=\"font-weight: 400;\"> the ability…</span> <a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\"><i><span style=\"font-weight: 400;\">CareCredit</span></i></a><i><span style=\"font-weight: 400;\">!</span></i></p><p>We offer a variety of ways to make your care affordable, including our Artisan Dental Health Plan. and the ability to make monthly payments for care when working with our patient care financing partner,&nbsp;<a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\">CareCredit.</a></p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/shutterstock_1395159488-1.jpg
-    buttonText: View Options
-    buttonLink: /financial/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Comfortable & Compassionate Care
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Our approach is to first understand your needs and wishes and then customize a treatment that alleviates any pain and is comfortable&nbsp;and supportive of your&nbsp;health and healing.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/shutterstock_1389890048-1.jpg
-    buttonText: Code of Conduct
-    buttonLink: /code-of-conduct/
-    reverse: true
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Convenient, Downtown Madison, WI Location
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Our intention is that your care be convenient, with appointments starting as early as 7:00 a.m. including lunch hour appointments, thru 5:00 p.m.&nbsp; We are centrally located in Madison, Wisconsin, eight blocks off the Capital Square at 10 North Livingston St.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/08/2.jpg
-    buttonText: View Contact Information
-    buttonLink: /contact-us/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: State of the Art Technology
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Integral to the goal of providing the highest quality dental care available is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and more effective long-lasting treatment.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/shutterstock_555860701-1.jpg
-    buttonText: Take a Look
-    buttonLink: /office-tour/
-    reverse: true
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Continuing Education
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>We are committed to continuous improvement and ongoing education as an essential part of providing you with the highest level of care possible. We have devoted hundreds of hours to continuing education courses, including hands-on clinics with some of the best dentists and instructors in the world.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/shutterstock_322706582-1.jpg
-    buttonText: Meet the Team
-    buttonLink: /meet-the-team/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Commitment to Total Health
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>At Artisan Dental, one aspect of our mission is to care for your oral and total health.&nbsp; In addition to being proactive with&nbsp;preventive and restorative dental care, we have created the&nbsp;Artisan Dental Wellness Series, designed to foster whole person health and enjoyment.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/RecycleWithSignRectangle-3.jpg
-    buttonText: Wellness Series
-    buttonLink: /wellness-series/
-    reverse: true
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Business for Good
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is a purpose-oriented company committed to using “Business as a Force for Good”. We have a demonstrated track record of creating benefit for all of the stakeholders connected to Artisan Dental as illustrated in our <a href=\"/certified-b-corporation/\">Certified B Corporation</a> designation and impact summarized in the linked 2025 Artisan Dental Impact Report.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2026/05/artisan-dental-impact-report-2025-border.jpg
-    buttonText: 2025 Artisan Dental Impact Report
-    buttonLink: /wp-content/uploads/2026/04/artisan-dental-impact-report-2025.pdf
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Sustainability
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>We incorporate a wide range of&nbsp;sustainability practices&nbsp;as a conscious daily endeavor including measures such as the purchase of 100% of our electrical energy needs from renewable sources through&nbsp;<a href=\"https://www.mge.com/our-environment/green-power/green-power-tomorrow\">MG&amp;E Green Power</a>&nbsp;program.&nbsp; We also purchase certified carbon offsets for all other energy uses and company travel that comprise Scopes 1, 2, &amp; 3 greenhouse gas emissions.&nbsp; The&nbsp;<a href=\"/program-details/\" target=\"_blank\" rel=\"noopener noreferrer\">Artisan Dental Recycling Program</a>&nbsp;is the first oral care recycling program in the Dane County area that is open to the public.&nbsp; We are the United States,&nbsp;<a href=\"https://www.bcorporation.net/en-us/find-a-b-corp/company/artisan-dental-llc/\">2nd Certified B Corporation dental practice</a>, a member of&nbsp;<a href=\"http://www.sustaindane.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustain Dane</a>&nbsp;and its&nbsp;<a href=\"http://www.sustaindane.org/going-sustainable/at-work/sustainable-business-network/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustainable Business Network</a>&nbsp;as well as&nbsp;<a href=\"http://www.danebuylocal.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Dane Buy Local.</a></p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/RecycleWithSignRectangle-3-1.jpg
-    buttonText: View More Information
-    buttonLink: /sustainability/
-    reverse: true
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Carbon Negative
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is the first carbon negative general dental practice in the United States. Artisan Dental offsets 120% of the greenhouse gas emissions associated with its operation including team business travel, team member commutes, office energy, and procurement of all supplies and materials required to provide your oral health care services.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/tress2.jpg
-    buttonText: View More Information
-    buttonLink: /carbon-neutral/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Philanthropy
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>We appreciate that we are an interwoven part of a larger local and global community.&nbsp; We are heartened by the opportunity to&nbsp;<a href=\"/community-giving/\" target=\"_blank\" rel=\"noopener noreferrer\">support the fine work of our non-profit partners</a>&nbsp;with owner and staff volunteer hours, free dental services and/or ongoing financial contributions.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/09/shutterstock_183501380-1.jpg
-    buttonText: Learn More
-    buttonLink: /community-giving/
-    reverse: true
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
-  - _component: page-sections/artisan/split-feature
-    id: ""
-    eyebrow: ""
-    heading: Local Independent Ownership
-    text: "
-
-      \t\t\t\t<div class=\"elementor-widget-container\">
-
-      \t\t\t\t\t\t\t\t\t<p>Artisan Dental is locally owned by&nbsp;<a href=\"/dr-nicole-andersen/\">Dr. Nicole Andersen</a>&nbsp;and&nbsp;<a href=\"/scott-andersen/\">Scott Andersen</a>, who feel fortunate to be cooperating together with the entire&nbsp;<a href=\"/meet-the-team/\">Artisan Dental Team</a>&nbsp;to provide you with the highest quality care, while strengthening the health of our community and environment.</p>\t\t\t\t\t\t\t\t</div>
-
-      \t\t\t\t"
-    image: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-235.jpg
-    buttonText: Why Choose Artisan
-    buttonLink: /why-choose-artisan/
-    reverse: false
-    align: left
-    mediaMinHeight: 420px
-    backgroundColor: transparent
-    backgroundImage: ""
-    eyebrowColor: "var(--color-brand-secondary)"
-    headingColor: "#321c0e"
-    textColor: "#333333"
-    buttonBackgroundColor: rgb(50, 28, 14)
-    buttonTextColor: rgb(255, 255, 255)
+- _component: page-sections/artisan/page-banner
+  id: ''
+  eyebrow: ''
+  heading: About Us
+  backgroundColor: '#321c0e'
+  headingColor: '#ffffff'
+  eyebrowColor: var(--color-brand-secondary)
+  backgroundImage: ''
+  overlayColor: rgba(50, 28, 14, 0.55)
+  align: center
+  minHeight: ''
+- _component: page-sections/artisan/photo-intro-hero
+  id: ''
+  eyebrow: We Invite You To
+  heading: Learn More About Us
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Artisan Dental is an award-winning, mission, vision and values oriented general dentistry practice in downtown Madison, Wisconsin. As a member of the broader, Business For Good movement and Certified B Corporation, our mission is to optimize the health and happiness of our patients, team members, suppliers, community, and the environment through exceptional quality care and sustainable business practices.</p><p>We designed our facility in downtown Madison, Wisconsin to be warm, calming, and supportive of your health and healing.&nbsp; From our floor to ceiling windows, to the incorporation of the visual technology “Nature Relaxation”, our intention is that your dental care experience is comfortable and enjoyable.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-239.jpeg
+  buttonText: Schedule Your Consultation
+  buttonLink: /contact-us/
+  secondaryButtonText: Learn More
+  secondaryButtonLink: '#down'
+  eyebrowColor: '#d2b22e'
+  headingColor: '#ffffff'
+  textColor: '#ffffff'
+- _component: page-sections/artisan/icon-grid
+  id: down
+  eyebrow: ''
+  heading: 'CORE VALUES:'
+  text: ''
+  intro: |-
+    <h3>MISSION:</h3>
+    <p>Our mission is to optimize the health and happiness of our patients, team members, suppliers, community, and the environment through exceptional quality care and sustainable business practices.</p>
+    <h3>VISION:</h3>
+    <p>Our mission will be enacted by providing exceptional quality oral health care that is empathetic, caring and compassionate. We will create opportunities for the growth and development of our team members professionally and personally. The prosperity of the organization will create the conditions for all of its stakeholders to flourish.</p>
+  cards:
+  - icon: check-circle-duo
+    title: Love
+    text: ''
+  - icon: check-circle-duo
+    title: Service
+    text: ''
+  - icon: check-circle-duo
+    title: Ethical Integrity
+    text: ''
+  - icon: check-circle-duo
+    title: Wisdom
+    text: ''
+  - icon: check-circle-duo
+    title: Collaboration
+    text: ''
+  - icon: check-circle-duo
+    title: Empathy
+    text: ''
+  - icon: check-circle-duo
+    title: Compassion
+    text: ''
+  - icon: check-circle-duo
+    title: Creativity
+    text: ''
+  - icon: check-circle-duo
+    title: Fun
+    text: ''
+  columns: 3
+  boxed: true
+  boxBackgroundColor: '#f2f2f2'
+  boxBorderColor: '#7a7a7a'
+  backgroundColor: '#ffffff'
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  iconColor: var(--color-brand-secondary)
+  paddingBlock: 60px 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ★★★★★
+  heading: Award-Winning
+  text: <p>In 2026 Dr. Nicole Andersen was again named Top Dentist by her colleagues since 2011. In 2025 Artisan received the Great Places to Work certification and our B Corporation Recertification for the third time!</p><p>In 2023 Scott Andersen was awarded the Wisconsin Sustainable Business Council’s, Sustainable Leadership Executive Award. This same year Artisan’s Impact Report won two American Graphic award in the Designing for Good and Wellness categories. In 2022, Artisan Dental received the Community’s Excellence Award.</p><p>In 2020 and 2021 Artisan Dental was named Climate Champion by Dane County Office of Energy &amp; Climate Change. In 2021 Artisan Dental received the Communitas Award, a MarCom Award and our Director of Business Development was honored with the AADOM Green Leader Award.</p><p>In 2017, 2018 &amp; 2019 Artisan Dental was recognized by Madison Magazine as a Best Place to Work in the small company category. In 2018, Artisan Dental, was one of the winners of the In Business Magazine, Dane County Small Business award. Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019. The Best For The World designation is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment. In 2019, Artisan Dental was selected as a winner in the Wisconsin based, Force for Positive Change award.</p>
+  image: ''
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: ''
+  buttonTextColor: ''
+  boxed: true
+  boxBackgroundColor: '#f2f2f2'
+  boxBorderColor: '#7a7a7a'
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: ''
+  text: ''
+  image: /wp-content/uploads/2020/09/Team-Lake-ShoreHomePage.jpg
+  imageAlt: The Artisan Dental team sitting along the lakeshore
+  buttonText: ''
+  buttonLink: ''
+  paddingBlock: 60px 0px
+  align: left
+  backgroundColor: transparent
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: Our Team Provides
+  heading: Exceptional Quality
+  text: <p>At Artisan Dental our commitment to providing exceptional quality preventive, cosmetic and restorative dental care is central to our entire team’s efforts.&nbsp; Our team has completed hundreds of hours of continuing education courses with some of the finest instructors in the world.</p>
+  image: ''
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px 60px
+  boxed: true
+  boxBackgroundColor: '#f2f2f2'
+  boxBorderColor: '#7a7a7a'
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: Top Rated
+  heading: Patient Reviews
+  text: <p>We feel fortunate to have received very appreciative patient feedback from our existing patients regarding their experience being cared for at Artisan Dental. We invite you to review their comments available on the <a href="https://www.google.com/search?q=artisan+dental+madison+wi#lrd=0x880653684d22bba9:0x675904eddaf49867,1">Google</a>, <a href="https://www.yelp.com/biz/artisan-dental-madison">Yelp</a>, <a href="https://www.facebook.com/Artisan-Dental-Madison-417141075083050/">Facebook</a>, and <a href="http://rateadentist.com/reviews/Wisconsin/Madison/ArtisanDentalLLCMadison">Rate A Dentist</a> review sites.</p>
+  image: /wp-content/uploads/2020/08/unrecognizable-woman-showing-five-stars-evaluating-coworking-place.jpg
+  imageAlt: Patient holding a five-star review card
+  buttonText: View All Reviews
+  buttonLink: /patient-reviews/
+  reverse: true
+  mediaMinHeight: 420px
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  align: left
+  backgroundColor: transparent
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: Proud to be
+  heading: Certified B Corporation
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Artisan Dental is Wisconsin’s 1st dental practice to be certified as a B corporation. &nbsp;Called “the highest standard for socially responsible business” by Inc. magazine, B Corp certification is to sustainable business what USDA Organic certification is to food or Leed certification is to buildings.&nbsp;</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/bthechange.jpg
+  buttonText: Learn More
+  buttonLink: /certified-b-corporation/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: ''
+  text: <p><img decoding="async" class="alignleft" style="float:left;margin:0 1.5rem 0.5rem 0;width:100px;height:auto" src="/wp-content/uploads/2020/09/logo-black-certified-b-corpora-.png" alt="Certified B Corporation" width="100" height="163">B corporation certification is one of the most respected and credible certifications for conscious and sustainable businesses globally with more than 6737 companies, 161 industries and 90 countries as of 5/8/2023.&nbsp;&nbsp;Artisan Dental was recognized as a Best For The World – Worker category honoree in 2018 &amp; 2019.&nbsp;<a href="https://bthechange.com/2018-best-for-the-world-workers-honorees-e285649d2514">The Best For The World designation</a>&nbsp;is conferred by the non-profit B Lab, to businesses earning a Workers score in the top 10 percent of fellow Certified B Corporations of a similar size and in the same industry on the B Impact Assessment.&nbsp; You can learn more at our&nbsp;<a href="/certified-b-corporation/">Certified B Corporations page</a>.</p>
+  image: ''
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: ''
+  buttonTextColor: ''
+  boxed: true
+  boxBackgroundColor: '#f2f2f2'
+  boxBorderColor: '#7a7a7a'
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: The Artisan
+  heading: Dental Health Plan
+  text: <p></p>
+  image: ''
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: ''
+  buttonTextColor: ''
+  paddingBlock: 60px 0px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: ''
+  text: <p></p>
+  image: /wp-content/uploads/2022/12/Graphic-without-prices.jpg
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: ''
+  buttonTextColor: ''
+  paddingBlock: 0px 60px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Insurance Compatibility
+  text: <p>We work with a range of dental insurance companies and our team of patient care professionals will assist you in maximizing your insurance benefits.</p>
+  image: ''
+  buttonText: ''
+  buttonLink: ''
+  reverse: false
+  align: left
+  mediaMinHeight: 0px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: ''
+  buttonTextColor: ''
+  boxed: true
+  boxBackgroundColor: '#f2f2f2'
+  boxBorderColor: '#7a7a7a'
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Affordability
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p><span style=\"font-weight: 400;\">We offer a variety of ways to make your care affordable, including our Artisan Dental Health </span><span style=\"font-weight: 400;\">Plan and</span><span style=\"font-weight: 400;\"> the ability…</span> <a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\"><i><span style=\"font-weight: 400;\">CareCredit</span></i></a><i><span style=\"font-weight: 400;\">!</span></i></p><p>We offer a variety of ways to make your care affordable, including our Artisan Dental Health Plan. and the ability to make monthly payments for care when working with our patient care financing partner,&nbsp;<a href=\"https://www.carecredit.com/go/CHG554/\" target=\"_blank\" rel=\"noopener\">CareCredit.</a></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/shutterstock_1395159488-1.jpg
+  buttonText: View Options
+  buttonLink: /financial/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Comfortable & Compassionate Care
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Our approach is to first understand your needs and wishes and then customize a treatment that alleviates any pain and is comfortable&nbsp;and supportive of your&nbsp;health and healing.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/shutterstock_1389890048-1.jpg
+  buttonText: Code of Conduct
+  buttonLink: /code-of-conduct/
+  reverse: true
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Convenient, Downtown Madison, WI Location
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Our intention is that your care be convenient, with appointments starting as early as 7:00 a.m. including lunch hour appointments, thru 5:00 p.m.&nbsp; We are centrally located in Madison, Wisconsin, eight blocks off the Capital Square at 10 North Livingston St.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/08/2.jpg
+  buttonText: View Contact Information
+  buttonLink: /contact-us/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: State of the Art Technology
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Integral to the goal of providing the highest quality dental care available is the incorporation of the latest technological advances in dentistry today. Utilizing the most advanced technology enables more detailed and complete evaluations and more effective long-lasting treatment.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/shutterstock_555860701-1.jpg
+  buttonText: Take a Look
+  buttonLink: /office-tour/
+  reverse: true
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Continuing Education
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>We are committed to continuous improvement and ongoing education as an essential part of providing you with the highest level of care possible. We have devoted hundreds of hours to continuing education courses, including hands-on clinics with some of the best dentists and instructors in the world.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/shutterstock_322706582-1.jpg
+  buttonText: Meet the Team
+  buttonLink: /meet-the-team/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Commitment to Total Health
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>At Artisan Dental, one aspect of our mission is to care for your oral and total health.&nbsp; In addition to being proactive with&nbsp;preventive and restorative dental care, we have created the&nbsp;Artisan Dental Wellness Series, designed to foster whole person health and enjoyment.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/RecycleWithSignRectangle-3.jpg
+  buttonText: Wellness Series
+  buttonLink: /wellness-series/
+  reverse: true
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Business for Good
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Artisan Dental is a purpose-oriented company committed to using “Business as a Force for Good”. We have a demonstrated track record of creating benefit for all of the stakeholders connected to Artisan Dental as illustrated in our <a href=\"/certified-b-corporation/\">Certified B Corporation</a> designation and impact summarized in the linked 2025 Artisan Dental Impact Report.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2026/05/artisan-dental-impact-report-2025-border.jpg
+  buttonText: 2025 Artisan Dental Impact Report
+  buttonLink: /wp-content/uploads/2026/04/artisan-dental-impact-report-2025.pdf
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Sustainability
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>We incorporate a wide range of&nbsp;sustainability practices&nbsp;as a conscious daily endeavor including measures such as the purchase of 100% of our electrical energy needs from renewable sources through&nbsp;<a href=\"https://www.mge.com/our-environment/green-power/green-power-tomorrow\">MG&amp;E Green Power</a>&nbsp;program.&nbsp; We also purchase certified carbon offsets for all other energy uses and company travel that comprise Scopes 1, 2, &amp; 3 greenhouse gas emissions.&nbsp; The&nbsp;<a href=\"/program-details/\" target=\"_blank\" rel=\"noopener noreferrer\">Artisan Dental Recycling Program</a>&nbsp;is the first oral care recycling program in the Dane County area that is open to the public.&nbsp; We are the United States,&nbsp;<a href=\"https://www.bcorporation.net/en-us/find-a-b-corp/company/artisan-dental-llc/\">2nd Certified B Corporation dental practice</a>, a member of&nbsp;<a href=\"http://www.sustaindane.org/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustain Dane</a>&nbsp;and its&nbsp;<a href=\"http://www.sustaindane.org/going-sustainable/at-work/sustainable-business-network/\" target=\"_blank\" rel=\"noopener noreferrer\">Sustainable Business Network</a>&nbsp;as well as&nbsp;<a href=\"http://www.danebuylocal.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Dane Buy Local.</a></p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/RecycleWithSignRectangle-3-1.jpg
+  buttonText: View More Information
+  buttonLink: /sustainability/
+  reverse: true
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Carbon Negative
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Artisan Dental is the first carbon negative general dental practice in the United States. Artisan Dental offsets 120% of the greenhouse gas emissions associated with its operation including team business travel, team member commutes, office energy, and procurement of all supplies and materials required to provide your oral health care services.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/tress2.jpg
+  buttonText: View More Information
+  buttonLink: /carbon-neutral/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Philanthropy
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>We appreciate that we are an interwoven part of a larger local and global community.&nbsp; We are heartened by the opportunity to&nbsp;<a href=\"/community-giving/\" target=\"_blank\" rel=\"noopener noreferrer\">support the fine work of our non-profit partners</a>&nbsp;with owner and staff volunteer hours, free dental services and/or ongoing financial contributions.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/09/shutterstock_183501380-1.jpg
+  buttonText: Learn More
+  buttonLink: /community-giving/
+  reverse: true
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
+- _component: page-sections/artisan/split-feature
+  id: ''
+  eyebrow: ''
+  heading: Local Independent Ownership
+  text: "\n\t\t\t\t<div class=\"elementor-widget-container\">\n\t\t\t\t\t\t\t\t\t<p>Artisan Dental is locally owned by&nbsp;<a href=\"/dr-nicole-andersen/\">Dr. Nicole Andersen</a>&nbsp;and&nbsp;<a href=\"/scott-andersen/\">Scott Andersen</a>, who feel fortunate to be cooperating together with the entire&nbsp;<a href=\"/meet-the-team/\">Artisan Dental Team</a>&nbsp;to provide you with the highest quality care, while strengthening the health of our community and environment.</p>\t\t\t\t\t\t\t\t</div>\n\t\t\t\t"
+  image: /wp-content/uploads/2020/08/ArtisanDental-OfficeTechnology-235.jpg
+  buttonText: Why Choose Artisan
+  buttonLink: /why-choose-artisan/
+  reverse: false
+  align: left
+  mediaMinHeight: 420px
+  backgroundColor: transparent
+  backgroundImage: ''
+  eyebrowColor: var(--color-brand-secondary)
+  headingColor: '#321c0e'
+  textColor: '#333333'
+  buttonBackgroundColor: rgb(50, 28, 14)
+  buttonTextColor: rgb(255, 255, 255)
+  paddingBlock: 40px
 ---

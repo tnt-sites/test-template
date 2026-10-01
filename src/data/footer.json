@@ -158,6 +158,18 @@
           {
             "name": "HIPAA Policy",
             "path": "/legal/"
+          },
+          {
+            "name": "Privacy Policy",
+            "path": "/privacy-policy/"
+          },
+          {
+            "name": "Accessibility Statement",
+            "path": "/accessibility-statement/"
+          },
+          {
+            "name": "ADA Efforts",
+            "path": "/ada-efforts/"
           }
         ]
       },

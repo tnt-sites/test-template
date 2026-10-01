@@ -79,6 +79,9 @@ pageSections:
       - name: Kaitlin
         path: /kaitlin/
         current: false
+      - name: MaryKate
+        path: /marykate/
+        current: false
       - name: Kelli
         path: /kelli/
         current: true

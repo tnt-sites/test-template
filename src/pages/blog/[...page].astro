@@ -56,6 +56,7 @@ const pageDescription =
       page.data.length > 0 ? (
         <>
           <Grid
+            class="blog-cards"
             gap="lg"
             layout="start"
             minItemWidth="320"
@@ -129,3 +130,12 @@ const pageDescription =
     }
   </CustomSection>
 </Page>
+
+<style is:global>
+  /* Many post images are logos and award badges, which a cover crop cut
+     off; fit the whole image in the frame on a soft neutral instead. */
+  .blog-cards .image img {
+    background: #f7f5ef;
+    object-fit: contain;
+  }
+</style>
