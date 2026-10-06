@@ -67,6 +67,10 @@
       "path": "/hipaa-notice/"
     },
     {
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
+    },
+    {
       "name": "Accessibility Statement",
       "path": "/accessibility-statement/"
     },
@@ -85,6 +89,10 @@
     {
       "name": "Privacy Policy",
       "path": "/privacy-policy"
+    },
+    {
+      "name": "ADA Efforts",
+      "path": "/ada-efforts/"
     },
     {
       "name": "Accessibility Statement",
@@ -251,6 +259,10 @@
       {
         "name": "HIPAA Notice",
         "path": "/hipaa-notice/"
+      },
+      {
+        "name": "ADA Efforts",
+        "path": "/ada-efforts/"
       },
       {
         "name": "Accessibility Statement",

@@ -46,6 +46,12 @@ pageSections:
       heading: Our Amenities
       level: h3
       text: "<ul>\n\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Beverage Bar</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Play Area</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Blankets &amp; Pillows</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Netflix</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Neck Pillows</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t\t\t\t\t<span>\n\t\t\t\t\t\t\t<i aria-hidden=\"true\"></i>\t\t\t\t\t\t</span>\n\t\t\t\t\t\t\t\t\t\t<span>Warm, Scented Towels</span>\n\t\t\t\t\t\t\t\t\t</li>\n\t\t\t\t\t\t</ul>"
+    - _bt: gallery
+      items:
+      - src: /wp-content/uploads/2019/10/game-ammenities.jpg
+        alt: Columbine Creek Dentistry play area with video games | Littleton, CO
+      - src: /wp-content/uploads/2019/10/latesttech.jpg
+        alt: Columbine Creek Dentistry treatment room with flat screen TV | Littleton, CO
     - _bt: prose
       heading: Latest Technology
       level: h3

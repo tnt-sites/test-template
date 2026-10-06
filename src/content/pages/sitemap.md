@@ -143,6 +143,7 @@ pageSections:
           <li><a href="/schedule-appointment/">Schedule Appointment</a></li>
           <li><a href="/privacy-policy/">Privacy Policy</a></li>
           <li><a href="/hipaa-notice/">HIPAA Notice of Privacy Practices</a></li>
+          <li><a href="/ada-efforts/">ADA Accessibility Efforts</a></li>
           <li><a href="/accessibility-statement/">Accessibility Statement</a></li>
           </ul>
       - _bt: prose

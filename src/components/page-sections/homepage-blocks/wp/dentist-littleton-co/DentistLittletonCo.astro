@@ -103,7 +103,9 @@ const {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin: 10px 20px 0px 0px;
+    /* Stacked full width on mobile, so no right gutter — it left this button
+       20px narrower than the one beneath it. The gap returns side by side. */
+    margin: 10px 0px 0px 0px;
     padding: 10px;
     transition: all 0.25s ease;
     white-space: nowrap;
@@ -162,6 +164,7 @@ const {
     :global(.dlc-btn) {
       border: 1px solid #3b6278;
       display: inline;
+      margin-right: 20px;
       margin-top: 0px;
     }
 

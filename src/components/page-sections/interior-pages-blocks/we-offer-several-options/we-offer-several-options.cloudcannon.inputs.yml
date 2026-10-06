@@ -3,14 +3,6 @@ _inputs:
     type: html
   subheading:
     type: text
-  image:
-    type: image
-  imageAlt:
-    type: text
-  text2:
-    type: html
-  text3:
-    type: text
   text4:
     type: html
   images:

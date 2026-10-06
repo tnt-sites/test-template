@@ -71,8 +71,8 @@ const sectionsList = toList(sections).map((sec) => {
               </div>
             </div>
           </div>
-          <ButtonGroup buttonSections={buttonSectionsList} alignX="start" />
-          <ButtonGroup buttonSections={buttonSections2List} propName="buttonSections2" alignX="start" />
+          <ButtonGroup buttonSections={buttonSectionsList} alignX="start" class="se-service-buttons" />
+          <ButtonGroup buttonSections={buttonSections2List} propName="buttonSections2" alignX="start" class="se-service-buttons" />
           {sectionsList.map((sec, i) => (
             <Fragment>
               <div class="se-rule">
@@ -204,6 +204,63 @@ const sectionsList = toList(sections).map((sec) => {
 
 
 
+
+  /* The service links sit as a grid of square green tiles, three to a row at
+     every width, as the source page lays them out — not the site's pill buttons. */
+  .services :global(.se-service-buttons) {
+    display: grid;
+    gap: 10px 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 10px;
+    padding: 0 10px;
+  }
+
+  .services :global(.se-service-buttons > editable-array) {
+    display: contents;
+  }
+
+  .services :global(.se-service-buttons editable-array-item) {
+    display: flex;
+  }
+
+  .services :global(.se-service-buttons .button) {
+    background-color: var(--btnbg);
+    border: none;
+    border-radius: 3px;
+    color: var(--c6);
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    height: 100%;
+    line-height: 1.25;
+    max-width: none;
+    min-height: 40px;
+    min-width: 0;
+    padding: 8px 6px;
+    text-align: center;
+    white-space: normal;
+    width: 100%;
+  }
+
+  .services :global(.se-service-buttons .label-text) {
+    white-space: normal;
+  }
+
+  .services :global(.se-service-buttons .button:hover),
+  .services :global(.se-service-buttons .button:focus-visible) {
+    background-color: color-mix(in srgb, var(--btnbg) 80%, black);
+    color: var(--c6);
+  }
+
+  @media (max-width: 767px) {
+    .services :global(.se-service-buttons) {
+      gap: 8px;
+      padding: 0;
+    }
+
+    .services :global(.se-service-buttons .button) {
+      font-size: 14px;
+    }
+  }
 
   .se-decor {
     border-top: 1px solid #e8e8e8;

@@ -125,20 +125,53 @@ pageSections:
     uppercase: false
   buttonSections2:
   - _component: building-blocks/core-elements/button
+    id: ''
     text: Sedation Dentistry
+    hideText: false
     link: /dental-services/sedation-dentistry/
+    modalTarget: ''
+    iconName: ''
+    iconPosition: before
     variant: primary
     size: md
+    width: xs
+    borderRadius: default
+    borderWidth: default
+    borderColor: default
+    textColor: default
+    uppercase: false
   - _component: building-blocks/core-elements/button
+    id: ''
     text: Pediatric Dentistry
+    hideText: false
     link: /dental-services/pediatric-dentistry/
+    modalTarget: ''
+    iconName: ''
+    iconPosition: before
     variant: primary
     size: md
+    width: xs
+    borderRadius: default
+    borderWidth: default
+    borderColor: default
+    textColor: default
+    uppercase: false
   - _component: building-blocks/core-elements/button
+    id: ''
     text: Emergency Dentistry
+    hideText: false
     link: /dental-services/emergency-dentistry/
+    modalTarget: ''
+    iconName: ''
+    iconPosition: before
     variant: primary
     size: md
+    width: xs
+    borderRadius: default
+    borderWidth: default
+    borderColor: default
+    textColor: default
+    uppercase: false
   sections:
   - heading: General Dentistry Services
     text: Columbine Creek Dentistry&nbsp;is your local source for excellence in general dental care for

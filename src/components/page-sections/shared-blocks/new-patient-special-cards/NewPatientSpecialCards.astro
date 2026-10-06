@@ -16,7 +16,7 @@
  *   its heading white — white text on the near-white card, i.e. invisible. The
  *   band is blue at every width here.
  *
- * `cards`: [{ heading, note, price, items: [{ text }] }]. `price` and
+ * `cards`: [{ heading, note, price, items: [{ text }], hidden }]. `price` and
  * `heading` take HTML, since the source copy carries `<sup>` and `<br>`.
  */
 const {
@@ -33,10 +33,11 @@ const {
 
 const clean = (v: unknown) => (typeof v === "string" ? v.trim() : "");
 
-type Card = { heading?: string; note?: string; price?: string; items?: { text?: string }[] };
+type Card = { heading?: string; note?: string; price?: string; items?: { text?: string }[]; hidden?: boolean };
 
 const list: Card[] = (Array.isArray(cards) ? cards : [])
   .filter((c): c is Card => !!c && typeof c === "object")
+  .filter((c) => !c.hidden)
   .filter((c) => clean(c.heading) || clean(c.price) || (Array.isArray(c.items) && c.items.length > 0));
 
 const HEADING_TAGS: Record<string, string> = { h2: "h2", h3: "h3", h4: "h4", h5: "h5" };

@@ -62,13 +62,10 @@ const searchButtons = resolvedSearchButtonSections.map((button: any) =>
 
 const buttons = pageButtons.map((button: any) => sanitizeButtonSection(button));
 
+// The search button stays out of the mobile menu: the two-tier header shows
+// no search on desktop either, so a lone "Search" row read as a stray link.
 const mobileNavData = [
   ...navData,
-  ...searchButtons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
   ...buttons.map((button: any) => ({
     name: button.text || "Button",
     path: button.link || button.href || "#",

@@ -10,7 +10,7 @@
  * they now share.
  *
  * Content is a typed `blocks` array so a page can carry any number of prose
- * sections, images, a service-card grid, a pricing table, and a CTA, in any
+ * sections, images, image galleries, a service-card grid, a pricing table, and a CTA, in any
  * order — which is exactly the variation that made the migrator emit a new
  * component per page.
  */
@@ -159,6 +159,21 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
                 <img src={block.src} alt={block.alt || ""} loading="lazy" />
               </figure>
             ) : null;
+          }
+          if (bt === "gallery") {
+            // Photos side by side at desktop width, stacked below 768px.
+            const images = (Array.isArray(block.items) ? block.items : []) as Block[];
+            return (
+              <div class="ic-gallery">
+                {images
+                  .filter((image) => clean(image.src))
+                  .map((image) => (
+                    <figure class="ic-gallery-item">
+                      <img src={image.src} alt={image.alt || ""} loading="lazy" />
+                    </figure>
+                  ))}
+              </div>
+            );
           }
           if (bt === "table") {
             return block.html ? (
@@ -502,6 +517,28 @@ const hasMenu = clean(eyebrow).length > 0 || links.some((l: any) => l && typeof 
 
   .ic-figure {
     margin: 0 0 16px;
+  }
+
+  .ic-gallery {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 768px) {
+    .ic-gallery {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    }
+  }
+
+  .ic-gallery-item {
+    margin: 0;
+  }
+
+  .ic-gallery-item img {
+    display: block;
+    height: auto;
+    width: 100%;
   }
 
   .ic-figure img {

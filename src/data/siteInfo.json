@@ -53,22 +53,22 @@
       "officeHours": [
         {
           "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 6:00 pm",
           "note": ""
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00 am - 5:00 pm",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "8:00 am - 6:00 pm",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00 am - 5:00 pm",
           "note": ""
         },
         {

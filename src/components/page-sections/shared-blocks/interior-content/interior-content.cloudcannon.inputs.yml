@@ -142,6 +142,18 @@ _structures:
           _bt: { type: hidden }
           src: { type: image }
           alt: { type: text }
+      - label: Image gallery
+        icon: photo_library
+        value:
+          _bt: gallery
+          items: []
+        _inputs:
+          _bt: { type: hidden }
+          items:
+            type: array
+            comment: Images shown side by side at desktop widths, stacked on mobile.
+            options:
+              structures: _structures.interior_content_gallery_image
       - label: Service cards
         icon: grid_view
         value:
@@ -269,6 +281,14 @@ _structures:
           text: { type: text }
           text2: { type: text }
           link: { type: url }
+  interior_content_gallery_image:
+    values:
+      - value:
+          src: ""
+          alt: ""
+        _inputs:
+          src: { type: image }
+          alt: { type: text }
   interior_content_special:
     values:
       - value:
@@ -276,7 +296,11 @@ _structures:
           note: ""
           price: ""
           items: []
+          hidden: false
         _inputs:
+          hidden:
+            type: switch
+            comment: Keep this offer on file but leave it off the page.
           heading:
             type: html
             comment: Name of the offer, shown in the blue band.

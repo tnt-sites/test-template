@@ -61,6 +61,7 @@ pageSections:
         - text: New Patients Only
         - text: Cannot Combine offers
       - heading: New Patient<br> Special
+        hidden: true
         note: ""
         price: <sup>$</sup>88
         items:
