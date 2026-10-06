@@ -53,7 +53,7 @@ pageSections:
 
 
 
-      <p class=\"wp-block-paragraph\">Which of these bridges our dentist suggests will depend on the <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3945276/\" target=\"_blank\" aria-label=\" (opens in a new tab)\" rel=\"noreferrer noopener\" class=\"rank-math-link\">specifics</a> of your case.&nbsp;&nbsp;</p>
+      <p class=\"wp-block-paragraph\">Which of these bridges our dentist suggests will depend on the <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC3945276/\" target=\"_blank\" aria-label=\" (opens in a new tab)\" rel=\"noreferrer noopener\" class=\"rank-math-link\">specifics</a> of your case.&nbsp;&nbsp;</p>
 
 
 

@@ -8,6 +8,8 @@ value:
   links: []
   image: ""
   imageAlt: ""
+  imageWidth: ""
+  imageAlign: left
   body: ""
   backgroundColor: transparent
   headingBackground: "#321c0e"

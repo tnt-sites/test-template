@@ -8,6 +8,15 @@ _inputs:
     type: html
   image:
     type: image
+  imageWidth:
+    type: text
+    comment: Optional display width for the image, e.g. "680px". Leave empty for its natural size.
+  imageAlign:
+    type: select
+    options:
+      values:
+        - left
+        - center
   backgroundColor:
     type: color
   headingBackground:

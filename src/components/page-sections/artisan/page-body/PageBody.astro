@@ -20,6 +20,8 @@ const {
   links = [],
   image = "",
   imageAlt = "",
+  imageWidth = "",
+  imageAlign = "left",
   body = "",
   backgroundColor = "transparent",
   headingBackground = "#321c0e",
@@ -65,7 +67,17 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
       )
     }
     <div class="pb2-main">
-      {image && <img class="pb2-image" src={image} alt={imageAlt} loading="lazy" />}
+      {
+        image && (
+          <img
+            class:list={["pb2-image", { centered: imageAlign === "center" }]}
+            src={image}
+            alt={imageAlt}
+            loading="lazy"
+            style={imageWidth ? `width:${imageWidth}` : undefined}
+          />
+        )
+      }
       {body && <div class="pb2-prose" set:html={body} />}
       <slot />
     </div>
@@ -145,6 +157,10 @@ const hasSidebar = Boolean(sidebarHeading) || list.length > 0;
     height: auto;
     margin-bottom: 1.75rem;
     max-width: 100%;
+  }
+
+  .pb2-image.centered {
+    margin-inline: auto;
   }
 
   .pb2-prose {

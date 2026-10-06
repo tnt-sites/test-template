@@ -52,7 +52,7 @@ pageSections:
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->
-      <p>Another reason mouth guards are recommended is due to their ability to reduce the number of traumatic injuries experienced during sports. Studies have been able to&nbsp;<a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3939571/">reduce the number of injuries sustained during sports</a>&nbsp;due to its ability to block direct blows to the temporomandibular joint and jawline during impact. With customized bite guards, the thickness and feel of the mouthguard can be adjusted to help prevent future injuries and protect people’s teeth during sports. This material is soft enough to provide comfort for the mouth but strong enough to handle pressure and potential impact. Mouthguards are a highly personalized treatment, using the impressions of the patient’s teeth to create a guard that’s custom-fitted to the mouth.</p>
+      <p>Another reason mouth guards are recommended is due to their ability to reduce the number of traumatic injuries experienced during sports. Studies have been able to&nbsp;<a class="rank-math-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3939571/">reduce the number of injuries sustained during sports</a>&nbsp;due to its ability to block direct blows to the temporomandibular joint and jawline during impact. With customized bite guards, the thickness and feel of the mouthguard can be adjusted to help prevent future injuries and protect people’s teeth during sports. This material is soft enough to provide comfort for the mouth but strong enough to handle pressure and potential impact. Mouthguards are a highly personalized treatment, using the impressions of the patient’s teeth to create a guard that’s custom-fitted to the mouth.</p>
       <p>&nbsp;</p>
       <!-- /wp:paragraph -->
 
@@ -64,7 +64,7 @@ pageSections:
       <ul>
       <li><strong>Optimal Safety:</strong> Because of the layers of superheated plastic and resin materials used to make custom-fitted mouthguards, these guards can provide you with protection.</li>
       <li><strong>Reduced Concussion Risk:</strong> During sports, wearing a custom-fitted mouthguard can help prevent the onset of serious concussion injuries that occur near and around the jawbone.</li>
-      <li><strong>Prevents Jaw Fractures:</strong> The material used to create custom-fitted bite guards acts as a<a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3939571/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)"> cushion for the upper and lower jaw</a>, preventing jaw fractures.</li>
+      <li><strong>Prevents Jaw Fractures:</strong> The material used to create custom-fitted bite guards acts as a<a class="rank-math-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3939571/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)"> cushion for the upper and lower jaw</a>, preventing jaw fractures.</li>
       <li><strong>Enhanced Comfort:</strong> Because of the softer materials, those with bruxism can have a more reliable time sleeping without the worry of discomfort and potential tooth grinding.</li>
       </ul>
       <p>&nbsp;</p>

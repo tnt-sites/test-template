@@ -58,7 +58,7 @@ pageSections:
       					<h3 class="elementor-heading-title elementor-size-default">Learn More By Calling Artisan Dental In Madison, WI Today</h3>				
 
       									<p><!-- /wp:heading --><!-- wp:paragraph --></p>
-      <p>Our team in Madison, WI, is ready to receive new and existing patients seeking <a class="rank-math-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5773996/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">dental implants</a>. By scheduling a consultation visit, you’ll set yourself on the road to a beautiful and functioning smile. During your visit, you’ll undergo a thorough dental exam, discuss your medical history, and explore options for dental restorations with our team. Don’t let a missing tooth or teeth spell the end to a confident smile. Call us today!</p>								
+      <p>Our team in Madison, WI, is ready to receive new and existing patients seeking <a class="rank-math-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5773996/" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">dental implants</a>. By scheduling a consultation visit, you’ll set yourself on the road to a beautiful and functioning smile. During your visit, you’ll undergo a thorough dental exam, discuss your medical history, and explore options for dental restorations with our team. Don’t let a missing tooth or teeth spell the end to a confident smile. Call us today!</p>								
     backgroundColor: transparent
     headingBackground: "#321c0e"
     headingColor: "#ffffff"

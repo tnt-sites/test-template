@@ -219,9 +219,11 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
       max-width: none;
     }
 
-    /* The slides are very wide (about 2.4:1), so cover-fitting them into a
-       tall phone-sized slide cropped them to a sliver. Stack instead: the
-       whole photo across the top, the copy on solid brand brown below. */
+    /* The slides are very wide (about 2.4:1) with the subject on the right
+       and empty space on the left for desktop copy. Cover-fitting them into a
+       tall phone slide cropped them to a sliver; showing the whole photo made
+       the subject tiny. Instead: a 4:3-ish photo band framed on the subject
+       (right of centre), with the copy on solid brand brown directly below. */
     .artisan-hero,
     .hero-track,
     .hero-slide {
@@ -231,18 +233,23 @@ const list = Array.isArray(slides) ? slides.filter(Boolean) : [];
     .hero-slide {
       align-items: stretch;
       background-color: #321c0e;
-      background-position: top center;
+      background-position: 82% top;
       background-repeat: no-repeat;
-      background-size: 100% auto;
+      background-size: auto 72vw;
       flex-direction: column;
-      padding-top: calc(100% * 815 / 1980);
+      padding-top: 72vw;
     }
 
     .hero-scrim {
+      align-items: flex-start;
       background: #321c0e;
       flex: 1;
       inset: auto;
       position: relative;
+    }
+
+    .hero-inner {
+      padding-block: 1.75rem 4.5rem;
     }
   }
 </style>

@@ -23,6 +23,8 @@ pageSections:
   sidebarHeading: ''
   links: []
   image: /wp-content/uploads/2020/09/featured.jpg
+  imageWidth: 700px
+  imageAlign: center
   imageAlt: Patient smiling with natural-looking veneers
   body: |-
     <h4>A Beautiful New Smile With Natural-Looking Veneers</h4>

@@ -103,6 +103,9 @@ const btnStyle = [
   /* --color-link is the darkened, AA-passing gold (see themes/_default.pcss).
      Set linkColor (e.g. #bf9800) on a dark section. Underlined because the
      gold is too close to the #333 body copy to tell links apart by colour. */
+  /* Sub-headings inside the copy (h3/h4) — bold Poppins like the section
+     heading, one step down, instead of the browser's thin default. */
+  .sf-body :global(h3), .sf-body :global(h4) { color: var(--hd); font-family: Poppins, sans-serif; font-size: 22px; font-weight: 700; line-height: 1.3; margin: 1.25rem 0 0.75rem; }
   .sf-body :global(a) { color: var(--lk, var(--color-link)); text-decoration: underline; text-underline-offset: 0.15em; }
   .sf-body :global(a:hover) { text-decoration-thickness: 2px; }
 

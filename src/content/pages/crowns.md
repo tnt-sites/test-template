@@ -73,7 +73,7 @@ pageSections:
 
 
 
-      <ul class=\"wp-block-list\"><li><a aria-label=\" (opens in a new tab)\" class=\"rank-math-link\" href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4026739/\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Ceramic or Porcelain Crowns</strong></a><strong> – </strong>These crowns are the types produced using the CEREC device or created in a lab. They provide the best natural color and are therefore preferred for restoration of the front teeth.</li><li><strong>Metal Crowns –</strong> Although less commonly used, metal crowns are sometimes used on the very back molars. They’re made of metals such as gold, palladium, platinum, or other elements. These have the benefit of preserving more of the tooth and rarely break or chip. However, they’re also very conspicuous.</li></ul>
+      <ul class=\"wp-block-list\"><li><a aria-label=\" (opens in a new tab)\" class=\"rank-math-link\" href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC4026739/\" target=\"_blank\" rel=\"noreferrer noopener\"><strong>Ceramic or Porcelain Crowns</strong></a><strong> – </strong>These crowns are the types produced using the CEREC device or created in a lab. They provide the best natural color and are therefore preferred for restoration of the front teeth.</li><li><strong>Metal Crowns –</strong> Although less commonly used, metal crowns are sometimes used on the very back molars. They’re made of metals such as gold, palladium, platinum, or other elements. These have the benefit of preserving more of the tooth and rarely break or chip. However, they’re also very conspicuous.</li></ul>
 
 
 
