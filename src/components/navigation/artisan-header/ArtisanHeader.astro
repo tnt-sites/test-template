@@ -115,17 +115,17 @@ const mobileNavData = navData;
         <Image source={logoSource} alt={logoAlt} editable={false} />
       </a>
       <Bar navData={navData} class="ah-nav desktop-main-nav" />
+      {/* In the logo row so the hamburger sits beside the logo on mobile. */}
+      <Mobile
+        logoSource={logoSource}
+        logoAlt={logoAlt}
+        navData={mobileNavData}
+        class="mobile-main-nav"
+        offices={resolvedOffices}
+        sharedSocials={resolvedSocials}
+      />
     </div>
   </div>
-
-  <Mobile
-    logoSource={logoSource}
-    logoAlt={logoAlt}
-    navData={mobileNavData}
-    class="mobile-main-nav"
-    offices={resolvedOffices}
-    sharedSocials={resolvedSocials}
-  />
 </header>
 
 <style>
