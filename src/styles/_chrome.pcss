@@ -137,3 +137,15 @@
     --chrome-topbar-height: 45px;
   }
 }
+
+/* In-page anchors (the New Patients dropdown) land below the fixed menu bar,
+   not under it. */
+html {
+  scroll-padding-top: 60px;
+}
+
+@media (min-width: 1025px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+}

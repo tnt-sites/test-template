@@ -105,6 +105,7 @@ const opensWithHero = Boolean(hasPageSections && HERO_FIRST.test(pageSections[0]
     offices={footerOffices}
     socials={footerSocials}
     data-fixed-tabs-active={hasActiveFixedTabs ? "true" : undefined}
+    data-hide-map-mobile={Astro.url.pathname === "/" ? "true" : undefined}
   />
   <FixedTabs {...fixedTabs} />
 </Layout>
@@ -115,6 +116,8 @@ const opensWithHero = Boolean(hasPageSections && HERO_FIRST.test(pageSections[0]
        the top of the window the way the source's does. */
     main[data-under-header="true"] {
       margin-top: calc(-1 * var(--site-header-height, 86px));
+      /* Read by the page-hero banners: their photo starts below the bar. */
+      --hero-image-top: var(--site-header-height, 86px);
     }
   }
 </style>

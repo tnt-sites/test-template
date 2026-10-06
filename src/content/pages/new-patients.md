@@ -32,7 +32,7 @@ pageSections:
     headingColor: var(--color-brand)
     textColor: "#000000"
   - _component: page-sections/wpmig/card-grid-patient
-    id: ""
+    id: patient-information
     heading: Patient Information
     text: Your journey to a healthy, beautiful smile begins with scheduling an appointment.
     text2: <ul><li aria-level="1"><span>Call us at <span><strong><a href="tel:+17323650123">(732) 365-0123</a></strong></span> or schedule online to request an appointment.</span></li><li aria-level="1"><span>When scheduling, please provide a brief description of your dental needs to help us serve you better.</span></li></ul>
@@ -47,7 +47,7 @@ pageSections:
     textColor2: "#ffffff"
     textColor2Hex: ""
   - _component: page-sections/wpmig/card-grid-payment
-    id: ""
+    id: payment-options
     heading: Payment Options
     text: |-
       <p><span>We aim to make dental care as accessible as possible by accepting various payment methods:</span></p>
@@ -64,7 +64,7 @@ pageSections:
     textColor: "#000000"
     textColorHex: ""
   - _component: page-sections/wpmig/prose-block-financing
-    id: ""
+    id: financing-options
     heading: Financing Options
     text: We are proud to offer CareCredit, which provides flexible 0% interest financing for up to six months. This allows you to receive the care you need now and pay over time without incurring additional interest charges.
     subheading: Smile Protection Plan

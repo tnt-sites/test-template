@@ -177,6 +177,7 @@ const footerStyle = [
         formEmbedUrl={band.formEmbedUrl}
         formTitle={band.formTitle || "Contact form"}
         formHeight={band.formHeight}
+        hideMapOnMobile={htmlAttributes["data-hide-map-mobile"] === "true"}
       />
     )
   }
@@ -430,9 +431,12 @@ const footerStyle = [
         color: var(--color-brand, #047ac0);
       }
 
-      &[data-fixed-tabs-active="true"] {
+      /* Room for the fixed tab bar (40px) is made inside the copyright bar,
+         not under the footer: padding here showed as a band of footer grey
+         between the copyright and the tabs. */
+      &[data-fixed-tabs-active="true"] .footer-copyright {
         @media (max-width: 1024px) {
-          padding-bottom: calc(72px + env(safe-area-inset-bottom));
+          padding-bottom: calc(40px + env(safe-area-inset-bottom));
         }
       }
 

@@ -23,8 +23,7 @@
       "href": "https://maps.app.goo.gl/xtWsEWogaiqDVA1q9",
       "target": "_blank",
       "icon": "map-pin",
-      "textStrong": "View ",
-      "textAfter": "Map"
+      "textStrong": "Map"
     },
     {
       "itemClass": "fr",

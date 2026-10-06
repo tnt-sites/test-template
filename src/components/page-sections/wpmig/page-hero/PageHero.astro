@@ -24,8 +24,13 @@ const headingColorValue = headingColorHex || headingColor || "var(--color-brand)
 </div>
 <style>
   .page-hero {
+    /* Seen only in the strip under the menu bar, and by contrast checkers. */
+    background-color: #1a1a1a;
     background-image: var(--bgimg, none);
-    background-position: 50% 0%;
+    /* Start the photo below the menu bar when the bar overlays this banner
+       (--hero-image-top, set by the Page layout), so the bar covers a dark
+       strip rather than the doctors' heads. */
+    background-position: 50% var(--hero-image-top, 0%);
     background-repeat: no-repeat;
     background-size: cover;
     box-sizing: border-box;

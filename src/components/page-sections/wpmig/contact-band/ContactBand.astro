@@ -49,6 +49,9 @@ const {
   titleSize = "",
   infoTextColor = "",
 
+  // Drop the map on phones, leaving the form (the homepage, per QC).
+  hideMapOnMobile = false,
+
   hidden = false,
   _component,
   ...rest
@@ -81,7 +84,7 @@ const style = [
 
 {
   !hidden && (
-    <div class="contact-band" id={id || undefined} style={style} {...rest}>
+    <div class="contact-band" id={id || undefined} style={style} data-hide-map-mobile={hideMapOnMobile ? "true" : undefined} {...rest}>
       <div class="cb-grid">
         {showMap && (
           <div class="cb-map">
@@ -181,6 +184,12 @@ const style = [
   @container (min-width: 900px) {
     .cb-map {
       min-height: var(--chrome-footer-form-map-height, 900px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .contact-band[data-hide-map-mobile="true"] .cb-map {
+      display: none;
     }
   }
 
