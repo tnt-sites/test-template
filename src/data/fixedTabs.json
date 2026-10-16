@@ -10,11 +10,11 @@
     },
     {
       "itemClass": "call",
-      "enabled": false,
-      "href": "#modal-contact",
+      "enabled": true,
+      "href": "tel:6084678022",
       "icon": "phone",
-      "textMobile": "Offices",
-      "textStrong": null
+      "textMobile": "Call",
+      "textStrong": "Us"
     },
     {
       "itemClass": "map",
