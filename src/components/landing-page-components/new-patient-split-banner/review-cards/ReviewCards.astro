@@ -1,0 +1,169 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  reviews = [],
+  cardBackgroundColor = "#484846",
+  textColor = "#ffffff",
+  starColor = "#febb21",
+  backgroundColor = "none",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const styleVars = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  cardBackgroundColor ? `--np-review-card-bg: ${cardBackgroundColor}` : "",
+  textColor ? `--np-review-card-text: ${textColor}` : "",
+  starColor ? `--np-review-card-stars: ${starColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["np-review-cards", className]}
+  paddingVertical="none"
+  paddingHorizontal="none"
+  colorScheme="default"
+  backgroundColor={backgroundColorHex ? "none" : backgroundColor}
+  style={styleVars || undefined}
+  {...htmlAttributes}
+>
+  <div class="cards-wrap">
+    {
+      reviews.map((review: any) => {
+        const stars = Math.max(0, Math.min(5, Number(review?.stars) || 5));
+
+        return (
+          <article class="card">
+            {review?.reviewText && <p class="review-text">{review.reviewText}</p>}
+            <div class="author">
+              {review?.googleLogoImage?.source && (
+                <span class="logo-wrap">
+                  <Image
+                    source={review.googleLogoImage.source}
+                    alt={review.googleLogoImage.alt || "Google"}
+                    rounded={false}
+                    editable={false}
+                    aspectRatio="none"
+                    sizes="auto"
+                    widths={[]}
+                  />
+                </span>
+              )}
+              <span class="author-meta">
+                <span class="stars" aria-label={`Rated ${stars} out of 5 stars`}>
+                  {"★".repeat(stars)}
+                </span>
+                {review?.author && <span class="author-name">- {review.author}</span>}
+              </span>
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
+</CustomSection>
+
+<style>
+  .np-review-cards .cards-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 100px auto;
+  }
+
+  .np-review-cards .card {
+    background-color: var(--np-review-card-bg, #484846);
+    flex: 0 1 438px;
+    margin: 10px 0;
+    min-height: 555px;
+    padding: 50px 20px;
+  }
+
+  .np-review-cards .review-text {
+    color: var(--np-review-card-text, #fff);
+    font-size: 21px;
+    line-height: 1.3;
+    margin: 0 auto;
+    min-height: 359px;
+  }
+
+  .np-review-cards .author {
+    align-items: center;
+    color: var(--np-review-card-text, #fff);
+    display: flex;
+    font-size: 16px;
+    justify-content: center;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+  }
+
+  .np-review-cards .logo-wrap {
+    margin-right: 10px;
+  }
+
+  .np-review-cards .logo-wrap :global(img) {
+    display: block;
+    margin: 0;
+  }
+
+  .np-review-cards .author-meta {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .np-review-cards .stars {
+    color: var(--np-review-card-stars, #febb21);
+    font-size: 28px;
+    letter-spacing: 0.3em;
+    line-height: 1;
+  }
+
+  .np-review-cards .author-name {
+    color: var(--np-review-card-text, #fff);
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  @media (max-width: 1024px) {
+    .np-review-cards .cards-wrap {
+      display: block;
+      margin-inline: auto;
+      text-align: center;
+      width: 100%;
+    }
+
+    .np-review-cards .card {
+      margin-inline: auto;
+      max-width: 438px;
+    }
+
+    .np-review-cards .author {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 590px) {
+    .np-review-cards .cards-wrap {
+      margin-top: 50px;
+    }
+
+    .np-review-cards .card {
+      min-height: auto;
+    }
+
+    .np-review-cards .review-text {
+      min-height: 0;
+    }
+  }
+</style>

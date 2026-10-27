@@ -1,0 +1,597 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  siteName = "",
+  contactTitle = "Contact Us",
+  offices = [],
+  phoneLabel = "Call Today!",
+  ctaText = "To Schedule An <strong>Appointment</strong>",
+  mapTitle = "Find Us",
+  mapEmbedUrl = "",
+  formTitle = "Ask A Question",
+  formAction = "",
+  formSubject = "Landing Footer Form",
+  formRedirect = "thanks.html",
+  formSubmitLabel = "Submit",
+  formButtonBorderRadius = "0px",
+  formButtonTextColor = "#ffffff",
+  formButtonBackgroundColor = "var(--color-brand, red)",
+  formButtonHoverBackgroundColor = "var(--color-brand-secondary, blue)",
+  formButtonHoverTextColor = "#ffffff",
+  contactCardBackgroundColor = "",
+  mapCardBackgroundColor = "",
+  formCardBackgroundColor = "",
+  legalLinks = [],
+  backgroundImage,
+  backgroundGradient = "",
+  legalBlurb = "",
+  backgroundColor = "",
+  backgroundColorHex = "",
+  linkColor = "",
+  linkHoverColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  id: elementId,
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const displaySiteName = siteName || (siteInfoData as any).siteName || "";
+const copyYear = new Date().getFullYear();
+const bgImage = await backgroundImageCss(backgroundImage);
+const backgroundGradientValue =
+  typeof backgroundGradient === "string" ? backgroundGradient.trim() : "";
+const formActionValue = typeof formAction === "string" ? formAction.trim() : "";
+const formSubjectValue = typeof formSubject === "string" ? formSubject.trim() : "";
+const formRedirectValue = typeof formRedirect === "string" ? formRedirect.trim() : "";
+const formSubmitLabelValue =
+  typeof formSubmitLabel === "string" && formSubmitLabel.trim().length > 0
+    ? formSubmitLabel.trim()
+    : "Submit";
+const formButtonBorderRadiusValue =
+  typeof formButtonBorderRadius === "string" && formButtonBorderRadius.trim().length > 0
+    ? formButtonBorderRadius.trim()
+    : "0px";
+const formButtonTextColorValue =
+  typeof formButtonTextColor === "string" && formButtonTextColor.trim().length > 0
+    ? formButtonTextColor.trim()
+    : "#ffffff";
+const formButtonBackgroundColorValue =
+  typeof formButtonBackgroundColor === "string" && formButtonBackgroundColor.trim().length > 0
+    ? formButtonBackgroundColor.trim()
+    : "var(--color-brand, red)";
+const formButtonHoverBackgroundColorValue =
+  typeof formButtonHoverBackgroundColor === "string" &&
+  formButtonHoverBackgroundColor.trim().length > 0
+    ? formButtonHoverBackgroundColor.trim()
+    : "var(--color-brand-secondary, blue)";
+const formButtonHoverTextColorValue =
+  typeof formButtonHoverTextColor === "string" && formButtonHoverTextColor.trim().length > 0
+    ? formButtonHoverTextColor.trim()
+    : "#ffffff";
+const contactCardBackgroundColorValue =
+  typeof contactCardBackgroundColor === "string" ? contactCardBackgroundColor.trim() : "";
+const mapCardBackgroundColorValue =
+  typeof mapCardBackgroundColor === "string" ? mapCardBackgroundColor.trim() : "";
+const formCardBackgroundColorValue =
+  typeof formCardBackgroundColor === "string" ? formCardBackgroundColor.trim() : "";
+const embedSrc = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+
+const bgColor = backgroundColorHex || getColorValue(backgroundColor);
+const footerBackgroundStyle = [
+  bgImage.style,
+  backgroundGradientValue
+    ? `--lp-footer-bg-gradient: ${backgroundGradientValue}`
+    : bgColor
+      ? `--lp-footer-bg-gradient: none`
+      : "",
+  `--lp-footer-form-button-radius: ${formButtonBorderRadiusValue}`,
+  `--lp-footer-form-button-color: ${formButtonTextColorValue}`,
+  `--lp-footer-form-button-bg: ${formButtonBackgroundColorValue}`,
+  `--lp-footer-form-button-hover-bg: ${formButtonHoverBackgroundColorValue}`,
+  `--lp-footer-form-button-hover-color: ${formButtonHoverTextColorValue}`,
+  bgColor ? `--lp-footer-bg-color: ${bgColor}` : "",
+  getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",
+  getColorValue(linkHoverColor)
+    ? `--footer-link-hover-color: ${getColorValue(linkHoverColor)}`
+    : "",
+  getColorValue(addressLinkColor)
+    ? `--footer-address-link-color: ${getColorValue(addressLinkColor)}`
+    : "",
+  getColorValue(addressLinkHoverColor)
+    ? `--footer-address-link-hover-color: ${getColorValue(addressLinkHoverColor)}`
+    : "",
+  getColorValue(phoneLinkColor)
+    ? `--footer-phone-link-color: ${getColorValue(phoneLinkColor)}`
+    : "",
+  getColorValue(phoneLinkHoverColor)
+    ? `--footer-phone-link-hover-color: ${getColorValue(phoneLinkHoverColor)}`
+    : "",
+]
+  .filter(Boolean)
+  .join("; ");
+const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const normalizedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+---
+
+<footer
+  class:list={["landing-footer", "landing-footer-three-cards-no-links", "bg-layers", className]}
+  id={elementId || undefined}
+  style={footerBackgroundStyle || undefined}
+  {...htmlAttributes}
+>
+  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="xl">
+    <div class="lp-footer-shell">
+      <div class="lp-footer-content">
+        <section
+          class="lp-footer-card lp-footer-card--contact"
+          style={contactCardBackgroundColorValue
+            ? `--lp-footer-card-bg: ${contactCardBackgroundColorValue}`
+            : undefined}
+        >
+          <h3 class="lp-footer-card-title" set:html={contactTitle} />
+
+          {
+            logoSource && (
+              <span class="lp-footer-logo-wrap">
+                <Image source={logoSource} alt={logoAlt} class="lp-footer-logo" editable={false} />
+              </span>
+            )
+          }
+
+          {
+            normalizedOffices.map((office: any) => (
+              <div class="lp-footer-office">
+                {office?.name && <span class="lp-footer-office-name">{office.name}</span>}
+
+                {Array.isArray(office?.phones) && office.phones.length > 0 && (
+                  <>
+                    {office.phones.map((phone: any) =>
+                      phone?.display ? (
+                        <a href={phone?.href || "#"} class="pho">
+                          {phoneLabel && <span class="pho-label">{phoneLabel}</span>}
+                          {phone.display}
+                        </a>
+                      ) : null
+                    )}
+                    {ctaText && <span class="cta" set:html={ctaText} />}
+                  </>
+                )}
+              </div>
+            ))
+          }
+        </section>
+
+        <section
+          class="lp-footer-card lp-footer-card--map"
+          style={mapCardBackgroundColorValue
+            ? `--lp-footer-card-bg: ${mapCardBackgroundColorValue}`
+            : undefined}
+        >
+          <h3 class="lp-footer-card-title">{mapTitle}</h3>
+
+          {
+            embedSrc && (
+              <div class="lp-footer-map-slot" aria-label="Office location map">
+                <iframe
+                  src={embedSrc}
+                  title="Office location map"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  allowfullscreen
+                />
+              </div>
+            )
+          }
+
+          {
+            normalizedOffices.map(
+              (office: any) =>
+                Array.isArray(office?.addresses) &&
+                office.addresses.map((address: any) => {
+                  const formattedLines = formatAddressLines(address);
+
+                  return formattedLines.length > 0 ? (
+                    <a
+                      href={address?.mapUrl || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="phy"
+                    >
+                      {formattedLines.map((line: string, index: number) => (
+                        <>
+                          {line}
+                          {index < formattedLines.length - 1 && <br />}
+                        </>
+                      ))}
+                    </a>
+                  ) : null;
+                })
+            )
+          }
+        </section>
+
+        <section
+          class="lp-footer-card lp-footer-card--form"
+          style={formCardBackgroundColorValue
+            ? `--lp-footer-card-bg: ${formCardBackgroundColorValue}`
+            : undefined}
+        >
+          <h3 class="lp-footer-card-title">{formTitle}</h3>
+          <form action={formActionValue || "#"} method="post" class="lp-footer-form">
+            <input class="lp-footer-input" name="Name" placeholder="Name" required type="text" />
+            <input class="lp-footer-input" name="email" placeholder="Email" required type="email" />
+            <input class="lp-footer-input" name="phone" placeholder="Phone Number" type="text" />
+            <textarea
+              class="lp-footer-input lp-footer-textarea"
+              name="Message"
+              placeholder="Questions/Comments"></textarea>
+            <button class="lp-footer-submit" type="submit">{formSubmitLabelValue}</button>
+            {formSubjectValue && <input name="_subject" value={formSubjectValue} type="hidden" />}
+            {
+              formRedirectValue && (
+                <input name="_redirect" value={formRedirectValue} type="hidden" />
+              )
+            }
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <div class="lp-footer-copy">
+      <span class="footer-legal-line footer-legal-line--primary">
+        Copyright &copy;{copyYear}
+        {displaySiteName}
+      </span>
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-separator" aria-hidden="true">
+            |
+          </span>
+        )
+      }
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-line footer-legal-line--links">
+            {legalLinks.map((item: any, index: number) => (
+              <>
+                <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+                {index < legalLinks.length - 1 && <span class="mx-2">|</span>}
+              </>
+            ))}
+          </span>
+        )
+      }
+      <span class="footer-legal-separator" aria-hidden="true">|</span>
+      <span class="footer-legal-line footer-legal-line--credit">
+        Site designed and maintained by <a href="https://www.tntdental.com" target="_blank"
+          >TNT Dental</a
+        >
+      </span>
+      {blurb && <p class="lp-footer-blurb">{blurb}</p>}
+    </div>
+  </CustomSection>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-footer.landing-footer-three-cards-no-links {
+      position: relative;
+      overflow: hidden;
+
+      /* Gradient + background image are composed by the shared `.bg-layers`
+         rule (src/styles/base/_background-image.pcss). */
+      --bg-gradient:
+        var(
+          --lp-footer-bg-gradient,
+          linear-gradient(180deg, color-mix(in srgb, #2c363c 88%, black) 0%, #2c363c 100%)
+        );
+
+      background-color: var(--lp-footer-bg-color, #2c363c);
+      color: #fff;
+      padding: 20px;
+      padding-top: 1.4rem;
+
+
+      .lp-footer-shell {
+        margin: 0 auto;
+        max-width: 1360px;
+      }
+
+      .lp-footer-logo-wrap {
+        display: block;
+        margin: 0 auto 1.25rem;
+        max-width: 220px;
+      }
+
+      .lp-footer-logo {
+        margin: 0 !important;
+      }
+
+      .lp-footer-content {
+        align-items: stretch;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        justify-content: center;
+      }
+
+      .lp-footer-card {
+        background: var(--lp-footer-card-bg, #fff);
+        border-radius: 15px;
+        box-shadow: 1px 3px 7px 0 rgba(0, 0, 0, 0.35);
+        color: #1f2633;
+        flex: 0 1 340px;
+        padding: 1.25rem;
+        text-align: center;
+      }
+
+      .lp-footer-card-title {
+        color: #101926;
+        font-family: var(--font-body, sans-serif);
+        font-size: 1.9rem;
+        font-weight: 300;
+        line-height: 1.1;
+        margin: 1rem 0 1.25rem;
+        text-transform: none;
+      }
+
+      .lp-footer-card--contact {
+        order: 1;
+      }
+
+      .lp-footer-card--map {
+        order: 2;
+      }
+
+      .lp-footer-card--form {
+        order: 3;
+      }
+
+      .lp-footer-office + .lp-footer-office {
+        margin-top: 1rem;
+      }
+
+      .lp-footer-office-name {
+        display: block;
+        font-size: 1.15rem;
+        font-weight: 700;
+        margin-bottom: 0.6rem;
+      }
+
+      .lp-footer-office a,
+      .lp-footer-card--map a,
+      .lp-footer-copy a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .lp-footer-office a {
+        display: block;
+        margin-top: 0.55rem;
+      }
+
+      .pho {
+        color: var(--footer-phone-link-color, var(--color-brand)) !important;
+        font-family: var(--font-body, sans-serif);
+        font-size: clamp(1.6rem, 2.6vw, 2.5rem);
+        font-weight: 700;
+        letter-spacing: 0.28px;
+        line-height: 1.1;
+      }
+
+      .pho:hover {
+        color: var(--footer-phone-link-hover-color, var(--color-brand-secondary)) !important;
+      }
+
+      .pho-label {
+        color: var(--color-text, #000);
+        display: block;
+        font-size: 1.125rem;
+        letter-spacing: 0.0625rem;
+        text-transform: uppercase;
+      }
+
+      .cta {
+        color: var(--color-text, #000);
+        display: block;
+        font-size: 1.125rem;
+        letter-spacing: 0.0625rem;
+        line-height: 1;
+        margin-top: 1.125rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .cta strong {
+        display: block;
+        font-size: 1.875rem;
+        text-transform: none;
+      }
+
+      .phy {
+        color: var(--footer-address-link-color, var(--color-brand)) !important;
+        display: block;
+        font-size: 1.25rem;
+        line-height: 1.1;
+        margin-top: 1rem;
+      }
+
+      .phy:hover {
+        color: var(--footer-address-link-hover-color, var(--color-brand-secondary)) !important;
+      }
+
+      .lp-footer-map-slot {
+        border-radius: 10px;
+        display: block;
+        margin-top: 0.5rem;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .lp-footer-map-slot iframe {
+        border: 0;
+        display: block;
+        height: 220px;
+        width: 100%;
+      }
+
+      .lp-footer-form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        margin: 1.15rem 0 0.35rem;
+      }
+
+      .lp-footer-input {
+        background: #ededed;
+        border: 0;
+        border-radius: 0;
+        color: #000;
+        font-size: 1.125rem;
+        line-height: 1.4;
+        margin: 3px auto;
+        outline: 0;
+        padding: 0.4rem 0.65rem;
+        width: 90%;
+      }
+
+      .lp-footer-input::placeholder {
+        color: #000;
+      }
+      .lp-footer-input:focus {
+        background-color: #f7f4f4;
+        box-shadow: inset 0 3px 0 var(--color-brand);
+      }
+
+      .lp-footer-textarea {
+        min-height: 90px;
+        padding-top: 8px;
+        resize: vertical;
+      }
+
+      .lp-footer-submit {
+        align-self: stretch;
+        background: var(--lp-footer-form-button-bg, var(--color-brand, red));
+        border: 0;
+        border-radius: var(--lp-footer-form-button-radius, 0);
+        box-shadow: none;
+        color: var(--lp-footer-form-button-color, #fff);
+        cursor: pointer;
+        font-size: 1.125rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        min-width: auto;
+        padding: 0.95rem 0.65rem;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      .lp-footer-submit:hover,
+      .lp-footer-submit:focus {
+        background: var(--lp-footer-form-button-hover-bg, var(--color-brand-secondary, blue));
+        color: var(--lp-footer-form-button-hover-color, #fff);
+      }
+
+      .lp-footer-copy {
+        color: #fff;
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        margin-top: 2rem;
+        padding: 0.65rem 0 3.75rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .lp-footer-copy a {
+        color: var(--footer-link-color, var(--color-brand));
+      }
+
+      .lp-footer-copy a:hover {
+        color: var(--footer-link-hover-color, var(--color-link-hover));
+      }
+
+      .footer-legal-line {
+        display: inline;
+      }
+
+      .footer-legal-separator {
+        display: inline;
+        margin: 0 0.5rem;
+      }
+
+      .lp-footer-blurb {
+        font-size: var(--font-size-xs);
+        letter-spacing: 0;
+        line-height: var(--line-height-relaxed);
+        margin: 20px auto 0;
+        max-width: 1150px;
+        text-transform: none;
+      }
+
+      @media (max-width: 1024px) {
+        .lp-footer-content {
+          display: block;
+        }
+
+        .lp-footer-card--contact,
+        .lp-footer-card--map,
+        .lp-footer-card--form {
+          margin: 20px auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .lp-footer-card-title {
+          font-size: 2rem;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .footer-legal-line {
+          display: block;
+        }
+
+        .footer-legal-line + .footer-legal-line {
+          margin-top: 0.25rem;
+        }
+
+        .footer-legal-separator {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

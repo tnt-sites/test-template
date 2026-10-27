@@ -1,0 +1,104 @@
+heading:
+  type: text
+  comment: Main heading for the callout section. Supports <br> for manual line breaks.
+
+headingBackgroundColor:
+  type: select
+  comment: Background color for the heading. Choose a theme color or use the hex override below for a custom color.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+headingBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the heading background color above. Leave blank to use the theme color.
+
+shadowColor:
+  type: select
+  comment: Color of the card shadow. Uses the same color tokens as headings. Choose a theme color or use a preset.
+  options:
+    values:
+      - id: var(--color-text)
+        name: Text (Default)
+      - id: var(--color-text-inverse)
+        name: Text Inverse (White)
+      - id: var(--color-brand)
+        name: Brand (Primary)
+      - id: var(--color-brand-secondary)
+        name: Brand (Secondary)
+      - id: var(--color-brand-muted)
+        name: Brand (Tertiary)
+      - id: var(--color-accent)
+        name: Accent
+      - id: var(--color-bg-base)
+        name: Base
+      - id: var(--color-bg-surface)
+        name: Surface
+      - id: var(--color-bg-accent)
+        name: Accent BG
+      - id: var(--color-bg-highlight)
+        name: Highlight BG
+      - id: var(--color-bg-dark)
+        name: Dark BG
+      - id: var(--color-bg-inverse)
+        name: Black
+
+backgroundColor:
+  type: select
+  comment: Background color of the section. Choose a theme color or use the hex override below for a custom color.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the section background color above. Leave blank to use the theme color.
+
+items:
+  type: array
+  label: Callout Items
+  comment: List of callout items to display. Each item can have an image and a heading.
+  _inputs:
+    image:
+      type: object
+      label: Image
+      _inputs:
+        source:
+          type: image
+          comment: Callout image.
+          options:
+            paths:
+              uploads: src/assets/images
+              static: ""
+        alt:
+          type: textarea
+          comment: Alt text for the image.
+    heading:
+      type: text
+      comment: Heading for the callout item.

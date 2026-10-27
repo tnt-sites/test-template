@@ -1,0 +1,223 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Text from "@components/building-blocks/core-elements/text/Text.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+
+const {
+  heading = "",
+  headingFontFamily = "",
+  contentStyle = "paragraph",
+  text = "",
+  listItems = [],
+  showDivider = true,
+  paddingVertical = "md",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  backgroundImage = "",
+  backgroundPositionX = "center",
+  backgroundPositionY = "center",
+  boxShadow = false,
+  topBorder = false,
+  borderColor = "var(--color-brand-secondary)",
+  headingColor = "",
+  dividerColor = "",
+  textColor = "",
+  checkIconName = "check-circle",
+  checkColor = "",
+  checkmarkShadowColor = "",
+  checkmarkShadowColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const resolvedCheckmarkShadow =
+  checkmarkShadowColorHex || checkmarkShadowColor || "var(--color-brand, #000)";
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  backgroundImage ? `background-image: url(${backgroundImage})` : "",
+  backgroundImage ? `background-repeat: no-repeat` : "",
+  backgroundImage ? `background-position: ${backgroundPositionX} ${backgroundPositionY}` : "",
+  headingColor ? `--pep-centered-heading-color: ${headingColor}` : "",
+  dividerColor ? `--pep-centered-divider-color: ${dividerColor}` : "",
+  textColor ? `--pep-centered-text-color: ${textColor}` : "",
+  checkColor ? `--pep-centered-check-color: ${checkColor}` : "",
+  `--pep-centered-check-shadow-color: ${resolvedCheckmarkShadow}`,
+  borderColor ? `--pep-centered-border-color: ${borderColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={[
+    "pep-banner-centered",
+    { "pep-banner-centered--has-shadow": boxShadow },
+    { "pep-banner-centered--has-top-border": topBorder },
+    { "pep-banner-centered--has-bg-image": backgroundImage },
+    className,
+  ]}
+  paddingVertical={paddingVertical}
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="pep-banner-centered__inner">
+    <Heading
+      text={heading}
+      level="h1"
+      class="pep-banner-centered__heading"
+      fontFamily={headingFontFamily}
+      data-prop="heading"
+      editable={true}
+    />
+    {showDivider && <hr class="pep-banner-centered__divider" />}
+    {
+      contentStyle === "checklist"
+        ? listItems.length > 0 && (
+            <ul class="pep-banner-centered__list" data-prop="listItems">
+              {listItems.map((item: string) => (
+                <li>
+                  <Icon name={checkIconName} size="4xl" class="pep-banner-centered__list-check" />
+                  <span class="pep-banner-centered__list-item-text" set:html={item} />
+                </li>
+              ))}
+            </ul>
+          )
+        : text && <Text text={text} class="pep-banner-centered__text" data-prop="text" />
+    }
+  </div>
+</CustomSection>
+
+<style>
+  .pep-banner-centered {
+    text-align: center;
+  }
+
+  .pep-banner-centered--has-shadow {
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.1),
+      0 10px 13px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+
+  .pep-banner-centered--has-top-border {
+    border-top: 4px solid
+      var(--pep-centered-border-color, var(--color-brand-secondary, var(--color-brand)));
+  }
+
+  .pep-banner-centered--has-bg-image {
+    background-size: auto;
+  }
+
+  .pep-banner-centered__inner {
+    margin: 0 auto;
+    max-width: 75rem;
+  }
+
+  .pep-banner-centered__heading {
+    color: var(--pep-centered-heading-color, var(--color-brand-secondary, var(--color-brand)));
+    font-size: clamp(2.75rem, 6vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.05;
+    margin: 0;
+    text-align: center;
+  }
+
+  .pep-banner-centered__divider {
+    border: 0;
+    border-bottom: 4px solid
+      var(
+        --pep-centered-divider-color,
+        var(--pep-centered-heading-color, var(--color-brand-secondary, var(--color-brand)))
+      );
+    display: block;
+    margin: 1.25rem auto 1.75rem;
+    width: 4.6875rem;
+  }
+
+  .pep-banner-centered__text :global(p) {
+    color: var(--pep-centered-text-color, var(--color-text));
+    font-size: clamp(1.125rem, 2vw, 1.625rem);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.45;
+    margin: 0 0 1.25rem;
+    text-align: center;
+  }
+
+  .pep-banner-centered__text :global(p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .pep-banner-centered__list {
+    display: table;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 62.5rem;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+  }
+
+  .pep-banner-centered__list li {
+    align-items: flex-start;
+    color: var(--pep-centered-text-color, var(--color-text));
+    display: flex;
+    font-size: clamp(1.125rem, 2vw, 1.75rem);
+    line-height: 1.35;
+    margin: 0 0 1rem;
+    overflow: visible;
+  }
+
+  .pep-banner-centered__list li::before {
+    content: none;
+    display: none;
+  }
+
+  .pep-banner-centered__list-check.icon {
+    color: var(--pep-centered-check-color, var(--color-brand-secondary, var(--color-brand)));
+    filter: drop-shadow(3px 3px 4px var(--pep-centered-check-shadow-color));
+    flex: 0 0 auto;
+    font-size: clamp(2.25rem, 4vw, 3rem);
+    margin-right: 0.8rem;
+    transform: translateY(-0.15em);
+  }
+
+  .pep-banner-centered__list-item-text {
+    flex: 1;
+  }
+
+  .pep-banner-centered__list li:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 740px) {
+    .pep-banner-centered__heading {
+      font-size: clamp(2.5rem, 10vw, 3.25rem);
+    }
+
+    .pep-banner-centered__text :global(p) {
+      font-size: 1.125rem;
+    }
+
+    .pep-banner-centered__list li {
+      font-size: 1.125rem;
+    }
+
+    .pep-banner-centered__list-check {
+      margin-right: 0.65rem;
+    }
+  }
+</style>

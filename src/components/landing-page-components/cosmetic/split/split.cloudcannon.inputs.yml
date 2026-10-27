@@ -1,0 +1,84 @@
+backgroundColor:
+  type: select
+  comment: Background color of the split section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: textarea
+  comment: Section heading (h2). Supports <br> and <span> to apply accent color (e.g. "Nobody Cares <br><span>More</span>").
+
+paragraphs:
+  type: array
+  comment: Body text paragraphs. Each item is one paragraph and supports basic inline HTML.
+  options:
+    structures:
+      values:
+        - label: Paragraph
+          icon: notes
+          value: ""
+          _inputs:
+            value:
+              type: textarea
+
+image:
+  type: object
+  comment: Photo displayed in the split column.
+  options:
+    structures:
+      values:
+        - label: Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+
+figcaption:
+  type: text
+  comment: Optional caption below the image (e.g. "Our Amazing Dental Team").
+
+reverse:
+  type: checkbox
+  comment: When checked, the image appears on the left and text on the right.
+
+accentColor:
+  type: color
+  comment: Override accent color for heading spans. Leave blank to use the site default.
+
+headingColor:
+  type: color
+  comment: Override heading text color. Leave blank to use the site default.
+
+fontHeadings:
+  type: text
+  comment: Override heading font family. Leave blank to use the site default.
+
+fontBody:
+  type: text
+  comment: Override body font family. Leave blank to use the site default.

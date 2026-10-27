@@ -63,6 +63,7 @@ const ensureTrailingSlash = (path: string) => {
 const routeTitleMap = new Map<string, string>();
 
 const pages = await getCollection("pages");
+const landingPages = await getCollection("landing-pages");
 const blogPosts = await getCollection("blog");
 
 pages.forEach((page: CollectionEntry<"pages">) => {
@@ -70,6 +71,16 @@ pages.forEach((page: CollectionEntry<"pages">) => {
   const fallbackTitle = rawSlug.length === 0 ? "Home" : toTitleCase(rawSlug.split("/").pop() || "");
   routeTitleMap.set(
     ensureTrailingSlash(rawSlug.length === 0 ? "/" : `/${rawSlug}`),
+    normalizeTitle(page.data?.title, fallbackTitle)
+  );
+});
+
+landingPages.forEach((page: CollectionEntry<"landing-pages">) => {
+  const rawSlug = page.id.replace(/index$/, "");
+  const fallbackTitle =
+    rawSlug.length === 0 ? "Landing" : toTitleCase(rawSlug.split("/").pop() || "");
+  routeTitleMap.set(
+    ensureTrailingSlash(rawSlug.length === 0 ? "/landing" : `/landing/${rawSlug}`),
     normalizeTitle(page.data?.title, fallbackTitle)
   );
 });

@@ -1,0 +1,40 @@
+splitSection:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - Split Section
+    icon: add
+  definitions:
+    component_name: SplitSection
+    named_args:
+      - editor_key: desktopImage
+        type: object
+        optional: true
+        remove_empty: true
+      - editor_key: mobileImage
+        type: object
+        optional: true
+        remove_empty: true
+      - editor_key: figcaption
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: headingPrefix
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: headingMain
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: content
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+  _inputs_from_glob:
+    - /src/components/page-sections/ppc-blocks/split-section/split-section.cloudcannon.inputs.yml

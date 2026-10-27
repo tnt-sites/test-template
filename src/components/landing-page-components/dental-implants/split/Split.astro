@@ -1,0 +1,186 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  headingFontFamily = "",
+  paragraphs = [] as string[],
+  image = { source: "", alt: "" },
+  figcaption = "",
+  buttonSections = [],
+  reverse = false,
+  imageNoShadow = false,
+  headingColor = "",
+  accentColor = "",
+  fontHeadings = "",
+  fontBody = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  headingColor ? `--di-heading-color: ${headingColor}` : "",
+  accentColor ? `--di-accent-color: ${accentColor}` : "",
+  fontHeadings ? `--di-font-headings: ${fontHeadings}` : "",
+  fontBody ? `--di-font-body: ${fontBody}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["di-split", reverse ? "even" : "odd", imageNoShadow ? "no-shad" : "", className]}
+  paddingVertical="4xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="split-inner">
+    <article>
+      {
+        heading && (
+          <Heading
+            text={heading}
+            level="h2"
+            fontFamily={headingFontFamily}
+            data-prop="heading"
+            editable={true}
+          />
+        )
+      }
+      {paragraphs.map((para: string) => <p set:html={para} />)}
+      {buttonSections.length > 0 && <ButtonGroup buttonSections={buttonSections} />}
+    </article>
+    <figure>
+      {
+        image?.source && (
+          <Image
+            source={image.source}
+            alt={image.alt || ""}
+            rounded={false}
+            editable={true}
+            aspectRatio="none"
+            sizes="auto"
+            widths={[]}
+            data-prop-src="image.source"
+            data-prop-alt="image.alt"
+          />
+        )
+      }
+      {figcaption && <figcaption>{figcaption}</figcaption>}
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  /* ── Layout ───────────────────────────────────────────────────────────────── */
+  .di-split .split-inner {
+    align-items: center;
+    display: flex;
+    gap: 2.5rem;
+    margin: 0 auto;
+    max-width: 1190px;
+  }
+
+  /* image on right (default / .odd) */
+  .di-split.odd figure {
+    order: 2;
+  }
+
+  /* image on left (.even / reverse) */
+  .di-split.even figure {
+    order: -1;
+  }
+
+  /* ── Article ──────────────────────────────────────────────────────────────── */
+  .di-split article {
+    flex: 1 1 50%;
+  }
+
+  .di-split h2 {
+    color: var(--di-heading-color, var(--color-heading));
+    font-family: var(--di-font-headings, var(--font-headings));
+    font-size: 2.125rem;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    margin: 0 0 1rem;
+  }
+
+  .di-split p {
+    font-family: var(--di-font-body, var(--font-body));
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    margin: 0 0 0.875rem;
+  }
+
+  .di-split :global(.button-group) {
+    margin-top: 1.25rem;
+  }
+
+  /* ── Figure ───────────────────────────────────────────────────────────────── */
+  .di-split figure {
+    flex: 0 1 48%;
+    margin: 0;
+    position: relative;
+  }
+
+  .di-split figure :global(img) {
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  /* no-shad removes figure box-shadow */
+  .di-split.no-shad figure :global(img) {
+    box-shadow: none;
+  }
+
+  .di-split figcaption {
+    background-color: rgba(0, 0, 0, 0.85);
+    bottom: 0;
+    color: #fff;
+    font-size: 0.875rem;
+    left: 50%;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.75rem;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    transform: translateX(-50%);
+    white-space: nowrap;
+  }
+
+  /* ── Responsive ───────────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .di-split .split-inner {
+      flex-direction: column;
+    }
+
+    .di-split.even figure,
+    .di-split.odd figure {
+      order: 0;
+    }
+
+    .di-split article,
+    .di-split figure {
+      flex: none;
+      width: 100%;
+    }
+  }
+</style>

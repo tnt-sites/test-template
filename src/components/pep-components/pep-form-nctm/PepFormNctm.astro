@@ -1,0 +1,385 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import ChoiceGroup from "@forms/choice-group/ChoiceGroup.astro";
+import Input from "@forms/input/Input.astro";
+import Submit from "@forms/submit/Submit.astro";
+import Textarea from "@forms/textarea/Textarea.astro";
+
+const {
+  callText = "",
+  phone = "",
+  phoneLabel = "",
+  image = { source: "", alt: "" },
+  figcaption = "",
+  bottomText = "",
+  formAction = "./",
+  nameLabel = "Name",
+  phoneFieldLabel = "Phone Number",
+  emailLabel = "Email Address",
+  timesLabel = "Preferred Appointment Time(s)",
+  timeOptions = [
+    { label: "Morning", value: "morning" },
+    { label: "Afternoon", value: "afternoon" },
+    { label: "Evening", value: "evening" },
+  ],
+  commentsLabel = "Questions/Comments",
+  submitButton = { text: "Submit", variant: "primary", size: "md" },
+  backgroundColor = "none",
+  backgroundColorHex = "",
+  contentBackgroundColor = "",
+  contentBackgroundColorHex = "",
+  callBackgroundColor = "",
+  callBackgroundColorHex = "",
+  callTextColor = "",
+  formBackgroundColor = "",
+  formBackgroundColorHex = "",
+  linkColor = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+
+const resolvedContentBg =
+  contentBackgroundColorHex ||
+  getColorValue(contentBackgroundColor) ||
+  "var(--color-bg-surface, #f0f0f0)";
+const resolvedCallBg =
+  callBackgroundColorHex || getColorValue(callBackgroundColor) || "var(--color-bg-base, #fff)";
+const resolvedFormBg =
+  formBackgroundColorHex ||
+  getColorValue(formBackgroundColor) ||
+  "var(--color-bg-surface, #f0f0f0)";
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  `--pfnc-content-bg: ${resolvedContentBg}`,
+  `--pfnc-call-bg: ${resolvedCallBg}`,
+  `--pfnc-form-bg: ${resolvedFormBg}`,
+  callTextColor ? `--pfnc-call-text-color: ${callTextColor}` : "",
+  linkColor ? `--pfnc-link-color: ${linkColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["pep-form-nctm", className]}
+  paddingVertical="xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="pep-form-nctm__content">
+    <div class="pep-form-nctm__call">
+      {
+        image?.source && (
+          <figure class="pep-form-nctm__figure">
+            <Image
+              source={image.source}
+              alt={image.alt || ""}
+              rounded={false}
+              editable={true}
+              aspectRatio="none"
+              sizes="(max-width: 890px) 100vw, 485px"
+              data-prop-src="image.source"
+              data-prop-alt="image.alt"
+            />
+            {figcaption && <figcaption data-prop="figcaption">{figcaption}</figcaption>}
+          </figure>
+        )
+      }
+      <article class="pep-form-nctm__article">
+        <p data-prop="callText" set:html={callText} />
+      </article>
+    </div>
+
+    <div class="pep-form-nctm__form-wrap">
+      <form
+        class="pep-form-nctm__form"
+        action={formAction}
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="pep-form-nctm__full">
+          <Input label={nameLabel} name="name" type="text" required={true} data-prop="nameLabel" />
+        </div>
+        <div class="pep-form-nctm__full">
+          <Input
+            label={phoneFieldLabel}
+            name="phone"
+            type="tel"
+            required={true}
+            data-prop="phoneFieldLabel"
+          />
+        </div>
+        <div class="pep-form-nctm__full">
+          <Input
+            label={emailLabel}
+            name="email"
+            type="email"
+            required={true}
+            data-prop="emailLabel"
+          />
+        </div>
+        <div class="pep-form-nctm__two-col">
+          <ChoiceGroup
+            name="preferred_time"
+            title={timesLabel}
+            options={timeOptions}
+            multiple={true}
+            orientation="vertical"
+            data-prop="timesLabel"
+          />
+          <Textarea label={commentsLabel} name="comments" data-prop="commentsLabel" />
+        </div>
+        <div class="pep-form-nctm__submit-row">
+          <Submit
+            class="pep-form-nctm__submit"
+            data-prop="submitButton.text"
+            text={submitButton?.text ?? "Submit"}
+            variant={submitButton?.variant ?? "primary"}
+            size={submitButton?.size ?? "md"}
+            iconName={submitButton?.iconName}
+            iconPosition={submitButton?.iconPosition}
+            hideText={submitButton?.hideText}
+            disabled={submitButton?.disabled}
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {
+    bottomText && (
+      <div class="pep-form-nctm__bottom">
+        <p data-prop="bottomText" set:html={bottomText} />
+      </div>
+    )
+  }
+</CustomSection>
+
+<style>
+  .pep-form-nctm__content {
+    background-color: var(--pfnc-content-bg);
+    margin: 0 auto;
+    max-width: 1260px;
+  }
+
+  /* ── Call row ─────────────────────────────────────────────────────────────── */
+  .pep-form-nctm__call {
+    align-items: center;
+    background-color: var(--pfnc-call-bg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2.5rem 0.625rem;
+  }
+
+  .pep-form-nctm__figure {
+    flex: 0 0 485px;
+    position: relative;
+  }
+
+  .pep-form-nctm__figure figcaption {
+    background-color: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0.1em;
+    padding: 0.3125rem 0.9375rem;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .pep-form-nctm__article {
+    flex: 0 1 730px;
+  }
+
+  .pep-form-nctm__article p {
+    color: var(--pfnc-call-text-color, var(--color-text, #000));
+    font-family: var(--font-body);
+    font-size: clamp(1.75rem, 3.5vw, 2.8125rem);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.35;
+    padding: 0.625rem;
+  }
+
+  .pep-form-nctm__article a {
+    color: var(--pfnc-link-color, var(--color-brand));
+  }
+
+  .pep-form-nctm__article a:hover {
+    color: var(--color-brand-secondary, var(--color-brand));
+  }
+
+  /* ── Form area ────────────────────────────────────────────────────────────── */
+  .pep-form-nctm__form-wrap {
+    background-color: var(--pfnc-form-bg);
+    padding: 2rem 2.5rem 3rem;
+  }
+
+  .pep-form-nctm__form {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  /* Full-width field rows */
+  .pep-form-nctm__full :global(.input) {
+    margin-bottom: 1.25rem;
+  }
+
+  .pep-form-nctm__full :global(.label),
+  .pep-form-nctm__two-col :global(.label),
+  .pep-form-nctm__two-col :global(.legend) {
+    color: var(--color-text, #000);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.375rem;
+  }
+
+  .pep-form-nctm__full :global(.field),
+  .pep-form-nctm__two-col :global(.field) {
+    background-color: var(--color-bg-base, #fff);
+    border: 1px solid var(--color-border, #ccc);
+    color: var(--color-text, #000);
+    font-size: 1rem;
+    height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+  }
+
+  .pep-form-nctm__two-col :global(.textarea .field) {
+    height: 9rem;
+    padding: 0.625rem 0.75rem;
+    resize: vertical;
+  }
+
+  /* Two-column row: checkboxes left, textarea right */
+  .pep-form-nctm__two-col {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0.5rem;
+  }
+
+  .pep-form-nctm__two-col :global(.choice-group) {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .pep-form-nctm__two-col :global(.choice-group-options) {
+    gap: 0.625rem;
+    margin-top: 0.5rem;
+  }
+
+  .pep-form-nctm__two-col :global(.choice-group-option) {
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  .pep-form-nctm__two-col :global(.choice-group-field) {
+    flex-shrink: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .pep-form-nctm__two-col :global(.textarea) {
+    margin-bottom: 0;
+  }
+
+  /* Submit row */
+  .pep-form-nctm__submit-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.25rem;
+  }
+
+  .pep-form-nctm__submit :global(.button) {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    min-width: 200px;
+    text-transform: uppercase;
+  }
+
+  /* ── Bottom text ──────────────────────────────────────────────────────────── */
+  .pep-form-nctm__bottom {
+    padding: 2.5rem 1rem 3rem;
+    text-align: center;
+  }
+
+  .pep-form-nctm__bottom p {
+    color: var(--color-text-inverse, #fff);
+    font-family: var(--font-body);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  @media (max-width: 1024px) {
+    .pep-form-nctm__call {
+      display: block;
+      padding: 1.875rem 0.625rem 0.625rem;
+      text-align: center;
+    }
+
+    .pep-form-nctm__figure {
+      flex: 0 1 100%;
+      margin: 0 auto;
+      max-width: 485px;
+    }
+
+    .pep-form-nctm__article p {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pep-form-nctm__call {
+      display: block;
+      text-align: center;
+    }
+
+    .pep-form-nctm__article p {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    .pep-form-nctm__form-wrap {
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    .pep-form-nctm__two-col {
+      grid-template-columns: 1fr;
+    }
+
+    .pep-form-nctm__figure figcaption {
+      font-size: 1rem;
+      padding: 0.25rem 0.75rem;
+    }
+  }
+</style>

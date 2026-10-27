@@ -1,0 +1,186 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  heading = "",
+  consultationTitle = "",
+  consultationItems = [],
+  image = { source: "", alt: "" },
+  backgroundColor = "#f0f0f0",
+  backgroundColorHex = "",
+  headingColor = "#2691CA",
+  borderColor = "#0A4172",
+  titleBackground = "#0A4172",
+  titleBackgroundHex = "",
+  titleColor = "#ffffff",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  `--ai-banner-bg: ${backgroundColorHex || backgroundColor}`,
+  `--ai-banner-heading: ${headingColor}`,
+  `--ai-banner-border: ${borderColor}`,
+  `--ai-banner-title-bg: ${titleBackgroundHex || titleBackground}`,
+  `--ai-banner-title-color: ${titleColor}`,
+]
+  .filter(Boolean)
+  .join("; ");
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["ai-implant-banner", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor="transparent"
+  style={inlineStyle}
+  {...htmlAttributes}
+>
+  <section class="banner-inner block lg:flex justify-between items-center">
+    <article>
+      {heading && <h1 set:html={heading} />}
+
+      {
+        (consultationTitle || consultationItems.length > 0) && (
+          <div class="consultation-block">
+            {consultationTitle && <div class="consultation-title" set:html={consultationTitle} />}
+
+            {consultationItems.length > 0 && (
+              <ul>
+                {consultationItems.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )
+      }
+    </article>
+
+    <figure class="order-first">
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        editable={true}
+        aspectRatio="none"
+        sizes="auto"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+    </figure>
+  </section>
+</CustomSection>
+
+<style>
+  .ai-implant-banner {
+    background: var(--ai-banner-bg);
+    overflow: hidden;
+  }
+
+  .ai-implant-banner .banner-inner {
+    margin: 0 auto;
+    max-width: 1920px;
+  }
+
+  .ai-implant-banner article {
+    flex: 0 0 auto;
+    margin: 20px auto;
+    padding: 1.25rem;
+    text-align: center;
+  }
+
+  .ai-implant-banner h1 {
+    color: var(--ai-banner-heading);
+    font-family: "Caveat Brush", cursive;
+    font-size: 4.875rem;
+    font-weight: 400;
+    line-height: 1.05;
+    margin: 0;
+  }
+
+  .ai-implant-banner .consultation-block {
+    border: 4px solid var(--ai-banner-border);
+    margin: 0.625rem auto 0;
+    max-width: 39.375rem;
+    padding: 0.625rem 1.25rem;
+    width: 100%;
+  }
+
+  .ai-implant-banner .consultation-title {
+    background: var(--ai-banner-title-bg);
+    color: var(--ai-banner-title-color);
+    display: table;
+    font-size: 1.875rem;
+    margin: 0 auto;
+    max-width: 30rem;
+    padding: 0.3125rem;
+    width: 100%;
+  }
+
+  .ai-implant-banner ul {
+    display: table;
+    margin: 0.625rem auto 0;
+    padding-left: 1.5rem;
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  .ai-implant-banner li {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+
+  .ai-implant-banner figure {
+    flex: 0 1 666px;
+    margin: 0;
+    align-self: stretch;
+  }
+
+  .ai-implant-banner figure .image{
+    height: 100%;
+  }
+
+  .ai-implant-banner figure :global(img) {
+    display: block;
+    height: 100%;
+    max-width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .ai-implant-banner article {
+      width: 100%;
+    }
+
+    .ai-implant-banner figure {
+      width: 100%;
+    }
+
+    .ai-implant-banner h1 {
+      font-size: 3.75rem;
+    }
+
+    .ai-implant-banner li {
+      font-size: 1.875rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .ai-implant-banner h1 {
+      font-size: 2.75rem;
+    }
+
+    .ai-implant-banner .consultation-title {
+      font-size: 1.5rem;
+    }
+
+    .ai-implant-banner li {
+      font-size: 1.5rem;
+    }
+  }
+</style>

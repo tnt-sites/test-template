@@ -1,0 +1,315 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  badgeHeading = "",
+  badgeSubheading = "",
+  reviewText = "",
+  reviewerName = "",
+  reviewLogo = { source: "", alt: "" },
+  stars = 5,
+  waveTopImage = { source: "", alt: "" },
+  waveMiddleImage = { source: "", alt: "" },
+  waveBottomImage = { source: "", alt: "" },
+  badgeBackgroundColor = "",
+  headingColor = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const safeStars = Math.max(0, Math.min(5, Number(stars) || 0));
+const badgeTopLabel =
+  typeof badgeSubheading === "string"
+    ? badgeSubheading
+        .replace(/google/gi, "")
+        .replace(/review/gi, "")
+        .trim() || "Actual"
+    : "Actual";
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  badgeBackgroundColor ? `--pw-review-badge-bg: ${badgeBackgroundColor}` : "",
+  headingColor ? `--pw-review-heading-color: ${headingColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["pw-review", className]}
+  paddingHorizontal="md"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="wave-wrap" aria-hidden="true">
+    {
+      waveTopImage?.source && (
+        <span class="wave wave-top">
+          <Image
+            source={waveTopImage.source}
+            alt={waveTopImage.alt || ""}
+            rounded={false}
+            editable={true}
+            aspectRatio="none"
+            sizes="auto"
+            widths={[]}
+            data-prop-src="waveTopImage.source"
+            data-prop-alt="waveTopImage.alt"
+          />
+        </span>
+      )
+    }
+    {
+      waveMiddleImage?.source && (
+        <span class="wave wave-middle">
+          <Image
+            source={waveMiddleImage.source}
+            alt={waveMiddleImage.alt || ""}
+            rounded={false}
+            editable={true}
+            aspectRatio="none"
+            sizes="auto"
+            widths={[]}
+            data-prop-src="waveMiddleImage.source"
+            data-prop-alt="waveMiddleImage.alt"
+          />
+        </span>
+      )
+    }
+    {
+      waveBottomImage?.source && (
+        <span class="wave wave-bottom">
+          <Image
+            source={waveBottomImage.source}
+            alt={waveBottomImage.alt || ""}
+            rounded={false}
+            editable={true}
+            aspectRatio="none"
+            sizes="auto"
+            widths={[]}
+            data-prop-src="waveBottomImage.source"
+            data-prop-alt="waveBottomImage.alt"
+          />
+        </span>
+      )
+    }
+  </div>
+
+  <div class="inner">
+    <aside>
+      {badgeHeading && <p class="badge-heading" set:html={badgeHeading} />}
+      {
+        safeStars > 0 && (
+          <p class="stars" aria-label={`Rated ${safeStars} out of 5 stars`}>
+            {"★".repeat(safeStars)}
+          </p>
+        )
+      }
+      {
+        (badgeSubheading || reviewLogo?.source) && (
+          <div class="badge-subheading">
+            <span class="badge-subheading-line">{badgeTopLabel}</span>
+            {reviewLogo?.source && (
+              <span class="logo-wrap">
+                <Image
+                  source={reviewLogo.source}
+                  alt={reviewLogo.alt || "Google"}
+                  rounded={false}
+                  editable={true}
+                  aspectRatio="none"
+                  sizes="auto"
+                  widths={[]}
+                  data-prop-src="reviewLogo.source"
+                  data-prop-alt="reviewLogo.alt"
+                />
+              </span>
+            )}
+            <span class="badge-subheading-line">Review</span>
+          </div>
+        )
+      }
+    </aside>
+
+    <article>
+      {reviewText && <p class="review-text">{reviewText}</p>}
+      {reviewerName && <p class="reviewer">- {reviewerName}</p>}
+    </article>
+  </div>
+</CustomSection>
+
+<style>
+  .pw-review {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .pw-review .content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .pw-review .wave-wrap {
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+  }
+
+  .pw-review .wave {
+    display: block;
+    left: -8%;
+    margin: 0;
+    position: absolute;
+    right: -8%;
+  }
+
+  .pw-review .wave :global(.image),
+  .pw-review .wave :global(img) {
+    display: block;
+    width: 100%;
+  }
+
+  .pw-review .wave-top {
+    top: -118px;
+  }
+
+  .pw-review .wave-middle {
+    top: -68px;
+  }
+
+  .pw-review .wave-bottom {
+    bottom: -130px;
+  }
+
+  .pw-review .inner {
+    align-items: stretch;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.16);
+    display: grid;
+    gap: 0;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1130px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .pw-review aside,
+  .pw-review article {
+    border-radius: 0;
+    box-shadow: none;
+    padding: 2.5rem 1.6rem;
+  }
+
+  .pw-review aside {
+    background: #fff;
+    color: var(--pw-review-heading-color, #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .pw-review article {
+    background: var(--pw-review-badge-bg, #000);
+    color: #fff;
+    text-align: right;
+  }
+
+  .pw-review .badge-heading {
+    color: var(--pw-review-heading-color, #000);
+    font-size: clamp(1.35rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .pw-review .stars {
+    color: #dbe45a;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    line-height: 1;
+    margin: 0.75rem 0 0.55rem;
+  }
+
+  .pw-review .badge-subheading {
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 700;
+    gap: 0.3rem;
+    justify-content: center;
+    letter-spacing: 0.15em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  .pw-review .badge-subheading-line {
+    display: block;
+    line-height: 1;
+  }
+
+  .pw-review .logo-wrap {
+    display: inline-block;
+  }
+
+  .pw-review .logo-wrap :global(img) {
+    margin: 0;
+    width: 100%;
+  }
+
+  .pw-review .review-text {
+    color: #fff;
+    font-size: clamp(1.15rem, 2.1vw, 1.85rem);
+    line-height: 1.4;
+    margin: 0;
+    text-align: left;
+  }
+
+  .pw-review .reviewer {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    margin: 1rem 0 0;
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 900px) {
+    .pw-review .inner {
+      grid-template-columns: minmax(250px, 1fr) minmax(0, 2.65fr);
+    }
+
+    .pw-review aside {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    .pw-review article {
+      border-radius: 0 0.5rem 0.5rem 0;
+      padding: 3rem 3.125rem;
+    }
+  }
+
+  @media (max-width: 899px) {
+    .pw-review article {
+      text-align: center;
+    }
+
+    .pw-review .reviewer {
+      text-align: center;
+    }
+  }
+</style>

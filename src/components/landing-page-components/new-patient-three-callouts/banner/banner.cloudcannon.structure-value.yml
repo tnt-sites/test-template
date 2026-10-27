@@ -1,0 +1,24 @@
+label: NPTC Banner
+icon: dashboard
+description: Hero banner — heading with a three-sided bracket decoration and optional badge on the left, full-height photo on the right.
+value:
+  _component: landing-page-components/new-patient-three-callouts/banner
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  subheading: "Reston's"
+  heading: "Family-Friendly<br>Dentist"
+  badgeImage:
+    source: ""
+    alt: ""
+  image:
+    source: https://placehold.co/800x700
+    alt: Doctor photo
+  figcaption: ""
+  buttonSections: []
+  accentColor: "var(--color-brand)"
+  headingColor: "var(--color-text)"
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-three-callouts/banner/banner.cloudcannon.inputs.yml

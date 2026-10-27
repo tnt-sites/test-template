@@ -1,0 +1,26 @@
+label: Banner
+icon: dashboard
+description: Full-width banner hero with a floating card at the bottom, matching the lp-np-combo banner style.
+value:
+  _component: landing-page-components/new-patient-emergency-combo/banner
+  id: ""
+  image:
+    source: https://placehold.co/1440x700
+    alt: Smiling family at the dentist
+  heading: "At Our Practice, you can count on award-winning care in a warm, comfortable environment at each visit."
+  subtext: ""
+  buttonSections: []
+  badgeImage:
+    source: ""
+    alt: ""
+  specialBadge:
+    source: ""
+    alt: ""
+  figcaption: ""
+  backgroundColor: none
+  backgroundColorHex: ""
+  borderColor: "var(--color-brand)"
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-emergency-combo/banner/banner.cloudcannon.inputs.yml

@@ -1,0 +1,18 @@
+label: Pediatric Superhero Reviews
+icon: reviews
+description: Testimonial section with a Google review badge, star rating, and quote.
+value:
+  _component: landing-page-components/pediatric-superhero/reviews
+  id: ""
+  backgroundColor: accent
+  backgroundColorHex: ""
+  stars: 5
+  reviewLogo:
+    source: https://placehold.co/220x80
+    alt: Google logo
+  reviewText: The staff here are truly amazing. My daughter is very fearful and they are so patient and kind with her. They adapt to better suit her needs, talk everything through, and heap on the positive reinforcement...We have been coming here for 6 years now and I don't have a bad word to say.
+  reviewerName: Lyndsey B.
+  badgeBackgroundColor: ""
+  headingColor: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-superhero/reviews/reviews.cloudcannon.inputs.yml

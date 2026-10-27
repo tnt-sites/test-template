@@ -1,0 +1,582 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import Image from "@core-elements/image/Image.astro";
+import { backgroundImageCss } from "@core-elements/image/backgroundImageCss";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  siteName = "",
+  contactTitle = "Contact Us",
+  offices = [],
+  socials = [],
+  legalLinks = [],
+  pageButtons = [],
+  mapEmbedUrl = "",
+  backgroundImage,
+  backgroundGradient = "",
+  legalBlurb = "",
+  cardBackgroundColor = "",
+  officeHoursAlignment = "right",
+  backgroundColor = "",
+  backgroundColorHex = "",
+  linkColor = "",
+  linkHoverColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  id: elementId,
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const displaySiteName = siteName || (siteInfoData as any).siteName || "";
+const resolvedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+const copyYear = new Date().getFullYear();
+const embedSrc = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+const bgImage = await backgroundImageCss(backgroundImage);
+const backgroundGradientValue =
+  typeof backgroundGradient === "string" ? backgroundGradient.trim() : "";
+const bgColorMap: Record<string, string> = {
+  base: "var(--color-bg)",
+  surface: "var(--color-bg-surface)",
+  accent: "var(--color-bg-accent)",
+  highlight: "var(--color-bg-highlight)",
+  brand: "var(--color-bg-brand)",
+  "brand-secondary": "var(--color-bg-brand-secondary)",
+  dark: "var(--color-bg-dark)",
+  black: "var(--color-bg-black)",
+};
+const resolvedBgColor =
+  backgroundColorHex ||
+  (backgroundColor && backgroundColor !== "none" && bgColorMap[backgroundColor]) ||
+  "";
+const linkColorMap: Record<string, string> = {
+  white: "#fff",
+  brand: "var(--color-brand)",
+  "brand-secondary": "var(--color-brand-secondary)",
+  text: "var(--color-text)",
+  "text-strong": "var(--color-text-strong)",
+  "text-inverse": "var(--color-text-inverse)",
+};
+const resolvedLinkColor = (linkColor && linkColor !== "none" && linkColorMap[linkColor]) || "";
+const resolvedLinkHoverColor =
+  (linkHoverColor && linkHoverColor !== "none" && linkColorMap[linkHoverColor]) || "";
+const resolvedAddressLinkColor =
+  (addressLinkColor && addressLinkColor !== "none" && linkColorMap[addressLinkColor]) || "";
+const resolvedAddressLinkHoverColor =
+  (addressLinkHoverColor &&
+    addressLinkHoverColor !== "none" &&
+    linkColorMap[addressLinkHoverColor]) ||
+  "";
+const resolvedPhoneLinkColor =
+  (phoneLinkColor && phoneLinkColor !== "none" && linkColorMap[phoneLinkColor]) || "";
+const resolvedPhoneLinkHoverColor =
+  (phoneLinkHoverColor && phoneLinkHoverColor !== "none" && linkColorMap[phoneLinkHoverColor]) ||
+  "";
+const resolvedOfficeHoursAlignment = officeHoursAlignment === "left" ? "left" : "right";
+const footerBackgroundStyle = [
+  bgImage.style,
+  backgroundGradientValue ? `--landing-footer-bg-gradient: ${backgroundGradientValue}` : "",
+  resolvedBgColor ? `--landing-footer-bg-color: ${resolvedBgColor}` : "",
+  resolvedLinkColor ? `--footer-link-color: ${resolvedLinkColor}` : "",
+  resolvedLinkHoverColor ? `--footer-link-hover-color: ${resolvedLinkHoverColor}` : "",
+  resolvedAddressLinkColor ? `--footer-address-link-color: ${resolvedAddressLinkColor}` : "",
+  resolvedAddressLinkHoverColor
+    ? `--footer-address-link-hover-color: ${resolvedAddressLinkHoverColor}`
+    : "",
+  resolvedPhoneLinkColor ? `--footer-phone-link-color: ${resolvedPhoneLinkColor}` : "",
+  resolvedPhoneLinkHoverColor
+    ? `--footer-phone-link-hover-color: ${resolvedPhoneLinkHoverColor}`
+    : "",
+]
+  .filter(Boolean)
+  .join("; ");
+const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
+const cardStyle =
+  typeof cardBackgroundColor === "string" && cardBackgroundColor.trim().length > 0
+    ? `--fo-info-card-bg: ${cardBackgroundColor.trim()};`
+    : undefined;
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const getHoursSource = (source: any) => {
+  if (!source || typeof source !== "object") {
+    return [];
+  }
+
+  return (
+    source?.officeHours ?? source?.["office-hours"] ?? source?.office_hours ?? source?.hours ?? []
+  );
+};
+
+const formatOfficeHours = (source: any) => {
+  const rawHours = getHoursSource(source);
+  const rawEntries = Array.isArray(rawHours)
+    ? rawHours
+    : rawHours && typeof rawHours === "object"
+      ? Object.entries(rawHours).map(([day, value]: [string, any]) => {
+          if (typeof value === "string") {
+            return { day, hours: value, note: "" };
+          }
+
+          if (value && typeof value === "object") {
+            return {
+              day,
+              hours:
+                typeof value?.hours === "string"
+                  ? value.hours
+                  : typeof value?.time === "string"
+                    ? value.time
+                    : typeof value?.display === "string"
+                      ? value.display
+                      : "",
+              note:
+                typeof value?.note === "string"
+                  ? value.note
+                  : typeof value?.hoursNote === "string"
+                    ? value.hoursNote
+                    : "",
+            };
+          }
+
+          return null;
+        })
+      : [];
+
+  return rawEntries
+    .map((entry: any) => {
+      if (typeof entry === "string") {
+        const line = entry.trim();
+
+        return line.length > 0 ? { day: "", hours: line, note: "" } : null;
+      }
+
+      if (!entry || typeof entry !== "object") {
+        return null;
+      }
+
+      const day =
+        typeof entry?.day === "string"
+          ? entry.day.trim()
+          : typeof entry?.label === "string"
+            ? entry.label.trim()
+            : "";
+
+      const hours =
+        typeof entry?.hours === "string"
+          ? entry.hours.trim()
+          : typeof entry?.time === "string"
+            ? entry.time.trim()
+            : typeof entry?.display === "string"
+              ? entry.display.trim()
+              : "";
+
+      const note =
+        typeof entry?.note === "string"
+          ? entry.note.trim()
+          : typeof entry?.hoursNote === "string"
+            ? entry.hoursNote.trim()
+            : typeof entry?.["hours-note"] === "string"
+              ? entry["hours-note"].trim()
+              : "";
+
+      if (!day && !hours && !note) {
+        return null;
+      }
+
+      return { day, hours, note };
+    })
+    .filter(Boolean);
+};
+
+const getOfficeHoursEntries = (office: any) => {
+  const direct = formatOfficeHours(office);
+
+  if (direct.length > 0) {
+    return direct;
+  }
+
+  const addresses = Array.isArray(office?.addresses) ? office.addresses : [];
+
+  return addresses.reduce((allHours: any[], address: any) => {
+    return [...allHours, ...formatOfficeHours(address)];
+  }, []);
+};
+---
+
+<footer
+  class:list={["landing-footer", "landing-footer-overlapping-map", "bg-layers", className]}
+  id={elementId || undefined}
+  style={footerBackgroundStyle || undefined}
+  {...htmlAttributes}
+>
+  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="xl">
+    <div class="landing-footer-main" id="fo-contents">
+      <div class="landing-footer-contact fo-info" style={cardStyle}>
+        <span class="fo-title" set:html={contactTitle} />
+
+        {
+          resolvedOffices.map((office: any) => {
+            const officeHours = getOfficeHoursEntries(office);
+
+            return (
+              <div class="landing-footer-office">
+                {office?.name && <span class="landing-footer-office-name">{office.name}</span>}
+
+                {Array.isArray(office?.addresses) &&
+                  office.addresses.map((address: any) => {
+                    const formattedLines = formatAddressLines(address);
+
+                    return formattedLines.length > 0 ? (
+                      <a
+                        href={address?.mapUrl || "#"}
+                        class="phy"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Icon name="map-pin" size="none" class="fo-icon" aria-hidden="true" />
+                        <span>
+                          {formattedLines.map((line: string, index: number) => (
+                            <>
+                              {line}
+                              {index < formattedLines.length - 1 && <br />}
+                            </>
+                          ))}
+                        </span>
+                      </a>
+                    ) : null;
+                  })}
+
+                {Array.isArray(office?.phones) &&
+                  office.phones.map((phone: any) =>
+                    phone?.display ? (
+                      <a href={phone?.href || "#"} class="pho">
+                        <Icon name="phone" size="none" class="fo-icon" aria-hidden="true" />
+                        <span>
+                          {phone?.label ? `${phone.label}: ` : ""}
+                          {phone.display}
+                        </span>
+                      </a>
+                    ) : null
+                  )}
+
+                {officeHours.length > 0 && (
+                  <div class="fo-hours">
+                    <Icon name="clock" size="none" class="fo-icon" aria-hidden="true" />
+                    <div
+                      class:list={[
+                        "office-hours",
+                        "office-hours--left",
+                        `office-hours--time-${resolvedOfficeHoursAlignment}`,
+                      ]}
+                    >
+                      <div class="office-hours-list">
+                        {officeHours.map((hoursItem: any) => (
+                          <div class="office-hours-row">
+                            <div class="office-hours-line">
+                              {hoursItem.day && (
+                                <span class="office-hours-day">{hoursItem.day}</span>
+                              )}
+                              <span class="office-hours-time">{hoursItem.hours}</span>
+                            </div>
+                            {hoursItem.note && (
+                              <small class="office-hours-note">{hoursItem.note}</small>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })
+        }
+      </div>
+
+      {
+        embedSrc && (
+          <div class="landing-footer-map-embed" id="map" aria-label="Map location">
+            <iframe
+              src={embedSrc}
+              title="Office location map"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            />
+          </div>
+        )
+      }
+    </div>
+
+    <div class="copy text-center" id="copy">
+      <span class="footer-legal-line footer-legal-line--primary">
+        Copyright &copy;<span class="inline" id="copyDate">{copyYear}</span>
+        {displaySiteName}
+      </span>
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-separator" aria-hidden="true">
+            |
+          </span>
+        )
+      }
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-line footer-legal-line--links">
+            {legalLinks.map((item: any, index: number) => (
+              <>
+                <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+                {index < legalLinks.length - 1 && <span class="mx-2">|</span>}
+              </>
+            ))}
+          </span>
+        )
+      }
+      <span class="footer-legal-separator" aria-hidden="true">|</span>
+      <span class="footer-legal-line footer-legal-line--credit">
+        Site designed and maintained by <a href="https://www.tntdental.com" target="_blank"
+          >TNT Dental</a
+        >
+      </span>
+      {blurb && <p class="copy-blurb">{blurb}</p>}
+    </div>
+  </CustomSection>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-footer.landing-footer-overlapping-map {
+      position: relative;
+      overflow: hidden;
+      /* Gradient + background image are composed by the shared `.bg-layers`
+         rule (src/styles/base/_background-image.pcss). */
+      --bg-gradient: var(--landing-footer-bg-gradient, none);
+
+      background-color: var(--landing-footer-bg-color, #fff);
+      color: #fff;
+      container-type: inline-size;
+
+
+      .content {
+        max-width: 100%;
+      }
+
+      .landing-footer-main {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+        max-width: 1150px;
+        padding: 50px 10px;
+        position: relative;
+      }
+
+      .fo-info {
+        background-color: var(--fo-info-card-bg, #343434);
+        border-radius: 12px;
+        box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.36);
+        flex: 0 0 550px;
+        padding: 60px;
+        position: relative;
+        z-index: 5;
+      }
+
+      .fo-title,
+      .landing-footer-office-name,
+      .pho,
+      .phy,
+      .copy,
+      .copy a {
+        color: #fff;
+      }
+
+      .pho,
+      .phy,
+      .copy a {
+        color: var(--footer-link-color, var(--color-brand));
+      }
+
+      .pho {
+        color: var(--footer-phone-link-color, var(--color-brand));
+      }
+
+      .phy {
+        color: var(--footer-address-link-color, var(--color-brand));
+      }
+
+      .pho:hover,
+      .pho:focus-visible {
+        color: var(--footer-phone-link-hover-color, var(--color-brand-secondary));
+      }
+
+      .phy:hover,
+      .phy:focus-visible {
+        color: var(--footer-address-link-hover-color, var(--color-brand-secondary));
+      }
+
+      .fo-title{font-size: 80px; font-weight: 700; line-height: 1.1; text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.9)}
+      
+
+      .landing-footer-office + .landing-footer-office {
+        margin-top: var(--spacing-md);
+      }
+
+      .pho,
+      .phy,
+      .fo-hours {
+        display: flex;
+        align-items: flex-start;
+
+        .fo-icon {
+          color: #8bd3eb;
+          display: inline-block;
+          flex: 0 0 40px;
+          font-size: 30px;
+          margin-right: 10px;
+          text-align: center;
+          width: 40px;
+        }
+
+        > span,
+        > div {
+          display: inline-block;
+        }
+      }
+
+      .fo-hours .office-hours {
+        --office-hours-color: #fff;
+        --office-hours-day-color: #fff;
+        --office-hours-note-color: color-mix(in srgb, #fff 80%, transparent);
+        --office-hours-day-width: 140px;
+        flex: 0 1 350px;
+        margin: 0;
+        max-width: 350px;
+      }
+
+      .pho {
+        font-size: clamp(2rem, 3vw, 2.375rem);
+        font-weight: 700;
+        line-height: 0.86;
+        margin: 10px auto 20px;
+      }
+
+      .phy {
+        font-size: clamp(1rem, 2vw, 1.5rem);
+        font-weight: 400;
+        line-height: 1.25;
+        margin: 20px auto;
+      }
+
+      .landing-footer-map-embed {
+        flex: 0 0 657px;
+        margin-left: -80px;
+
+        iframe {
+          border: 0;
+          border-radius: 12px;
+          box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.36);
+          height: 580px;
+          width: 100%;
+        }
+      }
+
+      .copy {
+        background-color: #000;
+        font-size: var(--font-size-sm);
+        line-height: 1.5;
+        padding: 20px 10px;
+        text-align: center;
+
+        .footer-legal-line {
+          display: inline;
+        }
+
+        .footer-legal-separator {
+          display: inline;
+          margin: 0 0.5rem;
+        }
+      }
+
+      .copy a:hover,
+      .copy a:focus-visible {
+        color: var(--footer-link-hover-color, var(--color-link-hover));
+      }
+
+      .copy-blurb {
+        color: #fff;
+        font-size: var(--font-size-sm);
+        line-height: var(--line-height-relaxed);
+        margin: 20px auto 0;
+        max-width: 1150px;
+      }
+
+      @media (max-width: 1024px) {
+        .copy {
+          .footer-legal-line {
+            display: block;
+          }
+
+          .footer-legal-line + .footer-legal-line {
+            margin-top: 0.25rem;
+          }
+
+          .footer-legal-separator {
+            display: none;
+          }
+        }
+      }
+
+      @container (max-width: 1100px) {
+        .landing-footer-main {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .fo-info {
+          flex: 1 1 100%;
+          max-width: 700px;
+          padding: 40px 28px;
+        }
+
+        .landing-footer-map-embed {
+          flex: 1 1 100%;
+          margin-left: 0;
+          max-width: 700px;
+
+          iframe {
+            height: 420px;
+          }
+        }
+      }
+
+      @container (max-width: 700px) {
+        .fo-info {
+          padding: 30px 20px;
+        }
+
+        .hours label {
+          min-width: 110px;
+        }
+
+        .landing-footer-map-embed iframe {
+          height: 320px;
+        }
+      }
+    }
+  }
+</style>

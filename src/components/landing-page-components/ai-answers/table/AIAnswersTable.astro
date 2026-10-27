@@ -1,0 +1,305 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import FontelloIcon from "@core-elements/fontello-icon/FontelloIcon.astro";
+import Image from "@core-elements/image/Image.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+interface TableRow {
+  feature: string;
+  siteValue: string;
+  otherValue: string;
+}
+
+const {
+  heading = "",
+  headingLineColor = "#000000",
+  siteName = "",
+  logo = { source: "", alt: "" },
+  headerColor = "#0091AB",
+  headerTextColor = "#ffffff",
+  otherColumnLabel = "Other Dental Practices",
+  rows = [] as TableRow[],
+  checkIconName = "icon-ok-circled",
+  crossText = "✕",
+  checkColor = "#2e7d32",
+  crossColor = "#c0392b",
+  backgroundColor = "none",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const resolvedSiteName = siteName || siteInfoData.siteName;
+const resolvedHeading = heading.replace(/\{siteName\}/g, resolvedSiteName);
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  `--ai-table-header-bg: ${headerColor}`,
+  `--ai-table-header-color: ${headerTextColor}`,
+  `--ai-table-check: ${checkColor}`,
+  `--ai-table-cross: ${crossColor}`,
+  headingLineColor ? `--ai-table-line: ${headingLineColor}` : "",
+  `--ai-table-site-label: "${resolvedSiteName}"`,
+  `--ai-table-other-label: "${otherColumnLabel}"`,
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+
+function getCellType(value: string): "check" | "cross" | "text" {
+  if (value === "check") return "check";
+  if (value === "cross") return "cross";
+  return "text";
+}
+---
+
+<CustomSection
+  class:list={["ai-answers-table", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle}
+  {...htmlAttributes}
+>
+  <div class="table-inner">
+    {
+      heading && (
+        <div class="table-title">
+          <h2>
+            <span set:html={resolvedHeading} />
+          </h2>
+        </div>
+      )
+    }
+
+    <div class="comparison-table">
+      <div class="table-header">
+        <div></div>
+        <div class="logo-cell">
+          {
+            logo?.source ? (
+              <Image source={logo.source} alt={logo.alt || resolvedSiteName} editable={false} />
+            ) : (
+              <span class="site-name-fallback">{resolvedSiteName}</span>
+            )
+          }
+        </div>
+        <div class="other-label">{otherColumnLabel}</div>
+      </div>
+
+      {
+        rows.map((row: TableRow) => {
+          const siteType = getCellType(row.siteValue);
+          const otherType = getCellType(row.otherValue);
+          return (
+            <div class="table-row">
+              <div class="feature">{row.feature}</div>
+              <div class:list={["site-col", siteType === "text" && "price"]}>
+                {siteType === "check" && <FontelloIcon name={checkIconName} class="icon-check" />}
+                {siteType === "cross" && <strong class="icon-cross">{crossText}</strong>}
+                {siteType === "text" && row.siteValue}
+              </div>
+              <div class:list={["other-col", otherType === "text" && "price"]}>
+                {otherType === "check" && <FontelloIcon name={checkIconName} class="icon-check" />}
+                {otherType === "cross" && <strong class="icon-cross">{crossText}</strong>}
+                {otherType === "text" && row.otherValue}
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .ai-answers-table .table-inner {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 6.25rem 20px;
+  }
+
+  .ai-answers-table .table-title {
+    margin-bottom: 3.75rem;
+    text-align: center;
+  }
+
+  .ai-answers-table .table-title h2 {
+    font-size: clamp(1.75rem, 4vw, 3.125rem);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .ai-answers-table .table-title h2 span {
+    align-items: center;
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  .ai-answers-table .table-title h2 span::before,
+  .ai-answers-table .table-title h2 span::after {
+    background-color: var(--ai-table-line, #000);
+    content: "";
+    display: block;
+    flex: 0 0 150px;
+    height: 4px;
+  }
+
+  /* Comparison table */
+  .ai-answers-table .comparison-table {
+    margin: 0 auto;
+    max-width: 1260px;
+  }
+
+  .ai-answers-table .table-header {
+    align-items: center;
+    background: var(--ai-table-header-bg, #0091ab);
+    color: var(--ai-table-header-color, #fff);
+    display: grid;
+    font-weight: 600;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 1.25rem 3.75rem;
+    text-align: center;
+  }
+
+  .ai-answers-table .table-header .logo-cell {
+    text-align: center;
+  }
+
+  .ai-answers-table .table-header .logo-cell :global(.image) {
+    display: contents;
+  }
+
+  .ai-answers-table .table-header .logo-cell :global(img) {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    max-height: 80px;
+    width: auto;
+  }
+
+  .ai-answers-table .table-header .site-name-fallback {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .ai-answers-table .table-header .other-label {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
+
+  .ai-answers-table .table-row {
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 1rem;
+  }
+
+  .ai-answers-table .table-row .feature {
+    font-size: 1.4375rem;
+    padding-left: 1.25rem;
+  }
+
+  .ai-answers-table .table-row .site-col,
+  .ai-answers-table .table-row .other-col {
+    text-align: center;
+  }
+
+  .ai-answers-table .table-row .site-col.price,
+  .ai-answers-table .table-row .other-col.price {
+    color: var(--ai-table-check, #2e7d32);
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .ai-answers-table .table-row .other-col.price {
+    color: var(--ai-table-cross, #c0392b);
+  }
+
+  .ai-answers-table .icon-check {
+    color: var(--ai-table-check, #2e7d32);
+    font-size: 2rem;
+  }
+
+  .ai-answers-table .icon-cross {
+    color: var(--ai-table-cross, #c0392b);
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .ai-answers-table .icon-cross,
+  .ai-answers-table .icon-cross strong {
+    font-family: var(--font-body, inherit);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .ai-answers-table .table-title h2 span::before,
+    .ai-answers-table .table-title h2 span::after {
+      display: none;
+    }
+
+    .ai-answers-table .table-header {
+      display: none;
+    }
+
+    .ai-answers-table .table-row {
+      border: 1px solid #eee;
+      border-radius: 8px;
+      gap: 0.625rem;
+      grid-template-columns: 1fr;
+      margin-bottom: 1rem;
+      padding: 1.25rem;
+    }
+
+    .ai-answers-table .table-row .feature {
+      font-size: 1.125rem;
+      font-weight: 600;
+      padding-left: 0;
+    }
+
+    .ai-answers-table .table-row .site-col,
+    .ai-answers-table .table-row .other-col {
+      align-items: center;
+      display: flex;
+      font-size: 1rem;
+      justify-content: space-between;
+      text-align: left;
+    }
+
+    .ai-answers-table .table-row .site-col::after {
+      color: #555;
+      content: var(--ai-table-site-label, "Practice");
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+
+    .ai-answers-table .table-row .other-col::after {
+      color: #555;
+      content: var(--ai-table-other-label, "Other Practices");
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .ai-answers-table .table-title h2 span::before,
+    .ai-answers-table .table-title h2 span::after {
+      flex: 0 0 80px;
+    }
+
+    .ai-answers-table .table-header {
+      padding: 1.25rem;
+    }
+
+    .ai-answers-table .table-header .other-label {
+      font-size: 1.5rem;
+    }
+  }
+</style>

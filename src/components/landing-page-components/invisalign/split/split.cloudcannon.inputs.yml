@@ -1,0 +1,43 @@
+heading:
+  type: text
+  comment: Section heading. Supports <br> for line breaks.
+
+body:
+  type: markdown
+  comment: Section body copy.
+  options:
+    bold: true
+    italic: true
+    link: true
+    strike: false
+    bulletedlist: false
+    numberedlist: false
+
+image:
+  type: object
+  comment: Side image.
+  options:
+    structures:
+      values:
+        - label: Split Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+
+figcaption:
+  type: text
+  comment: Optional image caption.
+
+reverse:
+  type: checkbox
+  comment: Place image on the left when enabled.

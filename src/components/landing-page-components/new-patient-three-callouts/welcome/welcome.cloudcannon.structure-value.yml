@@ -1,0 +1,24 @@
+label: NPTC Welcome
+icon: waving_hand
+description: Centered text section with accent-colored emphasis phrases at the start of each paragraph (e.g. "We understand.", "We are different,").
+value:
+  _component: landing-page-components/new-patient-three-callouts/welcome
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  paragraphs:
+    - emphasis: "We understand."
+      body: >-
+        Taking care of your teeth and gums is not always your highest priority. In fact,
+        many people do not like going to the dentist. That is why we encourage you to give us a try.
+    - emphasis: "We are different,"
+      body: >-
+        and we strive to make every visit amazing. Our team starts with the highest quality
+        safety standards and a super-clean, modern office. Dental insurance is welcome, and we do
+        all we can to make high-quality dentistry affordable.
+    - emphasis: "We want you to love"
+      body: visiting our dental practice.
+  accentColor: "var(--color-brand)"
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-three-callouts/welcome/welcome.cloudcannon.inputs.yml

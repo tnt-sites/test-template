@@ -1,0 +1,306 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  heading = "Schedule Your Appointment Today!",
+  siteName = "",
+  offices = [],
+  legalLinks = [],
+  legalBlurb = "",
+  backgroundColor = "",
+  backgroundColorHex = "",
+  linkColor = "",
+  linkHoverColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const copyYear = new Date().getFullYear();
+const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+const resolvedBgColor = backgroundColorHex || getColorValue(backgroundColor);
+const footerBackgroundStyle = [
+  resolvedBgColor ? `--lp-footer-map-grid-bg-color: ${resolvedBgColor}` : "",
+  getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",
+  getColorValue(linkHoverColor)
+    ? `--footer-link-hover-color: ${getColorValue(linkHoverColor)}`
+    : "",
+  getColorValue(addressLinkColor)
+    ? `--footer-address-link-color: ${getColorValue(addressLinkColor)}`
+    : "",
+  getColorValue(addressLinkHoverColor)
+    ? `--footer-address-link-hover-color: ${getColorValue(addressLinkHoverColor)}`
+    : "",
+  getColorValue(phoneLinkColor)
+    ? `--footer-phone-link-color: ${getColorValue(phoneLinkColor)}`
+    : "",
+  getColorValue(phoneLinkHoverColor)
+    ? `--footer-phone-link-hover-color: ${getColorValue(phoneLinkHoverColor)}`
+    : "",
+]
+  .filter(Boolean)
+  .join("; ");
+const resolvedSiteName = siteName || (siteInfoData as any).siteName || "";
+const resolvedOffices: any[] =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+---
+
+<footer
+  class:list={["lp-footer-map-grid", className]}
+  style={footerBackgroundStyle || undefined}
+  {...htmlAttributes}
+>
+  <CustomSection paddingVertical="xl">
+    {heading && <h2 class="lp-footer-map-grid-heading">{heading}</h2>}
+
+    <div class="lp-footer-map-grid-locations">
+      {
+        resolvedOffices.map((office: any) => {
+          const phones: any[] = Array.isArray(office?.phones) ? office.phones : [];
+          const addresses: any[] = Array.isArray(office?.addresses) ? office.addresses : [];
+          const firstAddress = addresses[0] ?? null;
+          const embedUrl = typeof office?.mapEmbedUrl === "string" ? office.mapEmbedUrl.trim() : "";
+          const mapUrl = firstAddress?.mapUrl || "#";
+          const formattedLines = firstAddress ? formatAddressLines(firstAddress) : [];
+
+          return (
+            <figure class="lp-footer-map-grid-location">
+              {embedUrl && (
+                <div class="lp-footer-map-grid-map">
+                  <iframe
+                    src={embedUrl}
+                    title={office?.name ? `${office.name} map` : "Office location map"}
+                    width="100%"
+                    height="300"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    allowfullscreen
+                  />
+                </div>
+              )}
+
+              {formattedLines.length > 0 && (
+                <a
+                  href={mapUrl}
+                  class="lp-footer-map-grid-address"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {formattedLines.map((line: string, i: number) => (
+                    <>
+                      {line}
+                      {i < formattedLines.length - 1 && <br />}
+                    </>
+                  ))}
+                </a>
+              )}
+
+              {phones.map((phone: any) =>
+                phone?.display ? (
+                  <a href={phone?.href || "#"} class="lp-footer-map-grid-phone">
+                    {phone?.label ? `${phone.label}: ` : ""}
+                    {phone.display}
+                  </a>
+                ) : null
+              )}
+            </figure>
+          );
+        })
+      }
+    </div>
+  </CustomSection>
+
+  <div class="lp-footer-map-grid-copy">
+    <span class="footer-legal-line footer-legal-line--primary">
+      Copyright &copy; {copyYear}
+      {resolvedSiteName}
+    </span>
+    {
+      legalLinks.length > 0 && (
+        <span class="footer-legal-separator" aria-hidden="true">
+          |
+        </span>
+      )
+    }
+    {
+      legalLinks.length > 0 && (
+        <span class="footer-legal-line footer-legal-line--links">
+          {legalLinks.map((item: any, index: number) => (
+            <>
+              <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+              {index < legalLinks.length - 1 && <span class="footer-legal-link-separator">|</span>}
+            </>
+          ))}
+        </span>
+      )
+    }
+    <span class="footer-legal-separator" aria-hidden="true">|</span>
+    <span class="footer-legal-line footer-legal-line--credit">
+      Site designed and maintained by{" "}
+      <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">TNT Dental</a>
+    </span>
+    {blurb && <p class="lp-footer-map-grid-blurb">{blurb}</p>}
+  </div>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .lp-footer-map-grid {
+      background-color: var(--lp-footer-map-grid-bg-color, var(--color-bg));
+
+      &[data-fixed-tabs-active="true"] {
+        @media (max-width: 1024px) {
+          padding-bottom: calc(72px + env(safe-area-inset-bottom));
+        }
+      }
+
+      .lp-footer-map-grid-heading {
+        color: var(--color-text-strong);
+        font-size: var(--font-size-heading-xl);
+        font-weight: var(--font-weight-semibold);
+        margin-bottom: var(--spacing-lg);
+        text-align: center;
+      }
+
+      .lp-footer-map-grid-locations {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-lg);
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        @media (min-width: 768px) {
+          flex-wrap: nowrap;
+        }
+      }
+
+      .lp-footer-map-grid-location {
+        display: flex;
+        flex: 1 1 300px;
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        margin: 0;
+        text-align: center;
+      }
+
+      .lp-footer-map-grid-map {
+        overflow: hidden;
+        width: 100%;
+
+        iframe {
+          border: 0;
+          display: block;
+          height: 300px;
+          width: 100%;
+        }
+      }
+
+      .lp-footer-map-grid-address {
+        color: var(--footer-address-link-color, var(--color-brand));
+        display: block;
+        font-size: var(--font-size-md);
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--footer-address-link-hover-color, var(--color-brand-secondary));
+        }
+      }
+
+      .lp-footer-map-grid-phone {
+        color: var(--footer-phone-link-color, var(--color-brand));
+        display: block;
+        font-size: var(--font-size-xl);
+        font-weight: var(--font-weight-bold);
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--footer-phone-link-hover-color, var(--color-brand-secondary));
+        }
+      }
+
+      .lp-footer-map-grid-copy {
+        background-color: var(--color-bg-inverse);
+        color: var(--color-text-inverse);
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        padding: var(--spacing-sm) var(--spacing-md);
+        text-align: center;
+        text-transform: uppercase;
+
+        a {
+          color: var(--footer-link-color, var(--color-text-inverse));
+          text-decoration: none;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--footer-link-hover-color, var(--color-link-hover));
+          }
+        }
+      }
+
+      .footer-legal-line {
+        display: inline;
+      }
+
+      .footer-legal-separator,
+      .footer-legal-link-separator {
+        display: inline;
+        margin: 0 0.5rem;
+      }
+
+      .lp-footer-map-grid-blurb {
+        color: var(--color-text-inverse);
+        font-size: var(--font-size-xs);
+        letter-spacing: 0;
+        line-height: var(--line-height-relaxed);
+        margin: 20px auto 0;
+        max-width: 1150px;
+        text-transform: none;
+      }
+
+      @media (max-width: 1024px) {
+        .lp-footer-map-grid-copy {
+          .footer-legal-line {
+            display: block;
+          }
+
+          .footer-legal-line + .footer-legal-line {
+            margin-top: 0.25rem;
+          }
+
+          .footer-legal-separator {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+</style>

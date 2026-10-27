@@ -1,0 +1,62 @@
+backgroundColor:
+  type: select
+  comment: Background color of the count section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+items:
+  type: array
+  comment: Icon + label items to display in the row (typically 3–5 items).
+  options:
+    structures:
+      values:
+        - label: Count Item
+          icon: star
+          value:
+            image:
+              source: ""
+              alt: ""
+            text: ""
+          _inputs:
+            image:
+              type: object
+              comment: Icon image for this item.
+              options:
+                structures:
+                  values:
+                    - label: Icon Image
+                      icon: image
+                      value:
+                        source: ""
+                        alt: ""
+                      _inputs:
+                        source:
+                          type: image
+                          comment: Path or URL to the icon image.
+                          options:
+                            paths:
+                              uploads: src/assets/images
+                              static: ""
+                        alt:
+                          type: textarea
+                          comment: Alt text for accessibility.
+            text:
+              type: text
+              comment: Label text below the icon. Supports <br> for line breaks.

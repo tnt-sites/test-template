@@ -1,0 +1,196 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  h1Text = "Celebrate Summer",
+  h1SpanText = "with a",
+  accentWord = "Smile",
+  paragraph = "Let this be the season when you no longer have to hide your smile. Celebrate this summer with a beautiful, confident smile you can show off in selfies, posts, TikToks & more.",
+  image = { source: "assets/images/pep-summer-banner-bkg.png", alt: "" },
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  borderColor = "",
+  headingColor = "",
+  dividerColor = "",
+  textColor = "",
+  HeadingSpanColor = "",
+  AccentWordColor = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  borderColor ? `--pep-banner-border-color: ${borderColor}` : "",
+  headingColor ? `--pep-banner-heading-color: ${headingColor}` : "",
+  textColor ? `--pep-banner-text-color: ${textColor}` : "",
+  dividerColor ? `--pep-banner-divider-color: ${dividerColor}` : "",
+  HeadingSpanColor ? `--pep-banner-span-color: ${HeadingSpanColor}` : "",
+  AccentWordColor ? `--pep-banner-accent-word-color: ${AccentWordColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<section
+  id="banner"
+  class:list={["pep-banner-background", className]}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <figure class="pep-banner-background__figure">
+    <Image
+      source={image.source}
+      alt={image.alt}
+      rounded={false}
+      editable={true}
+      aspectRatio="none"
+      sizes="100vw"
+      data-prop-src="image.source"
+      data-prop-alt="image.alt"
+    />
+  </figure>
+  <article class="pep-banner-background__article">
+    <div class="top-text">
+      <h1 class="pep-banner-background__heading">
+        {h1Text}<br />
+        <span class="pep-banner-background__span-word">
+          {h1SpanText} <span class="pep-banner-background__accent-word">{accentWord}</span></span
+        >
+      </h1>
+      <hr />
+      <p class="pep-banner-background__text">{paragraph}</p>
+    </div>
+  </article>
+</section>
+
+<style>
+  .pep-banner-background {
+    border-bottom: 10px solid var(--pep-banner-border-color, var(--color-brand));
+    margin: 0 auto;
+    max-height: 693px;
+    max-width: 1920px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .pep-banner-background__article {
+    bottom: 50%;
+    max-width: 700px;
+    padding: 70px 20px 20px;
+    position: absolute;
+    right: 10%;
+    text-align: left;
+    transform: translateY(50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .pep-banner-background__heading {
+    color: var(--pep-banner-heading-color, var(--color-text));
+    font-family: var(--pep-banner-heading-font, var(--font-headings));
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px 0;
+    text-align: left;
+  }
+
+  .pep-banner-background__heading .pep-banner-background__span-word {
+    color: var(--pep-banner-span-color, inherit);
+    font-size: 1em;
+    font-weight: inherit;
+  }
+
+  .pep-banner-background__accent-word {
+    color: var(--pep-banner-accent-word-color, var(--color-brand));
+  }
+
+  .pep-banner-background hr {
+    border: none;
+    border-bottom: 1px solid var(--pep-centered-divider-color);
+    display: inline-block;
+    margin: 0 0 0 28px;
+    width: 191px;
+  }
+
+  .pep-banner-background__text {
+    color: var(--pep-banner-text-color, var(--color-text));
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.6vw, 2rem);
+    line-height: 1.35;
+    margin-left: 20px;
+    text-align: left;
+  }
+
+  .pep-banner-background__figure {
+    width: 100%;
+  }
+
+  .pep-banner-background__figure :global(img) {
+    display: block;
+    min-height: 36rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  @media (max-width: 1300px) {
+    .pep-banner-background__text {
+      font-size: clamp(1rem, 1.6vw, 1.4375rem);
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .pep-banner-background {
+      max-height: none;
+    }
+
+    .pep-banner-background__figure {
+      display: none;
+    }
+
+    .pep-banner-background__article {
+      margin: 0 auto;
+      max-width: 48rem;
+      padding: 3rem 1.5rem 2rem;
+      position: relative;
+      right: auto;
+      top: auto;
+      transform: none;
+    }
+
+    .pep-banner-background__heading {
+      font-size: clamp(2.5rem, 10vw, 4rem);
+      text-align: center;
+    }
+
+    .pep-banner-background hr {
+      display: block;
+      margin: 20px auto;
+      max-width: 95%;
+    }
+
+    .pep-banner-background__text {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pep-banner-background__article {
+      padding: 2.5rem 1rem 1.75rem;
+    }
+
+    .pep-banner-background__text {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+</style>

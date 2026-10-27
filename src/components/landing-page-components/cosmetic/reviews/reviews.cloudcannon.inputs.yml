@@ -1,0 +1,170 @@
+backgroundColor:
+  type: select
+  comment: Background color of the reviews section.
+  options:
+    values:
+      - id: brand
+        name: Brand (Primary)
+      - id: brand-secondary
+        name: Brand (Secondary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: text
+  comment: Section heading (h2) for the review quote column (e.g. "Patients Love Us").
+
+reviewText:
+  type: textarea
+  comment: Patient review quote text (without surrounding quotation marks).
+
+author:
+  type: text
+  comment: Reviewer name/attribution (e.g. "Regina W.").
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) shown under the review text.
+  options:
+    structures: _structures.buttonSections
+
+sliderHeading:
+  type: text
+  comment: Small label above the before/after slider title (e.g. "Actual Patient Results").
+
+sliderSubheading:
+  type: text
+  comment: Large title for the before/after slider (e.g. "Before & After").
+
+beforeImage:
+  type: object
+  comment: The "before" photo for the comparison slider.
+  options:
+    structures:
+      values:
+        - label: Before Photo
+          icon: image
+          value:
+            source: ""
+            alt: Before
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+
+afterImage:
+  type: object
+  comment: The "after" photo for the comparison slider.
+  options:
+    structures:
+      values:
+        - label: After Photo
+          icon: image
+          value:
+            source: ""
+            alt: After
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+
+starColor:
+  type: color
+  comment: Color for the star rating icons (default "#fcd800").
+
+accentColor:
+  type: select
+  comment: Accent/link color for the reviews section.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+headingColor:
+  type: select
+  comment: Heading text color for the reviews section.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+handleColor:
+  type: select
+  comment: Color for the before/after slider handle.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "var(--color-bg-dark)"
+        name: Dark
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+handleArrowColor:
+  type: select
+  comment: Color for the before/after slider handle arrows.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "var(--color-bg-dark)"
+        name: Dark
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Override heading font family. Leave blank to use the site default.

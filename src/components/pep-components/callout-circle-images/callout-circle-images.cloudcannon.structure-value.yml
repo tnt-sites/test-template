@@ -1,0 +1,27 @@
+label: Callout Circle Images
+icon: view_module
+description: A row of circular images with short headings below — ideal for highlighting key benefits or service categories.
+value:
+  _component: pep-components/callout-circle-images
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  headingColor: ""
+  itemHeadingColor: ""
+  circleBackgroundColor: ""
+  heading: "3 Ways We Can Help"
+  items:
+    - image:
+        source: https://placehold.co/400x400
+        alt: Callout image one
+      heading: "Callout Heading One"
+    - image:
+        source: https://placehold.co/400x400
+        alt: Callout image two
+      heading: "Callout Heading Two"
+    - image:
+        source: https://placehold.co/400x400
+        alt: Callout image three
+      heading: "Callout Heading Three"
+_inputs_from_glob:
+  - /src/components/pep-components/callout-circle-images/callout-circle-images.cloudcannon.inputs.yml

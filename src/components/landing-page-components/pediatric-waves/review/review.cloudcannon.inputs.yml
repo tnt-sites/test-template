@@ -1,0 +1,173 @@
+backgroundColor:
+  type: select
+  comment: Background color of the testimonial section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+badgeHeading:
+  type: text
+  comment: Heading text shown in the left testimonial badge card. Supports <br> line breaks.
+
+badgeSubheading:
+  type: text
+  comment: Small uppercase text shown under the stars.
+
+stars:
+  type: number
+  comment: Number of star icons to display (0-5).
+
+reviewText:
+  type: textarea
+  comment: Main testimonial body copy.
+
+reviewerName:
+  type: text
+  comment: Name shown after the testimonial text.
+
+reviewLogo:
+  type: object
+  comment: Optional review platform logo shown in the badge.
+  options:
+    structures:
+      values:
+        - label: Review Logo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the review platform logo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+badgeBackgroundColor:
+  type: select
+  comment: Background color for the left badge card.
+  options:
+    values:
+      - id: brand
+        name: Brand (Primary)
+      - id: brand-secondary
+        name: Brand (Secondary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+headingColor:
+  type: select
+  comment: Optional heading color override.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+
+waveTopImage:
+  type: object
+  comment: Optional top decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Top Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the top wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveMiddleImage:
+  type: object
+  comment: Optional middle decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Middle Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the middle wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveBottomImage:
+  type: object
+  comment: Optional bottom decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Bottom Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the bottom wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.

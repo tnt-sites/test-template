@@ -1,0 +1,178 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+interface Review {
+  googleLogo?: { source: string; alt: string };
+  text: string;
+  author: string;
+}
+
+const {
+  heading = "",
+  reviews = [] as Review[],
+  image = { source: "", alt: "" },
+  backgroundColor = "none",
+  backgroundColorHex = "",
+  headingColor = "var(--color-text)",
+  borderColor = "var(--color-text)",
+  starColor = "#febb21",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  headingColor ? `--ai-reviews-heading: ${headingColor}` : "",
+  borderColor ? `--ai-reviews-border: ${borderColor}` : "",
+  starColor ? `--ai-reviews-star: ${starColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["ai-implant-reviews", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="reviews-inner">
+    <div class="reviews-top block lg:flex justify-between items-center">
+      {heading && <h2 class="text-center" set:html={heading} />}
+      <figure class="reviews-image lg:order-first">
+        <Image
+          source={image.source}
+          alt={image.alt || ""}
+          editable={false}
+          rounded={false}
+          aspectRatio="none"
+          sizes="auto"
+          inferSize={true}
+          width={294}
+          height={294}
+        />
+      </figure>
+    </div>
+
+    {
+      reviews.length > 0 && (
+        <div class="reviews-content flex justify-around flex-wrap lg:flex-nowrap">
+          {reviews.map((review: Review) => (
+            <div class="review-item">
+              {review.googleLogo?.source && (
+                <Image
+                  source={review.googleLogo.source}
+                  alt={review.googleLogo.alt || ""}
+                  editable={false}
+                />
+              )}
+              <div class="review-stars" aria-label="5 stars">
+                ★★★★★
+              </div>
+              <p set:html={review.text} />
+              <span class="review-author">{review.author}</span>
+            </div>
+          ))}
+        </div>
+      )
+    }
+  </div>
+</CustomSection>
+
+<style>
+  .ai-implant-reviews .reviews-inner {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 3.75rem 20px;
+  }
+
+  .ai-implant-reviews .reviews-top {
+    gap: 1.25rem;
+  }
+
+  .ai-implant-reviews h2 {
+    color: var(--ai-reviews-heading, var(--color-text));
+    flex: 0 0 auto;
+    font-weight: 700;
+  }
+
+  .ai-implant-reviews .reviews-image {
+    flex: 0 1 294px;
+    margin: 0;
+    min-height: 294px;
+  }
+
+  .ai-implant-reviews .reviews-image :global(.image) {
+    display: contents;
+  }
+
+  .ai-implant-reviews .reviews-image :global(img) {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+  }
+
+  .ai-implant-reviews .reviews-content {
+    gap: 1.25rem;
+    margin-top: 3.75rem;
+  }
+
+  .ai-implant-reviews .review-item {
+    align-items: center;
+    border: 4px solid var(--ai-reviews-border, #0a4172);
+    display: flex;
+    flex: 0 1 420px;
+    flex-direction: column;
+    font-weight: 300;
+    line-height: 1.37;
+    padding: 3.75rem 1.25rem 1.25rem;
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  .ai-implant-reviews .review-item :global(.image) {
+    margin-top: -6.25rem;
+    width: auto;
+  }
+
+  .ai-implant-reviews .review-item :global(img) {
+    display: block;
+    height: 100%;
+    width: auto;
+  }
+
+  .ai-implant-reviews .review-stars {
+    color: var(--ai-reviews-star, #febb21);
+    font-size: 1.5rem;
+    letter-spacing: 0.55rem;
+    text-align: center;
+  }
+
+  .ai-implant-reviews .review-author {
+    display: block;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: auto;
+    padding-top: 1rem;
+    text-align: right;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .ai-implant-reviews .review-item {
+      flex: 0 1 100%;
+    }
+  }
+</style>

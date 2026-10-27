@@ -1,0 +1,68 @@
+label: Landing Footer 3 Cards (No Links)
+icon: page_footer
+description: "Landing footer with three cards: contact, find-us map, and ask-a-question form. No featured services links, ideal for PPC landing pages."
+value:
+  _component: navigation/landing/landing-footer-three-cards-no-links
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  siteName: Dental Studio
+  contactTitle: Contact Us
+  offices:
+    - name: ""
+      addresses:
+        - lines:
+            - 123 Main Street
+            - Suite 200
+          city: Dunedin
+          state: FL
+          postalCode: "34698"
+          country: USA
+          mapUrl: https://maps.google.com
+      phones:
+        - display: (123) 456-7890
+          href: tel:+11234567890
+  phoneLabel: Call Today!
+  ctaText: "To Schedule An <strong>Appointment</strong>"
+  mapTitle: Find Us
+  mapEmbedUrl: ""
+  formTitle: Ask A Question
+  formAction: ""
+  formSubject: Landing Footer Form
+  formRedirect: thanks.html
+  formSubmitLabel: Submit
+  formButtonBorderRadius: 0px
+  formButtonTextColor: ""
+  formButtonBackgroundColor: ""
+  formButtonHoverBackgroundColor: ""
+  formButtonHoverTextColor: ""
+  contactCardBackgroundColor: ""
+  mapCardBackgroundColor: ""
+  formCardBackgroundColor: ""
+  legalLinks:
+    - name: Privacy Policy
+      path: privacy-policy.html
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+  backgroundGradient: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  linkColor: brand
+  linkHoverColor: brand-secondary
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  legalBlurb: ""
+preview:
+  text:
+    - Landing Footer 3 Cards (No Links)
+  icon: page_footer
+picker_preview:
+  text: Landing Footer 3 Cards (No Links)
+  subtext: "Three-card footer with contact, map, and form — no internal navigation links."
+  icon: page_footer
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-three-cards-no-links/landing-footer-three-cards-no-links.cloudcannon.inputs.yml

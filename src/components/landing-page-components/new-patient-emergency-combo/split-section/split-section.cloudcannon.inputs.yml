@@ -1,0 +1,111 @@
+backgroundColor:
+  type: select
+  comment: Background color used behind the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+desktopImage:
+  type: object
+  comment: Image configuration for the desktop section.
+  options:
+    structures:
+      values:
+        - label: Desktop Image
+          icon: image
+          value:
+            _component: building-blocks/core-elements/image
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+mobileImage:
+  type: object
+  comment: Image configuration for the mobile section.
+  options:
+    structures:
+      values:
+        - label: Mobile Image
+          icon: image
+          value:
+            _component: building-blocks/core-elements/image
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+figcaption:
+  type: text
+  comment: Figure caption text (e.g., "Lily - Front Desk Receptionist")
+headingPrefix:
+  type: markdown
+  comment: Prefix text for heading (e.g., "Personalized Dentistry")
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+headingMain:
+  type: markdown
+  comment: Main heading text (e.g., "It All Starts with You")
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+content:
+  type: html
+  comment: Main content text
+# Add your other component inputs here
+# Example:
+# text:
+#   type: text
+#   comment: The text content for the component.

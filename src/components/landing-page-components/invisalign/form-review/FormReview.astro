@@ -1,0 +1,247 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+
+const {
+  formHeading = "Request a FREE Consultation",
+  formAction = "",
+  formMethod = "post",
+  formSubject = "Invisalign LP - Mid Page Appointment Request",
+  formRedirect = "",
+  reviewHeading = "Google Review",
+  reviewText = "",
+  reviewerName = "",
+  sectionSpacingTop = "100px",
+  formBackgroundColor = "var(--color-brand)",
+  formBackgroundColorHex = "",
+  reviewBackgroundColor = "#fff",
+  reviewBackgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const resolvedFormBg = formBackgroundColorHex || formBackgroundColor;
+const resolvedReviewBg = reviewBackgroundColorHex || reviewBackgroundColor;
+
+const styleVars = [
+  `--invis-middle-margin: ${sectionSpacingTop}`,
+  resolvedFormBg ? `--invis-form-bg: ${resolvedFormBg}` : "",
+  resolvedReviewBg ? `--invis-review-bg: ${resolvedReviewBg}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["invis-middle-block", className]}
+  paddingVertical="none"
+  paddingHorizontal="none"
+  backgroundColor="none"
+  style={styleVars}
+  {...htmlAttributes}
+>
+  <div class="forms">
+    <form action={formAction || undefined} method={formMethod || "post"}>
+      <h3>{formHeading}</h3>
+      <div class="container">
+        <div>
+          <span><input name="Name" placeholder="Name" required type="text" /></span>
+          <span><input name="email" placeholder="Email" required type="email" /></span>
+          <span><input name="phone" placeholder="Phone Number" type="text" /></span>
+        </div>
+        <div>
+          <span><textarea name="comments" placeholder="Questions/Comments"></textarea></span>
+          <button class="submit-btn" type="submit">Submit</button>
+        </div>
+      </div>
+      {formSubject && <input name="_subject" type="hidden" value={formSubject} />}
+      {formRedirect && <input name="_redirect" type="hidden" value={formRedirect} />}
+    </form>
+  </div>
+
+  <div class="reviews">
+    <div class="gallery">
+      <div class="review">
+        {reviewHeading && <h3>{reviewHeading}</h3>}
+        {reviewText && <p>{reviewText}</p>}
+        {
+          reviewerName && (
+            <p class="author">
+              <span class="star" aria-hidden="true">
+                ★★★★★
+              </span>
+              <span>- {reviewerName}</span>
+            </p>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .invis-middle-block {
+    margin: var(--invis-middle-margin, 100px) auto;
+    max-width: 1260px;
+  }
+
+  .invis-middle-block .forms {
+    background-color: var(--invis-form-bg, var(--color-brand));
+    padding: 30px 15px 50px;
+  }
+
+  .invis-middle-block form {
+    margin: 0 auto;
+    max-width: 1150px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .invis-middle-block form h3 {
+    color: #fff;
+    font-family: the-seasons, var(--font-headings);
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 1;
+    margin: 30px 0;
+  }
+
+  .invis-middle-block .container {
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .invis-middle-block .container > div {
+    display: flex;
+    flex: 0 1 45%;
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  .invis-middle-block .container > div:last-of-type {
+    flex: 0 1 55%;
+    max-width: 525px;
+  }
+
+  .invis-middle-block .container span {
+    padding: 5px 0;
+  }
+
+  .invis-middle-block input,
+  .invis-middle-block textarea {
+    background: #f2f2f2;
+    border: none;
+    color: #000;
+    display: block;
+    font-family: josefin-sans, var(--font-body);
+    font-size: 17px;
+    height: 44px;
+    padding: 15px 10px;
+    width: 100%;
+  }
+
+  .invis-middle-block textarea {
+    height: 100px;
+    padding-top: 10px;
+  }
+
+  .invis-middle-block .submit-btn {
+    background: var(--invis-form-bg, var(--color-brand));
+    color: var(--color-text-on-brand);
+    cursor: pointer;
+    font-family: josefin-sans, var(--font-body);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-top: 5px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+  }
+
+  .invis-middle-block .submit-btn:hover {
+    background: var(--color-brand-muted, var(--color-brand));
+  }
+
+  .invis-middle-block .reviews {
+    background: var(--invis-review-bg, #fff);
+    filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.24));
+    padding: 20px 10px 60px;
+    text-align: center;
+  }
+
+  .invis-middle-block .gallery {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 15px 50px;
+  }
+
+  .invis-middle-block .review {
+    color: #000;
+    position: relative;
+    text-align: center;
+  }
+
+  .invis-middle-block .review h3 {
+    color: #436a8b;
+    font-family: the-seasons, var(--font-headings);
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 10px 0;
+  }
+
+  .invis-middle-block .review p {
+    color: #000;
+    font-size: 27px;
+    line-height: 1.4;
+  }
+
+  .invis-middle-block .author {
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .invis-middle-block .star {
+    color: #febb21;
+    display: inline-block;
+    letter-spacing: 8.4px;
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 1000px) {
+    .invis-middle-block {
+      margin: 80px 20px;
+    }
+  }
+
+  @media (max-width: 880px) {
+    .invis-middle-block .container > div,
+    .invis-middle-block .container > div:last-of-type {
+      flex: 0 1 100%;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 590px) {
+    .invis-middle-block form {
+      padding: 20px 0;
+    }
+
+    .invis-middle-block form h3 {
+      font-size: 45px;
+    }
+
+    .invis-middle-block .gallery {
+      padding: 15px 20px;
+    }
+  }
+</style>

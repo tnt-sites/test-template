@@ -1,0 +1,39 @@
+label: Cosmetic Reviews & Before/After
+icon: star_rate
+description: Two-column section with a patient review quote on the left and an interactive before/after image comparison slider on the right.
+value:
+  _component: landing-page-components/cosmetic/reviews
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: "Patients Love Us"
+  reviewText: "Dr. Smith is so nice and does a great job. His assistant makes my visit enjoyable!"
+  author: "Regina W."
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      id: ""
+      text: Read More Reviews
+      hideText: false
+      link: "#"
+      modalTarget: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+      width: auto
+  sliderHeading: "Actual Patient Results"
+  sliderSubheading: "Before & After"
+  beforeImage:
+    source: https://placehold.co/480x360
+    alt: A smile before cosmetic work
+  afterImage:
+    source: https://placehold.co/480x360
+    alt: A beautiful smile after cosmetic work
+  starColor: "#fcd800"
+  accentColor: ""
+  headingColor: ""
+  handleColor: ""
+  handleArrowColor: ""
+  fontHeadings: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/cosmetic/reviews/reviews.cloudcannon.inputs.yml

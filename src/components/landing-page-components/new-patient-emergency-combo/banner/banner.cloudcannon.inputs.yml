@@ -1,0 +1,133 @@
+backgroundColor:
+  type: select
+  comment: Background color used behind the hero banner.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+image:
+  type: object
+  comment: Full-width banner photo.
+  options:
+    structures:
+      values:
+        - label: Banner Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+
+heading:
+  type: text
+  comment: Text displayed inside the banner bar card. Supports <br> for manual line breaks.
+
+subtext:
+  type: textarea
+  comment: Optional supporting text shown beside the heading in the banner bar.
+
+buttonSections:
+  type: array
+  comment: Optional CTA buttons in the banner bar.
+  options:
+    structures: _structures.buttonSections
+
+badgeImage:
+  type: object
+  comment: Optional badge/seal image positioned in the top-right corner of the banner.
+  options:
+    structures:
+      values:
+        - label: Badge Image
+          icon: military_tech
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the badge image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+specialBadge:
+  type: object
+  comment: Optional stamp/seal image that hangs off the left side of the banner bar card.
+  options:
+    structures:
+      values:
+        - label: Special Badge
+          icon: workspace_premium
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the stamp image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional caption text overlaid at the bottom of the banner image.
+
+borderColor:
+  type: select
+  comment: Color of the decorative bottom border on the hero.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Optional heading font family override (e.g. "Georgia, serif").
+
+fontBody:
+  type: text
+  comment: Optional body font family override (e.g. "Arial, sans-serif").

@@ -1,0 +1,172 @@
+backgroundColor:
+  type: select
+  comment: Background color of the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: text
+  comment: Section heading. Wrap part of the text in <span> to color it with the accent color.
+
+headingFontFamily:
+  type: text
+  comment: Optional heading font family override.
+
+paragraphs:
+  type: array
+  comment: Body paragraphs for this section.
+  options:
+    structures:
+      values:
+        - label: Paragraph
+          icon: format_paragraph
+          value:
+            body: ""
+          _inputs:
+            body:
+              type: textarea
+              comment: Paragraph text. Supports inline HTML for emphasis.
+
+image:
+  type: object
+  comment: Image displayed alongside the text.
+  options:
+    structures:
+      values:
+        - label: Section Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional image caption.
+
+reverse:
+  type: checkbox
+  comment: Move the text to the right and the image to the left on desktop when enabled.
+
+buttonSections:
+  type: array
+  comment: Optional call-to-action button group.
+  options:
+    structures: _structures.buttonSections
+
+headingColor:
+  type: select
+  comment: Optional heading color override.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+
+accentColor:
+  type: select
+  comment: Accent color used for the highlighted heading word(s).
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+
+decorationImage:
+  type: object
+  comment: Optional decorative graphic shown in the top-right corner of the section.
+  options:
+    structures:
+      values:
+        - label: Decoration Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the decoration graphic.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveImage:
+  type: object
+  comment: Optional decorative tiling wave image along the bottom edge of the section.
+  options:
+    structures:
+      values:
+        - label: Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveHeight:
+  type: text
+  comment: "Height of the tiling wave strip (e.g. 46px). The wave image repeats horizontally at this height."
+
+wavePosition:
+  type: select
+  comment: "Which edge of the section the wave strip hangs off."
+  options:
+    values:
+      - id: bottom
+        name: Bottom
+      - id: top
+        name: Top

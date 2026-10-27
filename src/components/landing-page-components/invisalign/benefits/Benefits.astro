@@ -1,0 +1,177 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  heading = "Benefits of Braces & Invisalign",
+  leftTitle = "Braces",
+  leftItems = [],
+  rightTitle = "Invisalign",
+  rightItems = [],
+  centerImage = { source: "", alt: "" },
+  backgroundImage = { source: "", alt: "" },
+  backgroundColor = "var(--color-brand)",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const resolvedBg = backgroundColorHex || backgroundColor;
+
+const styleVars = [
+  resolvedBg ? `--invis-benefits-color: ${resolvedBg}` : "",
+  backgroundImage?.source ? `--invis-benefits-bg: url('${backgroundImage.source}')` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["invis-benefits", className]}
+  paddingVertical="none"
+  paddingHorizontal="md"
+  backgroundColor="none"
+  style={styleVars || undefined}
+  {...htmlAttributes}
+>
+  {heading && <h2>{heading}</h2>}
+  <div class="flex-ed">
+    <div class="benefits-options">
+      {leftTitle && <h3>{leftTitle}</h3>}
+      <ul>
+        {leftItems.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+
+    <div class="center-image">
+      {
+        centerImage?.source && (
+          <Image
+            source={centerImage.source}
+            alt={centerImage.alt || ""}
+            rounded={false}
+            editable={true}
+            aspectRatio="none"
+            sizes="auto"
+            widths={[]}
+            data-prop-src="centerImage.source"
+            data-prop-alt="centerImage.alt"
+          />
+        )
+      }
+    </div>
+
+    <div class="benefits-options">
+      {rightTitle && <h3>{rightTitle}</h3>}
+      <ul>
+        {rightItems.map((item: string) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .invis-benefits {
+    background-color: var(--invis-benefits-color, var(--color-brand));
+    background-image: var(--invis-benefits-bg, none);
+    background-size: cover;
+    margin: 100px auto;
+    max-width: 100%;
+    padding-top: 25px;
+    position: relative;
+  }
+
+  .invis-benefits h2 {
+    color: #fff;
+    font-family: the-seasons, var(--font-headings);
+    font-size: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .invis-benefits .flex-ed {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  .invis-benefits .benefits-options {
+    width: 420px;
+  }
+
+  .invis-benefits h3 {
+    color: #fff;
+    font-family: the-seasons, var(--font-headings);
+    font-size: 45px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    margin: 10px auto;
+    text-align: left;
+  }
+
+  .invis-benefits ul {
+    padding-left: 0;
+  }
+
+  .invis-benefits li {
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 35px;
+    position: relative;
+    text-align: left;
+  }
+
+  .invis-benefits li::before {
+    color: #4f95d0;
+    content: "✦";
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 1000px) {
+    .invis-benefits {
+      margin-bottom: 50px;
+      padding: 100px 20px;
+    }
+
+    .invis-benefits h2 {
+      margin-bottom: 0;
+    }
+
+    .invis-benefits .flex-ed {
+      display: block;
+      padding: 30px 10px;
+    }
+
+    .invis-benefits .benefits-options {
+      margin: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .invis-benefits h3 {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 590px) {
+    .invis-benefits h2 {
+      font-size: 45px;
+    }
+
+    .invis-benefits h3 {
+      text-align: left;
+    }
+  }
+</style>

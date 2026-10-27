@@ -1,0 +1,32 @@
+label: PEP Image Grid
+icon: grid_view
+description: Grid of two or more square image or YouTube tiles with centered uppercase figcaptions.
+value:
+  _component: pep-components/pep-image-grid
+  id: ""
+  heading: "Hear From Our Patients"
+  paddingVertical: xl
+  backgroundColor: base
+  backgroundColorHex: ""
+  cardBackgroundColor: ""
+  cardBackgroundColorHex: ""
+  captionBackgroundColor: ""
+  captionBackgroundColorHex: ""
+  captionTextColor: ""
+  items:
+    - mediaType: youtube
+      image:
+        source: ""
+        alt: ""
+      youtubeId: qirqwHB1ObQ
+      youtubeTitle: Kimberly TMJ patient testimonial
+      caption: Hear From Kimberly, TMJ Patient
+    - mediaType: image
+      image:
+        source: https://placehold.co/800x800
+        alt: Dr. Michael Michel DDS PA
+      youtubeId: ""
+      youtubeTitle: ""
+      caption: Dr. Michael Michel, DDS, PA
+_inputs_from_glob:
+  - /src/components/pep-components/pep-image-grid/pep-image-grid.cloudcannon.inputs.yml

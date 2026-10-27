@@ -1,0 +1,25 @@
+label: Banner (Split)
+icon: dashboard
+description: Hero banner with heading and badge on the left, full-bleed photo on the right.
+value:
+  _component: landing-page-components/new-patient-split-banner/banner
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  subheading: "City's"
+  heading: "Top-Rated<br>Dental Expert"
+  text: ""
+  textBackgroundImage: ""
+  badgeImage:
+    source: ""
+    alt: ""
+  image:
+    source: https://placehold.co/800x600
+    alt: Doctor photo
+  figcaption: "Dr. LastName"
+  buttonSections: []
+  fontHeadings: ""
+  fontBody: ""
+  borderColor: "var(--color-brand)"
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-split-banner/banner/banner.cloudcannon.inputs.yml

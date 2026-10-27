@@ -1,0 +1,50 @@
+label: Pediatric Superhero Split
+icon: view_column
+description: Two-column content section with image and caption. Reuse for the "Meet", "Office", and "Practice" style sections, toggling Reverse to flip the layout.
+value:
+  _component: landing-page-components/pediatric-superhero/split
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: "Friendly <span>Expertise</span>"
+  headingFontFamily: ""
+  paragraphs:
+    - body: We want kids to love visiting the dentist. That is why our team provides one-on-one attention to every child.
+    - body: We want their rapidly changing smiles to be in the hands of true experts.
+    - body: We understand kids, and our small team has completed advanced training specific to pediatric dentistry. You can trust us to work with you and your kids to build the healthy habits that will lead to a lifetime of smiles.
+  image:
+    source: https://placehold.co/900x760
+    alt: Pediatric dentist with patient
+  figcaption: Our Pediatric Dentist
+  reverse: true
+  buttonSections:
+    - _component: building-blocks/wrappers/button-group
+      buttons:
+        - _component: building-blocks/core-elements/button
+          id: ""
+          text: Meet Our Pediatric Dentist
+          hideText: false
+          link: /meet-our-team/
+          modalTarget: ""
+          iconName: ""
+          iconPosition: before
+          variant: primary
+          size: md
+          width: md
+          borderRadius: default
+          borderWidth: default
+          borderColor: default
+          textColor: default
+          uppercase: false
+  headingColor: ""
+  accentColor: ""
+  decorationImage:
+    source: ""
+    alt: ""
+  waveImage:
+    source: ""
+    alt: ""
+  waveHeight: 46px
+  wavePosition: bottom
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-superhero/split/split.cloudcannon.inputs.yml

@@ -1,0 +1,32 @@
+label: Landing Footer Map Grid
+icon: map
+description: "Landing footer with a grid of embedded maps per office, address, and phone, plus legal copy bar."
+value:
+  _component: navigation/landing/landing-footer-map-grid
+  heading: Schedule Your Appointment Today!
+  siteName: ""
+  offices: []
+  legalLinks:
+    - name: Sitemap
+      path: sitemap.html
+    - name: Privacy Policy
+      path: privacy-policy.html
+  legalBlurb: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  linkColor: brand
+  linkHoverColor: brand-secondary
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+preview:
+  text:
+    - Landing Footer Map Grid
+  icon: map
+picker_preview:
+  text: Landing Footer Map Grid
+  subtext: "Two-column map grid with address and phone per location, plus legal bar."
+  icon: map
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-map-grid/landing-footer-map-grid.cloudcannon.inputs.yml

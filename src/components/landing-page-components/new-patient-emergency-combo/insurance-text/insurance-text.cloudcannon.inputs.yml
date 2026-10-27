@@ -1,0 +1,85 @@
+backgroundColor:
+  type: select
+  comment: Background color used behind the grid.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: markdown
+  comment: Main heading text. Use "||" for mobile line breaks.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+text:
+  type: markdown
+  comment: Main Text
+  options:
+    blockquote: false
+    bold: true
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+images:
+  type: array
+  comment: Array of logos/images to display under the text.
+  options:
+    structures:
+      values:
+        - label: Image
+          icon: workspace_premium
+          value:
+            _component: building-blocks/core-elements/image
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+imageType:
+  type: select
+  comment: Determines styling for images
+  options:
+    values:
+      - id: logos
+        name: Logos
+      - id: office
+        name: Office Photos

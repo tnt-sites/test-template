@@ -1,0 +1,77 @@
+backgroundColor:
+  type: select
+  comment: Background color of the testimonial section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+reviewLogo:
+  type: object
+  comment: Optional review platform logo shown in the badge (e.g. Google).
+  options:
+    structures:
+      values:
+        - label: Review Logo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the review platform logo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+stars:
+  type: number
+  comment: Number of star icons to display (0-5).
+
+reviewText:
+  type: textarea
+  comment: Main testimonial body copy.
+
+reviewerName:
+  type: text
+  comment: Name shown after the testimonial text.
+
+badgeBackgroundColor:
+  type: text
+  comment: Background color for the badge column (CSS color value).
+
+headingColor:
+  type: select
+  comment: Optional badge text color override.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary

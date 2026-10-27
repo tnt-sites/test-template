@@ -1,0 +1,209 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  headingPrefix = "",
+  heading = "",
+  listItems = [],
+  checkImage = "",
+  headingColor = "",
+  prefixColor = "",
+  fontHeadings = "",
+  fontBody = "",
+  image = { source: "", alt: "" },
+  figcaption = "",
+  reverse = false,
+  twoColumnList = false,
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const fontStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  fontHeadings ? `--np-font-headings: ${fontHeadings}` : "",
+  fontBody ? `--np-font-body: ${fontBody}` : "",
+  headingColor ? `--np-heading-color: ${headingColor}` : "",
+  prefixColor ? `--np-prefix-color: ${prefixColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["np-split-section", reverse && "alt", className]}
+  paddingVertical="4xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={fontStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="flex-ed">
+    <article>
+      <div class="content">
+        <h2>
+          {headingPrefix && <small class="prefix">{headingPrefix}</small>}
+          <span set:html={heading} />
+        </h2>
+        {
+          listItems.length > 0 && (
+            <ul
+              class:list={[twoColumnList && "two-col"]}
+              style={checkImage ? `--check-image: url(${checkImage})` : undefined}
+            >
+              {listItems.map((item: string) => (
+                <li set:html={item} />
+              ))}
+            </ul>
+          )
+        }
+      </div>
+    </article>
+    <figure>
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        editable={true}
+        aspectRatio="none"
+        sizes="auto"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+      {figcaption && <figcaption>{figcaption}</figcaption>}
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  .np-split-section {
+    position: relative;
+  }
+
+  .np-split-section .flex-ed {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: space-around;
+  }
+
+  /* "alt" variant: image on the left */
+  .np-split-section.alt figure {
+    order: -1;
+  }
+
+  .np-split-section figure {
+    flex: 0 1 480px;
+  }
+
+  .np-split-section figure .image {
+    margin-top: 0;
+  }
+
+  .np-split-section figure :global(img) {
+    border-radius: 2.375rem;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .np-split-section figcaption {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-top: 0.9375rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .np-split-section article {
+    flex: 0 1 520px;
+  }
+
+  .np-split-section h2 {
+    color: var(--np-heading-color, var(--color-text));
+    font-family: var(--np-font-headings, var(--font-headings));
+    font-size: 3.125rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 0 0.9375rem;
+    text-align: left;
+  }
+
+  .np-split-section h2 .prefix {
+    color: var(--np-prefix-color, var(--np-heading-color, var(--color-text)));
+    display: block;
+    font-family: var(--np-font-body, var(--font-body));
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.625rem;
+    text-transform: none;
+  }
+
+  .np-split-section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
+
+  .np-split-section ul li {
+    font-size: 1.875rem;
+    margin: 0.625rem auto;
+    padding-left: 2.1875rem;
+    position: relative;
+  }
+
+  .np-split-section ul li::before {
+    /* fallback unicode styles (ignored when image is set) */
+    color: var(--np-heading-color, var(--color-text));
+    content: var(--check-image, "✓");
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 1024px) {
+    .np-split-section ul.two-col {
+      column-count: 2;
+      column-gap: 1.25rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .np-split-section .flex-ed {
+      display: block;
+    }
+
+    .np-split-section article .content {
+      text-align: center;
+    }
+
+    .np-split-section h2 {
+      font-size: 2.8125rem;
+      text-align: center;
+    }
+
+    .np-split-section ul {
+      display: table;
+      margin: auto;
+    }
+
+    .np-split-section figure {
+      margin: 0 auto;
+      max-width: 700px;
+      width: 100%;
+    }
+  }
+</style>

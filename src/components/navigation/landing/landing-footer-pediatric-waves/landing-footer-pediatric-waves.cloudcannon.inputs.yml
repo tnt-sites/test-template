@@ -1,0 +1,241 @@
+logoSource:
+  type: image
+  comment: Logo image source URL or path.
+
+logoAlt:
+  type: text
+  comment: Alt text for the logo image.
+
+id:
+  type: text
+  comment: Optional HTML id attribute.
+
+contactTitle:
+  type: markdown
+  comment: Contact column heading. Supports inline emphasis styles.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: false
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+
+offices:
+  type: array
+  comment: Optional office contact override for this footer.
+  options:
+    structures: _structures.officeSections
+
+legalLinks:
+  type: array
+  comment: Legal links displayed in the copyright row.
+
+legalBlurb:
+  type: textarea
+  comment: Optional legal or compliance text shown under copyright.
+
+linkColor:
+  type: select
+  comment: Color of copyright row links.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)
+
+linkHoverColor:
+  type: select
+  comment: Color of copyright row links on hover.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)
+
+formHeading:
+  type: text
+  comment: Heading above the footer form.
+
+formAction:
+  type: text
+  comment: Form action URL.
+
+formBlocks:
+  type: array
+  label: Form Fields
+  comment: Form fields rendered by the Astro/CloudCannon form builder.
+  options:
+    structures: _structures.formBlocks
+
+mapEmbedUrl:
+  type: text
+  comment: Optional Google Maps embed URL (iframe src value).
+
+questionsLine:
+  type: text
+  comment: Optional line shown below footer legal text.
+
+backgroundColor:
+  type: select
+  comment: Background color of the footer.
+  options:
+    values:
+      - id: ""
+        name: None
+      - id: "var(--color-bg)"
+        name: Base
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-bg-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-bg-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-bg-dark)"
+        name: Dark
+      - id: "var(--color-bg-black)"
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+officeHoursAlignment:
+  type: select
+  comment: Align hours text within each office-hours row while keeping the day and time columns aligned.
+  options:
+    values:
+      - id: right
+        name: Right aligned hours
+      - id: left
+        name: Left aligned hours
+
+topWaveImage:
+  type: object
+  comment: Optional top decorative wave image shown above the footer content.
+  options:
+    structures:
+      values:
+        - label: Top Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the top wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+addressLinkColor:
+  type: select
+  comment: Color of address links.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)
+addressLinkHoverColor:
+  type: select
+  comment: Color of address links on hover.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)
+phoneLinkColor:
+  type: select
+  comment: Color of phone links.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)
+phoneLinkHoverColor:
+  type: select
+  comment: Color of phone links on hover.
+  options:
+    values:
+      - id: ""
+        name: None (default)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+      - id: "var(--color-text-strong)"
+        name: Text (Strong)
+      - id: "var(--color-text-inverse)"
+        name: Text (Inverse)

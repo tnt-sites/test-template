@@ -1,0 +1,83 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import RenderBlock from "@components/utils/renderBlock.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import Split from "@wrappers/split/Split.astro";
+
+const {
+  image = {
+    source: "",
+    alt: "",
+  },
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  badges = [],
+  reverse = false,
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["hero", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={backgroundColorHex ? "none" : backgroundColor}
+  style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
+  {...htmlAttributes}
+>
+  <Split
+    distributionMode="third-two-thirds"
+    verticalAlignment="center"
+    reverse={reverse}
+    minSplitWidth={1025}
+    gap="2xl"
+    class="hero-split"
+  >
+    <Fragment slot="first">
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={true}
+        editable={true}
+        aspectRatio="landscape"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+    </Fragment>
+    <Fragment slot="second">
+      <Heading level="h1" size="lg" alignX="left" data-prop="heading">
+        {heading}
+      </Heading>
+      <Text data-prop="subtext" text={subtext} />
+      <ButtonGroup class="buttons" buttonSections={buttonSections} />
+      <div class="badges">
+        <RenderBlock contentSections={badges} propName="badges" editable={editable} />
+      </div>
+    </Fragment>
+  </Split>
+</CustomSection>
+
+<style>
+  .hero {
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      max-height: 235px;
+    }
+  }
+</style>

@@ -1,0 +1,163 @@
+id:
+  type: text
+  comment: "Developer use only. Optional HTML id attribute for this header."
+logoSource:
+  type: image
+  comment: Logo image source URL or path.
+logoAlt:
+  type: text
+  comment: Alt text for the logo image.
+pageButtons:
+  type: array
+  comment: Header CTA buttons.
+  options:
+    structures: _structures.buttonSections
+offices:
+  type: array
+  comment: Optional office override for this header.
+  options:
+    structures: _structures.officeSections
+mobileCallTextColor:
+  type: select
+  comment: Main text color of the mobile call button.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+mobileCallSmallTextColor:
+  type: select
+  comment: Small text color of the mobile call button.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+mobileRequestTextColor:
+  type: select
+  comment: Main text color of the mobile request button.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+mobileRequestSmallTextColor:
+  type: select
+  comment: Small text color of the mobile request button.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+addressLinkColor:
+  type: select
+  comment: Color of address links.
+  options:
+    values:
+      - id: ""
+        name: Default (Link Color)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+addressLinkHoverColor:
+  type: select
+  comment: Hover color of address links.
+  options:
+    values:
+      - id: ""
+        name: Default (Link Hover)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-link-hover)"
+        name: Link Hover
+phoneLinkColor:
+  type: select
+  comment: Color of phone links.
+  options:
+    values:
+      - id: ""
+        name: Default (Link Color)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+phoneLinkHoverColor:
+  type: select
+  comment: Hover color of phone links.
+  options:
+    values:
+      - id: ""
+        name: Default (Link Hover)
+      - id: "#fff"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-link-hover)"
+        name: Link Hover
+"$.offices[*].name":
+  type: text
+"$.offices[*].phones[*].display":
+  type: text
+"$.offices[*].phones[*].href":
+  type: text
+"$.offices[*].addresses[*].lines":
+  type: array
+"$.offices[*].addresses[*].city":
+  type: text
+"$.offices[*].addresses[*].state":
+  type: text
+"$.offices[*].addresses[*].postalCode":
+  type: text
+"$.offices[*].addresses[*].mapUrl":
+  type: url

@@ -1,0 +1,115 @@
+backgroundColor:
+  type: select
+  comment: Background color of the banner section. Use "none" when a background image is set on the section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+cityState:
+  type: text
+  comment: City/state name shown in lighter text above the main heading (e.g. "Vermont's").
+
+heading:
+  type: text
+  comment: Main H1 heading in large condensed type. Supports <br> for line breaks (e.g. "Top-Rated <br>Implant Dentists").
+
+offerLabel:
+  type: text
+  comment: Small uppercase label above the offer title inside the offer box (e.g. "One-On-One").
+
+offerTitle:
+  type: text
+  comment: Large accent-colored offer title inside the offer box (e.g. "Consultation").
+
+offerSubtitle:
+  type: text
+  comment: Bold detail line inside the offer box (e.g. "Includes Exam, X-Ray, and CBCT Scan").
+
+image:
+  type: object
+  comment: Doctor or team photo displayed on the right side of the banner.
+  options:
+    structures:
+      values:
+        - label: Banner Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the banner photo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text describing the photo.
+
+figcaption:
+  type: text
+  comment: Optional caption overlaid at the bottom of the photo (e.g. doctor names).
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) displayed below the offer box.
+  options:
+    structures: _structures.buttonSections
+
+accentColor:
+  type: select
+  comment: Accent color used for the offer title text inside the offer box.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+headingColor:
+  type: select
+  comment: Color of the city/state text above the main heading.
+  options:
+    values:
+      - id: "#ccc"
+        name: Light Gray (default)
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family. Leave blank for site default.
+
+fontBody:
+  type: text
+  comment: Override the offer box font family. Leave blank for site default.

@@ -1,0 +1,27 @@
+label: NPTC Split Section
+icon: view_column
+description: Two-column section with an H2 heading and bullet list on one side and a photo on the other. Use "reverse" to flip the image to the left.
+value:
+  _component: landing-page-components/new-patient-three-callouts/split
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: "Dental Insurance<br>Welcome"
+  listItems:
+    - Claims Filed on Your Behalf
+    - Personalized Treatment Plans
+    - Experienced in Maximizing Benefits
+    - Accepting Nearly All Insurance Plans
+  image:
+    source: https://placehold.co/480x420
+    alt: Team member smiling
+  figcaption: ""
+  reverse: false
+  buttonSections: []
+  accentColor: "var(--color-brand)"
+  headingColor: "var(--color-brand)"
+  headingFontFamily: ""
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-three-callouts/split/split.cloudcannon.inputs.yml

@@ -1,0 +1,170 @@
+backgroundColor:
+  type: select
+  comment: Background color of the hero section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+subheading:
+  type: text
+  comment: Small text above the main hero heading.
+
+heading:
+  type: text
+  comment: Main hero heading. Supports <br> line breaks.
+
+listItems:
+  type: array
+  comment: Bullet points shown under the heading.
+  options:
+    structures:
+      values:
+        - label: List Item
+          icon: add
+          value: ""
+
+image:
+  type: object
+  comment: Primary hero image shown on the right side.
+  options:
+    structures:
+      values:
+        - label: Hero Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the hero image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) below the bullet list.
+  options:
+    structures: _structures.buttonSections
+
+headingColor:
+  type: select
+  comment: Color of the main heading text.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+
+accentColor:
+  type: select
+  comment: Accent color for subheading and plus markers.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "var(--color-text-inverse)"
+        name: White
+
+waveTopImage:
+  type: object
+  comment: Optional top decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Top Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the top wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveMiddleImage:
+  type: object
+  comment: Optional middle decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Middle Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the middle wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveBottomImage:
+  type: object
+  comment: Optional bottom decorative wave image.
+  options:
+    structures:
+      values:
+        - label: Bottom Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the bottom wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.

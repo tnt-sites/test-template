@@ -1,0 +1,44 @@
+label: Landing Header — Two Locations, Logo Centered
+icon: location_on
+description: "Landing header with two office locations flanking a centered logo, plus mobile call and CTA buttons."
+value:
+  _component: navigation/landing/landing-header-two-locations
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  mobileCallLabel: Call Now
+  mobileCallSmallText: "Call Now"
+  mobileRequestLabel: "Request an Appointment"
+  mobileRequestHref: ""
+  mobileCallBackgroundColor: ""
+  mobileCallBackgroundColorHex: ""
+  mobileRequestBackgroundColor: ""
+  mobileRequestBackgroundColorHex: ""
+  mobileCallTextColor: ""
+  mobileCallSmallTextColor: ""
+  mobileRequestTextColor: ""
+  mobileRequestSmallTextColor: ""
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  pageButtons:
+    - _component: building-blocks/core-elements/button
+      text: Request an Appointment
+      hideText: false
+      link: /request-an-appointment/
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+      width: md
+  offices: []
+preview:
+  text:
+    - Landing Header — Two Locations, Logo Centered
+  icon: location_on
+picker_preview:
+  text: Landing Header — Two Locations, Logo Centered
+  subtext: "Left office | centered logo | right office, with mobile call + CTA buttons."
+  icon: location_on
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-header-two-locations/landing-header-two-locations.cloudcannon.inputs.yml

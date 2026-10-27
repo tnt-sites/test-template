@@ -1,0 +1,22 @@
+label: Reviews
+icon: reviews
+description: Full-width review quote section with a background image, star rating, and author attribution.
+value:
+  _component: landing-page-components/new-patient-split-banner/reviews
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  backgroundImage:
+    source: https://placehold.co/1920x600
+    alt: ""
+  heading: Hear From Our Patients
+  reviewText: >-
+    Everyone at this office has been amazing. Very understanding and kind! We very much recommend you!
+  author: Jessica O.
+  googleLogoImage:
+    source: ""
+    alt: Google Reviews
+  starColor: "#febb21"
+  fontHeadings: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-split-banner/reviews/reviews.cloudcannon.inputs.yml

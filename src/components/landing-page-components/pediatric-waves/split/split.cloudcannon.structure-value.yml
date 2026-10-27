@@ -1,0 +1,27 @@
+label: Pediatric Waves Split
+icon: view_column
+description: Two-column content section with image, CTA support, and side wave decoration.
+value:
+  _component: landing-page-components/pediatric-waves/split
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: Friendly <span>Expertise</span>
+  headingFontFamily: ""
+  paragraphs:
+    - body: We want kids to love visiting the dentist. Our team provides one-on-one attention to every child.
+    - body: We have completed advanced training specific to pediatric dentistry.
+    - body: You can trust us to build healthy habits that lead to a lifetime of smiles.
+  image:
+    source: https://placehold.co/900x760
+    alt: Pediatric dentist with patient
+  figcaption: ""
+  reverse: false
+  buttonSections: []
+  headingColor: ""
+  accentColor: "var(--color-brand-secondary)"
+  waveImage:
+    source: ""
+    alt: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-waves/split/split.cloudcannon.inputs.yml

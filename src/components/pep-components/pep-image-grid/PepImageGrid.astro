@@ -1,0 +1,201 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import Video from "@core-elements/video/Video.astro";
+
+const {
+  heading = "",
+  items = [],
+  paddingVertical = "xl",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  cardBackgroundColor = "",
+  cardBackgroundColorHex = "",
+  captionBackgroundColor = "",
+  captionBackgroundColorHex = "",
+  captionTextColor = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const resolvedCardBackground =
+  cardBackgroundColorHex || cardBackgroundColor || "var(--color-bg-base, #fff)";
+const resolvedCaptionBackground =
+  captionBackgroundColorHex || captionBackgroundColor || "var(--color-bg-base, #fff)";
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  `--pig-card-bg: ${resolvedCardBackground}`,
+  `--pig-caption-bg: ${resolvedCaptionBackground}`,
+  captionTextColor ? `--pig-caption-text: ${captionTextColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["pep-image-grid", className]}
+  paddingVertical={paddingVertical}
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="pep-image-grid__inner">
+    {heading && <h2 class="pep-image-grid__heading" set:html={heading} />}
+
+    <div class="pep-image-grid__grid">
+      {
+        items.map((item: any, index: number) => {
+          const mediaType = item?.mediaType === "youtube" ? "youtube" : "image";
+          const imageSource = item?.image?.source ?? "";
+          const imageAlt = item?.image?.alt ?? "";
+          const youtubeId = item?.youtubeId ?? "";
+          const youtubeTitle = item?.youtubeTitle || item?.caption || `Video ${index + 1}`;
+
+          if (mediaType === "youtube" && !youtubeId) {
+            return null;
+          }
+
+          if (mediaType === "image" && !imageSource) {
+            return null;
+          }
+
+          return (
+            <figure class="pep-image-grid__item">
+              <div class="pep-image-grid__media">
+                {mediaType === "youtube" ? (
+                  <Video
+                    type="youtube"
+                    id={youtubeId}
+                    title={youtubeTitle}
+                    class="pep-image-grid__video"
+                  />
+                ) : (
+                  <Image
+                    source={imageSource}
+                    alt={imageAlt}
+                    rounded={false}
+                    editable={true}
+                    aspectRatio="1:1"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    widths={[500, 900]}
+                    class="pep-image-grid__image"
+                    data-prop-src={`items.${index}.image.source`}
+                    data-prop-alt={`items.${index}.image.alt`}
+                  />
+                )}
+              </div>
+              {item?.caption && (
+                <figcaption data-prop={`items.${index}.caption`}>{item.caption}</figcaption>
+              )}
+            </figure>
+          );
+        })
+      }
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .pep-image-grid__inner {
+    margin: 0 auto;
+    max-width: 1260px;
+  }
+
+  .pep-image-grid__heading {
+    color: var(--color-brand-secondary, var(--color-brand));
+    font-size: clamp(2rem, 5vw, 3.25rem);
+    line-height: 1.1;
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+
+  .pep-image-grid__grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  }
+
+  .pep-image-grid__item {
+    background-color: var(--pig-card-bg);
+    margin: 0;
+    overflow: hidden;
+  }
+
+  .pep-image-grid__media {
+    aspect-ratio: 1 / 1;
+    background-color: var(--pig-card-bg);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .pep-image-grid__media :global(img),
+  .pep-image-grid__media :global(video),
+  .pep-image-grid__media :global(lite-youtube) {
+    height: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  .pep-image-grid__media :global(img) {
+    object-fit: cover;
+  }
+
+  .pep-image-grid__media :global(.video) {
+    display: block;
+    margin-top: 0;
+  }
+
+  .pep-image-grid__item figcaption {
+    background-color: var(--pig-caption-bg);
+    color: var(--pig-caption-text, var(--color-text, #000));
+    font-size: clamp(0.9rem, 1.6vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 1024px) {
+    .pep-image-grid__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      justify-content: center;
+    }
+
+    .pep-image-grid__item {
+      aspect-ratio: 1 / 1;
+      display: flex;
+      flex: 0 1 45%;
+      flex-direction: column;
+      max-width: 100%;
+      min-width: 200px;
+    }
+
+    .pep-image-grid__media {
+      aspect-ratio: 1 / 1;
+      flex: 1 1 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pep-image-grid__grid {
+      gap: 1rem;
+    }
+
+    .pep-image-grid__item figcaption {
+      padding: 0.65rem 0.85rem;
+    }
+  }
+</style>

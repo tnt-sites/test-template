@@ -1,0 +1,195 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import SimpleText from "@core-elements/simple-text/SimpleText.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "",
+  image = {
+    source: "",
+    alt: "",
+  },
+  mobileImage = {
+    source: "",
+    alt: "",
+  },
+  backgroundImage = {
+    source: "",
+  },
+  reviewText = "",
+  author = "",
+  authorAlignX = "left",
+  textColor = "#fff",
+  mobileTextColor = "#000",
+  starColor = "#febb21",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["reviews", className]}
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  backgroundImage={backgroundImage}
+  style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
+  {...htmlAttributes}
+>
+  <div class="content">
+    <div
+      class="container"
+      style={`--text-color: ${textColor}; --mobile-text-color: ${mobileTextColor};`}
+    >
+      <Image
+        class:list={["img-desk", className]}
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        aspectRatio="none"
+        sizes="auto"
+        widths={[]}
+        editable={true}
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+      <Image
+        class:list={["img-mob", className]}
+        source={mobileImage.source}
+        alt={mobileImage.alt}
+        rounded={false}
+        aspectRatio="none"
+        sizes="auto"
+        widths={[]}
+        editable={true}
+        data-prop-src="mobileImage.source"
+        data-prop-alt="mobileImage.alt"
+      />
+      <Text editable={true} data-prop="reviewText">
+        {reviewText}
+      </Text>
+      <div class={`author align-${authorAlignX}`}>
+        <SimpleText size="sm" editable={true} data-prop="author">
+          {author}
+        </SimpleText>
+        <div class="star" style={`--star-color: ${starColor};`}></div>
+      </div>
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .reviews {
+    position: relative;
+  }
+
+  .reviews .container {
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+  .reviews .text,
+  .reviews .author p {
+    color: var(--text-color);
+  }
+  .reviews .container .text {
+    font-size: 1.6rem;
+  }
+  .reviews .author {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+  }
+
+  .reviews .author.align-right {
+    justify-content: flex-end;
+  }
+
+  .reviews .author.align-center {
+    justify-content: center;
+  }
+
+  .reviews .author.align-left {
+    justify-content: flex-start;
+  }
+
+  .reviews .author p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .reviews .star:before {
+    color: var(--star-color);
+    content: "\e80f \e80f \e80f \e80f \e80f";
+    font-family: fontello;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 8.4px;
+    margin: 0;
+  }
+  .reviews .img-desk {
+    margin: 0;
+  }
+  .reviews .img-mob {
+    display: none;
+  }
+  .reviews .img-desk :global(img),
+  .reviews .img-mob :global(img) {
+    aspect-ratio: unset;
+    width: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .reviews .bg {
+      display: none;
+    }
+    .reviews .container {
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 40px 20px;
+    }
+
+    .reviews .text,
+    .reviews .author p {
+      color: var(--mobile-text-color);
+    }
+
+    .reviews .container .text {
+      text-align: center;
+    }
+    .reviews .author {
+      display: block;
+      margin-top: 1.4em;
+    }
+    .reviews .author p {
+      display: block;
+      text-align: center;
+    }
+
+    .reviews .img-desk,
+    .reviews .star {
+      display: none;
+    }
+    .reviews .img-mob {
+      display: block;
+    }
+    .reviews .img-mob :global(img) {
+      margin: 0 auto;
+    }
+  }
+</style>

@@ -1,0 +1,25 @@
+label: Banner
+icon: dashboard
+description: Hero banner with a heading and optional badge images on the left, and a full-height photo on the right. Badge images (e.g. award seals) are displayed side-by-side in a flex row.
+value:
+  _component: landing-page-components/count-on-us/banner
+  id: ""
+  backgroundColor: surface
+  backgroundColorHex: ""
+  subheading: "San Jose's"
+  heading: "Top-Rated<br>Dental Expert"
+  badgeImages:
+    - source: https://placehold.co/180x180
+      alt: "300+ 5 star reviews"
+    - source: https://placehold.co/180x180
+      alt: ""
+  image:
+    source: https://placehold.co/738x600
+    alt: Doctor photo
+  figcaption: ""
+  buttonSections: []
+  borderColor: "var(--color-brand)"
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/count-on-us/banner/banner.cloudcannon.inputs.yml

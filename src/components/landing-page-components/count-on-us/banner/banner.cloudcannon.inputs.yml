@@ -1,0 +1,114 @@
+backgroundColor:
+  type: select
+  comment: Background color of the banner section.
+  options:
+    values:
+      - id: brand
+        name: Brand (Primary)
+      - id: brand-secondary
+        name: Brand (Secondary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+subheading:
+  type: text
+  comment: Small uppercase text displayed above the main heading (e.g. city name like "San Jose's").
+
+heading:
+  type: text
+  comment: Main heading text. Supports <br> for manual line breaks.
+
+badgeImages:
+  type: array
+  comment: Optional badge/stamp images displayed side-by-side below the heading (e.g. review badges, award seals).
+  options:
+    structures:
+      values:
+        - label: Badge Image
+          icon: military_tech
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the badge or stamp image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+image:
+  type: object
+  comment: Full-height photo displayed on the right side of the banner.
+  options:
+    structures:
+      values:
+        - label: Banner Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the banner photo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional caption overlaid at the bottom of the photo (e.g. doctor name).
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) displayed below the badges.
+  options:
+    structures: _structures.buttonSections
+
+borderColor:
+  type: select
+  comment: Color of the decorative bottom border on the banner.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family (e.g. "Georgia, serif"). Leave blank to use the site default.
+
+fontBody:
+  type: text
+  comment: Override the subheading font family (e.g. "Arial, sans-serif"). Leave blank to use the site default.

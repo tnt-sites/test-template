@@ -1,0 +1,52 @@
+backgroundColor:
+  type: select
+  comment: Background color of the top bar.
+  options:
+    values:
+      - id: brand
+        name: Brand (Primary)
+      - id: brand-secondary
+        name: Brand (Secondary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+items:
+  type: array
+  comment: Announcement items separated by bullet dots.
+  options:
+    structures:
+      values:
+        - label: Item
+          icon: title
+          value: ""
+
+textColor:
+  type: select
+  comment: Text color for the top bar. Defaults to the current color scheme text color.
+  options:
+    values:
+      - id: "var(--color-text)"
+        name: Dark (default)
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary

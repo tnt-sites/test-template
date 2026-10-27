@@ -1,0 +1,13 @@
+label: Top Bar
+icon: announcement
+description: A thin announcement bar displayed below the header with bullet-separated text items.
+value:
+  _component: landing-page-components/new-patient-split-banner/top-bar
+  id: ""
+  backgroundColor: brand
+  textColor: "var(--color-text-inverse)"
+  items:
+    - New Patients Welcome
+    - Same-Day Appointments Available
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-split-banner/top-bar/top-bar.cloudcannon.inputs.yml

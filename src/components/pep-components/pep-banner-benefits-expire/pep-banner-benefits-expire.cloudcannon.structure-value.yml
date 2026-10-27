@@ -1,0 +1,25 @@
+label: PEP Banner Benefits Expire
+icon: dashboard
+description: Full-width PEP hero banner with an overlaid heading, body copy, stamp graphic, and desktop-only background image.
+value:
+  _component: pep-components/pep-banner-benefits-expire
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  borderColor: "var(--color-accent)"
+  headingColor: "var(--color-text-inverse)"
+  textColor: "var(--color-text)"
+  heading: "Let Your <br>Insurance <br>Help You Save"
+  headingFontFamily: ""
+  text: |
+    We get it. Things are expensive. At the same time, millions of Americans pay for dental benefits they never use. We do not want that to happen to you. In fact, letting your insurance help you pay for the dental care you need now saves you a lot of money in the long run.
+
+    We have reserved appointments exclusively for our current patients between now and the end of December. Please call today and let us help you maximize the value of your benefits.
+  image:
+    source: https://placehold.co/1920x900
+    alt: Piggy bank banner image
+  stampImage:
+    source: https://placehold.co/440x440
+    alt: Decorative benefits expire stamp
+_inputs_from_glob:
+  - /src/components/pep-components/pep-banner-benefits-expire/pep-banner-benefits-expire.cloudcannon.inputs.yml

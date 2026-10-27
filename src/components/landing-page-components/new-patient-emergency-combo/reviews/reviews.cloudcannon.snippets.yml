@@ -1,0 +1,24 @@
+reviews:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - reviews
+    icon: add
+  definitions:
+    component_name: Reviews
+    named_args:
+      - editor_key: heading
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: backgroundColor
+        type: string
+        optional: true
+        remove_empty: true
+    # Add your component arguments here
+    # Example:
+    # - editor_key: text
+    #   type: string
+  _inputs_from_glob:
+    - /src/components/page-sections/ppc-blocks/reviews/reviews.cloudcannon.inputs.yml

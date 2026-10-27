@@ -1,0 +1,21 @@
+label: Insurance
+icon: health_and_safety
+description: Section with one or two blocks of insurance welcome / no-insurance messaging.
+value:
+  _component: landing-page-components/new-patient-split-banner/insurance
+  id: ""
+  backgroundColor: surface
+  backgroundColorHex: ""
+  blocks:
+    - heading: Dental Insurance Welcome
+      text: >-
+        We realize the importance of taking care of your teeth, and we welcome dental insurance as a partner in making exceptional dentistry affordable.
+    - heading: "No Insurance?<br> No Worries!"
+      text: >-
+        If you do not have dental insurance, give us a call. We are proud to offer our in-house Dental Savings Plan.
+  headingColor: "var(--color-text)"
+  dividerColor: "var(--color-brand)"
+  fontHeadings: ""
+  headingFontFamily: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-split-banner/insurance/insurance.cloudcannon.inputs.yml

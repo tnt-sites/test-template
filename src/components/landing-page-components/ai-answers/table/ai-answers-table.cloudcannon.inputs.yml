@@ -1,0 +1,178 @@
+backgroundColor:
+  type: select
+  comment: Background color of the table section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: text
+  comment: Section heading displayed above the table. Supports <br> for line breaks.
+
+headingLineColor:
+  type: select
+  comment: Color of the decorative horizontal lines flanking the heading.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "#0A4172"
+        name: Navy
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+siteName:
+  type: text
+  comment: "Override for the practice name shown in the table header and mobile labels. Defaults to the site name from Site Info."
+
+logo:
+  type: object
+  comment: Practice logo displayed in the table header column.
+  options:
+    structures:
+      values:
+        - label: Logo Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the logo image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for the logo.
+
+headerColor:
+  type: select
+  comment: Background color of the table header row.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+headerTextColor:
+  type: select
+  comment: Text color of the table header row.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "#0A4172"
+        name: Navy
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+otherColumnLabel:
+  type: text
+  comment: Label for the "other practices" column in the table header.
+
+checkColor:
+  type: color
+  comment: Color of the checkmark icon.
+
+crossColor:
+  type: color
+  comment: Color of the cross text.
+
+checkIconName:
+  type: select
+  comment: Fontello icon to use as the checkmark.
+  options:
+    values:
+      - id: icon-ok-circled
+        name: Ok Circled
+      - id: icon-ok-circle
+        name: Ok Circle
+      - id: icon-ok
+        name: Ok
+      - id: icon-ok-1
+        name: Ok 1
+
+crossText:
+  type: text
+  comment: "Text displayed as the cross symbol (e.g. ✕ or ✗ or No)."
+
+rows:
+  type: array
+  comment: Comparison table rows. Set siteValue/otherValue to "check", "cross", or any text (e.g. a price).
+  options:
+    structures:
+      values:
+        - label: Row
+          icon: table_rows
+          value:
+            feature: ""
+            siteValue: check
+            otherValue: cross
+          _inputs:
+            feature:
+              type: text
+              comment: The feature or attribute being compared.
+            siteValue:
+              type: select
+              comment: "Value for your practice column: check, cross, or custom text."
+              options:
+                allow_create: true
+                values:
+                  - id: check
+                    name: "✓ Check"
+                  - id: cross
+                    name: "✗ Cross"
+            otherValue:
+              type: select
+              comment: "Value for the other practices column: check, cross, or custom text."
+              options:
+                allow_create: true
+                values:
+                  - id: check
+                    name: "✓ Check"
+                  - id: cross
+                    name: "✗ Cross"

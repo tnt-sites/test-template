@@ -1,0 +1,419 @@
+---
+import FontelloIcon from "@core-elements/fontello-icon/FontelloIcon.astro";
+import Image from "@core-elements/image/Image.astro";
+import siteInfoData from "@data/siteInfo.json";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  pageButtons = [],
+  offices = [],
+  backgroundColor = "",
+  backgroundColorHex = "",
+  iconBackgroundColor = "",
+  iconBackgroundColorHex = "",
+  linkColor = "",
+  linkColorHex = "",
+  addressLinkColor = "",
+  addressLinkColorHex = "",
+  addressLinkHoverColor = "",
+  addressLinkHoverColorHex = "",
+  phoneLinkColor = "",
+  phoneLinkColorHex = "",
+  phoneLinkHoverColor = "",
+  phoneLinkHoverColorHex = "",
+  mobileCallBackgroundColor = "",
+  mobileCallBackgroundColorHex = "",
+  mobileRequestBackgroundColor = "",
+  mobileRequestBackgroundColorHex = "",
+  mobileCallTextColor = "",
+  mobileCallSmallTextColor = "",
+  mobileRequestTextColor = "",
+  mobileRequestSmallTextColor = "",
+  mobileCallSmallText = "Call Now",
+  mobileRequestLabel = "Request an Appointment",
+  mobileRequestHref = "",
+  _component,
+  class: className,
+  ...htmlAttributes
+} = Astro.props as {
+  logoSource?: string;
+  logoAlt?: string;
+  pageButtons?: any[];
+  offices?: any[];
+  backgroundColor?: string;
+  backgroundColorHex?: string;
+  iconBackgroundColor?: string;
+  iconBackgroundColorHex?: string;
+  linkColor?: string;
+  linkColorHex?: string;
+  addressLinkColor?: string;
+  addressLinkColorHex?: string;
+  addressLinkHoverColor?: string;
+  addressLinkHoverColorHex?: string;
+  phoneLinkColor?: string;
+  phoneLinkColorHex?: string;
+  phoneLinkHoverColor?: string;
+  phoneLinkHoverColorHex?: string;
+  mobileCallBackgroundColor?: string;
+  mobileCallBackgroundColorHex?: string;
+  mobileRequestBackgroundColor?: string;
+  mobileRequestBackgroundColorHex?: string;
+  mobileCallTextColor?: string;
+  mobileCallSmallTextColor?: string;
+  mobileRequestTextColor?: string;
+  mobileRequestSmallTextColor?: string;
+  mobileCallSmallText?: string;
+  mobileRequestLabel?: string;
+  mobileRequestHref?: string;
+  _component?: string;
+  class?: string;
+  [key: string]: any;
+};
+
+const normalizedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const normalizedPageButtons = (Array.isArray(pageButtons) ? pageButtons : []).map(
+  (button: any) => ({
+    ...button,
+    text: typeof button?.text === "string" ? button.text : "",
+  })
+);
+
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+
+const resolvedBg = backgroundColorHex || getColorValue(backgroundColor) || "";
+const resolvedIconBg = iconBackgroundColorHex || getColorValue(iconBackgroundColor) || "";
+const resolvedLinkColor = linkColorHex || getColorValue(linkColor) || "";
+const resolvedAddressLinkColor = addressLinkColorHex || getColorValue(addressLinkColor) || "";
+const resolvedAddressLinkHoverColor =
+  addressLinkHoverColorHex || getColorValue(addressLinkHoverColor) || "";
+const resolvedPhoneLinkColor = phoneLinkColorHex || getColorValue(phoneLinkColor) || "";
+const resolvedPhoneLinkHoverColor =
+  phoneLinkHoverColorHex || getColorValue(phoneLinkHoverColor) || "";
+const resolvedMobileCallBg =
+  mobileCallBackgroundColorHex || getColorValue(mobileCallBackgroundColor) || "";
+const resolvedMobileRequestBg =
+  mobileRequestBackgroundColorHex || getColorValue(mobileRequestBackgroundColor) || "";
+const resolvedMobileCallTextColor = getColorValue(mobileCallTextColor) || "";
+const resolvedMobileCallSmallTextColor = getColorValue(mobileCallSmallTextColor) || "";
+const resolvedMobileRequestTextColor = getColorValue(mobileRequestTextColor) || "";
+const resolvedMobileRequestSmallTextColor = getColorValue(mobileRequestSmallTextColor) || "";
+
+const cssVars = [
+  resolvedBg && `--lhci-bg: ${resolvedBg}`,
+  resolvedIconBg && `--lhci-icon-bg: ${resolvedIconBg}`,
+  resolvedLinkColor && `--lhci-link-color: ${resolvedLinkColor}`,
+  resolvedAddressLinkColor && `--lhci-address-link-color: ${resolvedAddressLinkColor}`,
+  resolvedAddressLinkHoverColor &&
+    `--lhci-address-link-hover-color: ${resolvedAddressLinkHoverColor}`,
+  resolvedPhoneLinkColor && `--lhci-phone-link-color: ${resolvedPhoneLinkColor}`,
+  resolvedPhoneLinkHoverColor && `--lhci-phone-link-hover-color: ${resolvedPhoneLinkHoverColor}`,
+  resolvedMobileCallBg && `--lhci-mobile-call-bg: ${resolvedMobileCallBg}`,
+  resolvedMobileRequestBg && `--lhci-mobile-request-bg: ${resolvedMobileRequestBg}`,
+  resolvedMobileCallTextColor && `--lhci-mobile-call-text-color: ${resolvedMobileCallTextColor}`,
+  resolvedMobileCallSmallTextColor &&
+    `--lhci-mobile-call-small-text-color: ${resolvedMobileCallSmallTextColor}`,
+  resolvedMobileRequestTextColor &&
+    `--lhci-mobile-request-text-color: ${resolvedMobileRequestTextColor}`,
+  resolvedMobileRequestSmallTextColor &&
+    `--lhci-mobile-request-small-text-color: ${resolvedMobileRequestSmallTextColor}`,
+]
+  .filter(Boolean)
+  .join("; ");
+
+const firstPhone = normalizedOffices[0]?.phones?.[0];
+const mobileCallHref = firstPhone?.href || "#";
+const mobileCallDisplay = firstPhone?.display || "";
+const mobileRequestLink = normalizedPageButtons[0]?.link || mobileRequestHref;
+const mobileRequestLabelParts =
+  typeof mobileRequestLabel === "string" ? mobileRequestLabel.trim().split(/\s+/) : [];
+const mobileRequestFirstLine = mobileRequestLabelParts[0] || "";
+const mobileRequestSecondLine = mobileRequestLabelParts.slice(1).join(" ");
+---
+
+<header
+  class:list={["landing-header-ci", className]}
+  style={cssVars || undefined}
+  {...htmlAttributes}
+>
+  <div class="lhci-nav">
+    <a class="lhci-logo-link" href="/">
+      <Image source={logoSource} class="lhci-logo" alt={logoAlt} editable={false} />
+    </a>
+
+    {
+      normalizedOffices.map((office: any) => (
+        <>
+          {Array.isArray(office?.addresses) &&
+            office.addresses.map((address: any) => {
+              const lines = formatAddressLines(address);
+
+              return lines.length > 0 ? (
+                <a
+                  href={address?.mapUrl || "#"}
+                  class="lhci-address"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span class="lhci-icon-badge" aria-hidden="true">
+                    <FontelloIcon name="icon-location" size="sm" />
+                  </span>
+                  <span class="lhci-link-text">
+                    {lines.map((line: string, i: number) => (
+                      <>
+                        {line}
+                        {i < lines.length - 1 && <br />}
+                      </>
+                    ))}
+                  </span>
+                </a>
+              ) : null;
+            })}
+
+          {Array.isArray(office?.phones) &&
+            office.phones.map((phone: any) =>
+              phone?.display ? (
+                <a href={phone?.href || "#"} class="lhci-phone">
+                  <span class="lhci-icon-badge" aria-hidden="true">
+                    <FontelloIcon name="icon-phone" size="sm" />
+                  </span>
+                  <span class="lhci-link-text lhci-phone-text">
+                    {phone?.label ? `${phone.label}: ` : ""}
+                    {phone.display}
+                  </span>
+                </a>
+              ) : null
+            )}
+        </>
+      ))
+    }
+
+    {
+      normalizedPageButtons.length > 0 && (
+        <div class="lhci-buttons">
+          <ButtonGroup
+            direction="row"
+            alignX="end"
+            class="lhci-button-group"
+            buttonSections={normalizedPageButtons}
+            editable={false}
+          />
+        </div>
+      )
+    }
+  </div>
+
+  <div class="lhci-mobile-bar mobile-btns">
+    {
+      mobileCallDisplay && (
+        <a href={mobileCallHref} class="lhci-mobile-call mobile-call">
+          <span class="mobile-small">{mobileCallSmallText}</span>
+          {mobileCallDisplay}
+        </a>
+      )
+    }
+    <a href={mobileRequestLink} class="lhci-mobile-request mobile-ra">
+      <span class="mobile-small">{mobileRequestFirstLine || mobileRequestLabel}</span>
+      {mobileRequestSecondLine || mobileRequestLabel}
+    </a>
+  </div>
+</header>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-header-ci {
+      background-color: var(--lhci-bg, #fff);
+
+      .lhci-nav {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-md);
+        justify-content: space-between;
+        margin-inline: auto;
+        max-width: 1470px;
+        padding-block: var(--spacing-sm);
+        padding-inline: var(--spacing-lg);
+      }
+
+      .lhci-logo-link {
+        display: inline-flex;
+        flex-shrink: 0;
+      }
+
+      .lhci-logo {
+        margin: 0 !important;
+        max-height: 80px;
+        width: auto;
+      }
+
+      .lhci-address,
+      .lhci-phone {
+        align-items: center;
+        display: inline-flex;
+        gap: var(--spacing-xs);
+        line-height: 1.3;
+        text-decoration: none;
+      }
+
+      .lhci-address {
+        color: var(--lhci-address-link-color, var(--color-text));
+
+        &:hover,
+        &:focus-visible {
+          color: var(--lhci-address-link-hover-color, var(--color-link-hover));
+        }
+      }
+
+      .lhci-phone {
+        color: var(--lhci-phone-link-color, var(--color-text));
+
+        &:hover,
+        &:focus-visible {
+          color: var(--lhci-phone-link-hover-color, var(--color-link-hover));
+        }
+      }
+
+      .lhci-icon-badge {
+        align-items: center;
+        background-color: var(--lhci-icon-bg, var(--color-brand, #95982d));
+        border-radius: 50%;
+        color: #fff;
+        display: inline-flex;
+        flex-shrink: 0;
+        height: 40px;
+        justify-content: center;
+        width: 40px;
+      }
+
+      .lhci-link-text {
+        font-size: 1.05rem;
+      }
+
+      .lhci-phone-text {
+        font-size: 1.4rem;
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .lhci-buttons {
+        flex-shrink: 0;
+
+        .button-group {
+          container-type: normal;
+          margin-top: 0;
+          width: auto;
+        }
+
+        /* Pill button with white circular icon badge — matches legacy design */
+        .button {
+          border-radius: 40px;
+          font-size: 1.1rem;
+          font-weight: var(--font-weight-bold, 700);
+          padding-block: 3px;
+          padding-inline-end: var(--spacing-lg);
+          padding-inline-start: 3px;
+
+          .icon {
+            align-items: center;
+            background-color: #fff;
+            border-radius: 50%;
+            color: var(--lhci-icon-bg, var(--color-brand, #95982d));
+            display: inline-flex;
+            flex-shrink: 0;
+            height: 35px;
+            justify-content: center;
+            width: 35px;
+          }
+        }
+      }
+
+      .lhci-mobile-bar {
+        display: flex;
+        width: 100%;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
+
+        a {
+          align-items: center;
+          display: flex;
+          flex: 1 1 50%;
+          flex-direction: column;
+          font-size: 16px;
+          font-weight: 700;
+          justify-content: center;
+          letter-spacing: 2.4px;
+          line-height: 1.1;
+          min-height: 3rem;
+          padding: 12px 5px;
+          text-align: center;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+
+        .mobile-small {
+          display: block;
+          font-size: 14px;
+          letter-spacing: 0.7px;
+          line-height: 1.1;
+        }
+
+        .lhci-mobile-call {
+          background-color: var(
+            --lhci-mobile-call-bg,
+            var(--lhci-icon-bg, var(--color-brand, #95982d))
+          );
+          color: var(--lhci-mobile-call-text-color, #fff);
+
+          .mobile-small {
+            color: var(--lhci-mobile-call-small-text-color, #fff);
+          }
+        }
+
+        .lhci-mobile-request {
+          background-color: var(
+            --lhci-mobile-request-bg,
+            var(--lhci-icon-bg, var(--color-brand, #95982d))
+          );
+          color: var(--lhci-mobile-request-text-color, #fff);
+          text-transform: uppercase;
+
+          .mobile-small {
+            color: var(--lhci-mobile-request-small-text-color, #fff);
+          }
+        }
+
+      }
+
+      @media (max-width: 1024px){
+        .content{padding-inline: 0;}
+        .lhci-nav{justify-content: center;}
+        .lhci-logo-link{margin: 0 auto; padding: 20px 10px;}
+        .lhci-address, .lhci-phone, .lhci-buttons{display: none;}
+      }
+    }
+  }
+</style>

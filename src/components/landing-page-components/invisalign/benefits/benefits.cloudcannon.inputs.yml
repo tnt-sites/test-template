@@ -1,0 +1,93 @@
+heading:
+  type: text
+  comment: Main section heading.
+
+leftTitle:
+  type: text
+  comment: Heading above the left list.
+
+leftItems:
+  type: array
+  options:
+    structures:
+      values:
+        - label: Left Benefit Item
+          icon: check
+          value: ""
+
+rightTitle:
+  type: text
+  comment: Heading above the right list.
+
+rightItems:
+  type: array
+  options:
+    structures:
+      values:
+        - label: Right Benefit Item
+          icon: check
+          value: ""
+
+centerImage:
+  type: object
+  comment: Center illustrative image between the two lists.
+  options:
+    structures:
+      values:
+        - label: Center Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+
+backgroundColor:
+  type: select
+  comment: Section background color. Choose a theme color or use the hex override below for a custom color.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+backgroundImage:
+  type: object
+  comment: Full section background texture/image.
+  options:
+    structures:
+      values:
+        - label: Background Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text

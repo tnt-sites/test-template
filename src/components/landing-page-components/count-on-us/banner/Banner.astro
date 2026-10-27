@@ -1,0 +1,195 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  subheading = "",
+  heading = "",
+  badgeImages = [],
+  image = { source: "", alt: "" },
+  figcaption = "",
+  buttonSections = [],
+  borderColor = "",
+  fontHeadings = "",
+  fontBody = "",
+  backgroundColor = "surface",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  borderColor ? `--cou-border-color: ${borderColor}` : "",
+  fontHeadings ? `--cou-font-headings: ${fontHeadings}` : "",
+  fontBody ? `--cou-font-body: ${fontBody}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["cou-banner", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="flex-ed">
+    <article>
+      <h1>
+        {subheading && <small>{subheading}</small>}
+        <span set:html={heading} />
+      </h1>
+      {
+        badgeImages.length > 0 && (
+          <div class="badges">
+            {badgeImages.map((badge: { source: string; alt: string }) => (
+              <Image
+                source={badge.source}
+                alt={badge.alt || ""}
+                rounded={false}
+                editable={false}
+                aspectRatio="none"
+                sizes="auto"
+                widths={[]}
+              />
+            ))}
+          </div>
+        )
+      }
+      {buttonSections.length > 0 && <ButtonGroup buttonSections={buttonSections} />}
+    </article>
+    <figure>
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        editable={true}
+        aspectRatio="none"
+        sizes="auto"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+      {figcaption && <figcaption>{figcaption}</figcaption>}
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  .cou-banner {
+    border-bottom: 6px solid var(--cou-border-color, var(--color-brand));
+    overflow: hidden;
+  }
+
+  .cou-banner .flex-ed {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1920px;
+  }
+
+  .cou-banner article {
+    display: flex;
+    flex: 1 0 45%;
+    flex-direction: column;
+    justify-content: center;
+    order: 1;
+    padding: 2.8125rem 1.25rem;
+    text-align: center;
+    z-index: 3;
+  }
+
+  .cou-banner h1 {
+    color: var(--color-text);
+    font-family: var(--cou-font-headings, var(--font-headings));
+    font-size: 5.625rem;
+    font-weight: 300;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0.625rem 0 0;
+  }
+
+  .cou-banner h1 small {
+    display: block;
+    font-family: var(--cou-font-body, var(--font-body));
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  /* Two badge images side-by-side */
+  .cou-banner .badges {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    margin: 0.9375rem auto;
+    max-width: 420px;
+  }
+
+  .cou-banner .badges :global(img) {
+    flex: 0 1 auto;
+    max-width: 180px;
+  }
+
+  .cou-banner figure {
+    align-self: flex-end;
+    flex: 0 0 738px;
+    order: 2;
+    position: relative;
+  }
+
+  .cou-banner figure .image {
+    margin-top: 0;
+  }
+
+  .cou-banner figure :global(img) {
+    width: 100%;
+  }
+
+  .cou-banner figcaption {
+    background: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    color: var(--color-text);
+    font-weight: 700;
+    left: 0;
+    letter-spacing: 0.2em;
+    padding: 0.4375rem;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    .cou-banner .flex-ed {
+      flex-wrap: wrap;
+    }
+
+    .cou-banner h1 {
+      font-size: 3.75rem;
+    }
+
+    .cou-banner article {
+      flex: 0 0 100%;
+      order: 2;
+      padding: 1.875rem 1.25rem;
+    }
+
+    .cou-banner figure {
+      flex: 0 0 100%;
+      order: 1;
+    }
+  }
+</style>

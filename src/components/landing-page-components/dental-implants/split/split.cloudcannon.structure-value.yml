@@ -1,0 +1,26 @@
+label: DI Split Section
+icon: view_agenda
+description: Two-column split with heading, body text, optional button, and photo. Toggle reverse to put the image on the left.
+value:
+  _component: landing-page-components/dental-implants/split
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: "True Expertise in Dental Implants"
+  paragraphs:
+    - "Our team has placed thousands of implants and is committed to delivering results that look, feel, and function like natural teeth."
+    - "From initial consultation to final restoration, we handle every step in-house so you get seamless, coordinated care."
+  image:
+    source: https://placehold.co/580x420
+    alt: Dental implants procedure
+  figcaption: ""
+  buttonSections: []
+  reverse: false
+  imageNoShadow: false
+  headingColor: "var(--color-heading)"
+  accentColor: "var(--color-brand)"
+  headingFontFamily: ""
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/dental-implants/split/split.cloudcannon.inputs.yml

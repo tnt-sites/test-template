@@ -1,0 +1,84 @@
+formHeading:
+  type: text
+  comment: Heading shown above the form.
+
+formAction:
+  type: text
+  comment: Form submit endpoint.
+
+formMethod:
+  type: select
+  options:
+    values:
+      - id: post
+        name: POST
+      - id: get
+        name: GET
+
+formSubject:
+  type: text
+  comment: Value for hidden _subject field.
+
+formRedirect:
+  type: text
+  comment: Value for hidden _redirect field.
+
+reviewHeading:
+  type: text
+  comment: Heading shown above the review quote.
+
+reviewText:
+  type: textarea
+  comment: Review body copy.
+
+reviewerName:
+  type: text
+  comment: Name shown under the review.
+
+sectionSpacingTop:
+  type: text
+  comment: CSS spacing token/value for top margin (e.g. 100px).
+
+formBackgroundColor:
+  type: select
+  comment: Form section background color. Choose a theme color or use the hex override below for a custom color.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+
+formBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the form background above. Leave blank to use the theme color.
+
+reviewBackgroundColor:
+  type: select
+  comment: Review section background color. Choose a theme color or use the hex override below for a custom color.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+
+reviewBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the review background above. Leave blank to use the theme color.

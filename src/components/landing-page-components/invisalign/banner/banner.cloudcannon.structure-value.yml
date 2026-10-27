@@ -1,0 +1,26 @@
+label: Invisalign Banner
+icon: dashboard
+description: Hero section with large heading, coupons, and right-side doctor image.
+value:
+  _component: landing-page-components/invisalign/banner
+  id: ""
+  heading: Invisalign Day
+  preHeading: Join Us For
+  postHeading: July 15th
+  coupons:
+    - source: ""
+      alt: Coupon one
+    - source: ""
+      alt: Coupon two
+  image:
+    source: https://placehold.co/900x700
+    alt: Doctor smiling
+  figcaption: Broneil Ishaya, DDS
+  textPanelBackgroundImage:
+    source: ""
+    alt: ""
+  sectionBackground: "var(--color-brand)"
+  sectionBackgroundHex: ""
+  borderBottomColor: "var(--color-brand)"
+_inputs_from_glob:
+  - /src/components/landing-page-components/invisalign/banner/banner.cloudcannon.inputs.yml

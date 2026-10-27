@@ -1,0 +1,88 @@
+backgroundColor:
+  type: select
+  comment: Background color of the insurance section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+blocks:
+  type: array
+  comment: Insurance text blocks. Each block has a heading and body text.
+  options:
+    structures:
+      values:
+        - label: Insurance Block
+          icon: health_and_safety
+          value:
+            heading: ""
+            text: ""
+          _inputs:
+            heading:
+              type: text
+              comment: Block heading. Supports <br> for line breaks.
+            text:
+              type: markdown
+              comment: Body text for this insurance block.
+              options:
+                bold: true
+                italic: true
+                link: true
+                bulletedlist: false
+                numberedlist: false
+                strike: false
+
+headingColor:
+  type: select
+  comment: Color of the h2 heading text.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+dividerColor:
+  type: select
+  comment: Color of the decorative underline divider below each heading.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family (e.g. "Georgia, serif"). Leave blank to use the site default.
+
+headingFontFamily:
+  type: text
+  comment: Override the font family for the block headings. Leave blank to use the site default. Use any font family loaded by the page, including extra fonts.

@@ -1,0 +1,128 @@
+backgroundColor:
+  type: select
+  comment: Background color of the hero section.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "#fff"
+        name: White
+      - id: "#000"
+        name: Black
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-text)"
+        name: Text
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+subheading:
+  type: text
+  comment: Small text shown above the main heading.
+
+heading:
+  type: text
+  comment: Main hero heading. Wrap part of the text in <span> to color it with the accent color.
+
+tagline:
+  type: text
+  comment: Smaller line of text shown below the main heading.
+
+listItems:
+  type: array
+  comment: Checkmark bullet points shown under the heading.
+  options:
+    structures:
+      values:
+        - label: List Item
+          icon: check
+          value: ""
+
+image:
+  type: object
+  comment: Hero image.
+  options:
+    structures:
+      values:
+        - label: Hero Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the hero image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) below the bullet list.
+  options:
+    structures: _structures.buttonSections
+
+headingColor:
+  type: select
+  comment: Color of the main heading text.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+
+accentColor:
+  type: select
+  comment: Accent color for the highlighted heading word(s) and checkmarks.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+
+waveImage:
+  type: object
+  comment: Optional decorative wave image along the bottom edge of the section.
+  options:
+    structures:
+      values:
+        - label: Wave Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the wave image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: text
+              comment: Alt text for accessibility.
+
+waveHeight:
+  type: text
+  comment: "Height of the tiling wave strip (e.g. 92px). The wave image repeats horizontally at this height."

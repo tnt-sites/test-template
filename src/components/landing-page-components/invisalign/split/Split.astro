@@ -1,0 +1,135 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  heading = "",
+  body = "",
+  image = { source: "", alt: "" },
+  figcaption = "",
+  reverse = false,
+  class: className,
+  ...rest
+} = Astro.props;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["invis-split", reverse && "is-reverse", className]}
+  paddingVertical="none"
+  paddingHorizontal="md"
+  backgroundColor="none"
+  {...htmlAttributes}
+>
+  <div class="split-row">
+    <article>
+      {heading && <h2 set:html={heading} />}
+      {body && <p set:html={body} />}
+    </article>
+    <figure>
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        editable={true}
+        aspectRatio="none"
+        sizes="auto"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+      {figcaption && <figcaption>{figcaption}</figcaption>}
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  .invis-split {
+    margin: auto;
+    max-width: 1200px;
+    padding: 30px 10px 50px;
+  }
+
+  .invis-split .split-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .invis-split article {
+    flex: 0 1 575px;
+    margin: 10px;
+    text-align: left;
+  }
+
+  .invis-split h2 {
+    color: #436a8b;
+    font-family: the-seasons, var(--font-headings);
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    text-align: left;
+  }
+
+  .invis-split p {
+    color: #000;
+    font-family: josefin-sans, var(--font-body);
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .invis-split figure {
+    flex: 0 1 45%;
+  }
+
+  .invis-split figure :global(img) {
+    max-width: 550px;
+  }
+
+  .invis-split figcaption {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-top: 15px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .invis-split.is-reverse figure {
+    margin-right: 40px;
+    order: -1;
+  }
+
+  @media (max-width: 1000px) {
+    .invis-split {
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .invis-split .split-row {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .invis-split article,
+    .invis-split figure {
+      flex: 0 1 100%;
+      text-align: center;
+    }
+
+    .invis-split h2,
+    .invis-split figcaption {
+      text-align: center;
+    }
+
+    .invis-split.is-reverse figure {
+      margin-right: 0;
+      order: 2;
+    }
+  }
+</style>

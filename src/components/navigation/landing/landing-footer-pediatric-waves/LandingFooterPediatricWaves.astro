@@ -1,0 +1,684 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import RenderBlock from "@component-utils/renderBlock.astro";
+import Image from "@core-elements/image/Image.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  contactTitle = "Contact Us",
+  offices = [],
+  legalLinks = [],
+  legalBlurb = "",
+  formHeading = "Ask a Question",
+  formAction = "",
+  formBlocks = [],
+  mapEmbedUrl = "",
+  topWaveImage = { source: "", alt: "" },
+  questionsLine = "Have Questions? Get Answers",
+  backgroundColor = "",
+  backgroundColorHex = "",
+  officeHoursAlignment = "right",
+  linkColor = "",
+  linkHoverColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  class: className,
+  ...htmlAttributes
+} = Astro.props;
+
+const getTrimmedString = (value: any, fallback = "") =>
+  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
+
+const getSelectValue = (value: any) => {
+  if (typeof value === "string") return value.trim().toLowerCase();
+  if (value && typeof value === "object") {
+    const candidate = value.id ?? value.value ?? value.name;
+
+    if (typeof candidate === "string") return candidate.trim().toLowerCase();
+  }
+  return "";
+};
+
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+
+const resolvedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+const copyYear = new Date().getFullYear();
+const rootMapEmbedUrl = getTrimmedString((siteInfoData as any)?.mapEmbedUrl);
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const getHoursSource = (source: any) => {
+  if (!source || typeof source !== "object") {
+    return [];
+  }
+
+  return (
+    source?.officeHours ?? source?.["office-hours"] ?? source?.office_hours ?? source?.hours ?? []
+  );
+};
+
+const formatOfficeHours = (source: any) => {
+  const rawHours = getHoursSource(source);
+  const rawEntries = Array.isArray(rawHours)
+    ? rawHours
+    : rawHours && typeof rawHours === "object"
+      ? Object.entries(rawHours).map(([day, value]: [string, any]) => {
+          if (typeof value === "string") {
+            return { day, hours: value };
+          }
+
+          if (value && typeof value === "object") {
+            return { _day: day, ...value };
+          }
+
+          return null;
+        })
+      : [];
+
+  return rawEntries
+    .map((entry: any) => {
+      if (typeof entry === "string") {
+        const line = entry.trim();
+
+        return line.length > 0 ? { day: "", hours: line, note: "" } : null;
+      }
+
+      if (!entry || typeof entry !== "object") {
+        return null;
+      }
+
+      const day =
+        typeof entry?.day === "string"
+          ? entry.day.trim()
+          : typeof entry?.label === "string"
+            ? entry.label.trim()
+            : typeof entry?._day === "string"
+              ? entry._day.trim()
+              : "";
+      const hours =
+        typeof entry?.hours === "string"
+          ? entry.hours.trim()
+          : typeof entry?.time === "string"
+            ? entry.time.trim()
+            : typeof entry?.value === "string"
+              ? entry.value.trim()
+              : typeof entry?.display === "string"
+                ? entry.display.trim()
+                : "";
+      const note =
+        typeof entry?.note === "string"
+          ? entry.note.trim()
+          : typeof entry?.hoursNote === "string"
+            ? entry.hoursNote.trim()
+            : typeof entry?.["hours-note"] === "string"
+              ? entry["hours-note"].trim()
+              : typeof entry?.details === "string"
+                ? entry.details.trim()
+                : "";
+
+      if (!day && !hours && !note) {
+        return null;
+      }
+
+      return { day, hours, note };
+    })
+    .filter(Boolean);
+};
+
+const resolvedMapEmbedSrc = (() => {
+  const toEmbedUrl = (value: string) => {
+    const raw = value.trim();
+
+    if (!raw) {
+      return "";
+    }
+
+    if (/output=embed/i.test(raw) || /\/maps\/embed/i.test(raw)) {
+      return raw;
+    }
+
+    return `https://maps.google.com/maps?q=${encodeURIComponent(raw)}&output=embed`;
+  };
+
+  const pageLevel = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+
+  if (pageLevel) {
+    return toEmbedUrl(pageLevel);
+  }
+
+  const officeLevel = resolvedOffices.find(
+    (office: any) => typeof office?.mapEmbedUrl === "string" && office.mapEmbedUrl.trim().length > 0
+  );
+
+  if (officeLevel?.mapEmbedUrl) {
+    return toEmbedUrl(officeLevel.mapEmbedUrl);
+  }
+
+  const firstAddress = resolvedOffices[0]?.addresses?.[0];
+
+  if (firstAddress) {
+    const addressQuery = [...(firstAddress.lines || [])]
+      .concat(
+        [firstAddress.city, firstAddress.state, firstAddress.postalCode].filter(Boolean).join(" ")
+      )
+      .concat(firstAddress.country || "")
+      .filter((value: any) => typeof value === "string" && value.trim().length > 0)
+      .join(", ");
+
+    if (addressQuery) {
+      return toEmbedUrl(addressQuery);
+    }
+
+    if (typeof firstAddress.mapUrl === "string" && firstAddress.mapUrl.trim().length > 0) {
+      return toEmbedUrl(firstAddress.mapUrl);
+    }
+  }
+
+  return toEmbedUrl(rootMapEmbedUrl);
+})();
+
+const resolvedOfficeHoursAlignment =
+  getSelectValue(officeHoursAlignment) === "left" ? "left" : "right";
+const blurb = getTrimmedString(legalBlurb);
+
+const buildDefaultFormBlocks = () => {
+  const blocks: any[] = [
+    {
+      _component: "building-blocks/forms/input",
+      label: "Name",
+      name: "Name",
+      type: "text",
+      placeholder: "Name",
+      required: true,
+    },
+    {
+      _component: "building-blocks/forms/input",
+      label: "Phone",
+      name: "Phone",
+      type: "text",
+      placeholder: "Phone",
+      required: true,
+    },
+    {
+      _component: "building-blocks/forms/input",
+      label: "Email",
+      name: "Email",
+      type: "email",
+      placeholder: "Email",
+      required: true,
+    },
+    {
+      _component: "building-blocks/forms/textarea",
+      label: "Comments",
+      name: "CommentArea",
+      placeholder: "Comments",
+    },
+    {
+      _component: "building-blocks/forms/submit",
+      text: "Send",
+      variant: "primary",
+      size: "md",
+      class: "footer-submit-button",
+    },
+  ];
+
+  return blocks;
+};
+
+const resolvedFormBlocks =
+  Array.isArray(formBlocks) && formBlocks.length > 0 ? formBlocks : buildDefaultFormBlocks();
+
+const cssVars = [
+  (backgroundColorHex || getColorValue(backgroundColor)) ? `--pw-footer-bg: ${backgroundColorHex || getColorValue(backgroundColor)}` : "",
+  getColorValue(linkColor) ? `--footer-link-color: ${getColorValue(linkColor)}` : "",
+  getColorValue(linkHoverColor)
+    ? `--footer-link-hover-color: ${getColorValue(linkHoverColor)}`
+    : "",
+  getColorValue(addressLinkColor)
+    ? `--footer-address-link-color: ${getColorValue(addressLinkColor)}`
+    : "",
+  getColorValue(addressLinkHoverColor)
+    ? `--footer-address-link-hover-color: ${getColorValue(addressLinkHoverColor)}`
+    : "",
+  getColorValue(phoneLinkColor)
+    ? `--footer-phone-link-color: ${getColorValue(phoneLinkColor)}`
+    : "",
+  getColorValue(phoneLinkHoverColor)
+    ? `--footer-phone-link-hover-color: ${getColorValue(phoneLinkHoverColor)}`
+    : "",
+]
+  .filter(Boolean)
+  .join("; ");
+---
+
+<footer
+  class:list={["landing-footer-pediatric-waves", className]}
+  style={cssVars || undefined}
+  {...htmlAttributes}
+>
+  {
+    topWaveImage?.source && (
+      <div class="footer-wave-image" aria-hidden="true">
+        <Image
+          source={topWaveImage.source}
+          alt={topWaveImage.alt || ""}
+          rounded={false}
+          editable={true}
+          aspectRatio="none"
+          sizes="auto"
+          widths={[]}
+          data-prop-src="topWaveImage.source"
+          data-prop-alt="topWaveImage.alt"
+        />
+      </div>
+    )
+  }
+  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="xl">
+    <div class="footer-content">
+      <div class="form-column">
+        {
+          logoSource && (
+            <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
+          )
+        }
+        {formHeading && <span class="fo-title">{formHeading}</span>}
+        <form class="footer-form form" action={formAction || undefined} method="post">
+          <RenderBlock
+            contentSections={resolvedFormBlocks}
+            propName="formBlocks"
+            editable={false}
+          />
+        </form>
+      </div>
+
+      <div class="contact-column">
+        <span class="fo-title" set:html={contactTitle} />
+        <div class="contact-grid">
+          <div class="office-info">
+            {
+              resolvedOffices.map((office: any, officeIndex: number) => (
+                <div class="office">
+                  {Array.isArray(office?.addresses) &&
+                    office.addresses.map((address: any) => {
+                      const lines = formatAddressLines(address);
+
+                      return lines.length > 0 ? (
+                        <a
+                          href={address?.mapUrl || "#"}
+                          class="address"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {lines.map((line: string, index: number) => (
+                            <>
+                              {line}
+                              {index < lines.length - 1 && <br />}
+                            </>
+                          ))}
+                        </a>
+                      ) : null;
+                    })}
+
+                  {Array.isArray(office?.phones) &&
+                    office.phones.map((phone: any) =>
+                      phone?.display ? (
+                        <a href={phone?.href || "#"} class="phone">
+                          {phone.display}
+                        </a>
+                      ) : null
+                    )}
+
+                  {(() => {
+                    const officeHours = formatOfficeHours(office);
+                    const officeHoursNote =
+                      typeof office?.officeHoursNote === "string"
+                        ? office.officeHoursNote.trim()
+                        : "";
+
+                    return officeHours.length > 0 || officeHoursNote ? (
+                      <div
+                        class:list={[
+                          "office-hours",
+                          "office-hours--left",
+                          "pw-office-hours",
+                          `office-hours--time-${resolvedOfficeHoursAlignment}`,
+                        ]}
+                      >
+                        <span class="fo-title">Office Hours</span>
+                        <div class="office-hours-list">
+                          {officeHours.map((hoursItem: any) => (
+                            <div class="office-hours-row">
+                              <div class="office-hours-line">
+                                {hoursItem.day && (
+                                  <span class="office-hours-day">{hoursItem.day}</span>
+                                )}
+                                <span class="office-hours-time">{hoursItem.hours}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        {officeHoursNote && (
+                          <small class="office-hours-note">{officeHoursNote}</small>
+                        )}
+                        {officeIndex === 0 && questionsLine && (
+                          <span class="office-hours-questions">{questionsLine}</span>
+                        )}
+                      </div>
+                    ) : null;
+                  })()}
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="map-column">
+        {
+          resolvedMapEmbedSrc && (
+            <div class="map-wrap" aria-label="Map location">
+              <iframe
+                src={resolvedMapEmbedSrc}
+                title="Office location map"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              />
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <div class="copy">
+      <span class="footer-legal-line footer-legal-line--primary">
+        Copyright &copy; {copyYear}
+        {(siteInfoData as any).siteName || ""}
+      </span>
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-separator" aria-hidden="true">
+            |
+          </span>
+        )
+      }
+      {
+        legalLinks.length > 0 && (
+          <span class="footer-legal-line footer-legal-line--links">
+            {legalLinks.map((item: any, index: number) => (
+              <>
+                <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+                {index < legalLinks.length - 1 && (
+                  <span class="footer-legal-link-separator">|</span>
+                )}
+              </>
+            ))}
+          </span>
+        )
+      }
+      <span class="footer-legal-separator" aria-hidden="true">|</span>
+      <span class="footer-legal-line footer-legal-line--credit">
+        Site designed and maintained by{" "}
+        <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">TNT Dental</a>
+      </span>
+      {blurb && <p class="blurb">{blurb}</p>}
+    </div>
+  </CustomSection>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-footer-pediatric-waves {
+      background: var(--pw-footer-bg, var(--color-bg-brand-secondary));
+      color: #fff;
+      overflow: hidden;
+      position: relative;
+
+      .content {
+        padding-top: 0;
+      }
+
+      .footer-wave-image {
+        pointer-events: none;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+
+      .footer-wave-image .image,
+      .footer-wave-image img {
+        display: block;
+        width: 100%;
+      }
+
+      .fo-title {
+        display: block;
+        font-size: 1.2rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .footer-content {
+        display: flex;
+        align-items: start;
+        gap: 2rem;
+        margin: 0 auto;
+        max-width: 1300px;
+        padding-top: 3.5rem;
+        position: relative;
+        z-index: 2;
+      }
+
+      .form-column {
+        flex: 0 1 400px;
+      }
+
+      .contact-column {
+        flex: 0 1 420px;
+      }
+
+      .map-column {
+        flex: 0 1 450px;
+      }
+
+      .footer-logo {
+        margin: 0 0 1rem !important;
+        max-width: 250px;
+      }
+
+      .footer-form label {
+        display: none;
+      }
+
+      .footer-form input,
+      .footer-form textarea {
+        border: 0;
+        border-radius: 0;
+        font: inherit;
+        padding: 0.7rem 0.85rem;
+        width: 100%;
+      }
+
+      .footer-form textarea {
+        min-height: 90px;
+        resize: vertical;
+      }
+
+      .footer-form .footer-submit-button {
+        background: var(--color-brand, red);
+        border-color: var(--color-brand, red);
+        border-radius: 0;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin-top: 0.2rem;
+        text-transform: uppercase;
+        width: 100%;
+      }
+
+      .footer-form .footer-submit-button:hover,
+      .footer-form .footer-submit-button:focus-visible {
+        background: var(--color-brand-secondary, blue);
+        border-color: var(--color-brand-secondary, blue);
+        color: #fff;
+      }
+
+      .office-info {
+        min-width: 0;
+      }
+
+      .address,
+      .phone {
+        display: block;
+      }
+
+      .address {
+        color: var(--footer-address-link-color, var(--color-brand));
+      }
+
+      .phone {
+        color: var(--footer-phone-link-color, var(--color-brand));
+      }
+
+      .address:hover,
+      .address:focus-visible {
+        color: var(--footer-address-link-hover-color, var(--color-brand-secondary));
+      }
+
+      .phone:hover,
+      .phone:focus-visible {
+        color: var(--footer-phone-link-hover-color, var(--color-brand-secondary));
+      }
+
+      .copy a {
+        color: var(--footer-link-color, #fff);
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--footer-link-hover-color, #dbe45a);
+        }
+      }
+
+      .address {
+        margin-bottom: 0.35rem;
+      }
+
+      .phone {
+        font-size: 1.625rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .pw-office-hours {
+        --office-hours-color: #fff;
+        --office-hours-day-color: #fff;
+        --office-hours-note-color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 1rem;
+      }
+
+      .pw-office-hours .office-hours-day,
+      .pw-office-hours .office-hours-time {
+        font-size: 1rem;
+      }
+
+      .pw-office-hours .office-hours-note {
+        display: block;
+        margin-top: 0.35rem;
+      }
+
+      .office-hours-questions {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        margin-top: 20px;
+        text-transform: uppercase;
+      }
+
+      .map-wrap {
+        border-radius: 1rem;
+        overflow: hidden;
+      }
+
+      .map-wrap iframe {
+        border: 0;
+        display: block;
+        height: 100%;
+        min-height: 450px;
+        width: 100%;
+      }
+
+      .copy {
+        letter-spacing: 0.1em;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-top: 2rem;
+        padding: 20px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      .footer-legal-line {
+        display: inline;
+      }
+
+      .footer-legal-separator,
+      .footer-legal-link-separator {
+        display: inline;
+        margin: 0 0.5rem;
+      }
+
+      .blurb {
+        color: #fff;
+        font-size: var(--font-size-xs);
+        letter-spacing: 0;
+        line-height: var(--line-height-relaxed);
+        margin: 20px auto 0;
+        max-width: 1150px;
+        text-transform: none;
+      }
+
+      @media (max-width: 1024px) {
+        .copy {
+          .footer-legal-line {
+            display: block;
+          }
+
+          .footer-legal-line + .footer-legal-line {
+            margin-top: 0.25rem;
+          }
+
+          .footer-legal-separator {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,29 @@
+label: Pediatric Waves Review
+icon: reviews
+description: Testimonial section with review badge, stars, and layered wave decorations.
+value:
+  _component: landing-page-components/pediatric-waves/review
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  badgeHeading: "Mom & Dad<br>Approved<br>Dentists"
+  badgeSubheading: Actual Google Review
+  stars: 5
+  reviewText: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.
+  reviewerName: Laura N.
+  reviewLogo:
+    source: https://placehold.co/220x80
+    alt: Google logo
+  badgeBackgroundColor: "#000"
+  headingColor: ""
+  waveTopImage:
+    source: ""
+    alt: ""
+  waveMiddleImage:
+    source: ""
+    alt: ""
+  waveBottomImage:
+    source: ""
+    alt: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-waves/review/review.cloudcannon.inputs.yml

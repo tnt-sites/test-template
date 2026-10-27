@@ -1,0 +1,36 @@
+label: Callout Squares
+icon: grid_view
+description: A colored heading banner above a grid of equal-width icon+label squares with alternating odd/even background colors.
+value:
+  _component: pep-components/callout-squares
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  headingBackgroundColor: ""
+  headingBackgroundColorHex: ""
+  headingTextColor: ""
+  oddItemBackgroundColor: ""
+  oddItemBackgroundColorHex: ""
+  evenItemBackgroundColor: ""
+  evenItemBackgroundColorHex: ""
+  itemHeadingColor: ""
+  heading: "Common Problems Covered by Insurance"
+  items:
+    - image:
+        source: https://placehold.co/200x110
+        alt: Callout icon one
+      heading: "Callout<br>Heading One"
+    - image:
+        source: https://placehold.co/200x110
+        alt: Callout icon two
+      heading: "Callout<br>Heading Two"
+    - image:
+        source: https://placehold.co/200x110
+        alt: Callout icon three
+      heading: "Callout<br>Heading Three"
+    - image:
+        source: https://placehold.co/200x110
+        alt: Callout icon four
+      heading: "Callout<br>Heading Four"
+_inputs_from_glob:
+  - /src/components/pep-components/callout-squares/callout-squares.cloudcannon.inputs.yml

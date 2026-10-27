@@ -1,0 +1,112 @@
+backgroundColor:
+  type: select
+  comment: Background color used behind the grid.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+image:
+  type: object
+  comment: Image configuration for the hero section.
+  options:
+    structures:
+      values:
+        - label: Hero Image
+          icon: image
+          value:
+            _component: building-blocks/core-elements/image
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+
+heading:
+  type: text
+  comment: Main headline text. Supports <br> for manual line breaks.
+
+subtext:
+  type: textarea
+  comment: Supporting text shown beneath the headline.
+
+buttonSections:
+  type: array
+  comment: Optional CTA buttons displayed below the badges.
+  options:
+    structures: _structures.buttonSections
+
+badges:
+  type: array
+  comment: Optional badge images displayed below the supporting text.
+  options:
+    structures:
+      values:
+        - label: Badge
+          icon: workspace_premium
+          value:
+            _component: building-blocks/core-elements/image
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: The URL or path to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alternative text for accessibility.
+
+reverse:
+  type: checkbox
+  comment: Reverse layout so the image appears on the left.
+
+borderColor:
+  type: select
+  comment: Color of the decorative bottom border on the hero.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Optional heading font family override (e.g. "Georgia, serif").
+
+fontBody:
+  type: text
+  comment: Optional body font family override (e.g. "Arial, sans-serif").

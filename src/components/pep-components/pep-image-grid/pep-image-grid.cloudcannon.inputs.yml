@@ -1,0 +1,172 @@
+backgroundColor:
+  type: select
+  comment: Background color of the outer section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the section background color above.
+
+paddingVertical:
+  type: select
+  comment: Vertical spacing above and below the grid.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: xs
+        name: Extra Small
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+      - id: xl
+        name: Extra Large
+      - id: 2xl
+        name: 2XL
+
+cardBackgroundColor:
+  type: select
+  comment: Background color behind each image or video tile.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "var(--color-bg-base)"
+        name: Base
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+      - id: "#ffffff"
+        name: White
+      - id: "#000000"
+        name: Black
+
+cardBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the tile background.
+
+captionBackgroundColor:
+  type: select
+  comment: Background color behind each figcaption.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "var(--color-bg-base)"
+        name: Base
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+      - id: "#ffffff"
+        name: White
+      - id: "#000000"
+        name: Black
+
+captionBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the figcaption background.
+
+captionTextColor:
+  type: select
+  comment: Text color of each figcaption.
+  options:
+    values:
+      - id: ""
+        name: Default (Dark)
+      - id: "var(--color-text)"
+        name: Dark
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+
+heading:
+  type: text
+  comment: Optional section heading above the grid. Supports simple HTML such as <br>.
+
+items:
+  type: array
+  comment: Add two or more image or YouTube tiles.
+  options:
+    structures:
+      values:
+        - label: Grid Item
+          icon: image
+          value:
+            mediaType: image
+            image:
+              source: https://placehold.co/800x800
+              alt: Grid image
+            youtubeId: ""
+            youtubeTitle: ""
+            caption: Sample Caption
+
+items[*].mediaType:
+  type: select
+  comment: Choose whether this tile is a static image or a YouTube video.
+  options:
+    values:
+      - id: image
+        name: Image
+      - id: youtube
+        name: YouTube Video
+
+items[*].image.source:
+  type: image
+  comment: Image source used when media type is Image.
+
+items[*].image.alt:
+  type: text
+  comment: Alt text for the image tile.
+
+items[*].youtubeId:
+  type: text
+  comment: YouTube video ID only, for example qirqwHB1ObQ.
+
+items[*].youtubeTitle:
+  type: text
+  comment: Accessible title for the YouTube embed.
+
+items[*].caption:
+  type: text
+  comment: Centered uppercase figcaption shown below the media.

@@ -1,0 +1,78 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const { items = [], backgroundColor = "base", backgroundColorHex = "", class: className, ...rest } = Astro.props;
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["np-count", className]}
+  paddingVertical="4xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
+  {...htmlAttributes}
+>
+  <div class="items-row">
+    {
+      items.map((item: { image: { source: string; alt: string }; text: string }) => (
+        <div class="count-item">
+          <span class="img">
+            <Image
+              source={item.image?.source}
+              alt={item.image?.alt || ""}
+              rounded={false}
+              editable={false}
+              aspectRatio="none"
+              sizes="auto"
+              widths={[]}
+            />
+          </span>
+          <span class="text" set:html={item.text} />
+        </div>
+      ))
+    }
+  </div>
+</CustomSection>
+
+<style>
+  .np-count .items-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1.25rem;
+    text-align: center;
+  }
+
+  .np-count .count-item {
+    margin: 1.25rem auto;
+    text-align: center;
+  }
+
+  .np-count .img {
+    align-items: center;
+    display: flex;
+    height: 5rem;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    width: 5rem;
+  }
+
+  .np-count .text {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+</style>

@@ -1,0 +1,66 @@
+label: Landing Footer 3 Cards
+icon: page_footer
+description: "Landing footer with three cards: contact, featured services, and ask-a-question form."
+value:
+  _component: navigation/landing/landing-footer-three-cards
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  siteName: Dental Studio
+  contactTitle: Contact Us
+  featuredServicesTitle: Featured Services
+  featuredServicesLinks:
+    - name: Dental Implants
+      path: /dental-implants/
+    - name: Implant Bridge
+      path: /dental-bridges/
+    - name: Implant Dentures
+      path: /implant-retained-dentures/
+    - name: All-on-4
+      path: /all-on-4/
+  formTitle: Ask A Question
+  formAction: ""
+  formSubject: Landing Footer Form
+  formRedirect: thanks.html
+  formSubmitLabel: Submit
+  formButtonBorderRadius: 0px
+  formButtonTextColor: ""
+  formButtonBackgroundColor: ""
+  formButtonHoverBackgroundColor: ""
+  formButtonHoverTextColor: ""
+  footerLinksBackgroundColor: brand
+  footerLinksHoverBackgroundColor: brand-secondary
+  mapEmbedUrl: ""
+  contactCardBackgroundColor: ""
+  servicesCardBackgroundColor: ""
+  formCardBackgroundColor: ""
+  legalLinks:
+    - name: Sitemap
+      path: sitemap.html
+    - name: Privacy Policy
+      path: privacy-policy.html
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+  backgroundGradient: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  linkColor: brand
+  linkHoverColor: brand-secondary
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  legalBlurb: ""
+  offices: []
+preview:
+  text:
+    - Landing Footer 3 Cards
+  icon: page_footer
+picker_preview:
+  text: Landing Footer 3 Cards
+  subtext: "Three-card footer with contact, services, and form."
+  icon: page_footer
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-three-cards/landing-footer-three-cards.cloudcannon.inputs.yml

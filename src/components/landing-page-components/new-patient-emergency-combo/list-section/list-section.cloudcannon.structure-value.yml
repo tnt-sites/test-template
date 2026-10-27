@@ -1,0 +1,45 @@
+label: list-section
+icon: add
+description: Description for list-section component.
+value:
+  _component: landing-page-components/new-patient-emergency-combo/list-section
+  id: ""
+  heading: "list-section Heading"
+  backgroundColor: base
+  backgroundColorHex: ""
+  headingColor: "#ffffff"
+  listTextColor: "#ffffff"
+  checkmarkColor: "#DDCA52"
+  items:
+    - headingPrefix: "Looking for"
+      headingMain: "New Dentist?"
+      desktopImage:
+        source: https://placehold.co/600x400
+        alt: "New Dentist"
+      mobileImage:
+        source: https://placehold.co/600x400
+        alt: "New Dentist"
+      listText: |
+        <ul>
+          <li>Check-Ups & Cleanings</li>
+          <li>Dental Insurance Welcome</li>
+          <li>Friendly, Caring Staff</li>
+          <li>Crowns, Implants & More</li>
+        </ul>
+    - headingPrefix: "Have a"
+      headingMain: "Dental Emergency?"
+      desktopImage:
+        source: https://placehold.co/600x400
+        alt: "Dental Emergency"
+      mobileImage:
+        source: https://placehold.co/600x400
+        alt: "Dental Emergency"
+      listText: |
+        <ul>
+          <li>Tooth Pain & Sensitivity</li>
+          <li>Chipped or Fractured Tooth</li>
+          <li>Lost or Loose Crown</li>
+          <li>Bleeding or Swollen Gums</li>
+        </ul>
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-emergency-combo/list-section/list-section.cloudcannon.inputs.yml

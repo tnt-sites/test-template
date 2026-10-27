@@ -1,0 +1,50 @@
+label: Pediatric Waves Banner
+icon: image
+description: Hero section with bullet list, CTA buttons, and layered wave decorations.
+value:
+  _component: landing-page-components/pediatric-waves/banner
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  subheading: Board-Certified
+  heading: "<span>Pediatric</span><br>Dental Care"
+  listItems:
+    - State-of-the-Art, New Practice
+    - In-Network with Most Major Insurances
+    - Same-Day Appointments Available
+    - Fun, Interactive Environment
+  image:
+    source: https://placehold.co/900x780
+    alt: Pediatric patient in dental chair
+  buttonSections:
+    - _component: building-blocks/wrappers/button-group
+      buttons:
+        - _component: building-blocks/core-elements/button
+          id: ""
+          text: Request an Appointment
+          hideText: false
+          link: /request-an-appointment/
+          modalTarget: ""
+          iconName: ""
+          iconPosition: before
+          variant: primary
+          size: md
+          width: md
+          borderRadius: default
+          borderWidth: default
+          borderColor: default
+          textColor: default
+          uppercase: false
+  headingColor: ""
+  accentColor: ""
+  waveTopImage:
+    source: ""
+    alt: ""
+  waveMiddleImage:
+    source: ""
+    alt: ""
+  waveBottomImage:
+    source: ""
+    alt: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-waves/banner/banner.cloudcannon.inputs.yml

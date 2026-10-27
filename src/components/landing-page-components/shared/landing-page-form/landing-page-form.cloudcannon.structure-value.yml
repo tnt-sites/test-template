@@ -1,0 +1,78 @@
+label: Landing Page Form
+icon: add
+description: Description for Landing Page Form component.
+value:
+  _component: landing-page-components/shared/landing-page-form
+  id: ""
+  heading: Landing Page Form <span class="heading-color">Heading</span>
+  formAction: ""
+  formBlocks:
+    - _component: building-blocks/forms/input
+      label: Name
+      name: Name
+      type: text
+      placeholder: Name
+      required: true
+    - _component: building-blocks/forms/input
+      label: Phone Number
+      name: Phone
+      type: text
+      placeholder: Phone
+      required: true
+    - _component: building-blocks/forms/input
+      label: Email Address
+      name: email
+      type: email
+      placeholder: Email
+      required: true
+    - _component: building-blocks/forms/select
+      label: Are you a new or existing patient?
+      name: Patient
+      placeholder: Are You A New Or Existing Patient?
+      options:
+        - value: New Patient
+          label: New Patient
+        - value: Existing Patient
+          label: Existing Patient
+    - _component: building-blocks/forms/select
+      label: How did you hear about us?
+      name: Discover
+      placeholder: How Did You Hear About Us?
+      options:
+        - value: search engine
+          label: Search Engine
+        - value: family
+          label: Family/Friend
+        - value: promotion
+          label: Promotion
+        - value: social media
+          label: Social Media
+        - value: other
+          label: Other
+    - _component: building-blocks/forms/textarea
+      label: Comments
+      name: CommentArea
+      placeholder: Comments
+    - _component: building-blocks/forms/hidden
+      name: _subject
+      value: New Patient Request an Appointment
+    - _component: building-blocks/forms/hidden
+      name: _redirect
+      value: thanks.html
+    - _component: building-blocks/forms/submit
+      text: Send
+      variant: primary
+  backgroundColor: base
+  backgroundColorHex: ""
+  backgroundGradient: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+_inputs_from_glob:
+  - /src/components/landing-page-components/shared/landing-page-form/landing-page-form.cloudcannon.inputs.yml
+# IMPORTANT: If you add a _structures block, keep it AFTER _inputs_from_glob.
+# CloudCannon applies _inputs_from_glob in document order — if _structures
+# appears first, _inputs_from_glob is ignored and inputs fall back to
+# auto-detected types (e.g. color picker instead of dropdown).

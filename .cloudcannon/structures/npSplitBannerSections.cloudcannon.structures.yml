@@ -1,0 +1,7 @@
+npSplitBannerSections:
+  id_key: _component
+  style: modal
+  values_from_glob:
+    - /src/components/landing-page-components/new-patient-split-banner/**/*.cloudcannon.structure-value.yml
+    - /src/components/landing-page-components/shared/landing-page-form/landing-page-form.cloudcannon.structure-value.yml
+    - /src/components/navigation/fixed-tabs/fixed-tabs.cloudcannon.structure-value.yml

@@ -1,0 +1,27 @@
+label: Count / Icon Stats
+icon: bar_chart
+description: A row of icon + label items highlighting key practice differentiators.
+value:
+  _component: landing-page-components/new-patient-split-banner/count
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  items:
+    - image:
+        source: ""
+        alt: ""
+      text: "Personalized<br>Cosmetic<br>Dentistry"
+    - image:
+        source: ""
+        alt: ""
+      text: "Extensive<br>Training &<br>Experience"
+    - image:
+        source: ""
+        alt: ""
+      text: "Comfortable<br>Office<br>Atmosphere"
+    - image:
+        source: ""
+        alt: ""
+      text: "Team of Highly<br>Qualified<br>Professionals"
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-split-banner/count/count.cloudcannon.inputs.yml

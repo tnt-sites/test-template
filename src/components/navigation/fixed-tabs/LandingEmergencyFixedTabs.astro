@@ -1,0 +1,8 @@
+---
+import FixedTabs from "@components/navigation/fixed-tabs/FixedTabs.astro";
+import fixedTabsData from "@data/fixedTabs.json";
+
+const { tabs = fixedTabsData.tabs, ...rest } = Astro.props;
+---
+
+<FixedTabs tabs={tabs} {...rest} />

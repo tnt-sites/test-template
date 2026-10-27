@@ -1,0 +1,24 @@
+label: Cosmetic Split Section
+icon: view_agenda
+description: Two-column split with heading, body paragraphs, optional button, and photo. Toggle reverse to swap image/text sides.
+value:
+  _component: landing-page-components/cosmetic/split
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  heading: "Nobody Cares <br><span>More</span>"
+  paragraphs:
+    - "Every dentist tries to impress you with what they know. We go about things differently. We start by getting to know you."
+    - "Once we understand you and your goals, we unleash our experience and knowledge to develop a customized plan for your smile."
+  image:
+    source: https://placehold.co/580x420
+    alt: Dental team
+  figcaption: "Our Amazing Dental Team"
+  buttonSections: []
+  reverse: false
+  accentColor: ""
+  headingColor: ""
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/cosmetic/split/split.cloudcannon.inputs.yml

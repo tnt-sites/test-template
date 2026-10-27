@@ -1,0 +1,212 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  tagline = "",
+  subheading = "",
+  image = { source: "", alt: "" },
+  mobileImage = { source: "", alt: "" },
+  figcaptionLinks = [] as { name: string; url: string }[],
+  buttonSections = [],
+  accentColor = "",
+  headingColor = "",
+  fontHeadings = "",
+  fontBody = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  accentColor ? `--cos-accent-color: ${accentColor}` : "",
+  headingColor ? `--cos-heading-color: ${headingColor}` : "",
+  fontHeadings ? `--cos-font-headings: ${fontHeadings}` : "",
+  fontBody ? `--cos-font-body: ${fontBody}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  id="cos-banner"
+  class:list={["cos-banner", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="flex-ed">
+    <article>
+      {heading && <h1 set:html={heading} />}
+      {
+        tagline && (
+          <p class="tagline" aria-hidden="true">
+            {tagline}
+          </p>
+        )
+      }
+      {subheading && <p class="subheading" set:html={subheading} />}
+      {buttonSections.length > 0 && <ButtonGroup buttonSections={buttonSections} />}
+    </article>
+    <figure>
+      <picture>
+        {mobileImage?.source && <source media="(max-width: 790px)" srcset={mobileImage.source} />}
+        <Image
+          source={image.source}
+          alt={image.alt}
+          rounded={false}
+          editable={true}
+          aspectRatio="none"
+          sizes="auto"
+          widths={[]}
+          data-prop-src="image.source"
+          data-prop-alt="image.alt"
+        />
+      </picture>
+      {
+        figcaptionLinks.length > 0 && (
+          <figcaption>
+            {figcaptionLinks.map((link: { name: string; url: string }, i: number) => (
+              <>
+                <a href={link.url} target="_blank" rel="noopener">
+                  {link.name}
+                </a>
+                {i < figcaptionLinks.length - 1 && " | "}
+              </>
+            ))}
+          </figcaption>
+        )
+      }
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  .cos-banner {
+    overflow: hidden;
+  }
+
+  .cos-banner .flex-ed {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    margin: auto;
+    max-width: 1170px;
+  }
+
+  /* ── Article ─────────────────────────────────────────────────────────────── */
+  .cos-banner article {
+    display: flex;
+    flex: 0 1 45%;
+    flex-direction: column;
+    justify-content: center;
+    order: 1;
+    padding: 2.5rem 1.5rem 3.75rem;
+    text-align: center;
+    z-index: 3;
+  }
+
+  /* ── H1 ──────────────────────────────────────────────────────────────────── */
+  .cos-banner h1 {
+    color: var(--cos-heading-color, var(--color-heading, #000));
+    font-family: var(--cos-font-headings, var(--font-headings));
+    font-size: clamp(2.2rem, 4vw, 2.7rem);
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    line-height: 1.3;
+    margin: 0 0 1rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .cos-banner h1 :global(span) {
+    color: var(--cos-accent-color, var(--color-brand, #af8c57));
+  }
+
+  /* ── Tagline (diamond separator) ─────────────────────────────────────────── */
+  .cos-banner .tagline {
+    color: var(--cos-accent-color, var(--color-brand, #af8c57));
+    font-size: 1rem;
+    letter-spacing: 0.475rem;
+    margin: 0.25rem 0 1rem;
+  }
+
+  /* ── Body subheading ─────────────────────────────────────────────────────── */
+  .cos-banner .subheading {
+    font-family: var(--cos-font-body, var(--font-body));
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+  }
+
+  /* ── Figure ──────────────────────────────────────────────────────────────── */
+  .cos-banner figure {
+    flex: 0 1 55%;
+    max-height: 600px;
+    order: 2;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .cos-banner figure :global(img) {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* ── Figcaption ──────────────────────────────────────────────────────────── */
+  .cos-banner figcaption {
+    background: rgba(0, 0, 0, 0.55);
+    bottom: 0;
+    color: #fff;
+    font-size: 0.85rem;
+    left: 0;
+    padding: 0.5rem 0.75rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+  }
+
+  .cos-banner figcaption a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .cos-banner figcaption a:hover {
+    text-decoration: underline;
+  }
+
+  /* ── Responsive ──────────────────────────────────────────────────────────── */
+  @media (max-width: 790px) {
+    .cos-banner .flex-ed {
+      flex-direction: column;
+    }
+
+    .cos-banner article {
+      flex: none;
+      order: 2;
+      padding: 1.5rem 1rem 5rem;
+    }
+
+    .cos-banner figure {
+      flex: none;
+      max-height: 320px;
+      order: 1;
+      width: 100%;
+    }
+  }
+</style>

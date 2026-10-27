@@ -1,0 +1,140 @@
+backgroundColor:
+  type: select
+  comment: Background color of the section behind the callout cards.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+overlapBanner:
+  type: checkbox
+  comment: When enabled, the cards overlap the section above by 100px (designed to sit below the banner). Disable if placing elsewhere on the page.
+
+cards:
+  type: array
+  comment: The three callout cards. The first and last get rounded ends; the middle card gets the accent color.
+  options:
+    structures:
+      values:
+        - label: Callout Card
+          icon: dashboard
+          value:
+            image:
+              source: ""
+              alt: ""
+            text: ""
+            listItems: []
+          _inputs:
+            image:
+              type: object
+              comment: Icon or illustration displayed at the top of the card.
+              options:
+                structures:
+                  values:
+                    - label: Card Icon
+                      icon: image
+                      value:
+                        source: ""
+                        alt: ""
+                      _inputs:
+                        source:
+                          type: image
+                          comment: Path or URL to the icon/illustration.
+                          options:
+                            paths:
+                              uploads: src/assets/images
+                              static: ""
+                        alt:
+                          type: text
+                          comment: Alt text for accessibility (can be blank for decorative icons).
+            text:
+              type: text
+              comment: Large callout text displayed below the icon. Supports <br> for line breaks.
+            listItems:
+              type: array
+              comment: Optional bullet list of features or details shown below the callout text.
+              options:
+                structures:
+                  values:
+                    - label: List Item
+                      icon: add
+                      value: ""
+
+primaryCardColor:
+  type: select
+  comment: Background color for the first and last cards.
+  options:
+    values:
+      - id: ""
+        name: Default (Light Gray)
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg)"
+        name: Base
+
+accentCardColor:
+  type: select
+  comment: Background color for the middle (accent) card.
+  options:
+    values:
+      - id: ""
+        name: Default (Brand)
+      - id: "var(--color-bg-brand)"
+        name: Brand
+      - id: "var(--color-bg-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-bg-surface)"
+        name: Surface
+
+accentCardTextColor:
+  type: select
+  comment: Text color for the middle (accent) card.
+  options:
+    values:
+      - id: ""
+        name: Default (White)
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-text)"
+        name: Body Text
+
+bulletColor:
+  type: select
+  comment: Color of the + bullet markers in card lists.
+  options:
+    values:
+      - id: ""
+        name: Default (Brand)
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family for card text. Leave blank for site default.
+
+fontBody:
+  type: text
+  comment: Override the font family for list items. Leave blank for site default.

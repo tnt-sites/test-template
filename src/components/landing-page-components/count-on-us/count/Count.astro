@@ -1,0 +1,215 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+
+const {
+  headingLine1 = "Count",
+  headingLine2 = "On Us",
+  listItems = [],
+  accentColor = "",
+  squareColor = "",
+  boxBorderColor = "",
+  headingColor = "",
+  fontHeadings = "",
+  fontBody = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  accentColor ? `--cou-accent-color: ${accentColor}` : "",
+  squareColor ? `--cou-square-color: ${squareColor}` : "",
+  boxBorderColor ? `--cou-box-border-color: ${boxBorderColor}` : "",
+  headingColor ? `--cou-heading-color: ${headingColor}` : "",
+  fontHeadings ? `--cou-font-headings: ${fontHeadings}` : "",
+  fontBody ? `--cou-font-body: ${fontBody}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["cou-count", className]}
+  paddingVertical="4xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="box">
+    <!--
+      Decorative squares are real elements so they can sit behind the card
+      (z-index: 0) while the card sits above them (z-index: 1) without any
+      pseudo-element z-index conflicts with the .box corner bracket borders.
+    -->
+    <span class="sq sq-tl" aria-hidden="true"></span>
+    <span class="sq sq-br" aria-hidden="true"></span>
+
+    <div class="count">
+      <div class="h2">
+        {headingLine1}<br /><span>{headingLine2}</span>
+      </div>
+      <article>
+        <ul>
+          {listItems.map((item: string) => <li set:html={item} />)}
+        </ul>
+      </article>
+    </div>
+  </div>
+</CustomSection>
+
+<style>
+  .cou-count {
+    overflow: hidden;
+  }
+
+  /* ── Box wrapper ─────────────────────────────────────────────────────────── */
+  .cou-count .box {
+    margin: 0 auto;
+    max-width: 980px;
+    position: relative;
+    width: 100%;
+  }
+
+  /* Partial corner brackets — top (three sides) */
+  .cou-count .box::before {
+    border-left: 5px solid var(--cou-box-border-color, var(--color-brand));
+    border-right: 5px solid var(--cou-box-border-color, var(--color-brand));
+    border-top: 5px solid var(--cou-box-border-color, var(--color-brand));
+    content: "";
+    height: 20px;
+    left: -5px;
+    position: absolute;
+    right: -5px;
+    top: 0;
+    z-index: 5;
+  }
+
+  /* Partial corner brackets — bottom (three sides) */
+  .cou-count .box::after {
+    border-bottom: 5px solid var(--cou-box-border-color, var(--color-brand));
+    border-left: 5px solid var(--cou-box-border-color, var(--color-brand));
+    border-right: 5px solid var(--cou-box-border-color, var(--color-brand));
+    bottom: 0;
+    content: "";
+    height: 20px;
+    left: -5px;
+    position: absolute;
+    right: -5px;
+    z-index: 5;
+  }
+
+  /* ── Decorative background squares ─────────────────────────────────────── */
+  .cou-count .sq {
+    background: var(--cou-square-color, var(--color-bg-surface));
+    display: block;
+    height: 348px;
+    position: absolute;
+    width: 348px;
+    z-index: 0;
+  }
+
+  .cou-count .sq-tl {
+    left: -75px;
+    top: -50px;
+  }
+
+  .cou-count .sq-br {
+    bottom: -50px;
+    right: -75px;
+  }
+
+  /* ── Count card ─────────────────────────────────────────────────────────── */
+  .cou-count .count {
+    background: var(--color-bg);
+    border-bottom: 3px solid var(--cou-accent-color, var(--color-brand));
+    border-radius: 8px;
+    border-top: 3px solid var(--cou-accent-color, var(--color-brand));
+    display: flex;
+    margin: 50px auto;
+    max-width: 980px;
+
+    /* z-index: 1 ensures the white card sits above the .sq decorative squares */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── Large left heading ──────────────────────────────────────────────────── */
+  .cou-count .h2 {
+    color: var(--cou-heading-color, var(--color-text));
+    font-family: var(--cou-font-headings, var(--font-headings));
+    font-size: 5.625rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: auto 1.25rem;
+    min-width: 9rem;
+    padding: 3.125rem 1.5625rem 2.8125rem;
+    text-align: center;
+  }
+
+  .cou-count .h2 span {
+    display: block;
+  }
+
+  /* ── Article / list ─────────────────────────────────────────────────────── */
+  .cou-count article {
+    background: var(--color-bg);
+    border-radius: 0 8px 8px 0;
+    flex: 1;
+  }
+
+  .cou-count ul {
+    display: table;
+    font-family: var(--cou-font-body, var(--font-body));
+    font-size: 1.875rem;
+    line-height: 1.2;
+    list-style-type: none;
+    margin: 0.625rem auto;
+    padding: 3.125rem 1.25rem;
+    text-align: left;
+  }
+
+  .cou-count ul li {
+    padding: 0.625rem 0 0.625rem 2.5rem;
+    position: relative;
+  }
+
+  .cou-count ul li::before {
+    color: var(--cou-accent-color, var(--color-brand));
+    content: "+";
+    font-family: var(--cou-font-body, var(--font-body));
+    font-size: 1.875rem;
+    left: 0;
+    position: absolute;
+    top: 0.3125rem;
+  }
+
+  /* ── Responsive ─────────────────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .cou-count .count {
+      flex-direction: column;
+      margin: 1.875rem auto;
+    }
+
+    .cou-count .h2 {
+      font-size: 4rem;
+      padding: 2rem 1.25rem 1.25rem;
+    }
+
+    .cou-count article {
+      border-radius: 0 0 8px 8px;
+    }
+
+    .cou-count ul {
+      padding: 1.25rem 1.25rem 2rem;
+    }
+  }
+</style>

@@ -1,0 +1,15 @@
+belowBanner:
+  template: mdx_component
+  inline: false
+  preview:
+    text:
+      - below-banner
+    icon: add
+  definitions:
+    component_name: BelowBanner
+    # Add your component arguments here
+    # Example:
+    # - editor_key: text
+    #   type: string
+  _inputs_from_glob:
+    - /src/components/page-sections/ppc-blocks/below-banner/below-banner.cloudcannon.inputs.yml

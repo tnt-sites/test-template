@@ -1,0 +1,5 @@
+pepSections:
+  id_key: _component
+  style: modal
+  values_from_glob:
+    - /src/components/pep-components/**/*.cloudcannon.structure-value.yml

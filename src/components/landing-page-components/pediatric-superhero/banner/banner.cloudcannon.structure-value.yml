@@ -1,0 +1,28 @@
+label: Pediatric Superhero Banner
+icon: image
+description: Hero section with a board-certified badge, checkmark bullet list, and full-bleed image.
+value:
+  _component: landing-page-components/pediatric-superhero/banner
+  id: ""
+  backgroundColor: accent
+  backgroundColorHex: ""
+  subheading: Board-Certified
+  heading: "Pediatric <span>Dental Care</span>"
+  tagline: for Your Little Superhero
+  listItems:
+    - Proudly Locally Owned & Operated
+    - Same-Day Appointments Available
+    - In-Office Sedation Dentistry
+    - Board-Certified Pediatric Dentist
+  image:
+    source: https://placehold.co/1200x900
+    alt: Child smiling in dental chair
+  buttonSections: []
+  headingColor: ""
+  accentColor: ""
+  waveImage:
+    source: ""
+    alt: ""
+  waveHeight: 92px
+_inputs_from_glob:
+  - /src/components/landing-page-components/pediatric-superhero/banner/banner.cloudcannon.inputs.yml

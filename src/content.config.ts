@@ -108,9 +108,67 @@ const blogCollection = defineCollection({
   schema: blogPostSchema,
 });
 
+const landingStyles = [
+  "cosmetic",
+  "count-on-us",
+  "custom",
+  "dental-implants",
+  "emergency",
+  "new-patient-emergency-combo",
+  "new-patient-split-banner",
+  "new-patient-three-callouts",
+] as const;
+
+const landingComponentConfigSchema = z.union([
+  z.record(z.string(), z.any()),
+  z.array(z.record(z.string(), z.any())),
+]);
+
+const landingPageSchema = z.object({
+  title: z
+    .string()
+    .nullish()
+    .transform((v) => v ?? ""),
+  landingStyle: z.string().optional(),
+  landingMainNav: landingComponentConfigSchema.optional(),
+  landingFooter: landingComponentConfigSchema.optional(),
+  landingPageSections: z
+    .array(z.any())
+    .nullish()
+    .transform((v) => v ?? []),
+  head_scripts: z.array(z.string()).optional(),
+  footer_scripts: z.array(z.string()).optional(),
+  extraFonts: z.array(z.string()).optional(),
+  parentLandingPage: z.string().optional(),
+});
+
+const landingPagesCollection = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/landing-pages" }),
+  schema: landingPageSchema,
+});
+
+const pepPagesCollection = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/pep-pages" }),
+  schema: z.object({
+    title: z
+      .string()
+      .nullish()
+      .transform((v) => v ?? ""),
+    landingMainNav: landingComponentConfigSchema.optional(),
+    landingFooter: landingComponentConfigSchema.optional(),
+    pepSections: z.array(z.any()).optional(),
+    extraFonts: z.array(z.string()).optional(),
+    head_scripts: z.array(z.string()).optional(),
+    footer_scripts: z.array(z.string()).optional(),
+    parentLandingPage: z.string().optional(),
+  }),
+});
+
 export const collections = {
   pages: pagesCollection,
   "docs-pages": docsPagesCollection,
   "docs-components": docsComponentsCollection,
   blog: blogCollection,
+  "landing-pages": landingPagesCollection,
+  "pep-pages": pepPagesCollection,
 };

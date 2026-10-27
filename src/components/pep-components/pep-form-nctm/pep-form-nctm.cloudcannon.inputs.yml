@@ -1,0 +1,274 @@
+backgroundColor:
+  type: select
+  comment: Background color of the outer section (the band behind the content card).
+  options:
+    values:
+      - id: ""
+        name: None
+      - id: "var(--color-bg)"
+        name: Base
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-bg-dark)"
+        name: Dark
+      - id: "var(--color-bg-black)"
+        name: Black
+
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the outer section background. Overrides the dropdown above.
+
+contentBackgroundColor:
+  type: select
+  comment: Background color of the inner content card.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: none
+        name: None (Transparent)
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+contentBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the inner content card. Overrides the dropdown above.
+
+callBackgroundColor:
+  type: select
+  comment: Background color of the call-to-action row (photo + call text).
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: ""
+        name: None (Transparent)
+      - id: "var(--color-bg)"
+        name: Base
+      - id: "var(--color-bg-surface)"
+        name: Surface
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-bg-dark)"
+        name: Dark
+      - id: "var(--color-bg-black)"
+        name: Black
+
+callBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the call row background. Overrides the dropdown above.
+
+callTextColor:
+  type: select
+  comment: Color of the call text.
+  options:
+    values:
+      - id: ""
+        name: Default (Dark)
+      - id: "var(--color-text)"
+        name: Dark
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+
+formBackgroundColor:
+  type: select
+  comment: Background color behind the form inputs.
+  options:
+    values:
+      - id: ""
+        name: Default
+      - id: none
+        name: None (Transparent)
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+
+formBackgroundColorHex:
+  type: color
+  comment: Optional custom hex color for the form area background. Overrides the dropdown above.
+
+linkColor:
+  type: select
+  comment: Color of the phone number link in the call row.
+  options:
+    values:
+      - id: ""
+        name: Default (Brand)
+      - id: "var(--color-brand)"
+        name: Brand (Primary)
+      - id: "var(--color-brand-secondary)"
+        name: Brand (Secondary)
+      - id: "var(--color-brand-muted)"
+        name: Brand (Tertiary)
+      - id: "var(--color-text)"
+        name: Dark
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "#95982d"
+        name: Olive Green
+
+image:
+  type: object
+  comment: Photo displayed beside the call text.
+
+image.source:
+  type: image
+
+image.alt:
+  type: text
+  comment: Alt text for the call-row photo.
+
+figcaption:
+  type: text
+  comment: Caption overlaid at the bottom of the photo (e.g. doctor names). Leave blank to hide.
+
+callText:
+  type: html
+  comment: Full call-to-action text displayed in the call row next to the photo. Supports links, line breaks, and inline formatting.
+
+formAction:
+  type: text
+  comment: Form submission URL or relative path.
+
+nameLabel:
+  type: text
+  comment: Label for the Name field.
+
+phoneFieldLabel:
+  type: text
+  comment: Label for the Phone Number field.
+
+emailLabel:
+  type: text
+  comment: Label for the Email Address field.
+
+timesLabel:
+  type: text
+  comment: Legend/title for the preferred appointment time checkboxes.
+
+timeOptions:
+  type: array
+  comment: Checkbox options for preferred appointment times.
+  options:
+    structures:
+      values:
+        - label: Time Option
+          icon: schedule
+          value:
+            label: Morning
+            value: morning
+
+timeOptions[*].label:
+  type: text
+  comment: Display label for this time option.
+
+timeOptions[*].value:
+  type: text
+  comment: Form value submitted for this time option.
+
+commentsLabel:
+  type: text
+  comment: Label for the Questions/Comments textarea.
+
+submitButton:
+  type: object
+  comment: Style options for the submit button.
+
+submitButton.text:
+  type: text
+  comment: The text that goes inside the submit button.
+  hidden: "submitButton.hideText"
+
+submitButton.variant:
+  type: select
+  comment: The presentation of the submit button.
+  options:
+    values:
+      - id: primary
+        name: Primary
+      - id: secondary
+        name: Secondary
+      - id: tertiary
+        name: Tertiary
+      - id: ghost
+        name: Ghost
+      - id: text
+        name: Text
+
+submitButton.size:
+  type: select
+  comment: The size of the submit button.
+  options:
+    values:
+      - id: sm
+        name: Small
+      - id: md
+        name: Medium
+      - id: lg
+        name: Large
+
+submitButton.iconName:
+  type: select
+  comment: Optional icon to display on the button.
+  options:
+    values: _select_data.icons
+    preview:
+      text:
+        - key: name
+      image:
+        - template: src/icons/{id}.svg
+
+submitButton.iconPosition:
+  type: select
+  comment: Position of the icon relative to the text.
+  hidden: "!submitButton.iconName"
+  options:
+    values:
+      - id: before
+        name: Before
+      - id: after
+        name: After
+
+submitButton.hideText:
+  type: switch
+  comment: Hide button text, show icon only.
+  hidden: "!submitButton.iconName"
+
+submitButton.disabled:
+  type: switch
+  comment: Whether the submit button is disabled.
+
+bottomText:
+  type: markdown
+  comment: Optional paragraph displayed below the form over the outer section background.

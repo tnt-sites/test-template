@@ -213,6 +213,481 @@ collections_config:
     disable_add: false
     disable_add_folder: false
     disable_file_actions: false
+  landing_pages:
+    path: src/content/landing-pages
+    name: Landing Pages
+    icon: stars
+    url: /landing/[full_slug]/
+    disable_url: false
+    _enabled_editors:
+      - visual
+    _inputs:
+      landingMainNav:
+        type: array
+        comment: Add one header component for this landing page. Each page can choose a different header style/structure.
+        cascade: true
+        options:
+          structures: _structures.landingHeaderSections
+      landingFooter:
+        type: array
+        comment: Add one footer component for this landing page. Each page can choose a different footer style/structure.
+        cascade: true
+        options:
+          structures: _structures.landingFooterSections
+      landingPageSections:
+        type: array
+        comment: Landing Page Sections
+        cascade: true
+        options:
+          structures: _structures.landingPageSections
+      $.landingPageSections[*].items[*].desktopImage.source:
+        type: image
+        cascade: true
+      $.landingPageSections[*].items[*].mobileImage.source:
+        type: image
+        cascade: true
+      $.landingPageSections[*].items[*].listText:
+        type: markdown
+        options:
+          allow_resize: true
+          allow_custom_markup: false
+          remove_custom_markup: false
+          initial_height: 320
+          image_size_attributes: true
+        cascade: true
+      head_scripts:
+        type: array
+        comment: Scripts injected into the <head> for this page (e.g. Google Analytics). Sub-pages (form, thank you, etc.) inherit this value.
+        cascade: true
+      $.head_scripts[*]:
+        type: textarea
+        comment: A single script tag or snippet for the head.
+        cascade: true
+      footer_scripts:
+        type: array
+        comment: Scripts injected before </body>. Sub-pages (form, thank you, etc.) inherit this value.
+        cascade: true
+      $.footer_scripts[*]:
+        type: textarea
+        comment: A single script tag or snippet for the footer.
+        cascade: true
+      extraFonts:
+        type: array
+        comment: Extra font stylesheets for this landing page only (e.g. a Google or Adobe Fonts URL). Does not affect the rest of the site.
+        cascade: true
+      $.extraFonts[*]:
+        type: url
+        comment: Full stylesheet URL, e.g. https://fonts.googleapis.com/css2?family=Raleway&display=swap
+        cascade: true
+    create:
+      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
+    add_options:
+      - name: AI Answers
+        icon: stars
+        schema: landing-page-ai-answers
+      - name: Landing Page (Base)
+        icon: stars
+        schema: landing-page
+      - name: Landing Page (Cosmetic)
+        icon: stars
+        schema: landing-page-cosmetic
+      - name: Landing Page (Count On Us)
+        icon: stars
+        schema: landing-page-count-on-us
+      - name: Landing Page (Pediatric Waves)
+        icon: stars
+        schema: landing-page-pediatric-waves
+      - name: Landing Page (Pediatric Superhero)
+        icon: stars
+        schema: landing-page-pediatric-superhero
+      - name: Landing Page (Custom)
+        icon: stars
+        schema: landing-page-custom
+      - name: Landing Page (Dental Implants)
+        icon: stars
+        schema: landing-page-dental-implants
+      - name: Landing Page (Emergency)
+        icon: stars
+        schema: landing-page-emergency
+      - name: Landing Page (Invisalign)
+        icon: stars
+        schema: landing-page-invisalign
+      - name: Landing Page (New Patient Emergency Combo)
+        icon: stars
+        schema: landing-page-new-patient-emergency-combo
+      - name: Landing Page (New Patient Split Banner)
+        icon: stars
+        schema: landing-page-new-patient-split-banner
+      - name: Landing Page (New Patient Three Callouts)
+        icon: stars
+        schema: landing-page-np-three-callouts
+      - name: Landing Page (Form)
+        icon: stars
+        schema: landing-page-form
+      - name: Landing Page (Thank You)
+        icon: check_circle
+        schema: landing-page-thank-you
+      - name: Landing Page (Privacy Policy)
+        icon: policy
+        schema: landing-page-privacy-policy
+      - name: Landing Page (Sitemap)
+        icon: account_tree
+        schema: landing-page-sitemap
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url: /test-page/
+    schemas:
+      landing-page:
+        path: .cloudcannon/schemas/landing-page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Base)
+        icon: stars
+        _enabled_editors:
+          - visual
+      landing-page-ai-answers:
+        path: .cloudcannon/schemas/landing-page-ai-answers.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: AI Answers
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.aiAnswersSections
+            cascade: true
+      landing-page-cosmetic:
+        path: .cloudcannon/schemas/landing-page-cosmetic.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Cosmetic)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.cosmeticSections
+            cascade: true
+      landing-page-count-on-us:
+        path: .cloudcannon/schemas/landing-page-count-on-us.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Count On Us)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.countOnUsSections
+            cascade: true
+      landing-page-custom:
+        path: .cloudcannon/schemas/landing-page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Custom)
+        icon: stars
+        _enabled_editors:
+          - visual
+      landing-page-dental-implants:
+        path: .cloudcannon/schemas/landing-page-dental-implants.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Dental Implants)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.dentalImplantsSections
+            cascade: true
+      landing-page-emergency:
+        path: .cloudcannon/schemas/landing-page-emergency.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Emergency)
+        icon: stars
+        _enabled_editors:
+          - visual
+      landing-page-invisalign:
+        path: .cloudcannon/schemas/landing-page-invisalign.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Invisalign)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.invisalignSections
+            cascade: true
+      landing-page-pediatric-waves:
+        path: .cloudcannon/schemas/landing-page-pediatric-waves.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Pediatric Waves)
+        icon: stars
+        _enabled_editors:
+          - visual
+      landing-page-pediatric-superhero:
+        path: .cloudcannon/schemas/landing-page-pediatric-superhero.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Pediatric Superhero)
+        icon: stars
+        _enabled_editors:
+          - visual
+      landing-page-new-patient-split-banner:
+        path: .cloudcannon/schemas/landing-page-new-patient-split-banner.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (New Patient Split Banner)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.npSplitBannerSections
+            cascade: true
+      landing-page-np-three-callouts:
+        path: .cloudcannon/schemas/landing-page-np-three-callouts.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (New Patient Three Callouts)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.npThreeCalloutsSections
+            cascade: true
+      landing-page-new-patient-emergency-combo:
+        path: .cloudcannon/schemas/landing-page-new-patient-emergency-combo.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (New Patient Emergency Combo)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          landingMainNav:
+            type: array
+            options:
+              structures: _structures.landingHeaderSections
+            cascade: true
+          landingFooter:
+            type: array
+            options:
+              structures: _structures.landingFooterSections
+            cascade: true
+          landingPageSections:
+            type: array
+            options:
+              structures: _structures.npEmergencyComboSections
+            cascade: true
+          $.landingPageSections[*].items[*].listText:
+            cascade: true
+      landing-page-form:
+        path: .cloudcannon/schemas/landing-page-form.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Form)
+        icon: stars
+        _enabled_editors:
+          - visual
+        _inputs:
+          parentLandingPage:
+            type: text
+            comment: >-
+              Optional — link this form page to a main landing page so it shares the same header and footer.
+              To find the ID: look at the file path under src/content/landing-pages/ and use the path
+              without the .md extension.
+              Example: for src/content/landing-pages/my-landing-page.md, enter: my-landing-page.
+              Example: for src/content/landing-pages/MyFolder/my-page.md, enter: MyFolder/my-page.
+              Note: folder names are case-insensitive — MyFolder and myfolder both work.
+              Leave blank to use the header and footer configured in the sections below.
+            cascade: true
+      landing-page-thank-you:
+        path: .cloudcannon/schemas/landing-page-thank-you.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Thank You)
+        icon: check_circle
+        _enabled_editors:
+          - visual
+        _inputs:
+          parentLandingPage:
+            type: text
+            comment: >-
+              Optional — link this page to a main landing page so it shares the same header and footer.
+              To find the ID: look at the file path under src/content/landing-pages/ and use the path
+              without the .md extension.
+              Example: for src/content/landing-pages/my-landing-page.md, enter: my-landing-page.
+              Example: for src/content/landing-pages/MyFolder/my-page.md, enter: MyFolder/my-page.
+              Note: folder names are case-insensitive — MyFolder and myfolder both work.
+              Leave blank to use the header and footer configured in the sections below.
+            cascade: true
+      landing-page-privacy-policy:
+        path: .cloudcannon/schemas/landing-page-privacy-policy.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Privacy Policy)
+        icon: policy
+        _enabled_editors:
+          - visual
+        _inputs:
+          parentLandingPage:
+            type: text
+            comment: >-
+              Optional — link this page to a main landing page so it shares the same header and footer.
+              To find the ID: look at the file path under src/content/landing-pages/ and use the path
+              without the .md extension.
+              Example: for src/content/landing-pages/my-landing-page.md, enter: my-landing-page.
+              Example: for src/content/landing-pages/MyFolder/my-page.md, enter: MyFolder/my-page.
+              Note: folder names are case-insensitive — MyFolder and myfolder both work.
+              Leave blank to use the header and footer configured in the sections below.
+            cascade: true
+      landing-page-sitemap:
+        path: .cloudcannon/schemas/landing-page-sitemap.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: Landing Page (Sitemap)
+        icon: account_tree
+        _enabled_editors:
+          - visual
+        _inputs:
+          parentLandingPage:
+            type: text
+            comment: >-
+              Optional — link this page to a main landing page so it shares the same header and footer.
+              To find the ID: look at the file path under src/content/landing-pages/ and use the path
+              without the .md extension.
+              Example: for src/content/landing-pages/my-landing-page.md, enter: my-landing-page.
+              Example: for src/content/landing-pages/MyFolder/my-page.md, enter: MyFolder/my-page.
+              Note: folder names are case-insensitive — MyFolder and myfolder both work.
+              Leave blank to use the header and footer configured in the sections below.
+            cascade: true
+  pep_pages:
+    path: src/content/pep-pages
+    name: PEP Pages
+    icon: ads_click
+    url: /pep/[full_slug]/
+    disable_url: false
+    _enabled_editors:
+      - visual
+    _inputs:
+      landingMainNav:
+        type: array
+        comment: Add one header component for this PEP page. Each page can choose a different header style/structure.
+        cascade: true
+        options:
+          structures: _structures.landingHeaderSections
+      landingFooter:
+        type: array
+        comment: Add one footer component for this PEP page. Each page can choose a different footer style/structure.
+        cascade: true
+        options:
+          structures: _structures.landingFooterSections
+      pepSections:
+        type: array
+        comment: PEP Page Sections
+        cascade: true
+        options:
+          structures: _structures.pepSections
+      head_scripts:
+        type: array
+        comment: Scripts injected into the <head> for this page (e.g. Google Analytics). Sub-pages inherit this value.
+        cascade: true
+      $.head_scripts[*]:
+        type: textarea
+        comment: A single script tag or snippet for the head.
+        cascade: true
+      footer_scripts:
+        type: array
+        comment: Scripts injected before </body>. Sub-pages inherit this value.
+        cascade: true
+      $.footer_scripts[*]:
+        type: textarea
+        comment: A single script tag or snippet for the footer.
+        cascade: true
+      extraFonts:
+        type: array
+        comment: Extra font stylesheets for this PEP page only (e.g. a Google or Adobe Fonts URL). Does not affect the rest of the site.
+        cascade: true
+      $.extraFonts[*]:
+        type: url
+        comment: Full stylesheet URL, e.g. https://fonts.googleapis.com/css2?family=Raleway&display=swap
+        cascade: true
+    create:
+      path: "[relative_base_path]/{filename|slugify|lowercase}.md"
+    add_options:
+      - name: PEP Page
+        icon: ads_click
+        schema: pep-page
+    disable_add: false
+    disable_add_folder: false
+    disable_file_actions: false
+    new_preview_url: /test-page/
+    schemas:
+      pep-page:
+        path: .cloudcannon/schemas/pep-page.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: false
+        name: PEP Page
+        icon: ads_click
+        _enabled_editors:
+          - visual
 collection_groups:
   - heading: Content
     collections:
@@ -221,6 +696,12 @@ collection_groups:
   - heading: Data
     collections:
       - data
+  - heading: Landing Pages
+    collections:
+      - landing_pages
+  - heading: PEP Pages
+    collections:
+      - pep_pages
 file_config:
   - glob: src/data/fixedTabs.json
     _inputs:

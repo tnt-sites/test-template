@@ -1,0 +1,33 @@
+label: Landing Header - Four Col
+icon: view_week
+description: Four-column desktop header with logo, address, phone, and CTA; mobile call + request buttons.
+value:
+  _component: navigation/landing/landing-header-four-col
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  pageButtons:
+    - _component: building-blocks/core-elements/button
+      text: Request a Free Consultation
+      hideText: false
+      link: /request-an-appointment/
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+      width: md
+  offices: []
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  mobileCallLabel: Call Now
+  mobileRequestLabel: Request a Free Consultation
+  mobileRequestHref: /request-an-appointment/
+  mobileCallBackgroundColor: ""
+  mobileRequestBackgroundColor: ""
+  mobileCallTextColor: ""
+  mobileCallSmallTextColor: ""
+  mobileRequestTextColor: ""
+  mobileRequestSmallTextColor: ""
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-header-four-col/landing-header-four-col.cloudcannon.inputs.yml

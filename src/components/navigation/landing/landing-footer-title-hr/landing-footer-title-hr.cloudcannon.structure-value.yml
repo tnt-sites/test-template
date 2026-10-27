@@ -1,0 +1,41 @@
+label: Landing Footer - Title HR
+icon: page_footer
+description: "Three-column footer with titled sections separated by HR dividers: contact info, map, and office hours."
+value:
+  _component: navigation/landing/landing-footer-title-hr
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  siteName: ""
+  contactTitle: Contact Us
+  findUsTitle: Find Us
+  officeHoursTitle: Office Hours
+  offices: []
+  mapEmbedUrl: ""
+  officeHoursNote: ""
+  officeHoursAlignment: right
+  legalLinks:
+    - name: Sitemap
+      path: sitemap.html
+    - name: Privacy Policy
+      path: privacy-policy.html
+  legalBlurb: ""
+  linkColor: brand
+  linkHoverColor: brand-secondary
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  backgroundColor: ""
+  backgroundColorHex: ""
+  headingColor: ""
+  headingColorHex: ""
+preview:
+  text:
+    - Landing Footer - Title HR
+  icon: page_footer
+picker_preview:
+  text: Landing Footer - Title HR
+  subtext: "Three-column footer with heading/HR, contact info, map, and office hours."
+  icon: page_footer
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-title-hr/landing-footer-title-hr.cloudcannon.inputs.yml

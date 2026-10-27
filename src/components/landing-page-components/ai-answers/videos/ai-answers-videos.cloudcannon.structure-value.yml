@@ -1,0 +1,25 @@
+label: AI Answers Videos
+icon: video_library
+description: Three embedded YouTube or Vimeo videos with the AI Answers heading style.
+value:
+  _component: landing-page-components/ai-answers/videos/ai-answers-videos
+  id: ""
+  backgroundColor: none
+  backgroundColorHex: ""
+  heading: "Hear More From<br>Some of Our Actual Patients"
+  headingColor: "var(--color-text)"
+  image:
+    source: https://placehold.co/400x300
+    alt: "Patients smiling"
+  videos:
+    - type: youtube
+      id: dQw4w9WgXcQ
+      title: "Patient Story 1"
+    - type: vimeo
+      id: 76979871
+      title: "Patient Story 2"
+    - type: youtube
+      id: M7lc1UVf-VE
+      title: "Patient Story 3"
+_inputs_from_glob:
+  - /src/components/landing-page-components/ai-answers/videos/ai-answers-videos.cloudcannon.inputs.yml

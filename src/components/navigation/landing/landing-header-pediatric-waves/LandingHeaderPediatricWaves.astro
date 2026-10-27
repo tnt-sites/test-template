@@ -1,0 +1,346 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import siteInfoData from "@data/siteInfo.json";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  offices = [],
+  pageButtons = [],
+  mobileCallLabel = "Call Now",
+  mobileRequestLabel = "Request an Appointment",
+  mobileRequestHref = "",
+  mobileApptLabel = "",
+  mobileApptHref = "",
+  mobileBarBackground = "",
+  mobileCallBackground = "",
+  mobileRequestBackground = "",
+  mobileApptBackground = "",
+  mobileCallTextColor = "",
+  mobileCallSmallTextColor = "",
+  mobileRequestTextColor = "",
+  mobileRequestSmallTextColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  class: className,
+  ...htmlAttributes
+} = Astro.props as {
+  logoSource?: string;
+  logoAlt?: string;
+  offices?: any[];
+  pageButtons?: any[];
+  mobileCallLabel?: string;
+  mobileRequestLabel?: string;
+  mobileRequestHref?: string;
+  mobileApptLabel?: string;
+  mobileApptHref?: string;
+  mobileBarBackground?: string;
+  mobileCallBackground?: string;
+  mobileRequestBackground?: string;
+  mobileApptBackground?: string;
+  mobileCallTextColor?: string;
+  mobileCallSmallTextColor?: string;
+  mobileRequestTextColor?: string;
+  mobileRequestSmallTextColor?: string;
+  addressLinkColor?: string;
+  addressLinkHoverColor?: string;
+  phoneLinkColor?: string;
+  phoneLinkHoverColor?: string;
+  class?: string;
+  [key: string]: any;
+};
+
+const normalizedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const normalizedButtons = (Array.isArray(pageButtons) ? pageButtons : []).map((button: any) => ({
+  ...button,
+  text: typeof button?.text === "string" ? button.text : "",
+}));
+
+const resolvedMobileRequestLabelProp = mobileRequestLabel || mobileApptLabel;
+const resolvedMobileRequestHrefProp = mobileRequestHref || mobileApptHref;
+const resolvedMobileRequestBackground = mobileRequestBackground || mobileApptBackground;
+
+const mobilePhone = normalizedOffices[0]?.phones?.[0] ?? null;
+const mobileRequest = normalizedButtons[0] ?? null;
+const resolvedMobileRequestLabel =
+  resolvedMobileRequestLabelProp ||
+  (typeof mobileRequest?.text === "string" ? mobileRequest.text.trim() : "");
+const resolvedMobileRequestHref = resolvedMobileRequestHrefProp || mobileRequest?.link || "#";
+const mobileRequestLabelParts = resolvedMobileRequestLabel.split(/\s+/).filter(Boolean);
+const mobileRequestFirstLine = mobileRequestLabelParts.slice(0, 2).join(" ");
+const mobileRequestSecondLine = mobileRequestLabelParts.slice(2).join(" ");
+
+const cssVars = [
+  mobileBarBackground ? `--pw-header-mobile-bar-bg: ${mobileBarBackground}` : "",
+  mobileCallBackground ? `--pw-header-mobile-call-bg: ${mobileCallBackground}` : "",
+  resolvedMobileRequestBackground
+    ? `--pw-header-mobile-request-bg: ${resolvedMobileRequestBackground}`
+    : "",
+  mobileCallTextColor ? `--pw-header-mobile-call-text-color: ${mobileCallTextColor}` : "",
+  mobileCallSmallTextColor
+    ? `--pw-header-mobile-call-small-text-color: ${mobileCallSmallTextColor}`
+    : "",
+  mobileRequestTextColor ? `--pw-header-mobile-request-text-color: ${mobileRequestTextColor}` : "",
+  mobileRequestSmallTextColor
+    ? `--pw-header-mobile-request-small-text-color: ${mobileRequestSmallTextColor}`
+    : "",
+  addressLinkColor ? `--pw-header-address-link-color: ${addressLinkColor}` : "",
+  addressLinkHoverColor ? `--pw-header-address-link-hover-color: ${addressLinkHoverColor}` : "",
+  phoneLinkColor ? `--pw-header-phone-link-color: ${phoneLinkColor}` : "",
+  phoneLinkHoverColor ? `--pw-header-phone-link-hover-color: ${phoneLinkHoverColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+---
+
+<CustomSection
+  maxContentWidth="2xl"
+  paddingHorizontal="lg"
+  paddingVertical="none"
+  class:list={["landing-header-pediatric-waves", className]}
+  style={cssVars || undefined}
+  {...htmlAttributes}
+>
+  <div class="inner">
+    <a class="logo-link" href="/">
+      <Image source={logoSource} alt={logoAlt} class="logo" editable={false} />
+    </a>
+
+    <div class="contact">
+      {
+        normalizedOffices.map((office: any) => (
+          <div class="office">
+            {Array.isArray(office?.phones) &&
+              office.phones.map((phone: any) =>
+                phone?.display ? (
+                  <a href={phone?.href || "#"} class="phone">
+                    {phone.display}
+                  </a>
+                ) : null
+              )}
+
+            {Array.isArray(office?.addresses) &&
+              office.addresses.map((address: any) => {
+                const lines = formatAddressLines(address);
+
+                return lines.length > 0 ? (
+                  <a
+                    href={address?.mapUrl || "#"}
+                    class="address"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {lines.map((line: string, index: number) => (
+                      <>
+                        {line}
+                        {index < lines.length - 1 && <br />}
+                      </>
+                    ))}
+                  </a>
+                ) : null;
+              })}
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      normalizedButtons.length > 0 && (
+        <div class="buttons">
+          <ButtonGroup
+            direction="row"
+            align="center"
+            class="button-group"
+            buttonSections={normalizedButtons}
+            editable={false}
+          />
+        </div>
+      )
+    }
+  </div>
+
+  <div class="mobile-bar mobile-btns">
+    {
+      mobilePhone?.display && (
+        <a class="mobile-call" href={mobilePhone?.href || "#"}>
+          <span class="mobile-small">{mobileCallLabel}</span>
+          {mobilePhone.display}
+        </a>
+      )
+    }
+    {
+      resolvedMobileRequestLabel && (
+        <a class="mobile-request mobile-ra" href={resolvedMobileRequestHref}>
+          <span class="mobile-small">{mobileRequestFirstLine || resolvedMobileRequestLabel}</span>
+          {mobileRequestSecondLine || resolvedMobileRequestLabel}
+        </a>
+      )
+    }
+  </div>
+</CustomSection>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-header-pediatric-waves {
+      background: #fff;
+
+      .inner {
+        align-items: center;
+        display: grid;
+        gap: var(--spacing-md);
+        grid-template-columns: 1fr;
+        padding-block: var(--spacing-sm);
+
+        @media (min-width: 1024px) {
+          grid-template-columns: auto 1fr auto;
+        }
+      }
+
+      .logo-link {
+        display: inline-flex;
+      }
+
+      .logo {
+        margin: 0 !important;
+      }
+
+      .contact {
+        text-align: center;
+
+        @media (min-width: 1024px) {
+          text-align: center;
+        }
+      }
+
+      .phone,
+      .address {
+        display: block;
+        text-decoration: none;
+      }
+
+      .phone {
+        color: var(--pw-header-phone-link-color, #0d5f78);
+        font-size: clamp(1.35rem, 2.2vw, 2.2rem);
+        font-weight: var(--font-weight-semibold);
+        line-height: 1.05;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--pw-header-phone-link-hover-color, #0d5f78);
+        }
+      }
+
+      .address {
+        color: var(--pw-header-address-link-color, var(--color-text));
+        font-size: 1rem;
+        margin-top: 0.25rem;
+
+        &:hover,
+        &:focus-visible {
+          color: var(--pw-header-address-link-hover-color, var(--color-link-hover));
+        }
+      }
+
+      .buttons {
+        justify-self: end;
+
+        @media (max-width: 1023px) {
+          display: none;
+        }
+      }
+
+      .button-group {
+        justify-content: flex-end;
+      }
+
+      .mobile-bar {
+        background: var(--pw-header-mobile-bar-bg, transparent);
+        display: flex;
+        gap: 0;
+        width: 100%;
+
+        @media (min-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .mobile-bar a {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 50%;
+        font-size: 16px;
+        font-weight: 700;
+        justify-content: center;
+        letter-spacing: 2.4px;
+        line-height: 1.1;
+        min-height: 3rem;
+        padding: 12px 5px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .mobile-small {
+        display: block;
+        font-size: 14px;
+        letter-spacing: 0.7px;
+        line-height: 1.1;
+      }
+
+      .mobile-request {
+        background: var(--pw-header-mobile-request-bg, #dbe45a);
+        color: var(--pw-header-mobile-request-text-color, #000);
+
+        .mobile-small {
+          color: var(--pw-header-mobile-request-small-text-color, #000);
+        }
+      }
+
+      .mobile-call {
+        background: var(--pw-header-mobile-call-bg, red);
+        color: var(--pw-header-mobile-call-text-color, #fff);
+
+        .mobile-small {
+          color: var(--pw-header-mobile-call-small-text-color, #fff);
+        }
+      }
+
+      @media (max-width: 1023px) {
+        .content {
+          padding-inline: 0;
+        }
+
+        .inner {
+          justify-items: center;
+        }
+
+        .logo-link {
+          justify-self: center;
+        }
+
+        .contact,
+        .buttons {
+          display: none;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,98 @@
+backgroundColor:
+  type: select
+  comment: Background color of the videos section.
+  options:
+    values:
+      - id: brand
+        name: Brand (Primary)
+      - id: brand-secondary
+        name: Brand (Secondary)
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+heading:
+  type: text
+  comment: Section heading. Supports <br> for manual line breaks.
+
+headingColor:
+  type: select
+  comment: Color of the section heading.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "#0A4172"
+        name: Navy
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+image:
+  type: object
+  comment: Decorative image displayed beside the heading.
+  options:
+    structures:
+      values:
+        - label: Section Image
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+videos:
+  type: array
+  comment: Up to three videos. Supports YouTube and Vimeo embeds.
+  options:
+    structures:
+      values:
+        - label: Video
+          icon: video_library
+          value:
+            type: youtube
+            id: ""
+            title: ""
+          _inputs:
+            type:
+              type: select
+              comment: Choose the video provider.
+              options:
+                values:
+                  - id: youtube
+                    name: YouTube
+                  - id: vimeo
+                    name: Vimeo
+            id:
+              type: text
+              comment: Video ID only, not the full URL.
+            title:
+              type: text
+              comment: Optional title shown below the video.

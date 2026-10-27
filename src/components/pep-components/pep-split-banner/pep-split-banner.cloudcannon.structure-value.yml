@@ -1,0 +1,24 @@
+label: PEP Split Banner
+icon: dashboard
+description: Two-column hero banner — heading and body text on the left, full-height photo on the right.
+value:
+  _component: pep-components/pep-split-banner
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  borderColor: ""
+  headingColor: ""
+  textColor: ""
+  heading: "Plan Ahead.<br>Save. Smile!"
+  headingFontFamily: ""
+  text: |
+    It seems like everything is more expensive these days. Dental care does not have to follow the trend. By starting now, we can work with you and help you maximize the money you get from your dental insurance and flexible spending accounts (FSA).
+
+    Please call today to schedule your appointment so you can **use your benefits before they expire.**
+  image:
+    source: https://placehold.co/800x700
+    alt: Banner photo
+  figcaption: ""
+  buttonSections: []
+_inputs_from_glob:
+  - /src/components/pep-components/pep-split-banner/pep-split-banner.cloudcannon.inputs.yml

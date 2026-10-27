@@ -1,0 +1,229 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Text from "@components/building-blocks/core-elements/text/Text.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  heading = "",
+  headingFontFamily = "",
+  text = "",
+  image = { source: "", alt: "" },
+  stampImage = { source: "", alt: "" },
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  borderColor = "",
+  headingColor = "",
+  textColor = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  borderColor ? `--pep-benefits-border-color: ${borderColor}` : "",
+  headingColor ? `--pep-benefits-heading-color: ${headingColor}` : "",
+  textColor ? `--pep-benefits-text-color: ${textColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["pep-banner-benefits-expire", className]}
+  paddingVertical="none"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  <div class="pep-banner-benefits-expire__inner">
+    <article class="pep-banner-benefits-expire__article">
+      <Heading
+        text={heading}
+        level="h1"
+        class="pep-banner-benefits-expire__heading"
+        fontFamily={headingFontFamily}
+        data-prop="heading"
+        editable={true}
+      />
+      {text && <Text text={text} class="pep-banner-benefits-expire__text" data-prop="text" />}
+      {
+        stampImage?.source && (
+          <div class="pep-banner-benefits-expire__stamp">
+            <Image
+              source={stampImage.source}
+              alt={stampImage.alt}
+              rounded={false}
+              editable={true}
+              aspectRatio="none"
+              widths={[220, 440]}
+              sizes="(max-width: 1024px) 220px, 320px"
+              data-prop-src="stampImage.source"
+              data-prop-alt="stampImage.alt"
+            />
+          </div>
+        )
+      }
+    </article>
+
+    <figure class="pep-banner-benefits-expire__figure">
+      <Image
+        source={image.source}
+        alt={image.alt}
+        rounded={false}
+        editable={true}
+        aspectRatio="none"
+        sizes="100vw"
+        data-prop-src="image.source"
+        data-prop-alt="image.alt"
+      />
+    </figure>
+  </div>
+</CustomSection>
+
+<style>
+  .pep-banner-benefits-expire {
+    border-bottom: 12px solid var(--pep-benefits-border-color, var(--color-brand));
+    overflow: hidden;
+  }
+
+  .pep-banner-benefits-expire__inner {
+    margin: 0 auto;
+    max-width: 1920px;
+    position: relative;
+  }
+
+  .pep-banner-benefits-expire__article {
+    left: 5%;
+    max-width: min(48rem, calc(100% - 2.5rem));
+    padding: 4.5rem 1.25rem 1.5rem;
+    position: absolute;
+    text-align: left;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+  }
+
+  .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__heading) {
+    color: var(--pep-benefits-heading-color, var(--color-text-inverse, #fff));
+    font-size: clamp(4rem, 7vw, 5.75rem);
+    font-weight: 700;
+    line-height: 1;
+    margin: 0 0 1.5rem;
+    max-width: 10ch;
+    text-align: left;
+    text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.45);
+  }
+
+  .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__text p) {
+    color: var(--pep-benefits-text-color, var(--color-text));
+    font-size: clamp(1.125rem, 1.6vw, 1.3125rem);
+    line-height: 1.35;
+    margin: 0 0 1rem;
+    max-width: 36rem;
+    text-align: left;
+  }
+
+  .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__text p:last-child) {
+    margin-bottom: 0;
+  }
+
+  .pep-banner-benefits-expire__stamp {
+    pointer-events: none;
+    position: absolute;
+    right: -8rem;
+    top: -3.5rem;
+    width: clamp(12rem, 20vw, 20rem);
+  }
+
+  .pep-banner-benefits-expire__stamp .image,
+  .pep-banner-benefits-expire__figure .image {
+    height: 100%;
+    width: 100%;
+  }
+
+  .pep-banner-benefits-expire__stamp :global(img) {
+    height: auto;
+    width: 100%;
+  }
+
+  .pep-banner-benefits-expire__figure {
+    width: 100%;
+  }
+
+  .pep-banner-benefits-expire__figure :global(img) {
+    display: block;
+    min-height: 36rem;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+  }
+
+  @media (max-width: 1280px) {
+    .pep-banner-benefits-expire__article {
+      max-width: min(42rem, calc(100% - 2.5rem));
+    }
+
+    .pep-banner-benefits-expire__stamp {
+      right: -4rem;
+      top: -2rem;
+      width: 15rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .pep-banner-benefits-expire__article {
+      left: auto;
+      margin: 0 auto;
+      max-width: 48rem;
+      padding: 3rem 1.5rem 2rem;
+      position: relative;
+      top: auto;
+      transform: none;
+    }
+
+    .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__heading) {
+      color: var(--pep-benefits-heading-color, var(--color-text-inverse, #fff));
+      font-size: clamp(3rem, 10vw, 4rem);
+      margin-bottom: 1.25rem;
+      max-width: none;
+      text-align: center;
+    }
+
+    .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__text p) {
+      margin: 1em auto;
+      text-align: center;
+    }
+
+    .pep-banner-benefits-expire__stamp {
+      margin: 1.5rem auto 0;
+      position: relative;
+      right: auto;
+      top: auto;
+      width: min(14rem, 60vw);
+    }
+
+    .pep-banner-benefits-expire__figure {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .pep-banner-benefits-expire__article {
+      padding: 2.5rem 1rem 1.75rem;
+    }
+
+    .pep-banner-benefits-expire__article :global(.pep-banner-benefits-expire__text p) {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+</style>

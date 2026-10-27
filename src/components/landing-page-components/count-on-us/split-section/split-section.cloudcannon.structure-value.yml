@@ -1,0 +1,29 @@
+label: Split Section
+icon: view_column
+description: Two-column card with decorative corner squares, a heading+checklist on one side and a photo on the other. Use "reverse" to flip image to the left.
+value:
+  _component: landing-page-components/count-on-us/split-section
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  headingPrefix: What happens during
+  heading: "Your First Visit"
+  headingFontFamily: ""
+  listItems:
+    - Evaluation of Your Teeth, Gums &amp; Jaw
+    - Take Time to Answer Your Questions
+    - Oral Cancer Screening
+    - Personalized Treatment Plan
+  image:
+    source: https://placehold.co/420x480
+    alt: First visit photo
+  figcaption: ""
+  reverse: false
+  accentColor: "var(--color-brand)"
+  squareColor: "var(--color-bg-surface)"
+  headingColor: "var(--color-text)"
+  prefixColor: "var(--color-text-muted)"
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/count-on-us/split-section/split-section.cloudcannon.inputs.yml

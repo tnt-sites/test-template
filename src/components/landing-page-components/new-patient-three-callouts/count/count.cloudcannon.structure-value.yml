@@ -1,0 +1,41 @@
+label: NPTC Three Callouts
+icon: view_module
+description: Three callout cards displayed in a pill-shaped row. First and last cards have rounded ends; the middle card gets an accent color. Can overlap the banner above.
+value:
+  _component: landing-page-components/new-patient-three-callouts/count
+  id: ""
+  backgroundColor: base
+  backgroundColorHex: ""
+  overlapBanner: true
+  cards:
+    - image:
+        source: https://placehold.co/80x80
+        alt: ""
+      text: "Looking for a<br>New Dentist?"
+      listItems:
+        - New Patient Cleaning
+        - Dental Insurance Welcome
+        - Friendly, Caring Staff
+        - Crowns, Implants & More
+    - image:
+        source: https://placehold.co/80x80
+        alt: ""
+      text: "Same-Day<br>Appointments<br>Available"
+      listItems: []
+    - image:
+        source: https://placehold.co/80x80
+        alt: ""
+      text: "Have a Dental<br>Emergency?"
+      listItems:
+        - Tooth Pain & Sensitivity
+        - Chipped or Fractured Tooth
+        - Lost or Loose Crown
+        - Bleeding or Swollen Gums
+  primaryCardColor: ""
+  accentCardColor: ""
+  accentCardTextColor: ""
+  bulletColor: ""
+  fontHeadings: ""
+  fontBody: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-three-callouts/count/count.cloudcannon.inputs.yml

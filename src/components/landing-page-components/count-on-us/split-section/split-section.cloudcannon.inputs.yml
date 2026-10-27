@@ -1,0 +1,157 @@
+backgroundColor:
+  type: select
+  comment: Background color of the split section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+headingPrefix:
+  type: text
+  comment: Optional small label displayed above the main heading.
+
+heading:
+  type: text
+  comment: Main section heading. Supports <br> for line breaks.
+
+headingFontFamily:
+  type: text
+  comment: Override the font family for this heading. Leave blank to use the site default. Use any font family loaded by the page, including extra fonts.
+
+listItems:
+  type: array
+  comment: Checklist items. Each item supports inline HTML.
+  options:
+    structures:
+      values:
+        - label: List Item
+          icon: check_circle
+          value: ""
+
+image:
+  type: object
+  comment: Image displayed opposite the text content.
+  options:
+    structures:
+      values:
+        - label: Section Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional caption overlaid at the bottom of the image.
+
+reverse:
+  type: checkbox
+  comment: When enabled, the image appears on the left and text on the right.
+
+accentColor:
+  type: select
+  comment: Color of the "+" bullet markers.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+squareColor:
+  type: select
+  comment: Color of the decorative background squares at the card's corners.
+  options:
+    values:
+      - id: "var(--color-bg-surface)"
+        name: Surface (Light Gray)
+      - id: "var(--color-bg-accent)"
+        name: Accent
+      - id: "var(--color-bg-highlight)"
+        name: Highlight
+      - id: "var(--color-bg-brand)"
+        name: Brand
+      - id: "var(--color-bg-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-bg-brand-muted)"
+        name: Brand Muted
+      - id: "var(--cyan-light)"
+        name: Cyan Light
+      - id: "var(--cyan-dark)"
+        name: Cyan
+      - id: "var(--blue-light)"
+        name: Blue Light
+      - id: "var(--blue-dark)"
+        name: Blue
+
+headingColor:
+  type: select
+  comment: Color of the main h2 heading text.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+prefixColor:
+  type: select
+  comment: Color of the small prefix label above the heading. Defaults to heading color when unset.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family (e.g. "Georgia, serif"). Leave blank to use the site default.
+
+fontBody:
+  type: text
+  comment: Override the list/prefix font family (e.g. "Arial, sans-serif"). Leave blank to use the site default.

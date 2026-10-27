@@ -1,0 +1,126 @@
+backgroundColor:
+  type: select
+  comment: Background color of the banner section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+subheading:
+  type: text
+  comment: Small uppercase text displayed above the main heading (e.g. "Reston's").
+
+heading:
+  type: text
+  comment: Main H1 heading text. Supports <br> for manual line breaks.
+
+badgeImage:
+  type: object
+  comment: Optional badge or award image displayed below the heading.
+  options:
+    structures:
+      values:
+        - label: Badge Image
+          icon: workspace_premium
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the badge image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+image:
+  type: object
+  comment: Full-height photo displayed on the right side of the banner.
+  options:
+    structures:
+      values:
+        - label: Banner Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the banner photo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional caption overlaid at the bottom of the banner photo (e.g. doctor name, office name).
+
+buttonSections:
+  type: array
+  comment: Optional CTA buttons displayed below the badge image.
+  options:
+    structures: _structures.buttonSections
+
+accentColor:
+  type: select
+  comment: Color of the left bracket decoration on the banner.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White
+
+headingColor:
+  type: select
+  comment: Color of the main H1 heading.
+  options:
+    values:
+      - id: "var(--color-text)"
+        name: Body Text
+      - id: "var(--color-text-inverse)"
+        name: White
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family (e.g. "Gabarito, sans-serif"). Leave blank for site default.
+
+fontBody:
+  type: text
+  comment: Override the body/subheading font family. Leave blank for site default.

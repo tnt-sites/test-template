@@ -1,0 +1,82 @@
+backgroundColor:
+  type: select
+  comment: Background color used behind the grid.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+items:
+  type: array
+  comment: Blocks for each image + heading + text
+$.items[*].headingPrefix:
+  type: markdown
+  comment: First part of heading (e.g., "Looking for a")
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+$.items[*].headingMain:
+  type: markdown
+  comment: Main heading (e.g., "New Dentist?")
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+$.items[*].desktopImage:
+  type: image
+  comment: Desktop image URL
+$.items[*].mobileImage:
+  type: image
+  comment: Mobile image URL
+$.items[*].alt:
+  type: text
+  comment: Alt text for images
+$.items[*].listText:
+  type: markdown
+  comment: Text below images
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: true
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css

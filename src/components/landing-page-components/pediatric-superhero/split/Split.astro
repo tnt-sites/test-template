@@ -1,0 +1,247 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+interface Paragraph {
+  body: string;
+}
+
+const {
+  heading = "",
+  headingFontFamily = "",
+  paragraphs = [] as Paragraph[],
+  image = { source: "", alt: "" },
+  figcaption = "",
+  reverse = false,
+  buttonSections = [],
+  decorationImage = { source: "", alt: "" },
+  waveImage = { source: "", alt: "" },
+  waveHeight = "46px",
+  wavePosition = "bottom",
+  headingColor = "",
+  accentColor = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle = [
+  backgroundColorHex ? `background-color: ${backgroundColorHex}` : "",
+  headingColor ? `--ps-split-heading: ${headingColor}` : "",
+  accentColor ? `--ps-split-accent: ${accentColor}` : "",
+]
+  .filter(Boolean)
+  .join("; ");
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["ps-split", reverse && "alt", className]}
+  paddingHorizontal="md"
+  paddingVertical="4xl"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle || undefined}
+  {...htmlAttributes}
+>
+  {
+    decorationImage?.source && (
+      <div class="decoration-image" aria-hidden="true">
+        <Image
+          source={decorationImage.source}
+          alt={decorationImage.alt || ""}
+          rounded={false}
+          editable={true}
+          aspectRatio="none"
+          sizes="auto"
+          widths={[]}
+          data-prop-src="decorationImage.source"
+          data-prop-alt="decorationImage.alt"
+        />
+      </div>
+    )
+  }
+
+  <div class="inner">
+    <figure>
+      <div class="image-frame">
+        <Image
+          source={image.source}
+          alt={image.alt}
+          rounded={false}
+          editable={true}
+          aspectRatio="none"
+          sizes="auto"
+          data-prop-src="image.source"
+          data-prop-alt="image.alt"
+        />
+      </div>
+      {figcaption && <figcaption>{figcaption}</figcaption>}
+    </figure>
+
+    <article>
+      <Heading
+        text={heading}
+        level="h2"
+        fontFamily={headingFontFamily}
+        data-prop="heading"
+        editable={true}
+      />
+      {paragraphs.map((paragraph: Paragraph) => <p set:html={paragraph.body} />)}
+      {buttonSections.length > 0 && <ButtonGroup buttonSections={buttonSections} />}
+    </article>
+  </div>
+
+  {
+    waveImage?.source && (
+      <div
+        class:list={["wave-image", wavePosition === "top" ? "wave-top" : "wave-bottom"]}
+        aria-hidden="true"
+        style={`background-image: url(${waveImage.source}); height: ${waveHeight};`}
+        data-prop-src="waveImage.source"
+        data-prop-alt="waveImage.alt"
+      />
+    )
+  }
+</CustomSection>
+
+<style>
+  .ps-split {
+    position: relative;
+  }
+
+  .ps-split .decoration-image {
+    inset: 0 0 auto auto;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .ps-split .decoration-image :global(.image),
+  .ps-split .decoration-image :global(img) {
+    display: block;
+    width: 220px;
+  }
+
+  .ps-split .inner {
+    align-items: center;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1150px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .ps-split figure {
+    margin: 0;
+    order: 2;
+  }
+
+  .ps-split article {
+    order: 1;
+    text-align: center;
+  }
+
+  .ps-split h2 {
+    color: var(--ps-split-heading, #000);
+    font:
+      700 3.5rem/1 "Amatic SC",
+      sans-serif;
+    margin: 0 0 0.625rem;
+    text-transform: uppercase;
+  }
+
+  .ps-split h2 :global(span) {
+    color: var(--ps-split-accent, #64ab2e);
+  }
+
+  .ps-split p {
+    color: #252627;
+    font:
+      400 1.125rem/1.4 Neuton,
+      serif;
+    margin: 0.625rem 0;
+  }
+
+  .ps-split figure {
+    position: relative;
+  }
+
+  .ps-split .image-frame {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ps-split .image-frame :global(img) {
+    width: 100%;
+  }
+
+  .ps-split figcaption {
+    background-color: rgba(255, 255, 255, 0.9);
+    bottom: 0;
+    color: #252627;
+    font-size: 0.875rem;
+    font-weight: 700;
+    left: 0;
+    padding: 0.3rem 0.625rem 0.625rem;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .ps-split .wave-image {
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 11;
+  }
+
+  .ps-split .wave-image.wave-bottom {
+    top: 100%;
+  }
+
+  .ps-split .wave-image.wave-top {
+    bottom: 100%;
+  }
+
+  @media (min-width: 960px) {
+    .ps-split .inner {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .ps-split article {
+      text-align: left;
+    }
+
+    .ps-split.alt .inner figure {
+      order: 1;
+    }
+
+    .ps-split.alt .inner article {
+      order: 2;
+    }
+
+    .ps-split:not(.alt) .inner figure {
+      order: 2;
+    }
+
+    .ps-split:not(.alt) .inner article {
+      order: 1;
+    }
+  }
+</style>

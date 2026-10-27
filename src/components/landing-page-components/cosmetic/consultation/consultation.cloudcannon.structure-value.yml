@@ -1,0 +1,47 @@
+label: Cosmetic Consultation Form
+icon: contact_mail
+description: Two-column section with a heading on the left and a form on the right.
+value:
+  _component: landing-page-components/cosmetic/consultation
+  id: ""
+  backgroundColor: surface
+  backgroundColorHex: ""
+  heading: "Request a FREE Smile Makeover <span>Consultation</span>"
+  formAction: ""
+  formBlocks:
+    - _component: building-blocks/forms/input
+      label: Name
+      name: name
+      type: text
+      placeholder: Name
+      required: true
+    - _component: building-blocks/forms/input
+      label: Phone Number
+      name: phone
+      type: tel
+      placeholder: Phone Number
+      required: true
+    - _component: building-blocks/forms/input
+      label: Email Address
+      name: email
+      type: email
+      placeholder: Email Address
+      required: true
+    - _component: building-blocks/forms/textarea
+      label: Questions/Comments
+      name: message
+      placeholder: Questions/Comments
+    - _component: building-blocks/forms/hidden
+      name: _subject
+      value: PPC - Cosmetic - Mid Page Form
+    - _component: building-blocks/forms/hidden
+      name: _redirect
+      value: thanks.html
+    - _component: building-blocks/forms/submit
+      text: Submit
+      variant: primary
+  accentColor: ""
+  headingColor: ""
+  fontHeadings: ""
+_inputs_from_glob:
+  - /src/components/landing-page-components/cosmetic/consultation/consultation.cloudcannon.inputs.yml

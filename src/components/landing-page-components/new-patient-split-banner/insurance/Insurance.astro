@@ -1,0 +1,104 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+
+const {
+  blocks = [],
+  fontHeadings = "",
+  headingFontFamily = "",
+  headingColor = "",
+  dividerColor = "",
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const inlineStyle =
+  [
+    backgroundColorHex ? `background-color: ${backgroundColorHex}` : null,
+    fontHeadings ? `--np-font-headings: ${fontHeadings}` : null,
+    headingColor ? `--np-heading-color: ${headingColor}` : null,
+    dividerColor ? `--np-divider-color: ${dividerColor}` : null,
+  ]
+    .filter(Boolean)
+    .join("; ") || undefined;
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["np-insurance", className]}
+  paddingVertical="4xl"
+  paddingHorizontal="md"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={inlineStyle}
+  {...htmlAttributes}
+>
+  {
+    blocks.map((block: { heading: string; text: string }, i: number) => (
+      <div class="block">
+        <Heading
+          text={block.heading}
+          level="h2"
+          data-prop={`$.blocks[${i}].heading`}
+          editable={true}
+        />
+        <p set:html={block.text} />
+      </div>
+    ))
+  }
+</CustomSection>
+
+<style>
+  .np-insurance {
+    text-align: center;
+  }
+
+  .np-insurance .block {
+    margin: 0 auto;
+    max-width: 1240px;
+    text-align: center;
+  }
+
+  .np-insurance .block + .block {
+    margin-top: 3.5rem;
+  }
+
+  .np-insurance h2 {
+    color: var(--np-heading-color, var(--color-text));
+    font-family: var(--np-font-headings, var(--font-headings));
+    font-size: 3.125rem;
+    font-weight: 400;
+    line-height: 1.1;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .np-insurance h2::after {
+    background-color: var(--np-divider-color, var(--color-brand));
+    content: "";
+    display: block;
+    height: 4px;
+    margin: 1.875rem auto 0;
+    width: 70px;
+  }
+
+  .np-insurance p {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    margin: 0.625rem auto;
+    max-width: 1200px;
+    padding: 0.625rem;
+  }
+
+  @media (min-width: 1024px) {
+    .np-insurance h2 :global(br) {
+      display: none;
+    }
+  }
+</style>

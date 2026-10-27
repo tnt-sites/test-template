@@ -1,0 +1,15 @@
+label: Invisalign Split
+icon: view_column
+description: Text and image split section matching the Invisalign LP style.
+value:
+  _component: landing-page-components/invisalign/split
+  id: ""
+  heading: New Smile, New You
+  body: Congratulations! You are about to make a decision that will change your life.
+  image:
+    source: https://placehold.co/550x430
+    alt: Team smiling
+  figcaption: Dr. Ishaya with a patient
+  reverse: false
+_inputs_from_glob:
+  - /src/components/landing-page-components/invisalign/split/split.cloudcannon.inputs.yml

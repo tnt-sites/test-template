@@ -1,0 +1,417 @@
+---
+import siteInfoData from "@data/siteInfo.json";
+
+const {
+  logoSource,
+  logoAlt = "Logo",
+  siteName = "",
+  contactTitle = "Contact Us",
+  findUsTitle = "Find Us",
+  officeHoursTitle = "Office Hours",
+  offices = [],
+  mapEmbedUrl = "",
+  officeHoursNote = "",
+  officeHoursAlignment = "right",
+  legalLinks = [],
+  legalBlurb = "",
+  backgroundColor = "",
+  backgroundColorHex = "",
+  headingColor: headingColorProp = "",
+  headingColorHex = "",
+  linkColor = "",
+  linkHoverColor = "",
+  addressLinkColor = "",
+  addressLinkHoverColor = "",
+  phoneLinkColor = "",
+  phoneLinkHoverColor = "",
+  id: elementId,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const resolvedOffices =
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
+const displaySiteName = siteName || (siteInfoData as any).siteName || "";
+const copyYear = new Date().getFullYear();
+
+const firstOffice = resolvedOffices[0];
+const firstPhone = firstOffice?.phones?.[0];
+const firstAddress = firstOffice?.addresses?.[0];
+
+const formatAddressLines = (address: any) => {
+  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
+  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
+  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
+  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+
+  return [...lineItems, locationLine].filter(
+    (line) => typeof line === "string" && line.trim().length > 0
+  );
+};
+
+const addressLines = firstAddress ? formatAddressLines(firstAddress) : [];
+
+const officeHoursEntries: { day: string; hours: string }[] = Array.isArray(firstOffice?.officeHours)
+  ? firstOffice.officeHours
+      .filter((e: any) => e?.day || e?.hours)
+      .map((e: any) => ({ day: e?.day ?? "", hours: e?.hours ?? "" }))
+  : [];
+
+const resolvedOfficeHoursNote =
+  (typeof officeHoursNote === "string" && officeHoursNote.trim()) ||
+  (typeof firstOffice?.officeHoursNote === "string" && firstOffice.officeHoursNote.trim()) ||
+  "";
+
+const getColorValue = (value: any) => {
+  const raw = typeof value === "string" ? value : (value?.id ?? value?.value ?? value?.name);
+
+  if (typeof raw !== "string") return "";
+
+  const normalized = raw.trim();
+
+  return normalized && normalized !== "none" ? normalized : "";
+};
+
+const bgColor = backgroundColorHex || getColorValue(backgroundColor) || "";
+const resolvedHeadingColor = headingColorHex || getColorValue(headingColorProp) || "";
+const resolvedOfficeHoursAlignment = officeHoursAlignment === "left" ? "left" : "right";
+
+const cssVars = [
+  bgColor && `--lfth-bg: ${bgColor}`,
+  resolvedHeadingColor && `--lfth-heading-color: ${resolvedHeadingColor}`,
+  getColorValue(linkColor) && `--footer-link-color: ${getColorValue(linkColor)}`,
+  getColorValue(linkHoverColor) && `--footer-link-hover-color: ${getColorValue(linkHoverColor)}`,
+  getColorValue(addressLinkColor) &&
+    `--footer-address-link-color: ${getColorValue(addressLinkColor)}`,
+  getColorValue(addressLinkHoverColor) &&
+    `--footer-address-link-hover-color: ${getColorValue(addressLinkHoverColor)}`,
+  getColorValue(phoneLinkColor) && `--footer-phone-link-color: ${getColorValue(phoneLinkColor)}`,
+  getColorValue(phoneLinkHoverColor) &&
+    `--footer-phone-link-hover-color: ${getColorValue(phoneLinkHoverColor)}`,
+]
+  .filter(Boolean)
+  .join("; ");
+
+const embedSrc = typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+const blurb = typeof legalBlurb === "string" ? legalBlurb.trim() : "";
+---
+
+<footer
+  class:list={["landing-footer-title-hr", className]}
+  id={elementId || undefined}
+  style={cssVars || undefined}
+  {...htmlAttributes}
+>
+  <div class="lfth-inner">
+    <article class="lfth-col lfth-contact">
+      <h3 class="lfth-heading" data-prop="contactTitle">{contactTitle}</h3>
+      <hr class="lfth-hr" />
+      {logoSource && <img src={logoSource} alt={logoAlt} class="lfth-logo" loading="lazy" />}
+      {
+        addressLines.length > 0 && (
+          <a
+            href={firstAddress?.mapUrl || "#"}
+            class="lfth-address"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {addressLines.map((line: string, i: number) => (
+              <>
+                {line}
+                {i < addressLines.length - 1 && <br />}
+              </>
+            ))}
+          </a>
+        )
+      }
+      {
+        firstPhone?.display && (
+          <a href={firstPhone?.href || "#"} class="lfth-phone">
+            {firstPhone.display}
+          </a>
+        )
+      }
+    </article>
+
+    {
+      embedSrc && (
+        <article class="lfth-col lfth-map">
+          <h3 class="lfth-heading" data-prop="findUsTitle">
+            {findUsTitle}
+          </h3>
+          <hr class="lfth-hr" />
+          <div class="lfth-map-embed">
+            <iframe
+              src={embedSrc}
+              width="100%"
+              height="300"
+              style="border:0;"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Office location map"
+            />
+          </div>
+        </article>
+      )
+    }
+
+    {
+      officeHoursEntries.length > 0 && (
+        <article class="lfth-col lfth-hours">
+          <h3 class="lfth-heading" data-prop="officeHoursTitle">
+            {officeHoursTitle}
+          </h3>
+          <hr class="lfth-hr" />
+          <div
+            class:list={[
+              "office-hours",
+              "office-hours--left",
+              "lfth-office-hours",
+              `office-hours--time-${resolvedOfficeHoursAlignment}`,
+            ]}
+          >
+            <div class="office-hours-list">
+              {officeHoursEntries.map((entry) => (
+                <div class="office-hours-row">
+                  <div class="office-hours-line">
+                    {entry.day && <span class="office-hours-day">{entry.day}</span>}
+                    <span class="office-hours-time">{entry.hours}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {resolvedOfficeHoursNote && (
+            <p class="lfth-hours-note" data-prop="officeHoursNote">
+              {resolvedOfficeHoursNote}
+            </p>
+          )}
+        </article>
+      )
+    }
+  </div>
+
+  <div class="copy">
+    <span class="footer-legal-line footer-legal-line--primary">
+      Copyright &copy; {copyYear}
+      {displaySiteName}
+    </span>
+    {
+      legalLinks.length > 0 && (
+        <span class="footer-legal-separator" aria-hidden="true">
+          |
+        </span>
+      )
+    }
+    {
+      legalLinks.length > 0 && (
+        <span class="footer-legal-line footer-legal-line--links">
+          {legalLinks.map((item: any, index: number) => (
+            <>
+              <a href={item?.path || "#"}>{item?.name || "Link"}</a>
+              {index < legalLinks.length - 1 && <span class="footer-legal-link-separator">|</span>}
+            </>
+          ))}
+        </span>
+      )
+    }
+    <span class="footer-legal-separator" aria-hidden="true">|</span>
+    <span class="footer-legal-line footer-legal-line--credit">
+      Site designed and maintained by{" "}
+      <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">TNT Dental</a>
+    </span>
+    {blurb && <p class="copy-blurb">{blurb}</p>}
+  </div>
+</footer>
+
+<style lang="pcss" is:global>
+  @layer page-sections {
+    .landing-footer-title-hr {
+      background-color: var(--lfth-bg, #fff);
+      padding-top: 1.875rem;
+
+      .lfth-inner {
+        align-items: flex-start;
+        display: flex;
+        justify-content: space-around;
+        margin-inline: auto;
+        max-width: 1280px;
+        padding-inline: var(--spacing-md);
+      }
+
+      .lfth-col {
+        flex: 0 1 380px;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .lfth-map {
+        flex: 0 1 460px;
+      }
+
+      .lfth-heading {
+        color: var(--lfth-heading-color, #121618);
+        font-family: var(--font-heading, sans-serif);
+        font-size: clamp(1.75rem, 3vw, 2.8rem);
+        font-weight: 400;
+        margin-block: 10px 0;
+      }
+
+      .lfth-hr {
+        background-color: var(--lfth-heading-color, #403530);
+        border: none;
+        display: block;
+        height: 4px;
+        margin: 20px auto 30px;
+        width: 75px;
+      }
+
+      .lfth-logo {
+        display: block;
+        margin: 0 auto 1rem !important;
+        max-width: 100%;
+        padding-top: 1.875rem;
+      }
+
+      .lfth-address {
+        color: var(--footer-address-link-color, var(--color-brand));
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.45px;
+        line-height: 1.625;
+        padding-top: 2.1875rem;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--footer-address-link-hover-color, var(--color-brand-secondary));
+        }
+      }
+
+      .lfth-phone {
+        color: var(--footer-phone-link-color, var(--color-brand));
+        display: block;
+        font-size: clamp(1.75rem, 3vw, 2.5rem);
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        line-height: 1;
+        margin: 20px auto 30px;
+        text-decoration: none;
+
+        &:hover {
+          color: var(--footer-phone-link-hover-color, var(--color-brand-secondary));
+        }
+      }
+
+      .lfth-map-embed {
+        iframe {
+          display: block;
+          height: 300px;
+          width: 100%;
+        }
+      }
+
+      .lfth-office-hours {
+        --office-hours-color: var(--color-text, #121212);
+        --office-hours-day-color: var(--color-text, #121212);
+        --office-hours-note-color: var(--color-text-muted, #6f6f6f);
+        margin: 3.75rem auto 1.875rem;
+        max-width: 310px;
+      }
+
+      .lfth-office-hours .office-hours-day,
+      .lfth-office-hours .office-hours-time {
+        font-family: var(--font-heading, sans-serif);
+        font-size: 1.1875rem;
+      }
+
+      .lfth-hours-note {
+        font-family: var(--font-heading, sans-serif);
+        font-size: 1.1875rem;
+        margin-inline: auto;
+        max-width: 310px;
+        text-align: left;
+      }
+
+      .copy {
+        color: var(--color-text, #000);
+        font-size: var(--font-size-sm);
+        letter-spacing: 0.1em;
+        line-height: 1.5;
+        margin-top: 1.5rem;
+        padding: 20px 10px;
+        text-align: center;
+        text-transform: uppercase;
+
+        a {
+          color: var(--footer-link-color, var(--color-brand));
+          text-decoration: none;
+
+          &:hover,
+          &:focus-visible {
+            color: var(--footer-link-hover-color, var(--color-link-hover));
+          }
+        }
+      }
+
+      .footer-legal-line {
+        display: inline;
+      }
+
+      .footer-legal-separator,
+      .footer-legal-link-separator {
+        display: inline;
+        margin: 0 0.5rem;
+      }
+
+      .copy-blurb {
+        font-size: var(--font-size-xs);
+        letter-spacing: 0;
+        line-height: var(--line-height-relaxed);
+        margin: 20px auto 0;
+        max-width: 1150px;
+        text-transform: none;
+      }
+
+      @media (max-width: 1024px) {
+        .lfth-inner {
+          display: block;
+        }
+
+        .lfth-col {
+          margin: 20px auto;
+          max-width: 500px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .lfth-inner {
+          display: block;
+        }
+
+        .lfth-map {
+          display: none;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .copy {
+          .footer-legal-line {
+            display: block;
+          }
+
+          .footer-legal-line + .footer-legal-line {
+            margin-top: 0.25rem;
+          }
+
+          .footer-legal-separator {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+</style>

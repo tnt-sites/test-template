@@ -1,0 +1,129 @@
+backgroundColor:
+  type: select
+  comment: Background color of the banner section.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: base
+        name: Base
+      - id: surface
+        name: Surface
+      - id: accent
+        name: Accent
+      - id: highlight
+        name: Highlight
+      - id: dark
+        name: Dark
+      - id: black
+        name: Black
+backgroundColorHex:
+  type: color
+  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+
+subheading:
+  type: text
+  comment: Small uppercase text displayed above the main heading.
+
+heading:
+  type: text
+  comment: Main heading text. Supports <br> for manual line breaks.
+
+text:
+  type: markdown
+  comment: Optional body text displayed below the heading.
+  options:
+    bold: true
+    italic: true
+    link: true
+    strike: false
+    bulletedlist: false
+    numberedlist: false
+
+textBackgroundImage:
+  type: image
+  comment: Optional centered background image (heart) for the text panel.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+
+badgeImage:
+  type: object
+  comment: Optional badge or award image displayed below the heading.
+  options:
+    structures:
+      values:
+        - label: Badge Image
+          icon: workspace_premium
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the badge image.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+image:
+  type: object
+  comment: Full-bleed photo shown on the right side of the banner.
+  options:
+    structures:
+      values:
+        - label: Banner Photo
+          icon: image
+          value:
+            source: ""
+            alt: ""
+          _inputs:
+            source:
+              type: image
+              comment: Path or URL to the photo.
+              options:
+                paths:
+                  uploads: src/assets/images
+                  static: ""
+            alt:
+              type: textarea
+              comment: Alt text for accessibility.
+
+figcaption:
+  type: text
+  comment: Optional caption displayed over the bottom of the photo (e.g. doctor name).
+
+buttonSections:
+  type: array
+  comment: Optional CTA button(s) displayed below the heading.
+  options:
+    structures: _structures.buttonSections
+
+fontHeadings:
+  type: text
+  comment: Override the heading font family (e.g. "Georgia, serif"). Leave blank to use the site default.
+
+fontBody:
+  type: text
+  comment: Override the body/subheading font family (e.g. "Arial, sans-serif"). Leave blank to use the site default.
+
+borderColor:
+  type: select
+  comment: Color of the decorative bottom border on the banner.
+  options:
+    values:
+      - id: "var(--color-brand)"
+        name: Brand
+      - id: "var(--color-brand-secondary)"
+        name: Brand Secondary
+      - id: "var(--color-brand-muted)"
+        name: Brand Tertiary
+      - id: "#000"
+        name: Black
+      - id: "var(--color-text-inverse)"
+        name: White

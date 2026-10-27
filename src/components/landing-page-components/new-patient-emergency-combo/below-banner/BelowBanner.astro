@@ -1,0 +1,202 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  backgroundColor = "base",
+  backgroundColorHex = "",
+  items = [],
+  class: className,
+  editable = true,
+  ...rest
+} = Astro.props;
+
+const resolvedBg = backgroundColorHex ? "none" : backgroundColor;
+const htmlAttributes = Object.fromEntries(
+  Object.entries(rest).filter(([key]) => key !== "_component")
+);
+---
+
+<CustomSection
+  class:list={["lists-section", className]}
+  maxContentWidth="3xl"
+  colorScheme="default"
+  backgroundColor={resolvedBg}
+  style={backgroundColorHex ? `background-color: ${backgroundColorHex}` : undefined}
+  {...htmlAttributes}
+>
+  {
+    items.map((item) => (
+      <div class="flex-ed">
+        <figure>
+          <Image
+            source={item.desktopImage}
+            class="desktop-image"
+            alt={item.alt}
+            rounded={false}
+            editable={false}
+            aspectRatio="none"
+            sizes="auto"
+            data-prop-src="item.source"
+            data-prop-alt="item.alt"
+          />
+          <Image
+            src={item.mobileImage}
+            class="mobile-image"
+            alt={item.alt}
+            rounded={false}
+            editable={false}
+            aspectRatio="none"
+            sizes="auto"
+            data-prop-src="item.source"
+            data-prop-alt="item.alt"
+          />
+        </figure>
+        <div class="personalized">
+          <Heading level="h2" size="lg" editable={false}>
+            <span class="small-text">{item.headingPrefix}</span> {item.headingMain}
+          </Heading>
+          <div class="border-box">
+            <Text editable={false} data-prop="listText">
+              {item.listText}
+            </Text>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</CustomSection>
+
+<style>
+  .lists-section {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 60px auto;
+    max-width: 1150px;
+    padding-bottom: 60px;
+    position: relative;
+  }
+
+  .lists-section .flex-ed {
+    border: 1px solid #6a6869;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+
+  .lists-section .flex-ed:first-of-type {
+    border-bottom: none;
+  }
+
+  .lists-section .flex-ed:first-of-type figure {
+    order: 2;
+  }
+
+  .lists-section .flex-ed:last-of-type {
+    border-top: none;
+  }
+
+  .lists-section .flex-ed figure {
+    border: 1px solid #6a6869;
+    position: relative;
+  }
+
+  .lists-section .flex-ed figure figcaption {
+    background: rgba(255, 255, 255, 0.8);
+    bottom: 0;
+    left: 0;
+    letter-spacing: 0.2em;
+    padding: 10px;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .list-section .heading {
+    letter-spacing: -1.05px;
+    line-height: 1;
+    margin-top: 0;
+    position: relative;
+    text-transform: none;
+  }
+
+  .list-section .heading .small-text {
+    color: #000;
+    display: block;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .list-section ul {
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+
+  .list-section ul li {
+    color: #000;
+    font-size: 1.6rem;
+    letter-spacing: 0.6px;
+    list-style: none;
+    padding-left: 32px;
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+  }
+
+  .list-section ul li:before {
+    content: "\e832";
+    font-family: fontello;
+    font-size: 0.8em;
+    left: -2px;
+    position: absolute;
+    top: 13px;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+  .mobile-image {
+    display: none;
+  }
+
+  @media (max-width: 1024px) {
+    .list-section .flex-ed {
+      border: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 35px;
+    }
+
+    .personalized {
+      border: 3px solid rgba(0, 0, 0, 0.15);
+      padding: 15px 0 25px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .desktop-image {
+      display: none;
+    }
+
+    .mobile-image {
+      display: block;
+    }
+
+    .list-section {
+      display: block;
+      margin: 0 auto 20px;
+    }
+
+    .personalized {
+      border-radius: 0;
+      margin: 15px auto;
+      padding: 20px 10px;
+    }
+  }
+</style>

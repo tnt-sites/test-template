@@ -1,0 +1,14 @@
+label: Insurance Text
+icon: add
+description: Description for Insurance Text component.
+value:
+  _component: landing-page-components/new-patient-emergency-combo/insurance-text
+  id: ""
+  heading: "Insurance Text Heading"
+  text: "Insurance Text"
+  backgroundColor: base
+  backgroundColorHex: ""
+  images:
+  imageType: logos
+_inputs_from_glob:
+  - /src/components/landing-page-components/new-patient-emergency-combo/insurance-text/insurance-text.cloudcannon.inputs.yml

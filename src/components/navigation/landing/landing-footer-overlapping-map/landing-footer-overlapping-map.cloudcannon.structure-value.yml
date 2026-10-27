@@ -1,0 +1,57 @@
+label: Landing Footer Overlapping Map
+icon: page_footer
+description: "Landing footer with an overlapping map and contact card layout."
+value:
+  _component: navigation/landing/landing-footer-overlapping-map
+  logoSource: /images/logo.svg
+  logoAlt: Logo
+  siteName: Dental Studio
+  contactTitle: Schedule Your Visit Today!
+  cardBackgroundColor: "#343434"
+  pageButtons:
+    - _component: building-blocks/core-elements/button
+      text: Request an Appointment
+      hideText: false
+      link: /request-an-appointment/
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+      width: md
+  socials:
+    - label: Facebook
+      icon: social/facebook
+      link: https://facebook.com
+  legalLinks:
+    - name: Sitemap
+      path: sitemap.html
+    - name: Privacy Policy
+      path: privacy-policy.html
+  mapEmbedUrl: ""
+  backgroundImage:
+    source: null
+    alt: null
+    positionVertical: top
+    positionHorizontal: center
+  backgroundGradient: "linear-gradient(180deg, color-mix(in srgb, var(--color-bg-brand-secondary) 86%, black) 0%, var(--color-bg-brand-secondary) 100%)"
+  backgroundColor: ""
+  backgroundColorHex: ""
+  officeHoursAlignment: right
+  linkColor: brand
+  linkHoverColor: brand-secondary
+  addressLinkColor: ""
+  addressLinkHoverColor: ""
+  phoneLinkColor: ""
+  phoneLinkHoverColor: ""
+  legalBlurb: ""
+  offices: []
+preview:
+  text:
+    - Landing Footer Overlapping Map
+  icon: page_footer
+picker_preview:
+  text: Landing Footer Overlapping Map
+  subtext: "Card-style contact block with overlapping map."
+  icon: page_footer
+_inputs_from_glob:
+  - /src/components/navigation/landing/landing-footer-overlapping-map/landing-footer-overlapping-map.cloudcannon.inputs.yml
