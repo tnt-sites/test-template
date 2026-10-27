@@ -114,31 +114,39 @@ const hasModalItems = items.some((item: any) => item.contentSections.length > 0)
       {
         items.map((item: any) => {
           const iconName = item.iconPreset ? `emergency/${item.iconPreset}` : "emergency/toothache";
-          // Items with pop-up content are buttons; the rest are plain labels.
-          const Tag = item.contentSections.length > 0 ? "button" : "div";
-          const buttonProps =
-            Tag === "button"
-              ? {
-                  type: "button",
-                  "data-modal-target": item.modalId,
-                  "aria-haspopup": "dialog",
-                  "aria-controls": item.modalId,
-                }
-              : {};
-
           return (
             <editable-array-item data-component="page-sections/info-blocks/emergency-grid/emergency-item">
               <li>
-                <Tag class="item" {...buttonProps}>
-                  <Icon
-                    name={iconName}
-                    size="none"
-                    class="emergency-icon"
-                    style={`--icon-height: ${iconHeights[item.iconPreset] ?? 70}px`}
-                    aria-hidden="true"
-                  />
-                  <h3>{item.title}</h3>
-                </Tag>
+                {/* Items with pop-up content are buttons; the rest are plain labels. */}
+                {item.contentSections.length > 0 ? (
+                  <button
+                    type="button"
+                    class="item"
+                    data-modal-target={item.modalId}
+                    aria-haspopup="dialog"
+                    aria-controls={item.modalId}
+                  >
+                    <Icon
+                      name={iconName}
+                      size="none"
+                      class="emergency-icon"
+                      style={`--icon-height: ${iconHeights[item.iconPreset] ?? 70}px`}
+                      aria-hidden="true"
+                    />
+                    <h3>{item.title}</h3>
+                  </button>
+                ) : (
+                  <div class="item">
+                    <Icon
+                      name={iconName}
+                      size="none"
+                      class="emergency-icon"
+                      style={`--icon-height: ${iconHeights[item.iconPreset] ?? 70}px`}
+                      aria-hidden="true"
+                    />
+                    <h3>{item.title}</h3>
+                  </div>
+                )}
               </li>
             </editable-array-item>
           );
