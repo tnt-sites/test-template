@@ -1,25 +1,15 @@
 label: Index Reviews
 icon: format_quote
-description: A carousel of written patient reviews with star ratings.
+description: Patient review carousel with long arrows, dots and a button.
 value:
   _component: page-sections/homepage-blocks/index-reviews
   id: ""
-  heading: What Our Patients <span class="heading-color">Say</span>
+  heading: ""
   reviews:
-    - text: "The entire staff is incredibly kind and professional. I actually look forward to my appointments!"
-      authorName: Helen W.
-    - text: "I've been coming here for years. They always make me feel comfortable and well taken care of."
-      authorName: Michele R.
-    - text: "Exceptional care from start to finish. Highly recommend to anyone searching for a great dental office."
-      authorName: Susan F.
-  showQuoteIcon: false
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: null
-    alt: null
-    positionVertical: top
-    positionHorizontal: center
+    - text: "“Review text.”"
+      authorName: First L.
+  buttonSections: []
+  background: cream
 preview:
   text:
     - Index Reviews
@@ -28,7 +18,7 @@ preview:
   icon: format_quote
 picker_preview:
   text: Index Reviews
-  subtext: Patient reviews carousel with star ratings.
+  subtext: Patient review carousel.
   icon: format_quote
 _inputs_from_glob:
   - /src/components/page-sections/homepage-blocks/index-reviews/index-reviews.cloudcannon.inputs.yml
@@ -40,8 +30,6 @@ _structures:
         value:
           text: ""
           authorName: ""
-          socialIcon: ""
-          reviewerImage: ""
         _inputs:
           text:
             type: textarea
@@ -49,24 +37,3 @@ _structures:
           authorName:
             type: text
             comment: The reviewer's name.
-          socialIcon:
-            type: select
-            comment: Optional review platform icon shown next to the author name and stars.
-            options:
-              allow_empty: true
-              values:
-                - id: social/google
-                  name: Google
-                - id: social/facebook
-                  name: Facebook
-                - id: social/yelp
-                  name: Yelp
-                - id: social/instagram
-                  name: Instagram
-          reviewerImage:
-            type: image
-            comment: Optional circular photo of the reviewer shown next to their name.
-            options:
-              paths:
-                uploads: src/assets/images
-                static: ""

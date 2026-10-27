@@ -46,6 +46,11 @@ if (!_component && !hasText && !hasSlotContent) return;
     .text {
       margin-top: var(--spacing-lg);
 
+      /* The reset zeroes paragraph margins; space out consecutive blocks. */
+      > * + * {
+        margin-top: 1.4em;
+      }
+
       &.align-start {
         text-align: start;
       }

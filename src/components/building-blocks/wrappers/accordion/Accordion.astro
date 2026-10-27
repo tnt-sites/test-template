@@ -6,6 +6,7 @@ const {
   openFirst,
   singleOpen = false,
   label,
+  class: className,
   editable = true,
   "data-prop": customDataProp = "items",
   _component,
@@ -43,7 +44,7 @@ const hasSlotContent = (slotContent?.toString().trim().length ?? 0) > 0;
 if (!_component && !hasItems && !hasSlotContent) return;
 ---
 
-<div class:list={["accordion"]} {...arrayDataAttributes} {...htmlAttributes}>
+<div class:list={["accordion", className]} {...arrayDataAttributes} {...htmlAttributes}>
   <slot>
     {
       items &&

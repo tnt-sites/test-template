@@ -1,93 +1,94 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
   heading = "",
-  maxContentWidth,
-  paddingHorizontal,
   buttonSections = [],
-  colorScheme = "inherit",
-  backgroundColor,
-  backgroundGradient = "",
-  backgroundImage,
-  paddingVertical = "4xl",
+  background = "cream",
   class: className,
   editable = true,
-  ...rest
+  _component,
+  // Older settings, no longer used.
+  backgroundGradient,
+  backgroundImage,
+  maxContentWidth,
+  paddingHorizontal,
+  paddingVertical,
+  colorScheme,
+  backgroundColor,
+  ...htmlAttributes
 } = Astro.props;
-
-const htmlAttributes = Object.fromEntries(
-  Object.entries(rest).filter(([key]) => key !== "_component")
-);
 ---
 
-<CustomSection
-  class:list={["more-to-explore", className]}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
-  backgroundGradient={backgroundGradient}
-  backgroundImage={backgroundImage}
+<section
+  class:list={["more-to-explore", sectionBackground(background), className]}
   {...htmlAttributes}
 >
-  <Heading
-    class="more-to-explore__heading mt-12"
-    level="h6"
-    size="xl"
-    alignX="center"
-    text={heading}
-    data-prop="heading"
-  />
-  <ButtonGroup class="buttons" buttonSections={buttonSections} alignX="center" />
-</CustomSection>
+  <Heading level="h2" size="3xl" alignX="center" text={heading} data-prop="heading" />
+  <ButtonGroup buttonSections={buttonSections} alignX="center" />
+</section>
 
-<style is:global>
+<style>
   .more-to-explore {
-    .more-to-explore__heading {
-      font-size: 70px;
-      line-height:;
-    }
+    padding: 65px 25px;
   }
 
-  @layer components {
-    .more-to-explore__heading .heading-text .color {
-      color: var(--color-brand);
+  .more-to-explore :global(.heading) {
+    line-height: 1;
+    margin: 0;
+  }
+
+  /* Buttons stack full width on phones and wrap three to a row on desktop. */
+  .more-to-explore :global(.button-group) {
+    margin: 30px auto 0;
+    max-width: 1230px;
+  }
+
+  .more-to-explore :global(.button-group editable-array) {
+    display: block;
+    width: 100%;
+  }
+
+  .more-to-explore :global(.button-group editable-array-item) {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .more-to-explore :global(.button) {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    min-height: 50px;
+    padding: 0 25px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    .more-to-explore {
+      padding: 80px 25px;
     }
 
-    .more-to-explore .buttons,
-    .more-to-explore .buttons > editable-array {
+    .more-to-explore :global(.button-group) {
+      margin-top: 50px;
+    }
+
+    .more-to-explore :global(.button-group editable-array) {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--spacing-sm);
+      gap: 20px;
       justify-content: center;
     }
 
-    .more-to-explore .buttons .button {
-      flex: 0 0 350px;
-      min-width: 350px;
-      width: 350px;
+    .more-to-explore :global(.button-group editable-array-item) {
+      margin: 0;
     }
 
-    @media (max-width: 768px) {
-      .more-to-explore .buttons,
-      .more-to-explore .buttons > editable-array {
-        flex-direction: column;
-      }
-
-      .more-to-explore .buttons > editable-array-item,
-      .more-to-explore .buttons > editable-array > editable-array-item {
-        width: 100%;
-      }
-
-      .more-to-explore .buttons .button {
-        flex-basis: 100%;
-        min-width: auto;
-        width: 100%;
-      }
+    .more-to-explore :global(.button) {
+      min-width: 355px;
+      white-space: nowrap;
+      width: auto;
     }
   }
 </style>

@@ -20,9 +20,9 @@
 @layer base {
   .bg-layers {
     /* Custom properties inherit, and `.bg-layers` elements nest — a Card sits
-       inside a CustomSection, and the landing footers wrap one too. Without this
-       reset, a nested element with no background image of its own would inherit
-       the ancestor's tiers and repaint the ancestor's image. Resetting them to
+       inside a CustomSection. Without this reset, a nested element with no
+       background image of its own would inherit the ancestor's tiers and
+       repaint the ancestor's image. Resetting them to
        the guaranteed-invalid value makes each element fall back to `none` unless
        it sets its own; the inline style written by backgroundImageCss.ts is on
        the element itself, so it still wins here. */

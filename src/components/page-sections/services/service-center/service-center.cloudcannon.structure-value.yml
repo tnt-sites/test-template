@@ -1,0 +1,37 @@
+label: Service Center
+icon: hero
+description: Centered call-to-action with headline, supporting text, and buttons.
+value:
+  _component: page-sections/services/service-center
+  id: ""
+  heading: Heading text
+  anchorName: ""
+  subtext: Subtext placeholder text that will be replaced with actual content.
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  background: white
+  showHeadingBar: true
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Service Center
+  subtext:
+    - key: heading
+  icon: hero
+picker_preview:
+  text: Service Center
+  subtext: Centered service section with stacked text and buttons.
+_inputs_from_glob:
+  - /src/components/page-sections/services/service-center/service-center.cloudcannon.inputs.yml

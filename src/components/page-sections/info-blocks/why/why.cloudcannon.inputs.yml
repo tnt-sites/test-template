@@ -1,6 +1,22 @@
+heading:
+  type: markdown
+  comment: Heading centered above the reasons.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
 backgroundColor:
   type: select
-  comment: Background color used behind the grid.
+  comment: Background color for the band. Dark is the navy from the design.
   options:
     values:
       - id: none
@@ -72,10 +88,5 @@ backgroundImage.positionHorizontal:
 items:
   type: array
   options:
-    structures: _structures.whyListItems
-  comment: Array of list items.
-# Add your other component inputs here
-# Example:
-# text:
-#   type: text
-#   comment: The text content for the component.
+    structures: _structures.whyItems
+  comment: Reasons to choose the practice. Three fit on one row on desktop.

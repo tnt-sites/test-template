@@ -1,0 +1,27 @@
+heading:
+  type: markdown
+  comment: Heading centered above the slides.
+  options:
+    bold: false
+    italic: true
+    link: false
+    format: p
+    styles: /.cloudcannon/styles/editor.css
+slides:
+  type: array
+  comment: Before-and-after pairs, one pair per slide.
+  options:
+    structures: _structures.gallerySlides
+background:
+  type: select
+  comment: Section background.
+  options:
+    values:
+      - id: white
+        name: White
+      - id: cream
+        name: Cream
+      - id: navy
+        name: Navy
+      - id: green
+        name: Green

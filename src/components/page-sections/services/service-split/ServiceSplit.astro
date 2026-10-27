@@ -1,0 +1,130 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  anchorName = "",
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  imageSource = "",
+  imageAlt = "",
+  reverse = false,
+  background = "white",
+  showHeadingBar = true,
+  class: className,
+  _component,
+  // Older settings, no longer used.
+  imageFirstOnMobile,
+  colorScheme,
+  backgroundColor,
+  backgroundGradient,
+  backgroundImage,
+  paddingVertical,
+  rounded,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<section
+  class:list={["service-split", sectionBackground(background), className]}
+  id={anchorName || undefined}
+  {...htmlAttributes}
+>
+  {/* Photo first so it's on top on phones; on desktop it sits on the right unless "reverse". */}
+  <div
+    class:list={[
+      "block text-center lg:text-left lg:flex justify-around items-start",
+      !reverse && "lg:flex-row-reverse",
+    ]}
+  >
+    <figure>
+      <Image
+        source={imageSource}
+        alt={imageAlt}
+        sizes="(min-width: 1024px) 500px, 100vw"
+        editable={true}
+        data-prop-src="imageSource"
+        data-prop-alt="imageAlt"
+        data-editable="image"
+      />
+    </figure>
+
+    <article>
+      <Heading level="h2" data-prop="heading" text={heading} />
+      {showHeadingBar && <hr class="heading-bar" />}
+      <Text data-prop="subtext" text={subtext} />
+      <ButtonGroup buttonSections={buttonSections} direction="row" />
+      <slot name="text-end" />
+    </article>
+  </div>
+
+  <slot />
+</section>
+
+<style>
+  .service-split > div {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 65px 25px;
+  }
+
+  .service-split figure {
+    margin: 0 0 30px;
+  }
+
+  .service-split :global(img) {
+    aspect-ratio: 5 / 4;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .service-split article {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+
+  /* Heading, text and buttons follow the article's alignment. */
+  .service-split article :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .service-split article :global(.text) {
+    margin-top: 20px;
+  }
+
+  .service-split article :global(.button-group) {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    .service-split > div {
+      padding: 100px 25px;
+    }
+
+    .service-split figure {
+      margin: 0;
+      width: 40%;
+    }
+
+    .service-split article {
+      margin: 0;
+      max-width: 50%;
+    }
+
+    .service-split article :global(.button-group) {
+      justify-content: flex-start;
+    }
+
+    .service-split .heading-bar {
+      width: 95%;
+    }
+  }
+</style>

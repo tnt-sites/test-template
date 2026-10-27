@@ -1,0 +1,89 @@
+heading:
+  type: markdown
+  comment: Headline for the section.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+anchorName:
+  type: text
+  comment: Optional anchor name rendered above the service split section.
+subtext:
+  type: markdown
+  comment: Supporting copy beneath the headline.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+imageSource:
+  type: image
+  comment: Photo filling the other half of the section, edge to edge. It is cropped to fit, so use the focus settings below to keep the subject in view.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imagePositionVertical:
+  type: select
+  comment: Which part of the photo stays in view vertically when it is cropped.
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+imagePositionHorizontal:
+  type: select
+  comment: Which part of the photo stays in view horizontally when it is cropped.
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right
+imageAlt:
+  type: text
+  comment: Alt text describing the service image.
+buttonSections:
+  type: array
+  comment: Buttons for calls-to-action.
+  options:
+    structures: _structures.buttonSections
+reverse:
+  type: switch
+  comment: Put the image on the left and the text on the right (desktop).
+background:
+  type: select
+  comment: Background behind the text. Navy matches the design.
+  options:
+    values:
+      - id: navy
+        name: Navy
+      - id: green
+        name: Green
+showHeadingBar:
+  type: switch
+  comment: Show the thin bar under the heading.
+showLogo:
+  type: switch
+  comment: Show the faint Medford Dental Wellness building mark behind the text.

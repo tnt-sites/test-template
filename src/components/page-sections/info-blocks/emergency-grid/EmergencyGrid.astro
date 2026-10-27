@@ -1,19 +1,23 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
 import Icon from "@core-elements/icon/Icon.astro";
 import Text from "@core-elements/text/Text.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
 import Modal from "@page-sections/info-blocks/modal/Modal.astro";
 
 const {
   heading = "",
   subtext = "",
+  anchorName = "",
   emergencyItems = [],
-  backgroundColor = "none",
+  background = "white",
+  showHeadingBar = true,
   backgroundGradient = "",
   backgroundImage,
   gridIndex,
   class: className,
+  // Older setting, replaced by `background`.
+  backgroundColor,
   ...rest
 } = Astro.props;
 
@@ -71,181 +75,179 @@ const items = emergencyItems.map((item: any, index: number) => {
   };
 });
 
+// Rendered icon heights in px. Each icon is sized to cover roughly the same area,
+// so wide icons (dentures) and tall ones (toothache) read as the same size.
+const iconHeights: Record<string, number> = {
+  toothache: 88,
+  "chipped-tooth": 70,
+  "cracked-tooth": 73,
+  "sensitivity-hot-cold": 73,
+  "knocked-out-tooth": 75,
+  "lost-filling-crown": 78,
+  "broken-denture": 41,
+  "loose-tooth": 63,
+  "gum-lip-tongue-injury": 74,
+  "jaw-pain-clenching": 56,
+  "stuck-between-teeth": 40,
+};
+
 const hasModalItems = items.some((item: any) => item.contentSections.length > 0);
 ---
 
-<CustomSection
-  class:list={["emergency-grid", className]}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
-  backgroundGradient={backgroundGradient}
-  backgroundImage={backgroundImage}
+<section
+  class:list={["emergency-grid", sectionBackground(background), className]}
+  id={anchorName || undefined}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" data-prop="heading" text={heading} />
+  <div class="block text-center">
+    <Heading level="h2" data-prop="heading" text={heading} />
+    {showHeadingBar && <hr class="heading-bar" />}
+    <Text data-prop="subtext">{subtext}</Text>
 
-  <Text alignX="center" data-prop="subtext">
-    {subtext}
-  </Text>
+    <ul
+      class="no-check flex flex-wrap justify-center"
+      data-editable="array"
+      data-component-key="_component"
+      data-id-key="_component"
+      data-prop="emergencyItems"
+    >
+      {
+        items.map((item: any) => {
+          const iconName = item.iconPreset ? `emergency/${item.iconPreset}` : "emergency/toothache";
+          // Items with pop-up content are buttons; the rest are plain labels.
+          const Tag = item.contentSections.length > 0 ? "button" : "div";
+          const buttonProps =
+            Tag === "button"
+              ? {
+                  type: "button",
+                  "data-modal-target": item.modalId,
+                  "aria-haspopup": "dialog",
+                  "aria-controls": item.modalId,
+                }
+              : {};
 
-  <editable-array
-    class="emergency-grid-icons"
-    data-editable="array"
-    data-component-key="_component"
-    data-id-key="_component"
-    data-prop="emergencyItems"
-  >
-    {
-      items.map((item: any) => {
-        const title = item.title;
-        const iconName = item.iconPreset ? `emergency/${item.iconPreset}` : "emergency/toothache";
-
-        return (
-          <editable-array-item data-component="page-sections/info-blocks/emergency-grid/emergency-item">
-            {item.contentSections.length > 0 ? (
-              // If the item has a modal, render a button that triggers the modal
-              <button
-                type="button"
-                class="emergency-grid-item"
-                data-modal-target={item.modalId}
-                aria-haspopup="dialog"
-                aria-controls={item.modalId}
-              >
-                <div class="emergency-grid-item-icon" aria-hidden="true">
-                  <Icon name={iconName} size="none" />
-                </div>
-                <h3 class="emergency-grid-item-title">{title}</h3>
-              </button>
-            ) : (
-              // If the item does not have a modal, render a div
-              <div class="emergency-grid-item">
-                <div class="emergency-grid-item-icon" aria-hidden="true">
-                  <Icon name={iconName} size="none" />
-                </div>
-                <h3 class="emergency-grid-item-title">{title}</h3>
-              </div>
-            )}
-          </editable-array-item>
-        );
-      })
-    }
-  </editable-array>
+          return (
+            <editable-array-item data-component="page-sections/info-blocks/emergency-grid/emergency-item">
+              <li>
+                <Tag class="item" {...buttonProps}>
+                  <Icon
+                    name={iconName}
+                    size="none"
+                    class="emergency-icon"
+                    style={`--icon-height: ${iconHeights[item.iconPreset] ?? 70}px`}
+                    aria-hidden="true"
+                  />
+                  <h3>{item.title}</h3>
+                </Tag>
+              </li>
+            </editable-array-item>
+          );
+        })
+      }
+    </ul>
+  </div>
 
   {
-    hasModalItems && (
-      <div class="emergency-grid-popups">
-        {items.map((item: any, index: number) => {
-          if (item.contentSections.length === 0) return null;
-
-          const closeLabel = item.title
-            ? `Close ${item.title}`
-            : `Close Emergency Item ${index + 1}`;
-          return (
-            <Modal
-              id={item.modalId}
-              class="emergency-grid-modal"
-              closeLabel={closeLabel}
-              contentSections={item.contentSections}
-              propName={`emergencyItems.${index}.contentSections`}
-            />
-          );
-        })}
-      </div>
-    )
+    hasModalItems &&
+      items.map((item: any, index: number) =>
+        item.contentSections.length === 0 ? null : (
+          <Modal
+            id={item.modalId}
+            closeLabel={item.title ? `Close ${item.title}` : `Close Emergency Item ${index + 1}`}
+            contentSections={item.contentSections}
+            propName={`emergencyItems.${index}.contentSections`}
+          />
+        )
+      )
   }
-</CustomSection>
+</section>
 
-<style lang="pcss" is:global>
-  @layer page-sections {
-    .emergency-grid {
-      .emergency-grid-icons {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 20px auto;
-        max-width: 1400px;
-        text-align: center;
+<style>
+  .emergency-grid > div {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 65px 25px;
+  }
 
-        > * {
-          display: block;
-          flex: 0 1 180px;
-          margin: 10px auto;
-          padding: 5px;
-        }
-      }
+  .emergency-grid :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
 
-      .emergency-grid-item {
-        background: transparent;
-        border: 0;
-        color: var(--color-text-strong);
-        cursor: pointer;
-        display: block;
-        text-decoration: none;
-        width: 100%;
-      }
+  .emergency-grid .heading-bar {
+    margin: 20px auto 0;
+    max-width: 575px;
+  }
 
-      .emergency-grid-item-icon {
-        align-items: center;
-        display: flex;
-        height: 80px;
-        justify-content: center;
+  .emergency-grid :global(.text) {
+    font-size: 17px;
+    margin: 20px auto 0;
+    max-width: 770px;
+  }
 
-        .icon {
-          align-items: center;
-          color: var(--color-text-strong);
-          display: flex;
-          flex-direction: column;
-          height: 80px;
-          justify-content: center;
-          width: 80px;
+  .emergency-grid ul {
+    margin: 20px 0 0;
+    padding: 0;
+  }
 
-          svg {
-            height: 100%;
-            width: 100%;
-          }
+  .emergency-grid li {
+    list-style: none;
+    margin: 10px;
+    padding: 5px;
+    width: 180px;
+  }
 
+  .emergency-grid .item {
+    background: transparent;
+    border: 0;
+    color: var(--color-text-strong);
+    display: block;
+    width: 100%;
+  }
 
-          .ic-color {
-            color: var(--color-brand);
-            fill: var(--color-brand);
-            stroke: var(--color-brand);
-          }
+  .emergency-grid h3 {
+    font-size: 22px;
+    line-height: 1.1;
+    margin: 5px auto;
+  }
 
-          path:not(.ic-color),
-          circle:not(.ic-color),
-          ellipse:not(.ic-color),
-          polygon:not(.ic-color),
-          rect:not(.ic-color) {
-            fill: currentColor;
-          }
-        }
-      }
+  .emergency-grid button.item:hover h3 {
+    color: var(--color-brand);
+  }
 
-      .emergency-grid-item-title {
-        font-size: 22px;
-        line-height: 1.1;
-        margin: 5px auto;
-      }
+  /* Icons are sized per icon (see iconHeights) so they look evenly sized.
+     The icon SVGs mark their green parts with .ic-color; everything else is navy. */
+  .emergency-grid :global(.emergency-icon) {
+    align-items: center;
+    display: flex;
+    height: 90px;
+    justify-content: center;
+  }
 
-      .emergency-grid-item:hover,
-      .emergency-grid-item:focus-visible {
-        .emergency-grid-item-title {
-          color: var(--color-brand);
-        }
+  .emergency-grid :global(.emergency-icon svg) {
+    height: var(--icon-height, 70px);
+    max-width: 95px;
+    width: auto;
+  }
 
-        .emergency-grid-item-icon .icon .ic-color {
-          color: var(--color-brand);
-          fill: var(--color-brand);
-          stroke: var(--color-brand);
-        }
-      }
+  .emergency-grid :global(.emergency-icon .ic-color) {
+    color: var(--color-brand);
+    fill: var(--color-brand);
+    stroke: var(--color-brand);
+  }
 
-      .emergency-grid-modal-body {
-        margin-top: 0;
-      }
+  .emergency-grid
+    :global(.emergency-icon :is(path, circle, ellipse, polygon, rect):not(.ic-color)) {
+    fill: currentColor;
+  }
+
+  @media (min-width: 1024px) {
+    .emergency-grid > div {
+      padding: 100px 25px;
+    }
+
+    .emergency-grid :global(.text) {
+      font-size: 19px;
     }
   }
 </style>

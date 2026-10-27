@@ -1,6 +1,6 @@
 {
   "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoAlt": "Medford Dental Wellness",
   "navData": [
     {
       "name": "Home",
@@ -8,67 +8,169 @@
       "children": []
     },
     {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "/about-us/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
+          "name": "Meet the Dentists",
+          "path": "/meet-the-dentists/",
           "children": [
             {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
+              "name": "Dr. Anqi Hu",
+              "path": "/dr-hu/",
+              "children": []
+            },
+            {
+              "name": "Dr. Benjamin Hobaica",
+              "path": "/dr-hobaica/",
+              "children": []
+            },
+            {
+              "name": "Dr. Wenyu Qu",
+              "path": "/dr-qu/",
+              "children": []
+            },
+            {
+              "name": "Dr. Anthony Giamberardino",
+              "path": "/dr-giamberardino/",
+              "children": []
             }
           ]
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
+          "name": "Our Dental Technology",
+          "path": "/our-dental-technology/",
+          "children": []
+        },
+        {
+          "name": "Smile Gallery",
+          "path": "/smile-gallery/",
+          "children": []
+        },
+        {
+          "name": "Reviews",
+          "path": "/reviews/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Our Services",
+      "path": "/our-services/",
+      "children": [
+        {
+          "name": "Preventive Dentistry",
+          "path": "/preventive-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Children’s Dentistry",
+          "path": "/childrens-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Restorative Dentistry",
+          "path": "/restorative-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Missing Teeth",
+          "path": "/missing-teeth/",
           "children": [
             {
-              "name": "More Implants",
-              "path": "/dental-implants"
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "children": []
+            },
+            {
+              "name": "All-on-X Dental Implants",
+              "path": "/all-on-x-dental-implants/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "/cosmetic-dentistry/",
+          "children": []
+        },
+        {
+          "name": "Invisalign®",
+          "path": "/invisalign/",
+          "children": []
+        },
+        {
+          "name": "TMJ Therapy",
+          "path": "/tmj-therapy/",
+          "children": []
+        },
+        {
+          "name": "Sleep Apnea Treatment",
+          "path": "/sleep-apnea-treatment/",
+          "children": []
+        },
+        {
+          "name": "Emergency Dentistry",
+          "path": "/emergency-dentistry/",
+          "children": [
+            {
+              "name": "Root Canal Treatment",
+              "path": "/root-canal-treatment/",
+              "children": []
+            },
+            {
+              "name": "Tooth Extractions",
+              "path": "/tooth-extractions/",
+              "children": []
             }
           ]
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
-      "children": []
+      "name": "For Patients",
+      "path": "/for-patients/",
+      "children": [
+        {
+          "name": "Patient Forms",
+          "path": "/for-patients/#forms",
+          "children": []
+        },
+        {
+          "name": "Insurance & Payment",
+          "path": "/for-patients/#insurance",
+          "children": []
+        },
+        {
+          "name": "Request an Appointment",
+          "path": "/request-an-appointment/",
+          "children": []
+        }
+      ]
     },
     {
-      "name": "Blog",
-      "path": "/blog/",
-      "children": []
+      "name": "Contact",
+      "path": "/contact/",
+      "children": [
+        {
+          "name": "Request an Appointment",
+          "path": "/request-an-appointment/",
+          "children": []
+        },
+        {
+          "name": "Reviews",
+          "path": "/reviews/",
+          "children": []
+        }
+      ]
     }
   ],
-  "buttonSections": [
-    {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
-    }
-  ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "Book Now",
       "hideText": false,
       "link": "/request-an-appointment/",
       "modalTarget": "",
@@ -81,7 +183,8 @@
       "borderWidth": "default",
       "borderColor": "default",
       "textColor": "default",
-      "uppercase": false
+      "uppercase": true,
+      "openAppointmentWidget": true
     }
   ]
 }

@@ -1,20 +1,36 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
-  "colorBrandOn": "",
+  "colorBrand": "#52774C",
+  "colorBrandSecondary": "#132D3E",
+  "colorBrandTertiary": "#B1D7F0",
+  "colorBrandSubtle": "#3D5260",
+  "colorBrandOn": "#ffffff",
   "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
-  "extraColors": [],
+  "colorLink": "#52774C",
+  "colorLinkHover": "#132D3E",
+  "extraColors": [
+    {
+      "variable": "--color-text",
+      "value": "#000000"
+    },
+    {
+      "variable": "--color-text-strong",
+      "value": "#132D3E"
+    },
+    {
+      "variable": "--color-bg-dark",
+      "value": "#132D3E"
+    }
+  ],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "\"Neuton\", serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "\"Neuton\", serif"
+  },
+  "accentFont": {
+    "fontFamily": "\"Faculty Glyphic\", sans-serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap"
   ]
 }

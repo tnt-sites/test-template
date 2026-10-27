@@ -1,33 +1,26 @@
-label: Meet Landing
-icon: add
-description: Description for Meet Landing component.
+label: Meet the Doctors
+icon: groups
+description: Row of doctor portraits, each with a navy "Meet Dr." button linking to their page.
 value:
   _component: page-sections/people/meet-landing
   id: ""
-  variant: button
+  heading: ""
+  background: white
   doctors:
     - _component: page-sections/people/meet-landing/meet-landing-person
-      name: Dr. David Schram
-      href: dr-david-schram.html
-      imageSource: /src/assets/images/meet-our-dentists-schram.webp
-      imageAlt: Dr. David Schram
-    - _component: page-sections/people/meet-landing/meet-landing-person
-      name: Dr. Blake Smith
-      href: dr-blake-smith.html
-      imageSource: /src/assets/images/meet-our-dentists-smith.webp
-      imageAlt: Dr. Blake Smith
-    - _component: page-sections/people/meet-landing/meet-landing-person
-      name: Dr. Andrew Weaver
-      href: dr-andrew-weaver.html
-      imageSource: /src/assets/images/meet-our-dentists-weaver.webp
-      imageAlt: Dr. Andrew Weaver
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: null
-    alt: null
-    positionVertical: top
-    positionHorizontal: center
+      name: Meet Dr. Qu
+      href: /dr-qu/
+      imageSource: /src/assets/images/component-library/profile1.jpg
+      imageAlt: Dr. Qu
+preview:
+  text:
+    - Meet the Doctors
+  subtext:
+    - key: heading
+  icon: groups
+picker_preview:
+  text: Meet the Doctors
+  subtext: Doctor portraits with buttons to their pages.
 _inputs_from_glob:
   - /src/components/page-sections/people/meet-landing/meet-landing.cloudcannon.inputs.yml
 _structures:
@@ -37,33 +30,32 @@ _structures:
         icon: person
         value:
           _component: page-sections/people/meet-landing/meet-landing-person
-          name: Doctor Name
-          href: provider-page.html
+          name: Meet Dr. Name
+          href: ""
           imageSource: /src/assets/images/component-library/profile.jpg
-          imageAlt: Doctor Name
+          imageAlt: ""
         preview:
           text:
             - key: name
             - Doctor
           subtext:
             - key: href
-            - provider-page.html
           image:
             - key: imageSource
         _inputs:
           name:
             type: text
-            comment: Doctor display name.
+            comment: Button text, e.g. "Meet Dr. Qu".
           href:
-            type: text
-            comment: Link URL for the provider profile page.
+            type: url
+            comment: The doctor's page, e.g. /dr-qu/. Both the photo and the button link here.
           imageSource:
             type: image
-            comment: Doctor image.
+            comment: Portrait photo. Cropped to a tall 3:4 shape.
             options:
               paths:
                 uploads: src/assets/images
                 static: ""
           imageAlt:
             type: text
-            comment: Alt text for the doctor image.
+            comment: Describe the photo for screen readers, e.g. "Dr. Qu smiling in the office".

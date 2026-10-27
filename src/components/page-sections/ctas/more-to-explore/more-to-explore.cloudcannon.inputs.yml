@@ -14,105 +14,24 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
-maxContentWidth:
-  type: select
-  comment: Maximum width constraint for the content.
-  options:
-    values:
-      - id: xs
-        name: Extra Small
-      - id: sm
-        name: Small
-      - id: md
-        name: Medium
-      - id: lg
-        name: Large
-      - id: xl
-        name: Extra Large
-      - id: 2xl
-        name: 2xl
-      - id: 3xl
-        name: 3xl
-paddingHorizontal:
-  type: select
-  comment: Horizontal padding applied to the section content.
-  options:
-    values:
-      - id: none
-        name: None
-      - id: xs
-        name: Extra Small
-      - id: sm
-        name: Small
-      - id: md
-        name: Medium
-      - id: lg
-        name: Large
-      - id: xl
-        name: Extra Large
-      - id: 2xl
-        name: 2xl
-      - id: 3xl
-        name: 3xl
-paddingVertical:
-  type: select
-  comment: Vertical padding applied to the section content.
-  options:
-    values:
-      - id: none
-        name: None
-      - id: xs
-        name: Extra Small
-      - id: sm
-        name: Small
-      - id: md
-        name: Medium
-      - id: lg
-        name: Large
-      - id: xl
-        name: Extra Large
-      - id: 2xl
-        name: 2xl
-      - id: 3xl
-        name: 3xl
 buttonSections:
   type: array
-  comment: Buttons for calls-to-action.
+  comment: Links to related pages. Three fit per row on desktop. Use the Secondary variant for a navy button, like "Explore All Our Services".
   options:
     structures: _structures.buttonSections
-colorScheme:
+background:
   type: select
-  comment: Color scheme theme for the CTA.
+  comment: Section background. Cream matches the design.
   options:
     values:
-      - id: inherit
-        name: Inherit
-      - id: default
-        name: Default
-      - id: contrast
-        name: Contrast
-backgroundColor:
-  type: select
-  comment: Background color for the CTA.
-  options:
-    values:
-      - id: none
-        name: None
-      - id: base
-        name: Base
-      - id: surface
-        name: Surface
-      - id: accent
-        name: Accent
-      - id: highlight
-        name: Highlight
-      - id: dark
-        name: Dark
-      - id: black
-        name: Black
-backgroundColorHex:
-  type: color
-  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+      - id: cream
+        name: Cream
+      - id: white
+        name: White
+      - id: green
+        name: Green
+      - id: navy
+        name: Navy
 backgroundGradient:
   type: textarea
   comment: "Optional CSS gradient applied behind the section content."

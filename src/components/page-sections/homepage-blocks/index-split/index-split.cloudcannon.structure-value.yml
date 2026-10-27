@@ -1,16 +1,37 @@
 label: Index Split
-icon: add
-description: Description for Index Split component.
+icon: vertical_split
+description: Homepage split section with a photo and text, in a contained or full-width layout.
 value:
   _component: page-sections/homepage-blocks/index-split
   id: ""
-  heading: Index Split <span class="heading-color">Heading</span>
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: null
-    alt: null
-    positionVertical: top
-    positionHorizontal: center
+  heading: Heading text
+  anchorName: ""
+  subtext: Supporting copy for this section.
+  attribution: ""
+  buttonSections: []
+  buttonLayout: row
+  layout: contained
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt: ""
+  imagePositionVertical: center
+  imagePositionHorizontal: center
+  mapEmbedUrl: ""
+  accentImageSource: ""
+  accentImageAlt: ""
+  reverse: false
+  background: white
+  showHeadingBar: true
+  showLogo: true
+preview:
+  text:
+    - Index Split
+  subtext:
+    - key: heading
+  image:
+    - key: imageSource
+  icon: vertical_split
+picker_preview:
+  text: Index Split
+  subtext: Homepage photo and text section.
 _inputs_from_glob:
   - /src/components/page-sections/homepage-blocks/index-split/index-split.cloudcannon.inputs.yml

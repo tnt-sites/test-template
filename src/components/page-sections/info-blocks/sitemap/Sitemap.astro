@@ -52,13 +52,17 @@ const escapeHtml = (value: string) =>
     .replace(/\"/g, "&quot;")
     .replace(/'/g, "&#39;");
 
-const ensureTrailingSlash = (path: string) => (path === "/" ? "/" : `${path.replace(/\/+$/, "")}/`);
+// Adds the slash to the path only, so "/page#section" becomes "/page/#section".
+const ensureTrailingSlash = (path: string) => {
+  const [pathname, hash = ""] = path.split(/(?=#)/);
+  const withSlash = pathname === "/" ? "/" : `${pathname.replace(/\/+$/, "")}/`;
+  return withSlash + hash;
+};
 
 // Build a map of normalized path → page title from all content collections
 const routeTitleMap = new Map<string, string>();
 
 const pages = await getCollection("pages");
-const landingPages = await getCollection("landing-pages");
 const blogPosts = await getCollection("blog");
 
 pages.forEach((page: CollectionEntry<"pages">) => {
@@ -66,16 +70,6 @@ pages.forEach((page: CollectionEntry<"pages">) => {
   const fallbackTitle = rawSlug.length === 0 ? "Home" : toTitleCase(rawSlug.split("/").pop() || "");
   routeTitleMap.set(
     ensureTrailingSlash(rawSlug.length === 0 ? "/" : `/${rawSlug}`),
-    normalizeTitle(page.data?.title, fallbackTitle)
-  );
-});
-
-landingPages.forEach((page: CollectionEntry<"landing-pages">) => {
-  const rawSlug = page.id.replace(/index$/, "");
-  const fallbackTitle =
-    rawSlug.length === 0 ? "Landing" : toTitleCase(rawSlug.split("/").pop() || "");
-  routeTitleMap.set(
-    ensureTrailingSlash(rawSlug.length === 0 ? "/landing" : `/landing/${rawSlug}`),
     normalizeTitle(page.data?.title, fallbackTitle)
   );
 });

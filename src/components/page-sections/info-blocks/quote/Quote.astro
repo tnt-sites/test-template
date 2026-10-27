@@ -1,0 +1,84 @@
+---
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import MarkdownIt from "markdown-it";
+
+const {
+  quote = "",
+  attribution = "",
+  background = "navy",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const md = new MarkdownIt({ html: true });
+const quoteHtml = typeof quote === "string" && quote.trim() ? md.renderInline(quote.trim()) : "";
+
+if (!_component && !quoteHtml) return;
+---
+
+<section class:list={["quote", sectionBackground(background), className]} {...htmlAttributes}>
+  <figure class="block text-center">
+    <blockquote>
+      <p data-editable={editable ? "text" : undefined} data-prop={editable ? "quote" : undefined}>
+        <Fragment set:html={quoteHtml} />
+      </p>
+    </blockquote>
+    {
+      attribution && (
+        <figcaption
+          data-editable={editable ? "text" : undefined}
+          data-prop={editable ? "attribution" : undefined}
+        >
+          {attribution}
+        </figcaption>
+      )
+    }
+  </figure>
+</section>
+
+<style>
+  .quote {
+    padding: 50px 25px;
+  }
+
+  .quote figure {
+    margin: 0 auto;
+    max-width: 1215px;
+  }
+
+  .quote blockquote {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .quote p {
+    font-size: 20px;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Reviewer's name: green on light backgrounds, light blue on dark ones. */
+  .quote figcaption {
+    color: var(--color-brand);
+    font-family: var(--font-accent);
+    font-size: 17px;
+    letter-spacing: 0.05em;
+    margin-top: 25px;
+  }
+
+  .quote.on-dark figcaption {
+    color: var(--color-brand-muted);
+  }
+
+  @media (min-width: 1024px) {
+    .quote p {
+      font-size: 25px;
+      line-height: 1.8;
+    }
+  }
+</style>

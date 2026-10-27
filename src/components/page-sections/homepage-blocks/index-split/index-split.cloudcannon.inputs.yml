@@ -1,9 +1,6 @@
-id:
-  type: text
-  comment: Optional HTML id attribute for this component.
 heading:
   type: markdown
-  comment: Main heading text for the component. Supports inline span wrappers/classes for highlighted words.
+  comment: Headline for the section.
   options:
     blockquote: false
     bold: true
@@ -17,58 +14,63 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
-backgroundColor:
+anchorName:
+  type: text
+  comment: Optional anchor name rendered above the service split section.
+subtext:
+  type: markdown
+  comment: Supporting copy beneath the headline.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+attribution:
+  type: text
+  comment: Optional line under the text, shown in small capitals, e.g. "-Dr. Hu and Team" under a quote.
+buttonSections:
+  type: array
+  comment: Buttons for calls-to-action.
+  options:
+    structures: _structures.buttonSections
+buttonLayout:
   type: select
-  comment: Background color used behind the section.
+  comment: Show the buttons side by side, or stacked at the same width.
   options:
     values:
-      - id: none
-        name: None
-      - id: base
-        name: Base
-      - id: surface
-        name: Surface
-      - id: accent
-        name: Accent
-      - id: highlight
-        name: Highlight
-      - id: dark
-        name: Dark
-      - id: black
-        name: Black
-backgroundColorHex:
-  type: color
-  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
-backgroundGradient:
-  type: textarea
-  comment: Optional CSS gradient applied behind the section content.
-backgroundImage:
-  type: object
-  comment: Background image configuration for the section.
+      - id: row
+        name: Side by side
+      - id: stacked
+        name: Stacked
+layout:
+  type: select
+  comment: Contained keeps the photo inside the page width. Full puts the text on a coloured panel beside a photo that fills the other half edge to edge.
   options:
-    preview:
-      icon: image
-      text:
-        - key: alt
-        - Background Image
-      subtext:
-        - key: source
-        - Add an image source
-      image:
-        - key: source
-backgroundImage.source:
-  comment: URL or path to the background image.
+    values:
+      - id: contained
+        name: Contained
+      - id: full
+        name: Full
+imageSource:
   type: image
+  comment: Photo beside the text. Cropped to fit the layout.
   options:
     paths:
       uploads: src/assets/images
       static: ""
-backgroundImage.alt:
-  comment: Alt text for the background image.
-  type: textarea
-backgroundImage.positionVertical:
-  comment: Vertical position of the background image.
+imageAlt:
+  type: text
+  comment: Alt text describing the service image.
+imagePositionVertical:
   type: select
+  comment: Which part of the photo stays in view vertically when it is cropped.
   options:
     values:
       - id: top
@@ -77,9 +79,9 @@ backgroundImage.positionVertical:
         name: Center
       - id: bottom
         name: Bottom
-backgroundImage.positionHorizontal:
-  comment: Horizontal position of the background image.
+imagePositionHorizontal:
   type: select
+  comment: Which part of the photo stays in view horizontally when it is cropped.
   options:
     values:
       - id: left
@@ -88,8 +90,38 @@ backgroundImage.positionHorizontal:
         name: Center
       - id: right
         name: Right
-# Add your other component inputs here
-# Example:
-# text:
-#   type: text
-#   comment: The text content for the component.
+mapEmbedUrl:
+  type: text
+  comment: Optional Google Maps embed link (the src from Google's "Embed a map" code). When set, a live map replaces the photo.
+accentImageSource:
+  type: image
+  comment: Optional small photo overlapping the bottom corner of the main photo, on a light blue card (Contained layout only, hidden on phones).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+accentImageAlt:
+  type: text
+  comment: Describe the accent photo for screen readers. Leave blank if it is decorative.
+reverse:
+  type: switch
+  comment: Put the image on the left and the text on the right (desktop).
+background:
+  type: select
+  comment: Section background. Full layouts usually use Navy.
+  options:
+    values:
+      - id: white
+        name: White
+      - id: cream
+        name: Cream
+      - id: navy
+        name: Navy
+      - id: green
+        name: Green
+showHeadingBar:
+  type: switch
+  comment: Show the thin bar under the heading.
+showLogo:
+  type: switch
+  comment: Show the faint building mark behind the text (Full layout only).

@@ -1,0 +1,31 @@
+label: Service Split Full
+icon: hero
+description: Navy half with heading and copy over the faint building mark, beside a photo that fills the other half edge to edge.
+value:
+  _component: page-sections/services/service-split-full
+  id: ""
+  heading: Heading text
+  anchorName: ""
+  subtext: Supporting copy for this section.
+  imageSource: /src/assets/images/component-library/profile.jpg
+  imagePositionVertical: center
+  imagePositionHorizontal: center
+  imageAlt: ""
+  buttonSections: []
+  reverse: false
+  background: navy
+  showHeadingBar: true
+  showLogo: true
+preview:
+  text:
+    - Service Split Full
+  subtext:
+    - key: heading
+  image:
+    - key: imageSource
+  icon: hero
+picker_preview:
+  text: Service Split Full
+  subtext: Navy text panel beside a full-height photo.
+_inputs_from_glob:
+  - /src/components/page-sections/services/service-split-full/service-split-full.cloudcannon.inputs.yml

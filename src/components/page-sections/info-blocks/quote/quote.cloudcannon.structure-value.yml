@@ -1,0 +1,20 @@
+label: Quote
+icon: format_quote
+description: Centered patient quote with the reviewer's name underneath, on a navy band.
+value:
+  _component: page-sections/info-blocks/quote
+  id: ""
+  quote: “Quote text goes here.”
+  attribution: Patient name
+  background: navy
+preview:
+  text:
+    - Quote
+  subtext:
+    - key: attribution
+  icon: format_quote
+picker_preview:
+  text: Quote
+  subtext: Patient quote on a navy band.
+_inputs_from_glob:
+  - /src/components/page-sections/info-blocks/quote/quote.cloudcannon.inputs.yml

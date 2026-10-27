@@ -1,0 +1,42 @@
+heading:
+  type: markdown
+  comment: Heading centered above the photos.
+  options:
+    bold: false
+    italic: true
+    link: false
+    format: p
+    styles: /.cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Short intro under the heading.
+  options:
+    bold: true
+    italic: true
+    link: true
+    format: p
+results:
+  type: array
+  comment: Before-and-after cases, one column each. Four fit on desktop.
+  options:
+    structures: _structures.resultPairs
+buttonSections:
+  type: array
+  comment: Button under the photos, e.g. to the Smile Gallery.
+  options:
+    structures: _structures.buttonSections
+showHeadingBar:
+  type: switch
+  comment: Show the thin bar under the heading.
+bandBackground:
+  type: select
+  comment: Colour of the band behind the photos.
+  options:
+    values:
+      - id: cream
+        name: Cream
+      - id: white
+        name: White
+mobileCount:
+  type: number
+  comment: How many cases to show on phones (two fit side by side).

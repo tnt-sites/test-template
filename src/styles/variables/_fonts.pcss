@@ -1,48 +1,58 @@
 :where(:root) {
-  --font-body: "Figtree", sans-serif;
-  --font-headings: "Instrument Serif", serif;
+  --font-body: "Neuton", serif;
+  --font-headings: "Neuton", serif;
+  --font-accent: "Faculty Glyphic", sans-serif;
 
   --font-mono: menlo, consolas, monaco, adwaita mono, liberation mono, lucida console, monospace;
 
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-md: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.375rem;
-  --font-size-2xl: 1.625rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
+  /* Scale matches the Medford Dental Wellness style guide: body copy is
+     Neuton 19px, section headings 60px and hero headings 70px. */
+  --font-size-xs: 0.875rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.1875rem;
+  --font-size-lg: 1.3125rem;
+  --font-size-xl: 1.625rem;
+  --font-size-2xl: 1.9375rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 2.625rem;
 
-  --font-size-heading-xs: 1.125rem;
-  --font-size-heading-sm: 1.375rem;
-  --font-size-heading-md: 1.75rem;
-  --font-size-heading-lg: 2.25rem;
-  --font-size-heading-xl: 2.875rem;
-  --font-size-heading-2xl: 3.75rem;
-  --font-size-heading-3xl: 4.625rem;
-  --font-size-heading-4xl: 5.5rem;
+  --font-size-heading-xs: 1.1875rem;
+  --font-size-heading-sm: 1.3125rem;
+  --font-size-heading-md: 1.5rem;
+  --font-size-heading-lg: 1.75rem;
+  --font-size-heading-xl: 3.75rem;
+  --font-size-heading-2xl: 4.375rem;
+  --font-size-heading-3xl: 5rem;
+  --font-size-heading-4xl: 5.75rem;
 
   --font-weight-normal: 400;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  @media (--to-sm) {
-    --font-size-xs: 0.625rem;
-    --font-size-sm: 0.75rem;
-    --font-size-md: 0.875rem;
-    --font-size-lg: 1rem;
-    --font-size-xl: 1.125rem;
-    --font-size-2xl: 1.375rem;
-    --font-size-3xl: 1.625rem;
-    --font-size-4xl: 1.875rem;
+  @media (--to-lg) {
+    --font-size-heading-xl: 3rem;
+    --font-size-heading-2xl: 3.5rem;
+    --font-size-heading-3xl: 4rem;
+    --font-size-heading-4xl: 4.5rem;
+  }
 
-    --font-size-heading-xs: 1rem;
-    --font-size-heading-sm: 1.25rem;
-    --font-size-heading-md: 1.5rem;
-    --font-size-heading-lg: 1.875rem;
-    --font-size-heading-xl: 2.375rem;
-    --font-size-heading-2xl: 3rem;
-    --font-size-heading-3xl: 3.75rem;
-    --font-size-heading-4xl: 4.25rem;
+  @media (--to-sm) {
+    --font-size-xs: 0.8125rem;
+    --font-size-sm: 0.9375rem;
+    --font-size-md: 1.0625rem;
+    --font-size-lg: 1.1875rem;
+    --font-size-xl: 1.375rem;
+    --font-size-2xl: 1.625rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-4xl: 2.25rem;
+
+    --font-size-heading-xs: 1.0625rem;
+    --font-size-heading-sm: 1.1875rem;
+    --font-size-heading-md: 1.3125rem;
+    --font-size-heading-lg: 1.5rem;
+    --font-size-heading-xl: 2.5rem;
+    --font-size-heading-2xl: 2.625rem;
+    --font-size-heading-3xl: 3rem;
+    --font-size-heading-4xl: 3.5rem;
   }
 }

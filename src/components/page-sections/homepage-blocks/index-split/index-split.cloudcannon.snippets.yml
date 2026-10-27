@@ -4,11 +4,13 @@ indexSplit:
   preview:
     text:
       - Index Split
-    icon: add
+    subtext:
+      - key: heading
+    icon: vertical_split
   definitions:
     component_name: IndexSplit
     named_args:
-      - editor_key: id
+      - editor_key: anchorName
         type: string
         optional: true
         remove_empty: true
@@ -16,20 +18,65 @@ indexSplit:
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundColor
+      - editor_key: subtext
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundGradient
+      - editor_key: attribution
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundImage
-        type: object
+      - editor_key: layout
+        type: string
         optional: true
-    # Add your component arguments here
-    # Example:
-    # - editor_key: text
-    #   type: string
+        remove_empty: true
+      - editor_key: imageSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imageAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imagePositionVertical
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: imagePositionHorizontal
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: accentImageSource
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: accentImageAlt
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: background
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: mapEmbedUrl
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonLayout
+        type: string
+        optional: true
+        remove_empty: true
+      - editor_key: buttonSections
+        type: array
+        optional: true
+      - editor_key: reverse
+        type: boolean
+        optional: true
+      - editor_key: showHeadingBar
+        type: boolean
+        optional: true
+      - editor_key: showLogo
+        type: boolean
+        optional: true
   _inputs_from_glob:
     - /src/components/page-sections/homepage-blocks/index-split/index-split.cloudcannon.inputs.yml

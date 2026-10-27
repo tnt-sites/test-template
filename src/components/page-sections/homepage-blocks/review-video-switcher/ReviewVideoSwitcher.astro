@@ -120,6 +120,7 @@ const uid = `rvs-${Math.random().toString(36).slice(2, 7)}`;
             <Carousel editable={false} class="rvs-review-carousel">
               {reviews.map((review: ReviewItem) => {
                 const hasMeta = !!(review.reviewerImage || review.socialIcon);
+
                 return (
                   <CarouselSlide>
                     <div class="review-slide">

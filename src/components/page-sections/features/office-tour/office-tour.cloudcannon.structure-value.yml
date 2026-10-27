@@ -1,42 +1,55 @@
 label: Office Tour
 icon: view_carousel
-description: Description for office-tour component.
+description: Photo carousel with dots above, long arrows either side, and a caption under each photo.
 value:
   _component: page-sections/features/office-tour
   id: ""
   heading: Office Tour
-  tourSlides: []
-  slideNumbers: false
-  floatingArrows: false
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: ""
-    alt: ""
-    positionVertical: top
-    positionHorizontal: center
+  background: white
+  tourSlides:
+    - _component: page-sections/features/office-tour/tour-slide
+      imageSource: /src/assets/images/component-library/castle.jpg
+      imageAlt: ""
+      caption: ""
+preview:
+  text:
+    - Office Tour
+  subtext:
+    - key: heading
+  icon: view_carousel
+picker_preview:
+  text: Office Tour
+  subtext: Photo carousel with captions.
 _inputs_from_glob:
   - /src/components/page-sections/features/office-tour/office-tour.cloudcannon.inputs.yml
 _structures:
-  carouselSections:
+  tourSlides:
     values:
-      - label: Slide
+      - label: Tour Photo
         icon: image
         value:
-          image:
-            source: ""
-            alt: ""
+          _component: page-sections/features/office-tour/tour-slide
+          imageSource: ""
+          imageAlt: ""
           caption: ""
-        _inputs:
+        preview:
+          text:
+            - key: caption
+            - key: imageAlt
+            - Tour Photo
           image:
-            type: object
-          image.source:
+            - key: imageSource
+        _inputs:
+          imageSource:
             type: image
+            comment: The photo. It is cropped to a landscape shape (about 8:5).
             options:
               paths:
                 uploads: src/assets/images
                 static: ""
-          image.alt:
-            type: textarea
-          caption:
+          imageAlt:
             type: text
+            comment: Describe the photo for screen readers, e.g. "Front desk and waiting area".
+          caption:
+            type: textarea
+            comment: Optional italic caption shown under the photo.

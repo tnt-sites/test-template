@@ -1,0 +1,102 @@
+---
+import RenderBlock from "@components/utils/renderBlock.astro";
+import Button from "@core-elements/button/Button.astro";
+import ServiceSplit from "@page-sections/services/service-split/ServiceSplit.astro";
+
+// A Service Split with a "Learn More" button that shows extra content below it.
+const {
+  heading = "",
+  learnMoreButtonText = "",
+  learnMoreSections = [],
+  class: className,
+  _component,
+  ...serviceSplitProps
+} = Astro.props;
+
+const headingText = typeof heading === "string" ? heading.replace(/<[^>]*>/g, "").trim() : "";
+const buttonText =
+  learnMoreButtonText || (headingText ? `Learn More About ${headingText}` : "Learn More");
+const hasLearnMore = learnMoreSections?.length > 0;
+const learnMoreId = `learn-more-${crypto.randomUUID()}`;
+---
+
+<ServiceSplit
+  class:list={["service-split-learn-more", className]}
+  heading={heading}
+  {...serviceSplitProps}
+>
+  {
+    hasLearnMore && (
+      <Button
+        slot="text-end"
+        class="learn-more-button"
+        element="button"
+        variant="primary"
+        uppercase={true}
+        iconName="chevron-down"
+        iconPosition="after"
+        text={buttonText}
+        data-prop="learnMoreButtonText"
+        data-learn-more-trigger={learnMoreId}
+        aria-controls={learnMoreId}
+        aria-expanded="false"
+      />
+    )
+  }
+  {
+    hasLearnMore && (
+      <div id={learnMoreId} class="learn-more-content" hidden>
+        <RenderBlock contentSections={learnMoreSections} propName="learnMoreSections" />
+      </div>
+    )
+  }
+</ServiceSplit>
+
+<script>
+  // Shows/hides the extra content and flips the chevron.
+  const initServiceSplitLearnMore = () => {
+    document.querySelectorAll("[data-learn-more-trigger]").forEach((trigger) => {
+      if (trigger.getAttribute("data-learn-more-initialized") === "true") return;
+
+      const target = document.getElementById(trigger.getAttribute("data-learn-more-trigger") || "");
+      if (!target) return;
+
+      trigger.addEventListener("click", () => {
+        target.toggleAttribute("hidden");
+        const isOpen = !target.hasAttribute("hidden");
+        trigger.setAttribute("aria-expanded", isOpen.toString());
+        trigger.classList.toggle("is-open", isOpen);
+      });
+
+      trigger.setAttribute("data-learn-more-initialized", "true");
+    });
+  };
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initServiceSplitLearnMore);
+  } else {
+    initServiceSplitLearnMore();
+  }
+</script>
+
+<style>
+  :global(.learn-more-button) {
+    display: inline-flex;
+    margin-top: 15px;
+  }
+
+  /* Chevron turns over when the content is open. */
+  :global(.learn-more-button .icon) {
+    transition: transform var(--animation-normal) ease-out;
+  }
+
+  :global(.learn-more-button.is-open .icon) {
+    transform: rotate(180deg);
+  }
+
+  :global(.learn-more-content) {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 25px 65px;
+  }
+</style>

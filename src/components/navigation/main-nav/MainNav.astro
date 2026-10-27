@@ -1,72 +1,45 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
-import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import siteInfoData from "@data/siteInfo.json";
+import { Icon as AstroIcon } from "astro-icon/components";
 
 const {
   logoSource,
-  logoAlt = "logo",
+  logoAlt = "Medford Dental Wellness",
   navData = [],
-  buttonSections = [],
   pageButtons = [],
   socials = [],
-  class: className,
   offices = [],
-  legalLinks = [],
-  phoneText = "",
-  phoneHref = "",
-  addressHref = "",
-  addressLines = [],
-  emailHref = "",
-  emailText = [],
-  officeHoursTitle = "Office Hours",
-  officeHours = [],
-  officeHoursNote = "",
-  officeHoursNotes = [],
+  overlay = false,
+  class: className,
   _component,
+  // Older settings, no longer shown in the redesigned header.
+  buttonSections,
+  legalLinks,
+  phoneText,
+  phoneHref,
+  addressHref,
+  addressLines,
+  emailHref,
+  emailText,
+  officeHoursTitle,
+  officeHours,
+  officeHoursNote,
+  officeHoursNotes,
   ...htmlAttributes
 } = Astro.props;
-
-const defaultSearchButtonSections = [
-  {
-    _component: "building-blocks/core-elements/button",
-    text: "Search",
-    hideText: true,
-    link: "/search/",
-    iconName: "magnifying-glass",
-    iconPosition: "before",
-    variant: "ghost",
-    size: "lg",
-    width: "xs",
-  },
-];
-
-const resolvedSearchButtonSections =
-  Array.isArray(buttonSections) && buttonSections.length > 0
-    ? buttonSections
-    : defaultSearchButtonSections;
 
 const sanitizeButtonSection = (button: any) => ({
   ...button,
   text: typeof button?.text === "string" ? button.text : "",
 });
 
-const searchButtons = resolvedSearchButtonSections.map((button: any) =>
-  sanitizeButtonSection(button)
-);
-
 const buttons = pageButtons.map((button: any) => sanitizeButtonSection(button));
 
 const mobileNavData = [
   ...navData,
-  ...searchButtons.map((button: any) => ({
-    name: button.text || "Button",
-    path: button.link || button.href || "#",
-    children: [],
-  })),
   ...buttons.map((button: any) => ({
     name: button.text || "Button",
     path: button.link || button.href || "#",
@@ -74,160 +47,84 @@ const mobileNavData = [
   })),
 ];
 
-const hasLegacyOffice = (Array.isArray(addressLines) && addressLines.length > 0) || !!phoneText;
-
 const resolvedOffices =
-  Array.isArray(offices) && offices.length > 0
-    ? offices
-    : hasLegacyOffice
-      ? [
-          {
-            name: "",
-            addresses:
-              Array.isArray(addressLines) && addressLines.length > 0
-                ? [
-                    {
-                      lines: addressLines,
-                      mapUrl: addressHref || "",
-                    },
-                  ]
-                : [],
-            phones: phoneText
-              ? [
-                  {
-                    display: phoneText,
-                    href: phoneHref || "",
-                  },
-                ]
-              : [],
-            officeHours,
-            officeHoursNote,
-            officeHoursNotes,
-            socials,
-          },
-        ]
-      : ((siteInfoData as any).offices ?? []);
+  Array.isArray(offices) && offices.length > 0 ? offices : ((siteInfoData as any).offices ?? []);
 
 const sharedSocials =
-  Array.isArray(socials) && socials.length > 0
-    ? socials
-    : Array.isArray(resolvedOffices[0]?.socials)
-      ? resolvedOffices[0].socials
-      : ((siteInfoData as any).socials ?? []);
+  Array.isArray(socials) && socials.length > 0 ? socials : ((siteInfoData as any).socials ?? []);
 
-const formatAddressLines = (address: any) => {
-  const lineItems = Array.isArray(address?.lines) ? address.lines : [];
-  const stateAndPostal = [address?.state, address?.postalCode].filter(Boolean).join(" ");
-  const cityStatePostal = [address?.city, stateAndPostal].filter(Boolean).join(", ");
-  const locationLine = [cityStatePostal, address?.country].filter(Boolean).join(", ");
+const firstOffice = resolvedOffices[0] ?? {};
+const firstAddress = Array.isArray(firstOffice.addresses) ? firstOffice.addresses[0] : undefined;
+const firstPhone = Array.isArray(firstOffice.phones) ? firstOffice.phones[0] : undefined;
 
-  return [...lineItems, locationLine].filter(
-    (line) => typeof line === "string" && line.trim().length > 0
-  );
-};
+const addressText = firstAddress
+  ? [
+      ...(Array.isArray(firstAddress.lines) ? firstAddress.lines : []),
+      firstAddress.city,
+      [firstAddress.state, firstAddress.postalCode].filter(Boolean).join(" "),
+    ]
+      .filter((part) => typeof part === "string" && part.trim().length > 0)
+      .join(", ")
+  : "";
 ---
 
-<CustomSection
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="none"
-  class:list={["main-nav", className]}
+<header
+  class:list={["main-nav", overlay ? "is-overlay" : "is-solid", className]}
+  data-main-nav
   {...htmlAttributes}
 >
-  <div class="hd-content">
-    <a class="logo-link" href="/">
-      <Image source={logoSource} class="main-nav-logo" alt={logoAlt} editable={false} />
+  {
+    (addressText || firstPhone?.display) && (
+      <div class="main-nav-topbar">
+        {addressText && (
+          <a href={firstAddress?.mapUrl || undefined} target="_blank" rel="noopener noreferrer">
+            {addressText}
+          </a>
+        )}
+        {addressText && firstPhone?.display && <span class="main-nav-dot" aria-hidden="true" />}
+        {firstPhone?.display && <a href={firstPhone.href || undefined}>{firstPhone.display}</a>}
+      </div>
+    )
+  }
+
+  <div class="main-nav-bar">
+    <a class="main-nav-logo" href="/" aria-label={logoAlt}>
+      <AstroIcon name="medford-logo" aria-hidden="true" />
     </a>
-    <!-- Desktop Nav -->
-    <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
-        {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
 
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
+    <Bar navData={navData} class="desktop-main-nav" />
 
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
-              </div>
-            </>
-          ))
-        }
-      </div>
-      {
-        buttons.length > 0 && (
-          <div class="hd-btns page-buttons">
-            <ButtonGroup
-              direction="row"
-              align="center"
-              class="desktop-button-group"
-              buttonSections={buttons}
-              editable={false}
-            />
-          </div>
-        )
-      }
-      <div class="hd-nav">
-        <div class="nav-end">
-          <Bar navData={navData} class="desktop-main-nav" />
+    {
+      buttons.length > 0 && (
+        <ButtonGroup
+          direction="row"
+          align="center"
+          class="main-nav-buttons"
+          buttonSections={buttons}
+          editable={false}
+        />
+      )
+    }
 
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
-        </div>
-      </div>
-      <!-- End Desktop Nav -->
-    </div>
+    <Mobile
+      logoSource={logoSource}
+      logoAlt={logoAlt}
+      navData={mobileNavData}
+      class="mobile-main-nav"
+      offices={resolvedOffices}
+      sharedSocials={sharedSocials}
+    >
+      <AstroIcon slot="logo" name="medford-logo" class="mobile-logo-svg" aria-hidden="true" />
+    </Mobile>
   </div>
-  <!-- Mobile Nav -->
-  <Mobile
-    logoSource={logoSource}
-    logoAlt={logoAlt}
-    navData={mobileNavData}
-    class="mobile-main-nav"
-    offices={resolvedOffices}
-    sharedSocials={sharedSocials}
-  />
-  <!-- End Mobile Nav -->
-</CustomSection>
+</header>
 
-<!-- Adds --site-header-height CSS variable based on header height. Works with multiple screen sizes. -->
 <script>
-  const initMainNavHeaderHeight = () => {
-    document.querySelectorAll(".main-nav").forEach((mainNav) => {
-      if (mainNav.getAttribute("data-header-height-initialized") === "true") return;
+  const initMainNav = () => {
+    document.querySelectorAll<HTMLElement>("[data-main-nav]").forEach((mainNav) => {
+      if (mainNav.dataset.initialized === "true") return;
 
+      // Exposes the header height as --site-header-height for anchor offsets.
       const syncHeaderHeight = () => {
         document.documentElement.style.setProperty(
           "--site-header-height",
@@ -235,168 +132,399 @@ const formatAddressLines = (address: any) => {
         );
       };
 
+      // Switches to the compact, solid header once the page scrolls.
+      const syncScrolled = () => {
+        mainNav.classList.toggle("is-scrolled", window.scrollY > 40);
+      };
+
       syncHeaderHeight();
+      syncScrolled();
+      window.addEventListener("scroll", syncScrolled, { passive: true });
 
       if (typeof ResizeObserver !== "undefined") {
-        const resizeObserver = new ResizeObserver(syncHeaderHeight);
-        resizeObserver.observe(mainNav);
+        new ResizeObserver(syncHeaderHeight).observe(mainNav);
       }
 
-      mainNav.setAttribute("data-header-height-initialized", "true");
+      mainNav.dataset.initialized = "true";
     });
   };
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initMainNavHeaderHeight);
+    document.addEventListener("DOMContentLoaded", initMainNav);
   } else {
-    initMainNavHeaderHeight();
+    initMainNav();
   }
 </script>
 
 <style lang="pcss" is:global>
   @layer page-sections {
     .main-nav {
-      z-index: var(--layer-2);
-      background-color: var(--color-bg); 
-      padding-block: var(--spacing-md);
-      position: sticky; 
-      top: 0;
+      --main-nav-text: var(--gray-0);
+      /* Sizes scale with the window so everything fits on one line from
+         1025px up; they reach the design's full size at about 1400px. */
+      --main-nav-logo-height: clamp(50px, 6.3vw, 90px);
 
-      .desktop-main-nav.bar,
-      .desktop-button-group.button-group {
-        @media (max-width: 1024px) {
-          display: none;
+      color: var(--main-nav-text);
+      left: 0;
+      position: sticky;
+      right: 0;
+      top: 0;
+      transition: background-color var(--animation-slow) ease;
+      z-index: var(--layer-4);
+
+      &.is-solid,
+      &.is-scrolled {
+        background-color: var(--color-brand-subtle);
+      }
+
+      /* Over a banner the header floats on the photo until the page scrolls. */
+      &.is-overlay {
+        background-color: transparent;
+        position: fixed;
+
+        &.is-scrolled {
+          background-color: var(--color-brand-subtle);
         }
+      }
+
+      &.is-scrolled {
+        --main-nav-logo-height: 60px;
+
+        .main-nav-bar {
+          padding-block: 5px;
+        }
+
+        .main-nav-buttons .button {
+          min-height: 50px;
+        }
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    .main-nav-topbar {
+      align-items: center;
+      background-color: rgb(0 0 0 / 0.85);
+      display: flex;
+      font-family: var(--font-accent);
+      font-size: 1.0625rem;
+      gap: 15px;
+      justify-content: center;
+      letter-spacing: 0.04em;
+      min-height: 35px;
+      padding-inline: 25px;
+
+      .main-nav.is-solid &,
+      .main-nav.is-scrolled & {
+        background-color: #161e23;
+      }
+
+      a:hover,
+      a:focus-visible {
+        color: var(--color-brand-muted);
+      }
+    }
+
+    .main-nav-dot {
+      background-color: var(--color-brand-muted);
+      border-radius: 50%;
+      height: 6px;
+      width: 6px;
+    }
+
+    .main-nav-bar {
+      align-items: center;
+      display: flex;
+      gap: clamp(10px, 1.8vw, 25px);
+      padding: 20px clamp(15px, 3.3vw, 45px);
+      transition: padding var(--animation-slow) ease;
+    }
+
+    .main-nav-logo {
+      --logo-accent: currentColor;
+
+      display: block;
+      flex-shrink: 0;
+
+      svg {
+        display: block;
+        height: var(--main-nav-logo-height);
+        transition: height var(--animation-slow) ease;
+        width: auto;
+      }
+    }
+
+    /* Desktop nav: uppercase Faculty Glyphic with small green chevrons. */
+    .main-nav .desktop-main-nav.bar {
+      flex: 1 1 auto;
+      font-weight: var(--font-weight-normal);
+
+      min-width: 0;
+
+      .bar-list {
+        gap: clamp(0px, 0.3vw, 5px);
+        justify-content: center;
+      }
+
+      > .bar-list > .nav-item {
+        align-items: center;
+
+        > a {
+          color: var(--main-nav-text);
+          font-family: var(--font-accent);
+          font-size: clamp(0.8125rem, 1.22vw, 1.0625rem);
+          letter-spacing: clamp(0.02em, 0.06vw, 0.06em);
+          padding: 10px clamp(0px, 0.45vw, 5px);
+          text-transform: uppercase;
+
+          &:hover,
+          &[aria-current="page"] {
+            color: var(--color-brand-muted);
+            text-decoration: none;
+          }
+        }
+      }
+
+      > .bar-list > .nav-item > .nav-item-trigger {
+        border: 0;
+        color: var(--color-brand);
+        min-height: 1rem;
+        min-width: 1rem;
+        padding: 0;
+
+        &:hover,
+        &:focus-visible {
+          background: transparent;
+          color: var(--color-brand-muted);
+        }
+
+        .nav-item-icon {
+          color: inherit;
+          transform: rotate(90deg);
+          width: 0.875rem;
+        }
+      }
+
+      > .bar-list > .nav-item > .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+        transform: rotate(-90deg);
+      }
+
+      /* The bar's default animation re-centres the menu with translateX(-50%);
+         these menus line up with their link instead. */
+      > .bar-list > .nav-item > .nav-item-toggle:checked ~ .nav-item-content {
+        animation-name: grow-out;
+      }
+
+      > .bar-list > .nav-item > .nav-item-content {
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+        left: 0;
+        margin-top: 0;
+        min-width: 15rem;
+        padding-block: 5px;
+        transform: none;
+
+        .nav-item > a {
+          color: var(--color-text-strong);
+          padding: 10px 20px;
+          white-space: nowrap;
+
+          &:hover,
+          &[aria-current="page"] {
+            background: var(--color-bg-cream);
+            color: var(--color-brand);
+            text-decoration: none;
+          }
+        }
+
+        .nav-item-trigger {
+          border: 0;
+          color: var(--color-brand);
+          margin-right: 10px;
+        }
+      }
+    }
+
+    /* Green is too dark against the slate bar, so use the light blue there. */
+    .main-nav.is-solid .desktop-main-nav.bar > .bar-list > .nav-item > .nav-item-trigger,
+    .main-nav.is-scrolled .desktop-main-nav.bar > .bar-list > .nav-item > .nav-item-trigger {
+      color: var(--color-brand-muted);
+
+      &:hover,
+      &:focus-visible {
+        color: var(--gray-0);
+      }
+    }
+
+    /* Button groups default to full width as size containers; keep this one to
+       its content so the nav gets the remaining space. */
+    .main-nav .main-nav-buttons {
+      container-type: normal;
+      flex: 0 0 auto;
+      width: auto;
+      margin-top: 0;
+
+      .button {
+        background-color: var(--color-brand-muted);
+        border-color: transparent;
+        color: var(--color-brand-secondary);
+        font-size: clamp(0.875rem, 1.43vw, 1.25rem);
+        letter-spacing: 0.06em;
+        min-height: clamp(45px, 4.9vw, 70px);
+        padding-inline: clamp(15px, 3.15vw, 45px);
+        text-transform: uppercase;
+        transition:
+          background-color var(--animation-normal) ease,
+          min-height var(--animation-slow) ease;
+
+        &:hover,
+        &:focus-visible {
+          background-color: var(--gray-0);
+          color: var(--color-brand-secondary);
+        }
+      }
+    }
+
+
+    .main-nav .nav-hamburger.mobile-button {
+      display: none;
+    }
+
+    /* Green square "Menu" button and the logo inside the slide-out menu. */
+    .main-nav .mobile-nav-button {
+      align-items: center;
+      background-color: var(--color-brand);
+      border: 0;
+      border-radius: 0;
+      color: var(--gray-0);
+      display: flex;
+      flex-direction: column;
+      height: 70px;
+      justify-content: center;
+      min-width: 0;
+      padding: 0;
+      width: 70px;
+
+      .icon {
+        font-size: 2rem;
+
+        svg path {
+          stroke-width: 2.25;
+        }
+      }
+
+      &:hover {
+        background-color: var(--color-brand-secondary);
+        color: var(--gray-0);
+      }
+    }
+
+    .main-nav .nav-hamburger .mobile-nav-button::after {
+      content: "Menu";
+      font-family: var(--font-accent);
+      font-size: 0.75rem;
+      line-height: 1;
+    }
+
+    /* The slide-out menu is moved to <body> by its script, so these target its
+       own class rather than .main-nav. */
+    .mobile-main-nav .mobile-header {
+      padding: 10px 0 10px 25px;
+    }
+
+    .mobile-main-nav .mobile-logo {
+      --logo-accent: var(--color-brand);
+
+      color: var(--color-brand-secondary);
+      flex-shrink: 0;
+    }
+
+    .mobile-main-nav .mobile-header .mobile-logo svg {
+      display: block;
+      height: 60px;
+      max-height: none;
+      width: auto;
+    }
+
+    /* Close button: green square to match the Menu button. */
+    .mobile-main-nav .mobile-close .mobile-nav-button {
+      align-items: center;
+      background-color: var(--color-brand);
+      border: 0;
+      border-radius: 0;
+      color: var(--gray-0);
+      display: flex;
+      height: 70px;
+      justify-content: center;
+      min-width: 0;
+      padding: 0;
+      width: 70px;
+    }
+
+    .mobile-main-nav .mobile-close .mobile-nav-button:hover {
+      background-color: var(--color-brand-secondary);
+      color: var(--gray-0);
+    }
+
+    .mobile-main-nav .mobile-close .mobile-nav-button .icon {
+      font-size: 2rem;
+    }
+
+    .mobile-main-nav .mobile-header .mobile-close {
+      align-self: flex-start;
+      margin-top: -10px;
+    }
+
+    /* Social icons on one line. */
+    .mobile-main-nav .mobile-content .mobile-socials {
+      flex-wrap: nowrap;
+      gap: 15px;
+    }
+
+    .mobile-main-nav .mobile-socials .button {
+      min-width: 0;
+    }
+
+    /* Below desktop: white bar with the navy logo and the green Menu button. */
+    @media (max-width: 1024px) {
+      .main-nav .nav-hamburger.mobile-button {
+        align-self: flex-start;
+        display: block;
+        margin-top: -10px;
+      }
+
+      .main-nav,
+      .main-nav.is-overlay,
+      .main-nav.is-overlay.is-scrolled,
+      .main-nav.is-solid,
+      .main-nav.is-scrolled {
+        --main-nav-logo-height: 60px;
+        --main-nav-text: var(--color-brand-secondary);
+
+        background-color: var(--color-bg);
+        box-shadow: 0 1px 0 rgb(0 0 0 / 0.08);
+        position: sticky;
+      }
+
+      .main-nav-topbar,
+      .main-nav .desktop-main-nav.bar,
+      .main-nav .main-nav-buttons {
+        display: none;
+      }
+
+      .main-nav-bar,
+      .main-nav.is-scrolled .main-nav-bar {
+        justify-content: space-between;
+        padding: 10px 0 10px 25px;
       }
 
       .main-nav-logo {
-        margin-top: 0 !important;
+        --logo-accent: var(--color-brand);
       }
-
-      .nav-hamburger.mobile-button {
-        @media (min-width: 1025px) {
-          display: none;
-        }
-      }
-
-      > .outer-content .hd-content {
-        align-items: center;
-        container-type: inline-size;
-        display: flex;
-        flex-wrap: wrap;
-        gap: var(--spacing-md);
-
-        > a > .image img {
-          height: 1.8em;
-          max-width: min(20em, 100%);
-          width: auto;
-        }
-
-        .button-group {
-          margin-top: 0;
-        }
-      }
-
-      > .outer-content .hd-content .hd-right {
-        display: flex;
-        flex: 0 1 700px;
-        flex-direction: column;
-        gap: var(--spacing-sm);
-        margin-left: auto;
-        align-items: end;
-        margin-right: 20px;
-      }
-
-      > .outer-content .hd-content .hd-actions {
-        align-items: center;
-        display: flex;
-        gap: var(--spacing-sm);
-        justify-content: flex-end;
-      }
-
-      > .outer-content .hd-content .nav-end {
-        align-items: center;
-        display: inline-flex;
-        flex: 0 0 auto;
-        gap: var(--spacing-xs);
-        justify-content: flex-end;
-      }
-
-      > .outer-content .hd-content .nav-end > .desktop-main-nav.bar {
-        flex: 0 1 auto;
-      }
-
-      > .outer-content .hd-content .nav-end > .desktop-button-group.button-group {
-        flex: 0 0 30px;
-        margin-top: 0;
-        width: auto;
-      }
-
-      > .outer-content .hd-content .page-buttons {
-        flex: 0 0 auto;
-
-        > .button-group {
-          container-type: normal;
-          margin-left: 0;
-        }
-      }
-    }
-
-    .hd-info{display: flex; justify-content: space-between; align-items: center;}
-    .main-nav .phy{display: block; text-transform: uppercase; letter-spacing: 2px; color: var(--color-text); line-height: 1; transition: .3s;}
-      .main-nav .pho{font-weight: var(--font-weight-bold); color: var(--color-brand); font-size: var(--font-size-2xl); line-height: 1; transition: .3s; display: block; margin: 0 auto 5px;}
-
-    .main-nav .pho:hover, .main-nav .phy:hover{color: var(--color-brand-secondary)}
-
-    .mobile-nav-button{min-width: 10px;border-radius: 0; border: none; height: 70px; width: 70px; background-color: var(--color-brand); color: var(--color-text-on-brand); display: flex; align-items: center; justify-content: center;}
-    .nav-hamburger .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
-    }
-
-    .nav-hamburger .mobile-nav-button .icon svg path {
-      stroke-width: 2.25;
-    }
-
-    .mobile-close .mobile-nav-button .icon {
-      font-size: var(--font-size-4xl);
-    }
-
-    .mobile-close .mobile-nav-button .icon svg path {
-      stroke-width: 2.25;
-    }
-
-    .mobile-nav-close {}
-
-
-    @media (max-width: 1024px) {
-      .main-nav{padding: 0;}
-      .main-nav > .outer-content > .content {
-        align-items: center;
-        display: flex;
-        gap: var(--spacing-sm);
-        justify-content: space-between;
-        padding-right: 0;
-      }
-
-      .main-nav > .outer-content .hd-content {
-        align-items: center;
-        display: flex;
-        flex: 1 1 auto;
-        min-width: 0;
-      }
-
-      .main-nav > .outer-content .hd-content .logo-link {
-        display: block;
-        flex: 0 0 auto;
-      }
-
-      .main-nav > .outer-content .hd-content .logo-link .image img {
-        display: block;
-      }
-
-      .hd-info, .top-bar{display: none;}
-      .main-nav > .outer-content .hd-content .hd-right {display: none;}
     }
   }
-
 </style>

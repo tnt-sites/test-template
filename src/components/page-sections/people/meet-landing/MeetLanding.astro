@@ -1,34 +1,24 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
 import MeetLandingPerson from "./MeetLandingPerson.astro";
 
-type MeetLandingPersonItem = {
-  _component?: string;
-  name?: string;
-  href?: string;
-  imageSource?: string;
-  imageAlt?: string;
-};
-
 const {
-  variant = "button",
+  heading = "",
   doctors = [],
   providers = [],
-  backgroundColor = "base",
+  background = "white",
   id = "",
-  backgroundImage,
-  backgroundGradient = "",
   class: className,
   editable = true,
   _component,
-  ...rest
+  // Older settings, no longer used by the redesigned section.
+  variant,
+  backgroundColor,
+  backgroundImage,
+  backgroundGradient,
+  ...htmlAttributes
 } = Astro.props;
-
-const cleanText = (value: unknown, fallback = "") =>
-  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
-
-const normalizedVariant = variant === "name" ? "name" : "button";
-const variantClass = normalizedVariant === "name" ? "landing--names" : "landing--buttons";
 
 const doctorItems =
   Array.isArray(doctors) && doctors.length > 0
@@ -37,18 +27,13 @@ const doctorItems =
       ? providers
       : [];
 
-const normalizedDoctors = Array.isArray(doctorItems)
-  ? doctorItems
-      .filter((doctor): doctor is MeetLandingPersonItem => !!doctor && typeof doctor === "object")
-      .map((doctor) => ({
-        name: cleanText(doctor.name, "Provider Name"),
-        href: cleanText(doctor.href, "#"),
-        imageSource: cleanText(doctor.imageSource),
-        imageAlt: cleanText(doctor.imageAlt),
-      }))
-  : [];
+const normalizedDoctors = doctorItems.filter(
+  (doctor: unknown) => !!doctor && typeof doctor === "object"
+);
 
-const hasDoctors = normalizedDoctors.length > 0;
+if (!_component && normalizedDoctors.length === 0) {
+  return;
+}
 
 const doctorsArrayDataAttributes = editable
   ? {
@@ -58,96 +43,57 @@ const doctorsArrayDataAttributes = editable
       "data-prop": "doctors",
     }
   : {};
-
-if (!_component && !hasDoctors) {
-  return;
-}
-
-const htmlAttributes = Object.fromEntries(
-  Object.entries(rest).filter(([key]) => key !== "_component")
-);
 ---
 
-<CustomSection
-  class:list={["meet-landing", className]}
+<section
+  class:list={["meet-landing", sectionBackground(background), className]}
   id={id || undefined}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
-  backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
   {...htmlAttributes}
 >
-  {
-    hasDoctors && (
-      <div class:list={["landing", variantClass]} {...doctorsArrayDataAttributes}>
-        {normalizedDoctors.map((doctor) => (
-          <editable-array-item data-component="page-sections/people/meet-landing/meet-landing-person">
-            <MeetLandingPerson {...doctor} variant={normalizedVariant} editable={editable} />
-          </editable-array-item>
-        ))}
-      </div>
-    )
-  }
-</CustomSection>
+  {heading && <Heading level="h2" alignX="center" data-prop="heading" text={heading} />}
+  <ul class="no-check flex flex-wrap justify-center" {...doctorsArrayDataAttributes}>
+    {
+      normalizedDoctors.map((doctor: any) => (
+        <editable-array-item data-component="page-sections/people/meet-landing/meet-landing-person">
+          <MeetLandingPerson {...doctor} editable={editable} />
+        </editable-array-item>
+      ))
+    }
+  </ul>
+</section>
 
-<style lang="pcss" is:global>
+<style>
   .meet-landing {
-    .landing {
-      align-items: flex-start;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      justify-content: center;
-      margin-top: 1.5rem;
+    padding: 65px 25px;
+  }
+
+  .meet-landing :global(.heading) {
+    margin: 0 0 50px;
+  }
+
+  .meet-landing ul {
+    gap: 25px 15px;
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 0;
+  }
+
+  /* Two per row on phones, up to four on desktop. */
+  .meet-landing ul > :global(editable-array-item) {
+    width: 46%;
+  }
+
+  @media (min-width: 1024px) {
+    .meet-landing {
+      padding: 80px 25px;
     }
 
-    .landing > editable-array-item,
-    .landing > a {
-      flex: 0 1 auto;
-      text-align: center;
+    .meet-landing ul {
+      gap: 30px;
     }
 
-    .landing a {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    .landing .btn {
-      margin: 20px auto 0;
-    }
-
-    .landing .name {
-      color: #fff;
-      display: block;
-      font-size: 18px;
-      margin: 10px auto 0;
-    }
-
-    .landing a:hover .name,
-    .landing a:focus-visible .name {
-      color: var(--color-brand);
-    }
-
-    @media (max-width: 768px) {
-      .landing {
-        gap: 12px;
-      }
-
-      .landing > editable-array-item,
-      .landing > a {
-        flex-basis: calc(50% - 6px);
-      }
-    }
-
-    @media (max-width: 520px) {
-      .landing > editable-array-item,
-      .landing > a {
-        flex-basis: 100%;
-      }
+    .meet-landing ul > :global(editable-array-item) {
+      width: 265px;
     }
   }
 </style>

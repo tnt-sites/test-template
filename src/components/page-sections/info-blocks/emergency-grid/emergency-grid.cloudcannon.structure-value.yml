@@ -5,6 +5,7 @@ value:
   _component: page-sections/info-blocks/emergency-grid
   id: ""
   heading: Most Common Dental Emergencies
+  anchorName: ""
   subtext: ""
   backgroundImage:
     source: ""
@@ -178,7 +179,8 @@ value:
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.
   enableModals: true
-  backgroundColor: base
+  background: white
+  showHeadingBar: true
   backgroundGradient: ""
 _inputs_from_glob:
   - /src/components/page-sections/info-blocks/emergency-grid/emergency-grid.cloudcannon.inputs.yml

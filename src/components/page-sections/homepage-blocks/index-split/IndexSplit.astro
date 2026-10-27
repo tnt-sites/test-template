@@ -1,33 +1,337 @@
 ---
-import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import { Icon as AstroIcon } from "astro-icon/components";
 
+// Homepage photo-and-text section.
+//   layout "contained": photo (or map) inside the page width, optional accent photo.
+//   layout "full":      coloured text panel beside a photo that fills the other half.
 const {
+  anchorName = "",
   heading = "",
-  backgroundColor = "base",
-  id = "",
-  backgroundImage,
-  backgroundGradient = "",
+  subtext = "",
+  attribution = "",
+  buttonSections = [],
+  buttonLayout = "row",
+  layout = "contained",
+  imageSource = "",
+  imageAlt = "",
+  imagePositionVertical = "center",
+  imagePositionHorizontal = "center",
+  accentImageSource = "",
+  accentImageAlt = "",
+  mapEmbedUrl = "",
+  reverse = false,
+  background = "white",
+  showHeadingBar = true,
+  showLogo = true,
   class: className,
-  editable = true,
-  ...rest
+  _component,
+  // Older setting, no longer used.
+  imageFirstOnMobile,
+  ...htmlAttributes
 } = Astro.props;
 
-const htmlAttributes = Object.fromEntries(
-  Object.entries(rest).filter(([key]) => key !== "_component")
-);
+const isFull = layout === "full";
+const mapSrc = !isFull && typeof mapEmbedUrl === "string" ? mapEmbedUrl.trim() : "";
+const hasAccent =
+  !isFull && typeof accentImageSource === "string" && accentImageSource.trim() !== "";
 ---
 
-<CustomSection
-  class:list={["index-split", className]}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
-  backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+<section
+  class:list={[
+    "index-split",
+    isFull && "is-full",
+    hasAccent && "has-accent",
+    sectionBackground(background),
+    className,
+  ]}
+  id={anchorName || undefined}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
-</CustomSection>
+  {/* Photo first so it's on top on phones; on desktop it sits on the right unless "reverse". */}
+  <div
+    class:list={[
+      "block text-center lg:text-left lg:flex justify-around",
+      isFull ? "items-stretch" : "items-center",
+      !reverse && "lg:flex-row-reverse",
+    ]}
+  >
+    <figure>
+      {
+        mapSrc ? (
+          <iframe
+            src={mapSrc}
+            title="Map to our office"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          />
+        ) : (
+          <Image
+            source={imageSource}
+            alt={imageAlt}
+            sizes="(min-width: 1024px) 655px, 100vw"
+            positionVertical={imagePositionVertical}
+            positionHorizontal={imagePositionHorizontal}
+            editable={true}
+            data-prop-src="imageSource"
+            data-prop-alt="imageAlt"
+            data-editable="image"
+          />
+        )
+      }
+      {
+        hasAccent && (
+          <figure class="accent">
+            <Image
+              source={accentImageSource}
+              alt={accentImageAlt}
+              sizes="200px"
+              editable={true}
+              data-prop-src="accentImageSource"
+              data-prop-alt="accentImageAlt"
+              data-editable="image"
+            />
+          </figure>
+        )
+      }
+    </figure>
+
+    <article class:list={[reverse && "is-reverse"]}>
+      {
+        isFull && showLogo && (
+          <AstroIcon name="medford-building" class="logo-mark" aria-hidden="true" />
+        )
+      }
+      <div class="copy">
+        <Heading level="h2" data-prop="heading" text={heading} />
+        {showHeadingBar && <hr class="heading-bar" />}
+        <Text data-prop="subtext" text={subtext} />
+        {
+          attribution && (
+            <p class="attribution" data-editable="text" data-prop="attribution">
+              {attribution}
+            </p>
+          )
+        }
+        <ButtonGroup
+          class:list={[buttonLayout === "stacked" && "is-stacked"]}
+          buttonSections={buttonSections}
+          direction={buttonLayout === "stacked" ? "column" : "row"}
+        />
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  /* ---- Shared ---- */
+  .index-split figure {
+    margin: 0;
+    position: relative;
+  }
+
+  .index-split figure :global(img),
+  .index-split iframe {
+    aspect-ratio: 655 / 559;
+    border: 0;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .index-split article {
+    padding: 30px 25px 65px;
+    position: relative;
+  }
+
+  .index-split .copy {
+    margin: 0 auto;
+    max-width: 640px;
+    position: relative;
+  }
+
+  .index-split .copy :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .index-split .copy :global(.text) {
+    margin-top: 20px;
+  }
+
+  .index-split .copy :global(ul) {
+    margin-top: 20px;
+  }
+
+  .index-split .copy :global(li) {
+    margin-bottom: 5px;
+  }
+
+  /* Phone numbers read as plain text. */
+  .index-split .copy :global(a[href^="tel:"]) {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .index-split .attribution {
+    font-family: var(--font-accent);
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    margin: 25px 0 0;
+    text-transform: uppercase;
+  }
+
+  .index-split .copy :global(.button-group) {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .index-split .copy :global(.button-group.is-stacked) {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .index-split .copy :global(.button) {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    min-height: 50px;
+    padding: 0 50px;
+  }
+
+  .index-split .copy :global(.is-stacked .button) {
+    min-width: 265px;
+  }
+
+  /* Small photo overlapping the main photo's bottom corner (desktop only). */
+  .index-split .accent {
+    bottom: -70px;
+    display: none;
+    position: absolute;
+    right: 7.5%;
+    width: 26%;
+  }
+
+  .index-split .accent::before {
+    background-color: var(--color-brand-muted);
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: translate(15px, 15px);
+  }
+
+  .index-split .accent :global(img) {
+    aspect-ratio: 168 / 227;
+    position: relative;
+  }
+
+  /* ---- Full layout: coloured panel beside an edge-to-edge photo ---- */
+  .index-split.is-full figure {
+    aspect-ratio: 4 / 3;
+  }
+
+  .index-split.is-full figure :global(:is(.image, picture, img)) {
+    aspect-ratio: auto;
+    height: 100%;
+    inset: 0;
+    position: absolute;
+  }
+
+  .index-split.is-full article {
+    overflow: hidden;
+    padding: 65px 25px;
+  }
+
+  .index-split .logo-mark {
+    color: rgb(255 255 255 / 0.05);
+    height: 80%;
+    left: -100px;
+    position: absolute;
+    top: 10%;
+    width: auto;
+  }
+
+  .index-split .is-reverse .logo-mark {
+    left: auto;
+    right: -100px;
+  }
+
+  /* Light green underlined links on the coloured panel. */
+  .index-split.is-full .copy :global(a:not(.button)) {
+    color: #74b669;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  @media (min-width: 1024px) {
+    .index-split > div {
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 100px 25px;
+    }
+
+    .index-split.has-accent > div {
+      padding-bottom: 170px;
+    }
+
+    .index-split figure {
+      width: 53%;
+    }
+
+    .index-split article {
+      padding: 0;
+      width: 40%;
+    }
+
+    .index-split .copy {
+      margin: 0;
+    }
+
+    .index-split .heading-bar {
+      width: 95%;
+    }
+
+    .index-split .copy :global(.button-group) {
+      justify-content: flex-start;
+    }
+
+    .index-split .copy :global(.button-group.is-stacked) {
+      align-items: flex-start;
+    }
+
+    .index-split .accent {
+      display: block;
+    }
+
+    .index-split.is-full > div {
+      max-width: none;
+      min-height: 700px;
+      padding: 0;
+    }
+
+    .index-split.is-full figure {
+      aspect-ratio: auto;
+      width: 50%;
+    }
+
+    .index-split.is-full article {
+      align-items: center;
+      display: flex;
+      padding: 65px 30px 65px 15%;
+      width: 50%;
+    }
+
+    .index-split.is-full article.is-reverse {
+      padding: 65px 15% 65px 30px;
+    }
+
+    .index-split.is-full .copy {
+      max-width: 495px;
+    }
+  }
+</style>

@@ -1,6 +1,0 @@
-landingFooterSections:
-  id_key: _component
-  style: modal
-  values_from_glob:
-    - /src/components/navigation/landing/landing-footer/*.cloudcannon.structure-value.yml
-    - /src/components/navigation/landing/landing-footer-*/*.cloudcannon.structure-value.yml

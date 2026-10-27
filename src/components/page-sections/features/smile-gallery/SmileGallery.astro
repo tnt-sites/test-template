@@ -1,0 +1,67 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import Carousel from "@wrappers/carousel/Carousel.astro";
+import CarouselSlide from "@wrappers/carousel/CarouselSlide.astro";
+import GallerySlide from "./GallerySlide.astro";
+
+const {
+  heading = "",
+  slides = [],
+  background = "white",
+  class: className,
+  editable = true,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const normalizedSlides = Array.isArray(slides)
+  ? slides.filter((slide) => slide && typeof slide === "object")
+  : [];
+---
+
+<section
+  class:list={["smile-gallery", sectionBackground(background), className]}
+  {...htmlAttributes}
+>
+  {heading && <Heading level="h2" alignX="center" data-prop="heading" text={heading} />}
+
+  <Carousel
+    label={heading || "Smile gallery"}
+    arrowsBeside
+    arrowStyle="long"
+    data-prop="slides"
+    editable={editable}
+  >
+    {
+      normalizedSlides.map((slide: any, index) => (
+        <CarouselSlide aria-label={`Slide ${index + 1} of ${normalizedSlides.length}`}>
+          <editable-array-item data-component="page-sections/features/smile-gallery/gallery-slide">
+            <GallerySlide {...slide} editable={editable} />
+          </editable-array-item>
+        </CarouselSlide>
+      ))
+    }
+  </Carousel>
+</section>
+
+<style>
+  .smile-gallery {
+    padding: 60px 25px;
+  }
+
+  .smile-gallery :global(.heading) {
+    margin: 0 0 35px;
+  }
+
+  .smile-gallery :global(.carousel) {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
+
+  @media (min-width: 1024px) {
+    .smile-gallery {
+      padding: 80px 25px;
+    }
+  }
+</style>

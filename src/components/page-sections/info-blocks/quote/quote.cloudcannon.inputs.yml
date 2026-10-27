@@ -1,0 +1,24 @@
+quote:
+  type: markdown
+  comment: The quote, including its quotation marks. Shown centered in italics.
+  options:
+    bold: true
+    italic: true
+    link: false
+    format: p
+attribution:
+  type: text
+  comment: Who said it, e.g. "Bruce J." Shown in light blue under the quote.
+background:
+  type: select
+  comment: Section background. Navy matches the design.
+  options:
+    values:
+      - id: navy
+        name: Navy
+      - id: green
+        name: Green
+      - id: cream
+        name: Cream
+      - id: white
+        name: White

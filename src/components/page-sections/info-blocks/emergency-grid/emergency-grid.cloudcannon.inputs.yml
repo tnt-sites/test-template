@@ -14,6 +14,9 @@ heading:
     bulletedlist: false
     numberedlist: false
     styles: /.cloudcannon/styles/editor.css
+anchorName:
+  type: text
+  comment: Optional anchor so links can jump to this section, e.g. "most" for /emergency-dentistry/#most.
 subtext:
   type: text
   comment: Subtext displayed under the heading.
@@ -72,28 +75,22 @@ emergencyItems:
 enableModals:
   type: switch
   comment: Enable pop-up dialogs for items with modal content.
-backgroundColor:
+background:
   type: select
-  comment: Background color used behind the grid.
+  comment: Section background.
   options:
     values:
-      - id: none
-        name: None
-      - id: base
-        name: Base
-      - id: surface
-        name: Surface
-      - id: accent
-        name: Accent
-      - id: highlight
-        name: Highlight
-      - id: dark
-        name: Dark
-      - id: black
-        name: Black
-backgroundColorHex:
-  type: color
-  comment: Optional custom hex color that overrides the background color above. Leave blank to use the theme color.
+      - id: white
+        name: White
+      - id: cream
+        name: Cream
+      - id: navy
+        name: Navy
+      - id: green
+        name: Green
+showHeadingBar:
+  type: switch
+  comment: Show the thin bar under the heading.
 backgroundGradient:
   type: textarea
   comment: "Optional CSS gradient applied behind the section content."

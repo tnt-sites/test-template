@@ -1,0 +1,21 @@
+---
+title: Service Split
+spacing: all
+blocks:
+  _component: "page-sections/services/service-split"
+  heading: "Keep your team aligned"
+  subtext: "Drop service highlights between sections to reinforce the next step."
+  imageSource: /src/assets/images/component-library/sunset.jpg
+  imageAlt: "Sunset."
+  buttonSections:
+    - _component: "building-blocks/core-elements/button"
+      text: "Create workspace"
+      variant: primary
+      size: md
+      link: "/workspace"
+    - _component: "building-blocks/core-elements/button"
+      text: "Invite team"
+      variant: secondary
+      size: md
+      link: "/invite"
+---

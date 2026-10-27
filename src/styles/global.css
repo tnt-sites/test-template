@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* Brand names for Tailwind classes (bg-navy, text-sky, font-accent, ...).
+   "inline" points the classes at the site's existing variables, so
+   branding.json stays the single place the actual colours are set. */
+@theme inline {
+  --color-navy: var(--color-brand-secondary);
+  --color-green: var(--color-brand);
+  --color-sky: var(--color-brand-muted);
+  --color-cream: var(--color-bg-cream);
+  --color-slate: var(--color-brand-subtle);
+  --font-accent: var(--font-accent);
+}

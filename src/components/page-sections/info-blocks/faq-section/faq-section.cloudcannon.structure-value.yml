@@ -5,22 +5,10 @@ value:
   _component: page-sections/info-blocks/faq-section
   id: ""
   heading: Frequently Asked Questions
-  headingLevel: h2
-  headingSize: lg
   singleOpen: true
   openFirst: false
   items: []
-  maxContentWidth: xl
-  paddingHorizontal: xl
-  paddingVertical: 4xl
-  colorScheme: inherit
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: ""
-    alt: ""
-    positionVertical: top
-    positionHorizontal: center
+  background: white
 preview:
   text:
     - FAQ Section

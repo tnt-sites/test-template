@@ -3,7 +3,7 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/request-an-appointment/",
       "icon": "calendar-days",
       "textMobile": "Request",
       "textStrong": " an Appointment"
@@ -11,24 +11,24 @@
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+17813955545",
       "icon": "phone",
-      "textMobile": "Offices",
+      "textMobile": "Call",
       "textStrong": null
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/Medford+Dental+Wellness+Center/@42.4160386,-71.1112106,619m/data=!3m2!1e3!5s0x89e376c7e84467a5:0xffb323997179aead!4m8!3m7!1s0x8a1953f5f42589d7:0xe8506212b913ef05!8m2!3d42.4160386!4d-71.1112106!9m1!1b1!16s%2Fg%2F11yvhgjkzc",
       "target": "_blank",
       "icon": "map-pin",
-      "textStrong": "View ",
-      "textAfter": "Map"
+      "textStrong": null,
+      "textMobile": "Map"
     },
     {
       "itemClass": "fr",
       "enabled": true,
-      "href": "for-patients.html#forms",
+      "href": "/for-patients/#forms",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
       "textStrong": "Forms "
@@ -36,7 +36,7 @@
     {
       "itemClass": "fb",
       "enabled": true,
-      "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
+      "href": "https://www.facebook.com/medforddentalassociates/",
       "target": "_blank",
       "icon": "social/facebook",
       "textStrong": "Follow ",
@@ -45,7 +45,7 @@
     {
       "itemClass": "gg",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://maps.app.goo.gl/TVpjGmfnhDNCHu3n8",
       "target": "_blank",
       "icon": "social/google",
       "textMobile": "Read",
@@ -54,7 +54,7 @@
     {
       "itemClass": "ig",
       "enabled": false,
-      "href": "https://www.instagram.com/",
+      "href": "https://www.instagram.com/medforddentalassociates/",
       "target": "_blank",
       "icon": "social/instagram",
       "textMobile": "Follow ",

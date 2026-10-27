@@ -19,6 +19,9 @@ link:
   type: url
   comment: The URL to which the button should link.
   hidden: modalTarget
+openAppointmentWidget:
+  type: switch
+  comment: Open the online appointment request form in a pop-up instead of following the link. The link is still used if the form can't load.
 modalTarget:
   type: text
   comment: The ID of a modal element to open when the button is clicked.

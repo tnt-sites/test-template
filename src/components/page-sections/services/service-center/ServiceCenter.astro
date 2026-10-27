@@ -1,0 +1,71 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  anchorName = "",
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  background = "white",
+  showHeadingBar = true,
+  class: className,
+  _component,
+  // Older settings, no longer used.
+  colorScheme,
+  backgroundColor,
+  backgroundGradient,
+  backgroundImage,
+  paddingVertical,
+  rounded,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<section
+  class:list={["service-center", sectionBackground(background), className]}
+  id={anchorName || undefined}
+  {...htmlAttributes}
+>
+  <article class="block text-center">
+    {heading && <Heading level="h2" data-prop="heading" text={heading} />}
+    {showHeadingBar && heading && <hr class="heading-bar" />}
+    <Text data-prop="subtext" text={subtext} />
+    <ButtonGroup buttonSections={buttonSections} />
+  </article>
+</section>
+
+<style>
+  .service-center article {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 65px 25px;
+  }
+
+  .service-center :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .service-center :global(.text) {
+    margin-top: 20px;
+  }
+
+  .service-center :global(.button-group) {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  .service-center .heading-bar {
+    margin: 20px auto 0;
+    max-width: 575px;
+  }
+
+  @media (min-width: 1024px) {
+    .service-center article {
+      padding: 100px 25px;
+    }
+  }
+</style>

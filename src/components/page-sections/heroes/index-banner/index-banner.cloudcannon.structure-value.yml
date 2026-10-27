@@ -1,0 +1,30 @@
+label: Index Banner
+icon: hero
+description: Homepage banner with an optional background video, an eyebrow and heading on the left and intro copy on the right.
+value:
+  _component: page-sections/heroes/index-banner
+  id: ""
+  eyebrow: Eyebrow text
+  heading: Heading text
+  subtext: Intro copy for this page.
+  overlay: medium
+  showStripes: true
+  backgroundVideo: ""
+  backgroundImage:
+    source: /src/assets/images/component-library/dunedin-cliff.jpg
+    alt: ""
+    positionVertical: center
+    positionHorizontal: center
+preview:
+  text:
+    - Index Banner
+  subtext:
+    - key: heading
+  image:
+    - key: backgroundImage.source
+  icon: hero
+picker_preview:
+  text: Index Banner
+  subtext: Homepage banner with optional background video.
+_inputs_from_glob:
+  - /src/components/page-sections/heroes/index-banner/index-banner.cloudcannon.inputs.yml

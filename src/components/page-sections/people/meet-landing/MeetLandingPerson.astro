@@ -1,50 +1,81 @@
 ---
+import Button from "@core-elements/button/Button.astro";
 import Image from "@core-elements/image/Image.astro";
 
 const {
-  name = "Provider Name",
-  href = "#",
+  name = "",
+  href = "",
   imageSource = "",
   imageAlt = "",
-  variant = "button",
   editable = true,
+  class: className,
   _component,
+  // Older setting, no longer used: every card now has a button.
+  variant,
   ...htmlAttributes
 } = Astro.props;
 
-const cleanText = (value: unknown, fallback = "") =>
-  typeof value === "string" && value.trim().length > 0 ? value.trim() : fallback;
-
-const safeVariant = variant === "name" ? "name" : "button";
-const labelClass = safeVariant === "name" ? "name" : "btn";
-const providerName = cleanText(name, "Provider Name");
-const providerHref = cleanText(href, "#");
-const providerImage = cleanText(imageSource);
-const providerImageAlt = cleanText(imageAlt, providerName);
-
-if (!_component && providerName.length === 0 && providerImage.length === 0) {
-  return;
-}
+const label = typeof name === "string" && name.trim() ? name.trim() : "Meet the Doctor";
+const link = typeof href === "string" && href.trim() ? href.trim() : "";
 ---
 
-<a href={providerHref} {...htmlAttributes}>
-  {
-    providerImage && (
-      <Image
-        source={providerImage}
-        alt={providerImageAlt}
-        editable={editable}
-        data-editable={editable ? "image" : undefined}
-        data-prop-src={editable ? "imageSource" : undefined}
-        data-prop-alt={editable ? "imageAlt" : undefined}
-      />
-    )
+<li class:list={["meet-landing-person", className]} {...htmlAttributes}>
+  <a href={link || undefined} tabindex="-1" aria-hidden="true">
+    <Image
+      source={imageSource}
+      alt={imageAlt}
+      sizes="(min-width: 1024px) 264px, 50vw"
+      editable={editable}
+      data-editable={editable ? "image" : undefined}
+      data-prop-src={editable ? "imageSource" : undefined}
+      data-prop-alt={editable ? "imageAlt" : undefined}
+    />
+  </a>
+  <Button
+    text={label}
+    link={link}
+    variant="secondary"
+    uppercase={true}
+    editable={editable}
+    data-prop="name"
+  />
+</li>
+
+<style>
+  .meet-landing-person {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  <span
-    class={labelClass}
-    data-editable={editable ? "text" : undefined}
-    data-prop={editable ? "name" : undefined}
-  >
-    {providerName}
-  </span>
-</a>
+
+  .meet-landing-person a {
+    display: block;
+  }
+
+  /* Tall portrait crop from the design. */
+  .meet-landing-person :global(img) {
+    aspect-ratio: 264 / 350;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .meet-landing-person :global(.button) {
+    display: flex;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    margin-top: 10px;
+    min-height: 45px;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  @media (min-width: 1024px) {
+    .meet-landing-person :global(.button) {
+      font-size: 16px;
+      margin-top: 25px;
+      min-height: 50px;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import { Icon as AstroIcon } from "astro-icon/components";
+import MarkdownIt from "markdown-it";
+
+const { text = "", editable = true, class: className, _component, ...htmlAttributes } = Astro.props;
+
+const md = new MarkdownIt({ html: true });
+const textDataAttributes = editable ? { "data-editable": "text", "data-prop": "text" } : {};
+---
+
+<li class:list={["why-item text-center", className]} {...htmlAttributes}>
+  <AstroIcon name="medford-building" class="text-sky" aria-hidden="true" />
+  <p {...textDataAttributes}><Fragment set:html={md.renderInline(text)} /></p>
+</li>
+
+<style>
+  .why-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .why-item :global(svg) {
+    display: block;
+    height: 50px;
+    margin: 0 auto 10px;
+    width: auto;
+  }
+
+  .why-item p {
+    line-height: 1.2;
+    margin: 0 auto;
+    max-width: 15em;
+    text-wrap: balance;
+  }
+</style>

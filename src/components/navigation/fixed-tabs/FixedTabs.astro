@@ -74,7 +74,7 @@ if (!_component && visibleTabs.length === 0) {
       );
 
       return (
-        <li class={tab.itemClass}>
+        <li class:list={tab.itemClass}>
           <a
             href={normalizedHref || "#"}
             target={target}
@@ -110,8 +110,9 @@ if (!_component && visibleTabs.length === 0) {
 
     a {
       display: block;
-      font-size: 14px;
-      font-weight: 700;
+      font-family: var(--font-accent);
+      font-size: 1.0625rem;
+      font-weight: var(--font-weight-normal);
       color: var(--color-text-inverse);
       position: relative;
       overflow: hidden;
@@ -130,22 +131,27 @@ if (!_component && visibleTabs.length === 0) {
 
     :global(.icon svg) {
       display: block;
-      height: 16px;
-      width: 16px;
+      height: 18px;
+      width: 18px;
       margin: 0 auto !important;
     }
 
+    /* Request, Call and Map colours follow the mobile design. */
     .ra {
-      background-color: var(--color-brand);
+      background-color: var(--color-brand-muted);
+
+      a {
+        color: var(--color-brand-secondary);
+      }
     }
 
     .call {
-      background-color: var(--color-brand-muted);
+      background-color: var(--color-brand);
     }
 
     .map,
     .fr {
-      background-color: var(--color-text);
+      background-color: var(--color-brand-secondary);
     }
 
     .fb {
@@ -200,12 +206,16 @@ if (!_component && visibleTabs.length === 0) {
       display: flex;
 
       a {
-        padding: 12px 0;
+        padding: 15px 0;
         flex: 1;
 
         span {
           display: inline-block;
           vertical-align: middle;
+        }
+
+        span + span {
+          margin-left: 10px;
         }
       }
 

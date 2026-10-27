@@ -1,0 +1,40 @@
+label: Service Split
+icon: hero
+description: Side-by-side service section with copy on one side and stacked buttons on the other.
+value:
+  _component: page-sections/services/service-split
+  id: ""
+  heading: Heading text
+  anchorName: ""
+  subtext: Subtext placeholder text that will be replaced with actual content.
+  imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
+  imageAlt: ""
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: My Button
+      hideText: false
+      link: ""
+      iconName: ""
+      iconPosition: before
+      variant: primary
+      size: md
+  reverse: false
+  background: white
+  showHeadingBar: true
+  backgroundGradient: ""
+  backgroundImage:
+    source: ""
+    alt: ""
+    positionVertical: top
+    positionHorizontal: center
+preview:
+  text:
+    - Service Split
+  subtext:
+    - key: heading
+  icon: hero
+picker_preview:
+  text: Service Split
+  subtext: Split layout service section with button stack.
+_inputs_from_glob:
+  - /src/components/page-sections/services/service-split/service-split.cloudcannon.inputs.yml

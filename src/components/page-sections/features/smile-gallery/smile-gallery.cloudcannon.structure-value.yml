@@ -1,0 +1,90 @@
+label: Smile Gallery
+icon: compare
+description: Before-and-after photo carousel with dots above, long arrows either side, and a caption under each pair.
+value:
+  _component: page-sections/features/smile-gallery
+  id: ""
+  heading: Smile Gallery
+  background: white
+  slides:
+    - _component: page-sections/features/smile-gallery/gallery-slide
+      beforeImage: /src/assets/images/component-library/dunedin-cliff.jpg
+      beforeAlt: ""
+      beforeLabel: Before
+      afterImage: /src/assets/images/component-library/sunset.jpg
+      afterAlt: ""
+      afterLabel: After
+      caption: ""
+preview:
+  text:
+    - Smile Gallery
+  subtext:
+    - key: heading
+  icon: compare
+picker_preview:
+  text: Smile Gallery
+  subtext: Before-and-after photo carousel.
+_inputs_from_glob:
+  - /src/components/page-sections/features/smile-gallery/smile-gallery.cloudcannon.inputs.yml
+_structures:
+  gallerySlides:
+    values:
+      - label: Before & After
+        icon: compare
+        value:
+          _component: page-sections/features/smile-gallery/gallery-slide
+          combinedImage: ""
+          combinedAlt: ""
+          beforeImage: ""
+          beforeAlt: ""
+          beforeLabel: Before
+          afterImage: ""
+          afterAlt: ""
+          afterLabel: After
+          caption: ""
+        preview:
+          text:
+            - key: caption
+            - Before & After
+          image:
+            - key: afterImage
+        _inputs:
+          combinedImage:
+            type: image
+            comment: A single prepared image with before and after side by side (labels included). When set, the separate before/after photos below are ignored.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          combinedAlt:
+            type: text
+            comment: Describe the before and after for screen readers, e.g. "Gapped teeth before and after braces".
+          beforeImage:
+            type: image
+            comment: Photo before treatment. Cropped to a landscape shape (about 8:5).
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          beforeAlt:
+            type: text
+            comment: Describe the before photo for screen readers.
+          beforeLabel:
+            type: text
+            comment: Label under the before photo.
+          afterImage:
+            type: image
+            comment: Photo after treatment. Cropped to the same shape as the before photo.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          afterAlt:
+            type: text
+            comment: Describe the after photo for screen readers.
+          afterLabel:
+            type: text
+            comment: Label under the after photo.
+          caption:
+            type: textarea
+            comment: Optional italic caption under the pair, e.g. the treatment used.

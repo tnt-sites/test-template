@@ -1,0 +1,57 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  imageSource = "",
+  imageAlt = "",
+  caption = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<figure class:list={["tour-slide", className]} {...htmlAttributes}>
+  <Image
+    source={imageSource}
+    alt={imageAlt}
+    sizes="(min-width: 1024px) 893px, 100vw"
+    editable={editable}
+    data-prop-src="imageSource"
+    data-prop-alt="imageAlt"
+    data-editable="image"
+  />
+  {
+    caption && (
+      <figcaption
+        data-editable={editable ? "text" : undefined}
+        data-prop={editable ? "caption" : undefined}
+      >
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>
+
+<style>
+  .tour-slide {
+    margin: 0;
+  }
+
+  /* Every tour photo is cropped to the same landscape shape. */
+  .tour-slide :global(img) {
+    aspect-ratio: 893 / 553;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  figcaption {
+    font-style: italic;
+    margin: 30px auto 0;
+    max-width: 590px;
+    text-align: center;
+  }
+</style>

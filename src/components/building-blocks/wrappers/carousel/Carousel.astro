@@ -12,6 +12,11 @@ const {
   style = "",
   label,
   arrowStyle = "default",
+  // Arrows either side of the slides, with the dots above ("top") or below
+  // ("bottom"). On phones the arrows move beside the dots.
+  arrowsBeside = false,
+  dotsPosition = "top",
+  class: className,
   "data-prop": customDataProp = "slides",
   editable = true,
   _component,
@@ -23,6 +28,7 @@ const arrowIcons: Record<string, [string, string]> = {
   chevron: ["chevron-left", "chevron-right"],
   circle: ["arrow-left-circle", "arrow-right-circle"],
   arrow: ["arrow-left", "arrow-right"],
+  long: ["arrow-long", "arrow-long"],
 };
 const [prevIcon, nextIcon] = arrowIcons[arrowStyle] ?? [null, null];
 
@@ -80,95 +86,155 @@ const carouselStyles = `
 ---
 
 <section
-  class:list={carouselClasses}
+  class:list={[carouselClasses, arrowsBeside && "carousel-arrows-beside", className]}
   role="region"
   aria-label="Carousel"
   style={carouselStyles}
   {...htmlAttributes}
   {...dataAttributes}
 >
-  <div class="viewport">
-    <div
-      class="track"
-      {...editable
-        ? {
-            "data-editable": "array",
-            "data-component-key": "_component",
-            "data-id-key": "_component",
-            "data-prop": customDataProp,
-          }
-        : {}}
-    >
-      {
-        slides.length > 0 ? (
-          slides.map((slide: any, index: number) => (
-            <editable-array-item data-component="building-blocks/wrappers/carousel/carousel-slide">
-              <CarouselSlide
-                contentSections={slide.contentSections}
-                aria-label={`Slide ${index + 1} of ${slides.length}`}
-              />
-            </editable-array-item>
-          ))
-        ) : (
-          <slot />
-        )
-      }
-    </div>
-  </div>
-
-  <div class="controls-wrapper">
-    <button class="button prev" type="button" aria-label="Previous slide">
-      <slot name="prev-arrow">
-        {
-          prevIcon ? (
-            <AstroIcon name={prevIcon} is:inline />
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="49.498"
-              height="49.498"
-              viewBox="0 0 49.498 49.498"
+  {
+    arrowsBeside ? (
+      <>
+        {dotsPosition === "top" && (
+          <>
+            {/* Phones: arrows either side of the dots, above the slides. */}
+            <div class="phone-controls is-top flex lg:hidden items-center justify-between">
+              <button class="button prev" type="button" aria-label="Previous slide">
+                <AstroIcon name={prevIcon || "arrow-long"} is:inline />
+              </button>
+              <div class="indicators" />
+              <button class="button next" type="button" aria-label="Next slide">
+                <AstroIcon name={nextIcon || "arrow-long"} is:inline />
+              </button>
+            </div>
+            <div class="indicators desktop-dots hidden lg:flex" />
+          </>
+        )}
+        <div class="slides-row flex items-center">
+          <button class="button prev hidden lg:block" type="button" aria-label="Previous slide">
+            <AstroIcon name={prevIcon || "arrow-long"} is:inline />
+          </button>
+          <div class="viewport">
+            <div
+              class="track"
+              {...(editable
+                ? {
+                    "data-editable": "array",
+                    "data-component-key": "_component",
+                    "data-id-key": "_component",
+                    "data-prop": customDataProp,
+                  }
+                : {})}
             >
-              <path
-                id="Union_2"
-                data-name="Union 2"
-                d="M-612,7.5V-23h-30.5a1.5,1.5,0,0,1-1.5-1.5,1.5,1.5,0,0,1,1.5-1.5h32a1.5,1.5,0,0,1,1.5,1.5v32A1.5,1.5,0,0,1-610.5,9,1.5,1.5,0,0,1-612,7.5Z"
-                transform="translate(461.741 473.762) rotate(45)"
-                fill="#e3e3e3"
-              />
-            </svg>
-          )
-        }
-      </slot>
-    </button>
+              <slot />
+            </div>
+          </div>
+          <button class="button next hidden lg:block" type="button" aria-label="Next slide">
+            <AstroIcon name={nextIcon || "arrow-long"} is:inline />
+          </button>
+        </div>
+        {dotsPosition === "bottom" && (
+          <>
+            {/* Phones: arrows either side of the dots, below the slides. */}
+            <div class="phone-controls is-bottom flex lg:hidden items-center justify-between">
+              <button class="button prev" type="button" aria-label="Previous slide">
+                <AstroIcon name={prevIcon || "arrow-long"} is:inline />
+              </button>
+              <div class="indicators" />
+              <button class="button next" type="button" aria-label="Next slide">
+                <AstroIcon name={nextIcon || "arrow-long"} is:inline />
+              </button>
+            </div>
+            {/* Optional content (e.g. a button) beside the dots on desktop. */}
+            <div class="controls-row block lg:flex items-center justify-center">
+              <slot name="controls" />
+              <div class="indicators hidden lg:flex" />
+            </div>
+          </>
+        )}
+      </>
+    ) : (
+      <>
+        <div class="viewport">
+          <div
+            class="track"
+            {...(editable
+              ? {
+                  "data-editable": "array",
+                  "data-component-key": "_component",
+                  "data-id-key": "_component",
+                  "data-prop": customDataProp,
+                }
+              : {})}
+          >
+            {slides.length > 0 ? (
+              slides.map((slide: any, index: number) => (
+                <editable-array-item data-component="building-blocks/wrappers/carousel/carousel-slide">
+                  <CarouselSlide
+                    contentSections={slide.contentSections}
+                    aria-label={`Slide ${index + 1} of ${slides.length}`}
+                  />
+                </editable-array-item>
+              ))
+            ) : (
+              <slot />
+            )}
+          </div>
+        </div>
 
-    <div class="indicators"></div>
+        <div class="controls-wrapper">
+          <button class="button prev" type="button" aria-label="Previous slide">
+            <slot name="prev-arrow">
+              {prevIcon ? (
+                <AstroIcon name={prevIcon} is:inline />
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="49.498"
+                  height="49.498"
+                  viewBox="0 0 49.498 49.498"
+                >
+                  <path
+                    id="Union_2"
+                    data-name="Union 2"
+                    d="M-612,7.5V-23h-30.5a1.5,1.5,0,0,1-1.5-1.5,1.5,1.5,0,0,1,1.5-1.5h32a1.5,1.5,0,0,1,1.5,1.5v32A1.5,1.5,0,0,1-610.5,9,1.5,1.5,0,0,1-612,7.5Z"
+                    transform="translate(461.741 473.762) rotate(45)"
+                    fill="#e3e3e3"
+                  />
+                </svg>
+              )}
+            </slot>
+          </button>
 
-    <button class="button next" type="button" aria-label="Next slide">
-      <slot name="next-arrow">
-        {
-          nextIcon ? (
-            <AstroIcon name={nextIcon} is:inline />
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="49.498"
-              height="49.498"
-              viewBox="0 0 49.498 49.498"
-            >
-              <path
-                id="Union_2"
-                data-name="Union 2"
-                d="M-612,7.5V-23h-30.5a1.5,1.5,0,0,1-1.5-1.5,1.5,1.5,0,0,1,1.5-1.5h32a1.5,1.5,0,0,1,1.5,1.5v32A1.5,1.5,0,0,1-610.5,9,1.5,1.5,0,0,1-612,7.5Z"
-                transform="translate(461.741 473.762) rotate(45)"
-                fill="#e3e3e3"
-              />
-            </svg>
-          )
-        }
-      </slot>
-    </button>
-  </div>
+          <div class="indicators" />
+
+          <button class="button next" type="button" aria-label="Next slide">
+            <slot name="next-arrow">
+              {nextIcon ? (
+                <AstroIcon name={nextIcon} is:inline />
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="49.498"
+                  height="49.498"
+                  viewBox="0 0 49.498 49.498"
+                >
+                  <path
+                    id="Union_2"
+                    data-name="Union 2"
+                    d="M-612,7.5V-23h-30.5a1.5,1.5,0,0,1-1.5-1.5,1.5,1.5,0,0,1,1.5-1.5h32a1.5,1.5,0,0,1,1.5,1.5v32A1.5,1.5,0,0,1-610.5,9,1.5,1.5,0,0,1-612,7.5Z"
+                    transform="translate(461.741 473.762) rotate(45)"
+                    fill="#e3e3e3"
+                  />
+                </svg>
+              )}
+            </slot>
+          </button>
+        </div>
+      </>
+    )
+  }
 </section>
 
 <script>
@@ -188,8 +254,8 @@ const carouselStyles = `
       const viewport = carousel.querySelector(".viewport") as HTMLElement;
       const track = viewport?.querySelector(".track");
       const slides = track?.querySelectorAll(".slide");
-      const controlsWrapper = carousel.querySelector(".controls-wrapper");
-      const indicatorsContainer = controlsWrapper?.querySelector(".indicators");
+      // Arrows and dots can appear more than once (desktop and phone versions).
+      const indicatorContainers = carousel.querySelectorAll(".indicators");
 
       if (!viewport || !track || !slides || !slides.length) {
         console.warn("Carousel: Missing required elements");
@@ -242,15 +308,15 @@ const carouselStyles = `
       carousel.setAttribute("data-embla-initialized", "true");
 
       // Navigation buttons — wired up once, always.
-      const prevButton = carousel.querySelector(".prev") as HTMLButtonElement;
-      const nextButton = carousel.querySelector(".next") as HTMLButtonElement;
+      const prevButtons = carousel.querySelectorAll<HTMLButtonElement>(".prev");
+      const nextButtons = carousel.querySelectorAll<HTMLButtonElement>(".next");
 
-      if (prevButton) prevButton.addEventListener("click", () => embla.scrollPrev());
-      if (nextButton) nextButton.addEventListener("click", () => embla.scrollNext());
+      prevButtons.forEach((button) => button.addEventListener("click", () => embla.scrollPrev()));
+      nextButtons.forEach((button) => button.addEventListener("click", () => embla.scrollNext()));
 
       const updateButtons = () => {
-        if (prevButton) prevButton.disabled = !embla.canScrollPrev();
-        if (nextButton) nextButton.disabled = !embla.canScrollNext();
+        prevButtons.forEach((button) => (button.disabled = !embla.canScrollPrev()));
+        nextButtons.forEach((button) => (button.disabled = !embla.canScrollNext()));
       };
 
       // Show/hide arrows and indicators based on snap availability.
@@ -272,7 +338,7 @@ const carouselStyles = `
       embla.on("reInit", updateControls);
 
       // Setup indicators
-      if (indicatorsContainer) {
+      indicatorContainers.forEach((indicatorsContainer) => {
         const renderDots = () => {
           indicatorsContainer.innerHTML = "";
           embla.scrollSnapList().forEach((_, index) => {
@@ -298,7 +364,7 @@ const carouselStyles = `
         embla.on("select", updateSelectedDot);
         embla.on("reInit", renderDots);
         renderDots();
-      }
+      });
     });
   }
 
@@ -320,13 +386,13 @@ const carouselStyles = `
       --slide-width: 100%;
       --min-slide-width: 0px;
 
-      > .viewport {
+      .viewport {
         overflow: hidden;
         position: relative;
         width: 100%;
       }
 
-      > .viewport > .track {
+      .viewport > .track {
         display: flex;
         flex-wrap: nowrap;
 
@@ -404,6 +470,104 @@ const carouselStyles = `
         &[data-selected="true"] {
           background-color: var(--color-brand-muted);
           transform: scale(1.2);
+        }
+      }
+
+      /* "Arrows beside slides" layout: long thin arrows and small round dots. */
+      &.carousel-arrows-beside {
+        .prev,
+        .next {
+          background: transparent;
+          border: 0;
+          color: var(--color-text-strong);
+          flex-shrink: 0;
+          height: 36px;
+          min-height: 0;
+          min-width: 0;
+          padding: 0;
+          width: 62px;
+
+          svg {
+            height: 36px;
+            width: 62px;
+          }
+
+          &:hover,
+          &:focus-visible {
+            background: transparent;
+            color: var(--color-brand);
+          }
+        }
+
+        .prev svg {
+          transform: rotate(180deg);
+        }
+
+        .indicators {
+          display: flex;
+          gap: 25px;
+          justify-content: center;
+        }
+
+        .slides-row {
+          gap: 30px;
+        }
+
+        .slides-row > .viewport {
+          flex: 1;
+          min-width: 0;
+        }
+
+        .desktop-dots {
+          margin-bottom: 35px;
+        }
+
+        .phone-controls {
+          gap: 10px;
+        }
+
+        .phone-controls.is-top {
+          margin-bottom: 25px;
+        }
+
+        .phone-controls.is-bottom {
+          margin-top: 25px;
+        }
+
+        /* Extra controls (e.g. a button) beside the dots on desktop. */
+        .controls-row {
+          margin-top: 25px;
+          text-align: center;
+        }
+
+        @media (min-width: 1024px) {
+          .controls-row {
+            gap: 35px;
+            margin-top: 30px;
+          }
+        }
+
+        .indicator {
+          aspect-ratio: 1;
+          background-color: #d5d1c6;
+          border: 0;
+          border-radius: var(--radius-full);
+          cursor: pointer;
+          min-height: 0;
+          min-width: 0;
+          padding: 0;
+          width: 10px;
+
+          &[data-selected="true"] {
+            background-color: var(--color-brand);
+          }
+        }
+
+        /* Hidden when there's only one slide. !important beats the lg:block /
+           lg:flex utility classes on the controls. */
+        &[data-show-arrows="false"] :is(.prev, .next),
+        &[data-show-indicators="false"] .indicators {
+          display: none !important;
         }
       }
 

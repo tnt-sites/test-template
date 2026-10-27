@@ -1,0 +1,182 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+// Homepage before-and-after grid: each case is a column with the before photo
+// above the after photo. A cream band starts halfway down the first row.
+const {
+  heading = "",
+  subtext = "",
+  results = [],
+  buttonSections = [],
+  showHeadingBar = true,
+  bandBackground = "cream",
+  mobileCount = 2,
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const normalizedResults = Array.isArray(results)
+  ? results.filter((item) => item && typeof item === "object")
+  : [];
+const phoneCount = Math.max(1, Number(mobileCount) || 2);
+
+const resultsArrayDataAttributes = editable
+  ? {
+      "data-editable": "array",
+      "data-component-key": "_component",
+      "data-id-key": "_component",
+      "data-prop": "results",
+    }
+  : {};
+---
+
+<section
+  class:list={["index-results", bandBackground === "white" && "is-white", className]}
+  {...htmlAttributes}
+>
+  <div class="intro block text-center">
+    <Heading level="h2" data-prop="heading" text={heading} />
+    {showHeadingBar && <hr class="heading-bar" />}
+    <Text data-prop="subtext" text={subtext} />
+  </div>
+
+  {/* Two rows of photos, so the cream starting 25% down is halfway down the top photos. */}
+  <div class="photos">
+    <ul class="no-check flex justify-between" {...resultsArrayDataAttributes}>
+      {
+        normalizedResults.map((item: any, index: number) => (
+          <editable-array-item
+            data-component="page-sections/homepage-blocks/index-results/result-pair"
+            class:list={[index >= phoneCount && "hidden lg:block"]}
+          >
+            <li>
+              <Image
+                source={item.beforeImage}
+                alt={item.beforeAlt || ""}
+                sizes="(min-width: 1024px) 290px, 50vw"
+                editable={editable}
+                data-prop-src="beforeImage"
+                data-prop-alt="beforeAlt"
+                data-editable="image"
+              />
+              <Image
+                source={item.afterImage}
+                alt={item.afterAlt || ""}
+                sizes="(min-width: 1024px) 290px, 50vw"
+                editable={editable}
+                data-prop-src="afterImage"
+                data-prop-alt="afterAlt"
+                data-editable="image"
+              />
+            </li>
+          </editable-array-item>
+        ))
+      }
+    </ul>
+  </div>
+
+  <div class="button-row">
+    <ButtonGroup buttonSections={buttonSections} alignX="center" />
+  </div>
+</section>
+
+<style>
+  .index-results .intro {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 65px 25px 45px;
+  }
+
+  .index-results .intro :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .index-results .intro :global(.text) {
+    margin-top: 20px;
+  }
+
+  .index-results .heading-bar {
+    margin: 20px auto 0;
+    max-width: 655px;
+  }
+
+  .index-results .photos {
+    background: linear-gradient(to bottom, var(--color-bg) 25%, var(--color-bg-cream) 25%);
+    padding: 0 25px;
+  }
+
+  .index-results .button-row {
+    background: var(--color-bg-cream);
+    padding: 30px 25px 50px;
+  }
+
+  .index-results.is-white :is(.photos, .button-row) {
+    background: var(--color-bg);
+  }
+
+  .index-results ul {
+    gap: 25px;
+    margin: 0 auto;
+    max-width: 1230px;
+    padding: 0;
+  }
+
+  .index-results ul > :global(editable-array-item) {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .index-results li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Every photo is cropped to the same landscape shape. */
+  .index-results li :global(img) {
+    aspect-ratio: 284 / 185;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .index-results li :global(.image) {
+    margin: 0;
+  }
+
+  .index-results li :global(.image + .image) {
+    margin-top: 15px;
+  }
+
+  .index-results .button-row :global(.button-group) {
+    margin: 0;
+  }
+
+  .index-results .button-row :global(.button) {
+    font-size: 17px;
+    letter-spacing: 0.08em;
+    min-height: 50px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: 1024px) {
+    .index-results .intro {
+      padding-top: 100px;
+    }
+
+    .index-results .button-row {
+      padding-bottom: 70px;
+    }
+
+    .index-results ul {
+      gap: 40px;
+    }
+  }
+</style>

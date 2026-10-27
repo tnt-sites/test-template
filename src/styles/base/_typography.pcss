@@ -12,7 +12,7 @@
     h6 {
       color: var(--color-text-strong);
       font-family: var(--font-headings);
-      font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-normal);
       margin-bottom: 0.5em;
       margin-top: 0.8em;
     }
@@ -25,23 +25,17 @@
 
     h1 {
       font-size: var(--font-size-heading-2xl);
-      line-height: 1.2;
+      line-height: 1;
     }
 
     h2 {
       font-size: var(--font-size-heading-xl);
-      line-height: 1.25;
+      line-height: 1.05;
     }
 
     h3 {
       font-size: var(--font-size-heading-lg);
-      line-height: 1.3;
-    }
-
-    h4,
-    h5,
-    h6 {
-      font-weight: normal;
+      line-height: 1.15;
     }
 
     h4 {
@@ -64,7 +58,7 @@
     ol {
       color: var(--color-text);
       font-size: var(--font-size-md);
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     strong {
@@ -101,9 +95,10 @@
 
   .eyebrow {
     color: var(--color-text-muted);
-    font-size: var(--font-size-sm);
-    font-weight: 600;
-    letter-spacing: 0.08em;
+    font-family: var(--font-accent);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: 0.15em;
     margin-bottom: var(--spacing-sm);
     text-transform: uppercase;
   }
@@ -120,5 +115,42 @@
 
   .subtext {
     color: var(--color-text-muted);
+  }
+
+  /* Thin line under section headings. */
+  .heading-bar {
+    border: 0;
+    border-top: 2px solid #9f9f9f;
+    margin: 20px 0 0;
+  }
+
+  .on-dark .heading-bar {
+    border-top-color: #525a60;
+  }
+
+  .on-green .heading-bar {
+    border-top-color: rgb(255 255 255 / 0.6);
+  }
+
+  /* Sections with an anchor id stop below the sticky header when linked to. */
+  section[id] {
+    scroll-margin-top: var(--site-header-height, 0px);
+  }
+
+  /* Dark section backgrounds (navy, green): text, headings and links turn
+     white. Uses variables because headings and paragraphs set their own colour. */
+  .on-dark {
+    --color-text: var(--gray-0);
+    --color-text-strong: var(--gray-0);
+    --color-link: var(--color-brand-muted);
+    --color-link-hover: var(--gray-0);
+  }
+}
+
+/* Green buttons would disappear on a green section. In page-sections so it
+   beats the button's own (components layer) colour. */
+@layer page-sections {
+  .on-green .button.variant-primary {
+    background-color: var(--color-brand-secondary);
   }
 }

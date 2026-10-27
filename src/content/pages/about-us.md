@@ -1,208 +1,131 @@
 ---
 _schema: default
 title: About Us
-pageSections:
-  - _component: page-sections/heroes/hero-split
-    id: ''
-    eyebrow: Service - City, ST
-    heading: Creative <span class="heading-color">Title</span>
-    subtext: Subtitle placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Hero image
-    imageAspectRatio: none
-    buttonSections: []
-    reverse: false
-    colorScheme: inherit
-    backgroundColor: none
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading <span class="heading-font">text</span>
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: text
-        size: md
-        width: xs
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-center
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-    colorScheme: inherit
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/builders/custom-section
-    id: ''
-    label: tour
-    contentSections:
-      - _component: building-blocks/wrappers/carousel
-        id: ''
-        label: Carousel Test
-        slides:
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile3.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile5.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-        autoPlay: false
-        autoScroll: false
-        slideWidthPercent: 60
-        minSlideWidth: 0
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/features/office-tour
-    id: ''
-    heading: office-tour Heading
-    tourSlides:
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/castle.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/dunedin-cliff.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/profile5.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-    backgroundColor: base
-    slideNumbers: true
-    floatingArrows: true
-  - _component: page-sections/ctas/more-to-explore
-    id: ''
-    heading: More to <span class="color">Explore</span>
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-    maxContentWidth:
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/services-grid
-    id: ''
-    heading: Services Grid Heading
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
 description: ''
+pageSections:
+- _component: page-sections/heroes/interior-banner
+  eyebrow: About Our Medford Dental Office
+  heading: Making a Difference in Medford Since 1979
+  subtext: 'Welcome to our practice! We believe great dental care starts with who we are, not just what
+    we do. Our five core values guide every decision we make, every treatment we recommend, and every
+    patient we serve. Here’s a closer look at what you can expect when you let us tend to your smile:'
+  overlay: medium
+  showStripes: true
+  backgroundImage:
+    source: /src/assets/images/internal/about-1.webp
+    alt: ''
+    positionVertical: center
+    positionHorizontal: center
+- _component: page-sections/services/service-split
+  heading: Honesty
+  anchorName: ''
+  subtext: 'You can handle the truth.?
+
+
+    Whether it’s good news or bad news, we’ll always give you the real news. We believe transparency and
+    truth help you make the best decisions about your care.'
+  imageSource: /src/assets/images/internal/about-2.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: false
+  background: white
+  showHeadingBar: true
+- _component: page-sections/services/service-split
+  heading: Integrity
+  anchorName: ''
+  subtext: 'We embody the genuine core of who we are.?
+
+
+    It’s always the right thing to do the right thing, even when it’s hard. Here, you can fully expect
+    us to do the right thing for you. We put people over profits, every time.'
+  imageSource: /src/assets/images/internal/about-3.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: true
+  background: cream
+  showHeadingBar: true
+- _component: page-sections/services/service-split
+  heading: Grace
+  anchorName: ''
+  subtext: 'Our hearts lead our hands.?
+
+
+    We’re people serving people. Great dentistry begins with empathy, understanding, and compassion. Then
+    it delivers real-life solutions that meet you right where you are.'
+  imageSource: /src/assets/images/internal/about-4.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: false
+  background: white
+  showHeadingBar: true
+- _component: page-sections/services/service-split
+  heading: Hard Work
+  anchorName: ''
+  subtext: 'You deserve our best.?
+
+
+    However you want to say it – second mile service, above and beyond care – we do it. We work hard to
+    bring our best to the table for every visit.'
+  imageSource: /src/assets/images/internal/about-5.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: true
+  background: cream
+  showHeadingBar: true
+- _component: page-sections/services/service-split
+  heading: Curiosity
+  anchorName: ''
+  subtext: 'Advancements keep coming.?
+
+
+    From cutting-edge technology to innovative treatments, we continue to pursue the best and latest options
+    available for you, like Botox®, Invisalign®, sleep apnea solutions, pain-free digital X-rays, CEREC
+    same-day crowns and bridges, cone beam imaging, laser dentistry, scrape-free air abrasion, gunk-free
+    digital scanning, and much more.'
+  imageSource: /src/assets/images/internal/about-6.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: false
+  background: white
+  showHeadingBar: true
+- _component: page-sections/ctas/more-to-explore
+  heading: More to Explore
+  buttonSections:
+  - _component: building-blocks/core-elements/button
+    text: Meet the Dentists
+    hideText: false
+    link: /meet-the-dentists/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    uppercase: true
+  - _component: building-blocks/core-elements/button
+    text: Smile Gallery
+    hideText: false
+    link: /smile-gallery/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    uppercase: true
+  - _component: building-blocks/core-elements/button
+    text: Our Dental Technology
+    hideText: false
+    link: /our-dental-technology/
+    iconName: ''
+    iconPosition: before
+    variant: primary
+    size: md
+    uppercase: true
+  - _component: building-blocks/core-elements/button
+    text: View Our Services
+    hideText: false
+    link: /our-services/
+    iconName: ''
+    iconPosition: before
+    variant: secondary
+    size: md
+    uppercase: true
+  background: cream
 ---

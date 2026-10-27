@@ -16,22 +16,9 @@ officeTour:
         remove_empty: true
       - editor_key: tourSlides
         type: array
-      - editor_key: slideNumbers
-        type: boolean
-        optional: true
-      - editor_key: floatingArrows
-        type: boolean
-        optional: true
-      - editor_key: backgroundColor
+      - editor_key: background
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundGradient
-        type: string
-        optional: true
-        remove_empty: true
-      - editor_key: backgroundImage
-        type: object
-        optional: true
   _inputs_from_glob:
     - /src/components/page-sections/features/office-tour/office-tour.cloudcannon.inputs.yml

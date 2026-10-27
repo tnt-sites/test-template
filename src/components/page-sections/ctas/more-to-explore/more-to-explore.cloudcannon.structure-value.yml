@@ -1,10 +1,10 @@
 label: More to Explore
 icon: add
-description: CTA section with background image support and centered button group.
+description: Large centered heading with rows of pill buttons linking to related pages.
 value:
   _component: page-sections/ctas/more-to-explore
   id: ""
-  heading: More to <span class="color">Explore</span>
+  heading: More to Explore
   buttonSections:
     - _component: building-blocks/core-elements/button
       text: My Button
@@ -14,11 +14,8 @@ value:
       iconPosition: before
       variant: primary
       size: md
-  maxContentWidth: null
-  paddingHorizontal: sm
-  paddingVertical: sm
-  colorScheme: default
-  backgroundColor: base
+      uppercase: true
+  background: cream
   backgroundGradient: ""
   backgroundImage:
     source: null
@@ -33,6 +30,6 @@ preview:
   icon: add
 picker_preview:
   text: More to Explore
-  subtext: Centered CTA with a highlighted heading and button group.
+  subtext: Heading with rows of buttons to related pages.
 _inputs_from_glob:
   - /src/components/page-sections/ctas/more-to-explore/more-to-explore.cloudcannon.inputs.yml

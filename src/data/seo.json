@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
-  "url": "https://example.com",
+  "name": "Medford Dental Wellness",
+  "url": "https://www.dentalwellnessmedford.com",
   "description": "",
   "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
+  "titleFormat": "{title} | Medford Dental Wellness",
   "twitterHandle": "@yourusername"
 }

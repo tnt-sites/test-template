@@ -1,11 +1,11 @@
 label: Why
-icon: add
-description: Why section.
+icon: verified
+description: Navy band with a heading and short reasons to choose the practice, each under the building icon.
 value:
   _component: page-sections/info-blocks/why
   id: ""
-  heading: "why Heading"
-  backgroundColor: none
+  heading: Why Choose Medford Dental Wellness?
+  backgroundColor: dark
   backgroundGradient: ""
   backgroundImage:
     source: ""
@@ -13,37 +13,38 @@ value:
     positionVertical: top
     positionHorizontal: center
   items:
-    - _component: building-blocks/core-elements/list/list-item
-      text: List item 1
-      iconName: stylised-check
-      iconColor: default
-    - _component: building-blocks/core-elements/list/list-item
-      text: List item 2
-      iconName: stylised-check
-      iconColor: default
-    - _component: building-blocks/core-elements/list/list-item
-      text: List item 3
-      iconName: stylised-check
-      iconColor: default
+    - _component: page-sections/info-blocks/why/why-item
+      text: First reason
+    - _component: page-sections/info-blocks/why/why-item
+      text: Second reason
+    - _component: page-sections/info-blocks/why/why-item
+      text: Third reason
+preview:
+  text:
+    - Why
+  subtext:
+    - key: heading
+  icon: verified
+picker_preview:
+  text: Why
+  subtext: Navy band of reasons to choose the practice.
 _inputs_from_glob:
   - /src/components/page-sections/info-blocks/why/why.cloudcannon.inputs.yml
 _structures:
   whyItems:
     values:
-      - label: List Item
+      - label: Reason
         value:
-          _component: building-blocks/core-elements/list/list-item
-          text: "List item"
-          iconName: "stylised-check"
-          iconColor: default
+          _component: page-sections/info-blocks/why/why-item
+          text: Reason
         preview:
-          icon: text_fields
-          image:
-            - template: src/icons/{iconName}.svg
+          text:
+            - key: text
+          icon: verified
         _inputs:
           text:
             type: markdown
-            comment: The text to display in the list item.
+            comment: Short reason, ideally two lines or fewer. Shown under the building icon.
             options:
               blockquote: false
               bold: true
@@ -56,7 +57,3 @@ _structures:
               underline: false
               bulletedlist: false
               numberedlist: false
-          iconName:
-            hidden: true
-          iconColor:
-            hidden: true

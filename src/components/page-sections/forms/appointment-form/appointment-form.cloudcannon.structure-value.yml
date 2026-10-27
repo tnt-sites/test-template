@@ -131,7 +131,7 @@ value:
       value: Request Appointment
     - _component: building-blocks/forms/hidden
       name: _redirect
-      value: thanks.html
+      value: /thanks/
     - _component: building-blocks/forms/submit
       text: Submit
       variant: primary

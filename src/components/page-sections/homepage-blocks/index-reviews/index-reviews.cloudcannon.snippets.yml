@@ -19,20 +19,12 @@ indexReviews:
       - editor_key: reviews
         type: array
         optional: true
-      - editor_key: showQuoteIcon
-        type: boolean
+      - editor_key: buttonSections
+        type: array
         optional: true
-        remove_empty: true
-      - editor_key: backgroundColor
+      - editor_key: background
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundGradient
-        type: string
-        optional: true
-        remove_empty: true
-      - editor_key: backgroundImage
-        type: object
-        optional: true
   _inputs_from_glob:
     - /src/components/page-sections/homepage-blocks/index-reviews/index-reviews.cloudcannon.inputs.yml

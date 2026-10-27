@@ -1,0 +1,117 @@
+---
+import Image from "@core-elements/image/Image.astro";
+
+const {
+  combinedImage = "",
+  combinedAlt = "",
+  beforeImage = "",
+  beforeAlt = "",
+  beforeLabel = "Before",
+  afterImage = "",
+  afterAlt = "",
+  afterLabel = "After",
+  caption = "",
+  editable = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+const textAttributes = (prop: string) =>
+  editable ? { "data-editable": "text", "data-prop": prop } : {};
+
+const photos = [
+  { source: beforeImage, alt: beforeAlt, label: beforeLabel, prefix: "before" },
+  { source: afterImage, alt: afterAlt, label: afterLabel, prefix: "after" },
+];
+---
+
+<figure class:list={["gallery-slide", className]} {...htmlAttributes}>
+  {/* One prepared image with before and after side by side (labels included in the image). */}
+  {
+    combinedImage && (
+      <div class="combined">
+        <Image
+          source={combinedImage}
+          alt={combinedAlt}
+          sizes="(min-width: 1024px) 915px, 100vw"
+          editable={editable}
+          data-prop-src="combinedImage"
+          data-prop-alt="combinedAlt"
+          data-editable="image"
+        />
+      </div>
+    )
+  }
+
+  {/* Or separate before and after photos. */}
+  {
+    !combinedImage && (
+      <div class="block lg:flex justify-between">
+        {photos.map((photo) => (
+          <div class="photo">
+            <Image
+              source={photo.source}
+              alt={photo.alt}
+              sizes="(min-width: 1024px) 430px, 100vw"
+              editable={editable}
+              data-prop-src={`${photo.prefix}Image`}
+              data-prop-alt={`${photo.prefix}Alt`}
+              data-editable="image"
+            />
+            <p {...textAttributes(`${photo.prefix}Label`)}>{photo.label}</p>
+          </div>
+        ))}
+      </div>
+    )
+  }
+  {caption && <figcaption {...textAttributes("caption")}>{caption}</figcaption>}
+</figure>
+
+<style>
+  .gallery-slide {
+    margin: 0;
+  }
+
+  .photo {
+    margin-bottom: 25px;
+  }
+
+  /* Before and after photos are cropped to the same landscape shape. */
+  .gallery-slide :global(img) {
+    aspect-ratio: 428 / 264;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* Combined images keep their own shape. */
+  .combined {
+    margin: 0 auto 15px;
+    max-width: 915px;
+  }
+
+  .combined :global(img) {
+    aspect-ratio: auto;
+  }
+
+  .photo p {
+    margin: 15px 0 0;
+    text-align: center;
+  }
+
+  figcaption {
+    font-style: italic;
+    margin: 0 auto;
+    max-width: 590px;
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    .photo {
+      margin-bottom: 15px;
+      width: 47%;
+    }
+  }
+</style>

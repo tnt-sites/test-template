@@ -1,20 +1,20 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Medford Dental Wellness",
   "socials": [
+    {
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://maps.app.goo.gl/TVpjGmfnhDNCHu3n8"
+    },
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/medforddentalassociates/"
     },
     {
       "label": "Instagram",
       "icon": "social/instagram",
-      "link": "https://instagram.com"
-    },
-    {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "link": "https://www.instagram.com/medforddentalassociates/"
     }
   ],
   "offices": [
@@ -22,27 +22,24 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "101 Main St #206"
+          ],
+          "city": "Medford",
+          "state": "MA",
+          "postalCode": "02155",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://www.google.com/maps/place/Medford+Dental+Wellness+Center/@42.4160386,-71.1112106,619m/data=!3m2!1e3!5s0x89e376c7e84467a5:0xffb323997179aead!4m8!3m7!1s0x8a1953f5f42589d7:0xe8506212b913ef05!8m2!3d42.4160386!4d-71.1112106!9m1!1b1!16s%2Fg%2F11yvhgjkzc"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(781) 395-5545",
+          "href": "tel:+17813955545"
         }
       ],
-      "emails": [
-        {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
-        }
-      ],
+      "emails": [],
       "officeHours": [
         {
           "day": "Monday",
@@ -63,19 +60,18 @@
           "day": "Thursday",
           "hours": "8:00 am - 5:00 pm",
           "note": ""
-        },
-        {
-          "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
-          "note": ""
         }
       ],
       "officeHoursNote": ""
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
-  "mapEmbedUrl": "",
+  "head_scripts": [
+    "/* test header script */"
+  ],
+  "footer_scripts": [
+    "/* Test Footer Script */"
+  ],
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2696.2516295214773!2d-71.11121059999999!3d42.4160386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8a1953f5f42589d7%3A0xe8506212b913ef05!2sMedford%20Dental%20Wellness%20Center!5e1!3m2!1sen!2sus!4v1792079052072!5m2!1sen!2sus",
   "recaptchaSiteKey": ""
 }

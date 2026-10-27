@@ -1,0 +1,155 @@
+---
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import { sectionBackground } from "@components/utils/sectionBackgrounds";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+import { Icon as AstroIcon } from "astro-icon/components";
+
+// Coloured text panel beside a photo that fills the other half, edge to edge.
+const {
+  anchorName = "",
+  heading = "",
+  subtext = "",
+  buttonSections = [],
+  imageSource = "",
+  imageAlt = "",
+  imagePositionVertical = "center",
+  imagePositionHorizontal = "center",
+  reverse = false,
+  background = "navy",
+  showHeadingBar = true,
+  showLogo = true,
+  class: className,
+  _component,
+  // Older setting, no longer used.
+  imageFirstOnMobile,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<section
+  class:list={["service-split-full", sectionBackground(background), className]}
+  id={anchorName || undefined}
+  {...htmlAttributes}
+>
+  {/* Photo first so it's on top on phones; on desktop it sits on the right unless "reverse". */}
+  <div class:list={["block text-center lg:text-left lg:flex", !reverse && "lg:flex-row-reverse"]}>
+    <figure>
+      <Image
+        source={imageSource}
+        alt={imageAlt}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        positionVertical={imagePositionVertical}
+        positionHorizontal={imagePositionHorizontal}
+        editable={true}
+        data-prop-src="imageSource"
+        data-prop-alt="imageAlt"
+        data-editable="image"
+      />
+    </figure>
+
+    <article class:list={[reverse && "is-reverse"]}>
+      {showLogo && <AstroIcon name="medford-building" class="logo-mark" aria-hidden="true" />}
+      <div class="copy">
+        <Heading level="h2" data-prop="heading" text={heading} />
+        {showHeadingBar && <hr class="heading-bar" />}
+        <Text data-prop="subtext" text={subtext} />
+        <ButtonGroup buttonSections={buttonSections} direction="row" />
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .service-split-full figure {
+    aspect-ratio: 4 / 3;
+    margin: 0;
+    position: relative;
+  }
+
+  /* The photo fills its box, whatever size the box is. */
+  .service-split-full figure :global(:is(.image, picture, img)) {
+    display: block;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+  }
+
+  .service-split-full article {
+    overflow: hidden;
+    padding: 65px 25px;
+    position: relative;
+  }
+
+  /* Faint building mark behind the text, cropped by the panel edge. */
+  .service-split-full .logo-mark {
+    color: rgb(255 255 255 / 0.05);
+    height: 80%;
+    left: -100px;
+    position: absolute;
+    top: 10%;
+    width: auto;
+  }
+
+  .service-split-full .is-reverse .logo-mark {
+    left: auto;
+    right: -100px;
+  }
+
+  .service-split-full .copy {
+    margin: 0 auto;
+    max-width: 470px;
+    position: relative;
+  }
+
+  .service-split-full .copy :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .service-split-full .copy :global(.text) {
+    margin-top: 20px;
+  }
+
+  .service-split-full .copy :global(.button-group) {
+    justify-content: center;
+    margin-top: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    .service-split-full > div {
+      min-height: 700px;
+    }
+
+    .service-split-full figure {
+      aspect-ratio: auto;
+      width: 50%;
+    }
+
+    .service-split-full article {
+      align-items: center;
+      display: flex;
+      padding: 65px 30px 65px 15%;
+      width: 50%;
+    }
+
+    .service-split-full article.is-reverse {
+      padding: 65px 15% 65px 30px;
+    }
+
+    .service-split-full .copy {
+      margin: 0;
+    }
+
+    .service-split-full .copy :global(.button-group) {
+      justify-content: flex-start;
+    }
+
+    .service-split-full .heading-bar {
+      width: 95%;
+    }
+  }
+</style>

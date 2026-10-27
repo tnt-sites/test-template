@@ -1,163 +1,18 @@
-logoSource:
-  type: image
-  comment: "Logo image source URL or path."
 logoAlt:
   type: text
-  comment: "Alt text for the logo image for accessibility."
-offices:
-  type: array
-  comment: "Optional office contact override. Leave empty to use siteInfo offices."
-  options:
-    structures: _structures.officeSections
-"$.offices[*].name":
-  type: text
-  comment: "Optional office label."
-"$.offices[*].phones[*].display":
-  type: text
-  comment: "Phone number as displayed (e.g. (123) 456-7890)."
-"$.offices[*].phones[*].href":
-  type: text
-  comment: "Phone href value (e.g. tel:+11234567890)."
-"$.offices[*].addresses[*].lines":
-  type: array
-  comment: "Street address lines."
-"$.offices[*].addresses[*].city":
-  type: text
-"$.offices[*].addresses[*].state":
-  type: text
-"$.offices[*].addresses[*].postalCode":
-  type: text
-"$.offices[*].addresses[*].mapUrl":
-  type: url
-  comment: "Google Maps link for the address."
-"$.offices[*].officeHours":
-  type: array
-  comment: "Office hours entries."
-"$.offices[*].officeHours[*].day":
-  type: text
-"$.offices[*].officeHours[*].hours":
-  type: text
-"$.offices[*].officeHoursNote":
-  type: text
-  comment: "Optional note displayed below the hours list."
-links:
-  type: array
-  comment: "Array of navigation links to display in the footer."
-socials:
-  type: array
-  comment: "Array of social media links to display in the footer."
-siteName:
-  type: text
-  comment: "Business or site name used in the footer copyright line."
+  comment: Text read out by screen readers for the footer logo.
 contactTitle:
   type: text
-  comment: "Heading for the contact column (e.g. Contact Us)."
-phoneText:
-  type: text
-  comment: "Visible phone number text."
-phoneHref:
-  type: text
-  comment: "Phone link URL (e.g. tel:+12092163530)."
-addressHref:
-  type: text
-  comment: "Map/location link URL for the address block."
-addressLines:
-  type: array
-  comment: "Address lines shown as stacked text."
+  comment: Heading above the phone, address and social links. The details themselves come from Site Info.
 officeHoursTitle:
   type: text
-  comment: "Heading for office hours column."
-officeHours:
-  type: array
-  comment: "Office hours entries with day, hours, and optional note shown beneath each row."
-officeHoursNote:
-  type: text
-  comment: "General note displayed below the full office hours list (e.g. Closed on Sundays)."
-officeHoursNotes:
-  type: array
-  comment: "Optional list of general notes displayed below the full office hours list."
+  comment: Heading above the office hours. The hours themselves come from Site Info.
 legalLinks:
   type: array
-  comment: "Legal/utility links shown next to Sitemap/Privacy Policy (e.g. HIPAA Notice)."
-mapEmbedUrl:
+  comment: Links in the bottom bar, e.g. Sitemap and Privacy Policy.
+creditText:
   type: text
-  comment: "Optional Google Maps embed URL (iframe src value)."
-legalBlurb:
-  type: textarea
-  comment: "Optional legal/disclaimer text shown below the copyright row."
-addressLinkColor:
-  type: select
-  comment: "Color of address links."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-addressLinkHoverColor:
-  type: select
-  comment: "Color of address links on hover."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-phoneLinkColor:
-  type: select
-  comment: "Color of phone links."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
-phoneLinkHoverColor:
-  type: select
-  comment: "Color of phone links on hover."
-  options:
-    values:
-      - id: ""
-        name: None (default)
-      - id: "#fff"
-        name: White
-      - id: "var(--color-brand)"
-        name: Brand (Primary)
-      - id: "var(--color-brand-secondary)"
-        name: Brand (Secondary)
-      - id: "var(--color-text)"
-        name: Text
-      - id: "var(--color-text-strong)"
-        name: Text (Strong)
-      - id: "var(--color-text-inverse)"
-        name: Text (Inverse)
+  comment: Text before the TNT Dental logo in the bottom bar.
+creditLink:
+  type: url
+  comment: Where the TNT Dental logo links to.

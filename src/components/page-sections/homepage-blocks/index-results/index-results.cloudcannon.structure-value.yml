@@ -1,0 +1,67 @@
+label: Index Results
+icon: compare
+description: Homepage before-and-after photo grid, with the before photo above the after photo in each column.
+value:
+  _component: page-sections/homepage-blocks/index-results
+  id: ""
+  heading: Remarkable Results for Real Patients
+  subtext: Short intro text.
+  showHeadingBar: true
+  bandBackground: cream
+  mobileCount: 2
+  results:
+    - _component: page-sections/homepage-blocks/index-results/result-pair
+      beforeImage: ""
+      beforeAlt: ""
+      afterImage: ""
+      afterAlt: ""
+  buttonSections: []
+preview:
+  text:
+    - Index Results
+  subtext:
+    - key: heading
+  icon: compare
+picker_preview:
+  text: Index Results
+  subtext: Before-and-after photo grid.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-results/index-results.cloudcannon.inputs.yml
+_structures:
+  resultPairs:
+    values:
+      - label: Before & After
+        icon: compare
+        value:
+          _component: page-sections/homepage-blocks/index-results/result-pair
+          beforeImage: ""
+          beforeAlt: ""
+          afterImage: ""
+          afterAlt: ""
+        preview:
+          text:
+            - key: afterAlt
+            - Before & After
+          image:
+            - key: afterImage
+        _inputs:
+          beforeImage:
+            type: image
+            comment: Photo before treatment (top). Cropped to a landscape shape.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          beforeAlt:
+            type: text
+            comment: Describe the before photo for screen readers.
+          afterImage:
+            type: image
+            comment: Photo after treatment (bottom). Cropped to the same shape.
+            options:
+              paths:
+                uploads: src/assets/images
+                static: ""
+          afterAlt:
+            type: text
+            comment: Describe the after photo for screen readers.

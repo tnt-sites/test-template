@@ -1,0 +1,168 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  subtext = "",
+  backgroundImage,
+  overlay = "medium",
+  showStripes = true,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+// Darkens the photo from the bottom up so the white copy stays readable.
+const overlayGradients: Record<string, string> = {
+  none: "",
+  light:
+    "linear-gradient(to bottom, rgb(0 0 0 / 0.15) 0%, rgb(0 0 0 / 0.05) 35%, rgb(0 0 0 / 0.45) 100%)",
+  medium:
+    "linear-gradient(to bottom, rgb(0 0 0 / 0.25) 0%, rgb(0 0 0 / 0.15) 35%, rgb(0 0 0 / 0.65) 100%)",
+  dark: "linear-gradient(to bottom, rgb(0 0 0 / 0.4) 0%, rgb(0 0 0 / 0.35) 35%, rgb(0 0 0 / 0.8) 100%)",
+};
+const backgroundGradient = overlayGradients[overlay] ?? overlayGradients.medium;
+const photoSource = typeof backgroundImage?.source === "string" ? backgroundImage.source : "";
+---
+
+<div class:list={["interior-banner", className]} {...htmlAttributes}>
+  {/* CustomSection draws the optimised background photo (desktop only). */}
+  <CustomSection
+    class="banner-section"
+    paddingHorizontal="none"
+    paddingVertical="none"
+    backgroundColor="dark"
+    backgroundGradient={backgroundGradient}
+    backgroundImage={backgroundImage}
+  >
+    <div class="text-row block text-center lg:text-left lg:flex justify-between items-end">
+      <article class="title">
+        {/* The short label is the page's h1; the large title is an h2. */}
+        <h1 class="eyebrow" data-editable="text" data-prop="eyebrow">{eyebrow}</h1>
+        <Heading level="h2" size="2xl" data-prop="heading" text={heading} />
+      </article>
+      <Text data-prop="subtext" text={subtext} />
+    </div>
+  </CustomSection>
+
+  {
+    photoSource && (
+      <figure class="lg:hidden">
+        <Image
+          source={photoSource}
+          alt={backgroundImage?.alt || ""}
+          sizes="100vw"
+          positionVertical={backgroundImage?.positionVertical || "center"}
+          positionHorizontal={backgroundImage?.positionHorizontal || "center"}
+          editable={false}
+        />
+      </figure>
+    )
+  }
+
+  {showStripes && <div class="stripes" aria-hidden="true" />}
+</div>
+
+<style>
+  .interior-banner :global(.banner-section) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .interior-banner .text-row {
+    padding: 40px 25px 50px;
+  }
+
+  .interior-banner .eyebrow {
+    color: var(--color-brand-secondary);
+    font-size: 17px;
+    margin: 0 0 15px;
+    text-align: inherit;
+  }
+
+  .interior-banner :global(:is(.heading, .text)) {
+    margin: 0;
+    text-align: inherit;
+  }
+
+  .interior-banner .text-row > :global(.text) {
+    margin-top: 30px;
+  }
+
+  .interior-banner :global(.text a) {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  /* Phones and tablets: the photo sits under the text. */
+  .interior-banner figure {
+    margin: 0;
+  }
+
+  .interior-banner figure :global(img) {
+    aspect-ratio: 5 / 2;
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  /* Light blue, white and green brand stripes along the bottom. */
+  .interior-banner .stripes {
+    background: linear-gradient(
+      to bottom,
+      var(--color-brand-muted) 0 20px,
+      var(--color-bg) 20px 30px,
+      var(--color-brand) 30px 58px
+    );
+    height: 58px;
+  }
+
+  /* Phones and tablets: plain white behind the text (the photo shows below). */
+  @media (max-width: 1023px) {
+    .interior-banner :global(.banner-section) {
+      background-color: var(--color-bg);
+      background-image: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    /* The text sits over the photo on desktop. */
+    .interior-banner :global(.banner-section) {
+      --color-text: var(--gray-0);
+      --color-text-strong: var(--gray-0);
+      --color-link: var(--color-brand-muted);
+      --color-link-hover: var(--gray-0);
+
+      min-height: clamp(510px, 53vw, 750px);
+      text-shadow: 0 1px 6px rgb(0 0 0 / 0.45);
+    }
+
+    .interior-banner .text-row {
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 160px 25px 90px;
+      width: 100%;
+    }
+
+    .interior-banner .eyebrow {
+      color: var(--gray-0);
+      font-size: 19px;
+    }
+
+    .interior-banner .title {
+      max-width: 50%;
+    }
+
+    .interior-banner .text-row > :global(.text) {
+      margin-top: 0;
+      width: auto;
+      flex: 1;
+    }
+  }
+</style>

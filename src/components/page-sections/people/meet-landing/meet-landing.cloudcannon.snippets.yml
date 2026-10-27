@@ -3,8 +3,8 @@ meetLanding:
   inline: false
   preview:
     text:
-      - Meet Landing
-    icon: add
+      - Meet the Doctors
+    icon: groups
   definitions:
     component_name: MeetLanding
     named_args:
@@ -12,22 +12,15 @@ meetLanding:
         type: string
         optional: true
         remove_empty: true
-      - editor_key: variant
+      - editor_key: heading
         type: string
         optional: true
         remove_empty: true
       - editor_key: doctors
         type: array
-      - editor_key: backgroundColor
+      - editor_key: background
         type: string
         optional: true
         remove_empty: true
-      - editor_key: backgroundGradient
-        type: string
-        optional: true
-        remove_empty: true
-      - editor_key: backgroundImage
-        type: object
-        optional: true
   _inputs_from_glob:
     - /src/components/page-sections/people/meet-landing/meet-landing.cloudcannon.inputs.yml

@@ -18,6 +18,7 @@ const {
   uppercase = false,
   link,
   modalTarget,
+  openAppointmentWidget = false,
   element = "a",
   class: className,
   editable = true,
@@ -119,6 +120,12 @@ const tagProps = normalizedModalTarget
       ? { type: "button" }
       : {};
 
+// Opens the RevenueWell appointment pop-up (loaded in BaseLayout); the link is
+// the fallback if the widget hasn't loaded.
+if (openAppointmentWidget) {
+  (tagProps as any)["data-appointment-widget"] = "";
+}
+
 const hasText = normalizedText.length > 0;
 const slotContent = Astro.slots.has("default") ? await Astro.slots.render("default") : null;
 const hasSlotContent = (slotContent?.toString().trim().length ?? 0) > 0;
@@ -165,7 +172,8 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
       color: var(--color-text-strong);
       display: inline-flex;
       flex-shrink: 0;
-      font-weight: var(--font-weight-semibold);
+      font-family: var(--font-accent);
+      font-weight: var(--font-weight-normal);
       gap: 0.15em;
       justify-content: center;
       min-height: 10px;

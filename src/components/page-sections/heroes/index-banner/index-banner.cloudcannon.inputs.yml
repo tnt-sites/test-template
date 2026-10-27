@@ -1,0 +1,103 @@
+eyebrow:
+  type: text
+  comment: Small uppercase label above the heading, e.g. "Dental Implants Medford".
+heading:
+  type: markdown
+  comment: Main page heading (H1) shown bottom left, in large white type.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+    styles: /.cloudcannon/styles/editor.css
+subtext:
+  type: markdown
+  comment: Intro copy shown to the right of the heading (below it on mobile). Separate paragraphs with a blank line.
+  options:
+    blockquote: false
+    bold: true
+    format: p
+    italic: true
+    link: true
+    strike: false
+    subscript: true
+    superscript: true
+    underline: false
+    bulletedlist: false
+    numberedlist: false
+overlay:
+  type: select
+  comment: How much the photo is darkened so the white text stays readable. Use Dark for bright photos.
+  options:
+    values:
+      - id: none
+        name: None
+      - id: light
+        name: Light
+      - id: medium
+        name: Medium
+      - id: dark
+        name: Dark
+showStripes:
+  type: switch
+  comment: Show the light blue and green brand stripes along the bottom of the banner.
+backgroundImage:
+  type: object
+  comment: Photo behind the banner. On phones it shows below the text instead, and it is the fallback when the video can't play.
+  options:
+    preview:
+      icon: image
+      text:
+        - key: alt
+        - Background Image
+      subtext:
+        - key: source
+        - Add an image source
+      image:
+        - key: source
+backgroundImage.source:
+  comment: URL or path to the background image.
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+backgroundImage.alt:
+  comment: Alt text for the background image.
+  type: textarea
+backgroundImage.positionVertical:
+  comment: Vertical position of the background image.
+  type: select
+  options:
+    values:
+      - id: top
+        name: Top
+      - id: center
+        name: Center
+      - id: bottom
+        name: Bottom
+backgroundImage.positionHorizontal:
+  comment: Horizontal position of the background image.
+  type: select
+  options:
+    values:
+      - id: left
+        name: Left
+      - id: center
+        name: Center
+      - id: right
+        name: Right
+backgroundVideo:
+  type: file
+  comment: Optional MP4 that plays silently behind the text on desktop instead of the photo. Keep it short and small (a few MB).
+  options:
+    paths:
+      uploads: public/videos
+      static: public
