@@ -38,7 +38,7 @@ const TitleTag = href ? "a" : "span";
 
 <li class:list={["services-grid-item text-center", className]} {...htmlAttributes}>
   {/* White circle holding the icon, half above the card's top edge. */}
-  <div class="icon-circle">
+  <div class="service-icon">
     {iconName && <AstroIcon name={iconName} aria-hidden="true" />}
   </div>
 
@@ -86,12 +86,13 @@ const TitleTag = href ? "a" : "span";
     box-shadow: 0 3px 6px rgb(0 0 0 / 0.16);
     list-style: none;
     margin: 0;
+    overflow: visible;
     padding: 85px 25px 40px;
     position: relative;
     width: 100%;
   }
 
-  .icon-circle {
+  .service-icon {
     align-items: center;
     background-color: var(--color-bg);
     border-radius: 50%;
@@ -106,7 +107,7 @@ const TitleTag = href ? "a" : "span";
     width: 125px;
   }
 
-  .icon-circle :global(svg) {
+  .service-icon :global(svg) {
     height: 50px;
     width: 70px;
   }
