@@ -33,7 +33,6 @@ const normalizedLinks = Array.isArray(links)
   : [];
 
 const iconName = typeof icon === "string" && icon.trim() ? `services/${icon.trim()}` : "";
-const TitleTag = href ? "a" : "span";
 ---
 
 <li class:list={["services-grid-item text-center", className]} {...htmlAttributes}>
@@ -42,14 +41,19 @@ const TitleTag = href ? "a" : "span";
     {iconName && <AstroIcon name={iconName} aria-hidden="true" />}
   </div>
 
+  {/* Written out (not a dynamic tag) so CloudCannon's editor preview renders it. */}
   <h3>
-    <TitleTag
-      href={href || undefined}
-      data-editable={editable ? "text" : undefined}
-      data-prop={editable ? "title" : undefined}
-    >
-      <Fragment set:html={titleHtml} />
-    </TitleTag>
+    {
+      href ? (
+        <a href={href} data-editable="text" data-prop="title">
+          <Fragment set:html={titleHtml} />
+        </a>
+      ) : (
+        <span data-editable="text" data-prop="title">
+          <Fragment set:html={titleHtml} />
+        </span>
+      )
+    }
   </h3>
 
   {
