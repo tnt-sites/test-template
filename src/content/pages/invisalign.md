@@ -39,7 +39,7 @@ pageSections:
     text: Patients of All Ages Proudly Welcomed
 - _component: page-sections/services/service-split
   heading: How Invisalign Works
-  anchorName: ''
+  anchorName: how
   subtext: Your Invisalign journey begins with a consultation and a digital scan of your teeth, which
     is then used to create a precise treatment plan. You’ll advance through different sets of aligners,
     and as they’re worn, they will apply gradual pressure to your teeth that facilitates micromovements
@@ -54,7 +54,7 @@ pageSections:
   showHeadingBar: true
 - _component: page-sections/services/service-split
   heading: Is Invisalign Right for Me?
-  anchorName: ''
+  anchorName: right
   subtext: 'Most people who wonder about clear aligners turn out to be excellent candidates. Invisalign
     addresses many common orthodontic issues effectively, and both adults and teens achieve great results
     with this treatment at Medford Dental Wellness.

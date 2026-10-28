@@ -131,10 +131,10 @@ pageSections:
     links:
     - _component: page-sections/ctas/services-grid/service-link
       label: Invisalign® Clear Aligners
-      href: /invisalign/
+      href: /invisalign/#how
     - _component: page-sections/ctas/services-grid/service-link
       label: Traditional Braces
-      href: /invisalign/
+      href: /invisalign/#right
   - _component: page-sections/ctas/services-grid/services-grid-item
     icon: jaw
     title: I Have Jaw Pain

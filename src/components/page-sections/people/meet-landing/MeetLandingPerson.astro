@@ -20,7 +20,7 @@ const link = typeof href === "string" && href.trim() ? href.trim() : "";
 ---
 
 <li class:list={["meet-landing-person", className]} {...htmlAttributes}>
-  <a href={link || undefined} tabindex="-1" aria-hidden="true">
+  <a class="photo" href={link || undefined} tabindex="-1" aria-hidden="true">
     <Image
       source={imageSource}
       alt={imageAlt}
@@ -48,7 +48,7 @@ const link = typeof href === "string" && href.trim() ? href.trim() : "";
     padding: 0;
   }
 
-  .meet-landing-person a {
+  .meet-landing-person .photo {
     display: block;
   }
 

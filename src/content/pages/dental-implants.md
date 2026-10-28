@@ -15,15 +15,7 @@ pageSections:
     Dental implants represent a different approach entirely. At Medford Dental Wellness, our team uses
     titanium posts that fuse directly with your jawbone through osseointegration. This biological process
     creates a stable foundation that supports a custom crown, bridge, or denture. Unlike other tooth replacement
-    options, implants preserve jawbone structure and function much like natural tooth roots.
-
-
-    Each treatment plan reflects your unique anatomy and goals. We evaluate bone density, gum health,
-    and medical history to design an approach that fits your specific situation. You''ll receive clear
-    information about the process, timeline, and investment before any treatment begins.
-
-
-    Ready to explore whether implants could work for you? Call us to schedule your consultation.'
+    options, implants preserve jawbone structure and function much like natural tooth roots.'
   overlay: medium
   showStripes: true
   backgroundImage:

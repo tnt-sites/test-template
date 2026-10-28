@@ -180,6 +180,22 @@ pageSections:
   reverse: false
   background: white
   showHeadingBar: true
+- _component: page-sections/services/service-split
+  heading: Ready to See If All-on-X Is Right for You?
+  anchorName: ''
+  subtext: 'All-on-X represents a significant investment in your oral health and quality of life. During
+    your consultation at Medford Dental Wellness, we''ll evaluate your specific situation, discuss your
+    treatment goals, and determine whether this solution aligns with your needs.
+
+
+    Schedule your consultation with us by [**calling (781) 395-5545**](/contact/) or requesting an appointment
+    online. We''re here to provide the information you need to move forward with confidence.'
+  imageSource: /src/assets/images/internal/all-on-x-7.webp
+  imageAlt: ''
+  buttonSections: []
+  reverse: true
+  background: cream
+  showHeadingBar: true
 - _component: page-sections/info-blocks/faq-section
   heading: All-on-X Dental Implants Frequently Asked Questions
   singleOpen: true
@@ -228,22 +244,6 @@ pageSections:
       text: Implant failure is uncommon when proper protocols are followed. Should it occur, replacement
         is often possible depending on the specific situation. Dr. Qu will assess the circumstances and
         explain your options for maintaining your full-arch restoration.
-- _component: page-sections/services/service-split
-  heading: Ready to See If All-on-X Is Right for You?
-  anchorName: ''
-  subtext: 'All-on-X represents a significant investment in your oral health and quality of life. During
-    your consultation at Medford Dental Wellness, we''ll evaluate your specific situation, discuss your
-    treatment goals, and determine whether this solution aligns with your needs.
-
-
-    Schedule your consultation with us by [**calling (781) 395-5545**](/contact/) or requesting an appointment
-    online. We''re here to provide the information you need to move forward with confidence.'
-  imageSource: /src/assets/images/internal/all-on-x-7.webp
-  imageAlt: ''
-  buttonSections: []
-  reverse: true
-  background: cream
-  showHeadingBar: true
 - _component: page-sections/ctas/more-to-explore
   heading: More to Explore
   buttonSections:

@@ -27,6 +27,7 @@ pageSections:
     text: Read Our Google Reviews
     hideText: false
     link: https://www.google.com/maps/place/Medford+Dental+Wellness+Center/@42.4160386,-71.1112106,619m/data=!3m2!1e3!5s0x89e376c7e84467a5:0xffb323997179aead!4m8!3m7!1s0x8a1953f5f42589d7:0xe8506212b913ef05!8m2!3d42.4160386!4d-71.1112106!9m1!1b1!16s%2Fg%2F11yvhgjkzc!5m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MTAxMi4wIKXMDSoASAFQAw%3D%3D
+    newTab: true
     iconName: ''
     iconPosition: before
     variant: primary
@@ -36,6 +37,7 @@ pageSections:
     text: Read Our Facebook Reviews
     hideText: false
     link: https://www.facebook.com/medforddentalassociates/reviews
+    newTab: true
     iconName: ''
     iconPosition: before
     variant: primary
@@ -58,6 +60,7 @@ pageSections:
     text: Leave Us a Google Review
     hideText: false
     link: https://www.google.com/maps/place/Medford+Dental+Wellness+Center/@42.4160386,-71.1112106,619m/data=!3m2!1e3!5s0x89e376c7e84467a5:0xffb323997179aead!4m8!3m7!1s0x8a1953f5f42589d7:0xe8506212b913ef05!8m2!3d42.4160386!4d-71.1112106!9m1!1b1!16s%2Fg%2F11yvhgjkzc!5m1!1e1?hl=en-US&entry=ttu&g_ep=EgoyMDI2MTAxMi4wIKXMDSoASAFQAw%3D%3D
+    newTab: true
     iconName: ''
     iconPosition: before
     variant: primary

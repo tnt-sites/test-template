@@ -46,11 +46,6 @@
           "name": "Smile Gallery",
           "path": "/smile-gallery/",
           "children": []
-        },
-        {
-          "name": "Reviews",
-          "path": "/reviews/",
-          "children": []
         }
       ]
     },
@@ -145,6 +140,11 @@
           "name": "Request an Appointment",
           "path": "/request-an-appointment/",
           "children": []
+        },
+        {
+          "name": "Reviews",
+          "path": "/reviews/",
+          "children": []
         }
       ]
     },
@@ -155,11 +155,6 @@
         {
           "name": "Request an Appointment",
           "path": "/request-an-appointment/",
-          "children": []
-        },
-        {
-          "name": "Reviews",
-          "path": "/reviews/",
           "children": []
         }
       ]

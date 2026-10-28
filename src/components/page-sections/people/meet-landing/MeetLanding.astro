@@ -78,9 +78,11 @@ const doctorsArrayDataAttributes = editable
     padding: 0;
   }
 
-  /* Two per row on phones, up to four on desktop. */
+  /* One per row on phones and tablets, 2x2 on small desktops, four across on
+     wide screens. */
   .meet-landing ul > :global(editable-array-item) {
-    width: 46%;
+    max-width: 300px;
+    width: 100%;
   }
 
   @media (min-width: 1024px) {
@@ -90,10 +92,18 @@ const doctorsArrayDataAttributes = editable
 
     .meet-landing ul {
       gap: 30px;
+      max-width: 560px;
     }
 
     .meet-landing ul > :global(editable-array-item) {
       width: 265px;
+    }
+  }
+
+  /* Room for all four in one row (4 x 265px + gaps + side padding). */
+  @media (min-width: 1240px) {
+    .meet-landing ul {
+      max-width: 1230px;
     }
   }
 </style>

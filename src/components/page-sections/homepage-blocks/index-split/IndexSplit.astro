@@ -52,7 +52,8 @@ const hasAccent =
   id={anchorName || undefined}
   {...htmlAttributes}
 >
-  {/* Photo first so it's on top on phones; on desktop it sits on the right unless "reverse". */}
+  {/* Photo first so it's on top on phones; on desktop it sits on the right unless "reverse".
+      A map is desktop only. */}
   <div
     class:list={[
       "block text-center lg:text-left lg:flex justify-around",
@@ -60,7 +61,7 @@ const hasAccent =
       !reverse && "lg:flex-row-reverse",
     ]}
   >
-    <figure>
+    <figure class:list={[mapSrc && "hidden lg:block"]}>
       {
         mapSrc ? (
           <iframe

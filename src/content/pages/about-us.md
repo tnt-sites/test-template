@@ -22,7 +22,7 @@ pageSections:
     heading: Honesty
     anchorName: ''
     subtext: >-
-      You can handle the truth.?
+      You can handle the truth.
 
 
       Whether it’s good news or bad news, we’ll always give you the real news.
@@ -45,7 +45,7 @@ pageSections:
     heading: Integrity
     anchorName: ''
     subtext: >-
-      We embody the genuine core of who we are.?
+      We embody the genuine core of who we are.
 
 
       It’s always the right thing to do the right thing, even when it’s hard.
@@ -68,7 +68,7 @@ pageSections:
     heading: Grace
     anchorName: ''
     subtext: >-
-      Our hearts lead our hands.?
+      Our hearts lead our hands.
 
 
       We’re people serving people. Great dentistry begins with empathy,
@@ -91,7 +91,7 @@ pageSections:
     heading: Hard Work
     anchorName: ''
     subtext: >-
-      You deserve our best.?
+      You deserve our best.
 
 
       However you want to say it – second mile service, above and beyond care –
@@ -113,7 +113,7 @@ pageSections:
     heading: Curiosity
     anchorName: ''
     subtext: >-
-      Advancements keep coming.?
+      Advancements keep coming.
 
 
       From cutting-edge technology to innovative treatments, we continue to

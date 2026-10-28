@@ -17,6 +17,7 @@ const {
   textColor = "default",
   uppercase = false,
   link,
+  newTab = false,
   modalTarget,
   openAppointmentWidget = false,
   element = "a",
@@ -115,7 +116,9 @@ const tagProps = normalizedModalTarget
       "aria-controls": normalizedModalTarget,
     }
   : Tag === "a" && link
-    ? { href: link }
+    ? newTab
+      ? { href: link, target: "_blank", rel: "noopener noreferrer" }
+      : { href: link }
     : Tag === "button"
       ? { type: "button" }
       : {};
@@ -496,7 +499,8 @@ if (!_component && !hasText && !hasSlotContent && !hasIcon) return;
     @media (max-width: 768px) {
       .button {
         min-width: auto;
-        display: block;
+        /* Flex (not block) keeps the label centred vertically. */
+        display: flex;
       }
     }
   }

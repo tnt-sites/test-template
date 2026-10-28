@@ -288,23 +288,28 @@ const addressText = firstAddress
         }
       }
 
+      /* Dropdown arrows: white chevron in a white outlined box so they read as
+         buttons separate from the link text. */
       > .bar-list > .nav-item > .nav-item-trigger {
-        border: 0;
-        color: var(--color-brand);
-        min-height: 1rem;
-        min-width: 1rem;
+        border: 1px solid var(--gray-0);
+        border-radius: 3px;
+        color: var(--gray-0);
+        min-height: 20px;
+        min-width: 20px;
         padding: 0;
 
         &:hover,
         &:focus-visible {
-          background: transparent;
-          color: var(--color-brand-muted);
+          background: var(--gray-0);
+          border-color: var(--gray-0);
+          color: var(--color-brand-secondary);
         }
 
         .nav-item-icon {
           color: inherit;
+          display: flex;
           transform: rotate(90deg);
-          width: 0.875rem;
+          width: 0.75rem;
         }
       }
 
@@ -342,21 +347,48 @@ const addressText = firstAddress
         }
 
         .nav-item-trigger {
-          border: 0;
-          color: var(--color-brand);
+          background: var(--color-brand-secondary);
+          border: 1px solid var(--color-brand-secondary);
+          border-radius: 3px;
+          color: var(--gray-0);
           margin-right: 10px;
+          min-height: 20px;
+          min-width: 20px;
+
+          &:hover,
+          &:focus-visible {
+            background: var(--color-brand);
+            border-color: var(--color-brand);
+          }
+
+          .nav-item-icon {
+            color: inherit;
+            display: flex;
+            width: 0.75rem;
+          }
         }
-      }
-    }
 
-    /* Green is too dark against the slate bar, so use the light blue there. */
-    .main-nav.is-solid .desktop-main-nav.bar > .bar-list > .nav-item > .nav-item-trigger,
-    .main-nav.is-scrolled .desktop-main-nav.bar > .bar-list > .nav-item > .nav-item-trigger {
-      color: var(--color-brand-muted);
+        /* Nested arrows point right and stay that way while their menu is open. */
+        .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+          transform: none;
+        }
 
-      &:hover,
-      &:focus-visible {
-        color: var(--gray-0);
+        /* Third-level menus fly out to the right of their arrow instead of
+           opening inline. */
+        .nav-item.has-children > .nav-item-nested {
+          background: var(--color-bg);
+          box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+          left: 100%;
+          min-width: 15rem;
+          padding-block: 5px;
+          position: absolute;
+          top: -5px;
+          z-index: var(--layer-3);
+
+          .nav-item > a {
+            padding: 10px 20px;
+          }
+        }
       }
     }
 
