@@ -294,9 +294,11 @@ const addressText = firstAddress
         border: 1px solid var(--gray-0);
         border-radius: 3px;
         color: var(--gray-0);
-        min-height: 20px;
-        min-width: 20px;
+        height: 20px;
+        min-height: 0;
+        min-width: 0;
         padding: 0;
+        width: 20px;
 
         &:hover,
         &:focus-visible {
@@ -305,11 +307,19 @@ const addressText = firstAddress
           color: var(--color-brand-secondary);
         }
 
+        /* Square box rotated around its centre keeps the chevron centred. */
         .nav-item-icon {
           color: inherit;
           display: flex;
+          height: 12px;
           transform: rotate(90deg);
-          width: 0.75rem;
+          transform-origin: center;
+          width: 12px;
+
+          svg {
+            height: 100%;
+            width: 100%;
+          }
         }
       }
 
@@ -351,9 +361,12 @@ const addressText = firstAddress
           border: 1px solid var(--color-brand-secondary);
           border-radius: 3px;
           color: var(--gray-0);
+          height: 20px;
           margin-right: 10px;
-          min-height: 20px;
-          min-width: 20px;
+          min-height: 0;
+          min-width: 0;
+          padding: 0;
+          width: 20px;
 
           &:hover,
           &:focus-visible {
@@ -364,7 +377,14 @@ const addressText = firstAddress
           .nav-item-icon {
             color: inherit;
             display: flex;
-            width: 0.75rem;
+            height: 12px;
+            transform-origin: center;
+            width: 12px;
+
+            svg {
+              height: 100%;
+              width: 100%;
+            }
           }
         }
 
