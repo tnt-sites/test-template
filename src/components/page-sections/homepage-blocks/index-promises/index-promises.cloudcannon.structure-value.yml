@@ -1,0 +1,27 @@
+label: Index Promises
+icon: check_circle
+description: Light blue band with checkmark promises and a button.
+value:
+  _component: page-sections/homepage-blocks/index-promises
+  id: ""
+  heading: Our Promises to You
+  promises:
+    - title: Promise title
+      text: Promise description
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: Learn More
+      link: /about-us/
+      variant: tertiary
+      size: md
+preview:
+  text:
+    - Index Promises
+  subtext:
+    - key: heading
+  icon: check_circle
+picker_preview:
+  text: Index Promises
+  subtext: Light blue band with checkmark promises and a button.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-promises/index-promises.cloudcannon.inputs.yml

@@ -1,0 +1,20 @@
+label: Interior Text
+icon: article
+description: Heading and long-form text in a single column, with an optional blue band.
+value:
+  _component: page-sections/interior/interior-text
+  id: ""
+  heading: Section Heading
+  text: Body copy placeholder text.
+  band: false
+preview:
+  text:
+    - Interior Text
+  subtext:
+    - key: heading
+  icon: article
+picker_preview:
+  text: Interior Text
+  subtext: Heading and long-form text in a single column, with an optional blue band.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/interior-text/interior-text.cloudcannon.inputs.yml

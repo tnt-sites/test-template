@@ -3,31 +3,31 @@
     {
       "itemClass": "ra",
       "enabled": true,
-      "href": "request-an-appointment.html",
+      "href": "/request-an-appointment/",
       "icon": "calendar-days",
       "textMobile": "Request",
-      "textStrong": " an Appointment"
+      "textStrong": null
     },
     {
       "itemClass": "call",
       "enabled": true,
-      "href": "#modal-contact",
+      "href": "tel:+13034249470",
       "icon": "phone",
-      "textMobile": "Offices",
+      "textMobile": "Call",
       "textStrong": null
     },
     {
       "itemClass": "map",
       "enabled": true,
-      "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
+      "href": "https://www.google.com/maps/place/Adkins+Family+Dentistry/@39.775959,-105.080698,15z/data=!4m5!3m4!1s0x0:0x395e5900ed700f0e!8m2!3d39.775959!4d-105.080698",
       "target": "_blank",
       "icon": "map-pin",
-      "textStrong": "View ",
-      "textAfter": "Map"
+      "textStrong": null,
+      "textMobile": "Map"
     },
     {
       "itemClass": "fr",
-      "enabled": true,
+      "enabled": false,
       "href": "for-patients.html#forms",
       "icon": "document-arrow-down",
       "textMobile": "Download ",
@@ -35,7 +35,7 @@
     },
     {
       "itemClass": "fb",
-      "enabled": true,
+      "enabled": false,
       "href": "https://www.facebook.com/Ishaya.DDS/photos/?locale=ms_MY",
       "target": "_blank",
       "icon": "social/facebook",
@@ -44,7 +44,7 @@
     },
     {
       "itemClass": "gg",
-      "enabled": true,
+      "enabled": false,
       "href": "https://maps.app.goo.gl/K2MQJEnBWLAWSDU7A",
       "target": "_blank",
       "icon": "social/google",

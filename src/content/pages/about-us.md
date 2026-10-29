@@ -1,208 +1,80 @@
 ---
 _schema: default
-title: About Us
+title: About Our Dental Practice in Wheat Ridge, CO
+description: Our locally-owned Wheat Ridge dental office is ready to help you
+  with questions about scheduling, financial policy and insurance to make your
+  visit as simple…
 pageSections:
-  - _component: page-sections/heroes/hero-split
+  - _component: page-sections/interior/interior-banner
     id: ''
-    eyebrow: Service - City, ST
-    heading: Creative <span class="heading-color">Title</span>
-    subtext: Subtitle placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: Hero image
-    imageAspectRatio: none
+    eyebrow: About Our Dental Practice Wheat Ridge
+    heading: What Makes Us Unique?
+    imageSource: /src/assets/images/adkins/internal/about-us-1.webp
+    imageAlt: ''
+    textLeft: false
+  - _component: page-sections/interior/service-split
+    id: ''
+    heading: WE ARE COMMITTED
+    text: To optimal dentistry in a comfortable, caring environment for you and your
+      family.
+    imageSource: /src/assets/images/adkins/internal/about-us-2.webp
+    imageAlt: ''
+    videoType: youtube
+    videoId: ''
+    imageLeft: true
     buttonSections: []
-    reverse: false
-    colorScheme: inherit
-    backgroundColor: none
-  - _component: page-sections/ctas/cta-split
+  - _component: page-sections/interior/interior-text
     id: ''
-    heading: Heading <span class="heading-font">text</span>
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
+    heading: ''
+    text: >-
+      ### We Strive
+
+
+      To make each visit pleasant and informative, thereby establishing
+      long-term relationships based upon mutual respect.
+
+
+      ### We Are Dedicated
+
+
+      Through continuing education to providing our patients with dental health
+      for a lifetime.
+    band: true
+  - _component: page-sections/interior/service-split
+    id: ''
+    heading: Meet Dr. Adkins
+    text: Dr. Christopher Adkins believes in delivering the highest quality
+      dentistry possible, and settles for nothing less than perfection. Patients
+      always receive the same care he would give to his own family.
+    imageSource: ''
+    imageAlt: ''
+    videoType: vimeo
+    videoId: '465488653'
+    imageLeft: true
     buttonSections:
       - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: text
-        size: md
-        width: xs
-    reverse: false
-    colorScheme: default
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-split
-    id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
-    imageSource: /src/assets/images/component-library/dunedin-cliff.jpg
-    imageAlt: CTA image
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
+        text: Get to Know Dr. Adkins
+        link: /about-us/meet-dr-adkins/
         variant: primary
         size: md
-        width: xs
-    reverse: true
-    colorScheme: default
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/ctas/cta-center
+        width: none
+  - _component: page-sections/interior/service-split
     id: ''
-    heading: Heading text
-    anchorName: ''
-    subtext: Subtext placeholder text that will be replaced with actual content.
+    heading: Meet Our Staff
+    text: Most of our phenomenal team has been working alongside Dr. Adkins for over
+      15 years, delivering consistent, high-quality dental care to Wheat Ridge
+      families. We invite you to get to know the friendly faces you will see at
+      each visit by reading each of our staff’s short bios below.
+    imageSource: /src/assets/images/adkins/internal/about-us-3.webp
+    imageAlt: ''
+    videoType: youtube
+    videoId: ''
+    imageLeft: false
     buttonSections:
       - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
+        text: Meet the Team
+        link: /about-us/meet-the-team/
         variant: primary
         size: md
-        width: xs
-    colorScheme: inherit
-    backgroundColor: base
-    rounded: false
-  - _component: page-sections/builders/custom-section
-    id: ''
-    label: tour
-    contentSections:
-      - _component: building-blocks/wrappers/carousel
-        id: ''
-        label: Carousel Test
-        slides:
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile3.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-          - _component: building-blocks/wrappers/carousel/carousel-slide
-            contentSections:
-              - _component: building-blocks/core-elements/image
-                id: ''
-                source: /src/assets/images/component-library/profile5.jpg
-                alt: ''
-                rounded: true
-                aspectRatio: none
-                positionVertical: center
-                positionHorizontal: center
-                priority: false
-        autoPlay: false
-        autoScroll: false
-        slideWidthPercent: 60
-        minSlideWidth: 0
-    maxContentWidth: 2xl
-    paddingHorizontal: md
-    paddingVertical: md
-    colorScheme: inherit
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-    rounded: false
-  - _component: page-sections/features/office-tour
-    id: ''
-    heading: office-tour Heading
-    tourSlides:
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/castle.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/dunedin-cliff.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-      - _component: building-blocks/core-elements/image
-        id: ''
-        source: /src/assets/images/component-library/profile5.jpg
-        alt: ''
-        rounded: false
-        aspectRatio: none
-        positionVertical: center
-        positionHorizontal: center
-        priority: false
-    backgroundColor: base
-    slideNumbers: true
-    floatingArrows: true
-  - _component: page-sections/ctas/more-to-explore
-    id: ''
-    heading: More to <span class="color">Explore</span>
-    buttonSections:
-      - _component: building-blocks/core-elements/button
-        id: ''
-        text: My Button
-        hideText: false
-        link: ''
-        modalTarget: ''
-        iconName: ''
-        iconPosition: before
-        variant: primary
-        size: md
-        width: xs
-    maxContentWidth:
-    paddingHorizontal: sm
-    paddingVertical: sm
-    colorScheme: default
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-  - _component: page-sections/ctas/services-grid
-    id: ''
-    heading: Services Grid Heading
-    backgroundColor: base
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
-description: ''
+        width: none
 ---

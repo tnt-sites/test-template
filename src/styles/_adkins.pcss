@@ -1,0 +1,79 @@
+/* Adkins Family Dentistry site-wide styles, taken from files/Final.xd (Internal-Stylguide artboard).
+   Colors and fonts come from src/data/branding.json; this file only sets how they're applied. */
+
+@layer overrides {
+  body {
+    color: var(--color-text);
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  :where(:root) {
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: var(--color-brand);
+      font-weight: 200;
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+    }
+  }
+
+  /* Paragraphs and lists follow their section's size and color instead of the starter's fixed 16px. */
+  :where(:root) {
+    p,
+    ul,
+    ol {
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  /* Solid buttons are orange; outline buttons ("Learn More") are blue outline. Both turn solid blue on hover. */
+  .button {
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+
+    &.variant-primary {
+      background-color: var(--color-accent);
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-brand-secondary);
+        color: #fff;
+      }
+    }
+
+    &.variant-secondary {
+      background-color: var(--color-brand-secondary);
+      color: #fff;
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-brand);
+      }
+    }
+
+    &.variant-tertiary {
+      background-color: transparent;
+      border: 1px solid var(--color-brand-secondary);
+      color: var(--color-brand-secondary);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-brand-secondary);
+        border-color: var(--color-brand-secondary);
+        color: #fff;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+heading:
+  type: text
+  comment: Section heading (e.g. "Why Choose Adkins Family Dentistry for Dental Implants?").
+items:
+  type: array
+  comment: Checkmark reasons. Three fit best on one row.
+  options:
+    structures:
+      values:
+        - label: Reason
+          icon: check
+          value:
+            text: Reason text
+          preview:
+            text:
+              - key: text
+items[*].text:
+  type: text
+  comment: Reason text shown under the checkmark.

@@ -1,0 +1,208 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Image from "@core-elements/image/Image.astro";
+import Video from "@core-elements/video/Video.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  videoType = "vimeo",
+  videoId = "",
+  imageSource = "",
+  imageAlt = "",
+  reviews = [],
+  backgroundImage = "",
+  buttonSections = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["index-video-reviews", className]}
+  paddingVertical="none"
+  backgroundImage={{ source: backgroundImage, alt: "" }}
+  {...htmlAttributes}
+>
+  <div class="wrap block text-center">
+    <section class="block lg:flex justify-center items-stretch">
+      <figure>
+        {
+          videoId ? (
+            <Video type={videoType} id={videoId} title="Patient review" />
+          ) : (
+            <Image source={imageSource} alt={imageAlt} data-prop-src="imageSource" />
+          )
+        }
+      </figure>
+      <article data-review-slider>
+        <div class="slides">
+          {
+            reviews.map((review: any, index: number) => (
+              <blockquote
+                data-active={index === 0 ? "" : undefined}
+                aria-hidden={index === 0 ? undefined : "true"}
+              >
+                <p>{review.quote}</p>
+                <cite>{review.name}</cite>
+              </blockquote>
+            ))
+          }
+        </div>
+        {
+          reviews.length > 1 && (
+            <nav>
+              {reviews.map((_: any, index: number) => (
+                <button
+                  type="button"
+                  aria-label={`Show review ${index + 1}`}
+                  aria-current={index === 0 ? "true" : undefined}
+                />
+              ))}
+            </nav>
+          )
+        }
+      </article>
+    </section>
+    <ButtonGroup buttonSections={buttonSections} alignX="center" class="buttons" />
+  </div>
+</CustomSection>
+
+<script>
+  document.querySelectorAll("[data-review-slider]").forEach((slider) => {
+    const reviews = [...slider.querySelectorAll("blockquote")];
+    const dots = [...slider.querySelectorAll("nav button")];
+    let current = 0;
+
+    const show = (index: number) => {
+      current = index;
+      reviews.forEach((review, i) => {
+        review.toggleAttribute("data-active", i === index);
+        review.setAttribute("aria-hidden", String(i !== index));
+      });
+      dots.forEach((dot, i) => dot.toggleAttribute("aria-current", i === index));
+    };
+
+    dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+    if (reviews.length > 1) {
+      setInterval(() => show((current + 1) % reviews.length), 7000);
+    }
+  });
+</script>
+
+<style>
+  :global(.index-video-reviews) .wrap {
+    margin: 0 auto;
+    max-width: 1050px;
+    padding: 120px 20px;
+  }
+
+  :global(.index-video-reviews) figure {
+    align-self: center;
+    margin: 0 auto;
+    max-width: 505px;
+  }
+
+  :global(.index-video-reviews) figure :global(.video) {
+    margin: 0;
+  }
+
+  :global(.index-video-reviews) figure :global(img) {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  :global(.index-video-reviews) article {
+    background-color: #fff;
+    margin: 0 auto;
+    max-width: 505px;
+    padding: 35px 45px;
+  }
+
+  /* All reviews share one spot so the box is always as tall as the longest review and
+     never jumps in height while rotating; the active one fades in. */
+  :global(.index-video-reviews) .slides {
+    display: flex;
+  }
+
+  :global(.index-video-reviews) blockquote {
+    border: 0;
+    flex: 0 0 100%;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    transition: opacity 0.4s;
+    visibility: hidden;
+  }
+
+  :global(.index-video-reviews) blockquote + blockquote {
+    margin-left: -100%;
+  }
+
+  :global(.index-video-reviews) blockquote[data-active] {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  :global(.index-video-reviews) blockquote p {
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  :global(.index-video-reviews) cite {
+    color: var(--color-brand-secondary);
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 15px;
+  }
+
+  /* Final.xd dots are 5px, 20px apart; padding keeps a 15px tap target around each */
+  :global(.index-video-reviews) nav {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  :global(.index-video-reviews) nav button {
+    background-clip: content-box;
+    background-color: #c5c5c5;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 15px;
+    padding: 5px;
+    width: 15px;
+  }
+
+  :global(.index-video-reviews) nav button[aria-current] {
+    background-color: var(--color-text-intro);
+  }
+
+  :global(.index-video-reviews) :global(.buttons) {
+    margin-top: 45px;
+  }
+
+  :global(.index-video-reviews) :global(.buttons .button) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 55px;
+    min-width: 225px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-video-reviews) figure,
+    :global(.index-video-reviews) article {
+      flex: 0 1 505px;
+      margin: 0;
+    }
+  }
+</style>

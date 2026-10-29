@@ -1,0 +1,43 @@
+heading:
+  type: text
+  comment: Section heading.
+columns:
+  type: array
+  comment: Payment option columns. Add a button link, logos, or both.
+  options:
+    structures:
+      values:
+        - label: Column
+          icon: payments
+          value:
+            title: Column title
+            text: Column text
+            buttonText: Learn More
+            link: /patient-info/
+            logos: []
+          preview:
+            text:
+              - key: title
+columns[*].title:
+  type: text
+columns[*].text:
+  type: textarea
+columns[*].buttonText:
+  type: text
+columns[*].link:
+  type: url
+  comment: Leave blank to hide the button.
+columns[*].logos:
+  type: array
+  comment: Optional partner logos (e.g. Cherry, CareCredit).
+columns[*].logos[*].imageSource:
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+columns[*].logos[*].imageAlt:
+  type: text
+columns[*].logos[*].height:
+  type: number
+  comment: Logo height in pixels. Leave blank for 33px.

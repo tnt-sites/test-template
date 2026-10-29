@@ -6,13 +6,12 @@ pageSections:
     eyebrow: ""
     heading: All posts
     subtext: >-
-      This paginated blog index displays a grid of article cards, each waiting
-      to be populated with genuine posts once your content strategy moves beyond
-      placeholder text.
+      Tips and answers from Dr. Adkins and our team to help you keep your smile
+      healthy.
     buttonSections: []
     colorScheme: default
     backgroundColor: "var(--color-bg)"
 description: >-
-  Read our latest articles and insights on web development, design, and
-  technology.
+  Dental health articles from Adkins Family Dentistry in Wheat Ridge, CO,
+  covering preventive care, cosmetic dentistry, implants, Invisalign and more.
 ---

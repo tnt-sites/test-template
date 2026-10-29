@@ -1,0 +1,26 @@
+label: Index Video Reviews
+icon: reviews
+description: Review video beside a rotating written review, over a background photo.
+value:
+  _component: page-sections/homepage-blocks/index-video-reviews
+  id: ""
+  videoType: vimeo
+  videoId: ""
+  imageSource: /src/assets/images/adkins/home/review-video.png
+  imageAlt: ""
+  reviews:
+    - quote: "“Review text.”"
+      name: Patient Name
+  backgroundImage: /src/assets/images/adkins/home/reviews-bg.jpg
+  buttonSections: []
+preview:
+  text:
+    - Index Video Reviews
+  subtext:
+    - key: videoId
+  icon: reviews
+picker_preview:
+  text: Index Video Reviews
+  subtext: Review video beside a rotating written review, over a background photo.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-video-reviews/index-video-reviews.cloudcannon.inputs.yml

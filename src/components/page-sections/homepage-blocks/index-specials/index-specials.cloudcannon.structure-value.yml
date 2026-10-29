@@ -1,0 +1,26 @@
+label: Index Specials
+icon: sell
+description: Patient specials cards with a photo, price, title and button.
+value:
+  _component: page-sections/homepage-blocks/index-specials
+  id: ""
+  heading: Patient Specials
+  specials:
+    - imageSource: /src/assets/images/adkins/home/special-new-patient.jpg
+      imageAlt: ""
+      price: $60
+      title: New Patient Special
+      text: Offer details
+      buttonText: Learn More
+      link: /contact-us/
+preview:
+  text:
+    - Index Specials
+  subtext:
+    - key: heading
+  icon: sell
+picker_preview:
+  text: Index Specials
+  subtext: Patient specials cards with a photo, price, title and button.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-specials/index-specials.cloudcannon.inputs.yml

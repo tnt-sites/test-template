@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Button from "@core-elements/button/Button.astro";
 import Divider from "@core-elements/divider/Divider.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import siteInfoData from "@data/siteInfo.json";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
@@ -31,6 +32,9 @@ const {
   phoneLinkHoverColor = "",
   logoSource,
   logoAlt,
+  legalButton,
+  backgroundImage,
+  showEmail = true,
   _component,
   ...htmlAttributes
 } = Astro.props;
@@ -130,19 +134,16 @@ const footerStyle = [
 ---
 
 <footer class="footer" style={footerStyle || undefined} {...htmlAttributes}>
-  <CustomSection maxContentWidth="2xl" paddingHorizontal="md" paddingVertical="2xl">
-    <div class="footer-content">
-      <div class="content-container">
-        <a href="/">
-          <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
-        </a>
-      </div>
-      <!-- <div class="content-container">
-        <Bar navData={links} />
-      </div> -->
-    </div>
-
-    <div id="fo-content" class="fo-content block lg:flex justify-around items-start text-center">
+  <CustomSection
+    maxContentWidth="2xl"
+    paddingHorizontal="md"
+    paddingVertical="2xl"
+    backgroundImage={backgroundImage}
+  >
+    <div id="fo-content" class="fo-content block lg:flex justify-center items-start text-center lg:text-left">
+      <a href="/" class="fo-logo">
+        <Image source={logoSource} alt={logoAlt} class="footer-logo" editable={false} />
+      </a>
       <div class="fo-info">
         <span class="fo-title">{contactTitle}</span>
         {
@@ -153,12 +154,16 @@ const footerStyle = [
                 office.phones.map((phone: any) =>
                   phone?.display ? (
                     <a href={phone?.href || "#"} class="pho">
-                      {phone?.label ? `${phone.label}: ` : ""}
-                      {phone.display}
+                      <Icon name="phone" size="none" class="fo-icon" />
+                      <span>
+                        {phone?.label ? `${phone.label}: ` : ""}
+                        {phone.display}
+                      </span>
                     </a>
                   ) : null
                 )}
-              {Array.isArray(office?.emails) &&
+              {showEmail &&
+                Array.isArray(office?.emails) &&
                 office.emails.map((email: any) =>
                   email?.display ? (
                     <a href={email?.href || "#"} class="pho">
@@ -178,12 +183,15 @@ const footerStyle = [
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {formattedLines.map((line: string, index: number) => (
-                        <>
-                          {line}
-                          {index < formattedLines.length - 1 && <br />}
-                        </>
-                      ))}
+                      <Icon name="map-pin" size="none" class="fo-icon" />
+                      <span>
+                        {formattedLines.map((line: string, index: number) => (
+                          <>
+                            {line}
+                            {index < formattedLines.length - 1 && <br />}
+                          </>
+                        ))}
+                      </span>
                     </a>
                   ) : null;
                 })}
@@ -219,6 +227,7 @@ const footerStyle = [
           resolvedOffices.map((office: any) => (
             <div class="office-hours">
               {/* {office?.name && <span class="office-name">{office.name}</span>} */}
+              <Icon name="clock" size="none" class="fo-icon" />
               <div class="office-hours-list">
                 {(office?.officeHours || []).map((item: any) => (
                   <div class="office-hours-row">
@@ -299,6 +308,13 @@ const footerStyle = [
         </div>
         {blurb && <p class="footer-legal-blurb">{blurb}</p>}
       </div>
+      {
+        legalButton?.text && (
+          <a href={legalButton.link || "#"} class="fo-legal-button">
+            {legalButton.text}
+          </a>
+        )
+      }
     </div>
   </CustomSection>
 </footer>
@@ -466,8 +482,164 @@ const footerStyle = [
       }
     }
 
+    /* Adkins footer from Final.xd: textured blue band with logo, Contact Us and Office Hours
+       columns. Titles and icons are gold; text is white. Links hover gold (never the band blue). */
+    .footer {
+      background-color: var(--color-brand);
+      color: #fff;
+      font-size: 18px;
+      line-height: 22px;
+
+      .fo-content {
+        .fo-logo {
+          display: block;
+          margin-bottom: 30px;
+        }
+
+        .footer-logo img {
+          height: auto;
+          margin: 0 auto;
+          width: 155px;
+        }
+
+        .fo-title {
+          color: #e8c58c;
+          font-weight: var(--font-weight-bold);
+          margin-bottom: 10px;
+          text-align: inherit;
+        }
+
+        .fo-icon {
+          color: #e8c58c;
+          flex: none;
+          height: 20px;
+          width: 20px;
+        }
+
+        .fo-icon svg {
+          height: 20px;
+          width: 20px;
+        }
+
+        .pho,
+        .phy {
+          align-items: flex-start;
+          color: #fff;
+          display: inline-flex;
+          gap: 15px;
+          margin-bottom: 10px;
+          text-align: left;
+        }
+
+        .pho {
+          font-weight: var(--font-weight-bold);
+        }
+
+        .pho:hover,
+        .pho:focus-visible,
+        .phy:hover,
+        .phy:focus-visible {
+          color: #e8c58c;
+        }
+
+        .social {
+          margin-top: 5px;
+        }
+
+        .social .button {
+          color: #fff;
+        }
+
+        .social .button:hover,
+        .social .button:focus-visible {
+          background-color: transparent;
+          color: #e8c58c;
+        }
+
+        .fo-hours {
+          margin-top: 30px;
+        }
+
+        .office-hours {
+          --office-hours-color: #fff;
+          --office-hours-day-color: #fff;
+          --office-hours-note-color: #fff;
+          --office-hours-day-width: 112px;
+          --office-hours-gap: 0;
+
+          align-items: flex-start;
+          display: inline-flex;
+          gap: 15px;
+          margin: 0;
+          text-align: left;
+        }
+
+        .office-hours-day {
+          font-weight: var(--font-weight-normal);
+        }
+
+        .office-hours-row + .office-hours-row {
+          margin-top: 0;
+        }
+
+        /* Final.xd shows the note in the time column, same size as the hours */
+        .office-hours-note {
+          font-size: inherit;
+          line-height: inherit;
+          white-space: nowrap;
+        }
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .fo-legal-button {
+        background-color: var(--color-brand);
+        border: 1px solid #fff;
+        border-radius: 4px;
+        color: #fff;
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px 20px;
+        text-decoration: none;
+      }
+
+      .fo-legal-button:hover,
+      .fo-legal-button:focus-visible {
+        background-color: #fff;
+        color: var(--color-brand);
+      }
+
+      .footer-content {
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .footer .fo-content {
+        .fo-logo {
+          margin: 0 150px 0 0;
+        }
+
+        .fo-info {
+          flex: 0 0 360px;
+        }
+
+        .fo-hours {
+          margin-top: 0;
+        }
+
+        .social .button-group {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    /* Legal row: muted #739DCE text and links (Final.xd); links hover white */
     #copy {
-      font-size: var(--font-size-sm);
+      color: #739dce;
+      font-size: 11px;
       line-height: 1.5;
       padding: var(--spacing-md) var(--spacing-sm);
       text-align: center;
@@ -482,11 +654,11 @@ const footerStyle = [
       }
 
       a {
-        color: var(--color-link);
+        color: #739dce;
 
         &:hover,
         &:focus-visible {
-          color: var(--color-link-hover);
+          color: #fff;
         }
       }
 

@@ -1,18 +1,29 @@
 ---
 _schema: default
-title: Contact Us
+title: Contact Wheat Ridge Dental Practice
+description: Thank you for considering our dental office in Wheat Ridge, CO! Dr.
+  Adkins and his staff look forward to helping you achieve the quality oral
+  health that you…
 pageSections:
+  - _component: page-sections/interior/interior-banner
+    id: ''
+    eyebrow: Contact Wheat Ridge Dental Practice
+    heading: Get in Touch with Our Team Today!
+    imageSource: /src/assets/images/adkins/internal/contact-1.webp
+    imageAlt: ''
+    textLeft: false
+  - _component: page-sections/interior/service-intro
+    id: ''
+    text: Thank you for considering our dental office in Wheat Ridge, CO! Dr. Adkins
+      and his staff look forward to helping you achieve the quality oral health
+      that you deserve. Schedule with our friendly team by completing our form
+      below or call us today! We are also proud to treat families in the Arvada,
+      Littleton, Westminster, and Lakewood areas.
   - _component: page-sections/info-blocks/contact
-    id: ""
-    backgroundColor: "var(--color-bg)"
-    backgroundGradient: ""
-    backgroundImage:
-      source:
-      alt:
-      positionVertical: top
-      positionHorizontal: center
+    id: ''
+    backgroundColor: base
     officeHoursTitle: Office Hours
-    mapEmbedUrl: >-
-      https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3346.989778614257!2d-96.7204146227281!3d32.977671473580436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c23374904d86b%3A0x1d6d5ef027560e48!2sTNT%20Dental!5e0!3m2!1sen!2sus!4v1773839398787!5m2!1sen!2sus
-description: ""
+    doctorNames:
+      - Christopher Adkins, DDS
+    mapEmbedUrl: ''
 ---

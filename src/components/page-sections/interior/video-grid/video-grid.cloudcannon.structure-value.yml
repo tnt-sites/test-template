@@ -1,0 +1,22 @@
+label: Video Grid
+icon: smart_display
+description: YouTube or Vimeo videos, two per row.
+value:
+  _component: page-sections/interior/video-grid
+  id: ""
+  heading: ""
+  videos:
+    - type: youtube
+      id: ""
+      title: ""
+preview:
+  text:
+    - Video Grid
+  subtext:
+    - key: heading
+  icon: smart_display
+picker_preview:
+  text: Video Grid
+  subtext: YouTube or Vimeo videos, two per row.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/video-grid/video-grid.cloudcannon.inputs.yml

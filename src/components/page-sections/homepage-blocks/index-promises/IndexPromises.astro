@@ -1,0 +1,142 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  promises = [],
+  buttonSections = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection class:list={["index-promises", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <ul class="no-check block lg:flex justify-center items-start">
+      {
+        promises.map((promise: any) => (
+          <li>
+            <span class="check">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+            </span>
+            <h3>{promise.title}</h3>
+            <p>{promise.text}</p>
+          </li>
+        ))
+      }
+    </ul>
+    <ButtonGroup buttonSections={buttonSections} alignX="center" class="buttons" />
+  </div>
+</CustomSection>
+
+<style>
+  :global(.index-promises) {
+    background: linear-gradient(#b4c5d6, var(--color-band) 145px);
+  }
+
+  :global(.index-promises) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 95px 20px 100px;
+  }
+
+  :global(.index-promises) :global(.title) {
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-transform: uppercase;
+  }
+
+  :global(.index-promises) ul {
+    list-style: none;
+    margin: 105px 0 0;
+    padding: 0;
+  }
+
+  :global(.index-promises) li {
+    margin: 0 auto 40px;
+    max-width: 305px;
+    text-align: center;
+  }
+
+  :global(.index-promises) .check {
+    align-items: center;
+    background-color: #124985;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-flex;
+    font-size: 30px;
+    height: 55px;
+    justify-content: center;
+    width: 55px;
+  }
+
+  :global(.index-promises) h3 {
+    color: var(--color-brand-secondary);
+    font-family: var(--font-ui);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    margin: 30px 0 0;
+    text-transform: uppercase;
+  }
+
+  :global(.index-promises) p {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 5px 0 0;
+  }
+
+  :global(.index-promises) :global(.buttons) {
+    margin-top: 60px;
+  }
+
+  :global(.index-promises) :global(.buttons .button) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 55px;
+    min-width: 155px;
+  }
+
+  @media (max-width: 1023px) {
+    :global(.index-promises) ul {
+      margin-top: 50px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-promises) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.index-promises) li {
+      flex: 0 1 305px;
+      margin: 0;
+    }
+
+    :global(.index-promises) li + li {
+      margin-left: 40px;
+    }
+  }
+
+
+  /* Bold check from Final.xd */
+  :global(.index-promises) .check svg {
+    fill: none;
+    height: 28px;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3.5;
+    width: 28px;
+  }
+</style>

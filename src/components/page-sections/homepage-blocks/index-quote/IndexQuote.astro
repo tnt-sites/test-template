@@ -1,0 +1,114 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+
+const {
+  quote = "",
+  name = "",
+  badgeText = "",
+  imageSource = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["index-quote", className]}
+  paddingVertical="none"
+  backgroundImage={{ source: imageSource, alt: "" }}
+  {...htmlAttributes}
+>
+  <div class="wrap block">
+    <blockquote>
+      <p data-editable="text" data-prop="quote">{quote}</p>
+      <cite data-editable="text" data-prop="name">{name}</cite>
+    </blockquote>
+    {badgeText && <p class="badge">{badgeText}</p>}
+  </div>
+</CustomSection>
+
+<style>
+  /* Final.xd: 253px textured band. The badge hangs into the next section, so this section
+     stacks above it (z 15) but below the sticky header (z 20). */
+  :global(.index-quote) {
+    background-color: var(--color-brand);
+    position: relative;
+    z-index: 15;
+  }
+
+  :global(.index-quote) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 50px 20px;
+    position: relative;
+  }
+
+  :global(.index-quote) blockquote {
+    border-left: 2px solid #fff;
+    color: #fff;
+    margin: 0;
+    max-width: 1040px;
+    padding: 0 0 5px 30px;
+    text-align: left;
+  }
+
+  :global(.index-quote) blockquote p {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 28px;
+    margin: 0;
+  }
+
+  :global(.index-quote) cite {
+    color: #fff;
+    display: block;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+
+  :global(.index-quote) cite::before {
+    content: "- ";
+  }
+
+  :global(.index-quote) .badge {
+    align-items: center;
+    background-color: var(--color-text-intro);
+    border-radius: 50%;
+    box-shadow:
+      0 0 0 3px #7691ac,
+      0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #fff;
+    display: flex;
+    font-size: 24px;
+    font-weight: 300;
+    height: 230px;
+    justify-content: center;
+    line-height: 28px;
+    margin: 35px auto 0;
+    padding: 0 30px;
+    text-align: center;
+    width: 230px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-quote) .wrap {
+      padding: 50px 60px 50px 180px;
+    }
+
+    :global(.index-quote) blockquote p {
+      font-size: 25px;
+      line-height: 25px;
+    }
+
+    :global(.index-quote) .badge {
+      margin: 0;
+      position: absolute;
+      right: 60px;
+      top: 155px;
+    }
+  }
+</style>

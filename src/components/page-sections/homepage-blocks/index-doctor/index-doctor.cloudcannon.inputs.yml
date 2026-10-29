@@ -1,0 +1,61 @@
+heading:
+  type: text
+  comment: Section heading.
+text:
+  type: markdown
+  comment: Doctor intro text.
+  options:
+    bold: true
+    italic: true
+    link: true
+    format: p
+videoType:
+  type: select
+  comment: Where the intro video is hosted.
+  options:
+    values:
+      - id: vimeo
+        name: Vimeo
+      - id: youtube
+        name: YouTube
+videoId:
+  type: text
+  comment: Video ID. Leave blank to show the photo instead.
+imageSource:
+  type: image
+  comment: Photo shown when no video ID is set.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+buttonSections:
+  type: array
+  comment: Button under the text.
+  options:
+    structures: _structures.buttonSections
+logos:
+  type: array
+  comment: Association logos shown under the video.
+  options:
+    structures:
+      values:
+        - label: Logo
+          icon: image
+          value:
+            imageSource: ""
+            imageAlt: ""
+          preview:
+            text:
+              - key: imageAlt
+            image:
+              - key: imageSource
+logos[*].imageSource:
+  type: image
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+logos[*].imageAlt:
+  type: text

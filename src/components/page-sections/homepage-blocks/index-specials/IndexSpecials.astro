@@ -1,0 +1,134 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+
+const { heading = "", specials = [], class: className, _component, ...htmlAttributes } = Astro.props;
+---
+
+<CustomSection class:list={["index-specials", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <ul class="no-check block lg:flex justify-center items-stretch">
+      {
+        specials.map((special: any) => (
+          <li>
+            <figure>
+              <Image
+                source={special.imageSource}
+                alt={special.imageAlt}
+                editable={false}
+                sizes="(min-width: 1024px) 510px, 100vw"
+                widths={[510, 1020]}
+              />
+            </figure>
+            <article>
+              <p class="price">{special.price}</p>
+              <h3>{special.title}</h3>
+              <p>{special.text}</p>
+              {special.link && (
+                <a href={special.link} class="button variant-tertiary">
+                  {special.buttonText || "Learn More"}
+                </a>
+              )}
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.index-specials) .wrap {
+    margin: 0 auto;
+    max-width: 1104px;
+    padding: 90px 20px 100px;
+  }
+
+  :global(.index-specials) :global(.title) {
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-transform: uppercase;
+  }
+
+  :global(.index-specials) ul {
+    list-style: none;
+    margin: 45px 0 0;
+    padding: 0;
+  }
+
+  :global(.index-specials) li {
+    background-color: #fff;
+    border: 1px solid #124985;
+    margin: 0 auto 40px;
+    max-width: 512px;
+    text-align: center;
+  }
+
+  :global(.index-specials) figure {
+    margin: 0;
+  }
+
+  :global(.index-specials) figure :global(img) {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  :global(.index-specials) article {
+    font-family: var(--font-ui);
+    padding: 20px 30px 55px;
+  }
+
+  :global(.index-specials) .price {
+    color: var(--color-brand);
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 62px;
+    margin: 0;
+  }
+
+  :global(.index-specials) h3 {
+    color: #383838;
+    font-family: var(--font-ui);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 35px;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+  }
+
+  :global(.index-specials) article p:not(.price) {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 10px auto 35px;
+    max-width: 300px;
+  }
+
+  :global(.index-specials) a {
+    display: inline-block;
+    padding: 15px 30px;
+    width: auto;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-specials) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.index-specials) li {
+      flex: 0 1 512px;
+      margin: 0;
+    }
+
+    :global(.index-specials) li + li {
+      margin-left: 40px;
+    }
+  }
+</style>

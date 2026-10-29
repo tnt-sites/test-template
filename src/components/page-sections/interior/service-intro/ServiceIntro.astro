@@ -1,0 +1,36 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const { text = "", class: className, _component, ...htmlAttributes } = Astro.props;
+---
+
+<CustomSection
+  class:list={["service-intro", className]}
+  paddingVertical="none"
+  {...htmlAttributes}
+>
+  <div class="wrap block text-center">
+    <Text data-prop="text" text={text} />
+  </div>
+</CustomSection>
+
+<style>
+  :global(.service-intro) .wrap {
+    margin: 0 auto;
+    max-width: 840px;
+    padding: 95px 20px;
+  }
+
+  :global(.service-intro) :global(.text) {
+    color: var(--color-text-intro);
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0;
+    text-align: inherit;
+  }
+
+  :global(.service-intro) :global(.text p + p) {
+    margin-top: 20px;
+  }
+</style>

@@ -1,0 +1,47 @@
+heading:
+  type: text
+  comment: Optional heading above the team list.
+members:
+  type: array
+  comment: Team members. Photo is optional; members without one show text only.
+  options:
+    structures:
+      values:
+        - label: Team Member
+          icon: person
+          value:
+            name: Name
+            role: Role
+            imageSource: ""
+            imageAlt: ""
+            text: Coming soon!
+          preview:
+            text:
+              - key: name
+            subtext:
+              - key: role
+            image:
+              - key: imageSource
+members[*].name:
+  type: text
+members[*].role:
+  type: text
+  comment: Job title shown under the name.
+members[*].imageSource:
+  type: image
+  comment: Portrait photo (shown at 200x300).
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+members[*].imageAlt:
+  type: text
+  comment: Alt text for the photo. Leave blank to use the name.
+members[*].text:
+  type: markdown
+  comment: Short bio.
+  options:
+    bold: true
+    italic: true
+    link: true
+    format: p

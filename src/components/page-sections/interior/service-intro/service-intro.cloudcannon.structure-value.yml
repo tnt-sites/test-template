@@ -1,0 +1,18 @@
+label: Service Intro
+icon: notes
+description: Centered intro paragraph for interior pages.
+value:
+  _component: page-sections/interior/service-intro
+  id: ""
+  text: Intro paragraph placeholder text.
+preview:
+  text:
+    - Service Intro
+  subtext:
+    - key: text
+  icon: notes
+picker_preview:
+  text: Service Intro
+  subtext: Centered intro paragraph for interior pages.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/service-intro/service-intro.cloudcannon.inputs.yml

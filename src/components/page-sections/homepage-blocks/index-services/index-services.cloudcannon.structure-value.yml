@@ -1,0 +1,23 @@
+label: Index Services
+icon: medical_services
+description: Grid of icon cards linking to services, with a hover state and button.
+value:
+  _component: page-sections/homepage-blocks/index-services
+  id: ""
+  heading: Comprehensive Dental Services
+  services:
+    - icon: tooth
+      text: I Want to Enhance My Smile
+      link: /services/cosmetic-dentistry/
+  buttonSections: []
+preview:
+  text:
+    - Index Services
+  subtext:
+    - key: heading
+  icon: medical_services
+picker_preview:
+  text: Index Services
+  subtext: Grid of icon cards linking to services, with a hover state and button.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-services/index-services.cloudcannon.inputs.yml

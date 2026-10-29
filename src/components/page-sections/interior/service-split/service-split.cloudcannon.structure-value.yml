@@ -1,0 +1,26 @@
+label: Service Split
+icon: vertical_split
+description: Photo or YouTube video beside a heading and text.
+value:
+  _component: page-sections/interior/service-split
+  id: ""
+  heading: Section Heading
+  text: Body copy placeholder text.
+  imageSource: /src/assets/images/adkins/internal/dental-implants-2.webp
+  imageAlt: ""
+  videoId: ""
+  imageLeft: true
+  buttonSections: []
+preview:
+  text:
+    - Service Split
+  subtext:
+    - key: heading
+  image:
+    - key: imageSource
+  icon: vertical_split
+picker_preview:
+  text: Service Split
+  subtext: Photo or YouTube video beside a heading and text.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/service-split/service-split.cloudcannon.inputs.yml

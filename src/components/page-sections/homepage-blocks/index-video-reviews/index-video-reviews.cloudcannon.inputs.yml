@@ -1,0 +1,53 @@
+videoType:
+  type: select
+  comment: Where the review video is hosted.
+  options:
+    values:
+      - id: vimeo
+        name: Vimeo
+      - id: youtube
+        name: YouTube
+videoId:
+  type: text
+  comment: Video ID for the review video (the number in a Vimeo URL or YouTube's "v=" value). Leave blank to show the photo instead.
+imageSource:
+  type: image
+  comment: Photo shown when no video ID is set.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+reviews:
+  type: array
+  comment: Written reviews that rotate in the white box.
+  options:
+    structures:
+      values:
+        - label: Review
+          icon: reviews
+          value:
+            quote: "“Review text.”"
+            name: Patient Name
+          preview:
+            text:
+              - key: name
+            subtext:
+              - key: quote
+reviews[*].quote:
+  type: textarea
+reviews[*].name:
+  type: text
+backgroundImage:
+  type: image
+  comment: Section background photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+buttonSections:
+  type: array
+  comment: Button under the reviews.
+  options:
+    structures: _structures.buttonSections

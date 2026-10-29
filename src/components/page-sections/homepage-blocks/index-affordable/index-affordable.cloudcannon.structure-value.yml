@@ -1,0 +1,24 @@
+label: Index Affordable
+icon: payments
+description: Payment options in columns with buttons or partner logos.
+value:
+  _component: page-sections/homepage-blocks/index-affordable
+  id: ""
+  heading: Dentistry Made Affordable
+  columns:
+    - title: Dental Insurance
+      text: Column text
+      buttonText: Learn More
+      link: /patient-info/#dental-insurance
+      logos: []
+preview:
+  text:
+    - Index Affordable
+  subtext:
+    - key: heading
+  icon: payments
+picker_preview:
+  text: Index Affordable
+  subtext: Payment options in columns with buttons or partner logos.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-affordable/index-affordable.cloudcannon.inputs.yml

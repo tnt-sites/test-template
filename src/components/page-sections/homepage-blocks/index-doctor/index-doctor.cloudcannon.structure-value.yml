@@ -1,0 +1,25 @@
+label: Index Doctor
+icon: person
+description: Meet the doctor section with a video, intro, button and association logos.
+value:
+  _component: page-sections/homepage-blocks/index-doctor
+  id: ""
+  heading: Meet Dr. Adkins
+  text: Doctor intro placeholder text.
+  videoType: vimeo
+  videoId: ""
+  imageSource: /src/assets/images/adkins/home/meet-dr-adkins-video.png
+  imageAlt: ""
+  buttonSections: []
+  logos: []
+preview:
+  text:
+    - Index Doctor
+  subtext:
+    - key: heading
+  icon: person
+picker_preview:
+  text: Index Doctor
+  subtext: Meet the doctor section with a video, intro, button and association logos.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-doctor/index-doctor.cloudcannon.inputs.yml

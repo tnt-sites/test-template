@@ -1,0 +1,46 @@
+heading:
+  type: text
+  comment: Section heading.
+specials:
+  type: array
+  comment: Special offer cards.
+  options:
+    structures:
+      values:
+        - label: Special
+          icon: sell
+          value:
+            imageSource: ""
+            imageAlt: ""
+            price: $60
+            title: New Patient Special
+            text: Offer details
+            buttonText: Learn More
+            link: /contact-us/
+          preview:
+            text:
+              - key: price
+            subtext:
+              - key: title
+            image:
+              - key: imageSource
+specials[*].imageSource:
+  type: image
+  comment: Card photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+specials[*].imageAlt:
+  type: text
+specials[*].price:
+  type: text
+  comment: Large price line (e.g. "$60" or "Free").
+specials[*].title:
+  type: text
+specials[*].text:
+  type: text
+specials[*].buttonText:
+  type: text
+specials[*].link:
+  type: url

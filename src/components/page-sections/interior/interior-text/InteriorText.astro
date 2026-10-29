@@ -1,0 +1,71 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "",
+  text = "",
+  band = false,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["interior-text", { band }, className]}
+  paddingVertical="none"
+  {...htmlAttributes}
+>
+  <div class="wrap block">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <Text data-prop="text" text={text} />
+  </div>
+</CustomSection>
+
+<style>
+  :global(.interior-text.band) {
+    background-color: var(--color-band);
+  }
+
+  :global(.interior-text) .wrap {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 50px 20px;
+  }
+
+  :global(.interior-text.band) .wrap {
+    padding-block: 85px;
+  }
+
+  :global(.interior-text) :global(.title) {
+    color: var(--color-brand);
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 38px;
+    margin: 0;
+    text-align: center;
+  }
+
+  :global(.interior-text) :global(.text) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 25px;
+  }
+
+  :global(.interior-text) :global(.text h3) {
+    margin: 30px 0 10px;
+  }
+
+  :global(.interior-text) :global(.text p + p) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.interior-text) :global(.title) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+  }
+</style>

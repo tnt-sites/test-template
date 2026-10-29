@@ -1,0 +1,165 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Icon from "@core-elements/icon/Icon.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+// Icons are the line icons from Final.xd, saved in src/icons/services/.
+const {
+  heading = "",
+  services = [],
+  buttonSections = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection class:list={["index-services", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <ul class="no-check block lg:flex justify-center items-stretch">
+      {
+        services.map((service: any) => (
+          <li>
+            <a href={service.link}>
+              <Icon name={`services/${service.icon}`} size="none" class="service-icon" />
+              <span class="name">{service.text}</span>
+              <span class="more">Learn More</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <ButtonGroup buttonSections={buttonSections} alignX="center" class="buttons" />
+  </div>
+</CustomSection>
+
+<style>
+  :global(.index-services) {
+    background-color: var(--color-bg-surface);
+  }
+
+  :global(.index-services) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 85px 10px 100px;
+  }
+
+  :global(.index-services) :global(.title) {
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-transform: uppercase;
+  }
+
+  :global(.index-services) ul {
+    list-style: none;
+    margin: 55px 0 0;
+    padding: 0;
+  }
+
+  :global(.index-services) li {
+    margin: 0 auto 10px;
+    max-width: 268px;
+  }
+
+  /* Final.xd card: 268x318, icon 85px from the top, title at 183px */
+  :global(.index-services) a {
+    align-items: center;
+    background-color: #fff;
+    color: var(--color-brand-secondary);
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+    padding: 85px 25px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  :global(.index-services) :global(.service-icon) {
+    color: #4d4d4d;
+    height: 50px;
+    transition: color 0.3s;
+  }
+
+  :global(.index-services) :global(.service-icon svg) {
+    height: 50px;
+    width: auto;
+  }
+
+  :global(.index-services) .name {
+    font-family: var(--font-ui);
+    font-size: 21px;
+    line-height: 28px;
+    margin-top: 50px;
+    max-width: 215px;
+    white-space: pre-line;
+  }
+
+  /* Styleguide hover: blue card, white icon and title moved up, Learn More button shown */
+  :global(.index-services) .more {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    display: none;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 45px;
+    padding: 7px 0;
+    width: 135px;
+  }
+
+  :global(.index-services) a:hover,
+  :global(.index-services) a:focus-visible {
+    background-color: var(--color-brand-secondary);
+    color: #fff;
+    padding-top: 55px;
+  }
+
+  :global(.index-services) a:hover :global(.service-icon),
+  :global(.index-services) a:focus-visible :global(.service-icon) {
+    color: #fff;
+  }
+
+  :global(.index-services) a:hover .name,
+  :global(.index-services) a:focus-visible .name {
+    margin-top: 30px;
+  }
+
+  :global(.index-services) a:hover .more,
+  :global(.index-services) a:focus-visible .more {
+    display: block;
+  }
+
+  :global(.index-services) :global(.buttons) {
+    margin-top: 50px;
+  }
+
+  :global(.index-services) :global(.buttons .button) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 55px;
+    min-width: 255px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-services) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.index-services) li {
+      flex: 0 0 268px;
+      margin: 0;
+    }
+
+    :global(.index-services) li + li {
+      margin-left: 10px;
+    }
+  }
+</style>

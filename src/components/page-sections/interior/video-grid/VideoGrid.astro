@@ -1,0 +1,65 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Video from "@core-elements/video/Video.astro";
+
+const { heading = "", videos = [], class: className, _component, ...htmlAttributes } = Astro.props;
+---
+
+<CustomSection class:list={["video-grid", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <ul class="no-check block lg:flex flex-wrap justify-between">
+      {
+        videos.map((video: any) => (
+          <li>
+            <Video type={video.type || "youtube"} id={video.id} title={video.title || "Video"} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.video-grid) .wrap {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 50px 20px;
+  }
+
+  :global(.video-grid) :global(.title) {
+    color: var(--color-brand);
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 38px;
+    margin: 0 0 40px;
+    text-align: inherit;
+  }
+
+  :global(.video-grid) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  :global(.video-grid) li {
+    margin: 0 0 30px;
+  }
+
+  :global(.video-grid) li :global(.video) {
+    margin: 0;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.video-grid) :global(.title) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+
+    /* Two per row with a 20px gap (1130px of content) */
+    :global(.video-grid) li {
+      flex: 0 0 555px;
+    }
+  }
+</style>

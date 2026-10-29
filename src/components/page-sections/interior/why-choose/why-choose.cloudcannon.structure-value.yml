@@ -1,0 +1,22 @@
+label: Why Choose
+icon: check_circle
+description: Light blue band with a heading and checkmark reasons.
+value:
+  _component: page-sections/interior/why-choose
+  id: ""
+  heading: Why Choose Adkins Family Dentistry?
+  items:
+    - text: Locally-Owned & Operated by Dr. Adkins
+    - text: In-Network with Most PPO Dental Insurances
+    - text: Compassionate & Long-Standing Dental Team
+preview:
+  text:
+    - Why Choose
+  subtext:
+    - key: heading
+  icon: check_circle
+picker_preview:
+  text: Why Choose
+  subtext: Light blue band with a heading and checkmark reasons.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/why-choose/why-choose.cloudcannon.inputs.yml

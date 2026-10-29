@@ -1,8 +1,8 @@
 {
-  "name": "Astro Component Starter",
-  "url": "https://example.com",
-  "description": "",
-  "logoSource": "/images/logo.svg",
-  "titleFormat": "{title} | Astro Component Starter",
-  "twitterHandle": "@yourusername"
+  "name": "Adkins Family Dentistry",
+  "url": "https://wheatridgecodentist.com",
+  "description": "Adkins Family Dentistry offers comprehensive, compassionate dental care for the whole family in Wheat Ridge, CO.",
+  "logoSource": "/src/assets/images/adkins/global/logo.png",
+  "titleFormat": "{title} | Adkins Family Dentistry",
+  "twitterHandle": ""
 }

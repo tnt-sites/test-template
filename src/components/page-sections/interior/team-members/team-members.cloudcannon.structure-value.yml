@@ -1,0 +1,24 @@
+label: Team Members
+icon: groups
+description: Staff list with an optional portrait, name, role and bio for each person.
+value:
+  _component: page-sections/interior/team-members
+  id: ""
+  heading: ""
+  members:
+    - name: Name
+      role: Role
+      imageSource: ""
+      imageAlt: ""
+      text: Coming soon!
+preview:
+  text:
+    - Team Members
+  subtext:
+    - key: heading
+  icon: groups
+picker_preview:
+  text: Team Members
+  subtext: Staff list with an optional portrait, name, role and bio for each person.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/team-members/team-members.cloudcannon.inputs.yml

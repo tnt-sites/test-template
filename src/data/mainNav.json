@@ -1,6 +1,7 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
+  "logoSource": "/src/assets/images/adkins/global/logo.png",
+  "logoAlt": "Adkins Family Dentistry",
+  "hideSearch": true,
   "navData": [
     {
       "name": "Home",
@@ -8,67 +9,213 @@
       "children": []
     },
     {
-      "name": "Our Services",
-      "path": "/our-services",
+      "name": "About Us",
+      "path": "/about-us/",
       "children": [
         {
-          "name": "Preventive Dentistry",
-          "path": "/preventive-dentistry",
-          "children": [
-            {
-              "name": "Checkups",
-              "path": "/preventive-dentistry#checkups"
-            }
-          ]
+          "name": "Meet Dr. Adkins",
+          "path": "/about-us/meet-dr-adkins/",
+          "children": []
         },
         {
-          "name": "Dental Implants",
-          "path": "/dental-implants",
-          "children": [
-            {
-              "name": "More Implants",
-              "path": "/dental-implants"
-            }
-          ]
+          "name": "Meet the Team",
+          "path": "/about-us/meet-the-team/",
+          "children": []
         }
       ]
     },
     {
-      "name": "Why",
-      "path": "/why/",
+      "name": "Services",
+      "path": "/services/",
+      "children": [
+        {
+          "name": "General Dentistry",
+          "path": "/services/general-dentistry/",
+          "children": [
+            {
+              "name": "Dental Exams & Professional Cleanings",
+              "path": "/services/dental-exams-teeth-cleaning/",
+              "children": []
+            },
+            {
+              "name": "Dental Crowns",
+              "path": "/services/dental-crowns/",
+              "children": []
+            },
+            {
+              "name": "Dental Fillings",
+              "path": "/services/dental-fillings/",
+              "children": []
+            },
+            {
+              "name": "Root Canals",
+              "path": "/services/root-canals/",
+              "children": []
+            },
+            {
+              "name": "Tooth Extraction",
+              "path": "/services/tooth-extraction/",
+              "children": []
+            },
+            {
+              "name": "Bone Grafts",
+              "path": "/services/bone-grafts/",
+              "children": []
+            },
+            {
+              "name": "Dental Sealants",
+              "path": "/services/sealants/",
+              "children": []
+            },
+            {
+              "name": "Periodontal Scaling & Root Planing",
+              "path": "/services/periodontal-scaling-and-root-planing/",
+              "children": []
+            },
+            {
+              "name": "Laser Periodontal Therapy",
+              "path": "/laser-periodontal-therapy/",
+              "children": []
+            },
+            {
+              "name": "Fluoride Treatments",
+              "path": "/services/fluoride-treatments/",
+              "children": []
+            },
+            {
+              "name": "Dental Bridges",
+              "path": "/services/dental-bridges/",
+              "children": []
+            },
+            {
+              "name": "Dental Bonding",
+              "path": "/services/dental-bonding/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "path": "/services/cosmetic-dentistry/",
+          "children": [
+            {
+              "name": "Teeth Whitening",
+              "path": "/services/teeth-whitening/",
+              "children": []
+            },
+            {
+              "name": "Porcelain Veneers",
+              "path": "/services/porcelain-veneers/",
+              "children": []
+            },
+            {
+              "name": "Inlays & Onlays",
+              "path": "/services/inlays-and-onlays/",
+              "children": []
+            },
+            {
+              "name": "Full Mouth Reconstructions",
+              "path": "/services/full-mouth-reconstructions/",
+              "children": []
+            },
+            {
+              "name": "Dentures & Partials",
+              "path": "/services/dentures-and-partials/",
+              "children": []
+            },
+            {
+              "name": "Dental Implants",
+              "path": "/dental-implants/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Orthodontics",
+          "path": "/services/orthodontics/",
+          "children": [
+            {
+              "name": "Invisalign or Clear Aligners",
+              "path": "/services/invisalign-or-clear-aligners/",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Dental X-Rays",
+          "path": "/services/dental-x-rays/",
+          "children": []
+        },
+        {
+          "name": "Dental Emergency/Same Day Dentistry",
+          "path": "/services/dental-emergency-same-day/",
+          "children": []
+        },
+        {
+          "name": "Sleep Apnea",
+          "path": "/sleep-apnea/",
+          "children": []
+        },
+        {
+          "name": "Dental Anxiety",
+          "path": "/services/dental-anxiety/",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Patient Info",
+      "path": "/patient-info/",
+      "children": [
+        {
+          "name": "First Visit",
+          "path": "/patient-info/#first-visit",
+          "children": []
+        },
+        {
+          "name": "Dental Insurance",
+          "path": "/patient-info/#dental-insurance",
+          "children": []
+        },
+        {
+          "name": "Adkins Discount Plan",
+          "path": "/patient-info/#adkins-discount-plan",
+          "children": []
+        },
+        {
+          "name": "Dental Care Financing",
+          "path": "/patient-info/#dental-care-financing",
+          "children": []
+        },
+        {
+          "name": "Home Care Instructions",
+          "path": "/patient-info/#home-care-instructions",
+          "children": []
+        }
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "path": "/testimonials/",
       "children": []
     },
     {
       "name": "Blog",
       "path": "/blog/",
       "children": []
-    }
-  ],
-  "buttonSections": [
+    },
     {
-      "_component": "building-blocks/core-elements/button",
-      "id": "",
-      "text": "Search",
-      "hideText": true,
-      "link": "/search/",
-      "modalTarget": "",
-      "iconName": "magnifying-glass",
-      "iconPosition": "before",
-      "variant": "ghost",
-      "size": "lg",
-      "width": "none",
-      "borderRadius": "default",
-      "borderWidth": "default",
-      "borderColor": "default",
-      "textColor": "default",
-      "uppercase": false
+      "name": "Contact Us",
+      "path": "/contact-us/",
+      "children": []
     }
   ],
+  "buttonSections": [],
   "pageButtons": [
     {
       "_component": "building-blocks/core-elements/button",
       "id": "",
-      "text": "Request an Appointment",
+      "text": "Request Appointment",
       "hideText": false,
       "link": "/request-an-appointment/",
       "modalTarget": "",
@@ -76,7 +223,25 @@
       "iconPosition": "before",
       "variant": "primary",
       "size": "md",
-      "width": "md",
+      "width": "none",
+      "borderRadius": "default",
+      "borderWidth": "default",
+      "borderColor": "default",
+      "textColor": "default",
+      "uppercase": false
+    },
+    {
+      "_component": "building-blocks/core-elements/button",
+      "id": "",
+      "text": "(303) 424-9470",
+      "hideText": false,
+      "link": "tel:+13034249470",
+      "modalTarget": "",
+      "iconName": "device-phone-mobile",
+      "iconPosition": "before",
+      "variant": "primary",
+      "size": "md",
+      "width": "none",
       "borderRadius": "default",
       "borderWidth": "default",
       "borderColor": "default",

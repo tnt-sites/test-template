@@ -1,0 +1,153 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import Video from "@core-elements/video/Video.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  text = "",
+  videoType = "vimeo",
+  videoId = "",
+  imageSource = "",
+  imageAlt = "",
+  buttonSections = [],
+  logos = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection class:list={["index-doctor", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <section class="block lg:flex justify-between items-center lg:text-left">
+      <figure>
+        {
+          videoId ? (
+            <Video type={videoType} id={videoId} title={heading} />
+          ) : (
+            <Image source={imageSource} alt={imageAlt} data-prop-src="imageSource" />
+          )
+        }
+      </figure>
+      <article>
+        <Text data-prop="text" text={text} />
+        <ButtonGroup buttonSections={buttonSections} width="content" class="buttons" />
+      </article>
+    </section>
+    <ul class="no-check block lg:flex justify-center items-center">
+      {
+        logos.map((logo: any) => (
+          <li>
+            <Image source={logo.imageSource} alt={logo.imageAlt} editable={false} widths={[230, 460]} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.index-doctor) .wrap {
+    margin: 0 auto;
+    max-width: 1110px;
+    padding: 95px 20px 100px;
+  }
+
+  :global(.index-doctor) :global(.title) {
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-transform: uppercase;
+  }
+
+  :global(.index-doctor) section {
+    margin-top: 90px;
+  }
+
+  :global(.index-doctor) figure {
+    margin: 0 auto 30px;
+    max-width: 505px;
+  }
+
+  :global(.index-doctor) figure :global(.video) {
+    margin: 0;
+  }
+
+  :global(.index-doctor) article {
+    margin: 0 auto;
+    max-width: 505px;
+  }
+
+  :global(.index-doctor) :global(.text) {
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    text-align: inherit;
+  }
+
+  :global(.index-doctor) :global(.buttons) {
+    margin-top: 40px;
+  }
+
+  :global(.index-doctor) :global(.buttons .button) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 55px;
+    min-width: 275px;
+  }
+
+  :global(.index-doctor) ul {
+    list-style: none;
+    margin: 60px 0 0;
+    padding: 0;
+  }
+
+  :global(.index-doctor) li {
+    flex: none;
+    margin: 0 0 20px;
+  }
+
+  /* Logos are sized by height (Final.xd: about 42-44px) so they keep their own widths */
+  :global(.index-doctor) li :global(img) {
+    height: 44px;
+    margin: 0 auto;
+    max-width: none;
+    width: auto;
+  }
+
+  @media (max-width: 1023px) {
+    :global(.index-doctor) :global(.buttons) {
+      margin-inline: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-doctor) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.index-doctor) figure,
+    :global(.index-doctor) article {
+      flex: 0 1 505px;
+      margin: 0;
+    }
+
+    :global(.index-doctor) li {
+      margin-bottom: 0;
+    }
+
+    :global(.index-doctor) li + li {
+      margin-left: 75px;
+    }
+  }
+</style>

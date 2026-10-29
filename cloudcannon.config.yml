@@ -13,6 +13,10 @@ collections_config:
         type: text
         comment: Controls the metadata title for the page.
         cascade: true
+      hideReadyForm:
+        type: switch
+        comment: Hide the shared "Ready to Get Started?" form above the footer on this page (e.g. pages that already have their own form).
+        cascade: true
       $.pageSections[*].tourSlides[*].src:
         type: image
         cascade: true
@@ -41,7 +45,7 @@ collections_config:
     glob:
       - "**/*.mdx"
     icon: article
-    url: /blog/[full_slug]/
+    url: /[full_slug]/
     disable_url: false
     _enabled_editors:
       - content
@@ -185,7 +189,7 @@ collections_config:
       bodyFont.fontFamily:
         type: text
         cascade: true
-        comment: 'CSS font-family string, e.g. "Raleway", sans-serif'
+        comment: "CSS font-family string, e.g. \"Raleway\", sans-serif"
       headingsFont:
         type: object
         cascade: true
@@ -193,7 +197,7 @@ collections_config:
       headingsFont.fontFamily:
         type: text
         cascade: true
-        comment: 'CSS font-family string, e.g. "Playfair Display", serif'
+        comment: "CSS font-family string, e.g. \"Playfair Display\", serif"
       fontLinks:
         type: array
         cascade: true
@@ -736,6 +740,53 @@ file_config:
         type: switch
         comment: Toggle this tab on or off.
         cascade: true
+  - glob: src/data/footer.json
+    _inputs:
+      $.readyForm:
+        type: object
+        comment: "\"Ready to Get Started?\" form shown above the footer on every page."
+      $.readyForm.heading:
+        type: textarea
+        comment: Form heading. Press Enter to control where the line breaks.
+      $.readyForm.text:
+        type: textarea
+        comment: Short line under the heading.
+      $.readyForm.buttonText:
+        type: text
+        comment: Submit button text.
+      $.readyForm.formAction:
+        type: url
+        comment: Form handler URL (the TNT form adder link) that receives submissions.
+      $.readyForm.imageSource:
+        type: image
+        comment: Background photo behind the form.
+        options:
+          paths:
+            uploads: src/assets/images
+            static: ""
+      $.readyForm.imageAlt:
+        type: text
+        comment: Alt text for the background photo.
+      $.findOffice:
+        type: object
+        comment: "\"Find Our Office\" map section shown above the footer on every page. The map itself comes from Site Info > Map Embed URL."
+      $.findOffice.heading:
+        type: text
+        comment: Section heading.
+      $.findOffice.directions:
+        type: array
+        comment: Directions and landmarks shown as bars beside the map.
+      $.findOffice.directions[*]:
+        type: text
+      $.showEmail:
+        type: switch
+        comment: Show the office email address in the footer's Contact Us column.
+      $.legalButton.text:
+        type: text
+        comment: Button text in the footer's legal row (e.g. SB65 Service Listing).
+      $.legalButton.link:
+        type: url
+        comment: Page the legal-row button links to.
   - glob: src/data/siteInfo.json
     _inputs:
       $.offices[*].name:

@@ -1,33 +1,133 @@
 ---
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 
 const {
+  eyebrow = "",
   heading = "",
-  backgroundColor = "base",
-  id = "",
-  backgroundImage,
-  backgroundGradient = "",
+  text = "",
+  imageSource = "",
+  imageAlt = "",
+  buttonSections = [],
   class: className,
-  editable = true,
-  ...rest
+  _component,
+  ...htmlAttributes
 } = Astro.props;
-
-const htmlAttributes = Object.fromEntries(
-  Object.entries(rest).filter(([key]) => key !== "_component")
-);
 ---
 
 <CustomSection
   class:list={["index-banner", className]}
-  maxContentWidth="2xl"
-  paddingHorizontal="lg"
-  paddingVertical="4xl"
-  colorScheme="default"
-  backgroundColor={backgroundColor}
-  backgroundImage={backgroundImage}
-  style={backgroundGradient ? "--section-bg-gradient: " + backgroundGradient : undefined}
+  paddingVertical="none"
+  backgroundImage={{ source: imageSource, alt: imageAlt, positionVertical: "top" }}
   {...htmlAttributes}
 >
-  <Heading level="h2" size="lg" alignX="center" text={heading} data-prop="heading" />
+  <div class="wrap block text-center lg:text-left lg:flex justify-between items-end">
+    <article>
+      <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
+      <Heading level="h2" class="title" data-prop="heading" text={heading} />
+      <Text data-prop="text" text={text} />
+    </article>
+    <ButtonGroup buttonSections={buttonSections} width="content" alignX="center" class="buttons" />
+  </div>
 </CustomSection>
+
+<style>
+  /* Final.xd: 15% black over the photo, plus a black gradient (65%) across the bottom 173px */
+  :global(.index-banner) > :global(.outer-content) {
+    background:
+      linear-gradient(transparent, rgba(0, 0, 0, 0.65)) bottom / 100% 175px no-repeat,
+      rgba(0, 0, 0, 0.15);
+  }
+
+  :global(.index-banner) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    min-height: 645px;
+    padding: 50px 50px 60px;
+  }
+
+  :global(.index-banner) article {
+    color: #fff;
+    max-width: 1030px;
+  }
+
+  :global(.index-banner) :global(.eyebrow) {
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+  }
+
+  :global(.index-banner) :global(.title) {
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-shadow: 2px 3px 0 #000;
+  }
+
+  :global(.index-banner) :global(.text) {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 25px;
+    text-align: inherit;
+  }
+
+  :global(.index-banner) :global(.text p) {
+    color: #fff;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  :global(.index-banner) :global(.text a) {
+    color: #e8c58c;
+    text-decoration: underline;
+  }
+
+  :global(.index-banner) :global(.text a:hover) {
+    color: #fff;
+  }
+
+  :global(.index-banner) :global(.buttons) {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  :global(.index-banner) :global(.buttons .button) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    min-height: 55px;
+    min-width: 165px;
+  }
+
+  @media (max-width: 1023px) {
+    :global(.index-banner) .wrap {
+      min-height: 0;
+      padding: 200px 20px 40px;
+    }
+
+    :global(.index-banner) :global(.buttons) {
+      margin-inline: auto;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(.index-banner) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.index-banner) :global(.buttons) {
+      margin-top: 0;
+    }
+  }
+</style>

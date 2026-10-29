@@ -1,30 +1,48 @@
 {
-  "logoSource": "/images/logo.svg",
-  "logoAlt": "Logo",
-  "links": [
-    {
-      "name": "Home",
-      "path": "/"
-    },
-    {
-      "name": "Why",
-      "path": "/why/"
-    },
-    {
-      "name": "Blog",
-      "path": "/blog/"
-    }
-  ],
+  "logoSource": "/src/assets/images/adkins/global/logo-footer.png",
+  "logoAlt": "Adkins Family Dentistry",
+  "links": [],
   "contactTitle": "Contact Us",
   "officeHoursTitle": "Office Hours",
+  "legalButton": {
+    "text": "SB65 Service Listing",
+    "link": "/service-listing/"
+  },
   "legalLinks": [
     {
       "name": "Sitemap",
-      "path": "/sitemap"
+      "path": "/sitemap/"
     },
     {
       "name": "Privacy Policy",
-      "path": "/privacy-policy"
+      "path": "/privacy-policy/"
     }
-  ]
+  ],
+  "readyForm": {
+    "heading": "Ready to\nGet Started?",
+    "text": "Call now or fill out this form to connect with one of our friendly staff members.",
+    "buttonText": "Request an Appointment",
+    "imageSource": "/src/assets/images/adkins/global/ready-to-get-started.jpg",
+    "imageAlt": "Father playing with his son on the beach",
+    "formAction": "./"
+  },
+  "findOffice": {
+    "heading": "Find Our Wheat Ridge Dental Office",
+    "imageSource": "/src/assets/images/adkins/global/map.png",
+    "imageAlt": "Map to Adkins Family Dentistry",
+    "directions": [
+      "At the intersection of W. 44th Ave. and Wadsworth Blvd.",
+      "Minutes from Costco and Arvada Market Place",
+      "Less than 20 minutes from Downtown Denver",
+      "Near Arvada, Lakewood, Berkley & Mountain View",
+      "Located in the PNC Bank building"
+    ]
+  },
+  "backgroundImage": {
+    "source": "/src/assets/images/adkins/home/quote-band.jpg",
+    "alt": "",
+    "positionVertical": "center",
+    "positionHorizontal": "center"
+  },
+  "showEmail": false
 }

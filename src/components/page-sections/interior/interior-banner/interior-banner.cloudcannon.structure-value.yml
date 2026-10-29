@@ -1,0 +1,22 @@
+label: Interior Banner
+icon: image
+description: Photo banner with a small H1 and large H2 for interior pages.
+value:
+  _component: page-sections/interior/interior-banner
+  id: ""
+  eyebrow: Service Name Wheat Ridge
+  heading: Large Banner Heading
+  imageSource: /src/assets/images/adkins/internal/dental-implants-1.webp
+  imageAlt: ""
+  textLeft: false
+preview:
+  text:
+    - Interior Banner
+  subtext:
+    - key: eyebrow
+  icon: image
+picker_preview:
+  text: Interior Banner
+  subtext: Photo banner with a small H1 and large H2 for interior pages.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/interior-banner/interior-banner.cloudcannon.inputs.yml

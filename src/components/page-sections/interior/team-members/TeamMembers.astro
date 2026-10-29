@@ -1,0 +1,123 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const { heading = "", members = [], class: className, _component, ...htmlAttributes } = Astro.props;
+---
+
+<CustomSection class:list={["team-members", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block">
+    <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    <ul class="no-check">
+      {
+        members.map((member: any) => (
+          <li class="block text-center lg:text-left lg:flex items-start">
+            {member.imageSource && (
+              <figure>
+                <Image
+                  source={member.imageSource}
+                  alt={member.imageAlt || member.name}
+                  editable={false}
+                  sizes="200px"
+                  widths={[200, 400]}
+                />
+              </figure>
+            )}
+            <article>
+              <h3>{member.name}</h3>
+              {member.role && <p class="role">{member.role}</p>}
+              <Text text={member.text} editable={false} />
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.team-members) .wrap {
+    margin: 0 auto;
+    max-width: 970px;
+    padding: 50px 20px;
+  }
+
+  :global(.team-members) :global(.title) {
+    color: var(--color-brand);
+    font-size: 38px;
+    font-weight: 200;
+    line-height: 42px;
+    margin: 0 0 40px;
+    text-align: center;
+  }
+
+  :global(.team-members) ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  :global(.team-members) li {
+    border-bottom: 1px solid var(--color-band);
+    margin: 0 0 40px;
+    padding-bottom: 40px;
+  }
+
+  :global(.team-members) li:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  :global(.team-members) figure {
+    margin: 0 auto 25px;
+    width: 200px;
+  }
+
+  :global(.team-members) figure :global(img) {
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    width: 200px;
+  }
+
+  :global(.team-members) h3 {
+    color: var(--color-brand);
+    font-size: 28px;
+    font-weight: 200;
+    line-height: 34px;
+    margin: 0;
+  }
+
+  :global(.team-members) .role {
+    color: var(--color-brand-secondary);
+    font-family: var(--font-ui);
+    font-size: 18px;
+    line-height: 24px;
+    margin: 5px 0 0;
+    text-transform: uppercase;
+  }
+
+  :global(.team-members) :global(.text) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 15px;
+    text-align: inherit;
+  }
+
+  :global(.team-members) :global(.text p + p) {
+    margin-top: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.team-members) figure {
+      flex: 0 0 200px;
+      margin: 0 40px 0 0;
+    }
+
+    :global(.team-members) article {
+      flex: 1 1 auto;
+    }
+  }
+</style>

@@ -1,0 +1,152 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+import Input from "@forms/input/Input.astro";
+import Recaptcha from "@forms/recaptcha/Recaptcha.astro";
+import Submit from "@forms/submit/Submit.astro";
+import Textarea from "@forms/textarea/Textarea.astro";
+
+// Shared "Ready to Get Started?" form shown above the footer on every page.
+// Content lives in src/data/footer.json under `readyForm`.
+const {
+  heading = "",
+  text = "",
+  buttonText = "Request an Appointment",
+  formAction = "./",
+  imageSource = "",
+  imageAlt = "",
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["ready-form", className]}
+  paddingVertical="none"
+  backgroundImage={{ source: imageSource, alt: imageAlt, positionVertical: "center" }}
+  {...htmlAttributes}
+>
+  <div class="wrap block lg:flex justify-start">
+    <article>
+      <Heading level="h2" class="title" text={heading} editable={false} />
+      <Text text={text} editable={false} />
+      <form action={formAction} method="post">
+        <Input label="Name" name="name" required />
+        <div class="row block lg:flex justify-between">
+          <Input label="Phone" name="phone" type="tel" />
+          <Input label="Email" name="email" type="email" required />
+        </div>
+        <Textarea label="Your Messages" name="message" required />
+        <Recaptcha />
+        <Submit text={buttonText} editable={false} />
+      </form>
+    </article>
+  </div>
+</CustomSection>
+
+<style>
+  /* Final.xd: 964px photo band with a 545x764 card (white at 40%) 100px down and 125px in */
+  :global(.ready-form) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 100px 20px;
+  }
+
+  :global(.ready-form) article {
+    background-color: rgba(255, 255, 255, 0.4);
+    max-width: 545px;
+    padding: 30px 20px 40px;
+  }
+
+  :global(.ready-form) :global(.title) {
+    color: var(--color-brand);
+    font-family: var(--font-body);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 42px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  :global(.ready-form) :global(.text) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 35px;
+  }
+
+  :global(.ready-form) form {
+    margin-top: 20px;
+  }
+
+  :global(.ready-form) form .row {
+    max-width: none;
+    padding: 0;
+  }
+
+  /* Label sits 4px above its field; fields are 20px apart */
+  :global(.ready-form) :global(.input),
+  :global(.ready-form) :global(.textarea) {
+    gap: 4px;
+    margin-bottom: 20px;
+  }
+
+  :global(.ready-form) :global(.label) {
+    align-items: flex-start;
+    color: #383838;
+    display: flex;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  /* Small raised red asterisk, right after the label */
+  :global(.ready-form) :global(.input-required),
+  :global(.ready-form) :global(.textarea-required) {
+    color: #f00;
+    font-size: 11px;
+    line-height: 14px;
+    margin: 0;
+  }
+
+  :global(.ready-form) :global(.field) {
+    background-color: #fff;
+    border: 1px solid var(--color-border-inputs);
+    border-radius: 0;
+  }
+
+  :global(.ready-form) :global(input.field) {
+    height: 40px;
+  }
+
+  :global(.ready-form) :global(textarea.field) {
+    height: 190px;
+    resize: vertical;
+  }
+
+  :global(.ready-form) :global(.submit) {
+    background-color: var(--color-button-dark);
+    border-radius: 4px;
+    font-size: 18px;
+    height: 55px;
+    margin-top: 20px;
+    min-width: 295px;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.ready-form) .wrap {
+      padding-inline: 125px;
+    }
+
+    :global(.ready-form) :global(.title) {
+      font-size: 54px;
+      line-height: 52px;
+    }
+
+    :global(.ready-form) form .row :global(.input) {
+      flex: 0 0 242px;
+    }
+  }
+</style>

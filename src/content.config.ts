@@ -7,6 +7,7 @@ const pageSchema = z.object({
     .string()
     .nullish()
     .transform((v) => v ?? ""),
+  hideReadyForm: z.boolean().optional(),
   pageSections: z
     .array(z.any())
     .nullish()

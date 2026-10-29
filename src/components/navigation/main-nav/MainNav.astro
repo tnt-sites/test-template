@@ -2,6 +2,7 @@
 import CustomSection from "@builders/custom-section/CustomSection.astro";
 import Bar from "@components/navigation/bar/Bar.astro";
 import Mobile from "@components/navigation/mobile/Mobile.astro";
+import Icon from "@core-elements/icon/Icon.astro";
 import Image from "@core-elements/image/Image.astro";
 import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
 import siteInfoData from "@data/siteInfo.json";
@@ -10,6 +11,7 @@ const {
   logoSource,
   logoAlt = "logo",
   navData = [],
+  hideSearch = false,
   buttonSections = [],
   pageButtons = [],
   socials = [],
@@ -62,7 +64,7 @@ const buttons = pageButtons.map((button: any) => sanitizeButtonSection(button));
 
 const mobileNavData = [
   ...navData,
-  ...searchButtons.map((button: any) => ({
+  ...(hideSearch ? [] : searchButtons).map((button: any) => ({
     name: button.text || "Button",
     path: button.link || button.href || "#",
     children: [],
@@ -140,71 +142,81 @@ const formatAddressLines = (address: any) => {
     </a>
     <!-- Desktop Nav -->
     <div class="hd-right">
-      <!-- Phone and Address -->
-      <div class="hd-info">
+      <!-- Address, Socials and Buttons -->
+      <div class="hd-top">
+        <div class="hd-info">
+          {
+            resolvedOffices.map((office: any) =>
+              Array.isArray(office?.addresses) &&
+              office.addresses.map((address: any) => {
+                const formattedLines = formatAddressLines(address);
+
+                return formattedLines.length > 0 ? (
+                  <a
+                    href={address?.mapUrl || "#"}
+                    class="phy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {formattedLines.map((line: string, index: number) => (
+                      <>
+                        {line}
+                        {index < formattedLines.length - 1 && <br />}
+                      </>
+                    ))}
+                  </a>
+                ) : null;
+              })
+            )
+          }
+        </div>
         {
-          resolvedOffices.map((office: any) => (
-            <>
-              <div>
-                {Array.isArray(office?.phones) &&
-                  office.phones.map((phone: any) =>
-                    phone?.display ? (
-                      <a href={phone?.href || "#"} class="pho">
-                        {phone?.label ? `${phone.label}: ` : ""}
-                        {phone.display}
-                      </a>
-                    ) : null
-                  )}
-
-                {Array.isArray(office?.addresses) &&
-                  office.addresses.map((address: any) => {
-                    const formattedLines = formatAddressLines(address);
-
-                    return formattedLines.length > 0 ? (
-                      <a
-                        href={address?.mapUrl || "#"}
-                        class="phy"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {formattedLines.map((line: string, index: number) => (
-                          <>
-                            {line}
-                            {index < formattedLines.length - 1 && <br />}
-                          </>
-                        ))}
-                      </a>
-                    ) : null;
-                  })}
-              </div>
-            </>
-          ))
+          sharedSocials.length > 0 && (
+            <ul class="hd-socials">
+              {sharedSocials.map((social: any) => (
+                <li>
+                  <a
+                    href={social.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit our ${social.label || social.icon} page`}
+                  >
+                    <Icon name={social.icon} size="none" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+        {
+          buttons.length > 0 && (
+            <div class="hd-btns page-buttons">
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="desktop-button-group"
+                buttonSections={buttons}
+                editable={false}
+              />
+            </div>
+          )
         }
       </div>
-      {
-        buttons.length > 0 && (
-          <div class="hd-btns page-buttons">
-            <ButtonGroup
-              direction="row"
-              align="center"
-              class="desktop-button-group"
-              buttonSections={buttons}
-              editable={false}
-            />
-          </div>
-        )
-      }
       <div class="hd-nav">
         <div class="nav-end">
           <Bar navData={navData} class="desktop-main-nav" />
 
-          <ButtonGroup
-            direction="row"
-            align="center"
-            class="desktop-button-group"
-            buttonSections={searchButtons}
-            editable={false}
-          />
+          {
+            !hideSearch && (
+              <ButtonGroup
+                direction="row"
+                align="center"
+                class="desktop-button-group"
+                buttonSections={searchButtons}
+                editable={false}
+              />
+            )
+          }
         </div>
       </div>
       <!-- End Desktop Nav -->
@@ -244,6 +256,15 @@ const formatAddressLines = (address: any) => {
 
       mainNav.setAttribute("data-header-height-initialized", "true");
     });
+
+    // Condensed header once the page has scrolled past the top bar.
+    const toggleCondensed = () => {
+      document
+        .querySelectorAll(".main-nav")
+        .forEach((mainNav) => mainNav.classList.toggle("is-condensed", window.scrollY > 60));
+    };
+    toggleCondensed();
+    window.addEventListener("scroll", toggleCondensed, { passive: true });
   };
 
   if (document.readyState === "loading") {
@@ -366,6 +387,131 @@ const formatAddressLines = (address: any) => {
     }
 
     .mobile-nav-close {}
+
+    /* Header layout from Final.xd: address, socials and buttons on top, nav underneath */
+    .main-nav {
+      padding-block: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+
+      /* XD header spans 50px to 1350px on a 1400px artboard */
+      > .outer-content > .content {
+        max-width: 1400px;
+        padding-inline: 50px;
+      }
+
+      > .outer-content .hd-content > a > .image img {
+        height: 150px;
+        max-width: none;
+        transition: height 0.3s;
+      }
+
+      > .outer-content .hd-content .hd-right {
+        flex: 1 1 auto;
+        gap: 25px;
+        margin-right: 0;
+      }
+
+      .hd-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .phy {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0;
+        text-transform: none;
+        color: #000;
+        margin-right: 40px;
+      }
+
+      .phy:hover {
+        color: var(--color-brand-secondary);
+      }
+
+      .hd-socials {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          height: 38px;
+          border-radius: 4px;
+          background-color: var(--color-text-intro);
+          color: #fff;
+          font-size: 18px;
+          transition: background-color 0.3s;
+        }
+
+        a:hover {
+          background-color: var(--color-brand-secondary);
+        }
+
+        .icon,
+        .icon svg,
+        .icon svg path {
+          color: #fff;
+          fill: #fff;
+        }
+      }
+
+      .page-buttons .button-group {
+        gap: 10px;
+      }
+
+      .page-buttons .button {
+        min-width: 215px;
+        height: 50px;
+        border-radius: 4px;
+        background-color: var(--color-accent);
+        font-family: var(--font-body);
+        font-size: 18px;
+      }
+
+      .page-buttons .button:hover,
+      .page-buttons .button:focus {
+        background-color: var(--color-brand-secondary);
+      }
+
+      .bar a {
+        font-family: var(--font-ui);
+        font-size: 16px;
+        color: var(--color-text-nav);
+      }
+
+      .bar .bar-list {
+        gap: 10px;
+      }
+
+      .bar .bar-list > .nav-item > a {
+        padding: 10px 15px;
+      }
+
+      .bar a:hover {
+        color: var(--color-brand-secondary);
+      }
+
+      .bar .bar-list > .nav-item > a[aria-current="page"] {
+        text-decoration: none;
+        box-shadow: inset 0 -3px 0 #1a77c0;
+      }
+      &.is-condensed {
+        > .outer-content .hd-content > a > .image img {
+          height: 85px;
+        }
+
+        > .outer-content .hd-content .hd-right {
+          gap: 10px;
+        }
+      }
+    }
 
 
     @media (max-width: 1024px) {

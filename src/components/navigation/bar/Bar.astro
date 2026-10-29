@@ -454,8 +454,25 @@ function createNavItemData(item, level, parentGroupId) {
         grid-template-columns: minmax(0, 1fr) auto;
       }
 
+      /* Grandchild menus open as a flyout to the right of their submenu item */
+      .nav-item-content .nav-item.has-children {
+        position: relative;
+      }
+
       .nav-item-content .nav-item.has-children > .nav-item-nested {
-        grid-column: 1 / -1;
+        background: var(--color-bg);
+        border: 1px solid var(--color-border-subtle);
+        border-radius: var(--radius-xs);
+        left: 100%;
+        min-width: 200px;
+        position: absolute;
+        top: 0;
+        width: max-content;
+        z-index: var(--layer-3);
+      }
+
+      .nav-item-content .nav-item-toggle:checked ~ .nav-item-trigger .nav-item-icon {
+        transform: none;
       }
 
       .nav-item-content .nav-item > a {
@@ -468,7 +485,6 @@ function createNavItemData(item, level, parentGroupId) {
 
       .nav-item-nested .nav-item > a {
         border-radius: 0;
-        padding-left: var(--spacing-xl);
       }
     }
   }

@@ -1,0 +1,81 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+
+const {
+  eyebrow = "",
+  heading = "",
+  imageSource = "",
+  imageAlt = "",
+  textLeft = false,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["interior-banner", className]}
+  paddingVertical="none"
+  backgroundImage={{ source: imageSource, alt: imageAlt, positionVertical: "center" }}
+  {...htmlAttributes}
+>
+  <div class:list={["wrap block lg:flex items-center", textLeft ? "justify-start" : "justify-end"]}>
+    <article>
+      <Heading level="h1" class="eyebrow" data-prop="eyebrow" text={eyebrow} />
+      <Heading level="h2" class="title" data-prop="heading" text={heading} />
+    </article>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.interior-banner) :global(.outer-content) {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  :global(.interior-banner) .wrap {
+    margin: 0 auto;
+    max-width: 1170px;
+    min-height: 450px;
+    padding: 40px 20px;
+  }
+
+  :global(.interior-banner) article {
+    color: #fff;
+    max-width: 555px;
+  }
+
+  :global(.interior-banner) :global(.eyebrow) {
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+  }
+
+  :global(.interior-banner) :global(.title) {
+    color: #fff;
+    font-family: var(--font-ui);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 45px;
+    margin: 0;
+    text-shadow: 2px 3px 0 #000;
+  }
+
+  @media (max-width: 1023px) {
+    :global(.interior-banner) .wrap {
+      min-height: 300px;
+      padding-top: 120px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    :global(.interior-banner) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+  }
+</style>

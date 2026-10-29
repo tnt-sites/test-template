@@ -1,0 +1,33 @@
+heading:
+  type: text
+  comment: Section heading.
+text:
+  type: markdown
+  comment: Short description shown beside the links.
+  options:
+    bold: true
+    italic: true
+    link: true
+    format: p
+links:
+  type: array
+  comment: Links to blog posts or outside resources.
+  options:
+    structures:
+      values:
+        - label: Link
+          icon: link
+          value:
+            text: Link text
+            link: /blog/
+          preview:
+            text:
+              - key: text
+            subtext:
+              - key: link
+links[*].text:
+  type: text
+  comment: Link text.
+links[*].link:
+  type: url
+  comment: Page or URL to link to.

@@ -1,0 +1,19 @@
+eyebrow:
+  type: text
+  comment: Small H1 above the main heading (e.g. "Dental Implants Wheat Ridge").
+heading:
+  type: text
+  comment: Large H2 tagline shown in the banner.
+imageSource:
+  type: image
+  comment: Banner background photo.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the banner photo.
+textLeft:
+  type: switch
+  comment: Show the text on the left side of the banner instead of the right.

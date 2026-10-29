@@ -1,20 +1,61 @@
 {
-  "colorBrand": "green",
-  "colorBrandSecondary": "yellow",
-  "colorBrandTertiary": "#ff00ff",
-  "colorBrandSubtle": "",
-  "colorBrandOn": "",
+  "colorBrand": "#015294",
+  "colorBrandSecondary": "#1E73BE",
+  "colorBrandTertiary": "#1177C0",
+  "colorBrandSubtle": "#D4DEE8",
+  "colorBrandOn": "#ffffff",
   "colorTextOnBrand": "#ffffff",
-  "colorLink": "blue",
-  "colorLinkHover": "darkblue",
-  "extraColors": [],
+  "colorLink": "#1E73BE",
+  "colorLinkHover": "#015294",
+  "extraColors": [
+    {
+      "variable": "--color-text",
+      "value": "#383838"
+    },
+    {
+      "variable": "--color-text-intro",
+      "value": "#34495E"
+    },
+    {
+      "variable": "--color-text-nav",
+      "value": "#4C4F54"
+    },
+    {
+      "variable": "--color-accent",
+      "value": "#F8A844"
+    },
+    {
+      "variable": "--color-band",
+      "value": "#D4DEE8"
+    },
+    {
+      "variable": "--color-bg-surface",
+      "value": "#F8F8F8"
+    },
+    {
+      "variable": "--color-bg-muted",
+      "value": "#EFF2F5"
+    },
+    {
+      "variable": "--color-button-dark",
+      "value": "#5B5B5B"
+    },
+    {
+      "variable": "--color-border-inputs",
+      "value": "#D1D1D1"
+    },
+    {
+      "variable": "--font-ui",
+      "value": "Lato, sans-serif"
+    }
+  ],
   "bodyFont": {
-    "fontFamily": "\"Roboto\", sans-serif"
+    "fontFamily": "\"Overpass\", sans-serif"
   },
   "headingsFont": {
-    "fontFamily": "\"Playfair Display\", serif"
+    "fontFamily": "\"Raleway\", sans-serif"
   },
   "fontLinks": [
-    "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,700&family=Overpass:ital,wght@0,200;0,300;0,400;0,700;1,700&family=Raleway:wght@200;500&display=swap"
   ]
 }

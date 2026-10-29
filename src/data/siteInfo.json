@@ -1,20 +1,20 @@
 {
-  "siteName": "Dental Studio",
+  "siteName": "Adkins Family Dentistry",
   "socials": [
     {
       "label": "Facebook",
       "icon": "social/facebook",
-      "link": "https://facebook.com"
+      "link": "https://www.facebook.com/Adkins-Family-Dentistry-102118737826477/"
     },
     {
-      "label": "Instagram",
-      "icon": "social/instagram",
-      "link": "https://instagram.com"
+      "label": "Google",
+      "icon": "social/google",
+      "link": "https://www.google.com/maps/place/Adkins+Family+Dentistry/@39.775959,-105.080698,15z/data=!4m5!3m4!1s0x0:0x395e5900ed700f0e!8m2!3d39.775959!4d-105.080698"
     },
     {
-      "label": "LinkedIn",
-      "icon": "social/linkedin",
-      "link": "https://linkedin.com"
+      "label": "YouTube",
+      "icon": "social/youtube",
+      "link": "https://www.youtube.com/channel/UCZH7LnCqcEeE100flZkVHgQ/featured"
     }
   ],
   "offices": [
@@ -22,51 +22,53 @@
       "name": null,
       "addresses": [
         {
-          "lines": ["123 Main Street", "Suite 200"],
-          "city": "City",
-          "state": "ST",
-          "postalCode": "12345",
+          "lines": [
+            "4350 Wadsworth Boulevard # 410"
+          ],
+          "city": "Wheat Ridge",
+          "state": "CO",
+          "postalCode": "80033",
           "country": null,
-          "mapUrl": "https://maps.app.goo.gl/mwYFRCsLFsKPbFYQA"
+          "mapUrl": "https://www.google.com/maps/place/Adkins+Family+Dentistry/@39.775959,-105.080698,15z/data=!4m5!3m4!1s0x0:0x395e5900ed700f0e!8m2!3d39.775959!4d-105.080698"
         }
       ],
       "phones": [
         {
           "type": "phone",
-          "display": "(123) 456-7890",
-          "href": "tel:+11234567890"
+          "display": "(303) 424-9470",
+          "href": "tel:+13034249470"
         }
       ],
       "emails": [
         {
-          "display": "info@dentalstudio.com",
-          "href": "mailto:info@dentalstudio.com"
+          "display": "adkinsdds@gmail.com",
+          "href": "mailto:adkinsdds@gmail.com"
         }
       ],
       "officeHours": [
         {
-          "day": "Monday",
-          "hours": "8:00 am - 5:00 pm",
-          "note": ""
+          "day": "Monday*",
+          "hours": "8:00 am - 1:00 pm",
+          "note": "*Every Other Monday"
         },
         {
           "day": "Tuesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00 am - 5:00 pm",
           "note": ""
         },
         {
           "day": "Wednesday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00 am - 5:00 pm",
           "note": ""
         },
         {
           "day": "Thursday",
-          "hours": "8:00 am - 5:00 pm",
+          "hours": "7:00 am - 5:00 pm",
           "note": ""
         },
         {
           "day": "Friday",
-          "hours": "8:00 am - 2:00 pm",
+          "hours": "Closed",
           "note": ""
         }
       ],
@@ -74,8 +76,8 @@
     }
   ],
   "modals": [],
-  "head_scripts": ["/* test header script */"],
-  "footer_scripts": ["/* Test Footer Script */"],
-  "mapEmbedUrl": "",
+  "head_scripts": [],
+  "footer_scripts": [],
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10117.466889615638!2d-105.08971022229002!3d39.77595899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876b86529920c51d%3A0x395e5900ed700f0e!2sAdkins%20Family%20Dentistry!5e1!3m2!1sen!2sus!4v1793216802985!5m2!1sen!2sus",
   "recaptchaSiteKey": ""
 }

@@ -1,0 +1,98 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Text from "@core-elements/text/Text.astro";
+
+const {
+  heading = "Additional Resources",
+  text = "",
+  links = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection
+  class:list={["additional-resources", className]}
+  paddingVertical="none"
+  {...htmlAttributes}
+>
+  <div class="wrap block text-center lg:text-left lg:flex justify-between items-start">
+    <article>
+      <Heading level="h2" class="title" data-prop="heading" text={heading} />
+      <Text data-prop="text" text={text} />
+    </article>
+    <ul class="no-check">
+      {
+        links.map((link: any) => (
+          <li>
+            <a href={link.link} target={link.link?.startsWith("http") ? "_blank" : undefined}>
+              {link.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</CustomSection>
+
+<style>
+  :global(.additional-resources) {
+    background-color: var(--color-band);
+  }
+
+  :global(.additional-resources) .wrap {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 85px 20px;
+  }
+
+  :global(.additional-resources) article {
+    margin: 0 auto 30px;
+    max-width: 470px;
+  }
+
+  :global(.additional-resources) :global(.title) {
+    color: var(--color-brand);
+    font-size: 38px;
+    font-weight: 200;
+    line-height: 42px;
+    margin: 0;
+    text-align: inherit;
+  }
+
+  :global(.additional-resources) :global(.text) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 20px;
+    text-align: inherit;
+  }
+
+  :global(.additional-resources) ul {
+    background-color: #fff;
+    list-style: none;
+    margin: 0 auto;
+    max-width: 605px;
+    padding: 25px;
+    text-align: left;
+  }
+
+  :global(.additional-resources) a {
+    color: #1a77c0;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.additional-resources) article {
+      flex: 0 1 470px;
+      margin: 0;
+    }
+
+    :global(.additional-resources) ul {
+      flex: 0 1 605px;
+      margin: 0;
+    }
+  }
+</style>

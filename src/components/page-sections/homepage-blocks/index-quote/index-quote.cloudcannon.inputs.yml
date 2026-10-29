@@ -1,0 +1,16 @@
+quote:
+  type: textarea
+  comment: Patient quote, including quotation marks.
+name:
+  type: text
+  comment: Patient name shown under the quote.
+badgeText:
+  type: text
+  comment: Text in the circle badge on the right. Leave blank to hide it.
+imageSource:
+  type: image
+  comment: Blue textured background image.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""

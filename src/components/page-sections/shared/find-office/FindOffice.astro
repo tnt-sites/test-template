@@ -1,0 +1,108 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import siteInfoData from "@data/siteInfo.json";
+
+// Shared "Find Our Office" map block shown above the footer on every page.
+// Content lives in src/data/footer.json under `findOffice`; the map uses siteInfo's mapEmbedUrl.
+const {
+  heading = "",
+  directions = [],
+  mapEmbedUrl = (siteInfoData as any).mapEmbedUrl,
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+---
+
+<CustomSection class:list={["find-office", className]} paddingVertical="none" {...htmlAttributes}>
+  <div class="wrap block text-center lg:text-left lg:flex justify-center items-start">
+    <figure>
+      <iframe
+        src={mapEmbedUrl}
+        title="Map to our Wheat Ridge dental office"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen></iframe>
+    </figure>
+    <article>
+      <Heading level="h2" class="title" text={heading} editable={false} />
+      <ul class="no-check">
+        {directions.map((line: string) => <li>{line}</li>)}
+      </ul>
+    </article>
+  </div>
+</CustomSection>
+
+<style>
+  /* Final.xd: 672x429 map, then an 80px gap and a 478px column of heading and direction bars.
+     The gap is fixed and the map shrinks on narrower screens so the two never touch. */
+  :global(.find-office) .wrap {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 100px 20px;
+  }
+
+  :global(.find-office) figure {
+    margin: 0 auto 40px;
+    max-width: 672px;
+  }
+
+  :global(.find-office) iframe {
+    border: 0;
+    display: block;
+    height: 430px;
+    width: 100%;
+  }
+
+  :global(.find-office) article {
+    margin: 0 auto;
+    max-width: 478px;
+  }
+
+  :global(.find-office) :global(.title) {
+    color: var(--color-brand);
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 45px;
+    margin: 0;
+    text-align: inherit;
+    text-transform: uppercase;
+  }
+
+  :global(.find-office) ul {
+    list-style: none;
+    margin: 25px 0 0;
+    padding: 0;
+  }
+
+  :global(.find-office) li {
+    background-color: #ccd6e0;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 4px;
+    padding: 8px 20px;
+    text-align: left;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.find-office) figure {
+      flex: 0 1 672px;
+      margin: 0 80px 0 0;
+    }
+
+    :global(.find-office) article {
+      flex: 0 0 478px;
+      margin: 0;
+    }
+
+    :global(.find-office) :global(.title) {
+      font-size: 59px;
+      line-height: 62px;
+    }
+
+    :global(.find-office) li {
+      padding-inline: 33px 20px;
+    }
+  }
+</style>

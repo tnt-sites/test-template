@@ -1,0 +1,8 @@
+text:
+  type: markdown
+  comment: Centered intro paragraph(s) shown under the banner.
+  options:
+    bold: true
+    italic: true
+    link: true
+    format: p

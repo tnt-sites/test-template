@@ -1,0 +1,137 @@
+---
+import CustomSection from "@builders/custom-section/CustomSection.astro";
+import Heading from "@core-elements/heading/Heading.astro";
+import Image from "@core-elements/image/Image.astro";
+import Text from "@core-elements/text/Text.astro";
+import Video from "@core-elements/video/Video.astro";
+import ButtonGroup from "@wrappers/button-group/ButtonGroup.astro";
+
+const {
+  heading = "",
+  text = "",
+  imageSource = "",
+  imageAlt = "",
+  videoType = "youtube",
+  videoId = "",
+  imageLeft = true,
+  buttonSections = [],
+  class: className,
+  _component,
+  ...htmlAttributes
+} = Astro.props;
+
+// With no heading or text (e.g. testimonial videos) the photo/video is centered on its own.
+const solo = !heading && !text && buttonSections.length === 0;
+---
+
+<CustomSection class:list={["service-split", className]} paddingVertical="none" {...htmlAttributes}>
+  <div
+    class:list={[
+      "wrap block text-center lg:text-left lg:flex items-center",
+      solo ? "justify-center" : "justify-between",
+      { "lg:flex-row-reverse": !imageLeft && !solo },
+    ]}
+  >
+    <figure class:list={{ video: videoId }}>
+      {
+        videoId ? (
+          <Video type={videoType} id={videoId} title={heading} />
+        ) : (
+          <Image
+            source={imageSource}
+            alt={imageAlt}
+            data-prop-src="imageSource"
+            data-prop-alt="imageAlt"
+            sizes="(min-width: 1024px) 500px, 100vw"
+            widths={[500, 800, 1000]}
+          />
+        )
+      }
+    </figure>
+    {
+      !solo && (
+        <article>
+          <Heading level="h2" class="title" data-prop="heading" text={heading} />
+          <Text data-prop="text" text={text} />
+          {buttonSections.length > 0 && (
+            <ButtonGroup buttonSections={buttonSections} width="content" class="buttons" />
+          )}
+        </article>
+      )
+    }
+  </div>
+</CustomSection>
+
+<style>
+  :global(.service-split) .wrap {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 50px 20px;
+  }
+
+  :global(.service-split) figure {
+    margin: 0 auto 30px;
+    max-width: 500px;
+  }
+
+  :global(.service-split) figure :global(img) {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  :global(.service-split) figure.video {
+    width: 100%;
+  }
+
+  :global(.service-split) figure :global(.video) {
+    margin: 0;
+  }
+
+  :global(.service-split) article {
+    margin: 0 auto;
+    max-width: 505px;
+  }
+
+  :global(.service-split) :global(.title) {
+    color: var(--color-brand);
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 38px;
+    margin: 0;
+    text-align: inherit;
+  }
+
+  :global(.service-split) :global(.text) {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 25px;
+    text-align: inherit;
+  }
+
+  :global(.service-split) :global(.text ul) {
+    display: inline-block;
+    text-align: left;
+  }
+
+  :global(.service-split) :global(.buttons) {
+    margin-top: 25px;
+  }
+
+  @media (min-width: 1024px) {
+    :global(.service-split) figure {
+      flex: 0 0 500px;
+      margin: 0;
+    }
+
+    :global(.service-split) article {
+      flex: 0 1 505px;
+      margin: 0;
+    }
+
+    :global(.service-split) :global(.title) {
+      font-size: 38px;
+      line-height: 42px;
+    }
+  }
+</style>

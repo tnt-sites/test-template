@@ -1,0 +1,16 @@
+heading:
+  type: text
+  comment: Section heading (H2). Leave blank to hide.
+text:
+  type: markdown
+  comment: Body copy. Use Heading 3 for sub-sections and lists as needed.
+  options:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    format: p h3
+band:
+  type: switch
+  comment: Show the section on the light blue band.

@@ -1,16 +1,28 @@
 label: Index Banner
-icon: add
-description: Description for Index Banner component.
+icon: image
+description: Homepage photo banner with a small H1, large welcome heading, intro and button.
 value:
   _component: page-sections/homepage-blocks/index-banner
   id: ""
-  heading: Index Banner <span class="heading-color">Heading</span>
-  backgroundColor: base
-  backgroundGradient: ""
-  backgroundImage:
-    source: null
-    alt: null
-    positionVertical: top
-    positionHorizontal: center
+  eyebrow: Dentist in Wheat Ridge
+  heading: Welcome to Adkins Family Dentistry
+  text: Intro paragraph placeholder text.
+  imageSource: /src/assets/images/adkins/home/hero-family.jpg
+  imageAlt: ""
+  buttonSections:
+    - _component: building-blocks/core-elements/button
+      text: Contact Us
+      link: /contact-us/
+      variant: primary
+      size: md
+preview:
+  text:
+    - Index Banner
+  subtext:
+    - key: heading
+  icon: image
+picker_preview:
+  text: Index Banner
+  subtext: Homepage photo banner with a small H1, large welcome heading, intro and button.
 _inputs_from_glob:
   - /src/components/page-sections/homepage-blocks/index-banner/index-banner.cloudcannon.inputs.yml

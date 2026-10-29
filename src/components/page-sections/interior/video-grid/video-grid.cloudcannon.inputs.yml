@@ -1,0 +1,36 @@
+heading:
+  type: text
+  comment: Optional heading above the videos.
+videos:
+  type: array
+  comment: Videos shown two per row on desktop.
+  options:
+    structures:
+      values:
+        - label: Video
+          icon: smart_display
+          value:
+            type: youtube
+            id: ""
+            title: ""
+          preview:
+            text:
+              - key: title
+              - Video
+            subtext:
+              - key: id
+videos[*].type:
+  type: select
+  comment: Where the video is hosted.
+  options:
+    values:
+      - id: youtube
+        name: YouTube
+      - id: vimeo
+        name: Vimeo
+videos[*].id:
+  type: text
+  comment: Video ID (YouTube's "v=" value or the number in a Vimeo URL).
+videos[*].title:
+  type: text
+  comment: Short description of the video, read by screen readers.

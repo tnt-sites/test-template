@@ -1,0 +1,45 @@
+heading:
+  type: text
+  comment: Section heading.
+services:
+  type: array
+  comment: Service cards. They turn blue with a Learn More label on hover.
+  options:
+    structures:
+      values:
+        - label: Service
+          icon: medical_services
+          value:
+            icon: tooth
+            text: I Want to Enhance My Smile
+            link: /services/
+          preview:
+            text:
+              - key: text
+            subtext:
+              - key: link
+services[*].icon:
+  type: select
+  comment: Card icon (line icons from the design, in src/icons/services/).
+  options:
+    values:
+      - id: tooth
+        name: Tooth
+      - id: emergency-tooth
+        name: Emergency Tooth
+      - id: checkup-chair
+        name: Checkup Chair
+      - id: dentist
+        name: Dentist
+      - id: implant
+        name: Implant
+services[*].text:
+  type: textarea
+  comment: Card title. Press Enter to control where the line breaks.
+services[*].link:
+  type: url
+buttonSections:
+  type: array
+  comment: Button under the cards.
+  options:
+    structures: _structures.buttonSections

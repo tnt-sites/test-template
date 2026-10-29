@@ -1,0 +1,22 @@
+label: Additional Resources
+icon: link
+description: Light blue band with a heading and a boxed list of links.
+value:
+  _component: page-sections/interior/additional-resources
+  id: ""
+  heading: Additional Resources
+  text: Check out our blogs for additional articles with our dentist in Wheat Ridge, CO, Dr. Chris Adkins!
+  links:
+    - text: Link text
+      link: /blog/
+preview:
+  text:
+    - Additional Resources
+  subtext:
+    - key: heading
+  icon: link
+picker_preview:
+  text: Additional Resources
+  subtext: Light blue band with a heading and a boxed list of links.
+_inputs_from_glob:
+  - /src/components/page-sections/interior/additional-resources/additional-resources.cloudcannon.inputs.yml

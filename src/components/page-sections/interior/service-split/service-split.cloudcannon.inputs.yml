@@ -1,0 +1,42 @@
+heading:
+  type: text
+  comment: Section heading (H2).
+text:
+  type: markdown
+  comment: Body copy. Bulleted lists are allowed.
+  options:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    format: p
+imageSource:
+  type: image
+  comment: Square photo shown beside the text. Ignored when a YouTube video ID is set.
+  options:
+    paths:
+      uploads: src/assets/images
+      static: ""
+imageAlt:
+  type: text
+  comment: Alt text for the photo.
+videoType:
+  type: select
+  comment: Where the video is hosted.
+  options:
+    values:
+      - id: youtube
+        name: YouTube
+      - id: vimeo
+        name: Vimeo
+videoId:
+  type: text
+  comment: Optional video ID (YouTube's "v=" value or the number in a Vimeo URL). Replaces the photo with the video.
+imageLeft:
+  type: switch
+  comment: Show the photo or video on the left on desktop. Turn off to put it on the right.
+buttonSections:
+  type: array
+  comment: Optional buttons under the text (e.g. Learn More).
+  options:
+    structures: _structures.buttonSections

@@ -1,0 +1,28 @@
+heading:
+  type: text
+  comment: Section heading.
+promises:
+  type: array
+  comment: Checkmark promises. Four fit on one row.
+  options:
+    structures:
+      values:
+        - label: Promise
+          icon: check
+          value:
+            title: Promise title
+            text: Promise description
+          preview:
+            text:
+              - key: title
+            subtext:
+              - key: text
+promises[*].title:
+  type: text
+promises[*].text:
+  type: textarea
+buttonSections:
+  type: array
+  comment: Button under the promises.
+  options:
+    structures: _structures.buttonSections

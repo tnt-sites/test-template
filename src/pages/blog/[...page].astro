@@ -68,6 +68,7 @@ const pageDescription =
                 year: "numeric",
                 month: "long",
                 day: "numeric",
+                timeZone: "UTC",
               });
 
               // Get slug from id (for glob loader) or slug property (for default loader)
@@ -76,7 +77,7 @@ const pageDescription =
               return (
                 <GridItem editable={false}>
                   <Card
-                    link={`/blog/${slug}`}
+                    link={`/${slug}/`}
                     rounded={true}
                     border={true}
                     paddingVertical="lg"

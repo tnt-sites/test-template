@@ -1,0 +1,21 @@
+label: Index Quote
+icon: format_quote
+description: Blue band with a patient quote and a circle badge.
+value:
+  _component: page-sections/homepage-blocks/index-quote
+  id: ""
+  quote: "“Patient quote.”"
+  name: Patient Name
+  badgeText: Approved Provider for Colorado Worker’s Compensation
+  imageSource: /src/assets/images/adkins/home/quote-band.jpg
+preview:
+  text:
+    - Index Quote
+  subtext:
+    - key: name
+  icon: format_quote
+picker_preview:
+  text: Index Quote
+  subtext: Blue band with a patient quote and a circle badge.
+_inputs_from_glob:
+  - /src/components/page-sections/homepage-blocks/index-quote/index-quote.cloudcannon.inputs.yml

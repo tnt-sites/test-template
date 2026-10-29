@@ -83,7 +83,7 @@ landingPages.forEach((page: CollectionEntry<"landing-pages">) => {
 blogPosts.forEach((post: CollectionEntry<"blog">) => {
   const rawSlug = post.id?.replace(/\.mdx?$/, "") || post.slug;
   routeTitleMap.set(
-    ensureTrailingSlash(`/blog/${rawSlug}`),
+    ensureTrailingSlash(`/${rawSlug}`),
     normalizeTitle(post.data?.title, toTitleCase(rawSlug.split("/").pop() || "Blog Post"))
   );
 });
@@ -113,7 +113,7 @@ if (blogNavNode) {
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .forEach((post: CollectionEntry<"blog">) => {
       const rawSlug = post.id?.replace(/\.mdx?$/, "") || post.slug;
-      const path = ensureTrailingSlash(`/blog/${rawSlug}`);
+      const path = ensureTrailingSlash(`/${rawSlug}`);
       if (!navPathSet.has(path)) {
         const title = normalizeTitle(
           post.data?.title,
