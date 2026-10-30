@@ -300,7 +300,7 @@ const footerStyle = [
           }
           <span class="footer-legal-separator" aria-hidden="true">|</span>
           <span class="footer-legal-line footer-legal-line--credit">
-            Site designed and maintained by{" "}
+            Site maintained by{" "}
             <a href="https://www.tntdental.com" target="_blank" rel="noopener noreferrer">
               TNT Dental
             </a>
@@ -616,14 +616,15 @@ const footerStyle = [
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1025px) {
       .footer .fo-content {
         .fo-logo {
           margin: 0 150px 0 0;
         }
 
         .fo-info {
-          flex: 0 0 360px;
+          flex: 0 1 360px;
+          min-width: 0;
         }
 
         .fo-hours {

@@ -123,15 +123,16 @@ const { heading = "", columns = [], class: className, _component, ...htmlAttribu
     width: auto;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     :global(.index-affordable) :global(.title) {
       font-size: 59px;
       line-height: 62px;
     }
 
     :global(.index-affordable) li {
-      flex: 0 0 350px;
+      flex: 0 1 350px;
       margin: 0;
+      min-width: 0;
       text-align: left;
     }
 
@@ -140,7 +141,8 @@ const { heading = "", columns = [], class: className, _component, ...htmlAttribu
     }
 
     :global(.index-affordable) .logos {
-      gap: 45px;
+      flex-wrap: wrap;
+      gap: 20px 45px;
       justify-content: flex-start;
     }
   }

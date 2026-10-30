@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+/* lg starts at 1025px to match the header, which shows the mobile menu at 1024px and below */
+@theme {
+  --breakpoint-lg: 64.0625rem;
+}

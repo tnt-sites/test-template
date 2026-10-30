@@ -405,6 +405,16 @@ const getOfficeHoursGeneralNotes = (office: any) => {
     };
 
     nav.addEventListener("click", handleDropdownToggle);
+
+    // Close the menu when a link is followed, so same-page links (e.g. /patient-info/#first-visit)
+    // scroll the page instead of happening behind the open menu
+    nav.addEventListener("click", (e) => {
+      if (!e.target?.closest("a[href]") || !toggle?.checked) return;
+      toggle.checked = false;
+      nav.setAttribute("aria-hidden", "true");
+      nav.style.transform = "translateX(-100%)";
+      document.body.style.overflow = "";
+    });
     nav.addEventListener("keydown", (e) => {
       if (e.key === "Enter" || e.key === " ") {
         handleDropdownToggle(e);
@@ -478,6 +488,7 @@ const getOfficeHoursGeneralNotes = (office: any) => {
 
       .mobile-content {
         flex: 1;
+        overflow-x: hidden;
         overflow-y: auto;
 
         .mobile-list {
@@ -518,7 +529,6 @@ const getOfficeHoursGeneralNotes = (office: any) => {
           text-decoration: none;
           transition: background var(--animation-normal) ease-in-out;
           user-select: none;
-          white-space: nowrap;
           width: 100%;
 
           &[aria-current="page"] {

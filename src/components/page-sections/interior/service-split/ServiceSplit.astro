@@ -42,7 +42,7 @@ const solo = !heading && !text && buttonSections.length === 0;
             alt={imageAlt}
             data-prop-src="imageSource"
             data-prop-alt="imageAlt"
-            sizes="(min-width: 1024px) 500px, 100vw"
+            sizes="(min-width: 1025px) 500px, 100vw"
             widths={[500, 800, 1000]}
           />
         )
@@ -118,7 +118,11 @@ const solo = !heading && !text && buttonSections.length === 0;
     margin-top: 25px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
+    :global(.service-split) .wrap {
+      column-gap: 30px;
+    }
+
     :global(.service-split) figure {
       flex: 0 0 500px;
       margin: 0;

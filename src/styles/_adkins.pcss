@@ -77,3 +77,20 @@
     }
   }
 }
+
+/* QC: every button is centred on tablet and mobile, where the layouts stack */
+@layer overrides {
+  @media (max-width: 1024px) {
+    .button-group {
+      &,
+      > editable-array {
+        align-items: center;
+        justify-content: center;
+      }
+
+      &.fit-content {
+        margin-inline: auto;
+      }
+    }
+  }
+}

@@ -192,7 +192,7 @@ pageSections:
       tartar accumulation, as well as bacteria deposits on the roots of the
       teeth, we can keep the infection from spreading and leading to escalating
       dental problems such as tooth loss.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-10.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-2.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -213,7 +213,7 @@ pageSections:
       in fighting off the infection. The laser is gentle, and because it
       cauterizes the area, it means less post-operative bleeding and a faster
       recovery period.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-11.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-10.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -233,7 +233,7 @@ pageSections:
       which is their outermost layer. When applied at the end of your routine
       cleanings, fluoride can help prevent cavities from developing between
       visits to the dentist.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-12.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-11.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -253,7 +253,7 @@ pageSections:
       holding free-standing replacement teeth that are custom-designed to look
       like a natural part of your smile, securely in place. Bridges can last for
       years and help prevent dental drift.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-13.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-12.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -273,7 +273,7 @@ pageSections:
       is custom-shaded to match the surrounding teeth and sculpted to lengthen,
       brighten, or make the tooth whole again. After the putty is hardened, it
       is able to function as a natural part of your smile for years to come.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-14.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-13.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -294,7 +294,7 @@ pageSections:
       more positive experience. If you believe you could benefit from sedation
       dentistry in Wheat Ridge, give us a call before your visit and let us
       know!
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-15.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-14.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -314,7 +314,7 @@ pageSections:
       other underlying concerns. To prevent any harm from coming to your teeth
       and jaw joints, we can craft a nightguard for you to wear, providing a
       layer of protection between them.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-16.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-15.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''
@@ -328,7 +328,7 @@ pageSections:
       have TMJ disorder. Dr. Adkins can diagnose your issue and provide you with
       tailored treatment options, such as equilibration or an occlusal splint,
       to prevent your condition from worsening and ease your symptoms.
-    imageSource: /src/assets/images/adkins/internal/general-dentistry-2.webp
+    imageSource: /src/assets/images/adkins/internal/general-dentistry-16.webp
     imageAlt: ''
     videoType: youtube
     videoId: ''

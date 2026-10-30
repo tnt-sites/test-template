@@ -94,9 +94,10 @@ const {
     width: 230px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
+    /* Right padding keeps the quote clear of the badge (230px + 60px offset + 30px gap) */
     :global(.index-quote) .wrap {
-      padding: 50px 60px 50px 180px;
+      padding: 50px 320px 50px 180px;
     }
 
     :global(.index-quote) blockquote p {

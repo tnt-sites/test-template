@@ -124,16 +124,20 @@ const {
     width: auto;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: 1024px) {
     :global(.index-doctor) :global(.buttons) {
       margin-inline: auto;
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     :global(.index-doctor) :global(.title) {
       font-size: 59px;
       line-height: 62px;
+    }
+
+    :global(.index-doctor) section {
+      column-gap: 30px;
     }
 
     :global(.index-doctor) figure,

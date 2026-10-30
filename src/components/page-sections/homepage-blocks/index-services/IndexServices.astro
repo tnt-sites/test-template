@@ -147,15 +147,17 @@ const {
     min-width: 255px;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     :global(.index-services) :global(.title) {
       font-size: 59px;
       line-height: 62px;
     }
 
+    /* Cards shrink below 268px on narrow desktops so all five stay on screen */
     :global(.index-services) li {
-      flex: 0 0 268px;
+      flex: 0 1 268px;
       margin: 0;
+      min-width: 0;
     }
 
     :global(.index-services) li + li {
