@@ -11,7 +11,7 @@ pageSections:
     why so many adults and teens choose clear aligner treatment over traditional metal braces.
 
 
-    At Medford Dental Wellness, our team offers Invisalign as a discreet, comfortable path to a straighter
+    At Medford Dental Wellness Center, our team offers Invisalign as a discreet, comfortable path to a straighter
     smile. The aligners are virtually invisible when worn, and because they''re fully removable, you eat
     what you want and brush normally throughout treatment. There''s no hardware to adjust around, no wires
     to irritate your cheeks, and no dramatic change to how you look day to day.
@@ -28,7 +28,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Invisalign® Clear Aligners?
+  heading: Why Choose Medford Dental Wellness Center for Invisalign® Clear Aligners?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item
@@ -57,7 +57,7 @@ pageSections:
   anchorName: right
   subtext: 'Most people who wonder about clear aligners turn out to be excellent candidates. Invisalign
     addresses many common orthodontic issues effectively, and both adults and teens achieve great results
-    with this treatment at Medford Dental Wellness.
+    with this treatment at Medford Dental Wellness Center.
 
 
     The conditions it corrects most successfully include:
@@ -87,7 +87,7 @@ pageSections:
   heading: What Happens at Your Invisalign Appointment
   anchorName: ''
   subtext: 'Getting a detailed understanding of the process makes it much easier to commit, so here''s
-    exactly what your care looks like at Medford Dental Wellness from start to finish.
+    exactly what your care looks like at Medford Dental Wellness Center from start to finish.
 
 
     Your first appointment combines consultation and records gathering. Our team will review your bite,
@@ -138,7 +138,7 @@ pageSections:
     - Whether any mid-course refinements are needed along the way
 
 
-    During your consultation at Medford Dental Wellness, our team will assess your specific situation
+    During your consultation at Medford Dental Wellness Center, our team will assess your specific situation
     and provide a personalized timeline estimate so you know exactly what to expect.'
   imageSource: /src/assets/images/internal/invisalign-5.webp
   imageAlt: ''
@@ -206,7 +206,7 @@ pageSections:
     it! For many people in Medford, having a local practice that genuinely knows them makes all the difference.
 
 
-    At Medford Dental Wellness, our team takes time to understand your smile goals before recommending
+    At Medford Dental Wellness Center, our team takes time to understand your smile goals before recommending
     any treatment. There''s no pressure to commit at your first visit. We walk you through what the process
     looks like for your specific situation, what to realistically expect at each stage, and how your treatment
     fits into your overall oral health.
@@ -284,7 +284,7 @@ pageSections:
     first step is simply a conversation.
 
 
-    At Medford Dental Wellness, our team will evaluate your teeth and bite, discuss your goals, and provide
+    At Medford Dental Wellness Center, our team will evaluate your teeth and bite, discuss your goals, and provide
     you with a transparent overview of what treatment would involve. [**Call us at (781) 395-5545**](/contact/)
     or schedule a consultation online when you''re ready.'
   imageSource: /src/assets/images/internal/invisalign-9.webp

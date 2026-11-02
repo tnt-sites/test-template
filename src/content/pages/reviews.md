@@ -1,7 +1,7 @@
 ---
 _schema: default
-title: Patient Reviews Medford Dental Wellness | Medford, MA
-description: Patients love visiting Medford Dental Wellness in Medford, MA.
+title: Patient Reviews Medford Dental Wellness Center | Medford, MA
+description: Patients love visiting Medford Dental Wellness Center in Medford, MA.
 pageSections:
 - _component: page-sections/heroes/interior-banner
   eyebrow: Medford Dental Patient Reviews

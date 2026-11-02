@@ -14,12 +14,12 @@ pageSections:
   showStripes: true
   backgroundImage:
     source: /src/assets/images/home/team-banner.jpg
-    alt: The Medford Dental Wellness team
+    alt: The Medford Dental Wellness Center team
     positionVertical: center
     positionHorizontal: center
   backgroundVideo: /videos/home-banner.mp4
 - _component: page-sections/homepage-blocks/index-split
-  heading: Why Patients Choose Medford Dental Wellness
+  heading: Why Patients Choose Medford Dental Wellness Center
   anchorName: ''
   subtext: Since 1979, we’ve been the “go-to” dentist in Medford known for shaping smiles with honesty,
     integrity, hard work, and a curiosity that drives us to be our best. If that isn’t enough, you’ll
@@ -66,7 +66,7 @@ pageSections:
     uppercase: true
   layout: contained
   imageSource: /src/assets/images/home/team-group.jpg
-  imageAlt: The Medford Dental Wellness team
+  imageAlt: The Medford Dental Wellness Center team
   imagePositionVertical: center
   imagePositionHorizontal: center
   accentImageSource: /src/assets/images/home/embossed-logo.jpg
@@ -173,7 +173,7 @@ pageSections:
     uppercase: true
 - _component: page-sections/homepage-blocks/index-split
   id: find
-  heading: Why Patients Choose Medford Dental Wellness
+  heading: Why Patients Choose Medford Dental Wellness Center
   anchorName: ''
   subtext: 'Call [(781) 395-5545](tel:+17813955545) or request an appointment online to set up your first
     visit. We’ll be in touch soon!
@@ -220,6 +220,6 @@ pageSections:
   background: white
   showHeadingBar: true
   showLogo: true
-description: Medford Dental Wellness offers trusted, skilled, and comprehensive dentistry in Medford,
+description: Medford Dental Wellness Center offers trusted, skilled, and comprehensive dentistry in Medford,
   MA.
 ---

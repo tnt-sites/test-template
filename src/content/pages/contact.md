@@ -1,7 +1,7 @@
 ---
 _schema: default
-title: Contact Medford Dental Wellness | Medford, MA
-description: Contact Medford Dental Wellness for general, cosmetic, and restorative dentistry in Medford,
+title: Contact Medford Dental Wellness Center | Medford, MA
+description: Contact Medford Dental Wellness Center for general, cosmetic, and restorative dentistry in Medford,
   MA.
 pageSections:
 - _component: page-sections/heroes/interior-banner

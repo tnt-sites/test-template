@@ -19,7 +19,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Restorative Dentistry?
+  heading: Why Choose Medford Dental Wellness Center for Restorative Dentistry?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item

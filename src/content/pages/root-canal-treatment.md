@@ -18,7 +18,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Root Canal Treatment?
+  heading: Why Choose Medford Dental Wellness Center for Root Canal Treatment?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item

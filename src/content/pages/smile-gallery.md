@@ -1,7 +1,7 @@
 ---
 _schema: default
 title: Smile transformations
-description: See before and after smile transformations at Medford Dental Wellness in Medford, MA.
+description: See before and after smile transformations at Medford Dental Wellness Center in Medford, MA.
 pageSections:
 - _component: page-sections/heroes/interior-banner
   eyebrow: Dental Smile Gallery Medford

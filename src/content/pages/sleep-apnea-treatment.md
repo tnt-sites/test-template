@@ -13,7 +13,7 @@ pageSections:
     an alternative approach, oral appliance therapy offers a clinically proven solution.
 
 
-    At Medford Dental Wellness, our team provides oral appliance therapy (Panthera brand) for patients
+    At Medford Dental Wellness Center, our team provides oral appliance therapy (Panthera brand) for patients
     with mild to moderate obstructive sleep apnea. This custom-fabricated device repositions the lower
     jaw and tongue to maintain an open airway during sleep. The appliance is portable, silent, and designed
     for comfortable long-term use. Clinical studies demonstrate high patient compliance rates compared
@@ -31,7 +31,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Sleep Apnea Dentistry?
+  heading: Why Choose Medford Dental Wellness Center for Sleep Apnea Dentistry?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item
@@ -120,7 +120,7 @@ pageSections:
   heading: What Happens at Your Sleep Dental Appointment
   anchorName: ''
   subtext: 'Our treatment process follows a systematic approach designed for precision and effectiveness.
-    Each appointment at Medford Dental Wellness serves a specific clinical purpose.
+    Each appointment at Medford Dental Wellness Center serves a specific clinical purpose.
 
 
     Your initial consultation focuses on comprehensive evaluation. Our team will review your sleep study

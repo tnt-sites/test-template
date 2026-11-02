@@ -177,6 +177,6 @@ pageSections:
     - _component: page-sections/ctas/services-grid/service-link
       label: Tooth Extractions
       href: /tooth-extractions/
-description: Medford Dental Wellness offers comprehensive family, general, cosmetic, and restorative dentistry
+description: Medford Dental Wellness Center offers comprehensive family, general, cosmetic, and restorative dentistry
   in Medford, MA.
 ---

@@ -19,7 +19,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Tooth Extractions?
+  heading: Why Choose Medford Dental Wellness Center for Tooth Extractions?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item

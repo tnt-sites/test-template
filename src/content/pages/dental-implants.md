@@ -12,7 +12,7 @@ pageSections:
     find them unstable or uncomfortable during eating and speaking.
 
 
-    Dental implants represent a different approach entirely. At Medford Dental Wellness, our team uses
+    Dental implants represent a different approach entirely. At Medford Dental Wellness Center, our team uses
     titanium posts that fuse directly with your jawbone through osseointegration. This biological process
     creates a stable foundation that supports a custom crown, bridge, or denture. Unlike other tooth replacement
     options, implants preserve jawbone structure and function much like natural tooth roots.'
@@ -24,7 +24,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Dental Implants?
+  heading: Why Choose Medford Dental Wellness Center for Dental Implants?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item
@@ -100,7 +100,7 @@ pageSections:
   heading: Our Dental Implant Process
   anchorName: ''
   subtext: 'Your implant journey begins with a thorough assessment of your oral health. During your initial
-    consultation at Medford Dental Wellness, our team will review your dental and medical history, examine
+    consultation at Medford Dental Wellness Center, our team will review your dental and medical history, examine
     your gums and jawbone, and use advanced imaging to evaluate bone structure and available space. This
     careful evaluation ensures we gather all necessary information before presenting our findings and
     recommendations.
@@ -195,10 +195,10 @@ pageSections:
   background: cream
   showHeadingBar: true
 - _component: page-sections/services/service-split
-  heading: Why Patients Choose Medford Dental Wellness for Implants
+  heading: Why Patients Choose Medford Dental Wellness Center for Implants
   anchorName: ''
   subtext: 'Selecting the right provider for implant treatment requires evaluating both clinical expertise
-    and practice philosophy. At Medford Dental Wellness, several factors distinguish our approach to implant
+    and practice philosophy. At Medford Dental Wellness Center, several factors distinguish our approach to implant
     care.
 
 

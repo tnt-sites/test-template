@@ -7,7 +7,7 @@ pageSections:
   eyebrow: All-on-X Dental Implants Medford
   heading: New Teeth You Can Actually Count On
   subtext: 'Loose dentures that shift during meals, difficulty speaking clearly, or avoiding social situations
-    because of dental concerns affect many people. At Medford Dental Wellness, we help patients regain
+    because of dental concerns affect many people. At Medford Dental Wellness Center, we help patients regain
     confidence and function through comprehensive tooth replacement solutions.
 
 
@@ -22,7 +22,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for All-on-X Dental Implants?
+  heading: Why Choose Medford Dental Wellness Center for All-on-X Dental Implants?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item
@@ -184,7 +184,7 @@ pageSections:
   heading: Ready to See If All-on-X Is Right for You?
   anchorName: ''
   subtext: 'All-on-X represents a significant investment in your oral health and quality of life. During
-    your consultation at Medford Dental Wellness, we''ll evaluate your specific situation, discuss your
+    your consultation at Medford Dental Wellness Center, we''ll evaluate your specific situation, discuss your
     treatment goals, and determine whether this solution aligns with your needs.
 
 

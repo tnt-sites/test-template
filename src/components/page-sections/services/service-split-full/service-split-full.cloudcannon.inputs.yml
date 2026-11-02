@@ -86,4 +86,4 @@ showHeadingBar:
   comment: Show the thin bar under the heading.
 showLogo:
   type: switch
-  comment: Show the faint Medford Dental Wellness building mark behind the text.
+  comment: Show the faint Medford Dental Wellness Center building mark behind the text.

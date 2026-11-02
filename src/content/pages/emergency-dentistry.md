@@ -11,7 +11,7 @@ pageSections:
     situations can be stressful, and prompt professional care is crucial for your comfort and health.
 
 
-    At Medford Dental Wellness, we reserve time each day for urgent appointments. Our doctors and caring
+    At Medford Dental Wellness Center, we reserve time each day for urgent appointments. Our doctors and caring
     staff focus on rapid assessment, pain management, and clear communication about your condition and
     treatment options.'
   overlay: medium
@@ -22,7 +22,7 @@ pageSections:
     positionVertical: center
     positionHorizontal: center
 - _component: page-sections/info-blocks/why
-  heading: Why Choose Medford Dental Wellness for Emergency Dentistry?
+  heading: Why Choose Medford Dental Wellness Center for Emergency Dentistry?
   backgroundColor: dark
   items:
   - _component: page-sections/info-blocks/why/why-item
@@ -114,7 +114,7 @@ pageSections:
   heading: Why Patients in Medford Choose Us for Dental Emergencies
   anchorName: ''
   subtext: 'When you''re facing a dental emergency, you need a practice you can trust to be there for
-    you. Patients choose Medford Dental Wellness because we maintain dedicated emergency scheduling and
+    you. Patients choose Medford Dental Wellness Center because we maintain dedicated emergency scheduling and
     focus on both immediate relief and lasting solutions.
 
 
