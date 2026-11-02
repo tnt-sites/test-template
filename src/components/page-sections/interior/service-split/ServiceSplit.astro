@@ -14,6 +14,7 @@ const {
   videoType = "youtube",
   videoId = "",
   imageLeft = true,
+  imageNatural = false,
   buttonSections = [],
   class: className,
   _component,
@@ -32,7 +33,7 @@ const solo = !heading && !text && buttonSections.length === 0;
       { "lg:flex-row-reverse": !imageLeft && !solo },
     ]}
   >
-    <figure class:list={{ video: videoId }}>
+    <figure class:list={{ video: videoId, natural: imageNatural }}>
       {
         videoId ? (
           <Video type={videoType} id={videoId} title={heading} />
@@ -80,6 +81,11 @@ const solo = !heading && !text && buttonSections.length === 0;
     width: 100%;
   }
 
+  /* Wide group photos keep their own shape instead of the square crop */
+  :global(.service-split) figure.natural :global(img) {
+    aspect-ratio: auto;
+  }
+
   :global(.service-split) figure.video {
     width: 100%;
   }
@@ -107,6 +113,10 @@ const solo = !heading && !text && buttonSections.length === 0;
     line-height: 28px;
     margin-top: 25px;
     text-align: inherit;
+  }
+
+  :global(.service-split) :global(.text h3) {
+    margin: 25px 0 5px;
   }
 
   :global(.service-split) :global(.text ul) {

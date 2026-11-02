@@ -8,6 +8,7 @@ value:
   text: Body copy placeholder text.
   imageSource: /src/assets/images/adkins/internal/dental-implants-2.webp
   imageAlt: ""
+  imageNatural: false
   videoId: ""
   imageLeft: true
   buttonSections: []

@@ -80,7 +80,7 @@ pageSections:
       training to hone his skills and offer most services his patients would
       need from the comfort of a long-standing team they trust.
     videoType: vimeo
-    videoId: '465488653'
+    videoId: '347823927'
     imageSource: /src/assets/images/adkins/home/meet-dr-adkins-video.png
     imageAlt: Dr. Adkins
     buttonSections:

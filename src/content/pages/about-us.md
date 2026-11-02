@@ -15,18 +15,11 @@ pageSections:
   - _component: page-sections/interior/service-split
     id: ''
     heading: WE ARE COMMITTED
-    text: To optimal dentistry in a comfortable, caring environment for you and your
-      family.
-    imageSource: /src/assets/images/adkins/internal/about-us-2.webp
-    imageAlt: ''
-    videoType: youtube
-    videoId: ''
-    imageLeft: true
-    buttonSections: []
-  - _component: page-sections/interior/interior-text
-    id: ''
-    heading: ''
     text: >-
+      To optimal dentistry in a comfortable, caring environment for you and your
+      family.
+
+
       ### We Strive
 
 
@@ -39,17 +32,22 @@ pageSections:
 
       Through continuing education to providing our patients with dental health
       for a lifetime.
-    band: true
+    imageSource: /src/assets/images/adkins/internal/about-us-2.webp
+    imageAlt: ''
+    videoType: youtube
+    videoId: ''
+    imageLeft: true
+    buttonSections: []
   - _component: page-sections/interior/service-split
     id: ''
     heading: Meet Dr. Adkins
     text: Dr. Christopher Adkins believes in delivering the highest quality
       dentistry possible, and settles for nothing less than perfection. Patients
       always receive the same care he would give to his own family.
-    imageSource: ''
-    imageAlt: ''
+    imageSource: /src/assets/images/adkins/internal/about-us-dr-adkins.webp
+    imageAlt: Dr. Christopher Adkins
     videoType: vimeo
-    videoId: '465488653'
+    videoId: ''
     imageLeft: true
     buttonSections:
       - _component: building-blocks/core-elements/button
@@ -65,8 +63,9 @@ pageSections:
       15 years, delivering consistent, high-quality dental care to Wheat Ridge
       families. We invite you to get to know the friendly faces you will see at
       each visit by reading each of our staff’s short bios below.
-    imageSource: /src/assets/images/adkins/internal/about-us-3.webp
-    imageAlt: ''
+    imageSource: /src/assets/images/adkins/internal/about-us-team.webp
+    imageAlt: Dr. Adkins and the Adkins Family Dentistry team
+    imageNatural: true
     videoType: youtube
     videoId: ''
     imageLeft: false

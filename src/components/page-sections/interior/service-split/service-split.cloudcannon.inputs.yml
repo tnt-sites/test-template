@@ -3,13 +3,13 @@ heading:
   comment: Section heading (H2).
 text:
   type: markdown
-  comment: Body copy. Bulleted lists are allowed.
+  comment: Body copy. Bulleted lists and small subheadings are allowed.
   options:
     bold: true
     italic: true
     link: true
     bulletedlist: true
-    format: p
+    format: p h3
 imageSource:
   type: image
   comment: Square photo shown beside the text. Ignored when a YouTube video ID is set.
@@ -17,6 +17,9 @@ imageSource:
     paths:
       uploads: src/assets/images
       static: ""
+imageNatural:
+  type: switch
+  comment: Keep the photo's own shape instead of cropping it square (e.g. a wide group photo).
 imageAlt:
   type: text
   comment: Alt text for the photo.
