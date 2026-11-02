@@ -89,7 +89,8 @@ const addressText = firstAddress
 
   <div class="main-nav-bar">
     <a class="main-nav-logo" href="/" aria-label={logoAlt}>
-      <AstroIcon name="medford-logo" aria-hidden="true" />
+      <AstroIcon name="medford-logo-white" class="logo-desktop" aria-hidden="true" />
+      <AstroIcon name="medford-logo" class="logo-mobile" aria-hidden="true" />
     </a>
 
     <Bar navData={navData} class="desktop-main-nav" />
@@ -254,6 +255,11 @@ const addressText = firstAddress
         height: var(--main-nav-logo-height);
         transition: height var(--animation-slow) ease;
         width: auto;
+      }
+
+      /* White logo on desktop, navy and green logo on the white mobile bar. */
+      .logo-mobile {
+        display: none;
       }
     }
 
@@ -576,6 +582,14 @@ const addressText = firstAddress
 
       .main-nav-logo {
         --logo-accent: var(--color-brand);
+
+        .logo-desktop {
+          display: none;
+        }
+
+        .logo-mobile {
+          display: block;
+        }
       }
     }
   }
