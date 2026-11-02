@@ -36,7 +36,7 @@ pageSections:
     imageAlt: ''
     videoType: youtube
     videoId: ''
-    imageLeft: true
+    imageLeft: false
     buttonSections: []
   - _component: page-sections/interior/service-split
     id: ''

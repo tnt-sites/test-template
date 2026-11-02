@@ -53,8 +53,8 @@ pageSections:
       service trips to Guatemala, Ecuador and Ghana. He has also volunteered
       locally at Mission of Mercy. In his free time, Dr. Adkins enjoys
       snowboarding, skiing, soccer, golf, and playing guitar.
-    imageSource: /src/assets/images/adkins/internal/about-us-3.webp
-    imageAlt: ''
+    imageSource: /src/assets/images/adkins/internal/meet-dr-adkins-headshot.webp
+    imageAlt: Dr. Christopher Adkins
     videoType: youtube
     videoId: ''
     imageLeft: false
