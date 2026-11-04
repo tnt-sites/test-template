@@ -1,0 +1,34 @@
+# TNT standard redirects for a static site.
+# HTTPS, www, and a literal index.html request go to the public address.
+# Unknown addresses stay a real 404.
+
+Options +FollowSymLinks -MultiViews
+
+RewriteEngine On
+RewriteBase /
+
+# ---- HTTPS ----
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ---- Non-www to www ----
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} ^(.+)$ [NC]
+RewriteRule ^(.*)$ https://www.%1/$1 [L,R=301]
+
+# ---- Literal index.html to the folder ----
+RewriteCond %{THE_REQUEST} /\index\.html [NC]
+RewriteRule ^index\.html$ / [L,R=301]
+
+# ---- Versioned assets: styles.123.css -> styles.css ----
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)\.(\d+)\.(bmp|css|cur|gif|ico|jpe?g|js|png|svgz?|webp|webmanifest)$ $1.$3 [L]
+
+ErrorDocument 404 /404.html
+
+# The old WordPress sitemap had this address twice. The new site keeps one.
+RedirectMatch 301 ^/services/dental-implants/?$ https://www.wheatridgecodentist.com/dental-implants/
+
+# Rank Math's index name. This site publishes sitemap-index.xml.
+RedirectMatch 301 ^/sitemap_index\.xml$ https://www.wheatridgecodentist.com/sitemap-index.xml
